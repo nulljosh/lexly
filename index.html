@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Lingo - Learn Anything</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/lingo.css">
+</head>
+<body>
+    <a href="#main" class="sr-only" style="position:absolute;top:-40px;left:0;background:#0a0a0a;color:#fafafa;padding:8px;z-index:1000;">Skip to content</a>
+    <header class="header" role="banner">
+        <div class="header-inner">
+            <div class="logo" onclick="resetToHome()" role="button" tabindex="0" aria-label="Go to home screen">
+                <a href="https://heyitsmejosh.com" style="color:var(--text-muted);text-decoration:none;font-size:0.8125rem;transition:color 0.2s;">jt</a>
+                <span style="color:var(--text-muted);font-size:0.75rem;" aria-hidden="true">/</span>
+                <span>Lingo</span>
+            </div>
+            <div class="stats">
+                <button class="profile-chip" id="profileBtn" aria-label="Open profile">
+                    <span class="profile-chip-avatar" id="profileAvatar">L</span>
+                    <span class="profile-chip-name" id="profileName">Login</span>
+                </button>
+                <div class="stat-item stat-streak" aria-label="Day streak">
+                    <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    <span class="stat-val" id="streak">0</span>
+                </div>
+                <div class="stat-item stat-xp" aria-label="Experience points">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span class="stat-val" id="xp">0</span>
+                </div>
+                <div class="stat-item stat-hearts" aria-label="Hearts remaining">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <span class="stat-val" id="hearts">5</span>
+                </div>
+                <div class="stat-item" id="achievementBtn" role="button" tabindex="0" aria-label="View achievements" style="cursor:pointer;">
+                    <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="main" role="main">
+        <section class="auth-shell fade-up" id="authShell" aria-labelledby="authTitle">
+            <div class="auth-card">
+                <div class="auth-copy">
+                    <div class="auth-section-label">Get Started</div>
+                    <h1 id="authTitle" class="auth-heading">Learn anything.</h1>
+                    <p class="auth-subtitle">Languages, math, science, programming -- all in one place. Pick a name to track your streak, trophies, and progress.</p>
+                </div>
+
+                <div class="auth-panel">
+                    <form class="auth-form active" id="localProfileForm">
+                        <label class="auth-field">
+                            <span>Display name</span>
+                            <input type="text" id="localDisplayName" maxlength="50" placeholder="Your name" required>
+                        </label>
+                        <div class="auth-avatar-label">Choose an avatar</div>
+                        <div class="avatar-picker" id="authAvatarPicker" aria-label="Choose an avatar"></div>
+                        <button class="btn btn-primary auth-submit" type="submit">Start learning</button>
+                    </form>
+
+                    <div class="auth-feedback" id="authFeedback" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-shell" id="appShell">
+        <div class="subject-selection fade-up" id="subjectSelection">
+            <div class="category-tabs" role="tablist" aria-label="Subject categories">
+                <div class="category-tab active" data-category="languages" role="tab" tabindex="0" aria-selected="true" aria-controls="subjectGrid">Languages</div>
+                <div class="category-tab" data-category="programming" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Programming</div>
+                <div class="category-tab" data-category="computers" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Computers</div>
+                <div class="category-tab" data-category="math" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Math</div>
+                <div class="category-tab" data-category="science" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Science</div>
+                <div class="category-tab" data-category="skills" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Skills</div>
+                <div class="category-tab" data-category="games" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Games</div>
+            </div>
+
+            <div class="section-title" id="categoryTitle">Choose a language</div>
+            <div class="subject-grid" id="subjectGrid" role="tabpanel" aria-label="Subject grid"></div>
+        </div>
+
+        <div class="skill-tree" id="skillTree">
+            <button class="tree-back" id="treeBackBtn" aria-label="Back to subjects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All subjects</button>
+            <div class="tree-head">
+                <div class="tree-icon" id="treeIcon"><i class="fa-solid fa-book" aria-hidden="true"></i></div>
+                <div>
+                    <h2 class="tree-title" id="treeTitle">Course</h2>
+                    <div class="tree-sub" id="treeSub"></div>
+                </div>
+            </div>
+            <div class="tree-units" id="treeUnits"></div>
+        </div>
+
+        <div class="lesson-container" id="lessonContainer">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="progress-label" id="progressLabel">0 / 10</div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-container" id="questionContainer"></div>
+                <div class="feedback" id="feedback" aria-live="polite" role="status"></div>
+                <div class="btn-container">
+                    <button class="btn" id="skipBtn">Skip</button>
+                    <button class="btn btn-primary" id="checkBtn">Check</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer"></div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h2 class="result-title">Lesson Complete</h2>
+                <p class="result-subtitle">Here is how you did.</p>
+                <div class="result-stats">
+                    <div class="result-stat">
+                        <div class="result-stat-value" id="correctCount">0</div>
+                        <div class="result-stat-label">Correct</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="result-stat-value" id="xpEarned">0</div>
+                        <div class="result-stat-label">XP Earned</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="continueBtn">Continue</button>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <div class="achievement-panel" id="achievementPanel" role="dialog" aria-label="Trophies"></div>
+    <div class="profile-panel" id="profilePanel" role="dialog" aria-label="User profile"></div>
+
+    <footer style="max-width:960px;margin:0 auto;padding:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted);">
+        <span>&copy; 2026 Joshua Trommel</span>
+        <a href="https://github.com/nulljosh/apps" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-secondary)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-github"></i> Source</a>
+    </footer>
+
+    <svg class="noise-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+    </svg>
+
+    <script src="js/games.js"></script>
+    <script src="js/lingo-app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('js/sw.js').catch(() => {});
+        }
+        // Fade-up observer
+        const fadeObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+    </script>
+</body>
+</html>
