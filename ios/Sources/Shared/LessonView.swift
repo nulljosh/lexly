@@ -27,7 +27,7 @@ struct LessonView: View {
                                 Spacer()
                             }
                             .padding()
-                            .background(selected == choice ? Color.accentColor.opacity(0.2) : Color(.secondarySystemBackground))
+                            .background(selected == choice ? Color.accentColor.opacity(0.2) : Color.gray.opacity(0.15))
                             .cornerRadius(8)
                         }
                         .buttonStyle(.plain)
