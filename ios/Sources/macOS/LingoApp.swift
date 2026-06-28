@@ -7,6 +7,7 @@ struct LingoApp: App {
     var body: some Scene {
         WindowGroup {
             CatalogView(store: store)
+                .tint(Color(hex: "5B9BD5"))
         }
         .windowResizability(.contentSize)
     }

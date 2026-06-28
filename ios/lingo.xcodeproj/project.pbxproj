@@ -19,6 +19,7 @@
 		13DBA14E7DBBD40A04EA7AFE /* cpp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BE666DF95E425B711E90081 /* cpp.json */; };
 		1891E219C6A89705EE258AB2 /* python.json in Resources */ = {isa = PBXBuildFile; fileRef = 2558463843F88D615C200354 /* python.json */; };
 		247FA54CF79E95F1B6554112 /* logic.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBADCF9593A6188D62C99B7 /* logic.json */; };
+		25AE68830FA308BB7068A16E /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */; };
 		25D90218F50C49242402AF5E /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED52EC4C599FB4C93990AF /* LessonView.swift */; };
 		28972A2E39E0A81A6848D546 /* LingoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48042F3BA345F64023502DB5 /* LingoApp.swift */; };
 		29D0DBED28E100527457F052 /* hindi.json in Resources */ = {isa = PBXBuildFile; fileRef = BF9D238688612B66E23AD263 /* hindi.json */; };
@@ -85,6 +86,7 @@
 		D1704234CB203107E2EAF036 /* trigonometry.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0F8517A7ABB25B93AC01E7 /* trigonometry.json */; };
 		D3461DD54E4BB706279CD3B8 /* chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = 1298E370FBBBFAA5DE8131CB /* chinese.json */; };
 		D6090057FCD71A991D157BBD /* LingoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41722A7250A176A189B216F /* LingoApp.swift */; };
+		DAA555E8C1D5E9339DACD2E6 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */; };
 		DAAED67B144713AEF10BE165 /* geometry.json in Resources */ = {isa = PBXBuildFile; fileRef = 78329C083F6292E361208131 /* geometry.json */; };
 		DBF52E22BE2DCA6FBCD8C923 /* japanese.json in Resources */ = {isa = PBXBuildFile; fileRef = 957B0D682A78332B3AF55252 /* japanese.json */; };
 		DC39534230732711541B4746 /* algebra.json in Resources */ = {isa = PBXBuildFile; fileRef = 698847033238209C4252DDE8 /* algebra.json */; };
@@ -142,6 +144,7 @@
 		6DC5E8D574577465E5EC8F51 /* dutch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dutch.json; sourceTree = "<group>"; };
 		6E953B6B90C849ECB1D806FF /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
 		721FEFF6757512300B8F10FB /* spanish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spanish.json; sourceTree = "<group>"; };
+		72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		75FB08DD208F2C524B289E9F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		78329C083F6292E361208131 /* geometry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = geometry.json; sourceTree = "<group>"; };
 		817171023F298347664538D7 /* french.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = french.json; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				99103E67EEEBFAD239C1DFB7 /* CatalogView.swift */,
+				72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */,
 				BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */,
 				38ED52EC4C599FB4C93990AF /* LessonView.swift */,
 				3F214D0F0810B9E696D99BDC /* Models.swift */,
@@ -529,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F760457EFB5523B12867ECCF /* CatalogView.swift in Sources */,
+				DAA555E8C1D5E9339DACD2E6 /* Color+Hex.swift in Sources */,
 				E0BF49FF4C5ACDC5A2F62C83 /* ContentStore.swift in Sources */,
 				25D90218F50C49242402AF5E /* LessonView.swift in Sources */,
 				28972A2E39E0A81A6848D546 /* LingoApp.swift in Sources */,
@@ -542,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDF0E7D244D43765DF0B1A1 /* CatalogView.swift in Sources */,
+				25AE68830FA308BB7068A16E /* Color+Hex.swift in Sources */,
 				6E5C05E5064707F08881D627 /* ContentStore.swift in Sources */,
 				E723A76D805E8D23CF4E958A /* LessonView.swift in Sources */,
 				D6090057FCD71A991D157BBD /* LingoApp.swift in Sources */,

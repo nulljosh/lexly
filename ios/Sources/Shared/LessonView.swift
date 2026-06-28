@@ -7,62 +7,73 @@ struct LessonView: View {
     @State private var index = 0
     @State private var input = ""
     @State private var selected: String?
-    @State private var feedback: String?
+    @State private var feedback: FeedbackState?
+    @State private var exerciseKey = UUID()
+    @State private var pressedChoice: String?
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            if index < lesson.exercises.count {
-                let exercise = lesson.exercises[index]
-                Text(exercise.question)
-                    .font(.title3.bold())
+        ZStack(alignment: .bottom) {
+            VStack(alignment: .leading, spacing: 16) {
+                if index < lesson.exercises.count {
+                    let exercise = lesson.exercises[index]
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(exercise.question).font(.title3.bold())
 
-                if let choices = exercise.choices {
-                    ForEach(choices, id: \.self) { choice in
-                        Button {
-                            selected = choice
-                        } label: {
-                            HStack {
-                                Text(choice)
-                                Spacer()
+                        if let choices = exercise.choices {
+                            ForEach(choices, id: \.self) { choice in
+                                ChoiceButton(
+                                    choice: choice,
+                                    isSelected: selected == choice,
+                                    isPressed: pressedChoice == choice
+                                ) {
+                                    guard feedback == nil else { return }
+                                    pressedChoice = choice
+                                    withAnimation(.spring(response: 0.25, dampingFraction: 0.6)) {
+                                        selected = choice
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { pressedChoice = nil }
+                                }
                             }
-                            .padding()
-                            .background(selected == choice ? Color.accentColor.opacity(0.2) : Color.gray.opacity(0.15))
-                            .cornerRadius(8)
+                        } else {
+                            TextField("Your answer", text: $input)
+                                .textFieldStyle(.roundedBorder)
                         }
-                        .buttonStyle(.plain)
+
+                        Button(feedback == nil ? "Check" : "Continue") {
+                            feedback == nil ? check(exercise) : advance()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(feedback == nil && selected == nil && input.isEmpty)
                     }
+                    .id(exerciseKey)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
                 } else {
-                    TextField("Your answer", text: $input)
-                        .textFieldStyle(.roundedBorder)
-                }
-
-                if let feedback {
-                    Text(feedback)
-                        .foregroundStyle(feedback.hasPrefix("Correct") ? .green : .red)
-                }
-
-                Button(feedback == nil ? "Check" : "Continue") {
-                    if feedback == nil {
-                        check(exercise)
-                    } else {
-                        advance()
+                    VStack(spacing: 12) {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 64))
+                            .foregroundStyle(Color(hex: "5B9BD5"))
+                        Text("Lesson complete!").font(.title.bold())
+                        Button("Done") { store.completeLesson(lesson.id); dismiss() }
+                            .buttonStyle(.borderedProminent)
                     }
+                    .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.borderedProminent)
-            } else {
-                Text("Lesson complete.")
-                    .font(.title.bold())
-                Button("Done") {
-                    store.completeLesson(lesson.id)
-                    dismiss()
-                }
-                .buttonStyle(.borderedProminent)
+                Spacer()
             }
-            Spacer()
+            .padding()
+
+            if let fb = feedback {
+                FeedbackBanner(state: fb)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
         }
-        .padding()
         .navigationTitle(lesson.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: feedback)
     }
 
     private func check(_ exercise: Exercise) {
@@ -70,13 +81,60 @@ struct LessonView: View {
         let correct = given.replacingOccurrences(of: " ", with: "").lowercased()
             == exercise.answer.replacingOccurrences(of: " ", with: "").lowercased()
         store.recordAnswer(correct: correct, exerciseId: exercise.id, lessonId: lesson.id)
-        feedback = correct ? "Correct." : "Incorrect. Answer: \(exercise.answer)"
+        withAnimation { feedback = correct ? .correct : .incorrect(exercise.answer) }
     }
 
     private func advance() {
-        index += 1
-        input = ""
-        selected = nil
-        feedback = nil
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+            feedback = nil; exerciseKey = UUID(); index += 1; input = ""; selected = nil
+        }
+    }
+}
+
+private struct ChoiceButton: View {
+    let choice: String
+    let isSelected: Bool
+    let isPressed: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack { Text(choice); Spacer() }
+                .padding()
+                .background(isSelected ? Color(hex: "5B9BD5").opacity(0.15) : Color(.systemGray6))
+                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .stroke(isSelected ? Color(hex: "5B9BD5") : .clear, lineWidth: 2))
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .scaleEffect(isPressed ? 0.96 : 1.0)
+        .animation(.spring(response: 0.2, dampingFraction: 0.6), value: isPressed)
+    }
+}
+
+enum FeedbackState: Equatable {
+    case correct
+    case incorrect(String)
+}
+
+private struct FeedbackBanner: View {
+    let state: FeedbackState
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: state == .correct ? "checkmark.circle.fill" : "xmark.circle.fill")
+                .font(.title2)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(state == .correct ? "Correct!" : "Incorrect").font(.headline)
+                if case .incorrect(let answer) = state {
+                    Text("Answer: \(answer)").font(.subheadline)
+                }
+            }
+            Spacer()
+        }
+        .foregroundStyle(state == .correct ? Color(hex: "2d7a50") : Color(hex: "c44040"))
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
+            .fill(state == .correct ? Color(hex: "f0faf4") : Color(hex: "faf0f0")))
+        .padding()
     }
 }
