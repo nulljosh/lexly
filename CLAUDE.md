@@ -28,6 +28,9 @@ Lingo — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 - [x] iOS + macOS apps both exist and ship (ios/Sources/Shared is cross-platform; iOS/macOS dirs just hold each app's entry point + Info.plist)
 - [x] App Store: registered as "LingoAce" (iOS, app 6783501611) and "LingoAce Mac" (macOS, app 6783501927) — "Lingo", "LingoPlay", "LingoLeap", "LingoQuest", "LingoStar" all taken on the App Store
 - [x] School content (anatomy12, precalc11, precalc12) split into its own `school` category in catalog.json, not buried in math/science
+- [x] SwiftUI polish: icon chips, spring animations, feedback banner, unit progress fractions (2026-06-28)
+- [ ] Upload screenshots to ASC (files at screenshots/6.7/ and 6.5/) then submit both apps
+- [ ] macOS screenshot still needed before submission
 - [ ] Run `/mint` on it once it stands up
 
 ## Testing
