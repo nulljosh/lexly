@@ -2,7 +2,7 @@
 
 # Lingo
 
-![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flingo-black?logo=github)](https://github.com/nulljosh/lingo)
+![version](https://img.shields.io/badge/version-1.1.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flingo-black?logo=github)](https://github.com/nulljosh/lingo)
 
 A gamified language and skill learning app. Web + native iOS/macOS (LingoAce / LingoAce Mac).
 
@@ -24,7 +24,8 @@ Live at [lingo.heyitsmejosh.com](https://lingo.heyitsmejosh.com).
 - Spaced repetition review, XP, streaks, hearts, achievements
 - Speech recognition for language courses
 - Native iOS/macOS: SF Symbol icon chips, spring animations, per-unit progress, animated feedback
-- Local profile only — no backend, no account required
+- **Accounts** — email/password auth via Supabase, progress syncs across all platforms
+- Masterclass (BC curriculum) unlocks automatically after sign-in
 - Light/dark theme, PWA-ready
 
 ## Structure

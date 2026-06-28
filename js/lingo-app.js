@@ -54,6 +54,13 @@ const PROFILE_KEY = 'lingo.profile';
 const PROGRESS_KEY = 'lingo.progress';
 const SRS_KEY = 'lingo.srs';
 
+function setAuthCookie() {
+    document.cookie = 'lingo_authed=1; path=/; max-age=' + (60 * 60 * 24 * 30) + '; SameSite=Strict';
+}
+function clearAuthCookie() {
+    document.cookie = 'lingo_authed=; path=/; max-age=0';
+}
+
 const SUPABASE_URL = 'https://tjsxsqlxjmanwvmywwvw.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqc3hzcWx4am1hbnd2bXl3d3Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0OTc0MDEsImV4cCI6MjA4NjA3MzQwMX0.LphLfho3wdQC20MhtcnBpzQUNuBoTOobrugQbNGxc68';
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
@@ -158,6 +165,7 @@ async function initializeApp() {
     const { data: { session } } = await sb.auth.getSession();
     if (session) {
         currentUser = session.user;
+        setAuthCookie();
         await hydrateFromDb(session.user.id);
     }
     localProfile = loadProfile();
@@ -572,6 +580,7 @@ function renderProfilePanel() {
     });
     document.getElementById('signOutBtn').addEventListener('click', async () => {
         await sb.auth.signOut();
+        clearAuthCookie();
         currentUser = null;
         localProfile = null;
         localStorage.removeItem(PROFILE_KEY);
@@ -649,6 +658,7 @@ function setupEventListeners() {
         const { data, error } = await sb.auth.signUp({ email, password });
         if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
         currentUser = data.user;
+        setAuthCookie();
         const profile = { display_name: name, avatar_id: selectedAuthAvatar };
         await sb.from('lingo_profiles').upsert({ id: currentUser.id, ...profile });
         await sb.from('lingo_progress').upsert({ id: currentUser.id, ...DEFAULT_PROGRESS });
@@ -670,6 +680,7 @@ function setupEventListeners() {
         const { data, error } = await sb.auth.signInWithPassword({ email, password });
         if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
         currentUser = data.user;
+        setAuthCookie();
         await hydrateFromDb(currentUser.id);
         localProfile = loadProfile();
         syncGameStateFromProgress();
