@@ -627,9 +627,13 @@ function setupEventListeners() {
         if (localProfile) {
             renderProfilePanel();
         } else {
-            document.getElementById('authShell').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setTimeout(() => document.getElementById('signupName')?.focus(), 300);
+            const dialog = document.getElementById('authShell');
+            dialog.showModal();
+            setTimeout(() => document.getElementById('signinEmail')?.focus(), 100);
         }
+    });
+    document.getElementById('authCloseBtn').addEventListener('click', () => {
+        document.getElementById('authShell').close();
     });
 
     // Auth tab switching
@@ -692,10 +696,8 @@ function setupEventListeners() {
 }
 
 function updateShellForAuth() {
-    const authShell = document.getElementById('authShell');
-    authShell.style.display = localProfile ? 'none' : 'block';
-    if (!localProfile) authShell.classList.add('visible');
-    document.getElementById('appShell').style.display = localProfile ? 'block' : 'none';
+    const dialog = document.getElementById('authShell');
+    if (localProfile && dialog.open) dialog.close();
 }
 
 function getAvatarById(id) {
@@ -957,7 +959,7 @@ function renderSubjects(category) {
 
 function selectSubject(card) {
     if (!localProfile) {
-        document.getElementById('authShell').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('authShell').showModal();
         return;
     }
     document.querySelectorAll('.subject-card').forEach((subjectCard) => subjectCard.classList.remove('selected'));

@@ -1197,18 +1197,43 @@ body {
 
 /* ── Auth / Landing screen ── */
 
-.auth-shell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-    padding: 2rem 0;
+dialog.auth-shell {
+    border: none;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    max-width: 480px;
+    width: 90%;
+    background: var(--surface);
+    color: var(--text-primary);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-height: 90vh;
+    overflow-y: auto;
 }
+dialog.auth-shell::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+.auth-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    line-height: 1;
+    padding: 0.25rem;
+}
+.auth-close:hover { color: var(--text-primary); }
 
 .auth-card {
-    max-width: 440px;
+    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
+    position: relative;
 }
 
 .auth-copy {
