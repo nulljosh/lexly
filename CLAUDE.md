@@ -21,10 +21,12 @@ Lingo — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 - Accessibility: maintain `aria-label`s and skip-link already present in `index.html` when editing the header/nav
 
 ## Roadmap
-- [ ] Confirm whether the app still exists/is current (recovered 2026-06-21 after accidental deletion)
+- [x] Confirm whether the app still exists/is current (recovered 2026-06-21 after accidental deletion)
 - [ ] Build out: language quizzes + law quizzes, plus macOS/Windows "how to use computers" quizzes
+- [ ] Screenshots for both iOS and macOS App Store listings (currently blocking submission)
+- [ ] Submit both LingoAce (iOS) and LingoAce Mac (macOS) once screenshots are ready
 - [x] iOS + macOS apps both exist and ship (ios/Sources/Shared is cross-platform; iOS/macOS dirs just hold each app's entry point + Info.plist)
-- [x] App Store: submitted as "LingoBox" (iOS, app 6783501611) and "LingoBox Mac" (macOS, app 6783501927) — "Lingo" name was already taken on the App Store
+- [x] App Store: registered as "LingoAce" (iOS, app 6783501611) and "LingoAce Mac" (macOS, app 6783501927) — "Lingo", "LingoPlay", "LingoLeap", "LingoQuest", "LingoStar" all taken on the App Store
 - [x] School content (anatomy12, precalc11, precalc12) split into its own `school` category in catalog.json, not buried in math/science
 - [ ] Run `/mint` on it once it stands up
 

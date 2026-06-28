@@ -549,6 +549,7 @@ function setupEventListeners() {
             renderProfilePanel();
         } else {
             document.getElementById('authShell').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => document.getElementById('localDisplayName')?.focus(), 300);
         }
     });
 
