@@ -1248,6 +1248,30 @@ body {
     width: 100%;
 }
 
+.auth-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.auth-tab.active {
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 600;
+}
+
 .auth-form {
     display: flex;
     flex-direction: column;

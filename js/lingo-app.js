@@ -54,6 +54,12 @@ const PROFILE_KEY = 'lingo.profile';
 const PROGRESS_KEY = 'lingo.progress';
 const SRS_KEY = 'lingo.srs';
 
+const SUPABASE_URL = 'https://tjsxsqlxjmanwvmywwvw.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqc3hzcWx4am1hbnd2bXl3d3Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0OTc0MDEsImV4cCI6MjA4NjA3MzQwMX0.LphLfho3wdQC20MhtcnBpzQUNuBoTOobrugQbNGxc68';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+let currentUser = null;
+
 const DEFAULT_PROGRESS = {
     xp: 0,
     streak: 0,
@@ -148,7 +154,12 @@ async function loadCourse(subjectId) {
     return flat;
 }
 
-function initializeApp() {
+async function initializeApp() {
+    const { data: { session } } = await sb.auth.getSession();
+    if (session) {
+        currentUser = session.user;
+        await hydrateFromDb(session.user.id);
+    }
     localProfile = loadProfile();
     if (localProfile) {
         syncGameStateFromProgress();
@@ -159,6 +170,26 @@ function initializeApp() {
     renderSubjects(gameState.selectedCategory);
 }
 
+async function hydrateFromDb(uid) {
+    const [{ data: prof }, { data: prog }] = await Promise.all([
+        sb.from('lingo_profiles').select('*').eq('id', uid).maybeSingle(),
+        sb.from('lingo_progress').select('*').eq('id', uid).maybeSingle(),
+    ]);
+    if (prof) {
+        localStorage.setItem(PROFILE_KEY, JSON.stringify({ display_name: prof.display_name, avatar_id: prof.avatar_id }));
+    }
+    if (prog) {
+        localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+            xp: prog.xp, streak: prog.streak, hearts: prog.hearts,
+            completed_subjects: prog.completed_subjects,
+            lessons_completed: prog.lessons_completed,
+            trophy_ids: prog.trophy_ids,
+            last_played: prog.last_played || '',
+        }));
+        if (prog.srs) localStorage.setItem(SRS_KEY, JSON.stringify(prog.srs));
+    }
+}
+
 function loadProfile() {
     const raw = localStorage.getItem(PROFILE_KEY);
     if (!raw) return null;
@@ -167,6 +198,9 @@ function loadProfile() {
 
 function saveProfile(profile) {
     localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+    if (currentUser) {
+        sb.from('lingo_profiles').upsert({ id: currentUser.id, ...profile }).then(() => {});
+    }
 }
 
 function loadProgress() {
@@ -177,7 +211,20 @@ function loadProgress() {
 
 function saveProgress(patch) {
     const current = loadProgress();
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify({ ...current, ...patch }));
+    const next = { ...current, ...patch };
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(next));
+    if (currentUser) {
+        sb.from('lingo_progress').upsert({
+            id: currentUser.id,
+            xp: next.xp, streak: next.streak, hearts: next.hearts,
+            completed_subjects: next.completed_subjects,
+            lessons_completed: next.lessons_completed,
+            trophy_ids: next.trophy_ids,
+            last_played: next.last_played || null,
+            srs: getSrsData(),
+            updated_at: new Date().toISOString(),
+        }).then(() => {});
+    }
 }
 
 function syncGameStateFromProgress() {
@@ -409,7 +456,7 @@ function renderProfilePanel() {
     summaryName.textContent = localProfile.display_name;
     const summaryMeta = document.createElement('div');
     summaryMeta.className = 'profile-summary-meta';
-    summaryMeta.textContent = 'Local profile';
+    summaryMeta.textContent = currentUser ? currentUser.email : 'Local profile';
     summaryInfo.appendChild(summaryName);
     summaryInfo.appendChild(summaryMeta);
     summary.appendChild(avatarDiv);
@@ -479,8 +526,15 @@ function renderProfilePanel() {
     resetBtn.type = 'button';
     resetBtn.id = 'resetProfileBtn';
     resetBtn.textContent = 'Reset progress';
+    const signOutBtn = document.createElement('button');
+    signOutBtn.className = 'btn';
+    signOutBtn.type = 'button';
+    signOutBtn.id = 'signOutBtn';
+    signOutBtn.textContent = 'Sign out';
+    signOutBtn.style.display = currentUser ? '' : 'none';
     actions.appendChild(saveBtn);
     actions.appendChild(resetBtn);
+    actions.appendChild(signOutBtn);
     form.appendChild(actions);
 
     const feedbackDiv = document.createElement('div');
@@ -500,12 +554,13 @@ function renderProfilePanel() {
     trapFocus(panel);
 
     document.getElementById('closeProfileBtn').addEventListener('click', () => panel.classList.remove('active'));
-    document.getElementById('resetProfileBtn').addEventListener('click', () => {
+    document.getElementById('resetProfileBtn').addEventListener('click', async () => {
         if (confirm('Reset all progress? This cannot be undone.')) {
             localStorage.removeItem(PROGRESS_KEY);
             localStorage.removeItem(SRS_KEY);
-            localProfile = null;
-            localStorage.removeItem(PROFILE_KEY);
+            if (currentUser) {
+                await sb.from('lingo_progress').upsert({ id: currentUser.id, ...DEFAULT_PROGRESS, srs: {} });
+            }
             gameState.xp = 0;
             gameState.streak = 0;
             gameState.hearts = 5;
@@ -513,8 +568,23 @@ function renderProfilePanel() {
             updateHeaderProfile();
             updateStats();
             panel.classList.remove('active');
-            updateShellForAuth();
         }
+    });
+    document.getElementById('signOutBtn').addEventListener('click', async () => {
+        await sb.auth.signOut();
+        currentUser = null;
+        localProfile = null;
+        localStorage.removeItem(PROFILE_KEY);
+        localStorage.removeItem(PROGRESS_KEY);
+        localStorage.removeItem(SRS_KEY);
+        gameState.xp = 0;
+        gameState.streak = 0;
+        gameState.hearts = 5;
+        gameState.completedSubjects = [];
+        updateHeaderProfile();
+        updateStats();
+        panel.classList.remove('active');
+        updateShellForAuth();
     });
     document.getElementById('profileForm').addEventListener('submit', (event) => {
         event.preventDefault();
@@ -549,16 +619,60 @@ function setupEventListeners() {
             renderProfilePanel();
         } else {
             document.getElementById('authShell').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setTimeout(() => document.getElementById('localDisplayName')?.focus(), 300);
+            setTimeout(() => document.getElementById('signupName')?.focus(), 300);
         }
     });
 
-    document.getElementById('localProfileForm').addEventListener('submit', (event) => {
+    // Auth tab switching
+    document.getElementById('tabSignup').addEventListener('click', () => {
+        document.getElementById('formSignup').style.display = '';
+        document.getElementById('formSignin').style.display = 'none';
+        document.getElementById('tabSignup').classList.add('active');
+        document.getElementById('tabSignin').classList.remove('active');
+    });
+    document.getElementById('tabSignin').addEventListener('click', () => {
+        document.getElementById('formSignin').style.display = '';
+        document.getElementById('formSignup').style.display = 'none';
+        document.getElementById('tabSignin').classList.add('active');
+        document.getElementById('tabSignup').classList.remove('active');
+    });
+
+    document.getElementById('formSignup').addEventListener('submit', async (event) => {
         event.preventDefault();
-        const name = document.getElementById('localDisplayName').value.trim();
-        if (!name) return;
-        localProfile = { display_name: name, avatar_id: selectedAuthAvatar };
-        saveProfile(localProfile);
+        const feedback = document.getElementById('authFeedback');
+        const name = document.getElementById('signupName').value.trim();
+        const email = document.getElementById('signupEmail').value.trim();
+        const password = document.getElementById('signupPassword').value;
+        if (!name || !email || !password) return;
+        feedback.textContent = 'Creating account…';
+        feedback.className = 'auth-feedback';
+        const { data, error } = await sb.auth.signUp({ email, password });
+        if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
+        currentUser = data.user;
+        const profile = { display_name: name, avatar_id: selectedAuthAvatar };
+        await sb.from('lingo_profiles').upsert({ id: currentUser.id, ...profile });
+        await sb.from('lingo_progress').upsert({ id: currentUser.id, ...DEFAULT_PROGRESS });
+        localProfile = profile;
+        saveProfile(profile);
+        updateHeaderProfile();
+        updateStats();
+        updateShellForAuth();
+        renderSubjects(gameState.selectedCategory);
+    });
+
+    document.getElementById('formSignin').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const feedback = document.getElementById('authFeedback');
+        const email = document.getElementById('signinEmail').value.trim();
+        const password = document.getElementById('signinPassword').value;
+        feedback.textContent = 'Signing in…';
+        feedback.className = 'auth-feedback';
+        const { data, error } = await sb.auth.signInWithPassword({ email, password });
+        if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
+        currentUser = data.user;
+        await hydrateFromDb(currentUser.id);
+        localProfile = loadProfile();
+        syncGameStateFromProgress();
         updateHeaderProfile();
         updateStats();
         updateShellForAuth();
