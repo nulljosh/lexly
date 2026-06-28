@@ -24,21 +24,21 @@ final class AuthStore {
 
     func signUp(email: String, password: String, displayName: String, avatarId: String) async throws {
         let result = try await supabase.auth.signUp(email: email, password: password)
-        session = result.session
-        guard let uid = result.user.id.uuidString as String? else { return }
+        session = try? await supabase.auth.session
+        let uid = result.user.id.uuidString
         try await supabase.from("lingo_profiles")
-            .upsert(["id": uid, "display_name": displayName, "avatar_id": avatarId])
+            .upsert(["id": AnyJSON.string(uid), "display_name": AnyJSON.string(displayName), "avatar_id": AnyJSON.string(avatarId)])
             .execute()
         try await supabase.from("lingo_progress")
-            .upsert(["id": uid, "xp": 0, "streak": 0, "hearts": 5,
-                     "completed_subjects": [], "lessons_completed": [:],
-                     "trophy_ids": [], "srs": [:]] as [String: AnyJSON])
+            .upsert(["id": AnyJSON.string(uid), "xp": AnyJSON.integer(0), "streak": AnyJSON.integer(0), "hearts": AnyJSON.integer(5),
+                     "completed_subjects": AnyJSON.array([]), "lessons_completed": AnyJSON.object([:]),
+                     "trophy_ids": AnyJSON.array([]), "srs": AnyJSON.object([:])])
             .execute()
     }
 
     func signIn(email: String, password: String) async throws {
-        let result = try await supabase.auth.signIn(email: email, password: password)
-        session = result.session
+        try await supabase.auth.signIn(email: email, password: password)
+        session = try? await supabase.auth.session
     }
 
     func signOut() async throws {
