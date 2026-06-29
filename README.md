@@ -62,3 +62,10 @@ cd ios && xcodegen generate
 ```bash
 node tools/validate-catalog.js
 ```
+
+## Roadmap
+
+**App Store — icons (2026-06-28)**
+- [x] App icon assets verified clean (1024 has no alpha) — iOS and macOS
+- [ ] **Ship fresh iOS + macOS builds** — ASC still shows the old mis-scaled icon because no new build was uploaded. `cd ios && xcodegen generate`, then archive + upload (`ship` / asc-xcode-build), wait ~5–30 min for processing.
+- [ ] Pick a mononame (current App Store name LingoAce; Lingo/LingoPlay/LingoLeap/LingoQuest/LingoStar taken) — cascades into bundle IDs + ASC records, do as its own task
