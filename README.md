@@ -1,4 +1,4 @@
-<img src="assets/icon.svg" width="80">
+<img src="assets/icon.svg" width="80" style="border-radius:18px">
 
 # Lingo
 
