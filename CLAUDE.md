@@ -4,14 +4,14 @@ Guidance for working in this repo.
 
 ## What this is
 
-Lingo — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no bundler, no build step. Live at lingo.heyitsmejosh.com.
+Parlay — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no bundler, no build step. Live at parlay.heyitsmejosh.com.
 
 ## Architecture
 
 - `index.html` — single-page app shell, all screens are toggled divs
-- `js/lingo-app.js` — app state, profile/auth (local only — no backend, profile is stored client-side), lesson loading from `content/catalog.json`
+- `js/parlay-app.js` — app state, profile/auth (local only — no backend, profile is stored client-side), lesson loading from `content/catalog.json`
 - `js/games.js` — individual lesson/game-type rendering and scoring logic
-- `css/lingo.css` — all styles, includes light/dark theme via `data-theme` attribute on `<html>`
+- `css/parlay.css` — all styles, includes light/dark theme via `data-theme` attribute on `<html>`
 
 ## Conventions
 
@@ -24,9 +24,9 @@ Lingo — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 - [x] Confirm whether the app still exists/is current (recovered 2026-06-21 after accidental deletion)
 - [ ] Build out: language quizzes + law quizzes, plus macOS/Windows "how to use computers" quizzes
 - [ ] Screenshots for both iOS and macOS App Store listings (currently blocking submission)
-- [ ] Submit both LingoAce (iOS) and LingoAce Mac (macOS) once screenshots are ready
+- [ ] Submit both Parlay (iOS) and Parlay Mac (macOS) once screenshots are ready
 - [x] iOS + macOS apps both exist and ship (ios/Sources/Shared is cross-platform; iOS/macOS dirs just hold each app's entry point + Info.plist)
-- [x] App Store: registered as "LingoAce" (iOS, app 6783501611) and "LingoAce Mac" (macOS, app 6783501927) — "Lingo", "LingoPlay", "LingoLeap", "LingoQuest", "LingoStar" all taken on the App Store
+- [x] App Store: registered as "Parlay" (iOS, app 6783501611) and "Parlay Mac" (macOS, app 6783501927) — "Parlay", "ParlayPlay", "ParlayLeap", "ParlayQuest", "ParlayStar" all taken on the App Store
 - [x] School content (anatomy12, precalc11, precalc12) split into its own `school` category in catalog.json, not buried in math/science
 - [x] SwiftUI polish: icon chips, spring animations, feedback banner, unit progress fractions (2026-06-28)
 - [ ] Upload screenshots to ASC (files at screenshots/6.7/ and 6.5/) then submit both apps
