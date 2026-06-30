@@ -659,7 +659,7 @@ function setupEventListeners() {
         if (!name || !email || !password) return;
         feedback.textContent = 'Creating account…';
         feedback.className = 'auth-feedback';
-        const { data, error } = await sb.auth.signUp({ email, password });
+        const { data, error } = await sb.auth.signUp({ email, password, options: { emailRedirectTo: window.location.origin } });
         if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
         currentUser = data.user;
         setAuthCookie();
