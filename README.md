@@ -50,7 +50,7 @@ npx serve .
 
 ```bash
 cd ios && xcodegen generate
-# archive Lingo-iOS or Lingo-macOS, upload via asc-xcode-build skill
+# archive Lexly-iOS or Lexly-macOS, upload via asc-xcode-build skill
 ```
 
 ## Testing
