@@ -48,6 +48,7 @@
 		4ECF489A147474F5AC270527 /* german.json in Resources */ = {isa = PBXBuildFile; fileRef = 3701094CFDB3AAD051661459 /* german.json */; };
 		4F49103CB511C5FEE8B6672A /* arithmetic.json in Resources */ = {isa = PBXBuildFile; fileRef = 31395F36291D691B8F443E99 /* arithmetic.json */; };
 		50A073AFAEE88E9E2EAC1BEB /* spanish.json in Resources */ = {isa = PBXBuildFile; fileRef = 721FEFF6757512300B8F10FB /* spanish.json */; };
+		5228ED56641373D9692328C8 /* WhatsNewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */; };
 		533DE048D1F574A4C8CEA9B4 /* geography.json in Resources */ = {isa = PBXBuildFile; fileRef = 36BADF1122486F4DB65F1F78 /* geography.json */; };
 		53A1D6C9199FB8804F8758E6 /* sql.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EF34A271C6CF10F334D884F /* sql.json */; };
 		551561690DB355F67B368DD2 /* chemistry.json in Resources */ = {isa = PBXBuildFile; fileRef = B5B4FAB3C10777FC492A17C8 /* chemistry.json */; };
@@ -180,6 +181,7 @@
 		BF9D238688612B66E23AD263 /* hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hindi.json; sourceTree = "<group>"; };
 		BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStore.swift; sourceTree = "<group>"; };
 		C1328B3C2F4DE1C280B2CFA8 /* korean.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = korean.json; sourceTree = "<group>"; };
+		CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewSheet.swift; sourceTree = "<group>"; };
 		CF8B7548CA86AA6AD76DEEDB /* arabic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = arabic.json; sourceTree = "<group>"; };
 		D41722A7250A176A189B216F /* LingoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoApp.swift; sourceTree = "<group>"; };
 		D983068D2FA587BBD5F4FA81 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				5879FA1B9F4064EFBFBE7F15 /* Info.plist */,
 				48042F3BA345F64023502DB5 /* LingoApp.swift */,
 				8554AEA87307E9D90E1008A7 /* PrivacyInfo.xcprivacy */,
+				CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */,
 			);
 			name = iOS;
 			path = Sources/iOS;
@@ -577,6 +580,7 @@
 				28972A2E39E0A81A6848D546 /* LingoApp.swift in Sources */,
 				597CA4E3D0C3A5A35B6726C4 /* Models.swift in Sources */,
 				E3D69BA40AB7D56C296B68CA /* UnitsView.swift in Sources */,
+				5228ED56641373D9692328C8 /* WhatsNewSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +664,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QMM486NPYC;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -718,7 +722,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QMM486NPYC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

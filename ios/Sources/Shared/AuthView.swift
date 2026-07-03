@@ -13,7 +13,7 @@ struct AuthView: View {
 
     var body: some View {
         VStack(spacing: 24) {
-            Text("LingoAce").font(.largeTitle.bold())
+            Text("Lexly").font(.largeTitle.bold())
             Text("Learn anything.").foregroundStyle(.secondary)
 
             Picker("Mode", selection: $mode) {

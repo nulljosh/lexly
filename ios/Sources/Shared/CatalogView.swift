@@ -24,7 +24,7 @@ struct CatalogView: View {
                     Text("Couldn't load catalog.")
                 }
             }
-            .navigationTitle("LingoAce")
+            .navigationTitle("Lexly")
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button("Sign Out") {
