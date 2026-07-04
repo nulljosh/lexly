@@ -1014,13 +1014,23 @@ function renderSubjects(category) {
             badge.textContent = dueCount + ' due';
             card.appendChild(badge);
         }
-        card.addEventListener('click', () => selectSubject(card));
-        card.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                selectSubject(card);
-            }
-        });
+        if (subject.url) {
+            card.addEventListener('click', () => { window.location.href = subject.url; });
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    window.location.href = subject.url;
+                }
+            });
+        } else {
+            card.addEventListener('click', () => selectSubject(card));
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    selectSubject(card);
+                }
+            });
+        }
         grid.appendChild(card);
     });
 }

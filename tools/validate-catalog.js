@@ -23,6 +23,10 @@ for (const [catId, category] of Object.entries(catalog.categories)) {
   for (const subject of category.subjects || []) {
     check(typeof subject.id === 'string', `${catId}: subject missing id`);
     check(typeof subject.name === 'string', `${catId}/${subject.id}: missing name`);
+    if (subject.url) {
+      check(fs.existsSync(path.join(root, subject.url)), `${catId}/${subject.id}: url target not found at ${subject.url}`);
+      continue;
+    }
     check(typeof subject.packPath === 'string', `${catId}/${subject.id}: missing packPath`);
     const packFile = path.join(root, subject.packPath);
     if (!fs.existsSync(packFile)) {
