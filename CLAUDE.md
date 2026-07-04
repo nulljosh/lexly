@@ -21,15 +21,8 @@ Lexly — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 - Accessibility: maintain `aria-label`s and skip-link already present in `index.html` when editing the header/nav
 
 ## Roadmap
-- [x] School content (precalc11, precalc12, anatomy12, AP Bio 12) in `school` category
-- [x] SwiftUI polish: icon chips, spring animations, feedback banner, unit progress (2026-06-28)
-- [x] Dark mode card colors fixed — cards visible (2026-06-29)
-- [x] Auth modal background fixed — no longer transparent (2026-06-29)
-- [x] Signup emailRedirectTo set to window.location.origin (2026-06-29)
-- [x] Mac build version fixed: 1.1.0 / build 6 (2026-06-29)
-- [ ] Add `https://lexly.heyitsmejosh.com` to Supabase spark project redirect allow list (dashboard only)
-- [ ] Upload screenshots to ASC (files at screenshots/6.7/ and 6.5/) then submit both apps
-- [ ] macOS screenshot still needed before submission
+
+See README.md "Roadmap" section for current open items (macOS project source, ASC version bump, submission steps blocked on Apple 2FA).
 
 ## Testing
 - `node tools/validate-catalog.js` — smoke-checks catalog.json structure + every course pack referenced from it

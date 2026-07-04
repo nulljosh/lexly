@@ -58,3 +58,12 @@ cd ios && xcodegen generate
 ```bash
 node tools/validate-catalog.js
 ```
+
+## Roadmap
+
+- [ ] No `macos/` dir in this repo — the uploaded Mac builds came from elsewhere. Add a macos/ xcodegen target (mirror `ios/`) or recover the Mac project source.
+- [ ] Bump ASC version records from "1.0" to "1.1.0" to match uploaded builds, both apps.
+- [ ] Submission blocked on 2 interactive steps (need Apple web session + 2FA, can't be scripted):
+  1. `asc web apps availability create --app 6783501611 --territory ALL --apple-id trommatic@icloud.com` (and `--app 6783501927`)
+  2. Publish App Privacy in ASC for both apps
+  3. Then `asc review submit --app APP --version-id <id> --build BUILD --confirm`
