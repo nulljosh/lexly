@@ -10,6 +10,7 @@
 		01789627621AF263B1E6C6B2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F214D0F0810B9E696D99BDC /* Models.swift */; };
 		032AEBC42C7E6F3DA3A91693 /* precalc11.json in Resources */ = {isa = PBXBuildFile; fileRef = 879E14E2752370F51B709C91 /* precalc11.json */; };
 		045907B630F7999ACB5E5B8C /* korean.json in Resources */ = {isa = PBXBuildFile; fileRef = C1328B3C2F4DE1C280B2CFA8 /* korean.json */; };
+		059EC4FE2CDEBD15768E9037 /* LingoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06DDEAC9DBEEF0109B73C87D /* chess.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D1548A44AF9461019E577B /* chess.json */; };
 		0A5D3970081ED2480A4AA13D /* precalc11.json in Resources */ = {isa = PBXBuildFile; fileRef = 879E14E2752370F51B709C91 /* precalc11.json */; };
 		0BB7B0CD6F4A3CC8281854C9 /* arabic.json in Resources */ = {isa = PBXBuildFile; fileRef = CF8B7548CA86AA6AD76DEEDB /* arabic.json */; };
@@ -72,7 +73,9 @@
 		8247E9154BF512FC785F4ACD /* algebra.json in Resources */ = {isa = PBXBuildFile; fileRef = 698847033238209C4252DDE8 /* algebra.json */; };
 		83D3B93DE2F0C86834070045 /* java.json in Resources */ = {isa = PBXBuildFile; fileRef = 8907AAEC9D9D95B8AB2BC0C3 /* java.json */; };
 		83FE4BEB3BC285041939681B /* anatomy12.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF57FDC8F27D5751826EF2 /* anatomy12.json */; };
+		84A131E331C2CCFB4E50D916 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79594DE88C2126253A5FD79D /* SwiftUI.framework */; };
 		86CADF3E196A0732996BC51D /* dutch.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DC5E8D574577465E5EC8F51 /* dutch.json */; };
+		8F3318D38EC726266500BE15 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835C5E8FC11D9AD2C7BF476B /* WidgetKit.framework */; };
 		913AD7EDC1697999EF83BC9D /* italian.json in Resources */ = {isa = PBXBuildFile; fileRef = E96829EFE58B59935649CEA6 /* italian.json */; };
 		91AE638CFC27656B0F8084B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2EEE50C44A4A8A16F01FDA /* Assets.xcassets */; };
 		95E06A59222F1148E3EDCE4E /* biology.json in Resources */ = {isa = PBXBuildFile; fileRef = 82E2BFEDCA965D066CA39E04 /* biology.json */; };
@@ -109,7 +112,9 @@
 		E8D3FD83E83E3B650BEE8812 /* world_history.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E83CD684AE62F94F9439943 /* world_history.json */; };
 		E8DEFF56521D901F1FAF31BC /* russian.json in Resources */ = {isa = PBXBuildFile; fileRef = E28878C7B0B1D588D2471F69 /* russian.json */; };
 		E93AC4633CCF60CD8A7C2A42 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08DD208F2C524B289E9F /* PrivacyInfo.xcprivacy */; };
+		EF35A36622B744B3EF034DFD /* LingoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EAC69DD4E4BFD277E01680 /* LingoWidget.swift */; };
 		EFC32035248DAA79D1EC8AC5 /* go.json in Resources */ = {isa = PBXBuildFile; fileRef = EDDC45AA716BBD04CF700F92 /* go.json */; };
+		F18C0A6C1377A37894775E6C /* LingoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C559633FA5556CD67381ADE /* LingoWidgetBundle.swift */; };
 		F6897E8DA0302CF2FEF002D3 /* german.json in Resources */ = {isa = PBXBuildFile; fileRef = 3701094CFDB3AAD051661459 /* german.json */; };
 		F760457EFB5523B12867ECCF /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99103E67EEEBFAD239C1DFB7 /* CatalogView.swift */; };
 		FA146A59BECD4740462C3479 /* calculus.json in Resources */ = {isa = PBXBuildFile; fileRef = 53442AF129549F934E4477A6 /* calculus.json */; };
@@ -118,6 +123,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		91F3FAA6BBF283E4B9721BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F2560A77660B5388073E78F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3653121C21450926E1E43BF5;
+			remoteInfo = LingoWidgetExtension;
+		};
 		A86DCB672EDE27D5068E306C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F2560A77660B5388073E78F /* Project object */;
@@ -127,16 +139,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		97FA1CFDD2B9F7E5FFC1ED06 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				059EC4FE2CDEBD15768E9037 /* LingoWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0331E3C0FAC6DD186E906475 /* linear_algebra.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = linear_algebra.json; sourceTree = "<group>"; };
+		06EAC69DD4E4BFD277E01680 /* LingoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoWidget.swift; sourceTree = "<group>"; };
 		1298E370FBBBFAA5DE8131CB /* chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chinese.json; sourceTree = "<group>"; };
 		145F99C74BD922728A9B3871 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		18E4CF21151DC55C1582F3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2558463843F88D615C200354 /* python.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = python.json; sourceTree = "<group>"; };
 		31395F36291D691B8F443E99 /* arithmetic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = arithmetic.json; sourceTree = "<group>"; };
 		36BADF1122486F4DB65F1F78 /* geography.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = geography.json; sourceTree = "<group>"; };
 		3701094CFDB3AAD051661459 /* german.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = german.json; sourceTree = "<group>"; };
 		38ED52EC4C599FB4C93990AF /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		3BEF57FDC8F27D5751826EF2 /* anatomy12.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = anatomy12.json; sourceTree = "<group>"; };
+		3C559633FA5556CD67381ADE /* LingoWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoWidgetBundle.swift; sourceTree = "<group>"; };
 		3E08CADD3672CCCBFFB75423 /* precalc12.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = precalc12.json; sourceTree = "<group>"; };
 		3F214D0F0810B9E696D99BDC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4349CA379EE52052DE5210F6 /* music_theory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = music_theory.json; sourceTree = "<group>"; };
@@ -148,17 +177,22 @@
 		56A17B17BA470F4F8C7AD0B3 /* statistics.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = statistics.json; sourceTree = "<group>"; };
 		5879FA1B9F4064EFBFBE7F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E497242C06CB2BE09147F1E /* music_history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = music_history.json; sourceTree = "<group>"; };
+		62C884EB677AEBB4563179BA /* LingoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LingoWidget.entitlements; sourceTree = "<group>"; };
 		698847033238209C4252DDE8 /* algebra.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra.json; sourceTree = "<group>"; };
+		6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LingoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC5E8D574577465E5EC8F51 /* dutch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dutch.json; sourceTree = "<group>"; };
 		6E953B6B90C849ECB1D806FF /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
+		6F61B1297D4B4683A6A42DB9 /* Lingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lingo.entitlements; sourceTree = "<group>"; };
 		721FEFF6757512300B8F10FB /* spanish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spanish.json; sourceTree = "<group>"; };
 		72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		75FB08DD208F2C524B289E9F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		78329C083F6292E361208131 /* geometry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = geometry.json; sourceTree = "<group>"; };
+		79594DE88C2126253A5FD79D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		817171023F298347664538D7 /* french.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = french.json; sourceTree = "<group>"; };
 		8278ED8B373C8BD318F2AA57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D1548A44AF9461019E577B /* chess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chess.json; sourceTree = "<group>"; };
 		82E2BFEDCA965D066CA39E04 /* biology.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = biology.json; sourceTree = "<group>"; };
+		835C5E8FC11D9AD2C7BF476B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		844651E960161655EE200363 /* ContentStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStoreTests.swift; sourceTree = "<group>"; };
 		85262F07D23361702C21C7DA /* portuguese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = portuguese.json; sourceTree = "<group>"; };
 		8554AEA87307E9D90E1008A7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -194,6 +228,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C6B28CA150838A4438E1E369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3318D38EC726266500BE15 /* WidgetKit.framework in Frameworks */,
+				84A131E331C2CCFB4E50D916 /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7730263B3A3EFAAA58C22E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +272,8 @@
 				4AEC2E6F392F55CD517CCF99 /* Resources */,
 				86F9DF7A4BDF5AFA784C550F /* Shared */,
 				17C87B2087B12CD3A432A5C2 /* Tests */,
+				62943116EC56750778B4BA50 /* Widget */,
+				A2D4544F9B6639D36758D224 /* Frameworks */,
 				D8622F3E3F551CE7430FDA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -264,6 +309,18 @@
 			path = content;
 			sourceTree = "<group>";
 		};
+		62943116EC56750778B4BA50 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				18E4CF21151DC55C1582F3C6 /* Info.plist */,
+				62C884EB677AEBB4563179BA /* LingoWidget.entitlements */,
+				06EAC69DD4E4BFD277E01680 /* LingoWidget.swift */,
+				3C559633FA5556CD67381ADE /* LingoWidgetBundle.swift */,
+			);
+			name = Widget;
+			path = Sources/Widget;
+			sourceTree = "<group>";
+		};
 		86F9DF7A4BDF5AFA784C550F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,12 +337,22 @@
 			path = Sources/Shared;
 			sourceTree = "<group>";
 		};
+		A2D4544F9B6639D36758D224 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79594DE88C2126253A5FD79D /* SwiftUI.framework */,
+				835C5E8FC11D9AD2C7BF476B /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8622F3E3F551CE7430FDA09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4FA73EEEDA6CB0678990FF20 /* Lingo-iOS.app */,
 				9E6C02310119C639A0B9A691 /* Lingo-iOSTests.xctest */,
 				EAC571CBB172A60AD70C334B /* Lingo-macOS.app */,
+				6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +362,7 @@
 			children = (
 				8278ED8B373C8BD318F2AA57 /* Assets.xcassets */,
 				5879FA1B9F4064EFBFBE7F15 /* Info.plist */,
+				6F61B1297D4B4683A6A42DB9 /* Lingo.entitlements */,
 				48042F3BA345F64023502DB5 /* LingoApp.swift */,
 				8554AEA87307E9D90E1008A7 /* PrivacyInfo.xcprivacy */,
 				CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */,
@@ -360,10 +428,12 @@
 				EA0849FD6CDA3298D4BBFD4E /* Sources */,
 				B8CBB4883B3FA8064BA0FDA1 /* Resources */,
 				E7730263B3A3EFAAA58C22E2 /* Frameworks */,
+				97FA1CFDD2B9F7E5FFC1ED06 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				71C8A61A88A7570674793EF8 /* PBXTargetDependency */,
 			);
 			name = "Lingo-iOS";
 			packageProductDependencies = (
@@ -372,6 +442,24 @@
 			productName = "Lingo-iOS";
 			productReference = 4FA73EEEDA6CB0678990FF20 /* Lingo-iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3653121C21450926E1E43BF5 /* LingoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372C5C56F12366C5357B6DC4 /* Build configuration list for PBXNativeTarget "LingoWidgetExtension" */;
+			buildPhases = (
+				39292383D8BA5820FC8D89CD /* Sources */,
+				C6B28CA150838A4438E1E369 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LingoWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LingoWidgetExtension;
+			productReference = 6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		4100653D239F7BBB94D063B7 /* Lingo-macOS */ = {
 			isa = PBXNativeTarget;
@@ -423,6 +511,9 @@
 					2B0A8481F5C4FDED8C3532E4 = {
 						DevelopmentTeam = QMM486NPYC;
 					};
+					3653121C21450926E1E43BF5 = {
+						DevelopmentTeam = QMM486NPYC;
+					};
 					4100653D239F7BBB94D063B7 = {
 						DevelopmentTeam = QMM486NPYC;
 					};
@@ -451,6 +542,7 @@
 				2B0A8481F5C4FDED8C3532E4 /* Lingo-iOS */,
 				791AEA61FF3D5F1F5CB82651 /* Lingo-iOSTests */,
 				4100653D239F7BBB94D063B7 /* Lingo-macOS */,
+				3653121C21450926E1E43BF5 /* LingoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -559,6 +651,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		39292383D8BA5820FC8D89CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF35A36622B744B3EF034DFD /* LingoWidget.swift in Sources */,
+				F18C0A6C1377A37894775E6C /* LingoWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6AD1F84DFF83200F329C413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -607,6 +708,11 @@
 			isa = PBXTargetDependency;
 			target = 2B0A8481F5C4FDED8C3532E4 /* Lingo-iOS */;
 			targetProxy = A86DCB672EDE27D5068E306C /* PBXContainerItemProxy */;
+		};
+		71C8A61A88A7570674793EF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3653121C21450926E1E43BF5 /* LingoWidgetExtension */;
+			targetProxy = 91F3FAA6BBF283E4B9721BCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -664,7 +770,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QMM486NPYC;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -722,7 +828,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QMM486NPYC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -752,6 +858,23 @@
 				SWIFT_VERSION = 5.9;
 			};
 			name = Debug;
+		};
+		A71FAF8C615BC8AF9B2A4006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Widget/LingoWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.lingo.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
 		};
 		B5C12F620BE81DA8860DB336 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -793,6 +916,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/iOS/Lingo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Sources/iOS/Info.plist;
@@ -827,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/iOS/Lingo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Sources/iOS/Info.plist;
@@ -840,6 +965,23 @@
 			};
 			name = Release;
 		};
+		FBE6831DE25487E36C42F41B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Widget/LingoWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.lingo.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -848,6 +990,15 @@
 			buildConfigurations = (
 				ED47F15A82D4CA51F12DA8C0 /* Debug */,
 				F16B07D53BE7F7997B44D2A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		372C5C56F12366C5357B6DC4 /* Build configuration list for PBXNativeTarget "LingoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE6831DE25487E36C42F41B /* Debug */,
+				A71FAF8C615BC8AF9B2A4006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

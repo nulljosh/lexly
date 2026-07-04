@@ -15,7 +15,7 @@ settings:
   base:
     SWIFT_VERSION: "5.9"
     MARKETING_VERSION: "1.1.0"
-    CURRENT_PROJECT_VERSION: "6"
+    CURRENT_PROJECT_VERSION: "7"
     DEVELOPMENT_TEAM: QMM486NPYC
 
 schemes:
@@ -39,6 +39,12 @@ targets:
     dependencies:
       - package: Supabase
         product: Supabase
+      - target: LingoWidgetExtension
+    entitlements:
+      path: Sources/iOS/Lingo.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.nulljosh.lingo
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.nulljosh.lingo
@@ -46,6 +52,27 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         TARGETED_DEVICE_FAMILY: "1"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_ENTITLEMENTS: Sources/iOS/Lingo.entitlements
+
+  LingoWidgetExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/Widget
+    dependencies:
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
+    entitlements:
+      path: Sources/Widget/LingoWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.nulljosh.lingo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nulljosh.lingo.widget
+        INFOPLIST_FILE: Sources/Widget/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_ENTITLEMENTS: Sources/Widget/LingoWidget.entitlements
 
   Lingo-iOSTests:
     type: bundle.unit-test

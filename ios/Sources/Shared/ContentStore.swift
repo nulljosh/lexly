@@ -1,4 +1,5 @@
 import Foundation
+import WidgetKit
 
 @Observable
 final class ContentStore {
@@ -57,6 +58,13 @@ final class ContentStore {
             UserDefaults.standard.set(data, forKey: progressKey)
         }
         let snap = progress
+
+        if let shared = UserDefaults(suiteName: "group.com.nulljosh.lingo") {
+            shared.set(snap.streak, forKey: "widget.streak")
+            shared.set(snap.xp, forKey: "widget.xp")
+        }
+        WidgetCenter.shared.reloadAllTimelines()
+
         Task {
             guard let uid = try? await supabase.auth.session.user.id.uuidString else { return }
             let row = DBProgress(
