@@ -13,8 +13,8 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com).
 | Platform | Name | App ID | Status |
 |---|---|---|---|
 | Web | Lexly | — | Live |
-| iOS | Lexly (6783501611) | com.nulljosh.lingo | Build 1.1.0/6 ready to upload |
-| macOS | Lexly Mac (6783501927) | com.nulljosh.lingo.mac | Build 1.1.0/6 ready to upload |
+| iOS | Lexly (6783501611) | com.nulljosh.lingo | v1.1.0, build 202607030001 attached, awaiting submission |
+| macOS | Lexly Mac (6783501927) | com.nulljosh.lingo.mac | v1.1.0, build 202607030001 attached, awaiting submission |
 
 ## Features
 
@@ -61,8 +61,8 @@ node tools/validate-catalog.js
 
 ## Roadmap
 
-- [ ] No `macos/` dir in this repo — the uploaded Mac builds came from elsewhere. Add a macos/ xcodegen target (mirror `ios/`) or recover the Mac project source.
-- [ ] Bump ASC version records from "1.0" to "1.1.0" to match uploaded builds, both apps.
+- [x] `Lingo-macOS` target already exists in `ios/project.yml` and builds clean locally (`xcodebuild -scheme Lingo-macOS`) — no separate `macos/` dir needed.
+- [x] ASC version records bumped 1.0 → 1.1.0, latest build (202607030001) attached to both apps.
 - [ ] Submission blocked on 2 interactive steps (need Apple web session + 2FA, can't be scripted):
   1. `asc web apps availability create --app 6783501611 --territory ALL --apple-id trommatic@icloud.com` (and `--app 6783501927`)
   2. Publish App Privacy in ASC for both apps
