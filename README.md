@@ -69,7 +69,4 @@ node tools/validate-catalog.js
 - [x] `Lingo-macOS` target already exists in `ios/project.yml` and builds clean locally (`xcodebuild -scheme Lingo-macOS`) — no separate `macos/` dir needed.
 - [x] ASC version records bumped 1.0 → 1.1.0, latest build (202607030001) attached to both apps.
 - [x] Fixed builds attached to 1.1.0: iOS 202607060001, Mac 202607060002 (rebuilt+uploaded 2026-07-06, VALID).
-- [ ] Submission blocked on 2 interactive steps (need Apple web session + 2FA, can't be scripted):
-  1. `asc web apps availability create --app 6783501611 --territory ALL --apple-id trommatic@icloud.com` (and `--app 6783501927`)
-  2. Publish App Privacy in ASC for both apps
-  3. Then `asc review submit --app APP --version-id <id> --build BUILD --confirm`
+- [x] SUBMITTED 2026-07-06: both 1.1.0 versions WAITING_FOR_REVIEW. Availability (all 175 territories) set via public v2 appAvailabilities API (no web session needed); App Privacy (email+user ID, app functionality) published via asc web; demo account, copyright, free pricing set via API.
