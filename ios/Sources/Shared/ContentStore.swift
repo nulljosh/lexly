@@ -87,7 +87,9 @@ final class ContentStore {
     }
 
     private static func loadJSON<T: Decodable>(_ name: String, subdir: String? = nil, as type: T.Type) -> T? {
-        guard let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdir),
+        // ponytail: xcodegen flattens resource folders, so fall back to bundle root
+        guard let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: subdir)
+                ?? Bundle.main.url(forResource: name, withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let decoded = try? JSONDecoder().decode(T.self, from: data) else {
             return nil

@@ -58,7 +58,8 @@ private struct SubjectRow: View {
     private func sfSymbol(for faIcon: String) -> String {
         let key = faIcon.components(separatedBy: " ").last?.replacingOccurrences(of: "fa-", with: "") ?? ""
         let map: [String: String] = [
-            "book": "book.fill", "book-open": "book.open.fill",
+            "book": "book.fill", "book-open": "book",
+            "chalkboard-user": "graduationcap.fill",
             "atom": "staroflife.fill", "chess": "crown.fill",
             "computer": "desktopcomputer", "database": "cylinder.fill",
             "dna": "staroflife.fill", "draw-polygon": "pentagon.fill",

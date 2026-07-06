@@ -8,6 +8,11 @@ A gamified language and skill learning app. Web + native iOS/macOS.
 
 Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com).
 
+<p>
+  <img src="screenshots/catalog.png" width="260" alt="Course catalog">
+  <img src="screenshots/course.png" width="260" alt="Pre-Calculus 12 course">
+</p>
+
 ## Platforms
 
 | Platform | Name | App ID | Status |
@@ -63,6 +68,7 @@ node tools/validate-catalog.js
 
 - [x] `Lingo-macOS` target already exists in `ios/project.yml` and builds clean locally (`xcodebuild -scheme Lingo-macOS`) — no separate `macos/` dir needed.
 - [x] ASC version records bumped 1.0 → 1.1.0, latest build (202607030001) attached to both apps.
+- [ ] **Build 202607030001 is broken** — bundle flattening made every course fail to load ("Couldn't load X"). Fixed 2026-07-05 (`ContentStore.loadJSON` root fallback + `book.open.fill`→`book` icon). Archive + upload new build (iOS + Mac) before submitting.
 - [ ] Submission blocked on 2 interactive steps (need Apple web session + 2FA, can't be scripted):
   1. `asc web apps availability create --app 6783501611 --territory ALL --apple-id trommatic@icloud.com` (and `--app 6783501927`)
   2. Publish App Privacy in ASC for both apps
