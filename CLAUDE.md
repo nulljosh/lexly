@@ -8,7 +8,8 @@ Lexly — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 
 ## Architecture
 
-- `index.html` — single-page app shell, all screens are toggled divs
+- `index.html` — marketing landing page (public root)
+- `app/index.html` — single-page app shell, all screens are toggled divs
 - `js/lingo-app.js` — app state, profile/auth (local only — no backend, profile is stored client-side), lesson loading from `content/catalog.json`
 - `js/games.js` — individual lesson/game-type rendering and scoring logic
 - `css/lingo.css` — all styles, includes light/dark theme via `data-theme` attribute on `<html>`

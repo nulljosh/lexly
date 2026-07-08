@@ -1,200 +1,237 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#fafafa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Lexly - Learn Anything</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/lingo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fafafa">
+<title>Lexly — Learn anything</title>
+<meta name="description" content="40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.">
+<link rel="icon" href="/assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400..900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --text-primary: #1A1A1A;
+    --text-secondary: rgba(26,26,26,0.6);
+    --text-muted: rgba(26,26,26,0.4);
+    --accent: #5B9BD5;
+    --border: rgba(26,26,26,0.1);
+    --success: #2d7a50;
+    --font: 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --radius-pill: 999px;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg-primary); color: var(--text-primary); font-family: var(--font); overflow-x: hidden; }
+  a { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+
+  @keyframes lxFadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  .eyebrow { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.75rem; }
+  h1, h2 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+  .btn { text-decoration: none; font-size: 0.9375rem; font-weight: 500; padding: 0.875rem 1.75rem; border-radius: var(--radius-pill); display: inline-block; transition: transform 0.2s var(--spring), opacity 0.2s var(--ease); }
+  .btn-primary { background: var(--text-primary); color: #fff; }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-secondary { color: var(--text-primary); border: 1px solid var(--border); }
+  .btn-secondary:hover { opacity: 0.7; }
+
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border); }
+  .header-inner { max-width: 1080px; margin: 0 auto; padding: 0.9rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
+  .logo img { border-radius: 6px; }
+  nav.main-nav { display: flex; align-items: center; gap: 2rem; }
+  nav.main-nav a { text-decoration: none; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; }
+  nav.main-nav a:hover { color: var(--text-primary); }
+  .header-cta { background: var(--text-primary); color: #fff; font-size: 0.875rem; font-weight: 500; padding: 0.55rem 1.25rem; border-radius: var(--radius-pill); text-decoration: none; transition: opacity 0.2s var(--ease); }
+  .header-cta:hover { opacity: 0.85; }
+
+  .hero { max-width: 1080px; margin: 0 auto; padding: 5rem 1.5rem 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+  .hero-copy { animation: lxFadeUp 0.8s var(--ease) both; }
+  .hero h1 { font-style: italic; font-size: clamp(2.75rem, 5.5vw, 4.25rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero p { font-size: 1.125rem; line-height: 1.6; color: var(--text-secondary); max-width: 460px; margin: 0 0 2rem; }
+  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+  .status-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.9rem; border-radius: var(--radius-pill); background: rgba(26,26,26,0.04); border: 1px solid var(--border); font-size: 0.8125rem; color: var(--text-secondary); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); flex-shrink: 0; }
+
+  .hero-art { position: relative; display: flex; justify-content: center; animation: lxFadeUp 0.9s var(--ease) 0.1s both; }
+  .hero-art .glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(91,155,213,0.18) 0%, rgba(91,155,213,0) 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .hero-art img { position: relative; width: 240px; border-radius: 28px; box-shadow: 0 30px 60px rgba(0,0,0,0.18); border: 1px solid var(--border); }
+  .hero-art img.shot-1 { transform: rotate(-3deg); }
+  .hero-art img.shot-2 { transform: rotate(4deg) translate(-70px, 40px); }
+
+  section { max-width: 1080px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .section-head { max-width: 480px; margin: 0 auto 3rem; text-align: center; }
+  .section-head h2 { font-style: italic; font-size: 2rem; }
+
+  .icon-tile { width: 44px; height: 44px; border-radius: 12px; background: rgba(91,155,213,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--accent); }
+  .icon-tile svg { width: 22px; height: 22px; }
+
+  .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .card { padding: 1.5rem; background: var(--bg-primary); border: 1px solid var(--border); border-radius: 14px; }
+  .card-title { font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+  .card-desc { font-size: 0.875rem; line-height: 1.55; color: var(--text-secondary); }
+
+  #courses { background: var(--bg-secondary); padding: 5rem 0; max-width: none; }
+  .courses-inner { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .courses-inner h2 { font-size: 2rem; margin-bottom: 1rem; }
+  .courses-inner p { font-size: 1rem; line-height: 1.6; color: var(--text-secondary); max-width: 420px; margin: 0 0 1.75rem; }
+  .category-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .category-pill { padding: 0.5rem 1rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8125rem; font-weight: 500; color: var(--text-secondary); }
+  .courses-shot { display: flex; justify-content: center; }
+  .courses-shot img { width: 220px; border-radius: 24px; box-shadow: 0 24px 48px rgba(0,0,0,0.15); border: 1px solid var(--border); }
+
+  .platforms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .platform-name { font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; }
+  .platform-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+  .badge { padding: 0.15rem 0.5rem; border-radius: var(--radius-pill); font-size: 0.6875rem; font-weight: 700; }
+  .badge-live { background: rgba(45,122,80,0.1); color: var(--success); }
+  .badge-pending { background: rgba(26,26,26,0.06); color: var(--text-muted); }
+  .platform-detail { font-size: 0.8125rem; color: var(--text-muted); }
+
+  footer { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8125rem; color: var(--text-muted); }
+  footer a { text-decoration: none; color: var(--text-muted); }
+  footer a:hover { color: var(--text-primary); }
+
+  @media (max-width: 860px) {
+    nav.main-nav { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 3rem; }
+    .hero-art { margin-top: 2rem; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .courses-inner { grid-template-columns: 1fr; }
+    .courses-shot { order: -1; }
+    .platforms-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-    <a href="#main" class="sr-only" style="position:absolute;top:-40px;left:0;background:#0a0a0a;color:#fafafa;padding:8px;z-index:1000;">Skip to content</a>
-    <header class="header" role="banner">
-        <div class="header-inner">
-            <div class="logo" onclick="resetToHome()" role="button" tabindex="0" aria-label="Go to home screen">
-                <span>Lexly</span>
-            </div>
-            <div class="stats">
-                <button class="profile-chip" id="profileBtn" aria-label="Open profile">
-                    <span class="profile-chip-avatar" id="profileAvatar">L</span>
-                    <span class="profile-chip-name" id="profileName">Login</span>
-                </button>
-                <div class="stat-item stat-streak" aria-label="Day streak">
-                    <i class="fa-solid fa-fire" aria-hidden="true"></i>
-                    <span class="stat-val" id="streak">0</span>
-                </div>
-                <div class="stat-item stat-xp" aria-label="Experience points">
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    <span class="stat-val" id="xp">0</span>
-                </div>
-                <div class="stat-item stat-hearts" aria-label="Hearts remaining">
-                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                    <span class="stat-val" id="hearts">5</span>
-                </div>
-                <div class="stat-item" id="achievementBtn" role="button" tabindex="0" aria-label="View achievements" style="cursor:pointer;">
-                    <i class="fa-solid fa-trophy" aria-hidden="true"></i>
-                </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
-                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <dialog class="auth-shell" id="authShell" aria-labelledby="authTitle">
-        <div class="auth-card">
-            <button class="auth-close" id="authCloseBtn" aria-label="Close">&#x2715;</button>
-            <div class="auth-copy">
-                <div class="auth-section-label">Get Started</div>
-                <h1 id="authTitle" class="auth-heading">Learn anything.</h1>
-                <p class="auth-subtitle">Create an account to sync your streak, trophies, and progress across devices.</p>
-            </div>
-
-            <div class="auth-panel">
-                    <div class="auth-tabs" role="tablist">
-                        <button class="auth-tab active" id="tabSignup" role="tab" aria-selected="true" aria-controls="formSignup" type="button">Sign up</button>
-                        <button class="auth-tab" id="tabSignin" role="tab" aria-selected="false" aria-controls="formSignin" type="button">Sign in</button>
-                    </div>
-
-                    <form class="auth-form active" id="formSignup">
-                        <label class="auth-field">
-                            <span>Display name</span>
-                            <input type="text" id="signupName" maxlength="50" placeholder="Your name" required>
-                        </label>
-                        <label class="auth-field">
-                            <span>Email</span>
-                            <input type="email" id="signupEmail" placeholder="you@example.com" required>
-                        </label>
-                        <label class="auth-field">
-                            <span>Password</span>
-                            <input type="password" id="signupPassword" placeholder="Min 6 characters" minlength="6" required>
-                        </label>
-                        <button class="btn btn-primary auth-submit" type="submit">Create account</button>
-                    </form>
-
-                    <form class="auth-form" id="formSignin" style="display:none">
-                        <label class="auth-field">
-                            <span>Email</span>
-                            <input type="email" id="signinEmail" placeholder="you@example.com" required>
-                        </label>
-                        <label class="auth-field">
-                            <span>Password</span>
-                            <input type="password" id="signinPassword" placeholder="Your password" required>
-                        </label>
-                        <button class="btn btn-primary auth-submit" type="submit">Sign in</button>
-                    </form>
-
-                    <div class="auth-feedback" id="authFeedback" aria-live="polite"></div>
-                </div>
-            </div>
-        </div>
-    </dialog>
-
-    <div class="container" id="main" role="main">
-        <section class="app-shell" id="appShell">
-        <div class="subject-selection fade-up" id="subjectSelection">
-            <div class="category-tabs" role="tablist" aria-label="Subject categories">
-                <div class="category-tab active" data-category="languages" role="tab" tabindex="0" aria-selected="true" aria-controls="subjectGrid">Languages</div>
-                <div class="category-tab" data-category="programming" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Programming</div>
-                <div class="category-tab" data-category="computers" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Computers</div>
-                <div class="category-tab" data-category="math" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Math</div>
-                <div class="category-tab" data-category="science" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Science</div>
-                <div class="category-tab" data-category="school" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">School</div>
-                <div class="category-tab" data-category="skills" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Skills</div>
-                <div class="category-tab" data-category="games" role="tab" tabindex="0" aria-selected="false" aria-controls="subjectGrid">Games</div>
-            </div>
-
-            <div class="section-title" id="categoryTitle">Choose a language</div>
-            <div class="subject-grid" id="subjectGrid" role="tabpanel" aria-label="Subject grid"></div>
-        </div>
-
-        <div class="skill-tree" id="skillTree">
-            <button class="tree-back" id="treeBackBtn" aria-label="Back to subjects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All subjects</button>
-            <div class="tree-head">
-                <div class="tree-icon" id="treeIcon"><i class="fa-solid fa-book" aria-hidden="true"></i></div>
-                <div>
-                    <h2 class="tree-title" id="treeTitle">Course</h2>
-                    <div class="tree-sub" id="treeSub"></div>
-                </div>
-            </div>
-            <div class="tree-units" id="treeUnits"></div>
-        </div>
-
-        <div class="lesson-container" id="lessonContainer">
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressBar"></div>
-                </div>
-                <div class="progress-label" id="progressLabel">0 / 10</div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-container" id="questionContainer"></div>
-                <div class="feedback" id="feedback" aria-live="polite" role="status"></div>
-                <div class="btn-container">
-                    <button class="btn" id="skipBtn">Skip</button>
-                    <button class="btn btn-primary" id="checkBtn">Check</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-container" id="gameContainer"></div>
-
-        <div class="result-container" id="resultContainer">
-            <div class="result-card">
-                <div class="result-icon">
-                    <i class="fa-solid fa-trophy"></i>
-                </div>
-                <h2 class="result-title">Lesson Complete</h2>
-                <p class="result-subtitle">Here is how you did.</p>
-                <div class="result-stats">
-                    <div class="result-stat">
-                        <div class="result-stat-value" id="correctCount">0</div>
-                        <div class="result-stat-label">Correct</div>
-                    </div>
-                    <div class="result-stat">
-                        <div class="result-stat-value" id="xpEarned">0</div>
-                        <div class="result-stat-label">XP Earned</div>
-                    </div>
-                </div>
-                <button class="btn btn-primary" id="continueBtn">Continue</button>
-            </div>
-        </div>
-        </section>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="/assets/icon.svg" alt="" width="24" height="24">
+      Lexly
     </div>
+    <nav class="main-nav">
+      <a href="#features">Features</a>
+      <a href="#courses">Courses</a>
+      <a href="#platforms">Platforms</a>
+    </nav>
+    <a href="/app/" class="header-cta">Get started</a>
+  </div>
+</header>
 
-    <div class="achievement-panel" id="achievementPanel" role="dialog" aria-label="Trophies"></div>
-    <div class="profile-panel" id="profilePanel" role="dialog" aria-label="User profile"></div>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Gamified learning</div>
+    <h1>Learn anything.</h1>
+    <p>40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.</p>
+    <div class="hero-actions">
+      <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
+      <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
+    </div>
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      <span>Web + iOS + macOS &middot; free to play</span>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="glow"></div>
+    <img class="shot-1" src="/assets/marketing/catalog.png" alt="Lexly course catalog screen">
+    <img class="shot-2" src="/assets/marketing/course.png" alt="Lexly course screen">
+  </div>
+</section>
 
-    <footer style="max-width:960px;margin:0 auto;padding:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted);">
-        <span>&copy; 2026 Joshua Trommel</span>
-        <a href="https://github.com/nulljosh/apps" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-secondary)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-brands fa-github"></i> Source</a>
-    </footer>
+<section id="features">
+  <div class="section-head">
+    <div class="eyebrow">Why it sticks</div>
+    <h2>Built to make progress feel good</h2>
+  </div>
+  <div class="features-grid">
+    <div class="card">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+      <div class="card-title">Spaced repetition</div>
+      <div class="card-desc">Review queues resurface exactly what you're about to forget, right before you forget it.</div>
+    </div>
+    <div class="card">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <div class="card-title">Speech recognition</div>
+      <div class="card-desc">Language courses listen back — practice pronunciation out loud, not just multiple choice.</div>
+    </div>
+    <div class="card">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 5.5 6 11a6 6 0 0 1-12 0c0-1.5.5-2.5 1.5-3.8 1 .8 1.5 0 1.3-1C8.4 6.8 9.8 4 12 2z"/></svg></div>
+      <div class="card-title">Streaks &amp; XP</div>
+      <div class="card-desc">Hearts, streaks, and achievements keep a daily habit fun instead of a chore.</div>
+    </div>
+    <div class="card">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9c-.16 0-.32.01-.47.03A6 6 0 0 0 6 12.5a4.5 4.5 0 0 0 .5 9h11z"/></svg></div>
+      <div class="card-title">Synced everywhere</div>
+      <div class="card-desc">Email/password auth syncs progress across web, iOS, and macOS in real time.</div>
+    </div>
+  </div>
+</section>
 
-    <svg class="noise-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-        <filter id="noiseFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
-    </svg>
+<section id="courses">
+  <div class="courses-inner">
+    <div>
+      <div class="eyebrow">One catalog, every subject</div>
+      <h2>40+ courses, one streak.</h2>
+      <p>Switch between a new language and a BC curriculum masterclass without losing your XP or your streak.</p>
+      <div class="category-pills">
+        <div class="category-pill">Languages</div>
+        <div class="category-pill">Programming</div>
+        <div class="category-pill">Computers</div>
+        <div class="category-pill">Math</div>
+        <div class="category-pill">Science</div>
+        <div class="category-pill">School</div>
+        <div class="category-pill">Skills</div>
+        <div class="category-pill">Games</div>
+      </div>
+    </div>
+    <div class="courses-shot">
+      <img src="/assets/marketing/catalog.png" alt="Lexly subjects and course list">
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-    <script src="js/lingo-app.js"></script>
-    <script src="js/games.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('js/sw.js').catch(() => {});
-        }
-        // Fade-up observer
-        const fadeObs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
-    </script>
+<section id="platforms">
+  <div class="section-head">
+    <div class="eyebrow">Everywhere you learn</div>
+    <h2>One account, every device</h2>
+  </div>
+  <div class="platforms-grid">
+    <div class="card">
+      <div class="platform-row">
+        <div class="platform-name">Web</div>
+        <div class="badge badge-live">Live</div>
+      </div>
+      <div class="platform-detail">lexly.heyitsmejosh.com</div>
+    </div>
+    <div class="card">
+      <div class="platform-row">
+        <div class="platform-name">iOS</div>
+        <div class="badge badge-pending">Pending</div>
+      </div>
+      <div class="platform-detail">v1.1.0 awaiting App Store review</div>
+    </div>
+    <div class="card">
+      <div class="platform-row">
+        <div class="platform-name">macOS</div>
+        <div class="badge badge-pending">Pending</div>
+      </div>
+      <div class="platform-detail">v1.1.0 awaiting App Store review</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Joshua Trommel</span>
+  <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener">GitHub &middot; Source</a>
+</footer>
+
 </body>
 </html>

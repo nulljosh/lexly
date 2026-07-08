@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Fetch the course catalog (course metadata only, not lesson content).
 async function loadCatalog() {
     try {
-        const res = await fetch('content/catalog.json');
+        const res = await fetch('/content/catalog.json');
         const data = await res.json();
         categories = data.categories || {};
     } catch (_) {
@@ -135,7 +135,7 @@ function findSubjectMeta(subjectId) {
 async function loadCourse(subjectId) {
     if (questions[subjectId]) return questions[subjectId];
     const meta = findSubjectMeta(subjectId);
-    const path = meta && meta.packPath ? meta.packPath : `content/courses/${subjectId}.json`;
+    const path = meta && meta.packPath ? meta.packPath : `/content/courses/${subjectId}.json`;
     let pack;
     try {
         const res = await fetch(path);
