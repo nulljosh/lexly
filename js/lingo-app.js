@@ -661,7 +661,7 @@ function setupEventListeners() {
         if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; return; }
         currentUser = data.user;
         setAuthCookie();
-        const profile = { display_name: name, avatar_id: selectedAuthAvatar };
+        const profile = { display_name: name, avatar_id: svgDataUri(generatePixelArtSVG()) };
         await sb.from('lingo_profiles').upsert({ id: currentUser.id, ...profile });
         await sb.from('lingo_progress').upsert({ id: currentUser.id, ...DEFAULT_PROGRESS });
         localProfile = profile;
