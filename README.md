@@ -73,3 +73,7 @@ node tools/validate-catalog.js
 - [x] 2026-07-07: web landing page + `/app/` split shipped (see below); native iOS/macOS SwiftUI UI still on the pre-redesign look.
 - [x] Native iOS/macOS visual parity checked 2026-07-07: SwiftUI app already uses matching `#5B9BD5` accent throughout (tint, buttons, selection); native apps correctly use system fonts (SF Pro) rather than the web's Fraunces/DM Sans. No drift — nothing to fix here.
 - [ ] Fresh screenshots + resubmission: would need a real build+run+fastlane cycle and supersedes the 1.1.0 currently WAITING_FOR_REVIEW — confirm with Josh before bumping/resubmitting.
+
+## Roadmap (added 2026-07-09)
+- Stripe Pro unlock: migration + edge functions (stripe-checkout, stripe-webhook) written, not deployed. Needs STRIPE_SECRET_KEY/STRIPE_PRO_PRICE_ID/STRIPE_WEBHOOK_SECRET secrets + `supabase link --project-ref tjsxsqlxjmanwvmywwvw` + `supabase db push` + `supabase functions deploy`. User providing Stripe test key next session.
+- Brilliant/Duolingo parity: streaks, XP, hearts, SRS review already shipped. Not yet added: daily XP goal ring, guided step-by-step hint problems (Brilliant-style).
