@@ -10,3 +10,6 @@
 - [ ] Set en-US What's New for 1.1.0 (empty; flagged by `asc review doctor`) — auto-write denied by policy, run: `asc localizations update --app 6783501611 --locale en-US --whats-new "..."`
 - [ ] Merge photographed pre-calc notes into PC12 masterclass — PDF embeds are ~30KB thumbnails, handwriting illegible; needs full-res originals (matches existing "pc12 re-scan pending user photos")
 - [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
+
+## Rejection 1.1.0 details (pulled 2026-07-12)
+- [ ] 2.1: "Couldn't load Computer Basics" on iPad — root cause fixed in 634e2fc (missing exercise ids); verify + resubmit 1.1.1
