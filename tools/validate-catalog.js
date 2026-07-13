@@ -43,6 +43,17 @@ for (const [catId, category] of Object.entries(catalog.categories)) {
     check(Array.isArray(pack.units), `${catId}/${subject.id}: pack missing units array`);
     for (const unit of pack.units || []) {
       check(Array.isArray(unit.lessons), `${catId}/${subject.id}: unit missing lessons array`);
+      for (const lesson of unit.lessons || []) {
+        check(typeof lesson.id === 'string' && typeof lesson.title === 'string', `${catId}/${subject.id}/${unit.id}: lesson missing id/title`);
+        check(Array.isArray(lesson.exercises), `${catId}/${subject.id}/${lesson.id}: lesson missing exercises array`);
+        for (const ex of lesson.exercises || []) {
+          // iOS Exercise model requires all four as strings; missing any makes the whole course fail to load
+          for (const key of ['type', 'question', 'answer', 'id']) {
+            check(typeof ex[key] === 'string', `${catId}/${subject.id}/${lesson.id}: exercise missing string "${key}"`);
+          }
+          if (ex.choices !== undefined) check(Array.isArray(ex.choices), `${catId}/${subject.id}/${lesson.id}: exercise choices must be an array`);
+        }
+      }
     }
   }
 }

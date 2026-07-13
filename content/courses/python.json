@@ -14,19 +14,96 @@
           "id": "u1l1",
           "title": "Printing & comments",
           "exercises": [
-            { "type": "mathChoice", "question": "Which line prints text to the screen?", "answer": "print(\"hi\")", "choices": ["print(\"hi\")", "echo(\"hi\")", "console.log(\"hi\")", "printf(\"hi\")"] },
-            { "type": "mathChoice", "question": "How do you start a single-line comment?", "answer": "#", "choices": ["#", "//", "<!--", "--"] },
-            { "type": "sentence", "question": "Order the line: print the word hello", "answer": "print ( \"hello\" )", "words": ["print", "(", "\"hello\"", ")"] },
-            { "type": "mathChoice", "question": "What does print() add at the end by default?", "answer": "a newline", "choices": ["a newline", "a space", "a tab", "nothing"] }
+            {
+              "type": "mathChoice",
+              "question": "Which line prints text to the screen?",
+              "answer": "print(\"hi\")",
+              "choices": [
+                "print(\"hi\")",
+                "echo(\"hi\")",
+                "console.log(\"hi\")",
+                "printf(\"hi\")"
+              ],
+              "id": "python_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you start a single-line comment?",
+              "answer": "#",
+              "choices": [
+                "#",
+                "//",
+                "<!--",
+                "--"
+              ],
+              "id": "python_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Order the line: print the word hello",
+              "answer": "print ( \"hello\" )",
+              "words": [
+                "print",
+                "(",
+                "\"hello\"",
+                ")"
+              ],
+              "id": "python_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does print() add at the end by default?",
+              "answer": "a newline",
+              "choices": [
+                "a newline",
+                "a space",
+                "a tab",
+                "nothing"
+              ],
+              "id": "python_3"
+            }
           ]
         },
         {
           "id": "u1l2",
           "title": "Running code",
           "exercises": [
-            { "type": "mathChoice", "question": "What file extension do Python scripts use?", "answer": ".py", "choices": [".py", ".python", ".pyt", ".script"] },
-            { "type": "mathChoice", "question": "Which command runs a script named app.py?", "answer": "python app.py", "choices": ["python app.py", "run app.py", "node app.py", "exec app.py"] },
-            { "type": "mathChoice", "question": "Python is which kind of language?", "answer": "interpreted", "choices": ["interpreted", "assembly", "compiled to .exe only", "markup"] }
+            {
+              "type": "mathChoice",
+              "question": "What file extension do Python scripts use?",
+              "answer": ".py",
+              "choices": [
+                ".py",
+                ".python",
+                ".pyt",
+                ".script"
+              ],
+              "id": "python_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which command runs a script named app.py?",
+              "answer": "python app.py",
+              "choices": [
+                "python app.py",
+                "run app.py",
+                "node app.py",
+                "exec app.py"
+              ],
+              "id": "python_5"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Python is which kind of language?",
+              "answer": "interpreted",
+              "choices": [
+                "interpreted",
+                "assembly",
+                "compiled to .exe only",
+                "markup"
+              ],
+              "id": "python_6"
+            }
           ]
         }
       ]
@@ -39,19 +116,95 @@
           "id": "u2l1",
           "title": "Assigning values",
           "exercises": [
-            { "type": "sentence", "question": "Assign 5 to the name x", "answer": "x = 5", "words": ["x", "=", "5"] },
-            { "type": "mathChoice", "question": "What type is the value 3.14?", "answer": "float", "choices": ["float", "int", "str", "bool"] },
-            { "type": "mathChoice", "question": "What type is the value \"hello\"?", "answer": "str", "choices": ["str", "int", "char", "text"] },
-            { "type": "mathChoice", "question": "What type is the value True?", "answer": "bool", "choices": ["bool", "int", "str", "flag"] }
+            {
+              "type": "sentence",
+              "question": "Assign 5 to the name x",
+              "answer": "x = 5",
+              "words": [
+                "x",
+                "=",
+                "5"
+              ],
+              "id": "python_7"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type is the value 3.14?",
+              "answer": "float",
+              "choices": [
+                "float",
+                "int",
+                "str",
+                "bool"
+              ],
+              "id": "python_8"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type is the value \"hello\"?",
+              "answer": "str",
+              "choices": [
+                "str",
+                "int",
+                "char",
+                "text"
+              ],
+              "id": "python_9"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type is the value True?",
+              "answer": "bool",
+              "choices": [
+                "bool",
+                "int",
+                "str",
+                "flag"
+              ],
+              "id": "python_10"
+            }
           ]
         },
         {
           "id": "u2l2",
           "title": "Working with types",
           "exercises": [
-            { "type": "mathChoice", "question": "Which function returns the type of a value?", "answer": "type()", "choices": ["type()", "typeof()", "kind()", "class()"] },
-            { "type": "mathChoice", "question": "What does int(\"7\") return?", "answer": "7", "choices": ["7", "\"7\"", "7.0", "an error"] },
-            { "type": "mathChoice", "question": "What does len(\"cat\") return?", "answer": "3", "choices": ["3", "1", "\"cat\"", "4"] }
+            {
+              "type": "mathChoice",
+              "question": "Which function returns the type of a value?",
+              "answer": "type()",
+              "choices": [
+                "type()",
+                "typeof()",
+                "kind()",
+                "class()"
+              ],
+              "id": "python_11"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does int(\"7\") return?",
+              "answer": "7",
+              "choices": [
+                "7",
+                "\"7\"",
+                "7.0",
+                "an error"
+              ],
+              "id": "python_12"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does len(\"cat\") return?",
+              "answer": "3",
+              "choices": [
+                "3",
+                "1",
+                "\"cat\"",
+                "4"
+              ],
+              "id": "python_13"
+            }
           ]
         }
       ]
@@ -64,19 +217,94 @@
           "id": "u3l1",
           "title": "Math operators",
           "exercises": [
-            { "type": "mathChoice", "question": "What does 7 // 2 evaluate to?", "answer": "3", "choices": ["3", "3.5", "1", "14"] },
-            { "type": "mathChoice", "question": "What does 7 % 2 evaluate to?", "answer": "1", "choices": ["1", "3", "0", "3.5"] },
-            { "type": "mathChoice", "question": "What does 2 ** 3 evaluate to?", "answer": "8", "choices": ["8", "6", "9", "5"] }
+            {
+              "type": "mathChoice",
+              "question": "What does 7 // 2 evaluate to?",
+              "answer": "3",
+              "choices": [
+                "3",
+                "3.5",
+                "1",
+                "14"
+              ],
+              "id": "python_14"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 7 % 2 evaluate to?",
+              "answer": "1",
+              "choices": [
+                "1",
+                "3",
+                "0",
+                "3.5"
+              ],
+              "id": "python_15"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 2 ** 3 evaluate to?",
+              "answer": "8",
+              "choices": [
+                "8",
+                "6",
+                "9",
+                "5"
+              ],
+              "id": "python_16"
+            }
           ]
         },
         {
           "id": "u3l2",
           "title": "Strings",
           "exercises": [
-            { "type": "mathChoice", "question": "What does \"ab\" + \"cd\" produce?", "answer": "\"abcd\"", "choices": ["\"abcd\"", "\"ab cd\"", "an error", "\"abdc\""] },
-            { "type": "mathChoice", "question": "What does \"hi\" * 3 produce?", "answer": "\"hihihi\"", "choices": ["\"hihihi\"", "\"hi3\"", "an error", "\"hi hi hi\""] },
-            { "type": "mathChoice", "question": "Which method makes a string uppercase?", "answer": ".upper()", "choices": [".upper()", ".caps()", ".toUpper()", ".big()"] },
-            { "type": "sentence", "question": "Build an f-string for name", "answer": "f\"hi {name}\"", "words": ["f\"hi", "{name}\""] }
+            {
+              "type": "mathChoice",
+              "question": "What does \"ab\" + \"cd\" produce?",
+              "answer": "\"abcd\"",
+              "choices": [
+                "\"abcd\"",
+                "\"ab cd\"",
+                "an error",
+                "\"abdc\""
+              ],
+              "id": "python_17"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does \"hi\" * 3 produce?",
+              "answer": "\"hihihi\"",
+              "choices": [
+                "\"hihihi\"",
+                "\"hi3\"",
+                "an error",
+                "\"hi hi hi\""
+              ],
+              "id": "python_18"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which method makes a string uppercase?",
+              "answer": ".upper()",
+              "choices": [
+                ".upper()",
+                ".caps()",
+                ".toUpper()",
+                ".big()"
+              ],
+              "id": "python_19"
+            },
+            {
+              "type": "sentence",
+              "question": "Build an f-string for name",
+              "answer": "f\"hi {name}\"",
+              "words": [
+                "f\"hi",
+                "{name}\""
+              ],
+              "id": "python_20"
+            }
           ]
         }
       ]
@@ -89,19 +317,99 @@
           "id": "u4l1",
           "title": "if / else",
           "exercises": [
-            { "type": "sentence", "question": "Order the lines: branch when x is positive", "answer": "if x > 0 : print ( \"pos\" )", "words": ["if", "x > 0", ":", "print", "(", "\"pos\"", ")"] },
-            { "type": "mathChoice", "question": "Which keyword handles the alternative branch?", "answer": "else", "choices": ["else", "elif", "otherwise", "default"] },
-            { "type": "mathChoice", "question": "What does Python use to group a block?", "answer": "indentation", "choices": ["indentation", "curly braces", "begin/end", "parentheses"] },
-            { "type": "mathChoice", "question": "Which is the equality comparison operator?", "answer": "==", "choices": ["==", "=", "===", "eq"] }
+            {
+              "type": "sentence",
+              "question": "Order the lines: branch when x is positive",
+              "answer": "if x > 0 : print ( \"pos\" )",
+              "words": [
+                "if",
+                "x > 0",
+                ":",
+                "print",
+                "(",
+                "\"pos\"",
+                ")"
+              ],
+              "id": "python_21"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword handles the alternative branch?",
+              "answer": "else",
+              "choices": [
+                "else",
+                "elif",
+                "otherwise",
+                "default"
+              ],
+              "id": "python_22"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Python use to group a block?",
+              "answer": "indentation",
+              "choices": [
+                "indentation",
+                "curly braces",
+                "begin/end",
+                "parentheses"
+              ],
+              "id": "python_23"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is the equality comparison operator?",
+              "answer": "==",
+              "choices": [
+                "==",
+                "=",
+                "===",
+                "eq"
+              ],
+              "id": "python_24"
+            }
           ]
         },
         {
           "id": "u4l2",
           "title": "Boolean logic",
           "exercises": [
-            { "type": "mathChoice", "question": "What does (True and False) evaluate to?", "answer": "False", "choices": ["False", "True", "None", "an error"] },
-            { "type": "mathChoice", "question": "What does (True or False) evaluate to?", "answer": "True", "choices": ["True", "False", "None", "an error"] },
-            { "type": "mathChoice", "question": "What does (not True) evaluate to?", "answer": "False", "choices": ["False", "True", "None", "0"] }
+            {
+              "type": "mathChoice",
+              "question": "What does (True and False) evaluate to?",
+              "answer": "False",
+              "choices": [
+                "False",
+                "True",
+                "None",
+                "an error"
+              ],
+              "id": "python_25"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (True or False) evaluate to?",
+              "answer": "True",
+              "choices": [
+                "True",
+                "False",
+                "None",
+                "an error"
+              ],
+              "id": "python_26"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (not True) evaluate to?",
+              "answer": "False",
+              "choices": [
+                "False",
+                "True",
+                "None",
+                "0"
+              ],
+              "id": "python_27"
+            }
           ]
         }
       ]
@@ -114,20 +422,112 @@
           "id": "u5l1",
           "title": "Lists",
           "exercises": [
-            { "type": "sentence", "question": "Create a list of two numbers", "answer": "nums = [ 1 , 2 ]", "words": ["nums", "=", "[", "1", ",", "2", "]"] },
-            { "type": "mathChoice", "question": "What index is the first element?", "answer": "0", "choices": ["0", "1", "-1", "first"] },
-            { "type": "mathChoice", "question": "Which method adds an item to the end of a list?", "answer": ".append()", "choices": [".append()", ".add()", ".push()", ".insert()"] },
-            { "type": "mathChoice", "question": "What does [1, 2, 3][-1] return?", "answer": "3", "choices": ["3", "1", "2", "an error"] }
+            {
+              "type": "sentence",
+              "question": "Create a list of two numbers",
+              "answer": "nums = [ 1 , 2 ]",
+              "words": [
+                "nums",
+                "=",
+                "[",
+                "1",
+                ",",
+                "2",
+                "]"
+              ],
+              "id": "python_28"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What index is the first element?",
+              "answer": "0",
+              "choices": [
+                "0",
+                "1",
+                "-1",
+                "first"
+              ],
+              "id": "python_29"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which method adds an item to the end of a list?",
+              "answer": ".append()",
+              "choices": [
+                ".append()",
+                ".add()",
+                ".push()",
+                ".insert()"
+              ],
+              "id": "python_30"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3][-1] return?",
+              "answer": "3",
+              "choices": [
+                "3",
+                "1",
+                "2",
+                "an error"
+              ],
+              "id": "python_31"
+            }
           ]
         },
         {
           "id": "u5l2",
           "title": "Loops",
           "exercises": [
-            { "type": "sentence", "question": "Loop over items in nums", "answer": "for n in nums :", "words": ["for", "n", "in", "nums", ":"] },
-            { "type": "mathChoice", "question": "What does range(3) produce?", "answer": "0, 1, 2", "choices": ["0, 1, 2", "1, 2, 3", "0, 1, 2, 3", "3"] },
-            { "type": "mathChoice", "question": "Which keyword stops a loop early?", "answer": "break", "choices": ["break", "stop", "exit", "end"] },
-            { "type": "mathChoice", "question": "Which keyword skips to the next iteration?", "answer": "continue", "choices": ["continue", "skip", "next", "pass"] }
+            {
+              "type": "sentence",
+              "question": "Loop over items in nums",
+              "answer": "for n in nums :",
+              "words": [
+                "for",
+                "n",
+                "in",
+                "nums",
+                ":"
+              ],
+              "id": "python_32"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does range(3) produce?",
+              "answer": "0, 1, 2",
+              "choices": [
+                "0, 1, 2",
+                "1, 2, 3",
+                "0, 1, 2, 3",
+                "3"
+              ],
+              "id": "python_33"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword stops a loop early?",
+              "answer": "break",
+              "choices": [
+                "break",
+                "stop",
+                "exit",
+                "end"
+              ],
+              "id": "python_34"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword skips to the next iteration?",
+              "answer": "continue",
+              "choices": [
+                "continue",
+                "skip",
+                "next",
+                "pass"
+              ],
+              "id": "python_35"
+            }
           ]
         }
       ]
@@ -140,10 +540,55 @@
           "id": "u6l1",
           "title": "Defining functions",
           "exercises": [
-            { "type": "mathChoice", "question": "Which keyword defines a function?", "answer": "def", "choices": ["def", "func", "function", "fn"] },
-            { "type": "sentence", "question": "Define a function named greet", "answer": "def greet ( ) :", "words": ["def", "greet", "(", ")", ":"] },
-            { "type": "mathChoice", "question": "Which keyword returns a value from a function?", "answer": "return", "choices": ["return", "give", "output", "yield"] },
-            { "type": "mathChoice", "question": "A value passed into a function is called a(n)?", "answer": "argument", "choices": ["argument", "variable", "result", "loop"] }
+            {
+              "type": "mathChoice",
+              "question": "Which keyword defines a function?",
+              "answer": "def",
+              "choices": [
+                "def",
+                "func",
+                "function",
+                "fn"
+              ],
+              "id": "python_36"
+            },
+            {
+              "type": "sentence",
+              "question": "Define a function named greet",
+              "answer": "def greet ( ) :",
+              "words": [
+                "def",
+                "greet",
+                "(",
+                ")",
+                ":"
+              ],
+              "id": "python_37"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword returns a value from a function?",
+              "answer": "return",
+              "choices": [
+                "return",
+                "give",
+                "output",
+                "yield"
+              ],
+              "id": "python_38"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A value passed into a function is called a(n)?",
+              "answer": "argument",
+              "choices": [
+                "argument",
+                "variable",
+                "result",
+                "loop"
+              ],
+              "id": "python_39"
+            }
           ]
         }
       ]
