@@ -208,10 +208,35 @@ function saveProfile(profile) {
     }
 }
 
+// Migrate legacy flat "subjectId/lessonId" string keys (which could collide
+// across courses if either id ever contained a "/") into a per-subject nested
+// map: { [subjectId]: { [lessonId]: true } }. Safe to run on already-migrated data.
+function migrateLessonsCompleted(lessonsCompleted) {
+    const migrated = {};
+    Object.entries(lessonsCompleted || {}).forEach(([key, value]) => {
+        if (!value) return;
+        const slash = key.indexOf('/');
+        if (slash === -1) {
+            // Already nested: { subjectId: { lessonId: true, ... } }
+            migrated[key] = { ...(migrated[key] || {}), ...value };
+            return;
+        }
+        const subjectId = key.slice(0, slash);
+        const lessonId = key.slice(slash + 1);
+        if (!migrated[subjectId]) migrated[subjectId] = {};
+        migrated[subjectId][lessonId] = true;
+    });
+    return migrated;
+}
+
 function loadProgress() {
     const raw = localStorage.getItem(PROGRESS_KEY);
     if (!raw) return { ...DEFAULT_PROGRESS };
-    try { return { ...DEFAULT_PROGRESS, ...JSON.parse(raw) }; } catch (_) { return { ...DEFAULT_PROGRESS }; }
+    try {
+        const parsed = { ...DEFAULT_PROGRESS, ...JSON.parse(raw) };
+        parsed.lessons_completed = migrateLessonsCompleted(parsed.lessons_completed);
+        return parsed;
+    } catch (_) { return { ...DEFAULT_PROGRESS }; }
 }
 
 function saveProgress(patch) {
@@ -1061,12 +1086,9 @@ function getLessonOrder(pack) {
     return order;
 }
 
-function lessonKey(subjectId, lessonId) {
-    return `${subjectId}/${lessonId}`;
-}
-
 function isLessonComplete(subjectId, lessonId) {
-    return Boolean(loadProgress().lessons_completed[lessonKey(subjectId, lessonId)]);
+    const bySubject = loadProgress().lessons_completed[subjectId];
+    return Boolean(bySubject && bySubject[lessonId]);
 }
 
 // A lesson unlocks when it is first in the course or the previous lesson is done.
@@ -1554,7 +1576,10 @@ function showResults() {
     // Crown a skill-tree lesson only when the player survived (hearts remaining).
     const lessonsCompleted = { ...progress.lessons_completed };
     if (gameState.selectedLesson && gameState.hearts > 0) {
-        lessonsCompleted[lessonKey(gameState.selectedSubject, gameState.selectedLesson)] = true;
+        lessonsCompleted[gameState.selectedSubject] = {
+            ...(lessonsCompleted[gameState.selectedSubject] || {}),
+            [gameState.selectedLesson]: true,
+        };
     }
 
     saveProgress({
