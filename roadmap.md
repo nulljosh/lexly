@@ -23,3 +23,4 @@
 
 ## 2026-07-14 dump
 - [ ] Mac 1.1.0 rejected — pull resolution center issues via asc, fix, resubmit
+- [x] Mac 1.1.0 rejection: details blocked on expired asc web session — run `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
