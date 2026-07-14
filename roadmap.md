@@ -20,3 +20,6 @@
 - [ ] Course list: expose Masterclass PDFs/material itself from the list (not only tests/quizzes per unit) + compiled course summary — see school/Biology_Masterclass.html, school/PC12_Masterclass.html, content/catalog.json
 - [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
 - [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
+
+## 2026-07-14 dump
+- [ ] Mac 1.1.0 rejected — pull resolution center issues via asc, fix, resubmit
