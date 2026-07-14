@@ -24,3 +24,14 @@
 ## 2026-07-14 dump
 - [ ] Mac 1.1.0 rejected — pull resolution center issues via asc, fix, resubmit
 - [x] Mac 1.1.0 rejection: details blocked on expired asc web session — run `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
+
+## From Lexly.pdf (imported 2026-07-14)
+- [ ] **Bug**: completing a lesson in one course checks off lessons across ALL courses (e.g. finishing first French quiz wrongly marks Math/Logic lessons complete too) — likely a shared/global completion key instead of per-course keying
+- [ ] Add bottom nav bar
+- [ ] Add a Settings view; move Sign Out into Settings (currently elsewhere)
+- [ ] Add light/dark mode — reuse the pattern already used in other repos (see talli/spark portfolio-tokens approach)
+- [ ] Expand language courses beyond beginner to intermediate/expert levels
+- [ ] Lessons should actually teach content, not just quiz — more Duolingo-like (currently quiz-only)
+- [ ] Some lessons still don't load at all
+- [ ] Lessons need a fractional/percentage progress bar; reduce whitespace, lesson view should fill the screen
+- [ ] Save progress to user profile; show grade in course list once a lesson is completed
