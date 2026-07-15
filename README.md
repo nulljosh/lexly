@@ -64,16 +64,10 @@ cd ios && xcodegen generate
 node tools/validate-catalog.js
 ```
 
+## Architecture
+
+<img src="architecture.svg" width="700">
+
 ## Roadmap
 
-- [x] `Lingo-macOS` target already exists in `ios/project.yml` and builds clean locally (`xcodebuild -scheme Lingo-macOS`) — no separate `macos/` dir needed.
-- [x] ASC version records bumped 1.0 → 1.1.0, latest build (202607030001) attached to both apps.
-- [x] Fixed builds attached to 1.1.0: iOS 202607060001, Mac 202607060002 (rebuilt+uploaded 2026-07-06, VALID).
-- [x] SUBMITTED 2026-07-06: both 1.1.0 versions WAITING_FOR_REVIEW. Availability (all 175 territories) set via public v2 appAvailabilities API (no web session needed); App Privacy (email+user ID, app functionality) published via asc web; demo account, copyright, free pricing set via API.
-- [x] 2026-07-07: web landing page + `/app/` split shipped (see below); native iOS/macOS SwiftUI UI still on the pre-redesign look.
-- [x] Native iOS/macOS visual parity checked 2026-07-07: SwiftUI app already uses matching `#5B9BD5` accent throughout (tint, buttons, selection); native apps correctly use system fonts (SF Pro) rather than the web's Fraunces/DM Sans. No drift — nothing to fix here.
-- [ ] Fresh screenshots + resubmission: would need a real build+run+fastlane cycle and supersedes the 1.1.0 currently WAITING_FOR_REVIEW — confirm with Josh before bumping/resubmitting.
-
-## Roadmap (added 2026-07-09)
-- Stripe Pro unlock: migration + edge functions (stripe-checkout, stripe-webhook) written, not deployed. Needs STRIPE_SECRET_KEY/STRIPE_PRO_PRICE_ID/STRIPE_WEBHOOK_SECRET secrets + `supabase link --project-ref tjsxsqlxjmanwvmywwvw` + `supabase db push` + `supabase functions deploy`. User providing Stripe test key next session.
-- Brilliant/Duolingo parity: streaks, XP, hearts, SRS review already shipped. Not yet added: daily XP goal ring, guided step-by-step hint problems (Brilliant-style).
+See `roadmap.md` for the current open items (iOS/Mac 1.1.0 rejection fixes, completion-tracking bug, Stripe Pro unlock, UX backlog).

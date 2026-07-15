@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, system-ui, sans-serif" viewBox="0 0 800 320"><defs><marker id="arrowhead" markerHeight="7" markerWidth="10" orient="auto" refX="10" refY="3.5"><path fill="#666" d="m0 0 10 3.5L0 7z"/></marker><style>.box{fill:#1a1a1a;stroke:#1a5a96;stroke-width:2}.label,.sub{fill:#e0e0e0;font-size:13px;text-anchor:middle}.sub{fill:#888;font-size:10px}.arrow{stroke:#666;stroke-width:2;fill:none;marker-end:url(#arrowhead)}</style></defs><path fill="#111" d="M0 0h800v320H0z"/>
+
+<rect width="150" height="50" x="20" y="30" class="box" rx="8"/><text x="95" y="52" class="label">Browser</text><text x="95" y="68" class="sub">index.html landing</text>
+<path d="M170 55h30" class="arrow"/>
+<rect width="150" height="50" x="200" y="30" class="box" rx="8"/><text x="275" y="52" class="label">app/index.html</text><text x="275" y="68" class="sub">SPA shell, toggled screens</text>
+
+<rect width="150" height="50" x="20" y="200" class="box" rx="8"/><text x="95" y="222" class="label">iOS / macOS</text><text x="95" y="238" class="sub">SwiftUI, Sources/Shared</text>
+<path d="M170 225h30" class="arrow"/>
+<rect width="150" height="50" x="200" y="200" class="box" rx="8"/><text x="275" y="222" class="label">Sources/Resources</text><text x="275" y="238" class="sub">bundled catalog.json + courses</text>
+
+<path d="M275 80v40" class="arrow"/>
+<path d="M275 200v-40" class="arrow"/>
+<rect width="180" height="50" x="220" y="120" class="box" rx="8"/><text x="310" y="142" class="label">js/lingo-app.js</text><text x="310" y="158" class="sub">state, lesson rendering</text>
+
+<path d="M400 145h30" class="arrow"/>
+<rect width="180" height="50" x="430" y="120" class="box" rx="8"/><text x="520" y="142" class="label">content/catalog.json</text><text x="520" y="158" class="sub">40+ course packs</text>
+
+<path d="M370 55h30" class="arrow"/>
+<path d="M370 225h30" class="arrow"/>
+<rect width="180" height="50" x="400" y="30" class="box" rx="8"/><text x="490" y="52" class="label">js/games.js</text><text x="490" y="68" class="sub">game-type scoring logic</text>
+
+<path d="M580 55h30" class="arrow"/>
+<path d="M580 225h30" class="arrow"/>
+<rect width="180" height="50" x="610" y="130" class="box" rx="8"/><text x="700" y="152" class="label">Supabase (spark)</text><text x="700" y="168" class="sub">email/password auth, progress sync</text>
+
+</svg>

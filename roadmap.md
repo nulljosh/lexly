@@ -1,10 +1,12 @@
 # lexly Roadmap
 
+## From chat 2026-07-14
+- [ ] Lexly's landing (`index.html`) is the reference design — port it to any project under `~/Documents/Code` still missing a matching landing page. Not started this session; needs a project-by-project survey first.
+
 ## From Icons.pdf / Asc.pdf (imported 2026-07-12)
 - [ ] Lexly iOS 1.1.0 REJECTED — unresolved issues in Resolution Center, fix + resubmit (Mac 1.1.0 still waiting for review)
 
 ## From Lexly.pdf (imported 2026-07-12)
-- [x] Fix courses not loading on iOS (Spanish, Computer Basics, Python) — exercises missing `id`, Swift decode failed; ids backfilled in both content copies, validator now checks exercise fields. Build succeeded.
 - [ ] Sim-verify course loading fix on device/simulator (rainchecked — usage burning fast; xcodebuild build passed)
 - [ ] Read exact 1.1.0 rejection message — `asc web review show --app 6783501611` blocked on expired Apple web session (needs 2FA relogin), then resubmit with fixed build
 - [ ] Set en-US What's New for 1.1.0 (empty; flagged by `asc review doctor`) — auto-write denied by policy, run: `asc localizations update --app 6783501611 --locale en-US --whats-new "..."`
@@ -22,8 +24,7 @@
 - [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
 
 ## 2026-07-14 dump
-- [ ] Mac 1.1.0 rejected — pull resolution center issues via asc, fix, resubmit
-- [x] Mac 1.1.0 rejection: details blocked on expired asc web session — run `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
+- [ ] Mac 1.1.0 rejected — pull resolution center issues via `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
 
 ## From Lexly.pdf (imported 2026-07-14)
 - [ ] **Bug**: completing a lesson in one course checks off lessons across ALL courses (e.g. finishing first French quiz wrongly marks Math/Logic lessons complete too) — likely a shared/global completion key instead of per-course keying
