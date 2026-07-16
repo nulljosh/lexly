@@ -36,3 +36,19 @@
 - [ ] Some lessons still don't load at all
 - [ ] Lessons need a fractional/percentage progress bar; reduce whitespace, lesson view should fill the screen
 - [ ] Save progress to user profile; show grade in course list once a lesson is completed
+
+## Codecademy/Duolingo feature parity (research 2026-07-16)
+Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements, speech recognition, per-unit progress, light/dark, PWA.
+- [ ] Teach-then-quiz lesson flow — short explanation/example before each exercise, not quiz-only (dup of existing item above; M effort)
+- [ ] Per-lesson fractional progress bar (dup of existing item above; S effort)
+- [ ] Fix cross-course completion bug (dup of existing bug above) + add real skill-tree/unit gating — lock later units until prior pass, visualize as a path (M)
+- [ ] Inline correct/incorrect feedback with a brief tip on wrong answers, not just pass/fail (S–M, extend games.js scoring)
+- [ ] Placement/diagnostic test per course so advanced users can skip ahead (M)
+- [ ] Streak freeze / streak repair item (S)
+- [ ] Richer achievement/badge screen + course-completion certificate view (S, ties to existing "richer icons" item)
+- [ ] Leaderboard (friends/weekly XP) — needs backend; Supabase already wired for auth/progress sync (M–L)
+- [ ] "Practice Hub" — free-practice mode across completed lessons for spaced-repetition reinforcement, separate from linear course (M)
+- [ ] More listening/speaking exercise types (dictation, "speak this sentence") reusing existing speech-recognition plumbing (M)
+- [ ] Weekly XP quests, reusing existing XP counters (S)
+- [ ] Lower priority: hearts-refill economy tuning, timed challenge mode (S each)
+- Explicitly skip: Codecademy-style full code-execution sandbox — out of scope, high effort, low relevance to a language app

@@ -396,6 +396,30 @@ body {
     font-weight: 400;
 }
 
+.profile-quest {
+    margin-bottom: 16px;
+}
+
+.profile-quest-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.profile-quest-bar {
+    background: var(--border);
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.profile-quest-fill {
+    background: var(--accent);
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s var(--ease);
+}
+
 .question-card {
     background: var(--card-bg);
     border: 1px solid var(--border);

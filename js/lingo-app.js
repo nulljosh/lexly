@@ -74,8 +74,23 @@ const DEFAULT_PROGRESS = {
     completed_subjects: [],
     lessons_completed: {},
     trophy_ids: [],
-    last_played: ''
+    last_played: '',
+    // Local-only fields (not synced to Supabase, see saveProgress's whitelist).
+    streak_freezes: 0,
+    weekly_xp: 0,
+    week_start: ''
 };
+
+const WEEKLY_XP_GOAL = 150;
+
+// Monday-anchored ISO date string for "start of this week", used to detect
+// week rollovers for the weekly XP quest without pulling in a date library.
+function currentWeekStart(date = new Date()) {
+    const d = new Date(date);
+    const day = (d.getDay() + 6) % 7; // 0 = Monday
+    d.setDate(d.getDate() - day);
+    return d.toISOString().slice(0, 10);
+}
 
 let recognition = null;
 let isListening = false;
@@ -394,6 +409,37 @@ function showAchievementToast(id) {
     }, 3000);
 }
 
+// Same visual pattern as showAchievementToast, for the day a banked streak
+// freeze auto-covers a missed day instead of resetting the streak.
+function showStreakFreezeToast() {
+    const toast = document.createElement('div');
+    toast.className = 'achievement-toast';
+    toast.setAttribute('role', 'alert');
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'achievement-toast-icon';
+    const iconEl = document.createElement('i');
+    iconEl.className = 'fa-solid fa-snowflake';
+    iconDiv.appendChild(iconEl);
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'achievement-toast-content';
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'achievement-toast-title';
+    titleDiv.textContent = 'Streak freeze used';
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'achievement-toast-name';
+    nameDiv.textContent = 'Missed a day, streak saved';
+    contentDiv.appendChild(titleDiv);
+    contentDiv.appendChild(nameDiv);
+    toast.appendChild(iconDiv);
+    toast.appendChild(contentDiv);
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('show')));
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
 function renderAchievementPanel() {
     const unlocked = getUnlockedAchievements();
     const panel = document.getElementById('achievementPanel');
@@ -535,6 +581,30 @@ function renderProfilePanel() {
         statsGrid.appendChild(stat);
     });
     form.appendChild(statsGrid);
+
+    const questProgress = loadProgress();
+    const questXp = questProgress.week_start === currentWeekStart() ? (questProgress.weekly_xp || 0) : 0;
+    const questDiv = document.createElement('div');
+    questDiv.className = 'profile-quest';
+    const questLabel = document.createElement('div');
+    questLabel.className = 'profile-quest-label';
+    questLabel.textContent = `Weekly quest: ${Math.min(questXp, WEEKLY_XP_GOAL)} / ${WEEKLY_XP_GOAL} XP`;
+    const questBar = document.createElement('div');
+    questBar.className = 'profile-quest-bar';
+    const questFill = document.createElement('div');
+    questFill.className = 'profile-quest-fill';
+    questFill.style.width = `${Math.min((questXp / WEEKLY_XP_GOAL) * 100, 100)}%`;
+    questBar.appendChild(questFill);
+    questDiv.appendChild(questLabel);
+    questDiv.appendChild(questBar);
+    if (questProgress.streak_freezes > 0) {
+        const freezeLabel = document.createElement('div');
+        freezeLabel.className = 'profile-quest-label';
+        freezeLabel.style.marginTop = '8px';
+        freezeLabel.innerHTML = `<i class="fa-solid fa-snowflake" aria-hidden="true"></i> ${questProgress.streak_freezes} streak freeze${questProgress.streak_freezes > 1 ? 's' : ''} banked`;
+        questDiv.appendChild(freezeLabel);
+    }
+    form.appendChild(questDiv);
 
     const schoolLink = document.createElement('a');
     schoolLink.href = 'school/index.html';
@@ -1560,14 +1630,35 @@ function showResults() {
 
     const progress = loadProgress();
     const today = new Date().toISOString().slice(0, 10);
+    let streakFreezes = progress.streak_freezes || 0;
+    let usedFreeze = false;
     if (progress.last_played !== today) {
         if (!progress.last_played) {
             gameState.streak += 1;
         } else {
             const diff = Math.floor((new Date(today) - new Date(progress.last_played)) / (1000 * 60 * 60 * 24));
-            gameState.streak = diff > 1 ? 1 : gameState.streak + 1;
+            if (diff > 1 && diff <= 2 && streakFreezes > 0) {
+                // Missed exactly one day and have a freeze banked: spend it to
+                // preserve the streak instead of resetting to 1.
+                streakFreezes -= 1;
+                usedFreeze = true;
+                gameState.streak += 1;
+            } else {
+                gameState.streak = diff > 1 ? 1 : gameState.streak + 1;
+            }
         }
     }
+    // Grant a freeze (cap 2 banked) at every 7-day streak milestone.
+    if (gameState.streak > 0 && gameState.streak % 7 === 0 && streakFreezes < 2) {
+        streakFreezes += 1;
+    }
+
+    // Weekly XP quest: reset the counter when a new week starts, else accrue.
+    const weekStart = currentWeekStart();
+    const xpEarnedThisLesson = gameState.correctAnswers * 10;
+    const weeklyXp = progress.week_start === weekStart
+        ? (progress.weekly_xp || 0) + xpEarnedThisLesson
+        : xpEarnedThisLesson;
 
     if (gameState.selectedSubject && !gameState.completedSubjects.includes(gameState.selectedSubject)) {
         gameState.completedSubjects.push(gameState.selectedSubject);
@@ -1588,8 +1679,13 @@ function showResults() {
         hearts: Math.max(gameState.hearts, 0),
         completed_subjects: [...gameState.completedSubjects],
         lessons_completed: lessonsCompleted,
-        last_played: today
+        last_played: today,
+        streak_freezes: streakFreezes,
+        weekly_xp: weeklyXp,
+        week_start: weekStart
     });
+
+    if (usedFreeze) showStreakFreezeToast();
 
     if (gameState.correctAnswers === gameState.totalQuestions) {
         saveAchievement('perfectLesson');
