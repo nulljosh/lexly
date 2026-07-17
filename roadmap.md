@@ -26,7 +26,8 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] 1.1.1 publish blocked: "cannot create a new version in the current state" — rejected 1.1.0 version still open; edit the existing 1.1.0 appStoreVersion to 1.1.1 (or resolve/close the rejected submission) then attach build 202607121732 and resubmit. Resume: asc workflow run --file .asc/workflow.json ship-ios --resume ship-ios-20260713T003210Z-af9573cc
 
 ## From chat 2026-07-13 (wrap-up, not started)
-- [ ] Course list: expose Masterclass PDFs/material itself from the list (not only tests/quizzes per unit) + compiled course summary — see school/Biology_Masterclass.html, school/PC12_Masterclass.html, content/catalog.json
+- [x] Course list: expose Masterclass material from the list — done, catalog.json "school" category already links both masterclass HTML files, School tab in app/index.html wired. Compiled course summary still not done if wanted later.
+- [ ] talli/docs/school (school.heyitsmejosh.com) deleted 2026-07-17 — dead duplicate, its /api/grades + /api/quizzes never existed. Its Vercel project (prj_rrzYEdPwMKFDBRzeXBv815Qnybfo, "school") and DNS still point at nothing — delete the Vercel project + drop the subdomain when convenient.
 - [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
 - [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
 
