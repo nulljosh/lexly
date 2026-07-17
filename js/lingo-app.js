@@ -1285,14 +1285,28 @@ function getLessonExercises(subjectId, lessonId) {
     return [];
 }
 
+function renderProgressPips(current, total) {
+    const bar = document.getElementById('progressBar');
+    bar.setAttribute('aria-valuemax', total);
+    bar.setAttribute('aria-valuenow', current);
+    if (bar.childElementCount !== total) {
+        bar.textContent = '';
+        for (let i = 0; i < total; i += 1) {
+            const pip = document.createElement('div');
+            pip.className = 'progress-pip';
+            bar.appendChild(pip);
+        }
+    }
+    Array.from(bar.children).forEach((pip, i) => pip.classList.toggle('filled', i < current));
+}
+
 function loadQuestion() {
     const question = gameState.lessonQuestions[gameState.currentQuestion];
     if (!question) {
         showResults();
         return;
     }
-    const progress = (gameState.currentQuestion / gameState.totalQuestions) * 100;
-    document.getElementById('progressBar').style.width = `${progress}%`;
+    renderProgressPips(gameState.currentQuestion, gameState.totalQuestions);
     document.getElementById('progressLabel').textContent = `${gameState.currentQuestion} / ${gameState.totalQuestions}`;
     const feedback = document.getElementById('feedback');
     feedback.classList.remove('show', 'correct', 'incorrect');

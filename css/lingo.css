@@ -374,19 +374,20 @@ body {
 
 .progress-bar {
     flex: 1;
+    display: flex;
+    gap: 4px;
+}
+
+.progress-pip {
+    flex: 1;
     background: var(--border);
     height: 8px;
     border-radius: 999px;
     overflow: hidden;
+    transition: background 0.3s var(--ease);
 }
 
-.progress-fill {
-    background: var(--accent);
-    height: 100%;
-    border-radius: 999px;
-    transition: width 0.4s var(--ease);
-    width: 0%;
-}
+.progress-pip.filled { background: var(--accent); }
 
 .progress-label {
     font-size: 0.75rem;
@@ -1912,10 +1913,15 @@ dialog.auth-shell::backdrop {
     text-align: left; padding: 0.85rem 1rem; margin-bottom: 0.6rem;
     background: var(--card-bg); border: 1px solid var(--card-border);
     border-radius: 14px; cursor: pointer; color: var(--text-primary);
-    font-size: 0.95rem; min-height: 44px;
+    font-size: 0.95rem; min-height: 44px; position: relative;
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s;
 }
 .tree-node:hover:not(.locked) { transform: translateY(-2px); border-color: var(--accent); }
+.tree-node:not(:last-child)::after {
+    content: ''; position: absolute; left: 1.63rem; top: 100%;
+    width: 1px; height: 0.6rem; background: var(--card-border);
+}
+.tree-node.complete:not(:last-child)::after { background: var(--accent-amber); }
 .tree-node-dot {
     width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
