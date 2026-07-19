@@ -1,13 +1,13 @@
 # lexly Roadmap
 
 ## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, IN PROGRESS
-- [x] Merged Lingo-macOS target into Lingo-iOS as Mac Catalyst (same bundle `com.nulljosh.lingo`), deleted Sources/macOS (24-line dup entry point had zero AppKit deps, trivial merge)
-- [x] iOS Simulator build passes with merged target
-- [x] Mac Catalyst build passes — fixed widget-embed conflict by adding `platformFilters = (ios, );` directly to the `LingoWidgetExtension.appex` PBXBuildFile entry (the "Embed Foundation Extensions" phase) in `lingo.xcodeproj/project.pbxproj`. xcodegen's `platformFilter: ios` on the dependency in project.yml does NOT propagate to this build-file entry — it's a known xcodegen gap, so this is a manual pbxproj edit.
-  - ⚠️ **`xcodegen generate` will wipe this edit.** After any regen, re-add `platformFilters = (ios, );` to that PBXBuildFile line (search for `LingoWidgetExtension.appex in Embed Foundation Extensions`) before building Catalyst, or the embed conflict returns.
-- [x] Code merged + pushed to nulljosh/lexly (c0a12b0) — GitHub side already unified, single repo, single Xcode project/target
-- [ ] In ASC: figure out how to add Mac (Catalyst) platform to "Lexly" app (6783501611) — `asc apps` has no obvious subcommand for this yet, need to check `asc apps update`/`asc web` or whether it's dashboard-only ("+Platform" button on app page)
-- [ ] Archive + upload new Catalyst-merged build (`asc xcode` helpers)
+- [x] ~~Catalyst approach (c0a12b0)~~ — superseded, see below. (For posterity: Catalyst build DID succeed after adding `platformFilters = (ios, );` to the widget's PBXBuildFile embed entry, a manual pbxproj edit xcodegen doesn't support natively — not needed anymore but keep in mind if Catalyst is revisited.)
+- [x] **Switched to native macOS target instead of Catalyst (1b635e1, current)** — restored `Sources/macOS` (native AppKit/SwiftUI-for-Mac, `Lingo-macOS` target in project.yml) and simply pointed its bundle ID at `com.nulljosh.lingo` (same as iOS) instead of the old `com.nulljosh.lingo.mac`. Apple allows one ASC app record to cover multiple platforms as long as every platform's target shares the same bundle ID — Catalyst isn't required for that, so this gets true native Mac UI without the iOS-compatibility-layer tradeoff.
+- [x] iOS Simulator build verified green post-revert (Debug-iphonesimulator, BUILD SUCCEEDED)
+- [ ] **Native macOS target build NOT yet verified** — `xcodebuild -target Lingo-macOS -destination 'platform=macOS'` failed with `unable to resolve module dependency: ConcurrencyExtras/IssueReporting` (swift-clocks SPM package, transitive via Supabase). This is DerivedData/SPM-resolution corruption from an earlier accidental concurrent-build collision (two xcodebuild runs sharing one DerivedData dir), NOT a real code error — same target config built cleanly before today's changes. Fix: `rm -rf ~/Library/Developer/Xcode/DerivedData/lingo-*` then rebuild clean, should resolve.
+- [x] Code pushed to nulljosh/lexly (1b635e1) — GitHub side already unified, single repo
+- [ ] Once native Mac build verified clean: in ASC, figure out how to add native Mac platform to "Lexly" app (6783501611) — `asc apps` had no obvious subcommand, may be dashboard-only ("+Platform" on app page)
+- [ ] Archive + upload new merged build (`asc xcode` helpers)
 - [ ] Attach build to Lexly app version, resubmit
 - [ ] Remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate/remove from sale)
 
