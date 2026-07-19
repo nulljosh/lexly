@@ -5,9 +5,11 @@
 - [x] Pro is now framed as an optional upgrade (unlimited streak freezes today; heart refills/extended play once Stripe is wired), never a content gate. Owner account (trommatic@icloud.com) auto-gets Pro perks.
 - [x] iOS 1.1.1 resubmitted to App Review (submission after fixing age rating + attaching build 202607121732, which already had the Computer Basics fix from 634e2fc)
 - [x] macOS platform added to the main "Lexly" app record (6783501611) via ASC dashboard (no API for this — had to click "Add Platform"), build 202607060001 attached to v1.1.1
-- [ ] macOS version still needs screenshots before it can submit (`asc review doctor --app 6783501611` blocks on `screenshots.required.any`) — automated capture pipeline (`.asc/screenshots.json`) hit an ambiguous "Sign In" element match (2 matches, no AXUniqueId), needs `axe describe-ui` + coordinate-based tap or a more specific accessibility id
-- [ ] Once merged macOS version ships: remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate — Apple API confirmed no hard-delete)
+- [x] Screenshot automation fixed — added accessibilityIdentifiers to disambiguate the two "Sign In" labels, plus a UITEST_SNAPSHOT bypass in AuthStore (iOS) since the demo account itself is broken (same one Apple flagged). macOS already had its own `-screenshots` launch flag.
+- [x] Captured a real Mac screenshot (1280x800), uploaded it, macOS 1.1.1 submitted to App Review (submission c2eeaff0)
+- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Needs a support ticket to Apple, not a scripting fix.
 - [ ] Lexly Mac's own demo account (jatrommel@gmail.com) was flagged by Apple as failing sign-in (2.1 Information Needed) — moot once that app is retired, don't fix
+- [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density (user feedback 2026-07-19, screenshot comparison) — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout
 
 ## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, DONE (see above), keeping for history
 - [x] ~~Catalyst approach (c0a12b0)~~ — superseded, see below. (For posterity: Catalyst build DID succeed after adding `platformFilters = (ios, );` to the widget's PBXBuildFile embed entry, a manual pbxproj edit xcodegen doesn't support natively — not needed anymore but keep in mind if Catalyst is revisited.)
