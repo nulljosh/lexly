@@ -27,8 +27,10 @@ struct CatalogView: View {
             .navigationTitle("Lexly")
             .toolbar {
                 ToolbarItem(placement: .automatic) {
-                    Button("Sign Out") {
-                        Task { try? await auth.signOut() }
+                    NavigationLink {
+                        SettingsView(auth: auth)
+                    } label: {
+                        Image(systemName: "gearshape")
                     }
                 }
             }

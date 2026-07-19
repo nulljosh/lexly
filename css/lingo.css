@@ -345,42 +345,6 @@ body {
     letter-spacing: 0.01em;
 }
 
-.pro-lock {
-    grid-column: 1 / -1;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-}
-
-.pro-lock-title {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-primary);
-}
-
-.pro-lock-desc {
-    font-size: 0.8125rem;
-    color: var(--text-secondary);
-    max-width: 320px;
-}
-
-.pro-lock-btn {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1.25rem;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.8125rem;
-    cursor: not-allowed;
-}
-
 .lesson-container {
     display: none;
 }

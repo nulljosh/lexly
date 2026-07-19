@@ -30,6 +30,7 @@
 		2ED5FFDAFDD001F321FCEF29 /* physics.json in Resources */ = {isa = PBXBuildFile; fileRef = E9261B0C87E6F1D387DBF0A7 /* physics.json */; };
 		3081F31BFDC7492F939C1C15 /* rust.json in Resources */ = {isa = PBXBuildFile; fileRef = B47A509557BCADC7E56991E1 /* rust.json */; };
 		3089398528823534E2C259E7 /* linear_algebra.json in Resources */ = {isa = PBXBuildFile; fileRef = 0331E3C0FAC6DD186E906475 /* linear_algebra.json */; };
+		3494E03A6BC345057FA030D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6879A4E2162C7E8DB0595B67 /* SettingsView.swift */; };
 		35DA9B6CAB3A26D1AB6EBB87 /* music_theory.json in Resources */ = {isa = PBXBuildFile; fileRef = 4349CA379EE52052DE5210F6 /* music_theory.json */; };
 		3611CFACF566DFF8AF545AEB /* french.json in Resources */ = {isa = PBXBuildFile; fileRef = 817171023F298347664538D7 /* french.json */; };
 		363024C112FBA06FC30C0C88 /* trigonometry.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0F8517A7ABB25B93AC01E7 /* trigonometry.json */; };
@@ -60,6 +61,7 @@
 		5FAEA01F64B9E1170750064C /* javascript.json in Resources */ = {isa = PBXBuildFile; fileRef = 4462801DB409CFD3D81F2E5B /* javascript.json */; };
 		62DFDE9E87DEBA260541EF77 /* computers.json in Resources */ = {isa = PBXBuildFile; fileRef = B6179B0E028A5343849EF466 /* computers.json */; };
 		65FE01B3E495B031D58BD547 /* japanese.json in Resources */ = {isa = PBXBuildFile; fileRef = 957B0D682A78332B3AF55252 /* japanese.json */; };
+		66AE67918261360F6C0269E6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6879A4E2162C7E8DB0595B67 /* SettingsView.swift */; };
 		68839C409A4A3F8AAB4F49DC /* portuguese.json in Resources */ = {isa = PBXBuildFile; fileRef = 85262F07D23361702C21C7DA /* portuguese.json */; };
 		6CDF0E7D244D43765DF0B1A1 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99103E67EEEBFAD239C1DFB7 /* CatalogView.swift */; };
 		6E5C05E5064707F08881D627 /* ContentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */; };
@@ -177,6 +179,7 @@
 		5879FA1B9F4064EFBFBE7F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E497242C06CB2BE09147F1E /* music_history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = music_history.json; sourceTree = "<group>"; };
 		62C884EB677AEBB4563179BA /* LingoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LingoWidget.entitlements; sourceTree = "<group>"; };
+		6879A4E2162C7E8DB0595B67 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		698847033238209C4252DDE8 /* algebra.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra.json; sourceTree = "<group>"; };
 		6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LingoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC5E8D574577465E5EC8F51 /* dutch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dutch.json; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 				BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */,
 				38ED52EC4C599FB4C93990AF /* LessonView.swift */,
 				3F214D0F0810B9E696D99BDC /* Models.swift */,
+				6879A4E2162C7E8DB0595B67 /* SettingsView.swift */,
 				6E953B6B90C849ECB1D806FF /* UnitsView.swift */,
 			);
 			name = Shared;
@@ -431,6 +435,7 @@
 			);
 			dependencies = (
 				71C8A61A88A7570674793EF8 /* PBXTargetDependency */,
+				DCB283CDE15FDB9ACE406523 /* PBXTargetDependency */,
 			);
 			name = "Lingo-iOS";
 			packageProductDependencies = (
@@ -530,6 +535,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				99F3180C842AB825B82844A4 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				C22EB9A41C224329A9063E46 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8622F3E3F551CE7430FDA09 /* Products */;
@@ -676,6 +682,7 @@
 				25D90218F50C49242402AF5E /* LessonView.swift in Sources */,
 				28972A2E39E0A81A6848D546 /* LingoApp.swift in Sources */,
 				597CA4E3D0C3A5A35B6726C4 /* Models.swift in Sources */,
+				3494E03A6BC345057FA030D0 /* SettingsView.swift in Sources */,
 				E3D69BA40AB7D56C296B68CA /* UnitsView.swift in Sources */,
 				5228ED56641373D9692328C8 /* WhatsNewSheet.swift in Sources */,
 			);
@@ -693,6 +700,7 @@
 				E723A76D805E8D23CF4E958A /* LessonView.swift in Sources */,
 				D6090057FCD71A991D157BBD /* LingoApp.swift in Sources */,
 				01789627621AF263B1E6C6B2 /* Models.swift in Sources */,
+				66AE67918261360F6C0269E6 /* SettingsView.swift in Sources */,
 				CA1E2FBF2C6E4563EB4D9A3C /* UnitsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +717,10 @@
 			isa = PBXTargetDependency;
 			target = 3653121C21450926E1E43BF5 /* LingoWidgetExtension */;
 			targetProxy = 91F3FAA6BBF283E4B9721BCC /* PBXContainerItemProxy */;
+		};
+		DCB283CDE15FDB9ACE406523 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6BE3E130F19DE8057959C62C /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1037,6 +1049,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		C22EB9A41C224329A9063E46 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.59.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1044,6 +1064,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99F3180C842AB825B82844A4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		6BE3E130F19DE8057959C62C /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C22EB9A41C224329A9063E46 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 		782342964314D86AB9DC7ECC /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
