@@ -34,8 +34,8 @@ final class ContentStore {
         if correct { progress.xp += 10 }
     }
 
-    func completeLesson(_ lessonId: String) {
-        progress.completedLessonIds.insert(lessonId)
+    func completeLesson(_ subjectId: String, _ lessonId: String) {
+        progress.completedLessonIds.insert("\(subjectId):\(lessonId)")
         updateStreak()
         save()
     }

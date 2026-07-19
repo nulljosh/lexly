@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LessonView: View {
     var store: ContentStore
+    var subjectId: String
     var lesson: Lesson
 
     @State private var index = 0
@@ -57,7 +58,7 @@ struct LessonView: View {
                             .font(.system(size: 64))
                             .foregroundStyle(Color(hex: "5B9BD5"))
                         Text("Lesson complete!").font(.title.bold())
-                        Button("Done") { store.completeLesson(lesson.id); dismiss() }
+                        Button("Done") { store.completeLesson(subjectId, lesson.id); dismiss() }
                             .buttonStyle(.borderedProminent)
                     }
                     .frame(maxWidth: .infinity)

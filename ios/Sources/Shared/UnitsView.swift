@@ -9,16 +9,16 @@ struct UnitsView: View {
         List {
             if let course {
                 ForEach(course.units) { unit in
-                    let done = unit.lessons.filter { store.progress.completedLessonIds.contains($0.id) }.count
+                    let done = unit.lessons.filter { store.progress.completedLessonIds.contains("\(subject.id):\($0.id)") }.count
                     Section {
                         ForEach(unit.lessons) { lesson in
                             NavigationLink {
-                                LessonView(store: store, lesson: lesson)
+                                LessonView(store: store, subjectId: subject.id, lesson: lesson)
                             } label: {
                                 HStack {
                                     Text(lesson.title)
                                     Spacer()
-                                    if store.progress.completedLessonIds.contains(lesson.id) {
+                                    if store.progress.completedLessonIds.contains("\(subject.id):\(lesson.id)") {
                                         Image(systemName: "checkmark.circle.fill")
                                             .foregroundStyle(Color(hex: "5B9BD5"))
                                     }
