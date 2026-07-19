@@ -10,12 +10,19 @@ let supabase = SupabaseClient(
 final class AuthStore {
     var session: Session?
     var isLoading = true
+    // ponytail: App Store screenshot automation needs to skip the real auth
+    // gate (demo Supabase credentials expire/rotate independently of this repo)
+    private let mockSignedIn = CommandLine.arguments.contains("UITEST_SNAPSHOT")
 
     init() {
+        if mockSignedIn {
+            isLoading = false
+            return
+        }
         Task { await refresh() }
     }
 
-    var isSignedIn: Bool { session != nil }
+    var isSignedIn: Bool { mockSignedIn || session != nil }
 
     func refresh() async {
         session = try? await supabase.auth.session

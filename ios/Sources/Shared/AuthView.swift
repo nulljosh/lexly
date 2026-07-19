@@ -18,7 +18,9 @@ struct AuthView: View {
 
             Picker("Mode", selection: $mode) {
                 Text("Sign In").tag(Mode.signIn)
+                    .accessibilityIdentifier("authModeSignIn")
                 Text("Sign Up").tag(Mode.signUp)
+                    .accessibilityIdentifier("authModeSignUp")
             }
             .pickerStyle(.segmented)
 
@@ -35,9 +37,11 @@ struct AuthView: View {
                     .autocapitalization(.none)
                     #endif
                     .textFieldStyle(.roundedBorder)
+                    .accessibilityIdentifier("emailField")
                 SecureField("Password", text: $password)
                     .textContentType(mode == .signUp ? .newPassword : .password)
                     .textFieldStyle(.roundedBorder)
+                    .accessibilityIdentifier("passwordField")
             }
 
             if !errorMessage.isEmpty {
@@ -53,6 +57,7 @@ struct AuthView: View {
             }
             .buttonStyle(.borderedProminent)
             .disabled(busy)
+            .accessibilityIdentifier("authSubmit")
         }
         .padding(32)
     }

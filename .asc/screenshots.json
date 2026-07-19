@@ -6,14 +6,9 @@
     "output_dir": "./screenshots/raw/6.7"
   },
   "steps": [
-    { "action": "launch" },
     { "action": "wait", "duration_ms": 1500 },
-    { "action": "tap", "label": "Sign In" },
+    { "action": "tap", "label": "Got it" },
     { "action": "wait", "duration_ms": 500 },
-    { "action": "type", "text": "jatrommel@gmail.com", "field": "Email" },
-    { "action": "type", "text": "Joshisrad4$!!", "field": "Password" },
-    { "action": "tap", "label": "Sign In" },
-    { "action": "wait", "duration_ms": 2000 },
     { "action": "screenshot", "name": "01_home" },
     { "action": "tap", "label": "Spanish" },
     { "action": "wait", "duration_ms": 1000 },
