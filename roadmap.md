@@ -1,6 +1,15 @@
 # lexly Roadmap
 
-## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, IN PROGRESS
+## 2026-07-19: monetization redesign (Duolingo model) + iOS resubmit + Mac merge
+- [x] Removed Pro category paywall entirely — all 40+ courses free for everyone. Was the trigger for Apple's 2.1(b) "explain your paid content" question with no working checkout behind it.
+- [x] Pro is now framed as an optional upgrade (unlimited streak freezes today; heart refills/extended play once Stripe is wired), never a content gate. Owner account (trommatic@icloud.com) auto-gets Pro perks.
+- [x] iOS 1.1.1 resubmitted to App Review (submission after fixing age rating + attaching build 202607121732, which already had the Computer Basics fix from 634e2fc)
+- [x] macOS platform added to the main "Lexly" app record (6783501611) via ASC dashboard (no API for this — had to click "Add Platform"), build 202607060001 attached to v1.1.1
+- [ ] macOS version still needs screenshots before it can submit (`asc review doctor --app 6783501611` blocks on `screenshots.required.any`) — automated capture pipeline (`.asc/screenshots.json`) hit an ambiguous "Sign In" element match (2 matches, no AXUniqueId), needs `axe describe-ui` + coordinate-based tap or a more specific accessibility id
+- [ ] Once merged macOS version ships: remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate — Apple API confirmed no hard-delete)
+- [ ] Lexly Mac's own demo account (jatrommel@gmail.com) was flagged by Apple as failing sign-in (2.1 Information Needed) — moot once that app is retired, don't fix
+
+## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, DONE (see above), keeping for history
 - [x] ~~Catalyst approach (c0a12b0)~~ — superseded, see below. (For posterity: Catalyst build DID succeed after adding `platformFilters = (ios, );` to the widget's PBXBuildFile embed entry, a manual pbxproj edit xcodegen doesn't support natively — not needed anymore but keep in mind if Catalyst is revisited.)
 - [x] **Switched to native macOS target instead of Catalyst (1b635e1, current)** — restored `Sources/macOS` (native AppKit/SwiftUI-for-Mac, `Lingo-macOS` target in project.yml) and simply pointed its bundle ID at `com.nulljosh.lingo` (same as iOS) instead of the old `com.nulljosh.lingo.mac`. Apple allows one ASC app record to cover multiple platforms as long as every platform's target shares the same bundle ID — Catalyst isn't required for that, so this gets true native Mac UI without the iOS-compatibility-layer tradeoff.
 - [x] iOS Simulator build verified green post-revert (Debug-iphonesimulator, BUILD SUCCEEDED)
