@@ -1,5 +1,8 @@
 # lexly Roadmap
 
+## 2026-07-19: rename to "Lingo" considered, dropped
+- Checked App Store name availability via exact-match PATCH attempt (asc-name-creator skill) — "Lingo" is taken by a different account (`ENTITY_ERROR.ATTRIBUTE.INVALID.DUPLICATE.DIFFERENT_ACCOUNT`), not reclaimable without a trademark claim. Kept "Lexly" as the live name, no code/ASC changes made.
+
 ## 2026-07-19: monetization redesign (Duolingo model) + iOS resubmit + Mac merge
 - [x] Removed Pro category paywall entirely — all 40+ courses free for everyone. Was the trigger for Apple's 2.1(b) "explain your paid content" question with no working checkout behind it.
 - [x] Pro is now framed as an optional upgrade (unlimited streak freezes today; heart refills/extended play once Stripe is wired), never a content gate. Owner account (trommatic@icloud.com) auto-gets Pro perks.
