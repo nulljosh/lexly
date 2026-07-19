@@ -10,14 +10,15 @@ struct LingoApp: App {
             Group {
                 if auth.isLoading {
                     ProgressView()
-                } else if auth.isSignedIn {
+                } else if auth.isSignedIn || CommandLine.arguments.contains("-screenshots") {
                     CatalogView(store: store, auth: auth)
                 } else {
                     AuthView(auth: auth)
                 }
             }
             .tint(Color(hex: "5B9BD5"))
-            .overlay { WhatsNewSheet() }
+            .frame(minWidth: CommandLine.arguments.contains("-screenshots") ? 1280 : 0, minHeight: CommandLine.arguments.contains("-screenshots") ? 800 : 0)
         }
+        .windowResizability(.contentSize)
     }
 }

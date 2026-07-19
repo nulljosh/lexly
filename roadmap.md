@@ -5,7 +5,11 @@
 - [x] iOS Simulator build passes with merged target
 - [x] Mac Catalyst build passes — fixed widget-embed conflict by adding `platformFilters = (ios, );` directly to the `LingoWidgetExtension.appex` PBXBuildFile entry (the "Embed Foundation Extensions" phase) in `lingo.xcodeproj/project.pbxproj`. xcodegen's `platformFilter: ios` on the dependency in project.yml does NOT propagate to this build-file entry — it's a known xcodegen gap, so this is a manual pbxproj edit.
   - ⚠️ **`xcodegen generate` will wipe this edit.** After any regen, re-add `platformFilters = (ios, );` to that PBXBuildFile line (search for `LingoWidgetExtension.appex in Embed Foundation Extensions`) before building Catalyst, or the embed conflict returns.
-- [ ] In ASC: add Mac (Catalyst) platform to "Lexly" app (6783501611), remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate), upload new build, resubmit both
+- [x] Code merged + pushed to nulljosh/lexly (c0a12b0) — GitHub side already unified, single repo, single Xcode project/target
+- [ ] In ASC: figure out how to add Mac (Catalyst) platform to "Lexly" app (6783501611) — `asc apps` has no obvious subcommand for this yet, need to check `asc apps update`/`asc web` or whether it's dashboard-only ("+Platform" button on app page)
+- [ ] Archive + upload new Catalyst-merged build (`asc xcode` helpers)
+- [ ] Attach build to Lexly app version, resubmit
+- [ ] Remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate/remove from sale)
 
 ## Duolingo UI patterns (Mobbin research 2026-07-16, verified against code 2026-07-16)
 Checked against actual code before acting — two of three were already built, third needs data/assets we don't have. Not implementing the reskin (see notes).
