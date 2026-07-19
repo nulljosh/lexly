@@ -4,6 +4,9 @@ packages:
   Supabase:
     url: https://github.com/supabase/supabase-swift
     from: "2.0.0"
+  SwiftLint:
+    url: https://github.com/realm/SwiftLint
+    from: "0.59.1"
 
 options:
   bundleIdPrefix: com.nulljosh
@@ -44,6 +47,9 @@ targets:
       - package: Supabase
         product: Supabase
       - target: LingoWidgetExtension
+    buildToolPlugins:
+      - plugin: SwiftLintBuildToolPlugin
+        package: SwiftLint
     entitlements:
       path: Sources/iOS/Lingo.entitlements
       properties:
