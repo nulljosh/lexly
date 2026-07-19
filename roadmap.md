@@ -1,5 +1,12 @@
 # lexly Roadmap
 
+## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, IN PROGRESS
+- [x] Merged Lingo-macOS target into Lingo-iOS as Mac Catalyst (same bundle `com.nulljosh.lingo`), deleted Sources/macOS (24-line dup entry point had zero AppKit deps, trivial merge)
+- [x] iOS Simulator build passes with merged target
+- [x] Mac Catalyst build passes — fixed widget-embed conflict by adding `platformFilters = (ios, );` directly to the `LingoWidgetExtension.appex` PBXBuildFile entry (the "Embed Foundation Extensions" phase) in `lingo.xcodeproj/project.pbxproj`. xcodegen's `platformFilter: ios` on the dependency in project.yml does NOT propagate to this build-file entry — it's a known xcodegen gap, so this is a manual pbxproj edit.
+  - ⚠️ **`xcodegen generate` will wipe this edit.** After any regen, re-add `platformFilters = (ios, );` to that PBXBuildFile line (search for `LingoWidgetExtension.appex in Embed Foundation Extensions`) before building Catalyst, or the embed conflict returns.
+- [ ] In ASC: add Mac (Catalyst) platform to "Lexly" app (6783501611), remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate), upload new build, resubmit both
+
 ## Duolingo UI patterns (Mobbin research 2026-07-16, verified against code 2026-07-16)
 Checked against actual code before acting — two of three were already built, third needs data/assets we don't have. Not implementing the reskin (see notes).
 
