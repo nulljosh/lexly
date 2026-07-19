@@ -66,6 +66,9 @@ const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFz
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
 let currentUser = null;
+let userIsPro = false;
+// Free tier gets Languages + Programming; the rest unlock with Lexly Pro.
+const PRO_LOCKED_CATEGORIES = ['computers', 'math', 'science', 'school', 'skills'];
 
 const DEFAULT_PROGRESS = {
     xp: 0,
@@ -197,6 +200,7 @@ async function hydrateFromDb(uid) {
     ]);
     if (prof) {
         localStorage.setItem(PROFILE_KEY, JSON.stringify({ display_name: prof.display_name, avatar_id: prof.avatar_id }));
+        userIsPro = !!prof.is_pro;
     }
     if (prog) {
         localStorage.setItem(PROGRESS_KEY, JSON.stringify({
@@ -1075,6 +1079,10 @@ function renderSubjects(category) {
         });
         return;
     }
+    if (PRO_LOCKED_CATEGORIES.includes(category) && !userIsPro) {
+        renderProLock(category);
+        return;
+    }
     const categoryData = categories[category];
     if (!categoryData) return;
     document.getElementById('categoryTitle').textContent = categoryData.title;
@@ -1128,6 +1136,29 @@ function renderSubjects(category) {
         }
         grid.appendChild(card);
     });
+}
+
+function renderProLock(category) {
+    const categoryData = categories[category];
+    document.getElementById('categoryTitle').textContent = categoryData ? categoryData.title : 'Lexly Pro';
+    const grid = document.getElementById('subjectGrid');
+    grid.textContent = '';
+    const lock = document.createElement('div');
+    lock.className = 'pro-lock';
+    const title = document.createElement('div');
+    title.className = 'pro-lock-title';
+    title.textContent = 'Unlock with Lexly Pro';
+    const desc = document.createElement('div');
+    desc.className = 'pro-lock-desc';
+    desc.textContent = 'Get every course category plus unlimited streak freezes.';
+    const btn = document.createElement('button');
+    btn.className = 'pro-lock-btn';
+    btn.textContent = 'Coming soon';
+    btn.disabled = true;
+    lock.appendChild(title);
+    lock.appendChild(desc);
+    lock.appendChild(btn);
+    grid.appendChild(lock);
 }
 
 function selectSubject(card) {
@@ -1662,8 +1693,9 @@ function showResults() {
             }
         }
     }
-    // Grant a freeze (cap 2 banked) at every 7-day streak milestone.
-    if (gameState.streak > 0 && gameState.streak % 7 === 0 && streakFreezes < 2) {
+    // Grant a freeze at every 7-day streak milestone (cap 2 banked, unlimited for Pro).
+    const freezeCap = userIsPro ? Infinity : 2;
+    if (gameState.streak > 0 && gameState.streak % 7 === 0 && streakFreezes < freezeCap) {
         streakFreezes += 1;
     }
 
