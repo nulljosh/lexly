@@ -46,7 +46,7 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Mac 1.1.0 rejected — pull resolution center issues via `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
 
 ## From Lexly.pdf (imported 2026-07-14)
-- [ ] **Bug**: completing a lesson in one course checks off lessons across ALL courses (e.g. finishing first French quiz wrongly marks Math/Logic lessons complete too) — likely a shared/global completion key instead of per-course keying
+- [x] **Bug fixed (342dfe0)**: cross-course completion bug was iOS/macOS-native-only (web `js/lingo-app.js` was already correctly namespaced). Root cause: `ContentStore.completedLessonIds` was a flat `Set<String>`, but course JSON files reuse generic lesson IDs (1, 2, 3…) across courses — 147 ID collisions found via script. Fixed by keying as `subjectId:lessonId` in `ContentStore.swift`/`LessonView.swift`/`UnitsView.swift`. Both iOS sim and native macOS builds verified green.
 - [ ] Add bottom nav bar
 - [ ] Add a Settings view; move Sign Out into Settings (currently elsewhere)
 - [ ] Add light/dark mode — reuse the pattern already used in other repos (see talli/spark portfolio-tokens approach)
