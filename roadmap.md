@@ -91,3 +91,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## From Lexly.pdf (imported 2026-07-19)
 - [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).
+
+## ASC review findings 2026-07-20 (via Resolution Center)
+- [ ] Guideline 2.1(b) Information Needed: Apple wants a written explanation of paid-content business model. Verified: app has zero StoreKit/IAP code, nothing is currently paywalled (matches "Pro un-paywalled, courses free" state). Drafted reply ready to paste in Resolution Center: "Lexly does not currently implement In-App Purchase or any paid content. All courses and features are free to use. Any 'Pro' references in the app are vestigial from an earlier design and unlock nothing — no purchase flow exists in the current build." No CLI reply path exists (asc web review has no reply subcommand) — Joshua needs to paste this in ASC dashboard.
