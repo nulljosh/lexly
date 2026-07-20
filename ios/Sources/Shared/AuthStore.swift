@@ -52,4 +52,19 @@ final class AuthStore {
         try await supabase.auth.signOut()
         session = nil
     }
+
+    /// Calls the shared `delete-account` Edge Function on the spark Supabase project,
+    /// which uses the service-role key to delete the authenticated user server-side
+    /// (the anon-key client SDK has no permission to delete its own auth user).
+    func deleteAccount() async throws {
+        guard let currentSession = session else { return }
+        var request = URLRequest(url: URL(string: "https://tjsxsqlxjmanwvmywwvw.supabase.co/functions/v1/delete-account")!)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(currentSession.accessToken)", forHTTPHeaderField: "Authorization")
+        let (_, response) = try await URLSession.shared.data(for: request)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
+            throw NSError(domain: "AuthStore", code: -1, userInfo: [NSLocalizedDescriptionKey: "Couldn't delete account. Try again."])
+        }
+        try await signOut()
+    }
 }
