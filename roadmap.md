@@ -85,3 +85,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - [ ] Weekly XP quests, reusing existing XP counters (S)
 - [ ] Lower priority: hearts-refill economy tuning, timed challenge mode (S each)
 - Explicitly skip: Codecademy-style full code-execution sandbox — out of scope, high effort, low relevance to a language app
+
+## From Lexly.pdf (imported 2026-07-19)
+- [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).
