@@ -86,5 +86,8 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - [ ] Lower priority: hearts-refill economy tuning, timed challenge mode (S each)
 - Explicitly skip: Codecademy-style full code-execution sandbox — out of scope, high effort, low relevance to a language app
 
+## 2026-07-20: weekly-XP week-boundary timezone bug fixed
+- [x] `currentWeekStart()` (js/lingo-app.js) used `.toISOString().slice(0,10)` on a local-time-adjusted Date, which converts to UTC — near midnight in any negative-UTC-offset zone (all US timezones) this could land on the wrong calendar day, silently rolling the weekly XP quest counter a day early/late. Switched to local `getFullYear/getMonth/getDate` formatting. Verified: `currentWeekStart(new Date('2026-01-01T23:30:00-05:00'))` now correctly returns `2025-12-29` (Monday) instead of jumping to the wrong week. `node tools/validate-catalog.js` still passes.
+
 ## From Lexly.pdf (imported 2026-07-19)
 - [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).

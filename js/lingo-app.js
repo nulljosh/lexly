@@ -92,7 +92,12 @@ function currentWeekStart(date = new Date()) {
     const d = new Date(date);
     const day = (d.getDay() + 6) % 7; // 0 = Monday
     d.setDate(d.getDate() - day);
-    return d.toISOString().slice(0, 10);
+    // Local calendar date, not toISOString() (which is UTC and can land on
+    // the wrong day near midnight in negative-UTC-offset zones).
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${dd}`;
 }
 
 let recognition = null;
