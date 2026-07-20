@@ -29,6 +29,7 @@ struct WhatsNewSheet: View {
                     }
                     .font(.body)
                     .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
 
                     Button {
                         seenVersion = whatsNewVersion
