@@ -94,3 +94,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## ASC review findings 2026-07-20 (via Resolution Center)
 - [ ] Guideline 2.1(b) Information Needed: Apple wants a written explanation of paid-content business model. Verified: app has zero StoreKit/IAP code, nothing is currently paywalled (matches "Pro un-paywalled, courses free" state). Drafted reply ready to paste in Resolution Center: "Lexly does not currently implement In-App Purchase or any paid content. All courses and features are free to use. Any 'Pro' references in the app are vestigial from an earlier design and unlock nothing — no purchase flow exists in the current build." No CLI reply path exists (asc web review has no reply subcommand) — Joshua needs to paste this in ASC dashboard.
+
+## Account deletion audit 2026-07-20
+- [x] Added delete-account parity (Guideline 5.1.1(v)) — reused the shared `delete-account` Edge Function on spark Supabase project. Added deleteAccount() to AuthStore.swift, wired into SettingsView.swift next to existing sign-out. Web app confirmed local-profile-only, no backend account there. Build-verified.
