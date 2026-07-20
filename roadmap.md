@@ -63,7 +63,7 @@ Checked against actual code before acting — two of three were already built, t
 - [x] **Bug fixed (342dfe0)**: cross-course completion bug was iOS/macOS-native-only (web `js/lingo-app.js` was already correctly namespaced). Root cause: `ContentStore.completedLessonIds` was a flat `Set<String>`, but course JSON files reuse generic lesson IDs (1, 2, 3…) across courses — 147 ID collisions found via script. Fixed by keying as `subjectId:lessonId` in `ContentStore.swift`/`LessonView.swift`/`UnitsView.swift`. Both iOS sim and native macOS builds verified green.
 - [ ] Add bottom nav bar
 - [ ] Add a Settings view; move Sign Out into Settings (currently elsewhere)
-- [ ] Add light/dark mode — reuse the pattern already used in other repos (see talli/spark portfolio-tokens approach)
+- [x] Light/dark mode — already implemented (`data-theme` toggle in app/index.html + js/lingo-app.js:721,968,975), verified 2026-07-20, no action needed
 - [ ] Expand language courses beyond beginner to intermediate/expert levels
 - [ ] Lessons should actually teach content, not just quiz — more Duolingo-like (currently quiz-only)
 - [ ] Some lessons still don't load at all
