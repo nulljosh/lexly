@@ -10,7 +10,7 @@
 - [x] macOS platform added to the main "Lexly" app record (6783501611) via ASC dashboard (no API for this — had to click "Add Platform"), build 202607060001 attached to v1.1.1
 - [x] Screenshot automation fixed — added accessibilityIdentifiers to disambiguate the two "Sign In" labels, plus a UITEST_SNAPSHOT bypass in AuthStore (iOS) since the demo account itself is broken (same one Apple flagged). macOS already had its own `-screenshots` launch flag.
 - [x] Captured a real Mac screenshot (1280x800), uploaded it, macOS 1.1.1 submitted to App Review (submission c2eeaff0)
-- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Needs a support ticket to Apple, not a scripting fix.
+- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Needs a support ticket to Apple, not a scripting fix. Re-confirmed 2026-07-21: the merge itself is solid — macOS 1.1.1 WAITING_FOR_REVIEW under the correct iOS app record (6783501611), old standalone record's 1.1.1 is REJECTED/orphaned. Same fix pattern applied to Echo tonight; Lexly already had it from 07-19.
 - [ ] Lexly Mac's own demo account (jatrommel@gmail.com) was flagged by Apple as failing sign-in (2.1 Information Needed) — moot once that app is retired, don't fix
 - [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density (user feedback 2026-07-19, screenshot comparison) — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout
 
