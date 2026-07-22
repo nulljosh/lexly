@@ -1,7 +1,6 @@
 # lexly Roadmap
 
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
-- [x] Checked `vercel.json`'s `lingo.heyitsmejosh.com` → `lexly.heyitsmejosh.com` redirect — moot. `lingo.heyitsmejosh.com` has no DNS record at all (confirmed via Cloudflare API, zone `6cea109e`); it was already deleted in the 2026-07-18 stale-CNAME cleanup. No live traffic can hit that host, so nothing to port. `vercel.json`'s redirect block is dead config, harmless to leave as-is.
 - [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
 - [ ] Deploy script/CI convention update: once cutover happens, update this repo's deploy docs (currently plain `git push` to Vercel per `~/Documents/Code/CLAUDE.md` stack conventions) to `wrangler pages deploy` instead
 
