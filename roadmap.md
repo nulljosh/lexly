@@ -1,5 +1,27 @@
 # lexly Roadmap
 
+## Fixed 2026-07-21 night (from user brain dump + screenshots)
+- [x] Cursive/serif display font (Fraunces) on landing + app headers → switched to same sans stack as body text (`css/lingo.css`, `index.html`)
+- [x] Masterclass cards (PC12, AP Biology) all redirected to landing instead of opening — catalog.json used relative `school/...` URLs which resolve wrong from `/app/`; made absolute (`/school/...`)
+
+## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
+- [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
+- [ ] "Computers" tab should merge into "Programming" with a better combined title; add more compute-related skills/courses
+- [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not just a code change.
+- [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried) — separate from the redirect bug already fixed above
+- [ ] Masterclass pages should render as a book/reader view of the actual notes content, not just open the raw HTML file as-is — check `school/PC12_Masterclass.html` / `school/Biology_Masterclass.html` rendering vs. desired reader UX
+- [ ] Web top nav bar reads cluttered (screenshot) — needs a visual pass
+- [ ] "+" icon should be white in light mode, currently isn't (screenshot) — check icon color token/SVG fill
+- [ ] Footer text spacing needs improvement (screenshot)
+- [ ] Add more skills/games/science courses (multiple screenshots, general content-expansion ask)
+- [ ] A UI glitch/visual artifact reported via screenshot — needs the actual image reviewed to diagnose (not visible in this text-only pass)
+- [ ] Top subject nav (languages/programming/etc.) currently scrolls vertically — should be horizontal-scroll only. Find the nav container CSS (didn't match common class names `.nav-scroll`/`.subject-nav`/`.tabs-scroll` — needs a fresh grep of `app/index.html`/`css/lingo.css` for the actual subject-picker markup)
+- [ ] Portfolio/profile: want the same "click avatar to refresh" instant feature other apps (epiphany etc.) have — should update instantly and persist to user profile; also general profile spacing/UI cleanup
+- [ ] School dashboard link is broken — clicking it bounces back to the landing page instead of the dashboard (separate from the masterclass fix above, needs its own repro)
+
+Full brain dump also exported to a PDF in ~/Downloads for image reference — screenshots referenced above are only described from user's captions, not directly reviewed this session.
+
+
 ## Confirmed 2026-07-21: universal app merge status
 Already merged — macOS platform lives under the main "Lexly" app record (6783501611), single bundle ID `com.nulljosh.lingo` across iOS+macOS targets, one repo. The old standalone "Lexly Mac" record (6783501927) is a dead orphan that can't be deleted via API or authenticated web session (409 conflict — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch). Genuine Apple-side restriction, needs a support ticket, not a scripting fix. No widget extension target exists in this repo, so the NSExtensionPointIdentifier bug that hit Talli/Epiphany doesn't apply here.
 
