@@ -1,5 +1,15 @@
 # lexly Roadmap
 
+## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
+- [x] Created Cloudflare Pages project `lexly`, deployed web assets (repo root minus `ios/`) to preview: https://lexly.pages.dev — confirmed live and serving (79 files)
+- [ ] Port `vercel.json`'s `lingo.heyitsmejosh.com` → `lexly.heyitsmejosh.com` redirect — Pages `_redirects` file is path-based within one deployment, doesn't do cross-host redirects; needs a Cloudflare Bulk Redirect or Worker instead once `lingo.heyitsmejosh.com` is pointed at Cloudflare
+- [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
+- [ ] Deploy script/CI convention update: once cutover happens, update this repo's deploy docs (currently plain `git push` to Vercel per `~/Documents/Code/CLAUDE.md` stack conventions) to `wrangler pages deploy` instead
+
+## iOS/macOS parity gaps (confirmed 2026-07-21 night, not yet built)
+- [ ] **Masterclass reader — iOS has none.** `ios/Sources/Resources/content/catalog.json`'s `school` category is missing `precalc12_masterclass`/`biology_masterclass` entries that web has; no SwiftUI view renders them. Plan: bundle `school/PC12_Masterclass.html` + `Biology_Masterclass.html` into `ios/Sources/Resources/content/school/`, add matching catalog entries, and add a small `WKWebView`-backed `MasterclassReaderView.swift` under `ios/Sources/Shared/` that opens the bundled HTML (reuse `CatalogView.swift`'s tap-to-open pattern, branch on a url/local-file field like web's `subject.url` branch) — reuse existing HTML, don't build a native reader from scratch.
+- [ ] **Avatar picker — iOS has none.** Web (`js/lingo-app.js`: `renderAvatarPicker()`, `AVATAR_PRESETS`, pixel-art SVG generation) has a full picker; iOS (`AuthStore.swift`/`AuthView.swift`) just hardcodes `avatarId: "falcon"` with no UI. This is also the open "click avatar to refresh, instant, persists to profile" request below — port web's `AVATAR_PRESETS` + SVG logic into a SwiftUI picker view, wire to `AuthStore` the same way `epiphany`'s avatar-refresh pattern works.
+
 ## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
 - [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
 - [ ] "Computers" tab should merge into "Programming" with a better combined title; add more compute-related skills/courses
