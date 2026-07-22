@@ -1,9 +1,5 @@
 # lexly Roadmap
 
-## Fixed 2026-07-21 night (from user brain dump + screenshots)
-- [x] Cursive/serif display font (Fraunces) on landing + app headers → switched to same sans stack as body text (`css/lingo.css`, `index.html`)
-- [x] Masterclass cards (PC12, AP Biology) all redirected to landing instead of opening — catalog.json used relative `school/...` URLs which resolve wrong from `/app/`; made absolute (`/school/...`)
-
 ## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
 - [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
 - [ ] "Computers" tab should merge into "Programming" with a better combined title; add more compute-related skills/courses
@@ -20,7 +16,6 @@
 - [ ] School dashboard link is broken — clicking it bounces back to the landing page instead of the dashboard (separate from the masterclass fix above, needs its own repro)
 
 Full brain dump also exported to a PDF in ~/Downloads for image reference — screenshots referenced above are only described from user's captions, not directly reviewed this session.
-
 
 ## Confirmed 2026-07-21: universal app merge status
 Already merged — macOS platform lives under the main "Lexly" app record (6783501611), single bundle ID `com.nulljosh.lingo` across iOS+macOS targets, one repo. The old standalone "Lexly Mac" record (6783501927) is a dead orphan that can't be deleted via API or authenticated web session (409 conflict — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch). Genuine Apple-side restriction, needs a support ticket, not a scripting fix. No widget extension target exists in this repo, so the NSExtensionPointIdentifier bug that hit Talli/Epiphany doesn't apply here.
