@@ -10,10 +10,8 @@ struct LingoApp: App {
             Group {
                 if auth.isLoading {
                     ProgressView()
-                } else if auth.isSignedIn || CommandLine.arguments.contains("-screenshots") {
-                    CatalogView(store: store, auth: auth)
                 } else {
-                    AuthView(auth: auth)
+                    CatalogView(store: store, auth: auth)
                 }
             }
             .tint(Color(hex: "5B9BD5"))

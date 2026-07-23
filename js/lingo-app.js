@@ -1140,10 +1140,6 @@ function renderSubjects(category) {
 }
 
 function selectSubject(card) {
-    if (!localProfile) {
-        document.getElementById('authShell').showModal();
-        return;
-    }
     document.querySelectorAll('.subject-card').forEach((subjectCard) => subjectCard.classList.remove('selected'));
     card.classList.add('selected');
     gameState.selectedSubject = card.dataset.subject;
