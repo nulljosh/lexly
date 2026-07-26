@@ -111,3 +111,8 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## Ingested 2026-07-25
 - [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
+
+## Visual verification 2026-07-25 (headless Chrome, CDP)
+- [x] Subject nav horizontal-scroll fix CONFIRMED by assertion, not eyeball: `.category-tabs` measured `scrollHeight 43 <= clientHeight 43` (the 2px vertical overflow is gone) and `scrollWidth 730 > clientWidth 358` (horizontal scrolling still works). Screenshot at 390x844 shows tabs on one row with the active underline aligned.
+- [x] School dashboard link CONFIRMED: served locally, `/school/index.html` returns 200 while the old relative `app/school/index.html` returns 404 — exactly the claimed root cause.
+- [x] Footer spacing reviewed at 390x844 and 1440x900, reads correctly.
