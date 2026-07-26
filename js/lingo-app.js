@@ -616,7 +616,7 @@ function renderProfilePanel() {
     form.appendChild(questDiv);
 
     const schoolLink = document.createElement('a');
-    schoolLink.href = 'school/index.html';
+    schoolLink.href = '/school/index.html';
     schoolLink.className = 'btn';
     schoolLink.style.display = 'block';
     schoolLink.style.textAlign = 'center';
