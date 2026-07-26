@@ -6,7 +6,6 @@
 - Code fix pushed 2026-07-22 (`js/lingo-app.js`, `ios/Sources/iOS/LingoApp.swift`, `ios/Sources/macOS/LingoApp.swift` — `selectSubject`/app entry no longer require `localProfile`/`auth.isSignedIn`), both iOS + macOS build clean
 - [ ] Still need: build+upload a new version (1.1.2+) with this fix and resubmit for review — Apple's Resolution Center reply alone doesn't attach a new build
 
-
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
 - [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
 - [ ] Deploy script/CI convention update: once cutover happens, update this repo's deploy docs (currently plain `git push` to Vercel per `~/Documents/Code/CLAUDE.md` stack conventions) to `wrangler pages deploy` instead
@@ -109,9 +108,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## From Lexly.pdf (imported 2026-07-19)
 - [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).
-
-## ASC review findings 2026-07-20 (via Resolution Center)
-- [x] Guideline 2.1(b) Information Needed: Apple wants a written explanation of paid-content business model. Verified: app has zero StoreKit/IAP code, nothing is currently paywalled (matches "Pro un-paywalled, courses free" state). Reply sent 2026-07-22 clarifying no paid content/IAP exists — awaiting Apple's re-review.
 
 ## Ingested 2026-07-25
 - [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
