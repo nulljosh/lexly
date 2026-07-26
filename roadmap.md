@@ -1,5 +1,12 @@
 # lexly Roadmap
 
+## iOS 1.1.1 review thread (submission c68dc74a) — replied 2026-07-22, awaiting Apple
+- [ ] Rejected twice: Guideline 2.1(b) (Apple asked for business model/paid-content clarification) and Guideline 5.1.1(v) (app required login before non-account features like quiz questions)
+- Replied to both in Resolution Center: app has zero IAP/paywall, everything free; login gate removed in code
+- Code fix pushed 2026-07-22 (`js/lingo-app.js`, `ios/Sources/iOS/LingoApp.swift`, `ios/Sources/macOS/LingoApp.swift` — `selectSubject`/app entry no longer require `localProfile`/`auth.isSignedIn`), both iOS + macOS build clean
+- [ ] Still need: build+upload a new version (1.1.2+) with this fix and resubmit for review — Apple's Resolution Center reply alone doesn't attach a new build
+
+
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
 - [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
 - [ ] Deploy script/CI convention update: once cutover happens, update this repo's deploy docs (currently plain `git push` to Vercel per `~/Documents/Code/CLAUDE.md` stack conventions) to `wrangler pages deploy` instead
@@ -32,7 +39,7 @@ Already merged — macOS platform lives under the main "Lexly" app record (67835
 - Checked App Store name availability via exact-match PATCH attempt (asc-name-creator skill) — "Lingo" is taken by a different account (`ENTITY_ERROR.ATTRIBUTE.INVALID.DUPLICATE.DIFFERENT_ACCOUNT`), not reclaimable without a trademark claim. Kept "Lexly" as the live name, no code/ASC changes made.
 
 ## 2026-07-19: monetization redesign (Duolingo model) + iOS resubmit + Mac merge
-- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Needs a support ticket to Apple, not a scripting fix. Re-confirmed 2026-07-21: the merge itself is solid — macOS 1.1.1 WAITING_FOR_REVIEW under the correct iOS app record (6783501611), old standalone record's 1.1.1 is REJECTED/orphaned. Same fix pattern applied to Echo tonight; Lexly already had it from 07-19.
+- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Filed Apple Developer Support ticket 2026-07-22, Case ID **102949489427**, requesting removal. Awaiting Apple's reply. Re-confirmed 2026-07-21: the merge itself is solid — macOS 1.1.1 WAITING_FOR_REVIEW under the correct iOS app record (6783501611), old standalone record's 1.1.1 is REJECTED/orphaned. Same fix pattern applied to Echo tonight; Lexly already had it from 07-19.
 - [ ] **Also tried `asc web apps delete` (2026-07-21, authenticated web session)** — same wall: `409` conflict. Root cause confirmed via `asc versions list`: the app's only version is stuck in `appVersionState: REJECTED`, not `PREPARE_FOR_SUBMISSION` — Apple's web deletion endpoint (same one the dashboard uses) refuses to delete an app with a non-editable rejected version attached. This is a genuine Apple-side restriction, not a scripting gap. File the support ticket.
 - [ ] Lexly Mac's own demo account (jatrommel@gmail.com) was flagged by Apple as failing sign-in (2.1 Information Needed) — moot once that app is retired, don't fix
 - [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density (user feedback 2026-07-19, screenshot comparison) — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout
@@ -104,4 +111,7 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).
 
 ## ASC review findings 2026-07-20 (via Resolution Center)
-- [ ] Guideline 2.1(b) Information Needed: Apple wants a written explanation of paid-content business model. Verified: app has zero StoreKit/IAP code, nothing is currently paywalled (matches "Pro un-paywalled, courses free" state). Drafted reply ready to paste in Resolution Center: "Lexly does not currently implement In-App Purchase or any paid content. All courses and features are free to use. Any 'Pro' references in the app are vestigial from an earlier design and unlock nothing — no purchase flow exists in the current build." No CLI reply path exists (asc web review has no reply subcommand) — Joshua needs to paste this in ASC dashboard.
+- [x] Guideline 2.1(b) Information Needed: Apple wants a written explanation of paid-content business model. Verified: app has zero StoreKit/IAP code, nothing is currently paywalled (matches "Pro un-paywalled, courses free" state). Reply sent 2026-07-22 clarifying no paid content/IAP exists — awaiting Apple's re-review.
+
+## Ingested 2026-07-25
+- [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
