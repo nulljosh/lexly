@@ -1,5 +1,9 @@
 # lexly Roadmap
 
+## macOS 1.1.1 rejected 2026-07-24 (submission c2eeaff0)
+Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
+- [ ] Test sign-in on an actual Mac build with jatrommel@gmail.com / Joshisrad4$!!, fix if broken, then resubmit macOS 1.1.1 (or bump to 1.1.2 if code changes)
+
 ## iOS 1.1.1 review thread (submission c68dc74a) — replied 2026-07-22, awaiting Apple
 - [ ] Rejected twice: Guideline 2.1(b) (Apple asked for business model/paid-content clarification) and Guideline 5.1.1(v) (app required login before non-account features like quiz questions)
 - Replied to both in Resolution Center: app has zero IAP/paywall, everything free; login gate removed in code
