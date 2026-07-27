@@ -112,3 +112,9 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - Live iOS 1.1.2 screenshots are locked ("Can't Delete Screenshot After Submit"), so **iOS version 1.1.3 was created** (`cf4fd9f4-70e2-44d0-9110-a3f27fa6513d`, PREPARE_FOR_SUBMISSION) and the corrected shots uploaded to its en-US localization. Not submitted — needs a build (new icon), What's New, and the 6.7 screenshot first.
 - [ ] macOS 1.1.1 is still in REJECTED state — screenshots are fixed but it needs resubmitting, and its What's New is still empty.
 - [ ] iOS 1.1.3 still needs a build (with the new icon) + What's New before submit.
+
+### 2026-07-27 late — macOS resubmitted
+- macOS 1.1.1 RESUBMITTED, now WAITING_FOR_REVIEW (submission `8c047c73-78af-467a-83f4-2c20bb1a10c2`). The old rejected submission `e23ab7a8` had to be cancelled first — it still held the version, blocking a new submission with "already added to another reviewSubmission".
+- macOS `whatsNew` is NOT editable ("Attribute 'whatsNew' cannot be edited at this time") because 1.1.1 is the first macOS release — release notes don't apply to a first version. `asc review doctor`'s "what's new is empty" warning is a false positive here; ignore it.
+- iOS 1.1.3 What's New set: "A clearer, more legible app icon and refreshed screenshots."
+- [ ] iOS 1.1.3 still needs an archive + upload carrying the new icon, then submit. Screenshots and What's New are already in place on it.
