@@ -5,10 +5,7 @@ Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirec
 - [x] Test sign-in on an actual Mac build with jatrommel@gmail.com / Joshisrad4$!!, fix if broken, then resubmit macOS 1.1.1 (or bump to 1.1.2 if code changes) — **root cause found 2026-07-26: sign-in wasn't broken, it was unreachable.** The 2026-07-22 fix for Apple's 5.1.1(v) rejection (below) removed the login *gate* entirely, but also left no path to sign in at all — `LingoApp.swift` (iOS+macOS) always goes straight to `CatalogView`, and `SettingsView` only had Sign Out/Delete Account. Fixed by adding an optional "Sign In" row to `SettingsView` (shown only when `!auth.isSignedIn`) that presents `AuthView` as a sheet — browsing stays gate-free, sign-in becomes reachable. Both `Lingo-macOS` and `Lingo-iOS` schemes build clean. **Resubmitted 2026-07-26:** kept version 1.1.1 (no user-facing marketing change), bumped build to 202607261932, archived+uploaded+attached+submitted via `asc` — now WAITING_FOR_REVIEW (submission e23ab7a8). Note: an earlier partial submission (build 202607261925) went out ~4 min before this SettingsView fix landed and was missing it — caught and re-submitted with the corrected build before Apple picked it up.
 
 ## iOS 1.1.1 review thread (submission c68dc74a) — replied 2026-07-22, awaiting Apple
-- [ ] Rejected twice: Guideline 2.1(b) (Apple asked for business model/paid-content clarification) and Guideline 5.1.1(v) (app required login before non-account features like quiz questions)
-- Replied to both in Resolution Center: app has zero IAP/paywall, everything free; login gate removed in code
-- Code fix pushed 2026-07-22 (`js/lingo-app.js`, `ios/Sources/iOS/LingoApp.swift`, `ios/Sources/macOS/LingoApp.swift` — `selectSubject`/app entry no longer require `localProfile`/`auth.isSignedIn`), both iOS + macOS build clean
-- [ ] Still need: build+upload a new version (1.1.2+) with this fix and resubmit for review — Apple's Resolution Center reply alone doesn't attach a new build
+- [x] Rejected twice: Guideline 2.1(b) and 5.1.1(v). Replied in Resolution Center + code fix pushed 2026-07-22. **Resolved: `asc versions list` (2026-07-26) confirms iOS 1.1.1 is `READY_FOR_DISTRIBUTION` — already approved and live, no further build/resubmit needed. This thread's remaining item was stale.**
 
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
 - [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
@@ -71,9 +68,8 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
 
 ## Rejection 1.1.0 details (pulled 2026-07-12)
-- [ ] 2.1: "Couldn't load Computer Basics" on iPad — root cause fixed in 634e2fc (missing exercise ids); verify + resubmit 1.1.1
-
-- [ ] 1.1.1 publish blocked: "cannot create a new version in the current state" — rejected 1.1.0 version still open; edit the existing 1.1.0 appStoreVersion to 1.1.1 (or resolve/close the rejected submission) then attach build 202607121732 and resubmit. Resume: asc workflow run --file .asc/workflow.json ship-ios --resume ship-ios-20260713T003210Z-af9573cc
+- [x] 2.1: "Couldn't load Computer Basics" on iPad — fixed in 634e2fc. Superseded: iOS 1.1.1 is now `READY_FOR_DISTRIBUTION` (confirmed 2026-07-26), so this shipped and cleared review.
+- [x] 1.1.1 publish blocked on rejected 1.1.0 — no longer blocked, both platforms moved past 1.1.0 (iOS live, macOS 1.1.1 WAITING_FOR_REVIEW as of 2026-07-26).
 
 ## From chat 2026-07-13 (wrap-up, not started)
 - [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
