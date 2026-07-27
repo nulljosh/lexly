@@ -108,3 +108,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## Ingested 2026-07-25
 - [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
+
+## Icon recolor shipped (2026-07-26)
+- [x] App icon background recolored (sky blue), v1.1.2 submitted for App Store review same night.
