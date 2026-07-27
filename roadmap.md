@@ -2,10 +2,6 @@
 
 ## macOS 1.1.1 rejected 2026-07-24 (submission c2eeaff0)
 Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
-- [x] Test sign-in on an actual Mac build with jatrommel@gmail.com / Joshisrad4$!!, fix if broken, then resubmit macOS 1.1.1 (or bump to 1.1.2 if code changes) — **root cause found 2026-07-26: sign-in wasn't broken, it was unreachable.** The 2026-07-22 fix for Apple's 5.1.1(v) rejection (below) removed the login *gate* entirely, but also left no path to sign in at all — `LingoApp.swift` (iOS+macOS) always goes straight to `CatalogView`, and `SettingsView` only had Sign Out/Delete Account. Fixed by adding an optional "Sign In" row to `SettingsView` (shown only when `!auth.isSignedIn`) that presents `AuthView` as a sheet — browsing stays gate-free, sign-in becomes reachable. Both `Lingo-macOS` and `Lingo-iOS` schemes build clean. **Resubmitted 2026-07-26:** kept version 1.1.1 (no user-facing marketing change), bumped build to 202607261932, archived+uploaded+attached+submitted via `asc` — now WAITING_FOR_REVIEW (submission e23ab7a8). Note: an earlier partial submission (build 202607261925) went out ~4 min before this SettingsView fix landed and was missing it — caught and re-submitted with the corrected build before Apple picked it up.
-
-## iOS 1.1.1 review thread (submission c68dc74a) — replied 2026-07-22, awaiting Apple
-- [x] Rejected twice: Guideline 2.1(b) and 5.1.1(v). Replied in Resolution Center + code fix pushed 2026-07-22. **Resolved: `asc versions list` (2026-07-26) confirms iOS 1.1.1 is `READY_FOR_DISTRIBUTION` — already approved and live, no further build/resubmit needed. This thread's remaining item was stale.**
 
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
 - [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
@@ -67,10 +63,6 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Merge photographed pre-calc notes into PC12 masterclass — PDF embeds are ~30KB thumbnails, handwriting illegible; needs full-res originals (matches existing "pc12 re-scan pending user photos")
 - [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
 
-## Rejection 1.1.0 details (pulled 2026-07-12)
-- [x] 2.1: "Couldn't load Computer Basics" on iPad — fixed in 634e2fc. Superseded: iOS 1.1.1 is now `READY_FOR_DISTRIBUTION` (confirmed 2026-07-26), so this shipped and cleared review.
-- [x] 1.1.1 publish blocked on rejected 1.1.0 — no longer blocked, both platforms moved past 1.1.0 (iOS live, macOS 1.1.1 WAITING_FOR_REVIEW as of 2026-07-26).
-
 ## From chat 2026-07-13 (wrap-up, not started)
 - [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
 - [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
@@ -109,13 +101,7 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ## Ingested 2026-07-25
 - [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
 
-## Icon recolor shipped (2026-07-26)
-- [x] App icon background recolored (sky blue), v1.1.2 submitted for App Store review same night.
-
 ## 2026-07-27
-- [x] App icon redesigned — single solid white speech bubble on #2e86de. Previous version was near-invisible (outline strokes in a tint barely off the background). All iOS/macOS PNG sizes regenerated from `assets/icon.svg` via `rsvg-convert`.
-- [x] Landing page + app CSS: removed `font-style: italic` headings, dropped Fraunces/DM Sans Google Fonts entirely, `--font`/`--font-display` now SF/Helvetica system stack.
-- [x] **Stale "Lingo" App Store screenshots** — FIXED for iOS (see 1.1.3 note below). Original note: — the uploaded 6.5"/6.7" screenshots (`screenshots/6.5/`, `screenshots/6.7/`, `screenshots/raw/mac/`) were shot before the rename and still show "Lingo" as the nav title. The app code is correct (`CatalogView.navigationTitle("Lexly")`, both Info.plists say Lexly). Re-shoot via `.asc/screenshots.json` plan (note: its `udid` is stale) + `asc screenshots upload`. This is the likely cause of the macOS 1.1.1 rejection (submission e23ab7a8-27f6-4248-ba37-807207f10d07) — Apple's API exposes no rejection text, only the dashboard/email does.
 - [ ] macOS 1.1.1 REJECTED; iOS 1.1.2 is READY_FOR_DISTRIBUTION. Mac What's New is empty (`asc review doctor` warning) — fill before resubmitting.
 - [ ] Ship icon change as 1.1.3 (iOS + macOS) once screenshots are re-shot.
 
