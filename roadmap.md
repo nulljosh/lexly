@@ -111,3 +111,10 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## Icon recolor shipped (2026-07-26)
 - [x] App icon background recolored (sky blue), v1.1.2 submitted for App Store review same night.
+
+## 2026-07-27
+- [x] App icon redesigned — single solid white speech bubble on #2e86de. Previous version was near-invisible (outline strokes in a tint barely off the background). All iOS/macOS PNG sizes regenerated from `assets/icon.svg` via `rsvg-convert`.
+- [x] Landing page + app CSS: removed `font-style: italic` headings, dropped Fraunces/DM Sans Google Fonts entirely, `--font`/`--font-display` now SF/Helvetica system stack.
+- [ ] **Stale "Lingo" App Store screenshots** — the uploaded 6.5"/6.7" screenshots (`screenshots/6.5/`, `screenshots/6.7/`, `screenshots/raw/mac/`) were shot before the rename and still show "Lingo" as the nav title. The app code is correct (`CatalogView.navigationTitle("Lexly")`, both Info.plists say Lexly). Re-shoot via `.asc/screenshots.json` plan (note: its `udid` is stale) + `asc screenshots upload`. This is the likely cause of the macOS 1.1.1 rejection (submission e23ab7a8-27f6-4248-ba37-807207f10d07) — Apple's API exposes no rejection text, only the dashboard/email does.
+- [ ] macOS 1.1.1 REJECTED; iOS 1.1.2 is READY_FOR_DISTRIBUTION. Mac What's New is empty (`asc review doctor` warning) — fill before resubmitting.
+- [ ] Ship icon change as 1.1.3 (iOS + macOS) once screenshots are re-shot.
