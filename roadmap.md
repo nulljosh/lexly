@@ -107,6 +107,8 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ### Screenshot re-shoot 2026-07-27 (done, iOS only)
 - Re-captured from sim (iPhone 14 Plus + 11 Pro Max), title now reads "Lexly". Saved to `screenshots/6.5|6.7/01_categories_full.png` + `screenshots/raw/`.
-- Both captures are actually APP_IPHONE_65 sizes (1284x2778, 1242x2688) — ASC rejects them for IPHONE_67, which wants 1290x2796. **No 6.7 screenshot exists yet**; need a real 6.7-class sim (iPhone 15/16 Plus).
+- (resolved) First pass captures were both APP_IPHONE_65 sizes (1284x2778, 1242x2688) — ASC rejects them for IPHONE_67, which wants 1290x2796. 6.7 since re-shot on iPhone 17 Pro Max (1320x2868) and uploaded. Duplicate 6.5 asset deleted.
 - Live iOS 1.1.2 screenshots are locked ("Can't Delete Screenshot After Submit"), so **iOS version 1.1.3 was created** (`cf4fd9f4-70e2-44d0-9110-a3f27fa6513d`, PREPARE_FOR_SUBMISSION) and the corrected shots uploaded to its en-US localization. Not submitted — needs a build (new icon), What's New, and the 6.7 screenshot first.
-- [ ] macOS still untouched: `screenshots/raw/mac/01_home.png` is stale, requires running the Mac app to re-shoot. macOS 1.1.1 remains REJECTED.
+- [x] macOS re-shot: built Lingo-macOS, launched it, resized window to 1440x900 via System Events, captured with `asc screenshots capture --provider macos`, cropped to exactly 1440x900 with sips. Saved to `screenshots/mac/01_home.png`, uploaded to the REJECTED macOS 1.1.1 localization (rejected versions still accept metadata edits).
+- [ ] macOS 1.1.1 is still in REJECTED state — screenshots are fixed but it needs resubmitting, and its What's New is still empty.
+- [ ] iOS 1.1.3 still needs a build (with the new icon) + What's New before submit.
