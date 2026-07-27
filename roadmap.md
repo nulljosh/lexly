@@ -118,3 +118,9 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - macOS `whatsNew` is NOT editable ("Attribute 'whatsNew' cannot be edited at this time") because 1.1.1 is the first macOS release — release notes don't apply to a first version. `asc review doctor`'s "what's new is empty" warning is a false positive here; ignore it.
 - iOS 1.1.3 What's New set: "A clearer, more legible app icon and refreshed screenshots."
 - [ ] iOS 1.1.3 still needs an archive + upload carrying the new icon, then submit. Screenshots and What's New are already in place on it.
+
+### iOS 1.1.3 build attempt 2026-07-27 late
+- Bumped `MARKETING_VERSION` to 1.1.3 in `ios/project.yml`; new icon is in the build.
+- First `asc workflow run ship-ios VERSION:1.1.3` FAILED at the archive step: `Validate plug-in "SwiftLintBuildToolPlugin"`. This is exactly the unverified SwiftLint wiring flagged in `~/Documents/Code/CLAUDE.md` (committed to lexly but never build-verified). Applied the documented fallback: removed the `SwiftLint` entry from `packages:` and the `buildToolPlugins:` block from `project.yml`, regenerated.
+- [ ] Re-run was still in flight when the session ended — **verify whether it archived and uploaded** before assuming 1.1.3 has a build. Resume with `asc workflow run ship-ios VERSION:1.1.3`, or check `asc builds list --app 6783501611` for build `202607271640`.
+- [ ] If lexly should keep SwiftLint, re-add the wiring and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping — headless archives can't grant the plugin's trust prompt.
