@@ -5,25 +5,40 @@ struct SettingsView: View {
     @State private var confirmingDelete = false
     @State private var deleting = false
     @State private var deleteError: String?
+    @State private var showingAuth = false
 
     var body: some View {
         List {
-            Section {
-                Button("Sign Out", role: .destructive) {
-                    Task { try? await auth.signOut() }
+            if auth.isSignedIn {
+                Section {
+                    Button("Sign Out", role: .destructive) {
+                        Task { try? await auth.signOut() }
+                    }
                 }
-            }
 
-            Section {
-                Button("Delete Account", role: .destructive) {
-                    confirmingDelete = true
+                Section {
+                    Button("Delete Account", role: .destructive) {
+                        confirmingDelete = true
+                    }
+                    .disabled(deleting)
+                } footer: {
+                    Text("Permanently deletes your account and progress. This cannot be undone.")
                 }
-                .disabled(deleting)
-            } footer: {
-                Text("Permanently deletes your account and progress. This cannot be undone.")
+            } else {
+                Section {
+                    Button("Sign In") {
+                        showingAuth = true
+                    }
+                    .accessibilityIdentifier("settingsSignIn")
+                } footer: {
+                    Text("Sign in to sync your progress across devices.")
+                }
             }
         }
         .navigationTitle("Settings")
+        .sheet(isPresented: $showingAuth) {
+            AuthView(auth: auth)
+        }
         .confirmationDialog(
             "Delete your account?",
             isPresented: $confirmingDelete,
