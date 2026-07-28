@@ -6,7 +6,7 @@
 
 A gamified language and skill learning app. Web + native iOS/macOS.
 
-Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com).
+Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
 
 <p>
   <img src="screenshots/catalog.png" width="260" alt="Course catalog">

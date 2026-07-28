@@ -124,3 +124,7 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - First `asc workflow run ship-ios VERSION:1.1.3` FAILED at the archive step: `Validate plug-in "SwiftLintBuildToolPlugin"`. This is exactly the unverified SwiftLint wiring flagged in `~/Documents/Code/CLAUDE.md` (committed to lexly but never build-verified). Applied the documented fallback: removed the `SwiftLint` entry from `packages:` and the `buildToolPlugins:` block from `project.yml`, regenerated.
 - [ ] Re-run was still in flight when the session ended — **verify whether it archived and uploaded** before assuming 1.1.3 has a build. Resume with `asc workflow run ship-ios VERSION:1.1.3`, or check `asc builds list --app 6783501611` for build `202607271640`.
 - [ ] If lexly should keep SwiftLint, re-add the wiring and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping — headless archives can't grant the plugin's trust prompt.
+
+## From App Store.pdf (imported 2026-07-28)
+- [ ] Lexly macOS 1.1.1 submission REJECTED + carries a warning — pull the reasons (ASC email received 2026-07-27) and fix.
+- [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only.
