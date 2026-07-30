@@ -25,4 +25,11 @@ final class ContentStoreTests: XCTestCase {
         let pack = try JSONDecoder().decode(CoursePack.self, from: data)
         XCTAssertFalse(pack.units.isEmpty)
     }
+
+    func testMasterclassNotesDecode() throws {
+        let url = resourcesDir.appendingPathComponent("notes/precalc12_masterclass.json")
+        let data = try Data(contentsOf: url)
+        let notes = try JSONDecoder().decode(Notes.self, from: data)
+        XCTAssertFalse(notes.sections.isEmpty)
+    }
 }

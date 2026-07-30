@@ -13,7 +13,11 @@ struct CatalogView: View {
                         Section(category.title) {
                             ForEach(category.subjects) { subject in
                                 NavigationLink {
-                                    UnitsView(store: store, subject: subject)
+                                    if subject.notesPath != nil {
+                                        NotesView(store: store, subject: subject)
+                                    } else {
+                                        UnitsView(store: store, subject: subject)
+                                    }
                                 } label: {
                                     SubjectRow(subject: subject)
                                 }

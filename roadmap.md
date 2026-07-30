@@ -129,3 +129,12 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ## From App Store.pdf (imported 2026-07-28)
 - [ ] Lexly macOS 1.1.1 submission REJECTED + carries a warning — pull the reasons (ASC email received 2026-07-27) and fix.
 - [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only.
+
+## From App Store.pdf (imported 2026-07-29)
+- [ ] Lexly (main, iOS) shows an active red "View App Review Issues & Messages" banner on ASC — pull the reasons via `asc review doctor` / dashboard and fix.
+- [ ] Icon should be made smaller/simplified inside the rounded square — currently reads too busy/large.
+
+### 2026-07-29 — Masterclass fixed, "teach as you go" scoped
+- Fixed real bug: native iOS/macOS app's `Sources/Resources/content` was a stale hand-copy missing the Masterclass catalog entries entirely — tapping Masterclass did nothing. Web already worked (links to notes HTML directly).
+- Parsed both masterclass HTML files into structured JSON (`content/notes/precalc12_masterclass.json`, `biology_masterclass.json`). Added native `NotesView.swift` (sections/formulas/warn-tip-info/examples/tables/flashcards) and routed `CatalogView` to it for subjects with `notesPath`. Replaced the stale resource copy with a symlink (`ios/Sources/Resources/content` → `../../../content`) so this can't drift again. Build verified.
+- [ ] **Not started** — "teach as you go" (Duolingo-style: show the concept/explanation before quizzing) for the 40 regular course packs. This is a content-authoring job, not just UI: each lesson needs a short teaching block written before its exercises, per course. Scope as its own session — don't try to bundle into a quick UI pass.

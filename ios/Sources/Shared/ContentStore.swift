@@ -26,8 +26,15 @@ final class ContentStore {
     }
 
     func loadCourse(_ subject: Subject) -> CoursePack? {
-        let name = (subject.packPath as NSString).lastPathComponent.replacingOccurrences(of: ".json", with: "")
+        guard let packPath = subject.packPath else { return nil }
+        let name = (packPath as NSString).lastPathComponent.replacingOccurrences(of: ".json", with: "")
         return ContentStore.loadJSON(name, subdir: "courses", as: CoursePack.self)
+    }
+
+    func loadNotes(_ subject: Subject) -> Notes? {
+        guard let notesPath = subject.notesPath else { return nil }
+        let name = (notesPath as NSString).lastPathComponent.replacingOccurrences(of: ".json", with: "")
+        return ContentStore.loadJSON(name, subdir: "notes", as: Notes.self)
     }
 
     func recordAnswer(correct: Bool, exerciseId: String, lessonId: String) {

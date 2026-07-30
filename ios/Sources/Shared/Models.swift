@@ -14,7 +14,48 @@ struct Subject: Decodable, Identifiable {
     let name: String
     let icon: String
     let level: String
-    let packPath: String
+    let packPath: String?
+    let notesPath: String?
+}
+
+struct Notes: Decodable {
+    let id: String
+    let name: String
+    let sections: [NotesSection]
+}
+
+struct NotesSection: Decodable, Identifiable {
+    let id: String
+    let title: String
+    let unitTag: String
+    let blocks: [NotesBlock]
+}
+
+struct NotesBlock: Decodable, Identifiable {
+    let type: String
+    let text: String?
+    let title: String?
+    let items: [String]?
+    let ordered: Bool?
+    let steps: [String]?
+    let headers: [String]?
+    let rows: [[String]]?
+    let modules: [NotesModule]?
+    let cards: [NotesFlashcard]?
+
+    var id: String { (title ?? text ?? UUID().uuidString) + type }
+}
+
+struct NotesModule: Decodable, Identifiable {
+    let title: String
+    let items: [String]
+    var id: String { title }
+}
+
+struct NotesFlashcard: Decodable, Identifiable {
+    let q: String
+    let a: String
+    var id: String { q }
 }
 
 struct CoursePack: Decodable {
