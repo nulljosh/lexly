@@ -13,7 +13,6 @@ Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirec
 
 ## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
 - [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
-- [x] "Computers" tab merged into "Programming" (2026-07-28) — combined title "Choose a programming or computer skill", Computer Basics subject folded into the programming category (web `content/catalog.json` + iOS `ios/Sources/Resources/content/catalog.json`), separate "Computers" tab removed from `app/index.html`. Category is data-driven, no Swift enum needed.
 - [ ] Add more compute-related skills/courses beyond Computer Basics (separate scope from the merge above)
 - [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not just a code change.
 - [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried) — separate from the redirect bug already fixed above
