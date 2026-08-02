@@ -1,5 +1,8 @@
 # lexly Roadmap
 
+## From Notes PDF (imported 2026-08-02)
+- [ ] iOS needs a splash animation to match Duolingo's (playful animated launch screen, not a static splash).
+
 ## macOS 1.1.1 rejected 2026-07-24 (submission c2eeaff0)
 Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
 
