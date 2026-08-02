@@ -125,21 +125,27 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ### iOS 1.1.3 build attempt 2026-07-27 late
 - Bumped `MARKETING_VERSION` to 1.1.3 in `ios/project.yml`; new icon is in the build.
 - First `asc workflow run ship-ios VERSION:1.1.3` FAILED at the archive step: `Validate plug-in "SwiftLintBuildToolPlugin"`. This is exactly the unverified SwiftLint wiring flagged in `~/Documents/Code/CLAUDE.md` (committed to lexly but never build-verified). Applied the documented fallback: removed the `SwiftLint` entry from `packages:` and the `buildToolPlugins:` block from `project.yml`, regenerated.
-- [ ] Re-run was still in flight when the session ended — **verify whether it archived and uploaded** before assuming 1.1.3 has a build. Resume with `asc workflow run ship-ios VERSION:1.1.3`, or check `asc builds list --app 6783501611` for build `202607271640`.
+- [x] Re-run confirmed complete 2026-08-02: build `202607271632` (not `202607271640` as guessed — close but that's the actual build number) is `VALID`, uploaded 2026-07-27T16:33. Version 1.1.3 reached `READY_FOR_DISTRIBUTION`, submission `8ae27c86` `COMPLETE`/approved. 1.1.3 is live/shipped.
 - [ ] If lexly should keep SwiftLint, re-add the wiring and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping — headless archives can't grant the plugin's trust prompt.
 
 ## From App Store.pdf (imported 2026-07-28)
-- [ ] Lexly macOS 1.1.1 submission REJECTED + carries a warning — pull the reasons (ASC email received 2026-07-27) and fix.
-- [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only.
+- [x] Lexly macOS 1.1.1 submission REJECTED — 2026-08-02: `asc review doctor` showed the only blocking item was a stale/orphaned `inAppPurchaseVersion` review item (state REJECTED) left over from a deleted Pro IAP (`asc iap list` returns 0 IAPs — Pro is un-paywalled per earlier work, so this item had no live IAP behind it). No actual app-content rejection reason was ever surfaced by the public API — canceled the stuck submission (`8c047c73`), doctor cleared to "no submission blockers detected," and resubmitted (`asc review submit --platform MAC_OS`, submission `a91ea668-bb56-4a31-b722-d7c58782777c`). Now `WAITING_FOR_REVIEW` as of 2026-08-02.
+- [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only. **Do not touch — Apple support case 102949489427 already filed.**
 
 ## From App Store.pdf (imported 2026-07-29)
-- [ ] Lexly (main, iOS) shows an active red "View App Review Issues & Messages" banner on ASC — pull the reasons via `asc review doctor` / dashboard and fix.
+- [x] Lexly (main, iOS) "View App Review Issues & Messages" banner — 2026-08-02: `asc review doctor --app 6783501611` shows iOS 1.1.3 is `READY_FOR_DISTRIBUTION`, latest submission (`8ae27c86`) state `COMPLETE`/approved (build `202607271632`, uploaded 2026-07-27, `processingState: VALID`). The 07-27 SwiftLint-plugin re-run did complete and ship successfully — no outstanding iOS review issue exists now; banner was stale.
 - [ ] Icon should be made smaller/simplified inside the rounded square — currently reads too busy/large.
 
 ### 2026-07-29 — Masterclass fixed, "teach as you go" scoped
 - Fixed real bug: native iOS/macOS app's `Sources/Resources/content` was a stale hand-copy missing the Masterclass catalog entries entirely — tapping Masterclass did nothing. Web already worked (links to notes HTML directly).
 - Parsed both masterclass HTML files into structured JSON (`content/notes/precalc12_masterclass.json`, `biology_masterclass.json`). Added native `NotesView.swift` (sections/formulas/warn-tip-info/examples/tables/flashcards) and routed `CatalogView` to it for subjects with `notesPath`. Replaced the stale resource copy with a symlink (`ios/Sources/Resources/content` → `../../../content`) so this can't drift again. Build verified.
 - [ ] **Not started** — "teach as you go" (Duolingo-style: show the concept/explanation before quizzing) for the 40 regular course packs. This is a content-authoring job, not just UI: each lesson needs a short teaching block written before its exercises, per course. Scope as its own session — don't try to bundle into a quick UI pass.
+
+### 2026-08-02 — ASC review health check
+- iOS 1.1.3: confirmed shipped/approved (`READY_FOR_DISTRIBUTION`, build 202607271632 VALID). No code changes needed.
+- iOS review banner: stale, no outstanding issue — approval of 1.1.3 already resolved it.
+- macOS 1.1.1: found the "rejection" was actually a stuck reviewSubmission holding an orphaned `inAppPurchaseVersion` item from a since-deleted Pro IAP (app currently has 0 IAPs — Pro is free per earlier redesign). Canceled the stuck submission and resubmitted; now `WAITING_FOR_REVIEW`. No app-content fix was needed — this wasn't a real 1.5/2.1-style rejection, just leftover IAP review-item cruft.
+- Did not touch: Lexly Mac (6783501927) duplicate-record deletion — Apple support case only, left alone per instruction.
 
 ### 2026-08-02 — Duolingo-style profile panel
 - Reworked the profile panel to match Duolingo's layout: bigger avatar banner, `@handle · Joined <year>` line, icon-based overview grid (streak/XP/courses/trophies). Built entirely from existing local/Supabase profile data.
