@@ -541,12 +541,29 @@ function renderProfilePanel() {
     summaryName.textContent = localProfile.display_name;
     const summaryMeta = document.createElement('div');
     summaryMeta.className = 'profile-summary-meta';
-    summaryMeta.textContent = currentUser ? currentUser.email : 'Local profile';
+    const handle = localProfile.display_name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+    const joinedYear = currentUser ? new Date(currentUser.created_at).getFullYear() : null;
+    summaryMeta.textContent = joinedYear ? `@${handle} · Joined ${joinedYear}` : `@${handle} · Local profile`;
     summaryInfo.appendChild(summaryName);
     summaryInfo.appendChild(summaryMeta);
     summary.appendChild(avatarDiv);
     summary.appendChild(summaryInfo);
     panel.appendChild(summary);
+
+    const overview = document.createElement('div');
+    overview.className = 'profile-overview';
+    [
+        ['fa-fire', `${gameState.streak} day streak`],
+        ['fa-bolt', `${gameState.xp} XP`],
+        ['fa-book', `${gameState.completedSubjects.length} courses`],
+        ['fa-trophy', `${getUnlockedAchievements().length} trophies`]
+    ].forEach(([icon, label]) => {
+        const item = document.createElement('div');
+        item.className = 'profile-overview-item';
+        item.innerHTML = `<i class="fa-solid ${icon}" aria-hidden="true"></i> ${label}`;
+        overview.appendChild(item);
+    });
+    panel.appendChild(overview);
 
     const form = document.createElement('form');
     form.className = 'profile-form';
@@ -570,26 +587,6 @@ function renderProfilePanel() {
     avatarPickerDiv.className = 'avatar-picker';
     avatarPickerDiv.id = 'profileAvatarPicker';
     form.appendChild(avatarPickerDiv);
-
-    const statsGrid = document.createElement('div');
-    statsGrid.className = 'profile-stats-grid';
-    [
-        [gameState.xp, 'Total XP'],
-        [gameState.streak, 'Day streak'],
-        [gameState.completedSubjects.length, 'Courses tried'],
-        [getUnlockedAchievements().length, 'Trophies']
-    ].forEach(([val, label]) => {
-        const stat = document.createElement('div');
-        stat.className = 'profile-stat';
-        const strong = document.createElement('strong');
-        strong.textContent = val;
-        const span = document.createElement('span');
-        span.textContent = label;
-        stat.appendChild(strong);
-        stat.appendChild(span);
-        statsGrid.appendChild(stat);
-    });
-    form.appendChild(statsGrid);
 
     const questProgress = loadProgress();
     const questXp = questProgress.week_start === currentWeekStart() ? (questProgress.weekly_xp || 0) : 0;
