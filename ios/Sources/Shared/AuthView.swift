@@ -8,6 +8,7 @@ struct AuthView: View {
     @State private var displayName = ""
     @State private var errorMessage = ""
     @State private var busy = false
+    @State private var avatarId = "falcon"
 
     enum Mode { case signIn, signUp }
 
@@ -26,6 +27,7 @@ struct AuthView: View {
 
             VStack(spacing: 12) {
                 if mode == .signUp {
+                    AvatarPickerView(avatarId: $avatarId)
                     TextField("Display name", text: $displayName)
                         .textContentType(.name)
                         .textFieldStyle(.roundedBorder)
@@ -70,7 +72,7 @@ struct AuthView: View {
                 if mode == .signUp {
                     try await auth.signUp(email: email, password: password,
                                          displayName: displayName.isEmpty ? "Learner" : displayName,
-                                         avatarId: "falcon")
+                                         avatarId: avatarId)
                 } else {
                     try await auth.signIn(email: email, password: password)
                 }

@@ -29,15 +29,24 @@ struct CatalogView: View {
                 }
             }
             .navigationTitle("Lexly")
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    NavigationLink {
-                        SettingsView(auth: auth)
-                    } label: {
-                        Image(systemName: "gearshape")
-                    }
-                }
+        }
+    }
+}
+
+/// Bottom tab bar wrapping Catalog + Settings — iOS only (macOS keeps CatalogView's
+/// own window, no tab-bar idiom there).
+struct RootTabView: View {
+    var store: ContentStore
+    var auth: AuthStore
+
+    var body: some View {
+        TabView {
+            CatalogView(store: store, auth: auth)
+                .tabItem { Label("Learn", systemImage: "book.fill") }
+            NavigationStack {
+                SettingsView(auth: auth)
             }
+            .tabItem { Label("Settings", systemImage: "gearshape") }
         }
     }
 }

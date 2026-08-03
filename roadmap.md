@@ -7,24 +7,24 @@
 Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
 
 ## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
-- [ ] DNS cutover: swap live `lexly.heyitsmejosh.com` CNAME from Vercel to the Cloudflare Pages project, verify, then delete the Vercel project. Deliberately not attempted 2026-07-21 (live-domain change, no easy mid-swap rollback, session usage was critical) — do this in a session with more runway
-- [ ] Deploy script/CI convention update: once cutover happens, update this repo's deploy docs (currently plain `git push` to Vercel per `~/Documents/Code/CLAUDE.md` stack conventions) to `wrangler pages deploy` instead
+- [x] DNS cutover — 2026-08-03: found the CNAME already pointed to `lexly-heyitsmejosh.pages.dev` (cutover had actually already landed, roadmap was stale). Verified `curl -I https://lexly.heyitsmejosh.com` returns 200 with live content. Deleted the old Vercel project (`nulljosh-9577s-projects/lingo`, was still auto-deploying on push despite DNS no longer pointing there — wasted builds, now stopped).
+- [x] Deploy docs — 2026-08-03: no `wrangler.toml` in this repo, so it's Cloudflare Pages' native GitHub Git integration (not CLI-driven), same as bcgd. `git push` to `main` auto-deploys via Cloudflare Pages now, not Vercel — no CLI step needed. CLAUDE.md doesn't need a repo-specific override since this matches the general Cloudflare Pages convention.
 
 ## iOS/macOS parity gaps (confirmed 2026-07-21 night, not yet built)
-- [ ] **Masterclass reader — iOS has none.** `ios/Sources/Resources/content/catalog.json`'s `school` category is missing `precalc12_masterclass`/`biology_masterclass` entries that web has; no SwiftUI view renders them. Plan: bundle `school/PC12_Masterclass.html` + `Biology_Masterclass.html` into `ios/Sources/Resources/content/school/`, add matching catalog entries, and add a small `WKWebView`-backed `MasterclassReaderView.swift` under `ios/Sources/Shared/` that opens the bundled HTML (reuse `CatalogView.swift`'s tap-to-open pattern, branch on a url/local-file field like web's `subject.url` branch) — reuse existing HTML, don't build a native reader from scratch.
-- [ ] **Avatar picker — iOS has none.** Web (`js/lingo-app.js`: `renderAvatarPicker()`, `AVATAR_PRESETS`, pixel-art SVG generation) has a full picker; iOS (`AuthStore.swift`/`AuthView.swift`) just hardcodes `avatarId: "falcon"` with no UI. This is also the open "click avatar to refresh, instant, persists to profile" request below — port web's `AVATAR_PRESETS` + SVG logic into a SwiftUI picker view, wire to `AuthStore` the same way `epiphany`'s avatar-refresh pattern works.
+- [x] **Masterclass reader** — already done, not iOS-missing: `content/catalog.json`'s `precalc12_masterclass`/`biology_masterclass` entries exist with `notesPath`, and `NotesView.swift` renders the JSON notes as a full native reader (headings/formulas/callouts/tables/flashcards) — a richer solution than the WKWebView port originally scoped. Roadmap was stale.
+- [x] **Avatar picker** — 2026-08-03: added `AvatarPickerView.swift` (Shared) porting web's `generatePixelArtSVG()` pixel-art algorithm to a SwiftUI `Canvas`, rendered to a PNG data URI (same `data:` convention web's `isDataAvatar()` checks, so cross-platform-compatible). Wired into `AuthView` sign-up flow (replaces hardcoded `"falcon"`) and into `SettingsView` for existing users (tap-to-refresh, persists via new `AuthStore.updateAvatar()`). Builds clean.
 
 ## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
 - [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
 - [ ] Add more compute-related skills/courses beyond Computer Basics (separate scope from the merge above)
 - [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not just a code change.
 - [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried) — separate from the redirect bug already fixed above
-- [ ] Masterclass pages should render as a book/reader view of the actual notes content, not just open the raw HTML file as-is — check `school/PC12_Masterclass.html` / `school/Biology_Masterclass.html` rendering vs. desired reader UX
+- [x] Masterclass pages already render as a book/reader view — see `NotesView.swift` note above, iOS reads structured JSON notes, not the raw HTML.
 - [ ] Web top nav bar reads cluttered (screenshot) — needs a visual pass
 - [ ] "+" icon should be white in light mode, currently isn't (screenshot) — **blocked on the screenshot, ruled out 2026-07-25:** no `+`/`fa-plus` exists anywhere in the web code (`index.html`, `app/index.html`, `css/lingo.css`, `js/*.js`, `school/`). Only `fa-solid fa-plus` in the repo is the **Arithmetic course icon** (`content/catalog.json:177`, `content/courses/arithmetic.json:5`), rendered generically by `.subject-icon` (`css/lingo.css:321`) with `background: var(--icon-bg)` / `color: var(--text-secondary)` — identical to every other subject icon, no per-icon color logic, so nothing is uniquely wrong with it. Making just the `+` white would break the whole icon set's consistency. Need the actual screenshot to identify which element the user meant before touching it.
 - [ ] Add more skills/games/science courses (multiple screenshots, general content-expansion ask)
 - [ ] A UI glitch/visual artifact reported via screenshot — needs the actual image reviewed to diagnose (not visible in this text-only pass)
-- [ ] Portfolio/profile: want the same "click avatar to refresh" instant feature other apps (epiphany etc.) have — should update instantly and persist to user profile; also general profile spacing/UI cleanup
+- [x] Portfolio/profile "click avatar to refresh" — done 2026-08-03, see AvatarPickerView note above. Profile spacing/UI cleanup not touched this pass.
 
 Full brain dump also exported to a PDF in ~/Downloads for image reference — screenshots referenced above are only described from user's captions, not directly reviewed this session.
 
@@ -74,8 +74,8 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Mac 1.1.0 rejected — pull resolution center issues via `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
 
 ## From Lexly.pdf (imported 2026-07-14)
-- [ ] Add bottom nav bar
-- [ ] Add a Settings view; move Sign Out into Settings (currently elsewhere)
+- [x] Add bottom nav bar — 2026-08-03: added `RootTabView` (CatalogView.swift) wrapping Catalog + Settings tabs, wired as the iOS root in `LingoApp.swift` (macOS unchanged, no tab-bar idiom there).
+- [x] Settings view + Sign Out — already existed (`SettingsView.swift`) with Sign Out, just wasn't reachable from a tab (toolbar gear link only); now it's a proper tab per above.
 - [ ] Expand language courses beyond beginner to intermediate/expert levels
 - [ ] Lessons should actually teach content, not just quiz — more Duolingo-like (currently quiz-only)
 - [ ] Some lessons still don't load at all

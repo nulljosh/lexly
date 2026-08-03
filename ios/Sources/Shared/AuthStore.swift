@@ -48,6 +48,14 @@ final class AuthStore {
         session = try? await supabase.auth.session
     }
 
+    func updateAvatar(_ avatarId: String) async throws {
+        guard let uid = session?.user.id.uuidString else { return }
+        try await supabase.from("lingo_profiles")
+            .update(["avatar_id": AnyJSON.string(avatarId)])
+            .eq("id", value: uid)
+            .execute()
+    }
+
     func signOut() async throws {
         try await supabase.auth.signOut()
         session = nil

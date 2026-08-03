@@ -6,10 +6,24 @@ struct SettingsView: View {
     @State private var deleting = false
     @State private var deleteError: String?
     @State private var showingAuth = false
+    @State private var avatarId = ""
 
     var body: some View {
         List {
             if auth.isSignedIn {
+                // ponytail: doesn't fetch the existing avatar_id first, always shows a fresh
+                // random avatar on Settings open — add a lingo_profiles fetch if that's confusing
+                Section("Avatar") {
+                    HStack {
+                        AvatarPickerView(avatarId: $avatarId)
+                        Text("Tap to generate a new avatar").font(.footnote).foregroundStyle(.secondary)
+                    }
+                    .onChange(of: avatarId) { _, newValue in
+                        guard !newValue.isEmpty else { return }
+                        Task { try? await auth.updateAvatar(newValue) }
+                    }
+                }
+
                 Section {
                     Button("Sign Out", role: .destructive) {
                         Task { try? await auth.signOut() }

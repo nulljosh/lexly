@@ -11,7 +11,7 @@ struct LingoApp: App {
                 if auth.isLoading {
                     ProgressView()
                 } else {
-                    CatalogView(store: store, auth: auth)
+                    RootTabView(store: store, auth: auth)
                 }
             }
             .tint(Color(hex: "5B9BD5"))
