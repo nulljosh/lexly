@@ -51,7 +51,7 @@ Checked against actual code before acting — two of three were already built, t
 
 ## From Lexly.pdf (imported 2026-07-12)
 - [ ] Sim-verify course loading fix on device/simulator (rainchecked — usage burning fast; xcodebuild build passed)
-- [ ] Read exact 1.1.0 rejection message — `asc web review show --app 6783501611` blocked on expired Apple web session (needs 2FA relogin), then resubmit with fixed build
+- [x] Read exact 1.1.0 rejection message — MOOT 2026-08-03: checked live with a valid web session, `6783501611` v1.1.1 (MAC_OS) is IN_REVIEW since 2026-08-02. 1.1.0 was already superseded; no pending rejection to read.
 - [ ] Set en-US What's New for 1.1.0 (empty; flagged by `asc review doctor`) — auto-write denied by policy, run: `asc localizations update --app 6783501611 --locale en-US --whats-new "..."`
 - [ ] Merge photographed pre-calc notes into PC12 masterclass — PDF embeds are ~30KB thumbnails, handwriting illegible; needs full-res originals (matches existing "pc12 re-scan pending user photos")
 - [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
@@ -61,7 +61,7 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
 
 ## 2026-07-14 dump
-- [ ] Mac 1.1.0 rejected — pull resolution center issues via `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
+- [x] Mac 1.1.0 rejected — RESOLVED 2026-08-03: 1.1.1 was already resubmitted 2026-07-29 and its review submission is COMPLETE for `6783501927`. Nothing left to pull from resolution center.
 
 ## From Lexly.pdf (imported 2026-07-14)
 - [ ] Expand language courses beyond beginner to intermediate/expert levels
