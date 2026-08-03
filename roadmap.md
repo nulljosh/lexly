@@ -6,25 +6,15 @@
 ## macOS 1.1.1 rejected 2026-07-24 (submission c2eeaff0)
 Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
 
-## Cloudflare Pages migration — safe portion done 2026-07-21 night, DNS cutover deferred
-- [x] DNS cutover — 2026-08-03: found the CNAME already pointed to `lexly-heyitsmejosh.pages.dev` (cutover had actually already landed, roadmap was stale). Verified `curl -I https://lexly.heyitsmejosh.com` returns 200 with live content. Deleted the old Vercel project (`nulljosh-9577s-projects/lingo`, was still auto-deploying on push despite DNS no longer pointing there — wasted builds, now stopped).
-- [x] Deploy docs — 2026-08-03: no `wrangler.toml` in this repo, so it's Cloudflare Pages' native GitHub Git integration (not CLI-driven), same as bcgd. `git push` to `main` auto-deploys via Cloudflare Pages now, not Vercel — no CLI step needed. CLAUDE.md doesn't need a repo-specific override since this matches the general Cloudflare Pages convention.
-
-## iOS/macOS parity gaps (confirmed 2026-07-21 night, not yet built)
-- [x] **Masterclass reader** — already done, not iOS-missing: `content/catalog.json`'s `precalc12_masterclass`/`biology_masterclass` entries exist with `notesPath`, and `NotesView.swift` renders the JSON notes as a full native reader (headings/formulas/callouts/tables/flashcards) — a richer solution than the WKWebView port originally scoped. Roadmap was stale.
-- [x] **Avatar picker** — 2026-08-03: added `AvatarPickerView.swift` (Shared) porting web's `generatePixelArtSVG()` pixel-art algorithm to a SwiftUI `Canvas`, rendered to a PNG data URI (same `data:` convention web's `isDataAvatar()` checks, so cross-platform-compatible). Wired into `AuthView` sign-up flow (replaces hardcoded `"falcon"`) and into `SettingsView` for existing users (tap-to-refresh, persists via new `AuthStore.updateAvatar()`). Builds clean.
-
 ## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
 - [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
 - [ ] Add more compute-related skills/courses beyond Computer Basics (separate scope from the merge above)
 - [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not just a code change.
 - [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried) — separate from the redirect bug already fixed above
-- [x] Masterclass pages already render as a book/reader view — see `NotesView.swift` note above, iOS reads structured JSON notes, not the raw HTML.
 - [ ] Web top nav bar reads cluttered (screenshot) — needs a visual pass
 - [ ] "+" icon should be white in light mode, currently isn't (screenshot) — **blocked on the screenshot, ruled out 2026-07-25:** no `+`/`fa-plus` exists anywhere in the web code (`index.html`, `app/index.html`, `css/lingo.css`, `js/*.js`, `school/`). Only `fa-solid fa-plus` in the repo is the **Arithmetic course icon** (`content/catalog.json:177`, `content/courses/arithmetic.json:5`), rendered generically by `.subject-icon` (`css/lingo.css:321`) with `background: var(--icon-bg)` / `color: var(--text-secondary)` — identical to every other subject icon, no per-icon color logic, so nothing is uniquely wrong with it. Making just the `+` white would break the whole icon set's consistency. Need the actual screenshot to identify which element the user meant before touching it.
 - [ ] Add more skills/games/science courses (multiple screenshots, general content-expansion ask)
 - [ ] A UI glitch/visual artifact reported via screenshot — needs the actual image reviewed to diagnose (not visible in this text-only pass)
-- [x] Portfolio/profile "click avatar to refresh" — done 2026-08-03, see AvatarPickerView note above. Profile spacing/UI cleanup not touched this pass.
 
 Full brain dump also exported to a PDF in ~/Downloads for image reference — screenshots referenced above are only described from user's captions, not directly reviewed this session.
 
@@ -74,8 +64,6 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Mac 1.1.0 rejected — pull resolution center issues via `asc web auth login` then `asc web review show --app 6783501927`; iOS fix 634e2fc likely applies, bump 1.1.1 and resubmit both
 
 ## From Lexly.pdf (imported 2026-07-14)
-- [x] Add bottom nav bar — 2026-08-03: added `RootTabView` (CatalogView.swift) wrapping Catalog + Settings tabs, wired as the iOS root in `LingoApp.swift` (macOS unchanged, no tab-bar idiom there).
-- [x] Settings view + Sign Out — already existed (`SettingsView.swift`) with Sign Out, just wasn't reachable from a tab (toolbar gear link only); now it's a proper tab per above.
 - [ ] Expand language courses beyond beginner to intermediate/expert levels
 - [ ] Lessons should actually teach content, not just quiz — more Duolingo-like (currently quiz-only)
 - [ ] Some lessons still don't load at all
@@ -125,15 +113,12 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ### iOS 1.1.3 build attempt 2026-07-27 late
 - Bumped `MARKETING_VERSION` to 1.1.3 in `ios/project.yml`; new icon is in the build.
 - First `asc workflow run ship-ios VERSION:1.1.3` FAILED at the archive step: `Validate plug-in "SwiftLintBuildToolPlugin"`. This is exactly the unverified SwiftLint wiring flagged in `~/Documents/Code/CLAUDE.md` (committed to lexly but never build-verified). Applied the documented fallback: removed the `SwiftLint` entry from `packages:` and the `buildToolPlugins:` block from `project.yml`, regenerated.
-- [x] Re-run confirmed complete 2026-08-02: build `202607271632` (not `202607271640` as guessed — close but that's the actual build number) is `VALID`, uploaded 2026-07-27T16:33. Version 1.1.3 reached `READY_FOR_DISTRIBUTION`, submission `8ae27c86` `COMPLETE`/approved. 1.1.3 is live/shipped.
 - [ ] If lexly should keep SwiftLint, re-add the wiring and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping — headless archives can't grant the plugin's trust prompt.
 
 ## From App Store.pdf (imported 2026-07-28)
-- [x] Lexly macOS 1.1.1 submission REJECTED — 2026-08-02: `asc review doctor` showed the only blocking item was a stale/orphaned `inAppPurchaseVersion` review item (state REJECTED) left over from a deleted Pro IAP (`asc iap list` returns 0 IAPs — Pro is un-paywalled per earlier work, so this item had no live IAP behind it). No actual app-content rejection reason was ever surfaced by the public API — canceled the stuck submission (`8c047c73`), doctor cleared to "no submission blockers detected," and resubmitted (`asc review submit --platform MAC_OS`, submission `a91ea668-bb56-4a31-b722-d7c58782777c`). Now `WAITING_FOR_REVIEW` as of 2026-08-02.
 - [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only. **Do not touch — Apple support case 102949489427 already filed.**
 
 ## From App Store.pdf (imported 2026-07-29)
-- [x] Lexly (main, iOS) "View App Review Issues & Messages" banner — 2026-08-02: `asc review doctor --app 6783501611` shows iOS 1.1.3 is `READY_FOR_DISTRIBUTION`, latest submission (`8ae27c86`) state `COMPLETE`/approved (build `202607271632`, uploaded 2026-07-27, `processingState: VALID`). The 07-27 SwiftLint-plugin re-run did complete and ship successfully — no outstanding iOS review issue exists now; banner was stale.
 - [ ] Icon should be made smaller/simplified inside the rounded square — currently reads too busy/large.
 
 ### 2026-07-29 — Masterclass fixed, "teach as you go" scoped
