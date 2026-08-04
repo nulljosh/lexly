@@ -131,3 +131,9 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 
 ## Known-broken tooling (2026-08-04)
 - [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in the streak rollover date). **Pre-existing** — confirmed failing on a clean tree via `git stash`, unrelated to tonight's changes. Either the test fixture or `currentWeekStart()`/streak rollover is off by a day; worth resolving before trusting it as a gate.
+
+## Rejection 2026-08-04
+- [ ] **Lexly macOS 1.1.1 REJECTED** (notification 2026-08-04, submission `a91ea668-bb56-4a31-b722-d7c58782777c`, state UNRESOLVED_ISSUES, submitted 2026-08-02; version id `f9f6e627-0b7f-421a-9e85-50cfcdf96106`). iOS is unaffected — 1.1.3 is READY_FOR_DISTRIBUTION. **Rejection text is Resolution Center only**; `asc review` has no subcommand for it, so it needs Joshua at appstoreconnect.apple.com.
+  - RULED OUT: the stale-deploy theory. Apple's Jul 06 Mac rejection was a 2.1 course-load issue and lexly's website was serving 2-week-old broken content until 2026-08-04 — but the macOS app bundles its catalog locally (`ContentStore.loadJSON("catalog")` in `ios/Sources/Shared/ContentStore.swift:13`), it does not fetch from the web. Stale site cannot be the cause.
+  - LEADING UNVERIFIED HYPOTHESIS: the demo account. `jatrommel@gmail.com` was previously flagged by Apple as failing sign-in (2.1 Information Needed) on the OLD standalone Lexly Mac record (6783501927); the merged record (6783501611) likely declares the same credentials. If so the fix is to verify that login works and update the review demo credentials. Known-good password for that address per the healstack recovery: `Joshisrad4$!!`.
+  - Next step: read the Resolution Center message, then fix + resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` is unreliable on this account).
