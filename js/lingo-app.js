@@ -335,6 +335,18 @@ function getDueCount(subjectId) {
     }).length;
 }
 
+// Completed-lesson tally for a course card. The total is only known once the
+// pack has been fetched (packs load lazily), so callers must handle total=null.
+// ponytail: degrades like getDueCount rather than eagerly fetching all 41 packs.
+function getCourseProgress(subjectId) {
+    const done = Object.keys(loadProgress().lessons_completed[subjectId] || {}).length;
+    const pack = PACK_CACHE[subjectId];
+    if (!pack) return { done, total: null };
+    let total = 0;
+    (pack.units || []).forEach((unit) => { total += (unit.lessons || []).length; });
+    return { done, total };
+}
+
 function getQuestionsForLesson(subjectId, subset) {
     // When a skill-tree lesson is chosen, play exactly its exercises; otherwise
     // draw from the whole subject (review mode), due cards first.
@@ -1114,6 +1126,15 @@ function renderSubjects(category) {
             badge.className = 'review-badge';
             badge.textContent = dueCount + ' due';
             card.appendChild(badge);
+        }
+        const progress = getCourseProgress(subject.id);
+        if (progress.done > 0) {
+            const grade = document.createElement('div');
+            grade.className = 'subject-grade';
+            grade.textContent = progress.total
+                ? Math.round((progress.done / progress.total) * 100) + '% complete'
+                : progress.done + (progress.done === 1 ? ' lesson done' : ' lessons done');
+            card.appendChild(grade);
         }
         if (subject.url) {
             card.addEventListener('click', () => { window.location.href = subject.url; });

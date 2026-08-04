@@ -349,9 +349,24 @@ body {
     display: none;
 }
 
+/* Fill the stretched .container instead of sitting at natural height, which
+   left a large dead band under the question card on tall screens. */
 .lesson-container.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     animation: fadeUp 0.35s var(--ease);
+}
+
+.lesson-container.active .question-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Question grows, so the Skip/Check row settles at the bottom of the card. */
+.lesson-container.active .question-container {
+    flex: 1;
 }
 
 @keyframes fadeUp {
@@ -1022,6 +1037,13 @@ body {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
+}
+
+.subject-grade {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
 }
 
 .btn,
