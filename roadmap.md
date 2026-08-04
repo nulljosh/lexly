@@ -27,13 +27,10 @@ Already merged — macOS platform lives under the main "Lexly" app record (67835
 ## 2026-07-19: monetization redesign (Duolingo model) + iOS resubmit + Mac merge
 - [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Filed Apple Developer Support ticket 2026-07-22, Case ID **102949489427**, requesting removal. Awaiting Apple's reply. Re-confirmed 2026-07-21: the merge itself is solid — macOS 1.1.1 WAITING_FOR_REVIEW under the correct iOS app record (6783501611), old standalone record's 1.1.1 is REJECTED/orphaned. Same fix pattern applied to Echo tonight; Lexly already had it from 07-19.
 - [ ] **Also tried `asc web apps delete` (2026-07-21, authenticated web session)** — same wall: `409` conflict. Root cause confirmed via `asc versions list`: the app's only version is stuck in `appVersionState: REJECTED`, not `PREPARE_FOR_SUBMISSION` — Apple's web deletion endpoint (same one the dashboard uses) refuses to delete an app with a non-editable rejected version attached. This is a genuine Apple-side restriction, not a scripting gap. File the support ticket.
-- [ ] Lexly Mac's own demo account (jatrommel@gmail.com) was flagged by Apple as failing sign-in (2.1 Information Needed) — moot once that app is retired, don't fix
 - [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density (user feedback 2026-07-19, screenshot comparison) — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout
 
 ## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, DONE (see above), keeping for history
-- [ ] Once native Mac build verified clean: in ASC, figure out how to add native Mac platform to "Lexly" app (6783501611) — `asc apps` had no obvious subcommand, may be dashboard-only ("+Platform" on app page)
-- [ ] Archive + upload new merged build (`asc xcode` helpers)
-- [ ] Attach build to Lexly app version, resubmit
+- [x] Native Mac platform added to the unified Lexly record (6783501611) — verified 2026-08-04: `asc versions list` shows macOS 1.1.1 IN_REVIEW there.
 - [ ] Remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate/remove from sale)
 
 ## Duolingo UI patterns (Mobbin research 2026-07-16, verified against code 2026-07-16)
@@ -47,17 +44,15 @@ Checked against actual code before acting — two of three were already built, t
 - [ ] Lexly's landing (`index.html`) is the reference design — port it to any project under `~/Documents/Code` still missing a matching landing page. Not started this session; needs a project-by-project survey first.
 
 ## From Icons.pdf / Asc.pdf (imported 2026-07-12)
-- [ ] Lexly iOS 1.1.0 REJECTED — unresolved issues in Resolution Center, fix + resubmit (Mac 1.1.0 still waiting for review)
+- [x] iOS 1.1.0 rejection resolved — superseded; verified 2026-08-04 that 1.1.1, 1.1.2 and 1.1.3 are all READY_FOR_SALE.
 
 ## From Lexly.pdf (imported 2026-07-12)
 - [ ] Sim-verify course loading fix on device/simulator (rainchecked — usage burning fast; xcodebuild build passed)
-- [ ] Set en-US What's New for 1.1.0 (empty; flagged by `asc review doctor`) — auto-write denied by policy, run: `asc localizations update --app 6783501611 --locale en-US --whats-new "..."`
 - [ ] Merge photographed pre-calc notes into PC12 masterclass — PDF embeds are ~30KB thumbnails, handwriting illegible; needs full-res originals (matches existing "pc12 re-scan pending user photos")
 - [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
 
 ## From chat 2026-07-13 (wrap-up, not started)
 - [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
-- [ ] Apple emailed 2026-07-13: issue with Lexly Mac submission (ID 02681c16-1551-43e4-8fa0-154510d89508, submitted Jul 06) — read full email / Resolution Center, likely same 2.1 course-load issue as iOS; fix + resubmit
 
 ## From Lexly.pdf (imported 2026-07-14)
 - [ ] Expand language courses beyond beginner to intermediate/expert levels
@@ -69,17 +64,15 @@ Checked against actual code before acting — two of three were already built, t
 
 ## Codecademy/Duolingo feature parity (research 2026-07-16)
 Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements, speech recognition, per-unit progress, light/dark, PWA.
-- [ ] Teach-then-quiz lesson flow — short explanation/example before each exercise, not quiz-only (dup of existing item above; M effort)
-- [ ] Per-lesson fractional progress bar (dup of existing item above; S effort)
+- [ ] Per-lesson progress bar — **partially built, clarify before starting (checked 2026-08-04).** `app/index.html:129-131` has a `.progress-container` with `#progressBar` + `#progressLabel`; `js/lingo-app.js:1312-1333` fills it with one **discrete pip per question** (`.progress-pip.filled`) and renders `n / total` in the label. So per-question progress already exists and is visible. What does NOT exist is a *continuous/fractional* fill (no `progressFill` element anywhere in the repo). If "fractional" just meant "n of total", this is already done and should be deleted; if it meant a Duolingo-style smooth bar, it's a CSS swap from pips to a single fill element. Needs one word from Joshua.
 - [ ] Fix cross-course completion bug (dup of existing bug above) + add real skill-tree/unit gating — lock later units until prior pass, visualize as a path (M)
-- [ ] Inline correct/incorrect feedback with a brief tip on wrong answers, not just pass/fail (S–M, extend games.js scoring)
 - [ ] Placement/diagnostic test per course so advanced users can skip ahead (M)
-- [ ] Streak freeze / streak repair item (S)
+- [x] Streak freeze / streak repair — **already shipped** (verified in code 2026-08-04): state at `js/lingo-app.js:82`, "Streak freeze used" toast at `:448`, "n streak freezes banked" label at `:618-622`, award/consume logic at `:1670,1721`.
 - [ ] Richer achievement/badge screen + course-completion certificate view (S, ties to existing "richer icons" item)
 - [ ] Leaderboard (friends/weekly XP) — needs backend; Supabase already wired for auth/progress sync (M–L)
 - [ ] "Practice Hub" — free-practice mode across completed lessons for spaced-repetition reinforcement, separate from linear course (M)
 - [ ] More listening/speaking exercise types (dictation, "speak this sentence") reusing existing speech-recognition plumbing (M)
-- [ ] Weekly XP quests, reusing existing XP counters (S)
+- [x] Weekly XP quests — **already shipped** (verified in code 2026-08-04): `weekly_xp`/`week_start` state at `js/lingo-app.js:83-84`, `currentWeekStart()` at `:91`, week-rollover reset at `:604` and `:1695-1697`.
 - [ ] Lower priority: hearts-refill economy tuning, timed challenge mode (S each)
 - Explicitly skip: Codecademy-style full code-execution sandbox — out of scope, high effort, low relevance to a language app
 
