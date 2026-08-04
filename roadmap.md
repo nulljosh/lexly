@@ -131,3 +131,7 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ### 2026-08-02 — Duolingo-style profile panel
 - Reworked the profile panel to match Duolingo's layout: bigger avatar banner, `@handle · Joined <year>` line, icon-based overview grid (streak/XP/courses/trophies). Built entirely from existing local/Supabase profile data.
 - [ ] **Not started** — friends/following/followers + league/social features (seen in the Duolingo reference screenshot). Needs a real social backend (friend graph, leaderboard tables) — no schema for this exists yet. Scope as its own session.
+
+## Ingested 2026-08-04
+- [ ] Landing page still uses cursive fonts — remove them (no cursive, ever)
+- [ ] Dark icon/logo is too dark to be visible — refresh it
