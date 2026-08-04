@@ -21,6 +21,16 @@ Lexly — a static, vanilla JS/HTML/CSS gamified learning app. No framework, no 
 - Keep it framework-free; don't introduce a build step or bundler unless explicitly asked
 - Accessibility: maintain `aria-label`s and skip-link already present in `index.html` when editing the header/nav
 
+## Deploying
+
+Run `./scripts/deploy.sh`. **A plain `git push` deploys nothing** — the Cloudflare Pages
+project `lexly-heyitsmejosh` is not git-connected, and the site silently went 2 weeks stale
+that way (two already-fixed bugs looked unfixed because the live site was serving old files).
+
+The script stages only the publishable paths into a temp dir before deploying; don't deploy
+the repo root, `ios/build*` blows past the Pages file-count limit. Note a second, unused
+`lexly` Pages project exists — `lexly-heyitsmejosh` is the one holding the custom domain.
+
 ## Roadmap
 
 See README.md "Roadmap" section for current open items (macOS project source, ASC version bump, submission steps blocked on Apple 2FA).
