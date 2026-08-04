@@ -133,5 +133,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 - [ ] **Not started** — friends/following/followers + league/social features (seen in the Duolingo reference screenshot). Needs a real social backend (friend graph, leaderboard tables) — no schema for this exists yet. Scope as its own session.
 
 ## Ingested 2026-08-04
-- [ ] Landing page still uses cursive fonts — remove them (no cursive, ever)
-- [ ] Dark icon/logo is too dark to be visible — refresh it
+- [x] Landing page still uses cursive fonts — remove them (no cursive, ever) — 2026-08-04: source was already clean (fonts stripped 2026-07-27); root cause was a 2-week-stale Cloudflare Pages deploy on project `lexly-heyitsmejosh` still serving Fraunces italic + DM Sans. Redeployed current source, verified live: 0 hits for fraunces/googleapis.
+- [x] Dark icon/logo is too dark to be visible — refresh it — 2026-08-04: same stale-deploy root cause. Live was serving the pre-redesign icon; the 2026-07-27 icon (white speech bubble on #2e86de) went live with the same redeploy. Verified `/assets/icon.svg` now matches source.
+- [ ] Cloudflare Pages project `lexly-heyitsmejosh` is NOT git-connected (`Git Provider: No`), so `git push` does not deploy the site — it silently went 2 weeks stale and caused both bugs above. Either connect the repo to the Pages project or add a deploy step: stage `app css js content assets school functions index.html privacy.html support.html manifest.json` into a temp dir (never the repo root — `ios/build*` blows past the Pages file limit) and run `npx wrangler pages deploy <dir> --project-name lexly-heyitsmejosh --branch main`. Note a second, unused `lexly` Pages project also exists; `lexly-heyitsmejosh` is the one holding the custom domain.
