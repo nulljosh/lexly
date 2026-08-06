@@ -129,6 +129,9 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ## From Apple Notes (imported 2026-08-04)
 - [ ] **App Store banner like Duolingo.** Josh: "How do we get a banner on the App Store like Duolingo?" That is Apple's **Custom Product Pages** / featured promotional artwork — investigate what is actually achievable: custom product pages (up to 35, own screenshots/promo text, own URL) are self-serve via ASC; the big editorial banner on the Apps/Games tab is Apple-curated (App Store featuring nomination form), not purchasable. Determine which one he means, then either set up a custom product page via `asc` or submit a featuring nomination.
 
+## Masterclass integration (2026-08-06)
+- **15 book summaries ready to import**: Data Science For Dummies (complete), Good Feng Shui (complete), macOS Tahoe, Accounting, AI in Business, IBS, Sobriety, Statistics, ML, Pre-Calc, Steve Jobs, Calculus, Intro to Python, Mindset, The 48 Laws of Power. Converter script (`uprighty/scripts/summary-to-masterclass.py`) + full plan documented at `~/.claude/plans/`. All 15 JSON masterclass files + catalog entries ready to merge, deploy to Lexly — zero scoping uncertainty, execute next session.
+
 ## Known-broken tooling (2026-08-04)
 - [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in the streak rollover date). **Pre-existing** — confirmed failing on a clean tree via `git stash`, unrelated to tonight's changes. Either the test fixture or `currentWeekStart()`/streak rollover is off by a day; worth resolving before trusting it as a gate.
 
@@ -137,3 +140,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
   - RULED OUT: the stale-deploy theory. Apple's Jul 06 Mac rejection was a 2.1 course-load issue and lexly's website was serving 2-week-old broken content until 2026-08-04 — but the macOS app bundles its catalog locally (`ContentStore.loadJSON("catalog")` in `ios/Sources/Shared/ContentStore.swift:13`), it does not fetch from the web. Stale site cannot be the cause.
   - LEADING UNVERIFIED HYPOTHESIS: the demo account. `jatrommel@gmail.com` was previously flagged by Apple as failing sign-in (2.1 Information Needed) on the OLD standalone Lexly Mac record (6783501927); the merged record (6783501611) likely declares the same credentials. If so the fix is to verify that login works and update the review demo credentials. Known-good password for that address per the healstack recovery: `Joshisrad4$!!`.
   - Next step: read the Resolution Center message, then fix + resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` is unreliable on this account).
+
+## Pending (2026-08-04)
+- [ ] Duolingo Grade 4 Unit 5 (Intro to LCM) — ~40+ exercises, pending sync. Session budget constrained.
