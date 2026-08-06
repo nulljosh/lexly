@@ -2,7 +2,7 @@
 
 # Lexly
 
-![version](https://img.shields.io/badge/version-1.1.1-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
+![version](https://img.shields.io/badge/version-1.1.3-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
 
 A gamified language and skill learning app. Web + native iOS/macOS.
 
@@ -18,8 +18,10 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
 | Platform | Name | App ID | Status |
 |---|---|---|---|
 | Web | Lexly | — | Live |
-| iOS | Lexly (6783501611) | com.nulljosh.lingo | v1.1.0, build 202607030001 attached, awaiting submission |
-| macOS | Lexly Mac (6783501927) | com.nulljosh.lingo.mac | v1.1.0, build 202607030001 attached, awaiting submission |
+| iOS | Lexly (6783501611) | com.nulljosh.lingo | v1.1.3, READY_FOR_DISTRIBUTION |
+| macOS | Lexly (6783501611, merged app record) | com.nulljosh.lingo | v1.1.1, REJECTED — see roadmap.md |
+
+Note: the old standalone "Lexly Mac" record (6783501927) is a dead orphan superseded by the merge above — cannot be deleted, Apple support case open. Ignore it.
 
 ## Features
 
@@ -70,4 +72,4 @@ node tools/validate-catalog.js
 
 ## Roadmap
 
-See `roadmap.md` for the current open items (iOS/Mac 1.1.0 rejection fixes, completion-tracking bug, Stripe Pro unlock, UX backlog).
+See `roadmap.md` for current open items (macOS 1.1.1 rejection fix, content/course expansion, feature backlog).

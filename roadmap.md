@@ -1,144 +1,52 @@
 # lexly Roadmap
 
-## From Notes PDF (imported 2026-08-02)
-- [ ] iOS needs a splash animation to match Duolingo's (playful animated launch screen, not a static splash).
+## Current release state (2026-08-06)
+- **iOS**: 1.1.3 READY_FOR_DISTRIBUTION/shipped (build 202607271632 VALID, confirmed 2026-08-02). New icon, refreshed screenshots, What's New set.
+- **macOS**: 1.1.1 REJECTED (notification 2026-08-04, submission `a91ea668-bb56-4a31-b722-d7c58782777c`, state UNRESOLVED_ISSUES, version id `f9f6e627-0b7f-421a-9e85-50cfcdf96106`). History: rejected 07-24 (bad support URL + 2.1 sign-in issue, support URL fixed 07-26), resubmitted 07-27 (submission `8c047c73`), the 08-02 "rejection" turned out to be a stuck reviewSubmission holding an orphaned deleted-IAP item (canceled + resubmitted, not a real content issue), now rejected again 08-04.
+  - Ruled out: stale-deploy theory — macOS app bundles its catalog locally (`ContentStore.loadJSON` in `ios/Sources/Shared/ContentStore.swift:13`), doesn't fetch from the web, so the 2-week-stale website couldn't be the cause.
+  - Leading unverified hypothesis: demo account. `jatrommel@gmail.com` was previously flagged failing sign-in (2.1) on the old standalone Lexly Mac record; the merged record likely declares the same credentials. Known-good password (per healstack recovery): `Joshisrad4$!!`. Verify login works, update review demo credentials if needed.
+  - [ ] Read the Resolution Center message at appstoreconnect.apple.com (text is web-UI only), fix root cause, resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` unreliable on this account).
+- **Lexly Mac duplicate record** (ASC 6783501927, bundle `com.nulljosh.lingo`, orphaned since the iOS+macOS merge into 6783501611): cannot be deleted via API or dashboard — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch (confirmed via `asc web apps delete`, 409 conflict). Apple Developer Support case **102949489427** filed 2026-07-22, awaiting reply. **Do not touch further — case is open, dashboard-only from here.**
 
-## macOS 1.1.1 rejected 2026-07-24 (submission c2eeaff0)
-Two reasons: (1) Guideline 1.5 — Support URL had no real content, just redirected to the marketing homepage. Fixed 2026-07-26: added `support.html`, live at https://lexly.heyitsmejosh.com/support.html, ASC version localization updated to point there. (2) Guideline 2.1 — reviewer couldn't sign in with the demo account (jatrommel@gmail.com). Verified 2026-07-26: credentials are valid, Supabase `/auth/v1/token` accepts them directly via API — so this isn't a bad-credentials issue, it's likely a real sign-in bug in the macOS app itself (or a transient reviewer-side issue). **Needs a live Mac build test before resubmitting** — resubmitting blind risks the same 2.1 rejection again.
+## Open — content & UI
+- [ ] iOS needs a splash animation to match Duolingo's (playful animated launch screen, not static).
+- [ ] Landing page (`index.html`): user likes it, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction. (Separately: this landing page is the reference design to port to any other `~/Documents/Code` project still missing a matching one — needs a project-by-project survey, not started.)
+- [ ] Web top nav bar reads cluttered — needs a visual pass.
+- [ ] Icon should be simplified inside the rounded square — currently reads too busy/large.
+- [ ] Richen list/course icons (user wants them "bumped"/more visually rich).
+- [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout.
+- [ ] A UI glitch/visual artifact reported via screenshot (2026-07-21 brain dump) — needs the actual image reviewed to diagnose, never triaged.
+- [ ] "+" icon color complaint — **ruled out 2026-07-25**: no `+`/`fa-plus` exists anywhere except the Arithmetic course icon, styled identically to every other subject icon. Nothing uniquely wrong found; needs the actual screenshot to identify what the user meant before touching anything further.
 
-## Open from user brain dump 2026-07-21 (screenshots + notes, not yet triaged into code)
-- [ ] Landing page: user likes it a lot, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction
-- [ ] Add more compute-related skills/courses beyond Computer Basics (separate scope from the merge above)
-- [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not just a code change.
-- [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried) — separate from the redirect bug already fixed above
-- [ ] Web top nav bar reads cluttered (screenshot) — needs a visual pass
-- [ ] "+" icon should be white in light mode, currently isn't (screenshot) — **blocked on the screenshot, ruled out 2026-07-25:** no `+`/`fa-plus` exists anywhere in the web code (`index.html`, `app/index.html`, `css/lingo.css`, `js/*.js`, `school/`). Only `fa-solid fa-plus` in the repo is the **Arithmetic course icon** (`content/catalog.json:177`, `content/courses/arithmetic.json:5`), rendered generically by `.subject-icon` (`css/lingo.css:321`) with `background: var(--icon-bg)` / `color: var(--text-secondary)` — identical to every other subject icon, no per-icon color logic, so nothing is uniquely wrong with it. Making just the `+` white would break the whole icon set's consistency. Need the actual screenshot to identify which element the user meant before touching it.
-- [ ] Add more skills/games/science courses (multiple screenshots, general content-expansion ask)
-- [ ] A UI glitch/visual artifact reported via screenshot — needs the actual image reviewed to diagnose (not visible in this text-only pass)
+## Open — content & courses
+- [ ] Add more compute-related skills/courses beyond Computer Basics.
+- [ ] Add more skills/games/science courses generally (content-expansion ask).
+- [ ] Expand language courses beyond beginner to intermediate/expert levels.
+- [ ] Lessons should actually teach content before quizzing (Duolingo-style teaching block per lesson) — content-authoring job, not UI. Includes inline correct/incorrect explanatory tips (re-classified 2026-08-04: all 785 exercises checked, zero carry a tip field — same authoring job, merge together). Scope as its own session.
+- [ ] Math subjects should match Duolingo's subject/grade structure, with the ability to switch back and forth between the two systems (iOS + Mac).
+- [ ] Idea: integrate/copy the approach at calculus.academa.ai — LLM-driven interactive calculus tutor. Exploratory, no scope pinned down; needs a follow-up conversation on full integration vs. a Lexly feature inspired by it.
+- [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content — user considering splitting it into its own standalone project. Needs a decision, not a code change.
+- [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried).
+- [ ] Merge photographed pre-calc notes into PC12 masterclass — existing PDF embeds are ~30KB thumbnails, illegible; needs full-res photo originals from Joshua.
+- [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes item above.
+- [ ] **Masterclass JSON generation from Uprighty summaries** — BLOCKED: converter execution times out on the full dataset (runtime hang, not a logic error). 15 book summaries converted, catalog entries + validator support added, all deployed live. Generation itself deferred pending investigation; plan file at `~/claude/plans/tldr-shorter-and-bang-zippy-cupcake.md`.
+- [ ] Duolingo Grade 4 Unit 5 (Intro to LCM) — ~40+ exercises pending sync, session budget constrained.
 
-Full brain dump also exported to a PDF in ~/Downloads for image reference — screenshots referenced above are only described from user's captions, not directly reviewed this session.
+## Open — features (Codecademy/Duolingo parity research, 2026-07-16)
+Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hearts, achievements, speech recognition, weekly XP quests, per-question progress pips, light/dark, PWA, Duolingo-style profile panel (avatar banner + stats grid, shipped 2026-08-02).
+- [ ] Fractional/continuous progress bar — clarify with Joshua first: per-question pips (`n / total`) already exist and are visible; only a *smooth fill* variant (vs. discrete pips) is missing. If "fractional" meant the pip count, this is already done.
+- [ ] Fix cross-course completion bug + add real skill-tree/unit gating (lock later units until prior pass, visualize as a path). (M)
+- [ ] Placement/diagnostic test per course so advanced users can skip ahead. (M)
+- [ ] Richer achievement/badge screen + course-completion certificate view. (S)
+- [ ] Leaderboard (friends/weekly XP) — needs a friend-graph/leaderboard backend; no schema exists yet. (M–L)
+- [ ] Friends/following/followers + league/social features (Duolingo reference) — same backend gap as leaderboard above, scope together. Needs its own session.
+- [ ] "Practice Hub" — free-practice mode across completed lessons for spaced-repetition reinforcement, separate from the linear course. (M)
+- [ ] More listening/speaking exercise types (dictation, "speak this sentence"), reusing existing speech-recognition plumbing. (M)
+- [ ] Lower priority: hearts-refill economy tuning, timed challenge mode. (S each)
+- [ ] Illustrated character + speech bubble for translate exercises — needs illustration/audio assets Lexly doesn't have; asset-production task. Revisit if audio assets get added.
+- [ ] App Store Custom Product Page or featuring nomination ("banner like Duolingo") — Custom Product Pages (up to 35, self-serve via ASC) vs. the Apple-curated editorial banner (featuring nomination form, not purchasable) are different things; determine which Josh means, then set one up via `asc` or submit a nomination.
+- Explicitly skipped: Codecademy-style full code-execution sandbox (out of scope, high effort, low relevance to a language app); Duolingo mascot/illustrated skill-tree reskin (conflicts with no-gradients/no-mascot design taste, current minimal list-tree stays).
 
-## Confirmed 2026-07-21: universal app merge status
-Already merged — macOS platform lives under the main "Lexly" app record (6783501611), single bundle ID `com.nulljosh.lingo` across iOS+macOS targets, one repo. The old standalone "Lexly Mac" record (6783501927) is a dead orphan that can't be deleted via API or authenticated web session (409 conflict — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch). Genuine Apple-side restriction, needs a support ticket, not a scripting fix. No widget extension target exists in this repo, so the NSExtensionPointIdentifier bug that hit Talli/Epiphany doesn't apply here.
-
-## 2026-07-19: rename to "Lingo" considered, dropped
-- Checked App Store name availability via exact-match PATCH attempt (asc-name-creator skill) — "Lingo" is taken by a different account (`ENTITY_ERROR.ATTRIBUTE.INVALID.DUPLICATE.DIFFERENT_ACCOUNT`), not reclaimable without a trademark claim. Kept "Lexly" as the live name, no code/ASC changes made.
-
-## 2026-07-19: monetization redesign (Duolingo model) + iOS resubmit + Mac merge
-- [ ] "Lexly Mac" (6783501927) app deletion: tried the ASC "Remove App" dashboard control twice, canceled its review submission first (per Apple's docs), still blocked with no error detail. Filed Apple Developer Support ticket 2026-07-22, Case ID **102949489427**, requesting removal. Awaiting Apple's reply. Re-confirmed 2026-07-21: the merge itself is solid — macOS 1.1.1 WAITING_FOR_REVIEW under the correct iOS app record (6783501611), old standalone record's 1.1.1 is REJECTED/orphaned. Same fix pattern applied to Echo tonight; Lexly already had it from 07-19.
-- [ ] **Also tried `asc web apps delete` (2026-07-21, authenticated web session)** — same wall: `409` conflict. Root cause confirmed via `asc versions list`: the app's only version is stuck in `appVersionState: REJECTED`, not `PREPARE_FOR_SUBMISSION` — Apple's web deletion endpoint (same one the dashboard uses) refuses to delete an app with a non-editable rejected version attached. This is a genuine Apple-side restriction, not a scripting gap. File the support ticket.
-- [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density (user feedback 2026-07-19, screenshot comparison) — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout
-
-## Lexly Mac rejected 2026-07-18 (Guideline 5.2.5, "Mac" trademark) — merge into one app, DONE (see above), keeping for history
-- [x] Native Mac platform added to the unified Lexly record (6783501611) — verified 2026-08-04: `asc versions list` shows macOS 1.1.1 IN_REVIEW there.
-- [ ] Remove "Lexly Mac" (6783501927) from sale (can't delete, only deprecate/remove from sale)
-
-## Duolingo UI patterns (Mobbin research 2026-07-16, verified against code 2026-07-16)
-Checked against actual code before acting — two of three were already built, third needs data/assets we don't have. Not implementing the reskin (see notes).
-
-- Skill-tree gating: already implemented (`renderSkillTree`/`isLessonUnlocked` in js/lingo-app.js, crown/play/lock states). Duolingo's winding dotted path w/ mascot nodes is a cutesy illustrated look — conflicts with our no-gradients/no-mascot design taste. Current minimal list-node tree stays as-is.
-- Exercise header: already implemented (progressBar/progressFill/progressLabel + hearts in app/index.html + js/lingo-app.js). "NEW WORD"/"HARD EXERCISE" tag pills would need per-exercise difficulty/vocab metadata that doesn't exist in any `content/courses/*.json` (exercises are just `{type, question, answer, choices, id}`) — would have to fabricate the signal, so skipped.
-- [ ] Illustrated character + speech bubble for translate exercises — real feature but needs illustration/audio assets Lexly doesn't have; asset-production task, not a code change. Revisit if/when audio assets get added.
-
-## From chat 2026-07-14
-- [ ] Lexly's landing (`index.html`) is the reference design — port it to any project under `~/Documents/Code` still missing a matching landing page. Not started this session; needs a project-by-project survey first.
-
-## From Icons.pdf / Asc.pdf (imported 2026-07-12)
-- [x] iOS 1.1.0 rejection resolved — superseded; verified 2026-08-04 that 1.1.1, 1.1.2 and 1.1.3 are all READY_FOR_SALE.
-
-## From Lexly.pdf (imported 2026-07-12)
-- [ ] Sim-verify course loading fix on device/simulator (rainchecked — usage burning fast; xcodebuild build passed)
-- [ ] Merge photographed pre-calc notes into PC12 masterclass — PDF embeds are ~30KB thumbnails, handwriting illegible; needs full-res originals (matches existing "pc12 re-scan pending user photos")
-- [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology) — blocked on the notes above
-
-## From chat 2026-07-13 (wrap-up, not started)
-- [ ] Richen list icons (user likes them, wants them "bumped"/more rich)
-
-## From Lexly.pdf (imported 2026-07-14)
-- [ ] Expand language courses beyond beginner to intermediate/expert levels
-- [ ] Lessons should actually teach content, not just quiz — more Duolingo-like (currently quiz-only)
-- [x] Some lessons still don't load at all — 2026-08-04: **third symptom of the stale-deploy bug**, not a content or code defect. The fixes already existed (`911f9e5` 07-21 "broken masterclass links", `8cfc27c` 07-28 catalog restructure, `a852059` 07-29 "native Masterclass was unreachable") but the Pages project isn't git-connected, so none of them ever reached production until tonight's redeploy. Verified after deploying: all 41 catalog packs return 200 live, live `catalog.json` is byte-identical to local, all 785 reachable exercises use a type that has a renderer, zero lessons with empty exercise arrays, zero choice-exercises missing `choices`, zero answers absent from their own choices. Headless Chrome render of `/app/` loads the course grid clean. Note this is very likely the same "2.1 course-load issue" Apple cited in the Jul 06 Mac rejection above.
-- [x] Lessons need a fractional/percentage progress bar; reduce whitespace, lesson view should fill the screen — 2026-08-04: progress-bar half was already shipped (`progressLabel` renders `n / total`). Whitespace half fixed: `.lesson-container.active` was `display: block`, so the lesson sat at natural height inside an already-stretched `.container` (`flex: 1`), leaving a dead band underneath on tall screens. Now a flex column with `min-height: 100%`; the question card grows and the Skip/Check row settles at the bottom of the card.
-- [x] Save progress to user profile; show grade in course list once a lesson is completed — 2026-08-04: the save half was **already shipped** — `saveProgress()` upserts xp/streak/hearts/completed_subjects/lessons_completed/trophy_ids/srs to Supabase `lingo_progress`, and `hydrateFromDb()` pulls it back on sign-in. Only the grade display was missing: added `getCourseProgress(subjectId)` + a `.subject-grade` line on each course card. Shows "N% complete" once the pack is cached, else "N lessons done" — degrades the same way `getDueCount()` does rather than eagerly fetching all 41 packs to render a grid.
-- [ ] Inline correct/incorrect feedback with an explanatory tip — **re-classified 2026-08-04: this is content authoring, not a code task.** Checked all 785 exercises reachable from the catalog: the only fields present are `type`, `question`, `answer`, `choices`, `id`, `audio`, `words`. **Zero** carry a tip/hint/explanation. Feedback already shows the correct answer on a miss; adding a tip renderer now would just draw an empty box. The real work is writing 785 tips (same content job as "lessons should teach, not just quiz" above) — merge it into that item rather than tracking it as a bug.
-
-## Codecademy/Duolingo feature parity (research 2026-07-16)
-Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements, speech recognition, per-unit progress, light/dark, PWA.
-- [ ] Per-lesson progress bar — **partially built, clarify before starting (checked 2026-08-04).** `app/index.html:129-131` has a `.progress-container` with `#progressBar` + `#progressLabel`; `js/lingo-app.js:1312-1333` fills it with one **discrete pip per question** (`.progress-pip.filled`) and renders `n / total` in the label. So per-question progress already exists and is visible. What does NOT exist is a *continuous/fractional* fill (no `progressFill` element anywhere in the repo). If "fractional" just meant "n of total", this is already done and should be deleted; if it meant a Duolingo-style smooth bar, it's a CSS swap from pips to a single fill element. Needs one word from Joshua.
-- [ ] Fix cross-course completion bug (dup of existing bug above) + add real skill-tree/unit gating — lock later units until prior pass, visualize as a path (M)
-- [ ] Placement/diagnostic test per course so advanced users can skip ahead (M)
-- [x] Streak freeze / streak repair — **already shipped** (verified in code 2026-08-04): state at `js/lingo-app.js:82`, "Streak freeze used" toast at `:448`, "n streak freezes banked" label at `:618-622`, award/consume logic at `:1670,1721`.
-- [ ] Richer achievement/badge screen + course-completion certificate view (S, ties to existing "richer icons" item)
-- [ ] Leaderboard (friends/weekly XP) — needs backend; Supabase already wired for auth/progress sync (M–L)
-- [ ] "Practice Hub" — free-practice mode across completed lessons for spaced-repetition reinforcement, separate from linear course (M)
-- [ ] More listening/speaking exercise types (dictation, "speak this sentence") reusing existing speech-recognition plumbing (M)
-- [x] Weekly XP quests — **already shipped** (verified in code 2026-08-04): `weekly_xp`/`week_start` state at `js/lingo-app.js:83-84`, `currentWeekStart()` at `:91`, week-rollover reset at `:604` and `:1695-1697`.
-- [ ] Lower priority: hearts-refill economy tuning, timed challenge mode (S each)
-- Explicitly skip: Codecademy-style full code-execution sandbox — out of scope, high effort, low relevance to a language app
-
-## From Lexly.pdf (imported 2026-07-19)
-- [ ] Idea: integrate or copy the approach at https://calculus.academa.ai/ — described as "LLM calculus" teaching, i.e. an LLM-driven interactive math tutor. User's note: "this is exactly what Lexly should be, or at least a function of it." Exploratory — no scope pinned down yet, needs a follow-up conversation on what to actually build (full integration vs. a Lexly feature inspired by it).
-
-## Ingested 2026-07-25
-- [ ] Math subjects should match Duolingo's subject/grade structure; user should be able to switch back and forth between the two systems. Applies to both Lexly iOS and Mac.
-
-## 2026-07-27
-- [ ] macOS 1.1.1 REJECTED; iOS 1.1.2 is READY_FOR_DISTRIBUTION. Mac What's New is empty (`asc review doctor` warning) — fill before resubmitting.
-
-### Screenshot re-shoot 2026-07-27 (done, iOS + macOS)
-- iOS: Re-captured from sim (iPhone 14 Plus + 11 Pro Max, 6.7 and 6.5 resolutions), title now reads "Lexly". Saved to v1.1.3 localization.
-- macOS: Re-captured with Lexly title window, resized to 1440x900, uploaded to v1.1.1 localization.
-- Fonts: removed Google Fonts (Fraunces, DM Sans), switched landing page + app headers to system font stack (SF Pro / Helvetica).
-- (resolved) First pass captures were both APP_IPHONE_65 sizes (1284x2778, 1242x2688) — ASC rejects them for IPHONE_67, which wants 1290x2796. 6.7 since re-shot on iPhone 17 Pro Max (1320x2868) and uploaded. Duplicate 6.5 asset deleted.
-- Live iOS 1.1.2 screenshots are locked ("Can't Delete Screenshot After Submit"), so **iOS version 1.1.3 was created** (`cf4fd9f4-70e2-44d0-9110-a3f27fa6513d`, PREPARE_FOR_SUBMISSION) and the corrected shots uploaded to its en-US localization. Not submitted — needs a build (new icon), What's New, and the 6.7 screenshot first.
-- [ ] macOS 1.1.1 is still in REJECTED state — screenshots are fixed but it needs resubmitting, and its What's New is still empty.
-- [ ] iOS 1.1.3 still needs a build (with the new icon) + What's New before submit.
-
-### 2026-07-27 late — macOS resubmitted
-- macOS 1.1.1 RESUBMITTED, now WAITING_FOR_REVIEW (submission `8c047c73-78af-467a-83f4-2c20bb1a10c2`). The old rejected submission `e23ab7a8` had to be cancelled first — it still held the version, blocking a new submission with "already added to another reviewSubmission".
-- macOS `whatsNew` is NOT editable ("Attribute 'whatsNew' cannot be edited at this time") because 1.1.1 is the first macOS release — release notes don't apply to a first version. `asc review doctor`'s "what's new is empty" warning is a false positive here; ignore it.
-- iOS 1.1.3 What's New set: "A clearer, more legible app icon and refreshed screenshots."
-- [ ] iOS 1.1.3 still needs an archive + upload carrying the new icon, then submit. Screenshots and What's New are already in place on it.
-
-### iOS 1.1.3 build attempt 2026-07-27 late
-- Bumped `MARKETING_VERSION` to 1.1.3 in `ios/project.yml`; new icon is in the build.
-- First `asc workflow run ship-ios VERSION:1.1.3` FAILED at the archive step: `Validate plug-in "SwiftLintBuildToolPlugin"`. This is exactly the unverified SwiftLint wiring flagged in `~/Documents/Code/CLAUDE.md` (committed to lexly but never build-verified). Applied the documented fallback: removed the `SwiftLint` entry from `packages:` and the `buildToolPlugins:` block from `project.yml`, regenerated.
-- [ ] If lexly should keep SwiftLint, re-add the wiring and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping — headless archives can't grant the plugin's trust prompt.
-
-## From App Store.pdf (imported 2026-07-28)
-- [ ] Lexly Mac (ASC 6783501927) duplicate record still needs merge/delete — check the ASC email. Dashboard-only. **Do not touch — Apple support case 102949489427 already filed.**
-
-## From App Store.pdf (imported 2026-07-29)
-- [ ] Icon should be made smaller/simplified inside the rounded square — currently reads too busy/large.
-
-### 2026-07-29 — Masterclass fixed, "teach as you go" scoped
-- Fixed real bug: native iOS/macOS app's `Sources/Resources/content` was a stale hand-copy missing the Masterclass catalog entries entirely — tapping Masterclass did nothing. Web already worked (links to notes HTML directly).
-- Parsed both masterclass HTML files into structured JSON (`content/notes/precalc12_masterclass.json`, `biology_masterclass.json`). Added native `NotesView.swift` (sections/formulas/warn-tip-info/examples/tables/flashcards) and routed `CatalogView` to it for subjects with `notesPath`. Replaced the stale resource copy with a symlink (`ios/Sources/Resources/content` → `../../../content`) so this can't drift again. Build verified.
-- [ ] **Not started** — "teach as you go" (Duolingo-style: show the concept/explanation before quizzing) for the 40 regular course packs. This is a content-authoring job, not just UI: each lesson needs a short teaching block written before its exercises, per course. Scope as its own session — don't try to bundle into a quick UI pass.
-
-### 2026-08-02 — ASC review health check
-- iOS 1.1.3: confirmed shipped/approved (`READY_FOR_DISTRIBUTION`, build 202607271632 VALID). No code changes needed.
-- iOS review banner: stale, no outstanding issue — approval of 1.1.3 already resolved it.
-- macOS 1.1.1: found the "rejection" was actually a stuck reviewSubmission holding an orphaned `inAppPurchaseVersion` item from a since-deleted Pro IAP (app currently has 0 IAPs — Pro is free per earlier redesign). Canceled the stuck submission and resubmitted; now `WAITING_FOR_REVIEW`. No app-content fix was needed — this wasn't a real 1.5/2.1-style rejection, just leftover IAP review-item cruft.
-- Did not touch: Lexly Mac (6783501927) duplicate-record deletion — Apple support case only, left alone per instruction.
-
-### 2026-08-02 — Duolingo-style profile panel
-- Reworked the profile panel to match Duolingo's layout: bigger avatar banner, `@handle · Joined <year>` line, icon-based overview grid (streak/XP/courses/trophies). Built entirely from existing local/Supabase profile data.
-- [ ] **Not started** — friends/following/followers + league/social features (seen in the Duolingo reference screenshot). Needs a real social backend (friend graph, leaderboard tables) — no schema for this exists yet. Scope as its own session.
-
-## From Apple Notes (imported 2026-08-04)
-- [ ] **App Store banner like Duolingo.** Josh: "How do we get a banner on the App Store like Duolingo?" That is Apple's **Custom Product Pages** / featured promotional artwork — investigate what is actually achievable: custom product pages (up to 35, own screenshots/promo text, own URL) are self-serve via ASC; the big editorial banner on the Apps/Games tab is Apple-curated (App Store featuring nomination form), not purchasable. Determine which one he means, then either set up a custom product page via `asc` or submit a featuring nomination.
-
-
-## Known-broken tooling (2026-08-04)
-- [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in the streak rollover date). **Pre-existing** — confirmed failing on a clean tree via `git stash`, unrelated to tonight's changes. Either the test fixture or `currentWeekStart()`/streak rollover is off by a day; worth resolving before trusting it as a gate.
-
-## Rejection 2026-08-04
-- [ ] **Lexly macOS 1.1.1 REJECTED** (notification 2026-08-04, submission `a91ea668-bb56-4a31-b722-d7c58782777c`, state UNRESOLVED_ISSUES, submitted 2026-08-02; version id `f9f6e627-0b7f-421a-9e85-50cfcdf96106`). iOS is unaffected — 1.1.3 is READY_FOR_DISTRIBUTION. **Rejection text is Resolution Center only**; `asc review` has no subcommand for it, so it needs Joshua at appstoreconnect.apple.com.
-  - RULED OUT: the stale-deploy theory. Apple's Jul 06 Mac rejection was a 2.1 course-load issue and lexly's website was serving 2-week-old broken content until 2026-08-04 — but the macOS app bundles its catalog locally (`ContentStore.loadJSON("catalog")` in `ios/Sources/Shared/ContentStore.swift:13`), it does not fetch from the web. Stale site cannot be the cause.
-  - LEADING UNVERIFIED HYPOTHESIS: the demo account. `jatrommel@gmail.com` was previously flagged by Apple as failing sign-in (2.1 Information Needed) on the OLD standalone Lexly Mac record (6783501927); the merged record (6783501611) likely declares the same credentials. If so the fix is to verify that login works and update the review demo credentials. Known-good password for that address per the healstack recovery: `Joshisrad4$!!`.
-  - Next step: read the Resolution Center message, then fix + resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` is unreliable on this account).
-
-## Pending (2026-08-06)
-- [ ] **Masterclass JSON generation from Uprighty summaries** — BLOCKED: converter execution times out on full dataset (runtime hang, not logic error). Infrastructure is 90% complete: 15 book summaries from Uprighty have been converted, catalog entries added with `notesPath` pointers, and validator extended to support them. All changes deployed live. JSON generation deferred pending investigation — plan file at ~/claude/plans/tldr-shorter-and-bang-zippy-cupcake.md documents full approach + fallback strategy.
-- [ ] Duolingo Grade 4 Unit 5 (Intro to LCM) — ~40+ exercises, pending sync. Session budget constrained.
+## Known-broken tooling
+- [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in streak rollover date). Confirmed pre-existing on a clean tree, unrelated to any recent change. Either the test fixture or `currentWeekStart()`/rollover logic is off by a day — resolve before trusting it as a gate.
+- [ ] SwiftLint build-tool plugin wiring was removed from `project.yml` (`packages:`/`buildToolPlugins:`) after it broke the iOS 1.1.3 archive step (`Validate plug-in "SwiftLintBuildToolPlugin"` failure — headless archives can't grant the plugin's interactive trust prompt). If Lexly should keep SwiftLint, re-add and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping.
