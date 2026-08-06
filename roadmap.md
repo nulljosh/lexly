@@ -139,5 +139,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
   - LEADING UNVERIFIED HYPOTHESIS: the demo account. `jatrommel@gmail.com` was previously flagged by Apple as failing sign-in (2.1 Information Needed) on the OLD standalone Lexly Mac record (6783501927); the merged record (6783501611) likely declares the same credentials. If so the fix is to verify that login works and update the review demo credentials. Known-good password for that address per the healstack recovery: `Joshisrad4$!!`.
   - Next step: read the Resolution Center message, then fix + resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` is unreliable on this account).
 
-## Pending (2026-08-04)
+## Pending (2026-08-06)
+- [ ] **Masterclass JSON generation from Uprighty summaries** — BLOCKED: converter execution times out on full dataset (runtime hang, not logic error). Infrastructure is 90% complete: 15 book summaries from Uprighty have been converted, catalog entries added with `notesPath` pointers, and validator extended to support them. All changes deployed live. JSON generation deferred pending investigation — plan file at ~/claude/plans/tldr-shorter-and-bang-zippy-cupcake.md documents full approach + fallback strategy.
 - [ ] Duolingo Grade 4 Unit 5 (Intro to LCM) — ~40+ exercises, pending sync. Session budget constrained.
