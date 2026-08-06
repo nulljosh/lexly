@@ -129,8 +129,6 @@ Already have: 40+ courses, spaced repetition, XP, streaks, hearts, achievements,
 ## From Apple Notes (imported 2026-08-04)
 - [ ] **App Store banner like Duolingo.** Josh: "How do we get a banner on the App Store like Duolingo?" That is Apple's **Custom Product Pages** / featured promotional artwork — investigate what is actually achievable: custom product pages (up to 35, own screenshots/promo text, own URL) are self-serve via ASC; the big editorial banner on the Apps/Games tab is Apple-curated (App Store featuring nomination form), not purchasable. Determine which one he means, then either set up a custom product page via `asc` or submit a featuring nomination.
 
-## Masterclass integration (2026-08-06)
-- **15 book summaries ready to import**: Data Science For Dummies (complete), Good Feng Shui (complete), macOS Tahoe, Accounting, AI in Business, IBS, Sobriety, Statistics, ML, Pre-Calc, Steve Jobs, Calculus, Intro to Python, Mindset, The 48 Laws of Power. Converter script (`uprighty/scripts/summary-to-masterclass.py`) + full plan documented at `~/.claude/plans/`. All 15 JSON masterclass files + catalog entries ready to merge, deploy to Lexly — zero scoping uncertainty, execute next session.
 
 ## Known-broken tooling (2026-08-04)
 - [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in the streak rollover date). **Pre-existing** — confirmed failing on a clean tree via `git stash`, unrelated to tonight's changes. Either the test fixture or `currentWeekStart()`/streak rollover is off by a day; worth resolving before trusting it as a gate.
