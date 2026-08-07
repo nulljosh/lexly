@@ -47,6 +47,9 @@ Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hea
 - [ ] App Store Custom Product Page or featuring nomination ("banner like Duolingo") — Custom Product Pages (up to 35, self-serve via ASC) vs. the Apple-curated editorial banner (featuring nomination form, not purchasable) are different things; determine which Josh means, then set one up via `asc` or submit a nomination.
 - Explicitly skipped: Codecademy-style full code-execution sandbox (out of scope, high effort, low relevance to a language app); Duolingo mascot/illustrated skill-tree reskin (conflicts with no-gradients/no-mascot design taste, current minimal list-tree stays).
 
+## From Notes.app (imported 2026-08-07)
+- [ ] Mac OS issues flagged (from a bare Apple Note titled "Lexly / Mac OS / Issues", no detail text, screenshot attachment lost on export) — likely related to the unresolved Mac rejection from 2026-08-04. Ask Josh for specifics next time this comes up.
+
 ## Known-broken tooling
 - [ ] `tools/check-streak-freeze.js` fails: asserts `2026-07-07` but gets `2026-07-06` (off-by-one in streak rollover date). Confirmed pre-existing on a clean tree, unrelated to any recent change. Either the test fixture or `currentWeekStart()`/rollover logic is off by a day — resolve before trusting it as a gate.
 - [ ] SwiftLint build-tool plugin wiring was removed from `project.yml` (`packages:`/`buildToolPlugins:`) after it broke the iOS 1.1.3 archive step (`Validate plug-in "SwiftLintBuildToolPlugin"` failure — headless archives can't grant the plugin's interactive trust prompt). If Lexly should keep SwiftLint, re-add and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping.
