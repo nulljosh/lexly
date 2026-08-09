@@ -9,7 +9,7 @@ struct LingoApp: App {
         WindowGroup {
             Group {
                 if auth.isLoading {
-                    ProgressView()
+                    SplashView()
                 } else {
                     CatalogView(store: store, auth: auth)
                 }

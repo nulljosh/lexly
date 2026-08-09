@@ -9,10 +9,13 @@
 - **Lexly Mac duplicate record** (ASC 6783501927, bundle `com.nulljosh.lingo`, orphaned since the iOS+macOS merge into 6783501611): cannot be deleted via API or dashboard — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch (confirmed via `asc web apps delete`, 409 conflict). Apple Developer Support case **102949489427** filed 2026-07-22, awaiting reply. **Do not touch further — case is open, dashboard-only from here.**
 
 ## Open — content & UI
-- [ ] iOS needs a splash animation to match Duolingo's (playful animated launch screen, not static).
+- [x] iOS/macOS loading state replaced with a branded `SplashView` (Lexly mark + title, spring scale/fade-in) instead of a bare spinner; same mark added above the login/register title in `AuthView` for consistent branding (2026-08-08). Not Duolingo-style yet — no mascot/illustration, just a monochrome SF Symbol mark; revisit if a real illustrated splash is wanted.
 - [ ] Landing page (`index.html`): user likes it, wants it "bumped more" — no specific ask, needs a follow-up conversation on direction. (Separately: this landing page is the reference design to port to any other `~/Documents/Code` project still missing a matching one — needs a project-by-project survey, not started.)
 - [ ] Web top nav bar reads cluttered — needs a visual pass.
 - [ ] Icon should be simplified inside the rounded square — currently reads too busy/large.
+
+## From Apple Notes (imported 2026-08-08)
+- [ ] Course list icons (`CatalogView.swift:64`, `sfSymbol(for: subject.icon)`) need "bump/less generic" per note — currently plain SF Symbols mapped per subject; needs actual icon-set decisions (custom glyphs? different SF Symbol picks?), not a mechanical fix.
 - [ ] Richen list/course icons (user wants them "bumped"/more visually rich).
 - [ ] Native Mac UI polish: catalog/course list rows read cramped/iPhone-style rather than Mac-native density — icon-to-text spacing and row height need a Mac-specific pass, not a port of the iOS layout.
 - [ ] A UI glitch/visual artifact reported via screenshot (2026-07-21 brain dump) — needs the actual image reviewed to diagnose, never triaged.
