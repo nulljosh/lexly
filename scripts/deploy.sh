@@ -10,7 +10,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 PUBLISH=(app css js content assets school functions
-         index.html privacy.html support.html manifest.json)
+         index.html privacy.html support.html manifest.json _headers)
 
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
