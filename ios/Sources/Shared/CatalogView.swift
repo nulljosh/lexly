@@ -29,6 +29,9 @@ struct CatalogView: View {
                 }
             }
             .navigationTitle("Lexly")
+            #if os(macOS)
+            .listStyle(.inset)
+            #endif
         }
     }
 }
@@ -54,20 +57,43 @@ struct RootTabView: View {
 private struct SubjectRow: View {
     let subject: Subject
 
+    // ponytail: Mac rows carry their own metrics — the iOS sizes read cramped and
+    // touch-targeted in a desktop window. Tune here, not by forking the whole view.
+    #if os(macOS)
+    private static let iconSize: CGFloat = 26
+    private static let iconTextGap: CGFloat = 10
+    private static let rowPadding: CGFloat = 7
+    private static let titleFont: Font = .system(size: 13, weight: .medium)
+    private static let subtitleFont: Font = .system(size: 11)
+    #else
+    private static let iconSize: CGFloat = 32
+    private static let iconTextGap: CGFloat = 12
+    private static let rowPadding: CGFloat = 2
+    private static let titleFont: Font = .body.weight(.medium)
+    private static let subtitleFont: Font = .caption
+    #endif
+
     var body: some View {
-        Label {
+        HStack(spacing: Self.iconTextGap) {
+            icon
             VStack(alignment: .leading, spacing: 2) {
-                Text(subject.name).font(.body.weight(.medium))
-                Text(subject.level.capitalized).font(.caption).foregroundStyle(.secondary)
+                Text(subject.name)
+                    .font(Self.titleFont)
+                Text(subject.level.capitalized)
+                    .font(Self.subtitleFont)
+                    .foregroundStyle(.secondary)
             }
-        } icon: {
-            Image(systemName: sfSymbol(for: subject.icon))
-                .foregroundStyle(.white)
-                .frame(width: 32, height: 32)
-                .background(Color(hex: "5B9BD5"))
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, Self.rowPadding)
+    }
+
+    private var icon: some View {
+        Image(systemName: sfSymbol(for: subject.icon))
+            .font(.system(size: Self.iconSize * 0.5))
+            .foregroundStyle(.white)
+            .frame(width: Self.iconSize, height: Self.iconSize)
+            .background(Color(hex: "5B9BD5"))
+            .clipShape(RoundedRectangle(cornerRadius: Self.iconSize * 0.25, style: .continuous))
     }
 
     private func sfSymbol(for faIcon: String) -> String {

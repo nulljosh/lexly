@@ -23,6 +23,9 @@ struct UnitsView: View {
                                             .foregroundStyle(Color(hex: "5B9BD5"))
                                     }
                                 }
+                                #if os(macOS)
+                                .padding(.vertical, 4)
+                                #endif
                             }
                         }
                     } header: {
@@ -40,6 +43,9 @@ struct UnitsView: View {
             }
         }
         .navigationTitle(subject.name)
+        #if os(macOS)
+        .listStyle(.inset)
+        #endif
         .onAppear {
             if course == nil { course = store.loadCourse(subject) }
         }
