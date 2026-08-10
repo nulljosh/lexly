@@ -785,6 +785,15 @@ function setupEventListeners() {
         renderSubjects(gameState.selectedCategory);
     });
 
+    document.getElementById('forgotPassword').addEventListener('click', async () => {
+        const feedback = document.getElementById('authFeedback');
+        const email = document.getElementById('signinEmail').value.trim();
+        if (!email) { feedback.textContent = 'Enter your email first.'; feedback.className = 'auth-feedback error'; return; }
+        const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin });
+        feedback.textContent = error ? error.message : 'Check your email for a reset link.';
+        feedback.className = error ? 'auth-feedback error' : 'auth-feedback';
+    });
+
     document.getElementById('formSignin').addEventListener('submit', async (event) => {
         event.preventDefault();
         const feedback = document.getElementById('authFeedback');
