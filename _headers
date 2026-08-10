@@ -1,0 +1,4 @@
+# ponytail: short TTL on assets instead of edge purges — CLOUDFLARE_DNS_TOKEN
+# lacks Cache Purge scope, so a stale icon otherwise needs a ?v= bump by hand.
+/assets/*
+  Cache-Control: public, max-age=300, must-revalidate
