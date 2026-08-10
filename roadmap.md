@@ -60,3 +60,13 @@ Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hea
 ## App Store submission freeze — until 2026-08-18
 - [ ] **BLOCKED: no App Store submission on any app until 2026-08-18.** Account is under a Guideline 5.6 Developer Code of Conduct review suspension (Curvely, Transcriptly, Wiretext, NYC Survive). Apple warns that continued similar submissions may result in removal from the Apple Developer Program. Full detail: wiki `ship-plan.md` § "Guideline 5.6 suspension (2026-08-10)". TestFlight builds, pushes and web deploys are still fine.
 - [ ] Lexly Mac (6783501927) REJECTED on two counts. **5.2.5 IP:** the record name "Lexly Mac" uses the term "Mac" inappropriately — rename the App Store record to drop "Mac". **2.1:** the demo account jatrommel@gmail.com / Joshisrad4$!! does not work for reviewers and sign-up also errors — fix production auth and re-verify the demo credentials by actually signing in with them.
+
+## Decision 2026-08-10: merge Lexly Mac into one Universal Purchase record
+Apple rejected "Lexly Mac" under 5.2.5 — the name uses "Mac" inappropriately. Rather than
+rename around it, collapse the two records. Voxprint (6782604262) already proved one app record
+serves iOS + macOS via Universal Purchase, so the second record is what created the naming
+problem in the first place.
+- [ ] Add macOS as a platform on the existing **Lexly** record (6783501611) as a Universal Purchase, rather than keeping a separate Mac app.
+- [ ] Point the macOS build at that record; verify the Mac bundle ID is registered against the same app.
+- [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it.
+- [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after.
