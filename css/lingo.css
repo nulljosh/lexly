@@ -1467,6 +1467,21 @@ dialog.auth-shell::backdrop {
     transform: translateY(-2px);
 }
 
+.auth-forgot {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    font-family: var(--font);
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth-forgot:hover {
+    color: var(--text-primary);
+}
+
 /* ── Auth feedback ── */
 
 .auth-feedback {
