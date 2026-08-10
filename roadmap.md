@@ -1,5 +1,9 @@
 # lexly Roadmap
 
+## Email verification on signup + forgot-password flow
+
+Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but lacks password-recovery and email-verification paths. Currently if a user forgets their password or wants account security via email verification, there's no path forward. Implement: (1) password-reset route that emails a time-limited reset token, (2) token verification before allowing a new password, (3) optional email-verification on signup (soft gate, existing accounts grandfathered, login never blocked). See sparkjar's `/api/auth/verify-email.js` + `/api/auth/password-reset.js` for a reference implementation and the mail.js helper. This requires backend API infrastructure that Lexly currently lacks — either extend the static-app model with a minimal Cloudflare Worker API, or migrate to a backend-driven architecture (more scope but enables other features like leaderboards/friends).
+
 ## Current release state (2026-08-06)
 - **iOS**: 1.1.3 READY_FOR_DISTRIBUTION/shipped (build 202607271632 VALID, confirmed 2026-08-02). New icon, refreshed screenshots, What's New set.
 - **macOS**: 1.1.1 REJECTED (notification 2026-08-04, submission `a91ea668-bb56-4a31-b722-d7c58782777c`, state UNRESOLVED_ISSUES, version id `f9f6e627-0b7f-421a-9e85-50cfcdf96106`). History: rejected 07-24 (bad support URL + 2.1 sign-in issue, support URL fixed 07-26), resubmitted 07-27 (submission `8c047c73`), the 08-02 "rejection" turned out to be a stuck reviewSubmission holding an orphaned deleted-IAP item (canceled + resubmitted, not a real content issue), now rejected again 08-04.
