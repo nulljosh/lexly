@@ -70,3 +70,20 @@ problem in the first place.
 - [ ] Point the macOS build at that record; verify the Mac bundle ID is registered against the same app.
 - [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it.
 - [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after.
+
+## 2026-08-10 — the Universal Purchase merge is ALREADY DONE; only the duplicate deletion is left
+Verified via the API tonight. The main **Lexly** record (6783501611, `com.nulljosh.lingo`)
+already carries **MAC_OS 1.1.1** alongside iOS 1.1.3/1.1.2/1.1.1. So Lexly is already one record
+serving both platforms — no merge work is needed.
+
+The separate **Lexly Mac** record (6783501927, `com.nulljosh.lingo.mac`) is a pure duplicate. Its
+only version is MAC_OS 1.1.1 REJECTED — nothing live, nothing to lose. It is also the record that
+drew the 5.2.5 "Mac in the app name" rejection. Deleting it retires that rejection permanently
+and removes a rejected record from the review queue.
+
+Also verified: the App Review demo account `jatrommel@gmail.com` now signs in cleanly against the
+shared Supabase project (HTTP 200), so the 2.1 "we couldn't sign in" half of that rejection looks
+already resolved. The related Healstack demo account was genuinely broken and was fixed tonight —
+see healstack/roadmap.md; same shared database, different user row.
+
+- [ ] Delete the duplicate: `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --confirm`. **Deliberately not run tonight** — it is irreversible and Joshua was away from the keyboard, and there is zero time value in doing it before the 2026-08-18 freeze lifts. The `asc web` session was confirmed valid at the time of writing, so this is unblocked whenever he wants it run.
