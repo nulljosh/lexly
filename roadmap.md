@@ -87,3 +87,9 @@ already resolved. The related Healstack demo account was genuinely broken and wa
 see healstack/roadmap.md; same shared database, different user row.
 
 - [ ] Delete the duplicate: `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --confirm`. **Deliberately not run tonight** — it is irreversible and Joshua was away from the keyboard, and there is zero time value in doing it before the 2026-08-18 freeze lifts. The `asc web` session was confirmed valid at the time of writing, so this is unblocked whenever he wants it run.
+
+## App Store screenshots (queued 2026-08-11)
+`screenshots/` is hand-made PNGs (6.5/6.7/mac), last touched 2026-07-27, no harness.
+Build one with the `appstore-screenshots` skill, then run. Copy the pattern from
+`talli/ios`: Snapfile needs `xcargs("-skipPackagePluginValidation -skipMacroValidation")`,
+and the mock must cover every network refresh path, not just `init` — see talli 7386f1d.
