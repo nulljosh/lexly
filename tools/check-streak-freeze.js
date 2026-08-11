@@ -101,10 +101,14 @@ assert.strictEqual(vm.runInContext('loadProgress().streak', sandbox), 8, 'streak
 assert.strictEqual(vm.runInContext('loadProgress().streak_freezes', sandbox), 0, 'the spent freeze should be decremented');
 
 // --- currentWeekStart() should be Monday-anchored and stable within a week -
-const mon = vm.runInContext("currentWeekStart(new Date('2026-07-07'))", sandbox); // a Monday
-const wed = vm.runInContext("currentWeekStart(new Date('2026-07-09'))", sandbox); // same week, Wednesday
-const nextMon = vm.runInContext("currentWeekStart(new Date('2026-07-14'))", sandbox); // following Monday
-assert.strictEqual(mon, '2026-07-07', 'currentWeekStart should return the Monday itself unchanged');
+// Build local-midnight dates: currentWeekStart() reads getDay()/getDate() in
+// local time, but new Date('YYYY-MM-DD') parses as UTC midnight, which lands on
+// the previous day in negative-offset zones. Passing y/m/d keeps this test
+// timezone-independent.
+const mon = vm.runInContext("currentWeekStart(new Date(2026, 6, 6))", sandbox); // Monday
+const wed = vm.runInContext("currentWeekStart(new Date(2026, 6, 8))", sandbox); // same week, Wednesday
+const nextMon = vm.runInContext("currentWeekStart(new Date(2026, 6, 13))", sandbox); // following Monday
+assert.strictEqual(mon, '2026-07-06', 'currentWeekStart should return the Monday itself unchanged');
 assert.strictEqual(wed, mon, 'dates within the same week should share the same week_start');
 assert.notStrictEqual(nextMon, mon, 'the following week should have a different week_start');
 
