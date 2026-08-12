@@ -138,3 +138,13 @@ and the mock must cover every network refresh path, not just `init` — see tall
 - [ ] Web landing page: screenshots are basic and mildly stale — refresh them
 
 > Resume note (2026-08-11): a `wip: partial work from /work notes ingest` commit holds unfinished, unverified changes for the items above. Review `git show HEAD` before building on it — it was committed mid-flight, not reviewed, and is unpushed.
+
+## Sign-in rejection — account ruled out 2026-08-12
+
+`jatrommel@gmail.com` exists in `auth.users`, confirmed, last successful sign-in
+**2026-08-11**. So the Mac reviewer's "Sign In will load briefly and then stops" is a
+**client-side/macOS-build** failure, not a bad credential — the same credential works
+elsewhere. Reproduce on a real macOS build before resubmitting.
+
+Note the duplicate record `6783501927` failed 5.2.5 purely on the name "Lexly Mac"; that one
+cannot ship under that name regardless of the auth fix.
