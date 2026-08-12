@@ -2,31 +2,37 @@ import SwiftUI
 
 struct SettingsView: View {
     var auth: AuthStore
+    var store: ContentStore
     @State private var confirmingDelete = false
     @State private var deleting = false
     @State private var deleteError: String?
     @State private var showingAuth = false
     @State private var avatarId = ""
+    @State private var profile: LingoProfile?
 
     var body: some View {
         List {
             if auth.isSignedIn {
-                // ponytail: doesn't fetch the existing avatar_id first, always shows a fresh
-                // random avatar on Settings open — add a lingo_profiles fetch if that's confusing
+                accountSection
+                progressSection
+
                 Section("Avatar") {
                     HStack {
                         AvatarPickerView(avatarId: $avatarId)
                         Text("Tap to generate a new avatar").font(.footnote).foregroundStyle(.secondary)
                     }
                     .onChange(of: avatarId) { _, newValue in
-                        guard !newValue.isEmpty else { return }
+                        guard !newValue.isEmpty, newValue != profile?.avatar_id else { return }
                         Task { try? await auth.updateAvatar(newValue) }
                     }
                 }
 
                 Section {
                     Button("Sign Out", role: .destructive) {
-                        Task { try? await auth.signOut() }
+                        Task {
+                            try? await auth.signOut()
+                            profile = nil
+                        }
                     }
                 }
 
@@ -50,6 +56,7 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("Settings")
+        .task(id: auth.isSignedIn) { await loadProfile() }
         .sheet(isPresented: $showingAuth) {
             AuthView(auth: auth)
         }
@@ -78,5 +85,34 @@ struct SettingsView: View {
         }, message: {
             Text(deleteError ?? "")
         })
+    }
+
+    /// Signed-in state used to show nothing but a Sign Out button — no indication the
+    /// login had actually attached to an account.
+    private var accountSection: some View {
+        Section("Account") {
+            LabeledContent("Signed in as", value: profile?.display_name ?? "Learner")
+            if let email = auth.session?.user.email {
+                LabeledContent("Email", value: email)
+            }
+            if let joined = auth.session?.user.createdAt {
+                LabeledContent("Member since", value: joined.formatted(date: .abbreviated, time: .omitted))
+            }
+        }
+    }
+
+    private var progressSection: some View {
+        Section("Progress") {
+            LabeledContent("XP", value: "\(store.progress.xp)")
+            LabeledContent("Streak", value: store.progress.streak == 1 ? "1 day" : "\(store.progress.streak) days")
+            LabeledContent("Lessons completed", value: "\(store.progress.completedLessonIds.count)")
+        }
+    }
+
+    private func loadProfile() async {
+        guard auth.isSignedIn else { return }
+        profile = await auth.loadProfile()
+        if let existing = profile?.avatar_id, !existing.isEmpty { avatarId = existing }
+        await store.syncFromCloud()
     }
 }

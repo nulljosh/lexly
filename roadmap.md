@@ -93,3 +93,9 @@ see healstack/roadmap.md; same shared database, different user row.
 Build one with the `appstore-screenshots` skill, then run. Copy the pattern from
 `talli/ios`: Snapfile needs `xcargs("-skipPackagePluginValidation -skipMacroValidation")`,
 and the mock must cover every network refresh path, not just `init` — see talli 7386f1d.
+
+## From Apple Notes (imported 2026-08-11)
+- [ ] iOS: login works but no success message / no visual feedback on button tap
+- [ ] iOS: Settings is bare — login provides no actual information or data afterward
+- [ ] iOS: add padding to app icon (or scale the glyph down)
+- [ ] Web landing page: screenshots are basic and mildly stale — refresh them

@@ -29,9 +29,14 @@ final class AuthStore {
         isLoading = false
     }
 
-    func signUp(email: String, password: String, displayName: String, avatarId: String) async throws {
+    /// Returns true when the sign-up left us with a live session. False means Supabase
+    /// requires email confirmation first — the caller should say so rather than looking
+    /// like nothing happened.
+    @discardableResult
+    func signUp(email: String, password: String, displayName: String, avatarId: String) async throws -> Bool {
         let result = try await supabase.auth.signUp(email: email, password: password)
         session = try? await supabase.auth.session
+        guard session != nil else { return false }
         let uid = result.user.id.uuidString
         try await supabase.from("lingo_profiles")
             .upsert(["id": AnyJSON.string(uid), "display_name": AnyJSON.string(displayName), "avatar_id": AnyJSON.string(avatarId)])
@@ -41,11 +46,18 @@ final class AuthStore {
                      "completed_subjects": AnyJSON.array([]), "lessons_completed": AnyJSON.object([:]),
                      "trophy_ids": AnyJSON.array([]), "srs": AnyJSON.object([:])])
             .execute()
+        return true
     }
 
     func signIn(email: String, password: String) async throws {
         try await supabase.auth.signIn(email: email, password: password)
         session = try? await supabase.auth.session
+    }
+
+    func loadProfile() async -> LingoProfile? {
+        guard let uid = session?.user.id.uuidString else { return nil }
+        return try? await supabase.from("lingo_profiles")
+            .select().eq("id", value: uid).single().execute().value as LingoProfile?
     }
 
     func updateAvatar(_ avatarId: String) async throws {

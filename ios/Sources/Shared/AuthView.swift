@@ -2,7 +2,9 @@ import SwiftUI
 
 struct AuthView: View {
     var auth: AuthStore
+    @Environment(\.dismiss) private var dismiss
     @State private var mode: Mode = .signIn
+    @State private var notice = ""
     @State private var email = ""
     @State private var password = ""
     @State private var displayName = ""
@@ -49,11 +51,18 @@ struct AuthView: View {
 
             if !errorMessage.isEmpty {
                 Text(errorMessage).foregroundStyle(.red).font(.footnote)
+            } else if !notice.isEmpty {
+                Text(notice).foregroundStyle(.secondary).font(.footnote)
+                    .multilineTextAlignment(.center)
             }
 
             Button(action: submit) {
                 if busy {
-                    ProgressView().frame(maxWidth: .infinity)
+                    HStack(spacing: 8) {
+                        ProgressView()
+                        Text(mode == .signIn ? "Signing In…" : "Creating Account…")
+                    }
+                    .frame(maxWidth: .infinity)
                 } else {
                     Text(mode == .signIn ? "Sign In" : "Create Account").frame(maxWidth: .infinity)
                 }
@@ -65,18 +74,33 @@ struct AuthView: View {
         .padding(32)
     }
 
+    /// Dismissing back to a Settings screen that now shows the account IS the success
+    /// signal — the sheet used to just sit there after a good login, which read as
+    /// "nothing happened".
     private func submit() {
         errorMessage = ""
+        notice = ""
         busy = true
         Task {
             do {
                 if mode == .signUp {
-                    try await auth.signUp(email: email, password: password,
-                                         displayName: displayName.isEmpty ? "Learner" : displayName,
-                                         avatarId: avatarId)
-                } else {
-                    try await auth.signIn(email: email, password: password)
+                    let signedIn = try await auth.signUp(email: email, password: password,
+                                                         displayName: displayName.isEmpty ? "Learner" : displayName,
+                                                         avatarId: avatarId)
+                    busy = false
+                    if signedIn {
+                        dismiss()
+                    } else {
+                        mode = .signIn
+                        password = ""
+                        notice = "Account created. Check your email to confirm it, then sign in."
+                    }
+                    return
                 }
+                try await auth.signIn(email: email, password: password)
+                busy = false
+                dismiss()
+                return
             } catch {
                 errorMessage = error.localizedDescription
             }

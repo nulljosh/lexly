@@ -86,6 +86,11 @@ struct Exercise: Decodable, Identifiable {
     let id: String
 }
 
+struct LingoProfile: Decodable {
+    var display_name: String?
+    var avatar_id: String?
+}
+
 struct LingoProgress: Codable {
     var xp: Int = 0
     var streak: Int = 0

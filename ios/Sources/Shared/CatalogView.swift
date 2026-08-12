@@ -3,6 +3,9 @@ import SwiftUI
 struct CatalogView: View {
     var store: ContentStore
     var auth: AuthStore
+    #if os(macOS)
+    @State private var showingSettings = false
+    #endif
 
     var body: some View {
         NavigationStack {
@@ -31,6 +34,25 @@ struct CatalogView: View {
             .navigationTitle("Lexly")
             #if os(macOS)
             .listStyle(.inset)
+            // ponytail: Mac had no Settings surface at all, so sign-in was unreachable
+            // there. One toolbar button reuses the same SettingsView as iOS.
+            .toolbar {
+                Button {
+                    showingSettings = true
+                } label: {
+                    Label("Settings", systemImage: "gearshape")
+                }
+                .accessibilityIdentifier("settingsButton")
+            }
+            .sheet(isPresented: $showingSettings) {
+                NavigationStack {
+                    SettingsView(auth: auth, store: store)
+                        .toolbar {
+                            Button("Done") { showingSettings = false }
+                        }
+                }
+                .frame(minWidth: 420, minHeight: 480)
+            }
             #endif
         }
     }
@@ -47,7 +69,7 @@ struct RootTabView: View {
             CatalogView(store: store, auth: auth)
                 .tabItem { Label("Learn", systemImage: "book.fill") }
             NavigationStack {
-                SettingsView(auth: auth)
+                SettingsView(auth: auth, store: store)
             }
             .tabItem { Label("Settings", systemImage: "gearshape") }
         }
