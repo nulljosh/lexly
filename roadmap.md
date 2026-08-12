@@ -1,5 +1,42 @@
 # lexly Roadmap
 
+## App Review rejection reason — READ FROM RESOLUTION CENTER 2026-08-12
+
+Two Mac records, two different rejections. Both are macOS 1.1.1; iOS 1.1.3 is live and fine.
+
+**Record `6783501611` (the real one) — Guideline 2.1(a) App Completeness.** Reviewed
+2026-08-04, MacBook Pro 14-inch, macOS 26.6, build 202607261932.
+
+> Bug description: upon review we have found when we entered login details that the
+> **Sign In will load briefly and then stops**.
+
+**Record `6783501927` (the duplicate) — two reasons.** Reviewed 2026-08-07, build 202607171509.
+
+1. **Guideline 5.2.5 — Legal — Intellectual Property.** *"Terms for Mac in the app name in an
+   inappropriate manner."* The app record is literally named **"Lexly Mac"** — Apple treats
+   "Mac" in the name as trademark misuse. **This record can never ship under that name.**
+   Rename it, or delete the duplicate record (the standing plan) and ship macOS under the
+   iOS record as a platform.
+2. **Guideline 2.1 — Information Needed.** The demo account in App Store Connect does not
+   work: `jatrommel@gmail.com` / `Joshisrad4$!!` — *"We also received an error message when
+   tried to sign up with own account."* Note those credentials match
+   `project_dose_account_recovery` and are now known-bad to reviewers.
+
+Sign-in failure is shared with healstack and sparkjar — one root cause, three apps.
+
+Source: `asc web review show --app 6783501611 --apple-id trommatic@icloud.com` (needs `asc-login`;
+the public API only returns a generic "unresolved issues" wrapper). Submissions frozen
+until 2026-08-18 regardless — fix and stage, do not submit.
+
+## ASC state VERIFIED 2026-08-12 (`asc versions list`)
+
+**iOS 1.1.3 is LIVE** (`READY_FOR_SALE`). **macOS 1.1.1 is `REJECTED` on both records** —
+the real one `6783501611` and the duplicate `6783501927`. Reason is Resolution-Center-only
+(needs `asc-login`).
+
+Submissions frozen until 2026-08-18 (Guideline 5.6 review) — build and stage only, no
+`asc review submit`. Anything below this heading predates this check; trust this block.
+
 ## Email verification on signup + forgot-password flow
 
 Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but lacks password-recovery and email-verification paths. Currently if a user forgets their password or wants account security via email verification, there's no path forward. Implement: (1) password-reset route that emails a time-limited reset token, (2) token verification before allowing a new password, (3) optional email-verification on signup (soft gate, existing accounts grandfathered, login never blocked). See sparkjar's `/api/auth/verify-email.js` + `/api/auth/password-reset.js` for a reference implementation and the mail.js helper. This requires backend API infrastructure that Lexly currently lacks — either extend the static-app model with a minimal Cloudflare Worker API, or migrate to a backend-driven architecture (more scope but enables other features like leaderboards/friends).
