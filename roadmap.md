@@ -99,3 +99,5 @@ and the mock must cover every network refresh path, not just `init` — see tall
 - [ ] iOS: Settings is bare — login provides no actual information or data afterward
 - [ ] iOS: add padding to app icon (or scale the glyph down)
 - [ ] Web landing page: screenshots are basic and mildly stale — refresh them
+
+> Resume note (2026-08-11): a `wip: partial work from /work notes ingest` commit holds unfinished, unverified changes for the items above. Review `git show HEAD` before building on it — it was committed mid-flight, not reviewed, and is unpushed.
