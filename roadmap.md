@@ -46,7 +46,7 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - **macOS**: 1.1.1 REJECTED (notification 2026-08-04, submission `a91ea668-bb56-4a31-b722-d7c58782777c`, state UNRESOLVED_ISSUES, version id `f9f6e627-0b7f-421a-9e85-50cfcdf96106`). History: rejected 07-24 (bad support URL + 2.1 sign-in issue, support URL fixed 07-26), resubmitted 07-27 (submission `8c047c73`), the 08-02 "rejection" turned out to be a stuck reviewSubmission holding an orphaned deleted-IAP item (canceled + resubmitted, not a real content issue), now rejected again 08-04.
   - Ruled out: stale-deploy theory — macOS app bundles its catalog locally (`ContentStore.loadJSON` in `ios/Sources/Shared/ContentStore.swift:13`), doesn't fetch from the web, so the 2-week-stale website couldn't be the cause.
   - Leading unverified hypothesis: demo account. `jatrommel@gmail.com` was previously flagged failing sign-in (2.1) on the old standalone Lexly Mac record; the merged record likely declares the same credentials. Known-good password (per healstack recovery): `Joshisrad4$!!`. Verify login works, update review demo credentials if needed.
-  - [ ] Read the Resolution Center message at appstoreconnect.apple.com (text is web-UI only), fix root cause, resubmit via `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` unreliable on this account).
+  - [x] Read the Resolution Center message (done 2026-08-12, verbatim text at the top of this file) and fix the root cause — done 2026-08-13, see "Sign-in rejection — ROOT CAUSE FOUND AND FIXED". Resubmit still pending: blocked by the 2026-08-18 freeze, then `asc versions attach-build` + `asc review submissions-submit --confirm` (plain `asc review submit` unreliable on this account).
 - **Lexly Mac duplicate record** (ASC 6783501927, bundle `com.nulljosh.lingo`, orphaned since the iOS+macOS merge into 6783501611): cannot be deleted via API or dashboard — its only version is stuck REJECTED, which Apple's deletion endpoint refuses to touch (confirmed via `asc web apps delete`, 409 conflict). Apple Developer Support case **102949489427** filed 2026-07-22, awaiting reply. **Do not touch further — case is open, dashboard-only from here.**
 
 ## Open — content & UI
@@ -137,14 +137,44 @@ and the mock must cover every network refresh path, not just `init` — see tall
 - [ ] iOS: add padding to app icon (or scale the glyph down)
 - [ ] Web landing page: screenshots are basic and mildly stale — refresh them
 
-> Resume note (2026-08-11): a `wip: partial work from /work notes ingest` commit holds unfinished, unverified changes for the items above. Review `git show HEAD` before building on it — it was committed mid-flight, not reviewed, and is unpushed.
+> Resume note — RESOLVED 2026-08-13: the `wip: partial work from /work notes ingest` commit
+> (`9513311`) has now been reviewed and build-verified on both platforms. Its auth changes are
+> the success path the App Review rejection was about; keep them. It was also already pushed —
+> the "unpushed" claim was stale.
 
-## Sign-in rejection — account ruled out 2026-08-12
+## Sign-in rejection — ROOT CAUSE FOUND AND FIXED 2026-08-13
 
-`jatrommel@gmail.com` exists in `auth.users`, confirmed, last successful sign-in
-**2026-08-11**. So the Mac reviewer's "Sign In will load briefly and then stops" is a
-**client-side/macOS-build** failure, not a bad credential — the same credential works
-elsewhere. Reproduce on a real macOS build before resubmitting.
+**The reviewed build had no success path.** Build `202607261932` was cut from commit
+`996cf9a` (2026-07-26 **19:30**) — two minutes after that same commit first *added* sign-in
+to Settings, so the feature was submitted without ever being run on a Mac. In that build
+`AuthView.submit()` ended at `busy = false`: on a **successful** sign-in the spinner stopped
+and nothing else happened — no dismiss, no navigation, no state change. The sheet just sat
+there redisplaying the form. That is literally the reviewer's "the Sign In will load briefly
+and then stops." Not a credential problem, not network, not entitlements.
+
+Ruled out along the way, so nobody re-checks them:
+- **Credentials fine.** `POST /auth/v1/token?grant_type=password` with
+  `jatrommel@gmail.com` returns HTTP 200 and a valid access token (curled 2026-08-13).
+- **Entitlements fine.** `com.apple.security.network.client` was added in that same
+  `996cf9a` commit, 2 minutes *before* the build — so the reviewed build did have it.
+- **Keychain fine.** supabase-swift's `KeychainLocalStorage` query (`kSecAttrAccessible`,
+  no `kSecUseDataProtectionKeychain`) was probed directly on macOS 26: `SecItemAdd` returns
+  `errSecSuccess`. Adding `kSecUseDataProtectionKeychain` is what *fails* (-34018) — do not
+  "fix" it that way.
+
+**Fixed:**
+- The missing success path was already closed by wip commit `9513311` (2026-08-11), which
+  added `dismiss()` plus the "check your email to confirm" notice. Now build-verified on
+  both platforms — that commit is good, treat it as reviewed.
+- `AuthStore.signIn` still had the same silent-failure shape one layer down: it discarded
+  `signIn`'s return and re-read `try? await supabase.auth.session`, so any storage/refresh
+  failure left `session` nil while the call still "succeeded" — sheet dismisses, UI stays
+  signed out, nothing shown. Now assigns the `Session` that `signIn` returns directly, so a
+  failure throws and surfaces in `errorMessage`. Same fix applied to `signUp` via
+  `result.session`.
+
+Verified: `xcodebuild` BUILD SUCCEEDED for Lingo-macOS and Lingo-iOS;
+`node tools/validate-catalog.js` clean. Staged only — submissions frozen until 2026-08-18.
 
 Note the duplicate record `6783501927` failed 5.2.5 purely on the name "Lexly Mac"; that one
 cannot ship under that name regardless of the auth fix.

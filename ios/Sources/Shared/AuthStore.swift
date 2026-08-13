@@ -35,7 +35,7 @@ final class AuthStore {
     @discardableResult
     func signUp(email: String, password: String, displayName: String, avatarId: String) async throws -> Bool {
         let result = try await supabase.auth.signUp(email: email, password: password)
-        session = try? await supabase.auth.session
+        session = result.session
         guard session != nil else { return false }
         let uid = result.user.id.uuidString
         try await supabase.from("lingo_profiles")
@@ -49,9 +49,13 @@ final class AuthStore {
         return true
     }
 
+    /// Uses the session `signIn` already returns rather than re-reading it through
+    /// `try? auth.session` — that swallowed any storage/refresh failure, leaving
+    /// `session` nil while the call still "succeeded", so the sheet closed and the UI
+    /// stayed signed out with nothing shown. That silent path is what App Review saw as
+    /// "Sign In will load briefly and then stops" (Guideline 2.1, macOS 1.1.1).
     func signIn(email: String, password: String) async throws {
-        try await supabase.auth.signIn(email: email, password: password)
-        session = try? await supabase.auth.session
+        session = try await supabase.auth.signIn(email: email, password: password)
     }
 
     func loadProfile() async -> LingoProfile? {
