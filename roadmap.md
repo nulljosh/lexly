@@ -175,3 +175,6 @@ Verified: `xcodebuild` BUILD SUCCEEDED for Lingo-macOS and Lingo-iOS;
 
 Note the duplicate record `6783501927` failed 5.2.5 purely on the name "Lexly Mac"; that one
 cannot ship under that name regardless of the auth fix.
+
+## From Apple Notes (imported 2026-08-13)
+- [ ] Course completion is awarded without correct answers — users can enter incorrect answers and still be passed on the course. Gate completion on actual correct answers.
