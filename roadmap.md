@@ -1,5 +1,30 @@
 # lexly Roadmap
 
+## macOS sign-in fix BUILT AND STAGED 2026-08-14
+
+The 2.1(a) sign-in fix (`0ec5a2c`, 2026-08-13) was committed but had **never been built** —
+the newest build on the record was `202607271632` (Jul 27), two weeks older than the fix, so
+every artifact Apple could see still had the bug. Rebuilt and uploaded today:
+
+- Build **`202608141030`**, `MARKETING_VERSION` 1.1.3, scheme `Lingo-macOS`, Release.
+- **Version string unified at 1.1.3.** The macOS record sat at 1.1.1 while iOS shipped 1.1.3
+  off the same shared `MARKETING_VERSION`; a macOS build stamped 1.1.3 cannot attach to a
+  1.1.1 version row. Since this is one Universal Purchase record, both platforms now track
+  1.1.3 rather than forking the version string per platform.
+- **Dead-demo-account hypothesis is disproven.** The prior leading theory was that
+  `jatrommel@gmail.com` no longer signed in. Verified directly against the Supabase token
+  endpoint on 2026-08-14: returns a valid `access_token`. The credentials are fine — the
+  silent-nil path in `AuthStore.signIn` was the whole defect. Don't re-chase the demo account.
+- **Do not submit.** Freeze holds until 2026-08-18.
+
+Ruled out while investigating: macOS sandbox entitlements.
+`com.apple.security.network.client` is present in `Sources/macOS/Lingo-macOS.entitlements`.
+
+**Cross-app note:** the "one root cause, three apps" framing in the section below is wrong.
+Verified 2026-08-14 — sparkjar (dead `spark.heyitsmejosh.com` host, rebuilt 08-12) and
+healstack (missing Supabase Info.plist config + `fatalError`, build `202608121022` VALID)
+were both already fixed *and* staged. Lexly was the only one still missing a build.
+
 ## App Review rejection reason — READ FROM RESOLUTION CENTER 2026-08-12
 
 Two Mac records, two different rejections. Both are macOS 1.1.1; iOS 1.1.3 is live and fine.
