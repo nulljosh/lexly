@@ -15,7 +15,15 @@ every artifact Apple could see still had the bug. Rebuilt and uploaded today:
   `jatrommel@gmail.com` no longer signed in. Verified directly against the Supabase token
   endpoint on 2026-08-14: returns a valid `access_token`. The credentials are fine — the
   silent-nil path in `AuthStore.signIn` was the whole defect. Don't re-chase the demo account.
-- **Do not submit.** Freeze holds until 2026-08-18.
+- **Verified staged 2026-08-14:** build `202608141030` is `VALID` on the main record
+  (id `38d91fcc-02ae-414d-a71d-782ab1ba550e`), attached to version row
+  `f9f6e627-0b7f-421a-9e85-50cfcdf96106`, now **MAC_OS 1.1.3
+  `PREPARE_FOR_SUBMISSION`**. Nothing is in `WAITING_FOR_REVIEW`.
+- **`asc versions create` will not work here** — it errors "You cannot create a new
+  version of the App in the current state" while the rejected row is still open. The
+  rejected row is editable: `asc versions update --version-id <id> --version 1.1.3`
+  then `asc versions attach-build`. That's the path, don't retry create.
+- **Do not submit.** Freeze holds until 2026-08-18. On Aug 18 this is a pure submit.
 
 Ruled out while investigating: macOS sandbox entitlements.
 `com.apple.security.network.client` is present in `Sources/macOS/Lingo-macOS.entitlements`.
