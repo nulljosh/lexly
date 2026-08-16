@@ -255,4 +255,42 @@ cannot ship under that name regardless of the auth fix.
 
 ## Stashed 2026-08-15
 
-- [ ] **Latent: sign-up creates an auth user with no profile/progress rows if email confirmation is ever turned on.** Not a live bug today — verified 2026-08-15 that confirmation is **OFF** on the shared `spark` project, so `signUp` returns a session and the upserts run. But `AuthStore.signUp` (`ios/Sources/Shared/AuthStore.swift`) does `guard session != nil else { return false }` *before* the `lingo_profiles` / `lingo_progress` upserts. If confirmation gets enabled — and that setting is **project-wide on a Supabase project shared with epiphany/healstack/sparkjar, so another app's change can flip it under us** — every new signup returns false, shows "Account created. Check your email to confirm it", and lands a confirmed-but-profile-less user whose `loadProfile()` returns nil forever. Fix when it matters: move the upserts to first-successful-sign-in (or a `handle_new_user` DB trigger on `auth.users`, which is the version that survives the shared-config problem entirely). Deliberately not built now — YAGNI while confirmation is off.
+- [x] **Latent profile-stranding bug — FIXED 2026-08-15.** Profile creation is now lazy and
+  idempotent instead of signup-ordering-dependent. `AuthStore.signUp` no longer writes any
+  rows; it passes `display_name`/`avatar_id` as auth **user metadata**, and `loadProfile()`
+  creates the row if it's missing (`upsert … onConflict: "id", ignoreDuplicates: true`) then
+  reads it. Covers all four cases in one path: confirmation off, confirmation on, first
+  sign-in on a new device, and users already stranded by an earlier build.
+
+  **Rejected the `handle_new_user` trigger** this item originally suggested. `auth.users` is
+  shared with epiphany/healstack/sparkjar, so the trigger would write lingo rows for users of
+  three other apps who will never open lexly — and it would do nothing for anyone already
+  stranded. The client-side lazy path has neither problem.
+
+  `lingo_progress` was dropped from signup entirely rather than moved: `ContentStore.save()`
+  (`ios/Sources/Shared/ContentStore.swift:84`) already upserts the complete row on every
+  lesson, so a missing row self-heals on first activity and the signup write was pure
+  duplication. `syncFromCloud()` already no-ops on a missing row.
+
+  `ignoreDuplicates` (ON CONFLICT DO NOTHING) matters and is not cosmetic — `lingo_profiles`
+  carries an **`is_pro`** column, so a plain upsert on every launch would reset paid users to
+  free and clobber any rename made in Settings.
+
+  Verified live against `tjsxsqlxjmanwvmywwvw`, not just built (probe user created then
+  deleted via the `delete-account` edge function, sign-in afterwards → `invalid_credentials`,
+  no residue):
+  1. signup with `data:{display_name,avatar_id}` → metadata echoed back, and the JWT carries
+     `user_metadata` (total token 1051 bytes — no meaningful bloat from the avatar data URI)
+  2. `lingo_profiles` after signup → `[]`, confirming the signup path writes nothing
+  3. lazy ensure (`POST …?on_conflict=id`, `Prefer: resolution=ignore-duplicates`) → 201, row
+     created with the right name/avatar
+  4. rename the row, re-run ensure → 201, row **still** reads the rename, exactly 1 row
+
+  Confirmation-ON is reasoned, not directly exercised: that setting is project-wide on a
+  shared project and must not be flipped to test. The mechanism is unchanged either way —
+  metadata lands on the auth user regardless, and the session simply arrives at first
+  sign-in instead of at signup, hitting the same `loadProfile()` path.
+
+  No committed test script: the only meaningful check mutates live auth state (creates and
+  deletes a real user), which isn't worth shipping as a runnable file. The 4-step curl
+  sequence above is the reproduction.
