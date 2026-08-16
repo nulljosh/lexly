@@ -1,5 +1,46 @@
 # lexly Roadmap
 
+## Auth VERIFIED END-TO-END AGAINST LIVE BACKEND 2026-08-15
+
+The 08-13/08-14 "root cause found and fixed" claim **holds up**. Independently re-verified
+today against the live shared `spark` Supabase project (`tjsxsqlxjmanwvmywwvw`), not from
+the notes. Nothing needed fixing; no code change was made.
+
+- **Sign-in — real session.** `POST /auth/v1/token?grant_type=password` as
+  `jatrommel@gmail.com` → HTTP 200, access token (928 chars) + refresh token, `expires_in`
+  3600, `email_confirmed_at` 2026-05-28. Demo account is healthy.
+- **Sign-up — real session, immediately.** `POST /auth/v1/signup` with a throwaway address →
+  HTTP 200 **with an `access_token` in the response**. Email confirmation is **OFF** on this
+  project, so `signUp` returns a live session and the `guard session != nil` passes.
+- **Lexly is NOT exposed to the dead-mailer failure that sank sparkjar.** No confirmation
+  email is required for sign-up to succeed, so there is no silent no-op mail path in the
+  review-critical flow. Do not port sparkjar's Resend migration here as a rejection fix —
+  it is unrelated. (The separate "Email verification on signup + forgot-password" section
+  below is still a real *feature* gap, just not a ship blocker.)
+- **Post-signup writes succeed.** `lingo_profiles` upsert → HTTP 201, `lingo_progress`
+  upsert → HTTP 201 under the new user's own token, so RLS is not blocking the path that
+  runs right after the guard.
+- **`delete-account` edge function works** → HTTP 200 `{"ok":true}`; probe user cleaned up,
+  no test rows left behind.
+- **Committed and pushed, verified with git, not with notes.** `main` is clean and exactly
+  in sync with `origin/main` (0 ahead / 0 behind) through `754cec0`. The old "unpushed wip"
+  worry is stale for good.
+- **Builds green both platforms.** iOS: `-scheme Lingo-iOS -destination
+  'generic/platform=iOS Simulator'` → BUILD SUCCEEDED. macOS: `-scheme Lingo-macOS
+  -destination 'generic/platform=macOS'` → BUILD SUCCEEDED. Simulator never booted.
+
+**Build gotcha, cost ~15 min today — don't repeat it.** The macOS target only builds via
+`-scheme Lingo-macOS`. Building it with `-target Lingo-macOS` fails with
+`unable to resolve module dependency: 'ConcurrencyExtras' / 'IssueReporting'` in
+`swift-clocks`, because `-target` skips proper SPM package-graph resolution and
+`ONLY_ACTIVE_ARCH` then expands to x86_64+arm64 with deps built for only one. It is **not**
+a stale DerivedData problem (reproduced from a wiped DerivedData) and **not** a repo defect.
+All three schemes (`Lingo-iOS`, `Lingo-macOS`, `LingoWidgetExtension`) are tracked in git and
+present; `xcodegen generate` today was a byte-identical no-op.
+
+Remaining before resubmit: nothing technical. Blocked only on the 2026-08-18 freeze, then
+`asc versions attach-build` + `asc review submissions-submit --confirm`.
+
 ## macOS sign-in fix BUILT AND STAGED 2026-08-14
 
 The 2.1(a) sign-in fix (`0ec5a2c`, 2026-08-13) was committed but had **never been built** —
@@ -211,3 +252,7 @@ cannot ship under that name regardless of the auth fix.
 
 ## From Apple Notes (imported 2026-08-13)
 - [ ] Course completion is awarded without correct answers — users can enter incorrect answers and still be passed on the course. Gate completion on actual correct answers.
+
+## Stashed 2026-08-15
+
+- [ ] **Latent: sign-up creates an auth user with no profile/progress rows if email confirmation is ever turned on.** Not a live bug today — verified 2026-08-15 that confirmation is **OFF** on the shared `spark` project, so `signUp` returns a session and the upserts run. But `AuthStore.signUp` (`ios/Sources/Shared/AuthStore.swift`) does `guard session != nil else { return false }` *before* the `lingo_profiles` / `lingo_progress` upserts. If confirmation gets enabled — and that setting is **project-wide on a Supabase project shared with epiphany/healstack/sparkjar, so another app's change can flip it under us** — every new signup returns false, shows "Account created. Check your email to confirm it", and lands a confirmed-but-profile-less user whose `loadProfile()` returns nil forever. Fix when it matters: move the upserts to first-successful-sign-in (or a `handle_new_user` DB trigger on `auth.users`, which is the version that survives the shared-config problem entirely). Deliberately not built now — YAGNI while confirmation is off.
