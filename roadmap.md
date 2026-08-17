@@ -174,10 +174,10 @@ Apple rejected "Lexly Mac" under 5.2.5 — the name uses "Mac" inappropriately. 
 rename around it, collapse the two records. Voxprint (6782604262) already proved one app record
 serves iOS + macOS via Universal Purchase, so the second record is what created the naming
 problem in the first place.
-- [ ] Add macOS as a platform on the existing **Lexly** record (6783501611) as a Universal Purchase, rather than keeping a separate Mac app.
-- [ ] Point the macOS build at that record; verify the Mac bundle ID is registered against the same app.
-- [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it.
-- [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after.
+- [x] Add macOS as a platform on the existing **Lexly** record (6783501611) as a Universal Purchase, rather than keeping a separate Mac app. — verified 2026-08-17: `asc versions list --app 6783501611` returns MAC_OS 1.1.3 PREPARE_FOR_SUBMISSION alongside IOS 1.1.3/1.1.2/1.1.1 READY_FOR_SALE. One record, both platforms.
+- [x] Point the macOS build at that record; verify the Mac bundle ID is registered against the same app. — verified 2026-08-17: `ios/project.yml:73` and `ios/Sources/macOS/Info.plist:12` both build `com.nulljosh.lingo`. Nothing in the repo references `com.nulljosh.lingo.mac`.
+- [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it. — attempted 2026-08-17, rejected 409 on two dashboard-only prerequisites, see below.
+- [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after. — record work is now done; only the submission itself waits on the freeze.
 
 ## 2026-08-10 — the Universal Purchase merge is ALREADY DONE; only the duplicate deletion is left
 Verified via the API tonight. The main **Lexly** record (6783501611, `com.nulljosh.lingo`)
@@ -194,7 +194,19 @@ shared Supabase project (HTTP 200), so the 2.1 "we couldn't sign in" half of tha
 already resolved. The related Healstack demo account was genuinely broken and was fixed tonight —
 see healstack/roadmap.md; same shared database, different user row.
 
-- [ ] Delete the duplicate: `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --confirm`. **Deliberately not run tonight** — it is irreversible and Joshua was away from the keyboard, and there is zero time value in doing it before the 2026-08-18 freeze lifts. The `asc web` session was confirmed valid at the time of writing, so this is unblocked whenever he wants it run.
+- [ ] Delete the duplicate `6783501927` — **RAN 2026-08-17, rejected by Apple with a 409. It is NOT a one-command delete; two dashboard-only prerequisites must be cleared first.**
+
+  Command run (web session authenticated fine, 2FA accepted):
+  `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --confirm`
+
+  Apple's response — `status 409, correlation_key=BQ5J5M4UT3K5YJ6HJVMZYOZYTM`:
+  `codes=[STATE_ERROR.CANNOT_REMOVE_WITH_APP_STORE_AVAILABILITY, ENTITY_ERROR.ATTRIBUTE.INVALID.INVALID_STATE.IN_FLIGHT_REVIEW_SUBMISSIONS]`
+
+  So two blockers, both **dashboard-only — verified there is no `asc` path for either**:
+  1. **In-flight review submission.** `asc review submissions list --app 6783501927` shows `d4eda5d7-eb32-4495-ac8b-bcc34550a9f7`, MAC_OS, state `UNRESOLVED_ISSUES`, submitted 2026-08-07. (Two older ones are `COMPLETE` and harmless.) `asc review submissions` exposes only `list` — no cancel/withdraw. Must be removed from review in the ASC dashboard.
+  2. **App Store availability record.** `asc web apps availability` exposes only `create`, not remove — matches the known availability dead-end. The app must be taken off sale / have its territories cleared in the dashboard.
+
+  Order: clear the review submission, then remove availability, then re-run the delete command above. Nothing else about the merge is outstanding (see the two checked lines above — 6783501611 already carries MAC_OS 1.1.3 and the repo already builds `com.nulljosh.lingo`), so this record is inert in the meantime: no builds go to it, nothing depends on it.
 
 ## App Store screenshots (queued 2026-08-11)
 `screenshots/` is hand-made PNGs (6.5/6.7/mac), last touched 2026-07-27, no harness.
