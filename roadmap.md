@@ -311,3 +311,6 @@ cannot ship under that name regardless of the auth fix.
   No committed test script: the only meaningful check mutates live auth state (creates and
   deletes a real user), which isn't worth shipping as a runnable file. The 4-step curl
   sequence above is the reproduction.
+
+## Ingested 2026-08-18
+- [ ] Landing page: add dark mode support.
