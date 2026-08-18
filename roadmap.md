@@ -150,7 +150,6 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 ## Open — features (Codecademy/Duolingo parity research, 2026-07-16)
 Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hearts, achievements, speech recognition, weekly XP quests, per-question progress pips, light/dark, PWA, Duolingo-style profile panel (avatar banner + stats grid, shipped 2026-08-02).
 - [ ] Fractional/continuous progress bar — clarify with Joshua first: per-question pips (`n / total`) already exist and are visible; only a *smooth fill* variant (vs. discrete pips) is missing. If "fractional" meant the pip count, this is already done.
-- [x] Cross-course completion bug FOUND AND FIXED 2026-08-17. `completedSubjects` gains a course the moment one lesson in it is finished (`js/lingo-app.js`, end-of-lesson save), but the profile rendered it as "N courses" — so touching five courses once each read as five completed. Relabelled to "courses started", which is what the number actually is, and the write site now says so in a comment. Per-lesson data in `lessons_completed` was already correctly subject-scoped, and `migrateLessonsCompleted` already handles the old flat `subject/lesson` keys.
 - [ ] A real "courses completed" count still needs each pack's lesson total, and packs load lazily (`getCourseProgress` returns `total: null` until a pack is cached, deliberately — it will not eagerly fetch all 41). Either persist per-course lesson totals into `content/catalog.json` at build time, or accept counting only cached packs. Decide before building the completion stat.
 - [ ] Skill-tree/unit gating: **lesson-level gating already exists** — `isLessonUnlocked` unlocks a lesson only when the previous one is complete. What is missing is UNIT-level gating (lock later units until the prior unit passes) and the path visualisation. (M)
 - [ ] Placement/diagnostic test per course so advanced users can skip ahead. (M)
@@ -179,8 +178,6 @@ Apple rejected "Lexly Mac" under 5.2.5 — the name uses "Mac" inappropriately. 
 rename around it, collapse the two records. Voxprint (6782604262) already proved one app record
 serves iOS + macOS via Universal Purchase, so the second record is what created the naming
 problem in the first place.
-- [x] Add macOS as a platform on the existing **Lexly** record (6783501611) as a Universal Purchase, rather than keeping a separate Mac app. — verified 2026-08-17: `asc versions list --app 6783501611` returns MAC_OS 1.1.3 PREPARE_FOR_SUBMISSION alongside IOS 1.1.3/1.1.2/1.1.1 READY_FOR_SALE. One record, both platforms.
-- [x] Point the macOS build at that record; verify the Mac bundle ID is registered against the same app. — verified 2026-08-17: `ios/project.yml:73` and `ios/Sources/macOS/Info.plist:12` both build `com.nulljosh.lingo`. Nothing in the repo references `com.nulljosh.lingo.mac`.
 - [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it. — attempted 2026-08-17, rejected 409 on two dashboard-only prerequisites, see below.
 - [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after. — record work is now done; only the submission itself waits on the freeze.
 
@@ -271,13 +268,6 @@ cannot ship under that name regardless of the auth fix.
 - [ ] Course completion is awarded without correct answers — users can enter incorrect answers and still be passed on the course. Gate completion on actual correct answers.
 
 ## Stashed 2026-08-15
-
-- [x] **Latent profile-stranding bug — FIXED 2026-08-15.** Profile creation is now lazy and
-  idempotent instead of signup-ordering-dependent. `AuthStore.signUp` no longer writes any
-  rows; it passes `display_name`/`avatar_id` as auth **user metadata**, and `loadProfile()`
-  creates the row if it's missing (`upsert … onConflict: "id", ignoreDuplicates: true`) then
-  reads it. Covers all four cases in one path: confirmation off, confirmation on, first
-  sign-in on a new device, and users already stranded by an earlier build.
 
   **Rejected the `handle_new_user` trigger** this item originally suggested. `auth.users` is
   shared with epiphany/healstack/sparkjar, so the trigger would write lingo rows for users of
