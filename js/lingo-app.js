@@ -567,7 +567,7 @@ function renderProfilePanel() {
     [
         ['fa-fire', `${gameState.streak} day streak`],
         ['fa-bolt', `${gameState.xp} XP`],
-        ['fa-book', `${gameState.completedSubjects.length} courses`],
+        ['fa-book', `${gameState.completedSubjects.length} courses started`],
         ['fa-trophy', `${getUnlockedAchievements().length} trophies`]
     ].forEach(([icon, label]) => {
         const item = document.createElement('div');
@@ -1707,6 +1707,10 @@ function showResults() {
         ? (progress.weekly_xp || 0) + xpEarnedThisLesson
         : xpEarnedThisLesson;
 
+    // NB: this records a subject as soon as ONE lesson in it is finished, so it is a
+    // "courses started" list despite the name. The profile stat and the firstLesson
+    // achievement both read it that way. A real "courses completed" count needs each
+    // pack's lesson total, and packs load lazily — see getCourseProgress.
     if (gameState.selectedSubject && !gameState.completedSubjects.includes(gameState.selectedSubject)) {
         gameState.completedSubjects.push(gameState.selectedSubject);
     }
