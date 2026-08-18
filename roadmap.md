@@ -1,5 +1,8 @@
 # lexly Roadmap
 
+## Security (2026-08-17)
+- **Auth bypass in /school endpoint closed** — The `/school` gate was using a forged browser cookie (`lingo_authed`) for authentication. Fixed with Basic auth checking the `SCHOOL_PASSWORD` environment variable; requests without it are now denied (commit dfa230b). Deployed live.
+
 ## Auth VERIFIED END-TO-END AGAINST LIVE BACKEND 2026-08-15
 
 The 08-13/08-14 "root cause found and fixed" claim **holds up**. Independently re-verified
