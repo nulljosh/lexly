@@ -1,10 +1,13 @@
 export async function onRequest(context) {
   const { request, next, env } = context;
-  const cookie = request.headers.get('cookie') || '';
-  if (/(?:^|;\s*)lingo_authed=1(?:;|$)/.test(cookie)) return next();
+  const password = env.SCHOOL_PASSWORD;
 
-  const expected = 'Basic ' + btoa(`school:${env.SCHOOL_PASSWORD}`);
-  if (request.headers.get('authorization') === expected) return next();
+  // ponytail: Basic auth only. The old `lingo_authed=1` cookie shortcut was set by
+  // client JS, so anyone could forge it in devtools and walk straight past the gate.
+  // Browsers re-send Basic credentials for the realm, so the UX cost is one prompt.
+  if (password && request.headers.get('authorization') === 'Basic ' + btoa(`school:${password}`)) {
+    return next();
+  }
 
   return new Response('Auth required', {
     status: 401,

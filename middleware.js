@@ -1,13 +1,11 @@
 export const config = { matcher: '/school/:path*' };
 
+// ponytail: Basic auth only -- see functions/school/_middleware.js. The previous
+// `lingo_authed=1` cookie check was forgeable by any client (the cookie is set by
+// browser JS), which made this gate decorative.
 export default function middleware(request) {
-  // Allow if Supabase session cookie is present (set by lingo-app.js after sign-in)
-  const cookie = request.cookies.get('lingo_authed');
-  if (cookie?.value === '1') return;
-
-  // Fallback: Basic auth for direct access
-  const expected = 'Basic ' + btoa(`school:${process.env.SCHOOL_PASSWORD}`);
-  if (request.headers.get('authorization') === expected) return;
+  const password = process.env.SCHOOL_PASSWORD;
+  if (password && request.headers.get('authorization') === 'Basic ' + btoa(`school:${password}`)) return;
 
   return new Response('Auth required', {
     status: 401,

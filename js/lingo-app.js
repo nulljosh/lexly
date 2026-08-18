@@ -54,6 +54,7 @@ const PROFILE_KEY = 'lingo.profile';
 const PROGRESS_KEY = 'lingo.progress';
 const SRS_KEY = 'lingo.srs';
 
+// ponytail: UI hint only -- the server gate is Basic auth, this cookie grants nothing.
 function setAuthCookie() {
     document.cookie = 'lingo_authed=1; path=/; max-age=' + (60 * 60 * 24 * 30) + '; SameSite=Strict';
 }
