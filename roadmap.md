@@ -359,3 +359,4 @@ cannot ship under that name regardless of the auth fix.
   Then: `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --expected-name "Lexly Mac" --confirm`
   Safe: canonical Lexly 6783501611 (com.nulljosh.lingo) carries MAC_OS 1.1.3
   WAITING_FOR_REVIEW; the stray's 1.1.1 was never live.
+- [ ] Do the 'remove from sale in all territories' step via Claude in Chrome rather than by hand — Joshua OK'd browser automation for this on 2026-08-19. It is the one genuinely dashboard-only step: `asc web apps availability` exposes only `create`, so there is no CLI path. Once availability is cleared the delete command above works.
