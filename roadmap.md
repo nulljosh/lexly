@@ -347,3 +347,15 @@ cannot ship under that name regardless of the auth fix.
   above passed verification while the edge still served the old bytes for ~2 min. Add one image
   to the canary list (the script's own comment already warns that a content-only canary is the
   same failure wearing a new hat).
+
+
+## From ASC session 2026-08-19
+- [ ] **Delete stray ASC record 6783501927 (Lexly Mac, com.nulljosh.lingo.mac).**
+  Progress 2026-08-19: in-flight submission d4eda5d7 cancelled successfully via
+  `asc review submissions-update --id <id> --canceled=true --confirm`, so that
+  blocker is cleared. Deletion still returns
+  `STATE_ERROR.CANNOT_REMOVE_WITH_APP_STORE_AVAILABILITY`; clearing availability
+  appears dashboard-only (Pricing and Availability -> remove from sale everywhere).
+  Then: `asc web apps delete --app 6783501927 --expected-bundle-id com.nulljosh.lingo.mac --expected-name "Lexly Mac" --confirm`
+  Safe: canonical Lexly 6783501611 (com.nulljosh.lingo) carries MAC_OS 1.1.3
+  WAITING_FOR_REVIEW; the stray's 1.1.1 was never live.
