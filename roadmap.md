@@ -1,5 +1,14 @@
 # lexly Roadmap
 
+
+## Done 2026-08-18 — macOS 1.1.3 submit-ready
+`asc validate` on `f9f6e627-0b7f-421a-9e85-50cfcdf96106`: 0 errors, 0 blocking.
+
+One warning remains and is **not fixable**: `metadata.required.whats_new`. ASC rejects the PATCH with
+"Attribute 'whatsNew' cannot be edited at this time" because this is the *first* macOS version on the
+merged universal record — a first version has no What's New field. Non-blocking; ignore it on this row
+and expect it to disappear on macOS 1.1.4.
+
 ## Security (2026-08-17)
 - **Auth bypass in /school endpoint closed** — The `/school` gate was using a forged browser cookie (`lingo_authed`) for authentication. Fixed with Basic auth checking the `SCHOOL_PASSWORD` environment variable; requests without it are now denied (commit dfa230b). Deployed live.
 
@@ -67,7 +76,7 @@ every artifact Apple could see still had the bug. Rebuilt and uploaded today:
   version of the App in the current state" while the rejected row is still open. The
   rejected row is editable: `asc versions update --version-id <id> --version 1.1.3`
   then `asc versions attach-build`. That's the path, don't retry create.
-- **Do not submit.** Freeze holds until 2026-08-18. On Aug 18 this is a pure submit.
+- **Ready to submit** — `asc validate` clean 2026-08-18. Held only until the four in-flight verdicts land.
 
 Ruled out while investigating: macOS sandbox entitlements.
 `com.apple.security.network.client` is present in `Sources/macOS/Lingo-macOS.entitlements`.
@@ -103,7 +112,7 @@ Sign-in failure is shared with healstack and sparkjar — one root cause, three 
 
 Source: `asc web review show --app 6783501611 --apple-id trommatic@icloud.com` (needs `asc-login`;
 the public API only returns a generic "unresolved issues" wrapper). Submissions frozen
-until 2026-08-18 regardless — fix and stage, do not submit.
+The freeze lifted 2026-08-18; submission is now gated only on the four in-flight review verdicts.
 
 ## ASC state VERIFIED 2026-08-12 (`asc versions list`)
 
@@ -111,8 +120,11 @@ until 2026-08-18 regardless — fix and stage, do not submit.
 the real one `6783501611` and the duplicate `6783501927`. Reason is Resolution-Center-only
 (needs `asc-login`).
 
-Submissions frozen until 2026-08-18 (Guideline 5.6 review) — build and stage only, no
-`asc review submit`. Anything below this heading predates this check; trust this block.
+Freeze lifted 2026-08-18 (Guideline 5.6 suspension expired). Submitted that day and now
+WAITING_FOR_REVIEW: Curvely iOS 1.2.0, Wiretext iOS 1.1.0, Wordroot iOS 1.0, Healstack iOS 2.3.4.
+**Held pending those four verdicts — never a batch:** Sparkjar iOS+Mac, BCGD iOS+Mac, Wordroot Mac,
+Lexly Mac. All six are `asc validate` clean (0 errors, 0 blocking) with a VALID build attached, so
+each is one `asc review submit` away. Do not submit until the in-flight verdicts land.
 
 ## Email verification on signup + forgot-password flow
 
@@ -169,8 +181,12 @@ Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hea
 ## Known-broken tooling
 - [ ] SwiftLint build-tool plugin wiring was removed from `project.yml` (`packages:`/`buildToolPlugins:`) after it broke the iOS 1.1.3 archive step (`Validate plug-in "SwiftLintBuildToolPlugin"` failure — headless archives can't grant the plugin's interactive trust prompt). If Lexly should keep SwiftLint, re-add and verify with `xcodebuild ... -skipPackagePluginValidation` before shipping.
 
-## App Store submission freeze — until 2026-08-18
-- [ ] **BLOCKED: no App Store submission on any app until 2026-08-18.** Account is under a Guideline 5.6 Developer Code of Conduct review suspension (Curvely, Transcriptly, Wiretext, NYC Survive). Apple warns that continued similar submissions may result in removal from the Apple Developer Program. Full detail: wiki `ship-plan.md` § "Guideline 5.6 suspension (2026-08-10)". TestFlight builds, pushes and web deploys are still fine.
+## App Store submission freeze — LIFTED 2026-08-18
+Freeze lifted 2026-08-18 (Guideline 5.6 suspension expired). Submitted that day and now
+WAITING_FOR_REVIEW: Curvely iOS 1.2.0, Wiretext iOS 1.1.0, Wordroot iOS 1.0, Healstack iOS 2.3.4.
+**Held pending those four verdicts — never a batch:** Sparkjar iOS+Mac, BCGD iOS+Mac, Wordroot Mac,
+Lexly Mac. All six are `asc validate` clean (0 errors, 0 blocking) with a VALID build attached, so
+each is one `asc review submit` away. Do not submit until the in-flight verdicts land.
 - [ ] Lexly Mac (6783501927) REJECTED on two counts. **5.2.5 IP:** the record name "Lexly Mac" uses the term "Mac" inappropriately — rename the App Store record to drop "Mac". **2.1:** the demo account jatrommel@gmail.com / Joshisrad4$!! does not work for reviewers and sign-up also errors — fix production auth and re-verify the demo credentials by actually signing in with them.
 
 ## Decision 2026-08-10: merge Lexly Mac into one Universal Purchase record
@@ -179,7 +195,7 @@ rename around it, collapse the two records. Voxprint (6782604262) already proved
 serves iOS + macOS via Universal Purchase, so the second record is what created the naming
 problem in the first place.
 - [ ] Once macOS ships under the Lexly record, delete the orphaned **Lexly Mac** record (6783501927). That retires the 5.2.5 rejection permanently instead of renaming around it. — attempted 2026-08-17, rejected 409 on two dashboard-only prerequisites, see below.
-- [ ] Blocked until 2026-08-18 by the submission freeze. Do the record work first, submit after. — record work is now done; only the submission itself waits on the freeze.
+- [ ] Record work done; freeze lifted 2026-08-18. Only the submit remains, held for the in-flight verdicts.
 
 ## 2026-08-10 — the Universal Purchase merge is ALREADY DONE; only the duplicate deletion is left
 Verified via the API tonight. The main **Lexly** record (6783501611, `com.nulljosh.lingo`)
@@ -259,7 +275,7 @@ Ruled out along the way, so nobody re-checks them:
   `result.session`.
 
 Verified: `xcodebuild` BUILD SUCCEEDED for Lingo-macOS and Lingo-iOS;
-`node tools/validate-catalog.js` clean. Staged only — submissions frozen until 2026-08-18.
+`node tools/validate-catalog.js` clean. Staged; freeze lifted 2026-08-18, submit held for in-flight verdicts.
 
 Note the duplicate record `6783501927` failed 5.2.5 purely on the name "Lexly Mac"; that one
 cannot ship under that name regardless of the auth fix.
