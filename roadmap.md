@@ -360,3 +360,7 @@ cannot ship under that name regardless of the auth fix.
   Safe: canonical Lexly 6783501611 (com.nulljosh.lingo) carries MAC_OS 1.1.3
   WAITING_FOR_REVIEW; the stray's 1.1.1 was never live.
 - [ ] Do the 'remove from sale in all territories' step via Claude in Chrome rather than by hand — Joshua OK'd browser automation for this on 2026-08-19. It is the one genuinely dashboard-only step: `asc web apps availability` exposes only `create`, so there is no CLI path. Once availability is cleared the delete command above works.
+
+## Braindump 2026-08-19
+- [ ] Add a Discrete Mathematics course (logic, sets, combinatorics, graphs, proofs) — needs curriculum scoping first.
+- [ ] Copy more features from Brilliant and Duolingo (interactive problem cards, streaks, leagues, hearts/lives, daily goals) — audit which are missing.
