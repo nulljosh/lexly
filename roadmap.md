@@ -320,3 +320,30 @@ cannot ship under that name regardless of the auth fix.
 
 ## Ingested 2026-08-18
 - [ ] Landing page: add dark mode support.
+
+## From Notes (imported 2026-08-19)
+- [x] Refresh landing page screenshots — recaptured `assets/marketing/catalog.png` + `course.png`
+  from the live web app via headless Chrome (560x1000 @2x). The old ones were from 2026-07-07 and
+  showed a "Computers" category that was merged into Programming on 2026-07-28. Deployed + verified
+  live (md5 matches local).
+- [x] macOS 1.1.3 submitted for review (2026-08-19) — see "Stray Lexly Mac record" below for the
+  leftover duplicate.
+
+## Found while working 2026-08-19
+- [ ] **Delete the stray "Lexly Mac" ASC record 6783501927** (its only version is macOS 1.1.1
+  REJECTED). The canonical record is 6783501611, which now carries iOS 1.1.3 READY_FOR_SALE and
+  macOS 1.1.3 WAITING_FOR_REVIEW. The dashboard rejection badge people keep noticing is this dead
+  duplicate, not the real app. App-record deletion is dashboard-only — blocked on an Apple web
+  session (`asc web` SRP signin returned HTTP 503 all through 2026-08-19, before the 2FA step).
+- [ ] **App mobile layout overflows below ~560px.** At a 430px viewport the subject grid renders a
+  third partially-cut column and the header's avatar/Login control is clipped. `body` has
+  `overflow-x: hidden` (css/lingo.css:113), so the page can't be scrolled sideways to reach the cut
+  content — it just disappears. Something inside is forcing a min width wider than the viewport
+  (header stat pills are the likely culprit); `.subject-grid` itself is correctly
+  `repeat(auto-fill, minmax(140px, 1fr))` at that breakpoint. Repro:
+  `chrome --headless --window-size=430,932 --screenshot http://localhost:PORT/app/`.
+- [ ] **`scripts/deploy.sh` verify loop can't catch a stale image.** It md5-checks only
+  `content/catalog.json`, `css/lingo.css`, `js/lingo-app.js`, so the marketing PNGs deployed
+  above passed verification while the edge still served the old bytes for ~2 min. Add one image
+  to the canary list (the script's own comment already warns that a content-only canary is the
+  same failure wearing a new hat).
