@@ -761,8 +761,34 @@ body {
         padding: 1.5rem 1rem;
     }
 
+    /* Flex children default to min-width:auto, so .logo and .stats refused to
+       shrink below their content width. The row overflowed, body's
+       overflow-x:hidden clipped the login control, and the over-wide row
+       dragged the page past the viewport so the subject grid's last column
+       was cut off too. Let both children shrink; scroll the pills instead. */
+    .header-inner {
+        gap: 0.5rem;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .stats {
         gap: 0.375rem;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .stats::-webkit-scrollbar {
+        display: none;
     }
 
     .stat-item {

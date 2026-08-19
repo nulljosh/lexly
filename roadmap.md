@@ -335,13 +335,13 @@ cannot ship under that name regardless of the auth fix.
   macOS 1.1.3 WAITING_FOR_REVIEW. The dashboard rejection badge people keep noticing is this dead
   duplicate, not the real app. App-record deletion is dashboard-only — blocked on an Apple web
   session (`asc web` SRP signin returned HTTP 503 all through 2026-08-19, before the 2FA step).
-- [ ] **App mobile layout overflows below ~560px.** At a 430px viewport the subject grid renders a
-  third partially-cut column and the header's avatar/Login control is clipped. `body` has
-  `overflow-x: hidden` (css/lingo.css:113), so the page can't be scrolled sideways to reach the cut
-  content — it just disappears. Something inside is forcing a min width wider than the viewport
-  (header stat pills are the likely culprit); `.subject-grid` itself is correctly
-  `repeat(auto-fill, minmax(140px, 1fr))` at that breakpoint. Repro:
-  `chrome --headless --window-size=430,932 --screenshot http://localhost:PORT/app/`.
+- [x] App mobile layout overflow below ~560px — FIXED 2026-08-19. Cause was one thing,
+  not two: `.header-inner` is a flex row whose children (`.logo`, `.stats`) default to
+  `min-width:auto`, so neither could shrink. The row overflowed, `body{overflow-x:hidden}`
+  clipped the login control, and the over-wide row dragged the page past the viewport so
+  the subject grid's last column was cut too. Fixed at the 640px breakpoint: both children
+  get `min-width:0`, logo text ellipsizes, stat pills scroll. Deployed.
+  NOT visually confirmed — no browser available this session; eyeball at 430px.
 - [ ] **`scripts/deploy.sh` verify loop can't catch a stale image.** It md5-checks only
   `content/catalog.json`, `css/lingo.css`, `js/lingo-app.js`, so the marketing PNGs deployed
   above passed verification while the edge still served the old bytes for ~2 min. Add one image
