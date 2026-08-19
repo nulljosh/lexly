@@ -26,10 +26,15 @@ npx wrangler pages deploy "$STAGE" --project-name lexly-heyitsmejosh --branch ma
 # Check one file per asset class — a content-only canary would pass while a
 # CSS or JS change sat stale, which is the same failure wearing a new hat.
 # Edge propagation lags a few seconds, so retry rather than failing instantly.
-for asset in content/catalog.json css/lingo.css js/lingo-app.js; do
+# Images are their own asset class: the marketing screenshots went stale on
+# 2026-08-19 and passed verify because only json/css/js were checked.
+for asset in content/catalog.json css/lingo.css js/lingo-app.js assets/marketing/catalog.png assets/marketing/course.png; do
   LOCAL="$(md5 -q "$asset")"
   for attempt in 1 2 3 4 5 6; do
-    LIVE="$(curl -fsS "https://lexly.heyitsmejosh.com/$asset" | md5 -q)" || LIVE=""
+    # Cache-bust: /assets/* carries a 300s edge TTL (see _headers), far longer
+    # than this retry window, so an uncached URL would compare against the edge's
+    # stale copy — a false failure now, and a false pass before images were checked.
+    LIVE="$(curl -fsS "https://lexly.heyitsmejosh.com/$asset?deployverify=$$-$attempt" | md5 -q)" || LIVE=""
     [ "$LIVE" = "$LOCAL" ] && break
     sleep 5
   done
@@ -38,4 +43,4 @@ for asset in content/catalog.json css/lingo.css js/lingo-app.js; do
     exit 1
   fi
 done
-echo "deploy verified: live catalog.json, lingo.css, lingo-app.js all match local"
+echo "deploy verified: live catalog.json, lingo.css, lingo-app.js, marketing screenshots all match local"
