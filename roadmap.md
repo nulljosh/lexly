@@ -347,3 +347,6 @@ cannot ship under that name regardless of the auth fix.
 ## Braindump 2026-08-19
 - [ ] Add a Discrete Mathematics course (logic, sets, combinatorics, graphs, proofs) — needs curriculum scoping first.
 - [ ] Copy more features from Brilliant and Duolingo (interactive problem cards, streaks, leagues, hearts/lives, daily goals) — audit which are missing.
+
+## Braindump 2026-08-19
+- [ ] Scan/copy as much Duolingo content as possible — usage and session by session. Source state: math mostly done, language ~1/3 done, English perfect, a few other languages at level 10-15/100. User is done with Duolingo; port the content into Lexly.
