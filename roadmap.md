@@ -162,6 +162,9 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 Already have: 40+ courses, spaced repetition, XP, streaks (+ freeze/repair), hearts, achievements, speech recognition, weekly XP quests, per-question progress pips, light/dark, PWA, Duolingo-style profile panel (avatar banner + stats grid, shipped 2026-08-02).
 - [ ] Fractional/continuous progress bar — clarify with Joshua first: per-question pips (`n / total`) already exist and are visible; only a *smooth fill* variant (vs. discrete pips) is missing. If "fractional" meant the pip count, this is already done.
 - [ ] A real "courses completed" count still needs each pack's lesson total, and packs load lazily (`getCourseProgress` returns `total: null` until a pack is cached, deliberately — it will not eagerly fetch all 41). Either persist per-course lesson totals into `content/catalog.json` at build time, or accept counting only cached packs. Decide before building the completion stat.
+      NB 2026-08-19: `completed_subjects` is still pushed unconditionally in `showResults()` and
+      remains a "courses started" list — deliberately untouched by the completion-gating fix above,
+      since the profile stat and the `firstLesson` achievement both read it that way. Decide here.
 - [ ] Skill-tree/unit gating: **lesson-level gating already exists** — `isLessonUnlocked` unlocks a lesson only when the previous one is complete. What is missing is UNIT-level gating (lock later units until the prior unit passes) and the path visualisation. (M)
 - [ ] Placement/diagnostic test per course so advanced users can skip ahead. (M)
 - [ ] Richer achievement/badge screen + course-completion certificate view. (S)
@@ -278,9 +281,6 @@ Verified: `xcodebuild` BUILD SUCCEEDED for Lingo-macOS and Lingo-iOS;
 
 Note the duplicate record `6783501927` failed 5.2.5 purely on the name "Lexly Mac"; that one
 cannot ship under that name regardless of the auth fix.
-
-## From Apple Notes (imported 2026-08-13)
-- [ ] Course completion is awarded without correct answers — users can enter incorrect answers and still be passed on the course. Gate completion on actual correct answers.
 
 ## Stashed 2026-08-15
 

@@ -107,6 +107,18 @@ let selectedAuthAvatar = AVATAR_PRESETS[0].id;
 
 let localProfile = null;
 
+// A lesson is crowned only if the learner actually got enough right. 0.6 matches
+// the heart economy already in place: with 5 hearts and 10 questions the fifth
+// wrong answer ends the lesson, so any survivor already has >= 6/10. It only
+// changes the outcome for short packs, where surviving proved nothing.
+const LESSON_PASS_RATIO = 0.6;
+
+function lessonPassed(correctAnswers, totalQuestions, hearts) {
+    if (hearts <= 0) return false;
+    if (!totalQuestions) return false;
+    return correctAnswers >= Math.ceil(totalQuestions * LESSON_PASS_RATIO);
+}
+
 let gameState = {
     selectedCategory: 'languages',
     selectedSubject: null,
@@ -117,6 +129,7 @@ let gameState = {
     streak: 0,
     hearts: 5,
     currentAnswer: null,
+    answered: false,
     answerWords: [],
     lessonQuestions: [],
     currentQuestionData: null,
@@ -1339,6 +1352,7 @@ function loadQuestion() {
         showResults();
         return;
     }
+    gameState.answered = false;
     renderProgressPips(gameState.currentQuestion, gameState.totalQuestions);
     document.getElementById('progressLabel').textContent = `${gameState.currentQuestion} / ${gameState.totalQuestions}`;
     const feedback = document.getElementById('feedback');
@@ -1571,6 +1585,13 @@ function toggleWord(chip) {
 }
 
 function checkAnswer() {
+    // Resolve each question exactly once. The Skip button stays enabled after an
+    // answer is submitted, and skipping now routes through here, so without this
+    // guard a second press would re-score the same question -- draining another
+    // heart, or re-awarding the XP for one already answered correctly.
+    if (gameState.answered) return;
+    gameState.answered = true;
+
     const question = gameState.currentQuestionData;
     let isCorrect = false;
 
@@ -1657,7 +1678,10 @@ function spawnConfetti() {
 }
 
 function skipQuestion() {
-    nextQuestion();
+    // A skip is a wrong answer. checkAnswer() already resolves an empty input or
+    // selection as incorrect, so routing through it costs a heart and penalises
+    // SRS instead of advancing for free.
+    checkAnswer();
 }
 
 function nextQuestion() {
@@ -1716,9 +1740,12 @@ function showResults() {
         gameState.completedSubjects.push(gameState.selectedSubject);
     }
 
-    // Crown a skill-tree lesson only when the player survived (hearts remaining).
+    // Crown a skill-tree lesson only when the player survived AND actually
+    // answered enough correctly -- surviving alone used to be enough, so skipping
+    // every question crowned the lesson with zero correct answers.
     const lessonsCompleted = { ...progress.lessons_completed };
-    if (gameState.selectedLesson && gameState.hearts > 0) {
+    if (gameState.selectedLesson
+        && lessonPassed(gameState.correctAnswers, gameState.totalQuestions, gameState.hearts)) {
         lessonsCompleted[gameState.selectedSubject] = {
             ...(lessonsCompleted[gameState.selectedSubject] || {}),
             [gameState.selectedLesson]: true,
