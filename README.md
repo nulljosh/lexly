@@ -73,3 +73,7 @@ node tools/validate-catalog.js
 ## Roadmap
 
 See `roadmap.md` for current open items (macOS 1.1.1 rejection fix, content/course expansion, feature backlog).
+
+## Whitepaper
+
+[Technical whitepaper](WHITEPAPER.md)
