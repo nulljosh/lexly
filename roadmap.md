@@ -1,6 +1,5 @@
 # lexly Roadmap
 
-
 ## Done 2026-08-18 — macOS 1.1.3 submit-ready
 `asc validate` on `f9f6e627-0b7f-421a-9e85-50cfcdf96106`: 0 errors, 0 blocking.
 
@@ -321,33 +320,17 @@ cannot ship under that name regardless of the auth fix.
 ## Ingested 2026-08-18
 - [ ] Landing page: add dark mode support.
 
-## From Notes (imported 2026-08-19)
-- [x] Refresh landing page screenshots — recaptured `assets/marketing/catalog.png` + `course.png`
-  from the live web app via headless Chrome (560x1000 @2x). The old ones were from 2026-07-07 and
-  showed a "Computers" category that was merged into Programming on 2026-07-28. Deployed + verified
-  live (md5 matches local).
-- [x] macOS 1.1.3 submitted for review (2026-08-19) — see "Stray Lexly Mac record" below for the
-  leftover duplicate.
-
 ## Found while working 2026-08-19
 - [ ] **Delete the stray "Lexly Mac" ASC record 6783501927** (its only version is macOS 1.1.1
   REJECTED). The canonical record is 6783501611, which now carries iOS 1.1.3 READY_FOR_SALE and
   macOS 1.1.3 WAITING_FOR_REVIEW. The dashboard rejection badge people keep noticing is this dead
   duplicate, not the real app. App-record deletion is dashboard-only — blocked on an Apple web
   session (`asc web` SRP signin returned HTTP 503 all through 2026-08-19, before the 2FA step).
-- [x] App mobile layout overflow below ~560px — FIXED 2026-08-19. Cause was one thing,
-  not two: `.header-inner` is a flex row whose children (`.logo`, `.stats`) default to
-  `min-width:auto`, so neither could shrink. The row overflowed, `body{overflow-x:hidden}`
-  clipped the login control, and the over-wide row dragged the page past the viewport so
-  the subject grid's last column was cut too. Fixed at the 640px breakpoint: both children
-  get `min-width:0`, logo text ellipsizes, stat pills scroll. Deployed.
-  NOT visually confirmed — no browser available this session; eyeball at 430px.
 - [ ] **`scripts/deploy.sh` verify loop can't catch a stale image.** It md5-checks only
   `content/catalog.json`, `css/lingo.css`, `js/lingo-app.js`, so the marketing PNGs deployed
   above passed verification while the edge still served the old bytes for ~2 min. Add one image
   to the canary list (the script's own comment already warns that a content-only canary is the
   same failure wearing a new hat).
-
 
 ## From ASC session 2026-08-19
 - [ ] **Delete stray ASC record 6783501927 (Lexly Mac, com.nulljosh.lingo.mac).**
