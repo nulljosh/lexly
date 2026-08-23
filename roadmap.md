@@ -350,3 +350,7 @@ cannot ship under that name regardless of the auth fix.
 
 ## Braindump 2026-08-19
 - [ ] Scan/copy as much Duolingo content as possible — usage and session by session. Source state: math mostly done, language ~1/3 done, English perfect, a few other languages at level 10-15/100. User is done with Duolingo; port the content into Lexly.
+
+## Ingested 2026-08-22
+- [ ] **Lexly Mac rejection — Guideline 2.1(a) App Completeness** (submission a91ea668-bb56-4a31-b722-d7c58782777c, reviewed 2026-08-20, MacBook Pro 14" M4 / macOS 26.6.2, v1.1.3 build 202608141030). "We were unable to bypass the keychain request to access the app." The Mac build throws a blocking keychain prompt the reviewer cannot get past. Make keychain access optional / non-blocking at launch, or provide a path into the app that does not require it.
+- [ ] From Notes: "Weeks of trying to refresh this app submission with no luck. Latest build is like 3 weeks aka stale." iOS 1.1.3 is READY_FOR_DISTRIBUTION and its submission is COMPLETE — the stall is the Mac record, blocked by the keychain bug above.
