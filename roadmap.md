@@ -1,5 +1,10 @@
 # lexly Roadmap
 
+## Shipped 2026-08-23 — iOS 1.1.3 is LIVE on the App Store
+https://apps.apple.com/app/id6783501611 — linked from the landing page (hero CTA, platforms card,
+footer, Smart App Banner meta), the app shell footer, README and support page. macOS on the same
+record is still unreleased; keep it badged "Pending" on the site until it clears review.
+
 ## Done 2026-08-18 — macOS 1.1.3 submit-ready
 `asc validate` on `f9f6e627-0b7f-421a-9e85-50cfcdf96106`: 0 errors, 0 blocking.
 
