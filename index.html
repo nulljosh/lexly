@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#fafafa">
 <title>Lexly — Learn anything</title>
 <meta name="description" content="40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.">
+<meta name="apple-itunes-app" content="app-id=6783501611">
 <link rel="icon" href="/assets/icon.svg?v=2">
 <style>
   :root {
@@ -37,6 +38,12 @@
   .btn-primary:hover { transform: translateY(-2px); }
   .btn-secondary { color: var(--text-primary); border: 1px solid var(--border); }
   .btn-secondary:hover { opacity: 0.7; }
+  .btn-appstore { display: inline-flex; align-items: center; gap: 0.55rem; background: #000; color: #fff; text-decoration: none; padding: 0.7rem 1.4rem; border-radius: var(--radius-pill); transition: transform 0.2s var(--spring); }
+  .btn-appstore:hover { transform: translateY(-2px); }
+  .btn-appstore svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .btn-appstore .as-label { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .btn-appstore .as-small { font-size: 0.625rem; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.75; }
+  .btn-appstore .as-big { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; }
 
   header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border); }
   .header-inner { max-width: 1080px; margin: 0 auto; padding: 0.9rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
@@ -130,11 +137,15 @@
     <p>40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.</p>
     <div class="hero-actions">
       <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
+      <a href="https://apps.apple.com/app/id6783501611" target="_blank" rel="noopener" class="btn-appstore" aria-label="Download Lexly on the App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.12 3.02-.85.99-2.24 1.76-3.4 1.67a3.6 3.6 0 0 1-.03-.42c0-1.1.47-2.24 1.2-3.05.79-.9 2.16-1.58 3.3-1.63.03.14.05.28.05.41zM20.9 17.14c-.36.83-.53 1.2-1 1.94-.65 1.03-1.57 2.32-2.7 2.33-1.01.01-1.27-.66-2.64-.65-1.37.01-1.65.67-2.66.66-1.14-.01-2.01-1.17-2.66-2.2C7.4 16.3 7.2 12.9 8.32 11.1c.79-1.28 2.05-2.03 3.23-2.03 1.2 0 1.96.66 2.95.66.96 0 1.55-.66 2.94-.66 1.05 0 2.17.58 2.96 1.57-2.6 1.43-2.18 5.15.5 6.5z"/></svg>
+        <span class="as-label"><span class="as-small">Download on the</span><span class="as-big">App Store</span></span>
+      </a>
       <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
     </div>
     <div class="status-pill">
       <span class="status-dot"></span>
-      <span>Web + iOS + macOS &middot; free to play</span>
+      <span>Now on the App Store &middot; free to play</span>
     </div>
   </div>
   <div class="hero-art">
@@ -211,16 +222,16 @@
     <div class="card">
       <div class="platform-row">
         <div class="platform-name">iOS</div>
-        <div class="badge badge-pending">Pending</div>
+        <div class="badge badge-live">Live</div>
       </div>
-      <div class="platform-detail">v1.1.0 awaiting App Store review</div>
+      <div class="platform-detail"><a href="https://apps.apple.com/app/id6783501611" target="_blank" rel="noopener">Download on the App Store</a></div>
     </div>
     <div class="card">
       <div class="platform-row">
         <div class="platform-name">macOS</div>
         <div class="badge badge-pending">Pending</div>
       </div>
-      <div class="platform-detail">v1.1.0 awaiting App Store review</div>
+      <div class="platform-detail">Awaiting App Store review</div>
     </div>
   </div>
 </section>
