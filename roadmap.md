@@ -354,3 +354,15 @@ cannot ship under that name regardless of the auth fix.
 ## Ingested 2026-08-22
 - [ ] **Lexly Mac rejection — Guideline 2.1(a) App Completeness** (submission a91ea668-bb56-4a31-b722-d7c58782777c, reviewed 2026-08-20, MacBook Pro 14" M4 / macOS 26.6.2, v1.1.3 build 202608141030). "We were unable to bypass the keychain request to access the app." The Mac build throws a blocking keychain prompt the reviewer cannot get past. Make keychain access optional / non-blocking at launch, or provide a path into the app that does not require it.
 - [ ] From Notes: "Weeks of trying to refresh this app submission with no luck. Latest build is like 3 weeks aka stale." iOS 1.1.3 is READY_FOR_DISTRIBUTION and its submission is COMPLETE — the stall is the Mac record, blocked by the keychain bug above.
+
+## 2026-08-23 — delete the Lexly Mac duplicate record
+Lexly Mac (ASC 6783501927, com.nulljosh.lingo.mac) was merged into Lexly (6783501611); macOS
+now ships from the main record (1.1.4 Waiting for Review). The duplicate sits at 1.1.1 Rejected
+for two reasons, read verbatim 2026-08-23 from submission d4eda5d7:
+- 5.2.5 Legal: Intellectual Property — "Terms for Mac in the app name in an inappropriate manner".
+- 2.1 Information Needed — the demo account in App Review Information (jatrommel@gmail.com) would
+  not sign in, and sign-up errored too.
+Neither is worth fixing on a record that should not exist.
+- [ ] Ask Apple Developer Support to delete app record 6783501927.
+- [ ] Regardless: verify the demo account on the surviving Lexly record actually signs in, since
+      the same credentials are likely reused there.
