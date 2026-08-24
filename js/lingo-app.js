@@ -799,6 +799,13 @@ function setupEventListeners() {
         renderSubjects(gameState.selectedCategory);
     });
 
+    // OAuth: data-provider is passed straight through; add a button to add a provider.
+    document.querySelectorAll('.auth-oauth').forEach(btn => btn.addEventListener('click', async () => {
+        const feedback = document.getElementById('authFeedback');
+        const { error } = await sb.auth.signInWithOAuth({ provider: btn.dataset.provider, options: { redirectTo: window.location.origin } });
+        if (error) { feedback.textContent = error.message; feedback.className = 'auth-feedback error'; }
+    }));
+
     document.getElementById('forgotPassword').addEventListener('click', async () => {
         const feedback = document.getElementById('authFeedback');
         const email = document.getElementById('signinEmail').value.trim();
