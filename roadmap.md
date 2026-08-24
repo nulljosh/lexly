@@ -371,3 +371,7 @@ Neither is worth fixing on a record that should not exist.
 - [ ] Ask Apple Developer Support to delete app record 6783501927.
 - [ ] Regardless: verify the demo account on the surviving Lexly record actually signs in, since
       the same credentials are likely reused there.
+
+## Ingested 2026-08-24
+
+- [ ] **Hero animation pass** (Notes 2026-08-24). Reference: bookrank's hero animation — same style/vibe. Subject: **words in different languages**. Plus: generate a mascot in the spirit of Duolingo's, add it to the app with minor animations.
