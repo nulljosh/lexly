@@ -57,6 +57,22 @@
 
   .hero { max-width: 1080px; margin: 0 auto; padding: 5rem 1.5rem 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
   .hero-copy { animation: lxFadeUp 0.8s var(--ease) both; }
+
+  /* The headline says "learn anything" in a new language every few seconds -- the
+     same promise, demonstrated rather than described. Falls back to plain text if
+     the script never runs. */
+  .lx-cycle { display: inline-grid; vertical-align: bottom; }
+  .lx-cycle .lx-word {
+    grid-area: 1 / 1; color: var(--accent);
+    animation: lxWordIn 0.5s var(--ease) both;
+  }
+  @keyframes lxWordIn {
+    from { opacity: 0; transform: translateY(0.35em); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lx-cycle .lx-word { animation: none; }
+  }
   .hero h1 { font-size: clamp(2.75rem, 5.5vw, 4.25rem); line-height: 1.05; margin-bottom: 1.25rem; }
   .hero p { font-size: 1.125rem; line-height: 1.6; color: var(--text-secondary); max-width: 460px; margin: 0 0 2rem; }
   .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
@@ -133,7 +149,7 @@
 <section class="hero">
   <div class="hero-copy">
     <div class="eyebrow">Gamified learning</div>
-    <h1>Learn anything.</h1>
+    <h1>Learn <span class="lx-cycle" id="lxCycle"><span class="lx-word">anything</span></span>.</h1>
     <p>40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.</p>
     <div class="hero-actions">
       <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
@@ -241,6 +257,28 @@
   <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener">GitHub &middot; Source</a>
   <a href="https://apps.apple.com/app/id6783501611" target="_blank" rel="noopener">App Store</a>
 </footer>
+
+<script>
+// Cycle the headline word through the languages Lexly teaches. Pure decoration:
+// if this never runs the headline still reads "Learn anything."
+(function () {
+  var host = document.getElementById('lxCycle');
+  if (!host || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var WORDS = [
+    'anything', 'cualquier cosa', 'n\u2019importe quoi', 'irgendetwas', 'qualsiasi cosa',
+    'qualquer coisa', '\u4f55\u3067\u3082', '\uc544\ubb34\uac83\uc774\ub098', '\u4efb\u4f55\u4e8b',
+    '\u0447\u0442\u043e \u0443\u0433\u043e\u0434\u043d\u043e', '\u0623\u064a \u0634\u064a\u0621', 'vad som helst'
+  ];
+  var i = 0;
+  setInterval(function () {
+    i = (i + 1) % WORDS.length;
+    var next = document.createElement('span');
+    next.className = 'lx-word';
+    next.textContent = WORDS[i];
+    host.replaceChildren(next);
+  }, 2600);
+})();
+</script>
 
 </body>
 </html>
