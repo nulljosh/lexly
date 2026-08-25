@@ -1,30 +1,43 @@
 # lexly Roadmap
 
-## BLOCKED 2026-08-25 — macOS 1.1.4 rejected AGAIN; needs Joshua's 2FA to learn why
+## RESOLVED + RESUBMITTED 2026-08-25 — macOS 1.1.4 was never a code bug
 
-From an Apple email screenshotted into Apple Notes (filed and note deleted 2026-08-25):
+Read out of Resolution Center after Joshua supplied a 2FA code. The real reason, verbatim in
+substance:
 
-- Subject: "There's an issue with your Lexly (macOS) submission."
-- Submitted **Aug 24 2026, 10:34 PM PDT**, by API Key, 1 item, App Version **1.1.4 for macOS**
-- Submission ID **`90f5d700-a454-4ec3-aa2b-ad67496a46f8`**
+> **Guideline 2.1 - Information Needed.** "the app includes or accesses book or magazine content
+> and is intended for distribution on the App Store in China mainland. However, you have not
+> provided a permit demonstrating authorization to distribute an app with this content."
+> Apple wants the Internet Publishing License (网络出版服务许可证).
 
-Verified against `asc review submissions-list --app 6783501611`:
-`90f5d700` is `UNRESOLVED_ISSUES`; **`1a81dace` is `COMPLETE`**. Earlier roadmap/cross-repo notes
-naming `1a81dace` as the open blocker were tracking the wrong submission — that one resolved.
+Reviewed on a MacBook Air (15-inch, M3, 2024) against 1.1.4 (`202608242229`).
 
-**What this means:** the window-size fix (13f35fb, "window launched collapsed to a sliver",
-App Review 2.1a) was rebuilt as build `202608242229`, resubmitted, and **rejected again**. So
-either 2.1a was not actually fixed, or this is a different issue entirely.
+**This invalidates two earlier theories.** The 2.1(a) "unable to sign in" fix and the
+collapsed-window fix were both aimed at the wrong thing — the rejection was about *territory
+licensing*, not the build. Do not re-derive a code cause for this.
 
-**Why it is stuck:** the email is Apple's generic template and states no reason. The reason lives
-only in Resolution Center, which the public API does not expose. `asc web auth status` is
-`{"authenticated":false,"passwordStored":true}` — the password is stored, so this needs **only a
-2FA code** from Joshua, then:
-`asc web review show --app 6783501611 --apple-id trommatic@icloud.com`
+**Fix applied:** the permit is issued by China's NPPA to a registered Chinese entity, with the
+developer name required to match the 单位名称 on the license — not attainable here. So China
+mainland was dropped instead:
 
-- [ ] Get a 2FA code from Joshua, read the real rejection reason, then fix and resubmit.
-      Until this is read, do not guess at a fix or burn another submission on it.
+    asc pricing availability edit --app 6783501611 --territory "CHN" --available false
 
+Verified `available: true -> false` (`PROCESSING_TO_NOT_AVAILABLE`), with all 175 territory rows
+still present — that endpoint lists every territory with a boolean, so the count not changing is
+correct, the row does not disappear.
+
+Then: the stale `UNRESOLVED_ISSUES` submission had to be cancelled before the version could move
+(`asc submit cancel --id 90f5d700-... --confirm`, wait out the `CANCELING` state), and only then
+did `asc review submit` succeed. **New submission `c7a51dfe-7410-4be1-958e-9ba7f704be59`,
+submitted 2026-08-25 17:07 UTC. macOS 1.1.4 is now `WAITING_FOR_REVIEW`.**
+
+Note: `metadata.required.whats_new` still warns and is still **not fixable** — this is the first
+macOS version on the record, so Apple refuses the PATCH ("cannot be edited at this time").
+0 blocking either way.
+
+**Scope beyond Lexly:** bookrank, wordroot, quotestreak and inkpress are all also listed in China
+mainland. bookrank is *already live* with book summaries and China on, which means this rule is
+reviewer-triggered rather than automatic. Deliberately did **not** pre-emptively change them.
 
 ## Shipped 2026-08-23 — iOS 1.1.3 is LIVE on the App Store
 https://apps.apple.com/app/id6783501611 — linked from the landing page (hero CTA, platforms card,
