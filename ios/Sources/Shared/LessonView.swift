@@ -77,6 +77,12 @@ struct LessonView: View {
         .navigationBarTitleDisplayMode(.inline)
         #endif
         .animation(.spring(response: 0.35, dampingFraction: 0.8), value: feedback)
+        // ponytail: driven off the existing feedback state, so the wrong-answer buzz is free.
+        // .sensoryFeedback is cross-platform and simply no-ops on macOS, hence no #if fence.
+        .sensoryFeedback(trigger: feedback) { _, new in
+            guard let new else { return nil }
+            return new == .correct ? .success : .error
+        }
     }
 
     private func check(_ exercise: Exercise) {
