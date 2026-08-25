@@ -1,5 +1,31 @@
 # lexly Roadmap
 
+## BLOCKED 2026-08-25 — macOS 1.1.4 rejected AGAIN; needs Joshua's 2FA to learn why
+
+From an Apple email screenshotted into Apple Notes (filed and note deleted 2026-08-25):
+
+- Subject: "There's an issue with your Lexly (macOS) submission."
+- Submitted **Aug 24 2026, 10:34 PM PDT**, by API Key, 1 item, App Version **1.1.4 for macOS**
+- Submission ID **`90f5d700-a454-4ec3-aa2b-ad67496a46f8`**
+
+Verified against `asc review submissions-list --app 6783501611`:
+`90f5d700` is `UNRESOLVED_ISSUES`; **`1a81dace` is `COMPLETE`**. Earlier roadmap/cross-repo notes
+naming `1a81dace` as the open blocker were tracking the wrong submission — that one resolved.
+
+**What this means:** the window-size fix (13f35fb, "window launched collapsed to a sliver",
+App Review 2.1a) was rebuilt as build `202608242229`, resubmitted, and **rejected again**. So
+either 2.1a was not actually fixed, or this is a different issue entirely.
+
+**Why it is stuck:** the email is Apple's generic template and states no reason. The reason lives
+only in Resolution Center, which the public API does not expose. `asc web auth status` is
+`{"authenticated":false,"passwordStored":true}` — the password is stored, so this needs **only a
+2FA code** from Joshua, then:
+`asc web review show --app 6783501611 --apple-id trommatic@icloud.com`
+
+- [ ] Get a 2FA code from Joshua, read the real rejection reason, then fix and resubmit.
+      Until this is read, do not guess at a fix or burn another submission on it.
+
+
 ## Shipped 2026-08-23 — iOS 1.1.3 is LIVE on the App Store
 https://apps.apple.com/app/id6783501611 — linked from the landing page (hero CTA, platforms card,
 footer, Smart App Banner meta), the app shell footer, README and support page. macOS on the same
