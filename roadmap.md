@@ -375,3 +375,7 @@ Neither is worth fixing on a record that should not exist.
 ## Ingested 2026-08-24
 
 - [ ] **Hero animation pass** (Notes 2026-08-24). Reference: bookrank's hero animation — same style/vibe. Subject: **words in different languages**. Plus: generate a mascot in the spirit of Duolingo's, add it to the app with minor animations.
+
+## Someday / Explore
+
+- [ ] **Port the scrolling-languages hero animation to every project.** From Notes 2026-08-24: "I like the animation of the scrolling text of different languages. Can we apply that across all projects? It's awesome. Super original or semi original idea." Lexly is the source of the effect. Known wanters: Voxprint (voxprint/roadmap.md), Talli, Wordroot (wordroot/roadmap.md:137 hero animation pass). The per-project swap is the *content* of the scroll (languages for Lexly, words for Wordroot, etc.), not the mechanism. Right home is the shared Jaybulb `tokens.css` / design-system layer so it is written once — do not fork a copy into each repo.
