@@ -1826,3 +1826,46 @@ function escapeHtml(value) {
 }
 
 window.resetToHome = resetToHome;
+
+// ===== WebMCP accessors =====
+// Read-only views plus the two navigations. Progress is only ever written by
+// answering questions, so no accessor here can award XP or complete a lesson.
+window.lexlyCatalog = async () => {
+    if (!Object.keys(categories).length) await loadCatalog();
+    return categories;
+};
+window.lexlyProgress = () => {
+    const p = loadProgress();
+    const profile = loadProfile();
+    return {
+        username: profile.username || null,
+        xp: p.xp, streak: p.streak, hearts: p.hearts,
+        weeklyXp: p.weekly_xp, weeklyGoal: WEEKLY_XP_GOAL,
+        trophies: getUnlockedAchievements(),
+        lessonsCompleted: p.lessons_completed,
+    };
+};
+window.lexlyCourseProgress = async (subjectId) => {
+    if (!findSubjectMeta(subjectId)) { await loadCatalog(); }
+    if (!findSubjectMeta(subjectId)) return { error: `Unknown subject "${subjectId}"` };
+    await loadCourse(subjectId);
+    return { subjectId, ...getCourseProgress(subjectId), due: getDueCount(subjectId) };
+};
+window.lexlyDueReviews = (subjectId) => {
+    if (subjectId) return { subjectId, due: getDueCount(subjectId) };
+    // Only subjects whose pack has been fetched have questions to count.
+    return { bySubject: Object.fromEntries(Object.keys(questions).map(id => [id, getDueCount(id)])) };
+};
+window.lexlyOpenCourse = async (subjectId) => {
+    if (!findSubjectMeta(subjectId)) { await loadCatalog(); }
+    if (!findSubjectMeta(subjectId)) return { error: `Unknown subject "${subjectId}"` };
+    gameState.selectedSubject = subjectId;
+    await showSkillTree(subjectId);
+    return { opened: subjectId };
+};
+window.lexlyStartLesson = async (subjectId, lessonId) => {
+    const opened = await window.lexlyOpenCourse(subjectId);
+    if (opened.error) return opened;
+    await startLesson(lessonId);
+    return { subjectId, lessonId: lessonId || null, questions: gameState.totalQuestions };
+};
