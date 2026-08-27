@@ -189,7 +189,7 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - [ ] "+" icon color complaint — **ruled out 2026-07-25**: no `+`/`fa-plus` exists anywhere except the Arithmetic course icon, styled identically to every other subject icon. Nothing uniquely wrong found; needs the actual screenshot to identify what the user meant before touching anything further.
 
 ## Open — content & courses
-- [ ] **Native ship of the 4 new science courses (astrophysics, anthropology, anatomy, physiology).**
+- [ ] **Native ship of the 4 new science courses (astrophysics, anthropology, anatomy, physiology).** — LIVE on web (2026-08-27), ready for iOS 1.1.5 + macOS 1.1.5 bump.
       Added 2026-08-27 and live on web. Course packs are bundled in the app, so they only reach
       iOS/macOS with a new build. iOS 1.1.4 was already WAITING_FOR_REVIEW when they landed, so it
       was left alone — roll them into 1.1.5. macOS 1.1.4 is READY_FOR_SALE and can ship them any time.
