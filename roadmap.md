@@ -435,7 +435,6 @@ Neither is worth fixing on a record that should not exist.
 
 ## From Apple Notes (imported 2026-08-25)
 
-- [x] The top banner to download in the App Store is a nice touch — add it to all projects if possible, unless it's automatic. (2026-08-25: not automatic — one `<meta name="apple-itunes-app">` tag. Lexly already had it; added to the 9 other live-app landings: talli, bookrank, litigate, inkpress, curvely, wiretext, epiphany, voxprint, sparkjar.)
 - [ ] Add animation to the splash screen. If the app takes even a second to load there should be a logo or mascot animation.
 - [ ] Make list item icons more rich and relevant to their content.
 - [ ] All list items (even nested within views) should have rich icons.
@@ -443,11 +442,6 @@ Neither is worth fixing on a record that should not exist.
 - [ ] Needs more lessons and better UI.
 - [ ] Settings: when signed in should show user details, and have a profile tab (social aspect) showing XP etc.
 - [ ] Add intermediate and expert to all courses. There should be like 5-10 levels, not 3.
-- [x] Add haptic feedback support when the user chooses the correct option. (2026-08-25: `.sensoryFeedback` on LessonView, driven off existing feedback state — success on correct, error on wrong. iOS build clean.)
-
-## From Apple Notes (imported 2026-08-27)
-- [x] App Store screenshots should not include the "What's New" text overlay, and there should be more screenshots than there currently are. Done 2026-08-27: 3 shots per set (was 1) on iOS 1.1.4, both APP_IPHONE_65 and APP_IPHONE_67, no What's New modal.
-- [x] Lexly screenshots: captured + uploaded 2026-08-27. Library list + two book summaries (Calculus, Good Feng Shui) at 1242x2688 and 1290x2796, uploaded with --replace so the stale single `01_categories_full.png` is gone. iOS 1.1.4 resubmitted (submission 1306f9aa-5d33-4a33-b1db-edad2728b846).
 
 ## From screenshot pass (2026-08-27)
 - [ ] The submitted 1.1.4 build predates the markdown fix in `NotesView.swift` (commit 2f86735), so the uploaded screenshots show bold-rendered bullets while the binary under review still prints literal `**`. Cosmetic and confined to a few phrases, but the planned native 1.1.5 build should carry the fix so they match.
