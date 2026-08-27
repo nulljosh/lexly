@@ -430,3 +430,7 @@ Neither is worth fixing on a record that should not exist.
 - [ ] Settings: when signed in should show user details, and have a profile tab (social aspect) showing XP etc.
 - [ ] Add intermediate and expert to all courses. There should be like 5-10 levels, not 3.
 - [x] Add haptic feedback support when the user chooses the correct option. (2026-08-25: `.sensoryFeedback` on LessonView, driven off existing feedback state — success on correct, error on wrong. iOS build clean.)
+
+## From Apple Notes (imported 2026-08-27)
+- [ ] App Store screenshots should not include the "What's New" text overlay, and there should be more screenshots than there currently are.
+- [ ] Lexly screenshots: capture + upload not yet done. The prep IS committed — `suppressWhatsNew` UserDefaults flag added to `WhatsNewSheet.swift` (set it on the shots sim to kill the modal), and `.asc/screenshots.json` expanded from 2 steps to a fuller run. Remaining: boot Lexly-Shots, run the capture, frame, and `asc screenshots upload`. Paused 2026-08-27 — too many concurrent simulators were lagging the machine.

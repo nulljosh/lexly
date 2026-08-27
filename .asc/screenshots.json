@@ -6,12 +6,89 @@
     "output_dir": "./screenshots/raw/6.7"
   },
   "steps": [
-    { "action": "wait", "duration_ms": 1500 },
-    { "action": "tap", "label": "Got it" },
-    { "action": "wait", "duration_ms": 500 },
-    { "action": "screenshot", "name": "01_home" },
-    { "action": "tap", "label": "Spanish" },
-    { "action": "wait", "duration_ms": 1000 },
-    { "action": "screenshot", "name": "02_course" }
+    {
+      "action": "wait",
+      "duration_ms": 3000
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1200
+    },
+    {
+      "action": "screenshot",
+      "name": "01_home"
+    },
+    {
+      "action": "tap",
+      "label": "Spanish"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1500
+    },
+    {
+      "action": "screenshot",
+      "name": "02_course"
+    },
+    {
+      "action": "tap",
+      "label": "Greetings"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1500
+    },
+    {
+      "action": "screenshot",
+      "name": "03_lesson"
+    },
+    {
+      "action": "tap",
+      "label": "Spanish"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 800
+    },
+    {
+      "action": "tap",
+      "label": "Lexly"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 800
+    },
+    {
+      "action": "tap",
+      "label": "Pre-Calculus 12"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1500
+    },
+    {
+      "action": "screenshot",
+      "name": "04_school"
+    },
+    {
+      "action": "tap",
+      "label": "Lexly"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 800
+    },
+    {
+      "action": "tap",
+      "label": "Settings"
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1500
+    },
+    {
+      "action": "screenshot",
+      "name": "05_settings"
+    }
   ]
 }

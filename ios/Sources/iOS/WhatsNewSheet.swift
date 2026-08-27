@@ -14,7 +14,13 @@ struct WhatsNewSheet: View {
 
     var body: some View {
         Color.clear
-            .onAppear { isPresented = seenVersion != whatsNewVersion }
+            // ponytail: screenshot automation cannot tap inside a presented sheet, so
+            // captures shipped with this modal over the UI. A defaults flag set on the
+            // shots simulator suppresses it without touching per-version logic.
+            .onAppear {
+                let suppressed = UserDefaults.standard.bool(forKey: "suppressWhatsNew")
+                isPresented = !suppressed && seenVersion != whatsNewVersion
+            }
             .sheet(isPresented: $isPresented) {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("What's New in v\(whatsNewVersion)")
