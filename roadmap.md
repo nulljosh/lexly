@@ -436,5 +436,11 @@ Neither is worth fixing on a record that should not exist.
 - [x] Add haptic feedback support when the user chooses the correct option. (2026-08-25: `.sensoryFeedback` on LessonView, driven off existing feedback state — success on correct, error on wrong. iOS build clean.)
 
 ## From Apple Notes (imported 2026-08-27)
-- [ ] App Store screenshots should not include the "What's New" text overlay, and there should be more screenshots than there currently are.
-- [ ] Lexly screenshots: capture + upload not yet done. The prep IS committed — `suppressWhatsNew` UserDefaults flag added to `WhatsNewSheet.swift` (set it on the shots sim to kill the modal), and `.asc/screenshots.json` expanded from 2 steps to a fuller run. Remaining: boot Lexly-Shots, run the capture, frame, and `asc screenshots upload`. Paused 2026-08-27 — too many concurrent simulators were lagging the machine.
+- [x] App Store screenshots should not include the "What's New" text overlay, and there should be more screenshots than there currently are. Done 2026-08-27: 3 shots per set (was 1) on iOS 1.1.4, both APP_IPHONE_65 and APP_IPHONE_67, no What's New modal.
+- [x] Lexly screenshots: captured + uploaded 2026-08-27. Library list + two book summaries (Calculus, Good Feng Shui) at 1242x2688 and 1290x2796, uploaded with --replace so the stale single `01_categories_full.png` is gone. iOS 1.1.4 resubmitted (submission 1306f9aa-5d33-4a33-b1db-edad2728b846).
+
+## From screenshot pass (2026-08-27)
+- [ ] The submitted 1.1.4 build predates the markdown fix in `NotesView.swift` (commit 2f86735), so the uploaded screenshots show bold-rendered bullets while the binary under review still prints literal `**`. Cosmetic and confined to a few phrases, but the planned native 1.1.5 build should carry the fix so they match.
+- [ ] `content/notes/becoming-steve-jobs-masterclass.json` opens with an internal working note ("this batch picks up well past the previously-summarized material... pages 130-273 is still unphotographed"). That is author scaffolding, not reader content — strip it before that book is ever screenshotted or featured.
+- [ ] Content typo: Good Feng Shui summary lists a book as "If Itsdam for Modern Times" — almost certainly a garbled OCR of a real Eva Wong title. Verify and correct.
+- [ ] The floating Learn/Settings tab bar overlaps the last line of scrolling summary text (visible in every summary screenshot). Needs bottom content inset equal to the bar height.
