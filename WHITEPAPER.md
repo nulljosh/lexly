@@ -1,6 +1,6 @@
 # Lexly Technical Whitepaper
 
-**v1.1.0** | July 2026
+**v1.1.3 iOS / 1.1.4 macOS** | August 2026
 
 Lexly is a gamified learning app — not just languages, everything. 40+ courses
 span languages, programming, math, science, school curricula (Pre-Calculus 12,
@@ -46,8 +46,11 @@ The engagement loop is standard spaced-repetition gamification:
 | Platform | App ID | Status |
 |---|---|---|
 | Web | — | Live |
-| iOS (6783501611) | com.nulljosh.lingo | v1.1.0 Waiting for Review |
-| macOS (6783501927) | com.nulljosh.lingo.mac | v1.1.0 Waiting for Review |
+| iOS (6783501611) | com.nulljosh.lingo | v1.1.3 Live |
+| macOS (6783501611) | com.nulljosh.lingo.mac | v1.1.4 Live |
+
+Both platforms ship under the single ASC record 6783501611 — a duplicate
+record (6783501927) was created early on and is not the app of record.
 
 ## Privacy
 
