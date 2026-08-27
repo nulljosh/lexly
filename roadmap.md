@@ -189,10 +189,20 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - [ ] "+" icon color complaint — **ruled out 2026-07-25**: no `+`/`fa-plus` exists anywhere except the Arithmetic course icon, styled identically to every other subject icon. Nothing uniquely wrong found; needs the actual screenshot to identify what the user meant before touching anything further.
 
 ## Open — content & courses
-- [ ] **Native ship of the 4 new science courses (astrophysics, anthropology, anatomy, physiology).** — LIVE on web (2026-08-27), ready for iOS 1.1.5 + macOS 1.1.5 bump.
-      Added 2026-08-27 and live on web. Course packs are bundled in the app, so they only reach
-      iOS/macOS with a new build. iOS 1.1.4 was already WAITING_FOR_REVIEW when they landed, so it
-      was left alone — roll them into 1.1.5. macOS 1.1.4 is READY_FOR_SALE and can ship them any time.
+- [ ] **Native ship of the 4 new science courses (astrophysics, anthropology, anatomy, physiology).** — IN FLIGHT 2026-08-27 14:15.
+      Course packs are bundled (`ios/Sources/Resources/content` is a symlink to `content/`), so no
+      data work was needed — a rebuild picks them up automatically.
+      - Bumped to **1.1.5 / build 202608271410** in both `ios/project.yml` and the pbxproj.
+      - **iOS**: archived, exported, build uploaded and COMPLETE. Version 1.1.5 **cannot be created
+        yet** — 1.1.4 (the haptics release) is still WAITING_FOR_REVIEW and ASC allows only one
+        version in flight. Left 1.1.4 alone deliberately: it carries real changes and cancelling it
+        would only cost queue position. **Next step: once 1.1.4 is approved, `asc versions create
+        --app 6783501611 --version 1.1.5 --platform IOS`, set What's New, attach build, submit.**
+      - **macOS**: archived, exported (ExportOptionsMac.plist uses `destination: upload`, so it
+        uploads directly and writes no pkg — expected), version `3f8587fc-52a4-4636-b4e7-06efadef5bf3`
+        created with What's New set. Waiting on build processing, then attach + submit.
+      - `asc validate` is currently unusable on this app: "multiple app infos found" because the
+        in-review iOS app info coexists with the live one. Not a blocker, just no preflight report.
 - [ ] Add more compute-related skills/courses beyond Computer Basics.
 - [ ] Add more skills/games/science courses generally (content-expansion ask).
 - [ ] Expand language courses beyond beginner to intermediate/expert levels.
