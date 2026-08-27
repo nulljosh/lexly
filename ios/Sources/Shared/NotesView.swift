@@ -71,7 +71,7 @@ private struct NotesBlockView: View {
                     HStack(alignment: .top, spacing: 6) {
                         Text((block.ordered ?? false) ? "\(i + 1)." : "•")
                             .foregroundStyle(.secondary)
-                        Text(item).font(.callout).foregroundStyle(.secondary)
+                        Text(LocalizedStringKey(item)).font(.callout).foregroundStyle(.secondary)
                     }
                 }
             }
@@ -85,7 +85,7 @@ private struct NotesBlockView: View {
                         .foregroundStyle(.yellow)
                 }
                 ForEach(Array((block.steps ?? []).enumerated()), id: \.offset) { _, step in
-                    Text(step).font(.callout)
+                    Text(LocalizedStringKey(step)).font(.callout)
                 }
             }
             .padding(12)
@@ -102,7 +102,7 @@ private struct NotesBlockView: View {
                             .font(.caption.weight(.bold))
                             .foregroundStyle(Color(hex: "5B9BD5"))
                         ForEach(mod.items, id: \.self) { item in
-                            Text("• \(item)").font(.caption).foregroundStyle(.secondary)
+                            Text(LocalizedStringKey("• \(item)")).font(.caption).foregroundStyle(.secondary)
                         }
                     }
                     .padding(10)
@@ -144,7 +144,7 @@ private struct CalloutView: View {
                     .foregroundStyle(color)
             }
             ForEach(items, id: \.self) { item in
-                Text(item).font(.callout).foregroundStyle(color.opacity(0.85))
+                Text(LocalizedStringKey(item)).font(.callout).foregroundStyle(color.opacity(0.85))
             }
         }
         .padding(12)
@@ -170,7 +170,7 @@ private struct NotesTableView: View {
                 ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
                     GridRow {
                         ForEach(row, id: \.self) { cell in
-                            Text(cell).font(.caption)
+                            Text(LocalizedStringKey(cell)).font(.caption)
                         }
                     }
                 }
@@ -186,10 +186,10 @@ private struct FlashcardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(card.q).font(.callout.weight(.semibold))
+            Text(LocalizedStringKey(card.q)).font(.callout.weight(.semibold))
             if revealed {
                 Divider()
-                Text(card.a).font(.callout).foregroundStyle(.green)
+                Text(LocalizedStringKey(card.a)).font(.callout).foregroundStyle(.green)
             }
         }
         .padding(12)
