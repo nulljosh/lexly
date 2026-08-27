@@ -200,7 +200,7 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
         --app 6783501611 --version 1.1.5 --platform IOS`, set What's New, attach build, submit.**
       - **macOS**: archived, exported (ExportOptionsMac.plist uses `destination: upload`, so it
         uploads directly and writes no pkg — expected), version `3f8587fc-52a4-4636-b4e7-06efadef5bf3`
-        created with What's New set. Waiting on build processing, then attach + submit.
+        created, What's New set, build attached, **SUBMITTED for review 2026-08-27 14:15** (submission e3d14cbc-a175-4267-baaf-b693a33bc4a6).
       - `asc validate` is currently unusable on this app: "multiple app infos found" because the
         in-review iOS app info coexists with the live one. Not a blocker, just no preflight report.
 - [ ] Add more compute-related skills/courses beyond Computer Basics.
