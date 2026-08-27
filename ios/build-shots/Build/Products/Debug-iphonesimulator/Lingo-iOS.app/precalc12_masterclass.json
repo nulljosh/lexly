@@ -1,0 +1,1072 @@
+{
+  "id": "precalc12_masterclass",
+  "name": "Pre-Calc 12 Masterclass",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Grades & Module Map",
+      "unitTag": "Overview",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Unit",
+            "Topic",
+            "Grade",
+            "Module"
+          ],
+          "rows": [
+            [
+              "U1",
+              "Sequences & Series",
+              "88%",
+              "M1"
+            ],
+            [
+              "U2",
+              "Transformations",
+              "78%",
+              "M1"
+            ],
+            [
+              "U3",
+              "Polynomials",
+              "est. ~92%",
+              "M1"
+            ],
+            [
+              "U4",
+              "Exponents & Logs",
+              "est. ~90%",
+              "M2"
+            ],
+            [
+              "U5",
+              "Rational Expressions",
+              "pending",
+              "M2"
+            ],
+            [
+              "U6",
+              "Sinusoidal Functions",
+              "pending",
+              "M3"
+            ],
+            [
+              "U7",
+              "Trig Identities",
+              "pending",
+              "M3"
+            ],
+            [
+              "Quizzes (all units)",
+              "97% avg",
+              "—"
+            ]
+          ]
+        },
+        {
+          "type": "modgrid",
+          "modules": [
+            {
+              "title": "Module 1 · Rewrite done",
+              "items": [
+                "U1 Sequences & Series",
+                "U2 Transformations",
+                "U3 Polynomials"
+              ]
+            },
+            {
+              "title": "Module 2",
+              "items": [
+                "U4 Exponents & Logs",
+                "U5 Rational Expressions"
+              ]
+            },
+            {
+              "title": "Module 3",
+              "items": [
+                "U6 Sinusoidal Functions",
+                "U7 Trig Identities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "errors",
+      "title": "Known Errors to Fix",
+      "unitTag": "Cross-unit",
+      "blocks": [
+        {
+          "type": "warn",
+          "title": "U1 — Convergent/Divergent",
+          "items": [
+            "Marked r=−0.99 series as divergent. Wrong. |−0.99| = 0.99 < 1 → CONVERGES. Always take absolute value of r first."
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "U4 — Q8 Half-life (4.6)",
+          "items": [
+            "Got 15.1 years. Correct answer is 15.8 years. Arithmetic slip in log calculation: h = 20·log(0.5)/log(5/12) = 20·(−0.301)/(−0.380) = 15.8, not 15.1."
+          ]
+        },
+        {
+          "type": "info",
+          "items": [
+            "U4 Q1b source typo: Question prints \"6²=17\" — this is a misprint in the WCLN guide. 6²=36, so the correct log form is log₆(36)=2. Flag to teacher."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u1",
+      "title": "Sequences & Series",
+      "unitTag": "Unit 1",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Arithmetic"
+        },
+        {
+          "type": "formula",
+          "text": "aₙ = a₁ + (n − 1)d"
+        },
+        {
+          "type": "formula",
+          "text": "Sₙ = n/2 · (a₁ + aₙ) = n/2 · (2a₁ + (n−1)d)"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "d = common difference = a₂ − a₁ (constant gap)",
+            "Finding n: sub known values into aₙ formula, solve for n",
+            "Partial sum (terms i to j): Sⱼ − Sᵢ₋₁"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Geometric"
+        },
+        {
+          "type": "formula",
+          "text": "aₙ = a₁ · r^(n−1)"
+        },
+        {
+          "type": "formula",
+          "text": "Sₙ = a₁(1 − rⁿ) / (1 − r) [r ≠ 1]"
+        },
+        {
+          "type": "formula",
+          "text": "S∞ = a₁ / (1 − r) [only when |r| < 1]"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "r = common ratio = a₂/a₁",
+            "Finding n: aₙ = a₁rⁿ⁻¹ → take log both sides → n = 1 + log(aₙ/a₁)/log(r)"
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Convergent vs Divergent — most tested concept",
+          "items": [
+            "Converges (S∞ exists) iff |r| < 1",
+            "Diverges (no S∞) iff |r| ≥ 1",
+            "r = −0.99 → |r| = 0.99 < 1 → CONVERGES. Negative r ≠ divergent.",
+            "r = 1.01 → |r| = 1.01 ≥ 1 → DIVERGES."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Sigma Notation"
+        },
+        {
+          "type": "formula",
+          "text": "Σᵢ₌₁ⁿ (a₁ + (i−1)d) ← arithmetic sum to n terms"
+        },
+        {
+          "type": "formula",
+          "text": "Σᵢ₌₁ⁿ a₁·r^(i−1) ← geometric sum to n terms"
+        },
+        {
+          "type": "p",
+          "text": "Bottom of sigma = starting index; top = ending index; expression = general term."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Find S∞",
+          "steps": [
+            "Q: Σᵢ₌₁^∞ 8·(−0.5)^(i−1). Find S∞.",
+            "1. a₁ = 8, r = −0.5",
+            "2. |r| = 0.5 < 1 → converges",
+            "3. S∞ = 8 / (1−(−0.5)) = 8/1.5 = 16/3 ≈ 5.33"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Find n",
+          "steps": [
+            "Q: Arithmetic seq, a₁=3, d=4. Which term equals 87?",
+            "1. aₙ = 3 + (n−1)·4 = 87",
+            "2. (n−1)·4 = 84 → n−1 = 21 → n = 22"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Tip",
+          "items": [
+            "If asked for \"sum of terms from term 5 to term 10\": compute S₁₀ − S₄. The −1 offset on the start matters."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Transformations",
+      "unitTag": "Unit 2",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "General Form"
+        },
+        {
+          "type": "formula",
+          "text": "y = a · f( b(x − h) ) + k"
+        },
+        {
+          "type": "formula",
+          "text": "Mapping rule: (x, y) → (x/b + h, a·y + k)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Parameter",
+            "Effect",
+            "Trap"
+          ],
+          "rows": [
+            [
+              "a",
+              "Vertical stretch by |a|; a<0 reflects over x-axis",
+              "|a|<1 = compression, not stretch"
+            ],
+            [
+              "b",
+              "Horizontal stretch by 1/|b|; b<0 reflects over y-axis",
+              "b=2 means compress by ½, NOT stretch by 2"
+            ],
+            [
+              "h",
+              "Shifts RIGHT by h (for positive h)",
+              "y=f(x−3) shifts RIGHT 3, NOT left"
+            ],
+            [
+              "k",
+              "Shifts UP by k",
+              "Nothing tricky here"
+            ]
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "h direction — most common error",
+          "items": [
+            "y = f(x − h) → shifts RIGHT. The h inside the bracket is subtracted. Positive h = right.",
+            "y = f(x − 3): h = 3, shifts 3 right. y = f(x + 3): h = −3, shifts 3 left."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Reflections"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Over x-axis: multiply outside → y = −f(x)",
+            "Over y-axis: negate x inside → y = f(−x)",
+            "Over y = x: swap x and y (this is the inverse)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Inverse Functions"
+        },
+        {
+          "type": "formula",
+          "text": "To find f⁻¹(x): swap x and y, then solve for y"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Domain of f = Range of f⁻¹",
+            "Range of f = Domain of f⁻¹",
+            "Graph of f⁻¹ is reflection of f over the line y = x"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Identify Transformations",
+          "steps": [
+            "Q: y = −2f(3(x+1)) − 4. State all transformations.",
+            "1. a = −2 → vertical stretch ×2, reflect over x-axis",
+            "2. b = 3 → horizontal compression to 1/3",
+            "3. h = −1 → shift LEFT 1",
+            "4. k = −4 → shift DOWN 4",
+            "Mapping: (x,y) → (x/3 − 1, −2y − 4)"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Tip — Applying the mapping rule",
+          "items": [
+            "Take key points from the original function. Apply (x/b+h, ay+k) to each. Mapping order: horizontal changes first (divide x by b, shift by h), then vertical (multiply y by a, shift by k)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Polynomials",
+      "unitTag": "Unit 3",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Factoring Decision Tree"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Always factor GCF first",
+            "2 terms: diff of squares or sum/diff of cubes",
+            "3 terms, leading coeff = 1: simple trinomial (find p,q)",
+            "3 terms, leading coeff ≠ 1: AC method",
+            "4 terms: factor by grouping",
+            "Degree 4 with x² pattern: substitution (let u = x²)",
+            "Degree 3+: rational root theorem + synthetic division"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Special Products"
+        },
+        {
+          "type": "formula",
+          "text": "a² − b² = (a − b)(a + b)"
+        },
+        {
+          "type": "formula",
+          "text": "a³ + b³ = (a + b)(a² − ab + b²)"
+        },
+        {
+          "type": "formula",
+          "text": "a³ − b³ = (a − b)(a² + ab + b²)"
+        },
+        {
+          "type": "warn",
+          "title": "Cubes — middle sign trap",
+          "items": [
+            "Sum of cubes (a³+b³): middle term in trinomial is MINUS (a²−ab+b²)",
+            "Diff of cubes (a³−b³): middle term is PLUS (a²+ab+b²)",
+            "Memory aid: SOAP — Same, Opposite, Always Positive"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "AC Method (Messy Trinomials)"
+        },
+        {
+          "type": "formula",
+          "text": "ax² + bx + c: find p,q where p·q = a·c AND p+q = b"
+        },
+        {
+          "type": "formula",
+          "text": "Split middle: ax² + px + qx + c, then group"
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — AC Method",
+          "steps": [
+            "Q: Factor 6x² − 13x + 6",
+            "1. ac = 6·6 = 36. Find p,q: p·q=36, p+q=−13 → p=−9, q=−4",
+            "2. 6x² − 9x − 4x + 6",
+            "3. 3x(2x − 3) − 2(2x − 3)",
+            "4. (3x − 2)(2x − 3)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Remainder & Factor Theorems"
+        },
+        {
+          "type": "formula",
+          "text": "P(a) = remainder when P(x) ÷ (x − a) [Remainder Theorem]"
+        },
+        {
+          "type": "formula",
+          "text": "P(a) = 0 ↔ (x − a) is a factor [Factor Theorem]"
+        },
+        {
+          "type": "formula",
+          "text": "Rational roots: ±(factors of constant) / (factors of leading coeff)"
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Factor Cubic",
+          "steps": [
+            "Q: Factor P(x) = x³ − 5x² − 12x + 36",
+            "1. Try rational roots: ±1,±2,±3,±4,±6,±9,±12,±18,±36",
+            "2. P(2) = 8−20−24+36 = 0 ✓ → (x−2) is a factor",
+            "3. Synthetic division → x³−5x²−12x+36 = (x−2)(x²−3x−18)",
+            "4. x²−3x−18 = (x−6)(x+3)",
+            "5. P(x) = (x−2)(x−6)(x+3)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Polynomial Graph Characteristics"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Degree n → max n x-intercepts, max n−1 turning points",
+            "Leading coeff +, even degree → both ends go UP (U shape)",
+            "Leading coeff −, even degree → both ends go DOWN",
+            "Leading coeff +, odd degree → left DOWN, right UP",
+            "Leading coeff −, odd degree → left UP, right DOWN",
+            "Odd multiplicity at root → graph CROSSES x-axis",
+            "Even multiplicity at root → graph BOUNCES off x-axis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Exponents & Logs",
+      "unitTag": "Unit 4",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Exponent Laws"
+        },
+        {
+          "type": "formula",
+          "text": "xᵃ · xᵇ = xᵃ⁺ᵇ (product — add exponents)"
+        },
+        {
+          "type": "formula",
+          "text": "xᵃ / xᵇ = xᵃ⁻ᵇ (quotient — subtract)"
+        },
+        {
+          "type": "formula",
+          "text": "(xᵃ)ᵇ = xᵃᵇ (power of power — multiply)"
+        },
+        {
+          "type": "formula",
+          "text": "x⁰ = 1 (zero exponent)"
+        },
+        {
+          "type": "formula",
+          "text": "x⁻ⁿ = 1/xⁿ (negative — flip)"
+        },
+        {
+          "type": "formula",
+          "text": "x^(m/n) = ⁿ√(xᵐ) (rational — root of power)"
+        },
+        {
+          "type": "heading",
+          "text": "Logarithms"
+        },
+        {
+          "type": "formula",
+          "text": "log_b(A) = E ↔ bᴱ = A (definition: log = exponent)"
+        },
+        {
+          "type": "formula",
+          "text": "log_b(AB) = log_b(A) + log_b(B) (product rule)"
+        },
+        {
+          "type": "formula",
+          "text": "log_b(A/B) = log_b(A) − log_b(B) (quotient rule)"
+        },
+        {
+          "type": "formula",
+          "text": "log_b(Aⁿ) = n · log_b(A) (power rule)"
+        },
+        {
+          "type": "formula",
+          "text": "log_b(x) = log(x) / log(b) (change of base)"
+        },
+        {
+          "type": "tip",
+          "title": "Log = \"what exponent do I need?\"",
+          "items": [
+            "log₂(8) = 3 because 2³ = 8. The log is the exponent. B = base, E = exponent, A = answer (result)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving Exponential Equations"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Same base: 2^(x+1) = 2^5 → x+1 = 5 → x = 4",
+            "Different base: take log both sides, use power rule"
+          ]
+        },
+        {
+          "type": "formula",
+          "text": "3^x = 10 → x·log3 = log10 → x = log10/log3 ≈ 2.096"
+        },
+        {
+          "type": "heading",
+          "text": "Growth & Decay"
+        },
+        {
+          "type": "formula",
+          "text": "A = A₀ · b^(t/p) [b = growth factor, p = period for one cycle]"
+        },
+        {
+          "type": "formula",
+          "text": "A = A₀ · (1/2)^(t/h) [half-life: h = half-life period]"
+        },
+        {
+          "type": "warn",
+          "title": "Known Error — U4 Q8 Half-life",
+          "items": [
+            "When computing h = 20·log(0.5)/log(5/12): use exact fractions, don't round intermediate steps.",
+            "log(0.5) = −0.30103, log(5/12) = log(0.41667) = −0.37967",
+            "h = 20 · (−0.30103)/(−0.37967) = 15.84 ≈ 15.8 years"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Log Scale Applications"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Richter: difference in readings = exponent of 10× power. Δ=3.8 → 10³·⁸≈6310× more powerful",
+            "pH: pH = −log[H⁺]; more acidic = lower pH; ratio of acidity = 10^(pH₂−pH₁)",
+            "Decibels: dB = 10·log(I/I₀); increase of 10 dB = 10× louder"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Change of Base",
+          "steps": [
+            "Q: Solve 5^x = 500",
+            "1. log both sides: x·log5 = log500",
+            "2. x = log500/log5",
+            "3. x = 2.699/0.699 ≈ 3.86"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Log Rules Combined",
+          "steps": [
+            "Q: Write log x + 5 log y − 3 log x as single log",
+            "1. Combine x terms: (1−3)logx = −2logx",
+            "2. Power rule: log(x⁻²) + log(y⁵)",
+            "3. Product rule: log(y⁵/x²)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Rational Expressions",
+      "unitTag": "Unit 5",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Fundamentals"
+        },
+        {
+          "type": "p",
+          "text": "A rational expression is polynomial / polynomial . The denominator cannot equal zero."
+        },
+        {
+          "type": "formula",
+          "text": "Non-permissible values: set denominator = 0 and solve → those are EXCLUDED"
+        },
+        {
+          "type": "heading",
+          "text": "Operations"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Method"
+          ],
+          "rows": [
+            [
+              "Simplify",
+              "Factor top and bottom fully, cancel common factors, state restrictions"
+            ],
+            [
+              "Multiply",
+              "Factor everything, cancel across numerators/denominators, multiply remaining"
+            ],
+            [
+              "Divide",
+              "Multiply by reciprocal of second fraction, then same as multiply"
+            ],
+            [
+              "Add/Subtract",
+              "Find LCD (LCM of denominators), convert each fraction, combine numerators, simplify"
+            ]
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Restrictions after cancelling",
+          "items": [
+            "State ALL non-permissible values from the ORIGINAL denominators — even if a factor was cancelled. Restrictions come from before simplification."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Graphing y = a/(x−h) + k"
+        },
+        {
+          "type": "formula",
+          "text": "Vertical asymptote: x = h (denominator = 0)"
+        },
+        {
+          "type": "formula",
+          "text": "Horizontal asymptote: y = k (what y approaches as x → ±∞)"
+        },
+        {
+          "type": "formula",
+          "text": "a: steepness; a > 0 → Q1/Q3 relative to asymptotes; a < 0 → Q2/Q4"
+        },
+        {
+          "type": "tip",
+          "title": "Cheat code — finding 'a' from a graph",
+          "items": [
+            "Pick any obvious grid point on the graph. Sub its (x,y) into y = a/(x−h)+k and solve for a. Always works."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving Rational Equations"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Identify all non-permissible values first",
+            "Multiply every term by the LCD to clear fractions",
+            "Solve the resulting polynomial equation",
+            "Check solutions against non-permissible values — reject any that match"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Find Equation from Graph",
+          "steps": [
+            "Q: Graph has VA at x=3, HA at y=2, passes through (4,7)",
+            "1. h=3, k=2. Form: y = a/(x−3) + 2",
+            "2. Sub (4,7): 7 = a/(4−3) + 2 = a + 2",
+            "3. a = 5 → y = 5/(x−3) + 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Sinusoidal Functions",
+      "unitTag": "Unit 6",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "General Form"
+        },
+        {
+          "type": "formula",
+          "text": "y = a · sin( b(x − h) ) + k"
+        },
+        {
+          "type": "formula",
+          "text": "y = a · cos( b(x − h) ) + k"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Parameter",
+            "What it does",
+            "How to find from graph"
+          ],
+          "rows": [
+            [
+              "a",
+              "Amplitude = |a|; a<0 flips vertically",
+              "a = (max − min) / 2"
+            ],
+            [
+              "b",
+              "Period = 2π/|b| (in radians) or 360°/|b| (degrees)",
+              "b = 2π / period"
+            ],
+            [
+              "h",
+              "Phase shift: moves graph right by h",
+              "Read from graph where cycle starts"
+            ],
+            [
+              "k",
+              "Vertical displacement (midline = y=k)",
+              "k = (max + min) / 2"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Graphing — 5 Key Points Method"
+        },
+        {
+          "type": "p",
+          "text": "For one full period of y = a·sin(b(x−h))+k:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Start at phase shift h: y = k (zero)",
+            "Quarter period: y = k+a (max)",
+            "Half period: y = k (zero)",
+            "Three-quarter period: y = k−a (min)",
+            "Full period: y = k (zero, cycle repeats)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For cosine: starts at max (k+a), not zero."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Equation from Graph",
+          "steps": [
+            "Q: Graph has max=7, min=1, period=4π, starts at x=π",
+            "1. a = (7−1)/2 = 3",
+            "2. k = (7+1)/2 = 4",
+            "3. b = 2π/4π = 1/2",
+            "4. h = π (phase shift right)",
+            "5. y = 3·sin(½(x−π)) + 4"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Radians vs Degrees",
+          "items": [
+            "Standard PC12 uses radians. Period formula: T = 2π/|b|. If period is given as \"360°\" then in radians that is 2π. Always match units."
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Phase shift direction",
+          "items": [
+            "y = sin(x − π/3): phase shift = +π/3 (shifts RIGHT). Same h-direction trap as U2 transformations."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Trig Identities",
+      "unitTag": "Unit 7",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Foundational Identities"
+        },
+        {
+          "type": "formula",
+          "text": "Reciprocal: csc θ = 1/sin θ sec θ = 1/cos θ cot θ = 1/tan θ"
+        },
+        {
+          "type": "formula",
+          "text": "Quotient: tan θ = sin θ/cos θ cot θ = cos θ/sin θ"
+        },
+        {
+          "type": "formula",
+          "text": "Pythagorean: sin²θ + cos²θ = 1"
+        },
+        {
+          "type": "formula",
+          "text": "Derived: tan²θ + 1 = sec²θ 1 + cot²θ = csc²θ"
+        },
+        {
+          "type": "tip",
+          "title": "Deriving Pythagorean identities",
+          "items": [
+            "Start from sin²θ+cos²θ=1. Divide both sides by cos²θ → tan²θ+1=sec²θ. Divide by sin²θ → 1+cot²θ=csc²θ. Don't memorize three — derive from one."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Proving Identities — Strategy"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Work ONE side only — never move terms across the = sign",
+            "Pick the more complex side to transform",
+            "Common techniques (in order to try):"
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Rewrite everything in terms of sin and cos",
+            "Factor out common terms",
+            "Get a common denominator to combine fractions",
+            "Multiply top and bottom by conjugate (1+sinθ, 1−cosθ, etc.)",
+            "Use a Pythagorean identity to substitute (sin²=1−cos² etc.)"
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Never cross-multiply to \"prove\"",
+          "items": [
+            "Moving terms across the = sign assumes what you're trying to prove. Work one side only."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Sum & Difference Formulas"
+        },
+        {
+          "type": "formula",
+          "text": "sin(A ± B) = sinA·cosB ± cosA·sinB"
+        },
+        {
+          "type": "formula",
+          "text": "cos(A ± B) = cosA·cosB ∓ sinA·sinB (note: ∓ flips the sign)"
+        },
+        {
+          "type": "formula",
+          "text": "tan(A ± B) = (tanA ± tanB) / (1 ∓ tanA·tanB)"
+        },
+        {
+          "type": "heading",
+          "text": "Double Angle Formulas"
+        },
+        {
+          "type": "formula",
+          "text": "sin(2A) = 2·sinA·cosA"
+        },
+        {
+          "type": "formula",
+          "text": "cos(2A) = cos²A − sin²A = 1 − 2sin²A = 2cos²A − 1"
+        },
+        {
+          "type": "formula",
+          "text": "tan(2A) = 2·tanA / (1 − tan²A)"
+        },
+        {
+          "type": "tip",
+          "title": "Three forms of cos(2A)",
+          "items": [
+            "All three are equivalent via sin²+cos²=1. Pick whichever form makes the target expression cleanest. If the target has only cos, use 2cos²A−1."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving Trig Equations"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Isolate the trig function (treat sinθ or cosθ like a variable)",
+            "Find the reference angle using inverse trig",
+            "Identify which quadrants give the correct sign",
+            "List all solutions in the given domain",
+            "General solution: add 2πn (for sin/cos period 2π) or πn (for tan period π)"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Worked Example — Solving with Identity",
+          "steps": [
+            "Q: Solve 2sin²θ − sinθ − 1 = 0, θ ∈ [0, 2π]",
+            "1. Factor: (2sinθ + 1)(sinθ − 1) = 0",
+            "2. sinθ = −½ → θ = 7π/6, 11π/6",
+            "3. sinθ = 1 → θ = π/2",
+            "Solutions: θ = π/2, 7π/6, 11π/6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flashcards",
+      "title": "Flashcards",
+      "unitTag": "All Units",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Unit 1 — Sequences & Series"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "What are the two conditions for a geometric series to have an infinite sum?",
+              "a": "|r| < 1 (converges). Formula: S∞ = a₁/(1−r)"
+            },
+            {
+              "q": "Arithmetic sequence: a₁=5, d=3. Find a₁₀.",
+              "a": "a₁₀ = 5 + 9·3 = 5+27 = 32"
+            },
+            {
+              "q": "r = −0.5. Does the series converge?",
+              "a": "Yes. |r| = 0.5 < 1. S∞ = a₁/(1.5)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 2 — Transformations"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "y = 3f(2(x−4)) + 1. State all 4 transformations.",
+              "a": "V-stretch ×3; H-compress to ½; shift right 4; shift up 1"
+            },
+            {
+              "q": "What is the mapping rule for y = af(b(x−h))+k?",
+              "a": "(x,y) → (x/b + h, ay + k)"
+            },
+            {
+              "q": "How do you find the inverse of f(x) = 2x+3?",
+              "a": "Swap x,y: x=2y+3 → y=(x−3)/2 → f⁻¹(x) = (x−3)/2"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 3 — Polynomials"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "Factor 8x³ − 27y³",
+              "a": "(2x−3y)(4x²+6xy+9y²) — diff of cubes, middle term PLUS"
+            },
+            {
+              "q": "P(x) = x³−2x²−5x+6. Is (x−3) a factor?",
+              "a": "P(3) = 27−18−15+6 = 0. Yes, (x−3) is a factor."
+            },
+            {
+              "q": "What does even multiplicity mean for a graph?",
+              "a": "Graph BOUNCES off x-axis at that root (touches, doesn't cross)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 4 — Exponents & Logs"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "Convert to exponential: log₂(32) = 5",
+              "a": "2⁵ = 32"
+            },
+            {
+              "q": "Simplify: log₃(x²y) − log₃(x)",
+              "a": "log₃(x²y/x) = log₃(xy)"
+            },
+            {
+              "q": "Solve 4^x = 7 using change of base.",
+              "a": "x = log7/log4 ≈ 1.404"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 5 — Rational Expressions"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "Non-permissible values of (x+2)/(x²−9)",
+              "a": "x²−9=(x−3)(x+3). NPVs: x=3, x=−3"
+            },
+            {
+              "q": "y = 3/(x+2) − 1. State asymptotes.",
+              "a": "VA: x = −2 (denom=0). HA: y = −1 (k value)"
+            },
+            {
+              "q": "Simplify (x²−4)/(x²+4x+4)",
+              "a": "(x−2)(x+2)/(x+2)² = (x−2)/(x+2), x≠−2"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 6 — Sinusoidal Functions"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "y = 4sin(2(x−π/3)) + 1. State amplitude, period, phase shift.",
+              "a": "Amplitude=4; Period=2π/2=π; Phase shift=π/3 right; midline y=1"
+            },
+            {
+              "q": "Graph has max=10, min=2. What are a and k?",
+              "a": "a = (10−2)/2 = 4; k = (10+2)/2 = 6"
+            },
+            {
+              "q": "What does a negative 'a' do to a sinusoidal graph?",
+              "a": "Reflects (flips) the graph vertically — starts at minimum instead of maximum"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Unit 7 — Trig Identities"
+        },
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "Derive tan²θ + 1 = sec²θ from sin²θ+cos²θ=1",
+              "a": "Divide everything by cos²θ: sin²/cos² + 1 = 1/cos² → tan²θ+1=sec²θ"
+            },
+            {
+              "q": "Expand sin(A+B)",
+              "a": "sinA·cosB + cosA·sinB"
+            },
+            {
+              "q": "Three equivalent forms of cos(2A)",
+              "a": "cos²A−sin²A = 1−2sin²A = 2cos²A−1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

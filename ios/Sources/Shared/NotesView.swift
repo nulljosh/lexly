@@ -47,12 +47,14 @@ private struct NotesBlockView: View {
     var body: some View {
         switch block.type {
         case "heading":
-            Text(block.text ?? "")
+            // ponytail: LocalizedStringKey init is the one that parses markdown —
+            // Text(someString) uses the verbatim init and shows **bold** literally.
+            Text(LocalizedStringKey(block.text ?? ""))
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(Color.orange)
                 .padding(.top, 6)
         case "p":
-            Text(block.text ?? "")
+            Text(LocalizedStringKey(block.text ?? ""))
                 .font(.callout)
                 .foregroundStyle(.secondary)
         case "formula":

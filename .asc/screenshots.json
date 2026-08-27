@@ -2,13 +2,17 @@
   "version": 1,
   "app": {
     "bundle_id": "com.nulljosh.lingo",
-    "udid": "8B1A8082-C5F3-48FB-A17A-F12504938E6C",
+    "udid": "5DAB4442-CDF5-474C-A94F-621113C4BDD1",
     "output_dir": "./screenshots/raw/6.7"
   },
   "steps": [
     {
-      "action": "wait",
-      "duration_ms": 3000
+      "action": "launch"
+    },
+    {
+      "action": "wait_for",
+      "label": "Book Summaries",
+      "timeout_ms": 20000
     },
     {
       "action": "wait",
@@ -16,79 +20,44 @@
     },
     {
       "action": "screenshot",
-      "name": "01_home"
+      "name": "01_library"
     },
     {
       "action": "tap",
-      "label": "Spanish"
+      "label": "Machine Learning for Dummies"
+    },
+    {
+      "action": "wait_for",
+      "label": "Moving Beyond the Hype",
+      "timeout_ms": 20000
+    },
+    {
+      "action": "wait",
+      "duration_ms": 1200
+    },
+    {
+      "action": "screenshot",
+      "name": "02_summary"
+    },
+    {
+      "action": "tap",
+      "label": "Learn"
     },
     {
       "action": "wait",
       "duration_ms": 1500
     },
     {
-      "action": "screenshot",
-      "name": "02_course"
-    },
-    {
       "action": "tap",
-      "label": "Greetings"
+      "label": "Good Feng Shui"
     },
     {
       "action": "wait",
-      "duration_ms": 1500
+      "duration_ms": 2500
     },
     {
       "action": "screenshot",
-      "name": "03_lesson"
-    },
-    {
-      "action": "tap",
-      "label": "Spanish"
-    },
-    {
-      "action": "wait",
-      "duration_ms": 800
-    },
-    {
-      "action": "tap",
-      "label": "Lexly"
-    },
-    {
-      "action": "wait",
-      "duration_ms": 800
-    },
-    {
-      "action": "tap",
-      "label": "Pre-Calculus 12"
-    },
-    {
-      "action": "wait",
-      "duration_ms": 1500
-    },
-    {
-      "action": "screenshot",
-      "name": "04_school"
-    },
-    {
-      "action": "tap",
-      "label": "Lexly"
-    },
-    {
-      "action": "wait",
-      "duration_ms": 800
-    },
-    {
-      "action": "tap",
-      "label": "Settings"
-    },
-    {
-      "action": "wait",
-      "duration_ms": 1500
-    },
-    {
-      "action": "screenshot",
-      "name": "05_settings"
+      "name": "03_summary_alt"
     }
   ]
 }

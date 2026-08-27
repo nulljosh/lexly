@@ -1,0 +1,511 @@
+{
+  "id": "biology_masterclass",
+  "name": "AP Biology Masterclass",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Module Map",
+      "unitTag": "Overview",
+      "blocks": [
+        {
+          "type": "modgrid",
+          "modules": [
+            {
+              "title": "Molecular Foundation",
+              "items": [
+                "U1 · Homeostasis & Biomolecules",
+                "U2 · Cell Structure",
+                "U3 · DNA & Protein Synthesis"
+              ]
+            },
+            {
+              "title": "Intake & Transport",
+              "items": [
+                "U4 · Digestive System",
+                "U5 · Respiratory System",
+                "U6 · Circulatory System"
+              ]
+            },
+            {
+              "title": "Control & Continuity",
+              "items": [
+                "U7 · Nervous System",
+                "U8 · Excretory System",
+                "U9 · Reproductive System"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "items": [
+            "Big picture: Biology Builds From Small To Big — molecules → cells → tissues → organs → systems → organisms. Units 1–3 (molecular/cellular) are the foundation everything else depends on."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strategy",
+      "title": "Study Strategy",
+      "unitTag": "Overview",
+      "blocks": [
+        {
+          "type": "tip",
+          "title": "Review schedule",
+          "items": [
+            "Daily: 15–20 min on current unit notes",
+            "Weekly: practice questions — if you can't answer them, you don't know the material",
+            "Bi-weekly: revisit old units",
+            "Before exams: focus on how units connect"
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Reality check",
+          "items": [
+            "Systems units build on each other — digestive needs circulatory needs respiratory, etc. Falling behind in Bio 12 is brutal to recover from."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u1",
+      "title": "Homeostasis & Biological Molecules",
+      "unitTag": "Unit 1",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Homeostasis"
+        },
+        {
+          "type": "p",
+          "text": "Definition: body maintaining internal balance despite external changes."
+        },
+        {
+          "type": "p",
+          "text": "Mechanism: negative feedback loops — Receptors detect change → Control center processes → Effectors respond."
+        },
+        {
+          "type": "p",
+          "text": "Examples: temperature regulation, blood glucose control, pH balance."
+        },
+        {
+          "type": "heading",
+          "text": "Water Properties"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Polar molecule, partial charges; covalent bonds within, hydrogen bonds between molecules",
+            "Solvent, temperature moderator (high specific heat, evaporative cooling), cohesion/adhesion, transport medium"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "pH & Acids/Bases"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "0–6 acidic, 7 neutral, 8–14 basic",
+            "Acids release H⁺, bases release OH⁻",
+            "Buffers resist pH change — crucial for enzyme function",
+            "Blood pH ≈ 7.4, stomach pH ≈ 2"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Biomolecules"
+        },
+        {
+          "type": "example",
+          "title": "Macromolecule cheat sheet",
+          "steps": [
+            "Carbohydrates — monomers: monosaccharides; quick energy, structural support, energy storage",
+            "Lipids — triglycerides (long-term energy, insulation), phospholipids (membranes), steroids (hormones)",
+            "Proteins — monomers: amino acids; primary → secondary → tertiary structure; shape determines function",
+            "Nucleic acids — DNA/RNA, nucleotides (phosphate + sugar + base); store/transmit genetic info; ATP = energy currency"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hacks",
+          "items": [
+            "CLPN — Carbs quick energy, Lipids long-term, Proteins do work, Nucleic acids store info",
+            "Organelles: \"Never Call My Rough English, Go Learn Coding\" (Nucleus, Cytoplasm, Mitochondria, Ribosomes, ER, Golgi, Lysosomes, Chloroplasts)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Cell Structure & Function",
+      "unitTag": "Unit 2",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Cell Theory"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "All living things are made of cells",
+            "Cells are the basic unit of life",
+            "All cells come from pre-existing cells"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Prokaryotes vs Eukaryotes"
+        },
+        {
+          "type": "p",
+          "text": "Prokaryotes: no nucleus, less efficient (bacteria). Eukaryotes: have nucleus, more efficient (plants, animals)."
+        },
+        {
+          "type": "heading",
+          "text": "Organelles & Functions"
+        },
+        {
+          "type": "modgrid",
+          "modules": [
+            {
+              "title": "Both",
+              "items": [
+                "Nucleus — control center, DNA",
+                "Mitochondria — ATP",
+                "Ribosomes — protein factories",
+                "ER — transport (rough has ribosomes)",
+                "Golgi — processes/packages proteins",
+                "Cytoskeleton — shape"
+              ]
+            },
+            {
+              "title": "Animal only",
+              "items": [
+                "Lysosomes — digest waste",
+                "Centrioles — cell division",
+                "Small vacuoles — storage"
+              ]
+            },
+            {
+              "title": "Plant only",
+              "items": [
+                "Chloroplasts — photosynthesis",
+                "Cell wall — structure/protection",
+                "Large vacuole — storage/support"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Membrane Transport"
+        },
+        {
+          "type": "p",
+          "text": "Passive (no energy): diffusion, osmosis, facilitated diffusion."
+        },
+        {
+          "type": "p",
+          "text": "Active (requires energy): primary (ATP direct), secondary (gradients), endocytosis, exocytosis."
+        },
+        {
+          "type": "p",
+          "text": "Tonicity: isotonic — no net movement; hypertonic — cell shrinks; hypotonic — cell swells."
+        },
+        {
+          "type": "tip",
+          "title": "Memory hacks",
+          "items": [
+            "\"Water follows salt\" for osmosis",
+            "\"HYPE-rtonic makes cells shrink from HYPE-rdehydration\""
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Foundation warning",
+          "items": [
+            "If you don't understand transport, every other unit gets harder — this connects to everything."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "DNA, Protein Synthesis & Enzymes",
+      "unitTag": "Unit 3",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "DNA Structure & Replication"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Double helix; base pairing A-T, C-G; phosphate + deoxyribose + nitrogenous base",
+            "Semi-conservative replication: Helicase unzips, DNA polymerase adds nucleotides, Ligase seals fragments"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "RNA & Protein Synthesis"
+        },
+        {
+          "type": "p",
+          "text": "RNA differs from DNA: single strand, ribose sugar, uracil instead of thymine. Types: mRNA (messenger), tRNA (transfer), rRNA (ribosomal)."
+        },
+        {
+          "type": "example",
+          "title": "Central dogma",
+          "steps": [
+            "Transcription (nucleus): RNA polymerase reads DNA template → mRNA",
+            "Translation (ribosomes): Initiation → Elongation (tRNA brings amino acids) → Termination (stop codon, protein released)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Mutations"
+        },
+        {
+          "type": "p",
+          "text": "Point mutations: silent (no effect), missense (different amino acid), nonsense (premature stop). Frameshift: insertion/deletion shifts reading frame."
+        },
+        {
+          "type": "heading",
+          "text": "Enzymes"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Biological catalysts, lower activation energy; lock-and-key active site",
+            "Affected by temperature (denaturation past optimum), pH, concentration",
+            "Inhibition: competitive (competes for active site) vs non-competitive (binds elsewhere, changes shape)"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hacks",
+          "items": [
+            "Base pairs: \"Apple Tree, Car Garage\" (A-T, C-G)",
+            "Central dogma: \"DNA makes RNA makes Protein\" (DRP)",
+            "Replication: \"Helicase Helps, Polymerase Produces, Ligase Links\"",
+            "Restaurant analogy: DNA = recipe book, mRNA = order ticket, tRNA = waiters, ribosome = kitchen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Digestive System",
+      "unitTag": "Unit 4",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Pathway: Mouth → Esophagus → Stomach → Small intestine → Large intestine → Rectum."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Mechanical digestion: physical breakdown (chewing, churning)",
+            "Chemical digestion: enzyme breakdown — amylase (starch), pepsin (protein), lipase (fats)",
+            "Absorption mainly in small intestine, optimized via villi"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hack",
+          "items": [
+            "\"My Mouth Eats Small Lunch Regularly\" — trace the pathway first, then layer in enzymes/absorption."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Respiratory System",
+      "unitTag": "Unit 5",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "External respiration: gas exchange in lungs (O₂ in, CO₂ out)",
+            "Internal respiration: gas exchange at tissues",
+            "Alveoli: tiny air sacs for gas exchange; hemoglobin carries O₂",
+            "Medulla monitors CO₂ levels and adjusts breathing rate"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hack",
+          "items": [
+            "BRIN — Breathe, Ribs expand, Internal gas exchange, Nose/mouth entry."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Circulatory System",
+      "unitTag": "Unit 6",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Heart: 2 atria (receive blood), 2 ventricles (pump blood)",
+            "Blood flow: right side → lungs → left side → body",
+            "Arteries: away from heart, thick walls, high pressure. Veins: return to heart, valves, lower pressure. Capillaries: thin walls, gas/nutrient exchange",
+            "Blood: RBCs (O₂ transport), WBCs (immune), platelets (clotting), plasma (liquid)"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hacks",
+          "items": [
+            "\"Right Ventricle Leaves, Left Ventricle Arrives\"; \"Arteries Away, Veins Venture back\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Nervous System",
+      "unitTag": "Unit 7",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "CNS: brain and spinal cord. PNS: all other nerves",
+            "Neurons: electrical signals within cell, chemical signals between cells",
+            "Reflexes: automatic protective responses",
+            "Brain processes sensory info and controls responses"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hack",
+          "items": [
+            "\"CNS Controls, PNS Provides\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Excretory System",
+      "unitTag": "Unit 8",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Filters blood, removes wastes, maintains water/salt balance",
+            "Nephrons: functional units of kidneys",
+            "Process: Filtration → Reabsorption → Secretion → Excretion",
+            "Hormones: ADH (water retention), aldosterone (salt retention)"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hack",
+          "items": [
+            "\"Kidneys Keep Blood Clean\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u9",
+      "title": "Reproductive System",
+      "unitTag": "Unit 9",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Male: testes produce sperm and testosterone",
+            "Female: ovaries produce eggs, estrogen, progesterone",
+            "Menstrual cycle: hormone-controlled monthly cycle",
+            "Fertilization in fallopian tube; development: embryo → fetus → baby"
+          ]
+        },
+        {
+          "type": "tip",
+          "title": "Memory hack",
+          "items": [
+            "\"Hormones Control Everything\" in reproduction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flashcards",
+      "title": "All Flashcards",
+      "unitTag": "Review",
+      "blocks": [
+        {
+          "type": "flashcards",
+          "cards": [
+            {
+              "q": "Trace the pathway of a negative feedback loop.",
+              "a": "Stimulus → receptor → control center → effector → response"
+            },
+            {
+              "q": "Why is water a good solvent?",
+              "a": "It's polar, so it dissolves polar/ionic substances"
+            },
+            {
+              "q": "What's the difference between passive and active transport?",
+              "a": "Passive needs no energy (diffusion, osmosis, facilitated diffusion); active requires ATP"
+            },
+            {
+              "q": "What happens to a cell in a hypertonic solution?",
+              "a": "It shrinks — water leaves the cell"
+            },
+            {
+              "q": "Name the 3 enzymes in DNA replication.",
+              "a": "Helicase (unzips), DNA polymerase (adds nucleotides), Ligase (seals fragments)"
+            },
+            {
+              "q": "Where do transcription and translation happen?",
+              "a": "Transcription in the nucleus; translation at ribosomes in the cytoplasm"
+            },
+            {
+              "q": "What's the digestive pathway in order?",
+              "a": "Mouth → esophagus → stomach → small intestine → large intestine → rectum"
+            },
+            {
+              "q": "What does hemoglobin do?",
+              "a": "Carries oxygen in the blood"
+            },
+            {
+              "q": "What are the heart's 4 chambers and their roles?",
+              "a": "2 atria receive blood, 2 ventricles pump blood"
+            },
+            {
+              "q": "CNS vs PNS?",
+              "a": "CNS = brain + spinal cord; PNS = all other nerves"
+            },
+            {
+              "q": "What are the 4 steps of kidney filtration?",
+              "a": "Filtration → reabsorption → secretion → excretion"
+            },
+            {
+              "q": "What hormones control the menstrual cycle?",
+              "a": "Estrogen and progesterone"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
