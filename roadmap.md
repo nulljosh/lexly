@@ -214,32 +214,6 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - [ ] "+" icon color complaint — **ruled out 2026-07-25**: no `+`/`fa-plus` exists anywhere except the Arithmetic course icon, styled identically to every other subject icon. Nothing uniquely wrong found; needs the actual screenshot to identify what the user meant before touching anything further.
 
 ## Open — content & courses
-- [x] **Native ship of the 4 new science courses (astrophysics, anthropology, anatomy, physiology).** — DONE 2026-08-27, both platforms in review.
-      Course packs are bundled (`ios/Sources/Resources/content` is a symlink to `content/`), so no
-      data work was needed — a rebuild picks them up automatically.
-      - Bumped to **1.1.5 / build 202608271410** in both `ios/project.yml` and the pbxproj.
-      - **macOS**: version `3f8587fc-52a4-4636-b4e7-06efadef5bf3`, build 202608271410, What's New set,
-        **SUBMITTED 2026-08-27 14:15** (submission e3d14cbc-a175-4267-baaf-b693a33bc4a6).
-      - **iOS — corrected 2026-08-27 18:29.** The earlier plan ("leave 1.1.4 alone, ship 1.1.5 after
-        approval") was wrong: iOS 1.1.4 was submitted at 14:10 carrying build **202608271348**, which
-        was archived at 13:48 — *before* the courses landed in commit `c204a06` at 14:01. Because
-        content is bundled, that build did **not** contain the four courses, so macOS would have
-        shipped them and iOS would not. No rebuild was needed — the correct iOS build 202608271410
-        (`e1514989-fa48-4c69-9102-a141600dae95`) was already uploaded and VALID but unattached.
-        Fix: cancelled submission `1306f9aa` (version went to DEVELOPER_REJECTED), renamed the same
-        record 1.1.4 -> **1.1.5** with `asc versions update --version`, attached 202608271410,
-        rewrote What's New to cover the courses *and* the haptics change (the build has both), and
-        resubmitted. **New submission `16ca1b81-3421-4fcd-af22-c321b5983c31`, 2026-08-28 01:29 UTC.
-        iOS 1.1.5 is WAITING_FOR_REVIEW.** Cost: queue position only, no rebuild, no upload.
-      - Lesson: `asc versions update --version-id X --version 1.1.5` retitles an existing record in
-        place and keeps its metadata and screenshots — no need to create a fresh version and recopy.
-      - `asc validate` is still unusable on this app: "multiple app infos found" because the
-        in-review app info coexists with the live one. Not a blocker, just no preflight report.
-- [x] **CI deploy workflow — dropped deliberately 2026-08-27, do not re-plan it.** Pushing
-      `.github/workflows/` needs a token grant this machine does not have, so the file could only be
-      hand-pasted through GitHub's web UI and then wired with two Cloudflare secrets — all to replace
-      `./scripts/deploy.sh`, which already works, for a single deployer who deploys infrequently.
-      Not a blocker, not pending. Revisit only if someone else starts deploying this repo.
 - [ ] Add more compute-related skills/courses beyond Computer Basics.
 - [ ] Add more skills/games/science courses generally (content-expansion ask).
 - [ ] Expand language courses beyond beginner to intermediate/expert levels.
@@ -481,7 +455,6 @@ Neither is worth fixing on a record that should not exist.
 - [ ] Add intermediate and expert to all courses. There should be like 5-10 levels, not 3.
 
 ## From screenshot pass (2026-08-27)
-- [x] RESOLVED 2026-08-27 — the 1.1.4 build predated the markdown fix in `NotesView.swift` (commit 2f86735), so its screenshots showed bold-rendered bullets while the binary printed literal `**`. Superseded when iOS moved to build 202608271410 (1.1.5), which carries the fix.
 - [ ] `content/notes/becoming-steve-jobs-masterclass.json` opens with an internal working note ("this batch picks up well past the previously-summarized material... pages 130-273 is still unphotographed"). That is author scaffolding, not reader content — strip it before that book is ever screenshotted or featured.
 - [ ] Content typo: Good Feng Shui summary lists a book as "If Itsdam for Modern Times" — almost certainly a garbled OCR of a real Eva Wong title. Verify and correct.
 - [ ] The floating Learn/Settings tab bar overlaps the last line of scrolling summary text (visible in every summary screenshot). Needs bottom content inset equal to the bar height.
