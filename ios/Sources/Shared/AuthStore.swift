@@ -124,6 +124,16 @@ final class AuthStore {
         currentNonce = nil
     }
 
+    /// Google has no native ID-token path, so this is the OAuth browser flow. `lexly://`
+    /// must stay in the Supabase uri_allow_list and in CFBundleURLTypes on both platforms.
+    func signInWithGoogle() async throws {
+        try await supabase.auth.signInWithOAuth(
+            provider: .google,
+            redirectTo: URL(string: "lexly://")
+        )
+        session = try await supabase.auth.session
+    }
+
     static func randomNonce(length: Int = 32) -> String {
         let charset = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
         var bytes = [UInt8](repeating: 0, count: length)

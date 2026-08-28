@@ -89,6 +89,33 @@ struct AuthView: View {
             .frame(height: 44)
 
 
+            Button {
+
+                Task {
+
+                    do { try await auth.signInWithGoogle() }
+
+                    catch { errorMessage = error.localizedDescription }
+
+                }
+
+            } label: {
+
+                Text("Continue with Google")
+
+                    .fontWeight(.semibold)
+
+                    .frame(maxWidth: .infinity)
+
+                    .frame(height: 44)
+
+                    .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(.quaternary))
+
+            }
+
+            .buttonStyle(.plain)
+
+
             Button(action: submit) {
                 if busy {
                     HStack(spacing: 8) {
