@@ -40,9 +40,10 @@ mainland. bookrank is *already live* with book summaries and China on, which mea
 reviewer-triggered rather than automatic. Deliberately did **not** pre-emptively change them.
 
 ## Shipped 2026-08-23 — iOS 1.1.3 is LIVE on the App Store
-https://apps.apple.com/app/id6783501611 — linked from the landing page (hero CTA, platforms card,
-footer, Smart App Banner meta), the app shell footer, README and support page. macOS on the same
-record is still unreleased; keep it badged "Pending" on the site until it clears review.
+https://apps.apple.com/app/id6783501611 — linked from the landing page (hero CTA, footer, Smart App
+Banner meta), the app shell footer, README and support page. The platforms card used to repeat the
+hero's download CTA; it now reads as plain text so the page has one download button, not two. macOS
+on the same record is still unreleased; keep it badged "Pending" on the site until it clears review.
 
 ## Done 2026-08-18 — macOS 1.1.3 submit-ready
 `asc validate` on `f9f6e627-0b7f-421a-9e85-50cfcdf96106`: 0 errors, 0 blocking.
