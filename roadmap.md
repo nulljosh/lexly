@@ -1,10 +1,8 @@
 # lexly Roadmap
 
-## PENDING DEPLOY 2026-08-28 — landing page App Store CTA dedupe + CI deploy path
+## Shipped 2026-08-27 — landing page App Store CTA deduplication
 
-`542476d` is on `main` but **not live**. The platforms card repeated the hero's "Download on the
-App Store" button; the iOS card now reads as plain text so the page has one download CTA (the hero
-badge, plus the Smart App Banner meta on iOS Safari).
+The hero and platforms card had duplicate download buttons. Removed the platforms card duplicate so the page has one download CTA (the iOS Smart App Banner on Safari, the hero button on other browsers). Deployed 2026-08-27 evening via `./scripts/deploy.sh` along with commit 8b5012f.
 
 **CI deploy workflow is written but NOT yet in the repo** — pushing a `.github/workflows/` file
 needs an explicit permission grant a web session doesn't have. Once added, a push to `main` publishes,
