@@ -1,19 +1,28 @@
 # lexly Roadmap
 
-## PENDING DEPLOY 2026-08-28 — landing page App Store CTA dedupe
+## PENDING DEPLOY 2026-08-28 — landing page App Store CTA dedupe + CI deploy path
 
 `542476d` is on `main` but **not live**. The platforms card repeated the hero's "Download on the
 App Store" button; the iOS card now reads as plain text so the page has one download CTA (the hero
 badge, plus the Smart App Banner meta on iOS Safari).
 
-Run `./scripts/deploy.sh` from a Mac to publish it — remember a plain `git push` deploys nothing.
+**CI deploy workflow is written but NOT yet in the repo** — pushing a `.github/workflows/` file
+needs an explicit permission grant a web session doesn't have. Once added, a push to `main` publishes,
+closing the "a plain `git push` deploys nothing" trap that staled the site for 2 weeks. It runs
+`scripts/deploy.sh` itself rather than a copy, so the published path list can't drift. One manual
+step remains, doable from a phone: add repo secrets `CLOUDFLARE_API_TOKEN` (Account / Cloudflare
+Pages / Edit) and `CLOUDFLARE_ACCOUNT_ID`. Until both exist the workflow no-ops with a green check.
+`scripts/deploy.sh` also got a `md5file()` shim (BSD `md5 -q` vs Linux `md5sum`) so the same script
+runs on a Mac and on the CI runner; nothing else about it changed.
 
-Why it wasn't deployed from the session that wrote it: that was Claude Code **on the web**, an
-ephemeral container with a git clone and no secrets — no Cloudflare token, no `~/.wrangler`, and
-`wrangler login` is an interactive browser flow. `deploy.sh` also assumes macOS: it uses `md5 -q`
-(Linux has `md5sum`) and `rsync` (not installed there). Deploys have to run locally, or from CI
-holding a `CLOUDFLARE_API_TOKEN` repo secret — the latter would also close the "push deploys
-nothing" trap that staled the site for 2 weeks.
+Until those secrets are set, publish with `./scripts/deploy.sh` from a Mac.
+
+**Why a Claude Code web session cannot deploy directly, verified not assumed:** two independent
+walls. (1) No Cloudflare credentials — the container gets a git clone and no secrets, no
+`~/.wrangler`, and `wrangler login` is an interactive browser flow. (2) The sandbox network policy
+denies `api.cloudflare.com:443` outright (gateway 403 on CONNECT; npm/PyPI are allowlisted, the
+Cloudflare API is not), so even a hand-pasted token could not reach Cloudflare from there. CI is
+the fix: GitHub Actions holds the token and has open network.
 
 ## RESOLVED + RESUBMITTED 2026-08-25 — macOS 1.1.4 was never a code bug
 

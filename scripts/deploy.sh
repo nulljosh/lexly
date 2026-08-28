@@ -13,7 +13,14 @@ PUBLISH=(app css js content assets school functions
          index.html privacy.html support.html manifest.json _headers)
 
 STAGE="$(mktemp -d)"
-trap 'rm -rf "$STAGE"' EXIT
+VERIFY_TMP="$(mktemp)"
+trap 'rm -rf "$STAGE" "$VERIFY_TMP"' EXIT
+
+# macOS ships BSD `md5 -q`; Linux (and the GitHub Actions runner) ships `md5sum`.
+# Same digest either way — this only exists so CI can run this exact script.
+md5file() {
+  if command -v md5 >/dev/null 2>&1; then md5 -q "$1"; else md5sum "$1" | cut -d" " -f1; fi
+}
 
 for path in "${PUBLISH[@]}"; do
   rsync -aL --exclude '.DS_Store' "$path" "$STAGE/"
@@ -29,12 +36,16 @@ npx wrangler pages deploy "$STAGE" --project-name lexly-heyitsmejosh --branch ma
 # Images are their own asset class: the marketing screenshots went stale on
 # 2026-08-19 and passed verify because only json/css/js were checked.
 for asset in content/catalog.json css/lingo.css js/lingo-app.js assets/marketing/catalog.png assets/marketing/course.png; do
-  LOCAL="$(md5 -q "$asset")"
+  LOCAL="$(md5file "$asset")"
   for attempt in 1 2 3 4 5 6; do
     # Cache-bust: /assets/* carries a 300s edge TTL (see _headers), far longer
     # than this retry window, so an uncached URL would compare against the edge's
     # stale copy — a false failure now, and a false pass before images were checked.
-    LIVE="$(curl -fsS "https://lexly.heyitsmejosh.com/$asset?deployverify=$$-$attempt" | md5 -q)" || LIVE=""
+    if curl -fsS "https://lexly.heyitsmejosh.com/$asset?deployverify=$$-$attempt" -o "$VERIFY_TMP"; then
+      LIVE="$(md5file "$VERIFY_TMP")"
+    else
+      LIVE=""
+    fi
     [ "$LIVE" = "$LOCAL" ] && break
     sleep 5
   done
