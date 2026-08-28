@@ -4,19 +4,14 @@
 
 The hero and platforms card had duplicate download buttons. Removed the platforms card duplicate so the page has one download CTA (the iOS Smart App Banner on Safari, the hero button on other browsers). Deployed 2026-08-27 evening via `./scripts/deploy.sh` along with commit 8b5012f.
 
-## Blocked on Joshua — one Cloudflare token away from push-to-deploy
+## Shipped 2026-08-27 — push to main now deploys
 
-`.github/workflows/deploy.yml` is now in the repo and green: a push to `main` runs
-`scripts/deploy.sh` itself (not a copy, so the published path list can't drift). `CLOUDFLARE_ACCOUNT_ID`
-is set as a repo secret. The workflow no-ops with a green check until `CLOUDFLARE_API_TOKEN` exists.
-
-- [ ] Create a Cloudflare API token with **Account / Cloudflare Pages / Edit** at
-      dash.cloudflare.com/profile/api-tokens, then `gh secret set CLOUDFLARE_API_TOKEN -R nulljosh/lexly`.
-      Automating this failed only because the dashboard session is logged out and login is not
-      something an agent can do. Local wrangler auth is OAuth (unusable in CI) and the stored
-      `CLOUDFLARE_DNS_TOKEN` is zone-scoped, so neither can substitute.
-
-Until that token is set, publish with `./scripts/deploy.sh` from a Mac.
+`.github/workflows/deploy.yml` runs `scripts/deploy.sh` itself (not a copy, so the published path
+list can't drift). Both repo secrets are set: `CLOUDFLARE_ACCOUNT_ID` and a `CLOUDFLARE_API_TOKEN`
+scoped to Cloudflare Pages:Edit (token `lexly-ci-pages-deploy`). Verified end to end — a dispatch run
+deployed and logged `deploy verified`, which is deploy.sh curling production and md5-comparing one
+file per asset class. The "a plain git push publishes nothing" trap that staled the site for 2 weeks
+is closed.
 
 **Why a Claude Code web session cannot deploy directly, verified not assumed:** two independent
 walls. (1) No Cloudflare credentials — the container gets a git clone and no secrets, no
