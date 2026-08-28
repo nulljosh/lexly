@@ -10,8 +10,47 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/lingo.css">
+    <style>
+      /* Boot splash: inline so it paints before lingo.css arrives. Removed on window load. */
+      #boot { position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column;
+              align-items: center; justify-content: center; gap: 1.25rem;
+              background: #ffffff; color: #1A1A1A;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+              transition: opacity .3s ease; }
+      #boot[hidden] { display: none; }
+      #boot.done { opacity: 0; pointer-events: none; }
+      #boot img { width: 56px; height: 56px; border-radius: 13px; }
+      #boot .ring { width: 22px; height: 22px; border-radius: 50%;
+                    border: 2px solid rgba(26,26,26,0.15); border-top-color: #5B9BD5;
+                    animation: boot-spin .7s linear infinite; }
+      #boot span { font-size: .8125rem; color: rgba(26,26,26,0.55); }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { #boot .ring { animation-duration: 2s; } }
+      html[data-theme="dark"] #boot { background: #111; color: #e8e8e8; }
+      html[data-theme="dark"] #boot .ring { border-color: rgba(255,255,255,0.15); border-top-color: #7ab4e0; }
+      html[data-theme="dark"] #boot span { color: rgba(255,255,255,0.5); }
+    </style>
 </head>
 <body>
+    <div id="boot" role="status" aria-live="polite">
+      <img src="/assets/icon.svg?v=2" alt="" width="56" height="56">
+      <div class="ring" aria-hidden="true"></div>
+      <span>Loading Lexly&hellip;</span>
+    </div>
+    <script>
+      // Dismiss once everything has loaded; the timeout is a failsafe so a stalled
+      // asset can never leave the splash covering the app.
+      (function () {
+        var el = document.getElementById('boot'), done = false;
+        function hide() {
+          if (done) return; done = true;
+          el.classList.add('done');
+          setTimeout(function () { el.hidden = true; }, 300);
+        }
+        window.addEventListener('load', hide);
+        setTimeout(hide, 8000);
+      })();
+    </script>
     <a href="#main" class="sr-only" style="position:absolute;top:-40px;left:0;background:#0a0a0a;color:#fafafa;padding:8px;z-index:1000;">Skip to content</a>
     <header class="header" role="banner">
         <div class="header-inner">
