@@ -4,16 +4,19 @@
 
 The hero and platforms card had duplicate download buttons. Removed the platforms card duplicate so the page has one download CTA (the iOS Smart App Banner on Safari, the hero button on other browsers). Deployed 2026-08-27 evening via `./scripts/deploy.sh` along with commit 8b5012f.
 
-**CI deploy workflow is written but NOT yet in the repo** — pushing a `.github/workflows/` file
-needs an explicit permission grant a web session doesn't have. Once added, a push to `main` publishes,
-closing the "a plain `git push` deploys nothing" trap that staled the site for 2 weeks. It runs
-`scripts/deploy.sh` itself rather than a copy, so the published path list can't drift. One manual
-step remains, doable from a phone: add repo secrets `CLOUDFLARE_API_TOKEN` (Account / Cloudflare
-Pages / Edit) and `CLOUDFLARE_ACCOUNT_ID`. Until both exist the workflow no-ops with a green check.
-`scripts/deploy.sh` also got a `md5file()` shim (BSD `md5 -q` vs Linux `md5sum`) so the same script
-runs on a Mac and on the CI runner; nothing else about it changed.
+## Blocked on Joshua — one Cloudflare token away from push-to-deploy
 
-Until those secrets are set, publish with `./scripts/deploy.sh` from a Mac.
+`.github/workflows/deploy.yml` is now in the repo and green: a push to `main` runs
+`scripts/deploy.sh` itself (not a copy, so the published path list can't drift). `CLOUDFLARE_ACCOUNT_ID`
+is set as a repo secret. The workflow no-ops with a green check until `CLOUDFLARE_API_TOKEN` exists.
+
+- [ ] Create a Cloudflare API token with **Account / Cloudflare Pages / Edit** at
+      dash.cloudflare.com/profile/api-tokens, then `gh secret set CLOUDFLARE_API_TOKEN -R nulljosh/lexly`.
+      Automating this failed only because the dashboard session is logged out and login is not
+      something an agent can do. Local wrangler auth is OAuth (unusable in CI) and the stored
+      `CLOUDFLARE_DNS_TOKEN` is zone-scoped, so neither can substitute.
+
+Until that token is set, publish with `./scripts/deploy.sh` from a Mac.
 
 **Why a Claude Code web session cannot deploy directly, verified not assumed:** two independent
 walls. (1) No Cloudflare credentials — the container gets a git clone and no secrets, no
