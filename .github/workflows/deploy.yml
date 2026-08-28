@@ -1,0 +1,28 @@
+name: Deploy to Cloudflare Pages
+
+# The Pages project is not git-connected, so a plain push publishes nothing.
+# scripts/deploy.sh is the real publish path; this runs that exact script
+# (never a copy) so the published file list can't drift.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "CLOUDFLARE_API_TOKEN not set — skipping deploy."
+            exit 0
+          fi
+          ./scripts/deploy.sh
