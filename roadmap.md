@@ -1,5 +1,20 @@
 # lexly Roadmap
 
+## PENDING DEPLOY 2026-08-28 — landing page App Store CTA dedupe
+
+`542476d` is on `main` but **not live**. The platforms card repeated the hero's "Download on the
+App Store" button; the iOS card now reads as plain text so the page has one download CTA (the hero
+badge, plus the Smart App Banner meta on iOS Safari).
+
+Run `./scripts/deploy.sh` from a Mac to publish it — remember a plain `git push` deploys nothing.
+
+Why it wasn't deployed from the session that wrote it: that was Claude Code **on the web**, an
+ephemeral container with a git clone and no secrets — no Cloudflare token, no `~/.wrangler`, and
+`wrangler login` is an interactive browser flow. `deploy.sh` also assumes macOS: it uses `md5 -q`
+(Linux has `md5sum`) and `rsync` (not installed there). Deploys have to run locally, or from CI
+holding a `CLOUDFLARE_API_TOKEN` repo secret — the latter would also close the "push deploys
+nothing" trap that staled the site for 2 weeks.
+
 ## RESOLVED + RESUBMITTED 2026-08-25 — macOS 1.1.4 was never a code bug
 
 Read out of Resolution Center after Joshua supplied a 2FA code. The real reason, verbatim in
