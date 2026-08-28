@@ -49,6 +49,8 @@ targets:
       properties:
         com.apple.security.application-groups:
           - group.com.nulljosh.lingo
+        com.apple.developer.applesignin:
+          - Default
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.nulljosh.lingo

@@ -1,3 +1,4 @@
+import AuthenticationServices
 import SwiftUI
 
 struct AuthView: View {
@@ -55,6 +56,38 @@ struct AuthView: View {
                 Text(notice).foregroundStyle(.secondary).font(.footnote)
                     .multilineTextAlignment(.center)
             }
+
+            HStack {
+
+                Rectangle().frame(height: 1).foregroundStyle(.quaternary)
+
+                Text("or").font(.caption).foregroundStyle(.secondary)
+
+                Rectangle().frame(height: 1).foregroundStyle(.quaternary)
+
+            }
+
+
+            SignInWithAppleButton(.signIn) { request in
+
+                auth.prepareAppleRequest(request)
+
+            } onCompletion: { result in
+
+                Task {
+
+                    do { try await auth.signInWithApple(result: result) }
+
+                    catch { errorMessage = error.localizedDescription }
+
+                }
+
+            }
+
+            .signInWithAppleButtonStyle(.black)
+
+            .frame(height: 44)
+
 
             Button(action: submit) {
                 if busy {

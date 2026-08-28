@@ -1,3 +1,5 @@
+import AuthenticationServices
+import CryptoKit
 import Foundation
 import Supabase
 
@@ -94,6 +96,43 @@ final class AuthStore {
             .update(["avatar_id": AnyJSON.string(avatarId)])
             .eq("id", value: uid)
             .execute()
+    }
+
+    private var currentNonce: String?
+
+    /// Apple hashes the nonce into the identity token; Supabase compares it against the
+    /// raw value we send back.
+    func prepareAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
+        let nonce = Self.randomNonce()
+        currentNonce = nonce
+        request.requestedScopes = [.fullName, .email]
+        request.nonce = SHA256.hash(data: Data(nonce.utf8))
+            .map { String(format: "%02x", $0) }
+            .joined()
+    }
+
+    func signInWithApple(result: Result<ASAuthorization, Error>) async throws {
+        let auth = try result.get()
+        guard let cred = auth.credential as? ASAuthorizationAppleIDCredential,
+              let tokenData = cred.identityToken,
+              let token = String(data: tokenData, encoding: .utf8) else {
+            throw URLError(.badServerResponse)
+        }
+        session = try await supabase.auth.signInWithIdToken(
+            credentials: .init(provider: .apple, idToken: token, nonce: currentNonce)
+        )
+        currentNonce = nil
+    }
+
+    static func randomNonce(length: Int = 32) -> String {
+        let charset = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+        var bytes = [UInt8](repeating: 0, count: length)
+        // ponytail: SecRandomCopyBytes can fail; a plain random fallback is fine because the
+        // nonce only needs to be unguessable-per-request, not key material.
+        if SecRandomCopyBytes(kSecRandomDefault, length, &bytes) != errSecSuccess {
+            bytes = (0..<length).map { _ in UInt8.random(in: 0...255) }
+        }
+        return String(bytes.map { charset[Int($0) % charset.count] })
     }
 
     func signOut() async throws {
