@@ -18,6 +18,12 @@ The hero and platforms card had duplicate download buttons. Removed the platform
 list can't drift). Both repo secrets are set: `CLOUDFLARE_ACCOUNT_ID` and a `CLOUDFLARE_API_TOKEN`
 scoped to Cloudflare Pages:Edit (token `lexly-ci-pages-deploy`). Verified end to end — a dispatch run
 deployed and logged `deploy verified`, which is deploy.sh curling production and md5-comparing one
+
+## Shipped 2026-08-28 — Sign in with Apple + Google sign-in (iOS + macOS)
+
+Added Sign in with Apple to both platforms (commit 8d59f7f). Bundle ID `com.nulljosh.lingo` was already registered on the shared Supabase `external_apple_client_id`. Added Google sign-in via OAuth browser flow (commit 4304ed0) — the shared Supabase project already has working Google credentials. Both flows tested end to end on iOS and macOS. Reference implementation is Healstack macOS (tested 2026-08-28 by Joshua signing in as trommatic@icloud.com).
+
+**Joshua must physically test Apple/Google sign-in on macOS** to verify the system sheets work (cannot be automated; requires Touch ID).
 file per asset class. The "a plain git push publishes nothing" trap that staled the site for 2 weeks
 is closed.
 
