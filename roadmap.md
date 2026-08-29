@@ -472,4 +472,4 @@ Neither is worth fixing on a record that should not exist.
 ## From Notes (imported 2026-08-27)
 - [ ] **Decide: purge the dead Resend key from git history?** Not done deliberately — it needs a `git filter-repo` rewrite of 22+ commits plus a force-push to a public repo (breaks every existing clone), for a string that is already invalid and unusable. Security value is nil; only reason to do it is tidiness. Joshua's call.
 
-- [ ] 2026-08-29: App Review message on iOS submission 16ca1b81-3421-4fcd-af22-c321b5983c31 unread — `asc web review show` blocked by Apple SRP 503. Retry when Apple auth recovers. iOS 1.1.5 REJECTED, macOS 1.1.5 IN_REVIEW.
+- [ ] 2026-08-29: Apple REJECTED the 4.3(a) appeal on iOS 1.1.5 (read via ASC web UI; `asc web` still 503). Reply restates 4.3.0 Design: Spam — "similar binary, metadata, and/or concept as apps submitted by you or other developers, with only minor differences", and notes prior approvals don't guarantee future ones. Needs real differentiation, not another reply. macOS 1.1.5 still IN_REVIEW.
