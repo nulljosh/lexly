@@ -472,4 +472,5 @@ Neither is worth fixing on a record that should not exist.
 ## From Notes (imported 2026-08-27)
 - [ ] **Decide: purge the dead Resend key from git history?** Not done deliberately — it needs a `git filter-repo` rewrite of 22+ commits plus a force-push to a public repo (breaks every existing clone), for a string that is already invalid and unusable. Security value is nil; only reason to do it is tidiness. Joshua's call.
 
-- [ ] 2026-08-29: Apple REJECTED the 4.3(a) appeal on iOS 1.1.5 (read via ASC web UI; `asc web` still 503). Reply restates 4.3.0 Design: Spam — "similar binary, metadata, and/or concept as apps submitted by you or other developers, with only minor differences", and notes prior approvals don't guarantee future ones. Needs real differentiation, not another reply. macOS 1.1.5 still IN_REVIEW.
+- [x] 2026-08-29: Cancelled the iOS 1.1.5 review submission. Apple rejected the 4.3(a) appeal, restating 4.3.0 Design: Spam (similar concept, minor differences). 1.1.3 stays live; the four science courses ride along with a future differentiated release. macOS 1.1.5 left IN_REVIEW.
+- [ ] Reposition Lexly before any iOS resubmit: lead with the BC school-curriculum angle (PC12, AP Bio 12) in name/subtitle/screenshots/first-run, not streaks and hearts. Gamification stays, but it stops being the pitch. Cosmetic metadata edits are exhausted as a lever.
