@@ -11,7 +11,7 @@ struct CatalogView: View {
         NavigationStack {
             List {
                 if let catalog = store.catalog {
-                    ForEach(catalog.categoryKeys, id: \.self) { key in
+                    ForEach(Array(catalog.categories.keys.sorted()), id: \.self) { key in
                         let category = catalog.categories[key]!
                         Section(category.title) {
                             ForEach(category.subjects) { subject in

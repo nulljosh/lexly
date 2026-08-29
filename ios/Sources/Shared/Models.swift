@@ -2,15 +2,6 @@ import Foundation
 
 struct Catalog: Decodable {
     let categories: [String: Category]
-    // Catalog order is editorial, not alphabetical: the BC Grade 12 courses lead.
-    // Falls back to sorted keys for older catalogs that predate the field.
-    let order: [String]?
-
-    var categoryKeys: [String] {
-        guard let order else { return categories.keys.sorted() }
-        let known = order.filter { categories[$0] != nil }
-        return known + categories.keys.filter { !known.contains($0) }.sorted()
-    }
 }
 
 struct Category: Decodable {

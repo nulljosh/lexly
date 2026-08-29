@@ -1,177 +1,6 @@
 {
   "version": 1,
   "categories": {
-    "school": {
-      "title": "BC Grade 12 courses",
-      "subjects": [
-        {
-          "id": "precalc11",
-          "name": "Pre-Calculus 11",
-          "icon": "fa-solid fa-book",
-          "level": "BC Grade 12",
-          "packPath": "/content/courses/precalc11.json"
-        },
-        {
-          "id": "precalc12",
-          "name": "Pre-Calculus 12",
-          "icon": "fa-solid fa-book-open",
-          "level": "BC Grade 12",
-          "packPath": "/content/courses/precalc12.json"
-        },
-        {
-          "id": "anatomy12",
-          "name": "Anatomy & Physiology 12",
-          "icon": "fa-solid fa-heart-pulse",
-          "level": "BC Grade 12",
-          "packPath": "/content/courses/anatomy12.json"
-        },
-        {
-          "id": "biology",
-          "name": "AP Biology 12",
-          "icon": "fa-solid fa-dna",
-          "level": "BC Grade 12",
-          "packPath": "/content/courses/biology.json"
-        },
-        {
-          "id": "precalc12_masterclass",
-          "name": "Pre-Calc 12 Masterclass",
-          "icon": "fa-solid fa-chalkboard-user",
-          "level": "Full year notes",
-          "url": "/school/PC12_Masterclass.html",
-          "notesPath": "/content/notes/precalc12_masterclass.json"
-        },
-        {
-          "id": "biology_masterclass",
-          "name": "AP Biology Masterclass",
-          "icon": "fa-solid fa-chalkboard-user",
-          "level": "Full year notes",
-          "url": "/school/Biology_Masterclass.html",
-          "notesPath": "/content/notes/biology_masterclass.json"
-        }
-      ]
-    },
-    "math": {
-      "title": "Choose a math topic",
-      "subjects": [
-        {
-          "id": "arithmetic",
-          "name": "Arithmetic",
-          "icon": "fa-solid fa-plus",
-          "level": "Basic Math",
-          "packPath": "/content/courses/arithmetic.json"
-        },
-        {
-          "id": "algebra",
-          "name": "Algebra",
-          "icon": "fa-solid fa-superscript",
-          "level": "Equations & Variables",
-          "packPath": "/content/courses/algebra.json"
-        },
-        {
-          "id": "geometry",
-          "name": "Geometry",
-          "icon": "fa-solid fa-draw-polygon",
-          "level": "Shapes & Angles",
-          "packPath": "/content/courses/geometry.json"
-        },
-        {
-          "id": "trigonometry",
-          "name": "Trigonometry",
-          "icon": "fa-solid fa-wave-square",
-          "level": "Sine, Cosine, Tangent",
-          "packPath": "/content/courses/trigonometry.json"
-        },
-        {
-          "id": "calculus",
-          "name": "Calculus",
-          "icon": "fa-solid fa-infinity",
-          "level": "Limits to Series",
-          "packPath": "/content/courses/calculus.json"
-        },
-        {
-          "id": "statistics",
-          "name": "Statistics",
-          "icon": "fa-solid fa-chart-bar",
-          "level": "Data Analysis",
-          "packPath": "/content/courses/statistics.json"
-        },
-        {
-          "id": "linear_algebra",
-          "name": "Linear Algebra",
-          "icon": "fa-solid fa-table-cells",
-          "level": "Matrices & Vectors",
-          "packPath": "/content/courses/linear_algebra.json"
-        },
-        {
-          "id": "logic",
-          "name": "Logic",
-          "icon": "fa-solid fa-puzzle-piece",
-          "level": "Puzzles & Reasoning",
-          "packPath": "/content/courses/logic.json"
-        }
-      ]
-    },
-    "science": {
-      "title": "Choose a science topic",
-      "subjects": [
-        {
-          "id": "physics",
-          "name": "Physics",
-          "icon": "fa-solid fa-atom",
-          "level": "Forces & Energy",
-          "packPath": "/content/courses/physics.json"
-        },
-        {
-          "id": "chemistry",
-          "name": "Chemistry",
-          "icon": "fa-solid fa-flask",
-          "level": "Elements & Reactions",
-          "packPath": "/content/courses/chemistry.json"
-        },
-        {
-          "id": "biology",
-          "name": "Biology",
-          "icon": "fa-solid fa-dna",
-          "level": "Life Sciences",
-          "packPath": "/content/courses/biology.json"
-        },
-        {
-          "id": "astronomy",
-          "name": "Astronomy",
-          "icon": "fa-solid fa-satellite",
-          "level": "Space & Cosmos",
-          "packPath": "/content/courses/astronomy.json"
-        },
-        {
-          "id": "astrophysics",
-          "name": "Astrophysics",
-          "icon": "fa-solid fa-satellite",
-          "level": "Stars & Cosmology",
-          "packPath": "/content/courses/astrophysics.json"
-        },
-        {
-          "id": "anthropology",
-          "name": "Anthropology",
-          "icon": "fa-solid fa-landmark",
-          "level": "Human Origins & Culture",
-          "packPath": "/content/courses/anthropology.json"
-        },
-        {
-          "id": "anatomy",
-          "name": "Anatomy",
-          "icon": "fa-solid fa-heart-pulse",
-          "level": "Body Systems",
-          "packPath": "/content/courses/anatomy.json"
-        },
-        {
-          "id": "physiology",
-          "name": "Physiology",
-          "icon": "fa-solid fa-dna",
-          "level": "How the Body Works",
-          "packPath": "/content/courses/physiology.json"
-        }
-      ]
-    },
     "languages": {
       "title": "Choose a language",
       "subjects": [
@@ -334,6 +163,177 @@
         }
       ]
     },
+    "math": {
+      "title": "Choose a math topic",
+      "subjects": [
+        {
+          "id": "arithmetic",
+          "name": "Arithmetic",
+          "icon": "fa-solid fa-plus",
+          "level": "Basic Math",
+          "packPath": "/content/courses/arithmetic.json"
+        },
+        {
+          "id": "algebra",
+          "name": "Algebra",
+          "icon": "fa-solid fa-superscript",
+          "level": "Equations & Variables",
+          "packPath": "/content/courses/algebra.json"
+        },
+        {
+          "id": "geometry",
+          "name": "Geometry",
+          "icon": "fa-solid fa-draw-polygon",
+          "level": "Shapes & Angles",
+          "packPath": "/content/courses/geometry.json"
+        },
+        {
+          "id": "trigonometry",
+          "name": "Trigonometry",
+          "icon": "fa-solid fa-wave-square",
+          "level": "Sine, Cosine, Tangent",
+          "packPath": "/content/courses/trigonometry.json"
+        },
+        {
+          "id": "calculus",
+          "name": "Calculus",
+          "icon": "fa-solid fa-infinity",
+          "level": "Limits to Series",
+          "packPath": "/content/courses/calculus.json"
+        },
+        {
+          "id": "statistics",
+          "name": "Statistics",
+          "icon": "fa-solid fa-chart-bar",
+          "level": "Data Analysis",
+          "packPath": "/content/courses/statistics.json"
+        },
+        {
+          "id": "linear_algebra",
+          "name": "Linear Algebra",
+          "icon": "fa-solid fa-table-cells",
+          "level": "Matrices & Vectors",
+          "packPath": "/content/courses/linear_algebra.json"
+        },
+        {
+          "id": "logic",
+          "name": "Logic",
+          "icon": "fa-solid fa-puzzle-piece",
+          "level": "Puzzles & Reasoning",
+          "packPath": "/content/courses/logic.json"
+        }
+      ]
+    },
+    "science": {
+      "title": "Choose a science topic",
+      "subjects": [
+        {
+          "id": "physics",
+          "name": "Physics",
+          "icon": "fa-solid fa-atom",
+          "level": "Forces & Energy",
+          "packPath": "/content/courses/physics.json"
+        },
+        {
+          "id": "chemistry",
+          "name": "Chemistry",
+          "icon": "fa-solid fa-flask",
+          "level": "Elements & Reactions",
+          "packPath": "/content/courses/chemistry.json"
+        },
+        {
+          "id": "biology",
+          "name": "Biology",
+          "icon": "fa-solid fa-dna",
+          "level": "Life Sciences",
+          "packPath": "/content/courses/biology.json"
+        },
+        {
+          "id": "astronomy",
+          "name": "Astronomy",
+          "icon": "fa-solid fa-satellite",
+          "level": "Space & Cosmos",
+          "packPath": "/content/courses/astronomy.json"
+        },
+        {
+          "id": "astrophysics",
+          "name": "Astrophysics",
+          "icon": "fa-solid fa-satellite",
+          "level": "Stars & Cosmology",
+          "packPath": "/content/courses/astrophysics.json"
+        },
+        {
+          "id": "anthropology",
+          "name": "Anthropology",
+          "icon": "fa-solid fa-landmark",
+          "level": "Human Origins & Culture",
+          "packPath": "/content/courses/anthropology.json"
+        },
+        {
+          "id": "anatomy",
+          "name": "Anatomy",
+          "icon": "fa-solid fa-heart-pulse",
+          "level": "Body Systems",
+          "packPath": "/content/courses/anatomy.json"
+        },
+        {
+          "id": "physiology",
+          "name": "Physiology",
+          "icon": "fa-solid fa-dna",
+          "level": "How the Body Works",
+          "packPath": "/content/courses/physiology.json"
+        }
+      ]
+    },
+    "school": {
+      "title": "BC Grade 12 courses",
+      "subjects": [
+        {
+          "id": "precalc11",
+          "name": "Pre-Calculus 11",
+          "icon": "fa-solid fa-book",
+          "level": "BC Grade 12",
+          "packPath": "/content/courses/precalc11.json"
+        },
+        {
+          "id": "precalc12",
+          "name": "Pre-Calculus 12",
+          "icon": "fa-solid fa-book-open",
+          "level": "BC Grade 12",
+          "packPath": "/content/courses/precalc12.json"
+        },
+        {
+          "id": "anatomy12",
+          "name": "Anatomy & Physiology 12",
+          "icon": "fa-solid fa-heart-pulse",
+          "level": "BC Grade 12",
+          "packPath": "/content/courses/anatomy12.json"
+        },
+        {
+          "id": "biology",
+          "name": "AP Biology 12",
+          "icon": "fa-solid fa-dna",
+          "level": "BC Grade 12",
+          "packPath": "/content/courses/biology.json"
+        },
+        {
+          "id": "precalc12_masterclass",
+          "name": "Pre-Calc 12 Masterclass",
+          "icon": "fa-solid fa-chalkboard-user",
+          "level": "Full year notes",
+          "url": "/school/PC12_Masterclass.html",
+          "notesPath": "/content/notes/precalc12_masterclass.json"
+        },
+        {
+          "id": "biology_masterclass",
+          "name": "AP Biology Masterclass",
+          "icon": "fa-solid fa-chalkboard-user",
+          "level": "Full year notes",
+          "url": "/school/Biology_Masterclass.html",
+          "notesPath": "/content/notes/biology_masterclass.json"
+        }
+      ]
+    },
     "skills": {
       "title": "Choose a skill",
       "subjects": [
@@ -484,14 +484,5 @@
         }
       ]
     }
-  },
-  "order": [
-    "school",
-    "math",
-    "science",
-    "languages",
-    "programming",
-    "skills",
-    "books"
-  ]
+  }
 }
