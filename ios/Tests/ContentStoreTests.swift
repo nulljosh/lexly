@@ -19,6 +19,15 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertNotNil(catalog.categories["school"], "expected a school category")
     }
 
+    func testCategoryOrderLeadsWithSchool() throws {
+        let url = resourcesDir.appendingPathComponent("catalog.json")
+        let catalog = try JSONDecoder().decode(Catalog.self, from: try Data(contentsOf: url))
+        XCTAssertEqual(catalog.categoryKeys.first, "school")
+        XCTAssertEqual(Set(catalog.categoryKeys), Set(catalog.categories.keys),
+                       "every category must appear exactly once in the ordered list")
+        XCTAssertEqual(catalog.categoryKeys.count, catalog.categories.count)
+    }
+
     func testCoursePackDecodes() throws {
         let url = resourcesDir.appendingPathComponent("courses/anatomy12.json")
         let data = try Data(contentsOf: url)

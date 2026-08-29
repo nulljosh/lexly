@@ -4,7 +4,7 @@
 
 ![version](https://img.shields.io/badge/version-1.1.3-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/app/id6783501611) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
 
-A gamified language and skill learning app. Web + native iOS/macOS.
+A study app for the BC Grade 12 curriculum — Pre-Calculus 11/12, Anatomy & Physiology 12, AP Biology 12 — with a supporting library of math, science, language and skill courses. Web + native iOS/macOS.
 
 Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
 
@@ -25,7 +25,8 @@ Note: the old standalone "Lexly Mac" record (6783501927) is a dead orphan supers
 
 ## Features
 
-- 40+ courses: languages, programming, math, science, school (PC12, AP Bio 12), skills
+- BC Grade 12 core: Pre-Calculus 11/12, Anatomy & Physiology 12, AP Biology 12, plus Masterclass long-form notes
+- Supporting library: math, science, 12 languages, programming, skills, book summaries
 - Spaced repetition review, XP, streaks, hearts, achievements
 - Speech recognition for language courses
 - Native iOS/macOS: SF Symbol icon chips, spring animations, per-unit progress

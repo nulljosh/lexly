@@ -120,7 +120,7 @@ function lessonPassed(correctAnswers, totalQuestions, hearts) {
 }
 
 let gameState = {
-    selectedCategory: 'languages',
+    selectedCategory: 'school',
     selectedSubject: null,
     currentQuestion: 0,
     totalQuestions: 10,
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initSpeechRecognition();
     updateStats();
     await loadCatalog();
-    renderSubjects('languages');
+    renderSubjects('school');
     initializeApp();
 });
 

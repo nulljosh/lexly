@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#fafafa">
-<title>Lexly — Learn anything</title>
-<meta name="description" content="40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.">
+<title>Lexly — BC Grade 12 course study</title>
+<meta name="description" content="Study Pre-Calculus 11 and 12, Anatomy &amp; Physiology 12 and AP Biology 12 against the provincial course outlines, with unit trees, spaced repetition and full course notes.">
 <meta name="apple-itunes-app" content="app-id=6783501611">
 <link rel="icon" href="/assets/icon.svg?v=2">
 <style>
@@ -146,9 +146,9 @@
 
 <section class="hero">
   <div class="hero-copy">
-    <div class="eyebrow">Gamified learning</div>
-    <h1>Learn <span class="lx-cycle" id="lxCycle"><span class="lx-word">anything</span></span>.</h1>
-    <p>40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.</p>
+    <div class="eyebrow">BC Grade 12 coursework</div>
+    <h1>Study <span class="lx-cycle" id="lxCycle"><span class="lx-word">Pre-Calculus 12</span></span>.</h1>
+    <p>Pre-Calculus 11 and 12, Anatomy &amp; Physiology 12 and AP Biology 12, written to the provincial course outlines — with unit trees, spaced repetition, and full course notes to read straight through.</p>
     <div class="hero-actions">
       <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
       <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
@@ -179,8 +179,8 @@
     </div>
     <div class="card">
       <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 5.5 6 11a6 6 0 0 1-12 0c0-1.5.5-2.5 1.5-3.8 1 .8 1.5 0 1.3-1C8.4 6.8 9.8 4 12 2z"/></svg></div>
-      <div class="card-title">Streaks &amp; XP</div>
-      <div class="card-desc">Hearts, streaks, and achievements keep a daily habit fun instead of a chore.</div>
+      <div class="card-title">Course notes</div>
+      <div class="card-desc">Masterclass units hold the long-form notes for each course — read straight through when drilling isn’t the point.</div>
     </div>
     <div class="card">
       <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9c-.16 0-.32.01-.47.03A6 6 0 0 0 6 12.5a4.5 4.5 0 0 0 .5 9h11z"/></svg></div>
@@ -193,15 +193,15 @@
 <section id="courses">
   <div class="courses-inner">
     <div>
-      <div class="eyebrow">One catalog, every subject</div>
-      <h2>40+ courses, one streak.</h2>
-      <p>Switch between a new language and a BC curriculum masterclass without losing your XP or your streak.</p>
+      <div class="eyebrow">The Grade 12 core, and what backs it up</div>
+      <h2>Four provincial courses, and the groundwork under them.</h2>
+      <p>Drop into a Grade 12 unit, then back to the algebra or biology it assumes you already have.</p>
       <div class="category-pills">
-        <div class="category-pill">Languages</div>
-        <div class="category-pill">Programming</div>
+        <div class="category-pill">BC Grade 12</div>
         <div class="category-pill">Math</div>
         <div class="category-pill">Science</div>
-        <div class="category-pill">School</div>
+        <div class="category-pill">Languages</div>
+        <div class="category-pill">Programming</div>
         <div class="category-pill">Skills</div>
         <div class="category-pill">Books</div>
       </div>
@@ -251,15 +251,14 @@
 
 <script>
 // Cycle the headline word through the languages Lexly teaches. Pure decoration:
-// if this never runs the headline still reads "Learn anything."
+// if this never runs the headline still reads "Study Pre-Calculus 12."
 (function () {
   var host = document.getElementById('lxCycle');
   if (!host || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var WORDS = [
-    'anything', 'cualquier cosa', 'n\u2019importe quoi', 'irgendetwas', 'qualsiasi cosa',
-    'qualquer coisa', '\u4f55\u3067\u3082', '\uc544\ubb34\uac83\uc774\ub098', '\u4efb\u4f55\u4e8b',
-    '\u0447\u0442\u043e \u0443\u0433\u043e\u0434\u043d\u043e', '\u0623\u064a \u0634\u064a\u0621', 'vad som helst'
+    'Pre-Calculus 12', 'AP Biology 12', 'Anatomy & Physiology 12', 'Pre-Calculus 11'
   ];
+
   var i = 0;
   setInterval(function () {
     i = (i + 1) % WORDS.length;
