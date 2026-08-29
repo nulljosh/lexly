@@ -6,6 +6,7 @@
 - **Do not rebuild, bump, or resubmit the build.** Nothing in the binary was cited, and resubmitting the same build has failed for every other app in the wave and deepens the pattern.
 - [ ] **Subtitle + privacy URL still queued.** `subtitle` → "Languages and BC course notes" and `privacyPolicyUrl` → `lexly.heyitsmejosh.com/privacy` live on the app-info record, which is locked while macOS 1.1.5 is IN_REVIEW. **`asc metadata push` reports these as applied and they silently do not land** — always re-pull to verify. Push again once macOS review concludes.
 - [ ] **Watch macOS 1.1.5** (submission `e3d14cbc-a175-4267-baaf-b693a33bc4a6`, IN_REVIEW on the same build). If it also comes back 4.3(a), file the same reply on the Mac thread.
+- **Repositioning reverted (2026-08-29, `a5df300`).** The "lead with BC Grade 12 everywhere" commit demoted languages off the default tab and out of the listing copy. Languages are core to the app, not filler — reverted in full. The 4.3(a) read is driven by the screenshots and the account's submission pattern, not by which tab opens first; fix it there instead.
 - Canonical metadata now lives in `metadata/` at the repo root. `ios/fastlane/metadata/` is dead legacy that still says "LingoAce"/"LingoPlay" — never push from it.
 
 ## Shipped 2026-08-27 — landing page App Store CTA deduplication
