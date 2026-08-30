@@ -1383,8 +1383,8 @@ function renderQuestion(question) {
     const typeDiv = document.createElement('div');
     typeDiv.className = 'question-type';
 
-    if (question.type === 'translation' || question.type === 'mathChoice') {
-        typeDiv.textContent = question.type === 'mathChoice' ? 'Choose the correct answer' : 'Select the correct translation';
+    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze') {
+        typeDiv.textContent = CHOICE_PROMPTS[question.type];
         container.appendChild(typeDiv);
 
         const questionText = document.createElement('div');
@@ -1486,6 +1486,34 @@ function renderQuestion(question) {
                 });
             }
         }
+    } else if (question.type === 'match') {
+        typeDiv.textContent = 'Tap the matching pairs';
+        container.appendChild(typeDiv);
+
+        gameState.matchState = { selected: null, matched: 0, missed: false };
+        const total = question.pairs.length;
+
+        const grid = document.createElement('div');
+        grid.className = 'match-grid';
+        const left = question.pairs.map((pair, index) => ({ text: pair[0], key: index, side: 'l' }));
+        const right = shuffle(question.pairs.map((pair, index) => ({ text: pair[1], key: index, side: 'r' })));
+
+        [left, right].forEach((column) => {
+            const col = document.createElement('div');
+            col.className = 'match-col';
+            column.forEach((cell) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'match-btn';
+                btn.dataset.key = String(cell.key);
+                btn.dataset.side = cell.side;
+                btn.textContent = cell.text;
+                btn.addEventListener('click', () => selectMatch(btn, question, total));
+                col.appendChild(btn);
+            });
+            grid.appendChild(col);
+        });
+        container.appendChild(grid);
     } else if (question.type === 'listening') {
         typeDiv.textContent = 'Type what you hear';
         container.appendChild(typeDiv);
@@ -1560,6 +1588,58 @@ function renderQuestion(question) {
     gameState.currentQuestionData = question;
 }
 
+// Prompt line per choice-rendered exercise type.
+const CHOICE_PROMPTS = {
+    translation: 'Select the correct translation',
+    mathChoice: 'Choose the correct answer',
+    cloze: 'Fill in the blank',
+};
+
+function shuffle(items) {
+    const copy = [...items];
+    for (let index = copy.length - 1; index > 0; index -= 1) {
+        const swap = Math.floor(Math.random() * (index + 1));
+        [copy[index], copy[swap]] = [copy[swap], copy[index]];
+    }
+    return copy;
+}
+
+// Two taps make a pair. A wrong pair is remembered in `missed` so the whole
+// exercise still scores as incorrect even though the user can keep going.
+function selectMatch(button, question, total) {
+    const state = gameState.matchState;
+    if (!state || button.classList.contains('matched')) return;
+
+    const previous = state.selected;
+    if (!previous) {
+        button.classList.add('selected');
+        state.selected = button;
+        return;
+    }
+    if (previous === button) {
+        button.classList.remove('selected');
+        state.selected = null;
+        return;
+    }
+    previous.classList.remove('selected');
+    state.selected = null;
+
+    if (previous.dataset.side === button.dataset.side) return;
+
+    if (previous.dataset.key === button.dataset.key) {
+        previous.classList.add('matched');
+        button.classList.add('matched');
+        state.matched += 1;
+        if (state.matched === total) gameState.currentAnswer = question.answer;
+    } else {
+        state.missed = true;
+        [previous, button].forEach((cell) => {
+            cell.classList.add('match-wrong');
+            setTimeout(() => cell.classList.remove('match-wrong'), 400);
+        });
+    }
+}
+
 function selectChoice(button) {
     document.querySelectorAll('.choice-btn').forEach((item) => {
         item.classList.remove('selected');
@@ -1602,7 +1682,9 @@ function checkAnswer() {
     const question = gameState.currentQuestionData;
     let isCorrect = false;
 
-    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'sentence') {
+    if (question.type === 'match') {
+        isCorrect = !gameState.matchState?.missed;
+    } else if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze' || question.type === 'sentence') {
         isCorrect = gameState.currentAnswer === question.answer;
     } else if (question.type === 'listening') {
         const input = document.getElementById('listeningInput')?.value.trim();
@@ -1650,7 +1732,7 @@ function checkAnswer() {
     button.textContent = 'Continue';
     button.onclick = nextQuestion;
 
-    if (question.type === 'translation' || question.type === 'mathChoice') {
+    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze') {
         document.querySelectorAll('.choice-btn').forEach((item) => {
             item.style.pointerEvents = 'none';
             if (item.dataset.choice === question.answer) item.classList.add('correct');

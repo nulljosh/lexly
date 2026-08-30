@@ -63,6 +63,8 @@ struct CoursePack: Decodable {
     let name: String
     let category: String
     let level: String
+    /// BCP-47 tag the web app uses to pick a TTS voice. Optional: non-language packs omit it.
+    let lang: String?
     let units: [Unit]
 }
 
@@ -83,6 +85,12 @@ struct Exercise: Decodable, Identifiable {
     let question: String
     let answer: String
     let choices: [String]?
+    /// Word bank for `sentence`. Dropping this silently rendered a bare text field.
+    let words: [String]?
+    /// Text spoken aloud for `listening`. Dropping this made the exercise unanswerable.
+    let audio: String?
+    /// Pairs for `match`, as [prompt, answer].
+    let pairs: [[String]]?
     let id: String
 }
 
@@ -91,11 +99,22 @@ struct LingoProfile: Decodable {
     var avatar_id: String?
 }
 
+/// SM-2 card, field-for-field the shape the web app writes to `lingo_progress.srs`
+/// (see `updateSrs` in js/lingo-app.js) so progress syncs both ways.
+struct SrsCard: Codable {
+    var easiness: Double = 2.5
+    var interval: Int = 1
+    var repetitions: Int = 0
+    var nextReview: String = ""
+}
+
 struct LingoProgress: Codable {
     var xp: Int = 0
     var streak: Int = 0
+    var hearts: Int = 5
     var completedLessonIds: Set<String> = []
     var lastPlayed: String = ""
+    var srs: [String: SrsCard] = [:]
 }
 
 struct DBProgress: Codable {
@@ -107,5 +126,6 @@ struct DBProgress: Codable {
     var trophy_ids: [String]
     var lessons_completed: [String: Bool]
     var last_played: String?
+    var srs: [String: SrsCard]
     var updated_at: String
 }

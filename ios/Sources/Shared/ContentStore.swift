@@ -20,8 +20,10 @@ final class ContentStore {
             .select().eq("id", value: uid).single().execute().value as DBProgress? else { return }
         progress.xp = row.xp
         progress.streak = row.streak
+        progress.hearts = row.hearts
         progress.lastPlayed = row.last_played ?? ""
         progress.completedLessonIds = Set(row.lessons_completed.keys)
+        progress.srs = row.srs
         save()
     }
 
@@ -38,7 +40,52 @@ final class ContentStore {
     }
 
     func recordAnswer(correct: Bool, exerciseId: String, lessonId: String) {
-        if correct { progress.xp += 10 }
+        if correct { progress.xp += 10 } else { progress.hearts = max(0, progress.hearts - 1) }
+        updateSrs(exerciseId, correct: correct)
+        save()
+    }
+
+    /// Web parity: `LESSON_PASS_RATIO` / `lessonPassed` in js/lingo-app.js.
+    static let lessonPassRatio = 0.6
+
+    func lessonPassed(correct: Int, total: Int) -> Bool {
+        guard progress.hearts > 0, total > 0 else { return false }
+        return Double(correct) / Double(total) >= ContentStore.lessonPassRatio
+    }
+
+    func startLesson() {
+        progress.hearts = 5
+    }
+
+    /// SM-2, ported verbatim from `updateSrs` in js/lingo-app.js so cards written on
+    /// either platform stay interchangeable through the shared `srs` column.
+    private func updateSrs(_ exerciseId: String, correct: Bool) {
+        var card = progress.srs[exerciseId] ?? SrsCard(nextReview: ContentStore.isoDay(Date()))
+        if correct {
+            if card.repetitions == 0 { card.interval = 1 }
+            else if card.repetitions == 1 { card.interval = 6 }
+            else { card.interval = Int((Double(card.interval) * card.easiness).rounded()) }
+            card.repetitions += 1
+        } else {
+            card.repetitions = 0
+            card.interval = 1
+        }
+        let quality = correct ? 5.0 : 2.0
+        card.easiness = max(1.3, card.easiness + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)))
+        let next = Calendar.current.date(byAdding: .day, value: card.interval, to: Date()) ?? Date()
+        card.nextReview = ContentStore.isoDay(next)
+        progress.srs[exerciseId] = card
+    }
+
+    var dueCount: Int {
+        let now = Date()
+        return progress.srs.values.filter {
+            (ISO8601DateFormatter().date(from: $0.nextReview) ?? now) <= now
+        }.count
+    }
+
+    private static func isoDay(_ date: Date) -> String {
+        ISO8601DateFormatter().string(from: date)
     }
 
     func completeLesson(_ subjectId: String, _ lessonId: String) {
@@ -75,10 +122,11 @@ final class ContentStore {
         Task {
             guard let uid = try? await supabase.auth.session.user.id.uuidString else { return }
             let row = DBProgress(
-                id: uid, xp: snap.xp, streak: snap.streak, hearts: 5,
+                id: uid, xp: snap.xp, streak: snap.streak, hearts: snap.hearts,
                 completed_subjects: [], trophy_ids: [],
                 lessons_completed: Dictionary(uniqueKeysWithValues: snap.completedLessonIds.map { ($0, true) }),
                 last_played: snap.lastPlayed.isEmpty ? nil : snap.lastPlayed,
+                srs: snap.srs,
                 updated_at: ISO8601DateFormatter().string(from: Date())
             )
             try? await supabase.from("lingo_progress").upsert(row).execute()

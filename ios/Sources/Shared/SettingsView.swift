@@ -54,6 +54,11 @@ struct SettingsView: View {
                     Text("Sign in to sync your progress across devices.")
                 }
             }
+            Section {
+                Link("Sentence credits", destination: URL(string: "https://github.com/nulljosh/lexly/blob/main/ATTRIBUTION.md")!)
+            } footer: {
+                Text("Language sentences come from the Tatoeba Project, licensed CC-BY 2.0 FR.")
+            }
         }
         .navigationTitle("Settings")
         .task(id: auth.isSignedIn) { await loadProfile() }

@@ -26,6 +26,8 @@ Note: the old standalone "Lexly Mac" record (6783501927) is a dead orphan supers
 ## Features
 
 - 40+ courses: languages, programming, math, science, school (PC12, AP Bio 12), skills
+- 2,600+ exercises, ~2,000 of them across 12 languages
+- Exercise types: multiple choice, word bank, fill-in-the-blank, matching pairs, listening
 - Spaced repetition review, XP, streaks, hearts, achievements
 - Speech recognition for language courses
 - Native iOS/macOS: SF Symbol icon chips, spring animations, per-unit progress
@@ -41,6 +43,7 @@ js/lingo-app.js         # state, auth/profile, lesson rendering
 js/games.js             # game-type logic
 content/catalog.json    # course catalog
 content/courses/        # individual course packs (JSON)
+scripts/build-language-course.mjs  # generates language packs from Tatoeba
 ios/Sources/Shared/     # SwiftUI views (cross-platform)
 ios/Sources/iOS/        # iOS entry point
 ios/Sources/macOS/      # macOS entry point

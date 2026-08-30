@@ -13,7 +13,7 @@ struct UnitsView: View {
                     Section {
                         ForEach(unit.lessons) { lesson in
                             NavigationLink {
-                                LessonView(store: store, subjectId: subject.id, lesson: lesson)
+                                LessonView(store: store, subjectId: subject.id, lesson: lesson, lang: course.lang)
                             } label: {
                                 HStack {
                                     Text(lesson.title)

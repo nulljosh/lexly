@@ -26,6 +26,25 @@ final class ContentStoreTests: XCTestCase {
         XCTAssertFalse(pack.units.isEmpty)
     }
 
+    // Regression: the Swift Exercise model used to omit `words` and `audio`, so word-bank
+    // exercises decoded with no bank and listening exercises with no audio to play.
+    func testExerciseKeepsWordBankAndAudio() throws {
+        let url = resourcesDir.appendingPathComponent("courses/spanish.json")
+        let pack = try JSONDecoder().decode(CoursePack.self, from: try Data(contentsOf: url))
+        let exercises = pack.units.flatMap { $0.lessons.flatMap(\.exercises) }
+
+        let sentence = try XCTUnwrap(exercises.first { $0.type == "sentence" })
+        XCTAssertFalse(sentence.words?.isEmpty ?? true, "sentence exercise decoded without a word bank")
+
+        let listening = try XCTUnwrap(exercises.first { $0.type == "listening" })
+        XCTAssertFalse(listening.audio?.isEmpty ?? true, "listening exercise decoded without audio")
+
+        let match = try XCTUnwrap(exercises.first { $0.type == "match" })
+        XCTAssertEqual(match.pairs?.first?.count, 2)
+
+        XCTAssertEqual(pack.lang, "es-ES", "pack language is needed to pick a TTS voice")
+    }
+
     func testMasterclassNotesDecode() throws {
         let url = resourcesDir.appendingPathComponent("notes/precalc12_masterclass.json")
         let data = try Data(contentsOf: url)

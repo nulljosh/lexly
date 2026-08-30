@@ -1,5 +1,45 @@
 # lexly Roadmap
 
+## Shipped 2026-08-30 — language content 10x + iOS exercise parity
+
+**iOS was rendering a broken subset of the web app's exercises.** `Exercise` in
+`ios/Sources/Shared/Models.swift` decoded only `type/question/answer/choices/id`, silently
+dropping `words` and `audio`. A `sentence` exercise therefore rendered as a bare text field
+with no word bank, and a `listening` exercise rendered "Type what you hear" with **no audio
+at all** — unanswerable. `ContentStore.recordAnswer` was `if correct { xp += 10 }`: no
+hearts, no spaced repetition, both of which the web app has had for months.
+
+Fixed: added `words`/`audio`/`pairs` to the model and `lang` to `CoursePack`; rewrote
+`LessonView` to switch on `exercise.type` instead of on `choices != nil`; added a word-bank
+renderer, `AVSpeechSynthesizer` playback with a replay button, and a hearts row; ported SM-2
+and the `LESSON_PASS_RATIO` pass rule from `js/lingo-app.js` verbatim so cards written on
+either platform stay interchangeable through the shared `lingo_progress.srs` column.
+
+**Content: 830 → 2,615 exercises; languages 195 → 1,995.** Eleven of twelve languages were
+sitting at exactly 1 unit / 3 lessons / 15 exercises. `scripts/build-language-course.mjs`
+generates packs from Tatoeba sentence pairs (CC-BY 2.0 FR) ranked by OpenSubtitles word
+frequency, appending generated units *after* the hand-authored ones so existing exercise ids
+— and therefore committed SRS cards and `lessons_completed` keys — never orphan. Re-runnable
+and idempotent; corpora cache in gitignored `cache/`. Hindi's corpus only supports 9 units,
+so unit count adapts rather than failing.
+
+Attribution is required by CC-BY and is in place: `ATTRIBUTION.md`, a landing-page footer
+link, and a Settings row on iOS/macOS.
+
+**Two new exercise types on both platforms:** `match` (tap the matching pairs) and `cloze`
+(fill in the blank).
+
+`tools/validate-catalog.js` now type-checks every exercise against what the renderers on
+*both* platforms actually read — the guard that would have caught the iOS drop. It found two
+genuine issues on first run (duplicate multiple-choice options, and rows where the
+"translation" equalled its own prompt), both fixed at the generator.
+
+**Deliberately not done:** leagues/leaderboards (an empty leaderboard is worse than none
+until there are users) and the winding-path UI (a re-skin, not a capability).
+
+**Not submitted.** Per the 4.3(a) note below, the iOS build was not bumped, archived, or
+resubmitted. This work sits on main until the appeal resolves.
+
 ## App Review — Guideline 4.3(a), iOS 1.1.5 (2026-08-28)
 
 - [ ] **iOS 1.1.5 REJECTED under Guideline 4.3(a) Design: Spam.** Submission `16ca1b81-3421-4fcd-af22-c321b5983c31`, thread `1d490667-6b7d-34fb-a662-42e561a595a0`, rejected 08:14 PT. Apple's letter is the byte-identical wave boilerplate and names no comparison app. Lexly is the seventh app hit; see `~/Documents/Code/notes/appeal-4-3-spam.md`.
