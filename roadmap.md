@@ -24,6 +24,15 @@
   chemistry, biology, and the rest of the 1-unit packs). Tatoeba does not cover them, so they need
   a different generator or hand authoring.
 - [ ] Deliberately skipped, revisit when there are users: leagues/leaderboards (needs a new table +
+- [ ] **Hero screenshots are stale (show pre-auth-gate catalog).** The landing page marketing
+  images display the course list that authenticated users now see, but a logged-out visitor cannot
+  reach this screen (auth gate on renderSubjects). Screenshots need to show what a visitor actually
+  encounters (sign-in screen or a sample lesson) or be honest about the login requirement.
+- [ ] **No screenshot of an actual lesson.** Landing page describes five exercise types (multiple-choice,
+  match, cloze, word-bank, listening) but has zero visual proof. One lesson-in-progress screenshot
+  would give visitors real sense of what they are learning.
+- [ ] **No social proof.** No testimonials, review scores, user count, or credibility markers.
+  Not a blocker for v1, but typical SaaS landing pages have at least one "X students learned Y".
   RLS, renders empty until there is a user base) and the winding-path unit UI (a re-skin).
 
 ## Shipped 2026-08-30 — language content 10x + iOS exercise parity
