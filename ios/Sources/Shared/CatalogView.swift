@@ -7,11 +7,24 @@ struct CatalogView: View {
     @State private var showingSettings = false
     #endif
 
+    /// Deliberate order, matching the web app's default of `languages` first
+    /// (js/lingo-app.js). Alphabetical sorting put `books` at the top, so a language
+    /// app opened as a list of book summaries -- which is also what a reviewer saw.
+    private static let categoryOrder = [
+        "languages", "school", "math", "science", "programming", "skills", "computers", "books",
+    ]
+
+    private func orderedCategoryKeys(_ catalog: Catalog) -> [String] {
+        let known = CatalogView.categoryOrder.filter { catalog.categories[$0] != nil }
+        let rest = catalog.categories.keys.filter { !CatalogView.categoryOrder.contains($0) }.sorted()
+        return known + rest
+    }
+
     var body: some View {
         NavigationStack {
             List {
                 if let catalog = store.catalog {
-                    ForEach(Array(catalog.categories.keys.sorted()), id: \.self) { key in
+                    ForEach(orderedCategoryKeys(catalog), id: \.self) { key in
                         let category = catalog.categories[key]!
                         Section(category.title) {
                             ForEach(category.subjects) { subject in

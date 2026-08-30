@@ -57,6 +57,34 @@ Supabase (shared `spark` project, URL + anon key in `js/lingo-app.js`). Tables
 SM-2 card shape must stay identical on each. Email/password plus Sign in with Apple and
 Google. Stripe Pro subscription via `supabase/functions/`.
 
+## Auth differs by platform, on purpose
+
+The **web** app gates the course catalog behind a real account (one choke point in
+`renderSubjects`), with `/app/?demo=1` as the no-signup escape hatch the landing page
+links to.
+
+**iOS/macOS deliberately do not gate content.** Sign-in there buys progress sync, not
+access. Two reasons, and both should be re-checked before anyone "fixes" the
+inconsistency: App Review guideline 5.1.1(v) treats a registration wall in front of
+features that don't need an account as a rejection reason, and course content here is
+static and works offline. Lexly iOS is also on an open 4.3(a) appeal, so a login wall
+risks stacking a second, different rejection on top of it.
+
+Revisit once the 4.3(a) appeal resolves.
+
+## No book content
+
+Lexly ships **no book summaries**. A `books` category existed in `content/catalog.json`
+with 15 entries and was removed on 2026-08-30. It was unreachable on web (no matching
+`data-category` tab) but `CatalogView` sorted categories alphabetically, so `books`
+sorted first and the iOS app *opened* on a list of book summaries — which is what a
+reviewer saw. That content is Bookrank's product, and Apple had already rejected Lexly
+macOS 1.1.4 under Guideline 2.1 for "book or magazine content" (recorded at the time as
+a China territory problem; the real cause was this). The notes now live in
+`bookrank/content/masterclasses/`.
+
+`CatalogView.categoryOrder` is now explicit — do not go back to `.sorted()`.
+
 ## Conventions
 
 - Lesson content is data-driven via JSON, never hardcoded per-lesson HTML

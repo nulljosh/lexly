@@ -1,5 +1,33 @@
 # lexly Roadmap
 
+## Shipped 2026-08-30 — removed book summaries, fixed the iOS opening screen
+
+**The iOS app opened on a list of book summaries.** `CatalogView` rendered categories
+with `catalog.categories.keys.sorted()`, so `books` sorted first alphabetically — while
+the web app explicitly starts at `languages`. A language-learning app therefore opened,
+for every user and every App Review reviewer, as a book-summary app.
+
+Two fixes: `CatalogView.categoryOrder` is now an explicit list (languages first), and
+the `books` category is gone from `content/catalog.json` entirely — 15 entries, all
+notes-only, so the exercise/course/lesson counts are unchanged. The 15 masterclass JSON
+files moved to `bookrank/content/masterclasses/` rather than being deleted.
+
+**This is very likely the real cause of the Guideline 2.1 rejection on macOS 1.1.4**,
+which cited "book or magazine content" and a China publishing permit. That was recorded
+as a territory-licensing problem and worked around by dropping CHN. The actual problem
+was that Lexly contained book content at all. It also plausibly fed the 4.3(a) spam
+read: a "language app" whose first screen is book summaries looks like a grab-bag.
+
+Note the category was already unreachable on web — `app/index.html` has no `books`
+tab — so it was only ever visible on iOS.
+
+## Verified on device 2026-08-30 — all five exercise types, iOS simulator
+
+Driven with AXe on an iPhone 17 Pro simulator, not just compiled: translation, cloze,
+word bank (chips move to the answer row, Check enables), listening (Play button present
+and audible), and match (two-column grid). Hearts decrement on wrong answers. This
+closes the "iOS never actually run" gap.
+
 ## Open — gaps left by the 2026-08-30 content/parity work
 
 - [ ] **Nothing has been opened in a real browser.** The Chrome extension was not connected, so
