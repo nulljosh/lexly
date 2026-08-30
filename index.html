@@ -110,6 +110,25 @@
   .badge { padding: 0.15rem 0.5rem; border-radius: var(--radius-pill); font-size: 0.6875rem; font-weight: 700; }
   .badge-live { background: rgba(45,122,80,0.1); color: var(--success); }
   .badge-pending { background: rgba(26,26,26,0.06); color: var(--text-muted); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 1100px; margin: 0 auto; padding: 0 2rem 5rem; }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--font-display); font-size: 2.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .stat-label { font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.35rem; }
+  .types-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+  .type-row { display: grid; grid-template-columns: 180px 1fr; gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--border); }
+  .type-row:last-child { border-bottom: 1px solid var(--border); }
+  .type-name { font-weight: 600; font-size: 0.9375rem; }
+  .type-desc { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
+  .prose { max-width: 640px; margin: 0 auto; color: var(--text-secondary); font-size: 1rem; line-height: 1.7; text-align: center; }
+  .prose a { color: var(--accent); }
+  .faq-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .faq-q { font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
+  @media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .type-row { grid-template-columns: 1fr; gap: 0.35rem; }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
   .platform-detail { font-size: 0.8125rem; color: var(--text-muted); }
 
   footer { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8125rem; color: var(--text-muted); }
@@ -138,6 +157,8 @@
     <nav class="main-nav">
       <a href="#features">Features</a>
       <a href="#courses">Courses</a>
+      <a href="#practice">Practice</a>
+      <a href="#faq">FAQ</a>
       <a href="#platforms">Platforms</a>
     </nav>
     <a href="/app/" class="header-cta">Get started</a>
@@ -148,7 +169,7 @@
   <div class="hero-copy">
     <div class="eyebrow">Gamified learning</div>
     <h1>Learn <span class="lx-cycle" id="lxCycle"><span class="lx-word">anything</span></span>.</h1>
-    <p>40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.</p>
+    <p>2,600 exercises across 44 courses &mdash; 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition make it stick.</p>
     <div class="hero-actions">
       <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
       <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
@@ -159,6 +180,13 @@
     <img class="shot-1" src="/assets/marketing/catalog.png" alt="Lexly course catalog screen">
     <img class="shot-2" src="/assets/marketing/course.png" alt="Lexly course screen">
   </div>
+</section>
+
+<section class="stats" aria-label="Lexly by the numbers">
+  <div class="stat"><div class="stat-num">2,600</div><div class="stat-label">exercises</div></div>
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">languages</div></div>
+  <div class="stat"><div class="stat-num">44</div><div class="stat-label">courses</div></div>
+  <div class="stat"><div class="stat-num">523</div><div class="stat-label">lessons</div></div>
 </section>
 
 <section id="features">
@@ -212,6 +240,73 @@
   </div>
 </section>
 
+<section id="practice">
+  <div class="section-head">
+    <div class="eyebrow">More than multiple choice</div>
+    <h2>Five ways to practise</h2>
+  </div>
+  <div class="types-list">
+    <div class="type-row">
+      <div class="type-name">Translate</div>
+      <div class="type-desc">Pick the right translation, or say it out loud &mdash; language courses accept your voice as the answer.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-name">Word bank</div>
+      <div class="type-desc">Build the sentence from scattered words, with decoys mixed in so word order actually has to be right.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-name">Fill in the blank</div>
+      <div class="type-desc">One word removed from a real sentence. Tests the word in context instead of on a flashcard.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-name">Matching pairs</div>
+      <div class="type-desc">Tap four sentences to their translations. Fast, and it catches the ones you only half know.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-name">Listening</div>
+      <div class="type-desc">Type what you hear, spoken in the course's own language. Replay it as many times as you need.</div>
+    </div>
+  </div>
+</section>
+
+<section id="sentences">
+  <div class="section-head">
+    <div class="eyebrow">Where the sentences come from</div>
+    <h2>Written by people, not generated</h2>
+  </div>
+  <p class="prose">
+    Language exercises are built from the <a href="https://tatoeba.org" target="_blank" rel="noopener">Tatoeba Project</a>,
+    an open collection of sentences written and translated by volunteers since 2006. Lessons are ordered by how common the
+    vocabulary actually is, so the first unit teaches words you will genuinely hear. Tatoeba is licensed CC-BY 2.0 FR and
+    is <a href="https://github.com/nulljosh/lexly/blob/main/ATTRIBUTION.md" target="_blank" rel="noopener">credited in full</a>.
+  </p>
+</section>
+
+<section id="faq">
+  <div class="section-head">
+    <div class="eyebrow">Before you start</div>
+    <h2>Questions</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="card">
+      <div class="faq-q">Is it free?</div>
+      <div class="faq-a">Yes. Every course and every exercise is free, on all three platforms.</div>
+    </div>
+    <div class="card">
+      <div class="faq-q">Do I need an account?</div>
+      <div class="faq-a">Yes &mdash; courses and progress are tied to your account, so your streak and review queue follow you between devices.</div>
+    </div>
+    <div class="card">
+      <div class="faq-q">How does review work?</div>
+      <div class="faq-a">A real SM-2 spaced-repetition schedule. Each exercise gets its own interval that stretches as you keep getting it right, and resets when you don't.</div>
+    </div>
+    <div class="card">
+      <div class="faq-q">Is the source available?</div>
+      <div class="faq-a">All of it. Lexly is MIT licensed and the full repository, including the course generator, is on GitHub.</div>
+    </div>
+  </div>
+</section>
+
 <section id="platforms">
   <div class="section-head">
     <div class="eyebrow">Everywhere you learn</div>
@@ -235,9 +330,9 @@
     <div class="card">
       <div class="platform-row">
         <div class="platform-name">macOS</div>
-        <div class="badge badge-pending">Pending</div>
+        <div class="badge badge-live">Live</div>
       </div>
-      <div class="platform-detail">Awaiting App Store review</div>
+      <div class="platform-detail">Mac &middot; App Store</div>
     </div>
   </div>
 </section>
