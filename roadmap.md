@@ -1,5 +1,31 @@
 # lexly Roadmap
 
+## Open — gaps left by the 2026-08-30 content/parity work
+
+- [ ] **Nothing has been opened in a real browser.** The Chrome extension was not connected, so
+  `match`, `cloze`, the word bank and listening were verified headlessly in jsdom against the real
+  `app/index.html` + `js/lingo-app.js` (14/14 assertions, including a deliberate mispair grading
+  incorrect). Logic and DOM are proven; **CSS and layout are not** — `.match-grid` two-column
+  styling has never been rendered. Open the app and look before trusting the visuals.
+- [ ] **The jsdom harness is not in the repo.** It ran from a scratch dir because it needs `jsdom`
+  and this repo is deliberately dependency-free with no build step. Either re-create it when needed
+  or decide the dep is worth it; right now that coverage is not repeatable.
+- [ ] **iOS `match` and word-bank UI have never been run.** They compile and
+  `ContentStoreTests` proves the JSON decodes with `words`/`audio`/`pairs` intact, but no one has
+  tapped through a lesson in the simulator. `FlowRow` (the custom wrapping `Layout`) and
+  `MatchGrid` are the untested pieces.
+- [ ] **Generated content is ordered by word frequency, not by teaching order.** Unit 1 is
+  "statistically most common words", not "greetings". This is the real remaining gap versus a
+  designed curriculum, and no amount of extra sentences fixes it.
+- [ ] **No native-speaker review of ~1,800 generated exercises.** Tatoeba sentences are
+  human-written so the floor is high, but Hindi, Arabic, Korean and Chinese have had no check at
+  all beyond schema validation.
+- [ ] **~23 non-language courses are still 15-exercise stubs** (algebra, chess, geography,
+  chemistry, biology, and the rest of the 1-unit packs). Tatoeba does not cover them, so they need
+  a different generator or hand authoring.
+- [ ] Deliberately skipped, revisit when there are users: leagues/leaderboards (needs a new table +
+  RLS, renders empty until there is a user base) and the winding-path unit UI (a re-skin).
+
 ## Shipped 2026-08-30 — language content 10x + iOS exercise parity
 
 **iOS was rendering a broken subset of the web app's exercises.** `Exercise` in
