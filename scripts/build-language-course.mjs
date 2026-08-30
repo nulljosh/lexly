@@ -49,14 +49,110 @@ const LESSONS_PER_UNIT = 3;
 const SENTENCES_PER_LESSON = 8;
 const PER_UNIT = LESSONS_PER_UNIT * SENTENCES_PER_LESSON;
 
-// Difficulty ladder, one name per unit. Units are ordered by vocabulary difficulty and
-// nothing else, so the names say difficulty and nothing else -- an earlier pass named
-// them by topic ("Food & Drink") and every unit was full of unrelated sentences.
-const UNIT_NAMES = [
-    'Common Words 1', 'Common Words 2', 'Short Sentences 1', 'Short Sentences 2',
-    'Everyday Speech 1', 'Everyday Speech 2', 'Wider Vocabulary 1', 'Wider Vocabulary 2',
-    'Longer Sentences 1', 'Longer Sentences 2',
-];
+// Units are themes now, in teaching order. An earlier pass *named* units by topic while
+// still bucketing them by difficulty, so a unit called "Food & Drink" was full of
+// unrelated sentences and had to be reverted. The difference here is that membership is
+// derived from the sentence's own English side, so the name is a fact about the content.
+//
+// Matching on English keeps theme assignment identical across all 12 languages, and
+// measurement against the cached corpora shows every theme clears PER_UNIT even in the
+// smallest language (Korean: 140-1076 pairs per theme).
+const THEMES = [
+    ['Greetings & Courtesy', 'hello hi goodbye bye please thanks thank welcome sorry excuse meet name nice pleased'],
+    ['People & Family', 'family mother father brother sister son daughter friend man woman child baby parents wife husband boy girl'],
+    ['Food & Drink', 'eat eats eating ate food drink drinks water coffee tea bread milk hungry thirsty dinner lunch breakfast restaurant cook meal'],
+    ['Around the House', 'house home room door window table chair bed kitchen garden live lives living clean wall floor'],
+    ['Travel & Places', 'car train bus walk street city town road travel airport ticket station country village abroad'],
+    ['Time & Numbers', 'time day today tomorrow yesterday week month year hour minute clock late early o\'clock tonight'],
+    ['Work & School', 'work works working job school study teacher student book learn read write office money buy sell class'],
+    ['Feelings & Opinions', 'happy sad tired angry love want need think feel afraid glad hope believe lonely proud'],
+    ['Weather & Nature', 'rain rains snow sun sunny cold warm weather wind cloud tree flower sea mountain river'],
+    ['Health & Body', 'head hand eye eyes hair face sick doctor sleep sleeps hurt pain ill healthy'],
+].map(([title, words]) => ({ title, words: new Set(words.split(' ')) }));
+
+const GENERAL_UNIT = 'General Practice';
+
+// Rank penalty applied to a sentence carrying one out-of-list word, so those sort after
+// fully-known sentences of the same difficulty rather than being excluded outright.
+const UNKNOWN_WORD_PENALTY = 20000;
+
+// First theme whose keywords appear in the English side wins. English is the shared side
+// of every pair, so a sentence lands in the same theme in all 12 courses.
+function themeOf(englishText) {
+    const words = new Set(englishText.toLowerCase().match(/[a-z']+/g) || []);
+    for (const theme of THEMES) {
+        for (const word of words) {
+            if (theme.words.has(word)) return theme.title;
+        }
+    }
+    return null;
+}
+
+// Grammar notes shown before a unit's lessons. Deliberately only filled in for languages
+// whose grammar can be stated accurately here -- a wrong grammar note is worse than none,
+// so the rest are left empty and simply do not render. Keyed by theme title.
+const TIPS = {
+    spanish: {
+        'Greetings & Courtesy': 'Spanish has two ways to say "you": informal tu and formal usted. Usted takes the same verb ending as he/she, so "usted es" looks like "he is".',
+        'People & Family': 'Every noun is masculine or feminine, and the word for "the" changes with it: el hermano, la hermana. Plurals take los and las.',
+        'Food & Drink': 'Spanish usually drops the subject pronoun, because the verb ending already says who. "Quiero agua" is "I want water" with no word for "I".',
+        'Around the House': 'Estar is used for where something is, ser for what it is. La casa es grande describes it; la casa esta aqui locates it.',
+        'Travel & Places': 'Ir (to go) is followed by a: voy a Madrid. Combined with el it contracts to al: voy al centro.',
+        'Time & Numbers': 'Telling time uses ser plus the feminine article: es la una, but son las dos. The hour is treated as a feminine noun.',
+        'Work & School': 'Verbs fall into three groups by ending: -ar, -er and -ir. Learn one of each and most regular verbs follow.',
+        'Feelings & Opinions': 'Gustar works backwards from English: me gusta el cafe is literally "coffee pleases me", so the thing liked is the subject.',
+        'Weather & Nature': 'Weather usually uses hacer: hace frio, hace sol. Literally "it makes cold", not "it is cold".',
+        'Health & Body': 'With body parts Spanish uses the article, not a possessive: me duele la cabeza, "the head hurts me", not "my head".',
+    },
+    french: {
+        'Greetings & Courtesy': 'French has informal tu and formal vous. Vous is also the plural "you", so it covers both politeness and number.',
+        'People & Family': 'Nouns are masculine or feminine, and le, la and les change with them. The plural les is the same for both genders.',
+        'Food & Drink': 'French needs a partitive article for unspecified amounts: je bois du cafe, "I drink some coffee". Dropping it is ungrammatical.',
+        'Around the House': 'A la and de le contract: au salon, du jardin. These contractions are obligatory, not optional.',
+        'Travel & Places': 'Aller (to go) is irregular and pairs with a for places: je vais a Paris, but je vais au marche.',
+        'Time & Numbers': 'Time uses il est: il est deux heures. The word heures is required, unlike the English "it is two".',
+        'Work & School': 'Most verbs end in -er and share one set of endings. Learn parler and you can conjugate hundreds of others.',
+        'Feelings & Opinions': 'Adjectives agree with what they describe: il est content, elle est contente. The extra e is usually silent.',
+        'Weather & Nature': 'Weather uses il fait: il fait froid, il fait beau. Literally "it makes cold".',
+        'Health & Body': 'Avoir mal a describes pain: j ai mal a la tete. French uses "have pain at the head", not "my head hurts".',
+    },
+    german: {
+        'Greetings & Courtesy': 'German has informal du and formal Sie. Sie is always capitalised, which is how you tell it from sie meaning "she" or "they".',
+        'People & Family': 'German has three genders: der, die and das. The gender is not predictable from meaning, so learn it with the noun.',
+        'Food & Drink': 'The verb sits second in a main clause. Put anything else first and the verb still holds position two: heute esse ich Brot.',
+        'Around the House': 'Some prepositions take the accusative for movement and the dative for position: in die Kueche versus in der Kueche.',
+        'Travel & Places': 'Nach is used for towns and countries, zu for people and places: nach Berlin, but zum Bahnhof.',
+        'Time & Numbers': 'Time uses es ist: es ist zwei Uhr. Numbers above twenty are said backwards, so 21 is einundzwanzig, "one and twenty".',
+        'Work & School': 'Separable verbs split apart in a main clause: aufstehen becomes ich stehe auf, with the prefix at the end.',
+        'Feelings & Opinions': 'Modal verbs like koennen and wollen send the main verb to the end in its infinitive form: ich will nach Hause gehen.',
+        'Weather & Nature': 'Weather uses es plus a verb: es regnet, es schneit. There is no separate word for "it is raining".',
+        'Health & Body': 'Weh tun takes the dative: mir tut der Kopf weh, literally "to me the head does hurt".',
+    },
+    italian: {
+        'Greetings & Courtesy': 'Ciao is informal both coming and going. For strangers use buongiorno and the formal lei.',
+        'People & Family': 'Nouns ending in -o are usually masculine and -a feminine, and their plurals become -i and -e.',
+        'Food & Drink': 'Italian drops subject pronouns because the verb ending identifies the person: voglio acqua is "I want water".',
+        'Around the House': 'Essere is used for being and location, stare for states and ongoing actions: sto bene, sono a casa.',
+        'Travel & Places': 'Andare takes a for cities and in for countries: vado a Roma, but vado in Italia.',
+        'Time & Numbers': 'Time uses sono le: sono le due. The exception is one o clock, e l una, which is singular.',
+        'Work & School': 'Verbs come in three groups: -are, -ere and -ire. The -are group is by far the largest.',
+        'Feelings & Opinions': 'Piacere works backwards like Spanish gustar: mi piace il caffe means "coffee is pleasing to me".',
+        'Weather & Nature': 'Weather uses fa: fa freddo, fa caldo. For rain and snow use piove and nevica on their own.',
+        'Health & Body': 'Pain uses avere mal di: ho mal di testa, "I have pain of head".',
+    },
+    portuguese: {
+        'Greetings & Courtesy': 'Portuguese uses voce for "you" in Brazil, while tu is common in Portugal. Both are informal in everyday speech.',
+        'People & Family': 'Nouns are masculine or feminine and take o, a, os or as. Adjectives change ending to match.',
+        'Food & Drink': 'Subject pronouns are usually dropped: quero agua is "I want water", with the ending carrying the person.',
+        'Around the House': 'Ser is for permanent qualities, estar for temporary states and location: a casa e grande, a casa esta limpa.',
+        'Travel & Places': 'Prepositions contract with articles: a plus a becomes a with an accent, em plus o becomes no. These are obligatory.',
+        'Time & Numbers': 'Time uses sao as: sao as duas. One o clock is singular, e uma hora.',
+        'Work & School': 'Verbs fall into -ar, -er and -ir groups, and the -ar group covers most common verbs.',
+        'Feelings & Opinions': 'Gostar always needs de: gosto de cafe. Leaving out de is a common beginner mistake.',
+        'Weather & Nature': 'Weather uses esta or faz: esta frio, faz sol. For rain use the verb chove on its own.',
+        'Health & Body': 'Pain uses estar com dor de or doer: estou com dor de cabeca.',
+    },
+};
 
 async function exists(file) {
     try { await access(file); return true; } catch { return false; }
@@ -159,14 +255,21 @@ async function rankedPairs(id, config) {
             const words = tokenize(targetText);
             if (words.length < 3 || words.length > 8) continue;
             if (new Set(words).size < 3) continue;
+            // Allow ONE unknown word rather than demanding every word be in the top-50k
+            // list. Requiring all-known starved the smaller frequency lists: Hindi went
+            // from 284 usable pairs to 1,863 with this single change (6.6x), Korean 1.7x,
+            // Arabic 1.5x. Unknown-word sentences are pushed later by a rank penalty.
             const ranks = words.map((word) => rank.get(word));
-            if (ranks.some((value) => value === undefined)) continue;
-            difficulty = Math.max(...ranks);
+            const unknown = ranks.filter((value) => value === undefined).length;
+            if (unknown > 1) continue;
+            const known = ranks.filter((value) => value !== undefined);
+            if (!known.length) continue;
+            difficulty = Math.max(...known) + unknown * UNKNOWN_WORD_PENALTY;
         }
 
         seenEnglish.add(key);
         seenTarget.add(targetKey);
-        pairs.push({ target: targetText, english: englishText, difficulty });
+        pairs.push({ target: targetText, english: englishText, difficulty, theme: themeOf(englishText) });
     }
 
     pairs.sort((a, b) => a.difficulty - b.difficulty);
@@ -279,31 +382,64 @@ async function build(id) {
     const pack = JSON.parse(await readFile(packPath, 'utf8'));
 
     const pairs = await rankedPairs(id, config);
-    // Smaller corpora (Hindi is the thin one) get fewer units rather than no course.
-    const units = Math.min(UNITS, Math.floor(pairs.length / PER_UNIT));
-    if (units < MIN_UNITS) {
+    const unspaced = UNSPACED.has(id);
+
+    // Bucket by theme, keeping each bucket in difficulty order. A theme only becomes a
+    // unit if it has enough sentences of its own -- padding it with unrelated ones is
+    // exactly the mistake that got the previous topic-named attempt reverted.
+    const buckets = new Map(THEMES.map((theme) => [theme.title, []]));
+    const leftovers = [];
+    for (const pair of pairs) {
+        if (pair.theme && buckets.has(pair.theme)) buckets.get(pair.theme).push(pair);
+        else leftovers.push(pair);
+    }
+
+    const chosen = [];
+    for (const theme of THEMES) {
+        const pool = buckets.get(theme.title);
+        if (pool.length >= PER_UNIT) chosen.push({ title: theme.title, pool: pool.slice(0, PER_UNIT) });
+    }
+
+    // Anything that matched no theme still makes practice units at the end, so a large
+    // corpus is not thrown away just because its sentences are off-topic.
+    let spare = leftovers;
+    let generalIndex = 1;
+    while (chosen.length < UNITS && spare.length >= PER_UNIT) {
+        chosen.push({
+            title: chosen.some((u) => u.title.startsWith(GENERAL_UNIT)) ? `${GENERAL_UNIT} ${generalIndex}` : GENERAL_UNIT,
+            pool: spare.slice(0, PER_UNIT),
+        });
+        spare = spare.slice(PER_UNIT);
+        generalIndex += 1;
+    }
+
+    if (chosen.length < MIN_UNITS) {
         process.stderr.write(`  ! only ${pairs.length} usable pairs — skipping\n`);
         return null;
     }
-    if (units < UNITS) process.stderr.write(`  thin corpus: ${units} units\n`);
-    const usable = pairs.slice(0, units * PER_UNIT);
-    const unspaced = UNSPACED.has(id);
+    if (chosen.length < UNITS) process.stderr.write(`  ${chosen.length} units (thin corpus)\n`);
 
     // Drop any previously generated units, keep every hand-authored one.
     pack.units = pack.units.filter((unit) => !unit.id.startsWith('t'));
 
-    for (let unitIndex = 0; unitIndex < units; unitIndex += 1) {
-        const pool = usable.slice(unitIndex * PER_UNIT, (unitIndex + 1) * PER_UNIT);
+    chosen.forEach((unit, unitIndex) => {
         const lessons = [];
         for (let lessonIndex = 0; lessonIndex < LESSONS_PER_UNIT; lessonIndex += 1) {
-            const chunk = pool.slice(
+            const chunk = unit.pool.slice(
                 lessonIndex * SENTENCES_PER_LESSON,
                 (lessonIndex + 1) * SENTENCES_PER_LESSON,
             );
-            lessons.push(buildLesson(id, unitIndex, lessonIndex, chunk, pool, unspaced));
+            lessons.push(buildLesson(id, unitIndex, lessonIndex, chunk, unit.pool, unspaced));
         }
-        pack.units.push({ id: `t${unitIndex + 1}`, title: UNIT_NAMES[unitIndex], lessons });
-    }
+
+        const built = { id: `t${unitIndex + 1}`, title: unit.title, lessons };
+        // Three real phrases from this unit, shown before its first lesson. Derived, so
+        // every language gets one.
+        built.preview = unit.pool.slice(0, 3).map((pair) => [pair.english, pair.target]);
+        const tip = TIPS[id] && TIPS[id][unit.title];
+        if (tip) built.tip = tip;
+        pack.units.push(built);
+    });
 
     pack.version = (pack.version || 1) + 1;
     await writeFile(packPath, `${JSON.stringify(pack, null, 2)}\n`);

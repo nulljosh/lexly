@@ -11,6 +11,9 @@ struct UnitsView: View {
                 ForEach(course.units) { unit in
                     let done = unit.lessons.filter { store.progress.completedLessonIds.contains("\(subject.id):\($0.id)") }.count
                     Section {
+                        if unit.tip != nil || !(unit.preview ?? []).isEmpty {
+                            UnitIntro(unit: unit)
+                        }
                         ForEach(unit.lessons) { lesson in
                             NavigationLink {
                                 LessonView(store: store, subjectId: subject.id, lesson: lesson, lang: course.lang)
@@ -49,5 +52,38 @@ struct UnitsView: View {
         .onAppear {
             if course == nil { course = store.loadCourse(subject) }
         }
+    }
+}
+
+/// Web parity: the "Before you start" card in js/lingo-app.js. Until this existed a
+/// lesson only ever tested -- nothing taught.
+private struct UnitIntro: View {
+    let unit: Unit
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Before you start")
+                .font(.caption2.weight(.semibold))
+                .textCase(.uppercase)
+                .kerning(0.8)
+                .foregroundStyle(.secondary)
+
+            if let tip = unit.tip {
+                Text(tip)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            ForEach(Array((unit.preview ?? []).enumerated()), id: \.offset) { _, pair in
+                if pair.count == 2 {
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(pair[1]).font(.footnote.weight(.semibold))
+                        Text(pair[0]).font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+            }
+        }
+        .padding(.vertical, 6)
     }
 }

@@ -7,12 +7,12 @@ import AVFoundation
 enum Speech {
     private static let synthesizer = AVSpeechSynthesizer()
 
-    static func speak(_ text: String, lang: String?) {
+    static func speak(_ text: String, lang: String?, slow: Bool = false) {
         guard !text.isEmpty else { return }
         synthesizer.stopSpeaking(at: .immediate)
         let utterance = AVSpeechUtterance(string: text)
         if let lang { utterance.voice = AVSpeechSynthesisVoice(language: lang) }
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.9
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * (slow ? 0.4 : 0.9)
         synthesizer.speak(utterance)
     }
 }
@@ -59,10 +59,17 @@ struct LessonView: View {
                                 missed: $matchMissed
                             )
                         case "listening":
-                            Button {
-                                Speech.speak(exercise.audio ?? exercise.answer, lang: lang)
-                            } label: {
-                                Label("Play", systemImage: "speaker.wave.2.fill")
+                            HStack(spacing: 10) {
+                                Button {
+                                    Speech.speak(exercise.audio ?? exercise.answer, lang: lang)
+                                } label: {
+                                    Label("Play", systemImage: "speaker.wave.2.fill")
+                                }
+                                Button {
+                                    Speech.speak(exercise.audio ?? exercise.answer, lang: lang, slow: true)
+                                } label: {
+                                    Label("Slow", systemImage: "tortoise.fill")
+                                }
                             }
                             .buttonStyle(.bordered)
                             TextField("Type what you hear", text: $input)

@@ -2121,3 +2121,39 @@ body.demo .header-inner::after {
     text-transform: uppercase;
     color: var(--text-muted);
 }
+
+/* "Before you start" card above a unit's lessons: grammar note plus real phrases. */
+.unit-intro {
+    margin: 0 0 1rem;
+    padding: 1rem 1.125rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.unit-intro-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.unit-intro-tip {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+}
+
+.unit-intro-phrases {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 0.875rem;
+    font-size: 0.875rem;
+}
+
+.unit-intro-phrases dt { font-weight: 600; color: var(--text-primary); }
+.unit-intro-phrases dd { margin: 0; color: var(--text-muted); }

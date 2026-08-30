@@ -1,5 +1,46 @@
 # lexly Roadmap
 
+## Shipped 2026-08-30 — themed units and teaching content
+
+Units are now themes, not difficulty tiers. `scripts/build-language-course.mjs` buckets
+each sentence pair by matching its **English** side against keyword sets, so membership is
+derived from the content rather than asserted — which is the difference between this and
+the topic-naming pass that had to be reverted in August. All 12 languages get the same 10
+themes: Greetings & Courtesy through Health & Body.
+
+Every unit now opens with a **Before you start** card (web `buildUnitIntro`, iOS
+`UnitIntro`): three real phrases drawn from that unit, plus a grammar note where one could
+be written accurately. Tips exist for Spanish, French, German, Italian and Portuguese (50
+in total); Japanese, Chinese, Korean, Arabic, Hindi, Russian and Dutch deliberately have
+none, because a wrong grammar note is worse than no note. Until now not one exercise
+taught anything — the app only ever tested.
+
+**The frequency filter was starving the smaller languages.** It required every word of a
+sentence to appear in the top-50k list. Allowing one unknown word took Hindi from 284
+usable pairs to 1,863 (6.6x), Korean 1.7x, Arabic 1.5x — measured, not estimated. Hindi is
+now a full 10 units instead of 8, and every language sits at 10.
+
+Also added slow replay on listening exercises (0.45x web, 0.4x iOS).
+
+Verified on an iPhone 17 Pro simulator: the Food & Drink unit shows its tip and three
+food phrases, and the sentences in it are actually about eating.
+
+## Open — next on the curriculum
+
+- [ ] **Word-strength model (lexeme-lite).** The keystone: it unlocks a placement test,
+  weak-word review, and a vocabulary stat all at once. Design: `lingo.words` =
+  `{ [subject]: { [word]: { seen, correct } } }`, updated by tokenising the answer in
+  `checkAnswer` (web) / `recordAnswer` (iOS). Weak word = `seen >= 2 && correct/seen <
+  0.6`. Feed a "practice your weak words" session through the existing due-first review
+  path. Keep it local-only — `streak_freezes` and `weekly_xp` already set that precedent,
+  so no Supabase migration is needed.
+- [ ] **iOS daily reminder.** `UNUserNotificationCenter`, permission requested *after* the
+  first completed lesson rather than on cold launch, daily at 19:00, cleared when a lesson
+  is finished that day, with a Settings toggle. No Info.plist usage string required.
+- [ ] Placement test (needs the word model first), iOS speaking exercises, leagues,
+  stories, recorded human audio.
+- [ ] Grammar tips for the remaining 7 languages — needs someone who can verify them.
+
 ## Shipped 2026-08-30 — removed book summaries, fixed the iOS opening screen
 
 **The iOS app opened on a list of book summaries.** `CatalogView` rendered categories

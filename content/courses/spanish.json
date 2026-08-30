@@ -5,7 +5,7 @@
   "icon": "fa-solid fa-earth-americas",
   "level": "Beginner to Advanced",
   "lang": "es-ES",
-  "version": 7,
+  "version": 9,
   "units": [
     {
       "id": "u1",
@@ -624,7 +624,7 @@
     },
     {
       "id": "t1",
-      "title": "Common Words 1",
+      "title": "Greetings & Courtesy",
       "lessons": [
         {
           "id": "t1l1",
@@ -632,47 +632,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It is what it is.",
-              "answer": "Es lo que es.",
+              "question": "You're welcome.",
+              "answer": "No hay de qué.",
               "choices": [
-                "Pero ¿qué es?",
-                "Es lo que es.",
-                "Si sí sí, si no no.",
-                "¿Qué es eso?"
+                "Muy bien, gracias.",
+                "No hay de qué.",
+                "Gracias por todo.",
+                "Gracias por hacer esto."
               ],
               "id": "spanish_t1_1_0"
             },
             {
               "type": "cloze",
-              "question": "¿Por ____ no?",
-              "answer": "qué",
+              "question": "¿Es ____ bueno?",
+              "answer": "esto",
               "choices": [
-                "si",
-                "lo",
-                "Para",
-                "qué"
+                "hay",
+                "Yo",
+                "de",
+                "esto"
               ],
               "id": "spanish_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "And why not?",
-              "answer": "¿Y por qué no?",
+              "question": "This is nice.",
+              "answer": "Esto está bueno.",
               "words": [
-                "por",
-                "qué",
-                "yo?",
-                "¿Y",
-                "no?",
-                "qué"
+                "está",
+                "bueno.",
+                "eso",
+                "Esto",
+                "Gracias"
               ],
               "id": "spanish_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Es la una.",
-              "audio": "Es la una.",
+              "answer": "Gracias, es todo.",
+              "audio": "Gracias, es todo.",
               "id": "spanish_t1_1_3"
             },
             {
@@ -681,20 +680,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is it for?",
-                  "¿Para qué es?"
+                  "Nothing more, thanks.",
+                  "Nada más, gracias."
                 ],
                 [
-                  "But why?",
-                  "¿Pero por qué?"
+                  "That's all, thanks.",
+                  "Eso es todo, gracias."
                 ],
                 [
-                  "But what is it?",
-                  "Pero ¿qué es?"
+                  "Very good, thank you.",
+                  "Muy bien, gracias."
                 ],
                 [
-                  "Yes and no.",
-                  "Sí y no."
+                  "I'm fine, thank you.",
+                  "Estoy bien, gracias."
                 ]
               ],
               "id": "spanish_t1_1_4"
@@ -707,49 +706,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Isn't that right?",
-              "answer": "¿A que sí?",
+              "question": "Fine, thank you. And you?",
+              "answer": "Bien, gracias. ¿Y tú?",
               "choices": [
-                "¿Es por eso?",
-                "¿A que sí?",
-                "¿Por qué no?",
-                "¿Pero por qué?"
+                "No, eso es todo, gracias.",
+                "Bien, gracias. ¿Y tú?",
+                "¿Es esto bueno?",
+                "Eso es todo, gracias."
               ],
               "id": "spanish_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Sí ____ es.",
-              "answer": "lo",
+              "question": "Gracias, pero ____ gracias.",
+              "answer": "no",
               "choices": [
-                "Por",
-                "por",
-                "lo",
-                "Sí"
+                "de",
+                "qué",
+                "no",
+                "bueno"
               ],
               "id": "spanish_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "If yes yes, If not no.",
-              "answer": "Si sí sí, si no no.",
+              "question": "Thanks for everything.",
+              "answer": "Gracias por todo.",
               "words": [
-                "sí",
-                "no.",
-                "Eso",
-                "no",
-                "Si",
-                "sí,",
-                "si",
-                "un"
+                "bien",
+                "hay",
+                "todo.",
+                "Gracias",
+                "por"
               ],
               "id": "spanish_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿Y si no es?",
-              "audio": "¿Y si no es?",
+              "answer": "Gracias, pero estoy bien con ella.",
+              "audio": "Gracias, pero estoy bien con ella.",
               "id": "spanish_t1_2_3"
             },
             {
@@ -758,20 +754,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "No, it's not right.",
-                  "No, no está bien."
+                  "I am fine, thank you.",
+                  "Yo estoy bien, gracias."
                 ],
                 [
-                  "What is it?",
-                  "¿Qué es eso?"
+                  "Thank you for doing this.",
+                  "Gracias por hacer esto."
                 ],
                 [
-                  "No, no! That's not right.",
-                  "¡No, no! Eso no está bien."
+                  "Thanks for that.",
+                  "Gracias por eso."
                 ],
                 [
-                  "Is that OK?",
-                  "¿Está bien eso?"
+                  "Thanks, I'm fine.",
+                  "Gracias. Yo estoy bien."
                 ]
               ],
               "id": "spanish_t1_2_4"
@@ -784,46 +780,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What's that for?",
-              "answer": "¿Para qué es eso?",
+              "question": "Thank you for this.",
+              "answer": "Gracias por esto.",
               "choices": [
-                "Si sí sí, si no no.",
-                "¿Qué es eso?",
-                "Es la una.",
-                "¿Para qué es eso?"
+                "Gracias por todo.",
+                "Gracias por hacer esto.",
+                "Gracias, es todo.",
+                "Gracias por esto."
               ],
               "id": "spanish_t1_3_0"
             },
             {
-              "type": "cloze",
-              "question": "¿Por qué ____ eso?",
-              "answer": "es",
+              "type": "translation",
+              "question": "Thanks to her.",
+              "answer": "Gracias a ella.",
               "choices": [
-                "Pero",
-                "es",
-                "que",
-                "si"
+                "Muy bien, gracias.",
+                "Gracias a ella.",
+                "Gracias, es todo.",
+                "Esto está bueno."
               ],
               "id": "spanish_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "Is that why?",
-              "answer": "¿Es por eso?",
+              "question": "No, that's all, thank you.",
+              "answer": "No, eso es todo, gracias.",
               "words": [
-                "eso?",
-                "eso.",
-                "¿Eso",
-                "¿Es",
-                "por"
+                "eso",
+                "todo,",
+                "es",
+                "gracias.",
+                "Gracias.",
+                "No,",
+                "Gracias,"
               ],
               "id": "spanish_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿Eso es un sí?",
-              "audio": "¿Eso es un sí?",
+              "answer": "Gracias, pero eso ya lo sé.",
+              "audio": "Gracias, pero eso ya lo sé.",
               "id": "spanish_t1_3_3"
             },
             {
@@ -832,31 +830,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not that.",
-                  "No es eso."
+                  "Thanks, but no.",
+                  "Gracias, pero no."
                 ],
                 [
-                  "Why me?",
-                  "¿Por qué yo?"
+                  "Thank you for nothing.",
+                  "Gracias por nada."
                 ],
                 [
-                  "Why is he here?",
-                  "¿Por qué está aquí?"
+                  "She is very well, thank you.",
+                  "Ella está muy bien, gracias."
                 ],
                 [
-                  "Are you from here?",
-                  "¿Es de aquí?"
+                  "Thanks again for everything.",
+                  "Una vez más gracias por todo."
                 ]
               ],
               "id": "spanish_t1_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "You're welcome.",
+          "No hay de qué."
+        ],
+        [
+          "Is this nice?",
+          "¿Es esto bueno?"
+        ],
+        [
+          "This is nice.",
+          "Esto está bueno."
+        ]
+      ],
+      "tip": "Spanish has two ways to say \"you\": informal tu and formal usted. Usted takes the same verb ending as he/she, so \"usted es\" looks like \"he is\"."
     },
     {
       "id": "t2",
-      "title": "Common Words 2",
+      "title": "People & Family",
       "lessons": [
         {
           "id": "t2l1",
@@ -864,48 +877,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's not in.",
-              "answer": "No está aquí.",
+              "question": "He's already a man.",
+              "answer": "Él ya es un hombre.",
               "choices": [
-                "No es de por aquí.",
-                "No está aquí.",
-                "Es por aquí.",
-                "Todo está aquí."
+                "Soy un hombre.",
+                "Él ya es un hombre.",
+                "Él es un hombre de verdad.",
+                "¡No soy un hombre!"
               ],
               "id": "spanish_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Yo ____ aquí.",
-              "answer": "como",
+              "question": "¿Quién es ____ hombre?",
+              "answer": "ese",
               "choices": [
-                "Yo",
-                "Ya",
-                "qué",
-                "como"
+                "Ahora",
+                "Sé",
+                "no",
+                "ese"
               ],
               "id": "spanish_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "He's not from around here.",
-              "answer": "No es de por aquí.",
+              "question": "I am a man.",
+              "answer": "Soy un hombre.",
               "words": [
-                "Todo",
-                "por",
-                "¿Para",
-                "No",
-                "aquí.",
-                "de",
-                "es"
+                "verdad.",
+                "hombre",
+                "un",
+                "Soy",
+                "hombre."
               ],
               "id": "spanish_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Es por aquí.",
-              "audio": "Es por aquí.",
+              "answer": "Él es un hombre de verdad.",
+              "audio": "Él es un hombre de verdad.",
               "id": "spanish_t2_1_3"
             },
             {
@@ -914,20 +925,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not here.",
-                  "No es aquí."
+                  "Who is this man?",
+                  "¿Quién es este hombre?"
                 ],
                 [
-                  "It's for your own good.",
-                  "Es por tu bien."
+                  "I'm a man.",
+                  "Yo soy un hombre."
                 ],
                 [
-                  "What is this?",
-                  "¿Qué es esto?"
+                  "Well, you have a man.",
+                  "Bueno, tú tienes a un hombre."
                 ],
                 [
-                  "What is this for?",
-                  "¿Para qué es esto?"
+                  "I am not a man!",
+                  "¡No soy hombre!"
                 ]
               ],
               "id": "spanish_t2_1_4"
@@ -940,46 +951,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is not okay.",
-              "answer": "Esto no está bien.",
+              "question": "He's the man of the house.",
+              "answer": "Él es el hombre de la casa.",
               "choices": [
-                "Esto y no más.",
-                "Esto no está bien.",
-                "Yo como aquí.",
-                "Esto está bien."
+                "Soy el hombre de la casa.",
+                "Él es el hombre de la casa.",
+                "¿Quién es ese hombre?",
+                "Ahora es un hombre."
               ],
               "id": "spanish_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "Esto y ____ más.",
-              "answer": "no",
+              "question": "Soy el hombre ____ la casa.",
+              "answer": "de",
               "choices": [
-                "Ya",
-                "no",
-                "es",
-                "lo"
+                "Quién",
+                "de",
+                "Ahora",
+                "Dónde"
               ],
               "id": "spanish_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "This is good.",
-              "answer": "Esto está bien.",
+              "question": "He's a man now.",
+              "answer": "Ahora es un hombre.",
               "words": [
-                "está",
-                "¿Qué",
-                "es.",
-                "Esto",
-                "bien."
+                "un",
+                "como",
+                "es",
+                "Ahora",
+                "ese",
+                "hombre."
               ],
               "id": "spanish_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Todo está bien.",
-              "audio": "Todo está bien.",
+              "answer": "No eres un hombre.",
+              "audio": "No eres un hombre.",
               "id": "spanish_t2_2_3"
             },
             {
@@ -988,20 +1000,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's all.",
-                  "Eso es todo."
+                  "Where is the man?",
+                  "¿Dónde está el hombre?"
                 ],
                 [
-                  "Is this everything?",
-                  "¿Esto es todo?"
+                  "Be a man.",
+                  "Sé un hombre."
                 ],
                 [
-                  "Is everything all right?",
-                  "¿Está todo bien?"
+                  "I don't feel like a man anymore.",
+                  "Ya no me siento más como un hombre."
                 ],
                 [
-                  "Is everything OK here?",
-                  "¿Todo está bien aquí?"
+                  "You're a man.",
+                  "Tú eres un hombre."
                 ]
               ],
               "id": "spanish_t2_2_4"
@@ -1014,49 +1026,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What is all this?",
-              "answer": "¿Qué es todo esto?",
+              "question": "Then, it's a man.",
+              "answer": "Entonces, es un hombre.",
               "choices": [
-                "Esto y no más.",
-                "Esto está bien.",
-                "Yo como aquí.",
-                "¿Qué es todo esto?"
+                "Soy el hombre de la casa.",
+                "Ahora es un hombre.",
+                "¿Quién es ese hombre?",
+                "Entonces, es un hombre."
               ],
               "id": "spanish_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "No, eso ____ todo.",
-              "answer": "es",
+              "question": "El hombre ____ aquí.",
+              "answer": "está",
               "choices": [
-                "esto",
-                "es",
-                "por",
-                "lo"
+                "el",
+                "está",
+                "bueno",
+                "me"
               ],
               "id": "spanish_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "That's what it's all about.",
-              "answer": "Eso es todo lo que es.",
+              "question": "I'm a man now.",
+              "answer": "Ya soy un hombre.",
               "words": [
-                "bien.",
-                "lo",
-                "todo.",
-                "es.",
-                "todo",
-                "Eso",
-                "es",
-                "que"
+                "soy",
+                "un",
+                "un",
+                "Ya",
+                "hombre.",
+                "la"
               ],
               "id": "spanish_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Todo está aquí.",
-              "audio": "Todo está aquí.",
+              "answer": "¡No soy un hombre!",
+              "audio": "¡No soy un hombre!",
               "id": "spanish_t2_3_3"
             },
             {
@@ -1065,31 +1075,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That isn't the last of it.",
-                  "Eso no es todo."
+                  "You are a man.",
+                  "Eres un hombre."
                 ],
                 [
-                  "But that's not all.",
-                  "Pero eso no es todo."
+                  "You're a man now.",
+                  "Ahora eres un hombre."
                 ],
                 [
-                  "Is that OK now?",
-                  "¿Está bien ya?"
+                  "Is there a man in your life?",
+                  "¿Hay un hombre en tu vida?"
                 ],
                 [
-                  "I'm here already!",
-                  "¡Ya estoy aquí!"
+                  "He is a good man for the job.",
+                  "Es bueno para ese trabajo."
                 ]
               ],
               "id": "spanish_t2_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "He's already a man.",
+          "Él ya es un hombre."
+        ],
+        [
+          "Who is that man?",
+          "¿Quién es ese hombre?"
+        ],
+        [
+          "I am a man.",
+          "Soy un hombre."
+        ]
+      ],
+      "tip": "Every noun is masculine or feminine, and the word for \"the\" changes with it: el hermano, la hermana. Plurals take los and las."
     },
     {
       "id": "t3",
-      "title": "Short Sentences 1",
+      "title": "Food & Drink",
       "lessons": [
         {
           "id": "t3l1",
@@ -1097,46 +1122,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Why am I here?",
-              "answer": "¿Por qué estoy aquí?",
+              "question": "I eat here.",
+              "answer": "Yo como aquí.",
               "choices": [
-                "Todo está bien ahora.",
-                "¿Por qué estoy aquí?",
-                "No estoy aquí por esto.",
-                "¿Por qué es así?"
+                "¡No! ¡A él no le gusta el agua!",
+                "Yo como aquí.",
+                "Me gustaría más agua.",
+                "¿Aquí hay agua?"
               ],
               "id": "spanish_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "No por ____ estoy aquí.",
-              "answer": "eso",
+              "question": "Yo como aquí ____ el tiempo.",
+              "answer": "todo",
               "choices": [
-                "Ahora",
                 "aquí",
-                "estoy",
-                "eso"
+                "le",
+                "quieres",
+                "todo"
               ],
               "id": "spanish_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "I'm unnecessary here.",
-              "answer": "Estoy de más.",
+              "question": "I never eat.",
+              "answer": "No como nunca.",
               "words": [
-                "más.",
-                "estoy",
-                "de",
-                "Está",
-                "Estoy"
+                "nunca.",
+                "en",
+                "como",
+                "aquí",
+                "No"
               ],
               "id": "spanish_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yo no estoy aquí.",
-              "audio": "Yo no estoy aquí.",
+              "answer": "No como mucho.",
+              "audio": "No como mucho.",
               "id": "spanish_t3_1_3"
             },
             {
@@ -1145,20 +1170,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's not what I'm here for.",
-                  "Eso no es por lo que estoy aquí."
+                  "I eat at work.",
+                  "Como en el trabajo."
                 ],
                 [
-                  "What am I here for?",
-                  "¿Para qué estoy aquí?"
+                  "I eat here every day.",
+                  "Yo como aquí todos los días."
                 ],
                 [
-                  "I'm not here for that.",
-                  "No estoy aquí por esto."
+                  "I'd like some more water.",
+                  "Me gustaría más agua."
                 ],
                 [
-                  "I'm unwell.",
-                  "No estoy bien."
+                  "There is no life without water.",
+                  "No hay vida sin agua."
                 ]
               ],
               "id": "spanish_t3_1_4"
@@ -1171,47 +1196,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm not up for this.",
-              "answer": "No estoy para esto.",
+              "question": "Water is good.",
+              "answer": "El agua está buena.",
               "choices": [
-                "No estoy aquí por esto.",
-                "No estoy para esto.",
-                "¿Por qué ahora?",
-                "Está muy bien."
+                "Me gustaría más agua.",
+                "El agua está buena.",
+                "Yo quiero agua.",
+                "Tengo el agua."
               ],
               "id": "spanish_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "¿Estoy aquí ____ eso?",
-              "answer": "por",
+              "question": "¿Cómo es ____ agua aquí?",
+              "answer": "el",
               "choices": [
-                "lo",
-                "Eso",
-                "por",
-                "no"
+                "solo",
+                "Tengo",
+                "el",
+                "sin"
               ],
               "id": "spanish_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "No, I'm not okay.",
-              "answer": "No, no estoy bien.",
+              "question": "Water is important.",
+              "answer": "El agua es importante.",
               "words": [
-                "Todo",
-                "de",
-                "estoy",
-                "No,",
-                "bien.",
-                "no"
+                "gusta",
+                "solo",
+                "es",
+                "El",
+                "importante.",
+                "agua"
               ],
               "id": "spanish_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yo estoy aquí.",
-              "audio": "Yo estoy aquí.",
+              "answer": "Sin agua no hay vida.",
+              "audio": "Sin agua no hay vida.",
               "id": "spanish_t3_2_3"
             },
             {
@@ -1220,20 +1245,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He isn't here now.",
-                  "Ahora no está aquí."
+                  "Here's some water.",
+                  "Aquí hay un poco de agua."
                 ],
                 [
-                  "Everything is all right now.",
-                  "Ahora está todo bien."
+                  "There is no water.",
+                  "No hay agua."
                 ],
                 [
-                  "Everything's all right now.",
-                  "Todo está bien ahora."
+                  "No. He doesn't like water!",
+                  "¡No! ¡A él no le gusta el agua!"
                 ],
                 [
-                  "And now what?",
-                  "¿Y ahora qué?"
+                  "Are you sure you just want water?",
+                  "¿Estás seguro de que solo quieres agua?"
                 ]
               ],
               "id": "spanish_t3_2_4"
@@ -1246,46 +1271,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's ok now?",
-              "answer": "¿Está ahora bien?",
+              "question": "I need some water.",
+              "answer": "Necesito un poco de agua.",
               "choices": [
-                "Eso no es por lo que estoy aquí.",
-                "¿Para qué estoy aquí?",
-                "Estoy aquí ahora.",
-                "¿Está ahora bien?"
+                "Como en el trabajo.",
+                "Yo como aquí todos los días.",
+                "Me gustaría un poco más de agua.",
+                "Necesito un poco de agua."
               ],
               "id": "spanish_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Estoy ____ ahora.",
-              "answer": "aquí",
+              "question": "Me gustaría un ____ más de agua.",
+              "answer": "poco",
               "choices": [
-                "qué",
                 "aquí",
-                "estoy",
-                "está"
+                "poco",
+                "hay",
+                "todo"
               ],
               "id": "spanish_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "Why now?",
-              "answer": "¿Por qué ahora?",
+              "question": "I want some water.",
+              "answer": "Yo quiero agua.",
               "words": [
-                "¿No",
-                "así?",
-                "qué",
-                "¿Por",
-                "ahora?"
+                "aquí?",
+                "Tengo",
+                "quiero",
+                "Yo",
+                "agua."
               ],
               "id": "spanish_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Está muy bien.",
-              "audio": "Está muy bien.",
+              "answer": "Tengo el agua.",
+              "audio": "Tengo el agua.",
               "id": "spanish_t3_3_3"
             },
             {
@@ -1294,31 +1319,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Not too well.",
-                  "No muy bien."
+                  "I need water.",
+                  "Yo necesito agua."
                 ],
                 [
-                  "That's very good!",
-                  "Eso está muy bien!"
+                  "This is clearer than water.",
+                  "Esto es más claro que agua."
                 ],
                 [
-                  "Isn't it so?",
-                  "¿No es así?"
+                  "This is just water.",
+                  "Esto es solo agua."
                 ],
                 [
-                  "Why is it so?",
-                  "¿Por qué es así?"
+                  "Is there water there?",
+                  "¿Aquí hay agua?"
                 ]
               ],
               "id": "spanish_t3_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "I eat here.",
+          "Yo como aquí."
+        ],
+        [
+          "I eat here all the time.",
+          "Yo como aquí todo el tiempo."
+        ],
+        [
+          "I never eat.",
+          "No como nunca."
+        ]
+      ],
+      "tip": "Spanish usually drops the subject pronoun, because the verb ending already says who. \"Quiero agua\" is \"I want water\" with no word for \"I\"."
     },
     {
       "id": "t4",
-      "title": "Short Sentences 2",
+      "title": "Around the House",
       "lessons": [
         {
           "id": "t4l1",
@@ -1326,47 +1366,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No, it's not like that.",
-              "answer": "No, no es así.",
+              "question": "He is from home.",
+              "answer": "Él no está.",
               "choices": [
-                "Esto está bueno.",
-                "No, no es así.",
-                "Hay algo más.",
-                "¿Por qué eso es bueno?"
+                "Estaba en casa.",
+                "Él no está.",
+                "Él estaba en casa.",
+                "Estoy en la casa."
               ],
               "id": "spanish_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Algo no ____ bien.",
-              "answer": "está",
+              "question": "¿Por qué no ____ vamos a casa?",
+              "answer": "nos",
               "choices": [
-                "así",
-                "Qué",
-                "todo",
-                "está"
+                "Por",
+                "bien",
+                "Tengo",
+                "nos"
               ],
               "id": "spanish_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "You're welcome.",
-              "answer": "No hay de qué.",
+              "question": "Make yourself at home.",
+              "answer": "Está usted en su casa.",
               "words": [
-                "una",
-                "algo",
-                "hay",
-                "No",
-                "qué.",
-                "de"
+                "usted",
+                "Estoy",
+                "¿verdad?",
+                "Está",
+                "casa.",
+                "en",
+                "su"
               ],
               "id": "spanish_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Aquí hay algo.",
-              "audio": "Aquí hay algo.",
+              "answer": "Mi casa es tu casa.",
+              "audio": "Mi casa es tu casa.",
               "id": "spanish_t4_1_3"
             },
             {
@@ -1375,20 +1416,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "There's something else.",
-                  "Hay algo más."
+                  "He was at home.",
+                  "Él estaba en casa."
                 ],
                 [
-                  "This place has everything.",
-                  "Aquí hay de todo."
+                  "He isn't at home, is he?",
+                  "Él no está en casa, ¿verdad?"
                 ],
                 [
-                  "What's in here?",
-                  "¿Qué hay aquí?"
+                  "Everything is all right at home.",
+                  "Todo está bien en casa."
                 ],
                 [
-                  "There's one more.",
-                  "Hay una más."
+                  "His house is somewhere around here.",
+                  "Su casa está por aquí."
                 ]
               ],
               "id": "spanish_t4_1_4"
@@ -1401,48 +1442,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Isn't there something else?",
-              "answer": "¿No hay algo más?",
+              "question": "I'm going home now.",
+              "answer": "Ya voy a casa.",
               "choices": [
-                "Algo no está bien.",
-                "¿No hay algo más?",
-                "Esto está bueno.",
-                "¿Esto es bueno?"
+                "¿Por qué no nos vamos a casa?",
+                "Ya voy a casa.",
+                "Estaba en casa.",
+                "Está en casa ahora."
               ],
               "id": "spanish_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ya no ____ más.",
-              "answer": "hay",
+              "question": "Ella se ____ a casa.",
+              "answer": "fue",
               "choices": [
-                "algo",
-                "hay",
-                "bien",
-                "Ya"
+                "Estoy",
+                "fue",
+                "mi",
+                "por"
               ],
               "id": "spanish_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "Is it all that's there?",
-              "answer": "¿Es todo lo que hay?",
+              "question": "We're going home.",
+              "answer": "Vamos a casa.",
               "words": [
-                "todo",
-                "está",
-                "lo",
-                "no",
-                "hay?",
-                "¿Es",
-                "que"
+                "a",
+                "casa.",
+                "Tengo",
+                "Vamos",
+                "no"
               ],
               "id": "spanish_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Es todo, ya no hay más.",
-              "audio": "Es todo, ya no hay más.",
+              "answer": "Tengo una casa.",
+              "audio": "Tengo una casa.",
               "id": "spanish_t4_2_3"
             },
             {
@@ -1451,20 +1490,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is very good.",
-                  "Esto está muy bueno."
+                  "No, that's not my house.",
+                  "No, no es mi casa."
                 ],
                 [
-                  "That's good, isn't it?",
-                  "Qué bueno, ¿no es así?"
+                  "What is your house like?",
+                  "¿Cómo es tu casa?"
                 ],
                 [
-                  "It's quite good.",
-                  "Es bien bueno."
+                  "This is my home.",
+                  "Esta es mi casa."
                 ],
                 [
-                  "Is this OK?",
-                  "¿Esto es bueno?"
+                  "He's at home right now.",
+                  "Está en casa ahora."
                 ]
               ],
               "id": "spanish_t4_2_4"
@@ -1477,47 +1516,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is this nice?",
-              "answer": "¿Es esto bueno?",
+              "question": "I am at home.",
+              "answer": "Estoy en casa.",
               "choices": [
-                "Es todo, ya no hay más.",
-                "Aquí hay algo.",
-                "Algo no está bien.",
-                "¿Es esto bueno?"
+                "Tengo una casa.",
+                "Mi casa es tu casa.",
+                "¿Por qué no nos vamos a casa?",
+                "Estoy en casa."
               ],
               "id": "spanish_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Esto no ____ bueno.",
-              "answer": "es",
+              "question": "¿Estás ____ casa?",
+              "answer": "en",
               "choices": [
-                "Hay",
-                "es",
-                "muy",
-                "que"
+                "usted",
+                "en",
+                "mi",
+                "No"
               ],
               "id": "spanish_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "This is really good.",
-              "answer": "Esto es muy bueno.",
+              "question": "I'm going to my house.",
+              "answer": "Me voy a mi casa.",
               "words": [
-                "más?",
-                "bueno.",
-                "muy",
-                "todo,",
-                "es",
-                "Esto"
+                "Esta",
+                "casa.",
+                "mi",
+                "Me",
+                "Todo",
+                "a",
+                "voy"
               ],
               "id": "spanish_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿Por qué eso es bueno?",
-              "audio": "¿Por qué eso es bueno?",
+              "answer": "Estoy en la casa.",
+              "audio": "Estoy en la casa.",
               "id": "spanish_t4_3_3"
             },
             {
@@ -1526,31 +1566,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's not a good thing.",
-                  "No es algo bueno."
+                  "My house is here.",
+                  "Mi casa está aquí."
                 ],
                 [
-                  "That's good.",
-                  "Eso es bueno."
+                  "Is she at home?",
+                  "¿Está ella en casa?"
                 ],
                 [
-                  "What's good?",
-                  "¿Qué está bueno?"
+                  "She isn't at home now.",
+                  "Ahora no está en casa."
                 ],
                 [
-                  "This is nice.",
-                  "Esto está bueno."
+                  "I was at home.",
+                  "Estaba en casa."
                 ]
               ],
               "id": "spanish_t4_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "He is from home.",
+          "Él no está."
+        ],
+        [
+          "Why don't we go home?",
+          "¿Por qué no nos vamos a casa?"
+        ],
+        [
+          "Make yourself at home.",
+          "Está usted en su casa."
+        ]
+      ],
+      "tip": "Estar is used for where something is, ser for what it is. La casa es grande describes it; la casa esta aqui locates it."
     },
     {
       "id": "t5",
-      "title": "Everyday Speech 1",
+      "title": "Travel & Places",
       "lessons": [
         {
           "id": "t5l1",
@@ -1558,49 +1613,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's enough!",
-              "answer": "¡Ya está bueno!",
+              "question": "Walk this way.",
+              "answer": "Ve por aquí.",
               "choices": [
-                "Eso es todo lo que tengo.",
-                "¡Ya está bueno!",
-                "Ya lo tengo.",
-                "Ya no lo tengo."
+                "Este camino no es muy seguro.",
+                "Ve por aquí.",
+                "No me gusta nada esta ciudad.",
+                "¿Te gusta la ciudad?"
               ],
               "id": "spanish_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "No todo ____ bueno.",
-              "answer": "es",
+              "question": "No había nadie ____ en el camino.",
+              "answer": "más",
               "choices": [
-                "los",
-                "está",
+                "Necesito",
+                "dónde",
                 "No",
-                "es"
+                "más"
               ],
               "id": "spanish_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "That is all I have.",
-              "answer": "Eso es todo lo que tengo.",
+              "question": "This road isn't very safe.",
+              "answer": "Este camino no es muy seguro.",
               "words": [
-                "que",
-                "tengo.",
-                "lo",
-                "Eso",
+                "muy",
+                "seguro.",
                 "es",
-                "Él",
-                "bueno!",
-                "todo"
+                "Este",
+                "camino",
+                "me",
+                "los",
+                "no"
               ],
               "id": "spanish_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Esto es todo lo que tengo.",
-              "audio": "Esto es todo lo que tengo.",
+              "answer": "Yo camino todos los días.",
+              "audio": "Yo camino todos los días.",
               "id": "spanish_t5_1_3"
             },
             {
@@ -1609,20 +1664,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I've got anything.",
-                  "Tengo de todo."
+                  "I walk to work every day.",
+                  "Camino todos los días al trabajo."
                 ],
                 [
-                  "No, I don't have it.",
-                  "No, no lo tengo."
+                  "Where does that road lead?",
+                  "¿A dónde va ese camino?"
                 ],
                 [
-                  "I already have them.",
-                  "Ya los tengo."
+                  "She went down that road.",
+                  "Ella se fue por ese camino."
                 ],
                 [
-                  "What do I have?",
-                  "¿Qué es lo que tengo?"
+                  "How do you like this town?",
+                  "¿Qué le parece esta ciudad?"
                 ]
               ],
               "id": "spanish_t5_1_4"
@@ -1635,46 +1690,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't have it now.",
-              "answer": "Ya no tengo.",
+              "question": "I go into the city every day.",
+              "answer": "Yo voy a la ciudad todos los días.",
               "choices": [
-                "Él ya no está aquí.",
-                "Ya no tengo.",
-                "Esto es todo lo que tengo.",
-                "Ya no lo tengo."
+                "Ella es nueva en la ciudad.",
+                "Yo voy a la ciudad todos los días.",
+                "Yo camino todos los días.",
+                "¿Te gusta la ciudad?"
               ],
               "id": "spanish_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ya no ____ tengo.",
-              "answer": "lo",
+              "question": "¿Te gusta ____ ciudad?",
+              "answer": "la",
               "choices": [
-                "Ahora",
-                "lo",
-                "No",
-                "eso"
+                "Estás",
+                "la",
+                "gusta",
+                "Quiero"
               ],
               "id": "spanish_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "I got that.",
-              "answer": "Ya lo tengo.",
+              "question": "I don't like this city at all.",
+              "answer": "No me gusta nada esta ciudad.",
               "words": [
-                "tengo.",
-                "aquí.",
-                "bueno.",
-                "Ya",
-                "lo"
+                "me",
+                "ciudad.",
+                "nada",
+                "No",
+                "gusta",
+                "nadie",
+                "esta",
+                "Es"
               ],
               "id": "spanish_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "No tengo más.",
-              "audio": "No tengo más.",
+              "answer": "¿Estás en la ciudad?",
+              "audio": "¿Estás en la ciudad?",
               "id": "spanish_t5_2_3"
             },
             {
@@ -1683,20 +1741,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't have more than that.",
-                  "No tengo más que eso."
+                  "I want to go to the city.",
+                  "Quiero ir a la ciudad."
                 ],
                 [
-                  "Yes, I do have them.",
-                  "Sí que los tengo."
+                  "This is my city now.",
+                  "Esta es mi ciudad ahora."
                 ],
                 [
-                  "Why do I have it?",
-                  "¿Por qué lo tengo?"
+                  "Which town is this?",
+                  "¿Qué ciudad es esta?"
                 ],
                 [
-                  "Now I have you!",
-                  "¡Ahora te tengo!"
+                  "He's out of town.",
+                  "Está fuera de la ciudad."
                 ]
               ],
               "id": "spanish_t5_2_4"
@@ -1709,46 +1767,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I bet I do have them.",
-              "answer": "A que sí que los tengo.",
+              "question": "What's going on in this town?",
+              "answer": "¿Qué pasa en esta ciudad?",
               "choices": [
-                "Él es bueno.",
-                "No todo es bueno.",
-                "Él no está.",
-                "A que sí que los tengo."
+                "¿Por qué no te vas de la ciudad?",
+                "No había nadie más en el camino.",
+                "Soy de la ciudad.",
+                "¿Qué pasa en esta ciudad?"
               ],
               "id": "spanish_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Él ya ____ está aquí.",
-              "answer": "no",
+              "question": "Ella es nueva ____ la ciudad.",
+              "answer": "en",
               "choices": [
-                "Esto",
-                "no",
-                "está",
-                "es"
+                "aquí",
+                "en",
+                "Por",
+                "fuera"
               ],
               "id": "spanish_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "Here he is!",
-              "answer": "¡Aquí está él!",
+              "question": "I love this town.",
+              "answer": "Me gusta esta ciudad.",
               "words": [
-                "está",
-                "aquí.",
-                "él!",
-                "¡Aquí",
-                "Ya"
+                "gusta",
+                "esta",
+                "ciudad.",
+                "Este",
+                "Me",
+                "ciudad?"
               ],
               "id": "spanish_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¡Él está aquí!",
-              "audio": "¡Él está aquí!",
+              "answer": "Es nuevo en la ciudad.",
+              "audio": "Es nuevo en la ciudad.",
               "id": "spanish_t5_3_3"
             },
             {
@@ -1757,31 +1816,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He's out now.",
-                  "Él no está aquí ahora."
+                  "I need to get out of town.",
+                  "Necesito salir de la ciudad."
                 ],
                 [
-                  "He is from home.",
-                  "Él no está."
+                  "I'm from the city.",
+                  "Soy de la ciudad."
                 ],
                 [
-                  "He's good.",
-                  "Él es bueno."
+                  "Why don't you leave town?",
+                  "¿Por qué no te vas de la ciudad?"
                 ],
                 [
-                  "He's the one, isn't he?",
-                  "Es él, ¿no?"
+                  "You can't go to town.",
+                  "Ustedes no pueden ir a la ciudad."
                 ]
               ],
               "id": "spanish_t5_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "Walk this way.",
+          "Ve por aquí."
+        ],
+        [
+          "There was no one else on the road.",
+          "No había nadie más en el camino."
+        ],
+        [
+          "This road isn't very safe.",
+          "Este camino no es muy seguro."
+        ]
+      ],
+      "tip": "Ir (to go) is followed by a: voy a Madrid. Combined with el it contracts to al: voy al centro."
     },
     {
       "id": "t6",
-      "title": "Everyday Speech 2",
+      "title": "Time & Numbers",
       "lessons": [
         {
           "id": "t6l1",
@@ -1789,46 +1863,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's all right.",
-              "answer": "Él está bien.",
+              "question": "It's one o'clock.",
+              "answer": "Es la una.",
               "choices": [
-                "Él no está aquí.",
-                "¿Estás bien aquí?",
-                "Él está bien.",
-                "Sé que no sé."
+                "¿Quién es esta vez?",
+                "No tienes tiempo.",
+                "Es la una.",
+                "¿Quién tiene tiempo para eso?"
               ],
               "id": "spanish_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "Estoy ____ él.",
-              "answer": "con",
+              "question": "Una ____ más.",
+              "answer": "vez",
               "choices": [
-                "Estoy",
-                "está",
-                "Por",
-                "con"
+                "ahora",
+                "hay",
+                "no",
+                "vez"
               ],
               "id": "spanish_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "Seize him!",
-              "answer": "¡A por él!",
+              "question": "He was here at that time.",
+              "answer": "Él estaba aquí entonces.",
               "words": [
-                "por",
-                "¿Está",
-                "sé.",
-                "¡A",
-                "él!"
+                "estaba",
+                "aquí",
+                "entonces.",
+                "la",
+                "Quiero",
+                "Él"
               ],
               "id": "spanish_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Él no está aquí.",
-              "audio": "Él no está aquí.",
+              "answer": "¿Quién es esta vez?",
+              "audio": "¿Quién es esta vez?",
               "id": "spanish_t6_1_3"
             },
             {
@@ -1837,20 +1912,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is he right?",
-                  "¿Está él bien?"
+                  "I don't know if I have the time.",
+                  "No sé si tengo tiempo."
                 ],
                 [
-                  "He is in everything and is everything.",
-                  "Él está en todo y es todo."
+                  "I have no time.",
+                  "No tengo tiempo."
                 ],
                 [
-                  "He's with him.",
-                  "Está con él."
+                  "There is a time for everything.",
+                  "Hay un tiempo para todo."
                 ],
                 [
-                  "What are you about now?",
-                  "¿En qué estás ahora?"
+                  "I don't have time now.",
+                  "Ahora no tengo tiempo."
                 ]
               ],
               "id": "spanish_t6_1_4"
@@ -1863,48 +1938,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What are you here for?",
-              "answer": "¿Para qué estás aquí?",
+              "question": "All in good time.",
+              "answer": "Todo a su tiempo.",
               "choices": [
-                "¿Está él bien?",
-                "¿Para qué estás aquí?",
-                "Eso no lo sé.",
-                "Sé que no sé."
+                "No sé si tengo tiempo.",
+                "Todo a su tiempo.",
+                "Ahora no hay tiempo para eso.",
+                "¿Quién tiene tiempo para eso?"
               ],
               "id": "spanish_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "¿Por qué ____ aquí?",
-              "answer": "estás",
+              "question": "No tengo tiempo ____ eso ahora.",
+              "answer": "para",
               "choices": [
-                "lo",
-                "estás",
-                "es",
-                "por"
+                "Una",
+                "para",
+                "entonces",
+                "es"
               ],
               "id": "spanish_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Why aren't you here?",
-              "answer": "¿Por qué no estás aquí?",
+              "question": "I don't have time for this.",
+              "answer": "No tengo tiempo para esto.",
               "words": [
-                "aquí?",
-                "aquí?",
-                "estás",
-                "¿Por",
-                "qué",
-                "no",
-                "Esto"
+                "esto.",
+                "más",
+                "para",
+                "No",
+                "tengo",
+                "tiempo",
+                "entonces."
               ],
               "id": "spanish_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿No es por eso por qué estás aquí?",
-              "audio": "¿No es por eso por qué estás aquí?",
+              "answer": "No hay tiempo.",
+              "audio": "No hay tiempo.",
               "id": "spanish_t6_2_3"
             },
             {
@@ -1913,20 +1988,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is that why you're here?",
-                  "¿Por eso estás aquí?"
+                  "I don't have time for that.",
+                  "No tengo tiempo para eso."
                 ],
                 [
-                  "You're not feeling well.",
-                  "No estás bien."
+                  "Now it's time for the weather forecast.",
+                  "Y ahora, el tiempo."
                 ],
                 [
-                  "You are not here.",
-                  "No estás aquí."
+                  "You're on time.",
+                  "Estás a tiempo."
                 ],
                 [
-                  "Are you OK here?",
-                  "¿Estás bien aquí?"
+                  "You don't have the time.",
+                  "No tienes tiempo."
                 ]
               ],
               "id": "spanish_t6_2_4"
@@ -1939,47 +2014,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know everything.",
-              "answer": "Lo sé todo.",
+              "question": "There's time for everything.",
+              "answer": "Hay tiempo para todo.",
               "choices": [
-                "Él no está aquí.",
-                "Está con él.",
-                "Estoy con él.",
-                "Lo sé todo."
+                "¿Quién es esta vez?",
+                "Hay un tiempo para todo.",
+                "Una vez más.",
+                "Hay tiempo para todo."
               ],
               "id": "spanish_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Esto es todo lo ____ sé de él.",
-              "answer": "que",
+              "question": "Él ____ tiempo.",
+              "answer": "tiene",
               "choices": [
-                "por",
-                "que",
-                "está",
-                "Para"
+                "Quiero",
+                "tiene",
+                "para",
+                "Una"
               ],
               "id": "spanish_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know that.",
-              "answer": "Eso no lo sé.",
+              "question": "There's no time for that now.",
+              "answer": "Ahora no hay tiempo para eso.",
               "words": [
+                "hay",
+                "tiempo",
                 "no",
-                "Estoy",
-                "sé.",
-                "Eso",
-                "lo",
-                "Eso"
+                "más",
+                "eso.",
+                "Ahora",
+                "si",
+                "para"
               ],
               "id": "spanish_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sé que no sé.",
-              "audio": "Sé que no sé.",
+              "answer": "¿Quién tiene tiempo para eso?",
+              "audio": "¿Quién tiene tiempo para eso?",
               "id": "spanish_t6_3_3"
             },
             {
@@ -1988,31 +2065,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know that.",
-                  "Yo sé eso."
+                  "I don't have time for that right now.",
+                  "Ahora no tengo tiempo para eso."
                 ],
                 [
-                  "I know it very well.",
-                  "Lo sé muy bien."
+                  "I don't have time for anything.",
+                  "No tengo tiempo para nada."
                 ],
                 [
-                  "I don't know why.",
-                  "No sé por qué."
+                  "What is time?",
+                  "¿Qué es el tiempo?"
                 ],
                 [
-                  "I don't know.",
-                  "No lo sé."
+                  "I want more time.",
+                  "Quiero más tiempo."
                 ]
               ],
               "id": "spanish_t6_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "It's one o'clock.",
+          "Es la una."
+        ],
+        [
+          "One more time.",
+          "Una vez más."
+        ],
+        [
+          "He was here at that time.",
+          "Él estaba aquí entonces."
+        ]
+      ],
+      "tip": "Telling time uses ser plus the feminine article: es la una, but son las dos. The hour is treated as a feminine noun."
     },
     {
       "id": "t7",
-      "title": "Wider Vocabulary 1",
+      "title": "Work & School",
       "lessons": [
         {
           "id": "t7l1",
@@ -2020,48 +2112,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's all I know.",
-              "answer": "Eso es todo lo que sé.",
+              "question": "We have a lot of work to do.",
+              "answer": "Tenemos mucho que hacer.",
               "choices": [
-                "No sé más que eso.",
-                "Eso es todo lo que sé.",
-                "Sé lo que es.",
-                "Ya lo sé."
+                "Hay mucho trabajo que hacer.",
+                "Tenemos mucho que hacer.",
+                "¿Qué es tu trabajo?",
+                "Voy al trabajo."
               ],
               "id": "spanish_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Sí, ____ sé.",
-              "answer": "lo",
+              "question": "Yo ____ trabajo.",
+              "answer": "no",
               "choices": [
-                "así",
-                "que",
-                "Esto",
-                "lo"
+                "Ella",
+                "Ya",
+                "El",
+                "no"
               ],
               "id": "spanish_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "I know only this.",
-              "answer": "No sé más que eso.",
+              "question": "There's a lot of work to do.",
+              "answer": "Hay mucho trabajo que hacer.",
               "words": [
-                "más",
-                "eso.",
-                "Esto",
-                "Sé",
+                "trabajo",
+                "hacer.",
+                "solo.",
+                "¿Qué",
                 "que",
-                "No",
-                "sé"
+                "Hay",
+                "mucho"
               ],
               "id": "spanish_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Esto es todo lo que sé.",
-              "audio": "Esto es todo lo que sé.",
+              "answer": "Tengo un trabajo para ti.",
+              "audio": "Tengo un trabajo para ti.",
               "id": "spanish_t7_1_3"
             },
             {
@@ -2070,20 +2162,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know.",
-                  "Yo lo sé."
+                  "She has a lot of work to do.",
+                  "Ella tiene mucho trabajo que hacer."
                 ],
                 [
-                  "Now I know why.",
-                  "Ahora sé por qué."
+                  "I cannot do the work on my own.",
+                  "No puedo hacer el trabajo solo."
                 ],
                 [
-                  "I don't quite know.",
-                  "No sé bien."
+                  "I work with him.",
+                  "Trabajo con él."
                 ],
                 [
-                  "I don't know what it is.",
-                  "No sé lo que es."
+                  "She's at work, isn't she?",
+                  "Ella está en el trabajo, ¿no?"
                 ]
               ],
               "id": "spanish_t7_1_4"
@@ -2096,48 +2188,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know why you're here.",
-              "answer": "Sé por qué estás aquí.",
+              "question": "Who can do this work?",
+              "answer": "¿Quién puede hacer este trabajo?",
               "choices": [
-                "Ahora sé por qué.",
-                "Sé por qué estás aquí.",
-                "Esto es todo lo que sé.",
-                "Sé por qué es así."
+                "No puedo hacer el trabajo solo.",
+                "¿Quién puede hacer este trabajo?",
+                "Tengo un trabajo para ti.",
+                "Vamos al trabajo."
               ],
               "id": "spanish_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Lo ____ bien.",
-              "answer": "sé",
+              "question": "¿Cómo te va ____ el trabajo?",
+              "answer": "en",
               "choices": [
-                "ya",
-                "sé",
-                "si",
-                "Sí"
+                "No",
+                "en",
+                "Vamos",
+                "está"
               ],
               "id": "spanish_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know what that is.",
-              "answer": "No sé qué es eso.",
+              "question": "The job has already been done.",
+              "answer": "Ya está hecho el trabajo.",
               "words": [
-                "qué",
-                "es",
-                "sé",
-                "No",
-                "Esto",
-                "eso.",
-                "más"
+                "hecho",
+                "el",
+                "está",
+                "Ya",
+                "mi",
+                "trabajo.",
+                "hacer."
               ],
               "id": "spanish_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eso es lo que no sé.",
-              "audio": "Eso es lo que no sé.",
+              "answer": "Tengo mucho trabajo que hacer.",
+              "audio": "Tengo mucho trabajo que hacer.",
               "id": "spanish_t7_2_3"
             },
             {
@@ -2146,20 +2238,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know that already.",
-                  "Eso ya lo sé."
+                  "How's the work going?",
+                  "¿Cómo va el trabajo?"
                 ],
                 [
-                  "I know how it is.",
-                  "Ya lo sé."
+                  "I go to work.",
+                  "Voy al trabajo."
                 ],
                 [
-                  "I know what it is.",
-                  "Sé lo que es."
+                  "What's your job?",
+                  "¿Qué es tu trabajo?"
                 ],
                 [
-                  "I know why that is.",
-                  "Sé por qué es así."
+                  "Let's go at our work.",
+                  "Vamos al trabajo."
                 ]
               ],
               "id": "spanish_t7_2_4"
@@ -2172,47 +2264,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know that well.",
-              "answer": "Yo sé eso bien.",
+              "question": "That's not my job.",
+              "answer": "Ese no es mi trabajo.",
               "choices": [
-                "Sí, lo sé.",
-                "Sé lo que es.",
-                "No sé bien.",
-                "Yo sé eso bien."
+                "Yo no trabajo.",
+                "¿Qué es tu trabajo?",
+                "Trabajo con él.",
+                "Ese no es mi trabajo."
               ],
               "id": "spanish_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "Lo sé ____ él.",
-              "answer": "por",
+              "question": "Es ____ trabajo.",
+              "answer": "mi",
               "choices": [
-                "de",
-                "sé",
-                "por",
-                "lo"
+                "con",
+                "él",
+                "mi",
+                "tiene"
               ],
               "id": "spanish_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "I already know this.",
-              "answer": "Esto ya lo sé.",
+              "question": "She is at work right now.",
+              "answer": "Ahora está en el trabajo.",
               "words": [
-                "es",
-                "sé.",
-                "ya",
-                "Esto",
-                "Sé",
-                "lo"
+                "está",
+                "el",
+                "trabajo?",
+                "Ahora",
+                "en",
+                "trabajo.",
+                "hacer."
               ],
               "id": "spanish_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yo sé todo eso.",
-              "audio": "Yo sé todo eso.",
+              "answer": "El trabajo es todo para mí.",
+              "audio": "El trabajo es todo para mí.",
               "id": "spanish_t7_3_3"
             },
             {
@@ -2221,31 +2314,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know this.",
-                  "Esto lo sé."
+                  "Did you do your work?",
+                  "¿Has hecho tu trabajo?"
                 ],
                 [
-                  "I don't know if it is good.",
-                  "No sé si eso es bueno."
+                  "I work for you.",
+                  "Trabajo para ti."
                 ],
                 [
-                  "That's all I know about him.",
-                  "Eso es todo lo que sé de él."
+                  "The work is done.",
+                  "El trabajo está hecho."
                 ],
                 [
-                  "I don't know anymore.",
-                  "Yo ya no sé."
+                  "It's a lot of work.",
+                  "Es mucho trabajo."
                 ]
               ],
               "id": "spanish_t7_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "We have a lot of work to do.",
+          "Tenemos mucho que hacer."
+        ],
+        [
+          "I do not work.",
+          "Yo no trabajo."
+        ],
+        [
+          "There's a lot of work to do.",
+          "Hay mucho trabajo que hacer."
+        ]
+      ],
+      "tip": "Verbs fall into three groups by ending: -ar, -er and -ir. Learn one of each and most regular verbs follow."
     },
     {
       "id": "t8",
-      "title": "Wider Vocabulary 2",
+      "title": "Feelings & Opinions",
       "lessons": [
         {
           "id": "t8l1",
@@ -2253,50 +2361,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know, it's just...",
-              "answer": "Lo sé, es que...",
+              "question": "I don't love you anymore.",
+              "answer": "Ya no te quiero.",
               "choices": [
-                "Yo muy bien. ¿Y tú?",
-                "Lo sé, es que...",
-                "No sé por qué, pero así es.",
-                "Bien. ¿Y tú?"
+                "Quiero más de eso.",
+                "Ya no te quiero.",
+                "Ya no lo quiero.",
+                "No quiero nada."
               ],
               "id": "spanish_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Bueno, ¡no ____ sé!",
+              "question": "Esto es ____ que quiero.",
               "answer": "lo",
               "choices": [
-                "es",
-                "sé",
-                "Por",
+                "Sí",
+                "Eso",
+                "Sé",
                 "lo"
               ],
               "id": "spanish_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know why, but that's how it is.",
-              "answer": "No sé por qué, pero así es.",
+              "question": "I don't want it anymore.",
+              "answer": "Ya no lo quiero.",
               "words": [
-                "sé",
-                "qué,",
-                "por",
-                "pero",
-                "así",
-                "es.",
-                "nos",
-                "No",
-                "¿Por"
+                "no",
+                "Yo",
+                "quiero.",
+                "Ya",
+                "quiero.",
+                "lo"
               ],
               "id": "spanish_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿Qué sé yo?",
-              "audio": "¿Qué sé yo?",
+              "answer": "Ya no le quiero.",
+              "audio": "Ya no le quiero.",
               "id": "spanish_t8_1_3"
             },
             {
@@ -2305,20 +2410,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know now.",
-                  "Ahora lo sé."
+                  "I love him more than anything.",
+                  "Le quiero más que a nada."
                 ],
                 [
-                  "I don't know why I'm here.",
-                  "No sé por qué estoy aquí."
+                  "I love you more than I love her.",
+                  "Te quiero más que a ella."
                 ],
                 [
-                  "I am fine, and you?",
-                  "Estoy bien, ¿y tú?"
+                  "I do want it.",
+                  "Sí que lo quiero."
                 ],
                 [
-                  "Fine. And you?",
-                  "Bien. ¿Y tú?"
+                  "I don't want anything.",
+                  "No quiero nada."
                 ]
               ],
               "id": "spanish_t8_1_4"
@@ -2331,48 +2436,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You're fine.",
-              "answer": "Tú estás bien.",
+              "question": "I don't want any more.",
+              "answer": "No quiero nada más.",
               "choices": [
-                "Nos vamos ya.",
-                "Tú estás bien.",
-                "Yo no, ¿y tú?",
-                "Yo muy bien. ¿Y tú?"
+                "Yo me quiero.",
+                "No quiero nada más.",
+                "¡Lo quiero ahora!",
+                "Quiero más de eso."
               ],
               "id": "spanish_t8_2_0"
             },
             {
-              "type": "translation",
-              "question": "Not me. And you?",
-              "answer": "Yo no, ¿y tú?",
+              "type": "cloze",
+              "question": "¡Lo ____ ahora!",
+              "answer": "quiero",
               "choices": [
-                "No, para nada.",
-                "Yo no, ¿y tú?",
-                "¡Vamos que nos vamos!",
-                "Yo muy bien. ¿Y tú?"
+                "algo",
+                "quiero",
+                "ella",
+                "más"
               ],
               "id": "spanish_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm good. And you?",
-              "answer": "Yo muy bien. ¿Y tú?",
+              "question": "I want more of that.",
+              "answer": "Quiero más de eso.",
               "words": [
-                "muy",
-                "bien.",
-                "¿Y",
-                "Bueno,",
-                "sé,",
-                "tú?",
-                "Yo"
+                "de",
+                "quiero",
+                "más",
+                "no",
+                "Quiero",
+                "eso."
               ],
               "id": "spanish_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¡Tú estás aquí!",
-              "audio": "¡Tú estás aquí!",
+              "answer": "No te quiero.",
+              "audio": "No te quiero.",
               "id": "spanish_t8_2_3"
             },
             {
@@ -2381,20 +2485,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Hurry up, we are leaving!",
-                  "¡Vamos que nos vamos!"
+                  "I don't know what I want.",
+                  "No sé lo que quiero."
                 ],
                 [
-                  "Shall we go now?",
-                  "¿Nos vamos ahora?"
+                  "That's not what I want.",
+                  "Eso no es lo que quiero."
                 ],
                 [
-                  "Why don't we get out of here?",
-                  "¿Por qué no nos vamos de aquí?"
+                  "That's what I want.",
+                  "Eso es lo que quiero."
                 ],
                 [
-                  "We're leaving now.",
-                  "Nos vamos ya."
+                  "I love myself.",
+                  "Yo me quiero."
                 ]
               ],
               "id": "spanish_t8_2_4"
@@ -2407,47 +2511,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "We leave from here.",
-              "answer": "Nos vamos de aquí.",
+              "question": "I don't know what I want anymore.",
+              "answer": "Ya no sé lo que quiero.",
               "choices": [
-                "No sé nada de él.",
-                "¿Nos vamos ahora?",
-                "Sé que no sé nada.",
-                "Nos vamos de aquí."
+                "Sé lo que quiero.",
+                "Eso no es lo que quiero.",
+                "No te quiero aquí.",
+                "Ya no sé lo que quiero."
               ],
               "id": "spanish_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Sé que ____ sé nada.",
-              "answer": "no",
+              "question": "No te ____ aquí.",
+              "answer": "quiero",
               "choices": [
-                "para",
-                "no",
-                "yo",
-                "estás"
+                "Eso",
+                "quiero",
+                "todo",
+                "Sí"
               ],
               "id": "spanish_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "He's nothing.",
-              "answer": "Él no es nada.",
+              "question": "I want something more.",
+              "answer": "Quiero algo más.",
               "words": [
-                "no",
-                "nada.",
-                "es",
-                "aquí",
-                "nada.",
-                "Él"
+                "algo",
+                "más.",
+                "ahora!",
+                "quiero.",
+                "Quiero"
               ],
               "id": "spanish_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "No sé nada de él.",
-              "audio": "No sé nada de él.",
+              "answer": "Sé lo que quiero.",
+              "audio": "Sé lo que quiero.",
               "id": "spanish_t8_3_3"
             },
             {
@@ -2456,31 +2559,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "No, not at all.",
-                  "No, para nada."
+                  "I don't want this.",
+                  "No quiero esto."
                 ],
                 [
-                  "I don't know anything.",
-                  "No sé nada."
+                  "I want to be like her.",
+                  "Quiero ser como ella."
                 ],
                 [
-                  "There is nothing here.",
-                  "Aquí no hay nada."
+                  "I've got everything I want.",
+                  "Tengo todo lo que quiero."
                 ],
                 [
-                  "None of this is good.",
-                  "Nada de aquí es bueno."
+                  "I have what I want.",
+                  "Tengo lo que quiero."
                 ]
               ],
               "id": "spanish_t8_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "I don't love you anymore.",
+          "Ya no te quiero."
+        ],
+        [
+          "This is what I want.",
+          "Esto es lo que quiero."
+        ],
+        [
+          "I don't want it anymore.",
+          "Ya no lo quiero."
+        ]
+      ],
+      "tip": "Gustar works backwards from English: me gusta el cafe is literally \"coffee pleases me\", so the thing liked is the subject."
     },
     {
       "id": "t9",
-      "title": "Longer Sentences 1",
+      "title": "Weather & Nature",
       "lessons": [
         {
           "id": "t9l1",
@@ -2488,47 +2606,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is not good at all.",
-              "answer": "Esto no es nada bueno.",
+              "question": "How's the weather?",
+              "answer": "¿Cómo está el tiempo?",
               "choices": [
-                "¿Sí o no?",
-                "Esto no es nada bueno.",
-                "Es todo o nada.",
-                "¿Por qué tiene que ser así?"
+                "Eres muy idiota para salir con este tiempo.",
+                "¿Cómo está el tiempo?",
+                "Es un idiota sin corazón.",
+                "Me gusta mucho el sol."
               ],
               "id": "spanish_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "No ____ nada.",
-              "answer": "tengo",
+              "question": "El tiempo no ____ estar mejor.",
+              "answer": "podría",
               "choices": [
-                "No",
-                "está",
-                "Sí",
-                "tengo"
+                "sol",
+                "Hizo",
+                "corazón",
+                "podría"
               ],
               "id": "spanish_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know at all.",
-              "answer": "No sé para nada.",
+              "question": "How is the weather outside?",
+              "answer": "¿Cómo hace fuera?",
               "words": [
-                "sé",
-                "nada.",
-                "para",
+                "fuera?",
                 "no",
+                "voy.",
                 "¿Cómo",
-                "No"
+                "hace"
               ],
               "id": "spanish_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Para él, no es nada.",
-              "audio": "Para él, no es nada.",
+              "answer": "¿Qué tiempo hace esta mañana?",
+              "audio": "¿Qué tiempo hace esta mañana?",
               "id": "spanish_t9_1_3"
             },
             {
@@ -2537,20 +2654,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Everything is nothing.",
-                  "Todo es nada."
+                  "I like this weather.",
+                  "Me gusta este tiempo."
                 ],
                 [
-                  "I know nothing about that.",
-                  "No sé nada de eso."
+                  "I will go, provided the weather is clear.",
+                  "Si hace buen tiempo, voy."
                 ],
                 [
-                  "He swims well.",
-                  "Él nada bien."
+                  "It is bad weather.",
+                  "Hace mal tiempo."
                 ],
                 [
-                  "Very good. How are you?",
-                  "Muy bien. ¿Cómo estás tú?"
+                  "The weather was very good.",
+                  "Hizo muy buen tiempo."
                 ]
               ],
               "id": "spanish_t9_1_4"
@@ -2563,46 +2680,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What is he like?",
-              "answer": "¿Cómo es él?",
+              "question": "Every cloud has a silver lining.",
+              "answer": "No hay mal que por bien no venga.",
               "choices": [
-                "Todo es nada.",
-                "¿Cómo es él?",
-                "Así es como tiene que ser.",
-                "Es él o yo."
+                "Me gusta este tiempo.",
+                "No hay mal que por bien no venga.",
+                "Cualquier noche puede salir el sol.",
+                "El Sol está muy lejos de la Tierra."
               ],
               "id": "spanish_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "¿Cómo de ____ es?",
-              "answer": "bueno",
+              "question": "El tiempo ____ muy malo.",
+              "answer": "está",
               "choices": [
-                "tengo",
-                "bueno",
-                "estás",
-                "no"
+                "la",
+                "está",
+                "por",
+                "nada"
               ],
               "id": "spanish_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "How is he?",
-              "answer": "¿Cómo está él?",
+              "question": "Perhaps the weather is fine.",
+              "answer": "Puede que haga buen tiempo.",
               "words": [
-                "él?",
-                "Es",
-                "ser?",
-                "¿Cómo",
-                "está"
+                "que",
+                "tiempo",
+                "haga",
+                "tiempo.",
+                "tiempo.",
+                "Puede",
+                "buen"
               ],
               "id": "spanish_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "No sé cómo.",
-              "audio": "No sé cómo.",
+              "answer": "Iré, haga el tiempo que haga.",
+              "audio": "Iré, haga el tiempo que haga.",
               "id": "spanish_t9_2_3"
             },
             {
@@ -2611,20 +2730,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes or no?",
-                  "¿Sí o no?"
+                  "You are an idiot to go out in this weather.",
+                  "Eres muy idiota para salir con este tiempo."
                 ],
                 [
-                  "It's all or nothing.",
-                  "Es todo o nada."
+                  "He's a cold-hearted jerk.",
+                  "Es un idiota sin corazón."
                 ],
                 [
-                  "Is it a yes or a no?",
-                  "¿Eso es un sí o un no?"
+                  "The weather was going from bad to worse.",
+                  "El tiempo iba de mal en peor."
                 ],
                 [
-                  "All or nothing.",
-                  "O todo o nada."
+                  "How's the weather in New York?",
+                  "¿Qué tiempo hace en Nueva York?"
                 ]
               ],
               "id": "spanish_t9_2_4"
@@ -2637,47 +2756,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You or I?",
-              "answer": "¿Tú o yo?",
+              "question": "Beautiful weather, isn't it?",
+              "answer": "Bonito el tiempo, ¿no?",
               "choices": [
-                "No tengo nada.",
-                "¿Cómo de bueno es?",
-                "Para él, no es nada.",
-                "¿Tú o yo?"
+                "El tiempo no podría estar mejor.",
+                "El tiempo está muy malo.",
+                "¿Qué tiempo hace esta mañana?",
+                "Bonito el tiempo, ¿no?"
               ],
               "id": "spanish_t9_3_0"
             },
             {
-              "type": "translation",
-              "question": "It's him or me.",
-              "answer": "Es él o yo.",
+              "type": "cloze",
+              "question": "El Sol está muy ____ de la Tierra.",
+              "answer": "lejos",
               "choices": [
-                "No sé para nada.",
-                "Es él o yo.",
-                "Así es como tiene que ser.",
-                "Él nada bien."
+                "hace",
+                "lejos",
+                "está",
+                "bajo"
               ],
               "id": "spanish_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "To be or not to be?",
-              "answer": "¿Ser o no ser?",
+              "question": "The weather is good. It's sunny.",
+              "answer": "Hace buen tiempo. Hace sol.",
               "words": [
-                "no",
-                "ser?",
-                "o",
-                "¿Ser",
-                "O",
-                "No"
+                "tiempo.",
+                "Hace",
+                "Tierra.",
+                "Hace",
+                "Nada",
+                "sol.",
+                "buen"
               ],
               "id": "spanish_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "No hay que ser así.",
-              "audio": "No hay que ser así.",
+              "answer": "Nada nuevo bajo el sol.",
+              "audio": "Nada nuevo bajo el sol.",
               "id": "spanish_t9_3_3"
             },
             {
@@ -2686,31 +2806,46 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It is how it is.",
-                  "Es como tiene que ser."
+                  "There is nothing new under the sun.",
+                  "No hay nada nuevo bajo el sol."
                 ],
                 [
-                  "He has nothing.",
-                  "No tiene nada."
+                  "The sun was about to come up.",
+                  "El sol estaba a punto de salir."
                 ],
                 [
-                  "Why does it have to be like this?",
-                  "¿Por qué tiene que ser así?"
+                  "I like the sun a lot.",
+                  "Me gusta mucho el sol."
                 ],
                 [
-                  "This is how it has to be.",
-                  "Así es como tiene que ser."
+                  "Any night the sun can come out.",
+                  "Cualquier noche puede salir el sol."
                 ]
               ],
               "id": "spanish_t9_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "How's the weather?",
+          "¿Cómo está el tiempo?"
+        ],
+        [
+          "The weather couldn't be better.",
+          "El tiempo no podría estar mejor."
+        ],
+        [
+          "How is the weather outside?",
+          "¿Cómo hace fuera?"
+        ]
+      ],
+      "tip": "Weather usually uses hacer: hace frio, hace sol. Literally \"it makes cold\", not \"it is cold\"."
     },
     {
       "id": "t10",
-      "title": "Longer Sentences 2",
+      "title": "Health & Body",
       "lessons": [
         {
           "id": "t10l1",
@@ -2718,47 +2853,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It must be here.",
-              "answer": "Tiene que ser aquí.",
+              "question": "It's all in your head.",
+              "answer": "Todo está en tu cabeza.",
               "choices": [
-                "¿Cómo es ella?",
-                "Tiene que ser aquí.",
-                "Es de ella.",
-                "Esto es para ella."
+                "El problema se le fue de las manos.",
+                "Todo está en tu cabeza.",
+                "Había miedo en sus ojos.",
+                "Las personas tienen dos ojos."
               ],
               "id": "spanish_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Yo puedo ____ bueno.",
-              "answer": "ser",
+              "question": "Parece que ellos ____ buena cabeza.",
+              "answer": "tienen",
               "choices": [
-                "Ya",
-                "Yo",
-                "aquí",
-                "ser"
+                "que",
+                "él",
+                "te",
+                "tienen"
               ],
               "id": "spanish_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "I can't anymore.",
-              "answer": "Ya no puedo más.",
+              "question": "In my head it's all perfectly clear.",
+              "answer": "En mi cabeza está todo muy claro.",
               "words": [
-                "no",
-                "más.",
-                "ella",
-                "Ya",
-                "puedo",
-                "él."
+                "muy",
+                "está",
+                "muy",
+                "miedo",
+                "claro.",
+                "cabeza",
+                "mi",
+                "En",
+                "todo"
               ],
               "id": "spanish_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "¿Qué tiene ella?",
-              "audio": "¿Qué tiene ella?",
+              "answer": "¿Qué pasa por tu cabeza?",
+              "audio": "¿Qué pasa por tu cabeza?",
               "id": "spanish_t10_1_3"
             },
             {
@@ -2767,20 +2905,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She's not here.",
-                  "Ella no está aquí."
+                  "That's as plain as the nose on your face.",
+                  "Está más claro que el agua."
                 ],
                 [
-                  "Why is she here?",
-                  "¿Por qué está ella aquí?"
+                  "Put your hands on your head.",
+                  "¡Manos sobre la cabeza!"
                 ],
                 [
-                  "What is she like?",
-                  "¿Cómo es ella?"
+                  "The problem got out of hand.",
+                  "El problema se le fue de las manos."
                 ],
                 [
-                  "Here she is!",
-                  "¡Aquí está ella!"
+                  "Where are your eyes?",
+                  "¿Dónde están tus ojos?"
                 ]
               ],
               "id": "spanish_t10_1_4"
@@ -2793,46 +2931,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She is everything to him.",
-              "answer": "Ella es todo para él.",
+              "question": "I can see it in your eyes.",
+              "answer": "Lo puedo ver en tus ojos.",
               "choices": [
-                "Ya no le quiero.",
-                "Ella es todo para él.",
-                "No puedo con ella.",
-                "Yo puedo ser bueno."
+                "Se lo dijo cara a cara.",
+                "Lo puedo ver en tus ojos.",
+                "¿Qué tienes en la mano?",
+                "Parece que ellos tienen buena cabeza."
               ],
               "id": "spanish_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ella ____ bien.",
-              "answer": "nada",
+              "question": "Tengo ____ ojos.",
+              "answer": "dos",
               "choices": [
-                "aquí",
-                "nada",
-                "bueno",
-                "qué"
+                "de",
+                "dos",
+                "buena",
+                "Había"
               ],
               "id": "spanish_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "It's hers.",
-              "answer": "Es de ella.",
+              "question": "There was fear in her eyes.",
+              "answer": "Había miedo en sus ojos.",
               "words": [
-                "de",
-                "que",
-                "ella.",
-                "Es",
-                "aquí."
+                "sus",
+                "está",
+                "miedo",
+                "Quería",
+                "Había",
+                "en",
+                "ojos."
               ],
               "id": "spanish_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ella está aquí.",
-              "audio": "Ella está aquí.",
+              "answer": "¿Qué te pasa en los ojos?",
+              "audio": "¿Qué te pasa en los ojos?",
               "id": "spanish_t10_2_3"
             },
             {
@@ -2841,20 +2981,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's for her.",
-                  "Esto es para ella."
+                  "People have two eyes.",
+                  "Las personas tienen dos ojos."
                 ],
                 [
-                  "This is hers.",
-                  "Esto es de ella."
+                  "She has something in her hand.",
+                  "Ella tiene algo en la mano."
                 ],
                 [
-                  "I can't with her.",
-                  "No puedo con ella."
+                  "What do you have in your hand?",
+                  "¿Qué tienes en la mano?"
                 ],
                 [
-                  "She's with him.",
-                  "Ella está con él."
+                  "What's that in your hand?",
+                  "¿Qué es eso en tu mano?"
                 ]
               ],
               "id": "spanish_t10_2_4"
@@ -2867,47 +3007,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's with her.",
-              "answer": "Él está con ella.",
+              "question": "I can do it with one hand.",
+              "answer": "Puedo hacerlo con una mano.",
               "choices": [
-                "Le quiero más que a nada.",
-                "Ya no te quiero.",
-                "Ella está con ella.",
-                "Él está con ella."
+                "Quería hablar contigo cara a cara.",
+                "Todavía puedo ver la cara de mi madre.",
+                "¿Cómo estás haciendo eso con tu mano?",
+                "Puedo hacerlo con una mano."
               ],
               "id": "spanish_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ella está ____ ella.",
-              "answer": "con",
+              "question": "¿Cómo estás haciendo ____ con tu mano?",
+              "answer": "eso",
               "choices": [
-                "nada",
-                "con",
-                "más",
-                "él"
+                "Parece",
+                "eso",
+                "me",
+                "el"
               ],
               "id": "spanish_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't love you anymore.",
-              "answer": "Ya no te quiero.",
+              "question": "I can still see my mother's face.",
+              "answer": "Todavía puedo ver la cara de mi madre.",
               "words": [
-                "no",
                 "puedo",
-                "quiero.",
-                "Ya",
-                "ella?",
-                "te"
+                "la",
+                "ver",
+                "está",
+                "haciendo",
+                "madre.",
+                "cara",
+                "Todavía",
+                "de",
+                "mi"
               ],
               "id": "spanish_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Esto es lo que quiero.",
-              "audio": "Esto es lo que quiero.",
+              "answer": "Me gustaría hablar con él cara a cara.",
+              "audio": "Me gustaría hablar con él cara a cara.",
               "id": "spanish_t10_3_3"
             },
             {
@@ -2916,27 +3060,42 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't want it anymore.",
-                  "Ya no lo quiero."
+                  "I'm not fond of her face.",
+                  "No me gusta su cara."
                 ],
                 [
-                  "I do not love him any longer.",
-                  "Ya no le quiero."
+                  "He told him right to his face.",
+                  "Se lo dijo cara a cara."
                 ],
                 [
-                  "I love him more than anything.",
-                  "Le quiero más que a nada."
+                  "I wanted to talk with you face-to-face.",
+                  "Quería hablar contigo cara a cara."
                 ],
                 [
-                  "I love you more than I love her.",
-                  "Te quiero más que a ella."
+                  "I don't like your face.",
+                  "No me gusta tu cara."
                 ]
               ],
               "id": "spanish_t10_3_4"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "It's all in your head.",
+          "Todo está en tu cabeza."
+        ],
+        [
+          "It looks like they have a good head.",
+          "Parece que ellos tienen buena cabeza."
+        ],
+        [
+          "In my head it's all perfectly clear.",
+          "En mi cabeza está todo muy claro."
+        ]
+      ],
+      "tip": "With body parts Spanish uses the article, not a possessive: me duele la cabeza, \"the head hurts me\", not \"my head\"."
     }
   ]
 }

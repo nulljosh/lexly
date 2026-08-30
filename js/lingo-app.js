@@ -1307,6 +1307,43 @@ async function showSkillTree(subjectId) {
     renderSkillTree(pack);
 }
 
+// "Before you start": the grammar note for this unit, if one was written, plus three real
+// phrases from the unit itself. Until now a lesson only ever tested -- nothing taught.
+function buildUnitIntro(unit) {
+    const preview = Array.isArray(unit.preview) ? unit.preview : [];
+    if (!unit.tip && !preview.length) return null;
+
+    const card = document.createElement('div');
+    card.className = 'unit-intro';
+
+    const label = document.createElement('div');
+    label.className = 'unit-intro-label';
+    label.textContent = 'Before you start';
+    card.appendChild(label);
+
+    if (unit.tip) {
+        const tip = document.createElement('p');
+        tip.className = 'unit-intro-tip';
+        tip.textContent = unit.tip;
+        card.appendChild(tip);
+    }
+
+    if (preview.length) {
+        const list = document.createElement('dl');
+        list.className = 'unit-intro-phrases';
+        preview.forEach(([english, target]) => {
+            const dt = document.createElement('dt');
+            dt.textContent = target;
+            const dd = document.createElement('dd');
+            dd.textContent = english;
+            list.appendChild(dt);
+            list.appendChild(dd);
+        });
+        card.appendChild(list);
+    }
+    return card;
+}
+
 function renderSkillTree(pack) {
     const meta = findSubjectMeta(pack.id) || {};
     const treeIcon = document.getElementById('treeIcon');
@@ -1327,6 +1364,8 @@ function renderSkillTree(pack) {
         heading.className = 'tree-unit-title';
         heading.textContent = unit.title;
         unitEl.appendChild(heading);
+        const intro = buildUnitIntro(unit);
+        if (intro) unitEl.appendChild(intro);
 
         (unit.lessons || []).forEach((lesson) => {
             const index = flatIndex;
@@ -1363,13 +1402,13 @@ function resetToHome() {
 }
 
 // Speak text aloud with the course's language voice (real audio, no asset files).
-function speak(text, lang) {
+function speak(text, lang, slow) {
     if (!text || !('speechSynthesis' in window)) return;
     try {
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         if (lang) utter.lang = lang;
-        utter.rate = 0.9;
+        utter.rate = slow ? 0.45 : 0.9;
         window.speechSynthesis.speak(utter);
     } catch (_) { /* TTS unavailable */ }
 }
@@ -1602,6 +1641,14 @@ function renderQuestion(question) {
         replayBtn.appendChild(document.createTextNode(' Play'));
         replayBtn.addEventListener('click', () => speak(question.audio || question.answer, currentLang()));
         questionText.appendChild(replayBtn);
+        const slowBtn = document.createElement('button');
+        slowBtn.type = 'button';
+        slowBtn.className = 'btn tts-btn';
+        slowBtn.setAttribute('aria-label', 'Play audio slowly');
+        slowBtn.appendChild(makeIcon('fa-solid fa-gauge-simple-low'));
+        slowBtn.appendChild(document.createTextNode(' Slow'));
+        slowBtn.addEventListener('click', () => speak(question.audio || question.answer, currentLang(), true));
+        questionText.appendChild(slowBtn);
         container.appendChild(questionText);
         speak(question.audio || question.answer, currentLang());
 

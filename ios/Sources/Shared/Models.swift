@@ -71,6 +71,11 @@ struct CoursePack: Decodable {
 struct Unit: Decodable, Identifiable {
     let id: String
     let title: String
+    /// Grammar note for this unit. Only written for languages where it can be stated
+    /// accurately, so most units have none and simply show the phrases.
+    let tip: String?
+    /// Three `[english, target]` phrases drawn from this unit, shown before its lessons.
+    let preview: [[String]]?
     let lessons: [Lesson]
 }
 

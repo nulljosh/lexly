@@ -103,6 +103,19 @@ for (const [catId, category] of Object.entries(catalog.categories)) {
     }
     check(Array.isArray(pack.units), `${catId}/${subject.id}: pack missing units array`);
     for (const unit of pack.units || []) {
+      // Optional teaching fields. Both renderers read them, so both shapes are guarded.
+      if (unit.tip !== undefined) {
+        check(typeof unit.tip === 'string' && unit.tip.trim().length > 0,
+          `${catId}/${subject.id}/${unit.id}: tip must be a non-empty string`);
+      }
+      if (unit.preview !== undefined) {
+        check(Array.isArray(unit.preview) && unit.preview.length > 0,
+          `${catId}/${subject.id}/${unit.id}: preview must be a non-empty array`);
+        for (const pair of unit.preview || []) {
+          check(Array.isArray(pair) && pair.length === 2 && pair.every((side) => typeof side === 'string' && side.trim()),
+            `${catId}/${subject.id}/${unit.id}: preview entry must be [english, target]`);
+        }
+      }
       check(Array.isArray(unit.lessons), `${catId}/${subject.id}: unit missing lessons array`);
       for (const lesson of unit.lessons || []) {
         check(typeof lesson.id === 'string' && typeof lesson.title === 'string', `${catId}/${subject.id}/${unit.id}: lesson missing id/title`);
