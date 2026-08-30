@@ -125,7 +125,13 @@ async function rankedPairs(id, config) {
     );
 
     const unspaced = UNSPACED.has(id);
-    const seen = new Set();
+    // Dedupe on BOTH sides, ignoring case and punctuation. English-only dedupe let
+    // "Ça y est." and "Ça y est !" both land in the same match exercise, which has no
+    // answerable distinction between the two options.
+    const normalizeKey = (text) =>
+        text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+    const seenEnglish = new Set();
+    const seenTarget = new Set();
     const pairs = [];
 
     for (const line of (await readFile(linksFile, 'utf8')).split('\n')) {
@@ -134,11 +140,12 @@ async function rankedPairs(id, config) {
         const englishText = english.get(englishId);
         if (!targetText || !englishText) continue;
 
-        const key = englishText.toLowerCase();
-        if (seen.has(key)) continue;
+        const key = normalizeKey(englishText);
+        const targetKey = normalizeKey(targetText);
+        if (seenEnglish.has(key) || seenTarget.has(targetKey)) continue;
         // Tatoeba contains rows where the "translation" is the same string, which would
         // render as a translation exercise whose answer is its own prompt.
-        if (targetText.toLowerCase() === key) continue;
+        if (normalizeKey(targetText) === normalizeKey(englishText)) continue;
         // Quotation marks survive whitespace tokenizing as junk word-bank chips
         // (`\"\u00bfPor`), so drop quoted sentences rather than special-casing them later.
         if (/["\u00ab\u00bb\u201c\u201d]/.test(targetText) || /["\u201c\u201d]/.test(englishText)) continue;
@@ -157,7 +164,8 @@ async function rankedPairs(id, config) {
             difficulty = Math.max(...ranks);
         }
 
-        seen.add(key);
+        seenEnglish.add(key);
+        seenTarget.add(targetKey);
         pairs.push({ target: targetText, english: englishText, difficulty });
     }
 

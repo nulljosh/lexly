@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-asia",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -218,10 +218,10 @@
               "question": "You must be kidding!",
               "answer": "你骗人！",
               "choices": [
-                "他不蠢。",
+                "铃响了。",
                 "你骗人！",
-                "我笑了。",
-                "我头痛。"
+                "她来了！",
+                "我想哭。"
               ],
               "id": "chinese_t1_1_0"
             },
@@ -230,9 +230,9 @@
               "question": "I love you.",
               "answer": "我爱你。",
               "choices": [
-                "我笑了。",
+                "慢慢来。",
+                "他怕狗。",
                 "他不蠢。",
-                "天很冷。",
                 "我爱你。"
               ],
               "id": "chinese_t1_1_1"
@@ -261,16 +261,16 @@
                   "他不蠢。"
                 ],
                 [
-                  "He's not stupid.",
-                  "他不蠢。"
-                ],
-                [
                   "My stomach hurts.",
                   "我胃痛。"
                 ],
                 [
                   "The bell rang.",
                   "铃响了。"
+                ],
+                [
+                  "Good evening.",
+                  "晚上好。"
                 ]
               ],
               "id": "chinese_t1_1_4"
@@ -283,40 +283,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Good evening.",
-              "answer": "晚上好。",
+              "question": "I agree.",
+              "answer": "我同意。",
               "choices": [
-                "铃响了。",
-                "晚上好。",
-                "天很冷。",
-                "我头痛。"
+                "我教书。",
+                "我同意。",
+                "我爱你。",
+                "我胃痛。"
               ],
               "id": "chinese_t1_2_0"
             },
             {
               "type": "translation",
-              "question": "I agree.",
-              "answer": "我同意。",
+              "question": "No problem.",
+              "answer": "没关系。",
               "choices": [
-                "我想哭。",
-                "天很冷。",
-                "我同意。",
-                "她来了！"
+                "慢慢来。",
+                "早上好！",
+                "没关系。",
+                "我胃痛。"
               ],
               "id": "chinese_t1_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "没关系。",
-              "audio": "没关系。",
+              "answer": "她来了！",
+              "audio": "她来了！",
               "id": "chinese_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "她来了！",
-              "audio": "她来了！",
+              "answer": "慢慢来。",
+              "audio": "慢慢来。",
               "id": "chinese_t1_2_3"
             },
             {
@@ -325,20 +325,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Take it slowly.",
-                  "慢慢来。"
-                ],
-                [
                   "What's the matter?",
-                  "怎么了？"
-                ],
-                [
-                  "What's happened?",
                   "怎么了？"
                 ],
                 [
                   "I feel like crying.",
                   "我想哭。"
+                ],
+                [
+                  "He's afraid of dogs.",
+                  "他怕狗。"
+                ],
+                [
+                  "It's cold.",
+                  "天很冷。"
                 ]
               ],
               "id": "chinese_t1_2_4"
@@ -351,40 +351,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I felt like crying.",
-              "answer": "我想哭。",
+              "question": "He is mean.",
+              "answer": "他很凶。",
               "choices": [
-                "我笑了。",
+                "她来了！",
+                "我想哭。",
                 "我头痛。",
-                "天很冷。",
-                "我想哭。"
+                "他很凶。"
               ],
               "id": "chinese_t1_3_0"
             },
             {
               "type": "translation",
-              "question": "I want to cry.",
-              "answer": "我想哭。",
+              "question": "Congratulations!",
+              "answer": "祝贺你。",
               "choices": [
-                "我爱你。",
-                "我想哭。",
+                "铃响了。",
+                "祝贺你。",
                 "我头痛。",
-                "我同意。"
+                "接电话。"
               ],
               "id": "chinese_t1_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "他怕狗。",
-              "audio": "他怕狗。",
+              "answer": "我教书。",
+              "audio": "我教书。",
               "id": "chinese_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "天很冷。",
-              "audio": "天很冷。",
+              "answer": "我笑了。",
+              "audio": "我笑了。",
               "id": "chinese_t1_3_3"
             },
             {
@@ -393,20 +393,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is mean.",
-                  "他很凶。"
+                  "I am afraid of dying.",
+                  "我怕死。"
                 ],
                 [
-                  "Congratulations!",
-                  "祝贺你。"
+                  "You're a human.",
+                  "你是人。"
                 ],
                 [
-                  "I teach.",
-                  "我教书。"
+                  "Good morning!",
+                  "早上好！"
                 ],
                 [
-                  "I laughed.",
-                  "我笑了。"
+                  "How tall are you?",
+                  "你多高？"
                 ]
               ],
               "id": "chinese_t1_3_4"
@@ -425,109 +425,41 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I am afraid of dying.",
-              "answer": "我怕死。",
-              "choices": [
-                "他很穷。",
-                "我怕死。",
-                "你多高？",
-                "我在家。"
-              ],
-              "id": "chinese_t2_1_0"
-            },
-            {
-              "type": "translation",
-              "question": "I am afraid of death.",
-              "answer": "我怕死。",
-              "choices": [
-                "我在家。",
-                "早上好！",
-                "老問題。",
-                "我怕死。"
-              ],
-              "id": "chinese_t2_1_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "你是人。",
-              "audio": "你是人。",
-              "id": "chinese_t2_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "你是人。",
-              "audio": "你是人。",
-              "id": "chinese_t2_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Good morning!",
-                  "早上好！"
-                ],
-                [
-                  "Good morning.",
-                  "早上好！"
-                ],
-                [
-                  "How tall are you?",
-                  "你多高？"
-                ],
-                [
-                  "I am at home.",
-                  "我在家。"
-                ]
-              ],
-              "id": "chinese_t2_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t2l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I'm at home.",
+              "question": "I am at home.",
               "answer": "我在家。",
               "choices": [
                 "好问题。",
                 "我在家。",
-                "你是人。",
-                "认真点。"
+                "快来吧！",
+                "走慢點。"
               ],
-              "id": "chinese_t2_2_0"
+              "id": "chinese_t2_1_0"
             },
             {
               "type": "translation",
               "question": "He is poor.",
               "answer": "他很穷。",
               "choices": [
-                "去死吧！",
-                "他很穷。",
-                "你多高？",
-                "太好了！"
+                "下雨了。",
+                "我姓周。",
+                "好问题。",
+                "他很穷。"
               ],
-              "id": "chinese_t2_2_1"
+              "id": "chinese_t2_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "好问题。",
               "audio": "好问题。",
-              "id": "chinese_t2_2_2"
+              "id": "chinese_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "快来吧！",
               "audio": "快来吧！",
-              "id": "chinese_t2_2_3"
+              "id": "chinese_t2_1_3"
             },
             {
               "type": "match",
@@ -551,61 +483,57 @@
                   "他很懒。"
                 ]
               ],
-              "id": "chinese_t2_2_4"
+              "id": "chinese_t2_1_4"
             }
           ]
         },
         {
-          "id": "t2l3",
-          "title": "Lesson 3",
+          "id": "t2l2",
+          "title": "Lesson 2",
           "exercises": [
             {
               "type": "translation",
               "question": "The same old problem.",
               "answer": "老問題。",
               "choices": [
-                "你多高？",
-                "你是人。",
-                "他很懒。",
-                "老問題。"
+                "认真点。",
+                "老問題。",
+                "他很穷。",
+                "下雨了。"
               ],
-              "id": "chinese_t2_3_0"
+              "id": "chinese_t2_2_0"
             },
             {
               "type": "translation",
               "question": "Get serious.",
               "answer": "认真点。",
               "choices": [
-                "你是人。",
+                "好问题。",
                 "认真点。",
-                "他很穷。",
-                "去死吧！"
+                "谢谢你。",
+                "我姓周。"
               ],
-              "id": "chinese_t2_3_1"
+              "id": "chinese_t2_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "下雨了。",
               "audio": "下雨了。",
-              "id": "chinese_t2_3_2"
+              "id": "chinese_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "下雨了。",
-              "audio": "下雨了。",
-              "id": "chinese_t2_3_3"
+              "answer": "我姓周。",
+              "audio": "我姓周。",
+              "id": "chinese_t2_2_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "My surname is Zhou.",
-                  "我姓周。"
-                ],
                 [
                   "Who is he?",
                   "他是谁？"
@@ -617,6 +545,78 @@
                 [
                   "Great!",
                   "太好了！"
+                ],
+                [
+                  "Come in.",
+                  "进来吧。"
+                ]
+              ],
+              "id": "chinese_t2_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t2l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Don't lie to me!",
+              "answer": "别骗我！",
+              "choices": [
+                "认真点。",
+                "下雨了。",
+                "他很穷。",
+                "别骗我！"
+              ],
+              "id": "chinese_t2_3_0"
+            },
+            {
+              "type": "translation",
+              "question": "Take a short cut.",
+              "answer": "走捷徑。",
+              "choices": [
+                "他很穷。",
+                "走捷徑。",
+                "快来吧！",
+                "别骗我！"
+              ],
+              "id": "chinese_t2_3_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "你爸呢？",
+              "audio": "你爸呢？",
+              "id": "chinese_t2_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "走慢點。",
+              "audio": "走慢點。",
+              "id": "chinese_t2_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I'm free.",
+                  "我有空。"
+                ],
+                [
+                  "Give it up.",
+                  "放棄吧。"
+                ],
+                [
+                  "Am I hungry!",
+                  "我好餓！"
+                ],
+                [
+                  "Thank you!",
+                  "谢谢你。"
                 ]
               ],
               "id": "chinese_t2_3_4"
@@ -635,40 +635,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Come in.",
-              "answer": "进来吧。",
+              "question": "No prob.",
+              "answer": "没事儿。",
               "choices": [
-                "现在呢？",
-                "进来吧。",
-                "別傷心。",
-                "我饿了！"
+                "然后呢？",
+                "没事儿。",
+                "请关门。",
+                "有人吗？"
               ],
               "id": "chinese_t3_1_0"
             },
             {
               "type": "translation",
-              "question": "Come on in.",
-              "answer": "进来吧。",
+              "question": "I felt hungry.",
+              "answer": "我饿了！",
               "choices": [
-                "走捷徑。",
-                "走慢點。",
-                "现在呢？",
-                "进来吧。"
+                "你是谁？",
+                "请关门。",
+                "別回頭。",
+                "我饿了！"
               ],
               "id": "chinese_t3_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "别骗我！",
-              "audio": "别骗我！",
+              "answer": "为什么？",
+              "audio": "为什么？",
               "id": "chinese_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "走捷徑。",
-              "audio": "走捷徑。",
+              "answer": "好多了。",
+              "audio": "好多了。",
               "id": "chinese_t3_1_3"
             },
             {
@@ -677,20 +677,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How about your father?",
-                  "你爸呢？"
+                  "Who knows?",
+                  "谁知道？"
                 ],
                 [
-                  "Walk more slowly.",
-                  "走慢點。"
+                  "Who are you?",
+                  "你是谁？"
                 ],
                 [
-                  "I'm free.",
-                  "我有空。"
+                  "Shut the door.",
+                  "请关门。"
                 ],
                 [
-                  "Give it up.",
-                  "放棄吧。"
+                  "Don't be sad.",
+                  "別傷心。"
                 ]
               ],
               "id": "chinese_t3_1_4"
@@ -703,183 +703,41 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Am I hungry!",
-              "answer": "我好餓！",
+              "question": "And now?",
+              "answer": "现在呢？",
               "choices": [
-                "别骗我！",
-                "我好餓！",
-                "没关系！",
-                "你爸呢？"
+                "请关门。",
+                "现在呢？",
+                "我来啦。",
+                "跟我来！"
               ],
               "id": "chinese_t3_2_0"
             },
             {
               "type": "translation",
-              "question": "Thank you!",
-              "answer": "谢谢你。",
+              "question": "I'm tired.",
+              "answer": "我很累。",
               "choices": [
-                "别骗我！",
-                "別傷心。",
-                "谢谢你。",
-                "谁知道？"
+                "我饿了！",
+                "没办法。",
+                "我很累。",
+                "你是谁？"
               ],
               "id": "chinese_t3_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "谢谢你。",
-              "audio": "谢谢你。",
-              "id": "chinese_t3_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "没事儿。",
-              "audio": "没事儿。",
-              "id": "chinese_t3_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "It doesn't matter!",
-                  "没关系！"
-                ],
-                [
-                  "I felt hungry.",
-                  "我饿了！"
-                ],
-                [
-                  "I'm getting hungry.",
-                  "我饿了！"
-                ],
-                [
-                  "I'm hungry!",
-                  "我饿了！"
-                ]
-              ],
-              "id": "chinese_t3_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t3l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Why?",
-              "answer": "为什么？",
-              "choices": [
-                "别骗我！",
-                "你爸呢？",
-                "现在呢？",
-                "为什么？"
-              ],
-              "id": "chinese_t3_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "It's better.",
-              "answer": "好多了。",
-              "choices": [
-                "你爸呢？",
-                "好多了。",
-                "別傷心。",
-                "谢谢你。"
-              ],
-              "id": "chinese_t3_3_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "谁知道？",
-              "audio": "谁知道？",
-              "id": "chinese_t3_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "你是谁？",
-              "audio": "你是谁？",
-              "id": "chinese_t3_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Shut the door.",
-                  "请关门。"
-                ],
-                [
-                  "Don't be sad.",
-                  "別傷心。"
-                ],
-                [
-                  "And now?",
-                  "现在呢？"
-                ],
-                [
-                  "I'm tired.",
-                  "我很累。"
-                ]
-              ],
-              "id": "chinese_t3_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t4",
-      "title": "Short Sentences 2",
-      "lessons": [
-        {
-          "id": "t4l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I am tired.",
-              "answer": "我很累。",
-              "choices": [
-                "烦死人。",
-                "我很累。",
-                "我渴了。",
-                "他刚到。"
-              ],
-              "id": "chinese_t4_1_0"
-            },
-            {
-              "type": "translation",
-              "question": "I am very tired.",
-              "answer": "我很累。",
-              "choices": [
-                "别闹事。",
-                "开电视。",
-                "他刚到。",
-                "我很累。"
-              ],
-              "id": "chinese_t4_1_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
               "answer": "请保密。",
               "audio": "请保密。",
-              "id": "chinese_t4_1_2"
+              "id": "chinese_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "烦死人。",
               "audio": "烦死人。",
-              "id": "chinese_t4_1_3"
+              "id": "chinese_t3_2_3"
             },
             {
               "type": "match",
@@ -899,61 +757,65 @@
                   "然后呢？"
                 ],
                 [
-                  "Don't look back.",
-                  "別回頭。"
+                  "I do not understand.",
+                  "我不懂。"
                 ]
               ],
-              "id": "chinese_t4_1_4"
+              "id": "chinese_t3_2_4"
             }
           ]
         },
         {
-          "id": "t4l2",
-          "title": "Lesson 2",
+          "id": "t3l3",
+          "title": "Lesson 3",
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm coming.",
-              "answer": "我来啦。",
+              "question": "It's raining.",
+              "answer": "在下雨。",
               "choices": [
-                "我渴了。",
-                "我来啦。",
-                "别闹事。",
-                "烦死人。"
+                "谁知道？",
+                "你是谁？",
+                "別回頭。",
+                "在下雨。"
               ],
-              "id": "chinese_t4_2_0"
+              "id": "chinese_t3_3_0"
             },
             {
               "type": "translation",
-              "question": "Come with me!",
-              "answer": "跟我来！",
+              "question": "Don't look back.",
+              "answer": "別回頭。",
               "choices": [
-                "他醉了。",
-                "跟我来！",
-                "有人吗？",
-                "大家好！"
+                "賣完了！",
+                "別回頭。",
+                "我饿了！",
+                "好多了。"
               ],
-              "id": "chinese_t4_2_1"
+              "id": "chinese_t3_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "请注意！",
-              "audio": "请注意！",
-              "id": "chinese_t4_2_2"
+              "answer": "我来啦。",
+              "audio": "我来啦。",
+              "id": "chinese_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "太多了。",
-              "audio": "太多了。",
-              "id": "chinese_t4_2_3"
+              "answer": "跟我来！",
+              "audio": "跟我来！",
+              "id": "chinese_t3_3_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
+                [
+                  "Pay attention!",
+                  "请注意！"
+                ],
                 [
                   "All sold out!",
                   "賣完了！"
@@ -965,57 +827,59 @@
                 [
                   "Is anybody here?",
                   "有人吗？"
-                ],
-                [
-                  "He just arrived.",
-                  "他刚到。"
                 ]
               ],
-              "id": "chinese_t4_2_4"
+              "id": "chinese_t3_3_4"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "Short Sentences 2",
+      "lessons": [
         {
-          "id": "t4l3",
-          "title": "Lesson 3",
+          "id": "t4l1",
+          "title": "Lesson 1",
           "exercises": [
+            {
+              "type": "translation",
+              "question": "He just arrived.",
+              "answer": "他刚到。",
+              "choices": [
+                "我贫血。",
+                "他刚到。",
+                "大家好！",
+                "打扰了。"
+              ],
+              "id": "chinese_t4_1_0"
+            },
             {
               "type": "translation",
               "question": "Don't move.",
               "answer": "不要动。",
               "choices": [
-                "我走了。",
-                "开电视。",
-                "有人吗？",
+                "你忙吗？",
+                "大家好！",
+                "向左转。",
                 "不要动。"
               ],
-              "id": "chinese_t4_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "Turn to the left.",
-              "answer": "向左转。",
-              "choices": [
-                "烦死人。",
-                "向左转。",
-                "请保密。",
-                "我走了。"
-              ],
-              "id": "chinese_t4_3_1"
+              "id": "chinese_t4_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "向左转。",
               "audio": "向左转。",
-              "id": "chinese_t4_3_2"
+              "id": "chinese_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "我渴了。",
               "audio": "我渴了。",
-              "id": "chinese_t4_3_3"
+              "id": "chinese_t4_1_3"
             },
             {
               "type": "match",
@@ -1031,12 +895,148 @@
                   "他醉了。"
                 ],
                 [
-                  "Turn on the TV.",
-                  "开电视。"
+                  "Excuse me.",
+                  "对不起。"
                 ],
                 [
-                  "How is it going?",
-                  "你好吗？"
+                  "Turn on the TV.",
+                  "开电视。"
+                ]
+              ],
+              "id": "chinese_t4_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t4l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "How is it going?",
+              "answer": "你好吗？",
+              "choices": [
+                "不要动。",
+                "你好吗？",
+                "我贫血。",
+                "风停了。"
+              ],
+              "id": "chinese_t4_2_0"
+            },
+            {
+              "type": "translation",
+              "question": "How are you doing?",
+              "answer": "您好吗？",
+              "choices": [
+                "你在吗？",
+                "您好吗？",
+                "几点了？",
+                "不要动。"
+              ],
+              "id": "chinese_t4_2_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "你在吗？",
+              "audio": "你在吗？",
+              "id": "chinese_t4_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "餓了嗎？",
+              "audio": "餓了嗎？",
+              "id": "chinese_t4_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Are you busy?",
+                  "你忙吗？"
+                ],
+                [
+                  "He washes the car.",
+                  "他洗车。"
+                ],
+                [
+                  "What time is it?",
+                  "几点了？"
+                ],
+                [
+                  "The wind calmed down.",
+                  "风停了。"
+                ]
+              ],
+              "id": "chinese_t4_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t4l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "No way!",
+              "answer": "不可能！",
+              "choices": [
+                "餓了嗎？",
+                "我渴了。",
+                "不要动。",
+                "不可能！"
+              ],
+              "id": "chinese_t4_3_0"
+            },
+            {
+              "type": "translation",
+              "question": "I till the earth.",
+              "answer": "我耕田。",
+              "choices": [
+                "不要动。",
+                "我耕田。",
+                "锁坏了。",
+                "您好吗？"
+              ],
+              "id": "chinese_t4_3_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "这很好。",
+              "audio": "这很好。",
+              "id": "chinese_t4_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "打扰了。",
+              "audio": "打扰了。",
+              "id": "chinese_t4_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "She woke up.",
+                  "她醒了。"
+                ],
+                [
+                  "The lock is broken.",
+                  "锁坏了。"
+                ],
+                [
+                  "He walked away.",
+                  "他走了。"
+                ],
+                [
+                  "I'm anemic.",
+                  "我贫血。"
                 ]
               ],
               "id": "chinese_t4_3_4"
@@ -1055,40 +1055,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "How are you doing?",
-              "answer": "你好吗？",
+              "question": "Was there enough money?",
+              "answer": "钱够吗？",
               "choices": [
-                "她醒了。",
-                "你好吗？",
-                "他走了。",
-                "你忙吗？"
+                "我很穷。",
+                "钱够吗？",
+                "我学习。",
+                "很晚了。"
               ],
               "id": "chinese_t5_1_0"
             },
             {
               "type": "translation",
-              "question": "How's it going?",
-              "answer": "你好吗？",
+              "question": "He can read.",
+              "answer": "他識字。",
               "choices": [
-                "餓了嗎？",
-                "风停了。",
-                "他洗车。",
-                "你好吗？"
+                "我好累。",
+                "我很穷。",
+                "回答我。",
+                "他識字。"
               ],
               "id": "chinese_t5_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "你好吗？",
-              "audio": "你好吗？",
+              "answer": "我很穷。",
+              "audio": "我很穷。",
               "id": "chinese_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "你好吗？",
-              "audio": "你好吗？",
+              "answer": "不客气。",
+              "audio": "不客气。",
               "id": "chinese_t5_1_3"
             },
             {
@@ -1097,20 +1097,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you there?",
-                  "你在吗？"
+                  "There's no salt.",
+                  "没有盐。"
                 ],
                 [
-                  "Hungry?",
-                  "餓了嗎？"
+                  "She is dead.",
+                  "她死了。"
                 ],
                 [
-                  "Are you busy?",
-                  "你忙吗？"
+                  "My heart is in pain.",
+                  "我心痛。"
                 ],
                 [
-                  "He washes the car.",
-                  "他洗车。"
+                  "Where does it hurt?",
+                  "哪裡痛?"
                 ]
               ],
               "id": "chinese_t5_1_4"
@@ -1123,40 +1123,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What time is it?",
-              "answer": "几点了？",
+              "question": "He lay on his back.",
+              "answer": "他仰躺。",
               "choices": [
-                "他走了。",
-                "几点了？",
-                "我贫血。",
-                "打扰了。"
+                "我請你。",
+                "他仰躺。",
+                "不客气。",
+                "很晚了。"
               ],
               "id": "chinese_t5_2_0"
             },
             {
               "type": "translation",
-              "question": "The wind calmed down.",
-              "answer": "风停了。",
+              "question": "It's late.",
+              "answer": "很晚了。",
               "choices": [
-                "打扰了。",
-                "风停了。",
-                "钱够吗？",
-                "我很穷。"
+                "我心痛。",
+                "很晚了。",
+                "想得好!",
+                "他識字。"
               ],
               "id": "chinese_t5_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "不可能！",
-              "audio": "不可能！",
+              "answer": "我学习。",
+              "audio": "我学习。",
               "id": "chinese_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "我耕田。",
-              "audio": "我耕田。",
+              "answer": "他很帅。",
+              "audio": "他很帅。",
               "id": "chinese_t5_2_3"
             },
             {
@@ -1165,20 +1165,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is very good.",
-                  "这很好。"
+                  "I didn't say it.",
+                  "我没说。"
                 ],
                 [
-                  "I'm disturbing you.",
-                  "打扰了。"
+                  "I love her.",
+                  "我愛她。"
                 ],
                 [
-                  "She woke up.",
-                  "她醒了。"
+                  "I will wait.",
+                  "我會等。"
                 ],
                 [
-                  "The lock is broken.",
-                  "锁坏了。"
+                  "Good thinking!",
+                  "想得好!"
                 ]
               ],
               "id": "chinese_t5_2_4"
@@ -1191,40 +1191,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He walked away.",
-              "answer": "他走了。",
+              "question": "How much does it cost?",
+              "answer": "多少錢？",
               "choices": [
-                "你在吗？",
-                "几点了？",
-                "你忙吗？",
-                "他走了。"
+                "我好累。",
+                "他識字。",
+                "回答我。",
+                "多少錢？"
               ],
               "id": "chinese_t5_3_0"
             },
             {
               "type": "translation",
-              "question": "I'm anemic.",
-              "answer": "我贫血。",
+              "question": "I'll treat you.",
+              "answer": "我請你。",
               "choices": [
-                "你在吗？",
-                "我贫血。",
-                "锁坏了。",
-                "你忙吗？"
+                "我心痛。",
+                "我請你。",
+                "他識字。",
+                "我會等。"
               ],
               "id": "chinese_t5_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "钱够吗？",
-              "audio": "钱够吗？",
+              "answer": "小心狗！",
+              "audio": "小心狗！",
               "id": "chinese_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "他識字。",
-              "audio": "他識字。",
+              "answer": "好英俊！",
+              "audio": "好英俊！",
               "id": "chinese_t5_3_3"
             },
             {
@@ -1233,20 +1233,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm poor.",
-                  "我很穷。"
+                  "He wants affection.",
+                  "他要愛。"
                 ],
                 [
-                  "You're welcome.",
-                  "不客气。"
+                  "Answer me this.",
+                  "回答我。"
                 ],
                 [
-                  "There's no salt.",
-                  "没有盐。"
+                  "I'm so tired.",
+                  "我好累。"
                 ],
                 [
-                  "She is dead.",
-                  "她死了。"
+                  "You're sick!",
+                  "你有病！"
                 ]
               ],
               "id": "chinese_t5_3_4"
@@ -1265,40 +1265,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "My heart is in pain.",
-              "answer": "我心痛。",
+              "question": "Hit me.",
+              "answer": "打我吧。",
               "choices": [
-                "我没说。",
-                "我学习。",
-                "我心痛。",
-                "很晚了。"
+                "我也是。",
+                "我想你。",
+                "打我吧。",
+                "我沒事。"
               ],
               "id": "chinese_t6_1_0"
             },
             {
               "type": "translation",
-              "question": "Where does it hurt?",
-              "answer": "哪裡痛?",
+              "question": "Do you have one?",
+              "answer": "你有嗎？",
               "choices": [
-                "打我吧。",
-                "我学习。",
-                "我好累。",
-                "哪裡痛?"
+                "我很好。",
+                "别说谎!",
+                "該走了。",
+                "你有嗎？"
               ],
               "id": "chinese_t6_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "他仰躺。",
-              "audio": "他仰躺。",
+              "answer": "該走了。",
+              "audio": "該走了。",
               "id": "chinese_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "很晚了。",
-              "audio": "很晚了。",
+              "answer": "我也是。",
+              "audio": "我也是。",
               "id": "chinese_t6_1_3"
             },
             {
@@ -1307,20 +1307,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I study.",
-                  "我学习。"
+                  "I'm fine.",
+                  "我很好。"
                 ],
                 [
-                  "He is very handsome.",
-                  "他很帅。"
+                  "A bird can fly.",
+                  "鳥能飛。"
                 ],
                 [
-                  "I didn't say it.",
-                  "我没说。"
+                  "A fish can swim.",
+                  "魚能游。"
                 ],
                 [
-                  "I love her.",
-                  "我愛她。"
+                  "Don't tell lies.",
+                  "别说谎!"
                 ]
               ],
               "id": "chinese_t6_1_4"
@@ -1333,40 +1333,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I will wait.",
-              "answer": "我會等。",
+              "question": "Get up!",
+              "answer": "起来吧！",
               "choices": [
-                "哪裡痛?",
-                "我會等。",
-                "我請你。",
-                "該走了。"
+                "我很好。",
+                "起来吧！",
+                "滾出去！",
+                "我沒事。"
               ],
               "id": "chinese_t6_2_0"
             },
             {
               "type": "translation",
-              "question": "Good thinking!",
-              "answer": "想得好!",
+              "question": "Please turn off the light.",
+              "answer": "請關燈。",
               "choices": [
-                "很晚了。",
-                "想得好!",
-                "我請你。",
-                "你有嗎？"
+                "我想你。",
+                "請關燈。",
+                "你有嗎？",
+                "鳥能飛。"
               ],
               "id": "chinese_t6_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "我請你。",
-              "audio": "我請你。",
+              "answer": "很痛嗎?",
+              "audio": "很痛嗎?",
               "id": "chinese_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "小心狗！",
-              "audio": "小心狗！",
+              "answer": "我愛瞳。",
+              "audio": "我愛瞳。",
               "id": "chinese_t6_2_3"
             },
             {
@@ -1375,20 +1375,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How handsome!",
-                  "好英俊！"
+                  "Come here!",
+                  "來一下！"
                 ],
                 [
-                  "He wants affection.",
-                  "他要愛。"
+                  "Not yet.",
+                  "還沒有。"
                 ],
                 [
-                  "Answer me this.",
-                  "回答我。"
+                  "Good afternoon.",
+                  "下午好。"
                 ],
                 [
-                  "I'm so tired.",
-                  "我好累。"
+                  "I missed you.",
+                  "我想你。"
                 ]
               ],
               "id": "chinese_t6_2_4"
@@ -1401,40 +1401,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You're sick!",
-              "answer": "你有病！",
+              "question": "There is a strike.",
+              "answer": "有罢工。",
               "choices": [
-                "打我吧。",
-                "很晚了。",
-                "回答我。",
-                "你有病！"
+                "我也是。",
+                "魚能游。",
+                "你有嗎？",
+                "有罢工。"
               ],
               "id": "chinese_t6_3_0"
             },
             {
               "type": "translation",
-              "question": "Hit me.",
-              "answer": "打我吧。",
+              "question": "Check, please.",
+              "answer": "請結帳。",
               "choices": [
-                "我很好。",
-                "打我吧。",
-                "他要愛。",
-                "我没说。"
+                "善待安。",
+                "請結帳。",
+                "別碰它。",
+                "來一下！"
               ],
               "id": "chinese_t6_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "你有嗎？",
-              "audio": "你有嗎？",
+              "answer": "滾出去！",
+              "audio": "滾出去！",
               "id": "chinese_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "該走了。",
-              "audio": "該走了。",
+              "answer": "我沒事。",
+              "audio": "我沒事。",
               "id": "chinese_t6_3_3"
             },
             {
@@ -1443,20 +1443,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Me, too.",
-                  "我也是。"
+                  "Don't touch it.",
+                  "別碰它。"
                 ],
                 [
-                  "Me too.",
-                  "我也是。"
+                  "I'm busy.",
+                  "我很忙。"
                 ],
                 [
-                  "I'm fine.",
-                  "我很好。"
+                  "Who drew it?",
+                  "誰畫的？"
                 ],
                 [
-                  "A bird can fly.",
-                  "鳥能飛。"
+                  "Be nice to Ann.",
+                  "善待安。"
                 ]
               ],
               "id": "chinese_t6_3_4"
@@ -1475,251 +1475,41 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "A fish can swim.",
-              "answer": "魚能游。",
+              "question": "Please close the door.",
+              "answer": "請關門。",
               "choices": [
-                "滾出去！",
-                "魚能游。",
-                "我沒事。",
-                "很痛嗎?"
+                "他愛她。",
+                "請關門。",
+                "鎖大門。",
+                "我咳嗽。"
               ],
               "id": "chinese_t7_1_0"
             },
             {
               "type": "translation",
-              "question": "Don't tell lies.",
-              "answer": "别说谎!",
+              "question": "I've seen that.",
+              "answer": "我見過。",
               "choices": [
-                "請結帳。",
-                "請關燈。",
-                "請關門。",
-                "别说谎!"
+                "他愛她。",
+                "鳥下蛋。",
+                "說清楚。",
+                "我見過。"
               ],
               "id": "chinese_t7_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "别说谎!",
-              "audio": "别说谎!",
+              "answer": "他愛她。",
+              "audio": "他愛她。",
               "id": "chinese_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "起来吧！",
-              "audio": "起来吧！",
+              "answer": "請進來。",
+              "audio": "請進來。",
               "id": "chinese_t7_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Please turn off the light.",
-                  "請關燈。"
-                ],
-                [
-                  "Turn off the light, please.",
-                  "請關燈。"
-                ],
-                [
-                  "Does it hurt a lot?",
-                  "很痛嗎?"
-                ],
-                [
-                  "I love Hitomi.",
-                  "我愛瞳。"
-                ]
-              ],
-              "id": "chinese_t7_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Come here!",
-              "answer": "來一下！",
-              "choices": [
-                "善待安。",
-                "來一下！",
-                "我想你。",
-                "請關燈。"
-              ],
-              "id": "chinese_t7_2_0"
-            },
-            {
-              "type": "translation",
-              "question": "Not yet.",
-              "answer": "還沒有。",
-              "choices": [
-                "滾出去！",
-                "還沒有。",
-                "來一下！",
-                "別碰它。"
-              ],
-              "id": "chinese_t7_2_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "下午好。",
-              "audio": "下午好。",
-              "id": "chinese_t7_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "我想你。",
-              "audio": "我想你。",
-              "id": "chinese_t7_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "There is a strike.",
-                  "有罢工。"
-                ],
-                [
-                  "Check, please.",
-                  "請結帳。"
-                ],
-                [
-                  "Get out!",
-                  "滾出去！"
-                ],
-                [
-                  "I am okay.",
-                  "我沒事。"
-                ]
-              ],
-              "id": "chinese_t7_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I'm OK.",
-              "answer": "我沒事。",
-              "choices": [
-                "有罢工。",
-                "起来吧！",
-                "請關門。",
-                "我沒事。"
-              ],
-              "id": "chinese_t7_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "Don't touch it.",
-              "answer": "別碰它。",
-              "choices": [
-                "我愛瞳。",
-                "來一下！",
-                "別碰它。",
-                "滾出去！"
-              ],
-              "id": "chinese_t7_3_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "我很忙。",
-              "audio": "我很忙。",
-              "id": "chinese_t7_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "我很忙。",
-              "audio": "我很忙。",
-              "id": "chinese_t7_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I am very busy.",
-                  "我很忙。"
-                ],
-                [
-                  "Who drew it?",
-                  "誰畫的？"
-                ],
-                [
-                  "Be nice to Ann.",
-                  "善待安。"
-                ],
-                [
-                  "Please close the door.",
-                  "請關門。"
-                ]
-              ],
-              "id": "chinese_t7_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t8",
-      "title": "Wider Vocabulary 2",
-      "lessons": [
-        {
-          "id": "t8l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I've seen that.",
-              "answer": "我見過。",
-              "choices": [
-                "哪裡痛？",
-                "我見過。",
-                "非常冷。",
-                "請稍等。"
-              ],
-              "id": "chinese_t8_1_0"
-            },
-            {
-              "type": "translation",
-              "question": "He loves her.",
-              "answer": "他愛她。",
-              "choices": [
-                "非常冷。",
-                "鎖大門。",
-                "請安靜。",
-                "他愛她。"
-              ],
-              "id": "chinese_t8_1_1"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "請進來。",
-              "audio": "請進來。",
-              "id": "chinese_t8_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "請進來。",
-              "audio": "請進來。",
-              "id": "chinese_t8_1_3"
             },
             {
               "type": "match",
@@ -1739,8 +1529,218 @@
                   "她痛哭。"
                 ],
                 [
-                  "Where is the pain?",
-                  "哪裡痛？"
+                  "Say it clearly.",
+                  "說清楚。"
+                ]
+              ],
+              "id": "chinese_t7_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I borrow money.",
+              "answer": "我借錢。",
+              "choices": [
+                "請稍等。",
+                "我借錢。",
+                "請進來。",
+                "鳥下蛋。"
+              ],
+              "id": "chinese_t7_2_0"
+            },
+            {
+              "type": "translation",
+              "question": "Take it easy.",
+              "answer": "放輕鬆。",
+              "choices": [
+                "她恨他。",
+                "放輕鬆。",
+                "不行吗？",
+                "我咳嗽。"
+              ],
+              "id": "chinese_t7_2_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "請安靜。",
+              "audio": "請安靜。",
+              "id": "chinese_t7_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "我很餓。",
+              "audio": "我很餓。",
+              "id": "chinese_t7_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Once again.",
+                  "再一次。"
+                ],
+                [
+                  "I have a cough.",
+                  "我咳嗽。"
+                ],
+                [
+                  "Lock the gate.",
+                  "鎖大門。"
+                ],
+                [
+                  "Birds lay eggs.",
+                  "鳥下蛋。"
+                ]
+              ],
+              "id": "chinese_t7_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I am coming.",
+              "answer": "我來了。",
+              "choices": [
+                "我見過。",
+                "鎖大門。",
+                "她痛哭。",
+                "我來了。"
+              ],
+              "id": "chinese_t7_3_0"
+            },
+            {
+              "type": "translation",
+              "question": "It's very cold.",
+              "answer": "非常冷。",
+              "choices": [
+                "我見過。",
+                "他愛她。",
+                "非常冷。",
+                "放輕鬆。"
+              ],
+              "id": "chinese_t7_3_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "我恨你。",
+              "audio": "我恨你。",
+              "id": "chinese_t7_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "不行吗？",
+              "audio": "不行吗？",
+              "id": "chinese_t7_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "It's very big.",
+                  "它很大。"
+                ],
+                [
+                  "It's my treat.",
+                  "我請客。"
+                ],
+                [
+                  "The clock stopped.",
+                  "鐘停了。"
+                ],
+                [
+                  "She hated him.",
+                  "她恨他。"
+                ]
+              ],
+              "id": "chinese_t7_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "title": "Wider Vocabulary 2",
+      "lessons": [
+        {
+          "id": "t8l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "She was coming down the stairs.",
+              "answer": "她下樓。",
+              "choices": [
+                "我是林。",
+                "她下樓。",
+                "这很难。",
+                "免费的。"
+              ],
+              "id": "chinese_t8_1_0"
+            },
+            {
+              "type": "translation",
+              "question": "Fuck your mom.",
+              "answer": "幹你娘。",
+              "choices": [
+                "飯前洗手",
+                "我拍手。",
+                "赶上时髦",
+                "幹你娘。"
+              ],
+              "id": "chinese_t8_1_1"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "这很难。",
+              "audio": "这很难。",
+              "id": "chinese_t8_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "我饥饿！",
+              "audio": "我饥饿！",
+              "id": "chinese_t8_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Who am I?",
+                  "我是誰？"
+                ],
+                [
+                  "You are welcome.",
+                  "不客氣。"
+                ],
+                [
+                  "Remember!",
+                  "請記住！"
+                ],
+                [
+                  "It's for free.",
+                  "免费的。"
                 ]
               ],
               "id": "chinese_t8_1_4"
@@ -1753,40 +1753,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Say it clearly.",
-              "answer": "說清楚。",
+              "question": "I came.",
+              "answer": "我来了。",
               "choices": [
-                "再一次。",
-                "說清楚。",
-                "講清楚。",
-                "我咳嗽。"
+                "过奖了。",
+                "我来了。",
+                "他要钱。",
+                "我是林。"
               ],
               "id": "chinese_t8_2_0"
             },
             {
               "type": "translation",
-              "question": "I borrow money.",
-              "answer": "我借錢。",
+              "question": "He wants the money.",
+              "answer": "他要钱。",
               "choices": [
-                "它很大。",
-                "我借錢。",
-                "我恨你。",
-                "我請客。"
+                "你很笨。",
+                "他要钱。",
+                "我很渴。",
+                "我是林。"
               ],
               "id": "chinese_t8_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "放輕鬆。",
-              "audio": "放輕鬆。",
+              "answer": "我是林。",
+              "audio": "我是林。",
               "id": "chinese_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "請安靜。",
-              "audio": "請安靜。",
+              "answer": "关店了。",
+              "audio": "关店了。",
               "id": "chinese_t8_2_3"
             },
             {
@@ -1795,20 +1795,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm very hungry.",
-                  "我很餓。"
+                  "I'm very thirsty.",
+                  "我很渴。"
                 ],
                 [
-                  "Once again.",
-                  "再一次。"
+                  "Look at that mountain.",
+                  "看那山！"
                 ],
                 [
-                  "I have a cough.",
-                  "我咳嗽。"
+                  "I clapped my hands.",
+                  "我拍手。"
                 ],
                 [
-                  "Lock the gate.",
-                  "鎖大門。"
+                  "I'm flattered.",
+                  "过奖了。"
                 ]
               ],
               "id": "chinese_t8_2_4"
@@ -1821,40 +1821,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Birds lay eggs.",
-              "answer": "鳥下蛋。",
+              "question": "How cute!",
+              "answer": "好可愛！",
               "choices": [
-                "非常冷。",
-                "我咳嗽。",
-                "放輕鬆。",
-                "鳥下蛋。"
+                "飯前洗手",
+                "看那山！",
+                "赶上时髦",
+                "好可愛！"
               ],
               "id": "chinese_t8_3_0"
             },
             {
               "type": "translation",
-              "question": "I am coming.",
-              "answer": "我來了。",
+              "question": "Get with it.",
+              "answer": "赶上时髦",
               "choices": [
-                "請稍等。",
-                "我來了。",
-                "請安靜。",
-                "講清楚。"
+                "这很难。",
+                "赶上时髦",
+                "幹你娘。",
+                "他要钱。"
               ],
               "id": "chinese_t8_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "我來了。",
-              "audio": "我來了。",
+              "answer": "這是馬。",
+              "audio": "這是馬。",
               "id": "chinese_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "非常冷。",
-              "audio": "非常冷。",
+              "answer": "飯前洗手",
+              "audio": "飯前洗手",
               "id": "chinese_t8_3_3"
             },
             {
@@ -1863,20 +1863,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I hate you.",
-                  "我恨你。"
+                  "You are stupid.",
+                  "你很笨。"
                 ],
                 [
-                  "Something wrong?",
-                  "不行吗？"
+                  "Too bad.",
+                  "可惜啊。"
                 ],
                 [
-                  "It's very big.",
-                  "它很大。"
+                  "Looks really nice.",
+                  "很好看。"
                 ],
                 [
-                  "It's my treat.",
-                  "我請客。"
+                  "I feel dizzy.",
+                  "我頭暈。"
                 ]
               ],
               "id": "chinese_t8_3_4"
@@ -1895,40 +1895,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The clock stopped.",
-              "answer": "鐘停了。",
+              "question": "I believe in God.",
+              "answer": "我信神。",
               "choices": [
-                "她下樓。",
-                "鐘停了。",
-                "不客氣。",
-                "飯前洗手"
+                "進來吧！",
+                "我信神。",
+                "我困了。",
+                "好問題。"
               ],
               "id": "chinese_t9_1_0"
             },
             {
               "type": "translation",
-              "question": "She hated him.",
-              "answer": "她恨他。",
+              "question": "Are you sleepy?",
+              "answer": "你困吗？",
               "choices": [
-                "很好看。",
-                "我是誰？",
-                "赶上时髦",
-                "她恨他。"
+                "叫警察！",
+                "誰來了？",
+                "请原谅！",
+                "你困吗？"
               ],
               "id": "chinese_t9_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "她下樓。",
-              "audio": "她下樓。",
+              "answer": "叫警察！",
+              "audio": "叫警察！",
               "id": "chinese_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "幹你娘。",
-              "audio": "幹你娘。",
+              "answer": "辛苦啦！",
+              "audio": "辛苦啦！",
               "id": "chinese_t9_1_3"
             },
             {
@@ -1937,20 +1937,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is difficult.",
-                  "这很难。"
+                  "Forgive me!",
+                  "请原谅！"
                 ],
                 [
-                  "It's very difficult.",
-                  "这很难。"
+                  "You're terrible.",
+                  "你真壞。"
                 ],
                 [
-                  "Who am I?",
-                  "我是誰？"
+                  "Stand up.",
+                  "站起來。"
                 ],
                 [
-                  "You are welcome.",
-                  "不客氣。"
+                  "He is telling a lie.",
+                  "他說謊。"
                 ]
               ],
               "id": "chinese_t9_1_4"
@@ -1963,40 +1963,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Remember!",
-              "answer": "請記住！",
+              "question": "She's busy.",
+              "answer": "她很忙。",
               "choices": [
-                "过奖了。",
-                "請記住！",
-                "赶上时髦",
-                "她恨他。"
+                "请原谅！",
+                "她很忙。",
+                "没头绪。",
+                "大声喊!"
               ],
               "id": "chinese_t9_2_0"
             },
             {
               "type": "translation",
-              "question": "It's for free.",
-              "answer": "免费的。",
+              "question": "Is it raining?",
+              "answer": "下雨吗？",
               "choices": [
-                "看那山！",
-                "免费的。",
-                "可惜啊。",
-                "她下樓。"
+                "尽早做。",
+                "下雨吗？",
+                "辛苦啦！",
+                "我困了。"
               ],
               "id": "chinese_t9_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "他要钱。",
-              "audio": "他要钱。",
+              "answer": "誰來了？",
+              "audio": "誰來了？",
               "id": "chinese_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "我是林。",
-              "audio": "我是林。",
+              "answer": "他忙嗎？",
+              "audio": "他忙嗎？",
               "id": "chinese_t9_2_3"
             },
             {
@@ -2005,20 +2005,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm closing my store.",
-                  "关店了。"
+                  "Come on in!",
+                  "進來吧！"
                 ],
                 [
-                  "I'm very thirsty.",
-                  "我很渴。"
+                  "I'm sleepy.",
+                  "我困了。"
                 ],
                 [
-                  "Look at that mountain.",
-                  "看那山！"
+                  "He is very tall.",
+                  "他很高。"
                 ],
                 [
-                  "I clapped my hands.",
-                  "我拍手。"
+                  "Go to the patio.",
+                  "去露台。"
                 ]
               ],
               "id": "chinese_t9_2_4"
@@ -2031,40 +2031,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm flattered.",
-              "answer": "过奖了。",
+              "question": "It is too late.",
+              "answer": "太晚了。",
               "choices": [
-                "很好看。",
-                "这很难。",
-                "赶上时髦",
-                "过奖了。"
+                "你困吗？",
+                "下雨吗？",
+                "辛苦啦！",
+                "太晚了。"
               ],
               "id": "chinese_t9_3_0"
             },
             {
               "type": "translation",
-              "question": "How cute!",
-              "answer": "好可愛！",
+              "question": "Scream it loud!",
+              "answer": "大声喊!",
               "choices": [
-                "她恨他。",
-                "好可愛！",
-                "赶上时髦",
-                "我拍手。"
+                "叫警察！",
+                "大声喊!",
+                "没头绪。",
+                "站起來。"
               ],
               "id": "chinese_t9_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "赶上时髦",
-              "audio": "赶上时髦",
+              "answer": "谢幕了。",
+              "audio": "谢幕了。",
               "id": "chinese_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "這是馬。",
-              "audio": "這是馬。",
+              "answer": "灯亮着。",
+              "audio": "灯亮着。",
               "id": "chinese_t9_3_3"
             },
             {
@@ -2073,20 +2073,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Wash your hands before each meal.",
-                  "飯前洗手"
+                  "Do it as soon as possible.",
+                  "尽早做。"
                 ],
                 [
-                  "You are stupid.",
-                  "你很笨。"
+                  "There is no water.",
+                  "沒有水。"
                 ],
                 [
-                  "Too bad.",
-                  "可惜啊。"
+                  "A good question.",
+                  "好問題。"
                 ],
                 [
-                  "Looks really nice.",
-                  "很好看。"
+                  "I'm getting nowhere.",
+                  "没头绪。"
                 ]
               ],
               "id": "chinese_t9_3_4"
@@ -2105,40 +2105,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I feel dizzy.",
-              "answer": "我頭暈。",
+              "question": "He was very old.",
+              "answer": "他很老。",
               "choices": [
-                "太晚了。",
-                "我頭暈。",
-                "你困吗？",
-                "叫警察。"
+                "我明白。",
+                "他很老。",
+                "怎么办?",
+                "我恐高。"
               ],
               "id": "chinese_t10_1_0"
             },
             {
               "type": "translation",
-              "question": "I believe in God.",
-              "answer": "我信神。",
+              "question": "I'm fat.",
+              "answer": "我肥胖。",
               "choices": [
-                "他忙嗎？",
-                "叫警察！",
-                "谢幕了。",
-                "我信神。"
+                "放開他！",
+                "兴奋吗？",
+                "别生气。",
+                "我肥胖。"
               ],
               "id": "chinese_t10_1_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "你困吗？",
-              "audio": "你困吗？",
+              "answer": "你們呢？",
+              "audio": "你們呢？",
               "id": "chinese_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "叫警察！",
-              "audio": "叫警察！",
+              "answer": "汪汪汪！",
+              "audio": "汪汪汪！",
               "id": "chinese_t10_1_3"
             },
             {
@@ -2147,20 +2147,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Take care!",
-                  "慢走啊！"
+                  "Could be, could be.",
+                  "可以啊。"
                 ],
                 [
-                  "Good work!",
-                  "辛苦啦！"
+                  "I'm afraid of dogs.",
+                  "我怕狗。"
                 ],
                 [
-                  "Forgive me!",
-                  "请原谅！"
+                  "I get it.",
+                  "我明白。"
                 ],
                 [
-                  "You're terrible.",
-                  "你真壞。"
+                  "How odd!",
+                  "真奇怪。"
                 ]
               ],
               "id": "chinese_t10_1_4"
@@ -2173,40 +2173,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You're so bad.",
-              "answer": "你真壞。",
+              "question": "He is not here.",
+              "answer": "他不在。",
               "choices": [
-                "我信神。",
-                "你真壞。",
-                "辛苦啦！",
-                "叫警察。"
+                "着火了！",
+                "他不在。",
+                "我缺钱。",
+                "我肥胖。"
               ],
               "id": "chinese_t10_2_0"
             },
             {
               "type": "translation",
-              "question": "Stand up.",
-              "answer": "站起來。",
+              "question": "It's really awesome.",
+              "answer": "太棒了。",
               "choices": [
-                "叫警察。",
-                "站起來。",
-                "去露台。",
-                "她很忙。"
+                "请上车。",
+                "太棒了。",
+                "这不好。",
+                "他不在。"
               ],
               "id": "chinese_t10_2_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "他說謊。",
-              "audio": "他說謊。",
+              "answer": "怎么办?",
+              "audio": "怎么办?",
               "id": "chinese_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "她很忙。",
-              "audio": "她很忙。",
+              "answer": "这不好。",
+              "audio": "这不好。",
               "id": "chinese_t10_2_3"
             },
             {
@@ -2215,20 +2215,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is it raining?",
-                  "下雨吗？"
+                  "I'm afraid of heights.",
+                  "我恐高。"
                 ],
                 [
-                  "Who has come?",
-                  "誰來了？"
+                  "Come as soon as possible.",
+                  "尽早来。"
                 ],
                 [
-                  "Is he busy?",
-                  "他忙嗎？"
+                  "I am short of money.",
+                  "我缺钱。"
                 ],
                 [
-                  "Come on in!",
-                  "進來吧！"
+                  "How wide is it?",
+                  "有多宽？"
                 ]
               ],
               "id": "chinese_t10_2_4"
@@ -2241,40 +2241,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm sleepy.",
-              "answer": "我困了。",
+              "question": "Who do you love?",
+              "answer": "你爱谁？",
               "choices": [
-                "誰來了？",
-                "你困吗？",
-                "谢幕了。",
-                "我困了。"
+                "放開他！",
+                "兴奋吗？",
+                "别生气。",
+                "你爱谁？"
               ],
               "id": "chinese_t10_3_0"
             },
             {
               "type": "translation",
-              "question": "He is very tall.",
-              "answer": "他很高。",
+              "question": "Don't get angry.",
+              "answer": "别生气。",
               "choices": [
-                "你困吗？",
-                "他很高。",
-                "他說謊。",
-                "叫警察！"
+                "兴奋吗？",
+                "别生气。",
+                "他不在。",
+                "又来了！"
               ],
               "id": "chinese_t10_3_1"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "去露台。",
-              "audio": "去露台。",
+              "answer": "兴奋吗？",
+              "audio": "兴奋吗？",
               "id": "chinese_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "叫警察。",
-              "audio": "叫警察。",
+              "answer": "请上车。",
+              "audio": "请上车。",
               "id": "chinese_t10_3_3"
             },
             {
@@ -2283,20 +2283,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It is too late.",
-                  "太晚了。"
+                  "Don't blame it on her.",
+                  "别怪她。"
                 ],
                 [
-                  "Scream it loud!",
-                  "大声喊!"
+                  "Fire!",
+                  "着火了！"
                 ],
                 [
-                  "The curtain fell.",
-                  "谢幕了。"
+                  "Let go of him!",
+                  "放開他！"
                 ],
                 [
-                  "The light is on.",
-                  "灯亮着。"
+                  "It started again!",
+                  "又来了！"
                 ]
               ],
               "id": "chinese_t10_3_4"

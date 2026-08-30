@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-americas",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "It is what it is.",
               "answer": "É o que é.",
               "choices": [
-                "Para o que é isso?",
+                "Ele não para.",
                 "É o que é.",
-                "E por que não?",
-                "Ele não para."
+                "Para com isso!",
+                "É isso, não é?"
               ],
               "id": "portuguese_t1_1_0"
             },
@@ -228,9 +228,9 @@
               "question": "Por ____ eu?",
               "answer": "que",
               "choices": [
-                "com",
-                "Para",
+                "bem",
                 "Não",
+                "por",
                 "que"
               ],
               "id": "portuguese_t1_1_1"
@@ -242,9 +242,9 @@
               "words": [
                 "que",
                 "não?",
-                "está.",
+                "o",
                 "Por",
-                "é."
+                "eu?"
               ],
               "id": "portuguese_t1_1_2"
             },
@@ -288,12 +288,12 @@
             {
               "type": "translation",
               "question": "No, he isn't.",
-              "answer": "Não, ele não é.",
+              "answer": "Não, ele não está.",
               "choices": [
-                "Ele não para.",
-                "Não, ele não é.",
+                "Isso é um não?",
+                "Não, ele não está.",
                 "Por que eu?",
-                "Para com isso!"
+                "O que ele é?"
               ],
               "id": "portuguese_t1_2_0"
             },
@@ -303,30 +303,30 @@
               "answer": "está",
               "choices": [
                 "Por",
-                "por",
+                "com",
                 "está",
-                "eu"
+                "Ele"
               ],
               "id": "portuguese_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "He's okay.",
-              "answer": "Ele está bem.",
+              "question": "Stop that!",
+              "answer": "Para com isso!",
               "words": [
-                "não",
-                "é?",
-                "bem.",
-                "Ele",
-                "está"
+                "eu?",
+                "que",
+                "isso!",
+                "Para",
+                "com"
               ],
               "id": "portuguese_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ele está bem.",
-              "audio": "Ele está bem.",
+              "answer": "E por que isso?",
+              "audio": "E por que isso?",
               "id": "portuguese_t1_2_3"
             },
             {
@@ -335,20 +335,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Stop that!",
-                  "Para com isso!"
-                ],
-                [
-                  "And why is that?",
-                  "E por que isso?"
-                ],
-                [
                   "What's this stuff?",
                   "O que é isso?"
                 ],
                 [
                   "That's it, isn't it?",
                   "É isso, não é?"
+                ],
+                [
+                  "Why should I care?",
+                  "E eu com isso?"
+                ],
+                [
+                  "What is it for?",
+                  "Para que é isso?"
                 ]
               ],
               "id": "portuguese_t1_2_4"
@@ -361,47 +361,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Why should I care?",
-              "answer": "E eu com isso?",
+              "question": "What's it for?",
+              "answer": "Para o que é isso?",
               "choices": [
+                "Para com isso!",
                 "É isso, não é?",
-                "Por que eu?",
-                "Ele não está.",
-                "E eu com isso?"
+                "E por que não?",
+                "Para o que é isso?"
               ],
               "id": "portuguese_t1_3_0"
             },
             {
               "type": "translation",
-              "question": "What is it for?",
-              "answer": "Para que é isso?",
+              "question": "That isn't it.",
+              "answer": "Não é isso.",
               "choices": [
-                "E por que isso?",
-                "Para que é isso?",
-                "E eu com isso?",
-                "É isso, não é?"
+                "Ele não para.",
+                "Não é isso.",
+                "E por que não?",
+                "Por que não?"
               ],
               "id": "portuguese_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "What do I care?",
-              "answer": "E eu com isso?",
+              "question": "Is that a no?",
+              "answer": "Isso é um não?",
               "words": [
-                "eu",
+                "é",
+                "um",
+                "não?",
+                "Ele",
                 "com",
-                "isso?",
-                "bem?",
-                "é.",
-                "E"
+                "Isso"
               ],
               "id": "portuguese_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Para que é isso?",
-              "audio": "Para que é isso?",
+              "answer": "Bem, é isso.",
+              "audio": "Bem, é isso.",
               "id": "portuguese_t1_3_3"
             },
             {
@@ -410,20 +410,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What's that for?",
-                  "Para que é isso?"
+                  "Why so?",
+                  "Por que isso?"
                 ],
                 [
-                  "What's this for?",
-                  "Para que é isso?"
+                  "What is he like?",
+                  "Como ele é?"
                 ],
                 [
-                  "What is this for?",
-                  "Para o que é isso?"
+                  "What am I eating?",
+                  "O que eu como?"
                 ],
                 [
-                  "That isn't it.",
-                  "Não é isso."
+                  "How is it?",
+                  "Como é isso?"
                 ]
               ],
               "id": "portuguese_t1_3_4"
@@ -442,46 +442,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is that a no?",
-              "answer": "Isso é um não?",
+              "question": "How's he doing?",
+              "answer": "Como ele está?",
               "choices": [
-                "Isso é meu.",
-                "Isso é um não?",
-                "Isso é meu?",
-                "Como ele é?"
+                "Sim e não.",
+                "Como ele está?",
+                "Sim, ele é.",
+                "O que é isso aqui?"
               ],
               "id": "portuguese_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Para ____ isso.",
-              "answer": "com",
+              "question": "Eu ____ isso.",
+              "answer": "como",
               "choices": [
-                "Por",
-                "eu",
+                "não",
+                "sim",
                 "isso",
-                "com"
+                "como"
               ],
               "id": "portuguese_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "Well, that's that.",
-              "answer": "Bem, é isso.",
+              "question": "Yes and no.",
+              "answer": "Sim e não.",
               "words": [
-                "Eu",
-                "meu!",
-                "é",
-                "Bem,",
-                "isso."
+                "que",
+                "muito.",
+                "e",
+                "Sim",
+                "não."
               ],
               "id": "portuguese_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Por que isso?",
-              "audio": "Por que isso?",
+              "answer": "Sim, ele é.",
+              "audio": "Sim, ele é.",
               "id": "portuguese_t2_1_3"
             },
             {
@@ -490,20 +490,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is he like?",
-                  "Como ele é?"
+                  "Yes, that's it.",
+                  "Sim é isso."
                 ],
                 [
-                  "What am I eating?",
-                  "O que eu como?"
+                  "Yes, that's OK.",
+                  "Sim, está bem."
                 ],
                 [
-                  "How is it?",
-                  "Como é isso?"
+                  "Is that a yes?",
+                  "Isso é um sim?"
                 ],
                 [
-                  "How's he doing?",
-                  "Como ele está?"
+                  "What else?",
+                  "O que mais?"
                 ]
               ],
               "id": "portuguese_t2_1_4"
@@ -516,46 +516,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I eat it.",
-              "answer": "Eu como isso.",
+              "question": "That is mine.",
+              "answer": "Isso é meu.",
               "choices": [
-                "O que eu como?",
+                "Isso não é meu.",
+                "Isso é meu.",
                 "Eu como isso.",
-                "Para com isso.",
-                "Como ele é?"
+                "Não é meu."
               ],
               "id": "portuguese_t2_2_0"
             },
             {
               "type": "translation",
-              "question": "Yes and no.",
-              "answer": "Sim e não.",
+              "question": "That's not mine.",
+              "answer": "Isso não é meu.",
               "choices": [
-                "Sim, está bem.",
                 "Sim e não.",
-                "Isso é meu!",
-                "Para com isso."
+                "Isso não é meu.",
+                "Não como muito.",
+                "Aqui está ele!"
               ],
               "id": "portuguese_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Yes, he is.",
-              "answer": "Sim, ele é.",
+              "question": "It isn't mine.",
+              "answer": "Não é meu.",
               "words": [
-                "ele",
-                "é.",
-                "é?",
-                "Sim,",
-                "é."
+                "é",
+                "ele!",
+                "bem.",
+                "Não",
+                "meu."
               ],
               "id": "portuguese_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sim é isso.",
-              "audio": "Sim é isso.",
+              "answer": "Aqui está ele!",
+              "audio": "Aqui está ele!",
               "id": "portuguese_t2_2_3"
             },
             {
@@ -564,20 +564,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes, that's OK.",
-                  "Sim, está bem."
+                  "Why is he here?",
+                  "Por que ele está aqui?"
                 ],
                 [
-                  "Is that a yes?",
-                  "Isso é um sim?"
+                  "He is no longer here.",
+                  "Ele não está mais aqui."
                 ],
                 [
-                  "What else?",
-                  "O que mais?"
+                  "I eat here.",
+                  "Eu como aqui."
                 ],
                 [
-                  "That is mine.",
-                  "Isso é meu."
+                  "It's not here.",
+                  "Não está aqui."
                 ]
               ],
               "id": "portuguese_t2_2_4"
@@ -590,46 +590,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's not mine.",
-              "answer": "Isso não é meu.",
+              "question": "He isn't here, is he?",
+              "answer": "Ele não está aqui, está?",
               "choices": [
-                "Por que isso?",
+                "Isso não é meu.",
                 "Não é meu.",
-                "Para com isso.",
-                "Isso não é meu."
+                "Eu como isso.",
+                "Ele não está aqui, está?"
               ],
               "id": "portuguese_t2_3_0"
             },
             {
-              "type": "translation",
-              "question": "It isn't mine.",
-              "answer": "Não é meu.",
+              "type": "cloze",
+              "question": "Não está ____ aqui.",
+              "answer": "mais",
               "choices": [
-                "Isso é meu!",
-                "Não é meu.",
-                "Isso é um sim?",
-                "Isso é meu?"
+                "meu",
+                "mais",
+                "ele",
+                "Não"
               ],
               "id": "portuguese_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "It's not mine.",
-              "answer": "Não é meu.",
+              "question": "He is not here.",
+              "answer": "Ele não está aqui.",
               "words": [
-                "é",
-                "meu.",
-                "é",
-                "Não",
-                "como"
+                "não",
+                "está",
+                "mais?",
+                "Ele",
+                "aqui.",
+                "ele"
               ],
               "id": "portuguese_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Isso é meu.",
-              "audio": "Isso é meu.",
+              "answer": "O que é isso aqui?",
+              "audio": "O que é isso aqui?",
               "id": "portuguese_t2_3_3"
             },
             {
@@ -638,20 +639,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is this mine?",
-                  "Isso é meu?"
+                  "Not too well.",
+                  "Não muito bem."
                 ],
                 [
-                  "Is that mine?",
-                  "Isso é meu?"
+                  "I eat a lot.",
+                  "Eu como muito."
                 ],
                 [
-                  "That isn't mine.",
-                  "Isso não é meu."
+                  "I don't eat much.",
+                  "Eu não como muito."
                 ],
                 [
-                  "That's mine!",
-                  "Isso é meu!"
+                  "I don't eat a lot.",
+                  "Não como muito."
                 ]
               ],
               "id": "portuguese_t2_3_4"
@@ -670,48 +671,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Here he is!",
-              "answer": "Aqui está ele!",
+              "question": "What's the matter?",
+              "answer": "O que foi?",
               "choices": [
-                "Por que ela está aqui?",
-                "Aqui está ele!",
-                "Não está mais aqui.",
-                "Como ela é?"
+                "Ela está com ela.",
+                "O que foi?",
+                "Como ela é?",
+                "Eu estou bem."
               ],
               "id": "portuguese_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "Por que ____ está aqui?",
-              "answer": "ele",
+              "question": "O que ____ isso?",
+              "answer": "foi",
               "choices": [
-                "Ela",
-                "foi",
-                "com",
-                "ele"
+                "está",
+                "Isto",
+                "Isso",
+                "foi"
               ],
               "id": "portuguese_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "He is no longer here.",
-              "answer": "Ele não está mais aqui.",
+              "question": "It wasn't him.",
+              "answer": "Não foi ele.",
               "words": [
-                "não",
-                "aqui?",
-                "mais",
-                "ela",
-                "Ele",
-                "aqui.",
-                "está"
+                "ele.",
+                "ela.",
+                "foi",
+                "ela!",
+                "Não"
               ],
               "id": "portuguese_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu como aqui.",
-              "audio": "Eu como aqui.",
+              "answer": "Isso não foi muito bem.",
+              "audio": "Isso não foi muito bem.",
               "id": "portuguese_t3_1_3"
             },
             {
@@ -720,20 +719,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not here.",
-                  "Não está aqui."
+                  "She went with him.",
+                  "Ela foi com ele."
                 ],
                 [
-                  "He isn't here, is he?",
-                  "Ele não está aqui, está?"
+                  "She's not here.",
+                  "Ela não está aqui."
                 ],
                 [
-                  "It isn't here anymore.",
-                  "Não está mais aqui."
+                  "What is she like?",
+                  "Como ela é?"
                 ],
                 [
-                  "He is not here.",
-                  "Ele não está aqui."
+                  "Is she all right?",
+                  "Ela está bem?"
                 ]
               ],
               "id": "portuguese_t3_1_4"
@@ -746,46 +745,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's not here.",
-              "answer": "Ele não está aqui.",
+              "question": "She is here.",
+              "answer": "Ela está aqui.",
               "choices": [
-                "O que foi isso?",
-                "Ele não está aqui.",
-                "Isso não foi muito bem.",
-                "Por que ele está aqui?"
+                "Como ela é?",
+                "Ela está aqui.",
+                "Isto está bem.",
+                "Eu não estou muito bem."
               ],
               "id": "portuguese_t3_2_0"
             },
             {
-              "type": "translation",
-              "question": "What's this stuff here?",
-              "answer": "O que é isso aqui?",
+              "type": "cloze",
+              "question": "Aqui ____ ela!",
+              "answer": "está",
               "choices": [
-                "Eu como muito.",
-                "Ele não está aqui, está?",
-                "O que é isso aqui?",
-                "O que foi isso?"
+                "aqui",
+                "Não",
+                "está",
+                "Ela"
               ],
               "id": "portuguese_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "Not too well.",
-              "answer": "Não muito bem.",
+              "question": "Why is she here?",
+              "answer": "Por que ela está aqui?",
               "words": [
-                "muito",
-                "bem.",
-                "Como",
+                "que",
+                "isso",
+                "foi",
                 "Por",
-                "Não"
+                "está",
+                "aqui?",
+                "ela"
               ],
               "id": "portuguese_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu como muito.",
-              "audio": "Eu como muito.",
+              "answer": "Ela se foi.",
+              "audio": "Ela se foi.",
               "id": "portuguese_t3_2_3"
             },
             {
@@ -794,20 +795,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't eat much.",
-                  "Eu não como muito."
+                  "She's with him.",
+                  "Ela está com ele."
                 ],
                 [
-                  "I don't eat a lot.",
-                  "Eu não como muito."
+                  "He's with her.",
+                  "Ele está com ela."
                 ],
                 [
-                  "What's the matter?",
-                  "O que foi?"
+                  "She is with her.",
+                  "Ela está com ela."
                 ],
                 [
-                  "What was that for?",
-                  "O que foi isso?"
+                  "What is it?",
+                  "O que é isto?"
                 ]
               ],
               "id": "portuguese_t3_2_4"
@@ -820,47 +821,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It wasn't him.",
-              "answer": "Não foi ele.",
+              "question": "This isn't mine.",
+              "answer": "Isto não é meu.",
               "choices": [
-                "Por que ele está aqui?",
-                "Não muito bem.",
-                "Não está mais aqui.",
-                "Não foi ele."
+                "Ela foi com ele.",
+                "Ela não está aqui.",
+                "Isto é meu.",
+                "Isto não é meu."
               ],
               "id": "portuguese_t3_3_0"
             },
             {
-              "type": "cloze",
-              "question": "Isso não ____ muito bem.",
-              "answer": "foi",
+              "type": "translation",
+              "question": "This is mine.",
+              "answer": "Isto é meu.",
               "choices": [
-                "está",
-                "foi",
-                "Eu",
-                "aqui"
+                "Eu estou aqui.",
+                "Isto é meu.",
+                "O que foi isso?",
+                "Isso não foi muito bem."
               ],
               "id": "portuguese_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "She went with him.",
-              "answer": "Ela foi com ele.",
+              "question": "This is good.",
+              "answer": "Isto está bem.",
               "words": [
-                "foi",
-                "ele.",
-                "aqui?",
-                "Ela",
-                "Ela",
-                "com"
+                "é?",
+                "Aqui",
+                "está",
+                "Isto",
+                "bem."
               ],
               "id": "portuguese_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ela não está aqui.",
-              "audio": "Ela não está aqui.",
+              "answer": "Eu não estou muito bem.",
+              "audio": "Eu não estou muito bem.",
               "id": "portuguese_t3_3_3"
             },
             {
@@ -869,20 +869,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is she like?",
-                  "Como ela é?"
+                  "Why am I here?",
+                  "Por que eu estou aqui?"
                 ],
                 [
-                  "She is here.",
-                  "Ela está aqui."
+                  "I'm here.",
+                  "Eu estou aqui."
                 ],
                 [
-                  "Here she is!",
-                  "Aqui está ela!"
+                  "That's why I'm here.",
+                  "É por isso que estou aqui."
                 ],
                 [
-                  "Why is she here?",
-                  "Por que ela está aqui?"
+                  "I'm doing okay.",
+                  "Eu estou bem."
                 ]
               ],
               "id": "portuguese_t3_3_4"
@@ -901,46 +901,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is she here?",
-              "answer": "Ela está aqui?",
+              "question": "What am I here for?",
+              "answer": "Para que estou aqui?",
               "choices": [
-                "O que é isto?",
-                "Ela está aqui?",
-                "Ela está com ele.",
-                "Eu não estou muito bem."
+                "Ela não vai?",
+                "Para que estou aqui?",
+                "Eu não estou bem.",
+                "Como vai ser?"
               ],
               "id": "portuguese_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ela ____ foi.",
-              "answer": "se",
+              "question": "Estou ____ ele.",
+              "answer": "com",
               "choices": [
-                "foi",
-                "ela",
-                "eu",
-                "se"
+                "fazer",
+                "que",
+                "não",
+                "com"
               ],
               "id": "portuguese_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "Is she okay?",
-              "answer": "Ela está bem?",
+              "question": "That's what I'm here for.",
+              "answer": "Por isso que estou aqui.",
               "words": [
-                "está",
-                "bem?",
-                "se",
-                "Ela",
-                "que"
+                "isso",
+                "aqui?",
+                "bem",
+                "Por",
+                "aqui.",
+                "que",
+                "estou"
               ],
               "id": "portuguese_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ela está aqui.",
-              "audio": "Ela está aqui.",
+              "answer": "Eu não estou aqui.",
+              "audio": "Eu não estou aqui.",
               "id": "portuguese_t4_1_3"
             },
             {
@@ -949,20 +951,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's here.",
-                  "Ela está aqui."
+                  "I'm not OK.",
+                  "Eu não estou bem."
                 ],
                 [
-                  "She's with him.",
-                  "Ela está com ele."
+                  "I'm fine with it.",
+                  "Eu estou bem com isso."
                 ],
                 [
-                  "He's with her.",
-                  "Ele está com ela."
+                  "I'm OK with that.",
+                  "Estou bem com isso."
                 ],
                 [
-                  "She is with her.",
-                  "Ela está com ela."
+                  "Yes I am.",
+                  "Sim eu estou."
                 ]
               ],
               "id": "portuguese_t4_1_4"
@@ -975,47 +977,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What is it?",
-              "answer": "O que é isto?",
+              "question": "What am I to do?",
+              "answer": "O que é para eu fazer?",
               "choices": [
-                "Isto é meu.",
-                "O que é isto?",
-                "Ela está com ele.",
-                "Eu estou bem."
+                "Estou com ele.",
+                "O que é para eu fazer?",
+                "Ela não vai?",
+                "Não vamos fazer isso, vamos?"
               ],
               "id": "portuguese_t4_2_0"
             },
             {
-              "type": "translation",
-              "question": "What's this?",
-              "answer": "O que é isto?",
+              "type": "cloze",
+              "question": "Que está ____ a fazer?",
+              "answer": "ela",
               "choices": [
-                "Ela está aqui.",
-                "O que é isto?",
-                "Eu estou bem.",
-                "Ele está com ela."
+                "estou",
+                "ela",
+                "aqui",
+                "mais"
               ],
               "id": "portuguese_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "This isn't mine.",
-              "answer": "Isto não é meu.",
+              "question": "We won't do that.",
+              "answer": "Não vamos fazer isso.",
               "words": [
-                "é",
-                "meu.",
-                "não",
-                "muito",
-                "Isto",
-                "O"
+                "fazer",
+                "isso.",
+                "vamos",
+                "vai.",
+                "Não",
+                "estou"
               ],
               "id": "portuguese_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Isto é meu.",
-              "audio": "Isto é meu.",
+              "answer": "Vamos fazer mais.",
+              "audio": "Vamos fazer mais.",
               "id": "portuguese_t4_2_3"
             },
             {
@@ -1024,20 +1026,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is this?",
-                  "O que é isto?"
+                  "What are we going to do with that?",
+                  "O que vamos fazer com isso?"
                 ],
                 [
-                  "This is not mine.",
-                  "Isto não é meu."
+                  "We're going to do that.",
+                  "Vamos fazer isso."
                 ],
                 [
-                  "It is mine.",
-                  "Isto é meu."
+                  "How are we going to do it?",
+                  "Como vamos fazer isso?"
                 ],
                 [
-                  "It's mine.",
-                  "Isto é meu."
+                  "We're not going to do that, are we?",
+                  "Não vamos fazer isso, vamos?"
                 ]
               ],
               "id": "portuguese_t4_2_4"
@@ -1050,48 +1052,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is mine!",
-              "answer": "Isto é meu.",
+              "question": "He is already here.",
+              "answer": "Ele já está aqui.",
               "choices": [
-                "Ele está com ela.",
-                "Para que estou aqui?",
-                "Ela se foi.",
-                "Isto é meu."
+                "Vamos fazer mais.",
+                "Eu não estou aqui.",
+                "Estou com ele.",
+                "Ele já está aqui."
               ],
               "id": "portuguese_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Eu não ____ muito bem.",
-              "answer": "estou",
+              "question": "Já ____ aqui.",
+              "answer": "está",
               "choices": [
-                "foi",
-                "estou",
-                "se",
-                "Por"
+                "Isso",
+                "está",
+                "que",
+                "ele"
               ],
               "id": "portuguese_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "Why am I here?",
-              "answer": "Por que eu estou aqui?",
+              "question": "Yes, she will.",
+              "answer": "Sim, ela vai.",
               "words": [
-                "aqui?",
-                "aqui?",
-                "estou",
-                "Por",
-                "está",
-                "eu",
-                "que"
+                "ela",
+                "vai.",
+                "Ele",
+                "O",
+                "Sim,"
               ],
               "id": "portuguese_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu estou aqui.",
-              "audio": "Eu estou aqui.",
+              "answer": "Como vai ser?",
+              "audio": "Como vai ser?",
               "id": "portuguese_t4_3_3"
             },
             {
@@ -1100,20 +1100,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I am here.",
-                  "Eu estou aqui."
+                  "That didn't go very well, did it?",
+                  "Isso não vai muito bem, não é?"
                 ],
                 [
-                  "That's why I'm here.",
-                  "É por isso que estou aqui."
+                  "What is she going to do?",
+                  "Que vai ela fazer?"
                 ],
                 [
-                  "I'm doing okay.",
-                  "Eu estou bem."
+                  "What is he going to do?",
+                  "Que vai ele fazer?"
                 ],
                 [
-                  "What am I here for?",
-                  "Para que estou aqui?"
+                  "Doesn't she go?",
+                  "Ela não vai?"
                 ]
               ],
               "id": "portuguese_t4_3_4"
@@ -1132,46 +1132,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I am okay.",
-              "answer": "Eu estou bem.",
+              "question": "No, just one.",
+              "answer": "Não, uma só.",
               "choices": [
-                "Eu não estou bem.",
-                "Eu estou bem.",
-                "Estou bem com isso.",
-                "Sim eu estou."
+                "É só isso?",
+                "Não, uma só.",
+                "Está tudo bem.",
+                "Ela tem uma."
               ],
               "id": "portuguese_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Eu ____ bem.",
-              "answer": "estou",
+              "question": "É ____ ela.",
+              "answer": "só",
               "choices": [
-                "eu",
-                "está",
-                "vamos",
-                "estou"
+                "Ela",
+                "como",
+                "isso",
+                "só"
               ],
               "id": "portuguese_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "I'm with him.",
-              "answer": "Estou com ele.",
+              "question": "Is this all there is?",
+              "answer": "É só isso?",
               "words": [
-                "fazer?",
-                "está",
-                "ele.",
-                "Estou",
-                "com"
+                "É",
+                "isso?",
+                "isso?",
+                "É",
+                "só"
               ],
               "id": "portuguese_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Por isso que estou aqui.",
-              "audio": "Por isso que estou aqui.",
+              "answer": "Só que não.",
+              "audio": "Só que não.",
               "id": "portuguese_t5_1_3"
             },
             {
@@ -1180,20 +1180,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not here.",
-                  "Eu não estou aqui."
+                  "I'm no longer alone.",
+                  "Já não estou só."
                 ],
                 [
-                  "I'm not OK.",
-                  "Eu não estou bem."
+                  "He does not have to do this.",
+                  "Ele não tem que fazer isso."
                 ],
                 [
-                  "I'm doing OK.",
-                  "Eu estou bem."
+                  "What does she have?",
+                  "O que ela tem?"
                 ],
                 [
-                  "I'm fine with it.",
-                  "Eu estou bem com isso."
+                  "He has a lot to do.",
+                  "Ele tem muito que fazer."
                 ]
               ],
               "id": "portuguese_t5_1_4"
@@ -1206,354 +1206,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm OK with that.",
-              "answer": "Estou bem com isso.",
+              "question": "It has to be me.",
+              "answer": "Tem que ser eu.",
               "choices": [
-                "Vamos fazer isso.",
-                "Estou bem com isso.",
-                "Eu não estou aqui.",
-                "Ele já está aqui."
+                "Está tudo bem com ela.",
+                "Tem que ser eu.",
+                "Só que não.",
+                "Ela tem uma."
               ],
               "id": "portuguese_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Eu não ____ bem.",
-              "answer": "estou",
+              "question": "Ela ____ uma.",
+              "answer": "tem",
               "choices": [
-                "Estou",
-                "estou",
-                "com",
-                "Ele"
+                "está",
+                "tem",
+                "Vai",
+                "Tudo"
               ],
               "id": "portuguese_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "Yes I am.",
-              "answer": "Sim eu estou.",
+              "question": "Everything is fine.",
+              "answer": "Está tudo bem.",
               "words": [
-                "estou.",
-                "ser?",
-                "Estou",
-                "Sim",
-                "eu"
+                "bem.",
+                "não.",
+                "É",
+                "Está",
+                "tudo"
               ],
               "id": "portuguese_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu não estou bem.",
-              "audio": "Eu não estou bem.",
-              "id": "portuguese_t5_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "What is she doing?",
-                  "Que está ela a fazer?"
-                ],
-                [
-                  "Let's do more.",
-                  "Vamos fazer mais."
-                ],
-                [
-                  "What are we going to do with that?",
-                  "O que vamos fazer com isso?"
-                ],
-                [
-                  "We're going to do that.",
-                  "Vamos fazer isso."
-                ]
-              ],
-              "id": "portuguese_t5_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t5l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "How are we going to do it?",
-              "answer": "Como vamos fazer isso?",
-              "choices": [
-                "Já está aqui.",
-                "Não vamos fazer isso, vamos?",
-                "Eu não estou aqui.",
-                "Como vamos fazer isso?"
-              ],
-              "id": "portuguese_t5_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "O que vamos ____ com isso?",
-              "answer": "fazer",
-              "choices": [
-                "Não",
-                "fazer",
-                "ser",
-                "aqui"
-              ],
-              "id": "portuguese_t5_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "We're not going to do that, are we?",
-              "answer": "Não vamos fazer isso, vamos?",
-              "words": [
-                "vamos",
-                "mais.",
-                "isso,",
-                "a",
-                "Não",
-                "vamos?",
-                "fazer"
-              ],
-              "id": "portuguese_t5_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ele já está aqui.",
-              "audio": "Ele já está aqui.",
-              "id": "portuguese_t5_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "It is already here.",
-                  "Já está aqui."
-                ],
-                [
-                  "Yes, she will.",
-                  "Sim, ela vai."
-                ],
-                [
-                  "What's it going to be?",
-                  "Como vai ser?"
-                ],
-                [
-                  "What's it going to be like?",
-                  "Como vai ser?"
-                ]
-              ],
-              "id": "portuguese_t5_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t6",
-      "title": "Everyday Speech 2",
-      "lessons": [
-        {
-          "id": "t6l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "That didn't go very well, did it?",
-              "answer": "Isso não vai muito bem, não é?",
-              "choices": [
-                "Está tudo aqui.",
-                "Já não estou só.",
-                "Isso não vai muito bem, não é?",
-                "Isso é tudo?"
-              ],
-              "id": "portuguese_t6_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Que vai ____ fazer?",
-              "answer": "ela",
-              "choices": [
-                "Está",
-                "fazer",
-                "não",
-                "ela"
-              ],
-              "id": "portuguese_t6_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What is he going to do?",
-              "answer": "Que vai ele fazer?",
-              "words": [
-                "vai",
-                "ele",
-                "fazer?",
-                "só.",
-                "Não,",
-                "Que"
-              ],
-              "id": "portuguese_t6_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ela não vai?",
-              "audio": "Ela não vai?",
-              "id": "portuguese_t6_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "No, just one.",
-                  "Não, uma só."
-                ],
-                [
-                  "It's only her.",
-                  "É só ela."
-                ],
-                [
-                  "Said no one ever.",
-                  "Só que não."
-                ],
-                [
-                  "I'm no longer alone.",
-                  "Já não estou só."
-                ]
-              ],
-              "id": "portuguese_t6_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t6l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "He does not have to do this.",
-              "answer": "Ele não tem que fazer isso.",
-              "choices": [
-                "Que vai ela fazer?",
-                "Ele não tem que fazer isso.",
-                "Ele tem muito que fazer.",
-                "Ela tem uma."
-              ],
-              "id": "portuguese_t6_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "O que ____ tem?",
-              "answer": "ela",
-              "choices": [
-                "uma",
-                "ela",
-                "Ele",
-                "não"
-              ],
-              "id": "portuguese_t6_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "He has a lot to do.",
-              "answer": "Ele tem muito que fazer.",
-              "words": [
-                "fazer.",
-                "muito",
-                "que",
-                "Ele",
-                "tem",
-                "muito",
-                "Só"
-              ],
-              "id": "portuguese_t6_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Tem que ser eu.",
-              "audio": "Tem que ser eu.",
-              "id": "portuguese_t6_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "She has one.",
-                  "Ela tem uma."
-                ],
-                [
-                  "Everything is fine.",
-                  "Está tudo bem."
-                ],
-                [
-                  "It's OK.",
-                  "Está tudo bem."
-                ],
-                [
-                  "Everything's fine.",
-                  "Está tudo bem."
-                ]
-              ],
-              "id": "portuguese_t6_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t6l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Everything's OK.",
-              "answer": "Está tudo bem.",
-              "choices": [
-                "Ela não vai?",
-                "É só ela.",
-                "Que vai ela fazer?",
-                "Está tudo bem."
-              ],
-              "id": "portuguese_t6_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "That's all.",
               "answer": "Isso é tudo.",
-              "choices": [
-                "Que vai ela fazer?",
-                "Isso é tudo.",
-                "Não, uma só.",
-                "É só ela."
-              ],
-              "id": "portuguese_t6_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "Is that all?",
-              "answer": "Isso é tudo?",
-              "words": [
-                "é",
-                "tudo?",
-                "Só",
-                "Isso",
-                "Tudo"
-              ],
-              "id": "portuguese_t6_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Está tudo bem?",
-              "audio": "Está tudo bem?",
-              "id": "portuguese_t6_3_3"
+              "audio": "Isso é tudo.",
+              "id": "portuguese_t5_2_3"
             },
             {
               "type": "match",
@@ -1577,137 +1270,59 @@
                   "Não, é tudo."
                 ]
               ],
-              "id": "portuguese_t6_3_4"
+              "id": "portuguese_t5_2_4"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "t7",
-      "title": "Wider Vocabulary 1",
-      "lessons": [
+        },
         {
-          "id": "t7l1",
-          "title": "Lesson 1",
+          "id": "t5l3",
+          "title": "Lesson 3",
           "exercises": [
             {
               "type": "translation",
               "question": "Is everything alright here?",
               "answer": "Está tudo bem por aqui?",
               "choices": [
-                "Está tudo aqui.",
-                "Está tudo bem por aqui?",
-                "O que é tudo isto?",
-                "Está tudo bem com ele."
+                "Vai tudo bem.",
+                "É só ela.",
+                "Tudo está aqui.",
+                "Está tudo bem por aqui?"
               ],
-              "id": "portuguese_t7_1_0"
+              "id": "portuguese_t5_3_0"
             },
             {
               "type": "cloze",
               "question": "Está tudo ____ com ela.",
               "answer": "bem",
               "choices": [
-                "Não",
-                "por",
-                "Para",
-                "bem"
-              ],
-              "id": "portuguese_t7_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "It's all here.",
-              "answer": "Está tudo aqui.",
-              "words": [
-                "tudo",
-                "isso",
-                "aqui.",
-                "por",
-                "Está"
-              ],
-              "id": "portuguese_t7_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "O que é tudo isso?",
-              "audio": "O que é tudo isso?",
-              "id": "portuguese_t7_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "It's all right.",
-                  "Está tudo bem."
-                ],
-                [
-                  "All is well.",
-                  "Tudo está bem."
-                ],
-                [
-                  "What's all this?",
-                  "O que é tudo isso?"
-                ],
-                [
-                  "Is everything all right?",
-                  "Está tudo bem?"
-                ]
-              ],
-              "id": "portuguese_t7_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "No, everything isn't all right.",
-              "answer": "Não, não está tudo bem.",
-              "choices": [
-                "Ela é tudo para ele.",
-                "Não, não está tudo bem.",
-                "O que é tudo isso?",
-                "Está tudo bem com ele."
-              ],
-              "id": "portuguese_t7_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Está ____ bem.",
-              "answer": "tudo",
-              "choices": [
-                "não",
-                "tudo",
                 "que",
-                "Ela"
+                "bem",
+                "Está",
+                "ela"
               ],
-              "id": "portuguese_t7_2_1"
+              "id": "portuguese_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "It's all in here.",
-              "answer": "Tudo está aqui.",
+              "question": "What's all that?",
+              "answer": "O que é tudo isso?",
               "words": [
-                "está",
-                "bem",
-                "Não,",
-                "Tudo",
-                "aqui."
+                "que",
+                "ela",
+                "tudo",
+                "O",
+                "O",
+                "isso?",
+                "é"
               ],
-              "id": "portuguese_t7_2_2"
+              "id": "portuguese_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Está tudo bem.",
-              "audio": "Está tudo bem.",
-              "id": "portuguese_t7_2_3"
+              "answer": "Tudo está bem.",
+              "audio": "Tudo está bem.",
+              "id": "portuguese_t5_3_3"
             },
             {
               "type": "match",
@@ -1715,165 +1330,87 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That is all.",
-                  "Isso é tudo."
+                  "No, everything isn't all right.",
+                  "Não, não está tudo bem."
                 ],
                 [
-                  "Is that it?",
-                  "Isso é tudo?"
+                  "It's all in here.",
+                  "Tudo está aqui."
                 ],
                 [
-                  "Is everybody okay?",
-                  "Está tudo bem?"
+                  "Everything is all right.",
+                  "Vai tudo bem."
                 ],
                 [
                   "She is everything to him.",
                   "Ela é tudo para ele."
                 ]
               ],
-              "id": "portuguese_t7_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "That's all?",
-              "answer": "Isso é tudo?",
-              "choices": [
-                "Tudo está bem.",
-                "Está tudo bem com ela.",
-                "Para que é isso tudo?",
-                "Isso é tudo?"
-              ],
-              "id": "portuguese_t7_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "Is that all it is?",
-              "answer": "Isso é tudo?",
-              "choices": [
-                "Está tudo aqui.",
-                "Está tudo bem com ele.",
-                "Isso é tudo?",
-                "O que é tudo isso?"
-              ],
-              "id": "portuguese_t7_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What is all that?",
-              "answer": "O que é tudo isso?",
-              "words": [
-                "que",
-                "tudo",
-                "tudo",
-                "O",
-                "é",
-                "isso?",
-                "Tudo"
-              ],
-              "id": "portuguese_t7_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "O que é tudo isto?",
-              "audio": "O que é tudo isto?",
-              "id": "portuguese_t7_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "What's it all for?",
-                  "Para que é isso tudo?"
-                ],
-                [
-                  "What's all that for?",
-                  "Para que é isso tudo?"
-                ],
-                [
-                  "Is this all there is?",
-                  "Isso é tudo?"
-                ],
-                [
-                  "It's all right with him.",
-                  "Está tudo bem com ele."
-                ]
-              ],
-              "id": "portuguese_t7_3_4"
+              "id": "portuguese_t5_3_4"
             }
           ]
         }
       ]
     },
     {
-      "id": "t8",
-      "title": "Wider Vocabulary 2",
+      "id": "t6",
+      "title": "Everyday Speech 2",
       "lessons": [
         {
-          "id": "t8l1",
+          "id": "t6l1",
           "title": "Lesson 1",
           "exercises": [
             {
               "type": "translation",
-              "question": "That will be all.",
-              "answer": "Isso é tudo.",
+              "question": "What is all this?",
+              "answer": "O que é tudo isto?",
               "choices": [
-                "Tudo é um.",
-                "Isso é tudo.",
-                "Ela é tudo o que tenho.",
-                "Há muito que fazer."
+                "Isto é tudo.",
+                "Eu tenho tudo.",
+                "O que é tudo isto?",
+                "Eu tenho muito que fazer."
               ],
-              "id": "portuguese_t8_1_0"
+              "id": "portuguese_t6_1_0"
             },
             {
               "type": "translation",
-              "question": "This is it.",
-              "answer": "Isto é tudo.",
+              "question": "What's it all for?",
+              "answer": "Para que é isso tudo?",
               "choices": [
-                "O que eu tenho que fazer?",
-                "Eu tenho um.",
-                "Há muito que fazer.",
-                "Isto é tudo."
+                "Tudo é um.",
+                "O que há com ela?",
+                "Está tudo bem com ele.",
+                "Para que é isso tudo?"
               ],
-              "id": "portuguese_t8_1_1"
+              "id": "portuguese_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "End of story.",
-              "answer": "Isto é tudo.",
+              "question": "It's all right with him.",
+              "answer": "Está tudo bem com ele.",
               "words": [
-                "é",
-                "isso?",
-                "tudo.",
-                "Isto",
-                "tenho"
+                "tudo",
+                "com",
+                "isso",
+                "já",
+                "ele.",
+                "bem",
+                "Está"
               ],
-              "id": "portuguese_t8_1_2"
+              "id": "portuguese_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Vai tudo bem.",
-              "audio": "Vai tudo bem.",
-              "id": "portuguese_t8_1_3"
+              "answer": "Isto é tudo.",
+              "audio": "Isto é tudo.",
+              "id": "portuguese_t6_1_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "Everything is good.",
-                  "Vai tudo bem."
-                ],
                 [
                   "All is one.",
                   "Tudo é um."
@@ -1885,14 +1422,18 @@
                 [
                   "What else is there to do?",
                   "O que mais há que fazer?"
+                ],
+                [
+                  "What's wrong with her?",
+                  "O que há com ela?"
                 ]
               ],
-              "id": "portuguese_t8_1_4"
+              "id": "portuguese_t6_1_4"
             }
           ]
         },
         {
-          "id": "t8l2",
+          "id": "t6l2",
           "title": "Lesson 2",
           "exercises": [
             {
@@ -1900,45 +1441,45 @@
               "question": "There's a bit of everything.",
               "answer": "Há de tudo.",
               "choices": [
-                "Não tenho um.",
+                "Tudo é um.",
                 "Há de tudo.",
-                "Eu tenho um.",
-                "Ele é tudo o que eu tenho."
+                "Eu tenho que fazer isso?",
+                "Eu tenho muito que fazer."
               ],
-              "id": "portuguese_t8_2_0"
+              "id": "portuguese_t6_2_0"
             },
             {
               "type": "translation",
               "question": "I have a lot of work to do.",
               "answer": "Tenho muito o que fazer.",
               "choices": [
-                "Tudo é um.",
+                "Eu tenho tudo.",
                 "Tenho muito o que fazer.",
-                "O que mais há que fazer?",
-                "Isto é tudo."
+                "Para que é isso tudo?",
+                "Há muito que fazer."
               ],
-              "id": "portuguese_t8_2_1"
+              "id": "portuguese_t6_2_1"
             },
             {
               "type": "sentence",
               "question": "What do I have?",
               "answer": "O que eu tenho?",
               "words": [
+                "isso",
+                "tenho?",
                 "eu",
-                "fazer.",
-                "que",
-                "é",
+                "isso?",
                 "O",
-                "tenho?"
+                "que"
               ],
-              "id": "portuguese_t8_2_2"
+              "id": "portuguese_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Só tenho mais um.",
               "audio": "Só tenho mais um.",
-              "id": "portuguese_t8_2_3"
+              "id": "portuguese_t6_2_3"
             },
             {
               "type": "match",
@@ -1962,6 +1503,472 @@
                   "Eu tenho tudo."
                 ]
               ],
+              "id": "portuguese_t6_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t6l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I have one.",
+              "answer": "Eu tenho um.",
+              "choices": [
+                "Isto é tudo.",
+                "O que mais há que fazer?",
+                "Para que é isso tudo?",
+                "Eu tenho um."
+              ],
+              "id": "portuguese_t6_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Não ____ um.",
+              "answer": "tenho",
+              "choices": [
+                "Ela",
+                "tenho",
+                "Está",
+                "Eu"
+              ],
+              "id": "portuguese_t6_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Do I have to do that?",
+              "answer": "Eu tenho que fazer isso?",
+              "words": [
+                "tenho",
+                "que",
+                "fazer",
+                "isso?",
+                "o",
+                "Eu",
+                "fazer."
+              ],
+              "id": "portuguese_t6_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Eu tenho muito que fazer.",
+              "audio": "Eu tenho muito que fazer.",
+              "id": "portuguese_t6_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "This is what I have to do.",
+                  "Isto é o que tenho que fazer."
+                ],
+                [
+                  "I have one more.",
+                  "Eu tenho mais um."
+                ],
+                [
+                  "I already have one.",
+                  "Eu já tenho um."
+                ],
+                [
+                  "I have to do this.",
+                  "Tenho que fazer isso."
+                ]
+              ],
+              "id": "portuguese_t6_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "title": "Wider Vocabulary 1",
+      "lessons": [
+        {
+          "id": "t7l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What do I have to do?",
+              "answer": "O que tenho que fazer?",
+              "choices": [
+                "Eu não tenho que fazer isso.",
+                "O que tenho que fazer?",
+                "Eu não vou fazer isso.",
+                "Eu vou bem."
+              ],
+              "id": "portuguese_t7_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Não ____ isso.",
+              "answer": "tenho",
+              "choices": [
+                "Sim",
+                "fazer",
+                "muito",
+                "tenho"
+              ],
+              "id": "portuguese_t7_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I don't have to do that.",
+              "answer": "Eu não tenho que fazer isso.",
+              "words": [
+                "não",
+                "isso.",
+                "fazer",
+                "Eu",
+                "que",
+                "eu!",
+                "que",
+                "tenho"
+              ],
+              "id": "portuguese_t7_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "É isso o que tenho que fazer.",
+              "audio": "É isso o que tenho que fazer.",
+              "id": "portuguese_t7_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "That's not what I have to do.",
+                  "Isso não é o que tenho que fazer."
+                ],
+                [
+                  "That's all I have.",
+                  "Isso é tudo o que tenho."
+                ],
+                [
+                  "This is all I have.",
+                  "É tudo o que tenho."
+                ],
+                [
+                  "That's all I have to do.",
+                  "É só o que tenho que fazer."
+                ]
+              ],
+              "id": "portuguese_t7_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I have more than that.",
+              "answer": "Tenho mais que isso.",
+              "choices": [
+                "Isso é tudo o que tenho.",
+                "Tenho mais que isso.",
+                "É isso o que tenho que fazer.",
+                "É isso que eu vou fazer."
+              ],
+              "id": "portuguese_t7_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Sim, ____ tenho.",
+              "answer": "eu",
+              "choices": [
+                "mais",
+                "eu",
+                "Vou",
+                "tenho"
+              ],
+              "id": "portuguese_t7_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I have what I have.",
+              "answer": "Tenho o que tenho.",
+              "words": [
+                "que",
+                "tenho.",
+                "o",
+                "Tenho",
+                "que",
+                "fazer?"
+              ],
+              "id": "portuguese_t7_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Por que é que tenho que fazer isso?",
+              "audio": "Por que é que tenho que fazer isso?",
+              "id": "portuguese_t7_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I am going to do it.",
+                  "Eu vou fazer."
+                ],
+                [
+                  "I'm fine.",
+                  "Eu vou bem."
+                ],
+                [
+                  "I won't do it.",
+                  "Eu não vou fazer isso."
+                ],
+                [
+                  "That's what I'll do.",
+                  "É isso que eu vou fazer."
+                ]
+              ],
+              "id": "portuguese_t7_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I'm doing great.",
+              "answer": "Eu vou muito bem.",
+              "choices": [
+                "Não tenho isso.",
+                "Eu não vou fazer isso.",
+                "É tudo o que tenho.",
+                "Eu vou muito bem."
+              ],
+              "id": "portuguese_t7_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Isso é o ____ eu vou fazer.",
+              "answer": "que",
+              "choices": [
+                "Vou",
+                "muito",
+                "que",
+                "mais"
+              ],
+              "id": "portuguese_t7_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Here I come.",
+              "answer": "Aqui vou eu!",
+              "words": [
+                "vou",
+                "que",
+                "Isso",
+                "Aqui",
+                "eu!"
+              ],
+              "id": "portuguese_t7_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Como eu vou fazer isso?",
+              "audio": "Como eu vou fazer isso?",
+              "id": "portuguese_t7_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "All right, I'll do it.",
+                  "Tudo bem, eu vou fazer isso."
+                ],
+                [
+                  "I'm not going to do that anymore.",
+                  "Não vou mais fazer isso."
+                ],
+                [
+                  "I'll do this.",
+                  "Vou fazer isso."
+                ],
+                [
+                  "What am I going to do?",
+                  "O que eu vou fazer?"
+                ]
+              ],
+              "id": "portuguese_t7_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "title": "Wider Vocabulary 2",
+      "lessons": [
+        {
+          "id": "t8l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I'll go do that.",
+              "answer": "Eu vou fazer isso.",
+              "choices": [
+                "Sei que não sei.",
+                "Eu vou fazer isso.",
+                "Sim, é o que vou fazer.",
+                "Eu sei de tudo."
+              ],
+              "id": "portuguese_t8_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Eu ____ vou.",
+              "answer": "não",
+              "choices": [
+                "bem",
+                "Sei",
+                "sei",
+                "não"
+              ],
+              "id": "portuguese_t8_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Yeah, that's what I'll do.",
+              "answer": "Sim, é o que vou fazer.",
+              "words": [
+                "fazer.",
+                "que",
+                "é",
+                "vou",
+                "Sim,",
+                "mais",
+                "vou",
+                "o"
+              ],
+              "id": "portuguese_t8_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Não é isso que vou fazer.",
+              "audio": "Não é isso que vou fazer.",
+              "id": "portuguese_t8_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "What am I going to do with this?",
+                  "O que eu vou fazer com isso?"
+                ],
+                [
+                  "I don't know.",
+                  "Eu não sei."
+                ],
+                [
+                  "I don't know what it is.",
+                  "Eu não sei o que é isso."
+                ],
+                [
+                  "I know everything.",
+                  "Eu sei de tudo."
+                ]
+              ],
+              "id": "portuguese_t8_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I don't know what to do anymore.",
+              "answer": "Eu não sei mais o que fazer.",
+              "choices": [
+                "Não sei o que fazer.",
+                "Eu não sei mais o que fazer.",
+                "Eu sei que eu não sei.",
+                "Sei que não sei."
+              ],
+              "id": "portuguese_t8_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Eu sei que ____ não sei.",
+              "answer": "eu",
+              "choices": [
+                "tenho",
+                "eu",
+                "ele",
+                "vamos"
+              ],
+              "id": "portuguese_t8_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I know that I don't know.",
+              "answer": "Sei que não sei.",
+              "words": [
+                "não",
+                "sei",
+                "que",
+                "Sei",
+                "Sei",
+                "sei."
+              ],
+              "id": "portuguese_t8_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Eu sei como fazer.",
+              "audio": "Eu sei como fazer.",
+              "id": "portuguese_t8_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I know what I'll do.",
+                  "Eu sei o que vou fazer."
+                ],
+                [
+                  "This is all I know.",
+                  "Isso é tudo o que eu sei."
+                ],
+                [
+                  "I don't quite know.",
+                  "Eu não sei bem."
+                ],
+                [
+                  "I don't know what to do.",
+                  "Não sei o que fazer."
+                ]
+              ],
               "id": "portuguese_t8_2_4"
             }
           ]
@@ -1972,49 +1979,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I have one.",
-              "answer": "Eu tenho um.",
+              "question": "I know what to do.",
+              "answer": "Sei o que fazer.",
               "choices": [
-                "Ele é tudo o que eu tenho.",
-                "Eu tenho tudo.",
-                "Tudo é um.",
-                "Eu tenho um."
+                "Não, eu não sei.",
+                "Isso é tudo o que eu sei.",
+                "Eu não sei o que ele vai fazer.",
+                "Sei o que fazer."
               ],
               "id": "portuguese_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "O que eu ____ que fazer?",
-              "answer": "tenho",
+              "question": "Eu não sei o ____ ele vai fazer.",
+              "answer": "que",
               "choices": [
-                "tudo",
-                "tenho",
-                "Vai",
-                "que"
+                "não",
+                "que",
+                "de",
+                "isso"
               ],
               "id": "portuguese_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "What do I need to do?",
-              "answer": "O que eu tenho que fazer?",
+              "question": "I don't know what he is like.",
+              "answer": "Eu não sei como ele é.",
               "words": [
-                "que",
-                "O",
-                "tenho?",
-                "fazer?",
-                "tenho",
-                "O",
+                "não",
                 "eu",
-                "que"
+                "não",
+                "é.",
+                "como",
+                "Eu",
+                "sei",
+                "ele"
               ],
               "id": "portuguese_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Não tenho um.",
-              "audio": "Não tenho um.",
+              "answer": "Não, eu não sei.",
+              "audio": "Não, eu não sei.",
               "id": "portuguese_t8_3_3"
             },
             {
@@ -2023,20 +2030,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do I have to do that?",
-                  "Eu tenho que fazer isso?"
+                  "I know what I have to do.",
+                  "Eu sei o que tenho de fazer."
                 ],
                 [
-                  "I have many things to do.",
-                  "Tenho muito o que fazer."
+                  "I don't know what to do any more.",
+                  "Não sei mais o que fazer."
                 ],
                 [
-                  "I have a lot of work to do!",
-                  "Tenho muito o que fazer."
+                  "That's all I know.",
+                  "Isso é tudo que eu sei."
                 ],
                 [
-                  "I have a lot to do.",
-                  "Eu tenho muito que fazer."
+                  "I don't know what we'll do.",
+                  "Eu não sei o que vamos fazer."
                 ]
               ],
               "id": "portuguese_t8_3_4"
@@ -2055,47 +2062,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is what I have to do.",
-              "answer": "Isto é o que tenho que fazer.",
+              "question": "I already know.",
+              "answer": "Eu já sei.",
               "choices": [
-                "Não tenho isso.",
-                "Isto é o que tenho que fazer.",
-                "Eu tenho mais um.",
-                "Tenho que fazer isso."
+                "Não sei o que é isso.",
+                "Eu já sei.",
+                "Isso é o que eu não sei.",
+                "Eu sei que não sei."
               ],
               "id": "portuguese_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "Eu tenho ____ que fazer.",
-              "answer": "muito",
+              "question": "Eu não ____ como.",
+              "answer": "sei",
               "choices": [
-                "um",
-                "Sim",
-                "vou",
-                "muito"
+                "Sei",
+                "fazer",
+                "Isso",
+                "sei"
               ],
               "id": "portuguese_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "I have one more.",
-              "answer": "Eu tenho mais um.",
+              "question": "I know how to do this.",
+              "answer": "Eu sei como fazer isto.",
               "words": [
-                "tenho",
-                "um.",
-                "mais",
-                "é",
-                "eu",
-                "Eu"
+                "sei",
+                "Isto",
+                "Já",
+                "isto.",
+                "Eu",
+                "como",
+                "fazer"
               ],
               "id": "portuguese_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu já tenho um.",
-              "audio": "Eu já tenho um.",
+              "answer": "Isto é tudo o que sei.",
+              "audio": "Isto é tudo o que sei.",
               "id": "portuguese_t9_1_3"
             },
             {
@@ -2104,20 +2112,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I have to do this.",
-                  "Tenho que fazer isso."
+                  "I don't know how to do that.",
+                  "Eu não sei fazer isso."
                 ],
                 [
-                  "I have to do it.",
-                  "Tenho que fazer isso."
+                  "I know what it feels like.",
+                  "Eu sei como é isso."
                 ],
                 [
-                  "What do I have to do?",
-                  "O que tenho que fazer?"
+                  "I do not know why I am here.",
+                  "Não sei porque estou aqui."
                 ],
                 [
-                  "I don't have it.",
-                  "Não tenho isso."
+                  "I already know what it is.",
+                  "Já sei o que é."
                 ]
               ],
               "id": "portuguese_t9_1_4"
@@ -2130,51 +2138,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't have to do that.",
-              "answer": "Eu não tenho que fazer isso.",
+              "question": "I know how that goes.",
+              "answer": "Eu sei como isso vai.",
               "choices": [
-                "O que tenho que fazer?",
-                "Eu não tenho que fazer isso.",
-                "Tenho o que tenho.",
-                "Eu tenho muito que fazer."
+                "Eu não sei fazer isso.",
+                "Eu sei como isso vai.",
+                "Eu não sei o que sei.",
+                "Eu sei que tenho que fazer isso."
               ],
               "id": "portuguese_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "É isso o ____ tenho que fazer.",
-              "answer": "que",
+              "question": "Eu não ____ tudo.",
+              "answer": "sei",
               "choices": [
-                "Eu",
-                "que",
-                "um",
-                "tenho"
+                "estou",
+                "sei",
+                "tenho",
+                "não"
               ],
               "id": "portuguese_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "That's not what I have to do.",
-              "answer": "Isso não é o que tenho que fazer.",
+              "question": "That, I don't know.",
+              "answer": "Isso eu não sei.",
               "words": [
-                "fazer",
-                "que",
                 "eu",
-                "que",
-                "tenho",
-                "é",
                 "fazer.",
+                "tenho.",
                 "Isso",
-                "o",
-                "não"
+                "não",
+                "sei."
               ],
               "id": "portuguese_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Isso é tudo o que tenho.",
-              "audio": "Isso é tudo o que tenho.",
+              "answer": "Eu não sei mais.",
+              "audio": "Eu não sei mais.",
               "id": "portuguese_t9_2_3"
             },
             {
@@ -2183,20 +2187,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is all I have.",
-                  "É tudo o que tenho."
+                  "I don't know what that is.",
+                  "Não sei o que é isso."
                 ],
                 [
-                  "That's all I have to do.",
-                  "É só o que tenho que fazer."
+                  "That's what I don't know.",
+                  "Isso é o que eu não sei."
                 ],
                 [
-                  "I have more than that.",
-                  "Tenho mais que isso."
+                  "I'm not quite sure what to do.",
+                  "Não sei bem o que fazer."
                 ],
                 [
-                  "Yes, I do.",
-                  "Sim, eu tenho."
+                  "I know what this is.",
+                  "Eu sei o que é isso."
                 ]
               ],
               "id": "portuguese_t9_2_4"
@@ -2209,46 +2213,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I have what I have.",
-              "answer": "Tenho o que tenho.",
+              "question": "I know what it is.",
+              "answer": "Eu sei o que é.",
               "choices": [
-                "Não tenho isso.",
-                "Eu tenho tudo.",
-                "Eu vou bem.",
-                "Tenho o que tenho."
+                "Eu não sei como.",
+                "Eu não sei tudo.",
+                "Isto é tudo o que sei.",
+                "Eu sei o que é."
               ],
               "id": "portuguese_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Eu ____ tudo.",
+              "question": "Eu sei que ____ que fazer isso.",
               "answer": "tenho",
               "choices": [
-                "que",
+                "já",
                 "tenho",
-                "fazer",
-                "mais"
+                "vai",
+                "aqui"
               ],
               "id": "portuguese_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "I am going to do it.",
-              "answer": "Eu vou fazer.",
+              "question": "I don't know what I have.",
+              "answer": "Eu não sei o que tenho.",
               "words": [
-                "vou",
-                "fazer.",
-                "Sim,",
+                "não",
+                "Isso",
+                "o",
+                "tenho.",
+                "como.",
                 "Eu",
-                "não"
+                "sei",
+                "que"
               ],
               "id": "portuguese_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu vou bem.",
-              "audio": "Eu vou bem.",
+              "answer": "Sei que não tenho que fazer isso.",
+              "audio": "Sei que não tenho que fazer isso.",
               "id": "portuguese_t9_3_3"
             },
             {
@@ -2257,20 +2264,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm doing well.",
-                  "Eu vou bem."
+                  "I know that I don't have to do that.",
+                  "Eu sei que não tenho que fazer isso."
                 ],
                 [
-                  "I won't do it.",
-                  "Eu não vou fazer isso."
+                  "I don't know what I have to do.",
+                  "Eu não sei o que tenho que fazer."
                 ],
                 [
-                  "I'm not going to do this.",
-                  "Eu não vou fazer isso."
+                  "I know I don't know.",
+                  "Eu sei que não sei."
                 ],
                 [
-                  "I'm not going to do that.",
-                  "Eu não vou fazer isso."
+                  "I don't know what I know.",
+                  "Eu não sei o que sei."
                 ]
               ],
               "id": "portuguese_t9_3_4"
@@ -2289,50 +2296,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's what I'll do.",
-              "answer": "É isso que eu vou fazer.",
+              "question": "I don't know what I don't know.",
+              "answer": "Eu não sei o que eu não sei.",
               "choices": [
-                "Eu não vou fazer isso.",
-                "É isso que eu vou fazer.",
-                "Eu vou bem.",
-                "Aqui vou eu!"
+                "Não sei fazer isso.",
+                "Eu não sei o que eu não sei.",
+                "Eu já sei de tudo.",
+                "Eu sei o que fazer."
               ],
               "id": "portuguese_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Eu vou ____ bem.",
-              "answer": "muito",
+              "question": "Não sei o ____ fazer com isso.",
+              "answer": "que",
               "choices": [
-                "eu",
-                "com",
-                "vou",
-                "muito"
+                "Sei",
+                "para",
+                "de",
+                "que"
               ],
               "id": "portuguese_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "That's what I'm going to do.",
-              "answer": "Isso é o que eu vou fazer.",
+              "question": "I don't know what to do with this.",
+              "answer": "Eu não sei o que fazer com isto.",
               "words": [
-                "Isso",
-                "que",
-                "vou",
-                "vou",
-                "fazer.",
+                "não",
+                "sei",
                 "o",
-                "é",
-                "Isso",
-                "eu"
+                "fazer",
+                "agora.",
+                "com",
+                "vou",
+                "Eu",
+                "isto.",
+                "que"
               ],
               "id": "portuguese_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Aqui vou eu!",
-              "audio": "Aqui vou eu!",
+              "answer": "É tudo o que sei.",
+              "audio": "É tudo o que sei.",
               "id": "portuguese_t10_1_3"
             },
             {
@@ -2341,20 +2349,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How am I going to do that?",
-                  "Como eu vou fazer isso?"
+                  "I know all that.",
+                  "Sei tudo isso."
                 ],
                 [
-                  "All right, I'll do it.",
-                  "Tudo bem, eu vou fazer isso."
+                  "I know that I have to do that here.",
+                  "Sei que tenho que fazer isso aqui."
                 ],
                 [
-                  "I won't do that.",
-                  "Eu não vou fazer isso."
+                  "I don't know how to do it.",
+                  "Não sei fazer isso."
                 ],
                 [
-                  "I'm not going to do that anymore.",
-                  "Não vou mais fazer isso."
+                  "I don't know what to do with him anymore.",
+                  "Não sei mais o que fazer com ele."
                 ]
               ],
               "id": "portuguese_t10_1_4"
@@ -2367,46 +2375,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'll do this.",
-              "answer": "Vou fazer isso.",
+              "question": "I know what it's like.",
+              "answer": "Eu sei como é.",
               "choices": [
-                "Não é isso que vou fazer.",
-                "Vou fazer isso.",
-                "O que eu vou fazer?",
-                "Eu não sei."
+                "Tenho que fazer isto agora.",
+                "Eu sei como é.",
+                "É para quando?",
+                "Não sei o que fazer com isso."
               ],
               "id": "portuguese_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Vou ____ isso.",
-              "answer": "fazer",
+              "question": "Eu já ____ fazer isso.",
+              "answer": "sei",
               "choices": [
-                "Eu",
-                "fazer",
-                "muito",
-                "que"
+                "que",
+                "sei",
+                "com",
+                "Que"
               ],
               "id": "portuguese_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm going to do that.",
-              "answer": "Vou fazer isso.",
+              "question": "I already know everything.",
+              "answer": "Eu já sei de tudo.",
               "words": [
-                "fazer",
-                "Isso",
-                "isso.",
-                "Vou",
-                "O"
+                "de",
+                "não",
+                "já",
+                "com",
+                "Eu",
+                "sei",
+                "tudo."
               ],
               "id": "portuguese_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O que eu vou fazer?",
-              "audio": "O que eu vou fazer?",
+              "answer": "Que é que eu sei?",
+              "audio": "Que é que eu sei?",
               "id": "portuguese_t10_2_3"
             },
             {
@@ -2415,20 +2425,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not going.",
-                  "Eu não vou."
+                  "I know what I've got to do.",
+                  "Eu sei o que fazer."
                 ],
                 [
-                  "I'm not going to do it.",
-                  "Eu não vou fazer isso."
+                  "I don't know much more than that.",
+                  "Eu não sei muito mais do que isso."
                 ],
                 [
-                  "I'm going to go do that.",
-                  "Eu não vou fazer isso."
+                  "When do you need it by?",
+                  "É para quando?"
                 ],
                 [
-                  "Yeah, that's what I'll do.",
-                  "Sim, é o que vou fazer."
+                  "I don't know when.",
+                  "Eu não sei quando."
                 ]
               ],
               "id": "portuguese_t10_2_4"
@@ -2441,46 +2451,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's not what I'm going to do.",
-              "answer": "Não é isso que vou fazer.",
+              "question": "Everything is all right now.",
+              "answer": "Agora tudo está bem.",
               "choices": [
-                "Eu vou muito bem.",
-                "Vou fazer isso.",
-                "Tudo bem, eu vou fazer isso.",
-                "Não é isso que vou fazer."
+                "Não sei o que vou fazer agora.",
+                "Agora não sei o que fazer.",
+                "Agora não está aqui.",
+                "Agora tudo está bem."
               ],
               "id": "portuguese_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "O que eu ____ fazer com isso?",
-              "answer": "vou",
+              "question": "Agora não ____ aqui.",
+              "answer": "está",
               "choices": [
-                "Como",
-                "vou",
                 "que",
-                "muito"
+                "está",
+                "não",
+                "de"
               ],
               "id": "portuguese_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "I'm OK.",
-              "answer": "Eu vou bem.",
+              "question": "I don't know what to do now.",
+              "answer": "Agora não sei o que fazer.",
               "words": [
-                "bem.",
-                "isso",
+                "fazer.",
+                "o",
+                "vou",
+                "Agora",
+                "não",
+                "tudo",
                 "sei",
-                "Eu",
-                "vou"
+                "que"
               ],
               "id": "portuguese_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eu vou bem.",
-              "audio": "Eu vou bem.",
+              "answer": "Agora sei o que tenho de fazer.",
+              "audio": "Agora sei o que tenho de fazer.",
               "id": "portuguese_t10_3_3"
             },
             {
@@ -2489,20 +2502,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm good.",
-                  "Eu vou bem."
+                  "I don't know what to do right now.",
+                  "Eu não sei o que fazer agora."
                 ],
                 [
-                  "I don't know.",
-                  "Eu não sei."
+                  "I've got to do this now.",
+                  "Tenho que fazer isto agora."
                 ],
                 [
-                  "I don't know what it is.",
-                  "Eu não sei o que é isso."
+                  "I don't know what I'm going to do now.",
+                  "Não sei o que vou fazer agora."
                 ],
                 [
-                  "I know everything.",
-                  "Eu sei de tudo."
+                  "I'm with her now.",
+                  "Estou com ela agora."
                 ]
               ],
               "id": "portuguese_t10_3_4"

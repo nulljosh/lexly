@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-language",
   "level": "Beginner to Intermediate",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,44 +216,43 @@
               "question": "That's the one.",
               "answer": "Das ist sie.",
               "choices": [
-                "Ist es das?",
-                "Das ist sie.",
                 "Was ist das?",
-                "Ich nicht, und du?"
+                "Das ist sie.",
+                "Das ist er.",
+                "Ja, ist was?"
               ],
               "id": "german_t1_1_0"
             },
             {
               "type": "cloze",
-              "question": "Das ____ sie.",
-              "answer": "ist",
+              "question": "Das ist ____ nicht.",
+              "answer": "sie",
               "choices": [
-                "Was",
-                "du",
-                "Ist",
-                "ist"
+                "ich",
+                "ist",
+                "Wie",
+                "sie"
               ],
               "id": "german_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "That isn't her.",
-              "answer": "Das ist sie nicht.",
+              "question": "Is that it?",
+              "answer": "Ist es das?",
               "words": [
-                "ist",
-                "sie",
-                "Sie",
-                "Das",
-                "nicht.",
-                "sie"
+                "es",
+                "das?",
+                "Ja,",
+                "Ist",
+                "Ich"
               ],
               "id": "german_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Das ist sie nicht.",
-              "audio": "Das ist sie nicht.",
+              "answer": "Das ist es.",
+              "audio": "Das ist es.",
               "id": "german_t1_1_3"
             },
             {
@@ -262,20 +261,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is that it?",
-                  "Ist es das?"
-                ],
-                [
-                  "Is this it?",
-                  "Ist es das?"
-                ],
-                [
-                  "This is it.",
-                  "Das ist es."
-                ],
-                [
                   "That isn't it.",
                   "Das ist es nicht."
+                ],
+                [
+                  "Not me. And you?",
+                  "Ich nicht, und du?"
+                ],
+                [
+                  "What is it?",
+                  "Was ist das?"
+                ],
+                [
+                  "It is what it is.",
+                  "Es ist, was es ist."
                 ]
               ],
               "id": "german_t1_1_4"
@@ -288,37 +287,37 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Not me. And you?",
-              "answer": "Ich nicht, und du?",
+              "question": "It's closed.",
+              "answer": "Sie ist zu.",
               "choices": [
-                "Das ist es.",
-                "Ich nicht, und du?",
+                "Wie ist das?",
+                "Sie ist zu.",
                 "Das ist sie nicht.",
-                "Das ist er nicht."
+                "Ich nicht, und du?"
               ],
               "id": "german_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ich nicht, ____ du?",
-              "answer": "und",
+              "question": "Er ____ es.",
+              "answer": "ist",
               "choices": [
+                "sie",
+                "Er",
                 "ist",
-                "was",
-                "und",
-                "es"
+                "zu"
               ],
               "id": "german_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "What is it?",
-              "answer": "Was ist das?",
+              "question": "That's him.",
+              "answer": "Das ist er.",
               "words": [
-                "Ja?",
-                "du?",
-                "das?",
-                "Was",
+                "Ist",
+                "er.",
+                "er.",
+                "Das",
                 "ist"
               ],
               "id": "german_t1_2_2"
@@ -326,8 +325,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Was ist das?",
-              "audio": "Was ist das?",
+              "answer": "Das ist er nicht.",
+              "audio": "Das ist er nicht.",
               "id": "german_t1_2_3"
             },
             {
@@ -336,20 +335,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is this?",
-                  "Was ist das?"
+                  "Is that a yes?",
+                  "Ist das ein Ja?"
                 ],
                 [
-                  "What's this?",
-                  "Was ist das?"
+                  "Yes, what is it?",
+                  "Ja, ist was?"
                 ],
                 [
-                  "What is that?",
-                  "Was ist das?"
+                  "What is he like?",
+                  "Wie ist er?"
                 ],
                 [
-                  "It is what it is.",
-                  "Es ist, was es ist."
+                  "What's it like?",
+                  "Wie ist es?"
                 ]
               ],
               "id": "german_t1_2_4"
@@ -362,37 +361,37 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's closed.",
-              "answer": "Sie ist zu.",
+              "question": "She's not like us.",
+              "answer": "Sie ist nicht wie wir.",
               "choices": [
-                "Das ist er!",
-                "Das ist er nicht.",
-                "Er ist es.",
-                "Sie ist zu."
+                "Das ist er.",
+                "Ja, ist was?",
+                "Das ist es.",
+                "Sie ist nicht wie wir."
               ],
               "id": "german_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Er ____ es.",
-              "answer": "ist",
+              "question": "Er ist ____ wie wir.",
+              "answer": "nicht",
               "choices": [
-                "Er",
-                "ist",
-                "du",
-                "das"
+                "Was",
+                "nicht",
+                "Es",
+                "sie"
               ],
               "id": "german_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "That's him.",
-              "answer": "Das ist er.",
+              "question": "How's this?",
+              "answer": "Wie ist das?",
               "words": [
-                "er.",
-                "Es",
-                "es",
-                "Das",
+                "das?",
+                "ist",
+                "was",
+                "Wie",
                 "ist"
               ],
               "id": "german_t1_3_2"
@@ -400,8 +399,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Das ist er nicht.",
-              "audio": "Das ist er nicht.",
+              "answer": "Sie ist nicht wie ich.",
+              "audio": "Sie ist nicht wie ich.",
               "id": "german_t1_3_3"
             },
             {
@@ -410,20 +409,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That isn't him.",
-                  "Das ist er nicht."
+                  "That's the way it is.",
+                  "So ist es."
                 ],
                 [
-                  "This is the one.",
-                  "Das ist er!"
+                  "That's the way.",
+                  "Das ist so."
                 ],
                 [
-                  "Is that a yes?",
-                  "Ist das ein Ja?"
+                  "Is this not so?",
+                  "Ist das nicht so?"
                 ],
                 [
-                  "Does that mean yes?",
-                  "Ist das ein Ja?"
+                  "What is it like?",
+                  "Wie ist es so?"
                 ]
               ],
               "id": "german_t1_3_4"
@@ -442,195 +441,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Yes, what is it?",
-              "answer": "Ja, ist was?",
-              "choices": [
-                "Wie ist es?",
-                "Ja, ist was?",
-                "Er hat es.",
-                "Sie ist nicht wie ich."
-              ],
-              "id": "german_t2_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Wie ____ er?",
-              "answer": "ist",
-              "choices": [
-                "er",
-                "sie",
-                "was",
-                "ist"
-              ],
-              "id": "german_t2_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What's it like?",
-              "answer": "Wie ist es?",
-              "words": [
-                "es.",
-                "ich.",
-                "ist",
-                "Wie",
-                "es?"
-              ],
-              "id": "german_t2_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Sie ist nicht wie wir.",
-              "audio": "Sie ist nicht wie wir.",
-              "id": "german_t2_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "He's not like us.",
-                  "Er ist nicht wie wir."
-                ],
-                [
-                  "How's this?",
-                  "Wie ist das?"
-                ],
-                [
-                  "She's not like me.",
-                  "Sie ist nicht wie ich."
-                ],
-                [
-                  "How is this?",
-                  "Wie ist das?"
-                ]
-              ],
-              "id": "german_t2_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t2l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "That's the way it is.",
-              "answer": "So ist es.",
-              "choices": [
-                "Ist das so?",
-                "So ist es.",
-                "Wie ist er?",
-                "So ist es nicht."
-              ],
-              "id": "german_t2_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "So ____ es.",
-              "answer": "ist",
-              "choices": [
-                "ich",
-                "ist",
-                "hat",
-                "was"
-              ],
-              "id": "german_t2_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "That's the way.",
-              "answer": "Das ist so.",
-              "words": [
-                "ist",
-                "Was",
-                "ich.",
-                "Das",
-                "so."
-              ],
-              "id": "german_t2_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ist das nicht so?",
-              "audio": "Ist das nicht so?",
-              "id": "german_t2_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "What is it like?",
-                  "Wie ist es so?"
-                ],
-                [
-                  "That's not how.",
-                  "So ist es nicht."
-                ],
-                [
-                  "That's not how it is.",
-                  "So ist es nicht."
-                ],
-                [
-                  "It's not like that.",
-                  "So ist es nicht."
-                ]
-              ],
-              "id": "german_t2_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t2l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "It isn't like that.",
+              "question": "That's not how.",
               "answer": "So ist es nicht.",
               "choices": [
-                "Ist das nicht so?",
-                "Wie ist das?",
-                "Was hat sie?",
-                "So ist es nicht."
+                "Ist das so?",
+                "So ist es nicht.",
+                "Wie ist sie so?",
+                "Er ist nicht hier."
               ],
-              "id": "german_t2_3_0"
+              "id": "german_t2_1_0"
             },
             {
               "type": "cloze",
               "question": "Ist es ____ so?",
               "answer": "nicht",
               "choices": [
-                "hat",
-                "nicht",
-                "Das",
-                "Was"
+                "Sie",
+                "Ist",
+                "ist",
+                "nicht"
               ],
-              "id": "german_t2_3_1"
+              "id": "german_t2_1_1"
             },
             {
               "type": "sentence",
               "question": "Is that so?",
               "answer": "Ist das so?",
               "words": [
+                "Sie",
+                "wir",
                 "das",
-                "so?",
-                "so.",
                 "Ist",
-                "nicht."
+                "so?"
               ],
-              "id": "german_t2_3_2"
+              "id": "german_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Wie ist sie so?",
               "audio": "Wie ist sie so?",
-              "id": "german_t2_3_3"
+              "id": "german_t2_1_3"
             },
             {
               "type": "match",
@@ -646,12 +497,160 @@
                   "Was hat er?"
                 ],
                 [
-                  "What is the matter with him?",
-                  "Was hat er?"
-                ],
-                [
                   "He has got it.",
                   "Er hat es."
+                ],
+                [
+                  "He hasn't got them.",
+                  "Er hat sie nicht."
+                ]
+              ],
+              "id": "german_t2_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t2l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "He doesn't have it.",
+              "answer": "Das hat er nicht.",
+              "choices": [
+                "Sie hat die und ich nicht.",
+                "Das hat er nicht.",
+                "Ist es nicht so?",
+                "Er ist hier!"
+              ],
+              "id": "german_t2_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Sie hat die ____ ich nicht.",
+              "answer": "und",
+              "choices": [
+                "so",
+                "und",
+                "das",
+                "Sie"
+              ],
+              "id": "german_t2_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "He is here!",
+              "answer": "Er ist hier!",
+              "words": [
+                "ist",
+                "hier?",
+                "er?",
+                "Er",
+                "hier!"
+              ],
+              "id": "german_t2_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Sie ist nicht hier.",
+              "audio": "Sie ist nicht hier.",
+              "id": "german_t2_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Is it here?",
+                  "Ist das hier?"
+                ],
+                [
+                  "It's not here.",
+                  "Es ist nicht hier."
+                ],
+                [
+                  "Here she is!",
+                  "Hier ist sie!"
+                ],
+                [
+                  "She is here.",
+                  "Sie ist hier."
+                ]
+              ],
+              "id": "german_t2_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t2l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What's this?",
+              "answer": "Was ist das hier?",
+              "choices": [
+                "Sie hat die und ich nicht.",
+                "Er ist hier!",
+                "Ist es nicht so?",
+                "Was ist das hier?"
+              ],
+              "id": "german_t2_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Hier ____ es.",
+              "answer": "ist",
+              "choices": [
+                "ich",
+                "ist",
+                "nicht",
+                "hat"
+              ],
+              "id": "german_t2_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "It's here.",
+              "answer": "Es ist hier.",
+              "words": [
+                "ist",
+                "hier.",
+                "ist",
+                "Es",
+                "die"
+              ],
+              "id": "german_t2_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Er ist nicht hier.",
+              "audio": "Er ist nicht hier.",
+              "id": "german_t2_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "We don't have it.",
+                  "Wir haben es nicht."
+                ],
+                [
+                  "What do we have?",
+                  "Was haben wir?"
+                ],
+                [
+                  "Do they have that?",
+                  "Haben sie das?"
+                ],
+                [
+                  "We don't have that.",
+                  "Das haben wir nicht."
                 ]
               ],
               "id": "german_t2_3_4"
@@ -670,47 +669,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He hasn't got them.",
-              "answer": "Er hat sie nicht.",
+              "question": "What have we here?",
+              "answer": "Was haben wir hier?",
               "choices": [
-                "Haben sie das?",
-                "Er hat sie nicht.",
-                "Er ist hier!",
-                "Ist das hier?"
+                "Sind die für mich?",
+                "Was haben wir hier?",
+                "Das ist für sie.",
+                "So war es."
               ],
               "id": "german_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "Er hat ____ nicht.",
-              "answer": "sie",
+              "question": "Wir ____ sie!",
+              "answer": "haben",
               "choices": [
-                "haben",
-                "Was",
-                "wir",
-                "sie"
+                "so",
+                "Wir",
+                "hier",
+                "haben"
               ],
               "id": "german_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "He doesn't have them.",
-              "answer": "Er hat sie nicht.",
+              "question": "We have it!",
+              "answer": "Wir haben es!",
               "words": [
-                "hat",
-                "sie",
-                "nicht.",
-                "Er",
-                "nicht.",
-                "hier?"
+                "es!",
+                "Es",
+                "haben",
+                "und",
+                "Wir"
               ],
               "id": "german_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Er hat sie nicht.",
-              "audio": "Er hat sie nicht.",
+              "answer": "Ist das für mich?",
+              "audio": "Ist das für mich?",
               "id": "german_t3_1_3"
             },
             {
@@ -719,20 +717,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She's got them, and I haven't.",
-                  "Sie hat die und ich nicht."
+                  "It's for me.",
+                  "Es ist für mich."
                 ],
                 [
-                  "He is here!",
-                  "Er ist hier!"
+                  "This isn't for me.",
+                  "Das ist nicht für mich."
                 ],
                 [
-                  "She's not here.",
-                  "Sie ist nicht hier."
+                  "That's for them.",
+                  "Das ist für sie."
                 ],
                 [
-                  "Is it here?",
-                  "Ist das hier?"
+                  "We are here.",
+                  "Wir sind hier."
                 ]
               ],
               "id": "german_t3_1_4"
@@ -745,37 +743,37 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's not here.",
-              "answer": "Es ist nicht hier.",
+              "question": "They are here.",
+              "answer": "Sie sind hier.",
               "choices": [
-                "Das haben wir nicht.",
-                "Es ist nicht hier.",
-                "Was haben wir?",
-                "Was ist das hier?"
+                "Das ist für sie.",
+                "Sie sind hier.",
+                "Die sind nicht hier.",
+                "Sie sind nicht so."
               ],
               "id": "german_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Hier ____ sie!",
-              "answer": "ist",
+              "question": "Sind ____ das?",
+              "answer": "Sie",
               "choices": [
-                "Haben",
-                "nicht",
-                "ist",
-                "das"
+                "Das",
+                "Es",
+                "Sie",
+                "mich"
               ],
               "id": "german_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "She is here.",
-              "answer": "Sie ist hier.",
+              "question": "You're what?",
+              "answer": "Sie sind was?",
               "words": [
-                "ist",
-                "hier.",
-                "haben",
-                "Wir",
+                "sind",
+                "was?",
+                "war",
+                "was",
                 "Sie"
               ],
               "id": "german_t3_2_2"
@@ -783,8 +781,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Er ist hier!",
-              "audio": "Er ist hier!",
+              "answer": "Sie sind nicht hier.",
+              "audio": "Sie sind nicht hier.",
               "id": "german_t3_2_3"
             },
             {
@@ -793,20 +791,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Here it is.",
-                  "Hier ist es."
+                  "They aren't like us.",
+                  "Die sind nicht so wie wir."
                 ],
                 [
-                  "It's here.",
-                  "Es ist hier."
+                  "We're not like that.",
+                  "Wir sind nicht so."
                 ],
                 [
-                  "He's not here.",
-                  "Er ist nicht hier."
+                  "Are those for me?",
+                  "Sind die für mich?"
                 ],
                 [
-                  "He is not in.",
-                  "Er ist nicht hier."
+                  "You and I aren't like that.",
+                  "Du und ich sind nicht so."
                 ]
               ],
               "id": "german_t3_2_4"
@@ -819,47 +817,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She's here.",
-              "answer": "Sie ist hier.",
+              "question": "Are they here?",
+              "answer": "Sind sie hier?",
               "choices": [
-                "Sie hat die und ich nicht.",
-                "Was haben wir?",
-                "Was haben wir hier?",
-                "Sie ist hier."
+                "Es ist für mich.",
+                "Das ist nicht für mich.",
+                "Sie sind nicht wie wir.",
+                "Sind sie hier?"
               ],
               "id": "german_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Was ist ____ hier?",
-              "answer": "das",
+              "question": "Sie sind ____ wie wir.",
+              "answer": "nicht",
               "choices": [
-                "hat",
-                "das",
-                "hier",
-                "die"
+                "haben",
+                "nicht",
+                "wir",
+                "wie"
               ],
               "id": "german_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "We don't have it.",
-              "answer": "Wir haben es nicht.",
+              "question": "They're not here.",
+              "answer": "Die sind nicht hier.",
               "words": [
-                "haben",
-                "nicht.",
-                "wir",
-                "Hier",
-                "Wir",
-                "es"
+                "sind",
+                "hier.",
+                "so.",
+                "Es",
+                "Die",
+                "nicht"
               ],
               "id": "german_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Was haben wir?",
-              "audio": "Was haben wir?",
+              "answer": "Sie sind nicht so.",
+              "audio": "Sie sind nicht so.",
               "id": "german_t3_3_3"
             },
             {
@@ -868,20 +866,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do they have that?",
-                  "Haben sie das?"
+                  "We are what we are.",
+                  "Wir sind, was wir sind."
                 ],
                 [
-                  "We don't have that.",
-                  "Das haben wir nicht."
+                  "It's not us.",
+                  "Wir sind es nicht."
                 ],
                 [
-                  "What have we here?",
-                  "Was haben wir hier?"
+                  "What was that?",
+                  "Was war das?"
                 ],
                 [
-                  "What do we have here?",
-                  "Was haben wir hier?"
+                  "It was like this.",
+                  "So war es."
                 ]
               ],
               "id": "german_t3_3_4"
@@ -900,46 +898,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "We have her!",
-              "answer": "Wir haben sie!",
+              "question": "Come again?",
+              "answer": "Wie war das?",
               "choices": [
-                "Sind sie hier?",
-                "Wir haben sie!",
-                "Sie sind nicht wie wir.",
-                "Es ist für mich."
+                "Sie sind von hier.",
+                "Wie war das?",
+                "Sie war hier.",
+                "Wir sind nicht von hier."
               ],
               "id": "german_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Was haben ____ hier?",
-              "answer": "wir",
+              "question": "Wie ____ es?",
+              "answer": "war",
               "choices": [
-                "mich",
-                "Was",
-                "haben",
-                "wir"
+                "Er",
+                "War",
+                "das",
+                "war"
               ],
               "id": "german_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "We have it!",
-              "answer": "Wir haben es!",
+              "question": "Was that a yes?",
+              "answer": "War das ein Ja?",
               "words": [
-                "haben",
-                "es!",
-                "wie",
-                "Wir",
-                "Das"
+                "es?",
+                "hier.",
+                "das",
+                "War",
+                "Ja?",
+                "ein"
               ],
               "id": "german_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ist das für mich?",
-              "audio": "Ist das für mich?",
+              "answer": "Das war nicht sie.",
+              "audio": "Das war nicht sie.",
               "id": "german_t4_1_3"
             },
             {
@@ -948,20 +947,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is that something for me?",
-                  "Ist das für mich?"
+                  "She was here.",
+                  "Sie war hier."
                 ],
                 [
-                  "Is this for me?",
-                  "Ist das für mich?"
+                  "He was here.",
+                  "Er war hier."
                 ],
                 [
-                  "Is it for me?",
-                  "Ist das für mich?"
+                  "It wasn't me.",
+                  "Das war ich nicht."
                 ],
                 [
-                  "It's for me.",
-                  "Es ist für mich."
+                  "He wasn't here.",
+                  "Er war nicht hier."
                 ]
               ],
               "id": "german_t4_1_4"
@@ -974,37 +973,38 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is not for me.",
-              "answer": "Das ist nicht für mich.",
+              "question": "She wasn't here.",
+              "answer": "Sie war nicht hier.",
               "choices": [
-                "Das ist für sie.",
-                "Das ist nicht für mich.",
-                "Sie sind nicht hier.",
-                "Ist das für mich?"
+                "Wie war es?",
+                "Sie war nicht hier.",
+                "Sie sind von hier.",
+                "Das war ich."
               ],
               "id": "german_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Das ist ____ sie.",
-              "answer": "für",
+              "question": "Es ____ so.",
+              "answer": "war",
               "choices": [
-                "haben",
-                "für",
-                "Sind",
-                "sie"
+                "Sie",
+                "war",
+                "Es",
+                "das"
               ],
               "id": "german_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "We are here.",
-              "answer": "Wir sind hier.",
+              "question": "It wasn't like that.",
+              "answer": "Es war nicht so.",
               "words": [
-                "sind",
-                "hier.",
-                "ich",
-                "Wir",
+                "nicht",
+                "so.",
+                "war",
+                "So",
+                "Es",
                 "Sie"
               ],
               "id": "german_t4_2_2"
@@ -1012,8 +1012,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sie sind hier.",
-              "audio": "Sie sind hier.",
+              "answer": "Das war er nicht.",
+              "audio": "Das war er nicht.",
               "id": "german_t4_2_3"
             },
             {
@@ -1022,20 +1022,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You're what?",
-                  "Sie sind was?"
+                  "I was here.",
+                  "Ich war hier."
                 ],
                 [
-                  "They're here.",
-                  "Sie sind hier."
+                  "It was here.",
+                  "Es war hier."
                 ],
                 [
-                  "They aren't here.",
-                  "Sie sind nicht hier."
+                  "That wasn't the way it was.",
+                  "So war es nicht."
                 ],
                 [
-                  "They aren't like us.",
-                  "Die sind nicht so wie wir."
+                  "That was me.",
+                  "Das war ich."
                 ]
               ],
               "id": "german_t4_2_4"
@@ -1048,47 +1048,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "We're not like that.",
-              "answer": "Wir sind nicht so.",
+              "question": "I did not do this.",
+              "answer": "Ich war das nicht.",
               "choices": [
-                "Ist das für mich?",
-                "Du und ich sind nicht so.",
-                "Sie sind nicht hier.",
-                "Wir sind nicht so."
+                "Das war er nicht.",
+                "Das war nicht sie.",
+                "Wie war es?",
+                "Ich war das nicht."
               ],
               "id": "german_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Wir sind ____ so.",
-              "answer": "nicht",
+              "question": "Er war ____ nicht",
+              "answer": "es",
               "choices": [
-                "haben",
-                "nicht",
+                "war",
                 "es",
-                "Was"
+                "von",
+                "Sie"
               ],
               "id": "german_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "Are those for me?",
-              "answer": "Sind die für mich?",
+              "question": "We're from here.",
+              "answer": "Wir sind von hier.",
               "words": [
-                "und",
-                "mich?",
-                "für",
-                "Was",
-                "die",
-                "Sind"
+                "war",
+                "hier.",
+                "von",
+                "das?",
+                "sind",
+                "Wir"
               ],
               "id": "german_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Du und ich sind nicht so.",
-              "audio": "Du und ich sind nicht so.",
+              "answer": "Wir sind nicht von hier.",
+              "audio": "Wir sind nicht von hier.",
               "id": "german_t4_3_3"
             },
             {
@@ -1097,20 +1097,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We're here.",
-                  "Wir sind hier."
+                  "This is from me.",
+                  "Das ist von mir."
                 ],
                 [
-                  "Are they here?",
-                  "Sind sie hier?"
+                  "It's not from me.",
+                  "Es ist nicht von mir."
                 ],
                 [
-                  "They're not like us.",
-                  "Sie sind nicht wie wir."
+                  "He's not from around here.",
+                  "Er ist nicht von hier."
                 ],
                 [
-                  "They're not here.",
-                  "Sie sind nicht hier."
+                  "They are from here.",
+                  "Sie sind von hier."
                 ]
               ],
               "id": "german_t4_3_4"
@@ -1129,47 +1129,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "They aren't like that.",
-              "answer": "Sie sind nicht so.",
+              "question": "Is she from here?",
+              "answer": "Ist sie von hier?",
               "choices": [
-                "So war es.",
-                "Sie sind nicht so.",
-                "Wie war es?",
-                "War das ein Ja?"
+                "Das ist für dich.",
+                "Ist sie von hier?",
+                "War das ein Nein?",
+                "Ja und nein."
               ],
               "id": "german_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Wir sind, ____ wir sind.",
-              "answer": "was",
+              "question": "Er ist ____ hier.",
+              "answer": "von",
               "choices": [
-                "er",
-                "sind",
-                "Es",
-                "was"
+                "sie",
+                "wie",
+                "habe",
+                "von"
               ],
               "id": "german_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "It's not us.",
-              "answer": "Wir sind es nicht.",
+              "question": "This is for you.",
+              "answer": "Das ist für dich.",
               "words": [
+                "ist",
                 "sind",
-                "sind",
-                "es",
-                "sind,",
-                "nicht.",
-                "Wir"
+                "für",
+                "ein",
+                "dich.",
+                "Das"
               ],
               "id": "german_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Was war das?",
-              "audio": "Was war das?",
+              "answer": "Es ist nicht für dich.",
+              "audio": "Es ist nicht für dich.",
               "id": "german_t5_1_3"
             },
             {
@@ -1178,20 +1178,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It was like this.",
-                  "So war es."
+                  "This is not for you.",
+                  "Das ist nicht für dich."
                 ],
                 [
-                  "That's how it was.",
-                  "So war es."
+                  "What about her?",
+                  "Was ist mit ihr?"
                 ],
                 [
-                  "Come again?",
-                  "Wie war das?"
+                  "He's not like you.",
+                  "Er ist nicht wie ihr."
                 ],
                 [
-                  "How's that again?",
-                  "Wie war das?"
+                  "She's not like you.",
+                  "Sie ist nicht wie ihr."
                 ]
               ],
               "id": "german_t5_1_4"
@@ -1204,47 +1204,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What was it like?",
-              "answer": "Wie war es?",
+              "question": "We're not like you.",
+              "answer": "Wir sind nicht wie ihr.",
               "choices": [
-                "Das war ich nicht.",
-                "Wie war es?",
-                "Was war das?",
-                "Es war so."
+                "Was habe ich?",
+                "Wir sind nicht wie ihr.",
+                "Es ist nicht für dich.",
+                "Ja und nein."
               ],
               "id": "german_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Wie ____ es?",
-              "answer": "war",
+              "question": "Ja ____ nein.",
+              "answer": "und",
               "choices": [
-                "wir",
-                "war",
-                "Ja",
-                "sind"
+                "hier",
+                "und",
+                "War",
+                "sie"
               ],
               "id": "german_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "Was that a yes?",
-              "answer": "War das ein Ja?",
+              "question": "Was that a no?",
+              "answer": "War das ein Nein?",
               "words": [
                 "das",
-                "hier.",
-                "nicht",
+                "mit",
+                "ein",
                 "War",
                 "ein",
-                "Ja?"
+                "Nein?"
               ],
               "id": "german_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wie war es?",
-              "audio": "Wie war es?",
+              "answer": "Ist das ein nein?",
+              "audio": "Ist das ein nein?",
               "id": "german_t5_2_3"
             },
             {
@@ -1253,20 +1253,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That wasn't her.",
-                  "Das war nicht sie."
+                  "No, it wasn't him.",
+                  "Nein, er war es nicht."
                 ],
                 [
-                  "She was here.",
-                  "Sie war hier."
+                  "No, it's not.",
+                  "Nein, ist es nicht."
                 ],
                 [
-                  "He was here.",
-                  "Er war hier."
+                  "No, it's not that.",
+                  "Nein, dass ist es nicht."
                 ],
                 [
-                  "It wasn't me.",
-                  "Das war ich nicht."
+                  "No, not that one!",
+                  "Nein, nicht den!"
                 ]
               ],
               "id": "german_t5_2_4"
@@ -1279,46 +1279,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He wasn't here.",
-              "answer": "Er war nicht hier.",
+              "question": "No, no, that's not it.",
+              "answer": "Nein, nein, das ist es nicht.",
               "choices": [
-                "Es war nicht so.",
-                "Sie war nicht hier.",
-                "Was war das?",
-                "Er war nicht hier."
+                "Ich habe es.",
+                "Er ist von hier.",
+                "Ich habe dich.",
+                "Nein, nein, das ist es nicht."
               ],
               "id": "german_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Sie war ____ hier.",
-              "answer": "nicht",
+              "question": "Was ____ ich?",
+              "answer": "habe",
               "choices": [
-                "es",
-                "nicht",
-                "sind",
-                "Ja"
+                "ist",
+                "habe",
+                "mit",
+                "war"
               ],
               "id": "german_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "It was like that.",
-              "answer": "Es war so.",
+              "question": "I don't have it.",
+              "answer": "Ich habe es nicht.",
               "words": [
-                "war",
+                "habe",
                 "es",
-                "so.",
-                "Es",
-                "nicht."
+                "nicht.",
+                "und",
+                "Ich",
+                "Nein,"
               ],
               "id": "german_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Es war nicht so.",
-              "audio": "Es war nicht so.",
+              "answer": "Ich habe eine.",
+              "audio": "Ich habe eine.",
               "id": "german_t5_3_3"
             },
             {
@@ -1327,20 +1328,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That wasn't me.",
-                  "Das war ich nicht."
+                  "I don't have that.",
+                  "Ich habe das nicht."
                 ],
                 [
-                  "That was not me.",
-                  "Das war ich nicht."
+                  "I got you.",
+                  "Ich habe dich."
                 ],
                 [
-                  "That wasn't him.",
-                  "Das war er nicht."
+                  "I have it.",
+                  "Ich habe es."
                 ],
                 [
-                  "I was here.",
-                  "Ich war hier."
+                  "I've got something for you.",
+                  "Ich habe was für dich."
                 ]
               ],
               "id": "german_t5_3_4"
@@ -1359,47 +1360,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It was here.",
-              "answer": "Es war hier.",
+              "question": "What has he got that I haven't?",
+              "answer": "Was hat er, was ich nicht habe?",
               "choices": [
-                "Er ist nicht von hier.",
-                "Das ist nicht für dich.",
-                "Es war hier.",
-                "Wir sind nicht von hier."
+                "Ich bin nicht von hier.",
+                "Ich bin du.",
+                "Was hat er, was ich nicht habe?",
+                "Das hier bin ich."
               ],
               "id": "german_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "So war ____ nicht.",
-              "answer": "es",
+              "question": "Was hat sie, ____ ich nicht habe?",
+              "answer": "das",
               "choices": [
-                "So",
-                "Das",
-                "war",
-                "es"
+                "an",
+                "Sie",
+                "noch",
+                "das"
               ],
               "id": "german_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "I didn't do that.",
-              "answer": "Das war ich nicht.",
+              "question": "What are you wearing?",
+              "answer": "Was haben Sie an?",
               "words": [
-                "war",
-                "ich",
-                "nicht.",
-                "Wir",
-                "das",
-                "Das"
+                "haben",
+                "Sie",
+                "an?",
+                "hat",
+                "von",
+                "Was"
               ],
               "id": "german_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Das war ich.",
-              "audio": "Das war ich.",
+              "answer": "Ich bin nicht von hier.",
+              "audio": "Ich bin nicht von hier.",
               "id": "german_t6_1_3"
             },
             {
@@ -1408,20 +1409,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I did not do this.",
-                  "Ich war das nicht."
+                  "I am not like you.",
+                  "Ich bin nicht wie du."
                 ],
                 [
-                  "It wasn't him.",
-                  "Er war es nicht"
+                  "I'm not like you!",
+                  "Ich bin nicht so wie du!"
                 ],
                 [
-                  "We're from here.",
-                  "Wir sind von hier."
+                  "I'm not like her!",
+                  "Ich bin nicht so wie sie!"
                 ],
                 [
-                  "We're not from around here.",
-                  "Wir sind nicht von hier."
+                  "I'm not like him!",
+                  "Ich bin nicht wie er!"
                 ]
               ],
               "id": "german_t6_1_4"
@@ -1434,48 +1435,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is from me.",
-              "answer": "Das ist von mir.",
+              "question": "I'm here.",
+              "answer": "Ich bin hier.",
               "choices": [
-                "Sie sind von hier.",
-                "Das ist von mir.",
-                "Das war ich.",
-                "Er war es nicht"
+                "Ich bin nicht wie du.",
+                "Ich bin hier.",
+                "Ja, so bin ich.",
+                "Das hier bin ich."
               ],
               "id": "german_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Es ist ____ von mir.",
-              "answer": "nicht",
+              "question": "So bin ____ nicht.",
+              "answer": "ich",
               "choices": [
                 "ist",
-                "nicht",
-                "war",
-                "Wir"
+                "ich",
+                "bin",
+                "Aber"
               ],
               "id": "german_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "He's not from around here.",
-              "answer": "Er ist nicht von hier.",
+              "question": "Here I am.",
+              "answer": "Hier bin ich.",
               "words": [
-                "hier.",
-                "nicht.",
-                "von",
-                "Er",
-                "ist",
-                "nicht",
-                "war"
+                "bin",
+                "habe",
+                "ich.",
+                "Hier",
+                "was"
               ],
               "id": "german_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sie sind von hier.",
-              "audio": "Sie sind von hier.",
+              "answer": "Ich bin nicht hier.",
+              "audio": "Ich bin nicht hier.",
               "id": "german_t6_2_3"
             },
             {
@@ -1484,20 +1483,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "They're from here.",
-                  "Sie sind von hier."
+                  "This is me.",
+                  "Das bin ich."
                 ],
                 [
-                  "Is she from here?",
-                  "Ist sie von hier?"
+                  "I'm up.",
+                  "Ich bin auf."
                 ],
                 [
-                  "Does she come from here?",
-                  "Ist sie von hier?"
+                  "I'm not you.",
+                  "Ich bin nicht du."
                 ],
                 [
-                  "It isn't from me.",
-                  "Es ist nicht von mir."
+                  "I am you.",
+                  "Ich bin du."
                 ]
               ],
               "id": "german_t6_2_4"
@@ -1510,47 +1509,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's from here.",
-              "answer": "Er ist von hier.",
+              "question": "What am I?",
+              "answer": "Was bin ich?",
               "choices": [
-                "Das war ich.",
-                "Es ist nicht von mir.",
-                "Er war es nicht",
-                "Er ist von hier."
+                "Ich bin nicht von hier.",
+                "Ich bin nicht so wie sie!",
+                "Was hat sie, das ich nicht habe?",
+                "Was bin ich?"
               ],
               "id": "german_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Das ist ____ dich.",
-              "answer": "für",
+              "question": "Ich ____ das.",
+              "answer": "bin",
               "choices": [
-                "war",
-                "für",
-                "es",
-                "nicht"
+                "Ja",
+                "bin",
+                "nicht",
+                "ist"
               ],
               "id": "german_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "That's for you.",
-              "answer": "Das ist für dich.",
+              "question": "Yes, so am I.",
+              "answer": "Ja, so bin ich.",
               "words": [
-                "ist",
-                "hier?",
-                "dich.",
-                "Das",
-                "für",
-                "Er"
+                "so",
+                "bin",
+                "ich.",
+                "Ja,",
+                "bin",
+                "So"
               ],
               "id": "german_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Das ist für dich.",
-              "audio": "Das ist für dich.",
+              "answer": "Das hier bin ich.",
+              "audio": "Das hier bin ich.",
               "id": "german_t6_3_3"
             },
             {
@@ -1559,20 +1558,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not for you.",
-                  "Es ist nicht für dich."
+                  "But I'm not like that!",
+                  "Aber ich bin nicht so!"
                 ],
                 [
-                  "This is not for you.",
-                  "Das ist nicht für dich."
+                  "She is not here yet.",
+                  "Sie ist noch nicht hier."
                 ],
                 [
-                  "It isn't for you.",
-                  "Es ist nicht für dich."
+                  "Are you still here?",
+                  "Sind Sie noch hier?"
                 ],
                 [
-                  "That isn't for you.",
-                  "Das ist nicht für dich."
+                  "I still have them.",
+                  "Ich habe sie noch."
                 ]
               ],
               "id": "german_t6_3_4"
@@ -1591,513 +1590,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What about her?",
-              "answer": "Was ist mit ihr?",
-              "choices": [
-                "Was habe ich?",
-                "Was ist mit ihr?",
-                "Sie ist nicht wie ihr.",
-                "Ja und nein."
-              ],
-              "id": "german_t7_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Er ist ____ wie ihr.",
-              "answer": "nicht",
-              "choices": [
-                "Ja",
-                "ist",
-                "es",
-                "nicht"
-              ],
-              "id": "german_t7_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "She's not like you.",
-              "answer": "Sie ist nicht wie ihr.",
-              "words": [
-                "nicht",
-                "ihr.",
-                "hier.",
-                "es",
-                "wie",
-                "Sie",
-                "ist"
-              ],
-              "id": "german_t7_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Wir sind nicht wie ihr.",
-              "audio": "Wir sind nicht wie ihr.",
-              "id": "german_t7_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "We aren't like you.",
-                  "Wir sind nicht wie ihr."
-                ],
-                [
-                  "Yes and no.",
-                  "Ja und nein."
-                ],
-                [
-                  "Was that a no?",
-                  "War das ein Nein?"
-                ],
-                [
-                  "Is that a no?",
-                  "Ist das ein nein?"
-                ]
-              ],
-              "id": "german_t7_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "No, it wasn't him.",
-              "answer": "Nein, er war es nicht.",
-              "choices": [
-                "Er ist nicht wie ihr.",
-                "Nein, er war es nicht.",
-                "Ist das ein nein?",
-                "Nein, nein, das ist es nicht."
-              ],
-              "id": "german_t7_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Nein, ist ____ nicht.",
-              "answer": "es",
-              "choices": [
-                "dass",
-                "es",
-                "hier",
-                "sind"
-              ],
-              "id": "german_t7_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "No, it's not that.",
-              "answer": "Nein, dass ist es nicht.",
-              "words": [
-                "ist",
-                "es",
-                "dass",
-                "Nein,",
-                "wie",
-                "nicht.",
-                "sie,"
-              ],
-              "id": "german_t7_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Nein, nicht den!",
-              "audio": "Nein, nicht den!",
-              "id": "german_t7_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "No, no, that's not it.",
-                  "Nein, nein, das ist es nicht."
-                ],
-                [
-                  "What do I have?",
-                  "Was habe ich?"
-                ],
-                [
-                  "I don't have it.",
-                  "Ich habe es nicht."
-                ],
-                [
-                  "I have one.",
-                  "Ich habe eine."
-                ]
-              ],
-              "id": "german_t7_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I don't have that.",
-              "answer": "Ich habe das nicht.",
-              "choices": [
-                "Nein, nein, das ist es nicht.",
-                "Er ist nicht wie ihr.",
-                "Ich habe es.",
-                "Ich habe das nicht."
-              ],
-              "id": "german_t7_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ich ____ dich.",
-              "answer": "habe",
-              "choices": [
-                "von",
-                "wie",
-                "habe",
-                "ihr"
-              ],
-              "id": "german_t7_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I have it.",
-              "answer": "Ich habe es.",
-              "words": [
-                "habe",
-                "nicht.",
-                "war",
-                "Ich",
-                "es."
-              ],
-              "id": "german_t7_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Was hat er, was ich nicht habe?",
-              "audio": "Was hat er, was ich nicht habe?",
-              "id": "german_t7_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "What's he got that I haven't?",
-                  "Was hat er, was ich nicht habe?"
-                ],
-                [
-                  "What has she got that I haven't got?",
-                  "Was hat sie, das ich nicht habe?"
-                ],
-                [
-                  "What are you wearing?",
-                  "Was haben Sie an?"
-                ],
-                [
-                  "I'm not from here.",
-                  "Ich bin nicht von hier."
-                ]
-              ],
-              "id": "german_t7_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t8",
-      "title": "Wider Vocabulary 2",
-      "lessons": [
-        {
-          "id": "t8l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I am not like you.",
-              "answer": "Ich bin nicht wie du.",
-              "choices": [
-                "Aber ich bin nicht so!",
-                "Ich bin nicht wie du.",
-                "Ich habe sie noch.",
-                "Ich bin das."
-              ],
-              "id": "german_t8_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ich bin ____ wie du.",
-              "answer": "nicht",
-              "choices": [
-                "Sie",
-                "das",
-                "ich",
-                "nicht"
-              ],
-              "id": "german_t8_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I'm not like you!",
-              "answer": "Ich bin nicht wie du!",
-              "words": [
-                "Sie",
-                "wie",
-                "bin",
-                "Ich",
-                "du!",
-                "noch.",
-                "nicht"
-              ],
-              "id": "german_t8_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ich bin nicht so wie sie!",
-              "audio": "Ich bin nicht so wie sie!",
-              "id": "german_t8_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I'm not like him!",
-                  "Ich bin nicht wie er!"
-                ],
-                [
-                  "I'm here.",
-                  "Ich bin hier."
-                ],
-                [
-                  "I am here.",
-                  "Ich bin hier."
-                ],
-                [
-                  "I'm not like that.",
-                  "So bin ich nicht."
-                ]
-              ],
-              "id": "german_t8_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Here I am.",
-              "answer": "Hier bin ich.",
-              "choices": [
-                "Ich bin nicht wie du!",
-                "Hier bin ich.",
-                "Ich bin nicht hier.",
-                "Sind sie noch hier?"
-              ],
-              "id": "german_t8_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ich bin ____ hier.",
-              "answer": "nicht",
-              "choices": [
-                "Sind",
-                "nicht",
-                "ist",
-                "habe"
-              ],
-              "id": "german_t8_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "This is me.",
-              "answer": "Das bin ich.",
-              "words": [
-                "ich.",
-                "bin",
-                "bin",
-                "nicht.",
-                "Das"
-              ],
-              "id": "german_t8_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ich bin nicht du.",
-              "audio": "Ich bin nicht du.",
-              "id": "german_t8_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I am you.",
-                  "Ich bin du."
-                ],
-                [
-                  "What am I?",
-                  "Was bin ich?"
-                ],
-                [
-                  "I am that.",
-                  "Ich bin das."
-                ],
-                [
-                  "Yes, so am I.",
-                  "Ja, so bin ich."
-                ]
-              ],
-              "id": "german_t8_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "It's me here.",
-              "answer": "Das hier bin ich.",
-              "choices": [
-                "Sind Sie noch hier?",
-                "Ich bin nicht wie er!",
-                "So bin ich nicht.",
-                "Das hier bin ich."
-              ],
-              "id": "german_t8_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ich bin ____ du.",
-              "answer": "nicht",
-              "choices": [
-                "so",
-                "nicht",
-                "Hier",
-                "du"
-              ],
-              "id": "german_t8_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "But I'm not like that!",
-              "answer": "Aber ich bin nicht so!",
-              "words": [
-                "ich",
-                "nicht",
-                "bin",
-                "so!",
-                "Hier",
-                "Aber",
-                "Aber"
-              ],
-              "id": "german_t8_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ich bin nicht du!",
-              "audio": "Ich bin nicht du!",
-              "id": "german_t8_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "She is not here yet.",
-                  "Sie ist noch nicht hier."
-                ],
-                [
-                  "Are you still here?",
-                  "Sind Sie noch hier?"
-                ],
-                [
-                  "I still have them.",
-                  "Ich habe sie noch."
-                ],
-                [
-                  "Are they still here?",
-                  "Sind sie noch hier?"
-                ]
-              ],
-              "id": "german_t8_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t9",
-      "title": "Longer Sentences 1",
-      "lessons": [
-        {
-          "id": "t9l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
               "question": "She is not up yet.",
               "answer": "Sie ist noch nicht auf.",
               "choices": [
-                "Wir sind da.",
+                "Sie sind noch nicht hier.",
                 "Sie ist noch nicht auf.",
-                "Sie ist noch hier.",
-                "Da sind wir."
+                "Wir sind da.",
+                "Er ist nicht da."
               ],
-              "id": "german_t9_1_0"
+              "id": "german_t7_1_0"
             },
             {
               "type": "cloze",
               "question": "Er ist ____ nicht hier.",
               "answer": "noch",
               "choices": [
-                "nein",
+                "da",
+                "bin",
                 "Da",
-                "wir",
                 "noch"
               ],
-              "id": "german_t9_1_1"
+              "id": "german_t7_1_1"
             },
             {
               "type": "sentence",
               "question": "They're not here yet.",
               "answer": "Sie sind noch nicht hier.",
               "words": [
-                "sind",
                 "noch",
-                "eine.",
                 "hier.",
+                "haben?",
+                "habe",
+                "nicht",
                 "Sie",
-                "noch",
-                "nicht"
+                "sind"
               ],
-              "id": "german_t9_1_2"
+              "id": "german_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Ist sie noch zu haben?",
               "audio": "Ist sie noch zu haben?",
-              "id": "german_t9_1_3"
+              "id": "german_t7_1_3"
             },
             {
               "type": "match",
@@ -2117,8 +1652,468 @@
                   "Ich habe nur noch eine."
                 ],
                 [
-                  "I've got only one left.",
-                  "Ich habe nur noch eine."
+                  "No! Anything but that!",
+                  "Nein, nein! Nur das nicht!"
+                ]
+              ],
+              "id": "german_t7_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What's that there?",
+              "answer": "Was ist das da?",
+              "choices": [
+                "Ist sie noch hier?",
+                "Was ist das da?",
+                "Ist sie noch zu haben?",
+                "Sie ist nicht da."
+              ],
+              "id": "german_t7_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Da ____ wir!",
+              "answer": "sind",
+              "choices": [
+                "ist",
+                "sind",
+                "nicht",
+                "Nur"
+              ],
+              "id": "german_t7_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "There he is.",
+              "answer": "Da ist er.",
+              "words": [
+                "ist",
+                "Da",
+                "es",
+                "Da",
+                "er."
+              ],
+              "id": "german_t7_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Da ist es.",
+              "audio": "Da ist es.",
+              "id": "german_t7_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "And here they are.",
+                  "Und da sind sie."
+                ],
+                [
+                  "He is not there.",
+                  "Er ist nicht da."
+                ],
+                [
+                  "We've arrived.",
+                  "Wir sind da."
+                ],
+                [
+                  "She is not here.",
+                  "Sie ist nicht da."
+                ]
+              ],
+              "id": "german_t7_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t7l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "We're not there yet.",
+              "answer": "Wir sind noch nicht da.",
+              "choices": [
+                "Er ist noch nicht hier.",
+                "Wir sind da.",
+                "Ich habe nur noch eine.",
+                "Wir sind noch nicht da."
+              ],
+              "id": "german_t7_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Da ____ sie.",
+              "answer": "ist",
+              "choices": [
+                "Er",
+                "er",
+                "ist",
+                "bin"
+              ],
+              "id": "german_t7_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "They aren't here yet.",
+              "answer": "Sie sind noch nicht da.",
+              "words": [
+                "sind",
+                "nicht",
+                "Ich",
+                "Sie",
+                "noch",
+                "da.",
+                "wir!"
+              ],
+              "id": "german_t7_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Ist sie noch da?",
+              "audio": "Ist sie noch da?",
+              "id": "german_t7_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "What was there?",
+                  "Was war da?"
+                ],
+                [
+                  "They aren't there.",
+                  "Sie sind nicht da."
+                ],
+                [
+                  "Is it there?",
+                  "Ist es da?"
+                ],
+                [
+                  "I'm not in.",
+                  "Ich bin nicht da."
+                ]
+              ],
+              "id": "german_t7_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "title": "Wider Vocabulary 2",
+      "lessons": [
+        {
+          "id": "t8l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I'm there for you.",
+              "answer": "Ich bin für dich da.",
+              "choices": [
+                "Er war da.",
+                "Ich bin für dich da.",
+                "Es ist da.",
+                "Da sind sie."
+              ],
+              "id": "german_t8_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Es ist ____ da.",
+              "answer": "nicht",
+              "choices": [
+                "Sie",
+                "du",
+                "Er",
+                "nicht"
+              ],
+              "id": "german_t8_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "It's there.",
+              "answer": "Es ist da.",
+              "words": [
+                "ist",
+                "war",
+                "da.",
+                "Es",
+                "er"
+              ],
+              "id": "german_t8_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Wir sind für Sie da.",
+              "audio": "Wir sind für Sie da.",
+              "id": "german_t8_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I'm not here for you.",
+                  "Ich bin nicht für dich da."
+                ],
+                [
+                  "I was there.",
+                  "Ich war da."
+                ],
+                [
+                  "I wasn't there.",
+                  "Ich war nicht da."
+                ],
+                [
+                  "There they are.",
+                  "Da sind sie."
+                ]
+              ],
+              "id": "german_t8_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Is it still there?",
+              "answer": "Ist es noch da?",
+              "choices": [
+                "Nein, da ist er nicht.",
+                "Ist es noch da?",
+                "Nur wir sind noch da.",
+                "Er war da."
+              ],
+              "id": "german_t8_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Nur wir ____ noch da.",
+              "answer": "sind",
+              "choices": [
+                "dich",
+                "sind",
+                "für",
+                "bin"
+              ],
+              "id": "german_t8_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "He was there.",
+              "answer": "Er war da.",
+              "words": [
+                "da.",
+                "hat",
+                "war",
+                "sie.",
+                "Er"
+              ],
+              "id": "german_t8_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Sie war da.",
+              "audio": "Sie war da.",
+              "id": "german_t8_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "It wasn't there.",
+                  "Es war nicht da."
+                ],
+                [
+                  "Was she there?",
+                  "War sie da?"
+                ],
+                [
+                  "Was he there?",
+                  "War er da?"
+                ],
+                [
+                  "No, he's not there.",
+                  "Nein, da ist er nicht."
+                ]
+              ],
+              "id": "german_t8_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "As you treat me, so I will treat you.",
+              "answer": "Wie du mir, so ich dir.",
+              "choices": [
+                "Haben wir einen?",
+                "War sie da?",
+                "Was ist mit dir?",
+                "Wie du mir, so ich dir."
+              ],
+              "id": "german_t8_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Was ist ____ dir?",
+              "answer": "mit",
+              "choices": [
+                "ich",
+                "mit",
+                "Da",
+                "dich"
+              ],
+              "id": "german_t8_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "He is with you.",
+              "answer": "Er ist mit dir.",
+              "words": [
+                "ist",
+                "dir.",
+                "mit",
+                "dich",
+                "mit",
+                "Er"
+              ],
+              "id": "german_t8_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Haben wir einen?",
+              "audio": "Haben wir einen?",
+              "id": "german_t8_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "She's got one that he hasn't.",
+                  "Sie hat einen, den der nicht hat."
+                ],
+                [
+                  "What about us?",
+                  "Was ist mit uns?"
+                ],
+                [
+                  "We've got each other.",
+                  "Wir haben uns."
+                ],
+                [
+                  "It's for us.",
+                  "Es ist für uns."
+                ]
+              ],
+              "id": "german_t8_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "title": "Longer Sentences 1",
+      "lessons": [
+        {
+          "id": "t9l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "It's up to us.",
+              "answer": "Es ist an uns.",
+              "choices": [
+                "Kann er das?",
+                "Es ist an uns.",
+                "Kann sie das?",
+                "Das ist nicht gut."
+              ],
+              "id": "german_t9_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Ist es ____ uns?",
+              "answer": "für",
+              "choices": [
+                "an",
+                "ich",
+                "nicht",
+                "für"
+              ],
+              "id": "german_t9_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "What don't you have?",
+              "answer": "Was hast du nicht?",
+              "words": [
+                "hast",
+                "nicht?",
+                "du",
+                "nicht?",
+                "mich?",
+                "Was"
+              ],
+              "id": "german_t9_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Was hast du?",
+              "audio": "Was hast du?",
+              "id": "german_t9_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Do you still have it?",
+                  "Hast du es noch?"
+                ],
+                [
+                  "What's that your wearing?",
+                  "Was hast du da an?"
+                ],
+                [
+                  "There you have it.",
+                  "Da hast du es."
+                ],
+                [
+                  "Do you have them?",
+                  "Hast du sie?"
                 ]
               ],
               "id": "german_t9_1_4"
@@ -2131,47 +2126,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I only have one left.",
-              "answer": "Ich habe nur noch eine.",
+              "question": "What do you have for me?",
+              "answer": "Was hast du für mich?",
               "choices": [
-                "Ist sie noch zu haben?",
-                "Ich habe nur noch eine.",
-                "Er ist noch nicht hier.",
-                "Sie sind noch nicht da."
+                "Hast du es noch?",
+                "Was hast du für mich?",
+                "Was ist gut?",
+                "Er kann das nicht."
               ],
               "id": "german_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Nein, nein! ____ das nicht!",
-              "answer": "Nur",
+              "question": "Was hast ____ da?",
+              "answer": "du",
               "choices": [
-                "wir",
-                "Nur",
-                "nicht",
-                "Wir"
+                "Hast",
+                "du",
+                "uns",
+                "noch"
               ],
               "id": "german_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "What's that there?",
-              "answer": "Was ist das da?",
+              "question": "What do you have here?",
+              "answer": "Was hast du hier?",
               "words": [
-                "ist",
-                "ja!",
-                "hier?",
+                "hast",
+                "sie",
+                "gut?",
                 "Was",
-                "das",
-                "da?"
+                "du",
+                "hier?"
               ],
               "id": "german_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Da sind wir!",
-              "audio": "Da sind wir!",
+              "answer": "Ich kann es nicht.",
+              "audio": "Ich kann es nicht.",
               "id": "german_t9_2_3"
             },
             {
@@ -2180,20 +2175,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Here we are.",
-                  "Da sind wir."
+                  "Can he do it?",
+                  "Kann er das?"
                 ],
                 [
-                  "There he is.",
-                  "Da ist er."
+                  "Can she do it?",
+                  "Kann sie das?"
                 ],
                 [
-                  "There it is.",
-                  "Da ist es."
+                  "I can't do it.",
+                  "Ich kann das nicht."
                 ],
                 [
-                  "And here they are.",
-                  "Und da sind sie."
+                  "I can do this.",
+                  "Ich kann das!"
                 ]
               ],
               "id": "german_t9_2_4"
@@ -2206,47 +2201,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He is not there.",
-              "answer": "Er ist nicht da.",
+              "question": "Can I have one?",
+              "answer": "Kann ich einen haben?",
               "choices": [
-                "Er ist noch nicht hier.",
-                "Da sind wir!",
-                "Und da sind sie.",
-                "Er ist nicht da."
+                "Ist es für uns?",
+                "Was hast du da?",
+                "Was hast du?",
+                "Kann ich einen haben?"
               ],
               "id": "german_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Wir ____ da.",
-              "answer": "sind",
+              "question": "Er kann ____ nicht.",
+              "answer": "das",
               "choices": [
-                "ja",
-                "sind",
                 "ist",
-                "haben"
+                "das",
+                "Sie",
+                "Er"
               ],
               "id": "german_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "She is not here.",
-              "answer": "Sie ist nicht da.",
+              "question": "She can do it.",
+              "answer": "Sie kann es.",
               "words": [
-                "nicht",
-                "da.",
-                "ist",
+                "kann",
+                "es.",
+                "für",
                 "Sie",
-                "auf.",
-                "wir."
+                "da?"
               ],
               "id": "german_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sie ist nicht da.",
-              "audio": "Sie ist nicht da.",
+              "answer": "Er kann nicht.",
+              "audio": "Er kann nicht.",
               "id": "german_t9_3_3"
             },
             {
@@ -2255,20 +2249,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We're not there yet.",
-                  "Wir sind noch nicht da."
+                  "He's good.",
+                  "Er ist gut."
                 ],
                 [
-                  "There she is.",
-                  "Da ist sie."
+                  "She's good.",
+                  "Sie ist gut."
                 ],
                 [
-                  "They aren't here yet.",
-                  "Sie sind noch nicht da."
+                  "That's not good.",
+                  "Das ist nicht gut."
                 ],
                 [
-                  "There it is!",
-                  "Da ist es ja!"
+                  "What's good?",
+                  "Was ist gut?"
                 ]
               ],
               "id": "german_t9_3_4"
@@ -2287,47 +2281,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is she still there?",
-              "answer": "Ist sie noch da?",
+              "question": "Was it good?",
+              "answer": "War es gut?",
               "choices": [
-                "Was ist das da?",
-                "Ist sie noch da?",
-                "Es ist da.",
-                "Ich war nicht da."
+                "Das ist gut.",
+                "War es gut?",
+                "Sie sind nicht gut.",
+                "Ist das nicht gut?"
               ],
               "id": "german_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Was ____ da?",
-              "answer": "war",
+              "question": "Gut. ____ dir?",
+              "answer": "Und",
               "choices": [
-                "bin",
-                "wir",
-                "Nur",
-                "war"
+                "Ich",
+                "es",
+                "was",
+                "Und"
               ],
               "id": "german_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "They aren't there.",
-              "answer": "Sie sind nicht da.",
+              "question": "I was good.",
+              "answer": "Ich war gut.",
               "words": [
-                "sind",
-                "da.",
-                "Wir",
-                "Sie",
-                "nicht",
-                "sie"
+                "gut.",
+                "es",
+                "war",
+                "Ich",
+                "Die"
               ],
               "id": "german_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ist es da?",
-              "audio": "Ist es da?",
+              "answer": "Das war nicht gut.",
+              "audio": "Das war nicht gut.",
               "id": "german_t10_1_3"
             },
             {
@@ -2336,20 +2329,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not in.",
-                  "Ich bin nicht da."
+                  "This is good for us.",
+                  "Das ist gut für uns."
                 ],
                 [
-                  "I'm there for you.",
-                  "Ich bin für dich da."
+                  "He's not very good at it.",
+                  "Er kann das nicht so gut."
                 ],
                 [
-                  "It's not there.",
-                  "Es ist nicht da."
+                  "That's fine.",
+                  "Das ist gut."
                 ],
                 [
-                  "It isn't there.",
-                  "Es ist nicht da."
+                  "What good are they?",
+                  "Zu was sind die gut?"
                 ]
               ],
               "id": "german_t10_1_4"
@@ -2362,49 +2355,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's there.",
-              "answer": "Es ist da.",
+              "question": "What's the use?",
+              "answer": "Zu was ist es gut?",
               "choices": [
-                "Was war da?",
-                "Es ist da.",
-                "Was ist das da?",
-                "Ist es noch da?"
+                "Der ist gut.",
+                "Zu was ist es gut?",
+                "Es ist nicht gut.",
+                "Gut. Und dir?"
               ],
               "id": "german_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Wir sind ____ Sie da.",
-              "answer": "für",
+              "question": "Wie gut ____ sie?",
+              "answer": "sind",
               "choices": [
-                "da",
-                "für",
-                "Es",
-                "sie"
+                "Ist",
+                "sind",
+                "Sie",
+                "Die"
               ],
               "id": "german_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm not here for you.",
-              "answer": "Ich bin nicht für dich da.",
+              "question": "They're no good.",
+              "answer": "Sie sind nicht gut.",
               "words": [
-                "da.",
-                "dich",
-                "bin",
-                "Ich",
-                "für",
+                "dir?",
                 "nicht",
-                "nicht",
-                "sie."
+                "gut.",
+                "Sie",
+                "ist",
+                "sind"
               ],
               "id": "german_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ich bin für dich da.",
-              "audio": "Ich bin für dich da.",
+              "answer": "Ist es gut?",
+              "audio": "Ist es gut?",
               "id": "german_t10_2_3"
             },
             {
@@ -2413,20 +2404,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I was there.",
-                  "Ich war da."
+                  "Isn't that a good thing?",
+                  "Ist das nicht gut?"
                 ],
                 [
-                  "I wasn't there.",
-                  "Ich war nicht da."
+                  "I'm no good for you.",
+                  "Ich bin nicht gut für dich."
                 ],
                 [
-                  "She isn't there.",
-                  "Sie ist nicht da."
+                  "It's not good.",
+                  "Es ist nicht gut."
                 ],
                 [
-                  "There they are.",
-                  "Da sind sie."
+                  "It's good to have you here.",
+                  "Es ist gut, dich hier zu haben."
                 ]
               ],
               "id": "german_t10_2_4"
@@ -2439,48 +2430,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He isn't there.",
-              "answer": "Er ist nicht da.",
+              "question": "They're not good.",
+              "answer": "Die sind nicht gut.",
               "choices": [
-                "Sie sind nicht da.",
-                "Was ist das da?",
-                "Ist es da?",
-                "Er ist nicht da."
+                "Er ist gut zu mir.",
+                "Das ist, was ich gut kann.",
+                "Die sind gut.",
+                "Die sind nicht gut."
               ],
               "id": "german_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ist es ____ da?",
-              "answer": "noch",
+              "question": "Die ____ gut.",
+              "answer": "sind",
               "choices": [
                 "Es",
-                "noch",
-                "für",
-                "Was"
+                "sind",
+                "Sie",
+                "kann"
               ],
               "id": "german_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "We're the only ones left.",
-              "answer": "Nur wir sind noch da.",
+              "question": "This is what I'm good at.",
+              "answer": "Das ist, was ich gut kann.",
               "words": [
-                "da.",
-                "sie.",
-                "noch",
-                "Nur",
-                "wir",
-                "Da",
-                "sind"
+                "kann.",
+                "ich",
+                "es",
+                "Das",
+                "ist,",
+                "so",
+                "was",
+                "gut"
               ],
               "id": "german_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Was ist das da?",
-              "audio": "Was ist das da?",
+              "answer": "Das ist gut zu haben.",
+              "audio": "Das ist gut zu haben.",
               "id": "german_t10_3_3"
             },
             {
@@ -2489,20 +2481,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He was there.",
-                  "Er war da."
+                  "This is good for me.",
+                  "Das ist gut für mich."
                 ],
                 [
-                  "She was there.",
-                  "Sie war da."
+                  "That's a good one.",
+                  "Der ist gut."
                 ],
                 [
-                  "It wasn't there.",
-                  "Es war nicht da."
+                  "He is good to me.",
+                  "Er ist gut zu mir."
                 ],
                 [
-                  "He's not there.",
-                  "Er ist nicht da."
+                  "That's good for you.",
+                  "Das ist gut für dich."
                 ]
               ],
               "id": "german_t10_3_4"

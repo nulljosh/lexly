@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-asia",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -218,43 +218,44 @@
               "question": "Why are you here?",
               "answer": "왜 여기 있어요?",
               "choices": [
-                "난 거기 있을 거야.",
+                "빨리 집에 가자.",
                 "왜 여기 있어요?",
-                "우린 바로 여기 있을 거야.",
-                "빨리 집에 가자."
+                "너 이걸 할 거야 뭐야?",
+                "그건 이미 우리가 알고 있어."
               ],
               "id": "korean_t1_1_0"
             },
             {
-              "type": "cloze",
-              "question": "왜 ____ 있어요?",
-              "answer": "여기",
+              "type": "translation",
+              "question": "You're mine.",
+              "answer": "넌 내 거야.",
               "choices": [
-                "거야",
-                "말이",
-                "그는",
-                "여기"
+                "그럴 줄 알았어.",
+                "넌 절대 그걸 안 할 걸.",
+                "그 사람 어디 있지?",
+                "넌 내 거야."
               ],
               "id": "korean_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "How come you are here?",
-              "answer": "왜 여기 있어요?",
+              "question": "He is still here.",
+              "answer": "그는 아직 여기 있어요.",
               "words": [
-                "여기",
-                "있어요?",
-                "여기",
-                "왜",
-                "있어요."
+                "아직",
+                "뭐야?",
+                "사람",
+                "그는",
+                "있어요.",
+                "여기"
               ],
               "id": "korean_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "넌 내 거야.",
-              "audio": "넌 내 거야.",
+              "answer": "우린 바로 여기 있을 거야.",
+              "audio": "우린 바로 여기 있을 거야.",
               "id": "korean_t1_1_3"
             },
             {
@@ -263,20 +264,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is still here.",
-                  "그는 아직 여기 있어요."
-                ],
-                [
-                  "He's still here.",
-                  "그는 아직 여기 있어요."
-                ],
-                [
-                  "We'll be right here.",
-                  "우린 바로 여기 있을 거야."
-                ],
-                [
                   "Where is he?",
                   "그 사람 어디 있지?"
+                ],
+                [
+                  "Is she at home?",
+                  "그 사람 집에 있어?"
+                ],
+                [
+                  "Hurry home.",
+                  "빨리 집에 가자."
+                ],
+                [
+                  "Am I talking too much?",
+                  "내가 너무 말을 많이 하고 있어?"
                 ]
               ],
               "id": "korean_t1_1_4"
@@ -289,46 +290,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is she at home?",
-              "answer": "그 사람 집에 있어?",
+              "question": "Why are you saying such things?",
+              "answer": "왜 그런 말을 해?",
               "choices": [
-                "내가 너무 말을 많이 하고 있어?",
-                "그 사람 집에 있어?",
+                "나는 갈 거에요.",
+                "왜 그런 말을 해?",
                 "넌 내 거야.",
-                "너 이걸 할 거야 뭐야?"
+                "그 사람 집에 있어?"
               ],
               "id": "korean_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "그 사람 ____ 있어?",
-              "answer": "집에",
+              "question": "넌 ____ 몰라.",
+              "answer": "아무것도",
               "choices": [
-                "거야",
-                "그는",
-                "집에",
-                "바로"
+                "있어요",
+                "그런",
+                "아무것도",
+                "집에"
               ],
               "id": "korean_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "Hurry home.",
-              "answer": "빨리 집에 가자.",
+              "question": "Are you going to do this or what?",
+              "answer": "너 이걸 할 거야 뭐야?",
               "words": [
-                "알았어.",
-                "건",
-                "가자.",
-                "빨리",
-                "집에"
+                "이걸",
+                "거야",
+                "할",
+                "너",
+                "한",
+                "뭐야?",
+                "뭐야?"
               ],
               "id": "korean_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "내가 너무 말을 많이 하고 있어?",
-              "audio": "내가 너무 말을 많이 하고 있어?",
+              "answer": "그럴 줄 알았어.",
+              "audio": "그럴 줄 알았어.",
               "id": "korean_t1_2_3"
             },
             {
@@ -337,20 +340,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Why are you saying such things?",
-                  "왜 그런 말을 해?"
+                  "No comment.",
+                  "할 말이 없어."
                 ],
                 [
-                  "Why do you say things like that?",
-                  "왜 그런 말을 해?"
+                  "We already know that.",
+                  "그건 이미 우리가 알고 있어."
                 ],
                 [
-                  "You don't know anything.",
-                  "넌 아무것도 몰라."
+                  "You would never do that.",
+                  "넌 절대 그걸 안 할 걸."
                 ],
                 [
-                  "Are you going to do this or what?",
-                  "너 이걸 할 거야 뭐야?"
+                  "Are you in there?",
+                  "너 거기 있어?"
                 ]
               ],
               "id": "korean_t1_2_4"
@@ -363,48 +366,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't say.",
-              "answer": "그럴 줄 알았어.",
+              "question": "I'm going to be there.",
+              "answer": "난 거기 있을 거야.",
               "choices": [
-                "넌 절대 그걸 안 할 걸.",
-                "넌 내 거야.",
-                "그 사람 어디 있지?",
-                "그럴 줄 알았어."
+                "너 이걸 할 거야 뭐야?",
+                "그건 이미 우리가 알고 있어.",
+                "우린 바로 여기 있을 거야.",
+                "난 거기 있을 거야."
               ],
               "id": "korean_t1_3_0"
             },
             {
-              "type": "cloze",
-              "question": "할 ____ 없어.",
-              "answer": "말이",
+              "type": "translation",
+              "question": "She knows about things like that.",
+              "answer": "그녀는 그런 건 잘 알아.",
               "choices": [
-                "그건",
-                "말이",
-                "몰라",
-                "없어"
+                "빨리 집에 가자.",
+                "그녀는 그런 건 잘 알아.",
+                "우린 바로 여기 있을 거야.",
+                "그는 아직 여기 있어요."
               ],
               "id": "korean_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "We already know that.",
-              "answer": "그건 이미 우리가 알고 있어.",
+              "question": "I'm going to go.",
+              "answer": "나는 갈 거에요.",
               "words": [
-                "이미",
-                "알고",
-                "우리가",
-                "있어.",
-                "넌",
-                "그건",
-                "뭐야?"
+                "거에요.",
+                "있어요?",
+                "알아.",
+                "나는",
+                "갈"
               ],
               "id": "korean_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "넌 절대 그걸 안 할 걸.",
-              "audio": "넌 절대 그걸 안 할 걸.",
+              "answer": "다들 정말 잘 한 것 같아.",
+              "audio": "다들 정말 잘 한 것 같아.",
               "id": "korean_t1_3_3"
             },
             {
@@ -413,20 +414,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you in there?",
-                  "너 거기 있어?"
+                  "You can go home now.",
+                  "당신은 지금 집에 갈 수 있다."
                 ],
                 [
-                  "I'm going to be there.",
-                  "난 거기 있을 거야."
+                  "I'm at home.",
+                  "나는 집에 있다."
                 ],
                 [
-                  "I'll be there.",
-                  "난 거기 있을 거야."
+                  "Do you know her?",
+                  "그 사람을 알아요?"
                 ],
                 [
-                  "She knows about things like that.",
-                  "그녀는 그런 건 잘 알아."
+                  "Why are you looking at me like that?",
+                  "왜 그렇게 봐요?"
                 ]
               ],
               "id": "korean_t1_3_4"
@@ -445,124 +446,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm going to go.",
-              "answer": "나는 갈 거에요.",
-              "choices": [
-                "나 혼자 할 수 있다고!",
-                "나는 갈 거에요.",
-                "아무 말도 하지 마.",
-                "그 사람을 알아요?"
-              ],
-              "id": "korean_t2_1_0"
-            },
-            {
-              "type": "translation",
-              "question": "I think everyone did really well.",
-              "answer": "다들 정말 잘 한 것 같아.",
-              "choices": [
-                "그 사람을 알아요?",
-                "완전 말도 안돼!",
-                "당신은 지금 집에 갈 수 있다.",
-                "다들 정말 잘 한 것 같아."
-              ],
-              "id": "korean_t2_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "You can go home now.",
-              "answer": "당신은 지금 집에 갈 수 있다.",
-              "words": [
-                "안",
-                "혼자",
-                "지금",
-                "당신은",
-                "있다.",
-                "수",
-                "갈",
-                "집에"
-              ],
-              "id": "korean_t2_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "나는 집에 있다.",
-              "audio": "나는 집에 있다.",
-              "id": "korean_t2_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I am at home.",
-                  "나는 집에 있다."
-                ],
-                [
-                  "Do you know her?",
-                  "그 사람을 알아요?"
-                ],
-                [
-                  "Do you know that person?",
-                  "그 사람을 알아요?"
-                ],
-                [
-                  "Why are you looking at me like that?",
-                  "왜 그렇게 봐요?"
-                ]
-              ],
-              "id": "korean_t2_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t2l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
               "question": "There were lots of people.",
               "answer": "많이 사람이 있었어.",
               "choices": [
-                "왜 그렇게 봐요?",
+                "한 번 더.",
                 "많이 사람이 있었어.",
-                "다들 정말 잘 한 것 같아.",
-                "그 사람을 알아요?"
+                "이게 대체 뭐야?",
+                "왜 이걸 지금 말해?"
               ],
-              "id": "korean_t2_2_0"
+              "id": "korean_t2_1_0"
             },
             {
               "type": "translation",
               "question": "Please listen.",
               "answer": "제발 좀 들어.",
               "choices": [
-                "지금 무슨 생각해?",
-                "제발 좀 들어.",
-                "말도 안 돼!",
-                "다들 정말 잘 한 것 같아."
+                "이건 문제가 아니야.",
+                "완전 말도 안돼!",
+                "한 번 더.",
+                "제발 좀 들어."
               ],
-              "id": "korean_t2_2_1"
+              "id": "korean_t2_1_1"
             },
             {
               "type": "sentence",
               "question": "Once again.",
               "answer": "한 번 더.",
               "words": [
+                "싫어.",
+                "사람이",
                 "번",
-                "잘",
-                "다들",
                 "한",
                 "더."
               ],
-              "id": "korean_t2_2_2"
+              "id": "korean_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "이게 대체 뭐야?",
               "audio": "이게 대체 뭐야?",
-              "id": "korean_t2_2_3"
+              "id": "korean_t2_1_3"
             },
             {
               "type": "match",
@@ -586,37 +510,37 @@
                   "너 지금 집에 혼자 있어?"
                 ]
               ],
-              "id": "korean_t2_2_4"
+              "id": "korean_t2_1_4"
             }
           ]
         },
         {
-          "id": "t2l3",
-          "title": "Lesson 3",
+          "id": "t2l2",
+          "title": "Lesson 2",
           "exercises": [
             {
               "type": "translation",
               "question": "Why are you here alone?",
               "answer": "왜 혼자 여기 있어요?",
               "choices": [
-                "나는 집에 있다.",
-                "완전 말도 안돼!",
-                "다들 정말 잘 한 것 같아.",
-                "왜 혼자 여기 있어요?"
+                "나 혼자 할 수 있다고!",
+                "왜 혼자 여기 있어요?",
+                "제발 좀 들어.",
+                "이건 문제가 아니야."
               ],
-              "id": "korean_t2_3_0"
+              "id": "korean_t2_2_0"
             },
             {
               "type": "translation",
               "question": "I can do it by myself!",
               "answer": "나 혼자 할 수 있다고!",
               "choices": [
-                "말도 안 돼!",
+                "한 번 더.",
                 "나 혼자 할 수 있다고!",
-                "너 지금 집에 혼자 있어?",
-                "아무 말도 하지 마."
+                "제발 가지 마!",
+                "완전 말도 안돼!"
               ],
-              "id": "korean_t2_3_1"
+              "id": "korean_t2_2_1"
             },
             {
               "type": "sentence",
@@ -624,19 +548,19 @@
               "answer": "이건 문제가 아니야.",
               "words": [
                 "문제가",
-                "아니야.",
-                "사람이",
+                "안",
+                "뭐야?",
                 "이건",
-                "이게"
+                "아니야."
               ],
-              "id": "korean_t2_3_2"
+              "id": "korean_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "완전 말도 안돼!",
               "audio": "완전 말도 안돼!",
-              "id": "korean_t2_3_3"
+              "id": "korean_t2_2_3"
             },
             {
               "type": "match",
@@ -652,12 +576,87 @@
                   "말도 안 돼!"
                 ],
                 [
-                  "That's ridiculous!",
-                  "말도 안 돼!"
+                  "I can go tomorrow.",
+                  "난 내일 갈 수 있어."
                 ],
                 [
-                  "That's impossible!",
-                  "말도 안 돼!"
+                  "I am not at home tomorrow.",
+                  "나 내일 집에 없어."
+                ]
+              ],
+              "id": "korean_t2_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t2l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "You're planning to go tomorrow, aren't you?",
+              "answer": "너 내일 갈 거지, 그렇지?",
+              "choices": [
+                "나 혼자 할 수 있다고!",
+                "이건 문제가 아니야.",
+                "제발 좀 들어.",
+                "너 내일 갈 거지, 그렇지?"
+              ],
+              "id": "korean_t2_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "그래. 나 ____ 완전 싫어.",
+              "answer": "이거",
+              "choices": [
+                "그래",
+                "이거",
+                "있어",
+                "거기"
+              ],
+              "id": "korean_t2_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I think this is important.",
+              "answer": "이건 중요한 것 같아.",
+              "words": [
+                "중요한",
+                "것",
+                "이게",
+                "이건",
+                "같아.",
+                "거지,"
+              ],
+              "id": "korean_t2_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "왜 이걸 지금 말해?",
+              "audio": "왜 이걸 지금 말해?",
+              "id": "korean_t2_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Do you know?",
+                  "너는 알고 있어?"
+                ],
+                [
+                  "He came.",
+                  "그 사람이 왔어."
+                ],
+                [
+                  "Don't go there.",
+                  "거기 가지 마."
+                ],
+                [
+                  "Please don't go!",
+                  "제발 가지 마!"
                 ]
               ],
               "id": "korean_t2_3_4"
@@ -676,48 +675,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can go tomorrow.",
-              "answer": "난 내일 갈 수 있어.",
+              "question": "She's here.",
+              "answer": "그녀는 여기에 있다.",
               "choices": [
-                "너 내일 갈 거지, 그렇지?",
-                "난 내일 갈 수 있어.",
-                "난 돈 못 내.",
-                "이건 중요한 것 같아."
+                "얼마나 오래 거기 있을 거야?",
+                "그녀는 여기에 있다.",
+                "그는 많은 돈을 가지고 있다.",
+                "이건 네 것이다."
               ],
               "id": "korean_t3_1_0"
             },
             {
-              "type": "cloze",
-              "question": "나 내일 ____ 없어.",
-              "answer": "집에",
+              "type": "translation",
+              "question": "I cannot pay.",
+              "answer": "난 돈 못 내.",
               "choices": [
-                "전혀",
-                "중요한",
-                "거지",
-                "집에"
+                "이거 갖고 싶어.",
+                "그는 많은 돈을 가지고 있다.",
+                "누구 집에 있어?",
+                "난 돈 못 내."
               ],
               "id": "korean_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "You're planning to go tomorrow, aren't you?",
-              "answer": "너 내일 갈 거지, 그렇지?",
+              "question": "It's not necessary for you to stay here any longer.",
+              "answer": "너는 여기 더 있을 필요 없어.",
               "words": [
-                "내일",
-                "거지,",
-                "거지,",
-                "것",
-                "너",
-                "그렇지?",
-                "갈"
+                "못",
+                "없어.",
+                "있을",
+                "너는",
+                "있을",
+                "필요",
+                "여기",
+                "더"
               ],
               "id": "korean_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그래. 나 이거 완전 싫어.",
-              "audio": "그래. 나 이거 완전 싫어.",
+              "answer": "그 사람을 몰라요.",
+              "audio": "그 사람을 몰라요.",
               "id": "korean_t3_1_3"
             },
             {
@@ -726,20 +726,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I think this is important.",
-                  "이건 중요한 것 같아."
+                  "I don't know at all.",
+                  "난 전혀 모르겠어."
                 ],
                 [
-                  "Why are you telling this to me now?",
-                  "왜 이걸 지금 말해?"
+                  "I want this.",
+                  "이거 갖고 싶어."
                 ],
                 [
-                  "Do you know?",
-                  "너는 알고 있어?"
+                  "He has a lot of money.",
+                  "그는 많은 돈을 가지고 있다."
                 ],
                 [
-                  "He came.",
-                  "그 사람이 왔어."
+                  "I really love what I do.",
+                  "난 내가 하는 것이 정말 좋아."
                 ]
               ],
               "id": "korean_t3_1_4"
@@ -752,46 +752,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Don't go there.",
-              "answer": "거기 가지 마.",
+              "question": "Not now; maybe later.",
+              "answer": "지금 말고, 아마 나중에.",
               "choices": [
-                "나 내일 집에 없어.",
-                "거기 가지 마.",
+                "그는 많은 돈을 가지고 있다.",
                 "지금 말고, 아마 나중에.",
-                "너는 알고 있어?"
+                "누구 집에 있어요?",
+                "거의 다 왔어요"
               ],
               "id": "korean_t3_2_0"
             },
             {
-              "type": "cloze",
-              "question": "제발 ____ 마!",
-              "answer": "가지",
+              "type": "translation",
+              "question": "Listen to your father.",
+              "answer": "아버지 말 좀 들어.",
               "choices": [
-                "없어",
-                "그렇지",
-                "가지",
-                "있어"
+                "난 돈 못 내.",
+                "나는 내일 집에 있을 것이다.",
+                "아버지 말 좀 들어.",
+                "이거 갖고 싶어."
               ],
               "id": "korean_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "She's here.",
-              "answer": "그녀는 여기에 있다.",
+              "question": "Come with me.",
+              "answer": "나랑 같이 가자.",
               "words": [
-                "여기에",
-                "있다.",
-                "많은",
-                "그",
-                "그녀는"
+                "같이",
+                "가자.",
+                "생각",
+                "좋아.",
+                "나랑"
               ],
               "id": "korean_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그녀는 여기에 있다.",
-              "audio": "그녀는 여기에 있다.",
+              "answer": "거의 다 됐어요.",
+              "audio": "거의 다 됐어요.",
               "id": "korean_t3_2_3"
             },
             {
@@ -800,20 +800,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I cannot pay.",
-                  "난 돈 못 내."
+                  "We don't believe so.",
+                  "우린 그렇게 생각 안 해요."
                 ],
                 [
-                  "It's not necessary for you to stay here any longer.",
-                  "너는 여기 더 있을 필요 없어."
+                  "We don't think so.",
+                  "우린 그렇게 생각 안 해."
                 ],
                 [
-                  "I don't know at all.",
-                  "난 전혀 모르겠어."
+                  "How long are you going to be there?",
+                  "얼마나 오래 거기 있을 거야?"
                 ],
                 [
-                  "I want this.",
-                  "이거 갖고 싶어."
+                  "How should I know?",
+                  "내가 어떻게 알겠어요?"
                 ]
               ],
               "id": "korean_t3_2_4"
@@ -826,48 +826,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He has a lot of money.",
-              "answer": "그는 많은 돈을 가지고 있다.",
+              "question": "Why are you acting this way?",
+              "answer": "왜 그런 짓을 하는 거야?",
               "choices": [
-                "제발 가지 마!",
-                "왜 이걸 지금 말해?",
-                "그래. 나 이거 완전 싫어.",
-                "그는 많은 돈을 가지고 있다."
+                "난 전혀 모르겠어.",
+                "이거 갖고 싶어.",
+                "누구 집에 있어?",
+                "왜 그런 짓을 하는 거야?"
               ],
               "id": "korean_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "그는 많은 ____ 가지고 있다.",
-              "answer": "돈을",
+              "question": "누구 ____ 있어?",
+              "answer": "집에",
               "choices": [
-                "있어",
-                "돈을",
-                "그녀는",
-                "없어"
+                "있을",
+                "집에",
+                "모르겠어",
+                "너는"
               ],
               "id": "korean_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "He has got a lot of money.",
-              "answer": "그는 많은 돈을 가지고 있다.",
+              "question": "Is anybody home?",
+              "answer": "누구 집에 있어요?",
               "words": [
-                "많은",
-                "가지고",
-                "좀",
-                "나",
-                "있다.",
-                "돈을",
-                "그는"
+                "못",
+                "때문에",
+                "집에",
+                "누구",
+                "있어요?"
               ],
               "id": "korean_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그는 많은 돈을 가지고 있다.",
-              "audio": "그는 많은 돈을 가지고 있다.",
+              "answer": "거의 다 왔어요",
+              "audio": "거의 다 왔어요",
               "id": "korean_t3_3_3"
             },
             {
@@ -876,20 +874,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I really love what I do.",
-                  "난 내가 하는 것이 정말 좋아."
+                  "I'm here for work.",
+                  "일 때문에 왔어요."
                 ],
                 [
-                  "I really like what I do.",
-                  "난 내가 하는 것이 정말 좋아."
+                  "It won't help you.",
+                  "도움이 안 될 것이다."
                 ],
                 [
-                  "Not now; maybe later.",
-                  "지금 말고, 아마 나중에."
+                  "I'll stay at home tomorrow.",
+                  "나는 내일 집에 있을 것이다."
                 ],
                 [
-                  "Listen to your father.",
-                  "아버지 말 좀 들어."
+                  "This is yours.",
+                  "이건 네 것이다."
                 ]
               ],
               "id": "korean_t3_3_4"
@@ -908,48 +906,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Come with me.",
-              "answer": "나랑 같이 가자.",
+              "question": "What nonsense!",
+              "answer": "말도 안 되는 소리!",
               "choices": [
-                "일 때문에 왔어요.",
-                "나랑 같이 가자.",
-                "우린 그렇게 생각 안 해요.",
-                "누구 집에 있어?"
+                "나한테 전화 할 필요 없어.",
+                "말도 안 되는 소리!",
+                "그들은 서로 좋아 합니다",
+                "왜 여자가 싫어?"
               ],
               "id": "korean_t4_1_0"
             },
             {
               "type": "translation",
-              "question": "That's just about it.",
-              "answer": "거의 다 됐어요.",
+              "question": "I don't know if I have the time.",
+              "answer": "시간 있는지 잘 모르겠어요.",
               "choices": [
-                "왜 그런 짓을 하는 거야?",
-                "얼마나 오래 거기 있을 거야?",
-                "도움이 안 될 것이다.",
-                "거의 다 됐어요."
+                "아무도 그런 얘기 한 적 없다.",
+                "그들은 서로 좋아 합니다",
+                "그는 곧 올 것이다.",
+                "시간 있는지 잘 모르겠어요."
               ],
               "id": "korean_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "We don't believe so.",
-              "answer": "우린 그렇게 생각 안 해요.",
+              "question": "He will come soon.",
+              "answer": "그는 곧 올 것이다.",
               "words": [
-                "그렇게",
-                "거기",
-                "이건",
-                "우린",
-                "해요.",
-                "생각",
-                "안"
+                "것이다.",
+                "우리가",
+                "곧",
+                "그는",
+                "것이다.",
+                "올"
               ],
               "id": "korean_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "우린 그렇게 생각 안 해.",
-              "audio": "우린 그렇게 생각 안 해.",
+              "answer": "나 저 사람들 알아.",
+              "audio": "나 저 사람들 알아.",
               "id": "korean_t4_1_3"
             },
             {
@@ -958,20 +955,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How long are you going to be there?",
-                  "얼마나 오래 거기 있을 거야?"
+                  "They liked each other.",
+                  "그들은 서로 좋아 합니다"
                 ],
                 [
-                  "How should I know?",
-                  "내가 어떻게 알겠어요?"
+                  "Yes, you love me.",
+                  "그래, 너는 날 사랑해."
                 ],
                 [
-                  "Why are you acting this way?",
-                  "왜 그런 짓을 하는 거야?"
+                  "Is there anything you want to tell me?",
+                  "뭔가 하고 싶은 얘기 없어?"
                 ],
                 [
-                  "Anyone home?",
-                  "누구 집에 있어?"
+                  "Are you doing what you want to do?",
+                  "네가 하고 싶은 걸 하고 있어?"
                 ]
               ],
               "id": "korean_t4_1_4"
@@ -984,46 +981,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is anybody home?",
-              "answer": "누구 집에 있어요?",
+              "question": "Where will you go?",
+              "answer": "어디로 갈 거야?",
               "choices": [
-                "뭔가 하고 싶은 얘기 없어?",
-                "누구 집에 있어요?",
-                "우린 그렇게 생각 안 해.",
-                "얼마나 오래 거기 있을 거야?"
+                "시간 있는지 잘 모르겠어요.",
+                "어디로 갈 거야?",
+                "나한테 전화 할 필요 없어.",
+                "난 시간이 없다."
               ],
               "id": "korean_t4_2_0"
             },
             {
-              "type": "translation",
-              "question": "We're almost there.",
-              "answer": "거의 다 왔어요",
+              "type": "cloze",
+              "question": "제가 올 ____ 기다려 주세요.",
+              "answer": "때까지",
               "choices": [
-                "얼마나 오래 거기 있을 거야?",
-                "거의 다 왔어요",
-                "뭔가 하고 싶은 얘기 없어?",
-                "내가 어떻게 알겠어요?"
+                "시간",
+                "때까지",
+                "그래",
+                "주세요"
               ],
               "id": "korean_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm here for work.",
-              "answer": "일 때문에 왔어요.",
+              "question": "We can buy it.",
+              "answer": "이건 우리가 살 수 있어.",
               "words": [
-                "때문에",
-                "왔어요.",
-                "거의",
-                "일",
-                "같이"
+                "우리가",
+                "한",
+                "살",
+                "있는지",
+                "있어.",
+                "이건",
+                "수"
               ],
               "id": "korean_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "도움이 안 될 것이다.",
-              "audio": "도움이 안 될 것이다.",
+              "answer": "어디서 살 거야?",
+              "audio": "어디서 살 거야?",
               "id": "korean_t4_2_3"
             },
             {
@@ -1032,20 +1031,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'll stay at home tomorrow.",
-                  "나는 내일 집에 있을 것이다."
+                  "Nobody said that.",
+                  "아무도 그런 얘기 한 적 없다."
                 ],
                 [
-                  "This is yours.",
-                  "이건 네 것이다."
+                  "He is no longer here.",
+                  "그는 더 이상 여기 없다."
                 ],
                 [
-                  "I'm going to stay home tomorrow.",
-                  "나는 내일 집에 있을 것이다."
+                  "I had never seen him before.",
+                  "나는 그를 전에 본 적이 없다."
                 ],
                 [
-                  "What nonsense!",
-                  "말도 안 되는 소리!"
+                  "I have no time.",
+                  "난 시간이 없다."
                 ]
               ],
               "id": "korean_t4_2_4"
@@ -1058,47 +1057,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't know if I have the time.",
-              "answer": "시간 있는지 잘 모르겠어요.",
+              "question": "I don't want to go there.",
+              "answer": "난 거기 가고 싶지 않아.",
               "choices": [
-                "내가 어떻게 알겠어요?",
-                "우린 그렇게 생각 안 해.",
-                "일 때문에 왔어요.",
-                "시간 있는지 잘 모르겠어요."
+                "어디서 살 거야?",
+                "나 저 사람들 알아.",
+                "시간 있는지 잘 모르겠어요.",
+                "난 거기 가고 싶지 않아."
               ],
               "id": "korean_t4_3_0"
             },
             {
-              "type": "translation",
-              "question": "He will come soon.",
-              "answer": "그는 곧 올 것이다.",
+              "type": "cloze",
+              "question": "나랑 같이 ____ 싶지 않아?",
+              "answer": "가고",
               "choices": [
-                "우린 그렇게 생각 안 해요.",
-                "그는 곧 올 것이다.",
-                "뭔가 하고 싶은 얘기 없어?",
-                "도움이 안 될 것이다."
+                "거야",
+                "가고",
+                "적이",
+                "이건"
               ],
               "id": "korean_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "I recognize those people.",
-              "answer": "나 저 사람들 알아.",
+              "question": "I became a woman.",
+              "answer": "저는 여자가 됐어요.",
               "words": [
-                "있어요?",
-                "알아.",
-                "사람들",
-                "거의",
-                "저",
-                "나"
+                "여자가",
+                "됐어요.",
+                "난",
+                "서로",
+                "저는"
               ],
               "id": "korean_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그들은 서로 좋아 합니다",
-              "audio": "그들은 서로 좋아 합니다",
+              "answer": "왜 여자가 싫어?",
+              "audio": "왜 여자가 싫어?",
               "id": "korean_t4_3_3"
             },
             {
@@ -1107,20 +1105,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes, you love me.",
-                  "그래, 너는 날 사랑해."
+                  "Do you like women?",
+                  "너는 여자가 좋아?"
                 ],
                 [
-                  "Is there anything you want to tell me?",
-                  "뭔가 하고 싶은 얘기 없어?"
+                  "You don't know what that is?",
+                  "그건 뭔지 몰라?"
                 ],
                 [
-                  "Is there anything you'd like to tell me?",
-                  "뭔가 하고 싶은 얘기 없어?"
+                  "Hands up!",
+                  "두 손 들어!"
                 ],
                 [
-                  "Is there anything that you want to tell me?",
-                  "뭔가 하고 싶은 얘기 없어?"
+                  "You don't need to give me a call.",
+                  "나한테 전화 할 필요 없어."
                 ]
               ],
               "id": "korean_t4_3_4"
@@ -1139,46 +1137,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is there anything that you'd like to tell me?",
-              "answer": "뭔가 하고 싶은 얘기 없어?",
+              "question": "I'm behind you.",
+              "answer": "난 네 뒤에 있어.",
               "choices": [
-                "아무도 그런 얘기 한 적 없다.",
-                "뭔가 하고 싶은 얘기 없어?",
-                "나한테 전화 할 필요 없어.",
-                "너는 여자가 좋아?"
+                "너는 세 가지 문제가 있다.",
+                "난 네 뒤에 있어.",
+                "이제 가야 해요.",
+                "넌 가야 해요."
               ],
               "id": "korean_t5_1_0"
             },
             {
-              "type": "translation",
-              "question": "Are you doing what you want to do?",
-              "answer": "네가 하고 싶은 걸 하고 있어?",
+              "type": "cloze",
+              "question": "나는 ____ 생각해.",
+              "answer": "너를",
               "choices": [
-                "미안해. 할 수 없다고 생각해.",
-                "이건 우리가 살 수 있어.",
-                "제가 올 때까지 기다려 주세요.",
-                "네가 하고 싶은 걸 하고 있어?"
+                "보는",
+                "것이다",
+                "생각해",
+                "너를"
               ],
               "id": "korean_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "Where will you go?",
-              "answer": "어디로 갈 거야?",
+              "question": "You have three problems.",
+              "answer": "너는 세 가지 문제가 있다.",
               "words": [
-                "그를",
-                "하고",
-                "거야?",
-                "어디로",
-                "갈"
+                "세",
+                "가지",
+                "너를",
+                "너는",
+                "문제가",
+                "있어?",
+                "있다."
               ],
               "id": "korean_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "제가 올 때까지 기다려 주세요.",
-              "audio": "제가 올 때까지 기다려 주세요.",
+              "answer": "미안해. 할 수 없다고 생각해.",
+              "audio": "미안해. 할 수 없다고 생각해.",
               "id": "korean_t5_1_3"
             },
             {
@@ -1187,20 +1187,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We can buy it.",
-                  "이건 우리가 살 수 있어."
+                  "What kind of person do you want to be?",
+                  "어떤 사람이 되고 싶어요?"
                 ],
                 [
-                  "Where will you live?",
-                  "어디서 살 거야?"
+                  "She doesn't have any friends.",
+                  "그녀는 친구가 없다."
                 ],
                 [
-                  "Nobody said that.",
-                  "아무도 그런 얘기 한 적 없다."
+                  "Anybody home?",
+                  "집에 누군가 있어?"
                 ],
                 [
-                  "He is no longer here.",
-                  "그는 더 이상 여기 없다."
+                  "He will definitely come.",
+                  "그는 분명히 올 것이다."
                 ]
               ],
               "id": "korean_t5_1_4"
@@ -1213,46 +1213,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I had never seen him before.",
-              "answer": "나는 그를 전에 본 적이 없다.",
+              "question": "I know what you are thinking.",
+              "answer": "당신이 무슨 생각을 하고 있는지 알고 있다.",
               "choices": [
-                "그건 뭔지 몰라?",
-                "나는 그를 전에 본 적이 없다.",
-                "저는 여자가 됐어요.",
-                "나한테 전화 할 필요 없어."
+                "지금 좋아하는 사람 있어?",
+                "당신이 무슨 생각을 하고 있는지 알고 있다.",
+                "미안해. 할 수 없다고 생각해.",
+                "넌 가야 해요."
               ],
               "id": "korean_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "난 ____ 없다.",
-              "answer": "시간이",
+              "question": "넌 ____ 해요.",
+              "answer": "가야",
               "choices": [
-                "없다고",
-                "시간이",
-                "필요",
-                "싶지"
+                "봤어요",
+                "가야",
+                "있었어",
+                "그들이"
               ],
               "id": "korean_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "I don't have time.",
-              "answer": "난 시간이 없다.",
+              "question": "I have to go now.",
+              "answer": "이제 가야 해요.",
               "words": [
-                "없다.",
-                "하고",
-                "뭔지",
-                "난",
-                "시간이"
+                "해요.",
+                "생각을",
+                "번",
+                "이제",
+                "가야"
               ],
               "id": "korean_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "나는 그를 전에 본 적이 없다.",
-              "audio": "나는 그를 전에 본 적이 없다.",
+              "answer": "내 걱정 하지 마.",
+              "audio": "내 걱정 하지 마.",
               "id": "korean_t5_2_3"
             },
             {
@@ -1261,20 +1261,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't want to go there.",
-                  "난 거기 가고 싶지 않아."
+                  "Let's do this!",
+                  "한 번 해 보자!"
                 ],
                 [
-                  "Don't you want to go with me?",
-                  "나랑 같이 가고 싶지 않아?"
+                  "Everybody knows.",
+                  "모두가 알고 있어."
                 ],
                 [
-                  "I became a woman.",
-                  "저는 여자가 됐어요."
+                  "Everybody knew.",
+                  "모두가 알고 있었어."
                 ],
                 [
-                  "Why do you hate women?",
-                  "왜 여자가 싫어?"
+                  "Where did you see her?",
+                  "그녀를 어디서 봤어요?"
                 ]
               ],
               "id": "korean_t5_2_4"
@@ -1287,46 +1287,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you like women?",
-              "answer": "너는 여자가 좋아?",
+              "question": "I think they like you.",
+              "answer": "그들이 널 좋아하는 것 같아.",
               "choices": [
-                "미안해. 할 수 없다고 생각해.",
-                "제가 올 때까지 기다려 주세요.",
-                "어디로 갈 거야?",
-                "너는 여자가 좋아?"
+                "너랑 있을 시간 없어.",
+                "나는 너를 생각해.",
+                "한번 해 보는 거야!",
+                "그들이 널 좋아하는 것 같아."
               ],
               "id": "korean_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "그건 ____ 몰라?",
-              "answer": "뭔지",
+              "question": "지금 좋아하는 ____ 있어?",
+              "answer": "사람",
               "choices": [
-                "없어",
-                "뭔지",
-                "하고",
-                "있다"
+                "나는",
+                "사람",
+                "있을",
+                "하는"
               ],
               "id": "korean_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "Hands up!",
-              "answer": "두 손 들어!",
+              "question": "What are you doing that for?",
+              "answer": "그런 걸 하는 이유가 뭐야?",
               "words": [
-                "손",
-                "없다고",
-                "들어!",
-                "두",
-                "있다."
+                "걸",
+                "그는",
+                "이유가",
+                "하지",
+                "그런",
+                "뭐야?",
+                "하는"
               ],
               "id": "korean_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "나한테 전화 할 필요 없어.",
-              "audio": "나한테 전화 할 필요 없어.",
+              "answer": "더 시간이 필요해요.",
+              "audio": "더 시간이 필요해요.",
               "id": "korean_t5_3_3"
             },
             {
@@ -1335,20 +1337,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm behind you.",
-                  "난 네 뒤에 있어."
+                  "We need you.",
+                  "우리는 당신이 필요해요."
                 ],
                 [
-                  "I'm thinking of you.",
-                  "나는 너를 생각해."
+                  "Take a chance!",
+                  "한번 해 보는 거야!"
                 ],
                 [
-                  "You have three problems.",
-                  "너는 세 가지 문제가 있다."
+                  "I don't have time for you.",
+                  "너랑 있을 시간 없어."
                 ],
                 [
-                  "I'm sorry, I don't think I can.",
-                  "미안해. 할 수 없다고 생각해."
+                  "I'm not in the mood.",
+                  "그럴 기분 아니야."
                 ]
               ],
               "id": "korean_t5_3_4"
@@ -1367,46 +1369,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What kind of person do you want to be?",
-              "answer": "어떤 사람이 되고 싶어요?",
+              "question": "I know how it feels too!",
+              "answer": "그 기분 나도 알지!",
               "choices": [
-                "이제 가야 해요.",
-                "당신이 무슨 생각을 하고 있는지 알고 있다.",
-                "어떤 사람이 되고 싶어요?",
-                "그는 분명히 올 것이다."
+                "손을 들어 보세요.",
+                "너도 그거 들었어?",
+                "그 기분 나도 알지!",
+                "나 따라 해."
               ],
               "id": "korean_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "그녀는 ____ 없다.",
-              "answer": "친구가",
+              "question": "오늘 기분이 ____ 안 좋아요.",
+              "answer": "너무",
               "choices": [
-                "기분이",
-                "있었어",
                 "오늘",
-                "친구가"
+                "도움이",
+                "좋아요",
+                "너무"
               ],
               "id": "korean_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "Anybody home?",
-              "answer": "집에 누군가 있어?",
+              "question": "I'm looking for something.",
+              "answer": "뭔가 찾고 있다.",
               "words": [
-                "누군가",
-                "시간",
-                "뭔가",
+                "찾고",
+                "조용히",
                 "집에",
-                "있어?"
+                "뭔가",
+                "있다."
               ],
               "id": "korean_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그는 분명히 올 것이다.",
-              "audio": "그는 분명히 올 것이다.",
+              "answer": "손을 들어 보세요.",
+              "audio": "손을 들어 보세요.",
               "id": "korean_t6_1_3"
             },
             {
@@ -1415,20 +1417,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know what you are thinking.",
-                  "당신이 무슨 생각을 하고 있는지 알고 있다."
+                  "I was at home yesterday.",
+                  "어제 나는 집에 있었어."
                 ],
                 [
-                  "You have to go.",
-                  "넌 가야 해요."
+                  "Am I weird?",
+                  "내가 이상한 거야?"
                 ],
                 [
-                  "I have to go now.",
-                  "이제 가야 해요."
+                  "They are eating just now.",
+                  "그 사람들은 막 바로 먹고 있어."
                 ],
                 [
-                  "Stop worrying about me.",
-                  "내 걱정 하지 마."
+                  "Try it once more.",
+                  "다시 한번 해봐."
                 ]
               ],
               "id": "korean_t6_1_4"
@@ -1441,46 +1443,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Let's do this!",
-              "answer": "한 번 해 보자!",
+              "question": "Think about this.",
+              "answer": "생각 좀 해봐.",
               "choices": [
-                "그녀는 친구가 없다.",
-                "한 번 해 보자!",
-                "모두가 알고 있었어.",
-                "그럴 기분 아니야."
+                "어제 나는 집에 있었어.",
+                "생각 좀 해봐.",
+                "저를 따라 하세요.",
+                "나 따라 해."
               ],
               "id": "korean_t6_2_0"
             },
             {
-              "type": "cloze",
-              "question": "모두가 ____ 있어.",
-              "answer": "알고",
+              "type": "translation",
+              "question": "Come on. Give it a try.",
+              "answer": "괜찮아. 한 번 해봐.",
               "choices": [
-                "어디서",
-                "알고",
-                "나도",
-                "무슨"
+                "너도 그거 들었어?",
+                "괜찮아. 한 번 해봐.",
+                "오늘 기분이 너무 안 좋아요.",
+                "내가 이상한 거야?"
               ],
               "id": "korean_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Everybody knew.",
-              "answer": "모두가 알고 있었어.",
+              "question": "Try again.",
+              "answer": "다시 한 번 해봐.",
               "words": [
-                "알고",
-                "있어?",
-                "있었어.",
-                "모두가",
-                "거야!"
+                "번",
+                "해봐.",
+                "번",
+                "기분",
+                "다시",
+                "한"
               ],
               "id": "korean_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "모두가 알고 있었어.",
-              "audio": "모두가 알고 있었어.",
+              "answer": "조용히 해 주세요.",
+              "audio": "조용히 해 주세요.",
               "id": "korean_t6_2_3"
             },
             {
@@ -1489,20 +1492,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Where did you see her?",
-                  "그녀를 어디서 봤어요?"
+                  "Everybody needs to be quiet.",
+                  "모두 조용히 해야 한다."
                 ],
                 [
-                  "I think they like you.",
-                  "그들이 널 좋아하는 것 같아."
+                  "Do you have plans tomorrow night?",
+                  "내일 밤에 할 거 있어?"
                 ],
                 [
-                  "Is there anyone that you like right now?",
-                  "지금 좋아하는 사람 있어?"
+                  "I'll kill him.",
+                  "나는 그를 죽일 것이다."
                 ],
                 [
-                  "What are you doing that for?",
-                  "그런 걸 하는 이유가 뭐야?"
+                  "Did you hear it too?",
+                  "너도 그거 들었어?"
                 ]
               ],
               "id": "korean_t6_2_4"
@@ -1515,47 +1518,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I need more time.",
-              "answer": "더 시간이 필요해요.",
+              "question": "He came to see me.",
+              "answer": "그는 나를 만나서 왔어요.",
               "choices": [
-                "한번 해 보는 거야!",
-                "그는 분명히 올 것이다.",
-                "그런 걸 하는 이유가 뭐야?",
-                "더 시간이 필요해요."
+                "손을 들어 보세요.",
+                "그 사람들은 막 바로 먹고 있어.",
+                "오늘 기분이 너무 안 좋아요.",
+                "그는 나를 만나서 왔어요."
               ],
               "id": "korean_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "우리는 ____ 필요해요.",
-              "answer": "당신이",
+              "question": "내가 말하는 대로 해, ____ 하는 대로 말고.",
+              "answer": "내가",
               "choices": [
-                "보자",
-                "당신이",
-                "있었어",
-                "해요"
+                "그는",
+                "내가",
+                "너무",
+                "오늘"
               ],
               "id": "korean_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "Take a chance!",
-              "answer": "한번 해 보는 거야!",
+              "question": "Please repeat after me.",
+              "answer": "저를 따라 하세요.",
               "words": [
-                "해",
-                "하고",
-                "거야!",
-                "한번",
-                "보는",
-                "있어?"
+                "따라",
+                "하세요.",
+                "거기에",
+                "저를",
+                "기분이"
               ],
               "id": "korean_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "너랑 있을 시간 없어.",
-              "audio": "너랑 있을 시간 없어.",
+              "answer": "나 따라 해.",
+              "audio": "나 따라 해.",
               "id": "korean_t6_3_3"
             },
             {
@@ -1564,20 +1566,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not in the mood.",
-                  "그럴 기분 아니야."
+                  "I'm waiting for her to come here.",
+                  "나는 그녀를 기다리고 있어요."
                 ],
                 [
-                  "I know how it feels too!",
-                  "그 기분 나도 알지!"
+                  "You will know soon enough.",
+                  "곧 충분히 알게 될거야."
                 ],
                 [
-                  "I feel so bad today.",
-                  "오늘 기분이 너무 안 좋아요."
+                  "Maybe this would help.",
+                  "아마 이게 도움이 될거야."
                 ],
                 [
-                  "I'm looking for something.",
-                  "뭔가 찾고 있다."
+                  "Aren't you going to go there?",
+                  "거기에 가 있지 않을 거야?"
                 ]
               ],
               "id": "korean_t6_3_4"
@@ -1596,46 +1598,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Raise your hand.",
-              "answer": "손을 들어 보세요.",
+              "question": "What's the best way to get there?",
+              "answer": "거기에 갈 수 있는 가장 좋은 방법이 뭐야?",
               "choices": [
-                "내가 이상한 거야?",
-                "손을 들어 보세요.",
-                "내가 말하는 대로 해, 내가 하는 대로 말고.",
-                "그는 나를 만나서 왔어요."
+                "얼마나 많은 사람들이 거기에 있었어?",
+                "거기에 갈 수 있는 가장 좋은 방법이 뭐야?",
+                "이걸 어떻게 하는지 아는 사람?",
+                "돈을 얼마나 가지고 계세요?"
               ],
               "id": "korean_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "어제 나는 ____ 있었어.",
-              "answer": "집에",
+              "question": "거기에 ____ 있다.",
+              "answer": "문제가",
               "choices": [
-                "해야",
-                "가장",
-                "있지",
-                "집에"
+                "있었어",
+                "다른",
+                "자신을",
+                "문제가"
               ],
               "id": "korean_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "Am I weird?",
-              "answer": "내가 이상한 거야?",
+              "question": "How many were there?",
+              "answer": "얼마나 많은 사람들이 거기에 있었어?",
               "words": [
-                "이상한",
-                "있어?",
-                "거야?",
-                "어제",
-                "내가"
+                "사람들이",
+                "있었어?",
+                "텐데.",
+                "좋은",
+                "거기에",
+                "얼마나",
+                "많은"
               ],
               "id": "korean_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "그 사람들은 막 바로 먹고 있어.",
-              "audio": "그 사람들은 막 바로 먹고 있어.",
+              "answer": "천천히 말해 주세요.",
+              "audio": "천천히 말해 주세요.",
               "id": "korean_t7_1_3"
             },
             {
@@ -1644,20 +1648,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Try it once more.",
-                  "다시 한번 해봐."
+                  "I don't want to live.",
+                  "살고 싶지 않아."
                 ],
                 [
-                  "Think about this.",
-                  "생각 좀 해봐."
+                  "I live here.",
+                  "여기에 살고 있어요."
                 ],
                 [
-                  "Come on. Give it a try.",
-                  "괜찮아. 한 번 해봐."
+                  "Dad wasn't in at the time.",
+                  "아빠는 그 때 집에 없었어요."
                 ],
                 [
-                  "Try again.",
-                  "다시 한 번 해봐."
+                  "I'll be OK.",
+                  "나는 괜찮을 거야."
                 ]
               ],
               "id": "korean_t7_1_4"
@@ -1670,48 +1674,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Please keep your voices down.",
-              "answer": "조용히 해 주세요.",
+              "question": "We are what we think we are.",
+              "answer": "우리는 우리가 생각하는 것이다.",
               "choices": [
-                "생각 좀 해봐.",
-                "조용히 해 주세요.",
-                "그 사람들은 막 바로 먹고 있어.",
-                "저를 따라 하세요."
+                "여기에 살고 있어요.",
+                "우리는 우리가 생각하는 것이다.",
+                "천천히 말해 주세요.",
+                "내가 다른 곳에 있다면 좋을 텐데."
               ],
               "id": "korean_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "모두 조용히 ____ 한다.",
-              "answer": "해야",
+              "question": "이렇게 생각하는 ____ 있다.",
+              "answer": "사람들이",
               "choices": [
-                "어제",
-                "해야",
-                "말고",
-                "거기에"
+                "가지고",
+                "사람들이",
+                "여기에",
+                "계세요"
               ],
               "id": "korean_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "Do you have plans tomorrow night?",
-              "answer": "내일 밤에 할 거 있어?",
+              "question": "He died yesterday.",
+              "answer": "그는 어제 죽었어",
               "words": [
-                "할",
-                "거",
-                "밤에",
-                "내일",
-                "생각",
-                "있어?",
-                "먹고"
+                "어제",
+                "물",
+                "갈",
+                "그는",
+                "죽었어"
               ],
               "id": "korean_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "나는 그를 죽일 것이다.",
-              "audio": "나는 그를 죽일 것이다.",
+              "answer": "아무도 안 죽었어.",
+              "audio": "아무도 안 죽었어.",
               "id": "korean_t7_2_3"
             },
             {
@@ -1720,20 +1722,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Did you hear it too?",
-                  "너도 그거 들었어?"
+                  "I hate it when there are a lot of people.",
+                  "사람 많은 게 싫어요."
                 ],
                 [
-                  "He came to see me.",
-                  "그는 나를 만나서 왔어요."
+                  "How much money do you have with you?",
+                  "돈을 얼마나 가지고 계세요?"
                 ],
                 [
-                  "Do as I say, not as I do.",
-                  "내가 말하는 대로 해, 내가 하는 대로 말고."
+                  "Does anybody here know how this thing works?",
+                  "이걸 어떻게 하는지 아는 사람?"
                 ],
                 [
-                  "Please repeat after me.",
-                  "저를 따라 하세요."
+                  "I wish I were somewhere else.",
+                  "내가 다른 곳에 있다면 좋을 텐데."
                 ]
               ],
               "id": "korean_t7_2_4"
@@ -1746,47 +1748,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Repeat after me.",
-              "answer": "나 따라 해.",
+              "question": "I wish I could fly.",
+              "answer": "내가 날 수 있다면 좋을 텐데.",
               "choices": [
-                "어제 나는 집에 있었어.",
-                "내가 말하는 대로 해, 내가 하는 대로 말고.",
-                "괜찮아. 한 번 해봐.",
-                "나 따라 해."
+                "거기에 문제가 있다.",
+                "이걸 어떻게 하는지 아는 사람?",
+                "아빠는 그 때 집에 없었어요.",
+                "내가 날 수 있다면 좋을 텐데."
               ],
               "id": "korean_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "나는 그녀를 ____ 있어요.",
-              "answer": "기다리고",
+              "question": "물 좀 ____ 제발.",
+              "answer": "주세요",
               "choices": [
-                "문제가",
-                "바로",
-                "기다리고",
-                "모두"
+                "없이",
+                "사람은",
+                "주세요",
+                "곳에"
               ],
               "id": "korean_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "You will know soon enough.",
-              "answer": "곧 충분히 알게 될거야.",
+              "question": "How long can a person live without water?",
+              "answer": "사람은 물 없이 얼마나 살 수 있어?",
               "words": [
-                "충분히",
-                "될거야.",
-                "충분히",
-                "곧",
-                "있었어?",
-                "알게"
+                "없이",
+                "수",
+                "물",
+                "살고",
+                "얼마나",
+                "있어?",
+                "살",
+                "사람은",
+                "있는"
               ],
               "id": "korean_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "아마 이게 도움이 될거야.",
-              "audio": "아마 이게 도움이 될거야.",
+              "answer": "물 좀 주세요.",
+              "audio": "물 좀 주세요.",
               "id": "korean_t7_3_3"
             },
             {
@@ -1795,20 +1800,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Aren't you going to go there?",
-                  "거기에 가 있지 않을 거야?"
+                  "Pick up the phone.",
+                  "전화 좀 받아."
                 ],
                 [
-                  "What's the best way to get there?",
-                  "거기에 갈 수 있는 가장 좋은 방법이 뭐야?"
+                  "They believe me.",
+                  "그 사람들은 날 믿어."
                 ],
                 [
-                  "That's where the problem is.",
-                  "거기에 문제가 있다."
+                  "Believe in yourselves.",
+                  "너 자신을 믿어."
                 ],
                 [
-                  "How many were there?",
-                  "얼마나 많은 사람들이 거기에 있었어?"
+                  "Please believe me.",
+                  "제발 제 말 좀 믿어 주세요."
                 ]
               ],
               "id": "korean_t7_3_4"
@@ -1827,278 +1832,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Please speak slowly.",
-              "answer": "천천히 말해 주세요.",
+              "question": "Mom, I don't want to wear this.",
+              "answer": "엄마, 난 이걸 입고 싶지 않아.",
               "choices": [
-                "이렇게 생각하는 사람들이 있다.",
-                "천천히 말해 주세요.",
-                "전화 좀 받아.",
-                "나는 괜찮을 거야."
+                "저는 돈이 없습니다.",
+                "엄마, 난 이걸 입고 싶지 않아.",
+                "이해가 안 됩니다.",
+                "우린 돈이 더 필요해."
               ],
               "id": "korean_t8_1_0"
             },
             {
-              "type": "cloze",
-              "question": "살고 ____ 않아.",
-              "answer": "싶지",
+              "type": "translation",
+              "question": "I said I would do that!",
+              "answer": "그건 내가 할 소리야.",
               "choices": [
-                "많은",
-                "얼마나",
-                "살고",
-                "싶지"
+                "진짜로 걱정 안 하지?",
+                "거의 다 끝났어?",
+                "어디서 전화를 걸 수 있죠?",
+                "그건 내가 할 소리야."
               ],
               "id": "korean_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "I live here.",
-              "answer": "여기에 살고 있어요.",
+              "question": "I don't understand.",
+              "answer": "이해가 안 됩니다.",
               "words": [
-                "살고",
-                "집에",
-                "있어요.",
-                "여기에",
-                "텐데."
+                "안",
+                "입고",
+                "됩니다.",
+                "이해가",
+                "그는"
               ],
               "id": "korean_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "아빠는 그 때 집에 없었어요.",
-              "audio": "아빠는 그 때 집에 없었어요.",
-              "id": "korean_t8_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Dad wasn't at home then.",
-                  "아빠는 그 때 집에 없었어요."
-                ],
-                [
-                  "I'll be OK.",
-                  "나는 괜찮을 거야."
-                ],
-                [
-                  "We are what we think we are.",
-                  "우리는 우리가 생각하는 것이다."
-                ],
-                [
-                  "There are people who think like this.",
-                  "이렇게 생각하는 사람들이 있다."
-                ]
-              ],
-              "id": "korean_t8_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "He died yesterday.",
-              "answer": "그는 어제 죽었어",
-              "choices": [
-                "내가 다른 곳에 있다면 좋을 텐데.",
-                "그는 어제 죽었어",
-                "아빠는 그 때 집에 없었어요.",
-                "내가 날 수 있다면 좋을 텐데."
-              ],
-              "id": "korean_t8_2_0"
-            },
-            {
-              "type": "translation",
-              "question": "Nobody died.",
-              "answer": "아무도 안 죽었어.",
-              "choices": [
-                "제발 제 말 좀 믿어 주세요.",
-                "아무도 안 죽었어.",
-                "그 사람들은 날 믿어.",
-                "엄마, 난 이걸 입고 싶지 않아."
-              ],
-              "id": "korean_t8_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I hate it when there are a lot of people.",
-              "answer": "사람 많은 게 싫어요.",
-              "words": [
-                "게",
-                "그",
-                "많은",
-                "제발",
-                "사람",
-                "싫어요."
-              ],
-              "id": "korean_t8_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "돈을 얼마나 가지고 계세요?",
-              "audio": "돈을 얼마나 가지고 계세요?",
-              "id": "korean_t8_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Does anybody here know how this thing works?",
-                  "이걸 어떻게 하는지 아는 사람?"
-                ],
-                [
-                  "I wish I were somewhere else.",
-                  "내가 다른 곳에 있다면 좋을 텐데."
-                ],
-                [
-                  "I wish I could fly.",
-                  "내가 날 수 있다면 좋을 텐데."
-                ],
-                [
-                  "Some water, please.",
-                  "물 좀 주세요, 제발."
-                ]
-              ],
-              "id": "korean_t8_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "How long can a person live without water?",
-              "answer": "사람은 물 없이 얼마나 살 수 있어?",
-              "choices": [
-                "전화 좀 받아.",
-                "내가 날 수 있다면 좋을 텐데.",
-                "사람 많은 게 싫어요.",
-                "사람은 물 없이 얼마나 살 수 있어?"
-              ],
-              "id": "korean_t8_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "Please give me some water.",
-              "answer": "물 좀 주세요.",
-              "choices": [
-                "나는 괜찮을 거야.",
-                "물 좀 주세요.",
-                "돈을 얼마나 가지고 계세요?",
-                "아빠는 그 때 집에 없었어요."
-              ],
-              "id": "korean_t8_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "Pick up the phone.",
-              "answer": "전화 좀 받아.",
-              "words": [
-                "좀",
-                "받아.",
-                "그",
-                "받아.",
-                "전화"
-              ],
-              "id": "korean_t8_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "그 사람들은 날 믿어.",
-              "audio": "그 사람들은 날 믿어.",
-              "id": "korean_t8_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Believe in yourselves.",
-                  "너 자신을 믿어."
-                ],
-                [
-                  "Please believe me.",
-                  "제발 제 말 좀 믿어 주세요."
-                ],
-                [
-                  "Please believe what I say.",
-                  "제발 제 말 좀 믿어 주세요."
-                ],
-                [
-                  "Mom, I don't want to wear this.",
-                  "엄마, 난 이걸 입고 싶지 않아."
-                ]
-              ],
-              "id": "korean_t8_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t9",
-      "title": "Longer Sentences 1",
-      "lessons": [
-        {
-          "id": "t9l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I said I would do that!",
-              "answer": "그건 내가 할 소리야.",
-              "choices": [
-                "우린 돈이 더 필요해.",
-                "그건 내가 할 소리야.",
-                "그는 전화를 기다리고 있다.",
-                "쓸 수 있어요?"
-              ],
-              "id": "korean_t9_1_0"
-            },
-            {
-              "type": "translation",
-              "question": "I don't understand.",
-              "answer": "이해가 안 됩니다.",
-              "choices": [
-                "아버지는 지금 집에 안 계세요.",
-                "이제 다 끝났어.",
-                "쓸 수 있어요?",
-                "이해가 안 됩니다."
-              ],
-              "id": "korean_t9_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "My dad is not home at the moment.",
-              "answer": "아버지는 지금 집에 안 계세요.",
-              "words": [
-                "지금",
-                "내가",
-                "끝났어?",
-                "계세요.",
-                "아버지는",
-                "집에",
-                "안"
-              ],
-              "id": "korean_t9_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
               "answer": "아버지는 지금 집에 안 계세요.",
               "audio": "아버지는 지금 집에 안 계세요.",
-              "id": "korean_t9_1_3"
+              "id": "korean_t8_1_3"
             },
             {
               "type": "match",
@@ -2122,12 +1896,12 @@
                   "우린 돈이 더 필요해."
                 ]
               ],
-              "id": "korean_t9_1_4"
+              "id": "korean_t8_1_4"
             }
           ]
         },
         {
-          "id": "t9l2",
+          "id": "t8l2",
           "title": "Lesson 2",
           "exercises": [
             {
@@ -2135,24 +1909,24 @@
               "question": "Nobody had any money.",
               "answer": "아무도 돈이 없었어.",
               "choices": [
-                "그는 전화를 기다리고 있다.",
-                "아무도 돈이 없었어.",
                 "분명 또 다른 방법이 있을거야.",
-                "나는 돈이 없어."
+                "아무도 돈이 없었어.",
+                "왜 우리 돈이 더 필요해?",
+                "저는 돈이 없습니다."
               ],
-              "id": "korean_t9_2_0"
+              "id": "korean_t8_2_0"
             },
             {
               "type": "cloze",
               "question": "왜 우리 ____ 더 필요해?",
               "answer": "돈이",
               "choices": [
-                "저는",
+                "시간",
                 "돈이",
-                "이해가",
-                "지금"
+                "분명",
+                "그걸"
               ],
-              "id": "korean_t9_2_1"
+              "id": "korean_t8_2_1"
             },
             {
               "type": "sentence",
@@ -2160,19 +1934,19 @@
               "answer": "저는 돈이 없습니다.",
               "words": [
                 "없습니다.",
-                "내",
-                "소리야.",
-                "저는",
-                "돈이"
+                "수",
+                "돈이",
+                "우린",
+                "저는"
               ],
-              "id": "korean_t9_2_2"
+              "id": "korean_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "문제는 없을 것 같아.",
               "audio": "문제는 없을 것 같아.",
-              "id": "korean_t9_2_3"
+              "id": "korean_t8_2_3"
             },
             {
               "type": "match",
@@ -2192,8 +1966,241 @@
                   "거의 다 끝났어?"
                 ],
                 [
-                  "Are you almost finished?",
-                  "거의 다 끝났어?"
+                  "There must be another way.",
+                  "분명 또 다른 방법이 있을거야."
+                ]
+              ],
+              "id": "korean_t8_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "He is waiting for a telephone call.",
+              "answer": "그는 전화를 기다리고 있다.",
+              "choices": [
+                "진짜로 걱정 안 하지?",
+                "이제 다 끝났어.",
+                "어디서 전화를 걸 수 있죠?",
+                "그는 전화를 기다리고 있다."
+              ],
+              "id": "korean_t8_3_0"
+            },
+            {
+              "type": "translation",
+              "question": "Where can I make a phone call?",
+              "answer": "어디서 전화를 걸 수 있죠?",
+              "choices": [
+                "이해가 안 됩니다.",
+                "어디서 전화를 걸 수 있죠?",
+                "그건 내가 할 소리야.",
+                "왜 우리 돈이 더 필요해?"
+              ],
+              "id": "korean_t8_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Is there something you want to tell me?",
+              "answer": "뭔가 할 말이 있니?",
+              "words": [
+                "할",
+                "있니?",
+                "말이",
+                "마.",
+                "수",
+                "뭔가"
+              ],
+              "id": "korean_t8_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "진짜로 걱정 안 하지?",
+              "audio": "진짜로 걱정 안 하지?",
+              "id": "korean_t8_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Do you really think I can do this?",
+                  "너 내가 그걸 할 수 있다고 진짜로 생각해?"
+                ],
+                [
+                  "No one believed me.",
+                  "아무도 날 믿지 않았어."
+                ],
+                [
+                  "I can't go any farther.",
+                  "나는 더 이상 멀리 갈 수 없다."
+                ],
+                [
+                  "Don't lie.",
+                  "거짓말 하지 마."
+                ]
+              ],
+              "id": "korean_t8_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "title": "Longer Sentences 1",
+      "lessons": [
+        {
+          "id": "t9l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Don't you lie!",
+              "answer": "거짓말 하지 마세요.",
+              "choices": [
+                "모두들 거기 있을 거야.",
+                "거짓말 하지 마세요.",
+                "내가 이걸 했다.",
+                "잠시만 기다려 주세요."
+              ],
+              "id": "korean_t9_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "나는 거짓말 ____ 않습니다.",
+              "answer": "하지",
+              "choices": [
+                "유일한",
+                "선생님이",
+                "이상",
+                "하지"
+              ],
+              "id": "korean_t9_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Don't lie to me.",
+              "answer": "내게 거짓말 하지 마.",
+              "words": [
+                "거짓말",
+                "마.",
+                "하지",
+                "하지",
+                "마.",
+                "내게"
+              ],
+              "id": "korean_t9_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "더 이상 거짓말 하지마, 알았어?",
+              "audio": "더 이상 거짓말 하지마, 알았어?",
+              "id": "korean_t9_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Don't lie to us.",
+                  "우리에게 거짓말 하지 마."
+                ],
+                [
+                  "I have money for you.",
+                  "너에게 줄 돈이 있다."
+                ],
+                [
+                  "Sorry?",
+                  "잘 못 들었어요."
+                ],
+                [
+                  "I think that we're still too young.",
+                  "우린 아직 너무 어린 것 같아."
+                ]
+              ],
+              "id": "korean_t9_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t9l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "He's not going to visit you tomorrow.",
+              "answer": "그 사람은 내일 너를 보러 가지 않을 거야.",
+              "choices": [
+                "우리에게 거짓말 하지 마.",
+                "그 사람은 내일 너를 보러 가지 않을 거야.",
+                "알 것 같습니다.",
+                "영화 보러 가요."
+              ],
+              "id": "korean_t9_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "난 학교 ____ 게 좋아.",
+              "answer": "가는",
+              "choices": [
+                "내일",
+                "가는",
+                "내게",
+                "이상"
+              ],
+              "id": "korean_t9_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "He wants to be a schoolteacher.",
+              "answer": "그는 학교 선생님이 되고 싶어 해.",
+              "words": [
+                "선생님이",
+                "되고",
+                "학교",
+                "해.",
+                "그는",
+                "갖고",
+                "싶어",
+                "거야."
+              ],
+              "id": "korean_t9_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "우리 오늘 저녁 어디서 먹어?",
+              "audio": "우리 오늘 저녁 어디서 먹어?",
+              "id": "korean_t9_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Everyone's going to be there.",
+                  "모두들 거기 있을 거야."
+                ],
+                [
+                  "That was me.",
+                  "내가 이걸 했다."
+                ],
+                [
+                  "I'm the only person who did that.",
+                  "내가 그걸 한 유일한 사람이야."
+                ],
+                [
+                  "You took the words right out of my mouth.",
+                  "내 말이 바로 그 말이다."
                 ]
               ],
               "id": "korean_t9_2_4"
@@ -2206,48 +2213,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "There must be another way.",
-              "answer": "분명 또 다른 방법이 있을거야.",
+              "question": "I'll do this.",
+              "answer": "저는 이거 할게요.",
               "choices": [
-                "이해가 안 됩니다.",
-                "내 시간 끝났어?",
-                "그건 내 생각이 아니다.",
-                "분명 또 다른 방법이 있을거야."
+                "나는 거짓말 하지 않습니다.",
+                "난 학교 가는 게 좋아.",
+                "더 이상 거짓말 하지마, 알았어?",
+                "저는 이거 할게요."
               ],
               "id": "korean_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "그는 전화를 ____ 있다.",
-              "answer": "기다리고",
+              "question": "영화 ____ 가요.",
+              "answer": "보러",
               "choices": [
-                "있어요",
-                "기다리고",
-                "소리야",
-                "저는"
+                "있을",
+                "보러",
+                "갖고",
+                "나는"
               ],
               "id": "korean_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "Where can I make a phone call?",
-              "answer": "어디서 전화를 걸 수 있죠?",
+              "question": "I could only find two.",
+              "answer": "두 개 밖에 못 찾았어.",
               "words": [
-                "걸",
-                "수",
-                "내가",
-                "어디서",
-                "것",
-                "있죠?",
-                "전화를"
+                "밖에",
+                "못",
+                "밖에",
+                "두",
+                "난",
+                "찾았어.",
+                "개"
               ],
               "id": "korean_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "뭔가 할 말이 있니?",
-              "audio": "뭔가 할 말이 있니?",
+              "answer": "정확히 얼마 들었어?",
+              "audio": "정확히 얼마 들었어?",
               "id": "korean_t9_3_3"
             },
             {
@@ -2256,20 +2263,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is there something that you want to tell me?",
-                  "뭔가 할 말이 있니?"
+                  "Do you have the picture?",
+                  "사진 갖고 있어?"
                 ],
                 [
-                  "Is there something you wish to tell me?",
-                  "뭔가 할 말이 있니?"
+                  "Have you already sharpened the knives?",
+                  "칼 가는 거 벌써 다 했어?"
                 ],
                 [
-                  "Is there something you want to say?",
-                  "뭔가 할 말이 있니?"
+                  "Please wait a moment.",
+                  "잠시만 기다려 주세요."
                 ],
                 [
-                  "Is there something that you wish to tell me?",
-                  "뭔가 할 말이 있니?"
+                  "I think I understand.",
+                  "알 것 같습니다."
                 ]
               ],
               "id": "korean_t9_3_4"
@@ -2288,51 +2295,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is there something that you want to say?",
-              "answer": "뭔가 할 말이 있니?",
+              "question": "You are not an idiot!",
+              "answer": "너 바보 아냐!",
               "choices": [
-                "그는 학교 선생님이 되고 싶어 해.",
-                "뭔가 할 말이 있니?",
-                "그 사람은 내일 너를 보러 가지 않을 거야.",
-                "내게 거짓말 하지 마."
+                "가만히 좀 들어.",
+                "너 바보 아냐!",
+                "경찰이 너를 찾고 있다",
+                "제가 많이 일찍 왔어요."
               ],
               "id": "korean_t10_1_0"
             },
             {
-              "type": "translation",
-              "question": "You're not really worried, are you?",
-              "answer": "진짜로 걱정 안 하지?",
+              "type": "cloze",
+              "question": "바보 같은 ____ 하지 마!",
+              "answer": "소리",
               "choices": [
-                "거짓말 하지 마!",
-                "내가 이걸 했다.",
-                "모두들 거기 있을 거야.",
-                "진짜로 걱정 안 하지?"
+                "만난",
+                "여기",
+                "열심히",
+                "소리"
               ],
               "id": "korean_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "Do you really think I can do this?",
-              "answer": "너 내가 그걸 할 수 있다고 진짜로 생각해?",
+              "question": "Call me.",
+              "answer": "전화 좀 해줘.",
               "words": [
-                "내가",
-                "그걸",
-                "할",
-                "있다고",
-                "모두들",
-                "진짜로",
-                "이상",
-                "너",
-                "생각해?",
-                "수"
+                "해줘.",
+                "심지어",
+                "좀",
+                "전화",
+                "거짓말"
               ],
               "id": "korean_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "아무도 날 믿지 않았어.",
-              "audio": "아무도 날 믿지 않았어.",
+              "answer": "이제 충분히 했습니다.",
+              "audio": "이제 충분히 했습니다.",
               "id": "korean_t10_1_3"
             },
             {
@@ -2341,20 +2343,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I can't go any farther.",
-                  "나는 더 이상 멀리 갈 수 없다."
+                  "Do you come here a lot?",
+                  "여기 자주 와?"
                 ],
                 [
-                  "Don't lie.",
-                  "거짓말 하지 마."
+                  "Why are you lying?",
+                  "왜 거짓말 하는거야?"
                 ],
                 [
-                  "Don't you lie!",
-                  "거짓말 하지 마."
+                  "Stay a while and listen.",
+                  "가만히 좀 들어."
                 ],
                 [
-                  "I don't lie.",
-                  "나는 거짓말 하지 않습니다."
+                  "Do you know this song?",
+                  "이 노래 알아?"
                 ]
               ],
               "id": "korean_t10_1_4"
@@ -2367,47 +2369,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Don't lie to me.",
-              "answer": "내게 거짓말 하지 마.",
+              "question": "This is a dangerous job.",
+              "answer": "이건 위험한 일이야.",
               "choices": [
-                "진짜로 걱정 안 하지?",
-                "내게 거짓말 하지 마.",
-                "거짓말 하지 마세요.",
-                "내가 그걸 한 유일한 사람이야."
+                "왜 거짓말을 해요?",
+                "이건 위험한 일이야.",
+                "그 사람을 아세요?",
+                "바보 같은 소리 하지 마!"
               ],
               "id": "korean_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "더 이상 ____ 하지마, 알았어?",
-              "answer": "거짓말",
+              "question": "너는 열심히 ____ 한다.",
+              "answer": "일을",
               "choices": [
-                "생각해",
-                "거짓말",
-                "걱정",
-                "우리"
+                "하지",
+                "일을",
+                "알아",
+                "했습니다"
               ],
               "id": "korean_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "Don't lie to us.",
-              "answer": "우리에게 거짓말 하지 마.",
+              "question": "The police are looking for you.",
+              "answer": "경찰이 너를 찾고 있다",
               "words": [
-                "있니?",
-                "하지",
-                "마.",
-                "우리에게",
-                "말이",
-                "거짓말"
+                "딸이",
+                "찾고",
+                "있다",
+                "경찰이",
+                "바보",
+                "너를"
               ],
               "id": "korean_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "거짓말 하지 마세요.",
-              "audio": "거짓말 하지 마세요.",
+              "answer": "나는 그녀를 만난 적이 없다.",
+              "audio": "나는 그녀를 만난 적이 없다.",
               "id": "korean_t10_2_3"
             },
             {
@@ -2416,20 +2418,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Stop lying!",
-                  "거짓말 하지 마!"
+                  "I came very early.",
+                  "제가 많이 일찍 왔어요."
                 ],
                 [
-                  "I have money for you.",
-                  "너에게 줄 돈이 있다."
+                  "We'll learn the truth soon.",
+                  "우리는 곧 진실을 알게 될거야."
                 ],
                 [
-                  "Sorry?",
-                  "잘 못 들었어요."
+                  "Do you know that person?",
+                  "그 사람을 아세요?"
                 ],
                 [
-                  "I think that we're still too young.",
-                  "우린 아직 너무 어린 것 같아."
+                  "I wasn't even here.",
+                  "난 심지어 여기에 없었어."
                 ]
               ],
               "id": "korean_t10_2_4"
@@ -2442,49 +2444,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's not going to visit you tomorrow.",
-              "answer": "그 사람은 내일 너를 보러 가지 않을 거야.",
+              "question": "Tell me what you gave him.",
+              "answer": "당신이 그에게 준 것을 얘기해 주세요.",
               "choices": [
-                "거짓말 하지 마세요.",
-                "내가 이걸 했다.",
-                "모두들 거기 있을 거야.",
-                "그 사람은 내일 너를 보러 가지 않을 거야."
+                "우리는 거짓말을 하지 않아요.",
+                "우리는 내일 아침에 집을 떠날 것이다.",
+                "커피 한 잔?",
+                "당신이 그에게 준 것을 얘기해 주세요."
               ],
               "id": "korean_t10_3_0"
             },
             {
-              "type": "cloze",
-              "question": "난 학교 ____ 게 좋아.",
-              "answer": "가는",
+              "type": "translation",
+              "question": "Do you want a cup of coffee?",
+              "answer": "커피 한 잔?",
               "choices": [
-                "돈이",
-                "가는",
-                "이걸",
-                "되고"
+                "우리는 내일 아침에 집을 떠날 것이다.",
+                "커피 한 잔?",
+                "이건 위험한 일이야.",
+                "아무도 거짓말을 안 했어."
               ],
               "id": "korean_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "He wants to be a schoolteacher.",
-              "answer": "그는 학교 선생님이 되고 싶어 해.",
+              "question": "We'll leave the house tomorrow morning.",
+              "answer": "우리는 내일 아침에 집을 떠날 것이다.",
               "words": [
-                "해.",
-                "되고",
-                "멀리",
-                "그는",
-                "학교",
+                "것이다.",
+                "집을",
+                "하지",
+                "우리는",
                 "내일",
-                "선생님이",
-                "싶어"
+                "해줘.",
+                "아침에",
+                "떠날"
               ],
               "id": "korean_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "우리 오늘 저녁 어디서 먹어?",
-              "audio": "우리 오늘 저녁 어디서 먹어?",
+              "answer": "나는 딸이 셋 있다.",
+              "audio": "나는 딸이 셋 있다.",
               "id": "korean_t10_3_3"
             },
             {
@@ -2493,20 +2495,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Where do we eat dinner tonight?",
-                  "우리 오늘 저녁 어디서 먹어?"
+                  "We have two daughters.",
+                  "우리는 두 딸이 있다."
                 ],
                 [
-                  "Everyone's going to be there.",
-                  "모두들 거기 있을 거야."
+                  "Why do you lie?",
+                  "왜 거짓말을 해요?"
                 ],
                 [
-                  "That was me.",
-                  "내가 이걸 했다."
+                  "We don't lie.",
+                  "우리는 거짓말을 하지 않아요."
                 ],
                 [
-                  "I'm the only person who did that.",
-                  "내가 그걸 한 유일한 사람이야."
+                  "Nobody lied.",
+                  "아무도 거짓말을 안 했어."
                 ]
               ],
               "id": "korean_t10_3_4"

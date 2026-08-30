@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-europe",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "Me neither.",
               "answer": "И не я.",
               "choices": [
-                "И я нет!",
+                "Это не мы.",
                 "И не я.",
-                "Нет, это не я. Это ты!",
-                "Это не мы."
+                "Вы не я.",
+                "Это он, да?"
               ],
               "id": "russian_t1_1_0"
             },
@@ -228,31 +228,31 @@
               "question": "Ты ____ я.",
               "answer": "не",
               "choices": [
-                "ты",
-                "мы",
-                "он",
+                "да",
+                "вы",
+                "это",
                 "не"
               ],
               "id": "russian_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "You're not me.",
-              "answer": "Ты не я.",
+              "question": "I'm not you!",
+              "answer": "Я не ты!",
               "words": [
                 "не",
-                "я.",
-                "ты.",
-                "Ты",
-                "ты"
+                "ты!",
+                "ты",
+                "Я",
+                "Вы"
               ],
               "id": "russian_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ты не я.",
-              "audio": "Ты не я.",
+              "answer": "Это не я.",
+              "audio": "Это не я.",
               "id": "russian_t1_1_3"
             },
             {
@@ -261,20 +261,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not you!",
-                  "Я не ты!"
+                  "You are not me.",
+                  "Ты — это не я."
                 ],
                 [
                   "It isn't him.",
                   "Это не он."
                 ],
                 [
-                  "That isn't him.",
-                  "Это не он."
+                  "It's not us.",
+                  "Это не мы."
                 ],
                 [
-                  "That's not him.",
-                  "Это не он."
+                  "I am like you.",
+                  "Я как ты."
                 ]
               ],
               "id": "russian_t1_1_4"
@@ -287,46 +287,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's not us.",
-              "answer": "Это не мы.",
+              "question": "I am like him.",
+              "answer": "Я как он.",
               "choices": [
-                "Это не он.",
-                "Это не мы.",
-                "Это ты мне?",
-                "Ты не я."
+                "И да и нет.",
+                "Я как он.",
+                "Ты не я.",
+                "Это не он."
               ],
               "id": "russian_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Я ____ ты.",
+              "question": "Ты ____ он.",
               "answer": "как",
               "choices": [
-                "нет",
-                "Нет",
+                "Ты",
+                "что",
                 "как",
-                "Вы"
+                "он"
               ],
               "id": "russian_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "I am like him.",
-              "answer": "Я как он.",
+              "question": "You're not me.",
+              "answer": "Вы не я.",
               "words": [
-                "ты!",
+                "Ты",
                 "и",
-                "он.",
-                "Я",
-                "как"
+                "я.",
+                "Вы",
+                "не"
               ],
               "id": "russian_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ты как он.",
-              "audio": "Ты как он.",
+              "answer": "Я как вы.",
+              "audio": "Я как вы.",
               "id": "russian_t1_2_3"
             },
             {
@@ -335,20 +335,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm like you.",
-                  "Я как ты."
-                ],
-                [
-                  "Are you like him?",
-                  "Ты как он?"
-                ],
-                [
                   "You're like me.",
                   "Вы как я."
                 ],
                 [
+                  "It's him, isn't it?",
+                  "Это он, да?"
+                ],
+                [
                   "Oh, yeah?",
                   "Да ты что?"
+                ],
+                [
+                  "This is not for me.",
+                  "Это не мне."
                 ]
               ],
               "id": "russian_t1_2_4"
@@ -361,46 +361,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No kidding.",
-              "answer": "Да ты что.",
+              "question": "Did you say this to me?",
+              "answer": "Это ты мне?",
               "choices": [
-                "Ты не я.",
-                "Это ты мне?",
-                "Нет, это не я! Это ты!",
-                "Да ты что."
+                "Вы не я.",
+                "Это он, да?",
+                "Это не я.",
+                "Это ты мне?"
               ],
               "id": "russian_t1_3_0"
             },
             {
-              "type": "cloze",
-              "question": "Это ____ мне?",
-              "answer": "ты",
+              "type": "translation",
+              "question": "No, it's not me. It's you!",
+              "answer": "Нет, это не я. Это ты!",
               "choices": [
-                "Вы",
-                "ты",
-                "Это",
-                "он"
+                "Это не мы.",
+                "Нет, это не я. Это ты!",
+                "Это не я.",
+                "Я не ты!"
               ],
               "id": "russian_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "You just said that to me?",
-              "answer": "Это ты мне?",
+              "question": "Yes and no.",
+              "answer": "И да и нет.",
               "words": [
-                "мне?",
-                "нет.",
+                "да",
                 "и",
-                "Это",
-                "ты"
+                "нет.",
+                "мне.",
+                "вы!",
+                "И"
               ],
               "id": "russian_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Нет, это не я. Это ты!",
-              "audio": "Нет, это не я. Это ты!",
+              "answer": "И я нет!",
+              "audio": "И я нет!",
               "id": "russian_t1_3_3"
             },
             {
@@ -409,20 +410,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes and no.",
-                  "И да и нет."
-                ],
-                [
-                  "Neither do I!",
-                  "И я нет!"
-                ],
-                [
-                  "Neither am I!",
-                  "И я нет!"
-                ],
-                [
                   "No, it is not me! It is you!",
-                  "Нет, это не я! Это ты!"
+                  "Нет, это не я! Это вы!"
+                ],
+                [
+                  "No, that's not him.",
+                  "Нет, это не он."
+                ],
+                [
+                  "What do I have?",
+                  "Что у меня?"
+                ],
+                [
+                  "It is not so.",
+                  "Это не так."
                 ]
               ],
               "id": "russian_t1_3_4"
@@ -441,46 +442,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No, that's not him.",
-              "answer": "Нет, это не он.",
+              "question": "How come?",
+              "answer": "Как это так?",
               "choices": [
-                "Это не я, а ты!",
-                "Нет, это не он.",
-                "Это не так?",
-                "Это не ты, а я!"
+                "Нет, это не так.",
+                "Как это так?",
+                "Нет, не я, а ты!",
+                "Вы как она?"
               ],
               "id": "russian_t2_1_0"
             },
             {
-              "type": "translation",
-              "question": "What do I have?",
-              "answer": "Что у меня?",
+              "type": "cloze",
+              "question": "Что ____ так?",
+              "answer": "не",
               "choices": [
-                "Нет, это не так.",
-                "Это не так?",
-                "Это не так.",
-                "Что у меня?"
+                "Это",
+                "его",
+                "Нет",
+                "не"
               ],
               "id": "russian_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "It is not so.",
-              "answer": "Это не так.",
+              "question": "No, it's not like that.",
+              "answer": "Нет, это не так.",
               "words": [
-                "А",
-                "я!",
+                "вы!",
+                "так.",
                 "не",
-                "Это",
-                "так."
+                "—",
+                "это",
+                "Нет,"
               ],
               "id": "russian_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Как это так?",
-              "audio": "Как это так?",
+              "answer": "Нет, не я, а ты!",
+              "audio": "Нет, не я, а ты!",
               "id": "russian_t2_1_3"
             },
             {
@@ -489,20 +491,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Isn't it so?",
-                  "Это не так?"
+                  "It's not you, it's me!",
+                  "Это не ты, а я!"
                 ],
                 [
-                  "It's not like that.",
-                  "Это не так."
+                  "No, not me, but you!",
+                  "Нет, не я, а вы!"
                 ],
                 [
-                  "That's not so.",
-                  "Это не так."
+                  "It's not me, it's you!",
+                  "Это не я, а ты!"
                 ],
                 [
-                  "What is wrong?",
-                  "Что не так?"
+                  "Not me. And you?",
+                  "Я нет, а ты?"
                 ]
               ],
               "id": "russian_t2_1_4"
@@ -515,47 +517,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No, it's not like that.",
-              "answer": "Нет, это не так.",
+              "question": "What's wrong?",
+              "answer": "А что не так?",
               "choices": [
-                "Это не так!",
-                "Нет, это не так.",
-                "Это не его.",
-                "Что у меня?"
+                "Я — это ты, а ты — это я.",
+                "А что не так?",
+                "Что не так?",
+                "Это не его."
               ],
               "id": "russian_t2_2_0"
             },
             {
-              "type": "cloze",
-              "question": "Это ____ так!",
-              "answer": "не",
+              "type": "translation",
+              "question": "I am you and you are me.",
+              "answer": "Я — это ты, а ты — это я.",
               "choices": [
-                "это",
-                "не",
-                "нет",
-                "его"
+                "Нет, это не так.",
+                "Я — это ты, а ты — это я.",
+                "Он у тебя?",
+                "У меня его нет."
               ],
               "id": "russian_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "No! That's not the case.",
-              "answer": "Нет! Это не так.",
+              "question": "This is not his.",
+              "answer": "Это не его.",
               "words": [
                 "не",
-                "так?",
+                "ты,",
+                "Он",
                 "Это",
-                "Нет!",
-                "он.",
-                "так."
+                "его."
               ],
               "id": "russian_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не так.",
-              "audio": "Это не так.",
+              "answer": "У меня его нет.",
+              "audio": "У меня его нет.",
               "id": "russian_t2_2_3"
             },
             {
@@ -564,20 +565,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It isn't so.",
-                  "Это не так."
+                  "No, I don't have it.",
+                  "Нет, у меня его нет."
                 ],
                 [
-                  "It's not so.",
-                  "Это не так."
+                  "I'm not like everybody else.",
+                  "Я — не все."
                 ],
                 [
-                  "That's not true.",
-                  "Это не так."
+                  "How are y'all?",
+                  "Как вы все?"
                 ],
                 [
-                  "That is not true.",
-                  "Это не так."
+                  "It isn't her.",
+                  "Это не она."
                 ]
               ],
               "id": "russian_t2_2_4"
@@ -590,48 +591,52 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No I'm not; you are!",
-              "answer": "Нет, не я, а ты!",
+              "question": "You're like her.",
+              "answer": "Ты как она.",
               "choices": [
+                "Я — это ты, а ты — это я.",
+                "Это не его.",
                 "Что не так?",
-                "Как это так?",
-                "Что у меня?",
-                "Нет, не я, а ты!"
+                "Ты как она."
               ],
               "id": "russian_t2_3_0"
             },
             {
-              "type": "translation",
-              "question": "No, not me, but you!",
-              "answer": "Нет, не я, а ты!",
+              "type": "cloze",
+              "question": "Он ____ она.",
+              "answer": "как",
               "choices": [
-                "Что у меня?",
-                "Нет, не я, а ты!",
-                "Я — это ты, а ты — это я.",
-                "Как это так?"
+                "все",
+                "как",
+                "это",
+                "она"
               ],
               "id": "russian_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "It's not you, it's me!",
-              "answer": "Это не ты, а я!",
+              "question": "He's him and she's her.",
+              "answer": "Он — это он, а она — это она.",
               "words": [
-                "ты,",
-                "а",
-                "я!",
-                "я,",
-                "не",
+                "—",
+                "—",
+                "я.",
                 "Это",
-                "он."
+                "это",
+                "а",
+                "она",
+                "Он",
+                "он,",
+                "она.",
+                "это"
               ],
               "id": "russian_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не я, а ты!",
-              "audio": "Это не я, а ты!",
+              "answer": "Вы как она?",
+              "audio": "Вы как она?",
               "id": "russian_t2_3_3"
             },
             {
@@ -640,20 +645,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Not me. And you?",
-                  "Я нет, а ты?"
+                  "No, that's not her.",
+                  "Нет, это не она."
                 ],
                 [
-                  "What's wrong?",
-                  "А что не так?"
+                  "What is it that you got?",
+                  "Что это у тебя?"
                 ],
                 [
-                  "I am you and you are me.",
-                  "Я — это ты, а ты — это я."
+                  "What have you got?",
+                  "Что у тебя?"
                 ],
                 [
-                  "This is not his.",
-                  "Это не его."
+                  "Do you have it?",
+                  "Он у тебя?"
                 ]
               ],
               "id": "russian_t2_3_4"
@@ -672,46 +677,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't have one.",
-              "answer": "У меня его нет.",
+              "question": "I'm at your place.",
+              "answer": "Я у тебя.",
               "choices": [
-                "Это не его.",
-                "У меня его нет.",
-                "Что это у тебя?",
-                "Как вы все?"
+                "Это же он!",
+                "Я у тебя.",
+                "Как тебе это?",
+                "Это так просто."
               ],
               "id": "russian_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "Нет, у ____ его нет.",
-              "answer": "меня",
+              "question": "О нет, ____ он!",
+              "answer": "это",
               "choices": [
-                "если",
-                "Что",
                 "Не",
-                "меня"
+                "бы",
+                "если",
+                "это"
               ],
               "id": "russian_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "It's not his.",
-              "answer": "Это не его.",
+              "question": "And if not?",
+              "answer": "А если нет?",
               "words": [
-                "его.",
-                "тебя.",
-                "не",
-                "это",
-                "Это"
+                "нет?",
+                "тебе",
+                "если",
+                "О",
+                "А"
               ],
               "id": "russian_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У меня его нет.",
-              "audio": "У меня его нет.",
+              "answer": "Не за что.",
+              "audio": "Не за что.",
               "id": "russian_t3_1_3"
             },
             {
@@ -720,20 +725,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not like everybody else.",
-                  "Я — не все."
+                  "No problem.",
+                  "Да не за что."
                 ],
                 [
-                  "How are y'all?",
-                  "Как вы все?"
+                  "My ass!",
+                  "Как бы не так!"
                 ],
                 [
-                  "It isn't her.",
-                  "Это не она."
+                  "What do you think of this?",
+                  "Как тебе это?"
                 ],
                 [
-                  "That isn't her.",
-                  "Это не она."
+                  "This is not for you.",
+                  "Это не тебе."
                 ]
               ],
               "id": "russian_t3_1_4"
@@ -746,277 +751,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You're like her.",
-              "answer": "Ты как она.",
+              "question": "How do you like it?",
+              "answer": "Как он тебе?",
               "choices": [
-                "Нет, у меня его нет.",
-                "Ты как она.",
-                "Не за что.",
-                "Ты как она?"
+                "Как тебе это?",
+                "Как он тебе?",
+                "Как мне это есть?",
+                "Они у тебя есть?"
               ],
               "id": "russian_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ты ____ она?",
-              "answer": "как",
+              "question": "Это как ____ так?",
+              "answer": "они",
               "choices": [
-                "за",
-                "Нет",
-                "как",
-                "Ты"
+                "он",
+                "Не",
+                "они",
+                "так"
               ],
               "id": "russian_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "He's like her.",
-              "answer": "Он как она.",
+              "question": "It isn't them.",
+              "answer": "Это не они.",
               "words": [
-                "как",
-                "она.",
-                "что!",
-                "нет.",
-                "Он"
+                "не",
+                "они.",
+                "тебя.",
+                "Да,",
+                "Это"
               ],
               "id": "russian_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не она.",
-              "audio": "Это не она.",
-              "id": "russian_t3_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "He's him and she's her.",
-                  "Он — это он, а она — это она."
-                ],
-                [
-                  "No, that's not her.",
-                  "Нет, это не она."
-                ],
-                [
-                  "What is it that you got?",
-                  "Что это у тебя?"
-                ],
-                [
-                  "What have you got?",
-                  "Что у тебя?"
-                ]
-              ],
-              "id": "russian_t3_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t3l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Do you have it?",
-              "answer": "Он у тебя?",
-              "choices": [
-                "Он — это он, а она — это она.",
-                "Это не она.",
-                "Я — не все.",
-                "Он у тебя?"
-              ],
-              "id": "russian_t3_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "I'm at your place.",
-              "answer": "Я у тебя.",
-              "choices": [
-                "Нет, это не она.",
-                "Я у тебя.",
-                "Не за что!",
-                "Что это у тебя?"
-              ],
-              "id": "russian_t3_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "Oh no, it's him!",
-              "answer": "О нет, это он!",
-              "words": [
-                "нет,",
-                "он!",
-                "как",
-                "Он",
-                "О",
-                "это"
-              ],
-              "id": "russian_t3_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "А если нет?",
-              "audio": "А если нет?",
-              "id": "russian_t3_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "It was nothing.",
-                  "Не за что."
-                ],
-                [
-                  "Do not thank me.",
-                  "Не за что."
-                ],
-                [
-                  "You're welcome!",
-                  "Не за что!"
-                ],
-                [
-                  "Think nothing of it.",
-                  "Не за что."
-                ]
-              ],
-              "id": "russian_t3_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t4",
-      "title": "Short Sentences 2",
-      "lessons": [
-        {
-          "id": "t4l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "No problem.",
-              "answer": "Да не за что.",
-              "choices": [
-                "А как же я?",
-                "Да не за что.",
-                "Как бы не так!",
-                "Это не они."
-              ],
-              "id": "russian_t4_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Не ____ что!",
-              "answer": "за",
-              "choices": [
-                "как",
-                "Не",
-                "не",
-                "за"
-              ],
-              "id": "russian_t4_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "My ass!",
-              "answer": "Как бы не так!",
-              "words": [
-                "Ты",
-                "не",
-                "бы",
-                "Как",
-                "так!",
-                "не"
-              ],
-              "id": "russian_t4_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Как тебе это?",
-              "audio": "Как тебе это?",
-              "id": "russian_t4_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "This is not for you.",
-                  "Это не тебе."
-                ],
-                [
-                  "That's not for you.",
-                  "Это не тебе."
-                ],
-                [
-                  "How do you like it?",
-                  "Как он тебе?"
-                ],
-                [
-                  "How're they doing that?",
-                  "Это как они так?"
-                ]
-              ],
-              "id": "russian_t4_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t4l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "It isn't them.",
-              "answer": "Это не они.",
-              "choices": [
-                "Это так просто.",
-                "Это не они.",
-                "Как тебе это?",
-                "Это не тебе."
-              ],
-              "id": "russian_t4_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Это ____ они.",
-              "answer": "не",
-              "choices": [
-                "Это",
-                "не",
-                "Ты",
-                "за"
-              ],
-              "id": "russian_t4_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "You're like them.",
               "answer": "Ты как они.",
-              "words": [
-                "как",
-                "они.",
-                "мне",
-                "Ты",
-                "не"
-              ],
-              "id": "russian_t4_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Это не они.",
-              "audio": "Это не они.",
-              "id": "russian_t4_2_3"
+              "audio": "Ты как они.",
+              "id": "russian_t3_2_3"
             },
             {
               "type": "match",
@@ -1036,16 +811,16 @@
                   "Это же он!"
                 ],
                 [
-                  "This one is him.",
-                  "Это же он."
+                  "That's true.",
+                  "Так и есть."
                 ]
               ],
-              "id": "russian_t4_2_4"
+              "id": "russian_t3_2_4"
             }
           ]
         },
         {
-          "id": "t4l3",
+          "id": "t3l3",
           "title": "Lesson 3",
           "exercises": [
             {
@@ -1053,45 +828,45 @@
               "question": "Do you have one?",
               "answer": "У тебя есть?",
               "choices": [
-                "Как он тебе?",
-                "Как тебе это?",
-                "А как же я?",
+                "Да не за что.",
+                "Как бы не так!",
+                "У меня все они есть.",
                 "У тебя есть?"
               ],
-              "id": "russian_t4_3_0"
+              "id": "russian_t3_3_0"
             },
             {
               "type": "cloze",
               "question": "У меня ____ они есть.",
               "answer": "все",
               "choices": [
-                "не",
+                "он",
                 "все",
-                "мне",
-                "это"
+                "просто",
+                "они"
               ],
-              "id": "russian_t4_3_1"
+              "id": "russian_t3_3_1"
             },
             {
               "type": "sentence",
               "question": "How do I eat this?",
               "answer": "Как мне это есть?",
               "words": [
-                "меня",
-                "есть?",
-                "это",
-                "У",
                 "мне",
-                "Как"
+                "есть?",
+                "О",
+                "меня",
+                "Как",
+                "это"
               ],
-              "id": "russian_t4_3_2"
+              "id": "russian_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Они у тебя есть?",
               "audio": "Они у тебя есть?",
-              "id": "russian_t4_3_3"
+              "id": "russian_t3_3_3"
             },
             {
               "type": "match",
@@ -1107,12 +882,243 @@
                   "У тебя есть я."
                 ],
                 [
-                  "Yes, that's the case.",
+                  "Yes, that is true.",
                   "Да, так и есть."
                 ],
                 [
                   "It's so easy.",
                   "Это так просто."
+                ]
+              ],
+              "id": "russian_t3_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "Short Sentences 2",
+      "lessons": [
+        {
+          "id": "t4l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "It isn't that simple.",
+              "answer": "Это не так просто.",
+              "choices": [
+                "Мы все здесь.",
+                "Это не так просто.",
+                "Это не для меня.",
+                "Это же хорошо?"
+              ],
+              "id": "russian_t4_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Это ____ тебя!",
+              "answer": "для",
+              "choices": [
+                "Ну",
+                "просто",
+                "не",
+                "для"
+              ],
+              "id": "russian_t4_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "This isn't for you.",
+              "answer": "Это не для тебя.",
+              "words": [
+                "Да,",
+                "же",
+                "не",
+                "Это",
+                "тебя.",
+                "для"
+              ],
+              "id": "russian_t4_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Это для меня.",
+              "audio": "Это для меня.",
+              "id": "russian_t4_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "This isn't for me.",
+                  "Это не для меня."
+                ],
+                [
+                  "It's not easy for me.",
+                  "Для меня это не просто."
+                ],
+                [
+                  "They aren't for you.",
+                  "Они не для тебя."
+                ],
+                [
+                  "It's easy for me.",
+                  "Для меня это просто."
+                ]
+              ],
+              "id": "russian_t4_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t4l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "So what?",
+              "answer": "Ну и что?",
+              "choices": [
+                "Это для тебя!",
+                "Ну и что?",
+                "Мы все здесь.",
+                "Хорошо. А вы?"
+              ],
+              "id": "russian_t4_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Так, ____ и...?",
+              "answer": "ну",
+              "choices": [
+                "не",
+                "ну",
+                "же",
+                "так"
+              ],
+              "id": "russian_t4_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Yes, what of it?",
+              "answer": "Да, ну и что?",
+              "words": [
+                "и",
+                "что?",
+                "ну",
+                "тебя?",
+                "Да,",
+                "просто."
+              ],
+              "id": "russian_t4_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Ну и что это?",
+              "audio": "Ну и что это?",
+              "id": "russian_t4_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Fine. And you?",
+                  "Хорошо. А ты?"
+                ],
+                [
+                  "What is good for you is good for me.",
+                  "Что хорошо для тебя, хорошо и для меня."
+                ],
+                [
+                  "I'm fine, and you?",
+                  "Хорошо. А у тебя?"
+                ],
+                [
+                  "Good. And you?",
+                  "Хорошо. А вы?"
+                ]
+              ],
+              "id": "russian_t4_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t4l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "That's not good.",
+              "answer": "Это не есть хорошо.",
+              "choices": [
+                "Ну и что это?",
+                "Это для меня.",
+                "Это для тебя!",
+                "Это не есть хорошо."
+              ],
+              "id": "russian_t4_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Это ____ хорошо.",
+              "answer": "так",
+              "choices": [
+                "не",
+                "так",
+                "Для",
+                "для"
+              ],
+              "id": "russian_t4_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "That's not so good.",
+              "answer": "Это не так хорошо.",
+              "words": [
+                "тебя!",
+                "хорошо.",
+                "так",
+                "Они",
+                "не",
+                "Это"
+              ],
+              "id": "russian_t4_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Это же хорошо?",
+              "audio": "Это же хорошо?",
+              "id": "russian_t4_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I feel so good.",
+                  "Мне так хорошо."
+                ],
+                [
+                  "What's wrong with this?",
+                  "Что здесь не так?"
+                ],
+                [
+                  "It's not here.",
+                  "Это не здесь."
+                ],
+                [
+                  "We're all here.",
+                  "Мы все здесь."
                 ]
               ],
               "id": "russian_t4_3_4"
@@ -1131,46 +1137,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It isn't that simple.",
-              "answer": "Это не так просто.",
+              "question": "I'm not here.",
+              "answer": "Меня здесь нет.",
               "choices": [
-                "Это для тебя.",
-                "Это не так просто.",
-                "Это так просто?",
-                "Для меня это не просто."
+                "Тебя здесь нет.",
+                "Меня здесь нет.",
+                "О, и ты здесь!",
+                "Вы как здесь?"
               ],
               "id": "russian_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Это ____ просто.",
-              "answer": "так",
+              "question": "Его ____ нет.",
+              "answer": "здесь",
               "choices": [
-                "тебя",
-                "для",
-                "меня",
-                "так"
+                "Ты",
+                "вы",
+                "Это",
+                "здесь"
               ],
               "id": "russian_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "It's so simple.",
-              "answer": "Это так просто.",
+              "question": "You aren't here.",
+              "answer": "Тебя здесь нет.",
               "words": [
-                "так",
-                "не",
-                "просто.",
-                "Это",
-                "так"
+                "Хорошо,",
+                "что",
+                "нет.",
+                "Тебя",
+                "здесь"
               ],
               "id": "russian_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не так просто.",
-              "audio": "Это не так просто.",
+              "answer": "Хорошо, что ты здесь.",
+              "audio": "Хорошо, что ты здесь.",
               "id": "russian_t5_1_3"
             },
             {
@@ -1179,20 +1185,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not so simple.",
-                  "Это не так просто."
+                  "I'll be here if you need me.",
+                  "Если что, я здесь."
                 ],
                 [
-                  "It's not that easy.",
-                  "Это не так просто."
+                  "They're all here.",
+                  "Они все здесь."
                 ],
                 [
-                  "It isn't so easy!",
-                  "Это не так просто!"
+                  "They're not here.",
+                  "Они не здесь."
                 ],
                 [
-                  "Is it that simple?",
-                  "Это так просто?"
+                  "How come you are here?",
+                  "Ты как здесь?"
                 ]
               ],
               "id": "russian_t5_1_4"
@@ -1205,46 +1211,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It isn't so simple.",
-              "answer": "Это не так просто.",
+              "question": "It's good that you're here.",
+              "answer": "Хорошо, что вы здесь.",
               "choices": [
-                "Это не для тебя.",
-                "Это не так просто.",
-                "Это для меня.",
-                "Это для меня?"
+                "Нет, это был не он.",
+                "Хорошо, что вы здесь.",
+                "Хорошо, что ты здесь.",
+                "Вы как здесь?"
               ],
               "id": "russian_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Это ____ тебя!",
-              "answer": "для",
+              "question": "Вы ____ здесь?",
+              "answer": "как",
               "choices": [
-                "меня",
-                "для",
-                "что",
-                "так"
+                "нет",
+                "как",
+                "Его",
+                "да"
               ],
               "id": "russian_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "It's for you.",
-              "answer": "Это для тебя.",
+              "question": "Oh, you're here too!",
+              "answer": "О, и ты здесь!",
               "words": [
-                "тебя.",
-                "не",
-                "просто!",
-                "Это",
-                "для"
+                "и",
+                "Был",
+                "Хорошо,",
+                "О,",
+                "ты",
+                "здесь!"
               ],
               "id": "russian_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не для тебя.",
-              "audio": "Это не для тебя.",
+              "answer": "Как хорошо, что ты здесь.",
+              "audio": "Как хорошо, что ты здесь.",
               "id": "russian_t5_2_3"
             },
             {
@@ -1253,20 +1260,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is for me.",
-                  "Это для меня."
+                  "Yes, I'm here.",
+                  "Да, я здесь."
                 ],
                 [
-                  "This isn't for me.",
-                  "Это не для меня."
+                  "I am not here.",
+                  "Я не здесь."
                 ],
                 [
-                  "This is not for me.",
-                  "Это не для меня."
+                  "It wasn't him.",
+                  "Это был не он."
                 ],
                 [
-                  "It's for me.",
-                  "Это для меня."
+                  "It wasn't me.",
+                  "Это был не я."
                 ]
               ],
               "id": "russian_t5_2_4"
@@ -1279,47 +1286,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's not easy for me.",
-              "answer": "Для меня это не просто.",
+              "question": "It was you, wasn't it?",
+              "answer": "Это был ты, да?",
               "choices": [
-                "Это для тебя.",
-                "Это так просто.",
-                "Это не для тебя.",
-                "Для меня это не просто."
+                "Это был не ты.",
+                "Его здесь нет.",
+                "Был бы ты здесь.",
+                "Это был ты, да?"
               ],
               "id": "russian_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Для меня ____ не просто.",
-              "answer": "это",
+              "question": "Нет, это ____ не он.",
+              "answer": "был",
               "choices": [
-                "для",
-                "это",
-                "не",
-                "тебя"
+                "он",
+                "был",
+                "бы",
+                "Они"
               ],
               "id": "russian_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "They aren't for you.",
-              "answer": "Они не для тебя.",
+              "question": "It wasn't me. It's him!",
+              "answer": "Это был не я! Это он!",
               "words": [
+                "он!",
+                "я!",
+                "он.",
+                "Это",
+                "был",
                 "не",
-                "для",
-                "тебя.",
-                "что?",
-                "Они",
-                "меня."
+                "Если",
+                "Это"
               ],
               "id": "russian_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это для меня?",
-              "audio": "Это для меня?",
+              "answer": "Это был он.",
+              "audio": "Это был он.",
               "id": "russian_t5_3_3"
             },
             {
@@ -1328,20 +1337,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's easy for me.",
-                  "Для меня это просто."
+                  "That was me.",
+                  "Это был я."
                 ],
                 [
-                  "This isn't easy for me.",
-                  "Для меня это не просто."
+                  "I wish you were here.",
+                  "Был бы ты здесь."
                 ],
                 [
-                  "This is not easy for me.",
-                  "Для меня это не просто."
+                  "It wasn't you.",
+                  "Это был не ты."
                 ],
                 [
-                  "So what?",
-                  "Ну и что?"
+                  "I was here.",
+                  "Я был здесь."
                 ]
               ],
               "id": "russian_t5_3_4"
@@ -1360,46 +1369,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Yeah, and?",
-              "answer": "Так, ну и...?",
+              "question": "He was here.",
+              "answer": "Он был здесь.",
               "choices": [
-                "Хорошо. А у тебя?",
-                "Ну и что?",
-                "Так, ну и...?",
-                "Хорошо. А ты?"
+                "Я не знаю.",
+                "Я знаю о тебе.",
+                "Он был здесь.",
+                "Я не знаю когда."
               ],
               "id": "russian_t6_1_0"
             },
             {
-              "type": "translation",
-              "question": "Yes, what of it?",
-              "answer": "Да, ну и что?",
+              "type": "cloze",
+              "question": "Я ____ был.",
+              "answer": "здесь",
               "choices": [
-                "Это не здесь.",
-                "Хорошо. А ты?",
-                "Что здесь не так?",
-                "Да, ну и что?"
+                "знаю",
+                "как",
+                "тебе",
+                "здесь"
               ],
               "id": "russian_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "What does it matter?",
-              "answer": "Ну и что?",
+              "question": "I don't know what it is.",
+              "answer": "Я не знаю, что это.",
               "words": [
-                "и",
-                "Ну",
-                "что,",
-                "Ну",
-                "что?"
+                "не",
+                "что",
+                "был",
+                "здесь.",
+                "это.",
+                "знаю,",
+                "Я"
               ],
               "id": "russian_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Да, ну и что?",
-              "audio": "Да, ну и что?",
+              "answer": "Я не знаю.",
+              "audio": "Я не знаю.",
               "id": "russian_t6_1_3"
             },
             {
@@ -1408,20 +1419,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Then what?",
-                  "Ну и что?"
+                  "I know him.",
+                  "Я знаю его."
                 ],
                 [
-                  "So what is this?",
-                  "Ну и что это?"
+                  "I don't know him.",
+                  "Я его не знаю."
                 ],
                 [
-                  "Fine. And you?",
-                  "Хорошо. А ты?"
+                  "Do I know him?",
+                  "Я его знаю?"
                 ],
                 [
-                  "Good. And you?",
-                  "Хорошо. А ты?"
+                  "Yes, I know.",
+                  "Да, я знаю."
                 ]
               ],
               "id": "russian_t6_1_4"
@@ -1434,47 +1445,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What is good for you is good for me.",
-              "answer": "Что хорошо для тебя, хорошо и для меня.",
+              "question": "I know you.",
+              "answer": "Я знаю тебя.",
               "choices": [
-                "Да, ну и что?",
-                "Что хорошо для тебя, хорошо и для меня.",
-                "Ну и что это?",
-                "Мы все здесь."
+                "Я знаю его.",
+                "Я знаю тебя.",
+                "Я не знаю, что не так.",
+                "Я не знаю когда."
               ],
               "id": "russian_t6_2_0"
             },
             {
               "type": "translation",
-              "question": "I'm fine, and you?",
-              "answer": "Хорошо. А у тебя?",
+              "question": "I know that I do not know.",
+              "answer": "Я знаю, что я не знаю.",
               "choices": [
-                "Мы все здесь.",
-                "Хорошо. А у тебя?",
-                "Это не здесь.",
-                "Хорошо, что ты здесь."
+                "Я знаю о тебе.",
+                "Я знаю, что я не знаю.",
+                "Я здесь был.",
+                "Я его не знаю."
               ],
               "id": "russian_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "That's not good.",
-              "answer": "Это не есть хорошо.",
+              "question": "I know!",
+              "answer": "Да знаю я!",
               "words": [
-                "Ну",
-                "хорошо.",
-                "есть",
-                "Если",
-                "Это",
-                "не"
+                "знаю",
+                "его.",
+                "я!",
+                "Да",
+                "так."
               ],
               "id": "russian_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это так хорошо.",
-              "audio": "Это так хорошо.",
+              "answer": "Я знаю, что не так.",
+              "audio": "Я знаю, что не так.",
               "id": "russian_t6_2_3"
             },
             {
@@ -1483,20 +1493,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's not so good.",
-                  "Это не так хорошо."
+                  "I don't know which is which.",
+                  "Я не знаю, что есть что."
                 ],
                 [
-                  "I feel so good.",
-                  "Мне так хорошо."
+                  "I know it well.",
+                  "Я хорошо это знаю."
                 ],
                 [
-                  "That's no good.",
-                  "Это не есть хорошо."
+                  "I know what this is.",
+                  "Я знаю, что это."
                 ],
                 [
-                  "What's wrong with this?",
-                  "Что здесь не так?"
+                  "I know about you.",
+                  "Я знаю о тебе."
                 ]
               ],
               "id": "russian_t6_2_4"
@@ -1509,46 +1519,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's not here.",
-              "answer": "Это не здесь.",
+              "question": "I know how it is.",
+              "answer": "Я знаю, как это.",
               "choices": [
-                "Что здесь не так?",
-                "Ну и что это?",
-                "Мне так хорошо.",
-                "Это не здесь."
+                "Я не знаю.",
+                "Я его знаю?",
+                "Я здесь был.",
+                "Я знаю, как это."
               ],
               "id": "russian_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Мы ____ здесь.",
-              "answer": "все",
+              "question": "Я ____ знаю?",
+              "answer": "тебя",
               "choices": [
-                "Хорошо",
-                "все",
+                "когда",
+                "тебя",
                 "это",
-                "Ну"
+                "знаю"
               ],
               "id": "russian_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "I'm not here.",
-              "answer": "Меня здесь нет.",
+              "question": "I don't know what's wrong.",
+              "answer": "Я не знаю, что не так.",
               "words": [
-                "здесь",
-                "нет.",
-                "тебя?",
-                "Меня",
-                "здесь"
+                "знаю,",
+                "что",
+                "не",
+                "был",
+                "так.",
+                "Я",
+                "это",
+                "не"
               ],
               "id": "russian_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Его здесь нет.",
-              "audio": "Его здесь нет.",
+              "answer": "Я не знаю когда.",
+              "audio": "Я не знаю когда.",
               "id": "russian_t6_3_3"
             },
             {
@@ -1557,20 +1570,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You aren't here.",
-                  "Тебя здесь нет."
+                  "I know this.",
+                  "Я это знаю."
                 ],
                 [
-                  "You're not here.",
-                  "Тебя здесь нет."
+                  "I don't know how he does it.",
+                  "Я не знаю, как это он так."
                 ],
                 [
-                  "It's a good thing that you're here.",
-                  "Хорошо, что ты здесь."
+                  "I simply don't know.",
+                  "Я просто не знаю."
                 ],
                 [
-                  "I'll be here if you need me.",
-                  "Если что, я здесь."
+                  "I don't know how.",
+                  "Я не знаю как."
                 ]
               ],
               "id": "russian_t6_3_4"
@@ -1589,46 +1602,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "They're all here.",
-              "answer": "Они все здесь.",
+              "question": "No, I don't know.",
+              "answer": "Нет, не знаю.",
               "choices": [
-                "Это был я.",
-                "Они все здесь.",
-                "Ты как здесь?",
-                "Как хорошо, что ты здесь."
+                "Я знаю, что это был не он.",
+                "Нет, не знаю.",
+                "Я это хорошо знаю.",
+                "Я знаю, что это он."
               ],
               "id": "russian_t7_1_0"
             },
             {
-              "type": "cloze",
-              "question": "Они ____ здесь.",
-              "answer": "не",
+              "type": "translation",
+              "question": "I know him, but you don't.",
+              "answer": "Я знаю его, а ты нет.",
               "choices": [
-                "Нет",
-                "все",
-                "Да",
-                "не"
+                "Я знаю, что это был не он.",
+                "Я знаю, что это не так.",
+                "Я знаю, что это она.",
+                "Я знаю его, а ты нет."
               ],
               "id": "russian_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "How come you are here?",
-              "answer": "Ты как здесь?",
+              "question": "I know that wasn't him.",
+              "answer": "Я знаю, что это был не он.",
               "words": [
-                "как",
+                "не",
                 "был",
-                "здесь?",
-                "я!",
-                "Ты"
+                "он.",
+                "же",
+                "это",
+                "что",
+                "Я",
+                "Я",
+                "знаю,"
               ],
               "id": "russian_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Его здесь нет.",
-              "audio": "Его здесь нет.",
+              "answer": "Я знаю, что я знаю.",
+              "audio": "Я знаю, что я знаю.",
               "id": "russian_t7_1_3"
             },
             {
@@ -1637,20 +1654,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'll be here if you want me.",
-                  "Если что, я здесь."
+                  "I know him well.",
+                  "Я хорошо его знаю."
                 ],
                 [
-                  "It's good that you're here.",
-                  "Хорошо, что ты здесь."
+                  "I know it was him.",
+                  "Я знаю, что это был он."
                 ],
                 [
-                  "How come you're here?",
-                  "Ты как здесь?"
+                  "What do I know?",
+                  "Что я знаю?"
                 ],
                 [
-                  "Oh, you're here too!",
-                  "О, и ты здесь!"
+                  "I know it's her.",
+                  "Я знаю, что это она."
                 ]
               ],
               "id": "russian_t7_1_4"
@@ -1663,47 +1680,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It is so good that you are here.",
-              "answer": "Как хорошо, что ты здесь.",
+              "question": "I know it to be true.",
+              "answer": "Я знаю, что это так.",
               "choices": [
-                "Они не здесь.",
-                "Как хорошо, что ты здесь.",
-                "Его здесь нет.",
-                "Это был я."
+                "Я знаю, что это был он.",
+                "Я знаю, что это так.",
+                "Я знаю, что я знаю.",
+                "Я знаю, что это не так."
               ],
               "id": "russian_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Хорошо, что ____ здесь.",
-              "answer": "ты",
+              "question": "Я не знаю, ____ я знаю.",
+              "answer": "что",
               "choices": [
-                "все",
-                "ты",
-                "хорошо",
-                "как"
+                "она",
+                "что",
+                "просто",
+                "не"
               ],
               "id": "russian_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "It's a good thing you're here.",
-              "answer": "Хорошо, что Вы здесь.",
+              "question": "I know it was you.",
+              "answer": "Я знаю, что это был ты.",
               "words": [
-                "нет.",
-                "здесь.",
+                "знаю,",
+                "я",
+                "это",
+                "ты.",
                 "что",
-                "Хорошо,",
-                "Вы",
-                "как"
+                "Я",
+                "был",
+                "что"
               ],
               "id": "russian_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Да, я здесь.",
-              "audio": "Да, я здесь.",
+              "answer": "Я знаю, что он у тебя.",
+              "audio": "Я знаю, что он у тебя.",
               "id": "russian_t7_2_3"
             },
             {
@@ -1712,20 +1731,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I am not here.",
-                  "Меня здесь нет."
+                  "I know it's them.",
+                  "Я знаю, что это они."
                 ],
                 [
-                  "It wasn't him.",
-                  "Это был не он."
+                  "I know it's him.",
+                  "Я знаю, что это он."
                 ],
                 [
-                  "It wasn't me.",
-                  "Это был не я."
+                  "I know that well.",
+                  "Я это хорошо знаю."
                 ],
                 [
-                  "It was you, wasn't it?",
-                  "Это был ты, да?"
+                  "I know that isn't true.",
+                  "Я знаю, что это не так."
                 ]
               ],
               "id": "russian_t7_2_4"
@@ -1738,47 +1757,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "No, it wasn't him.",
-              "answer": "Нет, это был не он.",
+              "question": "I still don't know what that is.",
+              "answer": "Я так и не знаю, что это.",
               "choices": [
-                "Они не здесь.",
-                "Хорошо, что ты здесь.",
-                "Его здесь нет.",
-                "Нет, это был не он."
+                "Я знаю его, а ты нет.",
+                "Я это хорошо знаю.",
+                "Что я знаю?",
+                "Я так и не знаю, что это."
               ],
               "id": "russian_t7_3_0"
             },
             {
-              "type": "translation",
-              "question": "It wasn't me. It's him!",
-              "answer": "Это был не я! Это он!",
+              "type": "cloze",
+              "question": "Я знаю, ____ это ты.",
+              "answer": "что",
               "choices": [
-                "Они не здесь.",
-                "Его здесь нет.",
-                "Это был не я! Это он!",
-                "Ты как здесь?"
+                "просто",
+                "меня",
+                "что",
+                "Что"
               ],
               "id": "russian_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "That wasn't him.",
-              "answer": "Это был не он.",
+              "question": "I know that it's you.",
+              "answer": "Я знаю, что это вы.",
               "words": [
-                "нет.",
-                "он.",
-                "был",
-                "Это",
-                "не",
-                "не"
+                "знаю,",
+                "это",
+                "Что",
+                "Я",
+                "что",
+                "вы.",
+                "Да,"
               ],
               "id": "russian_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это был он.",
-              "audio": "Это был он.",
+              "answer": "Я его знаю, а он меня нет.",
+              "audio": "Я его знаю, а он меня нет.",
               "id": "russian_t7_3_3"
             },
             {
@@ -1787,20 +1807,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That was me.",
-                  "Это был я."
+                  "I know you're here.",
+                  "Я знаю, что ты здесь."
                 ],
                 [
-                  "I wish you were here.",
-                  "Был бы ты здесь."
+                  "Yes, I know it.",
+                  "Да, я это знаю."
                 ],
                 [
-                  "That wasn't me.",
-                  "Это был не я."
+                  "Oh, I know.",
+                  "Я же знаю."
                 ],
                 [
-                  "It wasn't you.",
-                  "Это был не ты."
+                  "I just know.",
+                  "Я просто знаю."
                 ]
               ],
               "id": "russian_t7_3_4"
@@ -1819,46 +1839,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I was here.",
-              "answer": "Я был здесь.",
+              "question": "It's a good thing I know you.",
+              "answer": "Хорошо, что я тебя знаю.",
               "choices": [
-                "Я не знаю, что есть что.",
-                "Я был здесь.",
-                "Я знаю, как это.",
-                "Я знаю, что я не знаю."
+                "Только ты и я.",
+                "Хорошо, что я тебя знаю.",
+                "Что есть, то есть.",
+                "А если так, то что?"
               ],
               "id": "russian_t8_1_0"
             },
             {
-              "type": "cloze",
-              "question": "Это был ____ я.",
-              "answer": "не",
+              "type": "translation",
+              "question": "Yes, yes, I know that.",
+              "answer": "Да, да, я знаю.",
               "choices": [
-                "тебя",
-                "так",
-                "есть",
-                "не"
+                "Это всё, что у тебя есть?",
+                "Это всё, что я знаю.",
+                "Это всё, что у меня есть.",
+                "Да, да, я знаю."
               ],
               "id": "russian_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "He was here.",
-              "answer": "Он был здесь.",
+              "question": "It is what it is.",
+              "answer": "Что есть, то есть.",
               "words": [
-                "был",
-                "тебя",
-                "здесь.",
-                "Он",
-                "есть"
+                "есть,",
+                "если",
+                "есть.",
+                "Что",
+                "есть",
+                "то"
               ],
               "id": "russian_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я здесь был.",
-              "audio": "Я здесь был.",
+              "answer": "Нет... То есть да.",
+              "audio": "Нет... То есть да.",
               "id": "russian_t8_1_3"
             },
             {
@@ -1867,20 +1888,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It was me.",
-                  "Это был я."
+                  "That isn't it.",
+                  "Это не то."
                 ],
                 [
-                  "I don't know what it is.",
-                  "Я не знаю, что это."
+                  "No, it's not that.",
+                  "Нет, это не то."
                 ],
                 [
-                  "I don't know what that is.",
-                  "Я не знаю, что это."
+                  "Is that a no?",
+                  "То есть нет?"
                 ],
                 [
-                  "I don't know.",
-                  "Я не знаю."
+                  "And if so, what then?",
+                  "А если так, то что?"
                 ]
               ],
               "id": "russian_t8_1_4"
@@ -1893,46 +1914,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know him.",
-              "answer": "Я знаю его.",
+              "question": "I am that.",
+              "answer": "Это то, что я есть.",
               "choices": [
-                "Это был не я.",
-                "Я знаю его.",
-                "Я не знаю.",
-                "Я тебя знаю?"
+                "Нет, это всё.",
+                "Это то, что я есть.",
+                "Да не то чтобы.",
+                "Только ты и я."
               ],
               "id": "russian_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Я его ____ знаю.",
-              "answer": "не",
+              "question": "Да не ____ чтобы.",
+              "answer": "то",
               "choices": [
-                "Он",
-                "не",
-                "как",
+                "это",
+                "то",
+                "ты",
                 "что"
               ],
               "id": "russian_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "Do I know him?",
-              "answer": "Я его знаю?",
+              "question": "Just you and me.",
+              "answer": "Только ты и я.",
               "words": [
-                "знаю?",
-                "был",
-                "его",
-                "знаю.",
-                "Я"
+                "и",
+                "меня",
+                "ты",
+                "так",
+                "Только",
+                "я."
               ],
               "id": "russian_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Да, я знаю.",
-              "audio": "Да, я знаю.",
+              "answer": "Я знаю только это.",
+              "audio": "Я знаю только это.",
               "id": "russian_t8_2_3"
             },
             {
@@ -1941,20 +1963,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes, I know it.",
-                  "Да, я знаю."
+                  "I'm all for that.",
+                  "Я только за."
                 ],
                 [
-                  "I know you.",
-                  "Я знаю тебя."
+                  "I know everything.",
+                  "Я всё знаю."
                 ],
                 [
-                  "I know that I do not know.",
-                  "Я знаю, что я не знаю."
+                  "This is all I know.",
+                  "Это всё, что я знаю."
                 ],
                 [
-                  "I know that I don't know.",
-                  "Я знаю, что я не знаю."
+                  "No, that's all.",
+                  "Нет, это всё."
                 ]
               ],
               "id": "russian_t8_2_4"
@@ -1967,49 +1989,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know!",
-              "answer": "Да знаю я!",
+              "question": "Is that it?",
+              "answer": "Это всё, что есть?",
               "choices": [
-                "Я знаю о тебе.",
-                "Я здесь был.",
-                "Я не знаю, что это.",
-                "Да знаю я!"
+                "Это всё, что у тебя есть?",
+                "Я всё знаю.",
+                "Это всё, что у меня есть.",
+                "Это всё, что есть?"
               ],
               "id": "russian_t8_3_0"
             },
             {
-              "type": "cloze",
-              "question": "Я знаю, ____ не так.",
-              "answer": "что",
+              "type": "translation",
+              "question": "That is all I have.",
+              "answer": "Это всё, что у меня есть.",
               "choices": [
-                "это",
-                "что",
-                "Он",
-                "не"
+                "Что есть, то есть.",
+                "Это всё, что у меня есть.",
+                "Да, да, я знаю.",
+                "Да не то чтобы."
               ],
               "id": "russian_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know which is which.",
-              "answer": "Я не знаю, что есть что.",
+              "question": "Do you have everything?",
+              "answer": "У тебя всё есть?",
               "words": [
-                "не",
-                "знаю",
-                "я!",
-                "что.",
+                "тебя",
+                "есть?",
+                "всё",
+                "всё,",
                 "что",
-                "Я",
-                "знаю,",
-                "есть"
+                "У"
               ],
               "id": "russian_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я хорошо это знаю.",
-              "audio": "Я хорошо это знаю.",
+              "answer": "Это всё, что у тебя есть?",
+              "audio": "Это всё, что у тебя есть?",
               "id": "russian_t8_3_3"
             },
             {
@@ -2018,20 +2038,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know what this is.",
-                  "Я знаю, что это."
+                  "Things are not that simple.",
+                  "Всё не так просто."
                 ],
                 [
-                  "I know about you.",
-                  "Я знаю о тебе."
+                  "I know all this.",
+                  "Я всё это знаю."
                 ],
                 [
-                  "I know how it is.",
-                  "Я знаю, как это."
+                  "I'm doing OK.",
+                  "У меня всё хорошо."
                 ],
                 [
-                  "Do I know you?",
-                  "Я тебя знаю?"
+                  "You've got everything.",
+                  "У тебя есть всё."
                 ]
               ],
               "id": "russian_t8_3_4"
@@ -2050,46 +2070,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't know what's wrong.",
-              "answer": "Я не знаю, что не так.",
+              "question": "What is all that stuff?",
+              "answer": "Что это всё?",
               "choices": [
-                "Я не знаю как.",
-                "Я не знаю, что не так.",
-                "Я это знаю.",
-                "Я просто не знаю."
+                "За что мне всё это?",
+                "Что это всё?",
+                "У меня всё.",
+                "Когда это было?"
               ],
               "id": "russian_t9_1_0"
             },
             {
-              "type": "cloze",
-              "question": "Я не ____ когда.",
-              "answer": "знаю",
+              "type": "translation",
+              "question": "I know everything about you.",
+              "answer": "Я всё о тебе знаю.",
               "choices": [
-                "что",
-                "нет",
-                "когда",
-                "знаю"
+                "У меня всё есть.",
+                "У тебя всё?",
+                "Всё не так.",
+                "Я всё о тебе знаю."
               ],
               "id": "russian_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "I know this.",
-              "answer": "Я это знаю.",
+              "question": "I have everything.",
+              "answer": "У меня всё есть.",
               "words": [
-                "знаю.",
-                "когда.",
-                "Нет,",
-                "Я",
-                "это"
+                "меня",
+                "есть.",
+                "всё",
+                "это",
+                "есть,",
+                "У"
               ],
               "id": "russian_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я не знаю, как это он так.",
-              "audio": "Я не знаю, как это он так.",
+              "answer": "Всё, что есть, есть.",
+              "audio": "Всё, что есть, есть.",
               "id": "russian_t9_1_3"
             },
             {
@@ -2098,20 +2119,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I simply don't know.",
-                  "Я просто не знаю."
+                  "Everything's wrong.",
+                  "Всё не так."
                 ],
                 [
-                  "I don't know what this is.",
-                  "Я не знаю, что это."
+                  "Everything's fine the way it is.",
+                  "Всё и так хорошо."
                 ],
                 [
-                  "I don't know how.",
-                  "Я не знаю как."
+                  "He's all I have.",
+                  "Он — всё, что у меня есть."
                 ],
                 [
-                  "No, I don't know.",
-                  "Нет, не знаю."
+                  "It's not over.",
+                  "Это не всё."
                 ]
               ],
               "id": "russian_t9_1_4"
@@ -2124,50 +2145,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know that.",
-              "answer": "Я это знаю.",
+              "question": "You are everything to me.",
+              "answer": "Ты для меня всё.",
               "choices": [
-                "Я не знаю как.",
-                "Я это знаю.",
-                "Я знаю, что это так.",
-                "Я не знаю когда."
+                "Всё не так.",
+                "Ты для меня всё.",
+                "Как всё было?",
+                "У меня есть всё."
               ],
               "id": "russian_t9_2_0"
             },
             {
-              "type": "translation",
-              "question": "I know him, but you don't.",
-              "answer": "Я знаю его, а ты нет.",
+              "type": "cloze",
+              "question": "У тебя ____ хорошо.",
+              "answer": "всё",
               "choices": [
-                "Я не знаю, как это он так.",
-                "Я знаю его, а ты нет.",
-                "Я не знаю как.",
-                "Я не знаю когда."
+                "есть",
+                "всё",
+                "Это",
+                "Вы"
               ],
               "id": "russian_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "I know that wasn't him.",
-              "answer": "Я знаю, что это был не он.",
+              "question": "Are you done talking?",
+              "answer": "У тебя всё?",
               "words": [
-                "знаю,",
-                "не",
-                "Нет,",
-                "Что",
-                "это",
-                "что",
-                "был",
-                "Я",
-                "он."
+                "всё?",
+                "Как",
+                "Когда",
+                "У",
+                "тебя"
               ],
               "id": "russian_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я знаю, что это был не он.",
-              "audio": "Я знаю, что это был не он.",
+              "answer": "Вы для меня всё.",
+              "audio": "Вы для меня всё.",
               "id": "russian_t9_2_3"
             },
             {
@@ -2176,20 +2193,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know what I know.",
-                  "Я знаю, что я знаю."
+                  "What have I done to deserve this?",
+                  "За что мне всё это?"
                 ],
                 [
-                  "I know him well.",
-                  "Я хорошо его знаю."
+                  "That's all that I'm going to say.",
+                  "У меня всё."
                 ],
                 [
-                  "I know it was him.",
-                  "Я знаю, что это был он."
+                  "Is that all for me?",
+                  "Это всё мне?"
                 ],
                 [
-                  "What do I know?",
-                  "Что я знаю?"
+                  "They've got everything here!",
+                  "Здесь есть всё!"
                 ]
               ],
               "id": "russian_t9_2_4"
@@ -2202,49 +2219,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know it's her.",
-              "answer": "Я знаю, что это она.",
+              "question": "He's everything to me.",
+              "answer": "Он для меня всё.",
               "choices": [
-                "Я не знаю как.",
-                "Я не знаю, что я знаю.",
-                "Я знаю, что это.",
-                "Я знаю, что это она."
+                "Я всё о тебе знаю.",
+                "У тебя всё хорошо.",
+                "Всё, что есть, есть.",
+                "Он для меня всё."
               ],
               "id": "russian_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Я знаю, ____ это так.",
-              "answer": "что",
+              "question": "У меня ____ всё.",
+              "answer": "есть",
               "choices": [
-                "тебя",
-                "что",
-                "так",
-                "нет"
+                "Здесь",
+                "есть",
+                "это",
+                "тебе"
               ],
               "id": "russian_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know what I know.",
-              "answer": "Я не знаю, что я знаю.",
+              "question": "For me, it's everything.",
+              "answer": "Для меня это всё.",
               "words": [
-                "не",
-                "а",
-                "что",
-                "знаю.",
-                "как.",
-                "Я",
-                "знаю,",
-                "я"
+                "это",
+                "всё.",
+                "меня",
+                "Для",
+                "и",
+                "это"
               ],
               "id": "russian_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я знаю, что это был ты.",
-              "audio": "Я знаю, что это был ты.",
+              "answer": "Всё это на мне.",
+              "audio": "Всё это на мне.",
               "id": "russian_t9_3_3"
             },
             {
@@ -2253,20 +2268,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know what that is.",
-                  "Я знаю, что это."
+                  "All this is for you.",
+                  "Всё это тебе."
                 ],
                 [
-                  "I know what it is.",
-                  "Я знаю, что это."
+                  "What was that?",
+                  "Что это было?"
                 ],
                 [
-                  "I know you have it.",
-                  "Я знаю, что он у тебя."
+                  "When was that?",
+                  "Когда это было?"
                 ],
                 [
-                  "I just don't know.",
-                  "Я просто не знаю."
+                  "How was everything?",
+                  "Как всё было?"
                 ]
               ],
               "id": "russian_t9_3_4"
@@ -2285,47 +2300,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know it's them.",
-              "answer": "Я знаю, что это они.",
+              "question": "It was here.",
+              "answer": "Это было здесь.",
               "choices": [
-                "Это не то.",
-                "Я знаю, что это они.",
-                "Что есть, то есть.",
-                "Я знаю, что это вы."
+                "Всё было хорошо.",
+                "Это было здесь.",
+                "Всё было не так.",
+                "Что было, то было."
               ],
               "id": "russian_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Я знаю, ____ это он.",
-              "answer": "что",
+              "question": "Это не ____ хорошо.",
+              "answer": "было",
               "choices": [
+                "меня",
                 "не",
-                "же",
-                "Это",
-                "что"
+                "его",
+                "было"
               ],
               "id": "russian_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "I know that well.",
-              "answer": "Я это хорошо знаю.",
+              "question": "Was it good?",
+              "answer": "Это было хорошо?",
               "words": [
-                "это",
-                "знаю.",
-                "знаю!",
-                "Я",
-                "хорошо",
-                "меня"
+                "хорошо?",
+                "было",
+                "было",
+                "Это",
+                "так"
               ],
               "id": "russian_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я знаю, что я не знаю.",
-              "audio": "Я знаю, что я не знаю.",
+              "answer": "Как это было?",
+              "audio": "Как это было?",
               "id": "russian_t10_1_3"
             },
             {
@@ -2334,20 +2348,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know that that's not true.",
-                  "Я знаю, что это не так."
+                  "It wasn't like that.",
+                  "Было не так."
                 ],
                 [
-                  "I know that that isn't true.",
-                  "Я знаю, что это не так."
+                  "It was simple.",
+                  "Это было просто."
                 ],
                 [
-                  "I still don't know what that is.",
-                  "Я так и не знаю, что это."
+                  "Everything was OK.",
+                  "Всё было хорошо."
                 ],
                 [
-                  "I know it's you.",
-                  "Я знаю, что это ты."
+                  "That was everything I had.",
+                  "Это всё, что у меня было."
                 ]
               ],
               "id": "russian_t10_1_4"
@@ -2360,48 +2374,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know that it's you.",
-              "answer": "Я знаю, что это вы.",
+              "question": "It was so simple.",
+              "answer": "Это было так просто.",
               "choices": [
-                "Я знаю, что это он.",
-                "Я знаю, что это вы.",
-                "Я же знаю.",
-                "Это то, что я есть."
+                "Это было не его.",
+                "Это было так просто.",
+                "Это было для меня?",
+                "Это не было хорошо."
               ],
               "id": "russian_t10_2_0"
             },
             {
-              "type": "translation",
-              "question": "I know him but he doesn't know me.",
-              "answer": "Я его знаю, а он меня нет.",
+              "type": "cloze",
+              "question": "Всё ____ просто.",
+              "answer": "было",
               "choices": [
-                "Я знаю, что я не знаю.",
-                "Я его знаю, а он меня нет.",
-                "Да, да, я знаю.",
-                "Я знаю, что это он."
+                "бы",
+                "было",
+                "для",
+                "Всё"
               ],
               "id": "russian_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "I know you're here.",
-              "answer": "Я знаю, что ты здесь.",
+              "question": "It didn't happen that way.",
+              "answer": "Всё было не так.",
               "words": [
-                "ты",
-                "знаю,",
-                "знаю,",
-                "то,",
-                "Я",
-                "что",
-                "здесь."
+                "так.",
+                "не",
+                "так.",
+                "Всё",
+                "было",
+                "было"
               ],
               "id": "russian_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я же знаю.",
-              "audio": "Я же знаю.",
+              "answer": "Всё не так было.",
+              "audio": "Всё не так было.",
               "id": "russian_t10_2_3"
             },
             {
@@ -2410,20 +2423,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Me, I know.",
-                  "Я же знаю."
+                  "Let's let bygones be bygones.",
+                  "Что было, то было."
                 ],
                 [
-                  "I know what I know!",
-                  "Я знаю, что́ я знаю!"
+                  "I don't know what it was.",
+                  "Я не знаю, что это было."
                 ],
                 [
-                  "I just know.",
-                  "Я просто знаю."
+                  "Was this for me?",
+                  "Это было для меня?"
                 ],
                 [
-                  "It's a good thing I know you.",
-                  "Хорошо, что я тебя знаю."
+                  "That's all there was.",
+                  "Это всё, что было."
                 ]
               ],
               "id": "russian_t10_2_4"
@@ -2436,47 +2449,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Yes, yes, I know that.",
-              "answer": "Да, да, я знаю.",
+              "question": "It wasn't so simple.",
+              "answer": "Это было не так просто.",
               "choices": [
-                "Я же знаю.",
-                "А если так, то что?",
-                "То есть нет?",
-                "Да, да, я знаю."
+                "Меня не было.",
+                "Я знаю, что это было.",
+                "Это было бы хорошо.",
+                "Это было не так просто."
               ],
               "id": "russian_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Что есть, ____ есть.",
-              "answer": "то",
+              "question": "Это было ____ хорошо.",
+              "answer": "бы",
               "choices": [
-                "хорошо",
-                "то",
-                "что",
-                "есть"
+                "здесь",
+                "бы",
+                "просто",
+                "не"
               ],
               "id": "russian_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "No... I mean, yes.",
-              "answer": "Нет... То есть да.",
+              "question": "I know what it was.",
+              "answer": "Я знаю, что это было.",
               "words": [
-                "То",
+                "было.",
+                "так",
                 "это",
-                "да.",
-                "Нет...",
-                "ты",
-                "есть"
+                "Я",
+                "знаю,",
+                "так.",
+                "что"
               ],
               "id": "russian_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это не то.",
-              "audio": "Это не то.",
+              "answer": "Что у тебя было?",
+              "audio": "Что у тебя было?",
               "id": "russian_t10_3_3"
             },
             {
@@ -2485,20 +2499,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "No, it's not that.",
-                  "Нет, это не то."
+                  "Was that for me?",
+                  "Это было мне?"
                 ],
                 [
-                  "Is that a no?",
-                  "То есть нет?"
+                  "It wasn't his.",
+                  "Это было не его."
                 ],
                 [
-                  "And if so, what then?",
-                  "А если так, то что?"
+                  "I've been away.",
+                  "Меня не было."
                 ],
                 [
-                  "I am that.",
-                  "Это то, что я есть."
+                  "I know what was wrong.",
+                  "Я знаю, что было не так."
                 ]
               ],
               "id": "russian_t10_3_4"

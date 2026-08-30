@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-africa",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "Why all this?",
               "answer": "لم كلّ هذا؟",
               "choices": [
-                "كيف لي أن أعرف؟",
+                "لماذا أنت هنا؟",
                 "لم كلّ هذا؟",
-                "مِن أَيْن هُو؟",
-                "هل هذا لكَ؟"
+                "لم يجب بعد.",
+                "مِن أَيْن هُو؟"
               ],
               "id": "arabic_t1_1_0"
             },
@@ -228,31 +228,31 @@
               "question": "ما ____ هذا؟",
               "answer": "كل",
               "choices": [
+                "هذا",
+                "لي",
                 "ما",
-                "حتى",
-                "مِن",
                 "كل"
               ],
               "id": "arabic_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "What's all this?",
-              "answer": "ما كلّ هذا؟",
+              "question": "That wasn't him.",
+              "answer": "هذا ليس هو.",
               "words": [
-                "كلّ",
-                "هذا؟",
-                "يكون",
-                "ما",
-                "هذا"
+                "ليس",
+                "هو.",
+                "لا",
+                "هذا",
+                "من"
               ],
               "id": "arabic_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "ما كلّ هذا؟",
-              "audio": "ما كلّ هذا؟",
+              "answer": "هل هذا لكَ؟",
+              "audio": "هل هذا لكَ؟",
               "id": "arabic_t1_1_3"
             },
             {
@@ -261,20 +261,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That wasn't him.",
-                  "هذا ليس هو."
-                ],
-                [
-                  "Is that yours?",
-                  "هل هذا لكَ؟"
-                ],
-                [
                   "But why?",
                   "و لكن لماذا؟"
                 ],
                 [
                   "Why were you there?",
                   "لماذا كنت هناك؟"
+                ],
+                [
+                  "Why are you here?",
+                  "لماذا أنت هنا؟"
+                ],
+                [
+                  "Why am I here?",
+                  "لماذا أنا هنا؟"
                 ]
               ],
               "id": "arabic_t1_1_4"
@@ -287,47 +287,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Why are you here?",
-              "answer": "لماذا أنت هنا؟",
+              "question": "Why am I even here?",
+              "answer": "لماذا أنا هنا حتى؟",
               "choices": [
-                "هذا ليس هو.",
-                "لماذا أنت هنا؟",
+                "من قد يكون هناك؟",
                 "لماذا أنا هنا حتى؟",
-                "و لكن لماذا؟"
+                "ما كل هذا؟",
+                "لماذا كنت هناك؟"
               ],
               "id": "arabic_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "لماذا ____ هنا؟",
-              "answer": "أنا",
+              "question": "ماذا ____ ذلك؟",
+              "answer": "بعد",
               "choices": [
-                "أريد",
-                "هنا",
-                "أنا",
-                "هذا"
+                "هذا",
+                "ما",
+                "بعد",
+                "هل"
               ],
               "id": "arabic_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "Why am I even here?",
-              "answer": "لماذا أنا هنا حتى؟",
+              "question": "He hasn't answered yet.",
+              "answer": "لم يجب بعد.",
               "words": [
-                "هنا",
-                "لا",
-                "أن",
-                "لماذا",
-                "أنا",
-                "حتى؟"
+                "أنت؟",
+                "كلّ",
+                "بعد.",
+                "لم",
+                "يجب"
               ],
               "id": "arabic_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "ماذا بعد ذلك؟",
-              "audio": "ماذا بعد ذلك؟",
+              "answer": "كنت هنا من قبل.",
+              "audio": "كنت هنا من قبل.",
               "id": "arabic_t1_2_3"
             },
             {
@@ -336,20 +335,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "And then?",
-                  "ماذا بعد ذلك؟"
-                ],
-                [
-                  "He hasn't answered yet.",
-                  "لم يجب بعد."
-                ],
-                [
-                  "I've been here before.",
-                  "كنت هنا من قبل."
-                ],
-                [
                   "Where do you come from?",
                   "من أين أنت؟"
+                ],
+                [
+                  "Where does he come from?",
+                  "مِن أَيْن هُو؟"
+                ],
+                [
+                  "How should I know?",
+                  "كيف لي أن أعرف؟"
+                ],
+                [
+                  "I know everything.",
+                  "أعرف كل شيء."
                 ]
               ],
               "id": "arabic_t1_2_4"
@@ -362,47 +361,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Where are you from?",
-              "answer": "من أين أنت؟",
+              "question": "I don't even know what that is.",
+              "answer": "أنا حتى لا أعرف ما ذلك.",
               "choices": [
-                "ما كل هذا؟",
-                "ماذا بعد ذلك؟",
-                "كيف لي أن أعرف؟",
-                "من أين أنت؟"
+                "لم يجب بعد.",
+                "مِن أَيْن هُو؟",
+                "هل هذا لكَ؟",
+                "أنا حتى لا أعرف ما ذلك."
               ],
               "id": "arabic_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "مِن ____ هُو؟",
-              "answer": "أَيْن",
+              "question": "أنا لا ____ لماذا",
+              "answer": "أعرف",
               "choices": [
-                "ذلك",
-                "أَيْن",
-                "لماذا",
-                "هنا"
+                "أن",
+                "أعرف",
+                "أين",
+                "لي"
               ],
               "id": "arabic_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "How should I know?",
-              "answer": "كيف لي أن أعرف؟",
+              "question": "Who could be out there?",
+              "answer": "من قد يكون هناك؟",
               "words": [
-                "لي",
-                "أن",
-                "أعرف؟",
                 "قد",
-                "حتى",
-                "كيف"
+                "يكون",
+                "هناك؟",
+                "و",
+                "أعرف؟",
+                "من"
               ],
               "id": "arabic_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أعرف كل شيء.",
-              "audio": "أعرف كل شيء.",
+              "answer": "أنا أريد أن أعرف لماذا أنا هنا.",
+              "audio": "أنا أريد أن أعرف لماذا أنا هنا.",
               "id": "arabic_t1_3_3"
             },
             {
@@ -411,20 +410,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't even know what that is.",
-                  "أنا حتى لا أعرف ما ذلك."
+                  "But I don't want to.",
+                  "لكن لا أريد"
                 ],
                 [
-                  "I don't know why.",
-                  "أنا لا أعرف لماذا"
+                  "I want to know.",
+                  "أريد أن أعرف."
                 ],
                 [
-                  "Who could be out there?",
-                  "من قد يكون هناك؟"
+                  "No, I suppose not.",
+                  "لا ، لا أعتقد ذلك."
                 ],
                 [
-                  "I want to know why I'm here.",
-                  "أنا أريد أن أعرف لماذا أنا هنا."
+                  "Yes. That's right.",
+                  "نعم، ذلك صحيح."
                 ]
               ],
               "id": "arabic_t1_3_4"
@@ -443,46 +442,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "But I don't want to.",
-              "answer": "لكن لا أريد",
+              "question": "This is true.",
+              "answer": "إن ذلك صحيح.",
               "choices": [
-                "أريد أن أعلم من أنت.",
-                "لكن لا أريد",
-                "نعم أنا أعلم",
-                "أنا بخير الآن."
+                "هل أنتَ بخير الآن؟",
+                "إن ذلك صحيح.",
+                "أنا بخير الآن.",
+                "جيد أن تكون هنا."
               ],
               "id": "arabic_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "لا ، ____ أعتقد ذلك.",
-              "answer": "لا",
+              "question": "هل ____ بخير؟",
+              "answer": "أنت",
               "choices": [
-                "أين",
-                "تكون",
-                "أعلم",
-                "لا"
+                "صحيح",
+                "كل",
+                "فقط",
+                "أنت"
               ],
               "id": "arabic_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "Yes. That's right.",
-              "answer": "نعم، ذلك صحيح.",
+              "question": "Are you all right now?",
+              "answer": "هل أنتَ بخير الآن؟",
               "words": [
+                "أين",
+                "الآن؟",
+                "بخير",
+                "لا،",
                 "أنتَ",
-                "إن",
-                "ذلك",
-                "نعم،",
-                "صحيح."
+                "هل"
               ],
               "id": "arabic_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "إن ذلك صحيح.",
-              "audio": "إن ذلك صحيح.",
+              "answer": "أنا بخير الآن.",
+              "audio": "أنا بخير الآن.",
               "id": "arabic_t2_1_3"
             },
             {
@@ -491,20 +491,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you all right?",
-                  "هل أنتَ بخير؟"
-                ],
-                [
-                  "Are you all right now?",
-                  "هل أنتَ بخير الآن؟"
-                ],
-                [
-                  "I'm OK now.",
-                  "أنا بخير الآن."
-                ],
-                [
                   "Is he OK?",
                   "هل هو بخير؟"
+                ],
+                [
+                  "I don't know where I am.",
+                  "لا أعلم أين أنا."
+                ],
+                [
+                  "I knew it was you.",
+                  "كنت أعلم أنه أنت."
+                ],
+                [
+                  "Yes, I know.",
+                  "نعم أنا أعلم"
                 ]
               ],
               "id": "arabic_t2_1_4"
@@ -517,46 +517,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't know where I am.",
-              "answer": "لا أعلم أين أنا.",
+              "question": "I know what I want.",
+              "answer": "أنا أعلم ما أريد",
               "choices": [
-                "أريد أن أعلم من أنت.",
-                "لا أعلم أين أنا.",
-                "كنت أعلم أنه أنت.",
+                "أنا أعلم أين أنت",
+                "أنا أعلم ما أريد",
+                "هل أنتَ بخير؟",
                 "أريد أن أعلم."
               ],
               "id": "arabic_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "كنت أعلم ____ أنت.",
-              "answer": "أنه",
+              "question": "أنا أعلم ____ أنت",
+              "answer": "أين",
               "choices": [
-                "أعتقد",
-                "أنه",
-                "كنت",
-                "لا"
+                "أي",
+                "أين",
+                "أحد",
+                "بخير"
               ],
               "id": "arabic_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Yes, I know.",
-              "answer": "نعم أنا أعلم",
+              "question": "I want to know you.",
+              "answer": "أريد أن أعلم.",
               "words": [
-                "أنا",
-                "أي",
-                "نعم،",
-                "نعم",
-                "أعلم"
+                "أن",
+                "ما",
+                "كيف",
+                "أريد",
+                "أعلم."
               ],
               "id": "arabic_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنا أعلم ما أريد",
-              "audio": "أنا أعلم ما أريد",
+              "answer": "أعلم من هي.",
+              "audio": "أعلم من هي.",
               "id": "arabic_t2_2_3"
             },
             {
@@ -565,20 +565,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know where you are.",
-                  "أنا أعلم أين أنت"
+                  "I want to know who you are.",
+                  "أريد أن أعلم من أنت."
                 ],
                 [
-                  "I knew that it was you.",
-                  "كنت أعلم أنه أنت."
+                  "Nobody's around.",
+                  "لا أحد هنا."
                 ],
                 [
-                  "I want to know you.",
-                  "أريد أن أعلم."
+                  "Are you here with anyone?",
+                  "هل أنت هنا مع أي شخص؟"
                 ],
                 [
-                  "I know who she is.",
-                  "أعلم من هي."
+                  "I don't even know anybody there.",
+                  "لا أعرف أي شخص هناك."
                 ]
               ],
               "id": "arabic_t2_2_4"
@@ -591,49 +591,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I want to know who you are.",
-              "answer": "أريد أن أعلم من أنت.",
+              "question": "He is only a man.",
+              "answer": "هو فقط رجل.",
               "choices": [
-                "كنت أعلم أنه أنت.",
-                "هل أنت هنا مع أي شخص؟",
+                "أنا أعلم أين أنت",
+                "أريد أن أعلم.",
                 "هل أنتَ بخير؟",
-                "أريد أن أعلم من أنت."
+                "هو فقط رجل."
               ],
               "id": "arabic_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "لا ____ هنا.",
-              "answer": "أحد",
+              "question": "لا، لا ____ كيف يبدو؟",
+              "answer": "أعلم",
               "choices": [
-                "لا",
-                "أحد",
-                "هو",
-                "أعتقد"
+                "أليس",
+                "أعلم",
+                "غير",
+                "يبدو"
               ],
               "id": "arabic_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "Are you here with anyone?",
-              "answer": "هل أنت هنا مع أي شخص؟",
+              "question": "He's a good person.",
+              "answer": "إنه شخص جيد.",
               "words": [
-                "،",
-                "مع",
-                "أنه",
-                "شخص؟",
-                "هنا",
-                "هل",
-                "أنت",
-                "أي"
+                "شخص",
+                "جيد.",
+                "ذلك",
+                "إنه",
+                "لدي"
               ],
               "id": "arabic_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لا أعرف أي شخص هناك.",
-              "audio": "لا أعرف أي شخص هناك.",
+              "answer": "جيد أن تكون هنا.",
+              "audio": "جيد أن تكون هنا.",
               "id": "arabic_t2_3_3"
             },
             {
@@ -642,20 +639,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is only a man.",
-                  "هو فقط رجل."
+                  "He isn't here, is he?",
+                  "إنه ليس هنا ، أليس كذلك؟"
                 ],
                 [
-                  "No, I don't. What's he like?",
-                  "لا، لا أعلم. كيف يبدو؟"
+                  "That is all I have.",
+                  "هذا كل ما لدي"
                 ],
                 [
-                  "He's a good person.",
-                  "إنه شخص جيد."
+                  "I'm not from here.",
+                  "أنا لست من هنا."
                 ],
                 [
-                  "Good to be here.",
-                  "جيد أن تكون هنا."
+                  "This is not true.",
+                  "هذا غير صحيح."
                 ]
               ],
               "id": "arabic_t2_3_4"
@@ -674,47 +671,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He isn't here, is he?",
-              "answer": "إنه ليس هنا ، أليس كذلك؟",
+              "question": "Do you have everything?",
+              "answer": "هل لديك كل شيء؟",
               "choices": [
-                "لو أنّني كنت أعرف!",
-                "إنه ليس هنا ، أليس كذلك؟",
                 "لدينا بعض الوقت الآن.",
-                "و كيف لك أن تعرف؟"
+                "هل لديك كل شيء؟",
+                "هل تعرف من هي؟",
+                "لقد حدث هذا."
               ],
               "id": "arabic_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "هذا كل ____ لدي",
-              "answer": "ما",
+              "question": "ماذا ____ الآن؟",
+              "answer": "تريد",
               "choices": [
-                "كيف",
-                "بعض",
                 "ذلك",
-                "ما"
+                "أن",
+                "شيء",
+                "تريد"
               ],
               "id": "arabic_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "This is all I have.",
-              "answer": "هذا كل ما لدي",
+              "question": "What else do you want?",
+              "answer": "ماذا تريد بعد؟",
               "words": [
-                "كل",
+                "بعد؟",
                 "ما",
-                "أن",
-                "هذا",
-                "لدي",
-                "ليس"
+                "تريد",
+                "حدث",
+                "ماذا"
               ],
               "id": "arabic_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنا لست من هنا.",
-              "audio": "أنا لست من هنا.",
+              "answer": "كُلْ ما تريد.",
+              "audio": "كُلْ ما تريد.",
               "id": "arabic_t3_1_3"
             },
             {
@@ -723,20 +719,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm not from around here.",
-                  "أنا لست من هنا."
+                  "What do you want then?",
+                  "ماذا تريد بعد ذلك؟"
                 ],
                 [
-                  "This is not true.",
-                  "هذا غير صحيح."
+                  "Why don't you want this?",
+                  "لم لا تريد هذا؟"
                 ],
                 [
-                  "Do you have everything?",
-                  "هل لديك كل شيء؟"
+                  "Do you know who she is?",
+                  "هل تعرف من هي؟"
                 ],
                 [
-                  "What do you want now?",
-                  "ماذا تريد الآن؟"
+                  "Do you know who he is?",
+                  "هل تعرف من يكون؟"
                 ]
               ],
               "id": "arabic_t3_1_4"
@@ -749,47 +745,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What else do you want?",
-              "answer": "ماذا تريد الآن؟",
+              "question": "How do you know?",
+              "answer": "و كيف لك أن تعرف؟",
               "choices": [
-                "هذا كل ما لدي",
-                "ماذا تريد الآن؟",
-                "هل تعرف من يكون؟",
-                "هذا غير صحيح."
+                "هل تعرف من هي؟",
+                "و كيف لك أن تعرف؟",
+                "هل حدث أي شيء؟",
+                "ما الذي حدث؟!"
               ],
               "id": "arabic_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "كُلْ ____ تريد.",
-              "answer": "ما",
+              "question": "كيف ____ هذا؟",
+              "answer": "تعرف",
               "choices": [
-                "أليس",
-                "لست",
-                "ما",
-                "كنت"
+                "لك",
+                "شيء",
+                "تعرف",
+                "لو"
               ],
               "id": "arabic_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "What do you want then?",
-              "answer": "ماذا تريد بعد ذلك؟",
+              "question": "How do you know that?",
+              "answer": "من أينَ تعرف هذا؟",
               "words": [
-                "هنا",
-                "كذلك؟",
-                "بعد",
-                "ماذا",
-                "ذلك؟",
-                "تريد"
+                "تكون.",
+                "ان",
+                "تعرف",
+                "من",
+                "هذا؟",
+                "أينَ"
               ],
               "id": "arabic_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لم لا تريد هذا؟",
-              "audio": "لم لا تريد هذا؟",
+              "answer": "لماذا تريد أن تعرف ذلك؟",
+              "audio": "لماذا تريد أن تعرف ذلك؟",
               "id": "arabic_t3_2_3"
             },
             {
@@ -798,20 +794,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you know who she is?",
-                  "هل تعرف من هي؟"
+                  "You have to know who you are.",
+                  "عليك ان تعرف من تكون."
                 ],
                 [
-                  "Do you know who he is?",
-                  "هل تعرف من يكون؟"
+                  "You don't know.",
+                  "أنت لا تعرف."
                 ],
                 [
-                  "How do you know?",
-                  "و كيف لك أن تعرف؟"
+                  "We've got some time now.",
+                  "لدينا بعض الوقت الآن."
                 ],
                 [
-                  "How do you know this?",
-                  "كيف تعرف هذا؟"
+                  "If only I knew!",
+                  "لو أنّني كنت أعرف!"
                 ]
               ],
               "id": "arabic_t3_2_4"
@@ -824,48 +820,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "How do you know that?",
-              "answer": "من أينَ تعرف هذا؟",
+              "question": "She's not here.",
+              "answer": "هي ليست هنا",
               "choices": [
-                "هذا كل ما لدي",
-                "هذا غير صحيح.",
-                "لو أنّني كنت أعرف!",
-                "من أينَ تعرف هذا؟"
+                "ماذا تريد بعد ذلك؟",
+                "لم لا تريد هذا؟",
+                "ما الذي حدث هنا؟",
+                "هي ليست هنا"
               ],
               "id": "arabic_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "لماذا تريد ____ تعرف ذلك؟",
-              "answer": "أن",
+              "question": "ما الذي ____ هنا؟",
+              "answer": "حدث",
               "choices": [
-                "لا",
-                "أن",
-                "أين",
-                "تعرف"
+                "لديك",
+                "حدث",
+                "لقد",
+                "ذلك"
               ],
               "id": "arabic_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "You have to know who you are.",
-              "answer": "عليك ان تعرف من تكون.",
+              "question": "Has something happened?",
+              "answer": "هل حدث أي شيء؟",
               "words": [
-                "ان",
-                "من",
-                "ليس",
-                "هي؟",
-                "تكون.",
-                "تعرف",
-                "عليك"
+                "حدث",
+                "شيء؟",
+                "كل",
+                "لديك",
+                "هل",
+                "أي"
               ],
               "id": "arabic_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنت لا تعرف.",
-              "audio": "أنت لا تعرف.",
+              "answer": "ما الذي حدث؟!",
+              "audio": "ما الذي حدث؟!",
               "id": "arabic_t3_3_3"
             },
             {
@@ -874,20 +869,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We've got some time now.",
-                  "لدينا بعض الوقت الآن."
+                  "That's not what happened here.",
+                  "ليس هذا ما حدث هنا."
                 ],
                 [
-                  "If only I knew!",
-                  "لو أنّني كنت أعرف!"
+                  "None of that actually happened.",
+                  "لا شيء من هذا حدث."
                 ],
                 [
-                  "She's not here.",
-                  "هي ليست هنا"
+                  "Why did it happen?",
+                  "لم حدث ذلك؟"
                 ],
                 [
-                  "She is not here.",
-                  "هي ليست هنا"
+                  "This happened.",
+                  "لقد حدث هذا."
                 ]
               ],
               "id": "arabic_t3_3_4"
@@ -906,48 +901,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What happened here?",
-              "answer": "ما الذي حدث هنا؟",
+              "question": "Something happened to day.",
+              "answer": "حدث شيء اليوم.",
               "choices": [
-                "ماذا كنت تفعل؟",
-                "ما الذي حدث هنا؟",
-                "ليس هذا ما حدث هنا.",
-                "لم حدث ذلك؟"
+                "كم الوقت هناك؟",
+                "حدث شيء اليوم.",
+                "لا أريد الكثير.",
+                "هذا جيد جدا"
               ],
               "id": "arabic_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "ما ____ حدث؟!",
-              "answer": "الذي",
+              "question": "هذا ما ____ حدث.",
+              "answer": "أعتقد",
               "choices": [
-                "لماذا",
-                "شيء",
-                "حدث",
-                "الذي"
+                "هذا",
+                "أعرف",
+                "كنت",
+                "أعتقد"
               ],
               "id": "arabic_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "That's not what happened here.",
-              "answer": "ليس هذا ما حدث هنا.",
+              "question": "Something happened.",
+              "answer": "حدث شيء ما.",
               "words": [
-                "هذا",
-                "هناك",
-                "الوقت؟",
-                "ليس",
-                "هنا.",
-                "ما",
-                "حدث"
+                "شيء",
+                "ما.",
+                "لم",
+                "حدث",
+                "هذا؟"
               ],
               "id": "arabic_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لا شيء من هذا حدث.",
-              "audio": "لا شيء من هذا حدث.",
+              "answer": "هذا ما حدث.",
+              "audio": "هذا ما حدث.",
               "id": "arabic_t4_1_3"
             },
             {
@@ -956,20 +949,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Why did it happen?",
-                  "لم حدث ذلك؟"
+                  "I don't want a lot.",
+                  "لا أريد الكثير."
                 ],
                 [
-                  "Why did that happen?",
-                  "لم حدث ذلك؟"
+                  "This way, sir.",
+                  "من هنا، سيدي."
                 ],
                 [
-                  "This happened.",
-                  "لقد حدث هذا."
+                  "What were you doing?",
+                  "ماذا كنت تفعل؟"
                 ],
                 [
-                  "Something happened to day.",
-                  "حدث شيء اليوم."
+                  "What were you doing at that time?",
+                  "ماذا كنت تفعل في ذلك الوقت؟"
                 ]
               ],
               "id": "arabic_t4_1_4"
@@ -982,46 +975,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's what I think happened.",
-              "answer": "هذا ما أعتقد حدث.",
+              "question": "How do you do that?",
+              "answer": "كيف تفعل ذلك؟",
               "choices": [
-                "ما الذي حدث؟!",
                 "هذا ما أعتقد حدث.",
-                "حدث شيء اليوم.",
-                "لم تفعل ذلك؟"
+                "كيف تفعل ذلك؟",
+                "كم الوقت هناك؟",
+                "لم يكن هناك أحد."
               ],
               "id": "arabic_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "حدث ____ ما.",
-              "answer": "شيء",
+              "question": "لا ____ ذلك!",
+              "answer": "تفعل",
               "choices": [
+                "سيدي",
+                "تفعل",
                 "هذا",
-                "شيء",
-                "هنا",
-                "لا"
+                "شيء"
               ],
               "id": "arabic_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "This is what happened.",
-              "answer": "هذا ما حدث.",
+              "question": "Why are you doing this?",
+              "answer": "لماذا تفعل هذا؟",
               "words": [
-                "ما",
-                "حدث.",
+                "تفعل",
+                "هذا؟",
                 "هذا",
-                "هذا",
-                "ذلك"
+                "لماذا",
+                "هذا؟"
               ],
               "id": "arabic_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لا أريد الكثير.",
-              "audio": "لا أريد الكثير.",
+              "answer": "ربما يجب ان تفعل ذلك الآن.",
+              "audio": "ربما يجب ان تفعل ذلك الآن.",
               "id": "arabic_t4_2_3"
             },
             {
@@ -1030,20 +1023,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This way, sir.",
-                  "من هنا، سيدي."
+                  "Why is she doing this?",
+                  "لم تفعل ذلك؟"
                 ],
                 [
-                  "What were you doing?",
-                  "ماذا كنت تفعل؟"
+                  "What do you want to do today?",
+                  "ماذا تريد أن تفعل اليوم؟"
                 ],
                 [
-                  "What were you doing at that time?",
-                  "ماذا كنت تفعل في ذلك الوقت؟"
+                  "I don't have time.",
+                  "ليس لدي وقت."
                 ],
                 [
-                  "How do you do that?",
-                  "كيف تفعل ذلك؟"
+                  "No one was present.",
+                  "لم يكن هناك أحد."
                 ]
               ],
               "id": "arabic_t4_2_4"
@@ -1056,49 +1049,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Don't do it!",
-              "answer": "لا تفعل ذلك!",
+              "question": "It wasn't like that.",
+              "answer": "لم يكن كذلك.",
               "choices": [
-                "لا شيء من هذا حدث.",
-                "حدث شيء ما.",
-                "ماذا تريد أن تفعل اليوم؟",
-                "لا تفعل ذلك!"
+                "ربما يجب ان تفعل ذلك الآن.",
+                "هذا ما حدث.",
+                "هذا ما أعتقد حدث.",
+                "لم يكن كذلك."
               ],
               "id": "arabic_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "لماذا ____ هذا؟",
-              "answer": "تفعل",
+              "question": "أنا لا أعرف ____ شئ بعد.",
+              "answer": "أي",
               "choices": [
-                "لم",
-                "تفعل",
-                "لماذا",
-                "هذا"
+                "وقت",
+                "أي",
+                "شيء",
+                "رائع"
               ],
               "id": "arabic_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "Perhaps you should do that now.",
-              "answer": "ربما يجب ان تفعل ذلك الآن.",
+              "question": "I didn't know that.",
+              "answer": "لم أعلم بهذا الأمر.",
               "words": [
-                "يجب",
-                "ان",
-                "تفعل",
-                "هنا،",
-                "أريد",
-                "ربما",
-                "الآن.",
-                "ذلك"
+                "جيد",
+                "الأمر.",
+                "بهذا",
+                "شئ",
+                "أعلم",
+                "لم"
               ],
               "id": "arabic_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لم تفعل ذلك؟",
-              "audio": "لم تفعل ذلك؟",
+              "answer": "هذا جيد جدا",
+              "audio": "هذا جيد جدا",
               "id": "arabic_t4_3_3"
             },
             {
@@ -1107,20 +1098,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What do you want to do today?",
-                  "ماذا تريد أن تفعل اليوم؟"
+                  "I'm really sorry!",
+                  "أنا آسف جداً!"
                 ],
                 [
-                  "I don't have time.",
-                  "ليس لدي وقت."
+                  "How fascinating!",
+                  "كم هذا رائع!."
                 ],
                 [
-                  "I am pressed for time.",
-                  "ليس لديّ وقت."
+                  "How nice of you!",
+                  "كم رائع أنتَ!"
                 ],
                 [
-                  "No one was present.",
-                  "لم يكن هناك أحد."
+                  "What is the time there?",
+                  "كم الوقت هناك؟"
                 ]
               ],
               "id": "arabic_t4_3_4"
@@ -1139,47 +1130,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It wasn't like that.",
-              "answer": "لم يكن كذلك.",
+              "question": "What is over there?",
+              "answer": "ماذا يوجد هناك؟",
               "choices": [
                 "لا يوجد شيء.",
-                "لم يكن كذلك.",
-                "هل لديك واحدة؟",
-                "هذا جيد جدا"
+                "ماذا يوجد هناك؟",
+                "ماذا قلت لي؟",
+                "أنت من قلت ذلك، أليس كذلك؟"
               ],
               "id": "arabic_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "أنا لا أعرف ____ شئ بعد.",
-              "answer": "أي",
+              "question": "لا يوجد ____ هناك.",
+              "answer": "شيء",
               "choices": [
-                "يكن",
-                "هناك",
-                "الذي",
-                "أي"
+                "يوجد",
+                "صحيح",
+                "ذلك",
+                "شيء"
               ],
               "id": "arabic_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "I didn't know that.",
-              "answer": "لم أعلم بهذا الأمر.",
+              "question": "There's nothing.",
+              "answer": "لا يوجد شيء.",
               "words": [
-                "أعلم",
-                "ذلك",
-                "بهذا",
-                "أنا",
-                "الأمر.",
-                "لم"
+                "لا",
+                "أن",
+                "شيء.",
+                "لا",
+                "يوجد"
               ],
               "id": "arabic_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "هذا جيد جدا",
-              "audio": "هذا جيد جدا",
+              "answer": "لماذا يوجد ذلك؟",
+              "audio": "لماذا يوجد ذلك؟",
               "id": "arabic_t5_1_3"
             },
             {
@@ -1188,20 +1178,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is very good.",
-                  "هذا جيد جدا"
+                  "Do you have one?",
+                  "هل لديك واحدة؟"
                 ],
                 [
-                  "I'm really sorry!",
-                  "أنا آسف جداً!"
+                  "I told you before!",
+                  "قلت لك ذلك من قبل!"
                 ],
                 [
-                  "I'm very sorry.",
-                  "أنا آسف جداً"
+                  "I already told you he isn't here.",
+                  "لقد قلت لك أنه ليس هنا."
                 ],
                 [
-                  "I am very sorry.",
-                  "أنا آسف جداً"
+                  "I said I'm sorry.",
+                  "لقد قلت أنا آسف"
                 ]
               ],
               "id": "arabic_t5_1_4"
@@ -1214,46 +1204,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "How fascinating!",
-              "answer": "كم هذا رائع!.",
+              "question": "Why did you say that?",
+              "answer": "لم قلت ذلك؟",
               "choices": [
-                "هل لديك واحدة؟",
-                "كم هذا رائع!.",
-                "قلت لك ذلك من قبل!",
-                "لا يوجد شيء هناك."
+                "لم كان يحدث ذلك؟",
+                "لم قلت ذلك؟",
+                "لماذا يوجد ذلك؟",
+                "أنت من قلت ذلك، أليس كذلك؟"
               ],
               "id": "arabic_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "كم ____ أنتَ!",
-              "answer": "رائع",
+              "question": "أنت من قلت ____ أليس كذلك؟",
+              "answer": "ذلك",
               "choices": [
-                "ليس",
-                "رائع",
-                "جدا",
-                "لي"
+                "لا",
+                "ذلك",
+                "إن",
+                "يوجد"
               ],
               "id": "arabic_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "What is the time there?",
-              "answer": "كم الوقت هناك؟",
+              "question": "What did you say to me?",
+              "answer": "ماذا قلت لي؟",
               "words": [
-                "هناك؟",
-                "ليس",
-                "أعلم",
-                "كم",
-                "الوقت"
+                "لي؟",
+                "يحدث.",
+                "هل",
+                "ماذا",
+                "قلت"
               ],
               "id": "arabic_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "ماذا يوجد هناك؟",
-              "audio": "ماذا يوجد هناك؟",
+              "answer": "ما الذي يحدث؟",
+              "audio": "ما الذي يحدث؟",
               "id": "arabic_t5_2_3"
             },
             {
@@ -1262,20 +1252,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "There's nothing there.",
-                  "لا يوجد شيء هناك."
+                  "That won't happen.",
+                  "لن يحدث ذلك."
                 ],
                 [
-                  "There's nothing.",
-                  "لا يوجد شيء."
+                  "I want to know what's going on out here.",
+                  "أريد أن أعرف ما يحدث هنا."
                 ],
                 [
-                  "There isn't anything.",
-                  "لا يوجد شيء."
+                  "What's happening here?",
+                  "ما الذي يحدث هنا؟"
                 ],
                 [
-                  "Why does that exist?",
-                  "لماذا يوجد ذلك؟"
+                  "What is going on here?",
+                  "ماذا يحدث هنا؟"
                 ]
               ],
               "id": "arabic_t5_2_4"
@@ -1288,206 +1278,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you have one?",
-              "answer": "هل لديك واحدة؟",
-              "choices": [
-                "أنا لا أعرف أي شئ بعد.",
-                "أنا آسف جداً",
-                "هذا جيد جدا",
-                "هل لديك واحدة؟"
-              ],
-              "id": "arabic_t5_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "قلت لك ____ من قبل!",
-              "answer": "ذلك",
-              "choices": [
-                "أعلم",
-                "ذلك",
-                "بهذا",
-                "أنا"
-              ],
-              "id": "arabic_t5_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I already told you he isn't here.",
-              "answer": "لقد قلت لك أنه ليس هنا.",
-              "words": [
-                "هنا.",
-                "أنه",
-                "جداً",
-                "لقد",
-                "قلت",
-                "لك",
-                "جيد",
-                "ليس"
-              ],
-              "id": "arabic_t5_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "لقد قلت أنا آسف",
-              "audio": "لقد قلت أنا آسف",
-              "id": "arabic_t5_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Why did you say that?",
-                  "لم قلت ذلك؟"
-                ],
-                [
-                  "You said that, didn't you?",
-                  "أنت من قلت ذلك، أليس كذلك؟"
-                ],
-                [
-                  "What did you say to me?",
-                  "ماذا قلت لي؟"
-                ],
-                [
-                  "What's going on?",
-                  "ما الذي يحدث؟"
-                ]
-              ],
-              "id": "arabic_t5_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t6",
-      "title": "Everyday Speech 2",
-      "lessons": [
-        {
-          "id": "t6l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "What is going on?",
-              "answer": "ما الذي يحدث؟",
-              "choices": [
-                "مرحباً، هل من أحدٍ هناك؟",
-                "أريد أن أعرف ما يحدث هنا.",
-                "ما الذي يحدث؟",
-                "ماذا يحدث هنا؟"
-              ],
-              "id": "arabic_t6_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "ما ____ يحدث؟",
-              "answer": "الذي",
-              "choices": [
-                "اليوم",
-                "لم",
-                "كان",
-                "الذي"
-              ],
-              "id": "arabic_t6_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What's happening?",
-              "answer": "ما الذي يحدث؟",
-              "words": [
-                "الذي",
-                "ذلك.",
-                "من",
-                "ما",
-                "يحدث؟"
-              ],
-              "id": "arabic_t6_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "لن يحدث ذلك.",
-              "audio": "لن يحدث ذلك.",
-              "id": "arabic_t6_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I want to know what's going on out here.",
-                  "أريد أن أعرف ما يحدث هنا."
-                ],
-                [
-                  "What's happening here?",
-                  "ما الذي يحدث هنا؟"
-                ],
-                [
-                  "What's going on here?",
-                  "ما الذي يحدث هنا؟"
-                ],
-                [
-                  "What is going on here?",
-                  "ماذا يحدث هنا؟"
-                ]
-              ],
-              "id": "arabic_t6_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t6l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
               "question": "Nothing happened.",
               "answer": "لم يحدث شيء.",
               "choices": [
-                "ماذا تفعل يا أبي؟",
-                "لم يحدث شيء.",
-                "ماذا؟ لا، بالطبع لا.",
-                "ما الذي يحدث هنا؟"
+                "إن ذلك بالطبع صحيح.",
+                "لا يوجد شيء هناك.",
+                "لم يحدث له شيء.",
+                "لم يحدث شيء."
               ],
-              "id": "arabic_t6_2_0"
+              "id": "arabic_t5_3_0"
             },
             {
               "type": "cloze",
               "question": "لم كان ____ ذلك؟",
               "answer": "يحدث",
               "choices": [
-                "ذلك",
+                "واحدة",
                 "يحدث",
-                "لك",
-                "أن"
+                "هناك",
+                "الذي"
               ],
-              "id": "arabic_t6_2_1"
+              "id": "arabic_t5_3_1"
             },
             {
               "type": "sentence",
               "question": "I didn't know what was going on.",
               "answer": "لم أعلم ماذا كان يحدث.",
               "words": [
-                "يحدث.",
-                "مرة",
-                "كان",
-                "لم",
                 "أعلم",
-                "ماذا",
-                "أنا"
+                "لقد",
+                "كان",
+                "لك",
+                "لم",
+                "يحدث.",
+                "ماذا"
               ],
-              "id": "arabic_t6_2_2"
+              "id": "arabic_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "ماذا يحدث اليوم؟",
               "audio": "ماذا يحدث اليوم؟",
-              "id": "arabic_t6_2_3"
+              "id": "arabic_t5_3_3"
             },
             {
               "type": "match",
@@ -1511,37 +1344,43 @@
                   "ماذا؟ لا، بالطبع لا."
                 ]
               ],
-              "id": "arabic_t6_2_4"
+              "id": "arabic_t5_3_4"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "title": "Everyday Speech 2",
+      "lessons": [
         {
-          "id": "t6l3",
-          "title": "Lesson 3",
+          "id": "t6l1",
+          "title": "Lesson 1",
           "exercises": [
             {
               "type": "translation",
               "question": "Thanks, that's all.",
               "answer": "شكراً، هذا كل شيء.",
               "choices": [
-                "مرحباً، هل من أحدٍ هناك؟",
-                "ما الذي يحدث هنا؟",
-                "لن يحدث ذلك.",
-                "شكراً، هذا كل شيء."
+                "شكرا مرة أخرى",
+                "هل تعلم لماذا انا هنا؟",
+                "شكراً، هذا كل شيء.",
+                "لماذا تعلم ذلك؟"
               ],
-              "id": "arabic_t6_3_0"
+              "id": "arabic_t6_1_0"
             },
             {
               "type": "cloze",
               "question": "لا، ____ لك.",
               "answer": "شكرا",
               "choices": [
-                "ماذا",
-                "شكرا",
-                "لن",
-                "هذا"
+                "معك",
+                "كل",
+                "أحد",
+                "شكرا"
               ],
-              "id": "arabic_t6_3_1"
+              "id": "arabic_t6_1_1"
             },
             {
               "type": "sentence",
@@ -1549,29 +1388,25 @@
               "answer": "أنا بخير، شكرا.",
               "words": [
                 "بخير،",
-                "شكرا.",
-                "شكراً،",
+                "هذا",
+                "أن",
                 "أنا",
-                "لن"
+                "شكرا."
               ],
-              "id": "arabic_t6_3_2"
+              "id": "arabic_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنا بخير، شكرا.",
-              "audio": "أنا بخير، شكرا.",
-              "id": "arabic_t6_3_3"
+              "answer": "شكرا مرة أخرى",
+              "audio": "شكرا مرة أخرى",
+              "id": "arabic_t6_1_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "Thanks again.",
-                  "شكرا مرة أخرى"
-                ],
                 [
                   "I'm fine, thank you.",
                   "أنا بخير, شكرا لك"
@@ -1583,6 +1418,158 @@
                 [
                   "What are you doing, Dad?",
                   "ماذا تفعل يا أبي؟"
+                ],
+                [
+                  "Father, where are you?",
+                  "أبي, أين أنتَ؟"
+                ]
+              ],
+              "id": "arabic_t6_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t6l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What's wrong with you?",
+              "answer": "ما الأمر معك؟",
+              "choices": [
+                "أنا بخير, شكرا لك",
+                "ما الأمر معك؟",
+                "هل تعلم لماذا؟",
+                "لماذا تعلم ذلك؟"
+              ],
+              "id": "arabic_t6_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "أنا معك ____ الآن",
+              "answer": "هنا",
+              "choices": [
+                "هناك",
+                "هنا",
+                "لك",
+                "أخرى"
+              ],
+              "id": "arabic_t6_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Who was with you?",
+              "answer": "من كان معك؟",
+              "words": [
+                "كان",
+                "أين",
+                "معك؟",
+                "من",
+                "شكراً"
+              ],
+              "id": "arabic_t6_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "ماذا قلتِ لها؟",
+              "audio": "ماذا قلتِ لها؟",
+              "id": "arabic_t6_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "No, I don't have it with me.",
+                  "لا ليس معي."
+                ],
+                [
+                  "Do you know?",
+                  "هل أنت تعلم؟"
+                ],
+                [
+                  "Do you know what you're doing?",
+                  "هل أنت تعلم ماذا تفعل؟"
+                ],
+                [
+                  "Do you know why I'm here?",
+                  "هل تعلم لماذا انا هنا؟"
+                ]
+              ],
+              "id": "arabic_t6_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t6l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Do you know who I am?",
+              "answer": "هل تعلم من أنا ؟",
+              "choices": [
+                "شكرا مرة أخرى",
+                "ماذا تفعل يا أبي؟",
+                "لا، شكراً لك.",
+                "هل تعلم من أنا ؟"
+              ],
+              "id": "arabic_t6_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "أنت ____ كيف",
+              "answer": "تعلم",
+              "choices": [
+                "هذا",
+                "تعلم",
+                "أحد",
+                "هناك"
+              ],
+              "id": "arabic_t6_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Do you know why?",
+              "answer": "هل تعلم لماذا؟",
+              "words": [
+                "تعلم",
+                "لماذا؟",
+                "هذا",
+                "هل",
+                "شيء."
+              ],
+              "id": "arabic_t6_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "لماذا تعلم ذلك؟",
+              "audio": "لماذا تعلم ذلك؟",
+              "id": "arabic_t6_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Want to know?",
+                  "هل تريد أن تعلم؟"
+                ],
+                [
+                  "You know it, don't you?",
+                  "أنت تعلم هذا، أليس كذلك؟"
+                ],
+                [
+                  "You don't know where he is.",
+                  "أنت لا تعلم أين هو."
+                ],
+                [
+                  "You know who she is.",
+                  "أنت تعلم من هي."
                 ]
               ],
               "id": "arabic_t6_3_4"
@@ -1601,47 +1588,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Father, where are you?",
-              "answer": "أبي, أين أنتَ؟",
+              "question": "You know who I am.",
+              "answer": "أنت تعلم من انا",
               "choices": [
-                "هذا المكان رائع.",
-                "أبي, أين أنتَ؟",
-                "أنا معك هنا الآن",
-                "هل أنت تعلم؟"
+                "أنت تعلم من نحن.",
+                "أنت تعلم من انا",
+                "هل تعلم ماذا فعل؟",
+                "أنتَ قد لا تُريد فِعل ذلك."
               ],
               "id": "arabic_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "ما ____ معك؟",
-              "answer": "الأمر",
+              "question": "هي تعلم ____ أنت.",
+              "answer": "من",
               "choices": [
-                "أين",
-                "ما",
-                "أنا",
-                "الأمر"
+                "أليس",
+                "رائع",
+                "هذا",
+                "من"
               ],
               "id": "arabic_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "Now I'm here with you.",
-              "answer": "أنا معك هنا الآن",
+              "question": "You know who we are.",
+              "answer": "أنت تعلم من نحن.",
               "words": [
-                "معك",
-                "الآن",
-                "هنا",
-                "المكان؟",
-                "أنا",
-                "لماذا"
+                "تعلم",
+                "نحن.",
+                "من",
+                "أنت.",
+                "أنت",
+                "."
               ],
               "id": "arabic_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "من كان معك؟",
-              "audio": "من كان معك؟",
+              "answer": "هي تعلم من يكون.",
+              "audio": "هي تعلم من يكون.",
               "id": "arabic_t7_1_3"
             },
             {
@@ -1650,20 +1637,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What did you say to her?",
-                  "ماذا قلتِ لها؟"
+                  "I do not want to work.",
+                  "لا أريد العمل."
                 ],
                 [
-                  "What did you tell her?",
-                  "ماذا قلتِ لها؟"
+                  "It's great out here.",
+                  "هذا المكان رائع."
                 ],
                 [
-                  "No, I don't have it with me.",
-                  "لا ليس معي."
+                  "What's that place?",
+                  "ما هذا المكان؟"
                 ],
                 [
-                  "Do you know?",
-                  "هل أنت تعلم؟"
+                  "I don't believe I know where that is.",
+                  "لا أعتقد أنّني أعرف هذا المكان."
                 ]
               ],
               "id": "arabic_t7_1_4"
@@ -1676,48 +1663,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you know what you're doing?",
-              "answer": "هل أنت تعلم ماذا تفعل؟",
+              "question": "It was where you told me it would be.",
+              "answer": "كان في المكان الذي قلت لي سيكون.",
               "choices": [
-                "ما هذا المكان؟",
-                "هل أنت تعلم ماذا تفعل؟",
-                "من كان معك؟",
-                "لا ليس معي."
+                "هذا المكان رائع.",
+                "كان في المكان الذي قلت لي سيكون.",
+                "هي تعلم من يكون.",
+                "لم يكن عليّ فعل شيء."
               ],
               "id": "arabic_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "هل تعلم ____ انا هنا؟",
-              "answer": "لماذا",
+              "question": "كان عليك ____ ذلك.",
+              "answer": "فعل",
               "choices": [
-                "كذلك",
-                "لماذا",
-                "تفعل",
-                "الأمر"
+                "قلت",
+                "فعل",
+                "لم",
+                "تعلم"
               ],
               "id": "arabic_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "Do you know who I am?",
-              "answer": "هل تعلم من أنا ؟",
+              "question": "I can't do it.",
+              "answer": "لا يمكنني فعل ذلك.",
               "words": [
-                "من",
-                "أنا",
-                "تعلم",
-                "هل",
-                "أنا",
-                "؟",
-                "نحن."
+                ".",
+                "ذلك.",
+                "يمكنني",
+                "لا",
+                "فعل",
+                "من"
               ],
               "id": "arabic_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنت تعلم كيف",
-              "audio": "أنت تعلم كيف",
+              "answer": "لم يكن عليك فعل هذا.",
+              "audio": "لم يكن عليك فعل هذا.",
               "id": "arabic_t7_2_3"
             },
             {
@@ -1726,20 +1712,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you know why?",
-                  "هل تعلم لماذا؟"
+                  "He shouldn't have done that.",
+                  "لم يكن عليه فعل هذا."
                 ],
                 [
-                  "Why do you know that?",
-                  "لماذا تعلم ذلك؟"
+                  "You might not want to do that.",
+                  "أنتَ قد لا تُريد فِعل ذلك."
                 ],
                 [
-                  "Want to know?",
-                  "هل تريد أن تعلم؟"
+                  "Do you know what he has done?",
+                  "هل تعلم ماذا فعل؟"
                 ],
                 [
-                  "You know it, don't you?",
-                  "أنت تعلم هذا، أليس كذلك؟"
+                  "I didn't have to do anything.",
+                  "لم يكن عليّ فعل شيء."
                 ]
               ],
               "id": "arabic_t7_2_4"
@@ -1752,47 +1738,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't know where he is.",
-              "answer": "أنت لا تعلم أين هو.",
+              "question": "I won't be able to do that.",
+              "answer": "لن أستطيع فعل هذا.",
               "choices": [
-                "أنت تعلم من نحن.",
-                "ما الأمر معك؟",
                 "هي تعلم من أنت.",
-                "أنت لا تعلم أين هو."
+                "هل تعلم ماذا فعل؟",
+                "ما هذا المكان؟",
+                "لن أستطيع فعل هذا."
               ],
               "id": "arabic_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "أنت تعلم ____ هي.",
-              "answer": "من",
+              "question": "أنت جيد جدًا في ____ ذلك ، أليس كذلك؟",
+              "answer": "فعل",
               "choices": [
-                "تفعل",
-                "أين",
-                "من",
-                "الأمر"
+                "ذلك",
+                "العمل",
+                "فعل",
+                "هو"
               ],
               "id": "arabic_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "You know who I am.",
-              "answer": "أنت تعلم من انا",
+              "question": "He's the one who did this.",
+              "answer": "هو من فعل هذا.",
               "words": [
-                "انا",
-                "انا",
-                "تعلم",
-                "أنت",
-                "تفعل؟",
-                "من"
+                "جدًا",
+                "هذا.",
+                "من",
+                "هو",
+                "تُريد",
+                "فعل"
               ],
               "id": "arabic_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "هي تعلم من أنت.",
-              "audio": "هي تعلم من أنت.",
+              "answer": "أنت من فعل هذا!",
+              "audio": "أنت من فعل هذا!",
               "id": "arabic_t7_3_3"
             },
             {
@@ -1801,20 +1787,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You know who we are.",
-                  "أنت تعلم من نحن."
+                  "Has he done this before?",
+                  "هل فعل هذا من قبل؟"
                 ],
                 [
-                  "She knows who he is.",
-                  "هي تعلم من يكون."
+                  "It didn't happen that way.",
+                  "لم يحدث هكذا."
                 ],
                 [
-                  "It's great out here.",
-                  "هذا المكان رائع."
+                  "I'm fine, mom.",
+                  "أنا بخير يا أمّي."
                 ],
                 [
-                  "What's that place?",
-                  "ما هذا المكان؟"
+                  "I'm sorry Mother.",
+                  "أنا آسف يا أمي ."
                 ]
               ],
               "id": "arabic_t7_3_4"
@@ -1833,47 +1819,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't believe I know where that is.",
-              "answer": "لا أعتقد أنّني أعرف هذا المكان.",
+              "question": "Is Mum here?",
+              "answer": "هل أمي هنا؟",
               "choices": [
-                "كان عليك فعل ذلك.",
-                "لا أعتقد أنّني أعرف هذا المكان.",
-                "أنتَ قد لا تُريد فِعل ذلك.",
-                "لم يكن عليك فعل هذا."
+                "هي تَعرِفُ الحقيقة.",
+                "هل أمي هنا؟",
+                "سيكون لديك الكثير من العمل بما أنني هنا.",
+                "هل تريد حقا أن تعلم؟"
               ],
               "id": "arabic_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "كان في المكان ____ قلت لي سيكون.",
-              "answer": "الذي",
+              "question": "لذلك ____ هنا",
+              "answer": "نحن",
               "choices": [
-                "قبل",
-                "أعتقد",
-                "ليس",
-                "الذي"
+                "هنا",
+                "أنني",
+                "لذلك",
+                "نحن"
               ],
               "id": "arabic_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "You should have done so.",
-              "answer": "كان عليك فعل ذلك.",
+              "question": "You'll have a lot to do now that I'm around.",
+              "answer": "سيكون لديك الكثير من العمل بما أنني هنا.",
               "words": [
-                "عليك",
-                "بخير",
-                "ذلك.",
-                "كان",
-                "لي",
-                "فعل"
+                "لديك",
+                "من",
+                "أنني",
+                "هنا.",
+                "بما",
+                "العمل",
+                "الكثير",
+                "سيكون",
+                "حقاً!",
+                "أمي"
               ],
               "id": "arabic_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لا يمكنني فعل ذلك.",
-              "audio": "لا يمكنني فعل ذلك.",
+              "answer": "لا ليس حقا.",
+              "audio": "لا ليس حقا.",
               "id": "arabic_t8_1_3"
             },
             {
@@ -1882,20 +1872,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You shouldn't have done that.",
-                  "لم يكن عليك فعل هذا."
+                  "That's really great!",
+                  "ذلك رائع حقاً!"
                 ],
                 [
-                  "He shouldn't have done that.",
-                  "لم يكن عليه فعل هذا."
+                  "Maybe she really won't be there?",
+                  "ربما لن تكون هناك حقا."
                 ],
                 [
-                  "You might not want to do that.",
-                  "أنتَ قد لا تُريد فِعل ذلك."
+                  "You really don't want to know.",
+                  "أنتَ حقاً لا تريد أن تعرف."
                 ],
                 [
-                  "Do you know what he has done?",
-                  "هل تعلم ماذا فعل؟"
+                  "Do you genuinely want to know?",
+                  "هل تريد حقا أن تعلم؟"
                 ]
               ],
               "id": "arabic_t8_1_4"
@@ -1908,52 +1898,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I didn't have to do anything.",
-              "answer": "لم يكن عليّ فعل شيء.",
+              "question": "I think that she knows the truth.",
+              "answer": "أعتقد أنها تعرف الحقيقة.",
               "choices": [
-                "سيكون لديك الكثير من العمل بما أنني هنا.",
-                "لم يكن عليّ فعل شيء.",
-                "أنت جيد جدًا في فعل ذلك ، أليس كذلك؟",
-                "أنا بخير يا أمّي."
+                "أريد الذهاب معك.",
+                "أعتقد أنها تعرف الحقيقة.",
+                "هل هذه هي حقا الحقيقة؟",
+                "هي تَعرِفُ الحقيقة."
               ],
               "id": "arabic_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "لن أستطيع ____ هذا.",
-              "answer": "فعل",
+              "question": "هل هذه ____ حقا الحقيقة؟",
+              "answer": "هي",
               "choices": [
-                "جيد",
-                "فعل",
-                "هو",
-                "العمل"
+                "الجميع",
+                "هي",
+                "الذهاب",
+                "ربما"
               ],
               "id": "arabic_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "You're very good at doing that, aren't you?",
-              "answer": "أنت جيد جدًا في فعل ذلك ، أليس كذلك؟",
+              "question": "She knows the truth.",
+              "answer": "هي تَعرِفُ الحقيقة.",
               "words": [
-                "كذلك؟",
-                "ذلك",
-                "في",
-                "أليس",
-                "،",
-                "جدًا",
-                "فعل",
-                "ليس",
-                "جيد",
-                "الذي",
-                "أنت"
+                "الحقيقة.",
+                "أمي",
+                "تَعرِفُ",
+                "أنها",
+                "هي"
               ],
               "id": "arabic_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "هو من فعل هذا.",
-              "audio": "هو من فعل هذا.",
+              "answer": "كيف حال الجميع؟",
+              "audio": "كيف حال الجميع؟",
               "id": "arabic_t8_2_3"
             },
             {
@@ -1962,20 +1946,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It was you who did this!",
-                  "أنت من فعل هذا!"
+                  "Thanks anyway.",
+                  "شكراً على أي حال."
                 ],
                 [
-                  "Has he done this before?",
-                  "هل فعل هذا من قبل؟"
+                  "I'm not in the best of shape.",
+                  "لست في أفضل حال."
                 ],
                 [
-                  "It didn't happen that way.",
-                  "لم يحدث هكذا."
+                  "You may go there.",
+                  "يمكنك الذهاب إلى هناك."
                 ],
                 [
-                  "I'm fine, mom.",
-                  "أنا بخير يا أمّي."
+                  "I want to go with you.",
+                  "أريد الذهاب معك."
                 ]
               ],
               "id": "arabic_t8_2_4"
@@ -1988,46 +1972,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm sorry Mother.",
-              "answer": "أنا آسف يا أمي .",
+              "question": "You can go wherever you want.",
+              "answer": "يمكنك الذهاب إلى أي مكان تريد.",
               "choices": [
-                "كان في المكان الذي قلت لي سيكون.",
-                "كان عليك فعل ذلك.",
-                "هل أمي هنا؟",
-                "أنا آسف يا أمي ."
+                "لا أريد الذهاب إلى هناك مرة أخرى.",
+                "لست في أفضل حال.",
+                "علي الذهاب الآن.",
+                "يمكنك الذهاب إلى أي مكان تريد."
               ],
               "id": "arabic_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "هل ____ هنا؟",
-              "answer": "أمي",
+              "question": "علي ____ الآن.",
+              "answer": "الذهاب",
               "choices": [
-                "سيكون",
-                "أمي",
-                "عليه",
-                "أعرف"
+                "لست",
+                "الذهاب",
+                "مرة",
+                "أريد"
               ],
               "id": "arabic_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "That's why we're here.",
-              "answer": "لذلك نحن هنا",
+              "question": "You don't need to go.",
+              "answer": "ليس عليك الذهاب.",
               "words": [
-                "نحن",
-                "هنا",
-                "الذي",
-                "الكثير",
-                "لذلك"
+                "عليك",
+                "الذهاب.",
+                "على",
+                "هناك",
+                "ليس"
               ],
               "id": "arabic_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لذلك نحن هنا",
-              "audio": "لذلك نحن هنا",
+              "answer": "لا أريد الذهاب إلى هناك مرة أخرى.",
+              "audio": "لا أريد الذهاب إلى هناك مرة أخرى.",
               "id": "arabic_t8_3_3"
             },
             {
@@ -2036,20 +2020,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You'll have a lot to do now that I'm around.",
-                  "سيكون لديك الكثير من العمل بما أنني هنا."
+                  "She shouldn't have done that.",
+                  "هي لم يكن عليها فعل هذا."
                 ],
                 [
-                  "No, not really.",
-                  "لا ليس حقا."
+                  "Why does she need to do this?",
+                  "لماذا عليها أن تفعل هذا؟"
                 ],
                 [
-                  "That's really great!",
-                  "ذلك رائع حقاً!"
+                  "What! You didn't really do that?",
+                  "ماذا! هل فعلت ذلك حقًا؟"
                 ],
                 [
-                  "Maybe she really won't be there?",
-                  "ربما لن تكون هناك حقا."
+                  "Why did you do that?",
+                  "لماذا فعلت ذلك؟"
                 ]
               ],
               "id": "arabic_t8_3_4"
@@ -2068,47 +2052,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You really don't want to know.",
-              "answer": "أنتَ حقاً لا تريد أن تعرف.",
+              "question": "I don't know why I just did that.",
+              "answer": "لا أعلم لم فعلت ذلك.",
               "choices": [
-                "أعتقد أنها تعرف الحقيقة.",
-                "أنتَ حقاً لا تريد أن تعرف.",
-                "شكراً على أي حال.",
-                "ماذا فعلت اليوم ؟"
+                "نحن في المنزل",
+                "لا أعلم لم فعلت ذلك.",
+                "نحن في المنزل الآن.",
+                "أكون أو لا أكون؟"
               ],
               "id": "arabic_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "هل تريد ____ أن تعلم؟",
-              "answer": "حقا",
+              "question": "ماذا فعلت ____ ؟",
+              "answer": "اليوم",
               "choices": [
-                "لا",
-                "مكان",
-                "لماذا",
-                "حقا"
+                "أفعل",
+                "شيء",
+                "هنا",
+                "اليوم"
               ],
               "id": "arabic_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "I think that she knows the truth.",
-              "answer": "أعتقد أنها تعرف الحقيقة.",
+              "question": "You're the one who did this!",
+              "answer": "أنت من فعلت هذا!",
               "words": [
-                "أنها",
-                "الحقيقة.",
-                "تعرف",
-                "الذهاب.",
-                "تريد",
-                "أعتقد"
+                "من",
+                "هذا!",
+                "فعلت",
+                "أعلم",
+                "هنا",
+                "أنت"
               ],
               "id": "arabic_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "هل هذه هي حقا الحقيقة؟",
-              "audio": "هل هذه هي حقا الحقيقة؟",
+              "answer": "قال لي كل شيء.",
+              "audio": "قال لي كل شيء.",
               "id": "arabic_t9_1_3"
             },
             {
@@ -2117,20 +2101,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She knows the truth.",
-                  "هي تَعرِفُ الحقيقة."
+                  "Who said that?",
+                  "من قال هذا؟"
                 ],
                 [
-                  "How is everyone?",
-                  "كيف حال الجميع؟"
+                  "He said that.",
+                  "هو من قال ذلك."
                 ],
                 [
-                  "Thanks anyway.",
-                  "شكراً على أي حال."
+                  "He told her that.",
+                  "هو من قال لها ذلك."
                 ],
                 [
-                  "How is everybody?",
-                  "كيف حال الجميع؟"
+                  "You're the one who said it.",
+                  "أنت من قال ذلك."
                 ]
               ],
               "id": "arabic_t9_1_4"
@@ -2143,46 +2127,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm not in the best of shape.",
-              "answer": "لست في أفضل حال.",
+              "question": "You know who they are.",
+              "answer": "أنت تعلم من هم.",
               "choices": [
-                "لماذا عليها أن تفعل هذا؟",
-                "لست في أفضل حال.",
-                "لماذا فعلت ذلك؟",
-                "هل تريد حقا أن تعلم؟"
+                "من قال هذا؟",
+                "أنت تعلم من هم.",
+                "أريد أن أكون هنا",
+                "ماذا عليّ أن أفعل؟"
               ],
               "id": "arabic_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "يمكنك الذهاب ____ هناك.",
-              "answer": "إلى",
+              "question": "مرحباً بك ____ المنزل.",
+              "answer": "في",
               "choices": [
-                "تريد",
-                "إلى",
-                "لي",
-                "حقا"
+                "هذا",
+                "في",
+                "الآن",
+                "أعلم"
               ],
               "id": "arabic_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "I want to go with you.",
-              "answer": "أريد الذهاب معك.",
+              "question": "I am in the house.",
+              "answer": "أنا في المنزل.",
               "words": [
-                "معك.",
-                "أنها",
-                "هناك",
-                "أريد",
-                "الذهاب"
+                "المنزل.",
+                "قال",
+                "فعلت",
+                "أنا",
+                "في"
               ],
               "id": "arabic_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "يمكنك الذهاب إلى أي مكان تريد.",
-              "audio": "يمكنك الذهاب إلى أي مكان تريد.",
+              "answer": "أمّي، أنا في المنزل.",
+              "audio": "أمّي، أنا في المنزل.",
               "id": "arabic_t9_2_3"
             },
             {
@@ -2191,20 +2175,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I have to go now.",
-                  "علي الذهاب الآن."
+                  "We are at home.",
+                  "نحن في المنزل"
                 ],
                 [
-                  "You don't need to go.",
-                  "ليس عليك الذهاب."
+                  "We're home now.",
+                  "نحن في المنزل الآن."
                 ],
                 [
-                  "I don't want to go there again.",
-                  "لا أريد الذهاب إلى هناك مرة أخرى."
+                  "Is somebody in the house?",
+                  "هل من أحد في المنزل؟"
                 ],
                 [
-                  "She shouldn't have done that.",
-                  "هي لم يكن عليها فعل هذا."
+                  "My father's not at home.",
+                  "أبي ليس في المنزل."
                 ]
               ],
               "id": "arabic_t9_2_4"
@@ -2217,46 +2201,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Why does she need to do this?",
-              "answer": "لماذا عليها أن تفعل هذا؟",
+              "question": "Here he is!",
+              "answer": "ها هو هنا",
               "choices": [
-                "من قال هذا؟",
-                "هي تَعرِفُ الحقيقة.",
-                "لماذا فعلت ذلك؟",
-                "لماذا عليها أن تفعل هذا؟"
+                "ماذا فعلت اليوم ؟",
+                "مرحباً بك في المنزل.",
+                "قال لي كل شيء.",
+                "ها هو هنا"
               ],
               "id": "arabic_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "ماذا! هل ____ ذلك حقًا؟",
-              "answer": "فعلت",
+              "question": "ماذا عليّ ____ أفعل؟",
+              "answer": "أن",
               "choices": [
-                "عليها",
-                "فعلت",
-                "كيف",
-                "تريد"
+                "أعلم",
+                "أن",
+                "علي",
+                "شيء"
               ],
               "id": "arabic_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "Why did you do that?",
-              "answer": "لماذا فعلت ذلك؟",
+              "question": "I don't know what to do.",
+              "answer": "لا أعرف ماذا أفعل.",
               "words": [
-                "فعلت",
-                "ذلك؟",
-                "أعلم",
-                "لماذا",
-                "حقاً"
+                "ماذا",
+                "أفعل.",
+                "أعرف",
+                "لا",
+                "أبي",
+                "أعلم"
               ],
               "id": "arabic_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "لا أعلم لم فعلت ذلك.",
-              "audio": "لا أعلم لم فعلت ذلك.",
+              "answer": "هل يجب أن أفعل ذلك الآن؟",
+              "audio": "هل يجب أن أفعل ذلك الآن؟",
               "id": "arabic_t9_3_3"
             },
             {
@@ -2265,20 +2250,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What did you do today?",
-                  "ماذا فعلت اليوم ؟"
+                  "I told you I don't know how to do that.",
+                  "قلت لك أنني لا أعرف كيف أفعل ذلك."
                 ],
                 [
-                  "You're the one who did this!",
-                  "أنت من فعلت هذا!"
+                  "Why don't I do that?",
+                  "لماذا لا أفعل ذلك؟"
                 ],
                 [
-                  "He told me everything.",
-                  "قال لي كل شيء."
+                  "To be or not to be?",
+                  "أكون أو لا أكون؟"
                 ],
                 [
-                  "Who said that?",
-                  "من قال هذا؟"
+                  "I want to be here.",
+                  "أريد أن أكون هنا"
                 ]
               ],
               "id": "arabic_t9_3_4"
@@ -2297,47 +2282,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He said that.",
-              "answer": "هو من قال ذلك.",
+              "question": "I know who I am.",
+              "answer": "أعرف من أكون.",
               "choices": [
+                "لا أظن ذلك.",
                 "أعرف من أكون.",
-                "هو من قال ذلك.",
-                "أنت من قال ذلك.",
-                "أريد أن أكون هنا"
+                "هم أفضل مني.",
+                "إنها فكرة جيدة."
               ],
               "id": "arabic_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "هو من ____ لها ذلك.",
-              "answer": "قال",
+              "question": "هذا ____ أكون.",
+              "answer": "من",
               "choices": [
-                "تعلم",
-                "يجب",
-                "علي",
-                "قال"
+                "أكون",
+                "هذا",
+                "مني",
+                "من"
               ],
               "id": "arabic_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "You're the one who said it.",
-              "answer": "أنت من قال ذلك.",
+              "question": "I'm better than you.",
+              "answer": "أنا أفضل منك.",
               "words": [
-                "من",
-                "ذلك.",
-                "أو",
-                "أنت",
-                "قال",
-                "من"
+                "منك.",
+                "أظنّ",
+                "أفضل",
+                "أنا",
+                "نعم"
               ],
               "id": "arabic_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أنت تعلم من هم.",
-              "audio": "أنت تعلم من هم.",
+              "answer": "ماذا يعني هذا؟",
+              "audio": "ماذا يعني هذا؟",
               "id": "arabic_t10_1_3"
             },
             {
@@ -2346,20 +2330,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Welcome home.",
-                  "مرحباً بك في المنزل."
+                  "What does it mean?",
+                  "ماذا يعني ذلك؟"
                 ],
                 [
-                  "I am in the house.",
-                  "أنا في المنزل."
+                  "I know how much he means to you.",
+                  "أعرفُ كَم يعني لكِ."
                 ],
                 [
-                  "Mom, I'm home.",
-                  "أمّي، أنا في المنزل."
+                  "I don't think so.",
+                  "لا أظن ذلك."
                 ],
                 [
-                  "We are at home.",
-                  "نحن في المنزل"
+                  "I think that's what happened.",
+                  "أظنّ أن هذا ما حدث."
                 ]
               ],
               "id": "arabic_t10_1_4"
@@ -2372,48 +2356,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "We're at home.",
-              "answer": "نحن في المنزل",
+              "question": "I think that's what's happening.",
+              "answer": "أظنّ أن هذا ما يحدث.",
               "choices": [
-                "هو من قال لها ذلك.",
-                "نحن في المنزل",
-                "أنا في المنزل.",
-                "أريد أن أكون هنا"
+                "متى علينا الذهاب؟",
+                "أظنّ أن هذا ما يحدث.",
+                "لديَ فكرة أفضل.",
+                "هذا من أكون."
               ],
               "id": "arabic_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "نحن في ____ الآن.",
-              "answer": "المنزل",
+              "question": "أنت ____ مني.",
+              "answer": "أفضل",
               "choices": [
-                "تعلم",
-                "المنزل",
-                "هذا",
-                "أنني"
+                "إنها",
+                "أفضل",
+                "سيكون",
+                "منك"
               ],
               "id": "arabic_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "Is somebody in the house?",
-              "answer": "هل من أحد في المنزل؟",
+              "question": "They're better than me.",
+              "answer": "هم أفضل مني.",
               "words": [
-                "في",
-                "بك",
+                "أفضل",
                 "من",
-                "ذلك.",
-                "هل",
-                "أحد",
-                "المنزل؟"
+                "مني.",
+                "هم",
+                "منك."
               ],
               "id": "arabic_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أبي ليس في المنزل.",
-              "audio": "أبي ليس في المنزل.",
+              "answer": "عليك أن تعرف هذه الأمور.",
+              "audio": "عليك أن تعرف هذه الأمور.",
               "id": "arabic_t10_2_3"
             },
             {
@@ -2422,20 +2404,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Here he is!",
-                  "ها هو هنا"
+                  "That's a great idea.",
+                  "إنها فكرة جيدة."
                 ],
                 [
-                  "What should I do?",
-                  "ماذا عليّ أن أفعل؟"
+                  "That's a good idea!",
+                  "هذه فكرة جيدة!"
                 ],
                 [
-                  "I don't know what to do.",
-                  "لا أعرف ماذا أفعل."
+                  "I've got a better idea.",
+                  "لديَ فكرة أفضل."
                 ],
                 [
-                  "Do I have to do it right away?",
-                  "هل يجب أن أفعل ذلك الآن؟"
+                  "Who's idea was that?",
+                  "فكرة مَن كانت هذه؟"
                 ]
               ],
               "id": "arabic_t10_2_4"
@@ -2448,47 +2430,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I told you I don't know how to do that.",
-              "answer": "قلت لك أنني لا أعرف كيف أفعل ذلك.",
+              "question": "I have no idea.",
+              "answer": "ليس لدي أي فكرة.",
               "choices": [
-                "ماذا عليّ أن أفعل؟",
-                "أنت من قال ذلك.",
-                "أنا أفضل منك.",
-                "قلت لك أنني لا أعرف كيف أفعل ذلك."
+                "المال ليس كل شيء.",
+                "لدي فكرة جيدة أخرى.",
+                "ليس لدينا أي فكرة.",
+                "ليس لدي أي فكرة."
               ],
               "id": "arabic_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "لماذا لا ____ ذلك؟",
-              "answer": "أفعل",
+              "question": "ليس لدينا ____ فكرة.",
+              "answer": "أي",
               "choices": [
                 "من",
-                "أفعل",
-                "يجب",
-                "ذلك"
+                "أي",
+                "أظن",
+                "أريد"
               ],
               "id": "arabic_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "To be or not to be?",
-              "answer": "أكون أو لا أكون؟",
+              "question": "I have another good idea.",
+              "answer": "لدي فكرة جيدة أخرى.",
               "words": [
-                "أو",
-                "لا",
-                "أكون؟",
-                "أكون",
-                "أنني",
-                "لا"
+                "فكرة",
+                "أعرفُ",
+                "أخرى.",
+                "لدي",
+                "كَم",
+                "جيدة"
               ],
               "id": "arabic_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "أريد أن أكون هنا",
-              "audio": "أريد أن أكون هنا",
+              "answer": "هل ذلك نعم أم لا؟",
+              "audio": "هل ذلك نعم أم لا؟",
               "id": "arabic_t10_3_3"
             },
             {
@@ -2497,20 +2479,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know who I am.",
-                  "أعرف من أكون."
+                  "I don't know when he'll be here.",
+                  "لا أعرف متى سيكون هنا."
                 ],
                 [
-                  "This is who I am.",
-                  "هذا من أكون."
+                  "When shall we go?",
+                  "متى علينا الذهاب؟"
                 ],
                 [
-                  "I'm better than you.",
-                  "أنا أفضل منك."
+                  "Money is not everything.",
+                  "المال ليس كل شيء."
                 ],
                 [
-                  "What does this mean?",
-                  "ماذا يعني هذا؟"
+                  "I want some money.",
+                  "أريد بعض المال."
                 ]
               ],
               "id": "arabic_t10_3_4"

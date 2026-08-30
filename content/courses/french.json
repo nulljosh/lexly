@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-europe",
   "level": "Beginner to Advanced",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "I don't have them.",
               "answer": "Je ne les ai pas.",
               "choices": [
-                "On y est.",
+                "Je ne suis pas.",
                 "Je ne les ai pas.",
-                "Elle est avec elle.",
-                "Bien à vous."
+                "Je ne les suis pas.",
+                "Ne nous suis pas !"
               ],
               "id": "french_t1_1_0"
             },
@@ -228,9 +228,9 @@
               "question": "Qui est ____ ?",
               "answer": "pour",
               "choices": [
-                "elle",
-                "avec",
                 "les",
+                "suis",
+                "Tu",
                 "pour"
               ],
               "id": "french_t1_1_1"
@@ -241,8 +241,8 @@
               "answer": "Pas de mais !",
               "words": [
                 "de",
-                "Pas",
-                "Ne",
+                "est",
+                "à",
                 "Pas",
                 "!",
                 "mais"
@@ -262,10 +262,6 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "All the best.",
-                  "Bien à vous."
-                ],
-                [
                   "Here we are.",
                   "On y est."
                 ],
@@ -274,8 +270,12 @@
                   "Ça y est."
                 ],
                 [
-                  "That's it!",
-                  "Ça y est !"
+                  "I don't follow.",
+                  "Je ne suis pas."
+                ],
+                [
+                  "I am!",
+                  "Je le suis !"
                 ]
               ],
               "id": "french_t1_1_4"
@@ -288,47 +288,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Made it.",
-              "answer": "Ça y est.",
+              "question": "I am who I am.",
+              "answer": "Je suis ce que je suis.",
               "choices": [
-                "Je ne suis pas.",
-                "Ça y est.",
-                "Tu me suis.",
-                "Bien à vous."
+                "Elle est avec elle.",
+                "Je suis ce que je suis.",
+                "Qui est pour ?",
+                "Ça y est."
               ],
               "id": "french_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ça y ____ !",
-              "answer": "est",
+              "question": "Ne me ____ pas !",
+              "answer": "suis",
               "choices": [
-                "les",
-                "ce",
-                "est",
-                "Qui"
+                "plus",
+                "On",
+                "suis",
+                "les"
               ],
               "id": "french_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "I don't follow.",
-              "answer": "Je ne suis pas.",
+              "question": "I don't follow them.",
+              "answer": "Je ne les suis pas.",
               "words": [
-                "suis",
-                "Qui",
-                "le",
-                "Je",
                 "ne",
-                "pas."
+                "suis",
+                "les",
+                "Je",
+                "est.",
+                "pas.",
+                "Tout"
               ],
               "id": "french_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je le suis !",
-              "audio": "Je le suis !",
+              "answer": "Je ne vous suis pas.",
+              "audio": "Je ne vous suis pas.",
               "id": "french_t1_2_3"
             },
             {
@@ -337,20 +338,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I am who I am.",
-                  "Je suis ce que je suis."
+                  "I'm for it.",
+                  "Je suis pour."
                 ],
                 [
-                  "Don't follow me.",
-                  "Ne me suis pas !"
+                  "Don't follow us!",
+                  "Ne nous suis pas !"
                 ],
                 [
-                  "I don't follow them.",
-                  "Je ne les suis pas."
+                  "You follow me.",
+                  "Tu me suis."
                 ],
                 [
-                  "I don't follow you.",
-                  "Je ne vous suis pas."
+                  "Whom is she with?",
+                  "Qui est avec elle ?"
                 ]
               ],
               "id": "french_t1_2_4"
@@ -363,46 +364,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm for it.",
-              "answer": "Je suis pour.",
+              "question": "He is with her.",
+              "answer": "Il est avec elle.",
               "choices": [
-                "Elle est avec elle.",
+                "Je ne les suis pas.",
+                "Ne nous suis pas !",
                 "Bien à vous.",
-                "Tu me suis.",
-                "Je suis pour."
+                "Il est avec elle."
               ],
               "id": "french_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ne nous ____ pas !",
-              "answer": "suis",
+              "question": "Je suis ____ vous.",
+              "answer": "avec",
               "choices": [
-                "je",
-                "suis",
+                "que",
+                "avec",
                 "de",
-                "ai"
+                "On"
               ],
               "id": "french_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "You follow me.",
-              "answer": "Tu me suis.",
+              "question": "She is with her.",
+              "answer": "Elle est avec elle.",
               "words": [
-                "suis.",
+                "est",
+                "avec",
+                "elle.",
                 "ne",
-                "On",
-                "Tu",
-                "me"
+                "pas",
+                "Elle"
               ],
               "id": "french_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Qui est avec elle ?",
-              "audio": "Qui est avec elle ?",
+              "answer": "Pas du tout !",
+              "audio": "Pas du tout !",
               "id": "french_t1_3_3"
             },
             {
@@ -411,20 +413,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is with her.",
-                  "Il est avec elle."
+                  "No, not at all.",
+                  "Non, pas du tout !"
                 ],
                 [
-                  "I'm with you.",
-                  "Je suis avec vous."
+                  "He's all yours.",
+                  "Il est tout à vous."
                 ],
                 [
-                  "He's with her.",
-                  "Il est avec elle."
+                  "All is one.",
+                  "Tout est un."
                 ],
                 [
-                  "She is with her.",
-                  "Elle est avec elle."
+                  "One more?",
+                  "Un de plus ?"
                 ]
               ],
               "id": "french_t1_3_4"
@@ -443,48 +445,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Not at all!",
-              "answer": "Pas du tout !",
+              "question": "Is there any left?",
+              "answer": "Y en a plus ?",
               "choices": [
-                "Ça ne te fait pas du bien.",
-                "Pas du tout !",
-                "Un de plus ?",
-                "Ça fait du bien."
+                "Ce qui est fait est fait.",
+                "Y en a plus ?",
+                "Il a bien fait.",
+                "Qui est avec moi ?"
               ],
               "id": "french_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Non, pas ____ tout !",
-              "answer": "du",
+              "question": "Je ne ____ suis pas.",
+              "answer": "te",
               "choices": [
-                "pas",
-                "pour",
-                "Je",
-                "du"
+                "ne",
+                "ça",
+                "Elle",
+                "te"
               ],
               "id": "french_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "Nope, not at all.",
-              "answer": "Non, pas du tout !",
+              "question": "It's no use crying over spilt milk.",
+              "answer": "Ce qui est fait est fait.",
               "words": [
-                "pas",
-                "tout",
-                "un.",
-                "Non,",
-                "!",
-                "du",
-                "pas"
+                "Qui",
+                "en",
+                "qui",
+                "Ce",
+                "fait.",
+                "est",
+                "fait",
+                "est"
               ],
               "id": "french_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Il est tout à vous.",
-              "audio": "Il est tout à vous.",
+              "answer": "Il a bien fait.",
+              "audio": "Il a bien fait.",
               "id": "french_t2_1_3"
             },
             {
@@ -493,20 +496,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's all yours.",
-                  "Il est tout à vous."
+                  "That doesn't cut the mustard.",
+                  "Ça ne le fait pas."
                 ],
                 [
-                  "All is one.",
-                  "Tout est un."
+                  "It feels good.",
+                  "Ça fait du bien."
                 ],
                 [
-                  "One more?",
-                  "Un de plus ?"
+                  "It is no good to you.",
+                  "Ça ne te fait pas du bien."
                 ],
                 [
-                  "Is there any left?",
-                  "Y en a plus ?"
+                  "Who did this?",
+                  "Qui a fait ça ?"
                 ]
               ],
               "id": "french_t2_1_4"
@@ -519,48 +522,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is it all gone?",
-              "answer": "Y en a plus ?",
+              "question": "She has done this.",
+              "answer": "Elle a fait ça.",
               "choices": [
-                "Ce qui est fait est fait.",
-                "Y en a plus ?",
-                "Je suis tout à fait pour.",
-                "Non, pas du tout !"
+                "Il a tout fait pour elle.",
+                "Elle a fait ça.",
+                "Je ne te suis pas.",
+                "Je suis tout à fait pour."
               ],
               "id": "french_t2_2_0"
             },
             {
-              "type": "translation",
-              "question": "There's none left?",
-              "answer": "Y en a plus ?",
+              "type": "cloze",
+              "question": "Il a tout ____ pour elle.",
+              "answer": "fait",
               "choices": [
-                "Tout est un.",
-                "Y en a plus ?",
-                "Ça fait du bien.",
-                "Non, pas du tout !"
+                "ne",
+                "fait",
+                "Pas",
+                "Bien"
               ],
               "id": "french_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Are there no more?",
-              "answer": "Y en a plus ?",
+              "question": "I'm all for that.",
+              "answer": "Je suis tout à fait pour.",
               "words": [
-                "a",
-                "plus",
-                "a",
-                "?",
-                "du",
-                "Y",
-                "en"
+                "le",
+                "pour.",
+                "fait",
+                "Je",
+                "à",
+                "tout",
+                "suis",
+                "moi."
               ],
               "id": "french_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je ne te suis pas.",
-              "audio": "Je ne te suis pas.",
+              "answer": "Pas tout à fait.",
+              "audio": "Pas tout à fait.",
               "id": "french_t2_2_3"
             },
             {
@@ -569,20 +573,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's no use crying over spilt milk.",
-                  "Ce qui est fait est fait."
+                  "Who does that?",
+                  "Qui fait ça ?"
                 ],
                 [
-                  "What's done is done.",
-                  "Ce qui est fait est fait."
+                  "He did this thing.",
+                  "Il a fait ça."
                 ],
                 [
-                  "Don't cry over spilt milk.",
-                  "Ce qui est fait est fait."
+                  "It serves you right!",
+                  "Bien fait pour vous !"
                 ],
                 [
-                  "He did right.",
-                  "Il a bien fait."
+                  "Me neither.",
+                  "Moi non plus."
                 ]
               ],
               "id": "french_t2_2_4"
@@ -595,50 +599,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That doesn't cut the mustard.",
-              "answer": "Ça ne le fait pas.",
+              "question": "It's all mine.",
+              "answer": "Tout est à moi.",
               "choices": [
-                "Y en a plus ?",
-                "Tout est un.",
-                "Non, pas du tout !",
-                "Ça ne le fait pas."
+                "Il a tout fait pour elle.",
+                "Je suis tout à fait pour.",
+                "Je ne te suis pas.",
+                "Tout est à moi."
               ],
               "id": "french_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ça fait ____ bien.",
-              "answer": "du",
+              "question": "Il est ____ moi.",
+              "answer": "avec",
               "choices": [
+                "Elle",
+                "avec",
                 "plus",
-                "du",
-                "vous",
-                "le"
+                "pas"
               ],
               "id": "french_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "It is no good to you.",
-              "answer": "Ça ne te fait pas du bien.",
+              "question": "She's with me.",
+              "answer": "Elle est avec moi.",
               "words": [
-                "ne",
-                "pas",
-                "fait",
-                "bien.",
-                "te",
-                "elle.",
-                "du",
-                "Ça",
-                "en"
+                "est",
+                "avec",
+                "a",
+                "Elle",
+                "moi.",
+                "bien"
               ],
               "id": "french_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Qui a fait ça ?",
-              "audio": "Qui a fait ça ?",
+              "answer": "Qui est avec moi ?",
+              "audio": "Qui est avec moi ?",
               "id": "french_t2_3_3"
             },
             {
@@ -647,20 +648,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She has done this.",
-                  "Elle a fait ça."
+                  "He's mine.",
+                  "Il est à moi."
                 ],
                 [
-                  "He did everything for her.",
-                  "Il a tout fait pour elle."
+                  "I'm me.",
+                  "Je suis moi."
                 ],
                 [
-                  "I'm all for that.",
-                  "Je suis tout à fait pour."
+                  "She's mine.",
+                  "Elle est à moi."
                 ],
                 [
-                  "Who did it?",
-                  "Qui a fait ça ?"
+                  "She means the world to me.",
+                  "Elle est tout pour moi."
                 ]
               ],
               "id": "french_t2_3_4"
@@ -679,47 +680,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Who did that?",
-              "answer": "Qui a fait ça ?",
+              "question": "Yes and no.",
+              "answer": "Oui et non.",
               "choices": [
-                "Il a fait ça.",
-                "Qui a fait ça ?",
-                "Qui fait ça ?",
-                "En fait, oui."
+                "Ça ne va plus du tout.",
+                "Oui et non.",
+                "Ça te va bien.",
+                "Tu as bien fait."
               ],
               "id": "french_t3_1_0"
             },
             {
-              "type": "translation",
-              "question": "Not exactly.",
-              "answer": "Pas tout à fait.",
+              "type": "cloze",
+              "question": "En ____ oui.",
+              "answer": "fait",
               "choices": [
-                "En fait, oui.",
-                "Il est à moi.",
-                "Elle est tout pour moi.",
-                "Pas tout à fait."
+                "me",
+                "tout",
+                "Moi",
+                "fait"
               ],
               "id": "french_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "Who does that?",
-              "answer": "Qui fait ça ?",
+              "question": "But yes, by the way!",
+              "answer": "Mais oui, au fait !",
               "words": [
+                "oui,",
+                "En",
                 "fait",
-                "ça",
-                "plus.",
-                "Qui",
-                "?",
-                "fait."
+                "ne",
+                "Mais",
+                "!",
+                "au"
               ],
               "id": "french_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Qui a fait ça ?",
-              "audio": "Qui a fait ça ?",
+              "answer": "Tout va bien.",
+              "audio": "Tout va bien.",
               "id": "french_t3_1_3"
             },
             {
@@ -728,20 +730,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He did this thing.",
-                  "Il a fait ça."
+                  "No, no, that's okay.",
+                  "Non, non, ça va."
                 ],
                 [
-                  "Me neither.",
-                  "Moi non plus."
+                  "I'm fine with it.",
+                  "Ça me va."
                 ],
                 [
-                  "Neither am I.",
-                  "Moi non plus."
+                  "That looks smart on you.",
+                  "Ça te va bien."
                 ],
                 [
-                  "Neither do I.",
-                  "Moi non plus."
+                  "You all right?",
+                  "Ça va bien ?"
                 ]
               ],
               "id": "french_t3_1_4"
@@ -754,47 +756,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Neither am I!",
-              "answer": "Moi non plus !",
+              "question": "Something wrong?",
+              "answer": "Ça ne va pas ?",
               "choices": [
-                "Pas tout à fait.",
-                "Moi non plus !",
-                "Elle est à moi.",
-                "Qui fait ça ?"
+                "Ça te va bien.",
+                "Ça ne va pas ?",
+                "Ça vous va bien.",
+                "Elle y va."
               ],
               "id": "french_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Moi non ____ !",
-              "answer": "plus",
+              "question": "Tout va ____ pour moi.",
+              "answer": "bien",
               "choices": [
-                "Pas",
-                "est",
-                "plus",
-                "fait"
+                "du",
+                "En",
+                "bien",
+                "si"
               ],
               "id": "french_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "It's all mine.",
-              "answer": "Tout est à moi.",
+              "question": "Let's get cracking!",
+              "answer": "On y va !",
               "words": [
-                "pour",
-                "Pas",
-                "à",
-                "Tout",
                 "moi.",
-                "est"
+                "et",
+                "va",
+                "On",
+                "!",
+                "y"
               ],
               "id": "french_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Il est avec moi.",
-              "audio": "Il est avec moi.",
+              "answer": "Si ça te va...",
+              "audio": "Si ça te va...",
               "id": "french_t3_2_3"
             },
             {
@@ -803,20 +805,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She's with me.",
-                  "Elle est avec moi."
+                  "She's all right.",
+                  "Elle va bien."
                 ],
                 [
-                  "Who's with me?",
-                  "Qui est avec moi ?"
+                  "He is doing well.",
+                  "Il va bien."
                 ],
                 [
-                  "He's mine.",
-                  "Il est à moi."
+                  "Things aren't going well at all, any more.",
+                  "Ça ne va plus du tout."
                 ],
                 [
-                  "I'm me.",
-                  "Je suis moi."
+                  "If you're happy, I'm happy.",
+                  "Si ça te va, ça me va."
                 ]
               ],
               "id": "french_t3_2_4"
@@ -829,48 +831,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I am me.",
-              "answer": "Je suis moi.",
+              "question": "It's OK with me if it's OK with you.",
+              "answer": "Ça me va si ça te va.",
               "choices": [
-                "En fait, oui.",
-                "Qui est avec moi ?",
-                "Elle est tout pour moi.",
-                "Je suis moi."
+                "Non, non, ça va.",
+                "Ça me va.",
+                "Moi, ça me va.",
+                "Ça me va si ça te va."
               ],
               "id": "french_t3_3_0"
             },
             {
-              "type": "translation",
-              "question": "She's mine.",
-              "answer": "Elle est à moi.",
+              "type": "cloze",
+              "question": "Moi, ça ____ va.",
+              "answer": "me",
               "choices": [
-                "Pas tout à fait.",
-                "Elle est à moi.",
-                "Oui et non.",
-                "Tout va bien."
+                "te",
+                "me",
+                "Ça",
+                "Si"
               ],
               "id": "french_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "She means the world to me.",
-              "answer": "Elle est tout pour moi.",
+              "question": "You look amazing.",
+              "answer": "Ça vous va bien.",
               "words": [
-                "est",
-                "pour",
-                "oui.",
-                "Pas",
-                "moi.",
-                "tout",
-                "Elle"
+                "vous",
+                "bien.",
+                "avec",
+                "fait",
+                "Ça",
+                "va"
               ],
               "id": "french_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Oui et non.",
-              "audio": "Oui et non.",
+              "answer": "Elle y va.",
+              "audio": "Elle y va.",
               "id": "french_t3_3_3"
             },
             {
@@ -879,20 +880,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Actually, yes.",
-                  "En fait, oui."
+                  "She is going with me.",
+                  "Elle va avec moi."
                 ],
                 [
-                  "But yes, by the way!",
-                  "Mais oui, au fait !"
+                  "He was fine.",
+                  "Il était bien."
                 ],
                 [
-                  "It's all right.",
-                  "Tout va bien."
+                  "Do you have them?",
+                  "Tu les as ?"
                 ],
                 [
-                  "Everything is fine.",
-                  "Tout va bien."
+                  "You did well.",
+                  "Tu as bien fait."
                 ]
               ],
               "id": "french_t3_3_4"
@@ -911,47 +912,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "All is well.",
-              "answer": "Tout va bien.",
+              "question": "You've got everything.",
+              "answer": "Tu as tout.",
               "choices": [
-                "Ça te va bien.",
-                "Tout va bien.",
-                "Ça me va.",
-                "Ça va bien ?"
+                "Je suis comme ça.",
+                "Tu as tout.",
+                "Il va le faire.",
+                "Ça ne se fait pas !"
               ],
               "id": "french_t4_1_0"
             },
             {
-              "type": "cloze",
-              "question": "Tout ____ bien.",
-              "answer": "va",
+              "type": "translation",
+              "question": "He is busy.",
+              "answer": "Il a à faire.",
               "choices": [
-                "Il",
-                "bien",
-                "Si",
-                "va"
+                "Ça fait quoi ?",
+                "Il va le faire.",
+                "Ça va pas le faire.",
+                "Il a à faire."
               ],
               "id": "french_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "No, no, that's okay.",
-              "answer": "Non, non, ça va.",
+              "question": "We're not going to make it.",
+              "answer": "Ça va pas le faire.",
               "words": [
-                "On",
-                "Si",
-                "non,",
-                "Non,",
-                "va.",
-                "ça"
+                "va",
+                "?",
+                "fait",
+                "Ça",
+                "faire.",
+                "pas",
+                "le"
               ],
               "id": "french_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ça me va.",
-              "audio": "Ça me va.",
+              "answer": "Ça ne va pas le faire !",
+              "audio": "Ça ne va pas le faire !",
               "id": "french_t4_1_3"
             },
             {
@@ -960,20 +962,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That looks smart on you.",
-                  "Ça te va bien."
+                  "He will do it.",
+                  "Il va le faire."
                 ],
                 [
-                  "It looks good on you.",
-                  "Ça te va bien."
+                  "She will do it.",
+                  "Elle va le faire."
                 ],
                 [
-                  "You all right?",
-                  "Ça va bien ?"
+                  "Who's going to do it?",
+                  "Qui va le faire ?"
                 ],
                 [
-                  "Are you all right?",
-                  "Ça va bien ?"
+                  "Who's going to do that?",
+                  "Qui va faire ça ?"
                 ]
               ],
               "id": "french_t4_1_4"
@@ -986,47 +988,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Something wrong?",
-              "answer": "Ça ne va pas ?",
+              "question": "We're going to do that.",
+              "answer": "On va faire ça.",
               "choices": [
-                "Non, non, ça va.",
-                "Ça ne va pas ?",
-                "On y va !",
-                "Ça va bien ?"
+                "Il a à faire.",
+                "On va faire ça.",
+                "Je suis comme ça.",
+                "Quoi ? Tu as fait quoi ?"
               ],
               "id": "french_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Tout va ____ pour moi.",
-              "answer": "bien",
+              "question": "Ça va ____ faire.",
+              "answer": "le",
               "choices": [
-                "Elle",
-                "bien",
                 "Ça",
-                "va"
+                "le",
+                "Pour",
+                "Qui"
               ],
               "id": "french_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "Let's get cracking!",
-              "answer": "On y va !",
+              "question": "For what?",
+              "answer": "Pour quoi faire ?",
               "words": [
-                "va",
-                "!",
-                "y",
-                "du",
-                "On",
-                "On"
+                "faire",
+                "?",
+                "quoi",
+                "à",
+                "Pour",
+                "elle"
               ],
               "id": "french_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "On y va !",
-              "audio": "On y va !",
+              "answer": "Et pour quoi ?",
+              "audio": "Et pour quoi ?",
               "id": "french_t4_2_3"
             },
             {
@@ -1035,20 +1037,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She's all right.",
-                  "Elle va bien."
+                  "How does it feel?",
+                  "Ça fait quoi ?"
                 ],
                 [
-                  "He is doing well.",
-                  "Il va bien."
+                  "What? Who, me?",
+                  "Quoi ? Qui ? Moi ?"
                 ],
                 [
-                  "He's all right.",
-                  "Il va bien."
+                  "There's plenty to go around.",
+                  "Il y a de quoi faire."
                 ],
                 [
-                  "Is everything okay?",
-                  "Tout va bien ?"
+                  "What? What did you do?",
+                  "Quoi ? Tu as fait quoi ?"
                 ]
               ],
               "id": "french_t4_2_4"
@@ -1061,50 +1063,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That looks good on you.",
-              "answer": "Ça te va bien !",
+              "question": "What's wrong with her?",
+              "answer": "Elle a quoi ?",
               "choices": [
-                "Ça te va bien.",
-                "Ça ne va plus du tout.",
-                "Ça ne va pas ?",
-                "Ça te va bien !"
+                "Et pour quoi ?",
+                "Ça ne va pas le faire !",
+                "Il a à faire.",
+                "Elle a quoi ?"
               ],
               "id": "french_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ça ne va ____ du tout.",
-              "answer": "plus",
+              "question": "Il a ____ ?",
+              "answer": "quoi",
               "choices": [
-                "va",
-                "plus",
-                "Non",
-                "Si"
+                "comme",
+                "quoi",
+                "Ça",
+                "ne"
               ],
               "id": "french_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "If you're happy, I'm happy.",
-              "answer": "Si ça te va, ça me va.",
+              "question": "You get used to everything.",
+              "answer": "On se fait à tout.",
               "words": [
-                "ça",
-                "va.",
-                "Si",
-                "pas",
-                "me",
-                "te",
-                "ça",
-                "Si",
-                "va,"
+                "elle",
+                "tout.",
+                "à",
+                "On",
+                "!",
+                "fait",
+                "se"
               ],
               "id": "french_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Tout va bien ?",
-              "audio": "Tout va bien ?",
+              "answer": "Ça ne se fait pas !",
+              "audio": "Ça ne se fait pas !",
               "id": "french_t4_3_3"
             },
             {
@@ -1113,20 +1113,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Everything is going fine.",
-                  "Tout va bien."
+                  "I'm not like that.",
+                  "Je ne suis pas comme ça."
                 ],
                 [
-                  "That's fine with me.",
-                  "Ça me va."
+                  "I'm not like you!",
+                  "Je ne suis pas comme vous !"
                 ],
                 [
-                  "Everything is OK.",
-                  "Tout va bien."
+                  "I'm not like her!",
+                  "Je ne suis pas comme elle !"
                 ],
                 [
-                  "Is he OK?",
-                  "Il va bien ?"
+                  "That's how I am.",
+                  "Je suis comme ça."
                 ]
               ],
               "id": "french_t4_3_4"
@@ -1145,46 +1145,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Shall we go?",
-              "answer": "On y va ?",
+              "question": "I am the way I am.",
+              "answer": "Je suis comme je suis.",
               "choices": [
-                "Elle y va.",
-                "On y va ?",
-                "Moi, ça me va.",
-                "Ça me va."
+                "Je sais quoi faire.",
+                "Je suis comme je suis.",
+                "Je sais que je ne sais pas.",
+                "Je ne le sais pas."
               ],
               "id": "french_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ça me va ____ ça te va.",
-              "answer": "si",
+              "question": "Je ne ____ pas.",
+              "answer": "sais",
               "choices": [
-                "Tu",
-                "Il",
-                "me",
-                "si"
+                "bien",
+                "tu",
+                "plus",
+                "sais"
               ],
               "id": "french_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "Let's leave.",
-              "answer": "On y va.",
+              "question": "I know what to do.",
+              "answer": "Je sais quoi faire.",
               "words": [
-                "ne",
-                "y",
-                "va.",
-                "On",
-                "y"
+                "sais",
+                "suis",
+                "quoi",
+                "elle",
+                "faire.",
+                "Je"
               ],
               "id": "french_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Moi, ça me va.",
-              "audio": "Moi, ça me va.",
+              "answer": "Je ne sais que faire.",
+              "audio": "Je ne sais que faire.",
               "id": "french_t5_1_3"
             },
             {
@@ -1193,20 +1194,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You look amazing.",
-                  "Ça te va bien."
+                  "I don't know who he is.",
+                  "Je ne sais pas qui il est."
                 ],
                 [
-                  "She goes.",
-                  "Elle y va."
+                  "I know who he is.",
+                  "Je sais qui il est."
                 ],
                 [
-                  "Are we going?",
-                  "On y va ?"
+                  "I don't know what to do anymore.",
+                  "Je ne sais plus quoi faire."
                 ],
                 [
-                  "Everything is going well.",
-                  "Tout va bien."
+                  "I know that you know that I know.",
+                  "Je sais que tu sais que je sais."
                 ]
               ],
               "id": "french_t5_1_4"
@@ -1219,46 +1220,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Things are fine.",
-              "answer": "Tout va bien.",
+              "question": "I know everything.",
+              "answer": "Je sais tout.",
               "choices": [
-                "Elle y va.",
-                "Tout va bien.",
-                "On y va ?",
-                "Tout va bien ?"
+                "Je ne sais pas quoi faire de ça.",
+                "Je sais tout.",
+                "Je ne sais que faire.",
+                "Je ne le sais pas."
               ],
               "id": "french_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Tout ____ bien.",
-              "answer": "va",
+              "question": "Je ne ____ sais pas.",
+              "answer": "le",
               "choices": [
-                "Tu",
-                "va",
-                "me",
-                "te"
+                "elle",
+                "le",
+                "sais",
+                "suis"
               ],
               "id": "french_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "Everything is alright.",
-              "answer": "Tout va bien.",
+              "question": "I know that I do not know.",
+              "answer": "Je sais que je ne sais pas.",
               "words": [
-                "bien.",
-                "y",
-                "Il",
-                "Tout",
-                "va"
+                "sais",
+                "il",
+                "ne",
+                "en",
+                "sais",
+                "pas.",
+                "que",
+                "Je",
+                "je"
               ],
               "id": "french_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Tout va bien.",
-              "audio": "Tout va bien.",
+              "answer": "Tu sais qui je suis ?",
+              "audio": "Tu sais qui je suis ?",
               "id": "french_t5_2_3"
             },
             {
@@ -1267,20 +1272,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Everything's OK.",
-                  "Tout va bien."
+                  "I know that you know.",
+                  "Je sais que tu sais."
                 ],
                 [
-                  "It isn't good.",
-                  "Ça ne va pas."
+                  "I know what you did.",
+                  "Je sais ce que tu as fait."
                 ],
                 [
-                  "I'm OK with that.",
-                  "Ça me va."
+                  "I know what's wrong.",
+                  "Je sais ce qui ne va pas."
                 ],
                 [
-                  "I'm OK with it.",
-                  "Ça me va."
+                  "I know who I am.",
+                  "Je sais qui je suis."
                 ]
               ],
               "id": "french_t5_2_4"
@@ -1293,47 +1298,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm fine with that.",
-              "answer": "Ça me va.",
+              "question": "You know what you have to do.",
+              "answer": "Tu sais ce que tu as à faire.",
               "choices": [
-                "Elle y va.",
-                "Ça me va si ça te va.",
-                "On y va ?",
-                "Ça me va."
+                "Je ne sais pas qui elle est.",
+                "Je ne sais pas.",
+                "Je sais ça.",
+                "Tu sais ce que tu as à faire."
               ],
               "id": "french_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Tout va ____ !",
-              "answer": "bien",
+              "question": "Je ne sais pas ____ faire de ça.",
+              "answer": "quoi",
               "choices": [
-                "ça",
-                "bien",
-                "va",
-                "ne"
+                "le",
+                "quoi",
+                "plus",
+                "fait"
               ],
               "id": "french_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "It suits you.",
-              "answer": "Ça te va bien.",
+              "question": "I don't know what to do with it.",
+              "answer": "Je ne sais pas quoi en faire.",
               "words": [
-                "te",
-                "va",
+                "je",
+                "quoi",
+                "sais",
+                "en",
+                "pas",
                 "bien.",
-                "me",
-                "Ça",
-                "te"
+                "faire.",
+                "Je",
+                "ne"
               ],
               "id": "french_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Tout va bien ?",
-              "audio": "Tout va bien ?",
+              "answer": "Je ne sais pas quoi y faire.",
+              "audio": "Je ne sais pas quoi y faire.",
               "id": "french_t5_3_3"
             },
             {
@@ -1342,20 +1350,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Everything's all right.",
-                  "Tout va bien."
+                  "I do know that.",
+                  "Je le sais bien."
                 ],
                 [
-                  "Things are going well.",
-                  "Tout va bien."
+                  "I know this.",
+                  "Je sais ça."
                 ],
                 [
-                  "He was fine.",
-                  "Il était bien."
+                  "I don't know who she is.",
+                  "Je ne sais pas qui elle est."
                 ],
                 [
-                  "Do you have them?",
-                  "Tu les as ?"
+                  "Yes, I know.",
+                  "Oui, je sais."
                 ]
               ],
               "id": "french_t5_3_4"
@@ -1374,676 +1382,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You did well.",
-              "answer": "Tu as bien fait.",
+              "question": "Yes, I know it.",
+              "answer": "Oui, je le sais.",
               "choices": [
-                "Elle va le faire.",
-                "Il a à faire.",
-                "Tu as bien fait.",
-                "Ça ne va pas le faire !"
+                "Je sais ce que tu sais.",
+                "Je ne sais pas qui a fait ça.",
+                "Oui, je le sais.",
+                "Tu ne sais pas quoi faire ?"
               ],
               "id": "french_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "Tu ____ tout.",
-              "answer": "as",
+              "question": "Non, je ____ sais pas.",
+              "answer": "ne",
               "choices": [
-                "quoi",
-                "tout",
-                "On",
-                "as"
+                "sais",
+                "as",
+                "suis",
+                "ne"
               ],
               "id": "french_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "He is busy.",
-              "answer": "Il a à faire.",
+              "question": "I can handle this.",
+              "answer": "Je sais y faire.",
               "words": [
-                "a",
-                "à",
+                "sais",
+                "y",
                 "faire.",
-                "a",
-                "Qui",
-                "Il"
+                "En",
+                "Tu",
+                "Je"
               ],
               "id": "french_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ça va pas le faire.",
-              "audio": "Ça va pas le faire.",
-              "id": "french_t6_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "We're not gonna make it.",
-                  "Ça va pas le faire."
-                ],
-                [
-                  "It's not gonna be fine!",
-                  "Ça ne va pas le faire !"
-                ],
-                [
-                  "He will do it.",
-                  "Il va le faire."
-                ],
-                [
-                  "She will do it.",
-                  "Elle va le faire."
-                ]
-              ],
-              "id": "french_t6_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t6l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Who's going to do it?",
-              "answer": "Qui va le faire ?",
-              "choices": [
-                "Tu as tout.",
-                "Qui va le faire ?",
-                "Ça va pas le faire.",
-                "Ça fait quoi ?"
-              ],
-              "id": "french_t6_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Qui va ____ ça ?",
-              "answer": "faire",
-              "choices": [
-                "fait",
-                "faire",
-                "le",
-                "Et"
-              ],
-              "id": "french_t6_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "We're going to do that.",
-              "answer": "On va faire ça.",
-              "words": [
-                "le",
-                "ça.",
-                "faire",
-                "fait.",
-                "On",
-                "va"
-              ],
-              "id": "french_t6_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ça va le faire.",
-              "audio": "Ça va le faire.",
-              "id": "french_t6_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "For what?",
-                  "Pour quoi faire ?"
-                ],
-                [
-                  "What for?",
-                  "Pour quoi faire ?"
-                ],
-                [
-                  "And for what?",
-                  "Et pour quoi ?"
-                ],
-                [
-                  "How does it feel?",
-                  "Ça fait quoi ?"
-                ]
-              ],
-              "id": "french_t6_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t6l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "What? Who, me?",
-              "answer": "Quoi ? Qui ? Moi ?",
-              "choices": [
-                "Pour quoi faire ?",
-                "Ça va pas le faire.",
-                "Ça va le faire.",
-                "Quoi ? Qui ? Moi ?"
-              ],
-              "id": "french_t6_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Il y a ____ quoi faire.",
-              "answer": "de",
-              "choices": [
-                "Quoi",
-                "de",
-                "Qui",
-                "faire"
-              ],
-              "id": "french_t6_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What? What did you do?",
-              "answer": "Quoi ? Tu as fait quoi ?",
-              "words": [
-                "fait",
-                "as",
-                "Tu",
-                "quoi",
-                "pas",
-                "as",
-                "?",
-                "Quoi",
-                "?"
-              ],
-              "id": "french_t6_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Elle a quoi ?",
-              "audio": "Elle a quoi ?",
-              "id": "french_t6_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "What is wrong with her?",
-                  "Elle a quoi ?"
-                ],
-                [
-                  "What's her deal?",
-                  "Elle a quoi ?"
-                ],
-                [
-                  "What's up with her?",
-                  "Elle a quoi ?"
-                ],
-                [
-                  "What's up with him?",
-                  "Il a quoi ?"
-                ]
-              ],
-              "id": "french_t6_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t7",
-      "title": "Wider Vocabulary 1",
-      "lessons": [
-        {
-          "id": "t7l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "What's his deal?",
-              "answer": "Il a quoi ?",
-              "choices": [
-                "Ça ne se fait pas !",
-                "Il a quoi ?",
-                "Je sais quoi faire.",
-                "Je sais tout."
-              ],
-              "id": "french_t7_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Il a ____ ?",
-              "answer": "quoi",
-              "choices": [
-                "On",
-                "je",
-                "ne",
-                "quoi"
-              ],
-              "id": "french_t7_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "What's wrong with him?",
-              "answer": "Il a quoi ?",
-              "words": [
-                "a",
-                "?",
-                "quoi",
-                "pas",
-                "Il",
-                "vous"
-              ],
-              "id": "french_t7_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "On se fait à tout.",
-              "audio": "On se fait à tout.",
-              "id": "french_t7_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "You get used to anything.",
-                  "On se fait à tout."
-                ],
-                [
-                  "One gets used to anything.",
-                  "On se fait à tout."
-                ],
-                [
-                  "That is not the done thing!",
-                  "Ça ne se fait pas !"
-                ],
-                [
-                  "People don't do that.",
-                  "Ça ne se fait pas."
-                ]
-              ],
-              "id": "french_t7_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I'm not like that.",
-              "answer": "Je ne suis pas comme ça.",
-              "choices": [
-                "Je ne suis pas comme elle !",
-                "Je ne suis pas comme ça.",
-                "Ça ne se fait pas.",
-                "Je sais qui il est."
-              ],
-              "id": "french_t7_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Je ne suis ____ comme vous !",
-              "answer": "pas",
-              "choices": [
-                "tu",
-                "pas",
-                "qui",
-                "vous"
-              ],
-              "id": "french_t7_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I'm not like her!",
-              "answer": "Je ne suis pas comme elle !",
-              "words": [
-                "ne",
-                "suis",
-                "pas",
-                "elle",
-                "!",
-                "comme",
-                "pas",
-                "Je",
-                "Ça"
-              ],
-              "id": "french_t7_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je ne suis pas comme elle.",
-              "audio": "Je ne suis pas comme elle.",
-              "id": "french_t7_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "That's how I am.",
-                  "Je suis comme ça."
-                ],
-                [
-                  "I am the way I am.",
-                  "Je suis comme je suis."
-                ],
-                [
-                  "I don't know.",
-                  "Je ne sais pas."
-                ],
-                [
-                  "I haven't got a clue.",
-                  "Je ne sais pas."
-                ]
-              ],
-              "id": "french_t7_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t7l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I know what to do.",
-              "answer": "Je sais quoi faire.",
-              "choices": [
-                "On se fait à tout.",
-                "Ça ne se fait pas !",
-                "Je ne sais plus quoi faire.",
-                "Je sais quoi faire."
-              ],
-              "id": "french_t7_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Je ne ____ que faire.",
-              "answer": "sais",
-              "choices": [
-                "quoi",
-                "On",
-                "sais",
-                "Je"
-              ],
-              "id": "french_t7_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I don't know who he is.",
-              "answer": "Je ne sais pas qui il est.",
-              "words": [
-                "sais",
-                "il",
-                "ne",
-                "a",
-                "pas",
-                "est.",
-                "qui",
-                "Je",
-                "vous"
-              ],
-              "id": "french_t7_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je sais qui il est.",
-              "audio": "Je sais qui il est.",
-              "id": "french_t7_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I don't know what to do anymore.",
-                  "Je ne sais plus quoi faire."
-                ],
-                [
-                  "I don't know what to do any more.",
-                  "Je ne sais plus quoi faire."
-                ],
-                [
-                  "I know that you know that I know.",
-                  "Je sais que tu sais que je sais."
-                ],
-                [
-                  "I know everything.",
-                  "Je sais tout."
-                ]
-              ],
-              "id": "french_t7_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t8",
-      "title": "Wider Vocabulary 2",
-      "lessons": [
-        {
-          "id": "t8l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I don't know that.",
-              "answer": "Je ne le sais pas.",
-              "choices": [
-                "Je ne sais pas quoi y faire.",
-                "Je ne le sais pas.",
-                "Tu sais qui je suis ?",
-                "Tu sais ce que tu as à faire."
-              ],
-              "id": "french_t8_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Je sais que ____ ne sais pas.",
-              "answer": "je",
-              "choices": [
-                "que",
-                "ne",
-                "sais",
-                "je"
-              ],
-              "id": "french_t8_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "Do you know who I am?",
-              "answer": "Tu sais qui je suis ?",
-              "words": [
-                "?",
-                "je",
-                "sais",
-                "ne",
-                "Tu",
-                "pas",
-                "suis",
-                "qui"
-              ],
-              "id": "french_t8_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je sais que tu sais.",
-              "audio": "Je sais que tu sais.",
-              "id": "french_t8_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I know what you did.",
-                  "Je sais ce que tu as fait."
-                ],
-                [
-                  "I know what's wrong.",
-                  "Je sais ce qui ne va pas."
-                ],
-                [
-                  "I know who I am.",
-                  "Je sais qui je suis."
-                ],
-                [
-                  "You know what you have to do.",
-                  "Tu sais ce que tu as à faire."
-                ]
-              ],
-              "id": "french_t8_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I don't know what to make of this.",
-              "answer": "Je ne sais pas quoi faire de ça.",
-              "choices": [
-                "Oui, je le sais.",
-                "Je ne sais pas quoi faire de ça.",
-                "Je ne sais pas quoi en faire.",
-                "Je ne sais pas quoi y faire."
-              ],
-              "id": "french_t8_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Je ne sais ____ quoi en faire.",
-              "answer": "pas",
-              "choices": [
-                "elle",
-                "pas",
-                "Oui",
-                "ça"
-              ],
-              "id": "french_t8_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I don't know what to do about it.",
-              "answer": "Je ne sais pas quoi y faire.",
-              "words": [
-                "sais",
-                "pas",
-                "ne",
-                "sais",
-                "ce",
-                "quoi",
-                "y",
-                "Je",
-                "faire."
-              ],
-              "id": "french_t8_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je le sais bien.",
-              "audio": "Je le sais bien.",
-              "id": "french_t8_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "I know this.",
-                  "Je sais ça."
-                ],
-                [
-                  "I don't know who she is.",
-                  "Je ne sais pas qui elle est."
-                ],
-                [
-                  "Yes, I know.",
-                  "Oui, je sais."
-                ],
-                [
-                  "Yes, I know it.",
-                  "Oui, je le sais."
-                ]
-              ],
-              "id": "french_t8_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t8l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "No, I don't know.",
-              "answer": "Non, je ne sais pas.",
-              "choices": [
-                "Je ne sais pas.",
-                "Je ne sais pas qui elle est.",
-                "Je sais y faire.",
-                "Non, je ne sais pas."
-              ],
-              "id": "french_t8_3_0"
-            },
-            {
-              "type": "translation",
-              "question": "I can handle this.",
-              "answer": "Je sais y faire.",
-              "choices": [
-                "Tu sais qui je suis ?",
-                "Je sais y faire.",
-                "Je sais que je ne sais pas.",
-                "Je ne sais pas quoi en faire."
-              ],
-              "id": "french_t8_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I know what you know.",
               "answer": "Je sais ce que tu sais.",
-              "words": [
-                "sais",
-                "faire",
-                "ce",
-                "sais.",
-                "que",
-                "Je",
-                "ce",
-                "tu"
-              ],
-              "id": "french_t8_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je ne sais pas.",
-              "audio": "Je ne sais pas.",
-              "id": "french_t8_3_3"
+              "audio": "Je sais ce que tu sais.",
+              "id": "french_t6_1_3"
             },
             {
               "type": "match",
@@ -2067,224 +1447,150 @@
                   "Tu ne sais pas tout."
                 ]
               ],
-              "id": "french_t8_3_4"
+              "id": "french_t6_1_4"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "t9",
-      "title": "Longer Sentences 1",
-      "lessons": [
+        },
         {
-          "id": "t9l1",
-          "title": "Lesson 1",
+          "id": "t6l2",
+          "title": "Lesson 2",
           "exercises": [
             {
               "type": "translation",
-              "question": "I do not know.",
-              "answer": "Je ne sais pas.",
+              "question": "I only know that.",
+              "answer": "Je ne sais que ça.",
               "choices": [
+                "Je le sais.",
+                "Je ne sais que ça.",
                 "Tu ne sais pas ?",
-                "Je ne sais pas.",
-                "Tu ne sais pas quoi faire ?",
-                "Je ne sais plus qui je suis."
+                "Tu ne sais pas quoi faire ?"
               ],
-              "id": "french_t9_1_0"
+              "id": "french_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Je ne ____ que ça.",
-              "answer": "sais",
+              "question": "De fait, ____ le sais.",
+              "answer": "je",
               "choices": [
-                "ne",
-                "quoi",
-                "que",
-                "sais"
+                "Non",
+                "je",
+                "ça",
+                "quoi"
               ],
-              "id": "french_t9_1_1"
+              "id": "french_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Actually, I know that.",
-              "answer": "De fait, je le sais.",
+              "question": "I'm in way over my head.",
+              "answer": "Je ne sais pas quoi faire.",
               "words": [
-                "fait,",
+                "faire.",
+                "quoi",
+                "ne",
+                "Je",
+                "pas",
                 "sais",
-                "plus.",
-                "sais.",
-                "De",
-                "je",
-                "le"
+                "faire.",
+                "En"
               ],
-              "id": "french_t9_1_2"
+              "id": "french_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je ne sais pas quoi faire.",
-              "audio": "Je ne sais pas quoi faire.",
-              "id": "french_t9_1_3"
+              "answer": "Tu sais tout.",
+              "audio": "Tu sais tout.",
+              "id": "french_t6_2_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "You know everything.",
-                  "Tu sais tout."
-                ],
                 [
                   "I don't know anymore.",
                   "Je ne sais plus."
                 ],
                 [
-                  "I don't know!",
-                  "Je ne sais pas !"
-                ],
-                [
                   "I know that you know this.",
                   "Je sais que tu le sais."
+                ],
+                [
+                  "I know everything that you've done.",
+                  "Je sais tout ce que tu as fait."
+                ],
+                [
+                  "I don't know who did that.",
+                  "Je ne sais pas qui a fait ça."
                 ]
               ],
-              "id": "french_t9_1_4"
+              "id": "french_t6_2_4"
             }
           ]
         },
         {
-          "id": "t9l2",
-          "title": "Lesson 2",
+          "id": "t6l3",
+          "title": "Lesson 3",
           "exercises": [
             {
               "type": "translation",
-              "question": "I know everything that you've done.",
-              "answer": "Je sais tout ce que tu as fait.",
+              "question": "I know who did that.",
+              "answer": "Je sais qui a fait ça.",
               "choices": [
-                "Tu sais tout.",
-                "Je sais tout ce que tu as fait.",
-                "Si tu le sais, tu le sais.",
-                "Je ne sais pas tout."
+                "Je sais ce que tu sais.",
+                "Je ne sais pas qui je suis.",
+                "Non, je ne sais pas.",
+                "Je sais qui a fait ça."
               ],
-              "id": "french_t9_2_0"
+              "id": "french_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Je ne sais pas ____ a fait ça.",
-              "answer": "qui",
+              "question": "En fait, je ____ sais pas.",
+              "answer": "ne",
               "choices": [
-                "elle",
                 "qui",
-                "pas",
-                "Tu"
+                "ne",
+                "quoi",
+                "tu"
               ],
-              "id": "french_t9_2_1"
+              "id": "french_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "I know who did that.",
-              "answer": "Je sais qui a fait ça.",
+              "question": "Don't you know?",
+              "answer": "Tu ne sais pas ?",
               "words": [
-                "qui",
-                "a",
+                "ne",
                 "sais",
-                "ça.",
-                "Je",
-                "quoi",
-                "fait",
-                "sais,"
+                "pas",
+                "?",
+                "sais.",
+                "Tu",
+                "le"
               ],
-              "id": "french_t9_2_2"
+              "id": "french_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je sais que tu sais que je sais.",
-              "audio": "Je sais que tu sais que je sais.",
-              "id": "french_t9_2_3"
+              "answer": "Tu ne sais pas quoi faire ?",
+              "audio": "Tu ne sais pas quoi faire ?",
+              "id": "french_t6_3_3"
             },
             {
               "type": "match",
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "Don't you know?",
-                  "Tu ne sais pas ?"
-                ],
-                [
-                  "Don't you know what to do?",
-                  "Tu ne sais pas quoi faire ?"
-                ],
                 [
                   "I know everything about her.",
                   "Je sais tout sur elle."
                 ],
                 [
-                  "I know what I've got to do.",
-                  "Je sais quoi faire."
-                ]
-              ],
-              "id": "french_t9_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t9l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I don't know what to do with this.",
-              "answer": "Je ne sais pas quoi en faire.",
-              "choices": [
-                "Je ne sais que ça.",
-                "Je ne sais pas qui a fait ça.",
-                "Je ne sais pas quoi faire.",
-                "Je ne sais pas quoi en faire."
-              ],
-              "id": "french_t9_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Je ne ____ pas tout.",
-              "answer": "sais",
-              "choices": [
-                "pas",
-                "sais",
-                "Si",
-                "fait"
-              ],
-              "id": "french_t9_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I know you know.",
-              "answer": "Je sais que tu sais.",
-              "words": [
-                "que",
-                "tu",
-                "?",
-                "Je",
-                "que",
-                "sais.",
-                "sais"
-              ],
-              "id": "french_t9_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Je sais ce que tu as fait.",
-              "audio": "Je sais ce que tu as fait.",
-              "id": "french_t9_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
+                  "I don't know everything.",
+                  "Je ne sais pas tout."
+                ],
                 [
                   "You know what to do.",
                   "Tu sais quoi faire."
@@ -2292,77 +1598,68 @@
                 [
                   "Do you know who did this?",
                   "Tu sais qui a fait ça ?"
-                ],
-                [
-                  "I don't know who I am anymore.",
-                  "Je ne sais plus qui je suis."
-                ],
-                [
-                  "If you know, you know.",
-                  "Si tu le sais, tu le sais."
                 ]
               ],
-              "id": "french_t9_3_4"
+              "id": "french_t6_3_4"
             }
           ]
         }
       ]
     },
     {
-      "id": "t10",
-      "title": "Longer Sentences 2",
+      "id": "t7",
+      "title": "Wider Vocabulary 1",
       "lessons": [
         {
-          "id": "t10l1",
+          "id": "t7l1",
           "title": "Lesson 1",
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't know how to do it.",
-              "answer": "Tu ne sais pas le faire.",
+              "question": "I don't know who I am anymore.",
+              "answer": "Je ne sais plus qui je suis.",
               "choices": [
-                "Je veux faire ça.",
                 "Tu ne sais pas le faire.",
-                "Je veux le faire pour vous.",
-                "Comme tu veux."
+                "Je ne sais plus qui je suis.",
+                "Je ne veux pas de ça !",
+                "Je sais ce que je veux faire."
               ],
-              "id": "french_t10_1_0"
+              "id": "french_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Je ____ qui.",
+              "question": "Si tu le ____ tu le sais.",
               "answer": "sais",
               "choices": [
+                "te",
                 "ne",
-                "pas",
-                "Non",
+                "pour",
                 "sais"
               ],
-              "id": "french_t10_1_1"
+              "id": "french_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know what more I should do.",
-              "answer": "Je ne sais que faire de plus.",
+              "question": "You don't know how to do it.",
+              "answer": "Tu ne sais pas le faire.",
               "words": [
-                "Plus",
-                "que",
-                "de",
-                "sais",
-                "plus.",
-                "sais",
                 "ne",
-                "Je",
-                "faire"
+                "faire.",
+                "le",
+                "Tu",
+                "pas",
+                "plus",
+                "ce",
+                "sais"
               ],
-              "id": "french_t10_1_2"
+              "id": "french_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je te veux.",
-              "audio": "Je te veux.",
-              "id": "french_t10_1_3"
+              "answer": "Je sais qui.",
+              "audio": "Je sais qui.",
+              "id": "french_t7_1_3"
             },
             {
               "type": "match",
@@ -2370,53 +1667,53 @@
               "answer": "matched",
               "pairs": [
                 [
+                  "I don't know what more I should do.",
+                  "Je ne sais que faire de plus."
+                ],
+                [
+                  "I want you.",
+                  "Je te veux."
+                ],
+                [
                   "If you want.",
                   "Si tu veux."
                 ],
                 [
                   "I don't want any more.",
                   "Je ne veux plus."
-                ],
-                [
-                  "I don't want it.",
-                  "Je ne le veux pas."
-                ],
-                [
-                  "Whatever you say.",
-                  "Comme tu veux."
                 ]
               ],
-              "id": "french_t10_1_4"
+              "id": "french_t7_1_4"
             }
           ]
         },
         {
-          "id": "t10l2",
+          "id": "t7l2",
           "title": "Lesson 2",
           "exercises": [
             {
               "type": "translation",
-              "question": "As you wish.",
-              "answer": "Comme tu veux.",
+              "question": "I don't want it.",
+              "answer": "Je ne le veux pas.",
               "choices": [
+                "Je te veux.",
+                "Je ne le veux pas.",
                 "Je sais qui.",
-                "Comme tu veux.",
-                "Plus tu en as, plus tu en veux.",
-                "Je sais ce que je veux."
+                "Non, je ne veux pas."
               ],
-              "id": "french_t10_2_0"
+              "id": "french_t7_2_0"
             },
             {
               "type": "cloze",
               "question": "Comme ____ veux.",
               "answer": "tu",
               "choices": [
-                "Je",
+                "qui",
                 "tu",
-                "ne",
-                "Plus"
+                "pas",
+                "sais"
               ],
-              "id": "french_t10_2_1"
+              "id": "french_t7_2_1"
             },
             {
               "type": "sentence",
@@ -2424,19 +1721,19 @@
               "answer": "Je le veux.",
               "words": [
                 "le",
-                "te",
-                "veux.",
+                "faire",
+                "faire.",
                 "Je",
-                "ça."
+                "veux."
               ],
-              "id": "french_t10_2_2"
+              "id": "french_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Mais je ne veux pas.",
               "audio": "Mais je ne veux pas.",
-              "id": "french_t10_2_3"
+              "id": "french_t7_2_3"
             },
             {
               "type": "match",
@@ -2460,12 +1757,12 @@
                   "Non, je ne veux pas."
                 ]
               ],
-              "id": "french_t10_2_4"
+              "id": "french_t7_2_4"
             }
           ]
         },
         {
-          "id": "t10l3",
+          "id": "t7l3",
           "title": "Lesson 3",
           "exercises": [
             {
@@ -2473,45 +1770,45 @@
               "question": "I want everything.",
               "answer": "Je veux tout.",
               "choices": [
-                "Plus tu en as, plus tu en veux.",
-                "Je ne le veux plus.",
-                "Je sais ce que tu veux faire.",
+                "Si tu le sais, tu le sais.",
+                "Je ne veux pas de ça !",
+                "Si tu veux.",
                 "Je veux tout."
               ],
-              "id": "french_t10_3_0"
+              "id": "french_t7_3_0"
             },
             {
               "type": "cloze",
               "question": "Je veux le ____ pour vous.",
               "answer": "faire",
               "choices": [
-                "plus",
+                "bien",
+                "ça",
                 "faire",
-                "sais",
-                "te"
+                "que"
               ],
-              "id": "french_t10_3_1"
+              "id": "french_t7_3_1"
             },
             {
               "type": "sentence",
               "question": "I want to do it.",
               "answer": "Je veux le faire.",
               "words": [
-                "veux",
-                "de",
+                "ne",
                 "faire.",
+                "veux",
                 "Je",
-                "plus",
+                "te",
                 "le"
               ],
-              "id": "french_t10_3_2"
+              "id": "french_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
               "answer": "Je veux faire ça.",
               "audio": "Je veux faire ça.",
-              "id": "french_t10_3_3"
+              "id": "french_t7_3_3"
             },
             {
               "type": "match",
@@ -2533,6 +1830,715 @@
                 [
                   "I know what I want.",
                   "Je sais ce que je veux."
+                ]
+              ],
+              "id": "french_t7_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "title": "Wider Vocabulary 2",
+      "lessons": [
+        {
+          "id": "t8l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I want that.",
+              "answer": "Moi je veux ça.",
+              "choices": [
+                "Je ne veux pas faire ça comme ça.",
+                "Moi je veux ça.",
+                "Je ne veux pas être comme ça.",
+                "Je ne veux pas faire ça non plus."
+              ],
+              "id": "french_t8_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je ____ veux.",
+              "answer": "les",
+              "choices": [
+                "je",
+                "que",
+                "faire",
+                "les"
+              ],
+              "id": "french_t8_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I don't want to be like that.",
+              "answer": "Je ne veux pas être comme ça.",
+              "words": [
+                "ne",
+                "pas",
+                "veux",
+                "être",
+                "comme",
+                "ça.",
+                "non",
+                "Je",
+                "ça."
+              ],
+              "id": "french_t8_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Je veux faire bien.",
+              "audio": "Je veux faire bien.",
+              "id": "french_t8_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I don't want to.",
+                  "Je ne veux pas."
+                ],
+                [
+                  "I don't want to do it anymore.",
+                  "Je ne veux plus le faire."
+                ],
+                [
+                  "I don't want to do that.",
+                  "Je ne veux pas faire ça."
+                ],
+                [
+                  "I don't want to do that either.",
+                  "Je ne veux pas faire ça non plus."
+                ]
+              ],
+              "id": "french_t8_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "You don't want to do this.",
+              "answer": "Tu ne veux pas faire ça.",
+              "choices": [
+                "Tu en veux plus ?",
+                "Tu ne veux pas faire ça.",
+                "Je ne veux plus faire ça.",
+                "Je ne veux pas faire ça comme ça."
+              ],
+              "id": "french_t8_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je ne veux ____ faire ça.",
+              "answer": "plus",
+              "choices": [
+                "tu",
+                "plus",
+                "ça",
+                "je"
+              ],
+              "id": "french_t8_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I don't want to do that that way.",
+              "answer": "Je ne veux pas faire ça comme ça.",
+              "words": [
+                "veux",
+                "pas",
+                "je",
+                "faire",
+                "comme",
+                "ça.",
+                "?",
+                "Je",
+                "ne",
+                "ça"
+              ],
+              "id": "french_t8_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Je ne sais pas ce que je veux.",
+              "audio": "Je ne sais pas ce que je veux.",
+              "id": "french_t8_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I know what you want.",
+                  "Je sais ce que tu veux."
+                ],
+                [
+                  "I don't want to do it that way.",
+                  "Je ne veux pas le faire comme ça."
+                ],
+                [
+                  "He does everything I want.",
+                  "Il fait tout ce que je veux."
+                ],
+                [
+                  "Do you want more?",
+                  "Tu en veux plus ?"
+                ]
+              ],
+              "id": "french_t8_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t8l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I don't want this.",
+              "answer": "Je ne veux pas ça.",
+              "choices": [
+                "Je veux faire plus.",
+                "Je ne veux pas le faire comme ça.",
+                "Je veux être comme elle.",
+                "Je ne veux pas ça."
+              ],
+              "id": "french_t8_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je veux ____ comme elle.",
+              "answer": "être",
+              "choices": [
+                "veux",
+                "être",
+                "que",
+                "ça"
+              ],
+              "id": "french_t8_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I don't want to be with you.",
+              "answer": "Je ne veux pas être avec vous.",
+              "words": [
+                "plus.",
+                "pas",
+                "être",
+                "être",
+                "avec",
+                "veux",
+                "ne",
+                "Je",
+                "vous."
+              ],
+              "id": "french_t8_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Je veux faire plus.",
+              "audio": "Je veux faire plus.",
+              "id": "french_t8_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "You know what you want.",
+                  "Tu sais ce que tu veux."
+                ],
+                [
+                  "Do you want that?",
+                  "Tu veux ça ?"
+                ],
+                [
+                  "Here he is!",
+                  "Il est ici !"
+                ],
+                [
+                  "It's all here.",
+                  "Tout est ici."
+                ]
+              ],
+              "id": "french_t8_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "title": "Longer Sentences 1",
+      "lessons": [
+        {
+          "id": "t9l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "He's here for me.",
+              "answer": "Il est ici pour moi.",
+              "choices": [
+                "Je veux être toi.",
+                "Il est ici pour moi.",
+                "Non, pas moi, mais toi !",
+                "Je veux être avec toi."
+              ],
+              "id": "french_t9_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Elle est ____ pour moi.",
+              "answer": "ici",
+              "choices": [
+                "pour",
+                "toi",
+                "faire",
+                "ici"
+              ],
+              "id": "french_t9_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I don't know what to do here.",
+              "answer": "Je ne sais que faire ici.",
+              "words": [
+                "ne",
+                "était",
+                "ici.",
+                "Je",
+                "que",
+                "faire",
+                "ici",
+                "sais"
+              ],
+              "id": "french_t9_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Elle est ici.",
+              "audio": "Elle est ici.",
+              "id": "french_t9_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Who's here with you?",
+                  "Qui est ici avec vous ?"
+                ],
+                [
+                  "Who was here?",
+                  "Qui était ici ?"
+                ],
+                [
+                  "I'm not here.",
+                  "Je ne suis pas ici."
+                ],
+                [
+                  "I am here.",
+                  "Je suis ici."
+                ]
+              ],
+              "id": "french_t9_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t9l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I am no longer here.",
+              "answer": "Je ne suis plus ici.",
+              "choices": [
+                "Qui est ici avec vous ?",
+                "Je ne suis plus ici.",
+                "Je suis avec toi.",
+                "Je suis comme toi."
+              ],
+              "id": "french_t9_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je veux ____ ici.",
+              "answer": "être",
+              "choices": [
+                "faire",
+                "être",
+                "pour",
+                "Qui"
+              ],
+              "id": "french_t9_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I'm comfortable here.",
+              "answer": "Je suis bien ici.",
+              "words": [
+                "suis",
+                "Tout",
+                "Qui",
+                "Je",
+                "bien",
+                "ici."
+              ],
+              "id": "french_t9_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Bien. Et toi ?",
+              "audio": "Bien. Et toi ?",
+              "id": "french_t9_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I want to be you.",
+                  "Je veux être toi."
+                ],
+                [
+                  "No, not me, but you!",
+                  "Non, pas moi, mais toi !"
+                ],
+                [
+                  "I want to be here with you.",
+                  "Je veux être ici avec toi."
+                ],
+                [
+                  "I know all about you.",
+                  "Je sais tout de toi."
+                ]
+              ],
+              "id": "french_t9_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t9l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I am not like you.",
+              "answer": "Je ne suis pas comme toi.",
+              "choices": [
+                "Elle est ici pour moi.",
+                "Je veux être ici.",
+                "Elle est ici.",
+                "Je ne suis pas comme toi."
+              ],
+              "id": "french_t9_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je suis ____ toi.",
+              "answer": "comme",
+              "choices": [
+                "est",
+                "comme",
+                "tout",
+                "mais"
+              ],
+              "id": "french_t9_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I'm all yours.",
+              "answer": "Je suis tout à toi.",
+              "words": [
+                "tout",
+                "à",
+                "toi.",
+                "Je",
+                "moi.",
+                "toi.",
+                "suis"
+              ],
+              "id": "french_t9_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Tout est pour toi.",
+              "audio": "Tout est pour toi.",
+              "id": "french_t9_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "I'm yours.",
+                  "Je suis à toi."
+                ],
+                [
+                  "It's all yours.",
+                  "Il est tout à toi."
+                ],
+                [
+                  "I want to be with you.",
+                  "Je veux être avec toi."
+                ],
+                [
+                  "I am with you.",
+                  "Je suis avec toi."
+                ]
+              ],
+              "id": "french_t9_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "title": "Longer Sentences 2",
+      "lessons": [
+        {
+          "id": "t10l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "That serves you right.",
+              "answer": "Bien fait pour toi.",
+              "choices": [
+                "Je suis toi.",
+                "Bien fait pour toi.",
+                "Qui était avec toi ?",
+                "Est-ce que tout va bien ?"
+              ],
+              "id": "french_t10_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je ne veux pas ____ ça avec toi.",
+              "answer": "faire",
+              "choices": [
+                "ne",
+                "est-ce",
+                "ici",
+                "faire"
+              ],
+              "id": "french_t10_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "We're not going with you.",
+              "answer": "On ne va pas avec toi.",
+              "words": [
+                "de",
+                "pas",
+                "toi.",
+                "On",
+                "ne",
+                "que",
+                "avec",
+                "va"
+              ],
+              "id": "french_t10_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Il est avec toi.",
+              "audio": "Il est avec toi.",
+              "id": "french_t10_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "What's mine is yours.",
+                  "Ce qui est à moi est à toi."
+                ],
+                [
+                  "I want only you.",
+                  "Je ne veux que toi."
+                ],
+                [
+                  "I am you.",
+                  "Je suis toi."
+                ],
+                [
+                  "I'm fine, and you?",
+                  "Je suis bien, et toi ?"
+                ]
+              ],
+              "id": "french_t10_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t10l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I don't want you here.",
+              "answer": "Je ne veux pas de toi ici.",
+              "choices": [
+                "Est-ce ce que tu veux faire ?",
+                "Je ne veux pas de toi ici.",
+                "Est-ce que tu suis ?",
+                "Je ne veux pas faire ça avec toi."
+              ],
+              "id": "french_t10_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Je ne veux ____ être comme toi.",
+              "answer": "pas",
+              "choices": [
+                "veux",
+                "pas",
+                "quoi",
+                "tu"
+              ],
+              "id": "french_t10_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Who was with you?",
+              "answer": "Qui était avec toi ?",
+              "words": [
+                "toi",
+                "fait",
+                "était",
+                "bien?",
+                "Qui",
+                "avec",
+                "?"
+              ],
+              "id": "french_t10_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "À qui est-ce ?",
+              "audio": "À qui est-ce ?",
+              "id": "french_t10_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Is everything all right?",
+                  "Est-ce que tout va bien ?"
+                ],
+                [
+                  "Is it yours?",
+                  "Est-ce à toi ?"
+                ],
+                [
+                  "Do you follow?",
+                  "Est-ce que tu suis ?"
+                ],
+                [
+                  "Is that for me?",
+                  "Est-ce pour moi ?"
+                ]
+              ],
+              "id": "french_t10_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t10l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Are you alright with this?",
+              "answer": "Est-ce que ça vous va ?",
+              "choices": [
+                "Est-ce que tout va bien ici ?",
+                "Est-ce un non ?",
+                "Est-ce que tu me suis ?",
+                "Est-ce que ça vous va ?"
+              ],
+              "id": "french_t10_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Est-ce que tu ____ suis ?",
+              "answer": "me",
+              "choices": [
+                "fait",
+                "me",
+                "était",
+                "toi"
+              ],
+              "id": "french_t10_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Is that a no?",
+              "answer": "Est-ce un non ?",
+              "words": [
+                "un",
+                "toi.",
+                "?",
+                "Est-ce",
+                "bien,",
+                "non"
+              ],
+              "id": "french_t10_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Est-ce à vous ?",
+              "audio": "Est-ce à vous ?",
+              "id": "french_t10_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "What's it made from?",
+                  "De quoi est-ce fait ?"
+                ],
+                [
+                  "Is that what you want to do?",
+                  "Est-ce ce que tu veux faire ?"
+                ],
+                [
+                  "Is everything OK here?",
+                  "Est-ce que tout va bien ici ?"
+                ],
+                [
+                  "Does this make you feel good?",
+                  "Est-ce que ça te fait du bien?"
                 ]
               ],
               "id": "french_t10_3_4"

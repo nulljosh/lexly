@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-europe",
   "level": "Beginner",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "That's it.",
               "answer": "Dat is het.",
               "choices": [
-                "Hij is er een van.",
+                "Ze zijn er niet.",
                 "Dat is het.",
-                "Dat was het!",
-                "We zijn er!"
+                "Ik heb het.",
+                "Heb je het?"
               ],
               "id": "dutch_t1_1_0"
             },
@@ -229,21 +229,21 @@
               "answer": "is",
               "choices": [
                 "het",
-                "van",
-                "ik",
+                "dat",
+                "Wat",
                 "is"
               ],
               "id": "dutch_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "What's that?",
-              "answer": "Wat is dat?",
+              "question": "That's them.",
+              "answer": "Dat zijn ze.",
               "words": [
-                "is",
-                "dat?",
-                "is",
-                "Wat",
+                "zijn",
+                "ze.",
+                "ik?",
+                "Dat",
                 "er?"
               ],
               "id": "dutch_t1_1_2"
@@ -251,8 +251,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat is dat?",
-              "audio": "Wat is dat?",
+              "answer": "We zijn er!",
+              "audio": "We zijn er!",
               "id": "dutch_t1_1_3"
             },
             {
@@ -261,20 +261,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's them.",
-                  "Dat zijn ze."
-                ],
-                [
-                  "We're here!",
-                  "We zijn er!"
-                ],
-                [
                   "That's one of them.",
                   "Hij is er een van."
                 ],
                 [
                   "What's the matter?",
                   "Wat is er?"
+                ],
+                [
+                  "They're not there.",
+                  "Ze zijn er niet."
+                ],
+                [
+                  "He's here.",
+                  "Hij is er."
                 ]
               ],
               "id": "dutch_t1_1_4"
@@ -287,46 +287,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "They're not there.",
-              "answer": "Ze zijn er niet.",
+              "question": "What do I have?",
+              "answer": "Wat heb ik?",
               "choices": [
+                "Wat was het?",
                 "Wat heb ik?",
-                "Ze zijn er niet.",
-                "Heb je er?",
-                "We zijn er!"
+                "Wat is dat?",
+                "Wat is er?"
               ],
               "id": "dutch_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Wat ____ er?",
-              "answer": "is",
+              "question": "Ik ____ je!",
+              "answer": "heb",
               "choices": [
-                "het",
-                "een",
-                "is",
-                "ze"
+                "wat",
+                "ben",
+                "heb",
+                "Heb"
               ],
               "id": "dutch_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "What's wrong?",
-              "answer": "Wat is er?",
+              "question": "I got it.",
+              "answer": "Ik heb het.",
               "words": [
-                "Ze",
-                "is",
-                "er?",
                 "Wat",
-                "is"
+                "heb.",
+                "het.",
+                "Ik",
+                "heb"
               ],
               "id": "dutch_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat heb ik?",
-              "audio": "Wat heb ik?",
+              "answer": "Wat heb je?",
+              "audio": "Wat heb je?",
               "id": "dutch_t1_2_3"
             },
             {
@@ -335,20 +335,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Gotcha!",
-                  "Ik heb je!"
-                ],
-                [
-                  "I got it.",
-                  "Ik heb het."
-                ],
-                [
-                  "What do you have?",
-                  "Wat heb je?"
-                ],
-                [
                   "I have what I have.",
                   "Ik heb wat ik heb."
+                ],
+                [
+                  "Do you have it?",
+                  "Heb je het?"
+                ],
+                [
+                  "I don't have it.",
+                  "Ik heb het niet."
+                ],
+                [
+                  "I got one!",
+                  "Ik heb er een!"
                 ]
               ],
               "id": "dutch_t1_2_4"
@@ -361,47 +361,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you have it?",
-              "answer": "Heb je het?",
+              "question": "Do you have any ones?",
+              "answer": "Heb je er?",
               "choices": [
-                "Dat was het!",
+                "Ik heb het.",
+                "Heb je het?",
                 "We zijn er!",
-                "Heb je er?",
-                "Heb je het?"
+                "Heb je er?"
               ],
               "id": "dutch_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik heb ____ niet.",
-              "answer": "het",
+              "question": "Ik was ____ niet.",
+              "answer": "er",
               "choices": [
-                "was",
-                "het",
                 "is",
-                "ze"
+                "er",
+                "was",
+                "heb"
               ],
               "id": "dutch_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "I got one!",
-              "answer": "Ik heb er een!",
+              "question": "What was it?",
+              "answer": "Wat was het?",
               "words": [
-                "heb",
-                "er",
+                "het?",
+                "je!",
                 "een!",
-                "is",
-                "wat",
-                "Ik"
+                "Wat",
+                "was"
               ],
               "id": "dutch_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Heb je er?",
-              "audio": "Heb je er?",
+              "answer": "Wat was dat?",
+              "audio": "Wat was dat?",
               "id": "dutch_t1_3_3"
             },
             {
@@ -410,20 +409,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I wasn't there.",
-                  "Ik was er niet."
-                ],
-                [
-                  "What was it?",
-                  "Wat was het?"
-                ],
-                [
-                  "What was that?",
-                  "Wat was dat?"
-                ],
-                [
                   "That was it!",
                   "Dat was het!"
+                ],
+                [
+                  "It's me.",
+                  "Ik ben het."
+                ],
+                [
+                  "That's me.",
+                  "Dat ben ik."
+                ],
+                [
+                  "What am I?",
+                  "Wat ben ik?"
                 ]
               ],
               "id": "dutch_t1_3_4"
@@ -442,46 +441,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's me.",
-              "answer": "Ik ben het.",
+              "question": "I'm not in.",
+              "answer": "Ik ben er niet.",
               "choices": [
-                "Hij weet het niet.",
-                "Ik ben het.",
-                "Ik weet het.",
-                "Ik ben er niet."
+                "Ben ik dat?",
+                "Ik ben er niet.",
+                "Wat is dit?",
+                "Hij weet dat."
               ],
               "id": "dutch_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ____ het.",
-              "answer": "ben",
+              "question": "Ben ____ er?",
+              "answer": "je",
               "choices": [
-                "niet",
-                "ik",
-                "het",
-                "ben"
+                "dit",
+                "Dit",
+                "ben",
+                "je"
               ],
               "id": "dutch_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "That's me.",
-              "answer": "Dat ben ik.",
+              "question": "Is that me?",
+              "answer": "Ben ik dat?",
               "words": [
-                "was",
-                "is.",
-                "ben",
-                "Dat",
-                "ik."
+                "niet.",
+                "ik.",
+                "ik",
+                "Ben",
+                "dat?"
               ],
               "id": "dutch_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat ben ik?",
-              "audio": "Wat ben ik?",
+              "answer": "Wat is dit?",
+              "audio": "Wat is dit?",
               "id": "dutch_t2_1_3"
             },
             {
@@ -490,20 +489,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "That's me!",
-                  "Dat ben ik!"
+                  "This is me.",
+                  "Dit ben ik."
                 ],
                 [
-                  "I'm not in.",
-                  "Ik ben er niet."
+                  "Is this it?",
+                  "Is dit het?"
                 ],
                 [
-                  "Are you there?",
-                  "Ben je er?"
+                  "This is it.",
+                  "Dit is het."
                 ],
                 [
-                  "Is that me?",
-                  "Ben ik dat?"
+                  "What about me?",
+                  "En ik dan?"
                 ]
               ],
               "id": "dutch_t2_1_4"
@@ -516,122 +515,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What's this?",
-              "answer": "Wat is dit?",
+              "question": "What was it, then?",
+              "answer": "Wat was dat dan?",
               "choices": [
+                "Ik weet het niet.",
+                "Wat was dat dan?",
                 "Ben je er?",
-                "Wat is dit?",
-                "Dat ben ik.",
-                "Ik ben er niet."
+                "Ik weet niet wat dat is."
               ],
               "id": "dutch_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "Dit ____ ik.",
-              "answer": "ben",
+              "question": "Ik weet ____ niet.",
+              "answer": "het",
               "choices": [
-                "Is",
-                "ben",
-                "wat",
-                "Dat"
+                "er",
+                "het",
+                "hij",
+                "dit"
               ],
               "id": "dutch_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "What is this?",
-              "answer": "Wat is dit?",
+              "question": "I don't know what it is.",
+              "answer": "Ik weet niet wat dat is.",
               "words": [
-                "is",
-                "dan?",
-                "Dat",
-                "Wat",
-                "dit?"
+                "het.",
+                "is.",
+                "dat",
+                "Ik",
+                "wat",
+                "niet",
+                "weet",
+                "niet."
               ],
               "id": "dutch_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Is dit het?",
-              "audio": "Is dit het?",
-              "id": "dutch_t2_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "This is it.",
-                  "Dit is het."
-                ],
-                [
-                  "What about me?",
-                  "En ik dan?"
-                ],
-                [
-                  "What was it, then?",
-                  "Wat was dat dan?"
-                ],
-                [
-                  "I don't know.",
-                  "Ik weet het niet."
-                ]
-              ],
-              "id": "dutch_t2_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t2l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I don't know what it is.",
-              "answer": "Ik weet niet wat dat is.",
-              "choices": [
-                "Dat ben ik!",
-                "Weet je het niet?",
-                "Dat ben ik.",
-                "Ik weet niet wat dat is."
-              ],
-              "id": "dutch_t2_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ik weet niet ____ dat is.",
-              "answer": "wat",
-              "choices": [
-                "Wat",
-                "wat",
-                "Is",
-                "Dat"
-              ],
-              "id": "dutch_t2_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "He does not know.",
               "answer": "Hij weet het niet.",
-              "words": [
-                "weet",
-                "het",
-                "Hij",
-                "Hij",
-                "niet.",
-                "En"
-              ],
-              "id": "dutch_t2_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Ik weet het niet.",
-              "audio": "Ik weet het niet.",
-              "id": "dutch_t2_3_3"
+              "audio": "Hij weet het niet.",
+              "id": "dutch_t2_2_3"
             },
             {
               "type": "match",
@@ -655,6 +582,80 @@
                   "Dat weet ik niet."
                 ]
               ],
+              "id": "dutch_t2_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t2l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "I know, I know.",
+              "answer": "Ik weet het, ik weet het.",
+              "choices": [
+                "Ik weet het niet.",
+                "Ik weet niet wat dat is.",
+                "Ben je er?",
+                "Ik weet het, ik weet het."
+              ],
+              "id": "dutch_t2_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Ze ____ het.",
+              "answer": "weet",
+              "choices": [
+                "ben",
+                "weet",
+                "niet",
+                "was"
+              ],
+              "id": "dutch_t2_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I know this.",
+              "answer": "Ik weet dit.",
+              "words": [
+                "weet",
+                "dit.",
+                "er",
+                "Ik",
+                "niet."
+              ],
+              "id": "dutch_t2_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Hij weet dat.",
+              "audio": "Hij weet dat.",
+              "id": "dutch_t2_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Do you know it?",
+                  "Weet je dat?"
+                ],
+                [
+                  "Dunno.",
+                  "Ik weet niet."
+                ],
+                [
+                  "Does he know?",
+                  "Weet hij het?"
+                ],
+                [
+                  "Beats me.",
+                  "Weet ik niet."
+                ]
+              ],
               "id": "dutch_t2_3_4"
             }
           ]
@@ -671,46 +672,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know, I know.",
-              "answer": "Ik weet het, ik weet het.",
+              "question": "I know you know.",
+              "answer": "Ik weet dat je het weet.",
               "choices": [
-                "Hier zijn we dan.",
-                "Ik weet het, ik weet het.",
-                "Ik weet niet.",
-                "Ik weet wat ik ben."
+                "Hier is hij!",
+                "Ik weet dat je het weet.",
+                "Ik weet dat ik het niet weet.",
+                "We zijn hier."
               ],
               "id": "dutch_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ze ____ het.",
+              "question": "Dat ____ ik.",
               "answer": "weet",
               "choices": [
-                "dit",
-                "Weet",
-                "wat",
+                "dat",
+                "Ze",
+                "het",
                 "weet"
               ],
               "id": "dutch_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "I know this.",
-              "answer": "Ik weet dit.",
+              "question": "As long as you know that.",
+              "answer": "Als je dat maar weet.",
               "words": [
-                "dit.",
-                "dat?",
-                "weet",
-                "ik.",
-                "Ik"
+                "je",
+                "is.",
+                "maar",
+                "ben",
+                "Als",
+                "weet.",
+                "dat"
               ],
               "id": "dutch_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Weet je het niet?",
-              "audio": "Weet je het niet?",
+              "answer": "Ik weet wat dat is.",
+              "audio": "Ik weet wat dat is.",
               "id": "dutch_t3_1_3"
             },
             {
@@ -719,20 +722,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He knows that.",
-                  "Hij weet dat."
+                  "I know that I do not know.",
+                  "Ik weet dat ik niet weet."
                 ],
                 [
-                  "Do you know it?",
-                  "Weet je dat?"
+                  "What do I know?",
+                  "Wat weet ik?"
                 ],
                 [
-                  "Dunno.",
-                  "Ik weet niet."
+                  "I know myself not to know.",
+                  "Ik weet dat ik het niet weet."
                 ],
                 [
-                  "Does he know?",
-                  "Weet hij het?"
+                  "I know what I am.",
+                  "Ik weet wat ik ben."
                 ]
               ],
               "id": "dutch_t3_1_4"
@@ -745,49 +748,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Beats me.",
-              "answer": "Weet ik niet.",
+              "question": "She knows that you know.",
+              "answer": "Ze weet dat je het weet.",
               "choices": [
-                "Ik weet dat het er is.",
-                "Weet ik niet.",
-                "Ik weet dat ik niet weet.",
-                "Ze weet het."
+                "Ik weet dat ik het niet weet.",
+                "Ze weet dat je het weet.",
+                "Het is hier.",
+                "Ze is hier."
               ],
               "id": "dutch_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik weet ____ niet.",
-              "answer": "het",
+              "question": "Weet je ____ niet?",
+              "answer": "dat",
               "choices": [
-                "weet",
-                "we",
+                "hij",
                 "het",
-                "Weet"
+                "dat",
+                "van"
               ],
               "id": "dutch_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "I know you know.",
-              "answer": "Ik weet dat je het weet.",
+              "question": "Here we are.",
+              "answer": "Hier zijn we dan.",
               "words": [
-                "weet",
-                "je",
-                "dat",
-                "het",
-                "weet.",
-                "Ik",
-                "weet",
-                "ik"
+                "Het",
+                "ze",
+                "we",
+                "Hier",
+                "dan.",
+                "zijn"
               ],
               "id": "dutch_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Dat weet ik.",
-              "audio": "Dat weet ik.",
+              "answer": "Ze is niet hier.",
+              "audio": "Ze is niet hier.",
               "id": "dutch_t3_2_3"
             },
             {
@@ -796,20 +797,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "As long as you know that.",
-                  "Als je dat maar weet."
+                  "I'm here.",
+                  "Ik ben hier."
                 ],
                 [
-                  "I know it's there.",
-                  "Ik weet dat het er is."
+                  "He is here!",
+                  "Hij is hier!"
                 ],
                 [
-                  "I know what that is.",
-                  "Ik weet wat dat is."
+                  "Here he is!",
+                  "Hier is hij!"
                 ],
                 [
-                  "I know that I do not know.",
-                  "Ik weet dat ik niet weet."
+                  "He's not here.",
+                  "Hij is niet hier."
                 ]
               ],
               "id": "dutch_t3_2_4"
@@ -822,50 +823,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you know?",
-              "answer": "Weet je dat?",
+              "question": "I'm not from here.",
+              "answer": "Ik ben niet van hier.",
               "choices": [
-                "Ze weet het.",
-                "Ik weet dat je het weet.",
-                "Weet hij het?",
-                "Weet je dat?"
+                "Ik weet dat ik niet weet.",
+                "Wat weet ik?",
+                "Is ze hier?",
+                "Ik ben niet van hier."
               ],
               "id": "dutch_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Wat ____ ik?",
-              "answer": "weet",
+              "question": "Is ____ hier?",
+              "answer": "ze",
               "choices": [
-                "zijn",
-                "weet",
-                "het",
-                "Ze"
+                "Dat",
+                "ze",
+                "Ze",
+                "je"
               ],
               "id": "dutch_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "I know myself not to know.",
-              "answer": "Ik weet dat ik het niet weet.",
+              "question": "It's over here.",
+              "answer": "Het is hier.",
               "words": [
-                "het",
-                "ik",
-                "ik",
-                "Ze",
+                "Dat",
                 "weet",
-                "weet.",
-                "dat",
-                "Ik",
-                "niet"
+                "is",
+                "Het",
+                "hier."
               ],
               "id": "dutch_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik weet wat ik ben.",
-              "audio": "Ik weet wat ik ben.",
+              "answer": "Ze is hier.",
+              "audio": "Ze is hier.",
               "id": "dutch_t3_3_3"
             },
             {
@@ -874,20 +871,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She knows that you know.",
-                  "Ze weet dat je het weet."
+                  "Are you from here?",
+                  "Ben je van hier?"
                 ],
                 [
-                  "I know that I don't know.",
-                  "Ik weet dat ik niet weet."
+                  "Here it is.",
+                  "Hier is het."
                 ],
                 [
-                  "Don't you know that?",
-                  "Weet je dat niet?"
+                  "Is it here?",
+                  "Is het hier?"
                 ],
                 [
-                  "Here we are.",
-                  "Hier zijn we dan."
+                  "We are here.",
+                  "We zijn hier."
                 ]
               ],
               "id": "dutch_t3_3_4"
@@ -906,46 +903,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She's not here.",
-              "answer": "Ze is niet hier.",
+              "question": "Here they are!",
+              "answer": "Hier zijn ze!",
               "choices": [
-                "We zijn hier.",
-                "Ze is niet hier.",
+                "Ik kan niet.",
                 "Hier zijn ze!",
-                "Hier zijn we dan."
+                "Weet ze dat ik hier ben?",
+                "Ik kan ze niet aan."
               ],
               "id": "dutch_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ____ hier.",
-              "answer": "ben",
+              "question": "Hier ____ ze!",
+              "answer": "is",
               "choices": [
-                "Het",
-                "is",
-                "We",
-                "ben"
+                "ben",
+                "jij",
+                "hij",
+                "is"
               ],
               "id": "dutch_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "Here we are!",
-              "answer": "Hier zijn we!",
+              "question": "Here I am.",
+              "answer": "Hier ben ik.",
               "words": [
-                "zijn",
-                "we!",
-                "hier.",
+                "ben",
+                "ik.",
+                "Dat",
                 "Hier",
-                "is"
+                "zijn"
               ],
               "id": "dutch_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hij is hier!",
-              "audio": "Hij is hier!",
+              "answer": "Weet hij dat ik hier ben?",
+              "audio": "Weet hij dat ik hier ben?",
               "id": "dutch_t4_1_3"
             },
             {
@@ -954,20 +951,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I am here.",
-                  "Ik ben hier."
+                  "Does she know that I'm here?",
+                  "Weet ze dat ik hier ben?"
                 ],
                 [
-                  "There we are!",
-                  "Hier zijn we dan."
+                  "What's this here?",
+                  "Wat is dat hier?"
                 ],
                 [
-                  "Here he is!",
-                  "Hier is hij!"
+                  "I am not here.",
+                  "Ik ben hier niet."
                 ],
                 [
-                  "He's not here.",
-                  "Hij is niet hier."
+                  "It is not so.",
+                  "Zo is het niet."
                 ]
               ],
               "id": "dutch_t4_1_4"
@@ -980,48 +977,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He is not here.",
-              "answer": "Hij is niet hier.",
+              "question": "May it be so!",
+              "answer": "Dat is maar zo!",
               "choices": [
-                "Hier is hij!",
-                "Hij is niet hier.",
-                "Hij is hier.",
-                "Hij is hier!"
+                "Hier is ze!",
+                "Dat is maar zo!",
+                "Ik kan niet.",
+                "Jij was er niet."
               ],
               "id": "dutch_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ben ____ van hier.",
+              "question": "Het is ____ zo.",
               "answer": "niet",
               "choices": [
-                "ze",
+                "dat",
                 "niet",
-                "Hier",
-                "is"
+                "is",
+                "Dat"
               ],
               "id": "dutch_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm not from around here.",
-              "answer": "Ik ben niet van hier.",
+              "question": "I'll be there in a little bit.",
+              "answer": "Ik ben er zo.",
               "words": [
+                "er",
+                "zo.",
                 "ben",
-                "je",
-                "niet",
-                "is",
-                "hier.",
+                "zijn",
                 "Ik",
-                "van"
+                "Jij"
               ],
               "id": "dutch_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Is ze hier?",
-              "audio": "Is ze hier?",
+              "answer": "Zo is het.",
+              "audio": "Zo is het.",
               "id": "dutch_t4_2_3"
             },
             {
@@ -1030,20 +1026,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's over here.",
-                  "Het is hier."
+                  "If only!",
+                  "Was het maar zo!"
                 ],
                 [
-                  "It's here.",
-                  "Het is hier."
+                  "Is that so?",
+                  "Is dat zo?"
                 ],
                 [
-                  "He is here.",
-                  "Hij is hier."
+                  "Do you have one?",
+                  "Heb jij er een?"
                 ],
                 [
-                  "He's here.",
-                  "Hij is hier."
+                  "You weren't there.",
+                  "Jij was er niet."
                 ]
               ],
               "id": "dutch_t4_2_4"
@@ -1056,356 +1052,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She is here.",
-              "answer": "Ze is hier.",
+              "question": "Is this you?",
+              "answer": "Ben jij dit?",
               "choices": [
-                "Hij is hier!",
-                "Is het hier?",
-                "Hij is hier.",
-                "Ze is hier."
+                "Zo is het.",
+                "Weet hij dat ik hier ben?",
+                "Hier is ze!",
+                "Ben jij dit?"
               ],
               "id": "dutch_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ben je ____ hier?",
-              "answer": "van",
+              "question": "Dat ____ niet!",
+              "answer": "kan",
               "choices": [
-                "is",
-                "van",
-                "hier",
-                "We"
+                "Ben",
+                "kan",
+                "Weet",
+                "Jij"
               ],
               "id": "dutch_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "Here it is.",
-              "answer": "Hier is het.",
+              "question": "I can do it.",
+              "answer": "Ik kan het.",
               "words": [
-                "is",
+                "kan",
                 "het.",
-                "we!",
-                "Hij",
-                "Hier"
+                "Heb",
+                "Was",
+                "Ik"
               ],
               "id": "dutch_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Is het hier?",
-              "audio": "Is het hier?",
+              "answer": "Ik kan ze niet aan.",
+              "audio": "Ik kan ze niet aan.",
               "id": "dutch_t4_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "We are here.",
-                  "We zijn hier."
-                ],
-                [
-                  "We're here.",
-                  "We zijn hier."
-                ],
-                [
-                  "Here they are!",
-                  "Hier zijn ze!"
-                ],
-                [
-                  "She's here.",
-                  "Ze is hier."
-                ]
-              ],
-              "id": "dutch_t4_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t5",
-      "title": "Everyday Speech 1",
-      "lessons": [
-        {
-          "id": "t5l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Here she is!",
-              "answer": "Hier is ze!",
-              "choices": [
-                "Dat is maar zo!",
-                "Hier is ze!",
-                "Was het maar zo.",
-                "Hier zijn we dan."
-              ],
-              "id": "dutch_t5_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Hier ____ ik.",
-              "answer": "ben",
-              "choices": [
-                "er",
-                "Is",
-                "Weet",
-                "ben"
-              ],
-              "id": "dutch_t5_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I'm in here.",
-              "answer": "Ik ben hier.",
-              "words": [
-                "Het",
-                "niet.",
-                "hier.",
-                "Ik",
-                "ben"
-              ],
-              "id": "dutch_t5_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Weet hij dat ik hier ben?",
-              "audio": "Weet hij dat ik hier ben?",
-              "id": "dutch_t5_1_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "Does he know that I'm here?",
-                  "Weet hij dat ik hier ben?"
-                ],
-                [
-                  "Does she know that I'm here?",
-                  "Weet ze dat ik hier ben?"
-                ],
-                [
-                  "Here we are, then.",
-                  "Hier zijn we dan."
-                ],
-                [
-                  "What's this here?",
-                  "Wat is dat hier?"
-                ]
-              ],
-              "id": "dutch_t5_1_4"
-            }
-          ]
-        },
-        {
-          "id": "t5l2",
-          "title": "Lesson 2",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I am not here.",
-              "answer": "Ik ben hier niet.",
-              "choices": [
-                "Was het maar zo.",
-                "Ik ben hier niet.",
-                "Ben jij dit?",
-                "Het is niet zo."
-              ],
-              "id": "dutch_t5_2_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Zo is ____ niet.",
-              "answer": "het",
-              "choices": [
-                "ben",
-                "het",
-                "Ben",
-                "is"
-              ],
-              "id": "dutch_t5_2_1"
-            },
-            {
-              "type": "sentence",
-              "question": "May it be so!",
-              "answer": "Dat is maar zo!",
-              "words": [
-                "is",
-                "ze",
-                "Het",
-                "Dat",
-                "maar",
-                "zo!"
-              ],
-              "id": "dutch_t5_2_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Het is niet zo.",
-              "audio": "Het is niet zo.",
-              "id": "dutch_t5_2_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "It isn't like that.",
-                  "Het is niet zo."
-                ],
-                [
-                  "I'll be there in a little bit.",
-                  "Ik ben er zo."
-                ],
-                [
-                  "That's right.",
-                  "Zo is het."
-                ],
-                [
-                  "If only!",
-                  "Was het maar zo!"
-                ]
-              ],
-              "id": "dutch_t5_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t5l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I wish.",
-              "answer": "Was het maar zo.",
-              "choices": [
-                "Ben jij dit?",
-                "Hier ben ik.",
-                "Weet hij dat ik hier ben?",
-                "Was het maar zo."
-              ],
-              "id": "dutch_t5_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ik ben ____ zo.",
-              "answer": "er",
-              "choices": [
-                "Ik",
-                "er",
-                "hier",
-                "Het"
-              ],
-              "id": "dutch_t5_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "Is that so?",
-              "answer": "Is dat zo?",
-              "words": [
-                "dat",
-                "het",
-                "zo?",
-                "Is",
-                "er"
-              ],
-              "id": "dutch_t5_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Heb jij er een?",
-              "audio": "Heb jij er een?",
-              "id": "dutch_t5_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "You weren't there.",
-                  "Jij was er niet."
-                ],
-                [
-                  "Is this you?",
-                  "Ben jij dit?"
-                ],
-                [
-                  "This can't be!",
-                  "Dat kan niet!"
-                ],
-                [
-                  "That's not possible.",
-                  "Dat kan niet!"
-                ]
-              ],
-              "id": "dutch_t5_3_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "t6",
-      "title": "Everyday Speech 2",
-      "lessons": [
-        {
-          "id": "t6l1",
-          "title": "Lesson 1",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "I can do it.",
-              "answer": "Ik kan het.",
-              "choices": [
-                "Dat kan niet!",
-                "Weet je nog?",
-                "Ik kan het.",
-                "Ik kan niet."
-              ],
-              "id": "dutch_t6_1_0"
-            },
-            {
-              "type": "cloze",
-              "question": "Ik kan ____ niet aan.",
-              "answer": "ze",
-              "choices": [
-                "nog",
-                "niet",
-                "Weet",
-                "ze"
-              ],
-              "id": "dutch_t6_1_1"
-            },
-            {
-              "type": "sentence",
-              "question": "That isn't possible.",
-              "answer": "Dat kan niet.",
-              "words": [
-                "kan",
-                "heb",
-                "Weet",
-                "Dat",
-                "niet."
-              ],
-              "id": "dutch_t6_1_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Dat kan niet!",
-              "audio": "Dat kan niet!",
-              "id": "dutch_t6_1_3"
             },
             {
               "type": "match",
@@ -1429,6 +1116,320 @@
                   "Ik kan niet."
                 ]
               ],
+              "id": "dutch_t4_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "title": "Everyday Speech 1",
+      "lessons": [
+        {
+          "id": "t5l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What can it be?",
+              "answer": "Wat kan het zijn?",
+              "choices": [
+                "Ik kan er zijn.",
+                "Wat kan het zijn?",
+                "We zijn er nog niet.",
+                "Ik weet het nog niet."
+              ],
+              "id": "dutch_t5_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Het ____ zijn.",
+              "answer": "kan",
+              "choices": [
+                "nog",
+                "wat",
+                "Het",
+                "kan"
+              ],
+              "id": "dutch_t5_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I can be there.",
+              "answer": "Ik kan er zijn.",
+              "words": [
+                "kan",
+                "Je",
+                "er",
+                "niet",
+                "zijn.",
+                "Ik"
+              ],
+              "id": "dutch_t5_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Hij kan het niet aan.",
+              "audio": "Hij kan het niet aan.",
+              "id": "dutch_t5_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "You can't handle it.",
+                  "Je kan het niet aan."
+                ],
+                [
+                  "I can't handle it.",
+                  "Ik kan het niet aan."
+                ],
+                [
+                  "You know that's not possible.",
+                  "Je weet dat dat niet kan."
+                ],
+                [
+                  "I have none.",
+                  "Ik heb er geen."
+                ]
+              ],
+              "id": "dutch_t5_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t5l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Do you remember?",
+              "answer": "Weet je nog?",
+              "choices": [
+                "Ja dat kan ik.",
+                "Weet je nog?",
+                "Hij kan het niet aan.",
+                "Ik weet het nog niet."
+              ],
+              "id": "dutch_t5_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Ik weet ____ nog niet.",
+              "answer": "het",
+              "choices": [
+                "hem",
+                "het",
+                "Dat",
+                "ben"
+              ],
+              "id": "dutch_t5_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "We're not there yet.",
+              "answer": "We zijn er nog niet.",
+              "words": [
+                "zijn",
+                "Dat",
+                "nog",
+                "We",
+                "dat",
+                "er",
+                "niet."
+              ],
+              "id": "dutch_t5_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Ze is nog niet hier.",
+              "audio": "Ze is nog niet hier.",
+              "id": "dutch_t5_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "He hasn't come yet.",
+                  "Hij is er nog niet."
+                ],
+                [
+                  "I remember.",
+                  "Ik weet het nog."
+                ],
+                [
+                  "I'm still hanging in there.",
+                  "Ik ben er nog."
+                ],
+                [
+                  "Are you still with me?",
+                  "Ben je er nog?"
+                ]
+              ],
+              "id": "dutch_t5_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t5l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Yes, I know.",
+              "answer": "Ja, ik weet het.",
+              "choices": [
+                "Het is niet van hem.",
+                "Het kan zijn.",
+                "Dat is van hem.",
+                "Ja, ik weet het."
+              ],
+              "id": "dutch_t5_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Ja dat ____ ik.",
+              "answer": "kan",
+              "choices": [
+                "Hij",
+                "kan",
+                "Ze",
+                "Het"
+              ],
+              "id": "dutch_t5_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Yes, what is it?",
+              "answer": "Ja, wat is het?",
+              "words": [
+                "wat",
+                "is",
+                "het?",
+                "zijn.",
+                "Ja,",
+                "Ja,"
+              ],
+              "id": "dutch_t5_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Dit is van hem.",
+              "audio": "Dit is van hem.",
+              "id": "dutch_t5_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "It's his.",
+                  "Het is van hem."
+                ],
+                [
+                  "That's his.",
+                  "Dat is van hem."
+                ],
+                [
+                  "It's not his.",
+                  "Het is niet van hem."
+                ],
+                [
+                  "What does she have?",
+                  "Wat heeft ze?"
+                ]
+              ],
+              "id": "dutch_t5_3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "title": "Everyday Speech 2",
+      "lessons": [
+        {
+          "id": "t6l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Does he have it?",
+              "answer": "Heeft hij het?",
+              "choices": [
+                "Ja, dat kan je wel.",
+                "Dat wil ik niet.",
+                "Heeft hij het?",
+                "Ik wil dat je dat weet."
+              ],
+              "id": "dutch_t6_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Weet je ____ wel?",
+              "answer": "dat",
+              "choices": [
+                "Weet",
+                "hij",
+                "moet",
+                "dat"
+              ],
+              "id": "dutch_t6_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "I can handle it.",
+              "answer": "Ik kan het wel aan.",
+              "words": [
+                "kan",
+                "wel",
+                "hij",
+                "Je",
+                "aan.",
+                "het",
+                "Ik"
+              ],
+              "id": "dutch_t6_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Ja, dat kan je wel.",
+              "audio": "Ja, dat kan je wel.",
+              "id": "dutch_t6_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "You know?",
+                  "Weet je wel?"
+                ],
+                [
+                  "You know it's not like that.",
+                  "Je weet wel dat het niet zo is."
+                ],
+                [
+                  "Yes, that I know well.",
+                  "Ja, dat weet ik wel."
+                ],
+                [
+                  "You don't have to.",
+                  "Dat moet niet."
+                ]
+              ],
               "id": "dutch_t6_1_4"
             }
           ]
@@ -1439,46 +1440,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can't!",
-              "answer": "Ik kan niet!",
+              "question": "Yes, you must.",
+              "answer": "Ja, je moet.",
               "choices": [
-                "Ik kan ze niet aan.",
-                "Ik kan niet!",
-                "Dat kan niet!",
-                "Ik kan er zijn."
+                "Weet je wel?",
+                "Ja, je moet.",
+                "Ik weet wat ik wil.",
+                "Ik wil dat je dat weet."
               ],
               "id": "dutch_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ____ het.",
-              "answer": "kan",
+              "question": "Wat moet ____ moet.",
+              "answer": "dat",
               "choices": [
+                "wil",
+                "dat",
                 "niet",
-                "kan",
-                "weet",
-                "Weet"
+                "Ik"
               ],
               "id": "dutch_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "That can't be!",
-              "answer": "Dat kan niet!",
+              "question": "This is the place to go.",
+              "answer": "Hier moet je zijn.",
               "words": [
-                "kan",
-                "zo",
-                "niet!",
-                "Dat",
-                "dat"
+                "Weet",
+                "zijn.",
+                "je",
+                "je?",
+                "Hier",
+                "moet"
               ],
               "id": "dutch_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik kan het niet.",
-              "audio": "Ik kan het niet.",
+              "answer": "Hij moet hier zijn.",
+              "audio": "Hij moet hier zijn.",
               "id": "dutch_t6_2_3"
             },
             {
@@ -1487,20 +1489,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What can it be?",
-                  "Wat kan het zijn?"
+                  "I have to be here.",
+                  "Ik moet hier zijn."
                 ],
                 [
-                  "Could be.",
-                  "Het kan zijn."
+                  "But I don't want to.",
+                  "Maar ik wil niet."
                 ],
                 [
-                  "I cannot do it.",
-                  "Ik kan niet."
+                  "I don't want it.",
+                  "Ik wil het niet."
                 ],
                 [
-                  "I can't do it!",
-                  "Ik kan niet."
+                  "I don't want that.",
+                  "Dat wil ik niet."
                 ]
               ],
               "id": "dutch_t6_2_4"
@@ -1513,48 +1515,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I cannot do it!",
-              "answer": "Ik kan niet.",
+              "question": "What do you want from me?",
+              "answer": "Wat wil je van me?",
               "choices": [
-                "Dat kan niet!",
-                "Ik kan het niet aan.",
-                "Je kan het niet aan.",
-                "Ik kan niet."
+                "Ja, dat kan je wel.",
+                "Ja, dat weet ik wel.",
+                "Weet je dat wel?",
+                "Wat wil je van me?"
               ],
               "id": "dutch_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik kan ____ zijn.",
-              "answer": "er",
+              "question": "Ik wil ____ zijn.",
+              "answer": "hier",
               "choices": [
-                "geen",
-                "er",
-                "je",
-                "Weet"
+                "wel",
+                "hier",
+                "hij",
+                "Dat"
               ],
               "id": "dutch_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "He can't handle it.",
-              "answer": "Hij kan het niet aan.",
+              "question": "I know what I want.",
+              "answer": "Ik weet wat ik wil.",
               "words": [
-                "kan",
-                "het",
-                "niet",
-                "aan.",
-                "zijn.",
-                "Hij",
-                "dit"
+                "weet",
+                "wat",
+                "ik",
+                "wil.",
+                "wel.",
+                "Ik",
+                "niet."
               ],
               "id": "dutch_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je kan het niet aan.",
-              "audio": "Je kan het niet aan.",
+              "answer": "Ik wil dat je dat weet.",
+              "audio": "Ik wil dat je dat weet.",
               "id": "dutch_t6_3_3"
             },
             {
@@ -1563,20 +1565,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I can't handle it.",
-                  "Ik kan het niet aan."
+                  "She wants him.",
+                  "Ze wil hem."
                 ],
                 [
-                  "You know that's not possible.",
-                  "Je weet dat dat niet kan."
+                  "What do you want?",
+                  "Wat wil je?"
                 ],
                 [
-                  "I have none.",
-                  "Ik heb er geen."
+                  "This is what I want.",
+                  "Dit is wat ik wil."
                 ],
                 [
-                  "Do you remember?",
-                  "Weet je nog?"
+                  "But what do you want?",
+                  "Maar wat wil je?"
                 ]
               ],
               "id": "dutch_t6_3_4"
@@ -1595,48 +1597,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't know yet.",
-              "answer": "Ik weet het nog niet.",
+              "question": "As you like.",
+              "answer": "Wat je wil.",
               "choices": [
-                "Ze is nog niet hier.",
-                "Ik weet het nog niet.",
-                "Dit is van hem.",
-                "Weet je dat wel?"
+                "Ik wil het.",
+                "Wat je wil.",
+                "We hebben hem!",
+                "Wat wil je hebben?"
               ],
               "id": "dutch_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ik weet ____ nog niet.",
-              "answer": "het",
+              "question": "Ik ____ dit.",
+              "answer": "wil",
               "choices": [
-                "hier",
-                "van",
+                "hebben",
                 "niet",
-                "het"
+                "jij",
+                "wil"
               ],
               "id": "dutch_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "We're not there yet.",
-              "answer": "We zijn er nog niet.",
+              "question": "I want it.",
+              "answer": "Ik wil het.",
               "words": [
+                "wil",
+                "hier",
+                "het.",
                 "er",
-                "niet.",
-                "ben",
-                "wel?",
-                "nog",
-                "We",
-                "zijn"
+                "Ik"
               ],
               "id": "dutch_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ze is nog niet hier.",
-              "audio": "Ze is nog niet hier.",
+              "answer": "Weet je wat ik wil?",
+              "audio": "Weet je wat ik wil?",
               "id": "dutch_t7_1_3"
             },
             {
@@ -1645,20 +1645,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He hasn't come yet.",
-                  "Hij is er nog niet."
+                  "You want this?",
+                  "Wil je dit?"
                 ],
                 [
-                  "He isn't here yet.",
-                  "Hij is er nog niet."
+                  "Want one?",
+                  "Wil je er een?"
                 ],
                 [
-                  "He's not here yet.",
-                  "Hij is er nog niet."
+                  "I don't have what I want.",
+                  "Ik heb niet wat ik wil."
                 ],
                 [
-                  "He's not in yet.",
-                  "Hij is er nog niet."
+                  "Do you want them?",
+                  "Wil je ze?"
                 ]
               ],
               "id": "dutch_t7_1_4"
@@ -1671,47 +1671,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I remember.",
-              "answer": "Ik weet het nog.",
+              "question": "I want that.",
+              "answer": "Ik wil dat.",
               "choices": [
-                "Ik ben er nog.",
-                "Ik weet het nog.",
-                "Hij is er nog niet.",
-                "Het is niet van hem."
+                "Wil je er een?",
+                "Ik wil dat.",
+                "Weet je wat ik wil?",
+                "We hebben het!"
               ],
               "id": "dutch_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Weet ____ nog?",
+              "question": "Ik wil ____ hier niet.",
               "answer": "je",
               "choices": [
-                "ze",
+                "hebben",
                 "je",
-                "hem",
-                "weet"
+                "dat",
+                "wil"
               ],
               "id": "dutch_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "I'm still hanging in there.",
-              "answer": "Ik ben er nog.",
+              "question": "Yes, I want to!",
+              "answer": "Ja, dat wil ik!",
               "words": [
-                "weet",
-                "nog.",
-                "ben",
-                "Ik",
-                "er",
-                "niet."
+                "goed?",
+                "ik!",
+                "dat",
+                "Ja,",
+                "wil",
+                "ik"
               ],
               "id": "dutch_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ben je er nog?",
-              "audio": "Ben je er nog?",
+              "answer": "Is het dat wat ze wil?",
+              "audio": "Is het dat wat ze wil?",
               "id": "dutch_t7_2_3"
             },
             {
@@ -1720,20 +1720,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you still there?",
-                  "Ben je er nog?"
+                  "I don't know what he wants.",
+                  "Ik weet niet wat hij wil."
                 ],
                 [
-                  "Yes, I know.",
-                  "Ja, ik weet het."
+                  "What would you like to have?",
+                  "Wat wil je hebben?"
                 ],
                 [
-                  "Yes, I know it.",
-                  "Ja, ik weet het."
+                  "We have him!",
+                  "We hebben hem!"
                 ],
                 [
-                  "Yes, I can.",
-                  "Ja dat kan ik."
+                  "We have it!",
+                  "We hebben het!"
                 ]
               ],
               "id": "dutch_t7_2_4"
@@ -1746,47 +1746,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Yes, what is it?",
-              "answer": "Ja, wat is het?",
+              "question": "What have we got here?",
+              "answer": "Wat hebben we hier?",
               "choices": [
-                "We zijn er nog niet.",
-                "Ze is nog niet hier.",
-                "Wat heeft ze?",
-                "Ja, wat is het?"
+                "Ik wil dit.",
+                "We hebben hem!",
+                "Ik heb niet wat ik wil.",
+                "Wat hebben we hier?"
               ],
               "id": "dutch_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "Dit is ____ hem.",
-              "answer": "van",
+              "question": "Ik wil ____ hebben.",
+              "answer": "ze",
               "choices": [
-                "zijn",
-                "is",
-                "van",
-                "ben"
+                "dat",
+                "het",
+                "ze",
+                "Weet"
               ],
               "id": "dutch_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "It's his.",
-              "answer": "Het is van hem.",
+              "question": "I want to have it.",
+              "answer": "Ik wil het hebben.",
               "words": [
-                "ik.",
-                "hem.",
-                "is",
-                "Het",
-                "is",
-                "van"
+                "Is",
+                "hebben.",
+                "wil",
+                "Ik",
+                "dit?",
+                "het"
               ],
               "id": "dutch_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Dat is van hem.",
-              "audio": "Dat is van hem.",
+              "answer": "Hebben we er een?",
+              "audio": "Hebben we er een?",
               "id": "dutch_t7_3_3"
             },
             {
@@ -1795,20 +1795,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It's not his.",
-                  "Het is niet van hem."
+                  "We've got them.",
+                  "We hebben ze."
                 ],
                 [
-                  "What does she have?",
-                  "Wat heeft ze?"
+                  "Do you want it?",
+                  "Wil je het hebben?"
                 ],
                 [
-                  "Does he have it?",
-                  "Heeft hij het?"
+                  "Is that okay?",
+                  "Is dat wel goed?"
                 ],
                 [
-                  "Do you realize that?",
-                  "Weet je dat wel?"
+                  "Fine. And you?",
+                  "Goed. En jij?"
                 ]
               ],
               "id": "dutch_t7_3_4"
@@ -1827,46 +1827,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can handle it.",
-              "answer": "Ik kan het wel aan.",
+              "question": "Good. And you?",
+              "answer": "Goed. En u?",
               "choices": [
-                "Hij moet hier zijn.",
-                "Ik kan het wel aan.",
-                "Maar ik wil niet.",
-                "Ze wil hem."
+                "Het was niet zo goed.",
+                "Goed. En u?",
+                "Het is goed.",
+                "Dat was goed."
               ],
               "id": "dutch_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ja, dat ____ je wel.",
-              "answer": "kan",
+              "question": "Was ____ goed?",
+              "answer": "het",
               "choices": [
+                "hem",
                 "Dat",
-                "dat",
-                "aan",
-                "kan"
+                "ben",
+                "het"
               ],
               "id": "dutch_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "You know?",
-              "answer": "Weet je wel?",
+              "question": "It's OK.",
+              "answer": "Het is goed.",
               "words": [
-                "je",
-                "weet.",
-                "wel?",
-                "Weet",
-                "niet"
+                "is",
+                "Goed",
+                "goed.",
+                "Het",
+                "Dat"
               ],
               "id": "dutch_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je weet wel dat het niet zo is.",
-              "audio": "Je weet wel dat het niet zo is.",
+              "answer": "Dit is niet goed.",
+              "audio": "Dit is niet goed.",
               "id": "dutch_t8_1_3"
             },
             {
@@ -1875,20 +1875,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You know it isn't like that.",
-                  "Je weet wel dat het niet zo is."
+                  "Good for you.",
+                  "Goed voor u."
                 ],
                 [
-                  "Yes, that I know well.",
-                  "Ja, dat weet ik wel."
+                  "I know what is good for you.",
+                  "Ik weet wat goed voor je is."
                 ],
                 [
-                  "Yes, that's something I know well.",
-                  "Ja, dat weet ik wel."
+                  "I'm good at it.",
+                  "Ik ben er goed in."
                 ],
                 [
-                  "Yes, I know that well.",
-                  "Ja, dat weet ik wel."
+                  "That was good.",
+                  "Dat was goed."
                 ]
               ],
               "id": "dutch_t8_1_4"
@@ -1901,46 +1901,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't have to.",
-              "answer": "Dat moet niet.",
+              "question": "Hats off to him!",
+              "answer": "Goed van hem!",
               "choices": [
-                "Ja, dat kan je wel.",
-                "Dat moet niet.",
-                "Je weet wel dat het niet zo is.",
-                "Wat wil je van me?"
+                "Dat is goed!",
+                "Goed van hem!",
+                "Is het goed?",
+                "Het was niet zo goed."
               ],
               "id": "dutch_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Dat ____ niet.",
-              "answer": "moet",
+              "question": "Is ____ goed?",
+              "answer": "het",
               "choices": [
-                "wel",
-                "moet",
-                "kan",
+                "goed",
+                "het",
+                "En",
                 "Hier"
               ],
               "id": "dutch_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "Yes, you must.",
-              "answer": "Ja, je moet.",
+              "question": "It wasn't as good.",
+              "answer": "Het was niet zo goed.",
               "words": [
-                "moet.",
-                "Je",
-                "je",
-                "wat",
-                "Ja,"
+                "was",
+                "niet",
+                "zo",
+                "u.",
+                "haar.",
+                "goed.",
+                "Het"
               ],
               "id": "dutch_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat moet dat moet.",
-              "audio": "Wat moet dat moet.",
+              "answer": "Ik weet dat je dat niet goed kan.",
+              "audio": "Ik weet dat je dat niet goed kan.",
               "id": "dutch_t8_2_3"
             },
             {
@@ -1949,20 +1951,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is the place to go.",
-                  "Hier moet je zijn."
+                  "They're good.",
+                  "Ze zijn goed."
                 ],
                 [
-                  "He has to be here.",
-                  "Hij moet hier zijn."
+                  "I'm not good at this.",
+                  "Ik ben hier niet goed in."
                 ],
                 [
-                  "He's got to be here.",
-                  "Hij moet hier zijn."
+                  "I do not know it well.",
+                  "Ik weet het niet zo goed."
                 ],
                 [
-                  "I have to be here.",
-                  "Ik moet hier zijn."
+                  "That's fine!",
+                  "Dat is goed!"
                 ]
               ],
               "id": "dutch_t8_2_4"
@@ -1975,38 +1977,38 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "But I don't want to.",
-              "answer": "Maar ik wil niet.",
+              "question": "This is beneath you.",
+              "answer": "Hier ben je te goed voor.",
               "choices": [
-                "Ik wil dat je dat weet.",
-                "Dat moet niet.",
-                "Weet je wel?",
-                "Maar ik wil niet."
+                "Dit is van haar.",
+                "Ik ben hier niet goed in.",
+                "Het is van haar.",
+                "Hier ben je te goed voor."
               ],
               "id": "dutch_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik wil ____ niet.",
-              "answer": "het",
+              "question": "Het is ____ haar.",
+              "answer": "van",
               "choices": [
-                "Maar",
-                "het",
-                "dat",
-                "Ze"
+                "En",
+                "van",
+                "haar",
+                "Is"
               ],
               "id": "dutch_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't want that.",
-              "answer": "Dat wil ik niet.",
+              "question": "That's hers.",
+              "answer": "Dat is van haar.",
               "words": [
-                "wil",
-                "niet.",
-                "ik",
-                "het",
-                "Dat",
+                "is",
+                "haar.",
+                "van",
+                "Was",
+                "goed!",
                 "Dat"
               ],
               "id": "dutch_t8_3_2"
@@ -2014,8 +2016,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat wil je van me?",
-              "audio": "Wat wil je van me?",
+              "answer": "Dit is van haar.",
+              "audio": "Dit is van haar.",
               "id": "dutch_t8_3_3"
             },
             {
@@ -2024,20 +2026,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want to be here.",
-                  "Ik wil hier zijn."
+                  "I wanna be with her.",
+                  "Ik wil met haar zijn."
                 ],
                 [
-                  "I know what I want.",
-                  "Ik weet wat ik wil."
+                  "We have her!",
+                  "We hebben haar!"
                 ],
                 [
-                  "I want you to know that.",
-                  "Ik wil dat je dat weet."
+                  "That's not for her.",
+                  "Dat is niet voor haar."
                 ],
                 [
-                  "She wants him.",
-                  "Ze wil hem."
+                  "It wasn't hers.",
+                  "Het was niet van haar."
                 ]
               ],
               "id": "dutch_t8_3_4"
@@ -2056,47 +2058,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What do you want?",
-              "answer": "Wat wil je?",
+              "question": "I am her.",
+              "answer": "Ik ben haar.",
               "choices": [
-                "Is het dat wat ze wil?",
-                "Wat wil je?",
-                "Ik wil dit.",
-                "Wil je ze?"
+                "Hoe weet je dat ik dat niet weet?",
+                "Ik ben haar.",
+                "En wat nu?",
+                "Dat kan niet waar zijn!"
               ],
               "id": "dutch_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "Dit is ____ ik wil.",
-              "answer": "wat",
+              "question": "Ik was ____ haar.",
+              "answer": "met",
               "choices": [
-                "Maar",
-                "hier",
-                "dat",
-                "wat"
+                "ik",
+                "kan",
+                "hij",
+                "met"
               ],
               "id": "dutch_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "But what do you want?",
-              "answer": "Maar wat wil je?",
+              "question": "No, I don't know.",
+              "answer": "Nee, ik weet het niet.",
               "words": [
-                "wat",
-                "je?",
-                "wil",
-                "ze?",
-                "wat",
-                "Maar"
+                "ik",
+                "niet",
+                "Je",
+                "niet.",
+                "Nee,",
+                "weet",
+                "het"
               ],
               "id": "dutch_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat je wil.",
-              "audio": "Wat je wil.",
+              "answer": "Ja en nee.",
+              "audio": "Ja en nee.",
               "id": "dutch_t9_1_3"
             },
             {
@@ -2105,20 +2108,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want this.",
-                  "Ik wil dit."
+                  "No, no, that's not it.",
+                  "Nee, nee, dat is het niet."
                 ],
                 [
-                  "I want it.",
-                  "Ik wil het."
+                  "How do you know that?",
+                  "Hoe weet je dat?"
                 ],
                 [
-                  "Do you know what I want?",
-                  "Weet je wat ik wil?"
+                  "What was it like?",
+                  "Hoe was het?"
                 ],
                 [
-                  "You want this?",
-                  "Wil je dit?"
+                  "What was she like?",
+                  "Hoe was ze?"
                 ]
               ],
               "id": "dutch_t9_1_4"
@@ -2131,46 +2134,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Want one?",
-              "answer": "Wil je er een?",
+              "question": "You know how.",
+              "answer": "Je weet hoe.",
               "choices": [
-                "Wat je wil.",
-                "Wil je er een?",
-                "Dit is wat ik wil.",
-                "We hebben het!"
+                "Nee, nee, dat is het niet.",
+                "Je weet hoe.",
+                "Waar ben je?",
+                "Ik kan nu niet."
               ],
               "id": "dutch_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik heb niet ____ ik wil.",
-              "answer": "wat",
+              "question": "Hoe ____ dat?",
+              "answer": "kan",
               "choices": [
-                "We",
-                "wat",
-                "ik",
-                "Wil"
+                "Nee",
+                "kan",
+                "ze",
+                "ben"
               ],
               "id": "dutch_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "Do you want them?",
-              "answer": "Wil je ze?",
+              "question": "How good is he?",
+              "answer": "Hoe goed is hij?",
               "words": [
-                "ze?",
-                "wil",
-                "Is",
-                "Wil",
-                "je"
+                "goed",
+                "je",
+                "met",
+                "Hoe",
+                "is",
+                "hij?"
               ],
               "id": "dutch_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik wil dat.",
-              "audio": "Ik wil dat.",
+              "answer": "Hoe weet u dat?",
+              "audio": "Hoe weet u dat?",
               "id": "dutch_t9_2_3"
             },
             {
@@ -2179,20 +2183,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't want this.",
-                  "Ik wil het niet."
+                  "How do you know I don't know?",
+                  "Hoe weet je dat ik dat niet weet?"
                 ],
                 [
-                  "I don't want you here.",
-                  "Ik wil je hier niet."
+                  "And now what?",
+                  "En wat nu?"
                 ],
                 [
-                  "Yes, I want to!",
-                  "Ja, dat wil ik!"
+                  "He's not here right now.",
+                  "Nu is hij niet hier."
                 ],
                 [
-                  "What is it that you want?",
-                  "Wat wil je?"
+                  "Do you want it now?",
+                  "Wil je het nu hebben?"
                 ]
               ],
               "id": "dutch_t9_2_4"
@@ -2205,47 +2209,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is that what she wants?",
-              "answer": "Is het dat wat ze wil?",
+              "question": "It's all right for now.",
+              "answer": "Het is goed voor nu.",
               "choices": [
-                "Dit is wat ik wil.",
-                "Ik heb niet wat ik wil.",
-                "Ik wil je hier niet.",
-                "Is het dat wat ze wil?"
+                "Ik was met haar.",
+                "Hoe kan dat?",
+                "Ja en nee.",
+                "Het is goed voor nu."
               ],
               "id": "dutch_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik weet niet ____ hij wil.",
-              "answer": "wat",
+              "question": "Ik kan ____ niet.",
+              "answer": "nu",
               "choices": [
-                "het",
-                "wat",
-                "hier",
-                "Maar"
+                "ben",
+                "nu",
+                "haar",
+                "Nee"
               ],
               "id": "dutch_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "What would you like to have?",
-              "answer": "Wat wil je hebben?",
+              "question": "She isn't here now.",
+              "answer": "Ze is er nu niet.",
               "words": [
-                "je",
-                "hebben?",
+                "er",
+                "nu",
+                "hier.",
+                "Ze",
                 "wil",
-                "Wat",
-                "ze?",
-                "wil"
+                "niet.",
+                "is"
               ],
               "id": "dutch_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "We hebben hem!",
-              "audio": "We hebben hem!",
+              "answer": "Ik weet het nu.",
+              "audio": "Ik weet het nu.",
               "id": "dutch_t9_3_3"
             },
             {
@@ -2254,20 +2259,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We have it!",
-                  "We hebben het!"
+                  "What do you want now?",
+                  "Wat wil je nu?"
                 ],
                 [
-                  "What have we got here?",
-                  "Wat hebben we hier?"
+                  "It cannot be true.",
+                  "Het kan niet waar zijn."
                 ],
                 [
-                  "What have we here?",
-                  "Wat hebben we hier?"
+                  "It can't be!",
+                  "Dat kan niet waar zijn!"
                 ],
                 [
-                  "What do we have here?",
-                  "Wat hebben we hier?"
+                  "Where are you?",
+                  "Waar ben je?"
                 ]
               ],
               "id": "dutch_t9_3_4"
@@ -2286,47 +2291,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I want them.",
-              "answer": "Ik wil ze hebben.",
+              "question": "That's not true.",
+              "answer": "Dat is niet waar.",
               "choices": [
-                "Het was niet zo goed.",
-                "Ik wil ze hebben.",
-                "Goed. En u?",
-                "Goed voor u."
+                "Ik weet niet waar ze zijn.",
+                "Dat is niet waar.",
+                "Waar wil je dat voor hebben?",
+                "Waar zijn ze?"
               ],
               "id": "dutch_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ik wil ____ hebben.",
-              "answer": "het",
+              "question": "Ik weet van ____ hij is.",
+              "answer": "waar",
               "choices": [
-                "wil",
-                "kan",
-                "hebben",
-                "het"
+                "ben",
+                "Ik",
+                "van",
+                "waar"
               ],
               "id": "dutch_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "Do we have one?",
-              "answer": "Hebben we er een?",
+              "question": "Where are we?",
+              "answer": "Waar zijn we?",
               "words": [
-                "we",
-                "een?",
+                "we?",
+                "u",
                 "zijn",
-                "Hebben",
-                "er",
-                "je"
+                "Waar",
+                "je?"
               ],
               "id": "dutch_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "We hebben ze.",
-              "audio": "We hebben ze.",
+              "answer": "Waar is hij?",
+              "audio": "Waar is hij?",
               "id": "dutch_t10_1_3"
             },
             {
@@ -2335,20 +2339,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you want it?",
-                  "Wil je het hebben?"
+                  "What good will that do?",
+                  "En waar is dat goed voor?"
                 ],
                 [
-                  "Is that okay?",
-                  "Is dat wel goed?"
+                  "I don't know where it is.",
+                  "Ik weet niet waar het is."
                 ],
                 [
-                  "Fine. And you?",
-                  "Goed. En jij?"
+                  "I don't know where they are.",
+                  "Ik weet niet waar ze zijn."
                 ],
                 [
-                  "Good. And you?",
-                  "Goed. En u?"
+                  "Is it true?",
+                  "Is het waar?"
                 ]
               ],
               "id": "dutch_t10_1_4"
@@ -2361,47 +2365,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Was it good?",
-              "answer": "Was het goed?",
+              "question": "This can't be true.",
+              "answer": "Dit kan niet waar zijn.",
               "choices": [
-                "Ik wil het hebben.",
-                "Was het goed?",
-                "Het was niet zo goed.",
-                "Goed van hem!"
+                "Het is waar.",
+                "Dit kan niet waar zijn.",
+                "Waar ben ik?",
+                "Ik weet van waar hij is."
               ],
               "id": "dutch_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Het ____ goed.",
-              "answer": "is",
+              "question": "Je weet dat ____ waar is.",
+              "answer": "het",
               "choices": [
+                "Het",
+                "het",
                 "van",
-                "is",
-                "Is",
-                "Dat"
+                "dat"
               ],
               "id": "dutch_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "This is not good.",
-              "answer": "Dit is niet goed.",
+              "question": "What do you want that for?",
+              "answer": "Waar wil je dat voor hebben?",
               "words": [
-                "ben",
-                "niet",
-                "goed.",
-                "Dit",
-                "We",
-                "is"
+                "hebben?",
+                "voor",
+                "wil",
+                "Waar",
+                "dat",
+                "is",
+                "je",
+                "is."
               ],
               "id": "dutch_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Dit is niet goed.",
-              "audio": "Dit is niet goed.",
+              "answer": "Waar ben ik nu?",
+              "audio": "Waar ben ik nu?",
               "id": "dutch_t10_2_3"
             },
             {
@@ -2410,20 +2416,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Good for you.",
-                  "Goed voor u."
+                  "Where are they?",
+                  "Waar zijn ze?"
                 ],
                 [
-                  "Good for you!",
-                  "Goed voor u."
+                  "I don't know where we are.",
+                  "Ik weet niet waar we zijn."
                 ],
                 [
-                  "I know what is good for you.",
-                  "Ik weet wat goed voor je is."
+                  "Where am I?",
+                  "Waar ben ik?"
                 ],
                 [
-                  "I'm good at it.",
-                  "Ik ben er goed in."
+                  "Do you know where it is?",
+                  "Weet u waar het is?"
                 ]
               ],
               "id": "dutch_t10_2_4"
@@ -2436,46 +2442,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That was good.",
-              "answer": "Dat was goed.",
+              "question": "Where have you been?",
+              "answer": "Waar was je?",
               "choices": [
-                "Hebben we er een?",
-                "Het was niet zo goed.",
-                "We hebben ze.",
-                "Dat was goed."
+                "Waar was het?",
+                "Ik weet niet waar hij is.",
+                "Waar is het?",
+                "Waar was je?"
               ],
               "id": "dutch_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Goed ____ hem!",
-              "answer": "van",
+              "question": "Waar ____ het?",
+              "answer": "is",
               "choices": [
-                "hebben",
-                "van",
-                "We",
-                "ze"
+                "Ik",
+                "is",
+                "we",
+                "hij"
               ],
               "id": "dutch_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "Is it good?",
-              "answer": "Is het goed?",
+              "question": "I don't know where he is.",
+              "answer": "Ik weet niet waar hij is.",
               "words": [
-                "goed?",
-                "Goed.",
-                "hebben.",
-                "Is",
-                "het"
+                "is.",
+                "waar",
+                "je?",
+                "Ik",
+                "weet",
+                "hij?",
+                "niet",
+                "hij"
               ],
               "id": "dutch_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Het was niet zo goed.",
-              "audio": "Het was niet zo goed.",
+              "answer": "Dat kan waar zijn.",
+              "audio": "Dat kan waar zijn.",
               "id": "dutch_t10_3_3"
             },
             {
@@ -2484,20 +2493,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It was not as good.",
-                  "Het was niet zo goed."
+                  "Is that true?",
+                  "Is dat waar?"
                 ],
                 [
-                  "I know you can't do that very well.",
-                  "Ik weet dat je dat niet goed kan."
+                  "It's true.",
+                  "Het is waar."
                 ],
                 [
-                  "They're good.",
-                  "Ze zijn goed."
+                  "Where was it?",
+                  "Waar was het?"
                 ],
                 [
-                  "I'm not good at this.",
-                  "Ik ben hier niet goed in."
+                  "Where was she?",
+                  "Waar was ze?"
                 ]
               ],
               "id": "dutch_t10_3_4"

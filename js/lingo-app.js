@@ -64,7 +64,13 @@ function clearAuthCookie() {
 
 const SUPABASE_URL = 'https://tjsxsqlxjmanwvmywwvw.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqc3hzcWx4am1hbnd2bXl3d3Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0OTc0MDEsImV4cCI6MjA4NjA3MzQwMX0.LphLfho3wdQC20MhtcnBpzQUNuBoTOobrugQbNGxc68';
-const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+// The Supabase SDK comes from a CDN, which a content blocker or an outage can stop from
+// loading. This used to be a bare `window.supabase.createClient(...)` at module scope, so a
+// missing SDK threw here and killed every line after it -- the catalog never rendered and the
+// app was a blank page with no error. Degrade instead: `sb` is null and auth is unavailable.
+const sb = window.supabase
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON)
+    : null;
 
 let currentUser = null;
 let userIsPro = false;
@@ -145,7 +151,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     initSpeechRecognition();
     updateStats();
     await loadCatalog();
-    renderSubjects('languages');
     initializeApp();
 });
 
@@ -195,8 +200,12 @@ async function loadCourse(subjectId) {
     return flat;
 }
 
+function isAuthed() {
+    return Boolean(currentUser);
+}
+
 async function initializeApp() {
-    const { data: { session } } = await sb.auth.getSession();
+    const session = sb ? (await sb.auth.getSession()).data.session : null;
     if (session) {
         currentUser = session.user;
         setAuthCookie();
@@ -703,7 +712,7 @@ function renderProfilePanel() {
         }
     });
     document.getElementById('signOutBtn').addEventListener('click', async () => {
-        await sb.auth.signOut();
+        if (sb) await sb.auth.signOut();
         clearAuthCookie();
         currentUser = null;
         localProfile = null;
@@ -718,6 +727,8 @@ function renderProfilePanel() {
         updateStats();
         panel.classList.remove('active');
         updateShellForAuth();
+        // Signing out must put the gate back, not leave the last catalog on screen.
+        renderSubjects(gameState.selectedCategory);
     });
     document.getElementById('profileForm').addEventListener('submit', (event) => {
         event.preventDefault();
@@ -1087,7 +1098,39 @@ function setupTouchGestures() {
     });
 }
 
+// Shown in place of the course grid when signed out, or when the Supabase SDK failed to
+// load and signing in is impossible.
+function renderAuthGate() {
+    document.getElementById('categoryTitle').textContent = sb ? 'Sign in to continue' : 'Sign-in unavailable';
+    const grid = document.getElementById('subjectGrid');
+    grid.textContent = '';
+
+    const panel = document.createElement('div');
+    panel.className = 'auth-gate';
+
+    const message = document.createElement('p');
+    message.className = 'auth-gate-text';
+    message.textContent = sb
+        ? 'Courses and your progress are tied to your account. Sign in or create one to start learning.'
+        : 'Could not load the sign-in service. Check your connection, or a content blocker may be stopping it.';
+    panel.appendChild(message);
+
+    if (sb) {
+        const button = document.createElement('button');
+        button.className = 'btn btn-primary';
+        button.id = 'authGateSignIn';
+        button.textContent = 'Sign in';
+        button.addEventListener('click', () => document.getElementById('authShell').showModal());
+        panel.appendChild(button);
+    }
+
+    grid.appendChild(panel);
+}
+
 function renderSubjects(category) {
+    // Course content requires a real account, not just a local profile. Gating here rather
+    // than at each call site means every path into the catalog is covered by one check.
+    if (!isAuthed()) { renderAuthGate(); return; }
     if (isGameCategory(category)) {
         document.getElementById('categoryTitle').textContent = 'Choose a game';
         const grid = document.getElementById('subjectGrid');
