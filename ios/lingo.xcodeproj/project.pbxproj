@@ -12,6 +12,7 @@
 		045907B630F7999ACB5E5B8C /* korean.json in Resources */ = {isa = PBXBuildFile; fileRef = C1328B3C2F4DE1C280B2CFA8 /* korean.json */; };
 		059EC4FE2CDEBD15768E9037 /* LingoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D04D79CB55B936DBED23841 /* LingoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06DDEAC9DBEEF0109B73C87D /* chess.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D1548A44AF9461019E577B /* chess.json */; };
+		09C2CE2E8598F9F8B6F8E9A4 /* discrete_math.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB9F94C3E58CDFD8E70B33 /* discrete_math.json */; };
 		0A5D3970081ED2480A4AA13D /* precalc11.json in Resources */ = {isa = PBXBuildFile; fileRef = 879E14E2752370F51B709C91 /* precalc11.json */; };
 		0BB7B0CD6F4A3CC8281854C9 /* arabic.json in Resources */ = {isa = PBXBuildFile; fileRef = CF8B7548CA86AA6AD76DEEDB /* arabic.json */; };
 		0C5D53AFA6E0B1E0D717D4B7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D983068D2FA587BBD5F4FA81 /* AuthView.swift */; };
@@ -42,6 +43,7 @@
 		387E27121537E21010F2647A /* music_theory.json in Resources */ = {isa = PBXBuildFile; fileRef = 4349CA379EE52052DE5210F6 /* music_theory.json */; };
 		387ED2785C32613B246E6381 /* precalc12.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E08CADD3672CCCBFFB75423 /* precalc12.json */; };
 		3BB09C4102B4DDCE0D57CB50 /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E13461BDB5DDAFF671A5AC4 /* catalog.json */; };
+		3C44065BB1D19FF398F4AD83 /* reverse_engineering.json in Resources */ = {isa = PBXBuildFile; fileRef = D1DCA2A90FD575638F1D0800 /* reverse_engineering.json */; };
 		4169FB4E1C7A828D60FBCB43 /* chess.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D1548A44AF9461019E577B /* chess.json */; };
 		42065E2A1395BEDE6AAAAFFE /* arithmetic.json in Resources */ = {isa = PBXBuildFile; fileRef = 31395F36291D691B8F443E99 /* arithmetic.json */; };
 		442E3036CB5907E72230A7B6 /* astrophysics.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C5DA3EB85AF4C36FC0C74C4 /* astrophysics.json */; };
@@ -76,6 +78,7 @@
 		6F3218447DEE9A342C07EAF9 /* precalc12_masterclass.json in Resources */ = {isa = PBXBuildFile; fileRef = C1DEE9DE26C2FBEC0546F384 /* precalc12_masterclass.json */; };
 		72E19D1FDDE16D54F3318F07 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 48B8AB9DC041EF61EF11842B /* Supabase */; };
 		7800E9486850AA0E14375760 /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4625048209FADCC92D7CC9A /* AvatarPickerView.swift */; };
+		78189777534DD3DA86B3D82D /* ios_internals.json in Resources */ = {isa = PBXBuildFile; fileRef = 738804B26679E303E7AE98CE /* ios_internals.json */; };
 		7A007768E4B740AA524405D3 /* music_history.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E497242C06CB2BE09147F1E /* music_history.json */; };
 		7B0650BB4C81FFF35689E8E6 /* cpp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BE666DF95E425B711E90081 /* cpp.json */; };
 		7DB404B693AEA4EADFA4BCDC /* rust.json in Resources */ = {isa = PBXBuildFile; fileRef = B47A509557BCADC7E56991E1 /* rust.json */; };
@@ -88,6 +91,7 @@
 		850AEDA3FADFAE12328B8A81 /* physiology.json in Resources */ = {isa = PBXBuildFile; fileRef = 20ED08DD321451E3CC5F88BE /* physiology.json */; };
 		86CADF3E196A0732996BC51D /* dutch.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DC5E8D574577465E5EC8F51 /* dutch.json */; };
 		8C091EA94AA06C815E76ABD4 /* SessionKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D63DD534912A773D403690 /* SessionKeychainStorage.swift */; };
+		8D654BB4EFAC10A5E793E1CA /* ios_internals.json in Resources */ = {isa = PBXBuildFile; fileRef = 738804B26679E303E7AE98CE /* ios_internals.json */; };
 		8E5DD4BC66B1EB2699D70ABF /* anthropology.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B78A24860D0E059A1BE0820 /* anthropology.json */; };
 		8ECA11B8D1BBFB4144DE6AA2 /* SessionKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D63DD534912A773D403690 /* SessionKeychainStorage.swift */; };
 		8F3318D38EC726266500BE15 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835C5E8FC11D9AD2C7BF476B /* WidgetKit.framework */; };
@@ -103,9 +107,11 @@
 		AF7F7EE841811BB66825ABFC /* astronomy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC67454921AA331D2D3EC7C /* astronomy.json */; };
 		B3C07777E88197ACDAA5DEAA /* computers.json in Resources */ = {isa = PBXBuildFile; fileRef = B6179B0E028A5343849EF466 /* computers.json */; };
 		B3FD61DB8BA782A823DA70AF /* anatomy12.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF57FDC8F27D5751826EF2 /* anatomy12.json */; };
+		B46BE8ED1A3AF5A2BF43C78F /* discrete_math.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB9F94C3E58CDFD8E70B33 /* discrete_math.json */; };
 		BA988804704D37E0EB7A31BA /* spanish.json in Resources */ = {isa = PBXBuildFile; fileRef = 721FEFF6757512300B8F10FB /* spanish.json */; };
 		BC8E6A3AEE9C4A242AE2BE28 /* linear_algebra.json in Resources */ = {isa = PBXBuildFile; fileRef = 0331E3C0FAC6DD186E906475 /* linear_algebra.json */; };
 		C2C53C7A67BEF1B097372697 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8554AEA87307E9D90E1008A7 /* PrivacyInfo.xcprivacy */; };
+		C3C95CB6958E6976793E6F29 /* reverse_engineering.json in Resources */ = {isa = PBXBuildFile; fileRef = D1DCA2A90FD575638F1D0800 /* reverse_engineering.json */; };
 		C593B921FC983DC917DC9F3C /* biology_masterclass.json in Resources */ = {isa = PBXBuildFile; fileRef = 86734E41E13DAF102D136EE9 /* biology_masterclass.json */; };
 		CA1E2FBF2C6E4563EB4D9A3C /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E953B6B90C849ECB1D806FF /* UnitsView.swift */; };
 		CF33E5ECE6D9F4FC66472380 /* hindi.json in Resources */ = {isa = PBXBuildFile; fileRef = BF9D238688612B66E23AD263 /* hindi.json */; };
@@ -212,6 +218,7 @@
 		6F61B1297D4B4683A6A42DB9 /* Lingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lingo.entitlements; sourceTree = "<group>"; };
 		721FEFF6757512300B8F10FB /* spanish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spanish.json; sourceTree = "<group>"; };
 		72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		738804B26679E303E7AE98CE /* ios_internals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ios_internals.json; sourceTree = "<group>"; };
 		78329C083F6292E361208131 /* geometry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = geometry.json; sourceTree = "<group>"; };
 		79594DE88C2126253A5FD79D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		7D994478AA66BD3E1A014902 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -235,6 +242,7 @@
 		9BE666DF95E425B711E90081 /* cpp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cpp.json; sourceTree = "<group>"; };
 		9E6C02310119C639A0B9A691 /* Lingo-iOSTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "Lingo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E83CD684AE62F94F9439943 /* world_history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = world_history.json; sourceTree = "<group>"; };
+		9FAB9F94C3E58CDFD8E70B33 /* discrete_math.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = discrete_math.json; sourceTree = "<group>"; };
 		A4625048209FADCC92D7CC9A /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
 		AB2EEE50C44A4A8A16F01FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B47A509557BCADC7E56991E1 /* rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rust.json; sourceTree = "<group>"; };
@@ -247,6 +255,7 @@
 		C1DEE9DE26C2FBEC0546F384 /* precalc12_masterclass.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = precalc12_masterclass.json; sourceTree = "<group>"; };
 		CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewSheet.swift; sourceTree = "<group>"; };
 		CF8B7548CA86AA6AD76DEEDB /* arabic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = arabic.json; sourceTree = "<group>"; };
+		D1DCA2A90FD575638F1D0800 /* reverse_engineering.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reverse_engineering.json; sourceTree = "<group>"; };
 		D41722A7250A176A189B216F /* LingoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoApp.swift; sourceTree = "<group>"; };
 		D983068D2FA587BBD5F4FA81 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		E28878C7B0B1D588D2471F69 /* russian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = russian.json; sourceTree = "<group>"; };
@@ -434,6 +443,7 @@
 				1298E370FBBBFAA5DE8131CB /* chinese.json */,
 				B6179B0E028A5343849EF466 /* computers.json */,
 				9BE666DF95E425B711E90081 /* cpp.json */,
+				9FAB9F94C3E58CDFD8E70B33 /* discrete_math.json */,
 				6DC5E8D574577465E5EC8F51 /* dutch.json */,
 				817171023F298347664538D7 /* french.json */,
 				36BADF1122486F4DB65F1F78 /* geography.json */,
@@ -441,6 +451,7 @@
 				3701094CFDB3AAD051661459 /* german.json */,
 				EDDC45AA716BBD04CF700F92 /* go.json */,
 				BF9D238688612B66E23AD263 /* hindi.json */,
+				738804B26679E303E7AE98CE /* ios_internals.json */,
 				E96829EFE58B59935649CEA6 /* italian.json */,
 				957B0D682A78332B3AF55252 /* japanese.json */,
 				8907AAEC9D9D95B8AB2BC0C3 /* java.json */,
@@ -456,6 +467,7 @@
 				879E14E2752370F51B709C91 /* precalc11.json */,
 				3E08CADD3672CCCBFFB75423 /* precalc12.json */,
 				2558463843F88D615C200354 /* python.json */,
+				D1DCA2A90FD575638F1D0800 /* reverse_engineering.json */,
 				E28878C7B0B1D588D2471F69 /* russian.json */,
 				B47A509557BCADC7E56991E1 /* rust.json */,
 				721FEFF6757512300B8F10FB /* spanish.json */,
@@ -619,6 +631,7 @@
 				D3461DD54E4BB706279CD3B8 /* chinese.json in Resources */,
 				B3C07777E88197ACDAA5DEAA /* computers.json in Resources */,
 				7B0650BB4C81FFF35689E8E6 /* cpp.json in Resources */,
+				B46BE8ED1A3AF5A2BF43C78F /* discrete_math.json in Resources */,
 				86CADF3E196A0732996BC51D /* dutch.json in Resources */,
 				7FCD7930E86A050BE652801F /* french.json in Resources */,
 				533DE048D1F574A4C8CEA9B4 /* geography.json in Resources */,
@@ -626,6 +639,7 @@
 				F6897E8DA0302CF2FEF002D3 /* german.json in Resources */,
 				2A412D23BA17043E177035EC /* go.json in Resources */,
 				29D0DBED28E100527457F052 /* hindi.json in Resources */,
+				78189777534DD3DA86B3D82D /* ios_internals.json in Resources */,
 				4EC73EE099FB9880E11646D2 /* italian.json in Resources */,
 				65FE01B3E495B031D58BD547 /* japanese.json in Resources */,
 				83D3B93DE2F0C86834070045 /* java.json in Resources */,
@@ -642,6 +656,7 @@
 				387ED2785C32613B246E6381 /* precalc12.json in Resources */,
 				6F3218447DEE9A342C07EAF9 /* precalc12_masterclass.json in Resources */,
 				1891E219C6A89705EE258AB2 /* python.json in Resources */,
+				3C44065BB1D19FF398F4AD83 /* reverse_engineering.json in Resources */,
 				E8DEFF56521D901F1FAF31BC /* russian.json in Resources */,
 				3081F31BFDC7492F939C1C15 /* rust.json in Resources */,
 				BA988804704D37E0EB7A31BA /* spanish.json in Resources */,
@@ -675,6 +690,7 @@
 				E1E420F02C4ABC6502AE60EB /* chinese.json in Resources */,
 				62DFDE9E87DEBA260541EF77 /* computers.json in Resources */,
 				13DBA14E7DBBD40A04EA7AFE /* cpp.json in Resources */,
+				09C2CE2E8598F9F8B6F8E9A4 /* discrete_math.json in Resources */,
 				E432FEA928A995B57233427B /* dutch.json in Resources */,
 				3611CFACF566DFF8AF545AEB /* french.json in Resources */,
 				2B65281A89034D25A150879B /* geography.json in Resources */,
@@ -682,6 +698,7 @@
 				4ECF489A147474F5AC270527 /* german.json in Resources */,
 				EFC32035248DAA79D1EC8AC5 /* go.json in Resources */,
 				CF33E5ECE6D9F4FC66472380 /* hindi.json in Resources */,
+				8D654BB4EFAC10A5E793E1CA /* ios_internals.json in Resources */,
 				913AD7EDC1697999EF83BC9D /* italian.json in Resources */,
 				DBF52E22BE2DCA6FBCD8C923 /* japanese.json in Resources */,
 				E28C27863E18EF25455A0C80 /* java.json in Resources */,
@@ -698,6 +715,7 @@
 				A24464F550AA5BC63FC42FD3 /* precalc12.json in Resources */,
 				6AC16FC4E789B39721C80293 /* precalc12_masterclass.json in Resources */,
 				131DC6F7C4D9FD99E8C84795 /* python.json in Resources */,
+				C3C95CB6958E6976793E6F29 /* reverse_engineering.json in Resources */,
 				9A7E4ECAAFE389739FFB84D2 /* russian.json in Resources */,
 				7DB404B693AEA4EADFA4BCDC /* rust.json in Resources */,
 				50A073AFAEE88E9E2EAC1BEB /* spanish.json in Resources */,
@@ -996,7 +1014,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.lingo;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1031,7 +1049,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.lingo;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
