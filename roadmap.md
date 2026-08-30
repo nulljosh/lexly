@@ -26,6 +26,7 @@ Verified on an iPhone 17 Pro simulator: the Food & Drink unit shows its tip and 
 food phrases, and the sentences in it are actually about eating.
 
 ## Open — next on the curriculum
+- [ ] App Store marketing URL: currently generic portfolio root (heyitsmejosh.com), should be https://lexly.heyitsmejosh.com. Frozen until 1.1.6+ ship due to current version READY_FOR_SALE status.
 
 - [ ] **Word-strength model (lexeme-lite).** The keystone: it unlocks a placement test,
   weak-word review, and a vocabulary stat all at once. Design: `lingo.words` =
