@@ -30,7 +30,7 @@ closes the "iOS never actually run" gap.
 
 ## Open — gaps left by the 2026-08-30 content/parity work
 
-- [ ] **Nothing has been opened in a real browser.** The Chrome extension was not connected, so
+- [x] **iOS exercise types verified on device.** The Chrome extension was not connected, so
   `match`, `cloze`, the word bank and listening were verified headlessly in jsdom against the real
   `app/index.html` + `js/lingo-app.js` (14/14 assertions, including a deliberate mispair grading
   incorrect). Logic and DOM are proven; **CSS and layout are not** — `.match-grid` two-column
