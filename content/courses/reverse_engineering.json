@@ -1,0 +1,370 @@
+{
+  "id": "reverse_engineering",
+  "name": "Reverse Engineering",
+  "category": "programming",
+  "icon": "fa-solid fa-magnifying-glass-chart",
+  "level": "Beginner to Intermediate",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "All",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Static analysis basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Turning machine code back into assembly is called",
+              "answer": "Disassembly",
+              "choices": [
+                "Disassembly",
+                "Decompilation",
+                "Compilation",
+                "Linking"
+              ],
+              "id": "reverse_engineering_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Tool that produces C-like pseudocode from a binary",
+              "answer": "Decompiler",
+              "choices": [
+                "Decompiler",
+                "Assembler",
+                "Linker",
+                "Debugger"
+              ],
+              "id": "reverse_engineering_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Free NSA reverse engineering suite",
+              "answer": "Ghidra",
+              "choices": [
+                "Ghidra",
+                "IDA Pro",
+                "Binary Ninja",
+                "Radare2"
+              ],
+              "id": "reverse_engineering_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Command that lists printable strings in a binary",
+              "answer": "strings",
+              "choices": [
+                "strings",
+                "nm",
+                "objdump",
+                "file"
+              ],
+              "id": "reverse_engineering_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Executable format used on Linux",
+              "answer": "ELF",
+              "choices": [
+                "ELF",
+                "PE",
+                "Mach-O",
+                "COFF"
+              ],
+              "id": "reverse_engineering_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Executable format used on macOS and iOS",
+              "answer": "Mach-O",
+              "choices": [
+                "Mach-O",
+                "ELF",
+                "PE",
+                "APK"
+              ],
+              "id": "reverse_engineering_5"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Assembly literacy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "On x86-64 System V, the first integer argument goes in",
+              "answer": "rdi",
+              "choices": [
+                "rdi",
+                "rax",
+                "rsp",
+                "rbx"
+              ],
+              "id": "reverse_engineering_6"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Register holding the return value on x86-64",
+              "answer": "rax",
+              "choices": [
+                "rax",
+                "rdi",
+                "rbp",
+                "rip"
+              ],
+              "id": "reverse_engineering_7"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Instruction that sets flags by subtracting without storing",
+              "answer": "cmp",
+              "choices": [
+                "cmp",
+                "sub",
+                "mov",
+                "test"
+              ],
+              "id": "reverse_engineering_8"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On ARM64, the return address lives in",
+              "answer": "x30 (LR)",
+              "choices": [
+                "x30 (LR)",
+                "x0",
+                "sp",
+                "pc"
+              ],
+              "id": "reverse_engineering_9"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the stack pointer do on a function call?",
+              "answer": "Grows downward",
+              "choices": [
+                "Grows downward",
+                "Grows upward",
+                "Stays fixed",
+                "Resets to zero"
+              ],
+              "id": "reverse_engineering_10"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A jump taken only when the zero flag is set",
+              "answer": "je",
+              "choices": [
+                "je",
+                "jmp",
+                "jne",
+                "call"
+              ],
+              "id": "reverse_engineering_11"
+            }
+          ]
+        },
+        {
+          "id": "u1l3",
+          "title": "Dynamic analysis",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Debugger shipped with LLVM and used on macOS",
+              "answer": "lldb",
+              "choices": [
+                "lldb",
+                "gdb",
+                "windbg",
+                "x64dbg"
+              ],
+              "id": "reverse_engineering_12"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Stopping execution at an address to inspect state",
+              "answer": "Breakpoint",
+              "choices": [
+                "Breakpoint",
+                "Watchpoint",
+                "Hook",
+                "Trap"
+              ],
+              "id": "reverse_engineering_13"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Linux tool that traces system calls",
+              "answer": "strace",
+              "choices": [
+                "strace",
+                "ltrace",
+                "perf",
+                "nm"
+              ],
+              "id": "reverse_engineering_14"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Framework for runtime hooking on iOS and Android",
+              "answer": "Frida",
+              "choices": [
+                "Frida",
+                "Ghidra",
+                "Wireshark",
+                "Burp"
+              ],
+              "id": "reverse_engineering_15"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Proxy commonly used to inspect app HTTPS traffic",
+              "answer": "Burp Suite",
+              "choices": [
+                "Burp Suite",
+                "Ghidra",
+                "Frida",
+                "lldb"
+              ],
+              "id": "reverse_engineering_16"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Defeating certificate pinning requires",
+              "answer": "Patching or hooking the app's trust check",
+              "choices": [
+                "Patching or hooking the app's trust check",
+                "A faster proxy",
+                "Root DNS access",
+                "Recompiling the OS"
+              ],
+              "id": "reverse_engineering_17"
+            }
+          ]
+        },
+        {
+          "id": "u1l4",
+          "title": "Obfuscation and protections",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Compressing or encrypting a binary to hide its code is called",
+              "answer": "Packing",
+              "choices": [
+                "Packing",
+                "Stripping",
+                "Linking",
+                "Fuzzing"
+              ],
+              "id": "reverse_engineering_18"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Randomizing where code loads in memory",
+              "answer": "ASLR",
+              "choices": [
+                "ASLR",
+                "DEP",
+                "CFI",
+                "PAC"
+              ],
+              "id": "reverse_engineering_19"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Marking the stack non-executable",
+              "answer": "NX / DEP",
+              "choices": [
+                "NX / DEP",
+                "ASLR",
+                "Stack canary",
+                "RELRO"
+              ],
+              "id": "reverse_engineering_20"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Value placed before the saved return address to detect overflow",
+              "answer": "Stack canary",
+              "choices": [
+                "Stack canary",
+                "ASLR slide",
+                "Nonce",
+                "Salt"
+              ],
+              "id": "reverse_engineering_21"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Removing symbol names from a binary",
+              "answer": "Stripping",
+              "choices": [
+                "Stripping",
+                "Packing",
+                "Signing",
+                "Fuzzing"
+              ],
+              "id": "reverse_engineering_22"
+            }
+          ]
+        },
+        {
+          "id": "u1l5",
+          "title": "Practice and ethics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Competition format built around reverse engineering puzzles",
+              "answer": "CTF",
+              "choices": [
+                "CTF",
+                "Hackathon",
+                "Bug bash",
+                "Code golf"
+              ],
+              "id": "reverse_engineering_23"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Automated input generation to find crashes",
+              "answer": "Fuzzing",
+              "choices": [
+                "Fuzzing",
+                "Linting",
+                "Profiling",
+                "Tracing"
+              ],
+              "id": "reverse_engineering_24"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Reporting a bug to the vendor before publishing",
+              "answer": "Responsible disclosure",
+              "choices": [
+                "Responsible disclosure",
+                "Full disclosure",
+                "Zero disclosure",
+                "Exploit sale"
+              ],
+              "id": "reverse_engineering_25"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Reverse engineering someone else's software is safest when",
+              "answer": "You own it or are authorized",
+              "choices": [
+                "You own it or are authorized",
+                "It is popular",
+                "It is closed source",
+                "It is old"
+              ],
+              "id": "reverse_engineering_26"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

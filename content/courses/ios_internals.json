@@ -1,0 +1,394 @@
+{
+  "id": "ios_internals",
+  "name": "iOS Internals & Jailbreaks",
+  "category": "programming",
+  "icon": "fa-solid fa-mobile-screen-button",
+  "level": "Intermediate",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "All",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "iOS security model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "The chain that verifies each boot stage from ROM upward",
+              "answer": "Secure Boot Chain",
+              "choices": [
+                "Secure Boot Chain",
+                "Keychain",
+                "Sandbox",
+                "Gatekeeper"
+              ],
+              "id": "ios_internals_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Immutable first-stage bootloader burned into the SoC",
+              "answer": "BootROM",
+              "choices": [
+                "BootROM",
+                "iBoot",
+                "LLB",
+                "XNU"
+              ],
+              "id": "ios_internals_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Name of the iOS/macOS kernel",
+              "answer": "XNU",
+              "choices": [
+                "XNU",
+                "Linux",
+                "Mach",
+                "Darwin"
+              ],
+              "id": "ios_internals_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Per-app restriction on file and API access",
+              "answer": "Sandbox",
+              "choices": [
+                "Sandbox",
+                "Entitlements",
+                "Codesign",
+                "KPP"
+              ],
+              "id": "ios_internals_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Signed key-value permissions baked into an app binary",
+              "answer": "Entitlements",
+              "choices": [
+                "Entitlements",
+                "Provisioning",
+                "Sandbox",
+                "Keychain"
+              ],
+              "id": "ios_internals_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Requirement that all executable pages be signed",
+              "answer": "Code signing enforcement",
+              "choices": [
+                "Code signing enforcement",
+                "ASLR",
+                "PAC",
+                "SIP"
+              ],
+              "id": "ios_internals_5"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Jailbreak anatomy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "A jailbreak fundamentally needs to defeat",
+              "answer": "Code signing and the sandbox",
+              "choices": [
+                "Code signing and the sandbox",
+                "The App Store",
+                "iCloud",
+                "Face ID"
+              ],
+              "id": "ios_internals_6"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A jailbreak that survives reboot is called",
+              "answer": "Untethered",
+              "choices": [
+                "Untethered",
+                "Tethered",
+                "Semi-tethered",
+                "Rootless"
+              ],
+              "id": "ios_internals_7"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A jailbreak needing a computer at each boot is",
+              "answer": "Tethered",
+              "choices": [
+                "Tethered",
+                "Untethered",
+                "Semi-untethered",
+                "Rootless"
+              ],
+              "id": "ios_internals_8"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A jailbreak re-run by opening an app after reboot is",
+              "answer": "Semi-untethered",
+              "choices": [
+                "Semi-untethered",
+                "Untethered",
+                "Tethered",
+                "Rootful"
+              ],
+              "id": "ios_internals_9"
+            },
+            {
+              "type": "mathChoice",
+              "question": "checkm8 exploits a bug in",
+              "answer": "The BootROM",
+              "choices": [
+                "The BootROM",
+                "The kernel",
+                "WebKit",
+                "Safari"
+              ],
+              "id": "ios_internals_10"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can Apple not patch checkm8 on affected devices?",
+              "answer": "BootROM is read-only",
+              "choices": [
+                "BootROM is read-only",
+                "Apple chose not to",
+                "It is in hardware fuses",
+                "It needs a recall"
+              ],
+              "id": "ios_internals_11"
+            }
+          ]
+        },
+        {
+          "id": "u1l3",
+          "title": "Exploit chains",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "First stage of a typical chain gets you",
+              "answer": "Code execution in a user process",
+              "choices": [
+                "Code execution in a user process",
+                "Kernel read/write",
+                "A root shell",
+                "A signed binary"
+              ],
+              "id": "ios_internals_12"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The prize of the kernel stage is usually",
+              "answer": "Arbitrary kernel read/write",
+              "choices": [
+                "Arbitrary kernel read/write",
+                "A crash log",
+                "A sandbox escape",
+                "A UI hook"
+              ],
+              "id": "ios_internals_13"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Escaping the browser process to attack the kernel is",
+              "answer": "A sandbox escape",
+              "choices": [
+                "A sandbox escape",
+                "Privilege escalation",
+                "Persistence",
+                "Injection"
+              ],
+              "id": "ios_internals_14"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Reusing existing code snippets to bypass NX is",
+              "answer": "ROP",
+              "choices": [
+                "ROP",
+                "JOP only",
+                "Shellcode",
+                "Heap spray"
+              ],
+              "id": "ios_internals_15"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Apple hardware feature signing pointers to stop ROP",
+              "answer": "PAC",
+              "choices": [
+                "PAC",
+                "KPP",
+                "KTRR",
+                "SIP"
+              ],
+              "id": "ios_internals_16"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Hardware protection making kernel text read-only after boot",
+              "answer": "KTRR",
+              "choices": [
+                "KTRR",
+                "PAC",
+                "ASLR",
+                "SIP"
+              ],
+              "id": "ios_internals_17"
+            }
+          ]
+        },
+        {
+          "id": "u1l4",
+          "title": "Tooling and history",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Package manager historically used on jailbroken devices",
+              "answer": "Cydia",
+              "choices": [
+                "Cydia",
+                "Homebrew",
+                "APT Store",
+                "TestFlight"
+              ],
+              "id": "ios_internals_18"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Runtime patching framework for tweaks",
+              "answer": "Cydia Substrate",
+              "choices": [
+                "Cydia Substrate",
+                "Frida",
+                "Xcode",
+                "Theos"
+              ],
+              "id": "ios_internals_19"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Build system for writing jailbreak tweaks",
+              "answer": "Theos",
+              "choices": [
+                "Theos",
+                "CMake",
+                "Bazel",
+                "SwiftPM"
+              ],
+              "id": "ios_internals_20"
+            },
+            {
+              "type": "mathChoice",
+              "question": "checkra1n and palera1n are based on",
+              "answer": "checkm8",
+              "choices": [
+                "checkm8",
+                "unc0ver",
+                "Taurine",
+                "Fugu"
+              ],
+              "id": "ios_internals_21"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A jailbreak that leaves the system partition untouched is",
+              "answer": "Rootless",
+              "choices": [
+                "Rootless",
+                "Rootful",
+                "Tethered",
+                "Semi-tethered"
+              ],
+              "id": "ios_internals_22"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Blobs saved to allow downgrading firmware",
+              "answer": "SHSH blobs",
+              "choices": [
+                "SHSH blobs",
+                "IPSW files",
+                "Entitlements",
+                "Provisioning profiles"
+              ],
+              "id": "ios_internals_23"
+            }
+          ]
+        },
+        {
+          "id": "u1l5",
+          "title": "Research practice",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Apple program that ships devices with relaxed security to researchers",
+              "answer": "Security Research Device Program",
+              "choices": [
+                "Security Research Device Program",
+                "Developer Program",
+                "TestFlight",
+                "AppleSeed"
+              ],
+              "id": "ios_internals_24"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Public database entry identifying a known vulnerability",
+              "answer": "CVE",
+              "choices": [
+                "CVE",
+                "CWE",
+                "RFC",
+                "ISO"
+              ],
+              "id": "ios_internals_25"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Google team publishing detailed iOS exploit write-ups",
+              "answer": "Project Zero",
+              "choices": [
+                "Project Zero",
+                "Red Team X",
+                "TAG",
+                "Chronicle"
+              ],
+              "id": "ios_internals_26"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Jailbreaking a device you own in the US is",
+              "answer": "Exempted under the DMCA",
+              "choices": [
+                "Exempted under the DMCA",
+                "Always illegal",
+                "A felony",
+                "Unregulated worldwide"
+              ],
+              "id": "ios_internals_27"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The right thing to do with a new kernel bug",
+              "answer": "Report it to Apple",
+              "choices": [
+                "Report it to Apple",
+                "Sell it anonymously",
+                "Post the exploit first",
+                "Use it quietly"
+              ],
+              "id": "ios_internals_28"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
