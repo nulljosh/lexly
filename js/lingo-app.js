@@ -143,6 +143,17 @@ let gameState = {
     selectedLesson: null
 };
 
+// `/app/?demo=1` plays one real lesson with no account, so the landing page can
+// prove the product instead of describing it. It uses the real renderers -- a
+// separate demo widget would drift from them -- and writes nothing: see the DEMO
+// guards in saveProgress and saveSrsData.
+const DEMO = new URLSearchParams(location.search).has('demo');
+// Course to play in demo mode. Generated lessons carry all five exercise types in
+// order (translation, cloze, word bank, listening, match), so one lesson shows
+// everything the landing page claims.
+const DEMO_SUBJECT = 'spanish';
+const DEMO_LESSON = 't1l1';
+
 document.addEventListener('DOMContentLoaded', async () => {
     initTheme();
     setupEventListeners();
@@ -151,8 +162,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     initSpeechRecognition();
     updateStats();
     await loadCatalog();
+    if (DEMO) { startDemo(); return; }
     initializeApp();
 });
+
+// Deliberately bypasses the auth gate. The gate lives at a single choke point in
+// renderSubjects, and nothing downstream of it re-checks -- so calling startLesson
+// directly is a chosen exception, not an oversight. Don't "fix" it by adding a
+// check here without also giving the landing page another way to demo.
+function startDemo() {
+    document.body.classList.add('demo');
+    gameState.selectedSubject = DEMO_SUBJECT;
+    gameState.hearts = 5;
+    startLesson(DEMO_LESSON);
+}
 
 // Fetch the course catalog (course metadata only, not lesson content).
 async function loadCatalog() {
@@ -287,6 +310,7 @@ function loadProgress() {
 }
 
 function saveProgress(patch) {
+    if (DEMO) return;
     const current = loadProgress();
     const next = { ...current, ...patch };
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(next));
@@ -323,6 +347,7 @@ function getSrsData() {
 }
 
 function saveSrsData(srs) {
+    if (DEMO) return;
     localStorage.setItem(SRS_KEY, JSON.stringify(srs));
 }
 
@@ -1830,6 +1855,18 @@ function showResults() {
     document.getElementById('resultContainer').classList.add('active');
     document.getElementById('correctCount').textContent = gameState.correctAnswers;
     document.getElementById('xpEarned').textContent = gameState.correctAnswers * 10;
+
+    if (DEMO) {
+        // Nothing below this point should run: it all writes progress, streaks and
+        // achievements a demo player does not have.
+        document.querySelector('.result-title').textContent = 'That was one lesson';
+        document.querySelector('.result-subtitle').textContent =
+            'There are 522 more, across 12 languages. Create an account to keep your XP and streak.';
+        const cta = document.getElementById('continueBtn');
+        cta.textContent = 'Create an account';
+        cta.onclick = () => { window.location.href = '/app/'; };
+        return;
+    }
 
     const progress = loadProgress();
     const today = new Date().toISOString().slice(0, 10);

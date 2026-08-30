@@ -35,7 +35,7 @@ npx wrangler pages deploy "$STAGE" --project-name lexly-heyitsmejosh --branch ma
 # Edge propagation lags a few seconds, so retry rather than failing instantly.
 # Images are their own asset class: the marketing screenshots went stale on
 # 2026-08-19 and passed verify because only json/css/js were checked.
-for asset in content/catalog.json css/lingo.css js/lingo-app.js assets/marketing/catalog.png assets/marketing/course.png; do
+for asset in content/catalog.json css/lingo.css js/lingo-app.js assets/marketing/catalog.png assets/marketing/course.png assets/og-image.jpg; do
   LOCAL="$(md5file "$asset")"
   for attempt in 1 2 3 4 5 6; do
     # Cache-bust: /assets/* carries a 300s edge TTL (see _headers), far longer

@@ -2100,3 +2100,24 @@ dialog.auth-shell::backdrop {
     color: var(--text-muted);
     line-height: 1.5;
 }
+
+/* Demo mode (/app/?demo=1): one real lesson, no account. Hide the chrome that only
+   means something to a signed-in player so the page reads as a lesson, not as a
+   half-logged-in app. Hearts stay — they are part of the lesson itself. */
+body.demo .stat-streak,
+body.demo .stat-xp,
+body.demo #achievementBtn,
+body.demo #profileBtn,
+body.demo .category-tabs,
+body.demo #skipBtn {
+    display: none;
+}
+
+body.demo .header-inner::after {
+    content: 'Demo lesson';
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}

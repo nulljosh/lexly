@@ -41,7 +41,7 @@ const sb = {
 const window = {
     supabase: { createClient: () => sb },
     speechSynthesis: undefined,
-    location: { href: '' },
+    location: { href: '', search: '' },
 };
 
 const sandbox = {
@@ -49,6 +49,8 @@ const sandbox = {
     fetch: async () => ({ json: async () => ({}) }),
     setTimeout, Date, JSON, Math, Boolean, Array, Object, String,
     SpeechSynthesisUtterance: function () {},
+    // The app reads `?demo=1` at load; without these the module throws here.
+    URLSearchParams, location: { href: '', search: '' },
     requestAnimationFrame: (fn) => setTimeout(fn, 0),
 };
 sandbox.global = sandbox;

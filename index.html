@@ -3,11 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#fafafa">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
 <title>Lexly — Learn anything</title>
-<meta name="description" content="40+ courses across languages, programming, math, science and school curricula — with spaced repetition, streaks, and speech recognition to make it stick.">
+<meta name="description" content="2,600 exercises across 44 courses — 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition, free on web, iOS and macOS.">
+<link rel="canonical" href="https://lexly.heyitsmejosh.com">
 <meta name="apple-itunes-app" content="app-id=6783501611">
 <link rel="icon" href="/assets/icon.svg?v=2">
+<link rel="apple-touch-icon" href="/assets/icon.svg?v=2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lexly">
+<meta property="og:url" content="https://lexly.heyitsmejosh.com">
+<meta property="og:title" content="Lexly — Learn anything">
+<meta property="og:description" content="2,600 exercises across 12 languages, math, science and programming. Spaced repetition, streaks and speech recognition. Free on web, iOS and macOS.">
+<meta property="og:image" content="https://lexly.heyitsmejosh.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lexly — Learn anything">
+<meta name="twitter:description" content="2,600 exercises across 12 languages, math, science and programming. Free on web, iOS and macOS.">
+<meta name="twitter:image" content="https://lexly.heyitsmejosh.com/assets/og-image.jpg">
 <style>
   :root {
     --bg-primary: #ffffff;
@@ -18,12 +34,45 @@
     --accent: #5B9BD5;
     --border: rgba(26,26,26,0.1);
     --success: #2d7a50;
+    --card-bg: #ffffff;
+    /* Text on a solid button, and two surfaces that were hardcoded white. Tokens so
+       the dark block can flip them without a second rule per element. */
+    --btn-fg: #ffffff;
+    --header-bg: rgba(255,255,255,0.85);
+    --pill-bg: #ffffff;
+    color-scheme: light;
     --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --radius-pill: 999px;
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
     --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
+  /* The app already has a dark palette (css/lingo.css [data-theme="dark"]). These are
+     those values, so the landing page and the app agree instead of drifting. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #111;
+      --bg-secondary: #1a1a1a;
+      --text-primary: #e8e8e8;
+      --text-secondary: rgba(255,255,255,0.5);
+      --text-muted: rgba(255,255,255,0.25);
+      --accent: #7ab4e0;
+      --border: rgba(255,255,255,0.1);
+      --success: #3d9e6a;
+      --card-bg: #1a1a1a;
+      --btn-fg: #111;
+      --header-bg: rgba(17,17,17,0.85);
+      --pill-bg: #1a1a1a;
+      color-scheme: dark;
+    }
+  }
+  .skip-link { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--text-primary); color: var(--btn-fg); padding: 0.75rem 1.25rem; border-radius: 0 0 8px 0; text-decoration: none; }
+  .skip-link:focus { left: 0; }
+  picture { display: contents; }
+  /* width/height attributes give the browser an aspect ratio (good, kills CLS), but a
+     CSS width with no height:auto then leaves the attribute height in force -- which
+     rendered the 1120x2000 hero shots at full height and pushed the copy off-screen. */
+  img { max-width: 100%; height: auto; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg-primary); color: var(--text-primary); font-family: var(--font); overflow-x: hidden; }
   a { color: var(--accent); }
@@ -34,25 +83,25 @@
   .eyebrow { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.75rem; }
   h1, h2 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
   .btn { text-decoration: none; font-size: 0.9375rem; font-weight: 500; padding: 0.875rem 1.75rem; border-radius: var(--radius-pill); display: inline-block; transition: transform 0.2s var(--spring), opacity 0.2s var(--ease); }
-  .btn-primary { background: var(--text-primary); color: #fff; }
+  .btn-primary { background: var(--text-primary); color: var(--btn-fg); }
   .btn-primary:hover { transform: translateY(-2px); }
   .btn-secondary { color: var(--text-primary); border: 1px solid var(--border); }
   .btn-secondary:hover { opacity: 0.7; }
-  .btn-appstore { display: inline-flex; align-items: center; gap: 0.55rem; background: #000; color: #fff; text-decoration: none; padding: 0.7rem 1.4rem; border-radius: var(--radius-pill); transition: transform 0.2s var(--spring); }
+  .btn-appstore { display: inline-flex; align-items: center; gap: 0.55rem; background: var(--text-primary); color: var(--btn-fg); text-decoration: none; padding: 0.7rem 1.4rem; border-radius: var(--radius-pill); transition: transform 0.2s var(--spring); }
   .btn-appstore:hover { transform: translateY(-2px); }
   .btn-appstore svg { width: 20px; height: 20px; flex-shrink: 0; }
   .btn-appstore .as-label { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
   .btn-appstore .as-small { font-size: 0.625rem; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.75; }
   .btn-appstore .as-big { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; }
 
-  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border); }
+  header { position: sticky; top: 0; z-index: 100; background: var(--header-bg); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border); }
   .header-inner { max-width: 1080px; margin: 0 auto; padding: 0.9rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
   .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
   .logo img { border-radius: 6px; }
   nav.main-nav { display: flex; align-items: center; gap: 2rem; }
   nav.main-nav a { text-decoration: none; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; }
   nav.main-nav a:hover { color: var(--text-primary); }
-  .header-cta { background: var(--text-primary); color: #fff; font-size: 0.875rem; font-weight: 500; padding: 0.55rem 1.25rem; border-radius: var(--radius-pill); text-decoration: none; transition: opacity 0.2s var(--ease); }
+  .header-cta { background: var(--text-primary); color: var(--btn-fg); font-size: 0.875rem; font-weight: 500; padding: 0.55rem 1.25rem; border-radius: var(--radius-pill); text-decoration: none; transition: opacity 0.2s var(--ease); }
   .header-cta:hover { opacity: 0.85; }
 
   .hero { max-width: 1080px; margin: 0 auto; padding: 5rem 1.5rem 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
@@ -79,7 +128,7 @@
 
   .hero-art { position: relative; display: flex; justify-content: center; animation: lxFadeUp 0.9s var(--ease) 0.1s both; }
   .hero-art .glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(91,155,213,0.18) 0%, rgba(91,155,213,0) 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
-  .hero-art img { position: relative; width: 240px; border-radius: 28px; box-shadow: 0 30px 60px rgba(0,0,0,0.18); border: 1px solid var(--border); }
+  .hero-art img { position: relative; width: 240px; height: auto; border-radius: 28px; box-shadow: 0 30px 60px rgba(0,0,0,0.18); border: 1px solid var(--border); }
   .hero-art img.shot-1 { transform: rotate(-3deg); }
   .hero-art img.shot-2 { transform: rotate(4deg) translate(-70px, 40px); }
 
@@ -100,7 +149,7 @@
   .courses-inner h2 { font-size: 2rem; margin-bottom: 1rem; }
   .courses-inner p { font-size: 1rem; line-height: 1.6; color: var(--text-secondary); max-width: 420px; margin: 0 0 1.75rem; }
   .category-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-  .category-pill { padding: 0.5rem 1rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8125rem; font-weight: 500; color: var(--text-secondary); }
+  .category-pill { padding: 0.5rem 1rem; background: var(--pill-bg); border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8125rem; font-weight: 500; color: var(--text-secondary); }
   .courses-shot { display: flex; justify-content: center; }
   .courses-shot img { width: 220px; border-radius: 24px; box-shadow: 0 24px 48px rgba(0,0,0,0.15); border: 1px solid var(--border); }
 
@@ -114,17 +163,20 @@
   .stat { text-align: center; }
   .stat-num { font-family: var(--font-display); font-size: 2.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
   .stat-label { font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.35rem; }
+  .hero-note { font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.85rem; }
+  .practice-cta { text-align: center; margin: 0 auto 2rem; }
   .practice-shot { max-width: 760px; margin: 0 auto 3rem; }
+  .practice-shot picture { display: block; }
   .practice-shot img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 14px; }
   .types-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
   .type-row { display: grid; grid-template-columns: 180px 1fr; gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--border); }
   .type-row:last-child { border-bottom: 1px solid var(--border); }
-  .type-name { font-weight: 600; font-size: 0.9375rem; }
+  .type-name { font-weight: 600; font-size: 0.9375rem; margin: 0; }
   .type-desc { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
   .prose { max-width: 640px; margin: 0 auto; color: var(--text-secondary); font-size: 1rem; line-height: 1.7; text-align: center; }
   .prose a { color: var(--accent); }
   .faq-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .faq-q { font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.5rem; }
+  .faq-q { font-weight: 600; font-size: 0.9375rem; margin: 0 0 0.5rem; }
   .faq-a { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
   @media (max-width: 720px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
@@ -137,7 +189,7 @@
   footer a { text-decoration: none; color: var(--text-muted); }
   footer a:hover { color: var(--text-primary); }
 
-  @media (max-width: 860px) {
+  @media (max-width: 1000px) {
     nav.main-nav { display: none; }
     .hero { grid-template-columns: 1fr; padding-top: 3rem; }
     .hero-art { margin-top: 2rem; }
@@ -146,10 +198,14 @@
     .courses-shot { order: -1; }
     .platforms-grid { grid-template-columns: 1fr; }
   }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
 </style>
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
 <header>
   <div class="header-inner">
     <div class="logo">
@@ -167,20 +223,21 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="main" tabindex="-1">
   <div class="hero-copy">
     <div class="eyebrow">Gamified learning</div>
     <h1>Learn <span class="lx-cycle" id="lxCycle"><span class="lx-word">anything</span></span>.</h1>
-    <p>2,600 exercises across 44 courses &mdash; 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition make it stick.</p>
+    <p class="hero-sub">2,600 exercises across 44 courses &mdash; 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition make it stick.</p>
     <div class="hero-actions">
-      <a href="/app/" class="btn btn-primary">Start learning &rarr;</a>
-      <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
+      <a href="/app/?demo=1" class="btn btn-primary">Try a lesson &rarr;</a>
+      <a href="/app/" class="btn btn-secondary">Sign in</a>
     </div>
+    <div class="hero-note">No account needed to try it.</div>
   </div>
   <div class="hero-art">
     <div class="glow"></div>
-    <img class="shot-1" src="/assets/marketing/catalog.png" alt="Lexly course catalog screen">
-    <img class="shot-2" src="/assets/marketing/course.png" alt="Lexly course screen">
+    <picture><source srcset="/assets/marketing/catalog.webp" type="image/webp"><img class="shot-1" src="/assets/marketing/catalog.png" alt="Lexly course catalog screen" width="1120" height="2000" fetchpriority="high"></picture>
+    <picture><source srcset="/assets/marketing/course.webp" type="image/webp"><img class="shot-2" src="/assets/marketing/course.png" alt="Lexly course screen" width="1120" height="2000" fetchpriority="high"></picture>
   </div>
 </section>
 
@@ -237,7 +294,7 @@
       </div>
     </div>
     <div class="courses-shot">
-      <img src="/assets/marketing/catalog.png" alt="Lexly subjects and course list">
+      <picture><source srcset="/assets/marketing/catalog.webp" type="image/webp"><img src="/assets/marketing/catalog.png" alt="Lexly subjects and course list" width="1120" height="2000" loading="lazy" decoding="async"></picture>
     </div>
   </div>
 </section>
@@ -247,28 +304,31 @@
     <div class="eyebrow">More than multiple choice</div>
     <h2>Five ways to practise</h2>
   </div>
+  <div class="practice-cta">
+    <a href="/app/?demo=1" class="btn btn-primary">Play this lesson &rarr;</a>
+  </div>
   <div class="practice-shot">
-    <img src="/assets/marketing/lesson.png" alt="A Lexly matching-pairs exercise in a Spanish lesson" width="1240" height="994" loading="lazy">
+    <picture><source srcset="/assets/marketing/lesson.webp" type="image/webp"><img src="/assets/marketing/lesson.png" alt="A Lexly matching-pairs exercise in a Spanish lesson" width="1240" height="994" loading="lazy" decoding="async"></picture>
   </div>
   <div class="types-list">
     <div class="type-row">
-      <div class="type-name">Translate</div>
+      <h3 class="type-name">Translate</h3>
       <div class="type-desc">Pick the right translation, or say it out loud &mdash; language courses accept your voice as the answer.</div>
     </div>
     <div class="type-row">
-      <div class="type-name">Word bank</div>
+      <h3 class="type-name">Word bank</h3>
       <div class="type-desc">Build the sentence from scattered words, with decoys mixed in so word order actually has to be right.</div>
     </div>
     <div class="type-row">
-      <div class="type-name">Fill in the blank</div>
+      <h3 class="type-name">Fill in the blank</h3>
       <div class="type-desc">One word removed from a real sentence. Tests the word in context instead of on a flashcard.</div>
     </div>
     <div class="type-row">
-      <div class="type-name">Matching pairs</div>
+      <h3 class="type-name">Matching pairs</h3>
       <div class="type-desc">Tap four sentences to their translations. Fast, and it catches the ones you only half know.</div>
     </div>
     <div class="type-row">
-      <div class="type-name">Listening</div>
+      <h3 class="type-name">Listening</h3>
       <div class="type-desc">Type what you hear, spoken in the course's own language. Replay it as many times as you need.</div>
     </div>
   </div>
@@ -294,19 +354,19 @@
   </div>
   <div class="faq-grid">
     <div class="card">
-      <div class="faq-q">Is it free?</div>
+      <h3 class="faq-q">Is it free?</h3>
       <div class="faq-a">Yes. Every course and every exercise is free, on all three platforms.</div>
     </div>
     <div class="card">
-      <div class="faq-q">Do I need an account?</div>
-      <div class="faq-a">Yes &mdash; courses and progress are tied to your account, so your streak and review queue follow you between devices.</div>
+      <h3 class="faq-q">Do I need an account?</h3>
+      <div class="faq-a">You can play a demo lesson without one. Saving your streak and review queue across devices needs an account.</div>
     </div>
     <div class="card">
-      <div class="faq-q">How does review work?</div>
+      <h3 class="faq-q">How does review work?</h3>
       <div class="faq-a">A real SM-2 spaced-repetition schedule. Each exercise gets its own interval that stretches as you keep getting it right, and resets when you don't.</div>
     </div>
     <div class="card">
-      <div class="faq-q">Is the source available?</div>
+      <h3 class="faq-q">Is the source available?</h3>
       <div class="faq-a">All of it. Lexly is MIT licensed and the full repository, including the course generator, is on GitHub.</div>
     </div>
   </div>
@@ -372,5 +432,38 @@
 })();
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Lexly",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web, iOS, macOS",
+      "url": "https://lexly.heyitsmejosh.com",
+      "downloadUrl": "https://apps.apple.com/app/id6783501611",
+      "description": "Gamified learning: 2,600 exercises across 12 languages, math, science and programming, with spaced repetition, streaks and speech recognition.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "contentRating": "4+",
+      "author": { "@type": "Person", "name": "Joshua Trommel" },
+      "license": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is it free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every course and every exercise is free, on all three platforms." } },
+        { "@type": "Question", "name": "Do I need an account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can play a demo lesson without one. Saving your streak and review queue across devices needs an account." } },
+        { "@type": "Question", "name": "How does review work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A real SM-2 spaced-repetition schedule. Each exercise gets its own interval that stretches as you keep getting it right, and resets when you don't." } },
+        { "@type": "Question", "name": "Is the source available?",
+          "acceptedAnswer": { "@type": "Answer", "text": "All of it. Lexly is MIT licensed and the full repository, including the course generator, is on GitHub." } }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>
