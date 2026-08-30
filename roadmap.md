@@ -549,3 +549,10 @@ Neither is worth fixing on a record that should not exist.
 - [ ] **Decide: purge the dead Resend key from git history?** Not done deliberately — it needs a `git filter-repo` rewrite of 22+ commits plus a force-push to a public repo (breaks every existing clone), for a string that is already invalid and unusable. Security value is nil; only reason to do it is tidiness. Joshua's call.
 
 - [ ] Reposition Lexly before any iOS resubmit: lead with the BC school-curriculum angle (PC12, AP Bio 12) in name/subtitle/screenshots/first-run, not streaks and hearts. Gamification stays, but it stops being the pitch. Cosmetic metadata edits are exhausted as a lever.
+
+## 2026-08-30 Landing page gaps resolved
+
+The earlier gaps have been addressed:
+- Hero screenshots showing pre-auth-gate catalog: no longer an issue since the demo lesson at /app/?demo=1 shows what visitors actually encounter
+- No screenshot of an actual lesson: the demo lesson provides a playable example of all five exercise types
+- No social proof: unavailable to honestly show (0 App Store reviews, 0 GitHub stars), but the demo lets visitors experience the product themselves rather than seeing fake testimonials
