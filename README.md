@@ -87,3 +87,9 @@ See `roadmap.md` for current open items (macOS 1.1.1 rejection fix, content/cour
 the WebMCP tools this app registers on `document.modelContext`, so an in-browser
 agent can drive it. Tools are split into read-only, reversible writes, and the
 few that require human confirmation.
+
+## Credits
+
+Language sentences come from the [Tatoeba Project](https://tatoeba.org) (CC-BY 2.0 FR) and
+are ordered by [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT). See
+[ATTRIBUTION.md](ATTRIBUTION.md).
