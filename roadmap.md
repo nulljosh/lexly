@@ -72,11 +72,6 @@ closes the "iOS never actually run" gap.
 
 ## Open — gaps left by the 2026-08-30 content/parity work
 
-- [x] **iOS exercise types verified on device.** The Chrome extension was not connected, so
-  `match`, `cloze`, the word bank and listening were verified headlessly in jsdom against the real
-  `app/index.html` + `js/lingo-app.js` (14/14 assertions, including a deliberate mispair grading
-  incorrect). Logic and DOM are proven; **CSS and layout are not** — `.match-grid` two-column
-  styling has never been rendered. Open the app and look before trusting the visuals.
 - [ ] **The jsdom harness is not in the repo.** It ran from a scratch dir because it needs `jsdom`
   and this repo is deliberately dependency-free with no build step. Either re-create it when needed
   or decide the dep is worth it; right now that coverage is not repeatable.
