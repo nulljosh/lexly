@@ -4,14 +4,158 @@
   "category": "math",
   "icon": "fa-solid fa-book-open",
   "level": "BC Grade 12",
-  "version": 2,
+  "version": 3,
   "units": [
     {
       "id": "u1",
-      "title": "Transformations & Function Operations",
+      "title": "Sequences & Series",
       "lessons": [
         {
           "id": "u1l1",
+          "title": "Permutations & Combinations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Number of permutations: P(5,3)",
+              "answer": "60",
+              "choices": [
+                "20",
+                "60",
+                "120",
+                "125"
+              ],
+              "id": "precalc12_u7_l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Combinations C(5,2) =",
+              "answer": "10",
+              "choices": [
+                "10",
+                "20",
+                "5",
+                "25"
+              ],
+              "id": "precalc12_u7_l1_1"
+            },
+            {
+              "type": "math",
+              "question": "5! =",
+              "answer": "120",
+              "id": "precalc12_u7_l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Combinations differ from permutations because order...",
+              "answer": "does not matter",
+              "choices": [
+                "does not matter",
+                "matters",
+                "is reversed",
+                "is squared"
+              ],
+              "id": "precalc12_u7_l1_3"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Geometric Series",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Sum of first 4 terms of geometric series 2,4,8,16: S4 =",
+              "answer": "30",
+              "id": "precalc12_u7_l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A geometric series converges when |r| is...",
+              "answer": "less than 1",
+              "choices": [
+                "less than 1",
+                "greater than 1",
+                "equal to 1",
+                "equal to 0"
+              ],
+              "id": "precalc12_u7_l2_1"
+            }
+          ]
+        },
+        {
+          "id": "u1l3",
+          "title": "Arithmetic Sequences & Series",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "In an arithmetic sequence, a1=5 and d=3. What is a10?",
+              "answer": "32",
+              "id": "precalc12_u1_l3_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The formula for the nth term of an arithmetic sequence is...",
+              "answer": "an = a1 + (n-1)d",
+              "id": "precalc12_u1_l3_1",
+              "choices": [
+                "an = a1 + (n-1)d",
+                "an = a1\u00b7r^(n-1)",
+                "an = a1 + nd",
+                "an = a1\u00b7r^n"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "Sum of the first n terms of an arithmetic series:",
+              "answer": "Sn = n/2 (a1 + an)",
+              "id": "precalc12_u1_l3_2",
+              "choices": [
+                "Sn = n/2 (a1 + an)",
+                "Sn = a1(1-r^n)/(1-r)",
+                "Sn = n(a1 + d)",
+                "Sn = a1/(1-r)"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "An infinite geometric series converges when...",
+              "answer": "|r| < 1",
+              "id": "precalc12_u1_l3_3",
+              "choices": [
+                "|r| < 1",
+                "|r| > 1",
+                "r > 0",
+                "r is an integer"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "Does the series with r = -0.99 converge or diverge?",
+              "answer": "converge",
+              "id": "precalc12_u1_l3_4",
+              "choices": [
+                "converge",
+                "diverge",
+                "neither",
+                "depends on a1"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Sum of an infinite geometric series with a1=8, r=1/2:",
+              "answer": "16",
+              "id": "precalc12_u1_l3_5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Transformations",
+      "lessons": [
+        {
+          "id": "u2l1",
           "title": "Transformations",
           "exercises": [
             {
@@ -71,7 +215,7 @@
           ]
         },
         {
-          "id": "u1l2",
+          "id": "u2l2",
           "title": "Inverse Functions",
           "exercises": [
             {
@@ -115,11 +259,11 @@
       ]
     },
     {
-      "id": "u2",
-      "title": "Polynomial Functions",
+      "id": "u3",
+      "title": "Polynomials",
       "lessons": [
         {
-          "id": "u2l1",
+          "id": "u3l1",
           "title": "Factoring & Division",
           "exercises": [
             {
@@ -167,7 +311,7 @@
           ]
         },
         {
-          "id": "u2l2",
+          "id": "u3l2",
           "title": "Graphing Polynomials",
           "exercises": [
             {
@@ -201,15 +345,387 @@
               "id": "precalc12_u2_l2_2"
             }
           ]
+        },
+        {
+          "id": "u3l3",
+          "title": "Remainder & Factor Theorems",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "By the remainder theorem, dividing P(x) by (x-a) gives a remainder of...",
+              "answer": "P(a)",
+              "id": "precalc12_u3_l3_0",
+              "choices": [
+                "P(a)",
+                "P(-a)",
+                "P(0)",
+                "a"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "(x-a) is a factor of P(x) if and only if...",
+              "answer": "P(a) = 0",
+              "id": "precalc12_u3_l3_1",
+              "choices": [
+                "P(a) = 0",
+                "P(0) = a",
+                "P(a) = 1",
+                "P'(a) = 0"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "If P(x)=x^3-2x^2+x-6, what is the remainder when divided by (x-3)?",
+              "answer": "6",
+              "id": "precalc12_u3_l3_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A root of even multiplicity means the graph...",
+              "answer": "bounces off the x-axis",
+              "id": "precalc12_u3_l3_3",
+              "choices": [
+                "bounces off the x-axis",
+                "crosses the x-axis",
+                "has a vertical asymptote",
+                "is undefined there"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "For an odd-degree polynomial with a negative leading coefficient, end behaviour is...",
+              "answer": "up on the left, down on the right",
+              "id": "precalc12_u3_l3_4",
+              "choices": [
+                "up on the left, down on the right",
+                "down on the left, up on the right",
+                "up on both ends",
+                "down on both ends"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Solve 64a^3 - 16a = 0 for the positive root:",
+              "answer": "1/2",
+              "id": "precalc12_u3_l3_5"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "u3",
-      "title": "Trigonometry: Angles & Unit Circle",
+      "id": "u4",
+      "title": "Exponents & Logarithms",
       "lessons": [
         {
-          "id": "u3l1",
+          "id": "u4l1",
+          "title": "Exponential Growth & Decay",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Exponential growth model?",
+              "answer": "y = a * b^x",
+              "choices": [
+                "y = mx + b",
+                "y = a * b^x",
+                "y = ax^2",
+                "y = a/x"
+              ],
+              "id": "precalc12_u5_l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If 0 < b < 1 in y = a*b^x, the function represents...",
+              "answer": "decay",
+              "choices": [
+                "growth",
+                "decay",
+                "a line",
+                "a parabola"
+              ],
+              "id": "precalc12_u5_l1_1"
+            },
+            {
+              "type": "math",
+              "question": "Simplify: 2^3 * 2^2 =",
+              "answer": "32",
+              "id": "precalc12_u5_l1_2"
+            },
+            {
+              "type": "math",
+              "question": "Simplify: (x^2)^3 =",
+              "answer": "x^6",
+              "id": "precalc12_u5_l1_3"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Log Laws & Equations",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Evaluate: log3(27)",
+              "answer": "3",
+              "id": "precalc12_u6_l1_0"
+            },
+            {
+              "type": "math",
+              "question": "Evaluate: log2(8)",
+              "answer": "3",
+              "id": "precalc12_u6_l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Product law: log(MN) =",
+              "answer": "log(M) + log(N)",
+              "choices": [
+                "log(M) + log(N)",
+                "log(M) * log(N)",
+                "log(M) - log(N)",
+                "log(M)/log(N)"
+              ],
+              "id": "precalc12_u6_l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Power law: log(M^k) =",
+              "answer": "k*log(M)",
+              "choices": [
+                "k*log(M)",
+                "log(M)^k",
+                "log(M)/k",
+                "log(k*M)"
+              ],
+              "id": "precalc12_u6_l1_3"
+            },
+            {
+              "type": "math",
+              "question": "Solve: log2(x) = 4, x =",
+              "answer": "16",
+              "id": "precalc12_u6_l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l3",
+          "title": "Log Laws & Solving",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "log(ab) =",
+              "answer": "log a + log b",
+              "id": "precalc12_u4_l3_0",
+              "choices": [
+                "log a + log b",
+                "log a - log b",
+                "log a \u00b7 log b",
+                "(log a)/(log b)"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "log(a^n) =",
+              "answer": "n\u00b7log a",
+              "id": "precalc12_u4_l3_1",
+              "choices": [
+                "n\u00b7log a",
+                "(log a)^n",
+                "log a / n",
+                "n + log a"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "Change of base: log_b(x) =",
+              "answer": "log(x)/log(b)",
+              "id": "precalc12_u4_l3_2",
+              "choices": [
+                "log(x)/log(b)",
+                "log(b)/log(x)",
+                "log(x)\u00b7log(b)",
+                "log(x) - log(b)"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Solve 3^x = 11. Round to 4 decimals.",
+              "answer": "2.1827",
+              "id": "precalc12_u4_l3_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "x^(1/n) is equivalent to...",
+              "answer": "the nth root of x",
+              "id": "precalc12_u4_l3_4",
+              "choices": [
+                "the nth root of x",
+                "x to the power n",
+                "1 divided by x^n",
+                "n times x"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "When solving a logarithmic equation you must always check for...",
+              "answer": "extraneous solutions",
+              "id": "precalc12_u4_l3_5",
+              "choices": [
+                "extraneous solutions",
+                "complex roots",
+                "asymptotes",
+                "multiplicity"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Rational Expressions & Conic Sections",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Rational Expressions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Before simplifying a rational expression you must state the...",
+              "answer": "non-permissible values",
+              "id": "precalc12_u5_l1_0",
+              "choices": [
+                "non-permissible values",
+                "leading coefficient",
+                "degree",
+                "amplitude"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Non-permissible values are the values that make the denominator equal to...",
+              "answer": "0",
+              "id": "precalc12_u5_l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Non-permissible values of (x+2)/(x^2-9):",
+              "answer": "x = 3 and x = -3",
+              "id": "precalc12_u5_l1_2",
+              "choices": [
+                "x = 3 and x = -3",
+                "x = -2",
+                "x = 9",
+                "x = 0"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "To add two rational expressions you first find the...",
+              "answer": "LCD",
+              "id": "precalc12_u5_l1_3",
+              "choices": [
+                "LCD",
+                "GCF",
+                "conjugate",
+                "reciprocal"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "To solve a rational equation, multiply through by the LCD and then...",
+              "answer": "check for extraneous solutions",
+              "id": "precalc12_u5_l1_4",
+              "choices": [
+                "check for extraneous solutions",
+                "take the log of both sides",
+                "square both sides",
+                "differentiate"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Simplify (x^2-4)/(x-2) for x not equal to 2:",
+              "answer": "x+2",
+              "id": "precalc12_u5_l1_5"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Conic Sections",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "A plane cutting a double-napped cone perpendicular to its axis forms a...",
+              "answer": "circle",
+              "id": "precalc12_u5_l2_0",
+              "choices": [
+                "circle",
+                "ellipse",
+                "parabola",
+                "hyperbola"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "A plane parallel to one side of the cone forms a...",
+              "answer": "parabola",
+              "id": "precalc12_u5_l2_1",
+              "choices": [
+                "parabola",
+                "circle",
+                "ellipse",
+                "hyperbola"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "A plane intersecting both nappes forms a...",
+              "answer": "hyperbola",
+              "id": "precalc12_u5_l2_2",
+              "choices": [
+                "hyperbola",
+                "ellipse",
+                "circle",
+                "parabola"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "Standard form of a circle centred at (h,k) with radius r:",
+              "answer": "(x-h)^2 + (y-k)^2 = r^2",
+              "id": "precalc12_u5_l2_3",
+              "choices": [
+                "(x-h)^2 + (y-k)^2 = r^2",
+                "x^2/a^2 + y^2/b^2 = 1",
+                "x^2/a^2 - y^2/b^2 = 1",
+                "y = ax^2"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "x^2/a^2 + y^2/b^2 = 1 is the standard form of a(n)...",
+              "answer": "ellipse",
+              "id": "precalc12_u5_l2_4",
+              "choices": [
+                "ellipse",
+                "hyperbola",
+                "circle",
+                "parabola"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Sinusoidal Functions",
+      "lessons": [
+        {
+          "id": "u6l1",
           "title": "Radians & the Unit Circle",
           "exercises": [
             {
@@ -257,7 +773,7 @@
           ]
         },
         {
-          "id": "u3l2",
+          "id": "u6l2",
           "title": "Trig Equations",
           "exercises": [
             {
@@ -315,15 +831,87 @@
               "id": "precalc12_u3_l2_4"
             }
           ]
+        },
+        {
+          "id": "u6l3",
+          "title": "Equations from Graphs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In y = a\u00b7sin(b(x-c)) + d, the amplitude is...",
+              "answer": "|a|",
+              "id": "precalc12_u6_l3_0",
+              "choices": [
+                "|a|",
+                "b",
+                "2\u03c0/b",
+                "d"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "In y = a\u00b7sin(b(x-c)) + d, the period is...",
+              "answer": "2\u03c0/b",
+              "id": "precalc12_u6_l3_1",
+              "choices": [
+                "2\u03c0/b",
+                "b/2\u03c0",
+                "|a|",
+                "c"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "Amplitude in terms of the max and min of a sinusoid:",
+              "answer": "(max - min)/2",
+              "id": "precalc12_u6_l3_2",
+              "choices": [
+                "(max - min)/2",
+                "(max + min)/2",
+                "max - min",
+                "max/min"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "The midline d equals...",
+              "answer": "(max + min)/2",
+              "id": "precalc12_u6_l3_3",
+              "choices": [
+                "(max + min)/2",
+                "(max - min)/2",
+                "0",
+                "2\u03c0/b"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "A sinusoid with max=8, min=-8, period=\u03c0 and a peak at x=0 has equation...",
+              "answer": "y = 8cos(2x)",
+              "id": "precalc12_u6_l3_4",
+              "choices": [
+                "y = 8cos(2x)",
+                "y = 8sin(2x)",
+                "y = 2cos(8x)",
+                "y = 8cos(x/2)"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Convert 60 degrees to radians (as a multiple of \u03c0, e.g. pi/6):",
+              "answer": "pi/3",
+              "id": "precalc12_u6_l3_5"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "u4",
+      "id": "u7",
       "title": "Trigonometric Identities",
       "lessons": [
         {
-          "id": "u4l1",
+          "id": "u7l1",
           "title": "Pythagorean & Reciprocal Identities",
           "exercises": [
             {
@@ -371,7 +959,7 @@
           ]
         },
         {
-          "id": "u4l2",
+          "id": "u7l2",
           "title": "Sum & Difference Formulas",
           "exercises": [
             {
@@ -393,184 +981,76 @@
               "id": "precalc12_u4_l2_2"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "u5",
-      "title": "Exponential Functions",
-      "lessons": [
-        {
-          "id": "u5l1",
-          "title": "Exponential Growth & Decay",
-          "exercises": [
-            {
-              "type": "mathChoice",
-              "question": "Exponential growth model?",
-              "answer": "y = a * b^x",
-              "choices": [
-                "y = mx + b",
-                "y = a * b^x",
-                "y = ax^2",
-                "y = a/x"
-              ],
-              "id": "precalc12_u5_l1_0"
-            },
-            {
-              "type": "mathChoice",
-              "question": "If 0 < b < 1 in y = a*b^x, the function represents...",
-              "answer": "decay",
-              "choices": [
-                "growth",
-                "decay",
-                "a line",
-                "a parabola"
-              ],
-              "id": "precalc12_u5_l1_1"
-            },
-            {
-              "type": "math",
-              "question": "Simplify: 2^3 * 2^2 =",
-              "answer": "32",
-              "id": "precalc12_u5_l1_2"
-            },
-            {
-              "type": "math",
-              "question": "Simplify: (x^2)^3 =",
-              "answer": "x^6",
-              "id": "precalc12_u5_l1_3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "u6",
-      "title": "Logarithmic Functions",
-      "lessons": [
-        {
-          "id": "u6l1",
-          "title": "Log Laws & Equations",
-          "exercises": [
-            {
-              "type": "math",
-              "question": "Evaluate: log3(27)",
-              "answer": "3",
-              "id": "precalc12_u6_l1_0"
-            },
-            {
-              "type": "math",
-              "question": "Evaluate: log2(8)",
-              "answer": "3",
-              "id": "precalc12_u6_l1_1"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Product law: log(MN) =",
-              "answer": "log(M) + log(N)",
-              "choices": [
-                "log(M) + log(N)",
-                "log(M) * log(N)",
-                "log(M) - log(N)",
-                "log(M)/log(N)"
-              ],
-              "id": "precalc12_u6_l1_2"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Power law: log(M^k) =",
-              "answer": "k*log(M)",
-              "choices": [
-                "k*log(M)",
-                "log(M)^k",
-                "log(M)/k",
-                "log(k*M)"
-              ],
-              "id": "precalc12_u6_l1_3"
-            },
-            {
-              "type": "math",
-              "question": "Solve: log2(x) = 4, x =",
-              "answer": "16",
-              "id": "precalc12_u6_l1_4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "u7",
-      "title": "Combinatorics & Series",
-      "lessons": [
-        {
-          "id": "u7l1",
-          "title": "Permutations & Combinations",
-          "exercises": [
-            {
-              "type": "mathChoice",
-              "question": "Number of permutations: P(5,3)",
-              "answer": "60",
-              "choices": [
-                "20",
-                "60",
-                "120",
-                "125"
-              ],
-              "id": "precalc12_u7_l1_0"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Combinations C(5,2) =",
-              "answer": "10",
-              "choices": [
-                "10",
-                "20",
-                "5",
-                "25"
-              ],
-              "id": "precalc12_u7_l1_1"
-            },
-            {
-              "type": "math",
-              "question": "5! =",
-              "answer": "120",
-              "id": "precalc12_u7_l1_2"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Combinations differ from permutations because order...",
-              "answer": "does not matter",
-              "choices": [
-                "does not matter",
-                "matters",
-                "is reversed",
-                "is squared"
-              ],
-              "id": "precalc12_u7_l1_3"
-            }
-          ]
         },
         {
-          "id": "u7l2",
-          "title": "Geometric Series",
+          "id": "u7l3",
+          "title": "Double Angle Identities",
           "exercises": [
             {
-              "type": "math",
-              "question": "Sum of first 4 terms of geometric series 2,4,8,16: S4 =",
-              "answer": "30",
-              "id": "precalc12_u7_l2_0"
+              "type": "mathChoice",
+              "question": "sin 2\u03b8 =",
+              "answer": "2 sin\u03b8 cos\u03b8",
+              "id": "precalc12_u7_l3_0",
+              "choices": [
+                "2 sin\u03b8 cos\u03b8",
+                "sin\u03b8 + cos\u03b8",
+                "cos\u00b2\u03b8 + sin\u00b2\u03b8",
+                "2 sin\u03b8"
+              ]
             },
             {
               "type": "mathChoice",
-              "question": "A geometric series converges when |r| is...",
-              "answer": "less than 1",
+              "question": "cos 2\u03b8 written using sine only:",
+              "answer": "1 - 2sin\u00b2\u03b8",
+              "id": "precalc12_u7_l3_1",
               "choices": [
-                "less than 1",
-                "greater than 1",
-                "equal to 1",
-                "equal to 0"
-              ],
-              "id": "precalc12_u7_l2_1"
+                "1 - 2sin\u00b2\u03b8",
+                "2cos\u00b2\u03b8 - 1",
+                "cos\u00b2\u03b8 - sin\u00b2\u03b8",
+                "2sin\u03b8cos\u03b8"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "1 + tan\u00b2\u03b8 =",
+              "answer": "sec\u00b2\u03b8",
+              "id": "precalc12_u7_l3_2",
+              "choices": [
+                "sec\u00b2\u03b8",
+                "csc\u00b2\u03b8",
+                "cot\u00b2\u03b8",
+                "1"
+              ]
+            },
+            {
+              "type": "math",
+              "question": "Solve 2cos\u00b2x - sinx = -1 on [0, 2\u03c0). x =",
+              "answer": "pi/2",
+              "id": "precalc12_u7_l3_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When proving an identity you should work on...",
+              "answer": "one side only",
+              "id": "precalc12_u7_l3_4",
+              "choices": [
+                "one side only",
+                "both sides at once",
+                "the equation as a whole",
+                "neither side"
+              ]
+            },
+            {
+              "type": "mathChoice",
+              "question": "CAST tells you which quadrants a trig ratio is...",
+              "answer": "positive",
+              "id": "precalc12_u7_l3_5",
+              "choices": [
+                "positive",
+                "undefined",
+                "increasing",
+                "periodic"
+              ]
             }
           ]
         }
