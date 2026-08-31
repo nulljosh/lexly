@@ -75,7 +75,7 @@
   img { max-width: 100%; height: auto; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg-primary); color: var(--text-primary); font-family: var(--font); overflow-x: hidden; }
-  a { color: var(--accent); }
+  a { color: var(--link, var(--accent)); }
   img { max-width: 100%; display: block; }
 
   @keyframes lxFadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
@@ -112,7 +112,7 @@
      the script never runs. */
   .lx-cycle { display: inline-grid; vertical-align: bottom; }
   .lx-cycle .lx-word {
-    grid-area: 1 / 1; color: var(--accent);
+    grid-area: 1 / 1; color: var(--link, var(--accent));
     animation: lxWordIn 0.5s var(--ease) both;
   }
   @keyframes lxWordIn {
@@ -136,7 +136,7 @@
   .section-head { max-width: 480px; margin: 0 auto 3rem; text-align: center; }
   .section-head h2 { font-size: 2rem; }
 
-  .icon-tile { width: 44px; height: 44px; border-radius: 12px; background: rgba(91,155,213,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--accent); }
+  .icon-tile { width: 44px; height: 44px; border-radius: 12px; background: rgba(91,155,213,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--link, var(--accent)); }
   .icon-tile svg { width: 22px; height: 22px; }
 
   .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
@@ -174,7 +174,7 @@
   .type-name { font-weight: 600; font-size: 0.9375rem; margin: 0; }
   .type-desc { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
   .prose { max-width: 640px; margin: 0 auto; color: var(--text-secondary); font-size: 1rem; line-height: 1.7; text-align: center; }
-  .prose a { color: var(--accent); }
+  .prose a { color: var(--link, var(--accent)); }
   .faq-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
   .faq-q { font-weight: 600; font-size: 0.9375rem; margin: 0 0 0.5rem; }
   .faq-a { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.6; }
