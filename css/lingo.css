@@ -1,3 +1,4 @@
+@import url("https://heyitsmejosh.com/tokens.css");
 
 @font-face {
     font-family: 'Geist';
@@ -21,78 +22,25 @@
     font-display: swap;
 }
 
-:root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --bg-tertiary: #ececec;
-    --text-primary: #1A1A1A;
-    --text-secondary: rgba(26,26,26,0.55);
-    --text-muted: rgba(26,26,26,0.35);
-    --accent: #5B9BD5;
-    --accent-amber: #2f6fae;
-    --border: rgba(26,26,26,0.1);
+:root{--bg-primary:var(--bg);--bg-secondary:var(--bg2);--bg-tertiary:var(--color-code-bg);--text-primary:var(--text);--text-secondary:var(--text2);--text-muted:var(--text3);--accent-amber:var(--bulb-deep);--font:var(--font-body);--font-display:var(--font-body);--spring:var(--spring);--card-bg:var(--bg);--card-border:var(--border);--input-bg:var(--bg);--header-bg:var(--bg);--choice-selected-bg:var(--bg2);--subject-1:var(--bg2);--subject-2:var(--bg2);--subject-3:var(--bg2);--subject-4:var(--bg2);--subject-5:var(--bg2);--icon-bg:var(--bg2);--icon-border:var(--border2);
     --success: #2d7a50;
     --error: #c44040;
-    --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --radius-sm: 6px;
-    --radius-md: 8px;
-    --radius-lg: 10px;
-    --radius-pill: 999px;
-    --ease: cubic-bezier(0.4, 0, 0.2, 1);
-    --card-bg: #fff;
-    --card-border: rgba(0,0,0,0.1);
     --card-shadow: rgba(0, 0, 0, 0.04);
-    --input-bg: #fff;
-    --header-bg: #ffffff;
-    --choice-selected-bg: #f0f0f0;
     --correct-bg: #f0faf4;
     --correct-border: #a3d4b0;
     --correct-text: #2d7a50;
     --incorrect-bg: #faf0f0;
     --incorrect-border: #d4a3a3;
-    --subject-1: #f5f5f5;
-    --subject-2: #f5f5f5;
-    --subject-3: #f5f5f5;
-    --subject-4: #f5f5f5;
-    --subject-5: #f5f5f5;
-    --icon-bg: #f0f0f0;
-    --icon-border: rgba(0,0,0,0.06);
-    color-scheme: light;
 }
-
-[data-theme="dark"] {
-    --bg-primary: #111;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #222;
-    --text-primary: #e8e8e8;
-    --text-secondary: rgba(255,255,255,0.5);
-    --text-muted: rgba(255,255,255,0.25);
-    --accent: #7ab4e0;
-    --accent-amber: #5B9BD5;
-    --border: rgba(255,255,255,0.1);
+[data-theme="dark"]{
     --success: #3d9e6a;
     --error: #c44040;
-    --card-bg: #1a1a1a;
-    --card-border: rgba(255,255,255,0.1);
     --card-shadow: rgba(0, 0, 0, 0.2);
-    --input-bg: #111;
-    --header-bg: #111;
-    --choice-selected-bg: #222;
     --correct-bg: #122a18;
     --correct-border: #2a5a3a;
     --correct-text: #3d9e6a;
     --incorrect-bg: #2a1818;
     --incorrect-border: #5a2a2a;
-    --subject-1: #1e2a1e;
-    --subject-2: #1e1e2a;
-    --subject-3: #2a1e1e;
-    --subject-4: #2a251e;
-    --subject-5: #1e2a28;
-    --icon-bg: #222;
-    --icon-border: rgba(255,255,255,0.06);
-    color-scheme: dark;
 }
 
 * {
