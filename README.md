@@ -4,7 +4,7 @@
 
 ![version](https://img.shields.io/badge/version-1.1.5-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/app/id6783501611) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
 
-A gamified language and skill learning app. Web + native iOS/macOS.
+Learn a language, or anything else, five minutes at a time. Streaks, hearts, XP. Web, iOS and macOS.
 
 Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
 
@@ -21,20 +21,20 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
 | iOS | Lexly (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a) — see roadmap.md |
 | macOS | Lexly (6783501611, merged app record) | com.nulljosh.lingo | 1.1.4 live; 1.1.5 in review |
 
-Version state goes stale fast — `asc versions list --app 6783501611` is the source of truth.
+Versions here go stale fast. `asc versions list --app 6783501611` is the truth.
 
-Note: the old standalone "Lexly Mac" record (6783501927) is a dead orphan superseded by the merge above — cannot be deleted, Apple support case open. Ignore it.
+The old standalone "Lexly Mac" record (6783501927) is a dead orphan. It cannot be deleted and an Apple support case is open. Ignore it.
 
 ## Features
 
-- 40+ courses: languages, programming, math, science, school (PC12, AP Bio 12), skills
-- 2,600+ exercises, ~2,000 of them across 12 languages
-- Exercise types: multiple choice, word bank, fill-in-the-blank, matching pairs, listening
-- Spaced repetition review, XP, streaks, hearts, achievements
-- Speech recognition for language courses
-- Native iOS/macOS: SF Symbol icon chips, spring animations, per-unit progress
-- Email/password auth via Supabase (spark project), progress syncs across platforms
-- Light/dark theme, PWA-ready
+- 40+ courses. Languages, programming, math, science, school (PC12, AP Bio 12), skills
+- 2,600+ exercises. About 2,000 of them across 12 languages
+- Multiple choice, word bank, fill in the blank, matching pairs, listening
+- Spaced repetition, XP, streaks, hearts, achievements
+- Speech recognition in the language courses
+- Native iOS and macOS: SF Symbol chips, spring animations, progress per unit
+- Email and password auth through Supabase (the spark project). Progress syncs everywhere
+- Light and dark. Installs as a PWA
 
 ## Structure
 
@@ -85,13 +85,11 @@ See `roadmap.md` for current open items.
 
 ## API and agent tools
 
-[`docs/API.md`](docs/API.md) documents the HTTP surface (where there is one) and
-the WebMCP tools this app registers on `document.modelContext`, so an in-browser
-agent can drive it. Tools are split into read-only, reversible writes, and the
-few that require human confirmation.
+An agent can drive this app. [`docs/API.md`](docs/API.md) lists the HTTP surface, where there
+is one, and the WebMCP tools registered on `document.modelContext`. Tools come in three kinds:
+read-only, writes you can undo, and the few that ask a human first.
 
 ## Credits
 
-Language sentences come from the [Tatoeba Project](https://tatoeba.org) (CC-BY 2.0 FR) and
-are ordered by [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT). See
-[ATTRIBUTION.md](ATTRIBUTION.md).
+Sentences come from the [Tatoeba Project](https://tatoeba.org) (CC-BY 2.0 FR), ordered by
+[FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT). See [ATTRIBUTION.md](ATTRIBUTION.md).
