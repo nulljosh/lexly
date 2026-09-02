@@ -2,9 +2,11 @@
 
 **v1.1.3 iOS / 1.1.4 macOS** | August 2026
 
-Lexly is a gamified learning app — not just languages, everything. 40+ courses
-span languages, programming, math, science, school curricula (Pre-Calculus 12,
-AP Biology 12), and general skills, all driven by one content schema. Live at
+Learn anything, five minutes at a time.
+
+Lexly is a gamified learning app. Not just languages. 40+ courses across languages,
+programming, math, science, school (Pre-Calculus 12, AP Biology 12) and general
+skills, all on one content schema. Live at
 [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com), with native iOS and
 macOS apps sharing progress across platforms.
 
@@ -13,24 +15,24 @@ macOS apps sharing progress across platforms.
 Everything the app teaches is data, not code. `content/catalog.json` declares
 subjects, courses, units, and lessons; a lesson is a sequence of typed
 exercises (multiple choice, translation, listening, typing). Adding a new
-course — whether Spanish or Pre-Calc 12 — is a JSON change, no app update.
+course, whether Spanish or Pre-Calc 12, is a JSON change, no app update.
 Masterclass courses are surfaced as normal course cards via url-type subjects
 in the same catalog.
 
 The engagement loop is standard spaced-repetition gamification:
 
-- **Spaced repetition review** — missed items resurface on a decay schedule.
-- **XP and streaks** — daily goal, streak counter, and an iOS home screen
+- **Spaced repetition review**: missed items resurface on a decay schedule.
+- **XP and streaks**: daily goal, streak counter, and an iOS home screen
   widget showing both.
-- **Hearts** — wrong answers cost hearts, gating brute-force guessing.
-- **Achievements** — milestone badges across courses.
-- **Speech recognition** — language courses score spoken answers via the
+- **Hearts**: wrong answers cost hearts, gating brute-force guessing.
+- **Achievements**: milestone badges across courses.
+- **Speech recognition**: language courses score spoken answers via the
   platform speech APIs.
 
 ## Architecture
 
 - **Web**: vanilla JS/HTML/CSS. No framework, no bundler, no build step. The
-  whole app is a single-page app of toggled divs — first paint is one HTML
+  whole app is a single-page app of toggled divs, first paint is one HTML
   file.
 - **Content**: `content/catalog.json` plus per-course `course-data.json`
   bundles. The iOS `ContentStore` walks the bundle directory tree to find
@@ -45,11 +47,11 @@ The engagement loop is standard spaced-repetition gamification:
 
 | Platform | App ID | Status |
 |---|---|---|
-| Web | — | Live |
+| Web |: | Live |
 | iOS (6783501611) | com.nulljosh.lingo | v1.1.3 Live |
 | macOS (6783501611) | com.nulljosh.lingo.mac | v1.1.4 Live |
 
-Both platforms ship under the single ASC record 6783501611 — a duplicate
+Both platforms ship under the single ASC record 6783501611, a duplicate
 record (6783501927) was created early on and is not the app of record.
 
 ## Privacy

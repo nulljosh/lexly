@@ -17,8 +17,8 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
 
 | Platform | Name | App ID | Status |
 |---|---|---|---|
-| Web | Lexly | — | Live |
-| iOS | Lexly (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a) — see roadmap.md |
+| Web | Lexly |: | Live |
+| iOS | Lexly (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a): see roadmap.md |
 | macOS | Lexly (6783501611, merged app record) | com.nulljosh.lingo | 1.1.4 live; 1.1.5 in review |
 
 Versions here go stale fast. `asc versions list --app 6783501611` is the truth.
