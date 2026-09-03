@@ -1,5 +1,12 @@
 # lexly Roadmap
 
+- [ ] Verify iPad split-view (CatalogView, iOS only) visually on simulator -- 2026-09-02.
+  Pushed the NavigationSplitView conversion without a simulator screenshot; this machine's
+  Xcode only has the iOS 26.5 SDK but the iOS 26.2 runtime downloaded, so `xcodebuild` won't
+  recognize any simulator destination even by explicit UDID. Needs the matching platform
+  component installed, then a quick visual check (both the sidebar/detail split and that
+  macOS's unchanged NavigationStack path still builds).
+
 ## Shipped 2026-08-30, themed units and teaching content
 
 Units are now themes, not difficulty tiers. `scripts/build-language-course.mjs` buckets
