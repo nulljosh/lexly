@@ -6,6 +6,9 @@ struct CatalogView: View {
     #if os(macOS)
     @State private var showingSettings = false
     #endif
+    #if os(iOS)
+    @State private var selectedSubject: Subject?
+    #endif
 
     /// Deliberate order, matching the web app's default of `languages` first
     /// (js/lingo-app.js). Alphabetical sorting put `books` at the top, so a language
@@ -21,52 +24,89 @@ struct CatalogView: View {
     }
 
     var body: some View {
+        #if os(iOS)
+        // NavigationSplitView collapses to a plain stack on iPhone's compact width, so
+        // this is a no-op there. On iPad it gives the catalog a persistent sidebar
+        // instead of a full-width list with nothing beside it.
+        NavigationSplitView {
+            catalogList
+                .navigationTitle("Lexly")
+        } detail: {
+            if let selectedSubject {
+                if selectedSubject.notesPath != nil {
+                    NotesView(store: store, subject: selectedSubject)
+                } else {
+                    UnitsView(store: store, subject: selectedSubject)
+                }
+            } else {
+                ContentUnavailableView("Select a Subject", systemImage: "book.closed")
+            }
+        }
+        #else
         NavigationStack {
+            catalogList
+                .navigationTitle("Lexly")
+                .listStyle(.inset)
+                // ponytail: Mac had no Settings surface at all, so sign-in was unreachable
+                // there. One toolbar button reuses the same SettingsView as iOS.
+                .toolbar {
+                    Button {
+                        showingSettings = true
+                    } label: {
+                        Label("Settings", systemImage: "gearshape")
+                    }
+                    .accessibilityIdentifier("settingsButton")
+                }
+                .sheet(isPresented: $showingSettings) {
+                    NavigationStack {
+                        SettingsView(auth: auth, store: store)
+                            .toolbar {
+                                Button("Done") { showingSettings = false }
+                            }
+                    }
+                    .frame(minWidth: 420, minHeight: 480)
+                }
+        }
+        #endif
+    }
+
+    @ViewBuilder
+    private var catalogList: some View {
+        if let catalog = store.catalog {
+            #if os(iOS)
+            List(selection: $selectedSubject) {
+                ForEach(orderedCategoryKeys(catalog), id: \.self) { key in
+                    let category = catalog.categories[key]!
+                    Section(category.title) {
+                        ForEach(category.subjects) { subject in
+                            SubjectRow(subject: subject)
+                                .tag(subject)
+                        }
+                    }
+                }
+            }
+            #else
             List {
-                if let catalog = store.catalog {
-                    ForEach(orderedCategoryKeys(catalog), id: \.self) { key in
-                        let category = catalog.categories[key]!
-                        Section(category.title) {
-                            ForEach(category.subjects) { subject in
-                                NavigationLink {
-                                    if subject.notesPath != nil {
-                                        NotesView(store: store, subject: subject)
-                                    } else {
-                                        UnitsView(store: store, subject: subject)
-                                    }
-                                } label: {
-                                    SubjectRow(subject: subject)
+                ForEach(orderedCategoryKeys(catalog), id: \.self) { key in
+                    let category = catalog.categories[key]!
+                    Section(category.title) {
+                        ForEach(category.subjects) { subject in
+                            NavigationLink {
+                                if subject.notesPath != nil {
+                                    NotesView(store: store, subject: subject)
+                                } else {
+                                    UnitsView(store: store, subject: subject)
                                 }
+                            } label: {
+                                SubjectRow(subject: subject)
                             }
                         }
                     }
-                } else {
-                    Text("Couldn't load catalog.")
                 }
-            }
-            .navigationTitle("Lexly")
-            #if os(macOS)
-            .listStyle(.inset)
-            // ponytail: Mac had no Settings surface at all, so sign-in was unreachable
-            // there. One toolbar button reuses the same SettingsView as iOS.
-            .toolbar {
-                Button {
-                    showingSettings = true
-                } label: {
-                    Label("Settings", systemImage: "gearshape")
-                }
-                .accessibilityIdentifier("settingsButton")
-            }
-            .sheet(isPresented: $showingSettings) {
-                NavigationStack {
-                    SettingsView(auth: auth, store: store)
-                        .toolbar {
-                            Button("Done") { showingSettings = false }
-                        }
-                }
-                .frame(minWidth: 420, minHeight: 480)
             }
             #endif
+        } else {
+            Text("Couldn't load catalog.")
         }
     }
 }

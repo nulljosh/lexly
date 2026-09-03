@@ -9,7 +9,7 @@ struct Category: Decodable {
     let subjects: [Subject]
 }
 
-struct Subject: Decodable, Identifiable {
+struct Subject: Decodable, Identifiable, Hashable {
     let id: String
     let name: String
     let icon: String
