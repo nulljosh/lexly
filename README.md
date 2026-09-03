@@ -4,7 +4,7 @@
 
 ![version](https://img.shields.io/badge/version-1.1.5-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/app/id6783501611) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
 
-Learn a language, or anything else, five minutes at a time. Streaks, hearts, XP. Web, iOS and macOS.
+Learn a language, or anything else, five minutes at a time. Streaks, hearts, XP. Web, iOS, macOS, and Apple Watch.
 
 Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
 
@@ -20,6 +20,7 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
 | Web | Lexly |: | Live |
 | iOS | Lexly (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a): see roadmap.md |
 | macOS | Lexly (6783501611, merged app record) | com.nulljosh.lingo | 1.1.4 live; 1.1.5 in review |
+| watchOS | Lexly Watch | com.nulljosh.lingo.watchos | Standalone companion, not yet submitted |
 
 Versions here go stale fast. `asc versions list --app 6783501611` is the truth.
 
@@ -33,6 +34,7 @@ The old standalone "Lexly Mac" record (6783501927) is a dead orphan. It cannot b
 - Spaced repetition, XP, streaks, hearts, achievements
 - Speech recognition in the language courses
 - Native iOS and macOS: SF Symbol chips, spring animations, progress per unit
+- Apple Watch companion: streak, XP, hearts, and due reviews at a glance
 - Email and password auth through Supabase (the spark project). Progress syncs everywhere
 - Light and dark. Installs as a PWA
 
@@ -49,6 +51,7 @@ scripts/build-language-course.mjs  # generates language packs from Tatoeba
 ios/Sources/Shared/     # SwiftUI views (cross-platform)
 ios/Sources/iOS/        # iOS entry point
 ios/Sources/macOS/      # macOS entry point
+watchos/                # standalone watchOS companion (own xcodegen project)
 school/                 # BC curriculum HTML masterclass pages
 ```
 
@@ -63,6 +66,16 @@ npx serve .
 ```bash
 cd ios && xcodegen generate
 # archive Lexly-iOS or Lexly-macOS, upload via asc-xcode-build skill
+```
+
+## watchOS
+
+Standalone companion app, no login flow of its own -- pair it by pasting a Supabase access
+token copied from the phone into the Settings tab. Reads `lingo_progress` (streak, XP,
+hearts, due reviews) directly from the shared `spark` Supabase project.
+
+```bash
+cd watchos && xcodegen generate
 ```
 
 ## Testing
