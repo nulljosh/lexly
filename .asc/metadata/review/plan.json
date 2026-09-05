@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-31T23:34:02Z",
+  "command": "metadata plan",
+  "reviewDir": ".asc/metadata/review",
+  "planPath": ".asc/metadata/review/plan.json",
+  "approvalPath": ".asc/metadata/review/approved.json",
+  "planHash": "ce07c64f98b8fa081616a7be2701a641f83d86e54e6435bdf71c55d21c08cb70",
+  "options": {
+    "appId": "6783501611",
+    "appInfoId": "c9abc6d5-4c41-4f11-8f40-02610de3b846",
+    "version": "1.1.5",
+    "platform": "IOS",
+    "dir": "./metadata",
+    "includes": [
+      "localizations"
+    ],
+    "allowDeletes": false
+  },
+  "plan": {
+    "appId": "6783501611",
+    "appInfoId": "c9abc6d5-4c41-4f11-8f40-02610de3b846",
+    "version": "1.1.5",
+    "versionId": "77004dd8-275a-4f3b-bc2a-11f46b933955",
+    "dir": "./metadata",
+    "dryRun": true,
+    "includes": [
+      "localizations"
+    ],
+    "adds": [],
+    "updates": [
+      {
+        "key": "app-info:en-US:privacyPolicyUrl",
+        "scope": "app-info",
+        "locale": "en-US",
+        "field": "privacyPolicyUrl",
+        "reason": "field value differs",
+        "from": "https://heyitsmejosh.com/privacy",
+        "to": "https://lexly.heyitsmejosh.com/privacy"
+      },
+      {
+        "key": "app-info:en-US:subtitle",
+        "scope": "app-info",
+        "locale": "en-US",
+        "field": "subtitle",
+        "reason": "field value differs",
+        "from": "Gamified learning \u0026 languages",
+        "to": "Languages and BC course notes"
+      }
+    ],
+    "deletes": [],
+    "apiCalls": [
+      {
+        "operation": "update_localization",
+        "scope": "app-info",
+        "count": 1
+      }
+    ]
+  }
+}
