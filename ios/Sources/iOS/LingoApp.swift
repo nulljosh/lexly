@@ -4,6 +4,7 @@ import SwiftUI
 struct LingoApp: App {
     @State private var auth = AuthStore()
     @State private var store = ContentStore()
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -17,6 +18,10 @@ struct LingoApp: App {
             .tint(Color(hex: "5B9BD5"))
             .overlay { WhatsNewSheet() }
             .shareApp("https://lexly.heyitsmejosh.com")
+            .onChange(of: scenePhase) { _, phase in
+                guard phase == .active else { return }
+                Task { await DailyReminder.reschedule(playedToday: store.playedToday) }
+            }
         }
     }
 }

@@ -33,6 +33,7 @@
 		3081F31BFDC7492F939C1C15 /* rust.json in Resources */ = {isa = PBXBuildFile; fileRef = B47A509557BCADC7E56991E1 /* rust.json */; };
 		3089398528823534E2C259E7 /* linear_algebra.json in Resources */ = {isa = PBXBuildFile; fileRef = 0331E3C0FAC6DD186E906475 /* linear_algebra.json */; };
 		32436A999EF81FAE739E12E4 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F3BB2EF274144F209BC78 /* NotesView.swift */; };
+		343C6A1222A64C3C1222C193 /* DailyReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA16B709D68772840BF2887 /* DailyReminderTests.swift */; };
 		3494E03A6BC345057FA030D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6879A4E2162C7E8DB0595B67 /* SettingsView.swift */; };
 		35DA9B6CAB3A26D1AB6EBB87 /* music_theory.json in Resources */ = {isa = PBXBuildFile; fileRef = 4349CA379EE52052DE5210F6 /* music_theory.json */; };
 		3611CFACF566DFF8AF545AEB /* french.json in Resources */ = {isa = PBXBuildFile; fileRef = 817171023F298347664538D7 /* french.json */; };
@@ -58,6 +59,7 @@
 		5228ED56641373D9692328C8 /* WhatsNewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */; };
 		533DE048D1F574A4C8CEA9B4 /* geography.json in Resources */ = {isa = PBXBuildFile; fileRef = 36BADF1122486F4DB65F1F78 /* geography.json */; };
 		53A1D6C9199FB8804F8758E6 /* sql.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EF34A271C6CF10F334D884F /* sql.json */; };
+		54DADEEC30AD359637F1B2AA /* DailyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85747ECA85D0763928C12F4E /* DailyReminder.swift */; };
 		551561690DB355F67B368DD2 /* chemistry.json in Resources */ = {isa = PBXBuildFile; fileRef = B5B4FAB3C10777FC492A17C8 /* chemistry.json */; };
 		57437A5D05AC13732DAB8A5B /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F99C74BD922728A9B3871 /* AuthStore.swift */; };
 		589CC8BC575513C116A030D3 /* biology_masterclass.json in Resources */ = {isa = PBXBuildFile; fileRef = 86734E41E13DAF102D136EE9 /* biology_masterclass.json */; };
@@ -97,6 +99,7 @@
 		8F3318D38EC726266500BE15 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835C5E8FC11D9AD2C7BF476B /* WidgetKit.framework */; };
 		913AD7EDC1697999EF83BC9D /* italian.json in Resources */ = {isa = PBXBuildFile; fileRef = E96829EFE58B59935649CEA6 /* italian.json */; };
 		91AE638CFC27656B0F8084B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2EEE50C44A4A8A16F01FDA /* Assets.xcassets */; };
+		933933F9E8F0F12B7845D7DD /* DailyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85747ECA85D0763928C12F4E /* DailyReminder.swift */; };
 		95E06A59222F1148E3EDCE4E /* biology.json in Resources */ = {isa = PBXBuildFile; fileRef = 82E2BFEDCA965D066CA39E04 /* biology.json */; };
 		9A7E4ECAAFE389739FFB84D2 /* russian.json in Resources */ = {isa = PBXBuildFile; fileRef = E28878C7B0B1D588D2471F69 /* russian.json */; };
 		A24464F550AA5BC63FC42FD3 /* precalc12.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E08CADD3672CCCBFFB75423 /* precalc12.json */; };
@@ -230,6 +233,7 @@
 		844651E960161655EE200363 /* ContentStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStoreTests.swift; sourceTree = "<group>"; };
 		85262F07D23361702C21C7DA /* portuguese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = portuguese.json; sourceTree = "<group>"; };
 		8554AEA87307E9D90E1008A7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		85747ECA85D0763928C12F4E /* DailyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReminder.swift; sourceTree = "<group>"; };
 		86734E41E13DAF102D136EE9 /* biology_masterclass.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = biology_masterclass.json; sourceTree = "<group>"; };
 		879E14E2752370F51B709C91 /* precalc11.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = precalc11.json; sourceTree = "<group>"; };
 		8907AAEC9D9D95B8AB2BC0C3 /* java.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = java.json; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 		BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStore.swift; sourceTree = "<group>"; };
 		C1328B3C2F4DE1C280B2CFA8 /* korean.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = korean.json; sourceTree = "<group>"; };
 		C1DEE9DE26C2FBEC0546F384 /* precalc12_masterclass.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = precalc12_masterclass.json; sourceTree = "<group>"; };
+		CAA16B709D68772840BF2887 /* DailyReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReminderTests.swift; sourceTree = "<group>"; };
 		CBC3AF06A855689B1A2B0129 /* WhatsNewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewSheet.swift; sourceTree = "<group>"; };
 		CF8B7548CA86AA6AD76DEEDB /* arabic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = arabic.json; sourceTree = "<group>"; };
 		D1DCA2A90FD575638F1D0800 /* reverse_engineering.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reverse_engineering.json; sourceTree = "<group>"; };
@@ -309,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				844651E960161655EE200363 /* ContentStoreTests.swift */,
+				CAA16B709D68772840BF2887 /* DailyReminderTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				99103E67EEEBFAD239C1DFB7 /* CatalogView.swift */,
 				72FCEEF6AC9EB8AA785F6719 /* Color+Hex.swift */,
 				BFF81D8C00013D3CA01B1ECA /* ContentStore.swift */,
+				85747ECA85D0763928C12F4E /* DailyReminder.swift */,
 				38ED52EC4C599FB4C93990AF /* LessonView.swift */,
 				3F214D0F0810B9E696D99BDC /* Models.swift */,
 				F53F3BB2EF274144F209BC78 /* NotesView.swift */,
@@ -743,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE438B456D4BB02E4C851E2 /* ContentStoreTests.swift in Sources */,
+				343C6A1222A64C3C1222C193 /* DailyReminderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +764,7 @@
 				F760457EFB5523B12867ECCF /* CatalogView.swift in Sources */,
 				DAA555E8C1D5E9339DACD2E6 /* Color+Hex.swift in Sources */,
 				E0BF49FF4C5ACDC5A2F62C83 /* ContentStore.swift in Sources */,
+				933933F9E8F0F12B7845D7DD /* DailyReminder.swift in Sources */,
 				25D90218F50C49242402AF5E /* LessonView.swift in Sources */,
 				28972A2E39E0A81A6848D546 /* LingoApp.swift in Sources */,
 				597CA4E3D0C3A5A35B6726C4 /* Models.swift in Sources */,
@@ -778,6 +787,7 @@
 				6CDF0E7D244D43765DF0B1A1 /* CatalogView.swift in Sources */,
 				25AE68830FA308BB7068A16E /* Color+Hex.swift in Sources */,
 				6E5C05E5064707F08881D627 /* ContentStore.swift in Sources */,
+				54DADEEC30AD359637F1B2AA /* DailyReminder.swift in Sources */,
 				E723A76D805E8D23CF4E958A /* LessonView.swift in Sources */,
 				D6090057FCD71A991D157BBD /* LingoApp.swift in Sources */,
 				01789627621AF263B1E6C6B2 /* Models.swift in Sources */,

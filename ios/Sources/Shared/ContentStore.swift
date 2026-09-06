@@ -92,6 +92,12 @@ final class ContentStore {
         progress.completedLessonIds.insert("\(subjectId):\(lessonId)")
         updateStreak()
         save()
+        DailyReminder.lessonCompleted()
+    }
+
+    var playedToday: Bool {
+        let fmt = DateFormatter(); fmt.dateFormat = "yyyy-MM-dd"
+        return progress.lastPlayed == fmt.string(from: Date())
     }
 
     private func updateStreak() {

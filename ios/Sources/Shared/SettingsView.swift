@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage(DailyReminder.enabledKey) private var dailyReminder = true
     var auth: AuthStore
     var store: ContentStore
     @State private var confirmingDelete = false
@@ -54,6 +55,16 @@ struct SettingsView: View {
                     Text("Sign in to sync your progress across devices.")
                 }
             }
+            #if os(iOS)
+            Section {
+                Toggle("Daily reminder", isOn: $dailyReminder)
+                    .onChange(of: dailyReminder) { _, _ in
+                        Task { await DailyReminder.reschedule(playedToday: store.playedToday) }
+                    }
+            } footer: {
+                Text("A nudge at 7 pm on days you have not done a lesson.")
+            }
+            #endif
             Section {
                 Link("Sentence credits", destination: URL(string: "https://github.com/nulljosh/lexly/blob/main/ATTRIBUTION.md")!)
             } footer: {

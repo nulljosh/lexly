@@ -42,7 +42,7 @@ food phrases, and the sentences in it are actually about eating.
   0.6`. Feed a "practice your weak words" session through the existing due-first review
   path. Keep it local-only, `streak_freezes` and `weekly_xp` already set that precedent,
   so no Supabase migration is needed.
-- [ ] **iOS daily reminder.** `UNUserNotificationCenter`, permission requested *after* the
+- [x] **iOS daily reminder.** Shipped 2026-09-06, unreleased (needs 1.1.6). `UNUserNotificationCenter`, permission requested *after* the
   first completed lesson rather than on cold launch, daily at 19:00, cleared when a lesson
   is finished that day, with a Settings toggle. No Info.plist usage string required.
 - [ ] Placement test (needs the word model first), iOS speaking exercises, leagues,
