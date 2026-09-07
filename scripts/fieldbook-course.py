@@ -18,13 +18,19 @@ units, i = [], 0
 for di, (dom, fs) in enumerate(sorted(by_dom.items()), 1):
     lessons = []
     for li, f in enumerate(fs, 1):
-        ex = [{'type': 'mathChoice', 'question': f'Which field: "{f["s"]}"', 'answer': f['n'], 'choices': choices(f), 'id': f'fieldbook_{i}'}]; i += 1
+        ex = []
+        if 'q' in f:  # the hand-written check question: tests understanding, not the field name
+            c = f['q']['x'] + [f['q']['a']]; rng.shuffle(c)
+            ex.append({'type': 'mathChoice', 'question': f['q']['q'], 'answer': f['q']['a'], 'choices': c, 'id': f'fieldbook_{i}'}); i += 1
+        ex.append({'type': 'mathChoice', 'question': f'Which field: "{f["s"]}"', 'answer': f['n'], 'choices': choices(f), 'id': f'fieldbook_{i}'}); i += 1
         for k in f['k']:
             ex.append({'type': 'mathChoice', 'question': f'Which field says: {k}', 'answer': f['n'], 'choices': choices(f), 'id': f'fieldbook_{i}'}); i += 1
         lessons.append({'id': f'u{di}l{li}', 'title': f['n'], 'exercises': ex})
-    units.append({'id': f'u{di}', 'title': dom, 'lessons': lessons})
+    slug = ''.join(ch if ch.isalnum() else '-' for ch in dom.lower()).strip('-')
+    while '--' in slug: slug = slug.replace('--', '-')
+    units.append({'id': f'u{di}', 'title': dom, 'tip': f'Read the {dom} entries first at fieldbook.heyitsmejosh.com/#{slug}, then come back and test yourself.', 'lessons': lessons})
 out = {'id': 'fieldbook', 'name': 'Fieldbook', 'category': 'science', 'icon': 'fa-solid fa-compass',
        'level': 'Every field of science and math', 'version': 1, 'units': units}
 json.dump(out, open(root / 'lexly/content/courses/fieldbook.json', 'w'), indent=1)
-assert i > 300 and all(e['answer'] in e['choices'] and len(set(e['choices'])) == 4 for u in units for l in u['lessons'] for e in l['exercises'])
+assert i > 400 and all(e['answer'] in e['choices'] and len(set(e['choices'])) == 4 for u in units for l in u['lessons'] for e in l['exercises'])
 print(len(units), 'units', i, 'exercises')
