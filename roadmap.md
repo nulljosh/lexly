@@ -1,5 +1,9 @@
 # lexly Roadmap
 
+## Shipped 2026-09-07, Fieldbook course integration
+
+Generated a new "Fieldbook" science course in the catalog (content/courses/fieldbook.json, 9 units, 528 exercises) from the sibling fieldbook repo's data.js via scripts/fieldbook-course.py. Each lesson opens with a read-first tip linking to fieldbook.heyitsmejosh.com, the first exercise per lesson is the hand-written check question, and remaining exercises are which-field drills to reinforce learning. Regeneration happens automatically when scripts/deploy.sh detects the sibling repo's presence. Deployed to lexly.heyitsmejosh.com 2026-09-07.
+
 - [ ] Verify iPad split-view (CatalogView, iOS only) visually on simulator -- 2026-09-02.
   Pushed the NavigationSplitView conversion without a simulator screenshot; this machine's
   Xcode only has the iOS 26.5 SDK but the iOS 26.2 runtime downloaded, so `xcodebuild` won't
