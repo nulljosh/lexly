@@ -7,6 +7,9 @@
 # We stage into a temp dir rather than deploying the repo root because
 # `ios/build*` blows past the Pages file-count limit.
 set -euo pipefail
+# Regenerate the Fieldbook course when the sibling repo is present (skipped in CI).
+[ -f "$(dirname "$0")/../../fieldbook/fields.json" ] && python3 "$(dirname "$0")/fieldbook-course.py"
+
 cd "$(dirname "$0")/.."
 
 PUBLISH=(app css js content assets school functions
