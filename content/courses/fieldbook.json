@@ -1,0 +1,5080 @@
+{
+ "id": "fieldbook",
+ "name": "Fieldbook",
+ "category": "science",
+ "icon": "fa-solid fa-compass",
+ "level": "Every field of science and math",
+ "version": 1,
+ "units": [
+  {
+   "id": "u1",
+   "title": "Anatomy & Physiology",
+   "lessons": [
+    {
+     "id": "u1l1",
+     "title": "Skeletal system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Bones, joints, and cartilage.\"",
+       "answer": "Skeletal system",
+       "choices": [
+        "Endocrine system",
+        "Urinary system",
+        "Skeletal system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_0"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Bone remodels itself continuously",
+       "answer": "Skeletal system",
+       "choices": [
+        "Skeletal system",
+        "Muscular system",
+        "Digestive system",
+        "Lymphatic and immune system"
+       ],
+       "id": "fieldbook_1"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Marrow makes red and white blood cells",
+       "answer": "Skeletal system",
+       "choices": [
+        "Nervous system",
+        "Skeletal system",
+        "Urinary system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_2"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Cartilage has no blood supply so it heals badly",
+       "answer": "Skeletal system",
+       "choices": [
+        "Skeletal system",
+        "Muscular system",
+        "Nervous system",
+        "Lymphatic and immune system"
+       ],
+       "id": "fieldbook_3"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Bone strength follows load: use it or lose it",
+       "answer": "Skeletal system",
+       "choices": [
+        "Homeostasis",
+        "Urinary system",
+        "Skeletal system",
+        "Lymphatic and immune system"
+       ],
+       "id": "fieldbook_4"
+      }
+     ]
+    },
+    {
+     "id": "u1l2",
+     "title": "Muscular system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How you move, pump, and breathe.\"",
+       "answer": "Muscular system",
+       "choices": [
+        "Endocrine system",
+        "Respiratory system",
+        "Integumentary system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_5"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Skeletal, smooth, cardiac",
+       "answer": "Muscular system",
+       "choices": [
+        "Muscular system",
+        "Integumentary system",
+        "Lymphatic and immune system",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_6"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Muscles pull only, so they pair up",
+       "answer": "Muscular system",
+       "choices": [
+        "Nervous system",
+        "Muscular system",
+        "Integumentary system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_7"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Contraction is filaments sliding, powered by ATP",
+       "answer": "Muscular system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Reproductive system",
+        "Cardiovascular system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_8"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Strength training works by damage and repair",
+       "answer": "Muscular system",
+       "choices": [
+        "Reproductive system",
+        "Muscular system",
+        "Lymphatic and immune system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_9"
+      }
+     ]
+    },
+    {
+     "id": "u1l3",
+     "title": "Nervous system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Brain, spinal cord, and nerves.\"",
+       "answer": "Nervous system",
+       "choices": [
+        "Cardiovascular system",
+        "Respiratory system",
+        "Muscular system",
+        "Nervous system"
+       ],
+       "id": "fieldbook_10"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Central vs peripheral",
+       "answer": "Nervous system",
+       "choices": [
+        "Nervous system",
+        "Lymphatic and immune system",
+        "Muscular system",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_11"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sensory in, motor out",
+       "answer": "Nervous system",
+       "choices": [
+        "Homeostasis",
+        "Endocrine system",
+        "Digestive system",
+        "Nervous system"
+       ],
+       "id": "fieldbook_12"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Autonomic: sympathetic (alert) vs parasympathetic (calm)",
+       "answer": "Nervous system",
+       "choices": [
+        "Homeostasis",
+        "Nervous system",
+        "Muscular system",
+        "Integumentary system"
+       ],
+       "id": "fieldbook_13"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Reflexes skip the brain",
+       "answer": "Nervous system",
+       "choices": [
+        "Homeostasis",
+        "Reproductive system",
+        "Nervous system",
+        "Lymphatic and immune system"
+       ],
+       "id": "fieldbook_14"
+      }
+     ]
+    },
+    {
+     "id": "u1l4",
+     "title": "Endocrine system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Hormones: chemical messages through the blood.\"",
+       "answer": "Endocrine system",
+       "choices": [
+        "Reproductive system",
+        "Muscular system",
+        "Endocrine system",
+        "Skeletal system"
+       ],
+       "id": "fieldbook_15"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Hormones are slow, wide, chemical signals",
+       "answer": "Endocrine system",
+       "choices": [
+        "Endocrine system",
+        "Digestive system",
+        "Urinary system",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_16"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Pituitary and hypothalamus control the rest",
+       "answer": "Endocrine system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Muscular system",
+        "Nervous system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_17"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Feedback loops keep levels stable",
+       "answer": "Endocrine system",
+       "choices": [
+        "Respiratory system",
+        "Cardiovascular system",
+        "Nervous system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_18"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Insulin lowers blood sugar, glucagon raises it",
+       "answer": "Endocrine system",
+       "choices": [
+        "Muscular system",
+        "Nervous system",
+        "Reproductive system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_19"
+      }
+     ]
+    },
+    {
+     "id": "u1l5",
+     "title": "Cardiovascular system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Heart, blood, and vessels.\"",
+       "answer": "Cardiovascular system",
+       "choices": [
+        "Nervous system",
+        "Urinary system",
+        "Cardiovascular system",
+        "Integumentary system"
+       ],
+       "id": "fieldbook_20"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Two circuits: lungs and body",
+       "answer": "Cardiovascular system",
+       "choices": [
+        "Cardiovascular system",
+        "Endocrine system",
+        "Digestive system",
+        "Urinary system"
+       ],
+       "id": "fieldbook_21"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Arteries out, veins back",
+       "answer": "Cardiovascular system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Cardiovascular system",
+        "Endocrine system",
+        "Nervous system"
+       ],
+       "id": "fieldbook_22"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Capillaries do the actual exchange",
+       "answer": "Cardiovascular system",
+       "choices": [
+        "Respiratory system",
+        "Skeletal system",
+        "Cardiovascular system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_23"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Blood pressure is the force on artery walls",
+       "answer": "Cardiovascular system",
+       "choices": [
+        "Cardiovascular system",
+        "Lymphatic and immune system",
+        "Digestive system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_24"
+      }
+     ]
+    },
+    {
+     "id": "u1l6",
+     "title": "Respiratory system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Getting oxygen in and carbon dioxide out.\"",
+       "answer": "Respiratory system",
+       "choices": [
+        "Reproductive system",
+        "Urinary system",
+        "Integumentary system",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_25"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Alveoli: tiny sacs, huge surface",
+       "answer": "Respiratory system",
+       "choices": [
+        "Reproductive system",
+        "Urinary system",
+        "Respiratory system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_26"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Gas exchange is passive diffusion",
+       "answer": "Respiratory system",
+       "choices": [
+        "Nervous system",
+        "Respiratory system",
+        "Reproductive system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_27"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The diaphragm does the work",
+       "answer": "Respiratory system",
+       "choices": [
+        "Nervous system",
+        "Respiratory system",
+        "Skeletal system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_28"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: CO2 drives the urge to breathe",
+       "answer": "Respiratory system",
+       "choices": [
+        "Muscular system",
+        "Respiratory system",
+        "Urinary system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_29"
+      }
+     ]
+    },
+    {
+     "id": "u1l7",
+     "title": "Digestive system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Turning food into molecules your cells can use.\"",
+       "answer": "Digestive system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Homeostasis",
+        "Respiratory system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_30"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mechanical then chemical breakdown",
+       "answer": "Digestive system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Reproductive system",
+        "Homeostasis",
+        "Digestive system"
+       ],
+       "id": "fieldbook_31"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Small intestine does the absorbing",
+       "answer": "Digestive system",
+       "choices": [
+        "Digestive system",
+        "Nervous system",
+        "Muscular system",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_32"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Liver processes everything absorbed before it reaches the body",
+       "answer": "Digestive system",
+       "choices": [
+        "Skeletal system",
+        "Digestive system",
+        "Integumentary system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_33"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Gut bacteria are part of the system",
+       "answer": "Digestive system",
+       "choices": [
+        "Integumentary system",
+        "Cardiovascular system",
+        "Digestive system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_34"
+      }
+     ]
+    },
+    {
+     "id": "u1l8",
+     "title": "Urinary system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Filtering the blood.\"",
+       "answer": "Urinary system",
+       "choices": [
+        "Respiratory system",
+        "Nervous system",
+        "Urinary system",
+        "Endocrine system"
+       ],
+       "id": "fieldbook_35"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Filter everything, reabsorb the good, excrete the rest",
+       "answer": "Urinary system",
+       "choices": [
+        "Endocrine system",
+        "Lymphatic and immune system",
+        "Homeostasis",
+        "Urinary system"
+       ],
+       "id": "fieldbook_36"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Kidneys regulate blood pressure and pH",
+       "answer": "Urinary system",
+       "choices": [
+        "Integumentary system",
+        "Endocrine system",
+        "Urinary system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_37"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Urine colour tracks hydration",
+       "answer": "Urinary system",
+       "choices": [
+        "Urinary system",
+        "Cardiovascular system",
+        "Skeletal system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_38"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: One kidney is enough",
+       "answer": "Urinary system",
+       "choices": [
+        "Respiratory system",
+        "Lymphatic and immune system",
+        "Urinary system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_39"
+      }
+     ]
+    },
+    {
+     "id": "u1l9",
+     "title": "Reproductive system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Making new humans.\"",
+       "answer": "Reproductive system",
+       "choices": [
+        "Reproductive system",
+        "Urinary system",
+        "Endocrine system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_40"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sperm are made fresh; eggs are lifelong stock",
+       "answer": "Reproductive system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Homeostasis",
+        "Skeletal system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_41"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Fertilisation happens in the tube, not the uterus",
+       "answer": "Reproductive system",
+       "choices": [
+        "Muscular system",
+        "Homeostasis",
+        "Lymphatic and immune system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_42"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The placenta is a temporary organ built by the baby",
+       "answer": "Reproductive system",
+       "choices": [
+        "Reproductive system",
+        "Nervous system",
+        "Urinary system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_43"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Hormone cycles drive the whole process",
+       "answer": "Reproductive system",
+       "choices": [
+        "Reproductive system",
+        "Muscular system",
+        "Urinary system",
+        "Digestive system"
+       ],
+       "id": "fieldbook_44"
+      }
+     ]
+    },
+    {
+     "id": "u1l10",
+     "title": "Integumentary system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Skin, hair, nails.\"",
+       "answer": "Integumentary system",
+       "choices": [
+        "Skeletal system",
+        "Integumentary system",
+        "Urinary system",
+        "Nervous system"
+       ],
+       "id": "fieldbook_45"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Outer layer is dead and replaces every month",
+       "answer": "Integumentary system",
+       "choices": [
+        "Integumentary system",
+        "Nervous system",
+        "Homeostasis",
+        "Respiratory system"
+       ],
+       "id": "fieldbook_46"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sweat cools by evaporation",
+       "answer": "Integumentary system",
+       "choices": [
+        "Reproductive system",
+        "Homeostasis",
+        "Integumentary system",
+        "Muscular system"
+       ],
+       "id": "fieldbook_47"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Melanin is the pigment and the sunscreen",
+       "answer": "Integumentary system",
+       "choices": [
+        "Cardiovascular system",
+        "Endocrine system",
+        "Integumentary system",
+        "Skeletal system"
+       ],
+       "id": "fieldbook_48"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Skin makes vitamin D",
+       "answer": "Integumentary system",
+       "choices": [
+        "Respiratory system",
+        "Cardiovascular system",
+        "Lymphatic and immune system",
+        "Integumentary system"
+       ],
+       "id": "fieldbook_49"
+      }
+     ]
+    },
+    {
+     "id": "u1l11",
+     "title": "Lymphatic and immune system",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Drainage and defence.\"",
+       "answer": "Lymphatic and immune system",
+       "choices": [
+        "Urinary system",
+        "Respiratory system",
+        "Reproductive system",
+        "Lymphatic and immune system"
+       ],
+       "id": "fieldbook_50"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Returns leaked fluid to the blood",
+       "answer": "Lymphatic and immune system",
+       "choices": [
+        "Homeostasis",
+        "Lymphatic and immune system",
+        "Nervous system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_51"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Nodes are immune checkpoints",
+       "answer": "Lymphatic and immune system",
+       "choices": [
+        "Nervous system",
+        "Lymphatic and immune system",
+        "Integumentary system",
+        "Skeletal system"
+       ],
+       "id": "fieldbook_52"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: No pump: moved by muscle and breathing",
+       "answer": "Lymphatic and immune system",
+       "choices": [
+        "Lymphatic and immune system",
+        "Reproductive system",
+        "Muscular system",
+        "Integumentary system"
+       ],
+       "id": "fieldbook_53"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Spleen filters blood, thymus trains T cells",
+       "answer": "Lymphatic and immune system",
+       "choices": [
+        "Skeletal system",
+        "Lymphatic and immune system",
+        "Muscular system",
+        "Reproductive system"
+       ],
+       "id": "fieldbook_54"
+      }
+     ]
+    },
+    {
+     "id": "u1l12",
+     "title": "Homeostasis",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How the body holds steady.\"",
+       "answer": "Homeostasis",
+       "choices": [
+        "Muscular system",
+        "Skeletal system",
+        "Reproductive system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_55"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sensor, control centre, effector",
+       "answer": "Homeostasis",
+       "choices": [
+        "Muscular system",
+        "Homeostasis",
+        "Respiratory system",
+        "Urinary system"
+       ],
+       "id": "fieldbook_56"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Negative feedback resists change",
+       "answer": "Homeostasis",
+       "choices": [
+        "Reproductive system",
+        "Urinary system",
+        "Integumentary system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_57"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Positive feedback amplifies (rare: labour, clotting)",
+       "answer": "Homeostasis",
+       "choices": [
+        "Lymphatic and immune system",
+        "Reproductive system",
+        "Homeostasis",
+        "Cardiovascular system"
+       ],
+       "id": "fieldbook_58"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most vital signs are homeostatic outputs",
+       "answer": "Homeostasis",
+       "choices": [
+        "Lymphatic and immune system",
+        "Digestive system",
+        "Muscular system",
+        "Homeostasis"
+       ],
+       "id": "fieldbook_59"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Applied",
+   "lessons": [
+    {
+     "id": "u2l1",
+     "title": "Medicine",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Preventing and treating disease.\"",
+       "answer": "Medicine",
+       "choices": [
+        "Engineering",
+        "Medicine",
+        "Nutrition",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_60"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Randomised trials are the standard of evidence",
+       "answer": "Medicine",
+       "choices": [
+        "Engineering",
+        "Nutrition",
+        "Medicine",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_61"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most conditions resolve on their own",
+       "answer": "Medicine",
+       "choices": [
+        "Agriculture",
+        "Epidemiology and public health",
+        "Nutrition",
+        "Medicine"
+       ],
+       "id": "fieldbook_62"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Prevention beats treatment",
+       "answer": "Medicine",
+       "choices": [
+        "Engineering",
+        "Epidemiology and public health",
+        "Nutrition",
+        "Medicine"
+       ],
+       "id": "fieldbook_63"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Drugs have doses; the dose is the poison",
+       "answer": "Medicine",
+       "choices": [
+        "Medicine",
+        "Epidemiology and public health",
+        "Agriculture",
+        "Engineering"
+       ],
+       "id": "fieldbook_64"
+      }
+     ]
+    },
+    {
+     "id": "u2l2",
+     "title": "Nutrition",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"What food does in the body.\"",
+       "answer": "Nutrition",
+       "choices": [
+        "Engineering",
+        "Medicine",
+        "Agriculture",
+        "Nutrition"
+       ],
+       "id": "fieldbook_65"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Calories are energy; the body obeys thermodynamics",
+       "answer": "Nutrition",
+       "choices": [
+        "Engineering",
+        "Agriculture",
+        "Nutrition",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_66"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Protein and fibre satiate; refined carbs do not",
+       "answer": "Nutrition",
+       "choices": [
+        "Epidemiology and public health",
+        "Nutrition",
+        "Medicine",
+        "Engineering"
+       ],
+       "id": "fieldbook_67"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Vitamins are small molecules the body cannot make",
+       "answer": "Nutrition",
+       "choices": [
+        "Nutrition",
+        "Agriculture",
+        "Medicine",
+        "Engineering"
+       ],
+       "id": "fieldbook_68"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most nutrition headlines come from weak observational studies",
+       "answer": "Nutrition",
+       "choices": [
+        "Engineering",
+        "Nutrition",
+        "Agriculture",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_69"
+      }
+     ]
+    },
+    {
+     "id": "u2l3",
+     "title": "Engineering",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Making things that work under constraints.\"",
+       "answer": "Engineering",
+       "choices": [
+        "Epidemiology and public health",
+        "Engineering",
+        "Nutrition",
+        "Medicine"
+       ],
+       "id": "fieldbook_70"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Constraints define the problem",
+       "answer": "Engineering",
+       "choices": [
+        "Epidemiology and public health",
+        "Engineering",
+        "Medicine",
+        "Agriculture"
+       ],
+       "id": "fieldbook_71"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Factor of safety: build stronger than needed",
+       "answer": "Engineering",
+       "choices": [
+        "Nutrition",
+        "Epidemiology and public health",
+        "Medicine",
+        "Engineering"
+       ],
+       "id": "fieldbook_72"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Everything is a trade-off",
+       "answer": "Engineering",
+       "choices": [
+        "Epidemiology and public health",
+        "Agriculture",
+        "Engineering",
+        "Medicine"
+       ],
+       "id": "fieldbook_73"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Failures teach more than successes",
+       "answer": "Engineering",
+       "choices": [
+        "Medicine",
+        "Epidemiology and public health",
+        "Engineering",
+        "Agriculture"
+       ],
+       "id": "fieldbook_74"
+      }
+     ]
+    },
+    {
+     "id": "u2l4",
+     "title": "Agriculture",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Growing food on purpose.\"",
+       "answer": "Agriculture",
+       "choices": [
+        "Nutrition",
+        "Engineering",
+        "Agriculture",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_75"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every crop is a heavily modified wild plant",
+       "answer": "Agriculture",
+       "choices": [
+        "Nutrition",
+        "Epidemiology and public health",
+        "Agriculture",
+        "Medicine"
+       ],
+       "id": "fieldbook_76"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Synthetic nitrogen feeds about half of humanity",
+       "answer": "Agriculture",
+       "choices": [
+        "Agriculture",
+        "Medicine",
+        "Nutrition",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_77"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Soil is alive and slow to rebuild",
+       "answer": "Agriculture",
+       "choices": [
+        "Engineering",
+        "Epidemiology and public health",
+        "Agriculture",
+        "Nutrition"
+       ],
+       "id": "fieldbook_78"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Monoculture is efficient and brittle",
+       "answer": "Agriculture",
+       "choices": [
+        "Nutrition",
+        "Medicine",
+        "Agriculture",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_79"
+      }
+     ]
+    },
+    {
+     "id": "u2l5",
+     "title": "Epidemiology and public health",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Disease in populations.\"",
+       "answer": "Epidemiology and public health",
+       "choices": [
+        "Epidemiology and public health",
+        "Agriculture",
+        "Engineering",
+        "Medicine"
+       ],
+       "id": "fieldbook_80"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Look for the pattern, not the individual",
+       "answer": "Epidemiology and public health",
+       "choices": [
+        "Epidemiology and public health",
+        "Medicine",
+        "Engineering",
+        "Agriculture"
+       ],
+       "id": "fieldbook_81"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Absolute risk matters more than relative risk",
+       "answer": "Epidemiology and public health",
+       "choices": [
+        "Epidemiology and public health",
+        "Agriculture",
+        "Engineering",
+        "Medicine"
+       ],
+       "id": "fieldbook_82"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: R0: how many each case infects",
+       "answer": "Epidemiology and public health",
+       "choices": [
+        "Agriculture",
+        "Medicine",
+        "Nutrition",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_83"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The biggest wins are boring: water, sewers, vaccines",
+       "answer": "Epidemiology and public health",
+       "choices": [
+        "Agriculture",
+        "Epidemiology and public health",
+        "Engineering",
+        "Nutrition"
+       ],
+       "id": "fieldbook_84"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Biology",
+   "lessons": [
+    {
+     "id": "u3l1",
+     "title": "Cell biology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The basic unit of life.\"",
+       "answer": "Cell biology",
+       "choices": [
+        "Cell biology",
+        "Evolutionary biology",
+        "Botany",
+        "Ecology"
+       ],
+       "id": "fieldbook_85"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The membrane is a selective gate",
+       "answer": "Cell biology",
+       "choices": [
+        "Cell biology",
+        "Microbiology",
+        "Molecular biology",
+        "Neuroscience"
+       ],
+       "id": "fieldbook_86"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mitochondria turn food into ATP",
+       "answer": "Cell biology",
+       "choices": [
+        "Immunology",
+        "Molecular biology",
+        "Cell biology",
+        "Microbiology"
+       ],
+       "id": "fieldbook_87"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The nucleus holds DNA in complex cells",
+       "answer": "Cell biology",
+       "choices": [
+        "Genetics",
+        "Zoology",
+        "Cell biology",
+        "Microbiology"
+       ],
+       "id": "fieldbook_88"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Cells divide by copying DNA and splitting",
+       "answer": "Cell biology",
+       "choices": [
+        "Molecular biology",
+        "Evolutionary biology",
+        "Developmental biology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_89"
+      }
+     ]
+    },
+    {
+     "id": "u3l2",
+     "title": "Genetics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Heredity and how traits are passed on.\"",
+       "answer": "Genetics",
+       "choices": [
+        "Genetics",
+        "Microbiology",
+        "Immunology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_90"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: DNA is a four-letter code",
+       "answer": "Genetics",
+       "choices": [
+        "Genetics",
+        "Cell biology",
+        "Developmental biology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_91"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A gene is a recipe for one protein",
+       "answer": "Genetics",
+       "choices": [
+        "Genetics",
+        "Botany",
+        "Evolutionary biology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_92"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Two copies of every gene, one per parent",
+       "answer": "Genetics",
+       "choices": [
+        "Developmental biology",
+        "Immunology",
+        "Genetics",
+        "Cell biology"
+       ],
+       "id": "fieldbook_93"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mutation is the raw material of variation",
+       "answer": "Genetics",
+       "choices": [
+        "Neuroscience",
+        "Genetics",
+        "Molecular biology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_94"
+      }
+     ]
+    },
+    {
+     "id": "u3l3",
+     "title": "Molecular biology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How genes actually run a cell.\"",
+       "answer": "Molecular biology",
+       "choices": [
+        "Microbiology",
+        "Molecular biology",
+        "Neuroscience",
+        "Genetics"
+       ],
+       "id": "fieldbook_95"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: DNA to RNA to protein",
+       "answer": "Molecular biology",
+       "choices": [
+        "Developmental biology",
+        "Neuroscience",
+        "Ecology",
+        "Molecular biology"
+       ],
+       "id": "fieldbook_96"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Gene regulation decides cell type",
+       "answer": "Molecular biology",
+       "choices": [
+        "Cell biology",
+        "Molecular biology",
+        "Ecology",
+        "Microbiology"
+       ],
+       "id": "fieldbook_97"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Epigenetics: tags on DNA change expression without changing the code",
+       "answer": "Molecular biology",
+       "choices": [
+        "Developmental biology",
+        "Molecular biology",
+        "Botany",
+        "Microbiology"
+       ],
+       "id": "fieldbook_98"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: CRISPR is a programmable pair of scissors",
+       "answer": "Molecular biology",
+       "choices": [
+        "Neuroscience",
+        "Molecular biology",
+        "Microbiology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_99"
+      }
+     ]
+    },
+    {
+     "id": "u3l4",
+     "title": "Evolutionary biology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How life changes over time.\"",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Neuroscience",
+        "Developmental biology",
+        "Microbiology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_100"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Variation, selection, inheritance",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Evolutionary biology",
+        "Developmental biology",
+        "Genetics",
+        "Ecology"
+       ],
+       "id": "fieldbook_101"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: No goal, no ladder, no progress toward humans",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Evolutionary biology",
+        "Microbiology",
+        "Neuroscience",
+        "Cell biology"
+       ],
+       "id": "fieldbook_102"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Common descent: all life shares one ancestor",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Evolutionary biology",
+        "Ecology",
+        "Microbiology",
+        "Zoology"
+       ],
+       "id": "fieldbook_103"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Speciation happens when populations stop interbreeding",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Evolutionary biology",
+        "Developmental biology",
+        "Molecular biology",
+        "Microbiology"
+       ],
+       "id": "fieldbook_104"
+      }
+     ]
+    },
+    {
+     "id": "u3l5",
+     "title": "Ecology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How organisms interact with each other and their environment.\"",
+       "answer": "Ecology",
+       "choices": [
+        "Genetics",
+        "Evolutionary biology",
+        "Botany",
+        "Ecology"
+       ],
+       "id": "fieldbook_105"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Energy flows, nutrients cycle",
+       "answer": "Ecology",
+       "choices": [
+        "Cell biology",
+        "Molecular biology",
+        "Immunology",
+        "Ecology"
+       ],
+       "id": "fieldbook_106"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: About 10% of energy passes each level of the food chain",
+       "answer": "Ecology",
+       "choices": [
+        "Zoology",
+        "Molecular biology",
+        "Microbiology",
+        "Ecology"
+       ],
+       "id": "fieldbook_107"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Populations are limited by resources and predators",
+       "answer": "Ecology",
+       "choices": [
+        "Ecology",
+        "Immunology",
+        "Genetics",
+        "Botany"
+       ],
+       "id": "fieldbook_108"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Keystone species hold ecosystems together",
+       "answer": "Ecology",
+       "choices": [
+        "Ecology",
+        "Genetics",
+        "Evolutionary biology",
+        "Zoology"
+       ],
+       "id": "fieldbook_109"
+      }
+     ]
+    },
+    {
+     "id": "u3l6",
+     "title": "Microbiology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Bacteria, viruses, fungi, and other tiny life.\"",
+       "answer": "Microbiology",
+       "choices": [
+        "Genetics",
+        "Ecology",
+        "Botany",
+        "Microbiology"
+       ],
+       "id": "fieldbook_110"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Bacteria have no nucleus and divide fast",
+       "answer": "Microbiology",
+       "choices": [
+        "Ecology",
+        "Microbiology",
+        "Zoology",
+        "Botany"
+       ],
+       "id": "fieldbook_111"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Viruses need a host cell to reproduce",
+       "answer": "Microbiology",
+       "choices": [
+        "Cell biology",
+        "Molecular biology",
+        "Microbiology",
+        "Ecology"
+       ],
+       "id": "fieldbook_112"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Antibiotics kill bacteria, not viruses",
+       "answer": "Microbiology",
+       "choices": [
+        "Microbiology",
+        "Developmental biology",
+        "Botany",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_113"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The microbiome shapes digestion, immunity, and mood",
+       "answer": "Microbiology",
+       "choices": [
+        "Evolutionary biology",
+        "Developmental biology",
+        "Microbiology",
+        "Zoology"
+       ],
+       "id": "fieldbook_114"
+      }
+     ]
+    },
+    {
+     "id": "u3l7",
+     "title": "Botany",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Plants.\"",
+       "answer": "Botany",
+       "choices": [
+        "Molecular biology",
+        "Ecology",
+        "Neuroscience",
+        "Botany"
+       ],
+       "id": "fieldbook_115"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Photosynthesis: light plus CO2 plus water makes sugar and oxygen",
+       "answer": "Botany",
+       "choices": [
+        "Molecular biology",
+        "Botany",
+        "Neuroscience",
+        "Zoology"
+       ],
+       "id": "fieldbook_116"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Wood is mostly captured carbon dioxide",
+       "answer": "Botany",
+       "choices": [
+        "Ecology",
+        "Zoology",
+        "Botany",
+        "Immunology"
+       ],
+       "id": "fieldbook_117"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Roots, stems, leaves, flowers: a modular body plan",
+       "answer": "Botany",
+       "choices": [
+        "Botany",
+        "Developmental biology",
+        "Genetics",
+        "Zoology"
+       ],
+       "id": "fieldbook_118"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Plants respond to their environment without nerves",
+       "answer": "Botany",
+       "choices": [
+        "Genetics",
+        "Neuroscience",
+        "Botany",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_119"
+      }
+     ]
+    },
+    {
+     "id": "u3l8",
+     "title": "Zoology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Animals.\"",
+       "answer": "Zoology",
+       "choices": [
+        "Zoology",
+        "Molecular biology",
+        "Neuroscience",
+        "Botany"
+       ],
+       "id": "fieldbook_120"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most animals are invertebrates, most invertebrates are insects",
+       "answer": "Zoology",
+       "choices": [
+        "Zoology",
+        "Microbiology",
+        "Molecular biology",
+        "Genetics"
+       ],
+       "id": "fieldbook_121"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Body plans are conserved: a bat wing and a human arm share the same bones",
+       "answer": "Zoology",
+       "choices": [
+        "Ecology",
+        "Cell biology",
+        "Evolutionary biology",
+        "Zoology"
+       ],
+       "id": "fieldbook_122"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Behaviour evolves like any other trait",
+       "answer": "Zoology",
+       "choices": [
+        "Zoology",
+        "Developmental biology",
+        "Evolutionary biology",
+        "Botany"
+       ],
+       "id": "fieldbook_123"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Vertebrates are one branch, not the main one",
+       "answer": "Zoology",
+       "choices": [
+        "Zoology",
+        "Neuroscience",
+        "Microbiology",
+        "Ecology"
+       ],
+       "id": "fieldbook_124"
+      }
+     ]
+    },
+    {
+     "id": "u3l9",
+     "title": "Neuroscience",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The brain and nervous system.\"",
+       "answer": "Neuroscience",
+       "choices": [
+        "Genetics",
+        "Evolutionary biology",
+        "Ecology",
+        "Neuroscience"
+       ],
+       "id": "fieldbook_125"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Neurons fire electrically, talk chemically",
+       "answer": "Neuroscience",
+       "choices": [
+        "Cell biology",
+        "Neuroscience",
+        "Botany",
+        "Ecology"
+       ],
+       "id": "fieldbook_126"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Learning changes synapse strength",
+       "answer": "Neuroscience",
+       "choices": [
+        "Neuroscience",
+        "Cell biology",
+        "Immunology",
+        "Zoology"
+       ],
+       "id": "fieldbook_127"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Different regions specialise but everything is connected",
+       "answer": "Neuroscience",
+       "choices": [
+        "Neuroscience",
+        "Genetics",
+        "Zoology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_128"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The brain uses about 20% of your energy",
+       "answer": "Neuroscience",
+       "choices": [
+        "Genetics",
+        "Neuroscience",
+        "Zoology",
+        "Developmental biology"
+       ],
+       "id": "fieldbook_129"
+      }
+     ]
+    },
+    {
+     "id": "u3l10",
+     "title": "Developmental biology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How one cell becomes a body.\"",
+       "answer": "Developmental biology",
+       "choices": [
+        "Developmental biology",
+        "Molecular biology",
+        "Evolutionary biology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_130"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Chemical gradients tell cells where they are",
+       "answer": "Developmental biology",
+       "choices": [
+        "Ecology",
+        "Botany",
+        "Developmental biology",
+        "Molecular biology"
+       ],
+       "id": "fieldbook_131"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Hox genes lay out the body from head to tail",
+       "answer": "Developmental biology",
+       "choices": [
+        "Evolutionary biology",
+        "Ecology",
+        "Neuroscience",
+        "Developmental biology"
+       ],
+       "id": "fieldbook_132"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Programmed cell death carves fingers from paddles",
+       "answer": "Developmental biology",
+       "choices": [
+        "Immunology",
+        "Developmental biology",
+        "Cell biology",
+        "Neuroscience"
+       ],
+       "id": "fieldbook_133"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Stem cells can become many types",
+       "answer": "Developmental biology",
+       "choices": [
+        "Developmental biology",
+        "Microbiology",
+        "Zoology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_134"
+      }
+     ]
+    },
+    {
+     "id": "u3l11",
+     "title": "Immunology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How the body defends itself.\"",
+       "answer": "Immunology",
+       "choices": [
+        "Botany",
+        "Ecology",
+        "Immunology",
+        "Cell biology"
+       ],
+       "id": "fieldbook_135"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Innate: fast, general. Adaptive: slow, specific, remembers",
+       "answer": "Immunology",
+       "choices": [
+        "Immunology",
+        "Botany",
+        "Zoology",
+        "Genetics"
+       ],
+       "id": "fieldbook_136"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Antibodies tag invaders for destruction",
+       "answer": "Immunology",
+       "choices": [
+        "Immunology",
+        "Evolutionary biology",
+        "Zoology",
+        "Microbiology"
+       ],
+       "id": "fieldbook_137"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Vaccines are rehearsal",
+       "answer": "Immunology",
+       "choices": [
+        "Developmental biology",
+        "Immunology",
+        "Botany",
+        "Microbiology"
+       ],
+       "id": "fieldbook_138"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Fever and inflammation are the defence, not the disease",
+       "answer": "Immunology",
+       "choices": [
+        "Evolutionary biology",
+        "Genetics",
+        "Neuroscience",
+        "Immunology"
+       ],
+       "id": "fieldbook_139"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Chemistry",
+   "lessons": [
+    {
+     "id": "u4l1",
+     "title": "General chemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Atoms, bonds, and reactions.\"",
+       "answer": "General chemistry",
+       "choices": [
+        "Inorganic chemistry",
+        "Biochemistry",
+        "General chemistry",
+        "Materials science"
+       ],
+       "id": "fieldbook_140"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Only outer electrons matter for chemistry",
+       "answer": "General chemistry",
+       "choices": [
+        "Biochemistry",
+        "General chemistry",
+        "Organic chemistry",
+        "Analytical chemistry"
+       ],
+       "id": "fieldbook_141"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Three bond types: covalent, ionic, metallic",
+       "answer": "General chemistry",
+       "choices": [
+        "Organic chemistry",
+        "Inorganic chemistry",
+        "Biochemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_142"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Reactions conserve atoms, just rearrange them",
+       "answer": "General chemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Inorganic chemistry",
+        "Organic chemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_143"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The periodic table is organised by electron structure",
+       "answer": "General chemistry",
+       "choices": [
+        "Biochemistry",
+        "Inorganic chemistry",
+        "General chemistry",
+        "Analytical chemistry"
+       ],
+       "id": "fieldbook_144"
+      }
+     ]
+    },
+    {
+     "id": "u4l2",
+     "title": "Organic chemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Carbon compounds, which means all of life.\"",
+       "answer": "Organic chemistry",
+       "choices": [
+        "Physical chemistry",
+        "Organic chemistry",
+        "General chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_145"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Carbon's four bonds make it the backbone of complexity",
+       "answer": "Organic chemistry",
+       "choices": [
+        "General chemistry",
+        "Organic chemistry",
+        "Physical chemistry",
+        "Biochemistry"
+       ],
+       "id": "fieldbook_146"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Functional groups decide how a molecule behaves",
+       "answer": "Organic chemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Organic chemistry",
+        "General chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_147"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Same atoms, different arrangement, different molecule",
+       "answer": "Organic chemistry",
+       "choices": [
+        "Physical chemistry",
+        "General chemistry",
+        "Organic chemistry",
+        "Biochemistry"
+       ],
+       "id": "fieldbook_148"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most drugs are small organic molecules",
+       "answer": "Organic chemistry",
+       "choices": [
+        "Organic chemistry",
+        "Biochemistry",
+        "General chemistry",
+        "Physical chemistry"
+       ],
+       "id": "fieldbook_149"
+      }
+     ]
+    },
+    {
+     "id": "u4l3",
+     "title": "Inorganic chemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Everything that is not carbon-based.\"",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "Organic chemistry",
+        "Biochemistry",
+        "Inorganic chemistry",
+        "Physical chemistry"
+       ],
+       "id": "fieldbook_150"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Metals give up electrons easily",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "General chemistry",
+        "Biochemistry",
+        "Materials science",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_151"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Transition metals have flexible electron shells",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "Biochemistry",
+        "Materials science",
+        "General chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_152"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Catalysts speed reactions without being used up",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "Physical chemistry",
+        "Inorganic chemistry",
+        "Organic chemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_153"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Crystals are repeating atomic patterns",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "Physical chemistry",
+        "Analytical chemistry",
+        "Inorganic chemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_154"
+      }
+     ]
+    },
+    {
+     "id": "u4l4",
+     "title": "Physical chemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The physics underneath chemistry.\"",
+       "answer": "Physical chemistry",
+       "choices": [
+        "Materials science",
+        "General chemistry",
+        "Physical chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_155"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Free energy decides direction",
+       "answer": "Physical chemistry",
+       "choices": [
+        "General chemistry",
+        "Analytical chemistry",
+        "Biochemistry",
+        "Physical chemistry"
+       ],
+       "id": "fieldbook_156"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Activation energy decides speed",
+       "answer": "Physical chemistry",
+       "choices": [
+        "Materials science",
+        "Physical chemistry",
+        "Biochemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_157"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Equilibrium is when forward and backward rates match",
+       "answer": "Physical chemistry",
+       "choices": [
+        "Materials science",
+        "Physical chemistry",
+        "Organic chemistry",
+        "Analytical chemistry"
+       ],
+       "id": "fieldbook_158"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Spectroscopy reads molecules by the light they absorb",
+       "answer": "Physical chemistry",
+       "choices": [
+        "General chemistry",
+        "Inorganic chemistry",
+        "Physical chemistry",
+        "Analytical chemistry"
+       ],
+       "id": "fieldbook_159"
+      }
+     ]
+    },
+    {
+     "id": "u4l5",
+     "title": "Biochemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The chemistry of living things.\"",
+       "answer": "Biochemistry",
+       "choices": [
+        "Biochemistry",
+        "General chemistry",
+        "Physical chemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_160"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Proteins fold into shapes and shape is function",
+       "answer": "Biochemistry",
+       "choices": [
+        "General chemistry",
+        "Biochemistry",
+        "Physical chemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_161"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: DNA stores, RNA carries, protein does",
+       "answer": "Biochemistry",
+       "choices": [
+        "Organic chemistry",
+        "General chemistry",
+        "Physical chemistry",
+        "Biochemistry"
+       ],
+       "id": "fieldbook_162"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: ATP is the energy currency of every cell",
+       "answer": "Biochemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Organic chemistry",
+        "Materials science",
+        "Biochemistry"
+       ],
+       "id": "fieldbook_163"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Enzymes are catalysts with exquisite specificity",
+       "answer": "Biochemistry",
+       "choices": [
+        "Materials science",
+        "Biochemistry",
+        "Analytical chemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_164"
+      }
+     ]
+    },
+    {
+     "id": "u4l6",
+     "title": "Analytical chemistry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Finding out what is in a sample and how much.\"",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Biochemistry",
+        "Inorganic chemistry",
+        "Analytical chemistry",
+        "Materials science"
+       ],
+       "id": "fieldbook_165"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Chromatography separates by how fast things travel through a medium",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Materials science",
+        "Organic chemistry",
+        "Physical chemistry"
+       ],
+       "id": "fieldbook_166"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mass spectrometry weighs molecules exactly",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Inorganic chemistry",
+        "Organic chemistry",
+        "Materials science"
+       ],
+       "id": "fieldbook_167"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Spectroscopy identifies by light absorbed or emitted",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Analytical chemistry",
+        "Organic chemistry",
+        "Biochemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_168"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Detection limits keep falling",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Biochemistry",
+        "Materials science",
+        "General chemistry",
+        "Analytical chemistry"
+       ],
+       "id": "fieldbook_169"
+      }
+     ]
+    },
+    {
+     "id": "u4l7",
+     "title": "Materials science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Designing stuff with the properties you want.\"",
+       "answer": "Materials science",
+       "choices": [
+        "Materials science",
+        "Analytical chemistry",
+        "Inorganic chemistry",
+        "General chemistry"
+       ],
+       "id": "fieldbook_170"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Structure decides properties at every scale",
+       "answer": "Materials science",
+       "choices": [
+        "Analytical chemistry",
+        "Materials science",
+        "Biochemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_171"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Metals bend because atomic planes slide",
+       "answer": "Materials science",
+       "choices": [
+        "Inorganic chemistry",
+        "Biochemistry",
+        "Materials science",
+        "Physical chemistry"
+       ],
+       "id": "fieldbook_172"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Polymers are long chains that tangle",
+       "answer": "Materials science",
+       "choices": [
+        "General chemistry",
+        "Materials science",
+        "Organic chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_173"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Composites combine materials to get the best of each",
+       "answer": "Materials science",
+       "choices": [
+        "General chemistry",
+        "Materials science",
+        "Organic chemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_174"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Computing",
+   "lessons": [
+    {
+     "id": "u5l1",
+     "title": "Computer science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"What can be computed, and how well.\"",
+       "answer": "Computer science",
+       "choices": [
+        "Information theory",
+        "Computer science",
+        "Artificial intelligence",
+        "Ecology"
+       ],
+       "id": "fieldbook_175"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: An algorithm is a finite exact procedure",
+       "answer": "Computer science",
+       "choices": [
+        "Engineering",
+        "Artificial intelligence",
+        "Information theory",
+        "Computer science"
+       ],
+       "id": "fieldbook_176"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Complexity: how time grows with input size",
+       "answer": "Computer science",
+       "choices": [
+        "Computer science",
+        "Information theory",
+        "Engineering",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_177"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Some problems are proven unsolvable",
+       "answer": "Computer science",
+       "choices": [
+        "Information theory",
+        "Cardiovascular system",
+        "Artificial intelligence",
+        "Computer science"
+       ],
+       "id": "fieldbook_178"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: All computers are equivalent in power, just speed differs",
+       "answer": "Computer science",
+       "choices": [
+        "Artificial intelligence",
+        "Computer science",
+        "Information theory",
+        "Integumentary system"
+       ],
+       "id": "fieldbook_179"
+      }
+     ]
+    },
+    {
+     "id": "u5l2",
+     "title": "Information theory",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Measuring information itself.\"",
+       "answer": "Information theory",
+       "choices": [
+        "Computer science",
+        "Artificial intelligence",
+        "Botany",
+        "Information theory"
+       ],
+       "id": "fieldbook_180"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A bit is one yes-or-no of surprise",
+       "answer": "Information theory",
+       "choices": [
+        "Logic and set theory",
+        "Computer science",
+        "Information theory",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_181"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every channel has a capacity",
+       "answer": "Information theory",
+       "choices": [
+        "Artificial intelligence",
+        "Planetary science",
+        "Computer science",
+        "Information theory"
+       ],
+       "id": "fieldbook_182"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Compression removes redundancy",
+       "answer": "Information theory",
+       "choices": [
+        "Computer science",
+        "Information theory",
+        "Engineering",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_183"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Error correction adds it back on purpose",
+       "answer": "Information theory",
+       "choices": [
+        "Anthropology",
+        "Information theory",
+        "Computer science",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_184"
+      }
+     ]
+    },
+    {
+     "id": "u5l3",
+     "title": "Artificial intelligence",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Machines that learn patterns.\"",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Artificial intelligence",
+        "History",
+        "Information theory",
+        "Computer science"
+       ],
+       "id": "fieldbook_185"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Learning is adjusting parameters to reduce error",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Computer science",
+        "Artificial intelligence",
+        "Information theory",
+        "Botany"
+       ],
+       "id": "fieldbook_186"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Deep networks build features layer by layer",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Computer science",
+        "Optics",
+        "Information theory",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_187"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Language models are next-word predictors at scale",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Information theory",
+        "Botany",
+        "Computer science",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_188"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Data and compute have mattered more than clever design",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Computer science",
+        "History",
+        "Artificial intelligence",
+        "Information theory"
+       ],
+       "id": "fieldbook_189"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Earth & Space",
+   "lessons": [
+    {
+     "id": "u6l1",
+     "title": "Geology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Rocks, and what the Earth is doing under your feet.\"",
+       "answer": "Geology",
+       "choices": [
+        "Geology",
+        "Astronomy",
+        "Meteorology",
+        "Climatology"
+       ],
+       "id": "fieldbook_190"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Plate tectonics explains mountains, quakes, volcanoes",
+       "answer": "Geology",
+       "choices": [
+        "Oceanography",
+        "Meteorology",
+        "Climatology",
+        "Geology"
+       ],
+       "id": "fieldbook_191"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Three rock types and a cycle between them",
+       "answer": "Geology",
+       "choices": [
+        "Planetary science",
+        "Astronomy",
+        "Geology",
+        "Oceanography"
+       ],
+       "id": "fieldbook_192"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Deep time: the Earth is 4.5 billion years old",
+       "answer": "Geology",
+       "choices": [
+        "Planetary science",
+        "Astronomy",
+        "Oceanography",
+        "Geology"
+       ],
+       "id": "fieldbook_193"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Rock layers are a history book",
+       "answer": "Geology",
+       "choices": [
+        "Meteorology",
+        "Climatology",
+        "Geology",
+        "Planetary science"
+       ],
+       "id": "fieldbook_194"
+      }
+     ]
+    },
+    {
+     "id": "u6l2",
+     "title": "Meteorology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Weather.\"",
+       "answer": "Meteorology",
+       "choices": [
+        "Planetary science",
+        "Astronomy",
+        "Meteorology",
+        "Climatology"
+       ],
+       "id": "fieldbook_195"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Weather is redistributed solar heat",
+       "answer": "Meteorology",
+       "choices": [
+        "Climatology",
+        "Meteorology",
+        "Planetary science",
+        "Oceanography"
+       ],
+       "id": "fieldbook_196"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Pressure differences drive wind",
+       "answer": "Meteorology",
+       "choices": [
+        "Climatology",
+        "Geology",
+        "Meteorology",
+        "Astronomy"
+       ],
+       "id": "fieldbook_197"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Coriolis effect spins storms",
+       "answer": "Meteorology",
+       "choices": [
+        "Meteorology",
+        "Oceanography",
+        "Geology",
+        "Planetary science"
+       ],
+       "id": "fieldbook_198"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Chaos limits forecasts to about ten days",
+       "answer": "Meteorology",
+       "choices": [
+        "Astronomy",
+        "Planetary science",
+        "Meteorology",
+        "Geology"
+       ],
+       "id": "fieldbook_199"
+      }
+     ]
+    },
+    {
+     "id": "u6l3",
+     "title": "Climatology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Long-term patterns of the atmosphere.\"",
+       "answer": "Climatology",
+       "choices": [
+        "Meteorology",
+        "Astronomy",
+        "Climatology",
+        "Geology"
+       ],
+       "id": "fieldbook_200"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Greenhouse gases trap outgoing heat",
+       "answer": "Climatology",
+       "choices": [
+        "Climatology",
+        "Meteorology",
+        "Oceanography",
+        "Planetary science"
+       ],
+       "id": "fieldbook_201"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: CO2 has risen about 50% since 1800",
+       "answer": "Climatology",
+       "choices": [
+        "Planetary science",
+        "Oceanography",
+        "Climatology",
+        "Geology"
+       ],
+       "id": "fieldbook_202"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Feedbacks: melting ice absorbs more sun",
+       "answer": "Climatology",
+       "choices": [
+        "Geology",
+        "Climatology",
+        "Oceanography",
+        "Astronomy"
+       ],
+       "id": "fieldbook_203"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The physics is nineteenth century and not in dispute",
+       "answer": "Climatology",
+       "choices": [
+        "Climatology",
+        "Meteorology",
+        "Oceanography",
+        "Planetary science"
+       ],
+       "id": "fieldbook_204"
+      }
+     ]
+    },
+    {
+     "id": "u6l4",
+     "title": "Oceanography",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The seas.\"",
+       "answer": "Oceanography",
+       "choices": [
+        "Oceanography",
+        "Geology",
+        "Astronomy",
+        "Climatology"
+       ],
+       "id": "fieldbook_205"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Half your oxygen comes from ocean plankton",
+       "answer": "Oceanography",
+       "choices": [
+        "Planetary science",
+        "Geology",
+        "Meteorology",
+        "Oceanography"
+       ],
+       "id": "fieldbook_206"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Currents redistribute heat globally",
+       "answer": "Oceanography",
+       "choices": [
+        "Climatology",
+        "Meteorology",
+        "Oceanography",
+        "Planetary science"
+       ],
+       "id": "fieldbook_207"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The deep ocean is dark, cold, high pressure, and full of life",
+       "answer": "Oceanography",
+       "choices": [
+        "Oceanography",
+        "Geology",
+        "Astronomy",
+        "Planetary science"
+       ],
+       "id": "fieldbook_208"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Absorbed CO2 is making seawater more acidic",
+       "answer": "Oceanography",
+       "choices": [
+        "Astronomy",
+        "Climatology",
+        "Oceanography",
+        "Meteorology"
+       ],
+       "id": "fieldbook_209"
+      }
+     ]
+    },
+    {
+     "id": "u6l5",
+     "title": "Planetary science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Other worlds.\"",
+       "answer": "Planetary science",
+       "choices": [
+        "Geology",
+        "Meteorology",
+        "Planetary science",
+        "Astronomy"
+       ],
+       "id": "fieldbook_210"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Rocky inner planets, gas and ice giants outer",
+       "answer": "Planetary science",
+       "choices": [
+        "Geology",
+        "Oceanography",
+        "Planetary science",
+        "Climatology"
+       ],
+       "id": "fieldbook_211"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Several moons have subsurface oceans",
+       "answer": "Planetary science",
+       "choices": [
+        "Oceanography",
+        "Geology",
+        "Planetary science",
+        "Astronomy"
+       ],
+       "id": "fieldbook_212"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mars was once wet",
+       "answer": "Planetary science",
+       "choices": [
+        "Geology",
+        "Climatology",
+        "Planetary science",
+        "Astronomy"
+       ],
+       "id": "fieldbook_213"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Comets and asteroids are leftover building material",
+       "answer": "Planetary science",
+       "choices": [
+        "Astronomy",
+        "Planetary science",
+        "Oceanography",
+        "Climatology"
+       ],
+       "id": "fieldbook_214"
+      }
+     ]
+    },
+    {
+     "id": "u6l6",
+     "title": "Astronomy",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Looking at the sky.\"",
+       "answer": "Astronomy",
+       "choices": [
+        "Astronomy",
+        "Geology",
+        "Planetary science",
+        "Oceanography"
+       ],
+       "id": "fieldbook_215"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: All astronomy is reading light",
+       "answer": "Astronomy",
+       "choices": [
+        "Oceanography",
+        "Astronomy",
+        "Geology",
+        "Meteorology"
+       ],
+       "id": "fieldbook_216"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Redshift measures recession speed",
+       "answer": "Astronomy",
+       "choices": [
+        "Meteorology",
+        "Oceanography",
+        "Astronomy",
+        "Climatology"
+       ],
+       "id": "fieldbook_217"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Looking far away is looking into the past",
+       "answer": "Astronomy",
+       "choices": [
+        "Oceanography",
+        "Climatology",
+        "Planetary science",
+        "Astronomy"
+       ],
+       "id": "fieldbook_218"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The night sky is a mix of nearby stars and distant galaxies",
+       "answer": "Astronomy",
+       "choices": [
+        "Oceanography",
+        "Astronomy",
+        "Planetary science",
+        "Geology"
+       ],
+       "id": "fieldbook_219"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u7",
+   "title": "Mathematics",
+   "lessons": [
+    {
+     "id": "u7l1",
+     "title": "Arithmetic and number theory",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Numbers and their hidden structure.\"",
+       "answer": "Arithmetic and number theory",
+       "choices": [
+        "Calculus",
+        "Algebra",
+        "Arithmetic and number theory",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_220"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Primes are the atoms of numbers",
+       "answer": "Arithmetic and number theory",
+       "choices": [
+        "Logic and set theory",
+        "Calculus",
+        "Linear algebra",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_221"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every whole number factors into primes exactly one way",
+       "answer": "Arithmetic and number theory",
+       "choices": [
+        "Probability",
+        "Differential equations and dynamics",
+        "Arithmetic and number theory",
+        "Geometry and trigonometry"
+       ],
+       "id": "fieldbook_222"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Modular arithmetic: clock math",
+       "answer": "Arithmetic and number theory",
+       "choices": [
+        "Discrete mathematics",
+        "Algebra",
+        "Differential equations and dynamics",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_223"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: RSA encryption rests on factoring being hard",
+       "answer": "Arithmetic and number theory",
+       "choices": [
+        "Calculus",
+        "Arithmetic and number theory",
+        "Geometry and trigonometry",
+        "Discrete mathematics"
+       ],
+       "id": "fieldbook_224"
+      }
+     ]
+    },
+    {
+     "id": "u7l2",
+     "title": "Algebra",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Working with unknowns and structure.\"",
+       "answer": "Algebra",
+       "choices": [
+        "Linear algebra",
+        "Arithmetic and number theory",
+        "Algebra",
+        "Geometry and trigonometry"
+       ],
+       "id": "fieldbook_225"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A variable stands for any number",
+       "answer": "Algebra",
+       "choices": [
+        "Algebra",
+        "Arithmetic and number theory",
+        "Probability",
+        "Logic and set theory"
+       ],
+       "id": "fieldbook_226"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Equations balance: do the same to both sides",
+       "answer": "Algebra",
+       "choices": [
+        "Arithmetic and number theory",
+        "Geometry and trigonometry",
+        "Algebra",
+        "Differential equations and dynamics"
+       ],
+       "id": "fieldbook_227"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Polynomials and their roots",
+       "answer": "Algebra",
+       "choices": [
+        "Linear algebra",
+        "Statistics",
+        "Algebra",
+        "Calculus"
+       ],
+       "id": "fieldbook_228"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Groups: the algebra of symmetry",
+       "answer": "Algebra",
+       "choices": [
+        "Logic and set theory",
+        "Topology",
+        "Linear algebra",
+        "Algebra"
+       ],
+       "id": "fieldbook_229"
+      }
+     ]
+    },
+    {
+     "id": "u7l3",
+     "title": "Geometry and trigonometry",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Shape, space, angles, and distance.\"",
+       "answer": "Geometry and trigonometry",
+       "choices": [
+        "Geometry and trigonometry",
+        "Logic and set theory",
+        "Arithmetic and number theory",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_230"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Pythagoras: a\u00b2 + b\u00b2 = c\u00b2",
+       "answer": "Geometry and trigonometry",
+       "choices": [
+        "Geometry and trigonometry",
+        "Calculus",
+        "Topology",
+        "Algebra"
+       ],
+       "id": "fieldbook_231"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Angles in a triangle sum to 180\u00b0 on a flat surface, not on a sphere",
+       "answer": "Geometry and trigonometry",
+       "choices": [
+        "Topology",
+        "Geometry and trigonometry",
+        "Algebra",
+        "Calculus"
+       ],
+       "id": "fieldbook_232"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sine and cosine are circle coordinates",
+       "answer": "Geometry and trigonometry",
+       "choices": [
+        "Topology",
+        "Geometry and trigonometry",
+        "Calculus",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_233"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every wave is sines added together",
+       "answer": "Geometry and trigonometry",
+       "choices": [
+        "Geometry and trigonometry",
+        "Arithmetic and number theory",
+        "Statistics",
+        "Algebra"
+       ],
+       "id": "fieldbook_234"
+      }
+     ]
+    },
+    {
+     "id": "u7l4",
+     "title": "Calculus",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Change and accumulation.\"",
+       "answer": "Calculus",
+       "choices": [
+        "Calculus",
+        "Linear algebra",
+        "Logic and set theory",
+        "Algebra"
+       ],
+       "id": "fieldbook_235"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Derivative: instantaneous rate of change",
+       "answer": "Calculus",
+       "choices": [
+        "Calculus",
+        "Arithmetic and number theory",
+        "Topology",
+        "Algebra"
+       ],
+       "id": "fieldbook_236"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Integral: total accumulated",
+       "answer": "Calculus",
+       "choices": [
+        "Geometry and trigonometry",
+        "Calculus",
+        "Algebra",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_237"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: They undo each other",
+       "answer": "Calculus",
+       "choices": [
+        "Logic and set theory",
+        "Calculus",
+        "Probability",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_238"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Limits make infinitely small steps rigorous",
+       "answer": "Calculus",
+       "choices": [
+        "Differential equations and dynamics",
+        "Arithmetic and number theory",
+        "Statistics",
+        "Calculus"
+       ],
+       "id": "fieldbook_239"
+      }
+     ]
+    },
+    {
+     "id": "u7l5",
+     "title": "Linear algebra",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Vectors, matrices, and spaces of many dimensions.\"",
+       "answer": "Linear algebra",
+       "choices": [
+        "Linear algebra",
+        "Topology",
+        "Arithmetic and number theory",
+        "Logic and set theory"
+       ],
+       "id": "fieldbook_240"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Vectors are arrows or lists, same thing",
+       "answer": "Linear algebra",
+       "choices": [
+        "Linear algebra",
+        "Differential equations and dynamics",
+        "Calculus",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_241"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Matrices transform space",
+       "answer": "Linear algebra",
+       "choices": [
+        "Arithmetic and number theory",
+        "Geometry and trigonometry",
+        "Linear algebra",
+        "Logic and set theory"
+       ],
+       "id": "fieldbook_242"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Eigenvectors: directions a transformation only stretches",
+       "answer": "Linear algebra",
+       "choices": [
+        "Discrete mathematics",
+        "Linear algebra",
+        "Statistics",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_243"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Dimension is just how many numbers you need",
+       "answer": "Linear algebra",
+       "choices": [
+        "Probability",
+        "Discrete mathematics",
+        "Linear algebra",
+        "Statistics"
+       ],
+       "id": "fieldbook_244"
+      }
+     ]
+    },
+    {
+     "id": "u7l6",
+     "title": "Probability",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Reasoning about uncertainty.\"",
+       "answer": "Probability",
+       "choices": [
+        "Discrete mathematics",
+        "Probability",
+        "Geometry and trigonometry",
+        "Calculus"
+       ],
+       "id": "fieldbook_245"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Probabilities sum to 1",
+       "answer": "Probability",
+       "choices": [
+        "Probability",
+        "Discrete mathematics",
+        "Differential equations and dynamics",
+        "Algebra"
+       ],
+       "id": "fieldbook_246"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Independent: multiply. Exclusive: add",
+       "answer": "Probability",
+       "choices": [
+        "Topology",
+        "Logic and set theory",
+        "Algebra",
+        "Probability"
+       ],
+       "id": "fieldbook_247"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Bayes: update prior belief with evidence",
+       "answer": "Probability",
+       "choices": [
+        "Probability",
+        "Statistics",
+        "Calculus",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_248"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Expected value: average outcome over many trials",
+       "answer": "Probability",
+       "choices": [
+        "Probability",
+        "Logic and set theory",
+        "Discrete mathematics",
+        "Calculus"
+       ],
+       "id": "fieldbook_249"
+      }
+     ]
+    },
+    {
+     "id": "u7l7",
+     "title": "Statistics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Learning from data.\"",
+       "answer": "Statistics",
+       "choices": [
+        "Probability",
+        "Topology",
+        "Geometry and trigonometry",
+        "Statistics"
+       ],
+       "id": "fieldbook_250"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mean vs median: outliers pull the mean",
+       "answer": "Statistics",
+       "choices": [
+        "Discrete mathematics",
+        "Geometry and trigonometry",
+        "Statistics",
+        "Differential equations and dynamics"
+       ],
+       "id": "fieldbook_251"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Standard deviation measures spread",
+       "answer": "Statistics",
+       "choices": [
+        "Statistics",
+        "Geometry and trigonometry",
+        "Discrete mathematics",
+        "Probability"
+       ],
+       "id": "fieldbook_252"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A p-value is not the chance you are wrong",
+       "answer": "Statistics",
+       "choices": [
+        "Geometry and trigonometry",
+        "Statistics",
+        "Linear algebra",
+        "Topology"
+       ],
+       "id": "fieldbook_253"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Correlation is not causation, but it is a clue",
+       "answer": "Statistics",
+       "choices": [
+        "Probability",
+        "Statistics",
+        "Topology",
+        "Differential equations and dynamics"
+       ],
+       "id": "fieldbook_254"
+      }
+     ]
+    },
+    {
+     "id": "u7l8",
+     "title": "Logic and set theory",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The foundations underneath all of math.\"",
+       "answer": "Logic and set theory",
+       "choices": [
+        "Logic and set theory",
+        "Calculus",
+        "Algebra",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_255"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Valid argument vs true conclusion are different",
+       "answer": "Logic and set theory",
+       "choices": [
+        "Calculus",
+        "Geometry and trigonometry",
+        "Logic and set theory",
+        "Statistics"
+       ],
+       "id": "fieldbook_256"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sets: collections, and collections of collections",
+       "answer": "Logic and set theory",
+       "choices": [
+        "Linear algebra",
+        "Logic and set theory",
+        "Calculus",
+        "Statistics"
+       ],
+       "id": "fieldbook_257"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Some infinities are bigger than others",
+       "answer": "Logic and set theory",
+       "choices": [
+        "Calculus",
+        "Statistics",
+        "Linear algebra",
+        "Logic and set theory"
+       ],
+       "id": "fieldbook_258"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: G\u00f6del: there are truths no proof can reach",
+       "answer": "Logic and set theory",
+       "choices": [
+        "Logic and set theory",
+        "Statistics",
+        "Topology",
+        "Calculus"
+       ],
+       "id": "fieldbook_259"
+      }
+     ]
+    },
+    {
+     "id": "u7l9",
+     "title": "Discrete mathematics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Math of separate, countable things.\"",
+       "answer": "Discrete mathematics",
+       "choices": [
+        "Linear algebra",
+        "Discrete mathematics",
+        "Statistics",
+        "Geometry and trigonometry"
+       ],
+       "id": "fieldbook_260"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Combinatorics: counting without listing",
+       "answer": "Discrete mathematics",
+       "choices": [
+        "Discrete mathematics",
+        "Statistics",
+        "Calculus",
+        "Topology"
+       ],
+       "id": "fieldbook_261"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Graphs: anything that is nodes and connections",
+       "answer": "Discrete mathematics",
+       "choices": [
+        "Discrete mathematics",
+        "Algebra",
+        "Logic and set theory",
+        "Statistics"
+       ],
+       "id": "fieldbook_262"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Induction: prove the first step and the step from any to next",
+       "answer": "Discrete mathematics",
+       "choices": [
+        "Statistics",
+        "Topology",
+        "Discrete mathematics",
+        "Calculus"
+       ],
+       "id": "fieldbook_263"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: P vs NP is the biggest open question in computing",
+       "answer": "Discrete mathematics",
+       "choices": [
+        "Topology",
+        "Logic and set theory",
+        "Arithmetic and number theory",
+        "Discrete mathematics"
+       ],
+       "id": "fieldbook_264"
+      }
+     ]
+    },
+    {
+     "id": "u7l10",
+     "title": "Differential equations and dynamics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Systems that change according to rules.\"",
+       "answer": "Differential equations and dynamics",
+       "choices": [
+        "Arithmetic and number theory",
+        "Statistics",
+        "Probability",
+        "Differential equations and dynamics"
+       ],
+       "id": "fieldbook_265"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The law gives the rate; the solution gives the path",
+       "answer": "Differential equations and dynamics",
+       "choices": [
+        "Differential equations and dynamics",
+        "Linear algebra",
+        "Calculus",
+        "Discrete mathematics"
+       ],
+       "id": "fieldbook_266"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Equilibria: where nothing changes",
+       "answer": "Differential equations and dynamics",
+       "choices": [
+        "Probability",
+        "Discrete mathematics",
+        "Algebra",
+        "Differential equations and dynamics"
+       ],
+       "id": "fieldbook_267"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Chaos: deterministic but unpredictable",
+       "answer": "Differential equations and dynamics",
+       "choices": [
+        "Logic and set theory",
+        "Discrete mathematics",
+        "Differential equations and dynamics",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_268"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most real systems are simulated, not solved",
+       "answer": "Differential equations and dynamics",
+       "choices": [
+        "Calculus",
+        "Statistics",
+        "Differential equations and dynamics",
+        "Logic and set theory"
+       ],
+       "id": "fieldbook_269"
+      }
+     ]
+    },
+    {
+     "id": "u7l11",
+     "title": "Topology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Shape without measurement.\"",
+       "answer": "Topology",
+       "choices": [
+        "Differential equations and dynamics",
+        "Topology",
+        "Probability",
+        "Arithmetic and number theory"
+       ],
+       "id": "fieldbook_270"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Stretching allowed, tearing not",
+       "answer": "Topology",
+       "choices": [
+        "Topology",
+        "Discrete mathematics",
+        "Arithmetic and number theory",
+        "Statistics"
+       ],
+       "id": "fieldbook_271"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Holes are the invariant",
+       "answer": "Topology",
+       "choices": [
+        "Probability",
+        "Algebra",
+        "Topology",
+        "Linear algebra"
+       ],
+       "id": "fieldbook_272"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A sphere and a torus are different; a cup and a torus are the same",
+       "answer": "Topology",
+       "choices": [
+        "Calculus",
+        "Statistics",
+        "Discrete mathematics",
+        "Topology"
+       ],
+       "id": "fieldbook_273"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Knots are topology",
+       "answer": "Topology",
+       "choices": [
+        "Algebra",
+        "Geometry and trigonometry",
+        "Calculus",
+        "Topology"
+       ],
+       "id": "fieldbook_274"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u8",
+   "title": "Mind & Society",
+   "lessons": [
+    {
+     "id": "u8l1",
+     "title": "Psychology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How people think, feel, and behave.\"",
+       "answer": "Psychology",
+       "choices": [
+        "Economics",
+        "Political science",
+        "Philosophy",
+        "Psychology"
+       ],
+       "id": "fieldbook_275"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Perception is inference, not photography",
+       "answer": "Psychology",
+       "choices": [
+        "Psychology",
+        "History",
+        "Economics",
+        "Sociology"
+       ],
+       "id": "fieldbook_276"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Memory is reconstructive and unreliable",
+       "answer": "Psychology",
+       "choices": [
+        "Political science",
+        "History",
+        "Economics",
+        "Psychology"
+       ],
+       "id": "fieldbook_277"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Cognitive biases are systematic, not random",
+       "answer": "Psychology",
+       "choices": [
+        "Psychology",
+        "Philosophy",
+        "Cognitive science",
+        "Political science"
+       ],
+       "id": "fieldbook_278"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The replication crisis reshaped the field",
+       "answer": "Psychology",
+       "choices": [
+        "Sociology",
+        "Anthropology",
+        "Economics",
+        "Psychology"
+       ],
+       "id": "fieldbook_279"
+      }
+     ]
+    },
+    {
+     "id": "u8l2",
+     "title": "Cognitive science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The mind as an information processor.\"",
+       "answer": "Cognitive science",
+       "choices": [
+        "Linguistics",
+        "Economics",
+        "Political science",
+        "Cognitive science"
+       ],
+       "id": "fieldbook_280"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mind as computation is the working assumption",
+       "answer": "Cognitive science",
+       "choices": [
+        "History",
+        "Political science",
+        "Cognitive science",
+        "Linguistics"
+       ],
+       "id": "fieldbook_281"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Working memory holds about four items",
+       "answer": "Cognitive science",
+       "choices": [
+        "Cognitive science",
+        "Psychology",
+        "Linguistics",
+        "Philosophy"
+       ],
+       "id": "fieldbook_282"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Language learning is fast, structured, and universal",
+       "answer": "Cognitive science",
+       "choices": [
+        "Economics",
+        "Linguistics",
+        "Cognitive science",
+        "History"
+       ],
+       "id": "fieldbook_283"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Embodiment: thinking uses the body, not just the head",
+       "answer": "Cognitive science",
+       "choices": [
+        "Cognitive science",
+        "Economics",
+        "Sociology",
+        "Linguistics"
+       ],
+       "id": "fieldbook_284"
+      }
+     ]
+    },
+    {
+     "id": "u8l3",
+     "title": "Linguistics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Language as a system.\"",
+       "answer": "Linguistics",
+       "choices": [
+        "Linguistics",
+        "Anthropology",
+        "Sociology",
+        "Cognitive science"
+       ],
+       "id": "fieldbook_285"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: All languages are equally complex",
+       "answer": "Linguistics",
+       "choices": [
+        "Linguistics",
+        "Psychology",
+        "Political science",
+        "Philosophy"
+       ],
+       "id": "fieldbook_286"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Children learn grammar nobody teaches them",
+       "answer": "Linguistics",
+       "choices": [
+        "Cognitive science",
+        "Sociology",
+        "History",
+        "Linguistics"
+       ],
+       "id": "fieldbook_287"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Languages evolve and form family trees",
+       "answer": "Linguistics",
+       "choices": [
+        "Cognitive science",
+        "Sociology",
+        "Philosophy",
+        "Linguistics"
+       ],
+       "id": "fieldbook_288"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Speech is primary, writing is technology",
+       "answer": "Linguistics",
+       "choices": [
+        "History",
+        "Anthropology",
+        "Linguistics",
+        "Economics"
+       ],
+       "id": "fieldbook_289"
+      }
+     ]
+    },
+    {
+     "id": "u8l4",
+     "title": "Economics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How people allocate scarce things.\"",
+       "answer": "Economics",
+       "choices": [
+        "Philosophy",
+        "Political science",
+        "Anthropology",
+        "Economics"
+       ],
+       "id": "fieldbook_290"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Incentives shape behaviour, always",
+       "answer": "Economics",
+       "choices": [
+        "Linguistics",
+        "Philosophy",
+        "Sociology",
+        "Economics"
+       ],
+       "id": "fieldbook_291"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Prices carry information",
+       "answer": "Economics",
+       "choices": [
+        "Political science",
+        "Philosophy",
+        "Economics",
+        "Linguistics"
+       ],
+       "id": "fieldbook_292"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Trade-offs and opportunity cost",
+       "answer": "Economics",
+       "choices": [
+        "Psychology",
+        "Political science",
+        "History",
+        "Economics"
+       ],
+       "id": "fieldbook_293"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Inflation is too much money chasing too few goods, roughly",
+       "answer": "Economics",
+       "choices": [
+        "Cognitive science",
+        "Psychology",
+        "Political science",
+        "Economics"
+       ],
+       "id": "fieldbook_294"
+      }
+     ]
+    },
+    {
+     "id": "u8l5",
+     "title": "Sociology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Groups, institutions, and society.\"",
+       "answer": "Sociology",
+       "choices": [
+        "Political science",
+        "Sociology",
+        "Psychology",
+        "Philosophy"
+       ],
+       "id": "fieldbook_295"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Social facts exist above the individual",
+       "answer": "Sociology",
+       "choices": [
+        "Economics",
+        "Sociology",
+        "Linguistics",
+        "Philosophy"
+       ],
+       "id": "fieldbook_296"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Norms are enforced informally and constantly",
+       "answer": "Sociology",
+       "choices": [
+        "Psychology",
+        "Sociology",
+        "History",
+        "Linguistics"
+       ],
+       "id": "fieldbook_297"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Institutions outlive the people in them",
+       "answer": "Sociology",
+       "choices": [
+        "History",
+        "Linguistics",
+        "Sociology",
+        "Anthropology"
+       ],
+       "id": "fieldbook_298"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Networks shape what you know and who you become",
+       "answer": "Sociology",
+       "choices": [
+        "Philosophy",
+        "Sociology",
+        "Political science",
+        "Economics"
+       ],
+       "id": "fieldbook_299"
+      }
+     ]
+    },
+    {
+     "id": "u8l6",
+     "title": "Anthropology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Humans across cultures and time.\"",
+       "answer": "Anthropology",
+       "choices": [
+        "Anthropology",
+        "Political science",
+        "Linguistics",
+        "Philosophy"
+       ],
+       "id": "fieldbook_300"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Culture is learned, shared, and mostly invisible to those inside it",
+       "answer": "Anthropology",
+       "choices": [
+        "Economics",
+        "Psychology",
+        "Political science",
+        "Anthropology"
+       ],
+       "id": "fieldbook_301"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Humans left Africa about 70,000 years ago",
+       "answer": "Anthropology",
+       "choices": [
+        "Linguistics",
+        "Psychology",
+        "Anthropology",
+        "History"
+       ],
+       "id": "fieldbook_302"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Agriculture is only 10,000 years old",
+       "answer": "Anthropology",
+       "choices": [
+        "Anthropology",
+        "Sociology",
+        "Political science",
+        "Philosophy"
+       ],
+       "id": "fieldbook_303"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Hunter-gatherers worked fewer hours than you",
+       "answer": "Anthropology",
+       "choices": [
+        "Political science",
+        "History",
+        "Anthropology",
+        "Linguistics"
+       ],
+       "id": "fieldbook_304"
+      }
+     ]
+    },
+    {
+     "id": "u8l7",
+     "title": "Political science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Power, government, and collective decision.\"",
+       "answer": "Political science",
+       "choices": [
+        "Anthropology",
+        "Political science",
+        "Cognitive science",
+        "Philosophy"
+       ],
+       "id": "fieldbook_305"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Institutions shape outcomes more than leaders",
+       "answer": "Political science",
+       "choices": [
+        "Philosophy",
+        "Political science",
+        "Economics",
+        "Psychology"
+       ],
+       "id": "fieldbook_306"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every voting system has provable flaws",
+       "answer": "Political science",
+       "choices": [
+        "Political science",
+        "Sociology",
+        "Philosophy",
+        "Anthropology"
+       ],
+       "id": "fieldbook_307"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Collective action problems: rational individuals, bad group outcomes",
+       "answer": "Political science",
+       "choices": [
+        "Linguistics",
+        "Political science",
+        "Psychology",
+        "History"
+       ],
+       "id": "fieldbook_308"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Legitimacy is cheaper than force",
+       "answer": "Political science",
+       "choices": [
+        "History",
+        "Sociology",
+        "Political science",
+        "Philosophy"
+       ],
+       "id": "fieldbook_309"
+      }
+     ]
+    },
+    {
+     "id": "u8l8",
+     "title": "History",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"What happened and why.\"",
+       "answer": "History",
+       "choices": [
+        "History",
+        "Economics",
+        "Psychology",
+        "Political science"
+       ],
+       "id": "fieldbook_310"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sources have bias; read against the grain",
+       "answer": "History",
+       "choices": [
+        "Political science",
+        "Economics",
+        "History",
+        "Linguistics"
+       ],
+       "id": "fieldbook_311"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Contingency: small events, huge consequences",
+       "answer": "History",
+       "choices": [
+        "Anthropology",
+        "History",
+        "Cognitive science",
+        "Economics"
+       ],
+       "id": "fieldbook_312"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most people in history were farmers",
+       "answer": "History",
+       "choices": [
+        "Anthropology",
+        "Political science",
+        "History",
+        "Psychology"
+       ],
+       "id": "fieldbook_313"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Progress is real and not guaranteed",
+       "answer": "History",
+       "choices": [
+        "Economics",
+        "History",
+        "Philosophy",
+        "Cognitive science"
+       ],
+       "id": "fieldbook_314"
+      }
+     ]
+    },
+    {
+     "id": "u8l9",
+     "title": "Philosophy",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The questions underneath everything else.\"",
+       "answer": "Philosophy",
+       "choices": [
+        "Political science",
+        "Philosophy",
+        "History",
+        "Anthropology"
+       ],
+       "id": "fieldbook_315"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Epistemology: what knowledge is",
+       "answer": "Philosophy",
+       "choices": [
+        "Linguistics",
+        "Anthropology",
+        "Philosophy",
+        "Psychology"
+       ],
+       "id": "fieldbook_316"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Ethics: what we owe each other",
+       "answer": "Philosophy",
+       "choices": [
+        "Anthropology",
+        "Philosophy",
+        "Linguistics",
+        "History"
+       ],
+       "id": "fieldbook_317"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Metaphysics: what is real",
+       "answer": "Philosophy",
+       "choices": [
+        "Philosophy",
+        "Political science",
+        "History",
+        "Psychology"
+       ],
+       "id": "fieldbook_318"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Logic: what follows from what",
+       "answer": "Philosophy",
+       "choices": [
+        "History",
+        "Sociology",
+        "Philosophy",
+        "Anthropology"
+       ],
+       "id": "fieldbook_319"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u9",
+   "title": "Physics",
+   "lessons": [
+    {
+     "id": "u9l1",
+     "title": "Classical mechanics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How things move and why.\"",
+       "answer": "Classical mechanics",
+       "choices": [
+        "Astrophysics and cosmology",
+        "Optics",
+        "Nuclear physics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_320"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Inertia: nothing changes speed or direction without a force",
+       "answer": "Classical mechanics",
+       "choices": [
+        "Relativity",
+        "Classical mechanics",
+        "Optics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_321"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: F = ma: force is mass times acceleration",
+       "answer": "Classical mechanics",
+       "choices": [
+        "Nuclear physics",
+        "Acoustics",
+        "Classical mechanics",
+        "Astrophysics and cosmology"
+       ],
+       "id": "fieldbook_322"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Momentum and energy are conserved in a closed system",
+       "answer": "Classical mechanics",
+       "choices": [
+        "Astrophysics and cosmology",
+        "Particle physics",
+        "Classical mechanics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_323"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Gravity pulls with strength proportional to mass and falls off with distance squared",
+       "answer": "Classical mechanics",
+       "choices": [
+        "Particle physics",
+        "Fluid dynamics",
+        "Relativity",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_324"
+      }
+     ]
+    },
+    {
+     "id": "u9l2",
+     "title": "Thermodynamics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Heat, energy, and the direction of time.\"",
+       "answer": "Thermodynamics",
+       "choices": [
+        "Quantum mechanics",
+        "Acoustics",
+        "Astrophysics and cosmology",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_325"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: First law: energy is conserved",
+       "answer": "Thermodynamics",
+       "choices": [
+        "Particle physics",
+        "Fluid dynamics",
+        "Optics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_326"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Second law: entropy of the universe always rises",
+       "answer": "Thermodynamics",
+       "choices": [
+        "Particle physics",
+        "Relativity",
+        "Thermodynamics",
+        "Fluid dynamics"
+       ],
+       "id": "fieldbook_327"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Temperature is average molecular motion",
+       "answer": "Thermodynamics",
+       "choices": [
+        "Electromagnetism",
+        "Optics",
+        "Condensed matter physics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_328"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Absolute zero is the floor, never quite reached",
+       "answer": "Thermodynamics",
+       "choices": [
+        "Classical mechanics",
+        "Quantum mechanics",
+        "Particle physics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_329"
+      }
+     ]
+    },
+    {
+     "id": "u9l3",
+     "title": "Electromagnetism",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Electricity, magnetism, and light as one thing.\"",
+       "answer": "Electromagnetism",
+       "choices": [
+        "Classical mechanics",
+        "Particle physics",
+        "Fluid dynamics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_330"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Like charges repel, opposites attract",
+       "answer": "Electromagnetism",
+       "choices": [
+        "Condensed matter physics",
+        "Thermodynamics",
+        "Electromagnetism",
+        "Optics"
+       ],
+       "id": "fieldbook_331"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A current makes a magnetic field; a changing field makes a current",
+       "answer": "Electromagnetism",
+       "choices": [
+        "Electromagnetism",
+        "Nuclear physics",
+        "Condensed matter physics",
+        "Optics"
+       ],
+       "id": "fieldbook_332"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Light is an electromagnetic wave",
+       "answer": "Electromagnetism",
+       "choices": [
+        "Quantum mechanics",
+        "Electromagnetism",
+        "Thermodynamics",
+        "Relativity"
+       ],
+       "id": "fieldbook_333"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The whole spectrum from radio to gamma is one phenomenon",
+       "answer": "Electromagnetism",
+       "choices": [
+        "Relativity",
+        "Electromagnetism",
+        "Acoustics",
+        "Condensed matter physics"
+       ],
+       "id": "fieldbook_334"
+      }
+     ]
+    },
+    {
+     "id": "u9l4",
+     "title": "Relativity",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Space and time as one flexible fabric.\"",
+       "answer": "Relativity",
+       "choices": [
+        "Thermodynamics",
+        "Astrophysics and cosmology",
+        "Optics",
+        "Relativity"
+       ],
+       "id": "fieldbook_335"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Nothing with mass reaches light speed",
+       "answer": "Relativity",
+       "choices": [
+        "Relativity",
+        "Optics",
+        "Fluid dynamics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_336"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Moving clocks run slow",
+       "answer": "Relativity",
+       "choices": [
+        "Classical mechanics",
+        "Thermodynamics",
+        "Quantum mechanics",
+        "Relativity"
+       ],
+       "id": "fieldbook_337"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: E = mc\u00b2",
+       "answer": "Relativity",
+       "choices": [
+        "Acoustics",
+        "Relativity",
+        "Astrophysics and cosmology",
+        "Particle physics"
+       ],
+       "id": "fieldbook_338"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Gravity is curved spacetime, not a pull",
+       "answer": "Relativity",
+       "choices": [
+        "Optics",
+        "Relativity",
+        "Particle physics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_339"
+      }
+     ]
+    },
+    {
+     "id": "u9l5",
+     "title": "Quantum mechanics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How the very small actually behaves.\"",
+       "answer": "Quantum mechanics",
+       "choices": [
+        "Quantum mechanics",
+        "Classical mechanics",
+        "Fluid dynamics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_340"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Particles are also waves",
+       "answer": "Quantum mechanics",
+       "choices": [
+        "Astrophysics and cosmology",
+        "Thermodynamics",
+        "Nuclear physics",
+        "Quantum mechanics"
+       ],
+       "id": "fieldbook_341"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Energy is quantised in discrete steps",
+       "answer": "Quantum mechanics",
+       "choices": [
+        "Quantum mechanics",
+        "Optics",
+        "Relativity",
+        "Particle physics"
+       ],
+       "id": "fieldbook_342"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Uncertainty: position and momentum cannot both be sharp",
+       "answer": "Quantum mechanics",
+       "choices": [
+        "Nuclear physics",
+        "Quantum mechanics",
+        "Electromagnetism",
+        "Astrophysics and cosmology"
+       ],
+       "id": "fieldbook_343"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Entanglement links particles across any distance",
+       "answer": "Quantum mechanics",
+       "choices": [
+        "Classical mechanics",
+        "Quantum mechanics",
+        "Electromagnetism",
+        "Particle physics"
+       ],
+       "id": "fieldbook_344"
+      }
+     ]
+    },
+    {
+     "id": "u9l6",
+     "title": "Particle physics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The smallest pieces of matter and the forces between them.\"",
+       "answer": "Particle physics",
+       "choices": [
+        "Quantum mechanics",
+        "Condensed matter physics",
+        "Classical mechanics",
+        "Particle physics"
+       ],
+       "id": "fieldbook_345"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Six quarks, six leptons, force carriers, the Higgs",
+       "answer": "Particle physics",
+       "choices": [
+        "Electromagnetism",
+        "Particle physics",
+        "Classical mechanics",
+        "Optics"
+       ],
+       "id": "fieldbook_346"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Four forces: gravity, electromagnetism, strong, weak",
+       "answer": "Particle physics",
+       "choices": [
+        "Particle physics",
+        "Nuclear physics",
+        "Astrophysics and cosmology",
+        "Fluid dynamics"
+       ],
+       "id": "fieldbook_347"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Antimatter exists and annihilates with matter",
+       "answer": "Particle physics",
+       "choices": [
+        "Particle physics",
+        "Acoustics",
+        "Quantum mechanics",
+        "Optics"
+       ],
+       "id": "fieldbook_348"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Most of the universe is not on the list",
+       "answer": "Particle physics",
+       "choices": [
+        "Particle physics",
+        "Nuclear physics",
+        "Acoustics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_349"
+      }
+     ]
+    },
+    {
+     "id": "u9l7",
+     "title": "Optics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Light: how it bends, splits, and images.\"",
+       "answer": "Optics",
+       "choices": [
+        "Optics",
+        "Classical mechanics",
+        "Nuclear physics",
+        "Relativity"
+       ],
+       "id": "fieldbook_350"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Refraction: bending when light changes medium",
+       "answer": "Optics",
+       "choices": [
+        "Electromagnetism",
+        "Particle physics",
+        "Fluid dynamics",
+        "Optics"
+       ],
+       "id": "fieldbook_351"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Reflection: angle in equals angle out",
+       "answer": "Optics",
+       "choices": [
+        "Optics",
+        "Classical mechanics",
+        "Thermodynamics",
+        "Nuclear physics"
+       ],
+       "id": "fieldbook_352"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Diffraction and interference prove light is a wave",
+       "answer": "Optics",
+       "choices": [
+        "Particle physics",
+        "Nuclear physics",
+        "Optics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_353"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Colour is wavelength",
+       "answer": "Optics",
+       "choices": [
+        "Nuclear physics",
+        "Classical mechanics",
+        "Optics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_354"
+      }
+     ]
+    },
+    {
+     "id": "u9l8",
+     "title": "Acoustics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Sound and vibration.\"",
+       "answer": "Acoustics",
+       "choices": [
+        "Acoustics",
+        "Fluid dynamics",
+        "Quantum mechanics",
+        "Optics"
+       ],
+       "id": "fieldbook_355"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Sound needs a medium",
+       "answer": "Acoustics",
+       "choices": [
+        "Acoustics",
+        "Fluid dynamics",
+        "Quantum mechanics",
+        "Astrophysics and cosmology"
+       ],
+       "id": "fieldbook_356"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Frequency is pitch, amplitude is loudness",
+       "answer": "Acoustics",
+       "choices": [
+        "Particle physics",
+        "Nuclear physics",
+        "Thermodynamics",
+        "Acoustics"
+       ],
+       "id": "fieldbook_357"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Resonance: small pushes at the right rate build large vibrations",
+       "answer": "Acoustics",
+       "choices": [
+        "Electromagnetism",
+        "Acoustics",
+        "Classical mechanics",
+        "Condensed matter physics"
+       ],
+       "id": "fieldbook_358"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Doppler: pitch shifts with motion",
+       "answer": "Acoustics",
+       "choices": [
+        "Quantum mechanics",
+        "Astrophysics and cosmology",
+        "Acoustics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_359"
+      }
+     ]
+    },
+    {
+     "id": "u9l9",
+     "title": "Nuclear physics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"The atomic nucleus, radioactivity, fission and fusion.\"",
+       "answer": "Nuclear physics",
+       "choices": [
+        "Nuclear physics",
+        "Fluid dynamics",
+        "Relativity",
+        "Quantum mechanics"
+       ],
+       "id": "fieldbook_360"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Half-life: time for half a sample to decay",
+       "answer": "Nuclear physics",
+       "choices": [
+        "Electromagnetism",
+        "Nuclear physics",
+        "Optics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_361"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Fission splits heavy atoms, fusion joins light ones",
+       "answer": "Nuclear physics",
+       "choices": [
+        "Particle physics",
+        "Acoustics",
+        "Nuclear physics",
+        "Condensed matter physics"
+       ],
+       "id": "fieldbook_362"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Binding energy is why either releases energy",
+       "answer": "Nuclear physics",
+       "choices": [
+        "Nuclear physics",
+        "Condensed matter physics",
+        "Quantum mechanics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_363"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Radiation comes in alpha, beta, gamma",
+       "answer": "Nuclear physics",
+       "choices": [
+        "Nuclear physics",
+        "Quantum mechanics",
+        "Optics",
+        "Relativity"
+       ],
+       "id": "fieldbook_364"
+      }
+     ]
+    },
+    {
+     "id": "u9l10",
+     "title": "Condensed matter physics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Why solids and liquids have the properties they have.\"",
+       "answer": "Condensed matter physics",
+       "choices": [
+        "Condensed matter physics",
+        "Nuclear physics",
+        "Electromagnetism",
+        "Relativity"
+       ],
+       "id": "fieldbook_365"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Band theory: energy levels decide conductor vs insulator",
+       "answer": "Condensed matter physics",
+       "choices": [
+        "Fluid dynamics",
+        "Condensed matter physics",
+        "Thermodynamics",
+        "Acoustics"
+       ],
+       "id": "fieldbook_366"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Semiconductors sit in between and can be switched",
+       "answer": "Condensed matter physics",
+       "choices": [
+        "Fluid dynamics",
+        "Condensed matter physics",
+        "Electromagnetism",
+        "Relativity"
+       ],
+       "id": "fieldbook_367"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Superconductivity: zero resistance below a critical temperature",
+       "answer": "Condensed matter physics",
+       "choices": [
+        "Condensed matter physics",
+        "Nuclear physics",
+        "Optics",
+        "Thermodynamics"
+       ],
+       "id": "fieldbook_368"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Phase transitions: sudden collective changes",
+       "answer": "Condensed matter physics",
+       "choices": [
+        "Acoustics",
+        "Quantum mechanics",
+        "Condensed matter physics",
+        "Particle physics"
+       ],
+       "id": "fieldbook_369"
+      }
+     ]
+    },
+    {
+     "id": "u9l11",
+     "title": "Fluid dynamics",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"How liquids and gases flow.\"",
+       "answer": "Fluid dynamics",
+       "choices": [
+        "Quantum mechanics",
+        "Fluid dynamics",
+        "Acoustics",
+        "Electromagnetism"
+       ],
+       "id": "fieldbook_370"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Viscosity: resistance to flow",
+       "answer": "Fluid dynamics",
+       "choices": [
+        "Fluid dynamics",
+        "Particle physics",
+        "Electromagnetism",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_371"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Bernoulli: faster fluid, lower pressure",
+       "answer": "Fluid dynamics",
+       "choices": [
+        "Thermodynamics",
+        "Nuclear physics",
+        "Fluid dynamics",
+        "Condensed matter physics"
+       ],
+       "id": "fieldbook_372"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Laminar flow is smooth, turbulent flow is chaotic",
+       "answer": "Fluid dynamics",
+       "choices": [
+        "Fluid dynamics",
+        "Optics",
+        "Particle physics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_373"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Navier-Stokes equations describe it all and remain unsolved",
+       "answer": "Fluid dynamics",
+       "choices": [
+        "Fluid dynamics",
+        "Classical mechanics",
+        "Acoustics",
+        "Nuclear physics"
+       ],
+       "id": "fieldbook_374"
+      }
+     ]
+    },
+    {
+     "id": "u9l12",
+     "title": "Astrophysics and cosmology",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Stars, galaxies, and the universe as a whole.\"",
+       "answer": "Astrophysics and cosmology",
+       "choices": [
+        "Electromagnetism",
+        "Astrophysics and cosmology",
+        "Thermodynamics",
+        "Relativity"
+       ],
+       "id": "fieldbook_375"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Stars fuse hydrogen into heavier elements",
+       "answer": "Astrophysics and cosmology",
+       "choices": [
+        "Nuclear physics",
+        "Classical mechanics",
+        "Astrophysics and cosmology",
+        "Quantum mechanics"
+       ],
+       "id": "fieldbook_376"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Every element heavier than helium was made in a star",
+       "answer": "Astrophysics and cosmology",
+       "choices": [
+        "Quantum mechanics",
+        "Astrophysics and cosmology",
+        "Acoustics",
+        "Classical mechanics"
+       ],
+       "id": "fieldbook_377"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The universe is expanding and accelerating",
+       "answer": "Astrophysics and cosmology",
+       "choices": [
+        "Fluid dynamics",
+        "Astrophysics and cosmology",
+        "Thermodynamics",
+        "Particle physics"
+       ],
+       "id": "fieldbook_378"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: 95% of it is dark matter and dark energy",
+       "answer": "Astrophysics and cosmology",
+       "choices": [
+        "Acoustics",
+        "Astrophysics and cosmology",
+        "Thermodynamics",
+        "Condensed matter physics"
+       ],
+       "id": "fieldbook_379"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
