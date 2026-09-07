@@ -76,9 +76,6 @@ closes the "iOS never actually run" gap.
 
 ## Open, gaps left by the 2026-08-30 content/parity work
 
-- [x] **The jsdom harness is not in the repo.** Decided 2026-09-06: not worth the dependency; CI runs the Swift unit tests on every push and the web app stays dependency-free. Recreate ad hoc if a DOM regression ever needs it. Original note: it ran from a scratch dir because it needs `jsdom`
-  and this repo is deliberately dependency-free with no build step. Either re-create it when needed
-  or decide the dep is worth it; right now that coverage is not repeatable.
 - [ ] **iOS `match` and word-bank UI have never been run.** They compile and
   `ContentStoreTests` proves the JSON decodes with `words`/`audio`/`pairs` intact, but no one has
   tapped through a lesson in the simulator. `FlowRow` (the custom wrapping `Layout`) and
