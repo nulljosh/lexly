@@ -351,6 +351,14 @@ function saveSrsData(srs) {
     localStorage.setItem(SRS_KEY, JSON.stringify(srs));
 }
 
+// Standard SM-2 spaced-repetition scheduler (SuperMemo 2). `quality` is 0-5,
+// where >=3 counts as a correct recall. First two correct reps get fixed
+// 1-day/6-day intervals; after that the interval grows by the card's easiness
+// factor each time. Any lapse (quality < 3) resets repetitions and interval
+// to start over, but does NOT reset easiness -- the 1.3 floor and the formula
+// below are SM-2's own constants, not tuned here. This card shape (`easiness`,
+// `interval`, `repetitions`, `nextReview`) is shared with the iOS/macOS app
+// via the `srs` Supabase column, so it must not change independently there.
 function updateSrs(questionId, quality) {
     const srs = getSrsData();
     const card = srs[questionId] || { easiness: 2.5, interval: 1, repetitions: 0, nextReview: new Date().toISOString() };

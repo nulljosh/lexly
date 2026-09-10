@@ -174,6 +174,11 @@ function initChess(board) {
     }
 
     function isSquareAttacked(b, tr, tc, byWhite) {
+        // Uses getRawMoves, not getLegalMoves, on purpose: legality checking calls
+        // isInCheck which calls this function, so checking against legal moves here
+        // would recurse forever. Raw (pseudo-legal) moves are enough to know if a
+        // square is attacked -- whether the attacker's own king would be left in
+        // check by making that move is irrelevant to the attack itself.
         for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
             const p = b[r][c];
             if (p === ' ' || (byWhite ? !isWhite(p) : !isBlack(p))) continue;
@@ -188,6 +193,9 @@ function initChess(board) {
     }
 
     function getLegalMoves(row, col, b, turn) {
+        // A raw move is only legal if playing it out on a scratch copy of the board
+        // doesn't leave the mover's own king in check. This is what actually
+        // enforces "can't move into/stay in check" -- there's no separate pin logic.
         return getRawMoves(row, col, b).filter(([r, c]) => {
             const copy = b.map(rw => [...rw]);
             copy[r][c] = copy[row][col]; copy[row][col] = ' ';

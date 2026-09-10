@@ -975,10 +975,10 @@
        "question": "Which field: \"Preventing and treating disease.\"",
        "answer": "Medicine",
        "choices": [
-        "Agriculture",
-        "Epidemiology and public health",
+        "Medicine",
+        "Accounting",
         "Engineering",
-        "Medicine"
+        "Agriculture"
        ],
        "id": "fieldbook_73"
       },
@@ -987,10 +987,10 @@
        "question": "Which field says: Randomised trials are the standard of evidence",
        "answer": "Medicine",
        "choices": [
-        "Agriculture",
-        "Medicine",
+        "Epidemiology and public health",
         "Accounting",
-        "Nutrition"
+        "Finance",
+        "Medicine"
        ],
        "id": "fieldbook_74"
       },
@@ -999,10 +999,10 @@
        "question": "Which field says: Most conditions resolve on their own",
        "answer": "Medicine",
        "choices": [
+        "Accounting",
         "Nutrition",
         "Medicine",
-        "Agriculture",
-        "Epidemiology and public health"
+        "Rocket science"
        ],
        "id": "fieldbook_75"
       },
@@ -1011,10 +1011,10 @@
        "question": "Which field says: Prevention beats treatment",
        "answer": "Medicine",
        "choices": [
-        "Engineering",
-        "Medicine",
         "Nutrition",
-        "Agriculture"
+        "Medicine",
+        "Rocket science",
+        "Finance"
        ],
        "id": "fieldbook_76"
       },
@@ -1023,8 +1023,8 @@
        "question": "Which field says: Drugs have doses; the dose is the poison",
        "answer": "Medicine",
        "choices": [
-        "Agriculture",
-        "Epidemiology and public health",
+        "Accounting",
+        "Rocket science",
         "Nutrition",
         "Medicine"
        ],
@@ -1041,10 +1041,10 @@
        "question": "Why is a calorie of sugar not the same as a calorie of beans in practice?",
        "answer": "Fiber and protein change how fast it is absorbed and how full you feel",
        "choices": [
-        "Beans have no calories",
-        "Fiber and protein change how fast it is absorbed and how full you feel",
         "The body cannot count sugar",
-        "Sugar calories are bigger"
+        "Sugar calories are bigger",
+        "Beans have no calories",
+        "Fiber and protein change how fast it is absorbed and how full you feel"
        ],
        "id": "fieldbook_78"
       },
@@ -1054,7 +1054,7 @@
        "answer": "Nutrition",
        "choices": [
         "Engineering",
-        "Agriculture",
+        "Epidemiology and public health",
         "Nutrition",
         "Medicine"
        ],
@@ -1065,10 +1065,10 @@
        "question": "Which field says: Calories are energy; the body obeys thermodynamics",
        "answer": "Nutrition",
        "choices": [
+        "Medicine",
+        "Engineering",
         "Nutrition",
-        "Agriculture",
-        "Accounting",
-        "Engineering"
+        "Finance"
        ],
        "id": "fieldbook_80"
       },
@@ -1077,10 +1077,10 @@
        "question": "Which field says: Protein and fibre satiate; refined carbs do not",
        "answer": "Nutrition",
        "choices": [
-        "Accounting",
-        "Nutrition",
-        "Agriculture",
-        "Medicine"
+        "Engineering",
+        "Epidemiology and public health",
+        "Rocket science",
+        "Nutrition"
        ],
        "id": "fieldbook_81"
       },
@@ -1089,10 +1089,10 @@
        "question": "Which field says: Vitamins are small molecules the body cannot make",
        "answer": "Nutrition",
        "choices": [
-        "Engineering",
-        "Finance",
-        "Medicine",
-        "Nutrition"
+        "Accounting",
+        "Nutrition",
+        "Rocket science",
+        "Medicine"
        ],
        "id": "fieldbook_82"
       },
@@ -1102,9 +1102,9 @@
        "answer": "Nutrition",
        "choices": [
         "Medicine",
+        "Nutrition",
         "Epidemiology and public health",
-        "Finance",
-        "Nutrition"
+        "Finance"
        ],
        "id": "fieldbook_83"
       }
@@ -1120,8 +1120,8 @@
        "answer": "Safety factors cover unknowns, wear, and bad days",
        "choices": [
         "Bridges shrink over time",
-        "Safety factors cover unknowns, wear, and bad days",
         "Steel is cheap",
+        "Safety factors cover unknowns, wear, and bad days",
         "Loads are always underestimated by law"
        ],
        "id": "fieldbook_84"
@@ -1131,10 +1131,10 @@
        "question": "Which field: \"Making things that work under constraints.\"",
        "answer": "Engineering",
        "choices": [
+        "Finance",
         "Accounting",
-        "Engineering",
-        "Nutrition",
-        "Epidemiology and public health"
+        "Agriculture",
+        "Engineering"
        ],
        "id": "fieldbook_85"
       },
@@ -1143,10 +1143,10 @@
        "question": "Which field says: Constraints define the problem",
        "answer": "Engineering",
        "choices": [
-        "Accounting",
-        "Agriculture",
-        "Medicine",
-        "Engineering"
+        "Nutrition",
+        "Epidemiology and public health",
+        "Engineering",
+        "Rocket science"
        ],
        "id": "fieldbook_86"
       },
@@ -1155,10 +1155,10 @@
        "question": "Which field says: Factor of safety: build stronger than needed",
        "answer": "Engineering",
        "choices": [
-        "Medicine",
-        "Engineering",
-        "Agriculture",
-        "Epidemiology and public health"
+        "Nutrition",
+        "Accounting",
+        "Finance",
+        "Engineering"
        ],
        "id": "fieldbook_87"
       },
@@ -1167,10 +1167,10 @@
        "question": "Which field says: Everything is a trade-off",
        "answer": "Engineering",
        "choices": [
-        "Medicine",
-        "Nutrition",
         "Engineering",
-        "Epidemiology and public health"
+        "Nutrition",
+        "Medicine",
+        "Accounting"
        ],
        "id": "fieldbook_88"
       },
@@ -1179,10 +1179,10 @@
        "question": "Which field says: Failures teach more than successes",
        "answer": "Engineering",
        "choices": [
-        "Medicine",
-        "Agriculture",
         "Engineering",
-        "Finance"
+        "Nutrition",
+        "Medicine",
+        "Agriculture"
        ],
        "id": "fieldbook_89"
       }
@@ -1190,6 +1190,84 @@
     },
     {
      "id": "u2l4",
+     "title": "Rocket science",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Why is most of a rocket's mass fuel?",
+       "answer": "Fuel must lift the fuel that lifts the payload, and the cost compounds",
+       "choices": [
+        "Engines weigh almost nothing",
+        "Fuel is cheaper than metal",
+        "Fuel must lift the fuel that lifts the payload, and the cost compounds",
+        "Regulations require a minimum fuel load"
+       ],
+       "id": "fieldbook_90"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Throwing mass backward hard enough to leave the planet.\"",
+       "answer": "Rocket science",
+       "choices": [
+        "Engineering",
+        "Medicine",
+        "Finance",
+        "Rocket science"
+       ],
+       "id": "fieldbook_91"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Thrust is momentum thrown backward",
+       "answer": "Rocket science",
+       "choices": [
+        "Engineering",
+        "Rocket science",
+        "Agriculture",
+        "Medicine"
+       ],
+       "id": "fieldbook_92"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The rocket equation punishes every extra gram",
+       "answer": "Rocket science",
+       "choices": [
+        "Nutrition",
+        "Rocket science",
+        "Engineering",
+        "Epidemiology and public health"
+       ],
+       "id": "fieldbook_93"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Staging discards dead mass mid-flight",
+       "answer": "Rocket science",
+       "choices": [
+        "Rocket science",
+        "Engineering",
+        "Nutrition",
+        "Medicine"
+       ],
+       "id": "fieldbook_94"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Orbit is sideways speed, not height",
+       "answer": "Rocket science",
+       "choices": [
+        "Rocket science",
+        "Epidemiology and public health",
+        "Agriculture",
+        "Engineering"
+       ],
+       "id": "fieldbook_95"
+      }
+     ]
+    },
+    {
+     "id": "u2l5",
      "title": "Agriculture",
      "exercises": [
       {
@@ -1199,146 +1277,68 @@
        "choices": [
         "Seeds expire",
         "Different crops use and restore different soil nutrients and break pest cycles",
-        "Farmers get bored",
-        "The law requires it"
+        "The law requires it",
+        "Farmers get bored"
        ],
-       "id": "fieldbook_90"
+       "id": "fieldbook_96"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Growing food on purpose.\"",
        "answer": "Agriculture",
        "choices": [
+        "Epidemiology and public health",
         "Agriculture",
-        "Accounting",
-        "Engineering",
+        "Rocket science",
         "Nutrition"
        ],
-       "id": "fieldbook_91"
+       "id": "fieldbook_97"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Every crop is a heavily modified wild plant",
        "answer": "Agriculture",
        "choices": [
+        "Accounting",
         "Agriculture",
-        "Engineering",
-        "Medicine",
-        "Epidemiology and public health"
+        "Nutrition",
+        "Engineering"
        ],
-       "id": "fieldbook_92"
+       "id": "fieldbook_98"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Synthetic nitrogen feeds about half of humanity",
        "answer": "Agriculture",
        "choices": [
+        "Finance",
+        "Epidemiology and public health",
         "Accounting",
-        "Medicine",
-        "Agriculture",
-        "Engineering"
+        "Agriculture"
        ],
-       "id": "fieldbook_93"
+       "id": "fieldbook_99"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Soil is alive and slow to rebuild",
        "answer": "Agriculture",
        "choices": [
-        "Medicine",
         "Epidemiology and public health",
         "Agriculture",
+        "Nutrition",
         "Engineering"
        ],
-       "id": "fieldbook_94"
+       "id": "fieldbook_100"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Monoculture is efficient and brittle",
        "answer": "Agriculture",
        "choices": [
-        "Medicine",
-        "Nutrition",
-        "Finance",
-        "Agriculture"
-       ],
-       "id": "fieldbook_95"
-      }
-     ]
-    },
-    {
-     "id": "u2l5",
-     "title": "Epidemiology and public health",
-     "exercises": [
-      {
-       "type": "mathChoice",
-       "question": "What does R equals 2 mean for a disease?",
-       "answer": "Each case infects two more on average",
-       "choices": [
-        "Two people are immune",
-        "Two percent die",
-        "Each case infects two more on average",
-        "It lasts two weeks"
-       ],
-       "id": "fieldbook_96"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field: \"Disease in populations.\"",
-       "answer": "Epidemiology and public health",
-       "choices": [
-        "Epidemiology and public health",
-        "Medicine",
         "Agriculture",
-        "Finance"
-       ],
-       "id": "fieldbook_97"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Look for the pattern, not the individual",
-       "answer": "Epidemiology and public health",
-       "choices": [
         "Finance",
-        "Nutrition",
         "Epidemiology and public health",
         "Accounting"
-       ],
-       "id": "fieldbook_98"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Absolute risk matters more than relative risk",
-       "answer": "Epidemiology and public health",
-       "choices": [
-        "Medicine",
-        "Nutrition",
-        "Engineering",
-        "Epidemiology and public health"
-       ],
-       "id": "fieldbook_99"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: R0: how many each case infects",
-       "answer": "Epidemiology and public health",
-       "choices": [
-        "Nutrition",
-        "Accounting",
-        "Medicine",
-        "Epidemiology and public health"
-       ],
-       "id": "fieldbook_100"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: The biggest wins are boring: water, sewers, vaccines",
-       "answer": "Epidemiology and public health",
-       "choices": [
-        "Epidemiology and public health",
-        "Medicine",
-        "Finance",
-        "Agriculture"
        ],
        "id": "fieldbook_101"
       }
@@ -1346,77 +1346,77 @@
     },
     {
      "id": "u2l6",
-     "title": "Finance",
+     "title": "Epidemiology and public health",
      "exercises": [
       {
        "type": "mathChoice",
-       "question": "Would you rather have one hundred dollars today or in a year?",
-       "answer": "Today; it can earn a return in the meantime",
+       "question": "What does R equals 2 mean for a disease?",
+       "answer": "Each case infects two more on average",
        "choices": [
-        "Today; it can earn a return in the meantime",
-        "No difference",
-        "In a year; it will be worth more",
-        "In a year; it avoids tax"
+        "Each case infects two more on average",
+        "Two people are immune",
+        "Two percent die",
+        "It lasts two weeks"
        ],
        "id": "fieldbook_102"
       },
       {
        "type": "mathChoice",
-       "question": "Which field: \"Moving money across time and risk.\"",
-       "answer": "Finance",
+       "question": "Which field: \"Disease in populations.\"",
+       "answer": "Epidemiology and public health",
        "choices": [
-        "Nutrition",
         "Epidemiology and public health",
-        "Accounting",
-        "Finance"
+        "Engineering",
+        "Nutrition",
+        "Medicine"
        ],
        "id": "fieldbook_103"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Money later is worth less than money now",
-       "answer": "Finance",
+       "question": "Which field says: Look for the pattern, not the individual",
+       "answer": "Epidemiology and public health",
        "choices": [
         "Agriculture",
         "Finance",
-        "Engineering",
+        "Epidemiology and public health",
         "Medicine"
        ],
        "id": "fieldbook_104"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Higher expected return means higher risk, always",
-       "answer": "Finance",
+       "question": "Which field says: Absolute risk matters more than relative risk",
+       "answer": "Epidemiology and public health",
        "choices": [
-        "Medicine",
-        "Finance",
+        "Rocket science",
         "Epidemiology and public health",
-        "Nutrition"
+        "Accounting",
+        "Medicine"
        ],
        "id": "fieldbook_105"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Diversification is the only free lunch",
-       "answer": "Finance",
+       "question": "Which field says: R0: how many each case infects",
+       "answer": "Epidemiology and public health",
        "choices": [
-        "Nutrition",
-        "Finance",
+        "Epidemiology and public health",
         "Accounting",
-        "Epidemiology and public health"
+        "Finance",
+        "Rocket science"
        ],
        "id": "fieldbook_106"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Borrowing to invest multiplies gains and losses equally",
-       "answer": "Finance",
+       "question": "Which field says: The biggest wins are boring: water, sewers, vaccines",
+       "answer": "Epidemiology and public health",
        "choices": [
-        "Agriculture",
-        "Finance",
-        "Medicine",
-        "Engineering"
+        "Nutrition",
+        "Epidemiology and public health",
+        "Accounting",
+        "Finance"
        ],
        "id": "fieldbook_107"
       }
@@ -1424,6 +1424,84 @@
     },
     {
      "id": "u2l7",
+     "title": "Finance",
+     "exercises": [
+      {
+       "type": "mathChoice",
+       "question": "Would you rather have one hundred dollars today or in a year?",
+       "answer": "Today; it can earn a return in the meantime",
+       "choices": [
+        "In a year; it avoids tax",
+        "In a year; it will be worth more",
+        "No difference",
+        "Today; it can earn a return in the meantime"
+       ],
+       "id": "fieldbook_108"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field: \"Moving money across time and risk.\"",
+       "answer": "Finance",
+       "choices": [
+        "Epidemiology and public health",
+        "Finance",
+        "Engineering",
+        "Rocket science"
+       ],
+       "id": "fieldbook_109"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Money later is worth less than money now",
+       "answer": "Finance",
+       "choices": [
+        "Medicine",
+        "Finance",
+        "Agriculture",
+        "Nutrition"
+       ],
+       "id": "fieldbook_110"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Higher expected return means higher risk, always",
+       "answer": "Finance",
+       "choices": [
+        "Nutrition",
+        "Finance",
+        "Accounting",
+        "Agriculture"
+       ],
+       "id": "fieldbook_111"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Diversification is the only free lunch",
+       "answer": "Finance",
+       "choices": [
+        "Rocket science",
+        "Finance",
+        "Medicine",
+        "Engineering"
+       ],
+       "id": "fieldbook_112"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Borrowing to invest multiplies gains and losses equally",
+       "answer": "Finance",
+       "choices": [
+        "Engineering",
+        "Finance",
+        "Epidemiology and public health",
+        "Agriculture"
+       ],
+       "id": "fieldbook_113"
+      }
+     ]
+    },
+    {
+     "id": "u2l8",
      "title": "Accounting",
      "exercises": [
       {
@@ -1431,24 +1509,24 @@
        "question": "A company reports a profit and goes bankrupt the same year. How?",
        "answer": "Profit is on paper; it ran out of cash",
        "choices": [
-        "Profits are taxed away",
         "Bankruptcy is unrelated to money",
-        "Profit is on paper; it ran out of cash",
-        "The report was late"
+        "The report was late",
+        "Profits are taxed away",
+        "Profit is on paper; it ran out of cash"
        ],
-       "id": "fieldbook_108"
+       "id": "fieldbook_114"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Recording what a business owns, owes, earns, and spends so the story adds up.\"",
        "answer": "Accounting",
        "choices": [
-        "Finance",
         "Accounting",
-        "Epidemiology and public health",
-        "Agriculture"
+        "Rocket science",
+        "Medicine",
+        "Engineering"
        ],
-       "id": "fieldbook_109"
+       "id": "fieldbook_115"
       },
       {
        "type": "mathChoice",
@@ -1456,47 +1534,47 @@
        "answer": "Accounting",
        "choices": [
         "Accounting",
-        "Agriculture",
         "Medicine",
-        "Engineering"
+        "Agriculture",
+        "Rocket science"
        ],
-       "id": "fieldbook_110"
+       "id": "fieldbook_116"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Every entry has an equal and opposite entry",
        "answer": "Accounting",
        "choices": [
-        "Accounting",
+        "Agriculture",
         "Medicine",
-        "Epidemiology and public health",
-        "Agriculture"
+        "Accounting",
+        "Nutrition"
        ],
-       "id": "fieldbook_111"
+       "id": "fieldbook_117"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Profit is an opinion, cash is a fact",
        "answer": "Accounting",
        "choices": [
-        "Nutrition",
         "Accounting",
-        "Epidemiology and public health",
-        "Medicine"
+        "Nutrition",
+        "Engineering",
+        "Agriculture"
        ],
-       "id": "fieldbook_112"
+       "id": "fieldbook_118"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Revenue is recorded when earned, not when paid",
        "answer": "Accounting",
        "choices": [
-        "Accounting",
+        "Rocket science",
+        "Epidemiology and public health",
         "Nutrition",
-        "Finance",
-        "Engineering"
+        "Accounting"
        ],
-       "id": "fieldbook_113"
+       "id": "fieldbook_119"
       }
      ]
     }
@@ -1516,28 +1594,16 @@
        "question": "Which part of the cell makes most of its usable energy?",
        "answer": "Mitochondria",
        "choices": [
-        "Nucleus",
-        "Cell membrane",
         "Mitochondria",
-        "Ribosomes"
+        "Cell membrane",
+        "Ribosomes",
+        "Nucleus"
        ],
-       "id": "fieldbook_114"
+       "id": "fieldbook_120"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"The basic unit of life.\"",
-       "answer": "Cell biology",
-       "choices": [
-        "Cell biology",
-        "Evolutionary biology",
-        "Genetics",
-        "Zoology"
-       ],
-       "id": "fieldbook_115"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: The membrane is a selective gate",
        "answer": "Cell biology",
        "choices": [
         "Zoology",
@@ -1545,11 +1611,11 @@
         "Microbiology",
         "Cell biology"
        ],
-       "id": "fieldbook_116"
+       "id": "fieldbook_121"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Mitochondria turn food into ATP",
+       "question": "Which field says: The membrane is a selective gate",
        "answer": "Cell biology",
        "choices": [
         "Cell biology",
@@ -1557,11 +1623,11 @@
         "Molecular biology",
         "Botany"
        ],
-       "id": "fieldbook_117"
+       "id": "fieldbook_122"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: The nucleus holds DNA in complex cells",
+       "question": "Which field says: Mitochondria turn food into ATP",
        "answer": "Cell biology",
        "choices": [
         "Cell biology",
@@ -1569,11 +1635,11 @@
         "Ecology",
         "Zoology"
        ],
-       "id": "fieldbook_118"
+       "id": "fieldbook_123"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Cells divide by copying DNA and splitting",
+       "question": "Which field says: The nucleus holds DNA in complex cells",
        "answer": "Cell biology",
        "choices": [
         "Molecular biology",
@@ -1581,7 +1647,19 @@
         "Botany",
         "Cell biology"
        ],
-       "id": "fieldbook_119"
+       "id": "fieldbook_124"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Cells divide by copying DNA and splitting",
+       "answer": "Cell biology",
+       "choices": [
+        "Microbiology",
+        "Cell biology",
+        "Zoology",
+        "Botany"
+       ],
+       "id": "fieldbook_125"
       }
      ]
     },
@@ -1594,28 +1672,16 @@
        "question": "Two brown-eyed parents have a blue-eyed child. How?",
        "answer": "Both carry a recessive allele and the child got one from each",
        "choices": [
-        "A mutation happened",
         "Both carry a recessive allele and the child got one from each",
         "Eye color is not inherited",
-        "The child will change color later"
+        "The child will change color later",
+        "A mutation happened"
        ],
-       "id": "fieldbook_120"
+       "id": "fieldbook_126"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Heredity and how traits are passed on.\"",
-       "answer": "Genetics",
-       "choices": [
-        "Genetics",
-        "Microbiology",
-        "Molecular biology",
-        "Cell biology"
-       ],
-       "id": "fieldbook_121"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: DNA is a four-letter code",
        "answer": "Genetics",
        "choices": [
         "Evolutionary biology",
@@ -1623,11 +1689,11 @@
         "Microbiology",
         "Genetics"
        ],
-       "id": "fieldbook_122"
+       "id": "fieldbook_127"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: A gene is a recipe for one protein",
+       "question": "Which field says: DNA is a four-letter code",
        "answer": "Genetics",
        "choices": [
         "Genetics",
@@ -1635,11 +1701,11 @@
         "Zoology",
         "Ecology"
        ],
-       "id": "fieldbook_123"
+       "id": "fieldbook_128"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Two copies of every gene, one per parent",
+       "question": "Which field says: A gene is a recipe for one protein",
        "answer": "Genetics",
        "choices": [
         "Ecology",
@@ -1647,11 +1713,11 @@
         "Genetics",
         "Developmental biology"
        ],
-       "id": "fieldbook_124"
+       "id": "fieldbook_129"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Mutation is the raw material of variation",
+       "question": "Which field says: Two copies of every gene, one per parent",
        "answer": "Genetics",
        "choices": [
         "Evolutionary biology",
@@ -1659,7 +1725,19 @@
         "Neuroscience",
         "Genetics"
        ],
-       "id": "fieldbook_125"
+       "id": "fieldbook_130"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Mutation is the raw material of variation",
+       "answer": "Genetics",
+       "choices": [
+        "Evolutionary biology",
+        "Genetics",
+        "Neuroscience",
+        "Zoology"
+       ],
+       "id": "fieldbook_131"
       }
      ]
     },
@@ -1673,27 +1751,15 @@
        "answer": "DNA to RNA to protein",
        "choices": [
         "Protein to DNA to RNA",
-        "DNA to protein to RNA",
+        "RNA to DNA to protein",
         "DNA to RNA to protein",
-        "RNA to DNA to protein"
+        "DNA to protein to RNA"
        ],
-       "id": "fieldbook_126"
+       "id": "fieldbook_132"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"How genes actually run a cell.\"",
-       "answer": "Molecular biology",
-       "choices": [
-        "Botany",
-        "Microbiology",
-        "Molecular biology",
-        "Developmental biology"
-       ],
-       "id": "fieldbook_127"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: DNA to RNA to protein",
        "answer": "Molecular biology",
        "choices": [
         "Zoology",
@@ -1701,11 +1767,11 @@
         "Microbiology",
         "Molecular biology"
        ],
-       "id": "fieldbook_128"
+       "id": "fieldbook_133"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Gene regulation decides cell type",
+       "question": "Which field says: DNA to RNA to protein",
        "answer": "Molecular biology",
        "choices": [
         "Developmental biology",
@@ -1713,11 +1779,11 @@
         "Molecular biology",
         "Genetics"
        ],
-       "id": "fieldbook_129"
+       "id": "fieldbook_134"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Epigenetics: tags on DNA change expression without changing the code",
+       "question": "Which field says: Gene regulation decides cell type",
        "answer": "Molecular biology",
        "choices": [
         "Developmental biology",
@@ -1725,11 +1791,11 @@
         "Ecology",
         "Neuroscience"
        ],
-       "id": "fieldbook_130"
+       "id": "fieldbook_135"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: CRISPR is a programmable pair of scissors",
+       "question": "Which field says: Epigenetics: tags on DNA change expression without changing the code",
        "answer": "Molecular biology",
        "choices": [
         "Molecular biology",
@@ -1737,7 +1803,19 @@
         "Evolutionary biology",
         "Developmental biology"
        ],
-       "id": "fieldbook_131"
+       "id": "fieldbook_136"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: CRISPR is a programmable pair of scissors",
+       "answer": "Molecular biology",
+       "choices": [
+        "Molecular biology",
+        "Developmental biology",
+        "Botany",
+        "Genetics"
+       ],
+       "id": "fieldbook_137"
       }
      ]
     },
@@ -1755,23 +1833,11 @@
         "Rare resistant ones survive and reproduce while others die",
         "Antibiotics weaken over time"
        ],
-       "id": "fieldbook_132"
+       "id": "fieldbook_138"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"How life changes over time.\"",
-       "answer": "Evolutionary biology",
-       "choices": [
-        "Ecology",
-        "Botany",
-        "Evolutionary biology",
-        "Immunology"
-       ],
-       "id": "fieldbook_133"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Variation, selection, inheritance",
        "answer": "Evolutionary biology",
        "choices": [
         "Zoology",
@@ -1779,11 +1845,11 @@
         "Developmental biology",
         "Evolutionary biology"
        ],
-       "id": "fieldbook_134"
+       "id": "fieldbook_139"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: No goal, no ladder, no progress toward humans",
+       "question": "Which field says: Variation, selection, inheritance",
        "answer": "Evolutionary biology",
        "choices": [
         "Evolutionary biology",
@@ -1791,11 +1857,11 @@
         "Microbiology",
         "Zoology"
        ],
-       "id": "fieldbook_135"
+       "id": "fieldbook_140"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Common descent: all life shares one ancestor",
+       "question": "Which field says: No goal, no ladder, no progress toward humans",
        "answer": "Evolutionary biology",
        "choices": [
         "Molecular biology",
@@ -1803,11 +1869,11 @@
         "Immunology",
         "Botany"
        ],
-       "id": "fieldbook_136"
+       "id": "fieldbook_141"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Speciation happens when populations stop interbreeding",
+       "question": "Which field says: Common descent: all life shares one ancestor",
        "answer": "Evolutionary biology",
        "choices": [
         "Ecology",
@@ -1815,7 +1881,19 @@
         "Zoology",
         "Evolutionary biology"
        ],
-       "id": "fieldbook_137"
+       "id": "fieldbook_142"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Speciation happens when populations stop interbreeding",
+       "answer": "Evolutionary biology",
+       "choices": [
+        "Cell biology",
+        "Molecular biology",
+        "Immunology",
+        "Evolutionary biology"
+       ],
+       "id": "fieldbook_143"
       }
      ]
     },
@@ -1830,10 +1908,10 @@
        "choices": [
         "Wolves drink the rivers down",
         "Deer were blocking the water",
-        "Fewer deer means more plants, which stabilizes riverbanks",
-        "Wolves dig channels"
+        "Wolves dig channels",
+        "Fewer deer means more plants, which stabilizes riverbanks"
        ],
-       "id": "fieldbook_138"
+       "id": "fieldbook_144"
       },
       {
        "type": "mathChoice",
@@ -1842,10 +1920,10 @@
        "choices": [
         "Developmental biology",
         "Neuroscience",
-        "Ecology",
-        "Zoology"
+        "Zoology",
+        "Ecology"
        ],
-       "id": "fieldbook_139"
+       "id": "fieldbook_145"
       },
       {
        "type": "mathChoice",
@@ -1853,47 +1931,47 @@
        "answer": "Ecology",
        "choices": [
         "Ecology",
-        "Immunology",
+        "Molecular biology",
         "Developmental biology",
-        "Neuroscience"
+        "Evolutionary biology"
        ],
-       "id": "fieldbook_140"
+       "id": "fieldbook_146"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: About 10% of energy passes each level of the food chain",
        "answer": "Ecology",
        "choices": [
-        "Immunology",
-        "Genetics",
-        "Molecular biology",
-        "Ecology"
+        "Developmental biology",
+        "Cell biology",
+        "Ecology",
+        "Genetics"
        ],
-       "id": "fieldbook_141"
+       "id": "fieldbook_147"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Populations are limited by resources and predators",
        "answer": "Ecology",
        "choices": [
+        "Immunology",
         "Ecology",
-        "Molecular biology",
-        "Evolutionary biology",
+        "Microbiology",
         "Cell biology"
        ],
-       "id": "fieldbook_142"
+       "id": "fieldbook_148"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Keystone species hold ecosystems together",
        "answer": "Ecology",
        "choices": [
-        "Microbiology",
+        "Genetics",
         "Zoology",
         "Ecology",
-        "Molecular biology"
+        "Developmental biology"
        ],
-       "id": "fieldbook_143"
+       "id": "fieldbook_149"
       }
      ]
     },
@@ -1906,12 +1984,12 @@
        "question": "Why do you need a fresh antibiotic for a virus?",
        "answer": "You do not; antibiotics do nothing against viruses",
        "choices": [
-        "Viruses live outside cells",
         "Viruses are bigger than bacteria",
+        "Antibiotics only work at night",
         "You do not; antibiotics do nothing against viruses",
-        "Antibiotics only work at night"
+        "Viruses live outside cells"
        ],
-       "id": "fieldbook_144"
+       "id": "fieldbook_150"
       },
       {
        "type": "mathChoice",
@@ -1919,59 +1997,59 @@
        "answer": "Microbiology",
        "choices": [
         "Evolutionary biology",
-        "Ecology",
         "Microbiology",
-        "Zoology"
+        "Cell biology",
+        "Developmental biology"
        ],
-       "id": "fieldbook_145"
+       "id": "fieldbook_151"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Bacteria have no nucleus and divide fast",
        "answer": "Microbiology",
        "choices": [
+        "Microbiology",
         "Botany",
         "Neuroscience",
-        "Microbiology",
-        "Ecology"
+        "Evolutionary biology"
        ],
-       "id": "fieldbook_146"
+       "id": "fieldbook_152"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Viruses need a host cell to reproduce",
        "answer": "Microbiology",
        "choices": [
-        "Developmental biology",
-        "Evolutionary biology",
-        "Cell biology",
-        "Microbiology"
+        "Zoology",
+        "Ecology",
+        "Microbiology",
+        "Cell biology"
        ],
-       "id": "fieldbook_147"
+       "id": "fieldbook_153"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Antibiotics kill bacteria, not viruses",
        "answer": "Microbiology",
        "choices": [
-        "Cell biology",
-        "Immunology",
-        "Evolutionary biology",
-        "Microbiology"
+        "Microbiology",
+        "Zoology",
+        "Neuroscience",
+        "Genetics"
        ],
-       "id": "fieldbook_148"
+       "id": "fieldbook_154"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: The microbiome shapes digestion, immunity, and mood",
        "answer": "Microbiology",
        "choices": [
+        "Microbiology",
         "Evolutionary biology",
-        "Genetics",
-        "Ecology",
-        "Microbiology"
+        "Neuroscience",
+        "Botany"
        ],
-       "id": "fieldbook_149"
+       "id": "fieldbook_155"
       }
      ]
     },
@@ -1984,72 +2062,72 @@
        "question": "Where does most of a tree's mass come from?",
        "answer": "Carbon dioxide pulled from the air",
        "choices": [
+        "Soil",
         "Sunlight",
         "Water",
-        "Soil",
         "Carbon dioxide pulled from the air"
        ],
-       "id": "fieldbook_150"
+       "id": "fieldbook_156"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Plants.\"",
        "answer": "Botany",
        "choices": [
-        "Immunology",
+        "Ecology",
+        "Cell biology",
         "Botany",
-        "Zoology",
-        "Microbiology"
+        "Evolutionary biology"
        ],
-       "id": "fieldbook_151"
+       "id": "fieldbook_157"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Photosynthesis: light plus CO2 plus water makes sugar and oxygen",
        "answer": "Botany",
        "choices": [
+        "Immunology",
         "Evolutionary biology",
-        "Genetics",
-        "Developmental biology",
-        "Botany"
+        "Botany",
+        "Ecology"
        ],
-       "id": "fieldbook_152"
+       "id": "fieldbook_158"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Wood is mostly captured carbon dioxide",
        "answer": "Botany",
        "choices": [
-        "Evolutionary biology",
-        "Neuroscience",
-        "Botany",
-        "Immunology"
+        "Immunology",
+        "Ecology",
+        "Genetics",
+        "Botany"
        ],
-       "id": "fieldbook_153"
+       "id": "fieldbook_159"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Roots, stems, leaves, flowers: a modular body plan",
        "answer": "Botany",
        "choices": [
-        "Genetics",
-        "Molecular biology",
+        "Neuroscience",
         "Botany",
-        "Neuroscience"
+        "Zoology",
+        "Evolutionary biology"
        ],
-       "id": "fieldbook_154"
+       "id": "fieldbook_160"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Plants respond to their environment without nerves",
        "answer": "Botany",
        "choices": [
-        "Molecular biology",
-        "Zoology",
+        "Cell biology",
         "Botany",
-        "Cell biology"
+        "Evolutionary biology",
+        "Zoology"
        ],
-       "id": "fieldbook_155"
+       "id": "fieldbook_161"
       }
      ]
     },
@@ -2062,72 +2140,72 @@
        "question": "Why do many desert animals come out only at night?",
        "answer": "To avoid heat and water loss",
        "choices": [
+        "Plants grow at night",
         "The sand is softer",
         "Predators sleep at night",
-        "To avoid heat and water loss",
-        "Plants grow at night"
+        "To avoid heat and water loss"
        ],
-       "id": "fieldbook_156"
+       "id": "fieldbook_162"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Animals.\"",
        "answer": "Zoology",
        "choices": [
-        "Cell biology",
-        "Molecular biology",
         "Botany",
-        "Zoology"
+        "Molecular biology",
+        "Zoology",
+        "Neuroscience"
        ],
-       "id": "fieldbook_157"
+       "id": "fieldbook_163"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Most animals are invertebrates, most invertebrates are insects",
        "answer": "Zoology",
        "choices": [
-        "Immunology",
+        "Microbiology",
         "Zoology",
         "Genetics",
         "Molecular biology"
        ],
-       "id": "fieldbook_158"
+       "id": "fieldbook_164"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Body plans are conserved: a bat wing and a human arm share the same bones",
        "answer": "Zoology",
        "choices": [
-        "Developmental biology",
-        "Neuroscience",
+        "Cell biology",
         "Zoology",
-        "Cell biology"
+        "Ecology",
+        "Botany"
        ],
-       "id": "fieldbook_159"
+       "id": "fieldbook_165"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Behaviour evolves like any other trait",
        "answer": "Zoology",
        "choices": [
+        "Cell biology",
         "Zoology",
-        "Neuroscience",
-        "Microbiology",
-        "Immunology"
+        "Genetics",
+        "Molecular biology"
        ],
-       "id": "fieldbook_160"
+       "id": "fieldbook_166"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Vertebrates are one branch, not the main one",
        "answer": "Zoology",
        "choices": [
-        "Zoology",
+        "Microbiology",
         "Genetics",
-        "Ecology",
-        "Immunology"
+        "Zoology",
+        "Botany"
        ],
-       "id": "fieldbook_161"
+       "id": "fieldbook_167"
       }
      ]
     },
@@ -2140,72 +2218,72 @@
        "question": "How does a signal travel down a neuron?",
        "answer": "As a wave of electrical charge along the membrane",
        "choices": [
-        "As a chemical flowing through a tube",
-        "As a vibration of the cell wall",
         "As a wave of electrical charge along the membrane",
-        "As heat"
+        "As a chemical flowing through a tube",
+        "As heat",
+        "As a vibration of the cell wall"
        ],
-       "id": "fieldbook_162"
+       "id": "fieldbook_168"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"The brain and nervous system.\"",
        "answer": "Neuroscience",
        "choices": [
+        "Cell biology",
+        "Zoology",
         "Neuroscience",
-        "Botany",
-        "Genetics",
-        "Ecology"
+        "Evolutionary biology"
        ],
-       "id": "fieldbook_163"
+       "id": "fieldbook_169"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Neurons fire electrically, talk chemically",
        "answer": "Neuroscience",
        "choices": [
+        "Developmental biology",
+        "Microbiology",
         "Evolutionary biology",
-        "Zoology",
-        "Neuroscience",
-        "Microbiology"
+        "Neuroscience"
        ],
-       "id": "fieldbook_164"
+       "id": "fieldbook_170"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Learning changes synapse strength",
        "answer": "Neuroscience",
        "choices": [
-        "Zoology",
-        "Neuroscience",
+        "Cell biology",
         "Botany",
-        "Cell biology"
+        "Evolutionary biology",
+        "Neuroscience"
        ],
-       "id": "fieldbook_165"
+       "id": "fieldbook_171"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Different regions specialise but everything is connected",
        "answer": "Neuroscience",
        "choices": [
-        "Botany",
-        "Immunology",
-        "Cell biology",
-        "Neuroscience"
+        "Neuroscience",
+        "Genetics",
+        "Ecology",
+        "Cell biology"
        ],
-       "id": "fieldbook_166"
+       "id": "fieldbook_172"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: The brain uses about 20% of your energy",
        "answer": "Neuroscience",
        "choices": [
-        "Ecology",
         "Neuroscience",
-        "Evolutionary biology",
-        "Genetics"
+        "Immunology",
+        "Microbiology",
+        "Developmental biology"
        ],
-       "id": "fieldbook_167"
+       "id": "fieldbook_173"
       }
      ]
     },
@@ -2218,36 +2296,36 @@
        "question": "Every cell in your body has the same DNA. Why are they different?",
        "answer": "Different genes are switched on in different cells",
        "choices": [
-        "Each cell type has its own DNA",
         "Cells lose DNA as they specialize",
+        "Each cell type has its own DNA",
         "Different genes are switched on in different cells",
         "Cells copy DNA with errors"
        ],
-       "id": "fieldbook_168"
+       "id": "fieldbook_174"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"How one cell becomes a body.\"",
        "answer": "Developmental biology",
        "choices": [
-        "Microbiology",
+        "Immunology",
+        "Cell biology",
         "Developmental biology",
-        "Ecology",
-        "Immunology"
+        "Ecology"
        ],
-       "id": "fieldbook_169"
+       "id": "fieldbook_175"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Chemical gradients tell cells where they are",
        "answer": "Developmental biology",
        "choices": [
-        "Cell biology",
-        "Evolutionary biology",
         "Genetics",
+        "Neuroscience",
+        "Zoology",
         "Developmental biology"
        ],
-       "id": "fieldbook_170"
+       "id": "fieldbook_176"
       },
       {
        "type": "mathChoice",
@@ -2255,35 +2333,35 @@
        "answer": "Developmental biology",
        "choices": [
         "Immunology",
-        "Ecology",
-        "Botany",
-        "Developmental biology"
+        "Developmental biology",
+        "Zoology",
+        "Molecular biology"
        ],
-       "id": "fieldbook_171"
+       "id": "fieldbook_177"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Programmed cell death carves fingers from paddles",
        "answer": "Developmental biology",
        "choices": [
-        "Developmental biology",
         "Molecular biology",
-        "Ecology",
-        "Cell biology"
+        "Developmental biology",
+        "Evolutionary biology",
+        "Microbiology"
        ],
-       "id": "fieldbook_172"
+       "id": "fieldbook_178"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Stem cells can become many types",
        "answer": "Developmental biology",
        "choices": [
+        "Genetics",
+        "Evolutionary biology",
         "Immunology",
-        "Microbiology",
-        "Developmental biology",
-        "Zoology"
+        "Developmental biology"
        ],
-       "id": "fieldbook_173"
+       "id": "fieldbook_179"
       }
      ]
     },
@@ -2296,72 +2374,72 @@
        "question": "Why does a vaccine protect you?",
        "answer": "It shows the immune system a target so memory cells are ready",
        "choices": [
+        "It thickens the skin",
         "It raises body temperature",
         "It kills germs in the blood",
-        "It shows the immune system a target so memory cells are ready",
-        "It thickens the skin"
+        "It shows the immune system a target so memory cells are ready"
        ],
-       "id": "fieldbook_174"
+       "id": "fieldbook_180"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"How the body defends itself.\"",
        "answer": "Immunology",
        "choices": [
+        "Microbiology",
+        "Zoology",
         "Immunology",
-        "Genetics",
-        "Botany",
-        "Evolutionary biology"
+        "Neuroscience"
        ],
-       "id": "fieldbook_175"
+       "id": "fieldbook_181"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Innate: fast, general. Adaptive: slow, specific, remembers",
        "answer": "Immunology",
        "choices": [
-        "Genetics",
+        "Developmental biology",
         "Immunology",
-        "Botany",
-        "Molecular biology"
+        "Genetics",
+        "Ecology"
        ],
-       "id": "fieldbook_176"
+       "id": "fieldbook_182"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Antibodies tag invaders for destruction",
        "answer": "Immunology",
        "choices": [
-        "Evolutionary biology",
-        "Genetics",
-        "Botany",
-        "Immunology"
+        "Molecular biology",
+        "Immunology",
+        "Zoology",
+        "Developmental biology"
        ],
-       "id": "fieldbook_177"
+       "id": "fieldbook_183"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Vaccines are rehearsal",
        "answer": "Immunology",
        "choices": [
-        "Developmental biology",
-        "Molecular biology",
+        "Zoology",
+        "Immunology",
         "Evolutionary biology",
-        "Immunology"
+        "Genetics"
        ],
-       "id": "fieldbook_178"
+       "id": "fieldbook_184"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Fever and inflammation are the defence, not the disease",
        "answer": "Immunology",
        "choices": [
-        "Neuroscience",
+        "Developmental biology",
+        "Ecology",
         "Immunology",
-        "Genetics",
-        "Ecology"
+        "Microbiology"
        ],
-       "id": "fieldbook_179"
+       "id": "fieldbook_185"
       }
      ]
     }
@@ -2381,60 +2459,60 @@
        "question": "Why do sodium and chlorine bond so readily?",
        "answer": "Sodium gives up an electron and chlorine takes it, making a stable pair",
        "choices": [
+        "Salt is lighter than either",
         "They have the same number of protons",
         "Sodium gives up an electron and chlorine takes it, making a stable pair",
-        "Both are gases",
-        "Salt is lighter than either"
+        "Both are gases"
        ],
-       "id": "fieldbook_180"
+       "id": "fieldbook_186"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Atoms, bonds, and reactions.\"",
        "answer": "General chemistry",
        "choices": [
-        "General chemistry",
-        "Materials science",
+        "Analytical chemistry",
         "Inorganic chemistry",
-        "Biochemistry"
+        "General chemistry",
+        "Materials science"
        ],
-       "id": "fieldbook_181"
+       "id": "fieldbook_187"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Only outer electrons matter for chemistry",
        "answer": "General chemistry",
        "choices": [
+        "Organic chemistry",
         "General chemistry",
         "Physical chemistry",
-        "Inorganic chemistry",
-        "Materials science"
+        "Biochemistry"
        ],
-       "id": "fieldbook_182"
+       "id": "fieldbook_188"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Three bond types: covalent, ionic, metallic",
        "answer": "General chemistry",
        "choices": [
+        "Organic chemistry",
+        "Biochemistry",
         "General chemistry",
-        "Inorganic chemistry",
-        "Analytical chemistry",
-        "Physical chemistry"
+        "Materials science"
        ],
-       "id": "fieldbook_183"
+       "id": "fieldbook_189"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Reactions conserve atoms, just rearrange them",
        "answer": "General chemistry",
        "choices": [
-        "Analytical chemistry",
-        "Materials science",
-        "Organic chemistry",
-        "General chemistry"
+        "General chemistry",
+        "Inorganic chemistry",
+        "Biochemistry",
+        "Materials science"
        ],
-       "id": "fieldbook_184"
+       "id": "fieldbook_190"
       },
       {
        "type": "mathChoice",
@@ -2442,11 +2520,11 @@
        "answer": "General chemistry",
        "choices": [
         "General chemistry",
-        "Materials science",
-        "Physical chemistry",
+        "Inorganic chemistry",
+        "Analytical chemistry",
         "Organic chemistry"
        ],
-       "id": "fieldbook_185"
+       "id": "fieldbook_191"
       }
      ]
     },
@@ -2459,24 +2537,24 @@
        "question": "Why is carbon the backbone of life's molecules?",
        "answer": "It forms four stable bonds and links into chains and rings",
        "choices": [
-        "It forms four stable bonds and links into chains and rings",
-        "It is the most abundant element",
         "It is radioactive",
-        "It dissolves in water"
+        "It forms four stable bonds and links into chains and rings",
+        "It dissolves in water",
+        "It is the most abundant element"
        ],
-       "id": "fieldbook_186"
+       "id": "fieldbook_192"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Carbon compounds, which means all of life.\"",
        "answer": "Organic chemistry",
        "choices": [
-        "General chemistry",
         "Physical chemistry",
-        "Inorganic chemistry",
-        "Organic chemistry"
+        "Analytical chemistry",
+        "Organic chemistry",
+        "Biochemistry"
        ],
-       "id": "fieldbook_187"
+       "id": "fieldbook_193"
       },
       {
        "type": "mathChoice",
@@ -2485,46 +2563,46 @@
        "choices": [
         "General chemistry",
         "Organic chemistry",
-        "Materials science",
-        "Analytical chemistry"
+        "Inorganic chemistry",
+        "Physical chemistry"
        ],
-       "id": "fieldbook_188"
+       "id": "fieldbook_194"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Functional groups decide how a molecule behaves",
        "answer": "Organic chemistry",
        "choices": [
-        "Inorganic chemistry",
-        "Materials science",
+        "General chemistry",
         "Organic chemistry",
+        "Inorganic chemistry",
         "Physical chemistry"
        ],
-       "id": "fieldbook_189"
+       "id": "fieldbook_195"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Same atoms, different arrangement, different molecule",
        "answer": "Organic chemistry",
        "choices": [
+        "Physical chemistry",
         "Organic chemistry",
-        "Inorganic chemistry",
-        "Analytical chemistry",
-        "General chemistry"
+        "Biochemistry",
+        "Inorganic chemistry"
        ],
-       "id": "fieldbook_190"
+       "id": "fieldbook_196"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Most drugs are small organic molecules",
        "answer": "Organic chemistry",
        "choices": [
-        "Physical chemistry",
+        "Analytical chemistry",
         "Organic chemistry",
-        "Materials science",
-        "Inorganic chemistry"
+        "Biochemistry",
+        "General chemistry"
        ],
-       "id": "fieldbook_191"
+       "id": "fieldbook_197"
       }
      ]
     },
@@ -2537,28 +2615,16 @@
        "question": "What makes transition metals like iron and copper good catalysts?",
        "answer": "They can shift between several oxidation states",
        "choices": [
-        "They can shift between several oxidation states",
-        "They are magnetic",
         "They melt at low temperatures",
-        "They are very dense"
+        "They are very dense",
+        "They are magnetic",
+        "They can shift between several oxidation states"
        ],
-       "id": "fieldbook_192"
+       "id": "fieldbook_198"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Everything that is not carbon-based.\"",
-       "answer": "Inorganic chemistry",
-       "choices": [
-        "Biochemistry",
-        "General chemistry",
-        "Materials science",
-        "Inorganic chemistry"
-       ],
-       "id": "fieldbook_193"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Metals give up electrons easily",
        "answer": "Inorganic chemistry",
        "choices": [
         "Materials science",
@@ -2566,11 +2632,11 @@
         "Inorganic chemistry",
         "Analytical chemistry"
        ],
-       "id": "fieldbook_194"
+       "id": "fieldbook_199"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Transition metals have flexible electron shells",
+       "question": "Which field says: Metals give up electrons easily",
        "answer": "Inorganic chemistry",
        "choices": [
         "Analytical chemistry",
@@ -2578,11 +2644,11 @@
         "Biochemistry",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_195"
+       "id": "fieldbook_200"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Catalysts speed reactions without being used up",
+       "question": "Which field says: Transition metals have flexible electron shells",
        "answer": "Inorganic chemistry",
        "choices": [
         "Physical chemistry",
@@ -2590,11 +2656,11 @@
         "Analytical chemistry",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_196"
+       "id": "fieldbook_201"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Crystals are repeating atomic patterns",
+       "question": "Which field says: Catalysts speed reactions without being used up",
        "answer": "Inorganic chemistry",
        "choices": [
         "Organic chemistry",
@@ -2602,7 +2668,19 @@
         "Physical chemistry",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_197"
+       "id": "fieldbook_202"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Crystals are repeating atomic patterns",
+       "answer": "Inorganic chemistry",
+       "choices": [
+        "Materials science",
+        "Organic chemistry",
+        "Inorganic chemistry",
+        "Biochemistry"
+       ],
+       "id": "fieldbook_203"
       }
      ]
     },
@@ -2615,28 +2693,16 @@
        "question": "A reaction releases heat but still does not happen. What is missing?",
        "answer": "Enough energy to get over the activation barrier",
        "choices": [
-        "Less pressure",
-        "A lower temperature",
+        "Enough energy to get over the activation barrier",
         "More product",
-        "Enough energy to get over the activation barrier"
+        "A lower temperature",
+        "Less pressure"
        ],
-       "id": "fieldbook_198"
+       "id": "fieldbook_204"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"The physics underneath chemistry.\"",
-       "answer": "Physical chemistry",
-       "choices": [
-        "Physical chemistry",
-        "General chemistry",
-        "Materials science",
-        "Biochemistry"
-       ],
-       "id": "fieldbook_199"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Free energy decides direction",
        "answer": "Physical chemistry",
        "choices": [
         "Organic chemistry",
@@ -2644,11 +2710,11 @@
         "Analytical chemistry",
         "General chemistry"
        ],
-       "id": "fieldbook_200"
+       "id": "fieldbook_205"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Activation energy decides speed",
+       "question": "Which field says: Free energy decides direction",
        "answer": "Physical chemistry",
        "choices": [
         "Inorganic chemistry",
@@ -2656,11 +2722,11 @@
         "General chemistry",
         "Analytical chemistry"
        ],
-       "id": "fieldbook_201"
+       "id": "fieldbook_206"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Equilibrium is when forward and backward rates match",
+       "question": "Which field says: Activation energy decides speed",
        "answer": "Physical chemistry",
        "choices": [
         "Analytical chemistry",
@@ -2668,11 +2734,11 @@
         "Physical chemistry",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_202"
+       "id": "fieldbook_207"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Spectroscopy reads molecules by the light they absorb",
+       "question": "Which field says: Equilibrium is when forward and backward rates match",
        "answer": "Physical chemistry",
        "choices": [
         "Inorganic chemistry",
@@ -2680,7 +2746,19 @@
         "Biochemistry",
         "Organic chemistry"
        ],
-       "id": "fieldbook_203"
+       "id": "fieldbook_208"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Spectroscopy reads molecules by the light they absorb",
+       "answer": "Physical chemistry",
+       "choices": [
+        "General chemistry",
+        "Physical chemistry",
+        "Biochemistry",
+        "Inorganic chemistry"
+       ],
+       "id": "fieldbook_209"
       }
      ]
     },
@@ -2693,28 +2771,16 @@
        "question": "What does an enzyme actually do?",
        "answer": "Speeds up a reaction without being used up",
        "choices": [
-        "Speeds up a reaction without being used up",
-        "Stores genetic information",
         "Provides the energy for a reaction",
-        "Breaks down into products"
+        "Speeds up a reaction without being used up",
+        "Breaks down into products",
+        "Stores genetic information"
        ],
-       "id": "fieldbook_204"
+       "id": "fieldbook_210"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"The chemistry of living things.\"",
-       "answer": "Biochemistry",
-       "choices": [
-        "General chemistry",
-        "Biochemistry",
-        "Organic chemistry",
-        "Analytical chemistry"
-       ],
-       "id": "fieldbook_205"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Proteins fold into shapes and shape is function",
        "answer": "Biochemistry",
        "choices": [
         "Biochemistry",
@@ -2722,11 +2788,11 @@
         "Physical chemistry",
         "Organic chemistry"
        ],
-       "id": "fieldbook_206"
+       "id": "fieldbook_211"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: DNA stores, RNA carries, protein does",
+       "question": "Which field says: Proteins fold into shapes and shape is function",
        "answer": "Biochemistry",
        "choices": [
         "Organic chemistry",
@@ -2734,7 +2800,19 @@
         "Physical chemistry",
         "Biochemistry"
        ],
-       "id": "fieldbook_207"
+       "id": "fieldbook_212"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: DNA stores, RNA carries, protein does",
+       "answer": "Biochemistry",
+       "choices": [
+        "Materials science",
+        "Biochemistry",
+        "Analytical chemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_213"
       },
       {
        "type": "mathChoice",
@@ -2742,23 +2820,23 @@
        "answer": "Biochemistry",
        "choices": [
         "Materials science",
-        "Biochemistry",
-        "Analytical chemistry",
-        "Organic chemistry"
+        "Inorganic chemistry",
+        "General chemistry",
+        "Biochemistry"
        ],
-       "id": "fieldbook_208"
+       "id": "fieldbook_214"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Enzymes are catalysts with exquisite specificity",
        "answer": "Biochemistry",
        "choices": [
-        "Materials science",
         "Inorganic chemistry",
-        "General chemistry",
-        "Biochemistry"
+        "Analytical chemistry",
+        "Biochemistry",
+        "Physical chemistry"
        ],
-       "id": "fieldbook_209"
+       "id": "fieldbook_215"
       }
      ]
     },
@@ -2772,27 +2850,15 @@
        "answer": "It sorts fragments by mass-to-charge ratio",
        "choices": [
         "By its color",
+        "By its boiling point",
         "By how fast it burns",
-        "It sorts fragments by mass-to-charge ratio",
-        "By its boiling point"
+        "It sorts fragments by mass-to-charge ratio"
        ],
-       "id": "fieldbook_210"
+       "id": "fieldbook_216"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Finding out what is in a sample and how much.\"",
-       "answer": "Analytical chemistry",
-       "choices": [
-        "Inorganic chemistry",
-        "Organic chemistry",
-        "Biochemistry",
-        "Analytical chemistry"
-       ],
-       "id": "fieldbook_211"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Chromatography separates by how fast things travel through a medium",
        "answer": "Analytical chemistry",
        "choices": [
         "Analytical chemistry",
@@ -2800,11 +2866,11 @@
         "Physical chemistry",
         "Biochemistry"
        ],
-       "id": "fieldbook_212"
+       "id": "fieldbook_217"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Mass spectrometry weighs molecules exactly",
+       "question": "Which field says: Chromatography separates by how fast things travel through a medium",
        "answer": "Analytical chemistry",
        "choices": [
         "Biochemistry",
@@ -2812,11 +2878,11 @@
         "Analytical chemistry",
         "Physical chemistry"
        ],
-       "id": "fieldbook_213"
+       "id": "fieldbook_218"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Spectroscopy identifies by light absorbed or emitted",
+       "question": "Which field says: Mass spectrometry weighs molecules exactly",
        "answer": "Analytical chemistry",
        "choices": [
         "Physical chemistry",
@@ -2824,11 +2890,11 @@
         "Analytical chemistry",
         "Organic chemistry"
        ],
-       "id": "fieldbook_214"
+       "id": "fieldbook_219"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Detection limits keep falling",
+       "question": "Which field says: Spectroscopy identifies by light absorbed or emitted",
        "answer": "Analytical chemistry",
        "choices": [
         "Materials science",
@@ -2836,7 +2902,19 @@
         "Physical chemistry",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_215"
+       "id": "fieldbook_220"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Detection limits keep falling",
+       "answer": "Analytical chemistry",
+       "choices": [
+        "Organic chemistry",
+        "General chemistry",
+        "Analytical chemistry",
+        "Materials science"
+       ],
+       "id": "fieldbook_221"
       }
      ]
     },
@@ -2849,28 +2927,16 @@
        "question": "Why is steel stronger than pure iron?",
        "answer": "Carbon atoms disrupt the crystal lattice and block slipping planes",
        "choices": [
-        "Steel has more iron",
         "Carbon atoms disrupt the crystal lattice and block slipping planes",
+        "Steel has more iron",
         "Steel is magnetic",
         "Steel is denser"
        ],
-       "id": "fieldbook_216"
+       "id": "fieldbook_222"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Designing stuff with the properties you want.\"",
-       "answer": "Materials science",
-       "choices": [
-        "Materials science",
-        "Inorganic chemistry",
-        "Analytical chemistry",
-        "General chemistry"
-       ],
-       "id": "fieldbook_217"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Structure decides properties at every scale",
        "answer": "Materials science",
        "choices": [
         "Organic chemistry",
@@ -2878,11 +2944,11 @@
         "General chemistry",
         "Analytical chemistry"
        ],
-       "id": "fieldbook_218"
+       "id": "fieldbook_223"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Metals bend because atomic planes slide",
+       "question": "Which field says: Structure decides properties at every scale",
        "answer": "Materials science",
        "choices": [
         "Analytical chemistry",
@@ -2890,11 +2956,11 @@
         "Organic chemistry",
         "Physical chemistry"
        ],
-       "id": "fieldbook_219"
+       "id": "fieldbook_224"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Polymers are long chains that tangle",
+       "question": "Which field says: Metals bend because atomic planes slide",
        "answer": "Materials science",
        "choices": [
         "General chemistry",
@@ -2902,11 +2968,11 @@
         "Materials science",
         "Inorganic chemistry"
        ],
-       "id": "fieldbook_220"
+       "id": "fieldbook_225"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Composites combine materials to get the best of each",
+       "question": "Which field says: Polymers are long chains that tangle",
        "answer": "Materials science",
        "choices": [
         "Inorganic chemistry",
@@ -2914,7 +2980,19 @@
         "Physical chemistry",
         "Materials science"
        ],
-       "id": "fieldbook_221"
+       "id": "fieldbook_226"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Composites combine materials to get the best of each",
+       "answer": "Materials science",
+       "choices": [
+        "Materials science",
+        "Biochemistry",
+        "Analytical chemistry",
+        "Organic chemistry"
+       ],
+       "id": "fieldbook_227"
       }
      ]
     }
@@ -2934,36 +3012,36 @@
        "question": "What can a computer not do, no matter how fast?",
        "answer": "Decide in general whether any program will halt",
        "choices": [
-        "Sort a billion numbers",
         "Multiply large numbers",
         "Decide in general whether any program will halt",
+        "Sort a billion numbers",
         "Play chess perfectly"
        ],
-       "id": "fieldbook_222"
+       "id": "fieldbook_228"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"What can be computed, and how well.\"",
        "answer": "Computer science",
        "choices": [
-        "Databases",
+        "Computer science",
         "Artificial intelligence",
-        "Information theory",
-        "Computer science"
+        "Databases",
+        "Algorithms and complexity"
        ],
-       "id": "fieldbook_223"
+       "id": "fieldbook_229"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: An algorithm is a finite exact procedure",
        "answer": "Computer science",
        "choices": [
-        "Cryptography",
-        "Databases",
         "Computer science",
-        "Algorithms and complexity"
+        "Algorithms and complexity",
+        "Information theory",
+        "Software engineering"
        ],
-       "id": "fieldbook_224"
+       "id": "fieldbook_230"
       },
       {
        "type": "mathChoice",
@@ -2971,35 +3049,35 @@
        "answer": "Computer science",
        "choices": [
         "Computer science",
-        "Software engineering",
         "Computer networking",
-        "Information theory"
+        "Cryptography",
+        "Software engineering"
        ],
-       "id": "fieldbook_225"
+       "id": "fieldbook_231"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Some problems are proven unsolvable",
        "answer": "Computer science",
        "choices": [
+        "Software engineering",
+        "Databases",
         "Algorithms and complexity",
-        "Computer science",
-        "Computer networking",
-        "Cryptography"
+        "Computer science"
        ],
-       "id": "fieldbook_226"
+       "id": "fieldbook_232"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: All computers are equivalent in power, just speed differs",
        "answer": "Computer science",
        "choices": [
-        "Computer science",
+        "Software engineering",
+        "Information theory",
         "Algorithms and complexity",
-        "Computer networking",
-        "Artificial intelligence"
+        "Computer science"
        ],
-       "id": "fieldbook_227"
+       "id": "fieldbook_233"
       }
      ]
     },
@@ -3012,28 +3090,16 @@
        "question": "Why can a text file shrink when zipped but a zip file cannot?",
        "answer": "Text has patterns to remove; the zip already has none",
        "choices": [
-        "Text is stored as pictures",
+        "Text has patterns to remove; the zip already has none",
         "Zipping adds data",
-        "Zip files are locked",
-        "Text has patterns to remove; the zip already has none"
+        "Text is stored as pictures",
+        "Zip files are locked"
        ],
-       "id": "fieldbook_228"
+       "id": "fieldbook_234"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Measuring information itself.\"",
-       "answer": "Information theory",
-       "choices": [
-        "Computer networking",
-        "Databases",
-        "Information theory",
-        "Computer science"
-       ],
-       "id": "fieldbook_229"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: A bit is one yes-or-no of surprise",
        "answer": "Information theory",
        "choices": [
         "Databases",
@@ -3041,11 +3107,11 @@
         "Information theory",
         "Computer networking"
        ],
-       "id": "fieldbook_230"
+       "id": "fieldbook_235"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Every channel has a capacity",
+       "question": "Which field says: A bit is one yes-or-no of surprise",
        "answer": "Information theory",
        "choices": [
         "Databases",
@@ -3053,11 +3119,11 @@
         "Information theory",
         "Computer science"
        ],
-       "id": "fieldbook_231"
+       "id": "fieldbook_236"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Compression removes redundancy",
+       "question": "Which field says: Every channel has a capacity",
        "answer": "Information theory",
        "choices": [
         "Algorithms and complexity",
@@ -3065,11 +3131,11 @@
         "Information theory",
         "Cryptography"
        ],
-       "id": "fieldbook_232"
+       "id": "fieldbook_237"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Error correction adds it back on purpose",
+       "question": "Which field says: Compression removes redundancy",
        "answer": "Information theory",
        "choices": [
         "Computer networking",
@@ -3077,7 +3143,19 @@
         "Information theory",
         "Artificial intelligence"
        ],
-       "id": "fieldbook_233"
+       "id": "fieldbook_238"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Error correction adds it back on purpose",
+       "answer": "Information theory",
+       "choices": [
+        "Information theory",
+        "Algorithms and complexity",
+        "Databases",
+        "Computer networking"
+       ],
+       "id": "fieldbook_239"
       }
      ]
     },
@@ -3090,12 +3168,12 @@
        "question": "How does a neural network learn?",
        "answer": "By adjusting weights to reduce error on examples",
        "choices": [
-        "By adjusting weights to reduce error on examples",
         "By storing rules a human wrote",
-        "By searching the internet",
-        "By copying the training data"
+        "By copying the training data",
+        "By adjusting weights to reduce error on examples",
+        "By searching the internet"
        ],
-       "id": "fieldbook_234"
+       "id": "fieldbook_240"
       },
       {
        "type": "mathChoice",
@@ -3103,27 +3181,15 @@
        "answer": "Artificial intelligence",
        "choices": [
         "Computer networking",
-        "Software engineering",
-        "Artificial intelligence",
-        "Algorithms and complexity"
-       ],
-       "id": "fieldbook_235"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Learning is adjusting parameters to reduce error",
-       "answer": "Artificial intelligence",
-       "choices": [
-        "Computer networking",
         "Information theory",
         "Artificial intelligence",
         "Databases"
        ],
-       "id": "fieldbook_236"
+       "id": "fieldbook_241"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Deep networks build features layer by layer",
+       "question": "Which field says: Learning is adjusting parameters to reduce error",
        "answer": "Artificial intelligence",
        "choices": [
         "Artificial intelligence",
@@ -3131,11 +3197,11 @@
         "Computer science",
         "Software engineering"
        ],
-       "id": "fieldbook_237"
+       "id": "fieldbook_242"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Language models are next-word predictors at scale",
+       "question": "Which field says: Deep networks build features layer by layer",
        "answer": "Artificial intelligence",
        "choices": [
         "Cryptography",
@@ -3143,11 +3209,11 @@
         "Databases",
         "Computer science"
        ],
-       "id": "fieldbook_238"
+       "id": "fieldbook_243"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Data and compute have mattered more than clever design",
+       "question": "Which field says: Language models are next-word predictors at scale",
        "answer": "Artificial intelligence",
        "choices": [
         "Artificial intelligence",
@@ -3155,7 +3221,19 @@
         "Computer science",
         "Cryptography"
        ],
-       "id": "fieldbook_239"
+       "id": "fieldbook_244"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Data and compute have mattered more than clever design",
+       "answer": "Artificial intelligence",
+       "choices": [
+        "Computer networking",
+        "Databases",
+        "Software engineering",
+        "Artificial intelligence"
+       ],
+       "id": "fieldbook_245"
       }
      ]
     },
@@ -3168,16 +3246,28 @@
        "question": "A list doubles in size. A good sort takes how much longer?",
        "answer": "A bit more than double",
        "choices": [
-        "Four times",
-        "The same",
+        "A bit more than double",
         "A thousand times",
-        "A bit more than double"
+        "Four times",
+        "The same"
        ],
-       "id": "fieldbook_240"
+       "id": "fieldbook_246"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Which problems can be solved fast, which cannot, and how to tell.\"",
+       "answer": "Algorithms and complexity",
+       "choices": [
+        "Computer networking",
+        "Algorithms and complexity",
+        "Software engineering",
+        "Computer science"
+       ],
+       "id": "fieldbook_247"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Count steps as a function of input size, ignore constants",
        "answer": "Algorithms and complexity",
        "choices": [
         "Software engineering",
@@ -3185,47 +3275,23 @@
         "Algorithms and complexity",
         "Information theory"
        ],
-       "id": "fieldbook_241"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Count steps as a function of input size, ignore constants",
-       "answer": "Algorithms and complexity",
-       "choices": [
-        "Algorithms and complexity",
-        "Databases",
-        "Cryptography",
-        "Information theory"
-       ],
-       "id": "fieldbook_242"
+       "id": "fieldbook_248"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Sorting is n log n at best when you compare pairs",
        "answer": "Algorithms and complexity",
        "choices": [
-        "Databases",
-        "Algorithms and complexity",
-        "Computer science",
-        "Computer networking"
+        "Cryptography",
+        "Information theory",
+        "Software engineering",
+        "Algorithms and complexity"
        ],
-       "id": "fieldbook_243"
+       "id": "fieldbook_249"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: NP problems are easy to check, apparently hard to solve",
-       "answer": "Algorithms and complexity",
-       "choices": [
-        "Computer networking",
-        "Information theory",
-        "Databases",
-        "Algorithms and complexity"
-       ],
-       "id": "fieldbook_244"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: A clever algorithm beats a faster computer every time",
        "answer": "Algorithms and complexity",
        "choices": [
         "Artificial intelligence",
@@ -3233,7 +3299,19 @@
         "Algorithms and complexity",
         "Computer science"
        ],
-       "id": "fieldbook_245"
+       "id": "fieldbook_250"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: A clever algorithm beats a faster computer every time",
+       "answer": "Algorithms and complexity",
+       "choices": [
+        "Algorithms and complexity",
+        "Computer networking",
+        "Cryptography",
+        "Databases"
+       ],
+       "id": "fieldbook_251"
       }
      ]
     },
@@ -3246,28 +3324,16 @@
        "question": "You publish a key and anyone can send you a secret. How?",
        "answer": "They lock with your public key; only your private key unlocks",
        "choices": [
+        "Messages are hidden in images",
         "They guess your password",
         "The key is secret too",
-        "Messages are hidden in images",
         "They lock with your public key; only your private key unlocks"
        ],
-       "id": "fieldbook_246"
+       "id": "fieldbook_252"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Keeping secrets and proving identity with math.\"",
-       "answer": "Cryptography",
-       "choices": [
-        "Cryptography",
-        "Software engineering",
-        "Databases",
-        "Algorithms and complexity"
-       ],
-       "id": "fieldbook_247"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Never invent your own cipher; use the reviewed ones",
        "answer": "Cryptography",
        "choices": [
         "Software engineering",
@@ -3275,11 +3341,11 @@
         "Information theory",
         "Computer science"
        ],
-       "id": "fieldbook_248"
+       "id": "fieldbook_253"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Public key locks, private key unlocks, and the pair is one-way",
+       "question": "Which field says: Never invent your own cipher; use the reviewed ones",
        "answer": "Cryptography",
        "choices": [
         "Cryptography",
@@ -3287,11 +3353,11 @@
         "Artificial intelligence",
         "Computer science"
        ],
-       "id": "fieldbook_249"
+       "id": "fieldbook_254"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: A hash is a fingerprint, not an encryption",
+       "question": "Which field says: Public key locks, private key unlocks, and the pair is one-way",
        "answer": "Cryptography",
        "choices": [
         "Computer networking",
@@ -3299,11 +3365,11 @@
         "Cryptography",
         "Artificial intelligence"
        ],
-       "id": "fieldbook_250"
+       "id": "fieldbook_255"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Key length matters more than algorithm cleverness",
+       "question": "Which field says: A hash is a fingerprint, not an encryption",
        "answer": "Cryptography",
        "choices": [
         "Software engineering",
@@ -3311,7 +3377,19 @@
         "Cryptography",
         "Computer networking"
        ],
-       "id": "fieldbook_251"
+       "id": "fieldbook_256"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: Key length matters more than algorithm cleverness",
+       "answer": "Cryptography",
+       "choices": [
+        "Software engineering",
+        "Cryptography",
+        "Information theory",
+        "Databases"
+       ],
+       "id": "fieldbook_257"
       }
      ]
     },
@@ -3324,72 +3402,72 @@
        "question": "A web page loads even though some packets were lost. Why?",
        "answer": "TCP notices missing packets and asks for them again",
        "choices": [
+        "Packets never get lost",
         "The server sends every packet twice",
         "TCP notices missing packets and asks for them again",
-        "Packets never get lost",
         "The browser guesses the content"
        ],
-       "id": "fieldbook_252"
+       "id": "fieldbook_258"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"How machines talk to each other across a room or a planet.\"",
        "answer": "Computer networking",
        "choices": [
+        "Algorithms and complexity",
+        "Cryptography",
         "Information theory",
-        "Artificial intelligence",
-        "Computer networking",
-        "Algorithms and complexity"
+        "Computer networking"
        ],
-       "id": "fieldbook_253"
+       "id": "fieldbook_259"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Data travels as packets, each finding its own route",
        "answer": "Computer networking",
        "choices": [
-        "Computer science",
+        "Software engineering",
         "Computer networking",
-        "Cryptography",
-        "Algorithms and complexity"
+        "Algorithms and complexity",
+        "Computer science"
        ],
-       "id": "fieldbook_254"
+       "id": "fieldbook_260"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: IP gets a packet to a machine, a port gets it to a program",
        "answer": "Computer networking",
        "choices": [
-        "Artificial intelligence",
-        "Cryptography",
         "Information theory",
-        "Computer networking"
+        "Computer networking",
+        "Algorithms and complexity",
+        "Software engineering"
        ],
-       "id": "fieldbook_255"
+       "id": "fieldbook_261"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: TCP retries, UDP does not, and each is right for something",
        "answer": "Computer networking",
        "choices": [
-        "Information theory",
+        "Computer science",
         "Databases",
         "Computer networking",
-        "Cryptography"
+        "Information theory"
        ],
-       "id": "fieldbook_256"
+       "id": "fieldbook_262"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: DNS is the phone book that turns names into addresses",
        "answer": "Computer networking",
        "choices": [
-        "Cryptography",
-        "Computer networking",
+        "Information theory",
         "Computer science",
-        "Information theory"
+        "Computer networking",
+        "Artificial intelligence"
        ],
-       "id": "fieldbook_257"
+       "id": "fieldbook_263"
       }
      ]
     },
@@ -3403,39 +3481,27 @@
        "answer": "Either the full transfer or none of it",
        "choices": [
         "Money added but not removed",
-        "Whatever was fastest",
         "Either the full transfer or none of it",
+        "Whatever was fastest",
         "Money removed but not added"
        ],
-       "id": "fieldbook_258"
+       "id": "fieldbook_264"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Storing data so it stays correct and comes back fast.\"",
        "answer": "Databases",
        "choices": [
-        "Software engineering",
-        "Databases",
         "Computer science",
-        "Computer networking"
+        "Databases",
+        "Computer networking",
+        "Software engineering"
        ],
-       "id": "fieldbook_259"
+       "id": "fieldbook_265"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: A transaction is all or nothing",
-       "answer": "Databases",
-       "choices": [
-        "Databases",
-        "Computer science",
-        "Artificial intelligence",
-        "Cryptography"
-       ],
-       "id": "fieldbook_260"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: An index is speed bought with space and slower writes",
        "answer": "Databases",
        "choices": [
         "Computer networking",
@@ -3443,11 +3509,11 @@
         "Databases",
         "Software engineering"
        ],
-       "id": "fieldbook_261"
+       "id": "fieldbook_266"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Normalize to avoid saying one fact twice",
+       "question": "Which field says: An index is speed bought with space and slower writes",
        "answer": "Databases",
        "choices": [
         "Computer science",
@@ -3455,11 +3521,11 @@
         "Computer networking",
         "Information theory"
        ],
-       "id": "fieldbook_262"
+       "id": "fieldbook_267"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: You cannot have perfect consistency, availability, and partition tolerance at once",
+       "question": "Which field says: Normalize to avoid saying one fact twice",
        "answer": "Databases",
        "choices": [
         "Computer networking",
@@ -3467,7 +3533,19 @@
         "Software engineering",
         "Databases"
        ],
-       "id": "fieldbook_263"
+       "id": "fieldbook_268"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: You cannot have perfect consistency, availability, and partition tolerance at once",
+       "answer": "Databases",
+       "choices": [
+        "Computer science",
+        "Databases",
+        "Computer networking",
+        "Information theory"
+       ],
+       "id": "fieldbook_269"
       }
      ]
     },
@@ -3480,28 +3558,16 @@
        "question": "Why write tests for code that already works?",
        "answer": "So you can change it later and know it still works",
        "choices": [
-        "Because the compiler needs them",
-        "So you can change it later and know it still works",
         "To document the author",
-        "To make it run faster"
+        "To make it run faster",
+        "Because the compiler needs them",
+        "So you can change it later and know it still works"
        ],
-       "id": "fieldbook_264"
+       "id": "fieldbook_270"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Building programs that still work after other people touch them.\"",
-       "answer": "Software engineering",
-       "choices": [
-        "Computer networking",
-        "Artificial intelligence",
-        "Databases",
-        "Software engineering"
-       ],
-       "id": "fieldbook_265"
-      },
-      {
-       "type": "mathChoice",
-       "question": "Which field says: Code is read far more often than it is written",
        "answer": "Software engineering",
        "choices": [
         "Software engineering",
@@ -3509,11 +3575,11 @@
         "Computer networking",
         "Artificial intelligence"
        ],
-       "id": "fieldbook_266"
+       "id": "fieldbook_271"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Tests are how you change code without fear",
+       "question": "Which field says: Code is read far more often than it is written",
        "answer": "Software engineering",
        "choices": [
         "Computer networking",
@@ -3521,11 +3587,11 @@
         "Cryptography",
         "Software engineering"
        ],
-       "id": "fieldbook_267"
+       "id": "fieldbook_272"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: Most bugs come from state and time, not from math",
+       "question": "Which field says: Tests are how you change code without fear",
        "answer": "Software engineering",
        "choices": [
         "Algorithms and complexity",
@@ -3533,11 +3599,11 @@
         "Computer science",
         "Software engineering"
        ],
-       "id": "fieldbook_268"
+       "id": "fieldbook_273"
       },
       {
        "type": "mathChoice",
-       "question": "Which field says: The best code is the code you did not have to write",
+       "question": "Which field says: Most bugs come from state and time, not from math",
        "answer": "Software engineering",
        "choices": [
         "Software engineering",
@@ -3545,7 +3611,19 @@
         "Computer science",
         "Algorithms and complexity"
        ],
-       "id": "fieldbook_269"
+       "id": "fieldbook_274"
+      },
+      {
+       "type": "mathChoice",
+       "question": "Which field says: The best code is the code you did not have to write",
+       "answer": "Software engineering",
+       "choices": [
+        "Artificial intelligence",
+        "Information theory",
+        "Cryptography",
+        "Software engineering"
+       ],
+       "id": "fieldbook_275"
       }
      ]
     }
@@ -3565,12 +3643,12 @@
        "question": "Why are there fossils of sea creatures on mountain tops?",
        "answer": "Plates pushed old sea floor upward over millions of years",
        "choices": [
-        "Plates pushed old sea floor upward over millions of years",
         "Animals climbed up",
+        "Plates pushed old sea floor upward over millions of years",
         "Sea level was once that high",
         "Floods carried them"
        ],
-       "id": "fieldbook_270"
+       "id": "fieldbook_276"
       },
       {
        "type": "mathChoice",
@@ -3578,59 +3656,59 @@
        "answer": "Geology",
        "choices": [
         "Planetary science",
-        "Climatology",
-        "Geology",
-        "Meteorology"
+        "Oceanography",
+        "Meteorology",
+        "Geology"
        ],
-       "id": "fieldbook_271"
+       "id": "fieldbook_277"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Plate tectonics explains mountains, quakes, volcanoes",
        "answer": "Geology",
        "choices": [
+        "Oceanography",
         "Planetary science",
-        "Climatology",
         "Geology",
-        "Meteorology"
+        "Astronomy"
        ],
-       "id": "fieldbook_272"
+       "id": "fieldbook_278"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Three rock types and a cycle between them",
        "answer": "Geology",
        "choices": [
-        "Planetary science",
         "Astronomy",
+        "Oceanography",
         "Geology",
-        "Oceanography"
+        "Climatology"
        ],
-       "id": "fieldbook_273"
+       "id": "fieldbook_279"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Deep time: the Earth is 4.5 billion years old",
        "answer": "Geology",
        "choices": [
-        "Planetary science",
         "Geology",
-        "Meteorology",
-        "Climatology"
+        "Astronomy",
+        "Climatology",
+        "Meteorology"
        ],
-       "id": "fieldbook_274"
+       "id": "fieldbook_280"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Rock layers are a history book",
        "answer": "Geology",
        "choices": [
-        "Geology",
-        "Planetary science",
         "Meteorology",
-        "Oceanography"
+        "Oceanography",
+        "Climatology",
+        "Geology"
        ],
-       "id": "fieldbook_275"
+       "id": "fieldbook_281"
       }
      ]
     },
@@ -3643,48 +3721,48 @@
        "question": "Why does rain usually come with low pressure?",
        "answer": "Rising air cools and its water condenses",
        "choices": [
-        "Wind pushes clouds down",
-        "Low pressure squeezes water out of clouds",
         "Cold air holds more water",
+        "Low pressure squeezes water out of clouds",
+        "Wind pushes clouds down",
         "Rising air cools and its water condenses"
        ],
-       "id": "fieldbook_276"
+       "id": "fieldbook_282"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Weather.\"",
        "answer": "Meteorology",
        "choices": [
-        "Planetary science",
-        "Climatology",
         "Meteorology",
-        "Geology"
+        "Oceanography",
+        "Climatology",
+        "Planetary science"
        ],
-       "id": "fieldbook_277"
+       "id": "fieldbook_283"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Weather is redistributed solar heat",
        "answer": "Meteorology",
        "choices": [
-        "Astronomy",
-        "Planetary science",
         "Meteorology",
+        "Planetary science",
+        "Astronomy",
         "Climatology"
        ],
-       "id": "fieldbook_278"
+       "id": "fieldbook_284"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Pressure differences drive wind",
        "answer": "Meteorology",
        "choices": [
-        "Geology",
-        "Astronomy",
+        "Oceanography",
+        "Planetary science",
         "Meteorology",
-        "Climatology"
+        "Astronomy"
        ],
-       "id": "fieldbook_279"
+       "id": "fieldbook_285"
       },
       {
        "type": "mathChoice",
@@ -3692,11 +3770,11 @@
        "answer": "Meteorology",
        "choices": [
         "Planetary science",
-        "Geology",
-        "Oceanography",
-        "Meteorology"
+        "Climatology",
+        "Meteorology",
+        "Astronomy"
        ],
-       "id": "fieldbook_280"
+       "id": "fieldbook_286"
       },
       {
        "type": "mathChoice",
@@ -3704,11 +3782,11 @@
        "answer": "Meteorology",
        "choices": [
         "Meteorology",
-        "Astronomy",
         "Climatology",
-        "Geology"
+        "Astronomy",
+        "Oceanography"
        ],
-       "id": "fieldbook_281"
+       "id": "fieldbook_287"
       }
      ]
     },
@@ -3721,72 +3799,72 @@
        "question": "What is the difference between weather and climate?",
        "answer": "Weather is today; climate is the long-run pattern",
        "choices": [
-        "Weather is global, climate is local",
-        "Climate changes daily",
         "Weather is today; climate is the long-run pattern",
-        "They are the same thing"
+        "Weather is global, climate is local",
+        "They are the same thing",
+        "Climate changes daily"
        ],
-       "id": "fieldbook_282"
+       "id": "fieldbook_288"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Long-term patterns of the atmosphere.\"",
        "answer": "Climatology",
        "choices": [
-        "Oceanography",
-        "Climatology",
+        "Meteorology",
         "Astronomy",
-        "Meteorology"
+        "Climatology",
+        "Oceanography"
        ],
-       "id": "fieldbook_283"
+       "id": "fieldbook_289"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Greenhouse gases trap outgoing heat",
        "answer": "Climatology",
        "choices": [
-        "Geology",
-        "Astronomy",
+        "Planetary science",
+        "Meteorology",
         "Climatology",
-        "Oceanography"
+        "Astronomy"
        ],
-       "id": "fieldbook_284"
+       "id": "fieldbook_290"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: CO2 has risen about 50% since 1800",
        "answer": "Climatology",
        "choices": [
-        "Planetary science",
         "Geology",
-        "Climatology",
-        "Oceanography"
+        "Planetary science",
+        "Meteorology",
+        "Climatology"
        ],
-       "id": "fieldbook_285"
+       "id": "fieldbook_291"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Feedbacks: melting ice absorbs more sun",
        "answer": "Climatology",
        "choices": [
-        "Meteorology",
-        "Climatology",
         "Astronomy",
-        "Planetary science"
+        "Climatology",
+        "Oceanography",
+        "Meteorology"
        ],
-       "id": "fieldbook_286"
+       "id": "fieldbook_292"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: The physics is nineteenth century and not in dispute",
        "answer": "Climatology",
        "choices": [
-        "Oceanography",
-        "Climatology",
+        "Astronomy",
         "Geology",
-        "Meteorology"
+        "Oceanography",
+        "Climatology"
        ],
-       "id": "fieldbook_287"
+       "id": "fieldbook_293"
       }
      ]
     },
@@ -3799,60 +3877,60 @@
        "question": "What drives the great ocean conveyor?",
        "answer": "Cold salty water sinking and warm water rising",
        "choices": [
+        "Cold salty water sinking and warm water rising",
         "Wind alone",
-        "The Moon's pull",
         "Fish migration",
-        "Cold salty water sinking and warm water rising"
+        "The Moon's pull"
        ],
-       "id": "fieldbook_288"
+       "id": "fieldbook_294"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"The seas.\"",
        "answer": "Oceanography",
        "choices": [
-        "Geology",
+        "Astronomy",
+        "Climatology",
         "Oceanography",
-        "Meteorology",
-        "Planetary science"
+        "Meteorology"
        ],
-       "id": "fieldbook_289"
+       "id": "fieldbook_295"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Half your oxygen comes from ocean plankton",
        "answer": "Oceanography",
        "choices": [
-        "Planetary science",
+        "Astronomy",
         "Geology",
         "Oceanography",
-        "Astronomy"
+        "Planetary science"
        ],
-       "id": "fieldbook_290"
+       "id": "fieldbook_296"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Currents redistribute heat globally",
        "answer": "Oceanography",
        "choices": [
+        "Oceanography",
         "Meteorology",
-        "Planetary science",
-        "Geology",
-        "Oceanography"
+        "Climatology",
+        "Astronomy"
        ],
-       "id": "fieldbook_291"
+       "id": "fieldbook_297"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: The deep ocean is dark, cold, high pressure, and full of life",
        "answer": "Oceanography",
        "choices": [
-        "Meteorology",
         "Astronomy",
-        "Geology",
-        "Oceanography"
+        "Planetary science",
+        "Oceanography",
+        "Meteorology"
        ],
-       "id": "fieldbook_292"
+       "id": "fieldbook_298"
       },
       {
        "type": "mathChoice",
@@ -3860,11 +3938,11 @@
        "answer": "Oceanography",
        "choices": [
         "Planetary science",
-        "Geology",
         "Astronomy",
-        "Oceanography"
+        "Oceanography",
+        "Meteorology"
        ],
-       "id": "fieldbook_293"
+       "id": "fieldbook_299"
       }
      ]
     },
@@ -3877,48 +3955,48 @@
        "question": "Why does Venus have a thick hot atmosphere and Mars a thin cold one?",
        "answer": "Size and distance from the Sun set how much gas each held",
        "choices": [
+        "Venus spins faster",
         "Venus has more volcanoes today",
-        "Size and distance from the Sun set how much gas each held",
         "Mars is farther from Earth",
-        "Venus spins faster"
+        "Size and distance from the Sun set how much gas each held"
        ],
-       "id": "fieldbook_294"
+       "id": "fieldbook_300"
       },
       {
        "type": "mathChoice",
        "question": "Which field: \"Other worlds.\"",
        "answer": "Planetary science",
        "choices": [
-        "Geology",
-        "Oceanography",
+        "Astronomy",
+        "Planetary science",
         "Climatology",
-        "Planetary science"
+        "Oceanography"
        ],
-       "id": "fieldbook_295"
+       "id": "fieldbook_301"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Rocky inner planets, gas and ice giants outer",
        "answer": "Planetary science",
        "choices": [
-        "Geology",
         "Meteorology",
-        "Climatology",
-        "Planetary science"
+        "Oceanography",
+        "Planetary science",
+        "Geology"
        ],
-       "id": "fieldbook_296"
+       "id": "fieldbook_302"
       },
       {
        "type": "mathChoice",
        "question": "Which field says: Several moons have subsurface oceans",
        "answer": "Planetary science",
        "choices": [
-        "Climatology",
+        "Astronomy",
         "Planetary science",
         "Geology",
         "Meteorology"
        ],
-       "id": "fieldbook_297"
+       "id": "fieldbook_303"
       },
       {
        "type": "mathChoice",
@@ -3930,7 +4008,7 @@
         "Climatology",
         "Oceanography"
        ],
-       "id": "fieldbook_298"
+       "id": "fieldbook_304"
       },
       {
        "type": "mathChoice",
@@ -3942,7 +4020,7 @@
         "Planetary science",
         "Climatology"
        ],
-       "id": "fieldbook_299"
+       "id": "fieldbook_305"
       }
      ]
     },
@@ -3960,7 +4038,7 @@
         "The far side is dark",
         "It rotates once for every orbit around Earth"
        ],
-       "id": "fieldbook_300"
+       "id": "fieldbook_306"
       },
       {
        "type": "mathChoice",
@@ -3972,7 +4050,7 @@
         "Oceanography",
         "Meteorology"
        ],
-       "id": "fieldbook_301"
+       "id": "fieldbook_307"
       },
       {
        "type": "mathChoice",
@@ -3984,7 +4062,7 @@
         "Climatology",
         "Astronomy"
        ],
-       "id": "fieldbook_302"
+       "id": "fieldbook_308"
       },
       {
        "type": "mathChoice",
@@ -3996,7 +4074,7 @@
         "Meteorology",
         "Astronomy"
        ],
-       "id": "fieldbook_303"
+       "id": "fieldbook_309"
       },
       {
        "type": "mathChoice",
@@ -4008,7 +4086,7 @@
         "Astronomy",
         "Climatology"
        ],
-       "id": "fieldbook_304"
+       "id": "fieldbook_310"
       },
       {
        "type": "mathChoice",
@@ -4020,7 +4098,7 @@
         "Planetary science",
         "Astronomy"
        ],
-       "id": "fieldbook_305"
+       "id": "fieldbook_311"
       }
      ]
     }
@@ -4045,7 +4123,7 @@
         "Primes are the largest numbers",
         "All primes are odd"
        ],
-       "id": "fieldbook_306"
+       "id": "fieldbook_312"
       },
       {
        "type": "mathChoice",
@@ -4057,7 +4135,7 @@
         "Discrete mathematics",
         "Game theory"
        ],
-       "id": "fieldbook_307"
+       "id": "fieldbook_313"
       },
       {
        "type": "mathChoice",
@@ -4069,7 +4147,7 @@
         "Optimization",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_308"
+       "id": "fieldbook_314"
       },
       {
        "type": "mathChoice",
@@ -4081,7 +4159,7 @@
         "Arithmetic and number theory",
         "Linear algebra"
        ],
-       "id": "fieldbook_309"
+       "id": "fieldbook_315"
       },
       {
        "type": "mathChoice",
@@ -4093,7 +4171,7 @@
         "Arithmetic and number theory",
         "Probability"
        ],
-       "id": "fieldbook_310"
+       "id": "fieldbook_316"
       },
       {
        "type": "mathChoice",
@@ -4105,7 +4183,7 @@
         "Statistics",
         "Probability"
        ],
-       "id": "fieldbook_311"
+       "id": "fieldbook_317"
       }
      ]
     },
@@ -4123,7 +4201,7 @@
         "Making the equation shorter",
         "Multiplying both sides"
        ],
-       "id": "fieldbook_312"
+       "id": "fieldbook_318"
       },
       {
        "type": "mathChoice",
@@ -4135,7 +4213,7 @@
         "Logic and set theory",
         "Geometry and trigonometry"
        ],
-       "id": "fieldbook_313"
+       "id": "fieldbook_319"
       },
       {
        "type": "mathChoice",
@@ -4147,7 +4225,7 @@
         "Logic and set theory",
         "Geometry and trigonometry"
        ],
-       "id": "fieldbook_314"
+       "id": "fieldbook_320"
       },
       {
        "type": "mathChoice",
@@ -4159,7 +4237,7 @@
         "Algebra",
         "Game theory"
        ],
-       "id": "fieldbook_315"
+       "id": "fieldbook_321"
       },
       {
        "type": "mathChoice",
@@ -4171,7 +4249,7 @@
         "Optimization",
         "Game theory"
        ],
-       "id": "fieldbook_316"
+       "id": "fieldbook_322"
       },
       {
        "type": "mathChoice",
@@ -4183,7 +4261,7 @@
         "Linear algebra",
         "Discrete mathematics"
        ],
-       "id": "fieldbook_317"
+       "id": "fieldbook_323"
       }
      ]
     },
@@ -4201,7 +4279,7 @@
         "Square the height",
         "Use the ratio of sides, a trig function"
        ],
-       "id": "fieldbook_318"
+       "id": "fieldbook_324"
       },
       {
        "type": "mathChoice",
@@ -4213,7 +4291,7 @@
         "Topology",
         "Algebra"
        ],
-       "id": "fieldbook_319"
+       "id": "fieldbook_325"
       },
       {
        "type": "mathChoice",
@@ -4225,7 +4303,7 @@
         "Differential equations and dynamics",
         "Optimization"
        ],
-       "id": "fieldbook_320"
+       "id": "fieldbook_326"
       },
       {
        "type": "mathChoice",
@@ -4237,7 +4315,7 @@
         "Algebra",
         "Game theory"
        ],
-       "id": "fieldbook_321"
+       "id": "fieldbook_327"
       },
       {
        "type": "mathChoice",
@@ -4249,7 +4327,7 @@
         "Discrete mathematics",
         "Geometry and trigonometry"
        ],
-       "id": "fieldbook_322"
+       "id": "fieldbook_328"
       },
       {
        "type": "mathChoice",
@@ -4261,7 +4339,7 @@
         "Discrete mathematics",
         "Geometry and trigonometry"
        ],
-       "id": "fieldbook_323"
+       "id": "fieldbook_329"
       }
      ]
     },
@@ -4279,7 +4357,7 @@
         "The maximum value",
         "The average over time"
        ],
-       "id": "fieldbook_324"
+       "id": "fieldbook_330"
       },
       {
        "type": "mathChoice",
@@ -4291,7 +4369,7 @@
         "Discrete mathematics",
         "Calculus"
        ],
-       "id": "fieldbook_325"
+       "id": "fieldbook_331"
       },
       {
        "type": "mathChoice",
@@ -4303,7 +4381,7 @@
         "Logic and set theory",
         "Calculus"
        ],
-       "id": "fieldbook_326"
+       "id": "fieldbook_332"
       },
       {
        "type": "mathChoice",
@@ -4315,7 +4393,7 @@
         "Calculus",
         "Geometry and trigonometry"
        ],
-       "id": "fieldbook_327"
+       "id": "fieldbook_333"
       },
       {
        "type": "mathChoice",
@@ -4327,7 +4405,7 @@
         "Statistics",
         "Calculus"
        ],
-       "id": "fieldbook_328"
+       "id": "fieldbook_334"
       },
       {
        "type": "mathChoice",
@@ -4339,7 +4417,7 @@
         "Calculus",
         "Linear algebra"
        ],
-       "id": "fieldbook_329"
+       "id": "fieldbook_335"
       }
      ]
     },
@@ -4357,7 +4435,7 @@
         "Sorts its entries",
         "Takes its square root"
        ],
-       "id": "fieldbook_330"
+       "id": "fieldbook_336"
       },
       {
        "type": "mathChoice",
@@ -4369,7 +4447,7 @@
         "Optimization",
         "Calculus"
        ],
-       "id": "fieldbook_331"
+       "id": "fieldbook_337"
       },
       {
        "type": "mathChoice",
@@ -4381,7 +4459,7 @@
         "Probability",
         "Logic and set theory"
        ],
-       "id": "fieldbook_332"
+       "id": "fieldbook_338"
       },
       {
        "type": "mathChoice",
@@ -4393,7 +4471,7 @@
         "Linear algebra",
         "Logic and set theory"
        ],
-       "id": "fieldbook_333"
+       "id": "fieldbook_339"
       },
       {
        "type": "mathChoice",
@@ -4405,7 +4483,7 @@
         "Differential equations and dynamics",
         "Linear algebra"
        ],
-       "id": "fieldbook_334"
+       "id": "fieldbook_340"
       },
       {
        "type": "mathChoice",
@@ -4417,7 +4495,7 @@
         "Probability",
         "Statistics"
        ],
-       "id": "fieldbook_335"
+       "id": "fieldbook_341"
       }
      ]
     },
@@ -4435,7 +4513,7 @@
         "Higher, the coin is hot",
         "Lower, tails is due"
        ],
-       "id": "fieldbook_336"
+       "id": "fieldbook_342"
       },
       {
        "type": "mathChoice",
@@ -4447,7 +4525,7 @@
         "Topology",
         "Probability"
        ],
-       "id": "fieldbook_337"
+       "id": "fieldbook_343"
       },
       {
        "type": "mathChoice",
@@ -4459,7 +4537,7 @@
         "Calculus",
         "Probability"
        ],
-       "id": "fieldbook_338"
+       "id": "fieldbook_344"
       },
       {
        "type": "mathChoice",
@@ -4471,7 +4549,7 @@
         "Topology",
         "Probability"
        ],
-       "id": "fieldbook_339"
+       "id": "fieldbook_345"
       },
       {
        "type": "mathChoice",
@@ -4483,7 +4561,7 @@
         "Probability",
         "Game theory"
        ],
-       "id": "fieldbook_340"
+       "id": "fieldbook_346"
       },
       {
        "type": "mathChoice",
@@ -4495,7 +4573,7 @@
         "Game theory",
         "Optimization"
        ],
-       "id": "fieldbook_341"
+       "id": "fieldbook_347"
       }
      ]
     },
@@ -4513,7 +4591,7 @@
         "Drowning causes ice cream sales",
         "Ice cream causes drowning"
        ],
-       "id": "fieldbook_342"
+       "id": "fieldbook_348"
       },
       {
        "type": "mathChoice",
@@ -4525,7 +4603,7 @@
         "Statistics",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_343"
+       "id": "fieldbook_349"
       },
       {
        "type": "mathChoice",
@@ -4537,7 +4615,7 @@
         "Geometry and trigonometry",
         "Linear algebra"
        ],
-       "id": "fieldbook_344"
+       "id": "fieldbook_350"
       },
       {
        "type": "mathChoice",
@@ -4549,7 +4627,7 @@
         "Topology",
         "Logic and set theory"
        ],
-       "id": "fieldbook_345"
+       "id": "fieldbook_351"
       },
       {
        "type": "mathChoice",
@@ -4561,7 +4639,7 @@
         "Logic and set theory",
         "Statistics"
        ],
-       "id": "fieldbook_346"
+       "id": "fieldbook_352"
       },
       {
        "type": "mathChoice",
@@ -4573,7 +4651,7 @@
         "Statistics",
         "Game theory"
        ],
-       "id": "fieldbook_347"
+       "id": "fieldbook_353"
       }
      ]
     },
@@ -4591,7 +4669,7 @@
         "Tom is a mammal",
         "All mammals are cats"
        ],
-       "id": "fieldbook_348"
+       "id": "fieldbook_354"
       },
       {
        "type": "mathChoice",
@@ -4603,7 +4681,7 @@
         "Calculus",
         "Logic and set theory"
        ],
-       "id": "fieldbook_349"
+       "id": "fieldbook_355"
       },
       {
        "type": "mathChoice",
@@ -4615,7 +4693,7 @@
         "Logic and set theory",
         "Game theory"
        ],
-       "id": "fieldbook_350"
+       "id": "fieldbook_356"
       },
       {
        "type": "mathChoice",
@@ -4627,7 +4705,7 @@
         "Logic and set theory",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_351"
+       "id": "fieldbook_357"
       },
       {
        "type": "mathChoice",
@@ -4639,7 +4717,7 @@
         "Logic and set theory",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_352"
+       "id": "fieldbook_358"
       },
       {
        "type": "mathChoice",
@@ -4651,7 +4729,7 @@
         "Algebra",
         "Logic and set theory"
        ],
-       "id": "fieldbook_353"
+       "id": "fieldbook_359"
       }
      ]
     },
@@ -4669,7 +4747,7 @@
         "Twenty-seven",
         "Three"
        ],
-       "id": "fieldbook_354"
+       "id": "fieldbook_360"
       },
       {
        "type": "mathChoice",
@@ -4681,7 +4759,7 @@
         "Optimization",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_355"
+       "id": "fieldbook_361"
       },
       {
        "type": "mathChoice",
@@ -4693,7 +4771,7 @@
         "Geometry and trigonometry",
         "Discrete mathematics"
        ],
-       "id": "fieldbook_356"
+       "id": "fieldbook_362"
       },
       {
        "type": "mathChoice",
@@ -4705,7 +4783,7 @@
         "Optimization",
         "Discrete mathematics"
        ],
-       "id": "fieldbook_357"
+       "id": "fieldbook_363"
       },
       {
        "type": "mathChoice",
@@ -4717,7 +4795,7 @@
         "Probability",
         "Algebra"
        ],
-       "id": "fieldbook_358"
+       "id": "fieldbook_364"
       },
       {
        "type": "mathChoice",
@@ -4729,7 +4807,7 @@
         "Discrete mathematics",
         "Optimization"
        ],
-       "id": "fieldbook_359"
+       "id": "fieldbook_365"
       }
      ]
     },
@@ -4747,7 +4825,7 @@
         "A list of past values",
         "A shape"
        ],
-       "id": "fieldbook_360"
+       "id": "fieldbook_366"
       },
       {
        "type": "mathChoice",
@@ -4759,7 +4837,7 @@
         "Differential equations and dynamics",
         "Optimization"
        ],
-       "id": "fieldbook_361"
+       "id": "fieldbook_367"
       },
       {
        "type": "mathChoice",
@@ -4771,7 +4849,7 @@
         "Geometry and trigonometry",
         "Differential equations and dynamics"
        ],
-       "id": "fieldbook_362"
+       "id": "fieldbook_368"
       },
       {
        "type": "mathChoice",
@@ -4783,7 +4861,7 @@
         "Differential equations and dynamics",
         "Game theory"
        ],
-       "id": "fieldbook_363"
+       "id": "fieldbook_369"
       },
       {
        "type": "mathChoice",
@@ -4795,7 +4873,7 @@
         "Arithmetic and number theory",
         "Probability"
        ],
-       "id": "fieldbook_364"
+       "id": "fieldbook_370"
       },
       {
        "type": "mathChoice",
@@ -4807,7 +4885,7 @@
         "Geometry and trigonometry",
         "Arithmetic and number theory"
        ],
-       "id": "fieldbook_365"
+       "id": "fieldbook_371"
       }
      ]
     },
@@ -4825,7 +4903,7 @@
         "Both have exactly one hole and can be deformed into each other",
         "Both hold liquid"
        ],
-       "id": "fieldbook_366"
+       "id": "fieldbook_372"
       },
       {
        "type": "mathChoice",
@@ -4837,7 +4915,7 @@
         "Discrete mathematics",
         "Topology"
        ],
-       "id": "fieldbook_367"
+       "id": "fieldbook_373"
       },
       {
        "type": "mathChoice",
@@ -4849,7 +4927,7 @@
         "Linear algebra",
         "Optimization"
        ],
-       "id": "fieldbook_368"
+       "id": "fieldbook_374"
       },
       {
        "type": "mathChoice",
@@ -4861,7 +4939,7 @@
         "Calculus",
         "Logic and set theory"
        ],
-       "id": "fieldbook_369"
+       "id": "fieldbook_375"
       },
       {
        "type": "mathChoice",
@@ -4873,7 +4951,7 @@
         "Discrete mathematics",
         "Optimization"
        ],
-       "id": "fieldbook_370"
+       "id": "fieldbook_376"
       },
       {
        "type": "mathChoice",
@@ -4885,7 +4963,7 @@
         "Topology",
         "Discrete mathematics"
        ],
-       "id": "fieldbook_371"
+       "id": "fieldbook_377"
       }
      ]
     },
@@ -4903,7 +4981,7 @@
         "They cannot count",
         "Each does better confessing no matter what the other does"
        ],
-       "id": "fieldbook_372"
+       "id": "fieldbook_378"
       },
       {
        "type": "mathChoice",
@@ -4915,7 +4993,7 @@
         "Game theory",
         "Calculus"
        ],
-       "id": "fieldbook_373"
+       "id": "fieldbook_379"
       },
       {
        "type": "mathChoice",
@@ -4927,7 +5005,7 @@
         "Differential equations and dynamics",
         "Topology"
        ],
-       "id": "fieldbook_374"
+       "id": "fieldbook_380"
       },
       {
        "type": "mathChoice",
@@ -4939,7 +5017,7 @@
         "Calculus",
         "Logic and set theory"
        ],
-       "id": "fieldbook_375"
+       "id": "fieldbook_381"
       },
       {
        "type": "mathChoice",
@@ -4951,7 +5029,7 @@
         "Game theory",
         "Logic and set theory"
        ],
-       "id": "fieldbook_376"
+       "id": "fieldbook_382"
       },
       {
        "type": "mathChoice",
@@ -4963,7 +5041,7 @@
         "Game theory",
         "Probability"
        ],
-       "id": "fieldbook_377"
+       "id": "fieldbook_383"
       }
      ]
     },
@@ -4981,7 +5059,7 @@
         "Yes, if the step size was small",
         "No, it must climb next"
        ],
-       "id": "fieldbook_378"
+       "id": "fieldbook_384"
       },
       {
        "type": "mathChoice",
@@ -4993,7 +5071,7 @@
         "Game theory",
         "Calculus"
        ],
-       "id": "fieldbook_379"
+       "id": "fieldbook_385"
       },
       {
        "type": "mathChoice",
@@ -5005,7 +5083,7 @@
         "Optimization",
         "Logic and set theory"
        ],
-       "id": "fieldbook_380"
+       "id": "fieldbook_386"
       },
       {
        "type": "mathChoice",
@@ -5017,7 +5095,7 @@
         "Probability",
         "Optimization"
        ],
-       "id": "fieldbook_381"
+       "id": "fieldbook_387"
       },
       {
        "type": "mathChoice",
@@ -5029,7 +5107,7 @@
         "Optimization",
         "Discrete mathematics"
        ],
-       "id": "fieldbook_382"
+       "id": "fieldbook_388"
       },
       {
        "type": "mathChoice",
@@ -5041,7 +5119,7 @@
         "Logic and set theory",
         "Optimization"
        ],
-       "id": "fieldbook_383"
+       "id": "fieldbook_389"
       }
      ]
     }
@@ -5066,7 +5144,7 @@
         "Attention is higher in the morning",
         "Dreams replay ads"
        ],
-       "id": "fieldbook_384"
+       "id": "fieldbook_390"
       },
       {
        "type": "mathChoice",
@@ -5078,7 +5156,7 @@
         "Archaeology",
         "Psychology"
        ],
-       "id": "fieldbook_385"
+       "id": "fieldbook_391"
       },
       {
        "type": "mathChoice",
@@ -5090,7 +5168,7 @@
         "Economics",
         "Political science"
        ],
-       "id": "fieldbook_386"
+       "id": "fieldbook_392"
       },
       {
        "type": "mathChoice",
@@ -5102,7 +5180,7 @@
         "Psychology",
         "Anthropology"
        ],
-       "id": "fieldbook_387"
+       "id": "fieldbook_393"
       },
       {
        "type": "mathChoice",
@@ -5114,7 +5192,7 @@
         "Psychology",
         "Law"
        ],
-       "id": "fieldbook_388"
+       "id": "fieldbook_394"
       },
       {
        "type": "mathChoice",
@@ -5126,7 +5204,7 @@
         "Anthropology",
         "Psychology"
        ],
-       "id": "fieldbook_389"
+       "id": "fieldbook_395"
       }
      ]
     },
@@ -5144,7 +5222,7 @@
         "Words are stored as pictures",
         "The mind predicts and fills in from context"
        ],
-       "id": "fieldbook_390"
+       "id": "fieldbook_396"
       },
       {
        "type": "mathChoice",
@@ -5156,7 +5234,7 @@
         "History",
         "Linguistics"
        ],
-       "id": "fieldbook_391"
+       "id": "fieldbook_397"
       },
       {
        "type": "mathChoice",
@@ -5168,7 +5246,7 @@
         "Sociology",
         "Philosophy"
        ],
-       "id": "fieldbook_392"
+       "id": "fieldbook_398"
       },
       {
        "type": "mathChoice",
@@ -5180,7 +5258,7 @@
         "Philosophy",
         "Sociology"
        ],
-       "id": "fieldbook_393"
+       "id": "fieldbook_399"
       },
       {
        "type": "mathChoice",
@@ -5192,7 +5270,7 @@
         "Geography",
         "Cognitive science"
        ],
-       "id": "fieldbook_394"
+       "id": "fieldbook_400"
       },
       {
        "type": "mathChoice",
@@ -5204,7 +5282,7 @@
         "Linguistics",
         "Philosophy"
        ],
-       "id": "fieldbook_395"
+       "id": "fieldbook_401"
       }
      ]
     },
@@ -5222,7 +5300,7 @@
         "Children copy exactly what they hear",
         "Humans come built for language"
        ],
-       "id": "fieldbook_396"
+       "id": "fieldbook_402"
       },
       {
        "type": "mathChoice",
@@ -5234,7 +5312,7 @@
         "Linguistics",
         "Economics"
        ],
-       "id": "fieldbook_397"
+       "id": "fieldbook_403"
       },
       {
        "type": "mathChoice",
@@ -5246,7 +5324,7 @@
         "Linguistics",
         "Economics"
        ],
-       "id": "fieldbook_398"
+       "id": "fieldbook_404"
       },
       {
        "type": "mathChoice",
@@ -5258,7 +5336,7 @@
         "Sociology",
         "History"
        ],
-       "id": "fieldbook_399"
+       "id": "fieldbook_405"
       },
       {
        "type": "mathChoice",
@@ -5270,7 +5348,7 @@
         "Political science",
         "Linguistics"
        ],
-       "id": "fieldbook_400"
+       "id": "fieldbook_406"
       },
       {
        "type": "mathChoice",
@@ -5282,7 +5360,7 @@
         "Cognitive science",
         "Archaeology"
        ],
-       "id": "fieldbook_401"
+       "id": "fieldbook_407"
       }
      ]
     },
@@ -5300,7 +5378,7 @@
         "Prices fall everywhere",
         "Nothing changes"
        ],
-       "id": "fieldbook_402"
+       "id": "fieldbook_408"
       },
       {
        "type": "mathChoice",
@@ -5312,7 +5390,7 @@
         "Economics",
         "Cognitive science"
        ],
-       "id": "fieldbook_403"
+       "id": "fieldbook_409"
       },
       {
        "type": "mathChoice",
@@ -5324,7 +5402,7 @@
         "Sociology",
         "Anthropology"
        ],
-       "id": "fieldbook_404"
+       "id": "fieldbook_410"
       },
       {
        "type": "mathChoice",
@@ -5336,7 +5414,7 @@
         "History",
         "Psychology"
        ],
-       "id": "fieldbook_405"
+       "id": "fieldbook_411"
       },
       {
        "type": "mathChoice",
@@ -5348,7 +5426,7 @@
         "Economics",
         "Law"
        ],
-       "id": "fieldbook_406"
+       "id": "fieldbook_412"
       },
       {
        "type": "mathChoice",
@@ -5360,7 +5438,7 @@
         "Anthropology",
         "Linguistics"
        ],
-       "id": "fieldbook_407"
+       "id": "fieldbook_413"
       }
      ]
     },
@@ -5378,7 +5456,7 @@
         "Crowds are more selfish",
         "Each assumes someone else will act"
        ],
-       "id": "fieldbook_408"
+       "id": "fieldbook_414"
       },
       {
        "type": "mathChoice",
@@ -5390,7 +5468,7 @@
         "Archaeology",
         "Linguistics"
        ],
-       "id": "fieldbook_409"
+       "id": "fieldbook_415"
       },
       {
        "type": "mathChoice",
@@ -5402,7 +5480,7 @@
         "Cognitive science",
         "Linguistics"
        ],
-       "id": "fieldbook_410"
+       "id": "fieldbook_416"
       },
       {
        "type": "mathChoice",
@@ -5414,7 +5492,7 @@
         "Economics",
         "Linguistics"
        ],
-       "id": "fieldbook_411"
+       "id": "fieldbook_417"
       },
       {
        "type": "mathChoice",
@@ -5426,7 +5504,7 @@
         "Sociology",
         "Geography"
        ],
-       "id": "fieldbook_412"
+       "id": "fieldbook_418"
       },
       {
        "type": "mathChoice",
@@ -5438,7 +5516,7 @@
         "Law",
         "Political science"
        ],
-       "id": "fieldbook_413"
+       "id": "fieldbook_419"
       }
      ]
     },
@@ -5456,7 +5534,7 @@
         "The learned, shared way a group lives",
         "Art and music only"
        ],
-       "id": "fieldbook_414"
+       "id": "fieldbook_420"
       },
       {
        "type": "mathChoice",
@@ -5468,7 +5546,7 @@
         "Philosophy",
         "Linguistics"
        ],
-       "id": "fieldbook_415"
+       "id": "fieldbook_421"
       },
       {
        "type": "mathChoice",
@@ -5480,7 +5558,7 @@
         "Linguistics",
         "Psychology"
        ],
-       "id": "fieldbook_416"
+       "id": "fieldbook_422"
       },
       {
        "type": "mathChoice",
@@ -5492,7 +5570,7 @@
         "Anthropology",
         "Geography"
        ],
-       "id": "fieldbook_417"
+       "id": "fieldbook_423"
       },
       {
        "type": "mathChoice",
@@ -5504,7 +5582,7 @@
         "Political science",
         "Psychology"
        ],
-       "id": "fieldbook_418"
+       "id": "fieldbook_424"
       },
       {
        "type": "mathChoice",
@@ -5516,7 +5594,7 @@
         "Philosophy",
         "Law"
        ],
-       "id": "fieldbook_419"
+       "id": "fieldbook_425"
       }
      ]
     },
@@ -5534,7 +5612,7 @@
         "Votes for small parties are wasted, so voters converge on two",
         "The law allows only two"
        ],
-       "id": "fieldbook_420"
+       "id": "fieldbook_426"
       },
       {
        "type": "mathChoice",
@@ -5546,7 +5624,7 @@
         "Political science",
         "Sociology"
        ],
-       "id": "fieldbook_421"
+       "id": "fieldbook_427"
       },
       {
        "type": "mathChoice",
@@ -5558,7 +5636,7 @@
         "Psychology",
         "Economics"
        ],
-       "id": "fieldbook_422"
+       "id": "fieldbook_428"
       },
       {
        "type": "mathChoice",
@@ -5570,7 +5648,7 @@
         "Economics",
         "Law"
        ],
-       "id": "fieldbook_423"
+       "id": "fieldbook_429"
       },
       {
        "type": "mathChoice",
@@ -5582,7 +5660,7 @@
         "Psychology",
         "Linguistics"
        ],
-       "id": "fieldbook_424"
+       "id": "fieldbook_430"
       },
       {
        "type": "mathChoice",
@@ -5594,7 +5672,7 @@
         "Political science",
         "Geography"
        ],
-       "id": "fieldbook_425"
+       "id": "fieldbook_431"
       }
      ]
     },
@@ -5612,7 +5690,7 @@
         "Old documents are usually forged",
         "Every source has a point of view and gaps"
        ],
-       "id": "fieldbook_426"
+       "id": "fieldbook_432"
       },
       {
        "type": "mathChoice",
@@ -5624,7 +5702,7 @@
         "Economics",
         "History"
        ],
-       "id": "fieldbook_427"
+       "id": "fieldbook_433"
       },
       {
        "type": "mathChoice",
@@ -5636,7 +5714,7 @@
         "Political science",
         "Archaeology"
        ],
-       "id": "fieldbook_428"
+       "id": "fieldbook_434"
       },
       {
        "type": "mathChoice",
@@ -5648,7 +5726,7 @@
         "History",
         "Archaeology"
        ],
-       "id": "fieldbook_429"
+       "id": "fieldbook_435"
       },
       {
        "type": "mathChoice",
@@ -5660,7 +5738,7 @@
         "Anthropology",
         "Geography"
        ],
-       "id": "fieldbook_430"
+       "id": "fieldbook_436"
       },
       {
        "type": "mathChoice",
@@ -5672,7 +5750,7 @@
         "Economics",
         "History"
        ],
-       "id": "fieldbook_431"
+       "id": "fieldbook_437"
       }
      ]
     },
@@ -5690,7 +5768,7 @@
         "To find the legally correct answer",
         "To prove ethics is impossible"
        ],
-       "id": "fieldbook_432"
+       "id": "fieldbook_438"
       },
       {
        "type": "mathChoice",
@@ -5702,7 +5780,7 @@
         "Political science",
         "Anthropology"
        ],
-       "id": "fieldbook_433"
+       "id": "fieldbook_439"
       },
       {
        "type": "mathChoice",
@@ -5714,7 +5792,7 @@
         "Linguistics",
         "Philosophy"
        ],
-       "id": "fieldbook_434"
+       "id": "fieldbook_440"
       },
       {
        "type": "mathChoice",
@@ -5726,7 +5804,7 @@
         "Philosophy",
         "Sociology"
        ],
-       "id": "fieldbook_435"
+       "id": "fieldbook_441"
       },
       {
        "type": "mathChoice",
@@ -5738,7 +5816,7 @@
         "Sociology",
         "Geography"
        ],
-       "id": "fieldbook_436"
+       "id": "fieldbook_442"
       },
       {
        "type": "mathChoice",
@@ -5750,7 +5828,7 @@
         "Political science",
         "Psychology"
        ],
-       "id": "fieldbook_437"
+       "id": "fieldbook_443"
       }
      ]
     },
@@ -5768,7 +5846,7 @@
         "Yes; civil cases need a lower standard of proof",
         "Only in another country"
        ],
-       "id": "fieldbook_438"
+       "id": "fieldbook_444"
       },
       {
        "type": "mathChoice",
@@ -5780,7 +5858,7 @@
         "Cognitive science",
         "Philosophy"
        ],
-       "id": "fieldbook_439"
+       "id": "fieldbook_445"
       },
       {
        "type": "mathChoice",
@@ -5792,7 +5870,7 @@
         "Geography",
         "Law"
        ],
-       "id": "fieldbook_440"
+       "id": "fieldbook_446"
       },
       {
        "type": "mathChoice",
@@ -5804,7 +5882,7 @@
         "Sociology",
         "Archaeology"
        ],
-       "id": "fieldbook_441"
+       "id": "fieldbook_447"
       },
       {
        "type": "mathChoice",
@@ -5816,7 +5894,7 @@
         "History",
         "Sociology"
        ],
-       "id": "fieldbook_442"
+       "id": "fieldbook_448"
       },
       {
        "type": "mathChoice",
@@ -5828,7 +5906,7 @@
         "Anthropology",
         "Law"
        ],
-       "id": "fieldbook_443"
+       "id": "fieldbook_449"
       }
      ]
     },
@@ -5846,7 +5924,7 @@
         "Flat land only exists near water",
         "Water was the cheapest way to move goods and people"
        ],
-       "id": "fieldbook_444"
+       "id": "fieldbook_450"
       },
       {
        "type": "mathChoice",
@@ -5858,7 +5936,7 @@
         "Psychology",
         "Economics"
        ],
-       "id": "fieldbook_445"
+       "id": "fieldbook_451"
       },
       {
        "type": "mathChoice",
@@ -5870,7 +5948,7 @@
         "Law",
         "Psychology"
        ],
-       "id": "fieldbook_446"
+       "id": "fieldbook_452"
       },
       {
        "type": "mathChoice",
@@ -5882,7 +5960,7 @@
         "Philosophy",
         "Geography"
        ],
-       "id": "fieldbook_447"
+       "id": "fieldbook_453"
       },
       {
        "type": "mathChoice",
@@ -5894,7 +5972,7 @@
         "Geography",
         "Economics"
        ],
-       "id": "fieldbook_448"
+       "id": "fieldbook_454"
       },
       {
        "type": "mathChoice",
@@ -5906,7 +5984,7 @@
         "History",
         "Law"
        ],
-       "id": "fieldbook_449"
+       "id": "fieldbook_455"
       }
      ]
     },
@@ -5924,7 +6002,7 @@
         "Museums will not display it",
         "Without its layer and surroundings, its age and use are unknown"
        ],
-       "id": "fieldbook_450"
+       "id": "fieldbook_456"
       },
       {
        "type": "mathChoice",
@@ -5936,7 +6014,7 @@
         "Economics",
         "Archaeology"
        ],
-       "id": "fieldbook_451"
+       "id": "fieldbook_457"
       },
       {
        "type": "mathChoice",
@@ -5948,7 +6026,7 @@
         "Sociology",
         "Linguistics"
        ],
-       "id": "fieldbook_452"
+       "id": "fieldbook_458"
       },
       {
        "type": "mathChoice",
@@ -5960,7 +6038,7 @@
         "Archaeology",
         "Sociology"
        ],
-       "id": "fieldbook_453"
+       "id": "fieldbook_459"
       },
       {
        "type": "mathChoice",
@@ -5972,7 +6050,7 @@
         "Law",
         "Archaeology"
        ],
-       "id": "fieldbook_454"
+       "id": "fieldbook_460"
       },
       {
        "type": "mathChoice",
@@ -5984,7 +6062,7 @@
         "Sociology",
         "Archaeology"
        ],
-       "id": "fieldbook_455"
+       "id": "fieldbook_461"
       }
      ]
     }
@@ -6009,7 +6087,7 @@
         "The table pushes up with a force equal to the book's weight",
         "Friction holds it in place"
        ],
-       "id": "fieldbook_456"
+       "id": "fieldbook_462"
       },
       {
        "type": "mathChoice",
@@ -6021,7 +6099,7 @@
         "Acoustics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_457"
+       "id": "fieldbook_463"
       },
       {
        "type": "mathChoice",
@@ -6033,7 +6111,7 @@
         "Nuclear physics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_458"
+       "id": "fieldbook_464"
       },
       {
        "type": "mathChoice",
@@ -6045,7 +6123,7 @@
         "Relativity",
         "Classical mechanics"
        ],
-       "id": "fieldbook_459"
+       "id": "fieldbook_465"
       },
       {
        "type": "mathChoice",
@@ -6057,7 +6135,7 @@
         "Quantum mechanics",
         "Electromagnetism"
        ],
-       "id": "fieldbook_460"
+       "id": "fieldbook_466"
       },
       {
        "type": "mathChoice",
@@ -6069,7 +6147,7 @@
         "Classical mechanics",
         "Optics"
        ],
-       "id": "fieldbook_461"
+       "id": "fieldbook_467"
       }
      ]
     },
@@ -6087,7 +6165,7 @@
         "Heat flows from hot to cold, and entropy would have to decrease",
         "Air cannot transfer heat to liquids"
        ],
-       "id": "fieldbook_462"
+       "id": "fieldbook_468"
       },
       {
        "type": "mathChoice",
@@ -6099,7 +6177,7 @@
         "Astrophysics and cosmology",
         "Thermodynamics"
        ],
-       "id": "fieldbook_463"
+       "id": "fieldbook_469"
       },
       {
        "type": "mathChoice",
@@ -6111,7 +6189,7 @@
         "Optics",
         "Acoustics"
        ],
-       "id": "fieldbook_464"
+       "id": "fieldbook_470"
       },
       {
        "type": "mathChoice",
@@ -6123,7 +6201,7 @@
         "Nuclear physics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_465"
+       "id": "fieldbook_471"
       },
       {
        "type": "mathChoice",
@@ -6135,7 +6213,7 @@
         "Optics",
         "Condensed matter physics"
        ],
-       "id": "fieldbook_466"
+       "id": "fieldbook_472"
       },
       {
        "type": "mathChoice",
@@ -6147,7 +6225,7 @@
         "Thermodynamics",
         "Astrophysics and cosmology"
        ],
-       "id": "fieldbook_467"
+       "id": "fieldbook_473"
       }
      ]
     },
@@ -6165,7 +6243,7 @@
         "Moving charge creates a magnetic field",
         "The wire heats the air"
        ],
-       "id": "fieldbook_468"
+       "id": "fieldbook_474"
       },
       {
        "type": "mathChoice",
@@ -6177,7 +6255,7 @@
         "Optics",
         "Thermodynamics"
        ],
-       "id": "fieldbook_469"
+       "id": "fieldbook_475"
       },
       {
        "type": "mathChoice",
@@ -6189,7 +6267,7 @@
         "Acoustics",
         "Condensed matter physics"
        ],
-       "id": "fieldbook_470"
+       "id": "fieldbook_476"
       },
       {
        "type": "mathChoice",
@@ -6201,7 +6279,7 @@
         "Electromagnetism",
         "Quantum mechanics"
        ],
-       "id": "fieldbook_471"
+       "id": "fieldbook_477"
       },
       {
        "type": "mathChoice",
@@ -6213,7 +6291,7 @@
         "Electromagnetism",
         "Thermodynamics"
        ],
-       "id": "fieldbook_472"
+       "id": "fieldbook_478"
       },
       {
        "type": "mathChoice",
@@ -6225,7 +6303,7 @@
         "Electromagnetism",
         "Fluid dynamics"
        ],
-       "id": "fieldbook_473"
+       "id": "fieldbook_479"
       }
      ]
     },
@@ -6243,7 +6321,7 @@
         "Gravity is weaker in space",
         "Light takes longer to reach Earth"
        ],
-       "id": "fieldbook_474"
+       "id": "fieldbook_480"
       },
       {
        "type": "mathChoice",
@@ -6255,7 +6333,7 @@
         "Fluid dynamics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_475"
+       "id": "fieldbook_481"
       },
       {
        "type": "mathChoice",
@@ -6267,7 +6345,7 @@
         "Particle physics",
         "Fluid dynamics"
        ],
-       "id": "fieldbook_476"
+       "id": "fieldbook_482"
       },
       {
        "type": "mathChoice",
@@ -6279,7 +6357,7 @@
         "Acoustics",
         "Fluid dynamics"
        ],
-       "id": "fieldbook_477"
+       "id": "fieldbook_483"
       },
       {
        "type": "mathChoice",
@@ -6291,7 +6369,7 @@
         "Fluid dynamics",
         "Thermodynamics"
        ],
-       "id": "fieldbook_478"
+       "id": "fieldbook_484"
       },
       {
        "type": "mathChoice",
@@ -6303,7 +6381,7 @@
         "Acoustics",
         "Nuclear physics"
        ],
-       "id": "fieldbook_479"
+       "id": "fieldbook_485"
       }
      ]
     },
@@ -6321,7 +6399,7 @@
         "Instruments are not precise enough yet",
         "Electrons have no position"
        ],
-       "id": "fieldbook_480"
+       "id": "fieldbook_486"
       },
       {
        "type": "mathChoice",
@@ -6333,7 +6411,7 @@
         "Particle physics",
         "Optics"
        ],
-       "id": "fieldbook_481"
+       "id": "fieldbook_487"
       },
       {
        "type": "mathChoice",
@@ -6345,7 +6423,7 @@
         "Quantum mechanics",
         "Thermodynamics"
        ],
-       "id": "fieldbook_482"
+       "id": "fieldbook_488"
       },
       {
        "type": "mathChoice",
@@ -6357,7 +6435,7 @@
         "Relativity",
         "Quantum mechanics"
        ],
-       "id": "fieldbook_483"
+       "id": "fieldbook_489"
       },
       {
        "type": "mathChoice",
@@ -6369,7 +6447,7 @@
         "Nuclear physics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_484"
+       "id": "fieldbook_490"
       },
       {
        "type": "mathChoice",
@@ -6381,7 +6459,7 @@
         "Electromagnetism",
         "Astrophysics and cosmology"
        ],
-       "id": "fieldbook_485"
+       "id": "fieldbook_491"
       }
      ]
     },
@@ -6399,7 +6477,7 @@
         "Magnetism",
         "Electron shielding"
        ],
-       "id": "fieldbook_486"
+       "id": "fieldbook_492"
       },
       {
        "type": "mathChoice",
@@ -6411,7 +6489,7 @@
         "Relativity",
         "Particle physics"
        ],
-       "id": "fieldbook_487"
+       "id": "fieldbook_493"
       },
       {
        "type": "mathChoice",
@@ -6423,7 +6501,7 @@
         "Acoustics",
         "Particle physics"
        ],
-       "id": "fieldbook_488"
+       "id": "fieldbook_494"
       },
       {
        "type": "mathChoice",
@@ -6435,7 +6513,7 @@
         "Electromagnetism",
         "Fluid dynamics"
        ],
-       "id": "fieldbook_489"
+       "id": "fieldbook_495"
       },
       {
        "type": "mathChoice",
@@ -6447,7 +6525,7 @@
         "Classical mechanics",
         "Acoustics"
        ],
-       "id": "fieldbook_490"
+       "id": "fieldbook_496"
       },
       {
        "type": "mathChoice",
@@ -6459,7 +6537,7 @@
         "Optics",
         "Particle physics"
        ],
-       "id": "fieldbook_491"
+       "id": "fieldbook_497"
       }
      ]
     },
@@ -6477,7 +6555,7 @@
         "The straw actually bends",
         "Water magnifies everything"
        ],
-       "id": "fieldbook_492"
+       "id": "fieldbook_498"
       },
       {
        "type": "mathChoice",
@@ -6489,7 +6567,7 @@
         "Optics",
         "Relativity"
        ],
-       "id": "fieldbook_493"
+       "id": "fieldbook_499"
       },
       {
        "type": "mathChoice",
@@ -6501,7 +6579,7 @@
         "Relativity",
         "Particle physics"
        ],
-       "id": "fieldbook_494"
+       "id": "fieldbook_500"
       },
       {
        "type": "mathChoice",
@@ -6513,7 +6591,7 @@
         "Particle physics",
         "Electromagnetism"
        ],
-       "id": "fieldbook_495"
+       "id": "fieldbook_501"
       },
       {
        "type": "mathChoice",
@@ -6525,7 +6603,7 @@
         "Condensed matter physics",
         "Optics"
        ],
-       "id": "fieldbook_496"
+       "id": "fieldbook_502"
       },
       {
        "type": "mathChoice",
@@ -6537,7 +6615,7 @@
         "Fluid dynamics",
         "Particle physics"
        ],
-       "id": "fieldbook_497"
+       "id": "fieldbook_503"
       }
      ]
     },
@@ -6555,7 +6633,7 @@
         "Your ear adapts to volume",
         "Sound waves bunch up in front of a moving source"
        ],
-       "id": "fieldbook_498"
+       "id": "fieldbook_504"
       },
       {
        "type": "mathChoice",
@@ -6567,7 +6645,7 @@
         "Quantum mechanics",
         "Nuclear physics"
        ],
-       "id": "fieldbook_499"
+       "id": "fieldbook_505"
       },
       {
        "type": "mathChoice",
@@ -6579,7 +6657,7 @@
         "Quantum mechanics",
         "Acoustics"
        ],
-       "id": "fieldbook_500"
+       "id": "fieldbook_506"
       },
       {
        "type": "mathChoice",
@@ -6591,7 +6669,7 @@
         "Condensed matter physics",
         "Relativity"
        ],
-       "id": "fieldbook_501"
+       "id": "fieldbook_507"
       },
       {
        "type": "mathChoice",
@@ -6603,7 +6681,7 @@
         "Acoustics",
         "Thermodynamics"
        ],
-       "id": "fieldbook_502"
+       "id": "fieldbook_508"
       },
       {
        "type": "mathChoice",
@@ -6615,7 +6693,7 @@
         "Classical mechanics",
         "Electromagnetism"
        ],
-       "id": "fieldbook_503"
+       "id": "fieldbook_509"
       }
      ]
     },
@@ -6633,7 +6711,7 @@
         "Friction between fuel rods",
         "Burning uranium with oxygen"
        ],
-       "id": "fieldbook_504"
+       "id": "fieldbook_510"
       },
       {
        "type": "mathChoice",
@@ -6645,7 +6723,7 @@
         "Nuclear physics",
         "Relativity"
        ],
-       "id": "fieldbook_505"
+       "id": "fieldbook_511"
       },
       {
        "type": "mathChoice",
@@ -6657,7 +6735,7 @@
         "Relativity",
         "Condensed matter physics"
        ],
-       "id": "fieldbook_506"
+       "id": "fieldbook_512"
       },
       {
        "type": "mathChoice",
@@ -6669,7 +6747,7 @@
         "Quantum mechanics",
         "Relativity"
        ],
-       "id": "fieldbook_507"
+       "id": "fieldbook_513"
       },
       {
        "type": "mathChoice",
@@ -6681,7 +6759,7 @@
         "Optics",
         "Nuclear physics"
        ],
-       "id": "fieldbook_508"
+       "id": "fieldbook_514"
       },
       {
        "type": "mathChoice",
@@ -6693,7 +6771,7 @@
         "Nuclear physics",
         "Classical mechanics"
        ],
-       "id": "fieldbook_509"
+       "id": "fieldbook_515"
       }
      ]
     },
@@ -6711,7 +6789,7 @@
         "Copper is heavier",
         "In copper, electrons are free to move through the whole solid"
        ],
-       "id": "fieldbook_510"
+       "id": "fieldbook_516"
       },
       {
        "type": "mathChoice",
@@ -6723,7 +6801,7 @@
         "Condensed matter physics",
         "Relativity"
        ],
-       "id": "fieldbook_511"
+       "id": "fieldbook_517"
       },
       {
        "type": "mathChoice",
@@ -6735,7 +6813,7 @@
         "Quantum mechanics",
         "Thermodynamics"
        ],
-       "id": "fieldbook_512"
+       "id": "fieldbook_518"
       },
       {
        "type": "mathChoice",
@@ -6747,7 +6825,7 @@
         "Condensed matter physics",
         "Electromagnetism"
        ],
-       "id": "fieldbook_513"
+       "id": "fieldbook_519"
       },
       {
        "type": "mathChoice",
@@ -6759,7 +6837,7 @@
         "Condensed matter physics",
         "Nuclear physics"
        ],
-       "id": "fieldbook_514"
+       "id": "fieldbook_520"
       },
       {
        "type": "mathChoice",
@@ -6771,7 +6849,7 @@
         "Relativity",
         "Acoustics"
        ],
-       "id": "fieldbook_515"
+       "id": "fieldbook_521"
       }
      ]
     },
@@ -6789,7 +6867,7 @@
         "The same volume must pass through a smaller opening each second",
         "Gravity is stronger in narrow channels"
        ],
-       "id": "fieldbook_516"
+       "id": "fieldbook_522"
       },
       {
        "type": "mathChoice",
@@ -6801,7 +6879,7 @@
         "Astrophysics and cosmology",
         "Condensed matter physics"
        ],
-       "id": "fieldbook_517"
+       "id": "fieldbook_523"
       },
       {
        "type": "mathChoice",
@@ -6813,7 +6891,7 @@
         "Fluid dynamics",
         "Relativity"
        ],
-       "id": "fieldbook_518"
+       "id": "fieldbook_524"
       },
       {
        "type": "mathChoice",
@@ -6825,7 +6903,7 @@
         "Fluid dynamics",
         "Relativity"
        ],
-       "id": "fieldbook_519"
+       "id": "fieldbook_525"
       },
       {
        "type": "mathChoice",
@@ -6837,7 +6915,7 @@
         "Fluid dynamics",
         "Acoustics"
        ],
-       "id": "fieldbook_520"
+       "id": "fieldbook_526"
       },
       {
        "type": "mathChoice",
@@ -6849,7 +6927,7 @@
         "Relativity",
         "Fluid dynamics"
        ],
-       "id": "fieldbook_521"
+       "id": "fieldbook_527"
       }
      ]
     },
@@ -6867,7 +6945,7 @@
         "Stars are getting dimmer",
         "Light from distant galaxies is shifted toward red"
        ],
-       "id": "fieldbook_522"
+       "id": "fieldbook_528"
       },
       {
        "type": "mathChoice",
@@ -6879,7 +6957,7 @@
         "Electromagnetism",
         "Quantum mechanics"
        ],
-       "id": "fieldbook_523"
+       "id": "fieldbook_529"
       },
       {
        "type": "mathChoice",
@@ -6891,7 +6969,7 @@
         "Astrophysics and cosmology",
         "Nuclear physics"
        ],
-       "id": "fieldbook_524"
+       "id": "fieldbook_530"
       },
       {
        "type": "mathChoice",
@@ -6903,7 +6981,7 @@
         "Thermodynamics",
         "Optics"
        ],
-       "id": "fieldbook_525"
+       "id": "fieldbook_531"
       },
       {
        "type": "mathChoice",
@@ -6915,7 +6993,7 @@
         "Electromagnetism",
         "Astrophysics and cosmology"
        ],
-       "id": "fieldbook_526"
+       "id": "fieldbook_532"
       },
       {
        "type": "mathChoice",
@@ -6927,7 +7005,7 @@
         "Acoustics",
         "Nuclear physics"
        ],
-       "id": "fieldbook_527"
+       "id": "fieldbook_533"
       }
      ]
     }
