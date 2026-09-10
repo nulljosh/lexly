@@ -113,6 +113,5 @@ project exists, `lexly-heyitsmejosh` holds the custom domain.
 ## Release
 
 Version state goes stale in docs, `asc versions list --app 6783501611` is the source of
-truth. As of 2026-08-30: iOS 1.1.3 live, iOS 1.1.5 REJECTED under Guideline 4.3(a) (part of a
-7-app wave; **do not resubmit into it**), macOS 1.1.4 live, macOS 1.1.5 in review. See
+truth. As of 2026-09-10: iOS 1.1.3 live, iOS 1.1.6 WAITING_FOR_REVIEW (deliberate resubmission into the same 4.3(a) wave after fixing missing Sign In with Apple capability and switching to manual code signing; iPad support dropped; appeal reply drafted but not filed pending outcome), macOS 1.1.4 live, macOS 1.1.5 in review. See
 `roadmap.md` before touching a submission.
