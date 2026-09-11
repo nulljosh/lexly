@@ -48,6 +48,21 @@ struct AuthView: View {
                     .textContentType(mode == .signUp ? .newPassword : .password)
                     .textFieldStyle(.roundedBorder)
                     .accessibilityIdentifier("passwordField")
+
+                if mode == .signIn {
+                    HStack {
+                        Spacer()
+                        Button("Forgot password?") {
+                            errorMessage = ""
+                            Task {
+                                do { try await auth.resetPassword(email: email); notice = "Check your email for a reset link." }
+                                catch { errorMessage = error.localizedDescription }
+                            }
+                        }
+                        .font(.footnote)
+                        .disabled(email.isEmpty)
+                    }
+                }
             }
 
             if !errorMessage.isEmpty {

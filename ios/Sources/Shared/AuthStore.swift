@@ -150,6 +150,12 @@ final class AuthStore {
         session = nil
     }
 
+    /// Redirects to the web app (which already handles PASSWORD_RECOVERY) rather than
+    /// building a second native new-password screen for a flow users complete over email anyway.
+    func resetPassword(email: String) async throws {
+        try await supabase.auth.resetPasswordForEmail(email, redirectTo: URL(string: "https://lexly.heyitsmejosh.com/app/"))
+    }
+
     /// Calls the shared `delete-account` Edge Function on the spark Supabase project,
     /// which uses the service-role key to delete the authenticated user server-side
     /// (the anon-key client SDK has no permission to delete its own auth user).
