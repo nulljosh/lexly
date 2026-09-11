@@ -1,14 +1,14 @@
+# Cloudflare Pages merges headers from every matching rule instead of letting a more specific
+# path override — a separate /app/* SAMEORIGIN block still got sent alongside this DENY, and
+# browsers honor the stricter of the two, blocking the landing page's own /app/?demo=1 iframe.
+# frame-ancestors 'self' allows only same-origin framing, so one site-wide SAMEORIGIN policy
+# covers both cases with no conflicting rule needed.
 /*
   X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
+  X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://heyitsmejosh.com https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; object-src 'none'; base-uri 'self'
-
-# landing page iframes /app/?demo=1 into itself; site-wide DENY/frame-ancestors 'none' blocked that
-/app/*
-  X-Frame-Options: SAMEORIGIN
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://heyitsmejosh.com https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co; frame-ancestors 'self'; object-src 'none'; base-uri 'self'
 
 # ponytail: short TTL on assets instead of edge purges — CLOUDFLARE_DNS_TOKEN
