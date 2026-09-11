@@ -55,7 +55,10 @@ footer, and an iOS Settings row.
 Supabase (shared `spark` project, URL + anon key in `js/lingo-app.js`). Tables
 `lingo_profiles` and `lingo_progress`; the `srs` column is written by **both** platforms, so
 SM-2 card shape must stay identical on each. Email/password plus Sign in with Apple and
-Google. Stripe Pro subscription via `supabase/functions/`.
+Google, password reset (redirects to the web app, which already handles PASSWORD_RECOVERY,
+rather than a second native new-password screen), and an optional Face ID shortcut on
+return (`AuthStore.biometricLogin()`, Keychain-backed, never a content gate). Stripe Pro
+subscription via `supabase/functions/`.
 
 ## Auth differs by platform, on purpose
 
