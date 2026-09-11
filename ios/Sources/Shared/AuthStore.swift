@@ -1,6 +1,7 @@
 import AuthenticationServices
 import CryptoKit
 import Foundation
+import LocalAuthentication
 import Supabase
 
 let supabase = SupabaseClient(
@@ -64,6 +65,41 @@ final class AuthStore {
     /// "Sign In will load briefly and then stops" (Guideline 2.1, macOS 1.1.1).
     func signIn(email: String, password: String) async throws {
         session = try await supabase.auth.signIn(email: email, password: password)
+        saveBiometricCredentials(email: email, password: password)
+    }
+
+    // MARK: Face ID convenience sign-in
+    // Optional shortcut for a returning user -- never a gate. Content stays reachable
+    // without it (see the file header note on why iOS/macOS don't wall off content).
+    private static let savedEmailKey = "lexly.biometric.email"
+
+    func hasSavedBiometricCredentials() -> Bool {
+        guard let email = UserDefaults.standard.string(forKey: Self.savedEmailKey) else { return false }
+        return KeychainHelper.load(key: email) != nil
+    }
+
+    func biometricLogin() async throws {
+        let context = LAContext()
+        try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Sign in to Lexly")
+        guard let email = UserDefaults.standard.string(forKey: Self.savedEmailKey),
+              let data = KeychainHelper.load(key: email),
+              let password = String(data: data, encoding: .utf8) else {
+            throw NSError(domain: "AuthStore", code: -1, userInfo: [NSLocalizedDescriptionKey: "No saved sign-in found."])
+        }
+        try await signIn(email: email, password: password)
+    }
+
+    private func saveBiometricCredentials(email: String, password: String) {
+        guard let data = password.data(using: .utf8) else { return }
+        UserDefaults.standard.set(email, forKey: Self.savedEmailKey)
+        KeychainHelper.save(key: email, data: data)
+    }
+
+    private func clearBiometricCredentials() {
+        if let email = UserDefaults.standard.string(forKey: Self.savedEmailKey) {
+            KeychainHelper.delete(key: email)
+        }
+        UserDefaults.standard.removeObject(forKey: Self.savedEmailKey)
     }
 
     /// Reads the profile, creating it first if it is missing. Create-if-missing lives here
@@ -148,6 +184,7 @@ final class AuthStore {
     func signOut() async throws {
         try await supabase.auth.signOut()
         session = nil
+        clearBiometricCredentials()
     }
 
     /// Redirects to the web app (which already handles PASSWORD_RECOVERY) rather than

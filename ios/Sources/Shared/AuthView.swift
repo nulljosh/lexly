@@ -21,6 +21,20 @@ struct AuthView: View {
             Text("Lexly").font(.largeTitle.bold())
             Text("Learn anything.").foregroundStyle(.secondary)
 
+            if mode == .signIn && auth.hasSavedBiometricCredentials() {
+                Button {
+                    Task {
+                        do { try await auth.biometricLogin(); dismiss() }
+                        catch { errorMessage = error.localizedDescription }
+                    }
+                } label: {
+                    Label("Sign in with Face ID", systemImage: "faceid")
+                        .frame(maxWidth: .infinity)
+                        .fontWeight(.semibold)
+                }
+                .buttonStyle(.bordered)
+            }
+
             Picker("Mode", selection: $mode) {
                 Text("Sign In").tag(Mode.signIn)
                     .accessibilityIdentifier("authModeSignIn")
