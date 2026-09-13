@@ -370,7 +370,7 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - [ ] Add more compute-related skills/courses beyond Computer Basics.
 - [ ] Add more skills/games/science courses generally (content-expansion ask).
 - [ ] Expand language courses beyond beginner to intermediate/expert levels.
-- [ ] Lessons should actually teach content before quizzing (Duolingo-style teaching block per lesson), content-authoring job, not UI. Includes inline correct/incorrect explanatory tips (re-classified 2026-08-04: all 785 exercises checked, zero carry a tip field, same authoring job, merge together). Scope as its own session.
+- [ ] **Lessons should actually teach content before quizzing** — content-authoring job now, not UI (the UI side shipped 2026-09-12: an optional `explain` field renders in the feedback banner on both web and iOS/macOS, and the unit-intro tip/preview card now covers French's `u1`). French's `u1` (15 exercises) has real explanations; the other ~850 exercises across 11 languages and ~40 non-language courses still carry none. Needs a native-speaker/subject-matter pass per course, not a mechanical fill.
 - [ ] Math subjects should match Duolingo's subject/grade structure, with the ability to switch back and forth between the two systems (iOS + Mac).
 - [ ] Idea: integrate/copy the approach at calculus.academa.ai, LLM-driven interactive calculus tutor. Exploratory, no scope pinned down; needs a follow-up conversation on full integration vs. a Lexly feature inspired by it.
 - [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content, user considering splitting it into its own standalone project. Needs a decision, not a code change.
