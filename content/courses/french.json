@@ -18,6 +18,7 @@
               "type": "translation",
               "question": "Hello",
               "answer": "Bonjour",
+              "explain": "Bonjour literally means \"good day\" and works any time before evening. After dark, switch to Bonsoir.",
               "choices": [
                 "Bonjour",
                 "Au revoir",
@@ -30,6 +31,7 @@
               "type": "translation",
               "question": "Thank you",
               "answer": "Merci",
+              "explain": "Merci stands alone. To say what for, add pour: merci pour tout, \"thanks for everything\".",
               "choices": [
                 "Merci",
                 "De rien",
@@ -42,6 +44,7 @@
               "type": "translation",
               "question": "Goodbye",
               "answer": "Au revoir",
+              "explain": "Au revoir means \"until we see each other again\" — revoir is re- (again) + voir (to see).",
               "choices": [
                 "Au revoir",
                 "Bonjour",
@@ -54,6 +57,7 @@
               "type": "translation",
               "question": "Water",
               "answer": "Eau",
+              "explain": "Eau is feminine: l'eau, une eau. The silent final letters (e-a-u for one sound) are typical of French spelling.",
               "choices": [
                 "Eau",
                 "Feu",
@@ -66,6 +70,7 @@
               "type": "translation",
               "question": "Cat",
               "answer": "Chat",
+              "explain": "Chat is masculine (le chat). A female cat is une chatte — the final consonant becomes audible.",
               "choices": [
                 "Chat",
                 "Chien",
@@ -78,6 +83,7 @@
               "type": "translation",
               "question": "House",
               "answer": "Maison",
+              "explain": "Maison is feminine: la maison. Chez moi (\"at my place\") is the more common way to say \"home\" in speech.",
               "choices": [
                 "Maison",
                 "Jardin",
@@ -90,6 +96,7 @@
               "type": "translation",
               "question": "Please",
               "answer": "S'il vous plait",
+              "explain": "Literally \"if it pleases you\". Drop to s'il te plait with someone you'd address as tu.",
               "choices": [
                 "S'il vous plait",
                 "Merci",
@@ -108,6 +115,7 @@
               "type": "translation",
               "question": "Yes",
               "answer": "Oui",
+              "explain": "For a positive answer to a negative question (\"Isn't it?\" — \"Actually, yes\"), French uses si instead of oui.",
               "choices": [
                 "Oui",
                 "Non",
@@ -120,6 +128,7 @@
               "type": "sentence",
               "question": "The cat is black",
               "answer": "Le chat est noir",
+              "explain": "Le marks chat as masculine. Adjectives usually follow the noun in French: chat noir, not noir chat.",
               "words": [
                 "Le",
                 "chat",
@@ -134,6 +143,7 @@
               "type": "sentence",
               "question": "I eat bread",
               "answer": "Je mange du pain",
+              "explain": "Du is the partitive article, \"some\" bread. French can't drop it the way English drops \"some\" — je mange pain is ungrammatical.",
               "words": [
                 "Je",
                 "mange",
@@ -148,6 +158,7 @@
               "type": "sentence",
               "question": "She is beautiful",
               "answer": "Elle est belle",
+              "explain": "Belle is the feminine form of beau. Masculine nouns before a vowel sound use a third form, bel (un bel homme).",
               "words": [
                 "Elle",
                 "est",
@@ -162,6 +173,7 @@
               "type": "sentence",
               "question": "I like music",
               "answer": "J'aime la musique",
+              "explain": "Je elides to J' before a vowel sound. La stays because musique is feminine and needs an article even for a general like.",
               "words": [
                 "J'aime",
                 "la",
@@ -177,6 +189,7 @@
               "question": "Type what you hear",
               "audio": "Bonjour",
               "answer": "Bonjour",
+              "explain": "The on in Bonjour is a nasal vowel with no English equivalent — air through the nose, not an \"n\" sound at the end.",
               "id": "french_12"
             },
             {
@@ -184,6 +197,7 @@
               "question": "Type what you hear",
               "audio": "Comment allez-vous",
               "answer": "Comment allez-vous",
+              "explain": "Comment allez-vous is the formal \"how are you\". The inversion (allez-vous instead of vous allez) is what marks it as a question here, not just word order.",
               "id": "french_13"
             }
           ]
@@ -197,11 +211,27 @@
               "question": "Type what you hear",
               "audio": "Bonne nuit",
               "answer": "Bonne nuit",
+              "explain": "Bonne nuit is only for parting at bedtime. During the evening itself, the greeting is Bonsoir, not Bonne nuit.",
               "id": "french_14"
             }
           ]
         }
-      ]
+      ],
+      "preview": [
+        [
+          "Hello",
+          "Bonjour"
+        ],
+        [
+          "Thank you",
+          "Merci"
+        ],
+        [
+          "Please",
+          "S'il vous plait"
+        ]
+      ],
+      "tip": "French greetings and thanks don't translate word for word — s'il vous plait is literally \"if it pleases you\". Learn the phrase, not just the words in it."
     },
     {
       "id": "t1",

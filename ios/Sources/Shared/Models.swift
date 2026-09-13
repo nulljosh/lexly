@@ -96,6 +96,8 @@ struct Exercise: Decodable, Identifiable {
     let audio: String?
     /// Pairs for `match`, as [prompt, answer].
     let pairs: [[String]]?
+    /// The "why" behind the answer, shown either way. Optional: most exercises have none.
+    let explain: String?
     let id: String
 }
 

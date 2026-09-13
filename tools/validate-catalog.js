@@ -126,6 +126,7 @@ for (const [catId, category] of Object.entries(catalog.categories)) {
             check(typeof ex[key] === 'string', `${catId}/${subject.id}/${lesson.id}: exercise missing string "${key}"`);
           }
           if (ex.choices !== undefined) check(Array.isArray(ex.choices), `${catId}/${subject.id}/${lesson.id}: exercise choices must be an array`);
+          if (ex.explain !== undefined) check(typeof ex.explain === 'string' && ex.explain.trim().length > 0, `${catId}/${subject.id}/${lesson.id}: exercise explain must be a non-empty string`);
           checkExerciseType(ex, `${catId}/${subject.id}/${lesson.id}`);
         }
       }

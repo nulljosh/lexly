@@ -1794,6 +1794,16 @@ function toggleWord(chip) {
     gameState.currentAnswer = gameState.answerWords.join(' ');
 }
 
+// The "why" behind an answer, shown either way (right or wrong) so a correct
+// guess still teaches the rule behind it. Optional: most exercises have none.
+function appendExplain(feedback, question) {
+    if (!question.explain) return;
+    const p = document.createElement('p');
+    p.className = 'feedback-explain';
+    p.textContent = question.explain;
+    feedback.appendChild(p);
+}
+
 function checkAnswer() {
     // Resolve each question exactly once. The Skip button stays enabled after an
     // answer is submitted, and skipping now routes through here, so without this
@@ -1824,6 +1834,7 @@ function checkAnswer() {
     if (isCorrect) {
         feedback.className = 'feedback correct show';
         feedback.textContent = 'Correct.';
+        appendExplain(feedback, question);
         gameState.correctAnswers += 1;
         gameState.xp += 10;
         vibrate(50);
@@ -1844,6 +1855,7 @@ function checkAnswer() {
         const strong = document.createElement('strong');
         strong.textContent = question.answer;
         feedback.appendChild(strong);
+        appendExplain(feedback, question);
         gameState.hearts -= 1;
         vibrate([50, 30, 50]);
         questionCard.classList.add('incorrect-anim');

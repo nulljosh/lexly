@@ -145,7 +145,7 @@ struct LessonView: View {
         // .sensoryFeedback is cross-platform and simply no-ops on macOS, hence no #if fence.
         .sensoryFeedback(trigger: feedback) { _, new in
             guard let new else { return nil }
-            return new == .correct ? .success : .error
+            return new.isCorrect ? .success : .error
         }
     }
 
@@ -173,7 +173,11 @@ struct LessonView: View {
             : normalize(given(for: exercise)) == normalize(exercise.answer)
         if correct { correctCount += 1 }
         store.recordAnswer(correct: correct, exerciseId: exercise.id, lessonId: lesson.id)
-        withAnimation { feedback = correct ? .correct : .incorrect(exercise.answer) }
+        withAnimation {
+            feedback = correct
+                ? .correct(exercise.explain)
+                : .incorrect(exercise.answer, exercise.explain)
+        }
     }
 
     /// Answers are compared ignoring spacing, case, and trailing punctuation so a
@@ -399,28 +403,42 @@ private struct ChoiceButton: View {
 }
 
 enum FeedbackState: Equatable {
-    case correct
-    case incorrect(String)
+    case correct(String?)
+    case incorrect(String, String?)
+
+    var isCorrect: Bool { if case .correct = self { return true }; return false }
 }
 
 private struct FeedbackBanner: View {
     let state: FeedbackState
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: state == .correct ? "checkmark.circle.fill" : "xmark.circle.fill")
+            Image(systemName: state.isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
                 .font(.title2)
             VStack(alignment: .leading, spacing: 2) {
-                Text(state == .correct ? "Correct!" : "Incorrect").font(.headline)
-                if case .incorrect(let answer) = state {
+                Text(state.isCorrect ? "Correct!" : "Incorrect").font(.headline)
+                if case .incorrect(let answer, _) = state {
                     Text("Answer: \(answer)").font(.subheadline)
+                }
+                // The "why" behind the answer, shown either way so a correct
+                // guess still teaches the rule behind it.
+                if let explain {
+                    Text(explain).font(.subheadline).opacity(0.85)
                 }
             }
             Spacer()
         }
-        .foregroundStyle(state == .correct ? Color(hex: "2d7a50") : Color(hex: "c44040"))
+        .foregroundStyle(state.isCorrect ? Color(hex: "2d7a50") : Color(hex: "c44040"))
         .padding()
         .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
-            .fill(state == .correct ? Color(hex: "f0faf4") : Color(hex: "faf0f0")))
+            .fill(state.isCorrect ? Color(hex: "f0faf4") : Color(hex: "faf0f0")))
         .padding()
+    }
+
+    private var explain: String? {
+        switch state {
+        case .correct(let explain): return explain
+        case .incorrect(_, let explain): return explain
+        }
     }
 }
