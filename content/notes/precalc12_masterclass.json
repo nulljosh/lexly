@@ -12,7 +12,7 @@
           "headers": [
             "Unit",
             "Topic",
-            "Grade",
+            "Historical assessment",
             "Module"
           ],
           "rows": [
@@ -69,7 +69,7 @@
           "type": "modgrid",
           "modules": [
             {
-              "title": "Module 1 · Rewrite done",
+              "title": "Module 1",
               "items": [
                 "U1 Sequences & Series",
                 "U2 Transformations",
@@ -90,33 +90,6 @@
                 "U7 Trig Identities"
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "errors",
-      "title": "Known Errors to Fix",
-      "unitTag": "Cross-unit",
-      "blocks": [
-        {
-          "type": "warn",
-          "title": "U1 — Convergent/Divergent",
-          "items": [
-            "Marked r=−0.99 series as divergent. Wrong. |−0.99| = 0.99 < 1 → CONVERGES. Always take absolute value of r first."
-          ]
-        },
-        {
-          "type": "warn",
-          "title": "U4 — Q8 Half-life (4.6)",
-          "items": [
-            "Got 15.1 years. Correct answer is 15.8 years. Arithmetic slip in log calculation: h = 20·log(0.5)/log(5/12) = 20·(−0.301)/(−0.380) = 15.8, not 15.1."
-          ]
-        },
-        {
-          "type": "info",
-          "items": [
-            "U4 Q1b source typo: Question prints \"6²=17\" — this is a misprint in the WCLN guide. 6²=36, so the correct log form is log₆(36)=2. Flag to teacher."
           ]
         }
       ]
@@ -539,15 +512,6 @@
         {
           "type": "formula",
           "text": "A = A₀ · (1/2)^(t/h) [half-life: h = half-life period]"
-        },
-        {
-          "type": "warn",
-          "title": "Known Error — U4 Q8 Half-life",
-          "items": [
-            "When computing h = 20·log(0.5)/log(5/12): use exact fractions, don't round intermediate steps.",
-            "log(0.5) = −0.30103, log(5/12) = log(0.41667) = −0.37967",
-            "h = 20 · (−0.30103)/(−0.37967) = 15.84 ≈ 15.8 years"
-          ]
         },
         {
           "type": "heading",

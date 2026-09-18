@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PC12 Masterclass — All Units</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-:root{--bg:#0a0a12;--s:rgba(255,255,255,0.05);--s2:rgba(0,0,0,0.35);--b:rgba(255,255,255,0.09);--t:#f0f0f8;--td:rgba(240,240,248,0.5);--acc:#0071e3;--green:#34c759;--orange:#ff9f0a;--red:#ff453a;--blue:#0a84ff;--pink:#bf5af2;--yellow:#ffd60a;}
+:root{--bg:#fff;--s:#f7f7f7;--s2:#eee;--b:#c7c7c7;--t:#111;--td:#222;--acc:#0645ad;--green:#146b2e;--orange:#8a4300;--red:#8b0000;--blue:#0645ad;--pink:#7a2aa8;--yellow:#6b4e00;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.65;display:flex;min-height:100vh;}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;background:#fff;color:#111;line-height:1.65;display:flex;min-height:100vh;}
 /* SIDEBAR */
-.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;background:rgba(10,10,18,0.75);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-right:1px solid var(--b);overflow-y:auto;padding:1.5rem 0;z-index:100;}
+.sidebar{position:fixed;top:0;left:0;width:260px;height:100vh;background:#f5f5f5;border-right:1px solid var(--b);overflow-y:auto;padding:1.5rem 0;z-index:100;}
 .sidebar-title{padding:0 1.5rem 1rem;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);}
 .sidebar a{display:block;padding:.55rem 1.5rem;font-size:.83rem;color:var(--td);text-decoration:none;border-left:3px solid transparent;transition:all .15s;}
-.sidebar a:hover,.sidebar a.active{color:var(--t);background:rgba(0,113,227,.1);border-left-color:var(--acc);}
+.sidebar a:hover,.sidebar a.active{color:var(--t);background:rgba(108,99,255,.1);border-left-color:var(--acc);}
 .sidebar .grp{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--td);padding:.9rem 1.5rem .3rem;opacity:.6;}
 /* MAIN */
 .main{margin-left:260px;padding:3rem 4rem;max-width:960px;width:100%;}
@@ -67,6 +66,25 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 .mod li{font-size:.8rem;color:var(--td);}
 /* SECTION DIVIDER */
 .section{padding-top:1rem;}
+/* PRINT: readable black-on-white study sheets */
+@media print{
+  @page{size:letter;margin:0.65in;}
+  :root{--bg:#fff;--s:#f7f7f7;--s2:#eee;--b:#bbb;--t:#111;--td:#222;--acc:#0645ad;--green:#146b2e;--orange:#8a4300;--red:#8b0000;--blue:#0645ad;--yellow:#6b4e00;}
+  body{display:block;background:#fff;color:#111;line-height:1.4;}
+  .sidebar{display:none;}
+  .main{margin:0;max-width:none;width:auto;padding:0;}
+  p,li,.ex .step,td{color:#222;}
+  h1,h2,h3,strong,.fc-q{color:#111;}
+  .meta{color:#444;}
+  .f,.fi{color:#0645ad;background:#f4f6f8;border-color:#999;}
+  .warn,.tip,.info,.ex,.fc,.mod{break-inside:avoid;background:#f7f7f7;border-color:#999;}
+  .warn p,.warn li{color:#6b0000;}
+  .tip p,.tip li,.fc-a{color:#146b2e;}
+  .info p{color:#0645ad;}
+  section{break-before:auto;}
+  h2{break-after:avoid;}
+  a{color:#0645ad;text-decoration:underline;}
+}
 </style>
 </head>
 <body>
@@ -75,7 +93,6 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
   <div class="sidebar-title">PC12 Masterclass</div>
   <div class="grp">Overview</div>
   <a href="#overview">Grades + Module Map</a>
-  <a href="#errors">Known Errors</a>
   <div class="grp">Units</div>
   <a href="#u1">U1 · Sequences &amp; Series</a>
   <a href="#u2">U2 · Transformations</a>
@@ -97,8 +114,9 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <section id="overview" class="section">
 <h2><span class="unit-tag">Overview</span>Grades &amp; Module Map</h2>
 
+<p>Historical snapshot from May 2026. Unit figures are local worksheet assessments or estimates, not verified current course grades. Current grades and completion status have not been checked.</p>
 <table>
-<tr><th>Unit</th><th>Topic</th><th>Grade</th><th>Module</th></tr>
+<tr><th>Unit</th><th>Topic</th><th>Historical assessment</th><th>Module</th></tr>
 <tr><td>U1</td><td>Sequences &amp; Series</td><td class="grade-b">88%</td><td>M1</td></tr>
 <tr><td>U2</td><td>Transformations</td><td class="grade-b">78%</td><td>M1</td></tr>
 <tr><td>U3</td><td>Polynomials</td><td class="grade-pend">est. ~92%</td><td>M1</td></tr>
@@ -110,25 +128,9 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 </table>
 
 <div class="mod-grid">
-<div class="mod"><div class="mod-title">Module 1 · Rewrite done</div><ul><li>U1 Sequences &amp; Series</li><li>U2 Transformations</li><li>U3 Polynomials</li></ul></div>
+<div class="mod"><div class="mod-title">Module 1</div><ul><li>U1 Sequences &amp; Series</li><li>U2 Transformations</li><li>U3 Polynomials</li></ul></div>
 <div class="mod"><div class="mod-title">Module 2</div><ul><li>U4 Exponents &amp; Logs</li><li>U5 Rational Expressions</li></ul></div>
 <div class="mod"><div class="mod-title">Module 3</div><ul><li>U6 Sinusoidal Functions</li><li>U7 Trig Identities</li></ul></div>
-</div>
-</section>
-
-<!-- KNOWN ERRORS -->
-<section id="errors" class="section">
-<h2><span class="unit-tag">Cross-unit</span>Known Errors to Fix</h2>
-<div class="warn">
-<div class="warn-title">U1 — Convergent/Divergent</div>
-<p>Marked r=−0.99 series as divergent. Wrong. |−0.99| = 0.99 &lt; 1 → CONVERGES. Always take absolute value of r first.</p>
-</div>
-<div class="warn">
-<div class="warn-title">U4 — Q8 Half-life (4.6)</div>
-<p>Got 15.1 years. Correct answer is 15.8 years. Arithmetic slip in log calculation: h = 20·log(0.5)/log(5/12) = 20·(−0.301)/(−0.380) = 15.8, not 15.1.</p>
-</div>
-<div class="info">
-<p><strong>U4 Q1b source typo:</strong> Question prints "6²=17" — this is a misprint in the WCLN guide. 6²=36, so the correct log form is log₆(36)=2. Flag to teacher.</p>
 </div>
 </section>
 
@@ -153,11 +155,12 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <span class="f">S∞ = a₁ / (1 − r)              [only when |r| &lt; 1]</span>
 <ul>
   <li><strong>r</strong> = common ratio = a₂/a₁</li>
-  <li>Finding n: aₙ = a₁rⁿ⁻¹ → take log both sides → n = 1 + log(aₙ/a₁)/log(r)</li>
+  <li>Finding n: n = 1 + log(aₙ/a₁)/log(r) requires r &gt; 0, r ≠ 1 and aₙ/a₁ &gt; 0. For r &lt; 0, use absolute values to find a candidate and check its sign/parity in the original sequence. Handle r = 0, 1, −1 separately; n must be a positive integer.</li>
 </ul>
 
 <div class="warn">
 <div class="warn-title">Convergent vs Divergent — most tested concept</div>
+<p>For a geometric series with a₁ ≠ 0 (the all-zero series always converges):</p>
 <p><strong>Converges</strong> (S∞ exists) iff |r| &lt; 1</p>
 <p><strong>Diverges</strong> (no S∞) iff |r| ≥ 1</p>
 <p>r = −0.99 → |r| = 0.99 &lt; 1 → CONVERGES. Negative r ≠ divergent.</p>
@@ -198,7 +201,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 
 <h3>General Form</h3>
 <span class="f">y = a · f( b(x − h) ) + k</span>
-<span class="f">Mapping rule:  (x, y) → (x/b + h,  a·y + k)</span>
+<span class="f">Mapping rule:  (x, y) → (x/b + h,  a·y + k), b ≠ 0</span>
 
 <table>
 <tr><th>Parameter</th><th>Effect</th><th>Trap</th></tr>
@@ -222,6 +225,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 </ul>
 
 <h3>Inverse Functions</h3>
+<p>An inverse is a function only if the original function is one-to-one. Restrict its domain if necessary; otherwise swapping x and y gives an inverse relation.</p>
 <span class="f">To find f⁻¹(x): swap x and y, then solve for y</span>
 <ul>
   <li>Domain of f = Range of f⁻¹</li>
@@ -305,7 +309,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <h3>Polynomial Graph Characteristics</h3>
 <ul>
   <li><strong>Degree n</strong> → max n x-intercepts, max n−1 turning points</li>
-  <li><strong>Leading coeff +, even degree</strong> → both ends go UP (U shape)</li>
+  <li><strong>Leading coeff +, even degree</strong> → both ends go UP (the middle may have several turns)</li>
   <li><strong>Leading coeff −, even degree</strong> → both ends go DOWN</li>
   <li><strong>Leading coeff +, odd degree</strong> → left DOWN, right UP</li>
   <li><strong>Leading coeff −, odd degree</strong> → left UP, right DOWN</li>
@@ -321,6 +325,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <h2><span class="unit-tag">Unit 4</span>Exponents &amp; Logs</h2>
 
 <h3>Exponent Laws</h3>
+<p>For arbitrary real exponents, use x &gt; 0. Quotients and negative exponents require nonzero bases; x⁰ = 1 requires x ≠ 0. For negative bases and rational powers, reduce m/n first and check real-root restrictions; power-of-power rules do not hold without conditions.</p>
 <span class="f">xᵃ · xᵇ = xᵃ⁺ᵇ         (product — add exponents)</span>
 <span class="f">xᵃ / xᵇ = xᵃ⁻ᵇ         (quotient — subtract)</span>
 <span class="f">(xᵃ)ᵇ  = xᵃᵇ           (power of power — multiply)</span>
@@ -329,6 +334,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <span class="f">x^(m/n) = ⁿ√(xᵐ)       (rational — root of power)</span>
 
 <h3>Logarithms</h3>
+<p>Real logarithms require b &gt; 0, b ≠ 1 and positive arguments. In the rules below A, B and x are positive. Preserve original domain restrictions after combining logs.</p>
 <span class="f">log_b(A) = E  ↔  bᴱ = A     (definition: log = exponent)</span>
 <span class="f">log_b(AB)  = log_b(A) + log_b(B)    (product rule)</span>
 <span class="f">log_b(A/B) = log_b(A) − log_b(B)    (quotient rule)</span>
@@ -351,18 +357,11 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <span class="f">A = A₀ · b^(t/p)     [b = growth factor, p = period for one cycle]</span>
 <span class="f">A = A₀ · (1/2)^(t/h)  [half-life: h = half-life period]</span>
 
-<div class="warn">
-<div class="warn-title">Known Error — U4 Q8 Half-life</div>
-<p>When computing h = 20·log(0.5)/log(5/12): use exact fractions, don't round intermediate steps.</p>
-<p>log(0.5) = −0.30103, log(5/12) = log(0.41667) = −0.37967</p>
-<p>h = 20 · (−0.30103)/(−0.37967) = <strong>15.84 ≈ 15.8 years</strong></p>
-</div>
-
 <h3>Log Scale Applications</h3>
 <ul>
-  <li><strong>Richter:</strong> difference in readings = exponent of 10× power. Δ=3.8 → 10³·⁸≈6310× more powerful</li>
-  <li><strong>pH:</strong> pH = −log[H⁺]; more acidic = lower pH; ratio of acidity = 10^(pH₂−pH₁)</li>
-  <li><strong>Decibels:</strong> dB = 10·log(I/I₀); increase of 10 dB = 10× louder</li>
+  <li><strong>Richter:</strong> measured amplitude ratio = 10^ΔM. ΔM = 3.8 → about 6310× the amplitude. Energy ratio is approximately 10^(1.5ΔM), about 501,187×. The worksheet calls the amplitude ratio “more powerful”; distinguish this from energy.</li>
+  <li><strong>pH:</strong> pH = −log[H⁺]; more acidic = lower pH; [H⁺]₁/[H⁺]₂ = 10^(pH₂−pH₁) in the dilute-solution approximation</li>
+  <li><strong>Decibels:</strong> dB = 10·log(I/I₀); increase of 10 dB = 10× the sound intensity, not 10× perceived loudness</li>
 </ul>
 
 <div class="ex">
@@ -378,7 +377,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <div class="step"><strong>Q:</strong> Write log x + 5 log y − 3 log x as single log</div>
 <div class="step">1. Combine x terms: (1−3)logx = −2logx</div>
 <div class="step">2. Power rule: log(x⁻²) + log(y⁵)</div>
-<div class="step">3. Product rule: <span>log(y⁵/x²)</span></div>
+<div class="step">3. Product rule: <span>log(y⁵/x²), with original restrictions x &gt; 0, y &gt; 0</span></div>
 </div>
 </section>
 
@@ -397,16 +396,17 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <tr><th>Operation</th><th>Method</th></tr>
 <tr><td>Simplify</td><td>Factor top and bottom fully, cancel common factors, state restrictions</td></tr>
 <tr><td>Multiply</td><td>Factor everything, cancel across numerators/denominators, multiply remaining</td></tr>
-<tr><td>Divide</td><td>Multiply by reciprocal of second fraction, then same as multiply</td></tr>
+<tr><td>Divide</td><td>Require the divisor to be defined and nonzero; multiply by its reciprocal, then simplify</td></tr>
 <tr><td>Add/Subtract</td><td>Find LCD (LCM of denominators), convert each fraction, combine numerators, simplify</td></tr>
 </table>
 
 <div class="warn">
 <div class="warn-title">Restrictions after cancelling</div>
-<p>State ALL non-permissible values from the ORIGINAL denominators — even if a factor was cancelled. Restrictions come from before simplification.</p>
+<p>State ALL non-permissible values from the ORIGINAL denominators — even if a factor was cancelled. Restrictions come from before simplification. For division, also exclude zeros of the divisor’s numerator.</p>
 </div>
 
 <h3>Graphing y = a/(x−h) + k</h3>
+<p>Assume a ≠ 0. If a = 0, this is y = k with a hole at x = h, not a vertical asymptote.</p>
 <span class="f">Vertical asymptote:   x = h  (denominator = 0)</span>
 <span class="f">Horizontal asymptote: y = k  (what y approaches as x → ±∞)</span>
 <span class="f">a: steepness; a > 0 → Q1/Q3 relative to asymptotes; a &lt; 0 → Q2/Q4</span>
@@ -445,26 +445,26 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 
 <table>
 <tr><th>Parameter</th><th>What it does</th><th>How to find from graph</th></tr>
-<tr><td><strong>a</strong></td><td>Amplitude = |a|; a&lt;0 flips vertically</td><td>a = (max − min) / 2</td></tr>
-<tr><td><strong>b</strong></td><td>Period = 2π/|b| (in radians) or 360°/|b| (degrees)</td><td>b = 2π / period</td></tr>
-<tr><td><strong>h</strong></td><td>Phase shift: moves graph right by h</td><td>Read from graph where cycle starts</td></tr>
+<tr><td><strong>a</strong></td><td>Amplitude = |a|; a&lt;0 flips vertically</td><td>|a| = (max − min) / 2; choose the sign to match the phase</td></tr>
+<tr><td><strong>b</strong></td><td>Period = 2π/|b| (in radians) or 360°/|b| (degrees)</td><td>|b| = 2π / period (radians), or 360° / period (degrees)</td></tr>
+<tr><td><strong>h</strong></td><td>Phase shift: moves graph right by h</td><td>Choose a matching point: rising midline for sine or maximum for cosine when a, b &gt; 0</td></tr>
 <tr><td><strong>k</strong></td><td>Vertical displacement (midline = y=k)</td><td>k = (max + min) / 2</td></tr>
 </table>
 
 <h3>Graphing — 5 Key Points Method</h3>
-<p>For one full period of y = a·sin(b(x−h))+k:</p>
+<p>For one full period of y = a·sin(b(x−h))+k, assume b &gt; 0 and a ≠ 0. If b &lt; 0, first use sin(−u) = −sin(u) to make b positive:</p>
 <ul>
-  <li>Start at phase shift h: y = k (zero)</li>
-  <li>Quarter period: y = k+a (max)</li>
-  <li>Half period: y = k (zero)</li>
-  <li>Three-quarter period: y = k−a (min)</li>
-  <li>Full period: y = k (zero, cycle repeats)</li>
+  <li>Start at phase shift h: y = k (midline)</li>
+  <li>Quarter period: y = k+a (maximum if a &gt; 0, minimum if a &lt; 0)</li>
+  <li>Half period: y = k (midline)</li>
+  <li>Three-quarter period: y = k−a (minimum if a &gt; 0, maximum if a &lt; 0)</li>
+  <li>Full period: y = k (midline, cycle repeats)</li>
 </ul>
-<p>For cosine: starts at max (k+a), not zero.</p>
+<p>For cosine at x = h: y = k+a, a maximum if a &gt; 0 and a minimum if a &lt; 0. If a = 0 or b = 0, the function is constant and has no fundamental period.</p>
 
 <div class="ex">
 <div class="ex-title">Worked Example — Equation from Graph</div>
-<div class="step"><strong>Q:</strong> Graph has max=7, min=1, period=4π, starts at x=π</div>
+<div class="step"><strong>Q:</strong> Graph has max=7, min=1, period=4π, crosses its midline upward at x=π</div>
 <div class="step">1. a = (7−1)/2 = <span>3</span></div>
 <div class="step">2. k = (7+1)/2 = <span>4</span></div>
 <div class="step">3. b = 2π/4π = <span>1/2</span></div>
@@ -490,6 +490,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <h2><span class="unit-tag">Unit 7</span>Trig Identities</h2>
 
 <h3>Foundational Identities</h3>
+<p>Use identities only where every expression is defined: denominators must be nonzero. In particular cot θ = 1/tan θ holds on their common domain; cot θ itself is defined by cos θ/sin θ wherever sin θ ≠ 0.</p>
 <span class="f">Reciprocal:   csc θ = 1/sin θ    sec θ = 1/cos θ    cot θ = 1/tan θ</span>
 <span class="f">Quotient:     tan θ = sin θ/cos θ    cot θ = cos θ/sin θ</span>
 <span class="f">Pythagorean:  sin²θ + cos²θ = 1</span>
@@ -502,7 +503,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 
 <h3>Proving Identities — Strategy</h3>
 <ol>
-  <li><strong>Work ONE side only</strong> — never move terms across the = sign</li>
+  <li><strong>Transform one side into the other</strong>, or independently simplify both sides to the same expression</li>
   <li>Pick the more complex side to transform</li>
   <li>Common techniques (in order to try):</li>
 </ol>
@@ -515,8 +516,8 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 </ul>
 
 <div class="warn">
-<div class="warn-title">Never cross-multiply to "prove"</div>
-<p>Moving terms across the = sign assumes what you're trying to prove. Work one side only.</p>
+<div class="warn-title">Avoid circular proofs</div>
+<p>Starting by assuming the desired equality is not enough. Reversible equivalences can prove an identity when justified on the original domain, including nonzero denominators; transforming one side is usually the clearest method.</p>
 </div>
 
 <h3>Sum &amp; Difference Formulas</h3>
@@ -540,7 +541,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
   <li>Find the reference angle using inverse trig</li>
   <li>Identify which quadrants give the correct sign</li>
   <li>List all solutions in the given domain</li>
-  <li>General solution: add 2πn (for sin/cos period 2π) or πn (for tan period π)</li>
+  <li>General solution: add 2πn to each sine/cosine argument solution, or πn for tangent, n ∈ ℤ; then solve for the original variable. For sin(bθ+c), the θ-period is 2π/|b|, not necessarily 2π.</li>
 </ol>
 
 <div class="ex">
@@ -561,7 +562,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 
 <h3>Unit 1 — Sequences &amp; Series</h3>
 <div class="fc-grid">
-<div class="fc"><div class="fc-q">What are the two conditions for a geometric series to have an infinite sum?</div><div class="fc-a">|r| &lt; 1 (converges). Formula: S∞ = a₁/(1−r)</div></div>
+<div class="fc"><div class="fc-q">For a₁ ≠ 0, when does a geometric series converge, and what is its sum?</div><div class="fc-a">|r| &lt; 1 (converges). Formula: S∞ = a₁/(1−r)</div></div>
 <div class="fc"><div class="fc-q">Arithmetic sequence: a₁=5, d=3. Find a₁₀.</div><div class="fc-a">a₁₀ = 5 + 9·3 = 5+27 = 32</div></div>
 <div class="fc"><div class="fc-q">r = −0.5. Does the series converge?</div><div class="fc-a">Yes. |r| = 0.5 &lt; 1. S∞ = a₁/(1.5)</div></div>
 </div>
@@ -583,7 +584,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <h3>Unit 4 — Exponents &amp; Logs</h3>
 <div class="fc-grid">
 <div class="fc"><div class="fc-q">Convert to exponential: log₂(32) = 5</div><div class="fc-a">2⁵ = 32</div></div>
-<div class="fc"><div class="fc-q">Simplify: log₃(x²y) − log₃(x)</div><div class="fc-a">log₃(x²y/x) = log₃(xy)</div></div>
+<div class="fc"><div class="fc-q">Simplify: log₃(x²y) − log₃(x)</div><div class="fc-a">log₃(x²y/x) = log₃(xy), retaining x &gt; 0 and y &gt; 0</div></div>
 <div class="fc"><div class="fc-q">Solve 4^x = 7 using change of base.</div><div class="fc-a">x = log7/log4 ≈ 1.404</div></div>
 </div>
 
@@ -597,8 +598,8 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 <h3>Unit 6 — Sinusoidal Functions</h3>
 <div class="fc-grid">
 <div class="fc"><div class="fc-q">y = 4sin(2(x−π/3)) + 1. State amplitude, period, phase shift.</div><div class="fc-a">Amplitude=4; Period=2π/2=π; Phase shift=π/3 right; midline y=1</div></div>
-<div class="fc"><div class="fc-q">Graph has max=10, min=2. What are a and k?</div><div class="fc-a">a = (10−2)/2 = 4; k = (10+2)/2 = 6</div></div>
-<div class="fc"><div class="fc-q">What does a negative 'a' do to a sinusoidal graph?</div><div class="fc-a">Reflects (flips) the graph vertically — starts at minimum instead of maximum</div></div>
+<div class="fc"><div class="fc-q">Graph has max=10, min=2. What are the amplitude and k?</div><div class="fc-a">|a| = (10−2)/2 = 4; k = (10+2)/2 = 6; the sign of a depends on the chosen phase</div></div>
+<div class="fc"><div class="fc-q">What does a negative 'a' do to a sinusoidal graph?</div><div class="fc-a">Reflects about the midline y=k. At x=h, cosine starts at a minimum when a&lt;0; sine still starts at the midline.</div></div>
 </div>
 
 <h3>Unit 7 — Trig Identities</h3>
@@ -610,7 +611,7 @@ td{padding:.55rem .9rem;border:1px solid var(--b);color:var(--td);}
 
 </section>
 
-<p style="text-align:center;font-size:.75rem;color:var(--td);padding:3rem 0 1rem;">PC12 · LEC 25–26 · Joshua Trommel · Generated 2026-05-28</p>
+<p style="text-align:center;font-size:.75rem;color:var(--td);padding:3rem 0 1rem;">PC12 · LEC 25–26 · Joshua Trommel · Final reviewed edition · 2026-09-18 · Print-friendly</p>
 
 </main>
 
@@ -627,3 +628,5 @@ setActive();
 </script>
 </body>
 </html>
+
+<!-- Science references: https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity ; https://www.ncbi.nlm.nih.gov/books/NBK20366/ -->
