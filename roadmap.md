@@ -375,8 +375,8 @@ Lexly's signup/login UI in `js/lingo-app.js` handles basic authentication but la
 - [ ] Idea: integrate/copy the approach at calculus.academa.ai, LLM-driven interactive calculus tutor. Exploratory, no scope pinned down; needs a follow-up conversation on full integration vs. a Lexly feature inspired by it.
 - [ ] School section (masterclasses + a year of tutor notes/assignments) is the only part of the app with personal custom content, user considering splitting it into its own standalone project. Needs a decision, not a code change.
 - [ ] Masterclasses need a clearer/more prominent tab in the UI (currently buried).
-- [ ] Merge photographed pre-calc notes into PC12 masterclass, existing PDF embeds are ~30KB thumbnails, illegible; needs full-res photo originals from Joshua.
-- [ ] Confirm final, complete A+ masterclass for both classes (PC12 + Biology), blocked on the notes item above.
+- [x] PC12 masterclass refreshed from the current iCloud math notes, with verified corrections, clean final answers, and printer-friendly light mode (2026-09-18).
+- [ ] Confirm final, complete A+ masterclass for Biology 12.
 - [ ] **Masterclass JSON generation from Uprighty summaries**, BLOCKED: converter execution times out on the full dataset (runtime hang, not a logic error). 15 book summaries converted, catalog entries + validator support added, all deployed live. Generation itself deferred pending investigation; plan file at `~/claude/plans/tldr-shorter-and-bang-zippy-cupcake.md`.
 - [ ] Duolingo Grade 4 Unit 5 (Intro to LCM), ~40+ exercises pending sync, session budget constrained.
 
