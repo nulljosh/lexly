@@ -1,4 +1,4 @@
-# Directory listings — Lexly
+# Directory listings, Lexly
 
 **AlternativeTo**
 Lexly. A gamified learning app for twelve languages plus a BC Grade 12 course library, all in one skill tree. Short drills, spaced repetition, hearts and XP, no ads. Free, on web, iOS, and macOS.

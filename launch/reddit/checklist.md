@@ -1,4 +1,4 @@
-# Reddit checklist — Lexly
+# Reddit checklist, Lexly
 
 Joshua's Reddit account karma/age: unknown, check first before posting anywhere.
 
