@@ -13,6 +13,8 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
   <img src="screenshots/course.png" width="260" alt="Pre-Calculus 12 course">
 </p>
 
+<img src="progress.svg" width="460">
+
 ## Platforms
 
 | Platform | Name | App ID | Status |
