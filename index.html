@@ -4,14 +4,15 @@
 <script>document.documentElement.classList.add('js')</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f0e4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)">
 <title>Lexly — Learn anything</title>
 <meta name="description" content="2,600 exercises across 44 courses — 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition, free on web, iOS and macOS.">
 <link rel="canonical" href="https://lexly.heyitsmejosh.com">
 <meta name="apple-itunes-app" content="app-id=6783501611">
 <link rel="icon" href="/assets/icon.svg?v=2">
 <link rel="apple-touch-icon" href="/assets/icon.svg?v=2">
+<link rel="stylesheet" href="https://heyitsmejosh.com/tokens.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lexly">
 <meta property="og:url" content="https://lexly.heyitsmejosh.com">
@@ -27,20 +28,19 @@
 <meta name="twitter:image" content="https://lexly.heyitsmejosh.com/assets/og-image.jpg">
 <style>
   :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --text-primary: #1A1A1A;
-    --text-secondary: rgba(26,26,26,0.6);
-    --text-muted: rgba(26,26,26,0.4);
-    --accent: #5B9BD5;
-    --border: rgba(26,26,26,0.1);
+    --bg-primary: var(--bg);
+    --bg-secondary: var(--bg2);
+    --text-primary: var(--text);
+    --text-secondary: var(--text2);
+    --text-muted: var(--text3);
+    --accent: var(--clay);
+    --link: var(--clay-deep);
+    --border: var(--border);
     --success: #2d7a50;
-    --card-bg: #ffffff;
-    /* Text on a solid button, and two surfaces that were hardcoded white. Tokens so
-       the dark block can flip them without a second rule per element. */
+    --card-bg: var(--bg);
     --btn-fg: #ffffff;
     --header-bg: rgba(255,255,255,0.85);
-    --pill-bg: #ffffff;
+    --pill-bg: var(--bg);
     color-scheme: light;
     --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -48,22 +48,21 @@
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
     --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  /* The app already has a dark palette (css/lingo.css [data-theme="dark"]). These are
-     those values, so the landing page and the app agree instead of drifting. */
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-primary: #111;
-      --bg-secondary: #1a1a1a;
-      --text-primary: #e8e8e8;
-      --text-secondary: rgba(255,255,255,0.5);
-      --text-muted: rgba(255,255,255,0.25);
-      --accent: #7ab4e0;
-      --border: rgba(255,255,255,0.1);
+      --bg-primary: var(--bg);
+      --bg-secondary: var(--bg2);
+      --text-primary: var(--text);
+      --text-secondary: var(--text2);
+      --text-muted: var(--text3);
+      --accent: var(--clay);
+      --link: var(--clay);
+      --border: var(--border);
       --success: #3d9e6a;
-      --card-bg: #1a1a1a;
+      --card-bg: var(--bg2);
       --btn-fg: #111;
       --header-bg: rgba(17,17,17,0.85);
-      --pill-bg: #1a1a1a;
+      --pill-bg: var(--bg2);
       color-scheme: dark;
     }
   }
@@ -128,7 +127,7 @@
   .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
 
   .hero-art { position: relative; display: flex; justify-content: center; animation: lxFadeUp 0.9s var(--ease) 0.1s both; }
-  .hero-art .glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(91,155,213,0.18) 0%, rgba(91,155,213,0) 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .hero-art .glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
   .hero-art img { position: relative; width: 240px; height: auto; border-radius: 28px; box-shadow: 0 30px 60px rgba(0,0,0,0.18); border: 1px solid var(--border); }
   .hero-art img.shot-1 { transform: rotate(-3deg); }
   .hero-art img.shot-2 { transform: rotate(4deg) translate(-70px, 40px); }
@@ -247,7 +246,7 @@
   <div class="hero-copy">
     <div class="eyebrow">Gamified learning</div>
     <h1>Learn <span class="lx-cycle" id="lxCycle"><span class="lx-word">anything</span></span>.</h1>
-    <p class="hero-sub">2,600 exercises across 44 courses &mdash; 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition make it stick.</p>
+    <p class="hero-sub">2,600 exercises across 44 courses - 12 languages plus programming, math, science and school curricula. Spaced repetition, streaks and speech recognition make it stick.</p>
 <div class="demo">
   <div class="device device-iphone" id="demoFrame" data-title="Lexly"><div class="device-screen"><iframe id="demoApp" title="Lexly, live" loading="lazy" data-src="/app/?demo=1"></iframe></div></div>
   <p class="demo-caption">This is the <span id="demoDev">iPhone</span> app, live. Try it.</p>
@@ -343,7 +342,7 @@ function fit(){i.style.transform='scale('+(i.parentNode.clientWidth/i.offsetWidt
   <div class="types-list">
     <div class="type-row">
       <h3 class="type-name">Translate</h3>
-      <div class="type-desc">Pick the right translation, or say it out loud &mdash; language courses accept your voice as the answer.</div>
+      <div class="type-desc">Pick the right translation, or say it out loud - language courses accept your voice as the answer.</div>
     </div>
     <div class="type-row">
       <h3 class="type-name">Word bank</h3>
@@ -449,7 +448,7 @@ function fit(){i.style.transform='scale('+(i.parentNode.clientWidth/i.offsetWidt
 <section id="install-anywhere">
   <div class="xp-wrap">
     <h2>Install it anywhere.</h2>
-    <p class="xp-lead">Lexly runs on every platform. On Windows, Linux and Android it installs straight from the browser &mdash; no store, no download, no runtime. It gets a real window, its own icon, and keeps working offline.</p>
+    <p class="xp-lead">Lexly runs on every platform. On Windows, Linux and Android it installs straight from the browser - no store, no download, no runtime. It gets a real window, its own icon, and keeps working offline.</p>
     <div class="xp-grid">
     <div class="xp-card">
       <h3>iPhone &amp; iPad</h3>
