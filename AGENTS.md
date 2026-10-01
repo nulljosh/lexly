@@ -1,1 +1,1 @@
-/Users/joshua/Documents/Code/lexly/CLAUDE.md
+CLAUDE.md
