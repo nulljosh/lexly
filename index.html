@@ -185,9 +185,22 @@
   }
   .platform-detail { font-size: 0.8125rem; color: var(--text-muted); }
 
-  footer { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8125rem; color: var(--text-muted); }
-  footer a { text-decoration: none; color: var(--text-muted); }
-  footer a:hover { color: var(--text-primary); }
+  /* Footer directory: tagline rule, four columns, two-by-two on phones. */
+  footer { padding: 0 0 3rem; text-align: center; font-size: .8125rem; color: var(--text-muted); }
+  footer .foot-rule { display: flex; align-items: center; gap: 16px; max-width: 880px; margin: 0 auto; padding: 8px 1.5rem 24px; color: var(--text-primary); font-size: .6875rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
+  footer .foot-rule::before { content: ""; order: 1; flex: 1; height: 1px; background: color-mix(in srgb, var(--text-muted) 35%, transparent); }
+  footer .foot-rule > :first-child { order: 0; }
+  footer .foot-rule > :last-child { order: 2; }
+  .foot-dir { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 24px; max-width: 880px; margin: 0 auto; padding: 0 1.5rem 28px; text-align: left; }
+  .foot-col h3 { margin: 0 0 8px; font-size: .75rem; font-weight: 600; color: var(--text-primary); letter-spacing: .02em; }
+  .foot-col ul { list-style: none; margin: 0; padding: 0; }
+  .foot-col a { position: relative; display: inline-block; padding: 5px 0; color: var(--text-muted); text-decoration: none; font-size: .8125rem; line-height: 1.35; }
+  .foot-col a::after { content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; height: 44px; min-width: 44px; }
+  .foot-col a:hover { color: var(--text-primary); text-decoration: underline; }
+  .foot-bar { max-width: 880px; margin: 0 auto; padding: 18px 1.5rem 0; border-top: 1px solid color-mix(in srgb, var(--text-muted) 35%, transparent); }
+  .foot-meta { margin: 0; color: var(--text-muted); font-size: .78rem; line-height: 1.9; }
+  .foot-meta a { color: var(--text-muted); }
+  @media (max-width: 700px) { .foot-dir { grid-template-columns: repeat(2, 1fr); } footer .foot-rule { font-size: .5625rem; letter-spacing: .14em; gap: 10px; } }
 
   @media (max-width: 1000px) {
     nav.main-nav { display: none; }
@@ -485,11 +498,51 @@ function fit(){i.style.transform='scale('+(i.parentNode.clientWidth/i.offsetWidt
 </section>
 
 <footer>
-  <span>&copy; 2026 Joshua Trommel</span>
-  <a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener">GitHub &middot; Source</a>
-  <a href="https://apps.apple.com/app/id6783501611" target="_blank" rel="noopener">App Store</a>
-  <a href="https://github.com/nulljosh/lexly/blob/main/docs/API.md" target="_blank" rel="noopener">API</a>
-  <a href="https://github.com/nulljosh/lexly/blob/main/ATTRIBUTION.md" target="_blank" rel="noopener">Sentence credits</a> &middot; <a href="https://heyitsmejosh.com/docs.html#lexly">Docs</a>
+  <div class="foot-rule" aria-hidden="true"><span>Lexly</span><span>Learn anything.</span></div>
+  <nav class="foot-dir" aria-label="Footer">
+    <div class="foot-col">
+      <h3>Lexly</h3>
+      <ul>
+        <li><a href="/app/">Open the web app</a></li>
+        <li><a href="https://apps.apple.com/app/id6783501611" target="_blank" rel="noopener">App Store</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#practice">Practice</a></li>
+        <li><a href="#sentences">Sentences</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#platforms">Platforms</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>Developers</h3>
+      <ul>
+        <li><a href="https://github.com/nulljosh/lexly" target="_blank" rel="noopener">Source</a></li>
+        <li><a href="https://github.com/nulljosh/lexly/blob/main/docs/API.md" target="_blank" rel="noopener">API</a></li>
+        <li><a href="https://github.com/nulljosh/lexly/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener">Architecture</a></li>
+        <li><a href="https://github.com/nulljosh/lexly/blob/main/ATTRIBUTION.md" target="_blank" rel="noopener">Sentence credits</a></li>
+        <li><a href="https://github.com/nulljosh/lexly/issues" target="_blank" rel="noopener">Report a bug</a></li>
+        <li><a href="https://heyitsmejosh.com/docs.html#lexly">Docs</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>Project</h3>
+      <ul>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="https://github.com/nulljosh/lexly/blob/main/LICENSE" target="_blank" rel="noopener">License (MIT)</a></li>
+        <li><a href="https://heyitsmejosh.com">Portfolio</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="foot-bar">
+    <p class="foot-meta">Lexly &middot; MIT License &middot; &copy; 2026 Joshua Trommel &middot; Made with <span class="heart">&hearts;</span> in Vancouver, BC</p>
+  </div>
 </footer>
 
 <script>
