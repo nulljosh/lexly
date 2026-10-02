@@ -115,3 +115,21 @@ assert.strictEqual(wed, mon, 'dates within the same week should share the same w
 assert.notStrictEqual(nextMon, mon, 'the following week should have a different week_start');
 
 console.log('PASS: streak freeze earn/spend logic and weekly quest week boundary are correct');
+
+
+// Drive the real completion path: extra lessons cannot earn another daily freeze.
+vm.runInContext(`
+    spawnConfetti = updateStats = renderSubjects = checkAchievements = saveAchievement = () => {};
+    document.getElementById = () => ({ classList: { add() {}, remove() {} }, focus() {} });
+    setTimeout = () => {};
+    const today = new Date().toISOString().slice(0, 10);
+    saveProgress({ streak: 7, streak_freezes: 1, last_played: today });
+    gameState.streak = 7;
+    gameState.completedSubjects = [];
+    gameState.correctAnswers = 0;
+    gameState.totalQuestions = 1;
+    showResults();
+`, sandbox);
+assert.strictEqual(vm.runInContext('loadProgress().streak_freezes', sandbox), 1,
+    'another lesson on day seven must not grant another freeze');
+console.log('PASS: same-day lessons do not farm streak freezes');

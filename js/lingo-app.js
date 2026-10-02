@@ -1957,7 +1957,7 @@ function showResults() {
     }
     // Grant a freeze at every 7-day streak milestone (cap 2 banked, unlimited for Pro).
     const freezeCap = userIsPro ? Infinity : 2;
-    if (gameState.streak > 0 && gameState.streak % 7 === 0 && streakFreezes < freezeCap) {
+    if (progress.last_played !== today && gameState.streak > 0 && gameState.streak % 7 === 0 && streakFreezes < freezeCap) {
         streakFreezes += 1;
     }
 

@@ -622,3 +622,6 @@ The earlier gaps have been addressed:
 - Hero screenshots showing pre-auth-gate catalog: no longer an issue since the demo lesson at /app/?demo=1 shows what visitors actually encounter
 - No screenshot of an actual lesson: the demo lesson provides a playable example of all five exercise types
 - No social proof: unavailable to honestly show (0 App Store reviews, 0 GitHub stars), but the demo lets visitors experience the product themselves rather than seeing fake testimonials
+
+## Bugs fixed
+- [x] Prevent extra lessons on a streak milestone day from farming additional freezes.
