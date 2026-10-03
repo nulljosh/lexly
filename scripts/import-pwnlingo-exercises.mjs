@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Imports real Duolingo exercises captured by the sibling pwnlingo repo
+// Imports real Duolingo exercises captured by the sibling Cruise repo
 // (scripts/lessons.jsonl + lessons.archive.jsonl) into Lexly language courses.
 // Existing hand-written courses are never touched: captured drills go into
 // extra units whose ids start with "pw", and a re-run replaces only those.
@@ -8,7 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const src = path.join(root, '..', 'pwnlingo', 'scripts');
+const src = path.join(root, '..', 'cruise', 'scripts');
 const coursesDir = path.join(root, 'content', 'courses');
 
 // pwnlingo track code -> Lexly course id. NEW entries only matter for courses Lexly lacks.
