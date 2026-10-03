@@ -4,7 +4,7 @@
   "category": "math",
   "icon": "fa-solid fa-book-open",
   "level": "BC Grade 12",
-  "version": 3,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -253,6 +253,72 @@
                 "continuous"
               ],
               "id": "precalc12_u1_l2_3"
+            }
+          ]
+        },
+        {
+          "id": "u2l3",
+          "title": "One-to-One & Restricted Domains",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which function is one-to-one?",
+              "answer": "y = x^3",
+              "choices": [
+                "y = x^2",
+                "y = x^3",
+                "y = |x|",
+                "y = x^4"
+              ],
+              "id": "precalc12_u2_l3_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The horizontal line test checks whether a function is...",
+              "answer": "one-to-one",
+              "choices": [
+                "one-to-one",
+                "even",
+                "continuous",
+                "a function"
+              ],
+              "id": "precalc12_u2_l3_1"
+            },
+            {
+              "type": "math",
+              "question": "Inverse of f(x) = 3x + 2: f^-1(x) =",
+              "answer": "(x-2)/3",
+              "id": "precalc12_u2_l3_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Inverse of f(x) = x^3 + 5:",
+              "answer": "(x-5)^(1/3)",
+              "choices": [
+                "(x-5)^(1/3)",
+                "x^3 - 5",
+                "(x+5)^(1/3)",
+                "1/(x^3+5)"
+              ],
+              "id": "precalc12_u2_l3_3"
+            },
+            {
+              "type": "math",
+              "question": "If (2, 8) is on f(x), the point on f^-1 has x-coordinate:",
+              "answer": "8",
+              "id": "precalc12_u2_l3_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "To make f(x) = x^2 one-to-one, restrict the domain to",
+              "answer": "x >= 0",
+              "choices": [
+                "x >= 0",
+                "x >= -1",
+                "all real x",
+                "x != 0"
+              ],
+              "id": "precalc12_u2_l3_5"
             }
           ]
         }
@@ -717,6 +783,60 @@
               ]
             }
           ]
+        },
+        {
+          "id": "u5l3",
+          "title": "Asymptotes & Holes",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Vertical asymptote of y = 1/(x - 3): x =",
+              "answer": "3",
+              "id": "precalc12_u5_l3_0"
+            },
+            {
+              "type": "math",
+              "question": "Horizontal asymptote of y = 1/(x + 4) - 1: y =",
+              "answer": "-1",
+              "id": "precalc12_u5_l3_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = (x+3)(x-5)/(x+3) has a ___ at x = -3",
+              "answer": "hole",
+              "choices": [
+                "hole",
+                "vertical asymptote",
+                "x-intercept",
+                "horizontal asymptote"
+              ],
+              "id": "precalc12_u5_l3_2"
+            },
+            {
+              "type": "math",
+              "question": "y-coordinate of the hole in y = (x+3)(x-5)/(x+3):",
+              "answer": "-8",
+              "id": "precalc12_u5_l3_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In y = (x-1)(x+2)/((x-1)(x-4)), x = 4 is a",
+              "answer": "vertical asymptote",
+              "choices": [
+                "vertical asymptote",
+                "hole",
+                "x-intercept",
+                "y-intercept"
+              ],
+              "id": "precalc12_u5_l3_4"
+            },
+            {
+              "type": "math",
+              "question": "y-coordinate of the hole in y = (x-1)(x+2)/((x-1)(x-4)):",
+              "answer": "-1",
+              "id": "precalc12_u5_l3_5"
+            }
+          ]
         }
       ]
     },
@@ -1051,6 +1171,504 @@
                 "increasing",
                 "periodic"
               ]
+            }
+          ]
+        },
+        {
+          "id": "u7l4",
+          "title": "Proving Identities",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "1 - sin^2(x) =",
+              "answer": "cos^2(x)",
+              "id": "precalc12_u7_l4_0"
+            },
+            {
+              "type": "math",
+              "question": "sin(x)cos(x)cot(x) simplifies to",
+              "answer": "cos^2(x)",
+              "id": "precalc12_u7_l4_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When proving an identity you should",
+              "answer": "work each side separately",
+              "choices": [
+                "work each side separately",
+                "add the same term to both sides",
+                "divide both sides by the same thing",
+                "cross-multiply"
+              ],
+              "id": "precalc12_u7_l4_2"
+            },
+            {
+              "type": "math",
+              "question": "If sin(t) = 3/5 and t is in Q1, cos(t) =",
+              "answer": "4/5",
+              "id": "precalc12_u7_l4_3"
+            },
+            {
+              "type": "math",
+              "question": "If sin(t) = 3/4 and t is in Q2, cos(t) = -sqrt(n)/4. n =",
+              "answer": "7",
+              "id": "precalc12_u7_l4_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Functions & Radicals",
+      "lessons": [
+        {
+          "id": "u8l1",
+          "title": "Function Notation & Compositions",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "If f(x) = -x^2 + 5, f(2) =",
+              "answer": "1",
+              "id": "precalc12_u8_l1_0"
+            },
+            {
+              "type": "math",
+              "question": "f(x) = x - 4 and g(x) = x^2 + 4. f(g(2)) =",
+              "answer": "4",
+              "id": "precalc12_u8_l1_1"
+            },
+            {
+              "type": "math",
+              "question": "Same f and g: g(f(3)) =",
+              "answer": "5",
+              "id": "precalc12_u8_l1_2"
+            },
+            {
+              "type": "math",
+              "question": "Same f and g: f(g(x)) =",
+              "answer": "x^2",
+              "id": "precalc12_u8_l1_3"
+            },
+            {
+              "type": "math",
+              "question": "Same f and g: g(f(x)) =",
+              "answer": "(x-4)^2+4",
+              "id": "precalc12_u8_l1_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "f(g(x)) and g(f(x)) are...",
+              "answer": "usually different (order matters)",
+              "choices": [
+                "always equal",
+                "usually different (order matters)",
+                "always zero",
+                "always linear"
+              ],
+              "id": "precalc12_u8_l1_5"
+            }
+          ]
+        },
+        {
+          "id": "u8l2",
+          "title": "Radical Functions",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Domain of y = sqrt(x - 3) + 1: x >=",
+              "answer": "3",
+              "id": "precalc12_u8_l2_0"
+            },
+            {
+              "type": "math",
+              "question": "x-coordinate of the start point of y = 2sqrt(x - 3) + 1:",
+              "answer": "3",
+              "id": "precalc12_u8_l2_1"
+            },
+            {
+              "type": "math",
+              "question": "y-coordinate of the start point of y = 2sqrt(x - 3) + 1:",
+              "answer": "1",
+              "id": "precalc12_u8_l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = -sqrt(x + 2) - 4 heads which way?",
+              "answer": "down and right",
+              "choices": [
+                "up and right",
+                "down and right",
+                "up and left",
+                "down and left"
+              ],
+              "id": "precalc12_u8_l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = sqrt(-x) heads which way?",
+              "answer": "up and left",
+              "choices": [
+                "up and right",
+                "down and right",
+                "up and left",
+                "down and left"
+              ],
+              "id": "precalc12_u8_l2_4"
+            },
+            {
+              "type": "math",
+              "question": "Range of y = -sqrt(x + 2) - 4: y <=",
+              "answer": "-4",
+              "id": "precalc12_u8_l2_5"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If (4, 9) is on f(x), which point is on sqrt(f(x))?",
+              "answer": "(4, 3)",
+              "choices": [
+                "(4, 3)",
+                "(2, 9)",
+                "(16, 9)",
+                "(4, 81)"
+              ],
+              "id": "precalc12_u8_l2_6"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The graph of sqrt(f(x)) does not exist where",
+              "answer": "f(x) < 0",
+              "choices": [
+                "f(x) < 0",
+                "f(x) > 1",
+                "f(x) = 0",
+                "nowhere"
+              ],
+              "id": "precalc12_u8_l2_7"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Points stay put on sqrt(f(x)) where f(x) equals",
+              "answer": "0 or 1",
+              "choices": [
+                "0 or 1",
+                "1 or 2",
+                "0 or 2",
+                "-1 or 1"
+              ],
+              "id": "precalc12_u8_l2_8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u9",
+      "title": "Trig Graphs & Equations",
+      "lessons": [
+        {
+          "id": "u9l1",
+          "title": "Sine & Cosine Graphs",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Period of y = sin(2x):",
+              "answer": "pi",
+              "id": "precalc12_u9_l1_0"
+            },
+            {
+              "type": "math",
+              "question": "Amplitude of y = 3sin(2(x - pi/4)) + 1:",
+              "answer": "3",
+              "id": "precalc12_u9_l1_1"
+            },
+            {
+              "type": "math",
+              "question": "Midline of y = 3sin(2(x - pi/4)) + 1: y =",
+              "answer": "1",
+              "id": "precalc12_u9_l1_2"
+            },
+            {
+              "type": "math",
+              "question": "Maximum value of y = 3sin(2(x - pi/4)) + 1:",
+              "answer": "4",
+              "id": "precalc12_u9_l1_3"
+            },
+            {
+              "type": "math",
+              "question": "A wave has max 5 and min -1. Its amplitude:",
+              "answer": "3",
+              "id": "precalc12_u9_l1_4"
+            },
+            {
+              "type": "math",
+              "question": "Same wave: midline y =",
+              "answer": "2",
+              "id": "precalc12_u9_l1_5"
+            },
+            {
+              "type": "math",
+              "question": "A wave has period pi. Its b value (2pi/period):",
+              "answer": "2",
+              "id": "precalc12_u9_l1_6"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In y = sin(bx), increasing b makes the graph",
+              "answer": "compress horizontally",
+              "choices": [
+                "compress horizontally",
+                "stretch horizontally",
+                "stretch vertically",
+                "shift right"
+              ],
+              "id": "precalc12_u9_l1_7"
+            }
+          ]
+        },
+        {
+          "id": "u9l2",
+          "title": "The Tangent Function",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "tan(x) =",
+              "answer": "sin(x)/cos(x)",
+              "choices": [
+                "sin(x)/cos(x)",
+                "cos(x)/sin(x)",
+                "1/sin(x)",
+                "sin(x)cos(x)"
+              ],
+              "id": "precalc12_u9_l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = tan(x) has vertical asymptotes where",
+              "answer": "cos(x) = 0",
+              "choices": [
+                "sin(x) = 0",
+                "cos(x) = 0",
+                "tan(x) = 1",
+                "nowhere"
+              ],
+              "id": "precalc12_u9_l2_1"
+            },
+            {
+              "type": "math",
+              "question": "Period of y = tan(x):",
+              "answer": "pi",
+              "id": "precalc12_u9_l2_2"
+            },
+            {
+              "type": "math",
+              "question": "tan(pi/4) =",
+              "answer": "1",
+              "id": "precalc12_u9_l2_3"
+            },
+            {
+              "type": "math",
+              "question": "tan(pi/3) =",
+              "answer": "sqrt(3)",
+              "id": "precalc12_u9_l2_4"
+            },
+            {
+              "type": "math",
+              "question": "tan(0) =",
+              "answer": "0",
+              "id": "precalc12_u9_l2_5"
+            }
+          ]
+        },
+        {
+          "id": "u9l3",
+          "title": "Quadratic Trig Equations",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Solve tan^2(x) - 5tan(x) + 4 = 0: smallest positive x (exact):",
+              "answer": "pi/4",
+              "id": "precalc12_u9_l3_0"
+            },
+            {
+              "type": "math",
+              "question": "Solve 2cos^2(x) - cos(x) = 0 on [0, 2pi): smallest x:",
+              "answer": "pi/3",
+              "id": "precalc12_u9_l3_1"
+            },
+            {
+              "type": "math",
+              "question": "Replace cos(2x) with 2cos^2(x) - 1 in cos(2x) + 1 = cos(x) to get 2cos^2(x) =",
+              "answer": "cos(x)",
+              "id": "precalc12_u9_l3_2"
+            },
+            {
+              "type": "math",
+              "question": "Solve 2sin(2x) = -1: sin(2x) =",
+              "answer": "-1/2",
+              "id": "precalc12_u9_l3_3"
+            },
+            {
+              "type": "math",
+              "question": "Solve sin(2x) = -1/2 on [0, 2pi): smallest x (exact):",
+              "answer": "7pi/12",
+              "id": "precalc12_u9_l3_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "sin(2x) = -1/2 on [0, 2pi) has how many solutions?",
+              "answer": "4",
+              "choices": [
+                "2",
+                "4",
+                "6",
+                "8"
+              ],
+              "id": "precalc12_u9_l3_5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u10",
+      "title": "Exponential & Log Functions",
+      "lessons": [
+        {
+          "id": "u10l1",
+          "title": "Exponential Transformations & Same Bases",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Horizontal asymptote of y = -2^(x+3) + 1: y =",
+              "answer": "1",
+              "id": "precalc12_u10_l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = -2^(x+3) + 1 is 2^x...",
+              "answer": "reflected over the x-axis, left 3, up 1",
+              "choices": [
+                "reflected over the x-axis, left 3, up 1",
+                "reflected over the y-axis, right 3, up 1",
+                "reflected over the x-axis, right 3, down 1",
+                "stretched by 3, up 1"
+              ],
+              "id": "precalc12_u10_l1_1"
+            },
+            {
+              "type": "math",
+              "question": "Solve 8^(3x-2) = 16^(x+1): x =",
+              "answer": "2",
+              "id": "precalc12_u10_l1_2"
+            },
+            {
+              "type": "math",
+              "question": "Write 27 as a power of 3: 27 = 3^",
+              "answer": "3",
+              "id": "precalc12_u10_l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "y = b^x with 0 < b < 1 is",
+              "answer": "decay",
+              "choices": [
+                "growth",
+                "decay",
+                "linear",
+                "a log"
+              ],
+              "id": "precalc12_u10_l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u10l2",
+          "title": "Log Graphs & Laws",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "log_2(8) =",
+              "answer": "3",
+              "id": "precalc12_u10_l2_0"
+            },
+            {
+              "type": "math",
+              "question": "Vertical asymptote of y = log_2(x): x =",
+              "answer": "0",
+              "id": "precalc12_u10_l2_1"
+            },
+            {
+              "type": "math",
+              "question": "log_2(8) + log_2(4) =",
+              "answer": "5",
+              "id": "precalc12_u10_l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "log(a + b) equals",
+              "answer": "it does not simplify",
+              "choices": [
+                "log a + log b",
+                "log a * log b",
+                "it does not simplify",
+                "log(ab)"
+              ],
+              "id": "precalc12_u10_l2_3"
+            },
+            {
+              "type": "math",
+              "question": "Vertical asymptote of y = -log_2(2(x + 3)): x =",
+              "answer": "-3",
+              "id": "precalc12_u10_l2_4"
+            },
+            {
+              "type": "math",
+              "question": "Solve 5^(x/2) = 200 (nearest hundredth): x =",
+              "answer": "6.58",
+              "id": "precalc12_u10_l2_5"
+            }
+          ]
+        },
+        {
+          "id": "u10l3",
+          "title": "Continuous Growth & e",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "(1 + 1/x)^x gets close to which number as x grows?",
+              "answer": "e (about 2.718)",
+              "choices": [
+                "e (about 2.718)",
+                "pi",
+                "2",
+                "10"
+              ],
+              "id": "precalc12_u10_l3_0"
+            },
+            {
+              "type": "math",
+              "question": "e rounded to 3 decimals:",
+              "answer": "2.718",
+              "id": "precalc12_u10_l3_1"
+            },
+            {
+              "type": "math",
+              "question": "$1000 at 5% growing continuously for 10 years, nearest dollar: 1000e^(0.5) =",
+              "answer": "1649",
+              "id": "precalc12_u10_l3_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Continuous growth formula",
+              "answer": "A = A0 e^(rt)",
+              "choices": [
+                "A = A0 e^(rt)",
+                "A = A0 (1 + r)^t",
+                "A = A0 + rt",
+                "A = A0 r^t"
+              ],
+              "id": "precalc12_u10_l3_3"
             }
           ]
         }
