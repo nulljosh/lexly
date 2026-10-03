@@ -285,10 +285,16 @@
               "id": "precalc12_u2_l3_1"
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "Inverse of f(x) = 3x + 2: f^-1(x) =",
               "answer": "(x-2)/3",
-              "id": "precalc12_u2_l3_2"
+              "id": "precalc12_u2_l3_2",
+              "choices": [
+                "(x-2)/3",
+                "3x-2",
+                "(x+2)/3",
+                "3/(x-2)"
+              ]
             },
             {
               "type": "mathChoice",
@@ -1179,16 +1185,28 @@
           "title": "Proving Identities",
           "exercises": [
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "1 - sin^2(x) =",
               "answer": "cos^2(x)",
-              "id": "precalc12_u7_l4_0"
+              "id": "precalc12_u7_l4_0",
+              "choices": [
+                "cos^2(x)",
+                "sin^2(x)",
+                "1 + sin^2(x)",
+                "cos(x)"
+              ]
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "sin(x)cos(x)cot(x) simplifies to",
               "answer": "cos^2(x)",
-              "id": "precalc12_u7_l4_1"
+              "id": "precalc12_u7_l4_1",
+              "choices": [
+                "cos^2(x)",
+                "sin^2(x)",
+                "tan(x)",
+                "1"
+              ]
             },
             {
               "type": "mathChoice",
@@ -1233,10 +1251,16 @@
               "id": "precalc12_u7_l5_1"
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "tan(2x) = 2tan(x) / (1 - ?)",
               "answer": "tan^2(x)",
-              "id": "precalc12_u7_l5_2"
+              "id": "precalc12_u7_l5_2",
+              "choices": [
+                "tan^2(x)",
+                "tan(x)",
+                "sec^2(x)",
+                "2tan(x)"
+              ]
             },
             {
               "type": "math",
@@ -1275,10 +1299,16 @@
               "id": "precalc12_u7_l5_6"
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "1 + tan^2(x) =",
               "answer": "sec^2(x)",
-              "id": "precalc12_u7_l5_7"
+              "id": "precalc12_u7_l5_7",
+              "choices": [
+                "sec^2(x)",
+                "tan^2(x)",
+                "csc^2(x)",
+                "cos^2(x)"
+              ]
             }
           ]
         }
@@ -1311,16 +1341,28 @@
               "id": "precalc12_u8_l1_2"
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "Same f and g: f(g(x)) =",
               "answer": "x^2",
-              "id": "precalc12_u8_l1_3"
+              "id": "precalc12_u8_l1_3",
+              "choices": [
+                "x^2",
+                "x^2 + 8",
+                "(x-4)^2",
+                "x^2 - 8"
+              ]
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "Same f and g: g(f(x)) =",
               "answer": "(x-4)^2+4",
-              "id": "precalc12_u8_l1_4"
+              "id": "precalc12_u8_l1_4",
+              "choices": [
+                "(x-4)^2+4",
+                "x^2",
+                "(x+4)^2+4",
+                "x^2 - 4"
+              ]
             },
             {
               "type": "mathChoice",
@@ -1533,10 +1575,16 @@
               "id": "precalc12_u9_l2_3"
             },
             {
-              "type": "math",
+              "type": "mathChoice",
               "question": "tan(pi/3) =",
               "answer": "sqrt(3)",
-              "id": "precalc12_u9_l2_4"
+              "id": "precalc12_u9_l2_4",
+              "choices": [
+                "sqrt(3)",
+                "1/sqrt(3)",
+                "1",
+                "sqrt(3)/2"
+              ]
             },
             {
               "type": "math",
