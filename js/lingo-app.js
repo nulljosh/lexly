@@ -1364,18 +1364,76 @@ function renderSkillTree(pack) {
 
     const host = document.getElementById('treeUnits');
     host.textContent = '';
+    const units = pack.units || [];
+    // A long course is a wall of locked rows. Past four units, fold each unit into one
+    // line with its progress and open only the one you are in, with a Continue button on top.
+    const collapsible = units.length > 4;
+    const nextIndex = order.findIndex((entry, i) => !isLessonComplete(pack.id, entry.lesson.id) && isLessonUnlocked(pack.id, order, i));
+    const next = nextIndex >= 0 ? order[nextIndex] : null;
+    if (next) {
+        const cta = document.createElement('button');
+        cta.className = 'tree-continue';
+        cta.setAttribute('aria-label', `${done ? 'Continue' : 'Start'}: ${next.lesson.title}`);
+        const text = document.createElement('span');
+        const kicker = document.createElement('span');
+        kicker.className = 'tree-continue-kicker';
+        kicker.textContent = done ? 'Continue' : 'Start';
+        const title = document.createElement('span');
+        title.className = 'tree-continue-title';
+        title.textContent = next.lesson.title;
+        const where = document.createElement('span');
+        where.className = 'tree-continue-where';
+        where.textContent = next.unitTitle;
+        text.append(kicker, title, where);
+        cta.append(text, makeIcon('fa-solid fa-arrow-right'));
+        cta.addEventListener('click', () => startLesson(next.lesson.id));
+        host.appendChild(cta);
+    }
     let flatIndex = 0;
-    (pack.units || []).forEach((unit) => {
+    units.forEach((unit) => {
         const unitEl = document.createElement('div');
         unitEl.className = 'tree-unit';
-        const heading = document.createElement('div');
-        heading.className = 'tree-unit-title';
-        heading.textContent = unit.title;
-        unitEl.appendChild(heading);
-        const intro = buildUnitIntro(unit);
-        if (intro) unitEl.appendChild(intro);
+        const lessons = unit.lessons || [];
+        const unitDone = lessons.filter((lesson) => isLessonComplete(pack.id, lesson.id)).length;
+        const open = !collapsible || (next ? next.unitId === unit.id : unit === units[0]);
+        const body = document.createElement('div');
+        body.className = 'tree-unit-body';
+        body.id = `tree-unit-${unit.id}`;
+        body.hidden = !open;
 
-        (unit.lessons || []).forEach((lesson) => {
+        if (collapsible) {
+            const head = document.createElement('button');
+            head.className = 'tree-unit-head';
+            head.setAttribute('aria-expanded', String(open));
+            head.setAttribute('aria-controls', body.id);
+            const name = document.createElement('span');
+            name.className = 'tree-unit-title';
+            name.textContent = unit.title;
+            const count = document.createElement('span');
+            count.className = 'tree-unit-count';
+            count.textContent = `${unitDone}/${lessons.length}`;
+            const bar = document.createElement('span');
+            bar.className = 'tree-unit-bar';
+            const fill = document.createElement('i');
+            fill.style.width = `${lessons.length ? Math.round((unitDone / lessons.length) * 100) : 0}%`;
+            bar.appendChild(fill);
+            head.append(name, count, bar, makeIcon('fa-solid fa-chevron-down'));
+            head.addEventListener('click', () => {
+                const nowOpen = body.hidden;
+                body.hidden = !nowOpen;
+                head.setAttribute('aria-expanded', String(nowOpen));
+            });
+            unitEl.appendChild(head);
+        } else {
+            const heading = document.createElement('div');
+            heading.className = 'tree-unit-title';
+            heading.textContent = unit.title;
+            unitEl.appendChild(heading);
+        }
+        const intro = buildUnitIntro(unit);
+        if (intro) body.appendChild(intro);
+
+        lessons.forEach((lesson) => {
             const index = flatIndex;
             flatIndex += 1;
             const complete = isLessonComplete(pack.id, lesson.id);
@@ -1393,8 +1451,9 @@ function renderSkillTree(pack) {
             node.appendChild(dot);
             node.appendChild(label);
             if (unlocked) node.addEventListener('click', () => startLesson(lesson.id));
-            unitEl.appendChild(node);
+            body.appendChild(node);
         });
+        unitEl.appendChild(body);
         host.appendChild(unitEl);
     });
 }
@@ -1705,6 +1764,28 @@ function renderQuestion(question) {
         input.placeholder = 'Enter your answer';
         input.setAttribute('aria-label', 'Your answer');
         container.appendChild(input);
+        // Phone keyboards bury ^ ( ) / and there is no sqrt or pi key. Each button types the exact
+        // ASCII the answer key uses, so a tap never produces something the grader rejects.
+        const pad = document.createElement('div');
+        pad.className = 'math-keys';
+        pad.setAttribute('role', 'group');
+        pad.setAttribute('aria-label', 'Math symbols');
+        ['sqrt(', 'pi', '^', '/', '(', ')', '-', ','].forEach((key) => {
+            const keyBtn = document.createElement('button');
+            keyBtn.type = 'button';
+            keyBtn.className = 'math-key';
+            keyBtn.textContent = key;
+            keyBtn.setAttribute('aria-label', `Insert ${key}`);
+            keyBtn.addEventListener('pointerdown', (event) => event.preventDefault());
+            keyBtn.addEventListener('click', () => {
+                const start = input.selectionStart ?? input.value.length;
+                const end = input.selectionEnd ?? start;
+                input.setRangeText(key, start, end, 'end');
+                input.focus();
+            });
+            pad.appendChild(keyBtn);
+        });
+        container.appendChild(pad);
         setTimeout(() => input.focus(), 100);
     }
 

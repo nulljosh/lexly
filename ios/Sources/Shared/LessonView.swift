@@ -95,6 +95,16 @@ struct LessonView: View {
                                 TextField("Your answer", text: $input)
                                     .textFieldStyle(.roundedBorder)
                                     .disabled(feedback != nil)
+                                // Web parity: the keypad in js/lingo-app.js. Each key types the exact
+                                // ASCII the answer key uses, so a tap never produces a wrong answer.
+                                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 8) {
+                                    ForEach(["sqrt(", "pi", "^", "/", "(", ")", "-", ","], id: \.self) { key in
+                                        Button(key) { input += key }
+                                            .buttonStyle(.bordered)
+                                            .accessibilityLabel("Insert \(key)")
+                                            .disabled(feedback != nil)
+                                    }
+                                }
                             }
                         }
 

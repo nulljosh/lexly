@@ -2111,3 +2111,43 @@ body.demo .header-inner::after {
 
 .unit-intro-phrases dt { font-weight: 600; color: var(--text-primary); }
 .unit-intro-phrases dd { margin: 0; color: var(--text-muted); }
+
+/* Course map: one Continue button, units folded to a line each. */
+.tree-continue {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    width: 100%; text-align: left; padding: 1rem 1.1rem; margin-bottom: 1.5rem;
+    background: var(--text-primary); color: var(--bg-primary); border: 0;
+    border-radius: 14px; cursor: pointer; min-height: 44px;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tree-continue:hover { transform: translateY(-2px); }
+.tree-continue > span:first-child { display: flex; flex-direction: column; gap: 0.15rem; }
+.tree-continue-kicker { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.7; }
+.tree-continue-title { font-size: 1.05rem; font-weight: 600; }
+.tree-continue-where { font-size: 0.8rem; opacity: 0.7; }
+.tree-unit-head {
+    display: flex; align-items: center; gap: 0.75rem; width: 100%; min-height: 44px;
+    padding: 0.85rem 0; margin-bottom: 0.75rem; background: none; border: 0;
+    border-bottom: 1px solid var(--border); cursor: pointer; font: inherit; text-align: left;
+    color: var(--text-muted);
+}
+.tree-unit-head .tree-unit-title { margin: 0; flex: 1; }
+.tree-unit-count { font-size: 0.75rem; color: var(--text-muted); }
+.tree-unit-bar { width: 48px; height: 4px; border-radius: 2px; background: var(--border); overflow: hidden; }
+.tree-unit-bar > i { display: block; height: 100%; background: var(--accent); }
+.tree-unit-head .fa-chevron-down { font-size: 0.7rem; transition: transform 0.2s; }
+.tree-unit-head[aria-expanded="true"] .fa-chevron-down { transform: rotate(180deg); }
+.tree-unit-body[hidden] { display: none; }
+
+/* Math answer keypad. */
+.math-keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.6rem; }
+.math-key {
+    min-height: 44px; padding: 0 0.4rem; font: inherit; font-size: 0.95rem;
+    color: var(--text-primary); background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 10px; cursor: pointer; transition: transform 0.15s, border-color 0.15s;
+}
+.math-key:hover { border-color: var(--text-muted); }
+.math-key:active { transform: scale(0.96); }
+@media (prefers-reduced-motion: reduce) {
+    .tree-continue, .math-key, .tree-unit-head .fa-chevron-down { transition: none; }
+}

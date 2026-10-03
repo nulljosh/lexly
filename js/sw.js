@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lexly-v5';
+const CACHE_VERSION = 'lexly-v6';
 
 const APP_SHELL = [
     './',
