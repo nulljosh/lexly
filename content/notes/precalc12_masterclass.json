@@ -927,6 +927,30 @@
             "3. sin\u03b8 = 1 \u2192 \u03b8 = \u03c0/2",
             "Solutions: \u03b8 = \u03c0/2, 7\u03c0/6, 11\u03c0/6"
           ]
+        },
+        {
+          "type": "heading",
+          "text": "Double Angle Forms"
+        },
+        {
+          "type": "formula",
+          "text": "cos 2x = cos\u00b2x \u2212 sin\u00b2x = 2cos\u00b2x \u2212 1 = 1 \u2212 2sin\u00b2x"
+        },
+        {
+          "type": "formula",
+          "text": "tan 2x = 2tan x / (1 \u2212 tan\u00b2x)"
+        },
+        {
+          "type": "formula",
+          "text": "1 + tan\u00b2x = sec\u00b2x"
+        },
+        {
+          "type": "warn",
+          "title": "Picking a form",
+          "items": [
+            "Pick the cos 2x form that cancels something in the equation",
+            "For cos 2x + 1 = cos x use 2cos\u00b2x \u2212 1, so the \u22121 and +1 cancel"
+          ]
         }
       ]
     },
@@ -1121,6 +1145,38 @@
             "$1000 at 5% growing continuously for 10 years",
             "A = A\u2080e^(rt) = 1000e^(0.5)",
             "\u2248 $1649"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Word Problems"
+        },
+        {
+          "type": "formula",
+          "text": "Half-life: A = A\u2080(1/2)^(t/h). Doubling: A = A\u2080\u00b72^(t/d)"
+        },
+        {
+          "type": "formula",
+          "text": "Compound: A = P(1 + r)^t. Continuous: A = Pe^(rt)"
+        },
+        {
+          "type": "example",
+          "title": "Worked Example",
+          "steps": [
+            "Half-life 5 days, 80 g, after 15 days",
+            "15 \u00f7 5 = 3 half-lives",
+            "80 \u2192 40 \u2192 20 \u2192 10, so 10 g",
+            "How long to double $1000 at 5%? 1000(1.05)^t = 2000",
+            "1.05^t = 2, t = log 2 / log 1.05 \u2248 14.21 years"
+          ]
+        },
+        {
+          "type": "warn",
+          "title": "Word problem traps",
+          "items": [
+            "Match the time units: half-life in days means t in days",
+            "Growth of 10% is a base of 1.1, not 0.1",
+            "Isolate the power first (divide out the coefficient), then take the log"
           ]
         }
       ]

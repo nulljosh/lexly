@@ -4,7 +4,7 @@
   "category": "math",
   "icon": "fa-solid fa-book-open",
   "level": "BC Grade 12",
-  "version": 4,
+  "version": 5,
   "units": [
     {
       "id": "u1",
@@ -1215,6 +1215,72 @@
               "id": "precalc12_u7_l4_4"
             }
           ]
+        },
+        {
+          "id": "u7l5",
+          "title": "More Double Angle Forms",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "cos(2x) = 2cos^2(x) - ?",
+              "answer": "1",
+              "id": "precalc12_u7_l5_0"
+            },
+            {
+              "type": "math",
+              "question": "cos(2x) = 1 - ?sin^2(x). ? =",
+              "answer": "2",
+              "id": "precalc12_u7_l5_1"
+            },
+            {
+              "type": "math",
+              "question": "tan(2x) = 2tan(x) / (1 - ?)",
+              "answer": "tan^2(x)",
+              "id": "precalc12_u7_l5_2"
+            },
+            {
+              "type": "math",
+              "question": "If cos(x) = 1/3, cos(2x) =",
+              "answer": "-7/9",
+              "id": "precalc12_u7_l5_3"
+            },
+            {
+              "type": "math",
+              "question": "If sin(t) = 3/5, cos(2t) =",
+              "answer": "7/25",
+              "id": "precalc12_u7_l5_4"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If sin(t) = 3/4 and t is in Q2, sin(2t) =",
+              "answer": "-3sqrt(7)/8",
+              "choices": [
+                "-3sqrt(7)/8",
+                "3sqrt(7)/8",
+                "-3/8",
+                "9/16"
+              ],
+              "id": "precalc12_u7_l5_5"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Best form of cos(2x) to solve cos(2x) + 1 = cos(x)",
+              "answer": "2cos^2(x) - 1",
+              "choices": [
+                "2cos^2(x) - 1",
+                "cos^2(x) - sin^2(x)",
+                "1 - 2sin^2(x)",
+                "2sin(x)cos(x)"
+              ],
+              "id": "precalc12_u7_l5_6"
+            },
+            {
+              "type": "math",
+              "question": "1 + tan^2(x) =",
+              "answer": "sec^2(x)",
+              "id": "precalc12_u7_l5_7"
+            }
+          ]
         }
       ]
     },
@@ -1669,6 +1735,78 @@
                 "A = A0 r^t"
               ],
               "id": "precalc12_u10_l3_3"
+            }
+          ]
+        },
+        {
+          "id": "u10l4",
+          "title": "Growth & Decay Word Problems",
+          "exercises": [
+            {
+              "type": "math",
+              "question": "Half-life is 5 days. Starting at 80 g, how many grams after 15 days?",
+              "answer": "10",
+              "id": "precalc12_u10_l4_0"
+            },
+            {
+              "type": "math",
+              "question": "Same sample (80 g, half-life 5 days) after 10 days, grams:",
+              "answer": "20",
+              "id": "precalc12_u10_l4_1"
+            },
+            {
+              "type": "math",
+              "question": "A population doubles every 3 years. Starting at 500, after 9 years:",
+              "answer": "4000",
+              "id": "precalc12_u10_l4_2"
+            },
+            {
+              "type": "math",
+              "question": "A population of 200 grows 10% per year: P = 200(b)^t. b =",
+              "answer": "1.1",
+              "id": "precalc12_u10_l4_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "$1000 at 5% compounded annually for 2 years: 1000(1.05)^2 =",
+              "answer": "$1102.50",
+              "choices": [
+                "$1102.50",
+                "$1100",
+                "$1050",
+                "$1250"
+              ],
+              "id": "precalc12_u10_l4_4"
+            },
+            {
+              "type": "math",
+              "question": "Solve 1000(1.05)^t = 2000 (nearest hundredth): t =",
+              "answer": "14.21",
+              "id": "precalc12_u10_l4_5"
+            },
+            {
+              "type": "math",
+              "question": "A = 500e^(-0.1t). A at t = 0 is",
+              "answer": "500",
+              "id": "precalc12_u10_l4_6"
+            },
+            {
+              "type": "math",
+              "question": "$2000 at 3% growing continuously for 5 years, nearest dollar: 2000e^(0.15) =",
+              "answer": "2324",
+              "id": "precalc12_u10_l4_7"
+            },
+            {
+              "type": "mathChoice",
+              "question": "To solve a^t = c for t you",
+              "answer": "take the log of both sides",
+              "choices": [
+                "take the log of both sides",
+                "square both sides",
+                "divide by a",
+                "subtract t"
+              ],
+              "id": "precalc12_u10_l4_8"
             }
           ]
         }
