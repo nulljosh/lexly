@@ -1,0 +1,904 @@
+{
+  "id": "pcb_design",
+  "name": "PCB Design",
+  "category": "engineering",
+  "icon": "fa-solid fa-diagram-project",
+  "level": "From Schematic to Board",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Schematic Basics",
+      "tip": "A schematic is a diagram showing how electronic components connect to each other. Each component has a symbol, and lines show the electrical connections. Schematics are the blueprint for how a circuit works before any physical board is built.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Circuit Symbols and Connections",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a schematic?",
+              "answer": "A diagram showing electrical components and how they are connected",
+              "explain": "A schematic uses standardized symbols to represent components like resistors, capacitors, and chips. Lines between symbols show electrical connections.",
+              "choices": [
+                "A physical circuit board",
+                "A diagram showing electrical components and how they are connected",
+                "A list of parts to buy",
+                "A mechanical drawing"
+              ],
+              "id": "pcb_design_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do schematics use standardized symbols?",
+              "answer": "So anyone can understand the circuit regardless of their native language",
+              "explain": "Standardized symbols are universal. An engineer in any country recognizes a resistor symbol the same way. This makes communication reliable.",
+              "choices": [
+                "To reduce the file size",
+                "So anyone can understand the circuit regardless of their native language",
+                "Because they are easier to draw by hand",
+                "To make the schematic more artistic"
+              ],
+              "id": "pcb_design_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 'net' mean in PCB design?",
+              "answer": "An electrical connection that groups all points at the same voltage",
+              "explain": "A net is a named signal or connection. All wires in a net are electrically equivalent and at the same potential. Nets make it easy to route complex circuits.",
+              "choices": [
+                "A type of via",
+                "An electrical connection that groups all points at the same voltage",
+                "A fishing tool",
+                "A printed circuit board"
+              ],
+              "id": "pcb_design_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a schematic and a layout?",
+              "answer": "Schematic shows connections; layout shows physical placement on the board",
+              "explain": "The schematic defines what connects to what electrically. The layout decides where components go physically on the board and how traces route between them.",
+              "choices": [
+                "Schematic shows connections; layout shows physical placement on the board",
+                "Schematics are for professionals; layouts are for beginners",
+                "They are the same thing",
+                "Layouts are always digital; schematics can be hand-drawn"
+              ],
+              "id": "pcb_design_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of ground in a circuit?",
+              "answer": "A reference point against which all other voltages are measured",
+              "explain": "Ground (GND) is the common return path for current and the baseline (0V) for voltage measurements. All other voltages are measured relative to ground.",
+              "choices": [
+                "To reduce heat in the board",
+                "A reference point against which all other voltages are measured",
+                "To provide protection in case of electrical shock",
+                "To prevent static electricity"
+              ],
+              "id": "pcb_design_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Designing the Schematic",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Before laying out a board, what must you do first?",
+              "answer": "Design and verify the schematic",
+              "explain": "The schematic is the logical blueprint. If the schematic is wrong, the board will be wrong. Always verify the circuit works on paper before committing it to a board.",
+              "choices": [
+                "Apply for a patent",
+                "Choose the board size",
+                "Design and verify the schematic",
+                "Buy all the parts"
+              ],
+              "id": "pcb_design_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'reference designator' in a schematic?",
+              "answer": "The label that identifies each component, like R1, C2, U3",
+              "explain": "Reference designators are unique labels for every component. R means resistor, C means capacitor, U means integrated circuit. The number makes each one unique.",
+              "choices": [
+                "The price of the component",
+                "The country where the component is made",
+                "The label that identifies each component, like R1, C2, U3",
+                "A document that comes with the component"
+              ],
+              "id": "pcb_design_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'datasheet'?",
+              "answer": "Technical documentation describing a component's pins, ratings, and behavior",
+              "explain": "A datasheet is the official specification for a component. It shows pin definitions, voltage/current limits, and how to use it correctly.",
+              "choices": [
+                "Technical documentation describing a component's pins, ratings, and behavior",
+                "A schematic symbol",
+                "A list of components to order",
+                "A design template"
+              ],
+              "id": "pcb_design_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should you check datasheets before designing?",
+              "answer": "To understand pin assignments, voltage limits, and electrical requirements",
+              "explain": "The datasheet tells you what each pin does, the maximum voltage/current it can handle, and any special requirements. Skipping this step causes designs to fail.",
+              "choices": [
+                "Because the internet says you should",
+                "To impress your boss",
+                "To understand pin assignments, voltage limits, and electrical requirements",
+                "Because datasheets are free to download"
+              ],
+              "id": "pcb_design_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'schematic capture' mean?",
+              "answer": "Using software to draw the circuit schematic",
+              "explain": "Schematic capture is the process of using PCB design software to draw your circuit schematically. The software tracks components, nets, and generates a parts list.",
+              "choices": [
+                "Using software to draw the circuit schematic",
+                "Taking a photo of a circuit board",
+                "Building a prototype by hand",
+                "Copying someone else's design"
+              ],
+              "id": "pcb_design_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Components and Footprints",
+      "tip": "Components are the physical parts (resistors, chips, connectors) that go on a board. Each component has a footprint, which is the pattern of solder pads that matches the component's physical shape. The footprint must match the component exactly.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Understanding Component Packages",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'package' in PCB design?",
+              "answer": "The physical form of a component and its pin arrangement",
+              "explain": "A package defines the physical shape and pin layout of a component. The same chip might come in DIP-8, TQFP-32, or other packages depending on the application.",
+              "choices": [
+                "A collection of design rules",
+                "The physical form of a component and its pin arrangement",
+                "The datasheet",
+                "The shipping box the component arrives in"
+              ],
+              "id": "pcb_design_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does DIP stand for?",
+              "answer": "Dual In-Line Package, with two rows of pins",
+              "explain": "DIP packages have pins on opposite sides in two parallel rows. DIP-8 has 8 pins total (4 on each side). They are easy to insert into breadboards.",
+              "choices": [
+                "Double Internal Pin",
+                "Double Input Package",
+                "Digital Interface Protocol",
+                "Dual In-Line Package, with two rows of pins"
+              ],
+              "id": "pcb_design_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'footprint'?",
+              "answer": "The pattern of solder pads on a PCB that matches a component's physical shape",
+              "explain": "A footprint is the outline and pad pattern for one component. It defines where solder pads go and their spacing so the component fits correctly.",
+              "choices": [
+                "The pattern of solder pads on a PCB that matches a component's physical shape",
+                "The manufacturing date",
+                "The weight of a component",
+                "The size of the component's packaging box"
+              ],
+              "id": "pcb_design_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it critical that a footprint matches the component exactly?",
+              "answer": "A wrong footprint prevents the component from soldering properly or fitting at all",
+              "explain": "If the footprint pads are too far apart or too close, the component will not fit or will not solder. A mismatch means a non-working board.",
+              "choices": [
+                "A wrong footprint prevents the component from soldering properly or fitting at all",
+                "Because footprints determine the component's cost",
+                "To fill up PCB design software",
+                "Because footprints affect the circuit's speed"
+              ],
+              "id": "pcb_design_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between through-hole and surface-mount packages?",
+              "answer": "Through-hole uses pins through the board; surface-mount sits on top",
+              "explain": "Through-hole components have long pins that go through the board. Surface-mount components sit flat on the board surface. Surface-mount is smaller and faster to assemble.",
+              "choices": [
+                "They require different soldering temperatures",
+                "Through-hole is newer technology",
+                "Surface-mount is more expensive",
+                "Through-hole uses pins through the board; surface-mount sits on top"
+              ],
+              "id": "pcb_design_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Selecting and Placing Components",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'component placement' mean?",
+              "answer": "Deciding where each component goes on the PCB layout",
+              "explain": "Component placement is the first step of board layout. You position each component to minimize trace length, avoid noise, and create a logical flow.",
+              "choices": [
+                "Deciding where each component goes on the PCB layout",
+                "Ordering components from suppliers",
+                "Testing the component before use",
+                "Writing the schematic symbol"
+              ],
+              "id": "pcb_design_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should you group related components together?",
+              "answer": "To minimize trace length and reduce noise and interference",
+              "explain": "Grouping related components close together keeps signal paths short, reduces capacitive coupling, and makes the board more compact and reliable.",
+              "choices": [
+                "To minimize trace length and reduce noise and interference",
+                "Because the PCB software requires it",
+                "Because it looks more organized",
+                "To reduce the board cost"
+              ],
+              "id": "pcb_design_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'critical signal path'?",
+              "answer": "A high-speed or sensitive signal that must be routed carefully",
+              "explain": "Critical paths (like clock signals or analog signals) need short, direct traces to avoid noise. These get priority during board layout.",
+              "choices": [
+                "Any signal on the board",
+                "A signal that repeats in the schematic",
+                "A high-speed or sensitive signal that must be routed carefully",
+                "A signal that crosses the entire board"
+              ],
+              "id": "pcb_design_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'DFM' (Design For Manufacturing) mean?",
+              "answer": "Designing the board so it is easy and cost-effective to manufacture",
+              "explain": "DFM considers manufacturing constraints: minimum trace width, minimum pad size, assembly capabilities. Good DFM reduces waste and cost.",
+              "choices": [
+                "Designing the board so it is easy and cost-effective to manufacture",
+                "Double Failure Mode",
+                "Data File Management",
+                "Digital Frequency Modulation"
+              ],
+              "id": "pcb_design_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When placing components, what should you avoid?",
+              "answer": "Placing high-noise components near sensitive analog circuits",
+              "explain": "Digital circuits (especially clocks and high-speed logic) generate noise. Placing them far from sensitive analog circuits prevents interference.",
+              "choices": [
+                "Placing high-noise components near sensitive analog circuits",
+                "Placing anything on the left side of the board",
+                "Placing too many components in one area",
+                "Placing expensive components first"
+              ],
+              "id": "pcb_design_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Traces and Routing",
+      "tip": "Traces are the thin copper lines that connect components on a PCB. Routing is the process of drawing these connections. Good routing minimizes length, avoids crossing signals, and respects electrical rules.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Understanding Traces",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'trace'?",
+              "answer": "A copper conductor on a PCB that carries current between pads",
+              "explain": "Traces are thin copper paths etched onto the board. They replace wires and carry signals and power between component pads.",
+              "choices": [
+                "A design rule",
+                "A debugging tool",
+                "A type of solder",
+                "A copper conductor on a PCB that carries current between pads"
+              ],
+              "id": "pcb_design_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'trace width' affect?",
+              "answer": "How much current the trace can safely carry without overheating",
+              "explain": "Thicker traces carry more current before exceeding safe temperatures. The required width depends on the current and copper thickness.",
+              "choices": [
+                "The color of the PCB",
+                "How much current the trace can safely carry without overheating",
+                "The speed of signals on the trace",
+                "The manufacturing time"
+              ],
+              "id": "pcb_design_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'trace length matching'?",
+              "answer": "Making multiple traces the same length to match signal arrival times",
+              "explain": "High-speed buses (like DDR memory) require equal-length traces so all data bits arrive at the same time. Mismatched lengths cause timing skew.",
+              "choices": [
+                "Selecting trace color to be consistent",
+                "Making multiple traces the same length to match signal arrival times",
+                "Organizing traces in parallel rows",
+                "Making all traces on a board the same length"
+              ],
+              "id": "pcb_design_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'trace impedance'?",
+              "answer": "The resistance and reactance of a trace at high frequencies",
+              "explain": "At high speeds, traces act like transmission lines with impedance. Matching impedance to the driver and receiver prevents reflections that corrupt signals.",
+              "choices": [
+                "The color of the solder mask",
+                "The resistance and reactance of a trace at high frequencies",
+                "The ability of a trace to carry DC current",
+                "The physical width of the trace"
+              ],
+              "id": "pcb_design_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When do you need to be most careful about two signal traces crossing over each other on different layers?",
+              "answer": "When the signals are sensitive or run at very high speeds",
+              "explain": "Traces on the same layer cannot cross without shorting, so crossings happen on different layers. Overlapping sensitive or very fast signals can couple and cause crosstalk. Cross them at right angles or separate them with a plane.",
+              "choices": [
+                "Never, it is never a problem",
+                "When the signals are sensitive or run at very high speeds",
+                "Always, no exceptions",
+                "Only on the top layer"
+              ],
+              "id": "pcb_design_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Routing Techniques",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'auto-routing' in PCB design?",
+              "answer": "Software that automatically finds paths for traces between pads",
+              "explain": "Auto-routers use algorithms to find valid trace paths. They are fast but often suboptimal. Manual routing gives better results for complex boards.",
+              "choices": [
+                "Software that automatically finds paths for traces between pads",
+                "A layout template for standard circuits",
+                "A type of soldering tool",
+                "Drawing all traces by hand"
+              ],
+              "id": "pcb_design_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'rat's nest'?",
+              "answer": "The unrouted connections shown as lines between component pads",
+              "explain": "Before routing, PCB software shows all required connections as straight lines. As you route traces, the rat's nest shrinks until all nets are connected.",
+              "choices": [
+                "An obsolete PCB format",
+                "The unrouted connections shown as lines between component pads",
+                "A design error",
+                "Tangled traces that do not work"
+              ],
+              "id": "pcb_design_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does '45-degree routing' mean?",
+              "answer": "Routing traces at 45-degree angles instead of 90 degrees where possible",
+              "explain": "Sharp 90-degree corners are avoided because they can trap etchant during manufacturing and make the trace slightly less uniform. 45-degree bends are the usual preference, and they also keep traces a bit shorter.",
+              "choices": [
+                "Making all angles exactly 45 degrees",
+                "A rule for spacing traces apart",
+                "Routing traces at 45-degree angles instead of 90 degrees where possible",
+                "A type of solder joint"
+              ],
+              "id": "pcb_design_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'fan-out' in PCB layout?",
+              "answer": "Spreading out traces from a dense component or pad to minimize congestion",
+              "explain": "High pin-count chips have many pads close together. Fan-out spreads these connections apart so they can route to other parts of the board without crossing.",
+              "choices": [
+                "The angle of a trace bend",
+                "A routing error",
+                "The number of traces connected to a pad",
+                "Spreading out traces from a dense component or pad to minimize congestion"
+              ],
+              "id": "pcb_design_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do if two traces must cross?",
+              "answer": "Route them on different layers using vias to separate them",
+              "explain": "If two nets must cross, put one on a different layer. Vias connect the layers. This avoids electrical shorts between the crossing traces.",
+              "choices": [
+                "Accept the short and shield it",
+                "Route them on different layers using vias to separate them",
+                "Redesign the board to avoid it",
+                "Use a thinner trace"
+              ],
+              "id": "pcb_design_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Layers and Ground Planes",
+      "tip": "PCBs can have multiple copper layers stacked together. Ground planes are large sheets of copper connected to ground that act as a reference and return path. They reduce noise and improve signal integrity.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Multi-Layer Board Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a multi-layer PCB?",
+              "answer": "A board with multiple copper layers stacked and separated by insulation",
+              "explain": "A 4-layer board has 4 copper layers (typically top, ground, power, bottom). More layers allow denser routing and better signal integrity.",
+              "choices": [
+                "A board with many components",
+                "A board with multiple solder masks",
+                "A board with multiple copper layers stacked and separated by insulation",
+                "A board made of multiple materials"
+              ],
+              "id": "pcb_design_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the typical layers in a 4-layer board?",
+              "answer": "Top signal, ground plane, power plane, bottom signal",
+              "explain": "This arrangement sandwiches power and ground planes between signal layers. This provides a low-impedance path for current return.",
+              "choices": [
+                "4 signal layers",
+                "Ground, ground, signal, signal",
+                "Power, signal, signal, power",
+                "Top signal, ground plane, power plane, bottom signal"
+              ],
+              "id": "pcb_design_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'ground plane'?",
+              "answer": "A large sheet of copper connected to ground that serves as a reference and return path",
+              "explain": "A ground plane is a continuous copper layer (or large area) connected to ground. It provides a low-impedance return path for signals and reduces noise.",
+              "choices": [
+                "A type of solder",
+                "A flat area with no components",
+                "A large sheet of copper connected to ground that serves as a reference and return path",
+                "A layer that must be removed"
+              ],
+              "id": "pcb_design_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'via'?",
+              "answer": "A small hole drilled through a PCB connecting copper on different layers",
+              "explain": "Vias allow signals and power to move between layers. A via is a connection point from one layer to another.",
+              "choices": [
+                "A type of trace",
+                "A design rule",
+                "A small hole drilled through a PCB connecting copper on different layers",
+                "An error in the layout"
+              ],
+              "id": "pcb_design_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should power and ground planes be continuous and unbroken?",
+              "answer": "To minimize impedance and provide low-resistance current paths",
+              "explain": "Cuts and islands in power or ground planes increase impedance and create loops that radiate noise. Continuous planes give the return current a short, low-impedance path.",
+              "choices": [
+                "To reduce the board cost",
+                "Because the software requires it",
+                "To minimize impedance and provide low-resistance current paths",
+                "To save time during design"
+              ],
+              "id": "pcb_design_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Power Distribution and Decoupling",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'decoupling capacitor'?",
+              "answer": "A capacitor placed near a chip's power pins to filter noise and supply current spikes",
+              "explain": "Decoupling caps absorb sudden current surges from logic transitions. They smooth the power supply and reduce voltage spikes that cause errors.",
+              "choices": [
+                "A capacitor placed near a chip's power pins to filter noise and supply current spikes",
+                "A device that measures capacitance",
+                "A capacitor that blocks power from the chip",
+                "A type of resistor"
+              ],
+              "id": "pcb_design_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many decoupling capacitors do you typically need per chip?",
+              "answer": "At least one, often multiple values to cover different frequencies",
+              "explain": "A single capacitor per power pin is a minimum. Using multiple capacitor values (100nF, 10uF) covers a wider frequency range and works better.",
+              "choices": [
+                "Exactly one per chip",
+                "Decoupling caps are optional",
+                "At least one, often multiple values to cover different frequencies",
+                "The number depends on the trace width"
+              ],
+              "id": "pcb_design_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where should decoupling capacitors be placed?",
+              "answer": "As close as possible to the chip's power pins",
+              "explain": "Close placement minimizes lead inductance and keeps the capacitor effective at high frequencies. Distance reduces the capacitor's benefit.",
+              "choices": [
+                "Under the solder mask",
+                "Far from the chip to reduce heat",
+                "As close as possible to the chip's power pins",
+                "Anywhere on the board"
+              ],
+              "id": "pcb_design_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'star grounding'?",
+              "answer": "Connecting all ground paths to a single point to avoid ground loops",
+              "explain": "In single-layer or simple boards, star grounding prevents loops that cause noise. All ground returns meet at one point, then go to the power supply.",
+              "choices": [
+                "Grounding all components at once",
+                "Connecting all ground paths to a single point to avoid ground loops",
+                "Grounding only high-power components",
+                "Using star-shaped circuit symbols"
+              ],
+              "id": "pcb_design_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'power distribution network' (PDN) impedance?",
+              "answer": "The total impedance from the power supply to a component, affecting voltage stability",
+              "explain": "PDN impedance determines how well the power system responds to current spikes. Lower impedance means better voltage stability and fewer errors.",
+              "choices": [
+                "The total impedance from the power supply to a component, affecting voltage stability",
+                "The resistance of power traces only",
+                "A type of capacitor rating",
+                "The efficiency of the power supply"
+              ],
+              "id": "pcb_design_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Design for Manufacturing",
+      "tip": "Design for Manufacturing (DFM) considers how a board is physically made and assembled. Understanding soldering, component mounting, and assembly processes ensures your design can be built correctly and cost-effectively.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Through-Hole and Surface-Mount Assembly",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of through-hole assembly?",
+              "answer": "Strong mechanical connections and easy hand-soldering",
+              "explain": "Through-hole pins go through the board and bend on the back, creating strong mechanical joints. They tolerate larger thermal stresses than surface-mount.",
+              "choices": [
+                "It requires less copper",
+                "It is faster to manufacture",
+                "Strong mechanical connections and easy hand-soldering",
+                "It uses less power"
+              ],
+              "id": "pcb_design_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of surface-mount assembly?",
+              "answer": "Small size, fast automated assembly, and high component density",
+              "explain": "Surface-mount components are tiny and placed by pick-and-place robots. This allows higher density, faster production, and smaller boards.",
+              "choices": [
+                "Lower cost components",
+                "Small size, fast automated assembly, and high component density",
+                "Easier to repair by hand",
+                "Stronger mechanical joints"
+              ],
+              "id": "pcb_design_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'reflow soldering'?",
+              "answer": "Heating the entire board in an oven to melt solder and attach surface-mount parts",
+              "explain": "Reflow soldering heats the board to above solder's melting point, then cools it. All surface-mount components solder simultaneously in one pass.",
+              "choices": [
+                "Applying solder to wires instead of pads",
+                "Soldering by hand with an iron",
+                "Heating the entire board in an oven to melt solder and attach surface-mount parts",
+                "Using a wave of liquid solder to coat the board"
+              ],
+              "id": "pcb_design_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'wave soldering'?",
+              "answer": "Passing the board over a wave of molten solder to solder through-hole components",
+              "explain": "Wave soldering is used for through-hole assembly. The board moves over a wave of hot solder, which wets the pads and solders all pins at once.",
+              "choices": [
+                "Using ultrasonic vibration to solder parts",
+                "Hand-soldering each joint",
+                "Soldering surface-mount components",
+                "Passing the board over a wave of molten solder to solder through-hole components"
+              ],
+              "id": "pcb_design_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'solder pad'?",
+              "answer": "A small copper area on the PCB where a component lead attaches and is soldered",
+              "explain": "Solder pads are tiny copper areas with specific sizes and shapes. Solder flows onto these pads, creating the electrical and mechanical bond with component leads.",
+              "choices": [
+                "A small copper area on the PCB where a component lead attaches and is soldered",
+                "An insulating layer",
+                "A place to store solder",
+                "A type of circuit board"
+              ],
+              "id": "pcb_design_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Manufacturing Constraints and Design Rules",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you find the minimum trace width you can use on a board?",
+              "answer": "Check the capabilities published by your chosen manufacturer",
+              "explain": "Manufacturing capabilities vary from one fabricator and process to another. Check the manufacturer's specifications before setting your design rules. Finer traces usually cost more; coarser traces are cheaper and more forgiving.",
+              "choices": [
+                "There is no minimum",
+                "It is the same for every manufacturer",
+                "It is set by the schematic symbol",
+                "Check the capabilities published by your chosen manufacturer"
+              ],
+              "id": "pcb_design_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'design rule check' (DRC)?",
+              "answer": "Automated verification that traces, pads, and spacing meet manufacturing requirements",
+              "explain": "DRC software checks that traces are not too thin, spacing is not too tight, and all pads are properly sized. It prevents designs that cannot be fabricated.",
+              "choices": [
+                "Automated verification that traces, pads, and spacing meet manufacturing requirements",
+                "A debugging tool",
+                "A list of electrical rules",
+                "A manual inspection process"
+              ],
+              "id": "pcb_design_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'clearance' mean in PCB design?",
+              "answer": "The minimum distance between copper elements to prevent shorts",
+              "explain": "Clearance is the gap between traces, between a trace and a pad, or between a pad and the board edge. Insufficient clearance causes electrical shorts.",
+              "choices": [
+                "The distance from the board edge",
+                "The amount of empty space on a board",
+                "The space inside a via",
+                "The minimum distance between copper elements to prevent shorts"
+              ],
+              "id": "pcb_design_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'solder mask'?",
+              "answer": "A layer of insulation that covers copper except where solder joints go",
+              "explain": "Solder mask prevents solder bridges between nearby traces and protects copper from oxidation. It is typically green, but other colors are available.",
+              "choices": [
+                "A protective tool used during assembly",
+                "A type of component",
+                "A photographic negative",
+                "A layer of insulation that covers copper except where solder joints go"
+              ],
+              "id": "pcb_design_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of 'silk screen' (legend layer) on a PCB?",
+              "answer": "To print component labels, reference designators, and test points",
+              "explain": "Silk screen is white printing on the PCB surface. It shows component labels (R1, C2), logos, and test points to aid assembly and troubleshooting.",
+              "choices": [
+                "To insulate the board",
+                "To improve electrical performance",
+                "To hold components in place during soldering",
+                "To print component labels, reference designators, and test points"
+              ],
+              "id": "pcb_design_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Verification and Quality",
+      "tip": "Before manufacturing, a PCB design must be checked for errors and verified to work. Design reviews, simulations, and final checks catch problems early.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Design Verification Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'design review'?",
+              "answer": "A systematic examination of the schematic and layout for errors",
+              "explain": "A design review involves checking logic, component choices, routing, and manufacturing rules. Having a second set of eyes catches mistakes.",
+              "choices": [
+                "Testing the finished board",
+                "Ordering parts from suppliers",
+                "Painting the board",
+                "A systematic examination of the schematic and layout for errors"
+              ],
+              "id": "pcb_design_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'electrical rule check' (ERC)?",
+              "answer": "Automated verification of schematic connections for electrical errors",
+              "explain": "ERC checks for unconnected pins, duplicate net names, shorted power/ground, and other wiring errors in the schematic.",
+              "choices": [
+                "A type of cable",
+                "A way to estimate manufacturing cost",
+                "Testing the board under power",
+                "Automated verification of schematic connections for electrical errors"
+              ],
+              "id": "pcb_design_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'prototype' in PCB design?",
+              "answer": "A small run of boards built for testing before full manufacturing",
+              "explain": "A prototype is a test board to verify the design works. If problems are found, they are fixed in software and a corrected production run is made.",
+              "choices": [
+                "A computer simulation",
+                "A schematic diagram",
+                "A small run of boards built for testing before full manufacturing",
+                "The original hand-drawn design"
+              ],
+              "id": "pcb_design_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'simulation' in circuit design?",
+              "answer": "Using software to model circuit behavior without building it",
+              "explain": "SPICE simulators predict how a circuit will behave: voltages, currents, timing. This catches errors before the prototype is built.",
+              "choices": [
+                "Running the design in an oven",
+                "Using software to model circuit behavior without building it",
+                "Building multiple versions",
+                "Testing on a breadboard"
+              ],
+              "id": "pcb_design_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'net list' verify?",
+              "answer": "That the layout matches the schematic connections",
+              "explain": "The net list is a record of all connections from the schematic. It is compared with the layout to ensure nothing was misrouted.",
+              "choices": [
+                "That all components are available",
+                "That the traces are not too thin",
+                "That the layout matches the schematic connections",
+                "That the board can support high current"
+              ],
+              "id": "pcb_design_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Testing and Quality Assurance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'continuity testing'?",
+              "answer": "Verifying that electrical paths exist where they should and shorts do not",
+              "explain": "Continuity testing uses a multimeter to check that traces are connected and no accidental shorts exist between signals.",
+              "choices": [
+                "Testing whether the board is still in production",
+                "Counting the number of components",
+                "Measuring trace thickness",
+                "Verifying that electrical paths exist where they should and shorts do not"
+              ],
+              "id": "pcb_design_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'in-circuit testing' (ICT)?",
+              "answer": "Automated testing of a board with a fixture that checks every node",
+              "explain": "ICT uses spring-loaded probes (the fixture) to contact test pads on the board. A tester checks voltages, continuity, and component values.",
+              "choices": [
+                "Testing only the circuit diagram",
+                "Automated testing of a board with a fixture that checks every node",
+                "Testing with the board powered off",
+                "A type of solder inspection"
+              ],
+              "id": "pcb_design_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'test point'?",
+              "answer": "A pad added to the board for test probes to measure voltage or current",
+              "explain": "Test points are marked on silk screen and connected to key signals. They let technicians measure the board during assembly and troubleshooting.",
+              "choices": [
+                "A color marking on the PCB",
+                "The highest score on a test",
+                "A corner of the board",
+                "A pad added to the board for test probes to measure voltage or current"
+              ],
+              "id": "pcb_design_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'burn-in' testing do?",
+              "answer": "Runs boards at elevated temperature and stress to find early failures",
+              "explain": "Burn-in stresses components by running them hot. Weak components fail early in the lab, not in the field.",
+              "choices": [
+                "Runs boards at elevated temperature and stress to find early failures",
+                "Measures component temperatures",
+                "Removes solder paste residue",
+                "Destroys defective boards"
+              ],
+              "id": "pcb_design_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'visual inspection' (VI) of a PCB?",
+              "answer": "Examining the board with eyes or a microscope for assembly defects",
+              "explain": "Visual inspection checks for cold solder joints, bridges, component placement errors, and damaged traces. It can catch many problems before testing.",
+              "choices": [
+                "Examining the board with eyes or a microscope for assembly defects",
+                "Testing with power applied",
+                "Checking the color of the board",
+                "Measuring electrical performance"
+              ],
+              "id": "pcb_design_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "storage_devices",
+  "name": "Storage Devices",
+  "category": "engineering",
+  "icon": "fa-solid fa-hard-drive",
+  "level": "Where Data Lives",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Hard Disk Drives",
+      "tip": "Hard disk drives store data on spinning magnetic platters. A read/write head moves across the platter to access data. They are mechanical, so access time depends on where the data is on the spinning disk.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "How Hard Drives Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main component that stores data in a hard disk drive?",
+              "answer": "A rotating magnetic platter",
+              "explain": "Data is stored as magnetic regions on a thin circular disk coated with magnetic material. As the platter spins, the read/write head accesses data.",
+              "choices": [
+                "A laser beam",
+                "A light-emitting crystal",
+                "A rotating magnetic platter",
+                "A series of transistors"
+              ],
+              "id": "storage_devices_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'read/write head'?",
+              "answer": "A tiny electromagnet that reads and writes data on the spinning platter",
+              "explain": "The head changes polarity to write data as magnetic bits and detects polarity changes to read. It floats a few nanometers above the platter without touching.",
+              "choices": [
+                "A circuit that controls the spindle",
+                "A cooling fan",
+                "A tiny electromagnet that reads and writes data on the spinning platter",
+                "A spinning motor"
+              ],
+              "id": "storage_devices_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'seek time' mean?",
+              "answer": "The time for the read/write head to move to the target data location",
+              "explain": "Seek time includes the time to physically move the head arm to the correct track. Faster seek times mean quicker data access.",
+              "choices": [
+                "The time for the read/write head to move to the target data location",
+                "The time to spin up the platter",
+                "The time to power on the drive",
+                "The time to write one byte"
+              ],
+              "id": "storage_devices_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'rotational latency'?",
+              "answer": "The time the platter must spin to bring the desired data under the head",
+              "explain": "Once the head reaches the right track, the platter must rotate to present the data under the head. Faster rotation reduces latency.",
+              "choices": [
+                "The time the platter must spin to bring the desired data under the head",
+                "The time to read one sector",
+                "The delay when the drive first powers on",
+                "The cooling time after extended use"
+              ],
+              "id": "storage_devices_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do hard drive platters keep spinning while the drive is in use?",
+              "answer": "To minimize latency and allow fast access to any data location",
+              "explain": "Continuous rotation means data is always moving under the head. Stopping and starting between accesses would add large delays.",
+              "choices": [
+                "To prevent data corruption",
+                "Because older drives required it",
+                "To minimize latency and allow fast access to any data location",
+                "To generate heat for the drive to operate"
+              ],
+              "id": "storage_devices_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Hard Drive Mechanics and Wear",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'sector' on a hard drive?",
+              "answer": "The smallest unit of data the drive can read or write",
+              "explain": "A sector is a fixed-size block (usually 512 bytes or 4 KB). Data is always read and written in whole sectors.",
+              "choices": [
+                "A section of the platter that has failed",
+                "A track that is not used",
+                "The smallest unit of data the drive can read or write",
+                "A backup copy of data"
+              ],
+              "id": "storage_devices_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'track' on a hard drive?",
+              "answer": "A circular path on the platter where data is stored",
+              "explain": "The platter is divided into concentric circles (tracks) and radial sections (sectors). Together they form a grid for storing data.",
+              "choices": [
+                "A backup system",
+                "A circular path on the platter where data is stored",
+                "A defective area of the platter",
+                "A cooling channel"
+              ],
+              "id": "storage_devices_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if the read/write head crashes into the platter?",
+              "answer": "The head and platter can both be damaged, destroying data",
+              "explain": "A head crash is catastrophic. The head scratches the platter, damaging both. Data loss is likely and the drive must be replaced.",
+              "choices": [
+                "The drive automatically repairs itself",
+                "Nothing; the head is designed to contact the platter",
+                "The head and platter can both be damaged, destroying data",
+                "Only the head is damaged, data is safe"
+              ],
+              "id": "storage_devices_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should you not move a hard drive while it is powered on?",
+              "answer": "Vibration can cause the head to crash into the platter",
+              "explain": "The head floats only nanometers above the platter. Sudden vibration or movement can make it contact the platter, causing data loss.",
+              "choices": [
+                "Because it corrupts the hard drive firmware",
+                "Because it wastes power",
+                "Vibration can cause the head to crash into the platter",
+                "Because it slows down the transfer rate"
+              ],
+              "id": "storage_devices_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'S.M.A.R.T. monitoring'?",
+              "answer": "Technology that predicts hard drive failures by monitoring key metrics",
+              "explain": "S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) tracks things like temperature and error rates. It can often warn before a drive fails, though not always.",
+              "choices": [
+                "A way to repair bad sectors",
+                "A method to clean the platter",
+                "Technology that predicts hard drive failures by monitoring key metrics",
+                "A security feature that encrypts data"
+              ],
+              "id": "storage_devices_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Flash Storage Fundamentals",
+      "tip": "Flash storage uses transistors to store charge, which represents 1s and 0s. Unlike hard drives, flash has no moving parts. However, flash cells wear out with repeated writes.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Flash Memory Cells",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'flash memory cell'?",
+              "answer": "A transistor that stores electrical charge to represent 1 or 0",
+              "explain": "A flash cell traps electrons in a floating gate. The amount of charge determines if it reads as 0 or 1.",
+              "choices": [
+                "A transistor that stores electrical charge to represent 1 or 0",
+                "A small area of the platter",
+                "A spinning motor",
+                "A cooling system"
+              ],
+              "id": "storage_devices_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between SLC, MLC, and TLC flash?",
+              "answer": "They store 1, 2, and 3 bits per cell respectively",
+              "explain": "SLC (Single-Level Cell) stores 1 bit, MLC (Multi-Level Cell) stores 2 bits, TLC stores 3 bits. More bits per cell means higher density but shorter lifespan.",
+              "choices": [
+                "They are speed grades for the same technology",
+                "They store 1, 2, and 3 bits per cell respectively",
+                "Different manufacturers make different types",
+                "They are different brands of the same product"
+              ],
+              "id": "storage_devices_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'flash memory wear'?",
+              "answer": "Degradation of cells after repeated write/erase cycles",
+              "explain": "Each write and erase damages the cell's gate insulator. After 1,000 to 100,000 cycles (depending on type), cells fail and cannot hold charge.",
+              "choices": [
+                "The flash becoming slower over time",
+                "The physical size of the flash chip decreasing",
+                "Dust accumulating on the flash chip",
+                "Degradation of cells after repeated write/erase cycles"
+              ],
+              "id": "storage_devices_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'program/erase cycle' (P/E cycle)?",
+              "answer": "One complete write and erase of a flash cell",
+              "explain": "Each write (program) and erase damages the cell. The number of P/E cycles is the lifespan of the cell.",
+              "choices": [
+                "A data integrity check",
+                "A full backup and restore",
+                "One complete write and erase of a flash cell",
+                "A system reboot"
+              ],
+              "id": "storage_devices_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'flash data retention'?",
+              "answer": "How long stored charge remains without being refreshed",
+              "explain": "Flash cells slowly lose charge over time, especially without power. Retention is important for devices that may be unpowered for long periods.",
+              "choices": [
+                "The cost per byte of storage",
+                "How much data can be stored",
+                "The speed of reading data",
+                "How long stored charge remains without being refreshed"
+              ],
+              "id": "storage_devices_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Wear Leveling and TRIM",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'wear leveling'?",
+              "answer": "Distributing writes across all cells to even out wear and extend lifespan",
+              "explain": "If the same cells are written repeatedly, they fail first. Wear leveling spreads writes across the entire flash so all cells wear equally.",
+              "choices": [
+                "Distributing writes across all cells to even out wear and extend lifespan",
+                "Replacing old cells with new ones",
+                "Checking the health of flash cells",
+                "A process that smooths the flash surface"
+              ],
+              "id": "storage_devices_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'TRIM command'?",
+              "answer": "A signal from the OS telling the drive which blocks are no longer used",
+              "explain": "When you delete a file, the OS sends TRIM to tell the drive those blocks are empty. The drive can optimize garbage collection.",
+              "choices": [
+                "A defragmentation process",
+                "A tool to reduce file sizes",
+                "A signal from the OS telling the drive which blocks are no longer used",
+                "A backup command"
+              ],
+              "id": "storage_devices_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'garbage collection' in an SSD?",
+              "answer": "The process of organizing free blocks and clearing invalid data",
+              "explain": "SSDs must consolidate fragmented blocks and erase invalid data to create free space. This happens automatically in the background.",
+              "choices": [
+                "The process of organizing free blocks and clearing invalid data",
+                "Deleting corrupt files",
+                "Checking disk health",
+                "Backing up old data"
+              ],
+              "id": "storage_devices_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is garbage collection necessary in flash storage?",
+              "answer": "Because flash must erase entire blocks even to write to a small part",
+              "explain": "Flash organizes data in blocks. To write to one block, the entire block must be erased first. Garbage collection consolidates data to create free blocks.",
+              "choices": [
+                "Because flash must erase entire blocks even to write to a small part",
+                "Because the operating system requires it",
+                "Because deleted files take up space",
+                "Because the drive is damaged"
+              ],
+              "id": "storage_devices_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if an SSD runs out of free space for garbage collection?",
+              "answer": "Performance degrades because the drive cannot consolidate and erase blocks",
+              "explain": "Without free space, the drive cannot move data around efficiently. Writes slow down as the drive struggles to find space.",
+              "choices": [
+                "The drive stops working completely",
+                "Performance degrades because the drive cannot consolidate and erase blocks",
+                "Files are automatically deleted",
+                "Data corruption occurs"
+              ],
+              "id": "storage_devices_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Storage Interfaces",
+      "tip": "Storage devices connect to the computer through interfaces that define the physical connection and protocol. SATA, NVMe, and USB are common interfaces with different speeds and uses.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "SATA and Serial Interfaces",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does SATA stand for?",
+              "answer": "Serial Advanced Technology Attachment",
+              "explain": "SATA is a serial interface for connecting hard drives and SSDs. It replaced the older parallel ATA (PATA) interface.",
+              "choices": [
+                "Sequential Array Transfer Architecture",
+                "Serial Attachment Technical Architecture",
+                "Serial Advanced Technology Attachment",
+                "Standard Automatic Transfer Access"
+              ],
+              "id": "storage_devices_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a key advantage of SATA over older parallel interfaces?",
+              "answer": "Simpler cabling and higher speeds despite using fewer wires",
+              "explain": "SATA uses fewer pins and thinner cables but achieves faster speeds through better signaling and higher clock rates.",
+              "choices": [
+                "SATA works with more devices",
+                "SATA is cheaper to manufacture",
+                "Simpler cabling and higher speeds despite using fewer wires",
+                "SATA is more secure"
+              ],
+              "id": "storage_devices_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'SATA hot-swapping'?",
+              "answer": "The ability to connect or disconnect a SATA drive while the computer is powered on",
+              "explain": "With a supporting controller and drive bay, SATA drives can be connected or removed without rebooting. This is useful for adding storage or replacing failed drives.",
+              "choices": [
+                "Replacing a SATA cable while in use",
+                "Switching between multiple SATA ports",
+                "The ability to connect or disconnect a SATA drive while the computer is powered on",
+                "Quickly removing and reinstalling the same drive"
+              ],
+              "id": "storage_devices_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many drives does a standard SATA port connect to?",
+              "answer": "One drive per port",
+              "explain": "SATA is point to point: each port connects to a single drive. A motherboard provides several ports, and the count varies by model.",
+              "choices": [
+                "Up to eight drives",
+                "Up to four drives in a daisy chain",
+                "One drive per port",
+                "As many as the power supply can feed"
+              ],
+              "id": "storage_devices_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is SATA's primary limitation?",
+              "answer": "Its maximum speed is lower than faster interfaces like NVMe",
+              "explain": "SATA has a bandwidth ceiling. NVMe and other modern interfaces are much faster, so SATA is being phased out for high-performance storage.",
+              "choices": [
+                "It requires constant power",
+                "It cannot hot-swap drives",
+                "It does not support SSDs",
+                "Its maximum speed is lower than faster interfaces like NVMe"
+              ],
+              "id": "storage_devices_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "NVMe and Modern Interfaces",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does NVMe stand for?",
+              "answer": "Non-Volatile Memory Express",
+              "explain": "NVMe is a modern interface designed specifically for flash memory. It is much faster than SATA.",
+              "choices": [
+                "Networked Variable Memory Endpoint",
+                "Network Virtual Memory Exchange",
+                "New Version Memory Expansion",
+                "Non-Volatile Memory Express"
+              ],
+              "id": "storage_devices_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of NVMe over SATA?",
+              "answer": "Much higher speed and lower latency",
+              "explain": "NVMe connects directly to PCIe lanes, bypassing the slower SATA controller. This gives dramatically faster performance.",
+              "choices": [
+                "It is easier to install",
+                "Much higher speed and lower latency",
+                "It is less expensive",
+                "It uses less power"
+              ],
+              "id": "storage_devices_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'M.2' form factor?",
+              "answer": "A small, rectangular slot for high-speed storage drives",
+              "explain": "M.2 is the physical shape used by most NVMe drives. It plugs directly into an M.2 slot on the motherboard without cables.",
+              "choices": [
+                "A type of hard drive",
+                "A USB connector",
+                "A small, rectangular slot for high-speed storage drives",
+                "A version of SATA"
+              ],
+              "id": "storage_devices_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between PCIe Gen 3, Gen 4, and Gen 5 NVMe?",
+              "answer": "Each generation has double the bandwidth of the previous",
+              "explain": "Each PCIe generation roughly doubles the bandwidth per lane of the one before. Generations are backward compatible, so a drive and slot of different generations still work together at the slower one's speed.",
+              "choices": [
+                "They are different brands",
+                "There is no practical difference",
+                "Each generation has double the bandwidth of the previous",
+                "Gen 5 works with all computers; Gen 3 and 4 do not"
+              ],
+              "id": "storage_devices_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can an NVMe drive work through a standard SATA port?",
+              "answer": "No, a SATA port uses a different protocol and cannot run NVMe",
+              "explain": "NVMe talks over PCIe, while a SATA port speaks the SATA protocol. Some M.2 slots do accept SATA drives, so always check what a slot supports.",
+              "choices": [
+                "Yes, but at reduced speed",
+                "No, a SATA port uses a different protocol and cannot run NVMe",
+                "Only on some motherboards",
+                "Yes, with an adapter"
+              ],
+              "id": "storage_devices_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "RAID and Redundancy",
+      "tip": "RAID combines multiple drives to improve performance or reliability. Different RAID levels trade speed, capacity, and redundancy. RAID is not a backup; it protects against drive failure but not data loss.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "RAID Levels 0, 1, and 5",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does RAID stand for?",
+              "answer": "Redundant Array of Independent Disks",
+              "explain": "RAID combines multiple drives using software or hardware to improve performance, reliability, or both.",
+              "choices": [
+                "Random Access of Integrated Data",
+                "Rapid Array of Integrated Drivers",
+                "Recursive Array of Independent Devices",
+                "Redundant Array of Independent Disks"
+              ],
+              "id": "storage_devices_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is RAID 0?",
+              "answer": "Striping data across multiple drives for speed, with no redundancy",
+              "explain": "RAID 0 splits data across drives, so speed scales with the number of drives. But if one drive fails, all data is lost. No redundancy.",
+              "choices": [
+                "Striping data across multiple drives for speed, with no redundancy",
+                "Mirroring data for backup",
+                "Storing multiple copies of data",
+                "Using parity to recover from drive failure"
+              ],
+              "id": "storage_devices_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is RAID 1?",
+              "answer": "Mirroring, where identical copies of data exist on two drives",
+              "explain": "RAID 1 writes the same data to two drives. If one fails, the other has a complete copy. Good redundancy, but usable capacity is half of the total and writes are no faster.",
+              "choices": [
+                "Combining three or more drives",
+                "A faster version of RAID 0",
+                "Mirroring, where identical copies of data exist on two drives",
+                "Using parity to recover from failure"
+              ],
+              "id": "storage_devices_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is RAID 5?",
+              "answer": "Striping with distributed parity to allow recovery from one drive failure",
+              "explain": "RAID 5 spreads data and parity across three or more drives. If one fails, the others reconstruct its data. Good balance of speed, capacity, and redundancy.",
+              "choices": [
+                "A combination of RAID 0 and RAID 1",
+                "Only for solid-state drives",
+                "Five drives in a single array",
+                "Striping with distributed parity to allow recovery from one drive failure"
+              ],
+              "id": "storage_devices_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the capacity overhead of RAID 5?",
+              "answer": "One drive's worth of space is used for parity data",
+              "explain": "In a 3-drive RAID 5, you get 2 drives' worth of usable space (one drive is parity). In a 4-drive array, you get 3 drives' worth.",
+              "choices": [
+                "Half the space is lost to parity",
+                "The overhead depends on the brand of drive",
+                "No overhead; all space is usable",
+                "One drive's worth of space is used for parity data"
+              ],
+              "id": "storage_devices_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "RAID Limitations and Alternatives",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What happens when a RAID 5 drive fails?",
+              "answer": "The array continues operating with reduced speed while the data is reconstructed",
+              "explain": "RAID 5 reconstructs the failed drive's data from parity. Until it finishes, the array runs slower.",
+              "choices": [
+                "The RAID controller automatically replaces the drive",
+                "All data is immediately lost",
+                "The array continues operating with reduced speed while the data is reconstructed",
+                "The array stops completely"
+              ],
+              "id": "storage_devices_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many drives can fail in RAID 5?",
+              "answer": "Only one drive can fail without data loss",
+              "explain": "RAID 5 protects against one drive failure. If a second drive fails before recovery completes, all data is lost.",
+              "choices": [
+                "Up to half the drives",
+                "Unlimited drives can fail",
+                "Only one drive can fail without data loss",
+                "Two drives can fail"
+              ],
+              "id": "storage_devices_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between RAID and backup?",
+              "answer": "RAID protects against hardware failure; backup protects against data loss",
+              "explain": "RAID keeps you running if a drive fails. But if you accidentally delete files or data is corrupted, RAID does not help. Use both.",
+              "choices": [
+                "They are the same thing",
+                "RAID is newer than backup",
+                "RAID protects against hardware failure; backup protects against data loss",
+                "Backup is more expensive"
+              ],
+              "id": "storage_devices_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is RAID reconstruction time?",
+              "answer": "The time required to rebuild a failed drive's data from parity",
+              "explain": "Reconstruction can take hours or days depending on the array size. During this time, the array is vulnerable to a second failure.",
+              "choices": [
+                "The time to format the array",
+                "The time to order a replacement drive",
+                "The time between backups",
+                "The time required to rebuild a failed drive's data from parity"
+              ],
+              "id": "storage_devices_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does RAID 5 reconstruction take so long?",
+              "answer": "The array must read all remaining drives to reconstruct one drive's worth of data",
+              "explain": "Reconstruction is I/O intensive. The array reads every block on every drive to calculate parity and rebuild the failed drive.",
+              "choices": [
+                "Because it encrypts the data",
+                "The array must read all remaining drives to reconstruct one drive's worth of data",
+                "Because it runs in the background",
+                "Because the RAID controller is slow"
+              ],
+              "id": "storage_devices_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "File Systems and Data Organization",
+      "tip": "A file system organizes how data is stored on a disk. It manages files, folders, and free space. It also provides features like permissions and journaling to keep data safe.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "File System Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a file system do?",
+              "answer": "Organizes data into files and folders and tracks where everything is stored",
+              "explain": "A file system is the logical layer on top of raw storage. It divides storage into files, folders, and free space and maintains a directory.",
+              "choices": [
+                "Compresses files to save space",
+                "Organizes data into files and folders and tracks where everything is stored",
+                "Encrypts data for security",
+                "Backs up data automatically"
+              ],
+              "id": "storage_devices_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'inode'?",
+              "answer": "A data structure that stores metadata about a file (size, permissions, timestamp)",
+              "explain": "An inode tracks file information like size, owner, permissions, and the location of data blocks. The file name is separate from the inode.",
+              "choices": [
+                "A type of encryption",
+                "A data structure that stores metadata about a file (size, permissions, timestamp)",
+                "A block of data",
+                "A hard link"
+              ],
+              "id": "storage_devices_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'fragmentation'?",
+              "answer": "When a file is split across non-contiguous blocks on disk",
+              "explain": "Fragmentation happens when files are written, deleted, and rewritten over time. Fragments slow down access because the head must move more.",
+              "choices": [
+                "The number of files on a disk",
+                "When a file is split across non-contiguous blocks on disk",
+                "A disk is broken into pieces",
+                "A type of data corruption"
+              ],
+              "id": "storage_devices_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is fragmentation less of a problem with SSDs than with hard drives?",
+              "answer": "SSDs have no moving head, so access time is the same regardless of location",
+              "explain": "Hard drives must seek to different parts of the platter, so fragmentation slows them down. SSDs access all locations equally fast.",
+              "choices": [
+                "SSDs do not use fragmentation",
+                "SSDs have no moving head, so access time is the same regardless of location",
+                "SSDs automatically defragment",
+                "TRIM prevents all fragmentation"
+              ],
+              "id": "storage_devices_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'journaling' in a file system?",
+              "answer": "Logging changes to a journal before writing to disk to prevent corruption",
+              "explain": "Journaling records what the file system is about to change. If the system crashes, the journal helps recover without corruption.",
+              "choices": [
+                "Logging changes to a journal before writing to disk to prevent corruption",
+                "Tracking file history",
+                "Keeping records of file access",
+                "Backing up files regularly"
+              ],
+              "id": "storage_devices_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Backups and Data Safety",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a backup?",
+              "answer": "A copy of data stored separately from the original",
+              "explain": "Backups protect against accidental deletion, corruption, and hardware failure. They are not the same as RAID.",
+              "choices": [
+                "A system that prevents deletions",
+                "A second copy on the same drive",
+                "A copy of data stored separately from the original",
+                "Part of the file system"
+              ],
+              "id": "storage_devices_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the '3-2-1 backup rule'?",
+              "answer": "Keep 3 copies of data: 2 on different media, 1 offsite",
+              "explain": "3 copies protect against multiple failure modes. 2 different media types protect against format-specific problems. Offsite protects against disaster.",
+              "choices": [
+                "Keep 3 copies in the same location",
+                "Backup 3 times per day, 2 days a week, 1 time per month",
+                "Backup to 3 different companies",
+                "Keep 3 copies of data: 2 on different media, 1 offsite"
+              ],
+              "id": "storage_devices_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'incremental backup'?",
+              "answer": "Backing up only the files that changed since the last backup",
+              "explain": "Incremental backups are fast and save space because they only back up new or modified files.",
+              "choices": [
+                "Backing up in increasing order of size",
+                "Backing up one file at a time",
+                "Backing up only the files that changed since the last backup",
+                "A full backup every time"
+              ],
+              "id": "storage_devices_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'full backup'?",
+              "answer": "Backing up all data regardless of when it was last backed up",
+              "explain": "A full backup takes more time and space but is complete and easy to restore. Incremental backups are faster but require all previous increments.",
+              "choices": [
+                "Backing up every file only once",
+                "A backup that never needs to be done again",
+                "Backing up all data regardless of when it was last backed up",
+                "A backup that fills the drive completely"
+              ],
+              "id": "storage_devices_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should backups be stored offsite?",
+              "answer": "To protect against disasters like fire or theft that destroy local data",
+              "explain": "If your home or office burns down, a backup in the same building is worthless. Offsite backups protect against physical disasters.",
+              "choices": [
+                "To protect against disasters like fire or theft that destroy local data",
+                "Because it is faster",
+                "Because offsite storage is more secure",
+                "Because it is cheaper"
+              ],
+              "id": "storage_devices_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Other Storage Technologies",
+      "tip": "Beyond hard drives and SSDs, optical media (CDs, DVDs) and tape storage serve specific purposes. Each has different characteristics for cost, speed, lifespan, and use cases.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Optical Media",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does a CD store data?",
+              "answer": "As pits and lands (bumps and flat areas) in a reflective layer",
+              "explain": "A laser reads the pits and lands. Pits scatter light; lands reflect it. The pattern represents 1s and 0s.",
+              "choices": [
+                "As color patterns on the disk",
+                "Using magnetic charges",
+                "As pits and lands (bumps and flat areas) in a reflective layer",
+                "As electrical charges in transistors"
+              ],
+              "id": "storage_devices_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a CD, DVD, and Blu-ray?",
+              "answer": "They use increasingly smaller pits and shorter laser wavelengths to store more data",
+              "explain": "CDs use a 780nm laser, DVDs use 650nm, and Blu-rays use 405nm. Shorter wavelengths read smaller pits, so Blu-rays hold more data in the same physical size.",
+              "choices": [
+                "DVDs and Blu-rays require special players",
+                "They are made from different materials",
+                "Only one type is rewritable",
+                "They use increasingly smaller pits and shorter laser wavelengths to store more data"
+              ],
+              "id": "storage_devices_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'disc rot' in optical media?",
+              "answer": "Degradation of the reflective layer over time, causing data errors",
+              "explain": "The dyes and coatings in optical disks fade over years or decades. Eventually, pits become unreadable.",
+              "choices": [
+                "Scratches on the disk surface",
+                "The disk spinning too fast",
+                "Dust accumulating on the disk",
+                "Degradation of the reflective layer over time, causing data errors"
+              ],
+              "id": "storage_devices_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the lifespan of a CD, DVD, or Blu-ray disk?",
+              "answer": "Highly variable, from a few years to many decades depending on manufacturing quality and storage conditions",
+              "explain": "Good quality disks in cool, dry storage may last decades. Poor quality or hot storage may fail in a few years. Test old disks.",
+              "choices": [
+                "Always exactly 10 years",
+                "Indefinite if kept in any environment",
+                "Highly variable, from a few years to many decades depending on manufacturing quality and storage conditions",
+                "Less than 1 year always"
+              ],
+              "id": "storage_devices_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'R' in CD-R mean?",
+              "answer": "Recordable: it can be written once",
+              "explain": "A CD-R has a dye layer that a laser burns once. CD-RW discs can be erased and rewritten, and CD-ROM discs are pressed at the factory and are read-only.",
+              "choices": [
+                "Recordable: it can be written once",
+                "Rapid: it spins faster",
+                "Read-only: it cannot be written at all",
+                "Rewritable: it can be erased and rewritten many times"
+              ],
+              "id": "storage_devices_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Tape Storage",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is magnetic tape used for?",
+              "answer": "Long-term archival and backup of large data sets",
+              "explain": "Tape is cheap per gigabyte for storage over decades. It is sequential, not random-access, so it is slow for day-to-day use.",
+              "choices": [
+                "Portable storage devices",
+                "Long-term archival and backup of large data sets",
+                "Fast database access",
+                "Real-time streaming"
+              ],
+              "id": "storage_devices_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of tape over hard drives for archival?",
+              "answer": "Much lower cost per gigabyte and longer data retention",
+              "explain": "Tape is very cheap per gigabyte for large data volumes and can store data for decades in the right conditions.",
+              "choices": [
+                "Easier to use",
+                "Much lower cost per gigabyte and longer data retention",
+                "More durable physically",
+                "Faster access speed"
+              ],
+              "id": "storage_devices_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'sequential access' in tape storage?",
+              "answer": "Data must be read in order from the beginning, not randomly",
+              "explain": "Tape is like a cassette: you must fast-forward to the data you want. Hard drives and SSDs allow random access to any location instantly.",
+              "choices": [
+                "Data can only be accessed once",
+                "Data is accessed in alphabetical order",
+                "Multiple people cannot access it at the same time",
+                "Data must be read in order from the beginning, not randomly"
+              ],
+              "id": "storage_devices_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is tape slow for random access?",
+              "answer": "The tape must physically move to the desired location, taking seconds to minutes",
+              "explain": "There is no 'jump to' operation. The tape drive must spool through the tape mechanically.",
+              "choices": [
+                "The tape must physically move to the desired location, taking seconds to minutes",
+                "Because it uses magnetic storage",
+                "Because it is old technology",
+                "Because tape is made of plastic"
+              ],
+              "id": "storage_devices_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the typical use case for LTO (Linear Tape-Open) tapes?",
+              "answer": "Enterprise-grade long-term backup and archival",
+              "explain": "LTO is the standard for data centers and institutions that need to preserve terabytes of data for years.",
+              "choices": [
+                "Real-time database access",
+                "Streaming video",
+                "Personal computer backup",
+                "Enterprise-grade long-term backup and archival"
+              ],
+              "id": "storage_devices_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
