@@ -30,7 +30,7 @@ struct CatalogView: View {
         // instead of a full-width list with nothing beside it.
         NavigationSplitView {
             catalogList
-                .navigationTitle("Lexly")
+                .navigationTitle("Tonchi")
         } detail: {
             if let selectedSubject {
                 if selectedSubject.notesPath != nil {
@@ -45,7 +45,7 @@ struct CatalogView: View {
         #else
         NavigationStack {
             catalogList
-                .navigationTitle("Lexly")
+                .navigationTitle("Tonchi")
                 .listStyle(.inset)
                 // ponytail: Mac had no Settings surface at all, so sign-in was unreachable
                 // there. One toolbar button reuses the same SettingsView as iOS.

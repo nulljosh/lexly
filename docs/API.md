@@ -1,6 +1,6 @@
-# Lexly API
+# Tonchi API
 
-Lexly is a client-side learning app. Course content is static JSON under
+Tonchi is a client-side learning app. Course content is static JSON under
 `/content` and progress lives in `localStorage`, mirrored to Supabase with the
 user's own session. There is no REST API of its own; the agent-facing interface
 is WebMCP.

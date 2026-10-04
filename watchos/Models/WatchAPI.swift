@@ -1,7 +1,7 @@
 import Foundation
 
 /// Talks directly to the shared `spark` Supabase project's REST API, the same backend
-/// `AuthStore.swift` and `js/lingo-app.js` use for `lingo_progress`. There is no Lexly
+/// `AuthStore.swift` and `js/lingo-app.js` use for `lingo_progress`. There is no Tonchi
 /// REST API of its own (see `docs/API.md`) and the watch has no room for a real sign-in
 /// flow, so the token pasted in PairingView is the Supabase session access token copied
 /// from the phone -- the same "paste a token" shape talli's watch app uses.

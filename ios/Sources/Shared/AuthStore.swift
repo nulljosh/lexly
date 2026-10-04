@@ -80,7 +80,7 @@ final class AuthStore {
 
     func biometricLogin() async throws {
         let context = LAContext()
-        try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Sign in to Lexly")
+        try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Sign in to Tonchi")
         guard let email = UserDefaults.standard.string(forKey: Self.savedEmailKey),
               let data = KeychainHelper.load(key: email),
               let password = String(data: data, encoding: .utf8) else {

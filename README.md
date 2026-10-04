@@ -1,8 +1,8 @@
 <img src="assets/icon.svg" width="80" style="border-radius:18px">
 
-# Lexly
+# Tonchi
 
-![version](https://img.shields.io/badge/version-1.1.5-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/app/id6783501611) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Flexly-black?logo=github)](https://github.com/nulljosh/lexly)
+![version](https://img.shields.io/badge/version-1.1.5-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/app/id6783501611) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Ftonchi-black?logo=github)](https://github.com/nulljosh/tonchi)
 
 Learn a language, or anything else, five minutes at a time. Streaks, hearts, XP. Web, iOS, macOS, and Apple Watch.
 
@@ -19,14 +19,14 @@ Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](
 
 | Platform | Name | App ID | Status |
 |---|---|---|---|
-| Web | Lexly |: | Live |
-| iOS | Lexly (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a): see roadmap.md |
-| macOS | Lexly (6783501611, merged app record) | com.nulljosh.lingo | 1.1.4 live; 1.1.5 in review |
-| watchOS | Lexly Watch | com.nulljosh.lingo.watchos | Standalone companion, not yet submitted |
+| Web | Tonchi |: | Live |
+| iOS | Tonchi (6783501611) | com.nulljosh.lingo | **1.1.3 live on the [App Store](https://apps.apple.com/app/id6783501611)**; 1.1.5 rejected under Guideline 4.3(a): see roadmap.md |
+| macOS | Tonchi (6783501611, merged app record) | com.nulljosh.lingo | 1.1.4 live; 1.1.5 in review |
+| watchOS | Tonchi Watch | com.nulljosh.lingo.watchos | Standalone companion, not yet submitted |
 
 Versions here go stale fast. `asc versions list --app 6783501611` is the truth.
 
-The old standalone "Lexly Mac" record (6783501927) is a dead orphan. It cannot be deleted and an Apple support case is open. Ignore it.
+The old standalone "Tonchi Mac" record (6783501927) is a dead orphan. It cannot be deleted and an Apple support case is open. Ignore it.
 
 ## Features
 
@@ -67,7 +67,7 @@ npx serve .
 
 ```bash
 cd ios && xcodegen generate
-# archive Lexly-iOS or Lexly-macOS, upload via asc-xcode-build skill
+# archive Tonchi-iOS or Tonchi-macOS, upload via asc-xcode-build skill
 ```
 
 ## watchOS

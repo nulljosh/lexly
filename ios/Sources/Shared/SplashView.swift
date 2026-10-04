@@ -20,7 +20,7 @@ struct SplashView: View {
             LexlyMark()
                 .scaleEffect(animateIn ? 1 : 0.7)
                 .opacity(animateIn ? 1 : 0)
-            Text("Lexly").font(.title2.bold())
+            Text("Tonchi").font(.title2.bold())
                 .opacity(animateIn ? 1 : 0)
         }
         .onAppear {

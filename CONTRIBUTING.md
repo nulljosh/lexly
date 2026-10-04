@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-git clone https://github.com/nulljosh/lexly.git
+git clone https://github.com/nulljosh/tonchi.git
 cd lexly
 ```
 

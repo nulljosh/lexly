@@ -10,7 +10,7 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 
 **macOS**: `ios/Sources/macOS/LingoApp.swift` is the entry point (separate from iOS), renders `CatalogView`. Same auth and progress syncing as iOS.
 
-**Android/Desktop (KMP)**: `kmp/composeApp/src/commonMain/kotlin/com/nulljosh/lexly/AppScreen.kt` is the shared entry point, fetches catalog from the live web API.
+**Android/Desktop (KMP)**: `kmp/composeApp/src/commonMain/kotlin/com/nulljosh/tonchi/AppScreen.kt` is the shared entry point, fetches catalog from the live web API.
 
 ## Web
 
@@ -47,7 +47,7 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 |---|---|
 | `scripts/build-language-course.mjs` | Generates language packs from Tatoeba/OpenSubtitles, appends with `t` prefix (safe to re-run) |
 | `scripts/fieldbook-course.py` | Builds fieldbook.json (science/math domain reference) from ../fieldbook source |
-| `scripts/import-pwnlingo-exercises.mjs` | Imports Duolingo exercise captures from sibling pwnlingo repo into new Lexly course files |
+| `scripts/import-pwnlingo-exercises.mjs` | Imports Duolingo exercise captures from sibling pwnlingo repo into new Tonchi course files |
 | `scripts/make-appicon.sh` | Renders icon.svg to all iOS app icon sizes (do not hand-export) |
 | `scripts/deploy.sh` | Publishes web + content to Cloudflare Pages (run manually, project not git-connected) |
 
@@ -68,7 +68,7 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 | `ios/Sources/Shared/AuthStore.swift` | Supabase auth (email, Apple, Google), biometric login (Face ID/Touch ID via Keychain), session persistence, profile fetch/update |
 | `ios/Sources/Shared/AvatarPickerView.swift` | 8x8 pixel-art avatar generator and picker, mirrors web's SVG generation to PNG |
 | `ios/Sources/Shared/SettingsView.swift` | Account settings, daily reminder toggle, delete account, daily streak/XP display |
-| `ios/Sources/Shared/SplashView.swift` | Loading screen with Lexly cap icon |
+| `ios/Sources/Shared/SplashView.swift` | Loading screen with Tonchi cap icon |
 | `ios/Sources/Shared/ContentStore.swift` | @Observable store, loads bundled `catalog.json` and course packs, manages progress (XP, streak, hearts, SRS cards), syncs with Supabase on init, saves to UserDefaults |
 | `ios/Sources/Shared/Models.swift` | Decodable types: Catalog, Subject, CoursePack, Unit, Lesson, Exercise, LingoProfile, SrsCard (SM-2 spaced repetition) |
 | `ios/Sources/Shared/DailyReminder.swift` | Local notification for daily lesson reminders, reschedules after lesson complete |
@@ -135,11 +135,11 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 
 | File | What it owns |
 |---|---|
-| `kmp/shared/src/commonMain/kotlin/com/nulljosh/lexly/Content.kt` | LexlyClient HTTP fetcher for catalog from web API |
-| `kmp/shared/src/commonTest/kotlin/com/nulljosh/lexly/ContentTest.kt` | Tests for catalog shape decoding |
-| `kmp/composeApp/src/commonMain/kotlin/com/nulljosh/lexly/AppScreen.kt` | Shared Compose UI |
-| `kmp/composeApp/src/androidMain/kotlin/com/nulljosh/lexly/MainActivity.kt` | Android entry |
-| `kmp/composeApp/src/desktopMain/kotlin/com/nulljosh/lexly/Main.kt` | Desktop window setup |
+| `kmp/shared/src/commonMain/kotlin/com/nulljosh/tonchi/Content.kt` | LexlyClient HTTP fetcher for catalog from web API |
+| `kmp/shared/src/commonTest/kotlin/com/nulljosh/tonchi/ContentTest.kt` | Tests for catalog shape decoding |
+| `kmp/composeApp/src/commonMain/kotlin/com/nulljosh/tonchi/AppScreen.kt` | Shared Compose UI |
+| `kmp/composeApp/src/androidMain/kotlin/com/nulljosh/tonchi/MainActivity.kt` | Android entry |
+| `kmp/composeApp/src/desktopMain/kotlin/com/nulljosh/tonchi/Main.kt` | Desktop window setup |
 
 ## watchOS
 

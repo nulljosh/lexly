@@ -1,5 +1,5 @@
 #!/bin/sh
-# Regenerate all Lexly app icon PNGs from assets/icon.svg. ALWAYS use this — never hand-export.
+# Regenerate all Tonchi app icon PNGs from assets/icon.svg. ALWAYS use this — never hand-export.
 # Renders at 1024 full-bleed, flattens onto the icon's own bg (no alpha, App Store rejects
 # alpha in app icons), then scales down for the macOS set. Mirrors sparkjar/scripts/make-appicon.sh.
 set -e

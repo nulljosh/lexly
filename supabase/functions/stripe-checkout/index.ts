@@ -1,4 +1,4 @@
-// Creates a Stripe Checkout Session for a one-time "Lexly Pro" unlock.
+// Creates a Stripe Checkout Session for a one-time "Tonchi Pro" unlock.
 // Requires env secrets: STRIPE_SECRET_KEY, STRIPE_PRO_PRICE_ID, SITE_URL.
 // Deploy: supabase functions deploy stripe-checkout
 import Stripe from 'https://esm.sh/stripe@17?target=deno';

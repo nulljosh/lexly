@@ -1,4 +1,4 @@
-// WebMCP tool registration for Lexly. Exposes the course catalog, progress and
+// WebMCP tool registration for Tonchi. Exposes the course catalog, progress and
 // lesson navigation to in-browser agents via document.modelContext.
 //
 // ponytail: tools call the accessors lingo-app.js already exports on window.

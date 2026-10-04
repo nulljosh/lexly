@@ -1,6 +1,6 @@
 # Attribution
 
-Lexly's language course content is generated from open, permissively licensed data by
+Tonchi's language course content is generated from open, permissively licensed data by
 `scripts/build-language-course.mjs`. No third-party language-learning app's content is
 used, copied, or derived from.
 

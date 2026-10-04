@@ -13,7 +13,7 @@ Pricing: Free.
 Links
 Web: https://lexly.heyitsmejosh.com
 App Store: https://apps.apple.com/app/id6783501611
-GitHub: https://github.com/nulljosh/lexly
+GitHub: https://github.com/nulljosh/tonchi
 
 ## First comment
 

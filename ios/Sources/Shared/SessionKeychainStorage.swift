@@ -12,7 +12,7 @@ import Supabase
 /// confidential information stored in your keychain" modal and demands the
 /// user's login password.
 ///
-/// App Review hit exactly that on Lexly Mac 1.1.3 and rejected it under
+/// App Review hit exactly that on Tonchi Mac 1.1.3 and rejected it under
 /// Guideline 2.1(a): "we were unable to bypass the keychain request to access
 /// the app." A reviewer has no login password to give, so the app is
 /// unenterable.

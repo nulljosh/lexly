@@ -18,7 +18,7 @@ struct AuthView: View {
     var body: some View {
         VStack(spacing: 24) {
             LexlyMark(size: 72)
-            Text("Lexly").font(.largeTitle.bold())
+            Text("Tonchi").font(.largeTitle.bold())
             Text("Learn anything.").foregroundStyle(.secondary)
 
             if mode == .signIn && auth.hasSavedBiometricCredentials() {

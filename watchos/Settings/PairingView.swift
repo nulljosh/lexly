@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Fills the gap talli's watch app has: WatchAPI reads an apiToken from UserDefaults but
 /// there's no UI on the watch to set one. Here the "token" is a Supabase access token
-/// copied from the phone (Lexly has no API token of its own -- see WatchAPI.swift).
+/// copied from the phone (Tonchi has no API token of its own -- see WatchAPI.swift).
 struct PairingView: View {
     @State private var token: String = WatchAPI.shared.apiToken
     @State private var saved = false
@@ -10,10 +10,10 @@ struct PairingView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Pair with Lexly")
+                Text("Pair with Tonchi")
                     .font(.headline)
 
-                Text("Paste your Lexly account's access token to sync your streak, XP, and reviews here.")
+                Text("Paste your Tonchi account's access token to sync your streak, XP, and reviews here.")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
 
