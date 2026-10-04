@@ -1,0 +1,904 @@
+{
+  "id": "ai",
+  "name": "Artificial Intelligence",
+  "category": "programming",
+  "icon": "fa-solid fa-robot",
+  "level": "Machine Learning Basics",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What AI Is",
+      "tip": "Artificial intelligence is software that can learn from data and make decisions without being explicitly programmed for every case. Machine learning is a subset of AI that learns patterns from data. Deep learning uses neural networks inspired by how brains work.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Defining Artificial Intelligence",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is artificial intelligence (AI)?",
+              "answer": "Software that can learn and make decisions from data",
+              "explain": "AI systems learn patterns from data and use those patterns to make predictions or decisions. This differs from traditional programs which follow hard-coded rules.",
+              "choices": [
+                "A computer that moves on its own",
+                "Software that can learn and make decisions from data",
+                "A robot with human-like feelings",
+                "Any computer program"
+              ],
+              "id": "ai_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between AI and machine learning?",
+              "answer": "AI is the broad field; machine learning is a technique within it",
+              "explain": "Artificial intelligence is the overall goal of making machines intelligent. Machine learning is one approach to achieve that by learning from data.",
+              "choices": [
+                "They are the same thing",
+                "AI is the broad field; machine learning is a technique within it",
+                "Machine learning is older",
+                "AI can only run on special hardware"
+              ],
+              "id": "ai_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is deep learning?",
+              "answer": "Machine learning using neural networks with many layers",
+              "explain": "Deep learning uses artificial neural networks with multiple layers to process data. The 'deep' refers to the depth of these layered networks.",
+              "choices": [
+                "Learning by reading books",
+                "Machine learning using neural networks with many layers",
+                "Any AI system that works well",
+                "A philosophy about understanding"
+              ],
+              "id": "ai_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do all AI systems have in common?",
+              "answer": "They use data and algorithms to solve problems",
+              "explain": "Whether supervised, unsupervised, or reinforcement learning, AI systems process data with algorithms to find patterns and make predictions.",
+              "choices": [
+                "They all use neural networks",
+                "They use data and algorithms to solve problems",
+                "They must always be accurate",
+                "They need human approval for every decision"
+              ],
+              "id": "ai_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a simple example of artificial intelligence?",
+              "answer": "Email spam filtering that learns what is spam",
+              "explain": "Spam filters learn from examples of spam and legitimate emails to classify new incoming mail. This is AI learning from data.",
+              "choices": [
+                "A calculator",
+                "A video game with fixed rules",
+                "Email spam filtering that learns what is spam",
+                "A digital clock"
+              ],
+              "id": "ai_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Understanding the Categories",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which statement best describes narrow AI?",
+              "answer": "AI designed to excel at one specific task",
+              "explain": "Narrow AI (also called weak AI) is built to do one thing very well, like play chess or recognize images. Most AI today is narrow AI.",
+              "choices": [
+                "AI that only works for children",
+                "AI designed to excel at one specific task",
+                "AI that cannot make mistakes",
+                "AI that learns while it is running"
+              ],
+              "id": "ai_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What would general AI (AGI) be able to do?",
+              "answer": "Learn and solve any intellectual task a human can",
+              "explain": "General artificial intelligence would be as intelligent as a human and able to learn and solve any type of problem. It does not exist yet.",
+              "choices": [
+                "Only answer questions about one topic",
+                "Learn and solve any intellectual task a human can",
+                "Think and feel like a human",
+                "Replace all jobs immediately"
+              ],
+              "id": "ai_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do machine learning and deep learning differ in complexity?",
+              "answer": "Deep learning uses more layers and processes more complex data",
+              "explain": "Deep learning uses multi-layered neural networks that can process complex, unstructured data like images and text more effectively than simpler ML algorithms.",
+              "choices": [
+                "Deep learning is always faster",
+                "Deep learning uses more layers and processes more complex data",
+                "Machine learning is only for experts",
+                "Deep learning never requires training data"
+              ],
+              "id": "ai_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What makes supervised learning different from unsupervised learning?",
+              "answer": "Supervised learning uses labeled training data with correct answers",
+              "explain": "Supervised learning trains on data with labels (correct answers). Unsupervised learning finds patterns in unlabeled data without knowing what it is looking for.",
+              "choices": [
+                "Supervised learning is always better",
+                "Supervised learning uses labeled training data with correct answers",
+                "Unsupervised learning requires a teacher",
+                "Supervised learning cannot use large datasets"
+              ],
+              "id": "ai_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a company choose machine learning over traditional programming?",
+              "answer": "Because the pattern is too complex or changes over time",
+              "explain": "Machine learning shines when the rules are hard to code by hand or need to adapt to new data. Traditional programming works when rules are clear and fixed.",
+              "choices": [
+                "Because machine learning is always cheaper",
+                "Because the pattern is too complex or changes over time",
+                "Because it requires no training data",
+                "Because it is guaranteed to be error-free"
+              ],
+              "id": "ai_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "How Machines Learn",
+      "tip": "Machines learn by adjusting internal weights to minimize errors on training data. In supervised learning, we provide examples with correct answers. In unsupervised learning, the machine finds its own patterns. Overfitting happens when a model memorizes data instead of learning general rules.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Training Data and Learning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is training data in machine learning?",
+              "answer": "Examples the system learns from to find patterns",
+              "explain": "Training data is the set of examples used to teach an AI system. The system analyzes this data to learn patterns it can apply to new, unseen data.",
+              "choices": [
+                "Data the system will never see",
+                "Examples the system learns from to find patterns",
+                "Incorrect data used to test the system",
+                "Data stored in a database"
+              ],
+              "id": "ai_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is more training data usually better for machine learning?",
+              "answer": "More examples help the system learn more robust patterns",
+              "explain": "Larger, diverse training datasets help AI systems find general patterns rather than memorizing specific examples. More data reduces overfitting.",
+              "choices": [
+                "Because it makes training faster",
+                "More examples help the system learn more robust patterns",
+                "Because bigger data is always better quality",
+                "To make the system forget old patterns"
+              ],
+              "id": "ai_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to 'train' a machine learning model?",
+              "answer": "Adjust internal parameters to fit patterns in the data",
+              "explain": "Training means feeding data into the system and adjusting its internal weights and parameters so it produces correct outputs on that data.",
+              "choices": [
+                "Teaching a computer to speak",
+                "Adjust internal parameters to fit patterns in the data",
+                "Testing the system on new data",
+                "Installing software updates"
+              ],
+              "id": "ai_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a validation dataset used for?",
+              "answer": "To check if the trained model works on data it has not seen",
+              "explain": "A validation set is separate from the training set. It tests whether the model learned general patterns or just memorized the training data.",
+              "choices": [
+                "To train the model",
+                "To check if the trained model works on data it has not seen",
+                "To fix bugs in the code",
+                "To store the results"
+              ],
+              "id": "ai_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a model works perfectly on training data but poorly on new data, what likely happened?",
+              "answer": "The model overfit by memorizing training data instead of learning patterns",
+              "explain": "This is overfitting. The model memorized specific examples instead of learning general rules. A validation set during training should catch this.",
+              "choices": [
+                "The training data was too small",
+                "The model overfit by memorizing training data instead of learning patterns",
+                "Neural networks cannot work on new data",
+                "The computer ran out of memory"
+              ],
+              "id": "ai_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Types of Learning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is supervised learning?",
+              "answer": "Learning from labeled examples with correct answers",
+              "explain": "In supervised learning, the training data includes both inputs and correct outputs. The system learns to map inputs to outputs.",
+              "choices": [
+                "Learning without any data",
+                "Learning from labeled examples with correct answers",
+                "Having a human watch the system train",
+                "Learning only from images"
+              ],
+              "id": "ai_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is unsupervised learning?",
+              "answer": "Finding patterns in data without labeled correct answers",
+              "explain": "Unsupervised learning finds hidden patterns in unlabeled data. Examples include clustering similar items or finding correlations without being told what to look for.",
+              "choices": [
+                "Learning with a teacher",
+                "Finding patterns in data without labeled correct answers",
+                "Training on labeled data only",
+                "A type of supervised learning"
+              ],
+              "id": "ai_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is reinforcement learning?",
+              "answer": "Learning through trial and error with rewards and penalties",
+              "explain": "Reinforcement learning trains a system by giving it rewards for good actions and penalties for bad ones. It learns to maximize total reward over time.",
+              "choices": [
+                "The same as supervised learning",
+                "Learning through trial and error with rewards and penalties",
+                "Learning from historical data only",
+                "A type of unsupervised learning"
+              ],
+              "id": "ai_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which type of learning would you use to teach a system to play a game?",
+              "answer": "Reinforcement learning, with wins as rewards",
+              "explain": "Reinforcement learning is ideal for games. The system learns which actions lead to winning and maximizes its score through trial and error.",
+              "choices": [
+                "Supervised learning with all possible moves",
+                "Reinforcement learning, with wins as rewards",
+                "Unsupervised learning without any feedback",
+                "Only pre-programmed rules"
+              ],
+              "id": "ai_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is overfitting and why is it a problem?",
+              "answer": "Model learns noise in training data instead of true patterns",
+              "explain": "Overfitting means the model fits the training data too closely, including random noise. It performs well on training data but fails on new data.",
+              "choices": [
+                "Using too much training data",
+                "Model learns noise in training data instead of true patterns",
+                "The model not learning enough",
+                "Having too many computers"
+              ],
+              "id": "ai_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Neural Networks",
+      "tip": "Neural networks are layers of artificial neurons connected together. Each neuron has weights that are adjusted during training. Backpropagation calculates how to adjust weights to reduce errors. Gradient descent is the algorithm that guides these adjustments step by step.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Building Blocks",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an artificial neuron?",
+              "answer": "A basic unit that takes inputs, applies weights, and produces output",
+              "explain": "An artificial neuron is inspired by biological neurons. It takes multiple inputs, multiplies them by weights, sums them, and applies an activation function.",
+              "choices": [
+                "A biological brain cell",
+                "A basic unit that takes inputs, applies weights, and produces output",
+                "A type of algorithm",
+                "A processor in a computer"
+              ],
+              "id": "ai_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are weights in a neural network?",
+              "answer": "Parameters that determine how much each input influences the output",
+              "explain": "Weights control the strength of connections between neurons. Training adjusts these weights to make the network produce correct outputs.",
+              "choices": [
+                "The amount of data the network processes",
+                "Parameters that determine how much each input influences the output",
+                "How heavy a neural network file is",
+                "The number of layers"
+              ],
+              "id": "ai_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a layer in a neural network?",
+              "answer": "A group of neurons that process the same type of information",
+              "explain": "Layers are arranged sequentially. Input layers receive data, hidden layers process it, and output layers produce the final result.",
+              "choices": [
+                "A physical piece of hardware",
+                "A group of neurons that process the same type of information",
+                "A saved checkpoint of the network",
+                "A type of learning algorithm"
+              ],
+              "id": "ai_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does an activation function do in a neuron?",
+              "answer": "Decides whether the neuron should activate based on its input",
+              "explain": "Activation functions introduce non-linearity. They decide whether a neuron fires and how much. Common ones include ReLU and sigmoid.",
+              "choices": [
+                "It multiplies the weights",
+                "Decides whether the neuron should activate based on its input",
+                "It calculates the error",
+                "It stores the training data"
+              ],
+              "id": "ai_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are multiple layers needed instead of just one?",
+              "answer": "Multiple layers can learn complex, hierarchical patterns",
+              "explain": "A single layer can only learn linear relationships. Multiple layers (deep networks) can learn non-linear, complex patterns in data.",
+              "choices": [
+                "Because one layer is always too slow",
+                "Multiple layers can learn complex, hierarchical patterns",
+                "Because each layer adds different data",
+                "They are just used to make the network bigger"
+              ],
+              "id": "ai_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "How Learning Works",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is backpropagation?",
+              "answer": "An algorithm that calculates errors backwards through the network to adjust weights",
+              "explain": "Backpropagation computes how much each weight contributed to the error, then adjusts all weights to reduce that error.",
+              "choices": [
+                "Moving data backwards through the network",
+                "An algorithm that calculates errors backwards through the network to adjust weights",
+                "A way to test the network on new data",
+                "Erasing the network and starting over"
+              ],
+              "id": "ai_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is gradient descent?",
+              "answer": "An optimization algorithm that adjusts weights to minimize error",
+              "explain": "Gradient descent calculates which direction to adjust weights to reduce error, then takes small steps in that direction repeatedly.",
+              "choices": [
+                "A slope in terrain",
+                "An optimization algorithm that adjusts weights to minimize error",
+                "A way to descend from space",
+                "A type of network layer"
+              ],
+              "id": "ai_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a loss function?",
+              "answer": "A measure of how wrong the network's output is compared to the correct answer",
+              "explain": "The loss function quantifies the error. Backpropagation and gradient descent work to minimize this loss.",
+              "choices": [
+                "The amount of data lost in training",
+                "A measure of how wrong the network's output is compared to the correct answer",
+                "A function that removes data",
+                "The number of failed training attempts"
+              ],
+              "id": "ai_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a learning rate in gradient descent?",
+              "answer": "How big each step is when adjusting weights",
+              "explain": "The learning rate controls step size. Too small: training is slow. Too large: you might miss the best solution.",
+              "choices": [
+                "How fast the computer runs",
+                "How big each step is when adjusting weights",
+                "The number of training examples",
+                "How many layers the network has"
+              ],
+              "id": "ai_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a neural network get stuck at a local minimum instead of finding the global best solution?",
+              "answer": "The optimization landscape has many valleys, not just one lowest point",
+              "explain": "Gradient descent can find a nearby valley (local minimum) that is not the absolute lowest point (global minimum). This is a known challenge in deep learning.",
+              "choices": [
+                "Because the computer does not have enough memory",
+                "The optimization landscape has many valleys, not just one lowest point",
+                "Because the network is too small",
+                "Because training data contains errors"
+              ],
+              "id": "ai_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Language Models",
+      "tip": "Language models predict the next word in a sequence by understanding patterns in text. Tokens are small pieces of text (words or subwords). Transformers use attention to focus on important words. The context window is how much text the model can see at once.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "How Language Models Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a token in language processing?",
+              "answer": "A small piece of text, like a word or subword",
+              "explain": "Language models break text into tokens before processing. A token might be a whole word like 'hello' or part of a word like 'ing' in 'running'.",
+              "choices": [
+                "A coin used in games",
+                "A small piece of text, like a word or subword",
+                "A type of grammar rule",
+                "A saved password"
+              ],
+              "id": "ai_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a transformer in AI?",
+              "answer": "A neural network architecture that uses attention to process text efficiently",
+              "explain": "Transformers process all tokens in parallel using attention mechanisms. They can handle long sequences and have become the standard for language models.",
+              "choices": [
+                "A device that converts electricity",
+                "A neural network architecture that uses attention to process text efficiently",
+                "A type of programming language",
+                "A method to compress text"
+              ],
+              "id": "ai_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the attention mechanism do?",
+              "answer": "Determines which words are most important for understanding context",
+              "explain": "Attention weights each word based on its relevance. This lets the model focus on key words rather than treating all words equally.",
+              "choices": [
+                "It pays the developer salary",
+                "Determines which words are most important for understanding context",
+                "It removes stop words from text",
+                "It translates text to another language"
+              ],
+              "id": "ai_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the context window of a language model?",
+              "answer": "The maximum amount of text the model can see when predicting the next word",
+              "explain": "The context window is a limit on how much prior text influences the next prediction. Larger windows allow the model to remember more context.",
+              "choices": [
+                "The window of a computer monitor",
+                "The maximum amount of text the model can see when predicting the next word",
+                "How long it takes to train the model",
+                "The size of the training data"
+              ],
+              "id": "ai_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do language models generate text?",
+              "answer": "By predicting the most likely next token repeatedly",
+              "explain": "Language models generate text one token at a time, using previously generated tokens as context to predict the next one.",
+              "choices": [
+                "By copying text from training data",
+                "By predicting the most likely next token repeatedly",
+                "By asking a human what to write",
+                "By flipping a coin for each word"
+              ],
+              "id": "ai_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Limitations and Challenges",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a hallucination in a language model?",
+              "answer": "When the model generates false information presented as fact",
+              "explain": "Hallucinations occur when language models produce plausible-sounding but incorrect information. The model is predicting likely text, not verifying truth.",
+              "choices": [
+                "When the model sees images",
+                "When the model generates false information presented as fact",
+                "A type of training data",
+                "An error in the code"
+              ],
+              "id": "ai_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a language model hallucinate?",
+              "answer": "It predicts likely words without checking if they are true",
+              "explain": "A language model is trained to predict the next likely word, not to check facts. On its own it has no way to tell a true sentence from a plausible false one.",
+              "choices": [
+                "Because the hardware is broken",
+                "It predicts likely words without checking if they are true",
+                "Because the training data is too large",
+                "Because humans told it to lie"
+              ],
+              "id": "ai_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a prompt in the context of language models?",
+              "answer": "The text input that the model uses to generate a response",
+              "explain": "A prompt is the starting text or question. The model generates a continuation based on the prompt and its learned patterns.",
+              "choices": [
+                "A reminder to the user",
+                "The text input that the model uses to generate a response",
+                "A saved section of code",
+                "A type of error message"
+              ],
+              "id": "ai_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does temperature affect a language model's output?",
+              "answer": "Higher temperature makes predictions more random; lower makes them more predictable",
+              "explain": "Temperature is a parameter that controls randomness. A higher value (like 0.9) increases creativity but reduces consistency. A lower value (like 0.1) produces more predictable text.",
+              "choices": [
+                "It controls the physical heat of the computer",
+                "Higher temperature makes predictions more random; lower makes them more predictable",
+                "It adjusts the size of the model",
+                "It determines the training data used"
+              ],
+              "id": "ai_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do language models sometimes repeat themselves?",
+              "answer": "The model can get stuck in patterns it learned from training data",
+              "explain": "Repetition happens when the model learns and reproduces patterns from training data, especially if those patterns are common in the data.",
+              "choices": [
+                "Because they are broken",
+                "The model can get stuck in patterns it learned from training data",
+                "Because the user is forcing it",
+                "Because all language models must repeat"
+              ],
+              "id": "ai_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Using AI Well",
+      "tip": "Effective use of AI means understanding what it can and cannot do. Know the strengths (pattern recognition, speed, scale) and limits (no true understanding, bias, hallucination). Verification of AI outputs is essential. Good prompts are specific and clear.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Effective Prompting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What makes a good prompt for an AI system?",
+              "answer": "Clear, specific, and provides necessary context",
+              "explain": "Good prompts tell the AI exactly what you want, include relevant background, and specify the format of the desired response.",
+              "choices": [
+                "A single word",
+                "Clear, specific, and provides necessary context",
+                "As long as possible",
+                "Vague to test the AI's intuition"
+              ],
+              "id": "ai_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you improve an AI response that is not quite right?",
+              "answer": "Refine the prompt with more specific instructions or examples",
+              "explain": "If the first response is off, provide more detail, examples, or constraints. Iterating with better prompts usually yields better results.",
+              "choices": [
+                "Always accept the first response",
+                "Refine the prompt with more specific instructions or examples",
+                "The AI is never wrong",
+                "Switch to a different AI system"
+              ],
+              "id": "ai_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of giving an AI system examples in a prompt?",
+              "answer": "To show the format and style you want in the response",
+              "explain": "Examples (few-shot prompting) help the AI understand the expected output format and tone by demonstration rather than just description.",
+              "choices": [
+                "To slow down the AI",
+                "To show the format and style you want in the response",
+                "To waste tokens",
+                "To confuse the system"
+              ],
+              "id": "ai_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use AI to help with a task?",
+              "answer": "When it excels at the pattern-recognition or scale needed",
+              "explain": "AI shines at finding patterns in large data, generating text, and processing at scale. Use it for those. Avoid it for tasks needing real-time verification or legal certainty.",
+              "choices": [
+                "For every task",
+                "When it excels at the pattern-recognition or scale needed",
+                "Never, humans are always better",
+                "Only when the AI is free"
+              ],
+              "id": "ai_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do before relying on an AI's answer for something important?",
+              "answer": "Verify the output with a trusted source",
+              "explain": "AI can hallucinate or misunderstand. Critical decisions require verification. Check facts, ask domain experts, or use multiple sources.",
+              "choices": [
+                "Assume it is always correct",
+                "Verify the output with a trusted source",
+                "Flip a coin to decide",
+                "Ask another AI"
+              ],
+              "id": "ai_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Practical Wisdom",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are AI systems good at?",
+              "answer": "Pattern recognition, generating text, processing large amounts of data",
+              "explain": "AI excels at finding patterns humans might miss and processing scale. It can generate fluent text and autocomplete ideas quickly.",
+              "choices": [
+                "Understanding human emotions perfectly",
+                "Pattern recognition, generating text, processing large amounts of data",
+                "Replacing human judgment entirely",
+                "Knowing the future"
+              ],
+              "id": "ai_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are AI systems not good at?",
+              "answer": "Verifying truth, understanding context deeply, moral judgment",
+              "explain": "AI lacks true understanding, cannot verify facts independently, and cannot make ethical decisions. It predicts plausible text, not truth.",
+              "choices": [
+                "Speed",
+                "Verifying truth, understanding context deeply, moral judgment",
+                "Analyzing data",
+                "Following instructions"
+              ],
+              "id": "ai_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How should AI be used as a tool?",
+              "answer": "As a starting point that humans then review and refine",
+              "explain": "AI works best as an augmentation tool. Generate a first draft, then a human reviews, edits, and verifies the output.",
+              "choices": [
+                "As a replacement for human work completely",
+                "As a starting point that humans then review and refine",
+                "Only when AI is 100 percent accurate",
+                "Never with human involvement"
+              ],
+              "id": "ai_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What responsibility do users have when using AI?",
+              "answer": "To verify outputs, understand limitations, and use it ethically",
+              "explain": "Users must verify AI responses before sharing them, understand AI cannot always be trusted, and avoid using it to deceive.",
+              "choices": [
+                "No responsibility, AI is always right",
+                "To verify outputs, understand limitations, and use it ethically",
+                "Only to follow the AI's suggestions",
+                "To blame the AI if something goes wrong"
+              ],
+              "id": "ai_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How might AI amplify human biases?",
+              "answer": "Training data contains real-world bias, and the AI learns and reproduces it",
+              "explain": "AI systems learn patterns from training data. If that data reflects human bias, the AI will too. Bias in training data leads to bias in the model.",
+              "choices": [
+                "AI is completely fair and unbiased",
+                "Training data contains real-world bias, and the AI learns and reproduces it",
+                "Only when humans tell it to be biased",
+                "AI cannot amplify anything"
+              ],
+              "id": "ai_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Safety and Ethics",
+      "tip": "AI systems can reflect human biases from their training data. Privacy concerns arise when training on sensitive information. Misuse happens when AI is used to deceive or harm. Alignment means building AI that behaves the way humans intend.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Ethical Concerns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is bias in an AI system?",
+              "answer": "When the system treats different groups unfairly due to training data",
+              "explain": "Bias occurs when an AI system's training data overrepresents or underrepresents certain groups. This leads to unfair predictions for those groups.",
+              "choices": [
+                "When the AI is very fast",
+                "When the system treats different groups unfairly due to training data",
+                "When humans disagree with the AI",
+                "A type of neural network"
+              ],
+              "id": "ai_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can bias in AI systems cause real-world harm?",
+              "answer": "Biased AI can deny loans, hiring, or services to unfairly treated groups",
+              "explain": "When AI makes decisions (hiring, loans, parole), bias can perpetuate discrimination. A biased AI loan system might deny credit to certain groups unfairly.",
+              "choices": [
+                "It cannot cause real-world harm",
+                "Biased AI can deny loans, hiring, or services to unfairly treated groups",
+                "Only in science fiction",
+                "Only if the AI is broken"
+              ],
+              "id": "ai_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is privacy concern with AI?",
+              "answer": "AI systems may memorize and leak sensitive information from training data",
+              "explain": "If AI is trained on personal data, it might memorize and later reproduce sensitive information like addresses, emails, or health data.",
+              "choices": [
+                "AI cannot access any data",
+                "AI systems may memorize and leak sensitive information from training data",
+                "Privacy only matters for passwords",
+                "All AI is completely private"
+              ],
+              "id": "ai_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How could AI be misused to deceive people?",
+              "answer": "Generate fake content, deepfakes, or manipulative text at scale",
+              "explain": "AI can generate text, images, and audio that are hard to distinguish from real. Bad actors might use AI to create misinformation or fraud.",
+              "choices": [
+                "It cannot be misused",
+                "Generate fake content, deepfakes, or manipulative text at scale",
+                "Only for entertainment",
+                "AI prevents all deception"
+              ],
+              "id": "ai_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the problem with using AI for high-stakes decisions without human oversight?",
+              "answer": "AI can make mistakes or exhibit bias that humans need to catch",
+              "explain": "AI should not make final decisions in critical areas (parole, medicine, hiring) without human review. Humans can catch biases and errors.",
+              "choices": [
+                "There is no problem",
+                "AI can make mistakes or exhibit bias that humans need to catch",
+                "Humans are always wrong",
+                "AI is always right"
+              ],
+              "id": "ai_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Building Safely",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is AI alignment?",
+              "answer": "Building AI systems that behave the way humans intend",
+              "explain": "Alignment means ensuring AI follows human values and instructions. Misaligned AI might pursue its goal in harmful or unintended ways.",
+              "choices": [
+                "Lining up computers in a row",
+                "Building AI systems that behave the way humans intend",
+                "A type of neural network",
+                "Decorating an office"
+              ],
+              "id": "ai_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can developers reduce bias in AI systems?",
+              "answer": "Use diverse, representative training data and audit for fairness",
+              "explain": "Reducing bias requires diverse training data, testing on different groups, and continuous auditing. No single step eliminates bias completely.",
+              "choices": [
+                "You cannot reduce bias",
+                "Use diverse, representative training data and audit for fairness",
+                "Bias is good",
+                "Ignore the problem"
+              ],
+              "id": "ai_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should companies do before deploying AI that affects people?",
+              "answer": "Test for bias, get expert review, and monitor for harms",
+              "explain": "Responsible AI deployment requires testing, expert oversight, and ongoing monitoring to catch bias and unintended harms.",
+              "choices": [
+                "Deploy immediately without testing",
+                "Test for bias, get expert review, and monitor for harms",
+                "Never deploy AI",
+                "Only test on one person"
+              ],
+              "id": "ai_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is transparency important in AI systems?",
+              "answer": "People affected by AI decisions should understand how they were made",
+              "explain": "Transparency lets people understand, challenge, and appeal AI decisions. A black-box AI system is hard to trust or fix.",
+              "choices": [
+                "It is not important",
+                "People affected by AI decisions should understand how they were made",
+                "AI should always be secret",
+                "Transparency makes AI slower"
+              ],
+              "id": "ai_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the responsibility of AI developers toward society?",
+              "answer": "Consider harms, biases, and misuse potential before releasing",
+              "explain": "Developers have a duty to anticipate harms, test safety, disclose limitations, and design with ethics in mind.",
+              "choices": [
+                "No responsibility",
+                "Consider harms, biases, and misuse potential before releasing",
+                "Only to make profit",
+                "To ignore safety concerns"
+              ],
+              "id": "ai_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

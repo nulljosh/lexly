@@ -1,0 +1,904 @@
+{
+  "id": "hardware",
+  "name": "Computer Hardware",
+  "category": "programming",
+  "icon": "fa-solid fa-microchip",
+  "level": "How Machines Are Built",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Inside the CPU",
+      "tip": "The CPU (processor) is the brain of the computer. It contains cores that execute instructions, a clock that synchronizes operations, and caches that store frequently used data. Transistors are the tiny switches that make everything work. Different instruction sets like x86 and ARM define how programs are written.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "CPU Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a CPU core?",
+              "answer": "An independent processing unit that executes instructions",
+              "explain": "Each core can run its own instruction independently. A multi-core CPU can run multiple instructions at the same time, improving performance.",
+              "choices": [
+                "The power supply of the CPU",
+                "An independent processing unit that executes instructions",
+                "A type of cooling system",
+                "The memory inside the CPU"
+              ],
+              "id": "hardware_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the CPU clock?",
+              "answer": "A pulse that synchronizes when the CPU executes instructions",
+              "explain": "The clock sends pulses at regular intervals (measured in GHz). Each pulse allows the CPU to perform one or more operations. A faster clock means more pulses per second.",
+              "choices": [
+                "A timer that tells you the time",
+                "A pulse that synchronizes when the CPU executes instructions",
+                "A cooling mechanism",
+                "A storage device"
+              ],
+              "id": "hardware_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is CPU cache?",
+              "answer": "Ultra-fast memory that stores frequently accessed data",
+              "explain": "Cache is much faster than RAM. The CPU stores data it needs frequently in cache (L1, L2, L3) to avoid slow trips to main memory.",
+              "choices": [
+                "A file storage system",
+                "Ultra-fast memory that stores frequently accessed data",
+                "A backup power supply",
+                "A cooling solution"
+              ],
+              "id": "hardware_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does a multi-core CPU help?",
+              "answer": "It can work on several tasks at the same time",
+              "explain": "Each core runs its own stream of instructions, so more cores let the computer do more things at once. It does not make any single core faster.",
+              "choices": [
+                "It makes each core run hotter and faster",
+                "It can work on several tasks at the same time",
+                "It replaces the need for RAM",
+                "It doubles the clock speed"
+              ],
+              "id": "hardware_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do transistors do in a CPU?",
+              "answer": "Act as tiny electronic switches that represent 0 and 1",
+              "explain": "Transistors are the building blocks of computer logic. Billions of transistors switch on and off to perform calculations and store data.",
+              "choices": [
+                "Generate heat",
+                "Act as tiny electronic switches that represent 0 and 1",
+                "Provide power",
+                "Carry data to storage"
+              ],
+              "id": "hardware_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Architecture and Instruction Sets",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an instruction set?",
+              "answer": "The set of commands a CPU can directly execute",
+              "explain": "An instruction set defines the basic operations a CPU understands. Programs are compiled or written for a specific instruction set.",
+              "choices": [
+                "A list of program instructions",
+                "The set of commands a CPU can directly execute",
+                "A type of memory",
+                "A cooling system"
+              ],
+              "id": "hardware_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the x86 instruction set?",
+              "answer": "An instruction set used in most desktop and laptop computers",
+              "explain": "x86 is the dominant instruction set for personal computers. It is used by Intel and AMD processors in most Windows and Linux computers.",
+              "choices": [
+                "Only used in old computers",
+                "An instruction set used in most desktop and laptop computers",
+                "A type of RAM",
+                "A cooling technology"
+              ],
+              "id": "hardware_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the ARM instruction set?",
+              "answer": "An instruction set used in phones, tablets, and some laptops",
+              "explain": "ARM is energy-efficient and dominates mobile devices. It is used in iPhones, Android phones, and increasingly in personal computers.",
+              "choices": [
+                "Only used in computers",
+                "An instruction set used in phones, tablets, and some laptops",
+                "A type of operating system",
+                "A storage technology"
+              ],
+              "id": "hardware_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can a Windows program not run on an iPhone without recompilation?",
+              "answer": "It was built for x86 chips; iPhones use ARM, a different instruction set",
+              "explain": "Programs are compiled for specific instruction sets. A Windows x86 program cannot run on ARM processors unless it is recompiled for ARM.",
+              "choices": [
+                "iPhones are not computers",
+                "It was built for x86 chips; iPhones use ARM, a different instruction set",
+                "The programs are identical",
+                "It is a software choice only"
+              ],
+              "id": "hardware_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does ARM have over x86?",
+              "answer": "Lower power consumption, making it ideal for mobile devices",
+              "explain": "ARM instruction sets are simpler and use less power. This is why phones and tablets use ARM; longer battery life matters for portable devices.",
+              "choices": [
+                "ARM is always faster",
+                "Lower power consumption, making it ideal for mobile devices",
+                "ARM is cheaper to manufacture",
+                "x86 is outdated"
+              ],
+              "id": "hardware_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Memory and Storage",
+      "tip": "RAM is fast temporary memory that your computer uses while running programs. Storage (SSD or HDD) holds data permanently. SSDs are faster but more expensive. HDDs are slower but cheaper and hold more data. NVMe is the fastest storage connection.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Memory Hierarchy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why do computers need both RAM and storage?",
+              "answer": "RAM is fast but temporary; storage is slower but permanent",
+              "explain": "RAM lets programs run at speed but loses data on shutdown. Storage keeps data safe long-term. Both are needed for a working computer.",
+              "choices": [
+                "One could do the job",
+                "RAM is fast but temporary; storage is slower but permanent",
+                "They serve the same purpose",
+                "Storage is only for backups"
+              ],
+              "id": "hardware_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to data in RAM when you turn off the computer?",
+              "answer": "It is erased because RAM needs continuous power",
+              "explain": "RAM is volatile memory. Without power, the electrical charges holding the data disappear. This is why you save files to storage.",
+              "choices": [
+                "It stays forever",
+                "It is erased because RAM needs continuous power",
+                "It moves to storage automatically",
+                "It waits for the next boot"
+              ],
+              "id": "hardware_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between RAM size and multitasking?",
+              "answer": "More RAM lets you run more programs smoothly at once",
+              "explain": "RAM holds the active programs and data. More RAM means more programs and data can be held simultaneously without slowdowns.",
+              "choices": [
+                "RAM size does not matter",
+                "More RAM lets you run more programs smoothly at once",
+                "Large RAM makes computers slow",
+                "Only gamers need RAM"
+              ],
+              "id": "hardware_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is VRAM?",
+              "answer": "Memory on a graphics card used by the GPU",
+              "explain": "VRAM (Video RAM) is dedicated memory on a graphics card. The GPU uses VRAM to store textures, images, and computational data for rendering.",
+              "choices": [
+                "The same as system RAM",
+                "Memory on a graphics card used by the GPU",
+                "A type of storage drive",
+                "Virtual RAM on disk"
+              ],
+              "id": "hardware_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you know if your computer needs more RAM?",
+              "answer": "Slowdowns, freezes, or constant disk activity when multitasking",
+              "explain": "When RAM is full, the OS swaps data to disk (slow). Signs include lag, freezing, or your disk being constantly busy. More RAM fixes this.",
+              "choices": [
+                "You never need more RAM",
+                "Slowdowns, freezes, or constant disk activity when multitasking",
+                "Only if using video editing",
+                "The computer will tell you"
+              ],
+              "id": "hardware_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Storage Technologies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is NVMe?",
+              "answer": "A fast storage interface that connects directly to the motherboard",
+              "explain": "NVMe (Non-Volatile Memory Express) is much faster than older SATA connections. It uses the PCIe bus for higher speed and lower latency.",
+              "choices": [
+                "A type of cloud storage",
+                "A fast storage interface that connects directly to the motherboard",
+                "An older storage technology",
+                "A brand of hard drive"
+              ],
+              "id": "hardware_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between volatile and non-volatile memory?",
+              "answer": "Volatile loses data without power; non-volatile keeps it",
+              "explain": "Volatile memory (RAM) requires power to hold data. Non-volatile storage (SSD, HDD) keeps data without power.",
+              "choices": [
+                "There is no difference",
+                "Volatile loses data without power; non-volatile keeps it",
+                "Volatile is always better",
+                "Non-volatile is the same as RAM"
+              ],
+              "id": "hardware_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the capacity of a drive measure?",
+              "answer": "How much data it can hold",
+              "explain": "Capacity is the amount of data a drive can store, measured in gigabytes or terabytes. Speed is a separate property.",
+              "choices": [
+                "How fast it reads data",
+                "How long it will last",
+                "How much data it can hold",
+                "How much power it uses"
+              ],
+              "id": "hardware_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a solid-state drive (SSD)?",
+              "answer": "Storage using flash memory with no moving parts",
+              "explain": "SSDs use flash memory chips like USB drives. They are fast, reliable, and have no moving parts, unlike HDDs.",
+              "choices": [
+                "A drive that is solid metal",
+                "Storage using flash memory with no moving parts",
+                "The same as a hard drive",
+                "A type of RAM"
+              ],
+              "id": "hardware_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are HDDs still used despite being slower than SSDs?",
+              "answer": "They are cheaper and can hold more data",
+              "explain": "Mechanical hard drives cost less per gigabyte and can reach multi-terabyte capacities. For large storage on a budget, HDDs make sense.",
+              "choices": [
+                "SSDs are always better",
+                "They are cheaper and can hold more data",
+                "HDDs are faster",
+                "HDDs work on all computers"
+              ],
+              "id": "hardware_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Motherboards and Buses",
+      "tip": "The motherboard is the main circuit board that connects everything. The chipset controls data flow between components. Buses like PCIe and USB carry data between devices. BIOS/UEFI firmware initializes the hardware before the operating system starts.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "The Motherboard",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a chipset do on a motherboard?",
+              "answer": "Controls data flow between the CPU, RAM, storage, and peripherals",
+              "explain": "The chipset is the traffic controller. It manages communication between the CPU and all other components like storage, USB, and network adapters.",
+              "choices": [
+                "It is the CPU",
+                "Controls data flow between the CPU, RAM, storage, and peripherals",
+                "A type of RAM",
+                "Provides cooling"
+              ],
+              "id": "hardware_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the two main chipset brands?",
+              "answer": "Intel and AMD (one for each CPU brand)",
+              "explain": "Intel makes chipsets for Intel CPUs. AMD makes chipsets for AMD CPUs. The CPU and chipset must be compatible.",
+              "choices": [
+                "Apple and Microsoft",
+                "Intel and AMD (one for each CPU brand)",
+                "Only Intel makes chipsets",
+                "AMD no longer makes chipsets"
+              ],
+              "id": "hardware_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a motherboard socket?",
+              "answer": "The slot where the CPU plugs into the motherboard",
+              "explain": "The socket holds the CPU and connects it to the motherboard. Different CPUs require different sockets, so compatibility matters.",
+              "choices": [
+                "An electrical outlet",
+                "The slot where the CPU plugs into the motherboard",
+                "The RAM slot",
+                "A cooling mechanism"
+              ],
+              "id": "hardware_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a DIMM slot on a motherboard?",
+              "answer": "The slot where RAM modules plug in",
+              "explain": "DIMMs (Dual Inline Memory Modules) are RAM sticks. Multiple DIMM slots let you add or upgrade RAM.",
+              "choices": [
+                "A CPU slot",
+                "The slot where RAM modules plug in",
+                "A storage connection",
+                "A power connector"
+              ],
+              "id": "hardware_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is compatibility between motherboard and CPU important?",
+              "answer": "The socket must match or the CPU will not fit or work",
+              "explain": "Different CPUs have different socket designs. An Intel CPU will not fit in an AMD socket and vice versa.",
+              "choices": [
+                "It is not important",
+                "The socket must match or the CPU will not fit or work",
+                "All CPUs fit all motherboards",
+                "You can use adapters"
+              ],
+              "id": "hardware_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Data and Power Paths",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is PCIe?",
+              "answer": "A fast bus that connects graphics cards, storage, and other peripherals",
+              "explain": "PCIe (PCI Express) is the standard way to connect expansion cards. It is much faster than older standards and comes in different versions.",
+              "choices": [
+                "A type of processor",
+                "A fast bus that connects graphics cards, storage, and other peripherals",
+                "The same as RAM",
+                "A power supply standard"
+              ],
+              "id": "hardware_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is USB?",
+              "answer": "A standard for connecting external devices like mice, keyboards, and drives",
+              "explain": "USB (Universal Serial Bus) is the standard way to plug in peripherals. It is on every modern computer and provides power and data transfer.",
+              "choices": [
+                "A type of storage",
+                "A standard for connecting external devices like mice, keyboards, and drives",
+                "An operating system",
+                "Only for phones"
+              ],
+              "id": "hardware_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is BIOS?",
+              "answer": "Firmware that initializes hardware before the OS boots",
+              "explain": "BIOS (Basic Input/Output System) runs before the OS. It checks hardware, loads settings, and starts the operating system.",
+              "choices": [
+                "A type of operating system",
+                "Firmware that initializes hardware before the OS boots",
+                "A storage device",
+                "A programming language"
+              ],
+              "id": "hardware_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is UEFI?",
+              "answer": "Modern firmware that replaces BIOS with more features and security",
+              "explain": "UEFI (Unified Extensible Firmware Interface) is the successor to BIOS. It is faster, more secure, and supports larger drives.",
+              "choices": [
+                "An older version of BIOS",
+                "Modern firmware that replaces BIOS with more features and security",
+                "A type of operating system",
+                "Only for Macs"
+              ],
+              "id": "hardware_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the role of the power supply in delivering power to components?",
+              "answer": "Convert AC power to DC and distribute correct voltages to each component",
+              "explain": "The PSU takes wall power (AC) and converts it to DC voltages (12V, 5V, 3.3V). Each component gets the right voltage.",
+              "choices": [
+                "It just plugs in",
+                "Convert AC power to DC and distribute correct voltages to each component",
+                "It provides cooling",
+                "It stores energy like a battery"
+              ],
+              "id": "hardware_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Graphics and Displays",
+      "tip": "A graphics processing unit (GPU) specializes in rendering images and video. VRAM is the memory the GPU uses. Display resolution is the number of pixels. Refresh rate is how often the image updates per second.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Graphics Hardware",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a GPU?",
+              "answer": "A processor specialized for rendering graphics and images",
+              "explain": "GPUs have thousands of small cores for parallel processing. They are much faster at graphics than CPUs but specialized for that task.",
+              "choices": [
+                "The same as a CPU",
+                "A processor specialized for rendering graphics and images",
+                "A type of RAM",
+                "A cooling device"
+              ],
+              "id": "hardware_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is VRAM on a graphics card?",
+              "answer": "Fast memory on the GPU for storing images and textures",
+              "explain": "VRAM is dedicated memory attached to the GPU. Games and graphics-heavy programs store textures, meshes, and framebuffers in VRAM.",
+              "choices": [
+                "The same as system RAM",
+                "Fast memory on the GPU for storing images and textures",
+                "A type of storage",
+                "Virtual memory"
+              ],
+              "id": "hardware_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a game needs more VRAM than the card has?",
+              "answer": "Performance drops as data moves to slower memory",
+              "explain": "When VRAM fills up, textures have to be swapped in and out of slower system memory. That causes stutter and lower frame rates.",
+              "choices": [
+                "The game runs faster",
+                "Performance drops as data moves to slower memory",
+                "The monitor resolution increases",
+                "The CPU turns off"
+              ],
+              "id": "hardware_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a computer work without a dedicated graphics card?",
+              "answer": "Yes, if the CPU has integrated graphics",
+              "explain": "Many CPUs include integrated graphics. They are slower than dedicated cards but sufficient for everyday tasks. Gaming requires more power.",
+              "choices": [
+                "No, you must have a dedicated card",
+                "Yes, if the CPU has integrated graphics",
+                "Only Macs can work without one",
+                "Graphics cards are not important"
+              ],
+              "id": "hardware_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is ray tracing in graphics?",
+              "answer": "A rendering technique that simulates realistic light and shadows",
+              "explain": "Ray tracing calculates light paths to create photorealistic images. It is much slower than simple rasterization but produces stunning results.",
+              "choices": [
+                "Finding defects in components",
+                "A rendering technique that simulates realistic light and shadows",
+                "A type of GPU memory",
+                "The speed of a monitor"
+              ],
+              "id": "hardware_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Display Technology",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between IPS and TN display panels?",
+              "answer": "IPS has better colors and viewing angles; TN is faster",
+              "explain": "IPS (In-Plane Switching) shows accurate colors from wide angles. TN (Twisted Nematic) is older, has narrower viewing angles, but faster response times.",
+              "choices": [
+                "They are the same",
+                "IPS has better colors and viewing angles; TN is faster",
+                "TN is always better",
+                "Only IPS exists now"
+              ],
+              "id": "hardware_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is response time on a monitor?",
+              "answer": "How fast a pixel can change colors",
+              "explain": "Response time is measured in milliseconds. Lower is better for gaming. A 1ms monitor responds faster than a 5ms monitor.",
+              "choices": [
+                "How bright the monitor is",
+                "How fast a pixel can change colors",
+                "The monitor's age",
+                "Power consumption"
+              ],
+              "id": "hardware_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does HDR mean on a monitor?",
+              "answer": "High Dynamic Range, showing brighter highlights and darker shadows",
+              "explain": "HDR displays can show a wider range of brightness levels. This creates more contrast and realistic images.",
+              "choices": [
+                "High Definition Resolution",
+                "High Dynamic Range, showing brighter highlights and darker shadows",
+                "Heavy Duty Rendering",
+                "A brand name"
+              ],
+              "id": "hardware_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a gamer prefer a 144Hz monitor over 60Hz?",
+              "answer": "More refresh cycles per second means smoother motion",
+              "explain": "A 144Hz monitor redraws the image 144 times per second instead of 60. This looks smoother, giving a competitive advantage in fast games.",
+              "choices": [
+                "It is cheaper",
+                "More refresh cycles per second means smoother motion",
+                "It is easier to see",
+                "It uses less power"
+              ],
+              "id": "hardware_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is color accuracy on a monitor?",
+              "answer": "How closely the monitor displays true colors",
+              "explain": "A monitor with high color accuracy shows colors exactly as intended. This matters for photo editing and design work.",
+              "choices": [
+                "The number of colors displayed",
+                "How closely the monitor displays true colors",
+                "The monitor's brightness",
+                "Only important for artists"
+              ],
+              "id": "hardware_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Power and Cooling",
+      "tip": "The power supply provides the correct voltage and current to every component. Heat is generated by CPUs and GPUs, and cooling systems prevent overheating. Thermal throttling slows the CPU when it overheats to protect itself. Heat sinks and fans manage temperature.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Power Systems",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a power supply (PSU) do?",
+              "answer": "Convert AC wall power to DC voltages for computer components",
+              "explain": "The PSU takes alternating current (AC) from the wall and converts it to direct current (DC) at various voltages like 12V, 5V, and 3.3V.",
+              "choices": [
+                "Store electrical energy",
+                "Convert AC wall power to DC voltages for computer components",
+                "Cool the computer",
+                "Process data"
+              ],
+              "id": "hardware_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is wattage in a power supply?",
+              "answer": "The maximum power output the PSU can supply",
+              "explain": "Wattage is measured in watts. A 650W PSU can supply up to 650 watts. You need enough wattage for all components plus overhead.",
+              "choices": [
+                "How long the PSU lasts",
+                "The maximum power output the PSU can supply",
+                "The physical size of the PSU",
+                "The cooling capacity"
+              ],
+              "id": "hardware_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a power supply is undersized?",
+              "answer": "The computer may crash or shut down unexpectedly",
+              "explain": "An undersized PSU cannot deliver enough power, causing instability, unexpected shutdowns, and potential hardware damage.",
+              "choices": [
+                "Nothing bad happens",
+                "The computer may crash or shut down unexpectedly",
+                "It makes the computer faster",
+                "It is just a warning"
+              ],
+              "id": "hardware_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 80+ certification on a PSU?",
+              "answer": "A rating showing the PSU converts 80% or more of power efficiently",
+              "explain": "80+ Bronze/Gold/Platinum indicate efficiency levels. A higher rating means less wasted power as heat and lower electric bills.",
+              "choices": [
+                "The maximum wattage",
+                "A rating showing the PSU converts 80% or more of power efficiently",
+                "How old the PSU is",
+                "A power cord type"
+              ],
+              "id": "hardware_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you calculate total power needed for a build?",
+              "answer": "Add the power of CPU, GPU, and other components, then add 20-30% overhead",
+              "explain": "Sum the power draw of major components, then buy a PSU with 20-30% more capacity for stability and longevity.",
+              "choices": [
+                "Just guess a high number",
+                "Add the power of CPU, GPU, and other components, then add 20-30% overhead",
+                "Use the cheapest PSU",
+                "CPU power is all that matters"
+              ],
+              "id": "hardware_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Thermal Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a heat sink?",
+              "answer": "Metal fins that dissipate heat from the CPU or GPU to the air",
+              "explain": "Heat sinks are typically made of aluminum or copper. They have large surface area to release heat from components to the surrounding air.",
+              "choices": [
+                "A container that holds water",
+                "Metal fins that dissipate heat from the CPU or GPU to the air",
+                "A type of RAM",
+                "A power cord"
+              ],
+              "id": "hardware_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is thermal paste?",
+              "answer": "A conductive material between CPU and heat sink for better heat transfer",
+              "explain": "Thermal paste fills microscopic gaps between the CPU and heat sink, improving contact and heat transfer efficiency.",
+              "choices": [
+                "A glue for building computers",
+                "A conductive material between CPU and heat sink for better heat transfer",
+                "A type of cooling liquid",
+                "Paint for computers"
+              ],
+              "id": "hardware_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is thermal throttling?",
+              "answer": "Automatically slowing the CPU when it overheats",
+              "explain": "Thermal throttling reduces CPU speed to lower heat generation and protect the hardware. It prevents damage but reduces performance.",
+              "choices": [
+                "A type of overclocking",
+                "Automatically slowing the CPU when it overheats",
+                "Increasing fan speed",
+                "A software update"
+              ],
+              "id": "hardware_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the ideal CPU temperature during normal use?",
+              "answer": "Usually 40-60 degrees Celsius, depending on the processor",
+              "explain": "Different CPUs have different safe ranges. Most are safe up to 90-100C but thermal throttling happens before that. Cooler is always better.",
+              "choices": [
+                "It does not matter",
+                "Usually 40-60 degrees Celsius, depending on the processor",
+                "Always below 20C",
+                "Always above 80C"
+              ],
+              "id": "hardware_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a good way to keep a computer cool?",
+              "answer": "Ensure good airflow, clean dust, and maintain thermal paste",
+              "explain": "Dust blocks cooling. Good case airflow, clean fans, and fresh thermal paste keep temperatures down. Liquid cooling is an option for extreme cases.",
+              "choices": [
+                "Cover all the vents",
+                "Ensure good airflow, clean dust, and maintain thermal paste",
+                "Run the computer in the freezer",
+                "Do not worry about heat"
+              ],
+              "id": "hardware_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Building and Troubleshooting",
+      "tip": "Building a computer requires checking compatibility: the motherboard socket must fit the CPU, RAM must fit DIMM slots, and the case must fit all components. POST (Power-on Self Test) happens at startup. Common failures include bad RAM, dead hard drives, and power supply issues.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Building Principles",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the first step when building a computer?",
+              "answer": "Check compatibility between motherboard, CPU, and RAM",
+              "explain": "Before buying anything, verify socket compatibility (CPU to motherboard) and RAM type. Wrong combinations will not work at all.",
+              "choices": [
+                "Order random components",
+                "Check compatibility between motherboard, CPU, and RAM",
+                "Install the operating system first",
+                "Buy the most expensive parts"
+              ],
+              "id": "hardware_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What must you check before installing RAM?",
+              "answer": "RAM type, speed, and number of slots on the motherboard",
+              "explain": "Verify you have DDR4 or DDR5 (not mixed), correct speed, and enough DIMM slots. Wrong type will not fit.",
+              "choices": [
+                "Nothing, just plug it in",
+                "RAM type, speed, and number of slots on the motherboard",
+                "Only the color",
+                "How old the motherboard is"
+              ],
+              "id": "hardware_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an M.2 slot?",
+              "answer": "A connection for NVMe SSDs on the motherboard",
+              "explain": "M.2 is the physical form factor for NVMe drives. Modern motherboards have one or more M.2 slots for fast storage.",
+              "choices": [
+                "A type of RAM slot",
+                "A connection for NVMe SSDs on the motherboard",
+                "A power connector",
+                "A cooling port"
+              ],
+              "id": "hardware_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the case form factor?",
+              "answer": "The size standard of the case (ATX, micro-ATX, mini-ITX)",
+              "explain": "Form factors define case size. ATX is standard, micro-ATX is smaller, mini-ITX is very small. Motherboards must fit the case.",
+              "choices": [
+                "A brand of case",
+                "The size standard of the case (ATX, micro-ATX, mini-ITX)",
+                "The color of the case",
+                "Only applies to storage"
+              ],
+              "id": "hardware_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do before touching internal components?",
+              "answer": "Ground yourself to avoid static electricity damaging parts",
+              "explain": "Static discharge can kill components. Touch a metal case part or wear an anti-static strap to discharge static electricity safely.",
+              "choices": [
+                "Nothing, it is safe",
+                "Ground yourself to avoid static electricity damaging parts",
+                "Wear gloves",
+                "Work in a humid room"
+              ],
+              "id": "hardware_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "When Things Go Wrong",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is POST (Power-on Self Test)?",
+              "answer": "A check the BIOS runs to verify hardware before booting the OS",
+              "explain": "POST checks that the CPU, RAM, and storage are working. If it fails, you hear beep codes. If successful, the OS boots.",
+              "choices": [
+                "A way to turn off the computer",
+                "A check the BIOS runs to verify hardware before booting the OS",
+                "A type of storage",
+                "A cooling test"
+              ],
+              "id": "hardware_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a computer beeps repeatedly on startup?",
+              "answer": "The POST detected a hardware problem",
+              "explain": "Beep codes indicate specific hardware failures. A continuous beep usually means RAM is not detected or not installed correctly.",
+              "choices": [
+                "The computer is working fine",
+                "The POST detected a hardware problem",
+                "The BIOS needs updating",
+                "The hard drive is full"
+              ],
+              "id": "hardware_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do if your computer will not boot?",
+              "answer": "Reseat RAM, check power connections, then try again",
+              "explain": "Many boot failures are caused by loose connections. Reseat RAM (remove and reinstall), check all power plugs, then retry.",
+              "choices": [
+                "Replace everything",
+                "Reseat RAM, check power connections, then try again",
+                "Throw it away",
+                "Call the manufacturer"
+              ],
+              "id": "hardware_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are signs of a failing hard drive?",
+              "answer": "Clicking sounds, slow file access, or frequent crashes",
+              "explain": "A dying drive makes clicking sounds (mechanical failure), takes forever to open files, or crashes the system. Back up your data immediately.",
+              "choices": [
+                "There are no warning signs",
+                "Clicking sounds, slow file access, or frequent crashes",
+                "The drive is always quiet when failing",
+                "Only shows red lights"
+              ],
+              "id": "hardware_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a blue screen of death (BSOD)?",
+              "answer": "A critical system error that forces a restart",
+              "explain": "A BSOD indicates a serious problem: driver issue, hardware failure, or bad RAM. It shows an error code and restarts automatically.",
+              "choices": [
+                "A normal part of Windows",
+                "A critical system error that forces a restart",
+                "A feature to save memory",
+                "A display setting"
+              ],
+              "id": "hardware_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
