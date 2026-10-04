@@ -53,6 +53,7 @@ const PACK_CACHE = {};
 const PROFILE_KEY = 'lingo.profile';
 const PROGRESS_KEY = 'lingo.progress';
 const SRS_KEY = 'lingo.srs';
+const WORDS_KEY = 'lingo.words';
 
 // ponytail: UI hint only -- the server gate is Basic auth, this cookie grants nothing.
 function setAuthCookie() {
@@ -381,6 +382,35 @@ function updateSrs(questionId, quality) {
     saveSrsData(srs);
 }
 
+// Word-strength: per-subject { word: { seen, correct } }, local-only like the SRS data.
+// ponytail: tokenises the answer text only; weak = seen >= 2 and under 60% right.
+function getWordData() {
+    try { return JSON.parse(localStorage.getItem(WORDS_KEY)) || {}; } catch (_) { return {}; }
+}
+
+function wordsOf(text) {
+    return typeof text === 'string' ? text.toLowerCase().match(/[\p{L}\p{N}]+/gu) || [] : [];
+}
+
+function updateWords(subjectId, question, isCorrect) {
+    if (DEMO || !subjectId || !['translation', 'cloze', 'listening', 'sentence'].includes(question.type)) return;
+    const data = getWordData();
+    const subject = data[subjectId] || (data[subjectId] = {});
+    new Set(wordsOf(question.answer)).forEach((word) => {
+        const entry = subject[word] || (subject[word] = { seen: 0, correct: 0 });
+        entry.seen += 1;
+        if (isCorrect) entry.correct += 1;
+    });
+    localStorage.setItem(WORDS_KEY, JSON.stringify(data));
+}
+
+function hasWeakWord(subjectWords, question) {
+    return wordsOf(question.answer).some((word) => {
+        const entry = subjectWords[word];
+        return entry && entry.seen >= 2 && entry.correct / entry.seen < 0.6;
+    });
+}
+
 function getDueCount(subjectId) {
     const srs = getSrsData();
     const subjectQuestions = questions[subjectId] || [];
@@ -414,18 +444,22 @@ function getQuestionsForLesson(subjectId, subset) {
     const subjectQuestions = questions[subjectId] || [];
     const srs = getSrsData();
     const now = new Date();
+    const weakWords = getWordData()[subjectId] || {};
     const due = [];
+    const weak = [];
     const rest = [];
 
     subjectQuestions.forEach((question) => {
         const card = srs[question.id];
         if (card && new Date(card.nextReview) <= now) due.push(question);
+        else if (hasWeakWord(weakWords, question)) weak.push(question);
         else rest.push(question);
     });
 
     shuffle(due);
+    shuffle(weak);
     shuffle(rest);
-    return [...due, ...rest].slice(0, gameState.totalQuestions);
+    return [...due, ...weak, ...rest].slice(0, gameState.totalQuestions);
 }
 
 function saveAchievement(id) {
@@ -1909,6 +1943,7 @@ function checkAnswer() {
     }
 
     if (question.id) updateSrs(question.id, isCorrect ? 5 : 1);
+    updateWords(gameState.selectedSubject, question, isCorrect);
 
     const feedback = document.getElementById('feedback');
     const questionCard = document.querySelector('.question-card');

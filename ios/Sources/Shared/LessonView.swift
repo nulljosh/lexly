@@ -182,7 +182,7 @@ struct LessonView: View {
             ? !matchMissed
             : normalize(given(for: exercise)) == normalize(exercise.answer)
         if correct { correctCount += 1 }
-        store.recordAnswer(correct: correct, exerciseId: exercise.id, lessonId: lesson.id)
+        store.recordAnswer(correct: correct, exerciseId: exercise.id, lessonId: lesson.id, subjectId: subjectId, exercise: exercise)
         withAnimation {
             feedback = correct
                 ? .correct(exercise.explain)

@@ -39,10 +39,31 @@ final class ContentStore {
         return ContentStore.loadJSON(name, subdir: "notes", as: Notes.self)
     }
 
-    func recordAnswer(correct: Bool, exerciseId: String, lessonId: String) {
+    func recordAnswer(correct: Bool, exerciseId: String, lessonId: String, subjectId: String = "", exercise: Exercise? = nil) {
         if correct { progress.xp += 10 } else { progress.hearts = max(0, progress.hearts - 1) }
         updateSrs(exerciseId, correct: correct)
+        if let exercise { updateWords(subjectId, exercise, correct: correct) }
         save()
+    }
+
+    /// Word strength, web parity with `updateWords` in js/lingo-app.js: per-subject
+    /// { word: [seen, correct] }, local-only (UserDefaults, never synced).
+    /// ponytail: recorded but no weak-word session on iOS yet; weak = seen >= 2, under 60% right.
+    private static let wordsKey = "lingo.words"
+
+    private func updateWords(_ subjectId: String, _ exercise: Exercise, correct: Bool) {
+        guard !subjectId.isEmpty, ["translation", "cloze", "listening", "sentence"].contains(exercise.type) else { return }
+        var all = UserDefaults.standard.dictionary(forKey: ContentStore.wordsKey) as? [String: [String: [Int]]] ?? [:]
+        var subject = all[subjectId] ?? [:]
+        let words = Set(exercise.answer.lowercased().split { !$0.isLetter && !$0.isNumber }.map(String.init))
+        for word in words {
+            var entry = subject[word] ?? [0, 0]
+            entry[0] += 1
+            if correct { entry[1] += 1 }
+            subject[word] = entry
+        }
+        all[subjectId] = subject
+        UserDefaults.standard.set(all, forKey: ContentStore.wordsKey)
     }
 
     /// Web parity: `LESSON_PASS_RATIO` / `lessonPassed` in js/lingo-app.js.
