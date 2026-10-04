@@ -141,7 +141,8 @@ let gameState = {
     lessonQuestions: [],
     currentQuestionData: null,
     completedSubjects: [],
-    selectedLesson: null
+    selectedLesson: null,
+    placement: null
 };
 
 // `/app/?demo=1` plays one real lesson with no account, so the landing page can
@@ -431,6 +432,27 @@ function getCourseProgress(subjectId) {
     let total = 0;
     (pack.units || []).forEach((unit) => { total += (unit.lessons || []).length; });
     return { done, total };
+}
+
+// Placement test: two questions from each of up to five evenly spaced units. Passing a
+// probe unit (all its questions right) skips every unit up to and including it, in order.
+// ponytail: all-right-or-stop is crude and a typo costs a unit, tune the bar with real data.
+function startPlacement() {
+    const units = PACK_CACHE[gameState.selectedSubject].units || [];
+    const n = Math.min(5, units.length);
+    const placement = { questions: [], unitOf: {}, asked: {}, right: {}, probes: [] };
+    for (let i = 0; i < n; i += 1) {
+        const u = Math.round(i * (units.length - 1) / Math.max(n - 1, 1));
+        const pool = [];
+        (units[u].lessons || []).forEach((lesson) => pool.push(...getLessonExercises(gameState.selectedSubject, lesson.id)));
+        const picked = shuffle(pool).slice(0, 2);
+        if (!picked.length) continue;
+        placement.probes.push(u);
+        placement.asked[u] = picked.length;
+        picked.forEach((question) => { placement.unitOf[question.id] = u; });
+        placement.questions.push(...picked);
+    }
+    startLesson(null, false, placement);
 }
 
 function getWeakQuestions(subjectId) {
@@ -1428,6 +1450,25 @@ function renderSkillTree(pack) {
         cta.addEventListener('click', () => startLesson(next.lesson.id));
         host.appendChild(cta);
     }
+    if (done === 0 && units.length >= 3 && !DEMO) {
+        const test = document.createElement('button');
+        test.className = 'tree-continue';
+        test.setAttribute('aria-label', 'Placement test: skip what you already know');
+        const ttext = document.createElement('span');
+        const tkicker = document.createElement('span');
+        tkicker.className = 'tree-continue-kicker';
+        tkicker.textContent = 'Not a beginner?';
+        const ttitle = document.createElement('span');
+        ttitle.className = 'tree-continue-title';
+        ttitle.textContent = 'Take the placement test';
+        const twhere = document.createElement('span');
+        twhere.className = 'tree-continue-where';
+        twhere.textContent = '10 questions, skip what you know';
+        ttext.append(tkicker, ttitle, twhere);
+        test.append(ttext, makeIcon('fa-solid fa-arrow-right'));
+        test.addEventListener('click', startPlacement);
+        host.appendChild(test);
+    }
     const weakCount = getWeakQuestions(pack.id).length;
     if (weakCount) {
         const weak = document.createElement('button');
@@ -1544,8 +1585,11 @@ function currentLang() {
     return (meta && meta.lang) || LANG_CODES[gameState.selectedSubject] || 'en-US';
 }
 
-async function startLesson(lessonId, weakOnly) {
+async function startLesson(lessonId, weakOnly, placement) {
     gameState.selectedLesson = lessonId || null;
+    gameState.placement = placement || null;
+    document.querySelector('.result-title').textContent = 'Lesson Complete';
+    document.querySelector('.result-subtitle').textContent = 'Here is how you did.';
     document.getElementById('subjectSelection').style.display = 'none';
     document.getElementById('skillTree').classList.remove('active');
     document.getElementById('lessonContainer').classList.add('active');
@@ -1553,7 +1597,7 @@ async function startLesson(lessonId, weakOnly) {
     gameState.correctAnswers = 0;
     gameState.hearts = 5;
     await loadCourse(gameState.selectedSubject);
-    const subset = weakOnly ? getWeakQuestions(gameState.selectedSubject).sort(() => Math.random() - 0.5).slice(0, 10)
+    const subset = placement ? placement.questions : weakOnly ? getWeakQuestions(gameState.selectedSubject).sort(() => Math.random() - 0.5).slice(0, 10)
         : lessonId ? getLessonExercises(gameState.selectedSubject, lessonId) : null;
     gameState.lessonQuestions = getQuestionsForLesson(gameState.selectedSubject, subset);
     gameState.totalQuestions = gameState.lessonQuestions.length || 10;
@@ -1970,6 +2014,11 @@ function checkAnswer() {
 
     if (question.id) updateSrs(question.id, isCorrect ? 5 : 1);
     updateWords(gameState.selectedSubject, question, isCorrect);
+    const placement = gameState.placement;
+    if (placement && isCorrect && question.id in placement.unitOf) {
+        const u = placement.unitOf[question.id];
+        placement.right[u] = (placement.right[u] || 0) + 1;
+    }
 
     const feedback = document.getElementById('feedback');
     const questionCard = document.querySelector('.question-card');
@@ -2130,6 +2179,23 @@ function showResults() {
         };
     }
 
+    if (gameState.placement) {
+        const { probes, asked, right } = gameState.placement;
+        let placed = -1;
+        for (const u of probes) {
+            if ((right[u] || 0) < asked[u]) break;
+            placed = u;
+        }
+        const done = { ...(lessonsCompleted[gameState.selectedSubject] || {}) };
+        PACK_CACHE[gameState.selectedSubject].units.slice(0, placed + 1)
+            .forEach((unit) => (unit.lessons || []).forEach((lesson) => { done[lesson.id] = true; }));
+        lessonsCompleted[gameState.selectedSubject] = done;
+        document.querySelector('.result-title').textContent = 'Placement done';
+        document.querySelector('.result-subtitle').textContent = placed < 0
+            ? 'Starting from the first lesson.'
+            : `Skipped ${placed + 1} unit${placed ? 's' : ''} you already know.`;
+    }
+
     saveProgress({
         xp: gameState.xp,
         streak: gameState.streak,
@@ -2161,8 +2227,9 @@ function continueLearning() {
     // Came from a skill-tree lesson: return to the tree so the new crown and the
     // next unlocked lesson are visible. Otherwise fall back to subject select.
     const pack = PACK_CACHE[gameState.selectedSubject];
-    if (gameState.selectedLesson && pack) {
+    if ((gameState.selectedLesson || gameState.placement) && pack) {
         gameState.selectedLesson = null;
+        gameState.placement = null;
         document.getElementById('skillTree').classList.add('active');
         renderSkillTree(pack);
         return;
