@@ -1,10 +1,10 @@
 import SwiftUI
 
-private let whatsNewVersion = "1.1.0"
+private let whatsNewVersion = "1.1.6"
 private let whatsNewBullets = [
-    "Accounts — sign in and sync progress across devices",
-    "Masterclass unlock",
-    "Streak now tracks and syncs across iOS and Mac",
+    "Pre-Calc 12: a full course, from functions to trigonometry",
+    "Course map with a Continue button that picks up where you left off",
+    "A math keypad for typing answers",
 ]
 
 struct WhatsNewSheet: View {
