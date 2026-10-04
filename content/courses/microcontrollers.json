@@ -1,0 +1,904 @@
+{
+  "id": "microcontrollers",
+  "name": "Microcontrollers",
+  "category": "engineering",
+  "icon": "fa-solid fa-lightbulb",
+  "level": "Hands-On Hardware Programming",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Board Anatomy and Pins",
+      "tip": "A microcontroller board is your gateway to hardware. It has a microchip at its core, pins for power and signals, and often a USB port for programming. Understanding what each part does is the first step to building projects.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Board Layout and Power",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the USB port on a microcontroller board do?",
+              "answer": "Provides power to the board and allows uploading programs",
+              "explain": "The USB port powers your board from a computer or USB power adapter. It also carries the serial data that lets you upload new firmware or communicate with the board.",
+              "choices": [
+                "Only allows programming",
+                "Provides power to the board and allows uploading programs",
+                "Supplies ground only",
+                "Only provides power"
+              ],
+              "id": "microcontrollers_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does VCC or VDD stand for on a pinout?",
+              "answer": "Power supply voltage, typically 5V or 3.3V",
+              "explain": "VCC and VDD are names for the positive power rail. When you connect VCC to the positive terminal of a battery, the board powers up. GND (ground) is the return path.",
+              "choices": [
+                "Vertical Copper Cable",
+                "Power supply voltage, typically 5V or 3.3V",
+                "Video Codec Connection",
+                "Voltage Control Circuit"
+              ],
+              "id": "microcontrollers_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why must you always connect the GND pin?",
+              "answer": "It provides the return path for current and completes the circuit",
+              "explain": "Current flows from VCC through your circuit and back to GND. Without GND connected, no current flows and nothing works, no matter how many signal pins you connect.",
+              "choices": [
+                "It provides the return path for current and completes the circuit",
+                "It stores energy",
+                "It reduces heat",
+                "It prevents static electricity"
+              ],
+              "id": "microcontrollers_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the reset button do?",
+              "answer": "Restarts the program from the beginning without losing power",
+              "explain": "Pressing reset stops the current program, reinitializes the chip, and starts running the firmware from address zero. The power stays on the entire time.",
+              "choices": [
+                "Shuts off the board",
+                "Erases all stored data",
+                "Clears the USB connection",
+                "Restarts the program from the beginning without losing power"
+              ],
+              "id": "microcontrollers_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the LED on the board (often labeled LED or L) for?",
+              "answer": "Testing and debugging by showing the board is running or responding",
+              "explain": "The onboard LED is your first tool for feedback. You can blink it to confirm code is running, use it to debug, or show status. It is wired directly to a pin.",
+              "choices": [
+                "Charging indicator",
+                "Testing and debugging by showing the board is running or responding",
+                "Power indication only",
+                "Heat dissipation"
+              ],
+              "id": "microcontrollers_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Understanding Pin Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a digital pin?",
+              "answer": "A pin that reads or outputs only two states: high (logic 1) or low (logic 0)",
+              "explain": "Digital pins are binary. They are either at the supply voltage (5V or 3.3V, high/1) or 0V (low/0). No in-between states. Perfect for buttons, switches, and turning things on and off.",
+              "choices": [
+                "A pin that handles continuously varying signals",
+                "A pin that reads or outputs only two states: high (logic 1) or low (logic 0)",
+                "A pin that communicates over the internet",
+                "A pin that stores data"
+              ],
+              "id": "microcontrollers_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an analog pin?",
+              "answer": "A pin that reads continuously varying voltage levels between 0V and reference voltage",
+              "explain": "Analog pins can read any voltage in a range, like 2.3V or 4.7V, not just 0 or 5. This is essential for sensors like temperature or light sensors.",
+              "choices": [
+                "A pin that produces sound",
+                "A pin that reads continuously varying voltage levels between 0V and reference voltage",
+                "A pin that only reads binary values",
+                "A pin that measures time"
+              ],
+              "id": "microcontrollers_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'ADC' stand for in microcontroller documentation?",
+              "answer": "Analog-to-Digital Converter, which converts analog voltages to digital numbers",
+              "explain": "The ADC reads a voltage on an analog pin and converts it to a digital value your program can use. It is how the microcontroller understands analog sensors.",
+              "choices": [
+                "Advanced Digital Circuit",
+                "Automatic Dimming Control",
+                "Auxiliary Data Channel",
+                "Analog-to-Digital Converter, which converts analog voltages to digital numbers"
+              ],
+              "id": "microcontrollers_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What voltage does a 'high' digital signal represent?",
+              "answer": "The board's operating voltage, usually 5V or 3.3V",
+              "explain": "When you read a digital pin as high, it is at the board's supply voltage. When low, it is at ground (0V). Some boards use 5V, others use 3.3V. Check your board.",
+              "choices": [
+                "The board's operating voltage, usually 5V or 3.3V",
+                "Always 12V",
+                "Varies from pin to pin",
+                "Always 1V"
+              ],
+              "id": "microcontrollers_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many analog pins do typical beginner boards have?",
+              "answer": "A handful, often 4 to 8 analog inputs",
+              "explain": "Entry-level boards typically have 4 to 8 dedicated analog input pins. Many digital pins can also output PWM signals, which is analog-like.",
+              "choices": [
+                "Only 1",
+                "None, analog is rare",
+                "Hundreds",
+                "A handful, often 4 to 8 analog inputs"
+              ],
+              "id": "microcontrollers_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Digital I/O: LEDs and Buttons",
+      "tip": "Controlling an LED and reading a button are the Hello World of hardware projects. An LED lights up when you send current through it. A button closes a circuit when pressed. These simple components teach you how to control and sense the digital world.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Blinking an LED",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you light up an LED?",
+              "answer": "Connect the long leg (anode) to power via a resistor and the short leg (cathode) to ground",
+              "explain": "LEDs are diodes. Current flows from positive to negative. The long leg connects to power (with a resistor), the short leg to ground. Reverse the polarity and it will not light.",
+              "choices": [
+                "Connect the long leg (anode) to power via a resistor and the short leg (cathode) to ground",
+                "Connect either leg to power and the other to ground",
+                "Connect both legs to power",
+                "LEDs do not need power to light"
+              ],
+              "id": "microcontrollers_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do you need a resistor in series with an LED?",
+              "answer": "To limit current and protect the LED from burning out",
+              "explain": "An LED has very little resistance once it conducts. If you apply full voltage directly, too much current flows and the LED can burn out quickly. A resistor limits the current.",
+              "choices": [
+                "To limit current and protect the LED from burning out",
+                "Resistors are always required",
+                "To prevent the board from overheating",
+                "To make the LED brighter"
+              ],
+              "id": "microcontrollers_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does digitalWrite do?",
+              "answer": "Sets a digital pin to high (ON) or low (OFF)",
+              "explain": "digitalWrite changes a pin to 5V (or 3.3V) when set to HIGH, or 0V when set to LOW. This turns things on and off.",
+              "choices": [
+                "Sends data over serial",
+                "Reads the state of a pin",
+                "Sets a digital pin to high (ON) or low (OFF)",
+                "Measures voltage"
+              ],
+              "id": "microcontrollers_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you make an LED blink?",
+              "answer": "Write HIGH to the pin, delay, write LOW to the pin, delay, repeat",
+              "explain": "To blink: set pin HIGH (LED on), wait, set LOW (LED off), wait, repeat. The delay controls the blink speed.",
+              "choices": [
+                "You cannot make an LED blink without external circuits",
+                "Write HIGH to the pin, delay, write LOW to the pin, delay, repeat",
+                "Use PWM only",
+                "Set the pin HIGH once and it blinks automatically"
+              ],
+              "id": "microcontrollers_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What would happen if you connected the LED backwards?",
+              "answer": "It would not light up because current cannot flow through it",
+              "explain": "LEDs are diodes and only conduct current in one direction. Backwards polarity blocks current. Swap the legs and it works again.",
+              "choices": [
+                "The LED would light very brightly",
+                "It would light up but dimly",
+                "It would not light up because current cannot flow through it",
+                "The board would shut off"
+              ],
+              "id": "microcontrollers_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Reading a Button",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a button do when pressed?",
+              "answer": "Closes the circuit, allowing current to flow",
+              "explain": "A button is a momentary switch. Pressing it connects two contacts together. Releasing it breaks the connection. It is used to signal a user action.",
+              "choices": [
+                "Closes the circuit, allowing current to flow",
+                "Increases voltage",
+                "Transmits a radio signal",
+                "Generates electricity"
+              ],
+              "id": "microcontrollers_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which Arduino-style function sets a pin to INPUT or OUTPUT?",
+              "answer": "pinMode(pin, mode)",
+              "explain": "pinMode sets whether a pin is an INPUT or an OUTPUT. A button pin must be set to INPUT so the pin can read the button's state without driving it.",
+              "choices": [
+                "analogWrite(pin, value)",
+                "digitalRead(pin)",
+                "pinMode(pin, mode)",
+                "delay(ms)"
+              ],
+              "id": "microcontrollers_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does digitalRead do?",
+              "answer": "Reads a pin and returns HIGH or LOW",
+              "explain": "digitalRead checks a pin's state and returns the value. You can then respond to it in your code, like checking if a button is pressed.",
+              "choices": [
+                "Reads a pin and returns HIGH or LOW",
+                "Changes a pin's state",
+                "Communicates over the internet",
+                "Erases data"
+              ],
+              "id": "microcontrollers_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A button connects its pin to VCC when pressed, and a pull-down resistor holds the pin LOW otherwise. How do you check if it is pressed?",
+              "answer": "Use if(digitalRead(buttonPin) == HIGH) to test the pin state",
+              "explain": "In this wiring the pin reads HIGH when pressed and LOW when released. With pull-up wiring the logic is inverted: pressed reads LOW.",
+              "choices": [
+                "The button automatically signals when pressed",
+                "You cannot detect button presses",
+                "Use if(digitalRead(buttonPin) == HIGH) to test the pin state",
+                "Buttons only work with analog pins"
+              ],
+              "id": "microcontrollers_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What problem happens if you read a button too slowly?",
+              "answer": "You might miss a quick button press between your readings",
+              "explain": "If you only check the button state every second, and the user presses for 100 milliseconds, you might miss it. Fast polling or interrupts solve this.",
+              "choices": [
+                "You might miss a quick button press between your readings",
+                "The button breaks",
+                "Nothing happens",
+                "The board reboots"
+              ],
+              "id": "microcontrollers_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Pull-up and Pull-down Resistors",
+      "tip": "A floating pin (not connected) gives unpredictable readings. Pull-up and pull-down resistors solve this by ensuring the pin has a known state when the button is not pressed. Many microcontroller boards have built-in pull-ups.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "The Floating Pin Problem",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'floating' pin?",
+              "answer": "An input pin that is not connected to power or ground, giving random readings",
+              "explain": "A floating pin has no stable reference. Electrical noise in the air causes it to read HIGH or LOW unpredictably. You need to pull it to a known state.",
+              "choices": [
+                "An input pin that is not connected to power or ground, giving random readings",
+                "A pin that is damaged",
+                "A pin used for debugging",
+                "A pin that changes state repeatedly"
+              ],
+              "id": "microcontrollers_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a pull-up resistor do?",
+              "answer": "Connects the pin to power (VCC) with a resistor, pulling it HIGH when nothing else is driving it",
+              "explain": "A pull-up resistor ensures the pin reads HIGH when the button is not pressed. When the button presses (connecting to ground), it pulls the pin LOW, overriding the resistor.",
+              "choices": [
+                "Connects the pin to power (VCC) with a resistor, pulling it HIGH when nothing else is driving it",
+                "Connects the pin to ground",
+                "Prevents the pin from working",
+                "Increases the pin's voltage"
+              ],
+              "id": "microcontrollers_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a pull-down resistor do?",
+              "answer": "Connects the pin to ground with a resistor, pulling it LOW when nothing else is driving it",
+              "explain": "A pull-down resistor ensures the pin reads LOW when not driven. When something connects the pin to power, it reads HIGH.",
+              "choices": [
+                "Amplifies the signal",
+                "Connects the pin to power",
+                "Connects the pin to ground with a resistor, pulling it LOW when nothing else is driving it",
+                "Decreases the pin's voltage"
+              ],
+              "id": "microcontrollers_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a typical value for a pull-up or pull-down resistor?",
+              "answer": "1,000 to 100,000 ohms (1K to 100K)",
+              "explain": "These ranges are standard. Higher values use less power. Lower values pull harder but consume more current. 10K is a common default.",
+              "choices": [
+                "1 million to 10 million ohms",
+                "Resistor value does not matter",
+                "1 to 10 ohms",
+                "1,000 to 100,000 ohms (1K to 100K)"
+              ],
+              "id": "microcontrollers_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do modern microcontroller boards have built-in pull-up resistors?",
+              "answer": "To simplify projects so you do not need external resistors for buttons",
+              "explain": "Many boards have internal pull-ups on their input pins. You enable them with pinMode(pin, INPUT_PULLUP). This saves wiring and components.",
+              "choices": [
+                "They are always required",
+                "Built-in pull-ups do not exist",
+                "To simplify projects so you do not need external resistors for buttons",
+                "To increase power consumption"
+              ],
+              "id": "microcontrollers_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Debouncing Techniques",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is button bounce?",
+              "answer": "When a button is pressed, the electrical contact bounces, causing multiple rapid on-off signals",
+              "explain": "Real buttons do not make a clean connection. They vibrate slightly, causing the pin to register multiple presses in a few milliseconds. This is called bouncing.",
+              "choices": [
+                "A software error",
+                "The button wearing out",
+                "When a button is pressed, the electrical contact bounces, causing multiple rapid on-off signals",
+                "The button staying pressed too long"
+              ],
+              "id": "microcontrollers_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is debouncing?",
+              "answer": "Waiting a few milliseconds after a button signal to confirm the state is stable",
+              "explain": "Debouncing eliminates false presses caused by bounce. After detecting a press, wait 20-50 milliseconds, then check again. If it is still pressed, treat it as a real press.",
+              "choices": [
+                "Removing the button",
+                "Using a pull-up resistor",
+                "Waiting a few milliseconds after a button signal to confirm the state is stable",
+                "Increasing the voltage"
+              ],
+              "id": "microcontrollers_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How long should you wait when debouncing a button?",
+              "answer": "20 to 50 milliseconds",
+              "explain": "Button bounce typically settles within a few to 20 milliseconds. Waiting 50 milliseconds is safe and handles even worn buttons.",
+              "choices": [
+                "20 to 50 milliseconds",
+                "1 second",
+                "No waiting needed",
+                "1 millisecond"
+              ],
+              "id": "microcontrollers_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you do not debounce a button?",
+              "answer": "One button press registers as multiple presses, causing unpredictable behavior",
+              "explain": "Without debouncing, a single press can trigger your code 5 or 10 times due to bounce. This breaks user interactions.",
+              "choices": [
+                "The button stops working",
+                "The board overheats",
+                "Nothing, it works fine",
+                "One button press registers as multiple presses, causing unpredictable behavior"
+              ],
+              "id": "microcontrollers_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the simplest debouncing approach?",
+              "answer": "Wait after detecting a press, then check the pin again",
+              "explain": "Simple debouncing: detect the press, delay 50 milliseconds, check again. If still pressed, confirm it. This works well for basic projects.",
+              "choices": [
+                "Use the fastest polling speed possible",
+                "Wait after detecting a press, then check the pin again",
+                "Debouncing is impossible",
+                "Ignore the bounce entirely"
+              ],
+              "id": "microcontrollers_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Reading Analog Sensors",
+      "tip": "Analog pins can read sensors that output varying voltages: temperature, light, distance, humidity. The Analog-to-Digital Converter (ADC) converts these voltages into numbers your program can use. Understanding ADC helps you interpret sensor data correctly.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "How ADC Works",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an ADC do?",
+              "answer": "Converts an analog voltage into a digital number the microcontroller can use",
+              "explain": "The ADC samples a voltage and converts it to a binary number. A 10-bit ADC returns 0 to 1023. Higher resolution ADCs give more precision.",
+              "choices": [
+                "Filters out noise",
+                "Converts an analog voltage into a digital number the microcontroller can use",
+                "Increases the voltage",
+                "Amplifies weak signals"
+              ],
+              "id": "microcontrollers_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does '10-bit ADC' mean?",
+              "answer": "The ADC has 10 bits of resolution, returning values from 0 to 1023",
+              "explain": "10 bits give 2^10 = 1024 possible values. If the reference voltage is 5V, each step is 5V/1023 = about 0.0049V.",
+              "choices": [
+                "It measures 10 different sensors",
+                "The ADC has 10 bits of resolution, returning values from 0 to 1023",
+                "It requires 10 wires",
+                "It measures 10 voltages per second"
+              ],
+              "id": "microcontrollers_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the reference voltage in ADC conversion?",
+              "answer": "The maximum voltage the ADC can measure, usually VCC (5V or 3.3V)",
+              "explain": "If the reference is 5V and you read 512 on a 10-bit ADC, the input voltage is about 2.5V (half of reference). Reference voltage sets the scale.",
+              "choices": [
+                "The maximum voltage the ADC can measure, usually VCC (5V or 3.3V)",
+                "The minimum voltage required",
+                "Always 1V",
+                "An external signal"
+              ],
+              "id": "microcontrollers_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you read an analog pin in code?",
+              "answer": "Use analogRead(pin), which returns 0 to 1023 on a 10-bit ADC",
+              "explain": "analogRead samples the voltage and returns the digital value. You can use this value to decide what to do. Higher values mean higher voltages.",
+              "choices": [
+                "Use digitalRead(pin)",
+                "Analog pins cannot be read in code",
+                "Use analogRead(pin), which returns 0 to 1023 on a 10-bit ADC",
+                "Use digitalWrite(pin, HIGH)"
+              ],
+              "id": "microcontrollers_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of a higher bit depth ADC?",
+              "answer": "More precision: smaller voltage steps can be detected",
+              "explain": "A 10-bit ADC divides 5V into 1024 steps. A 12-bit ADC divides it into 4096 steps, giving 4 times finer resolution. Useful for precise sensors.",
+              "choices": [
+                "Faster conversion",
+                "Simpler code",
+                "More precision: smaller voltage steps can be detected",
+                "Lower power consumption"
+              ],
+              "id": "microcontrollers_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Using Analog Sensors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How would you read a temperature sensor that outputs 0V at 0 degrees and 5V at 100 degrees?",
+              "answer": "Read the analog value, convert it to a temperature using the voltage scaling",
+              "explain": "If analogRead returns 512 (half of 1024) on a 10-bit ADC with 5V reference, the voltage is 2.5V, which means 50 degrees.",
+              "choices": [
+                "Temperature sensors cannot be read",
+                "Read the analog value, convert it to a temperature using the voltage scaling",
+                "The analog value is the temperature directly",
+                "Use a thermometer to read the actual temperature"
+              ],
+              "id": "microcontrollers_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a light sensor (photoresistor)?",
+              "answer": "A resistor that changes resistance based on light levels",
+              "explain": "A photoresistor (LDR) has lower resistance in bright light and higher resistance in darkness. Connect it as a voltage divider and read the analog output.",
+              "choices": [
+                "A light that is controlled by resistors",
+                "A sensor that produces light",
+                "A resistor that does not change",
+                "A resistor that changes resistance based on light levels"
+              ],
+              "id": "microcontrollers_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do analog sensors need filtering?",
+              "answer": "To remove electrical noise that causes jittery readings",
+              "explain": "Sensors can pick up electrical noise, causing readings to jump around. Averaging the last several readings smooths the noise and gives stable values.",
+              "choices": [
+                "Sensors do not need filtering",
+                "To reduce battery power",
+                "To increase the sensor speed",
+                "To remove electrical noise that causes jittery readings"
+              ],
+              "id": "microcontrollers_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a simple way to filter noisy sensor readings?",
+              "answer": "Read the sensor multiple times and average the results",
+              "explain": "Take 10 readings, add them up, divide by 10. Random noise cancels out and you get a smooth value. Simple and effective.",
+              "choices": [
+                "Read the sensor multiple times and average the results",
+                "Filtering is impossible",
+                "Ignore readings below a threshold",
+                "Use the fastest reading"
+              ],
+              "id": "microcontrollers_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How would you respond to a light sensor reading in code?",
+              "answer": "Read the analog value and use if statements to decide actions",
+              "explain": "If the value is above a threshold, it is bright. Below, it is dark. You can trigger actions like turning on an LED when darkness is detected.",
+              "choices": [
+                "The sensor automatically triggers actions",
+                "You cannot respond to sensor data",
+                "Read the analog value and use if statements to decide actions",
+                "Only digital sensors allow responses"
+              ],
+              "id": "microcontrollers_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "PWM: Dimming and Motors",
+      "tip": "PWM (Pulse-Width Modulation) is how you control the brightness of an LED or the speed of a motor using a digital pin. By rapidly switching on and off, you create an average voltage that feels like an analog output. PWM is one of the most useful techniques in embedded systems.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "PWM Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does PWM simulate analog output on a digital pin?",
+              "answer": "By rapidly switching the pin on and off at different duty cycles",
+              "explain": "A digital pin can only be on or off. By switching fast enough (1000+ times per second), the average voltage is controlled by the duty cycle percentage.",
+              "choices": [
+                "By rapidly switching the pin on and off at different duty cycles",
+                "It is not actually possible",
+                "By using an external circuit",
+                "It slowly increases the voltage"
+              ],
+              "id": "microcontrollers_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is duty cycle?",
+              "answer": "The percentage of time the signal is high in each PWM cycle",
+              "explain": "0% duty cycle means always off. 50% means on half the time, off half the time. 100% means always on. The duty cycle controls the output level.",
+              "choices": [
+                "How fast PWM switches",
+                "The type of pin used",
+                "The voltage applied",
+                "The percentage of time the signal is high in each PWM cycle"
+              ],
+              "id": "microcontrollers_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What function controls PWM in code?",
+              "answer": "analogWrite(pin, value) where value is 0-255 by default",
+              "explain": "On Arduino-style boards, analogWrite accepts 0 to 255 by default. 0 is 0% duty, 255 is 100% duty. Values in between give proportional brightness or motor speed.",
+              "choices": [
+                "PWM cannot be controlled in code",
+                "digitalWrite(pin, value)",
+                "analogWrite(pin, value) where value is 0-255 by default",
+                "analogRead(pin)"
+              ],
+              "id": "microcontrollers_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you dim an LED to half brightness?",
+              "answer": "Use analogWrite(ledPin, 128) which is 50% of 255",
+              "explain": "Half brightness means 50% duty cycle. Since analogWrite uses 0-255, 128 is half. 255 is full brightness, 0 is off.",
+              "choices": [
+                "LEDs cannot be dimmed",
+                "Use analogWrite(ledPin, 50)",
+                "Use analogWrite(ledPin, 128) which is 50% of 255",
+                "Use digitalWrite(ledPin, LOW)"
+              ],
+              "id": "microcontrollers_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which pins support PWM on typical boards?",
+              "answer": "Specific pins, often marked with ~ or PWM",
+              "explain": "Not all pins support PWM. Check your board documentation. Pins that support PWM are often labeled with ~ or PWM. Use those pins for dimming or motor control.",
+              "choices": [
+                "All pins",
+                "Specific pins, often marked with ~ or PWM",
+                "No pins support PWM",
+                "Analog input pins only"
+              ],
+              "id": "microcontrollers_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Controlling Motors and Brightness",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you control a DC motor speed with PWM?",
+              "answer": "Connect the motor through a transistor controlled by a PWM pin",
+              "explain": "The PWM pin provides the control signal. A transistor acts as a switch, connecting the motor to power. Higher duty cycle means faster motor speed. A diode across the motor protects the transistor from voltage spikes.",
+              "choices": [
+                "Connect the motor through a transistor controlled by a PWM pin",
+                "Motors cannot be speed controlled",
+                "Connect the motor directly to a PWM pin",
+                "Use only digital pins"
+              ],
+              "id": "microcontrollers_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do you need a transistor between a pin and a motor?",
+              "answer": "The pin cannot supply enough current to power the motor directly",
+              "explain": "A microcontroller pin can only supply milliamps. A motor needs amps. A transistor acts as a current amplifier, letting the pin control high power loads.",
+              "choices": [
+                "The pin cannot supply enough current to power the motor directly",
+                "Motors do not need transistors",
+                "To change the voltage",
+                "To make the motor more efficient"
+              ],
+              "id": "microcontrollers_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a relay?",
+              "answer": "An electromagnet-controlled switch for controlling high-power devices",
+              "explain": "A relay uses a small electromagnet to switch a high-power circuit. When the electromagnet activates (from a pin), it closes a relay contact.",
+              "choices": [
+                "A communication protocol",
+                "A motor controller",
+                "A type of resistor",
+                "An electromagnet-controlled switch for controlling high-power devices"
+              ],
+              "id": "microcontrollers_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How would you make an LED fade in and out smoothly?",
+              "answer": "Use analogWrite in a loop, increasing and decreasing the value",
+              "explain": "Loop from 0 to 255 with analogWrite, then back to 0. Add small delays between each step to see the fade. This is called breathing.",
+              "choices": [
+                "Toggle the LED on and off",
+                "Use analogWrite in a loop, increasing and decreasing the value",
+                "Use digitalWrite with delays",
+                "Fading is impossible"
+              ],
+              "id": "microcontrollers_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you PWM a motor too slowly?",
+              "answer": "The motor will stall or move jerkily instead of spinning smoothly",
+              "explain": "Slow pulses make the motor speed up and slow down with each pulse. Motor PWM is usually set to tens of kilohertz, which smooths the motion and keeps the whine out of the audible range.",
+              "choices": [
+                "PWM speed does not matter",
+                "Nothing, slow PWM always works",
+                "The motor will stall or move jerkily instead of spinning smoothly",
+                "The motor spins faster"
+              ],
+              "id": "microcontrollers_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Building Safe Projects",
+      "tip": "Every program on a microcontroller follows the setup-and-loop pattern. Setup runs once, configuring pins and initializing systems. Loop runs forever, reading inputs and controlling outputs. Building safe projects means understanding power requirements and protecting components.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "The Setup and Loop Model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the setup function do?",
+              "answer": "Runs once when the board powers up to initialize pins and variables",
+              "explain": "Setup configures which pins are inputs or outputs, initializes serial communication, and sets starting values. It runs exactly once.",
+              "choices": [
+                "Handles interrupts",
+                "Is optional",
+                "Runs once when the board powers up to initialize pins and variables",
+                "Runs repeatedly like loop"
+              ],
+              "id": "microcontrollers_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the loop function do?",
+              "answer": "Runs repeatedly forever, handling the main program logic",
+              "explain": "Loop executes over and over. This is where you read sensors, update displays, and respond to user input. It is the heart of the program.",
+              "choices": [
+                "Runs once and stops",
+                "Is never used",
+                "Runs repeatedly forever, handling the main program logic",
+                "Only handles startup"
+              ],
+              "id": "microcontrollers_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How would you set up a button on pin 7 as an input?",
+              "answer": "In setup, call pinMode(7, INPUT)",
+              "explain": "pinMode tells the microcontroller how to use the pin. INPUT means read from it. OUTPUT means drive it. It is usually called once in setup.",
+              "choices": [
+                "There is no way to set this",
+                "Call analogRead(7) once in setup",
+                "In setup, call pinMode(7, INPUT)",
+                "digitalWrite(7, INPUT)"
+              ],
+              "id": "microcontrollers_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you typically initialize in setup?",
+              "answer": "Pin modes, serial communication, and any one-time configuration",
+              "explain": "Setup is where you declare pins as input or output, begin serial at 9600 baud for debugging, and set starting values.",
+              "choices": [
+                "Delay values",
+                "Pin modes, serial communication, and any one-time configuration",
+                "Nothing, it is optional",
+                "Sensor readings"
+              ],
+              "id": "microcontrollers_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you put a long delay in loop?",
+              "answer": "The entire program pauses, missing sensor inputs or button presses",
+              "explain": "While delay is running, nothing else happens. A 1-second delay means your program ignores inputs for 1 second. Use delays carefully.",
+              "choices": [
+                "Only the LED pauses",
+                "It has no effect",
+                "Delays are always safe",
+                "The entire program pauses, missing sensor inputs or button presses"
+              ],
+              "id": "microcontrollers_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Powering Projects Safely",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the safest way to power a microcontroller board?",
+              "answer": "Use a regulated USB power supply or regulated external power rated for your board",
+              "explain": "Regulated power supplies maintain steady voltage. Unregulated supplies can damage components. Always check your board's power requirements (usually 5V or 3.3V).",
+              "choices": [
+                "Use a regulated USB power supply or regulated external power rated for your board",
+                "Direct battery connection is always safe",
+                "Power does not matter",
+                "Any power source will work"
+              ],
+              "id": "microcontrollers_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a decoupling capacitor?",
+              "answer": "A small capacitor placed near the power pins to smooth voltage spikes",
+              "explain": "Decoupling caps absorb sudden current spikes from components, protecting the chip. A 0.1uF cap near power is standard practice.",
+              "choices": [
+                "A type of resistor",
+                "Optional in all designs",
+                "A power supply",
+                "A small capacitor placed near the power pins to smooth voltage spikes"
+              ],
+              "id": "microcontrollers_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you safely connect an external power source to a microcontroller?",
+              "answer": "Check the voltage and polarity, and use a regulator if needed",
+              "explain": "Wrong voltage or polarity can destroy the chip instantly. Verify specifications and use a regulator to drop voltage safely. Capacitors near the power pins filter noise.",
+              "choices": [
+                "Connect any power source",
+                "No protection is needed",
+                "Check the voltage and polarity, and use a regulator if needed",
+                "Power connections do not matter"
+              ],
+              "id": "microcontrollers_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What protects a pin from overvoltage damage?",
+              "answer": "Clamping diodes and series resistors that limit the voltage or current at the pin",
+              "explain": "If a pin gets more than its rated voltage, it can burn out. Series resistors limit current and clamping diodes such as Schottky diodes divert excess voltage.",
+              "choices": [
+                "Nothing, pins are indestructible",
+                "Power supply regulation only",
+                "Capacitors alone",
+                "Clamping diodes and series resistors that limit the voltage or current at the pin"
+              ],
+              "id": "microcontrollers_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should you add a fuse in the power supply line for a project?",
+              "answer": "To prevent current overload from melting wires or damaging the board",
+              "explain": "A fuse breaks the circuit if current exceeds its rating. This protects against shorts and accidental mistakes. It is common practice for external power.",
+              "choices": [
+                "Fuses slow down the circuit",
+                "To increase power",
+                "To prevent current overload from melting wires or damaging the board",
+                "Fuses are always optional"
+              ],
+              "id": "microcontrollers_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

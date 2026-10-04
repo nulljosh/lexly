@@ -1,0 +1,904 @@
+{
+  "id": "embedded_systems",
+  "name": "Embedded Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-microchip",
+  "level": "Computers Inside Things",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What is an Embedded System",
+      "tip": "An embedded system is a computer built into a device to perform a specific task. Unlike a general-purpose computer, it runs dedicated software and is usually hidden from the user. Embedded systems power everything from coffee makers to cars.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Defining Embedded Systems",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an embedded system?",
+              "answer": "A computer designed to perform one specific task within a larger device",
+              "explain": "Embedded systems are purpose-built computers. Unlike your laptop, they do not run general-purpose software. A smartwatch, for instance, is an embedded system optimized to display time and fitness data.",
+              "choices": [
+                "A computer that is always connected to the internet",
+                "A computer designed to perform one specific task within a larger device",
+                "A computer you embed into concrete",
+                "Any computer smaller than a phone"
+              ],
+              "id": "embedded_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is an embedded system?",
+              "answer": "A microwave oven's control circuit",
+              "explain": "A microwave runs a dedicated program to control heating time, power level, and display. It is not designed to run arbitrary software, making it a classic embedded system.",
+              "choices": [
+                "A smartphone running iOS",
+                "A microwave oven's control circuit",
+                "A desktop computer running Windows",
+                "A laptop running Linux"
+              ],
+              "id": "embedded_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main goal of an embedded system?",
+              "answer": "Reliably perform a dedicated function within constraints",
+              "explain": "Embedded systems must work reliably with limited power, memory, or processing power. They are optimized for their specific job, not for running many different programs.",
+              "choices": [
+                "Connect to as many devices as possible",
+                "Run as many programs as possible",
+                "Use as much memory as available",
+                "Reliably perform a dedicated function within constraints"
+              ],
+              "id": "embedded_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'real-time' mean in embedded systems?",
+              "answer": "The system must respond to events within a specific time window",
+              "explain": "Real-time systems like car brakes or pacemakers must react within a guaranteed deadline. Missing a deadline can cause failure, so timing guarantees matter as much as correctness. Real time means predictable, not necessarily instant.",
+              "choices": [
+                "The system must respond to events within a specific time window",
+                "The system must respond instantly, with no delay",
+                "The system must always show the current time",
+                "The system must be available 24 hours a day"
+              ],
+              "id": "embedded_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do embedded systems use specialized hardware instead of general computers?",
+              "answer": "To reduce cost, power consumption, and physical size while meeting the specific task's needs",
+              "explain": "A smart thermostat does not need a 4-core CPU and 16 GB of RAM. Specialized hardware uses less power, costs less, and takes up less space while still doing the job.",
+              "choices": [
+                "General computers cannot be programmed",
+                "To reduce cost, power consumption, and physical size while meeting the specific task's needs",
+                "General computers are not available anymore",
+                "Specialized hardware is always faster"
+              ],
+              "id": "embedded_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Embedded Systems in the World",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Where are embedded systems most commonly found?",
+              "answer": "In consumer devices like appliances, vehicles, and medical equipment",
+              "explain": "Embedded systems outnumber general-purpose computers by a huge margin. Your car has dozens of them controlling the engine, brakes, and infotainment system.",
+              "choices": [
+                "Only in military equipment",
+                "Only in smartphones",
+                "Only in data centers",
+                "In consumer devices like appliances, vehicles, and medical equipment"
+              ],
+              "id": "embedded_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a constraint that embedded systems must handle that general computers do not?",
+              "answer": "Limited battery life and strict power budgets",
+              "explain": "A smartwatch must run for days or weeks on a small battery. This power constraint shapes every design decision, from CPU speed to memory usage.",
+              "choices": [
+                "Limited battery life and strict power budgets",
+                "They must run web browsers",
+                "They must support multiple users",
+                "They must always display graphics"
+              ],
+              "id": "embedded_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which property makes an embedded system different from a personal computer?",
+              "answer": "It is hidden from the user and runs fixed, dedicated software",
+              "explain": "When you use an embedded system, you interact with the device, not the computer inside it. The software is fixed and optimized for that one task.",
+              "choices": [
+                "Embedded systems are more expensive",
+                "It is hidden from the user and runs fixed, dedicated software",
+                "Embedded systems have better graphics",
+                "Embedded systems are always portable"
+              ],
+              "id": "embedded_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many embedded systems do you interact with on an average day?",
+              "answer": "Dozens or more, without noticing",
+              "explain": "Your car, coffee maker, microwave, watch, car key, thermostat, and door lock are all embedded systems. You never think of them as 'computers,' but they are.",
+              "choices": [
+                "Exactly one",
+                "None",
+                "Dozens or more, without noticing",
+                "Only when you use a smartphone"
+              ],
+              "id": "embedded_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do embedded developers test software so carefully before shipping?",
+              "answer": "Fixing a fault after devices are deployed in the field can be hard or costly",
+              "explain": "Devices may be sealed, remote, or safety-critical, so updating them after release can be difficult, expensive, or impossible. Catching faults before shipping matters much more than on a PC.",
+              "choices": [
+                "Fixing a fault after devices are deployed in the field can be hard or costly",
+                "Testing is only required for personal computers",
+                "Embedded software cannot contain bugs",
+                "Embedded software is never updated"
+              ],
+              "id": "embedded_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Microcontroller vs Microprocessor",
+      "tip": "A microcontroller is a small, complete computer on a single chip designed for embedded tasks. A microprocessor is a more powerful CPU that requires additional chips to function. Understanding the difference helps you choose the right tool for the job.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Microcontroller Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a microcontroller?",
+              "answer": "A complete computer on a single chip with CPU, memory, and input/output all integrated",
+              "explain": "A microcontroller is self-contained. It has a processor, RAM, flash storage, and GPIO pins all built in. You can power it and write code without additional chips.",
+              "choices": [
+                "A complete computer on a single chip with CPU, memory, and input/output all integrated",
+                "A small microprocessor",
+                "A type of memory",
+                "An external circuit board"
+              ],
+              "id": "embedded_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a typical microcontroller include?",
+              "answer": "CPU core, RAM, flash memory, timers, and GPIO pins",
+              "explain": "A microcontroller has everything needed to run a program and interact with the outside world. The CPU executes code, RAM holds data, flash stores the program, and GPIO lets it read and control hardware.",
+              "choices": [
+                "CPU core, RAM, flash memory, timers, and GPIO pins",
+                "Only a CPU",
+                "Only memory and display",
+                "Only power supply"
+              ],
+              "id": "embedded_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you use a microcontroller instead of a full computer?",
+              "answer": "It is smaller, cheaper, uses less power, and is simple to program for a specific task",
+              "explain": "For a device that needs to do one job, a microcontroller is ideal. You do not pay for or power features you do not need.",
+              "choices": [
+                "Microcontrollers can run Windows",
+                "It is smaller, cheaper, uses less power, and is simple to program for a specific task",
+                "Microcontrollers are always faster",
+                "Microcontrollers have more memory"
+              ],
+              "id": "embedded_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much flash memory does a typical microcontroller have?",
+              "answer": "A few kilobytes up to a couple of megabytes",
+              "explain": "A small microcontroller might have 8 KB or 32 KB of flash, while larger ones reach a megabyte or two. That is enough for most embedded tasks, but far less than a laptop.",
+              "choices": [
+                "Gigabytes",
+                "Terabytes",
+                "No storage at all",
+                "A few kilobytes up to a couple of megabytes"
+              ],
+              "id": "embedded_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many pins does a typical microcontroller have?",
+              "answer": "From about 8 to a few hundred, depending on the model",
+              "explain": "Simple microcontrollers have 8 pins, while more capable ones have 48, 64, 100, or more. Each pin can be used for power, ground, or input/output.",
+              "choices": [
+                "Thousands of pins",
+                "From about 8 to a few hundred, depending on the model",
+                "Never more than 4",
+                "Always exactly 64"
+              ],
+              "id": "embedded_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Microprocessor Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a microprocessor?",
+              "answer": "A CPU chip that requires external chips for memory, input/output, and power management",
+              "explain": "A microprocessor is just the brain. To make it work, you need to add RAM, storage, power circuitry, and GPIO controllers on separate chips.",
+              "choices": [
+                "A CPU chip that requires external chips for memory, input/output, and power management",
+                "The same thing as a microcontroller",
+                "A type of memory",
+                "A small computer"
+              ],
+              "id": "embedded_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do microprocessors need external support chips?",
+              "answer": "The CPU must be paired with separate chips for memory management, input/output control, and other functions",
+              "explain": "A microprocessor is specialized for speed and power. Other functions are handled by external chips chosen for the specific application.",
+              "choices": [
+                "External chips make the system cheaper",
+                "The CPU must be paired with separate chips for memory management, input/output control, and other functions",
+                "Because microprocessors cannot execute instructions",
+                "External chips are always faster"
+              ],
+              "id": "embedded_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use a microprocessor instead of a microcontroller?",
+              "answer": "When you need high performance or complex features that a microcontroller cannot provide",
+              "explain": "If you are building a device that needs fast computation, high-resolution graphics, or a lot of RAM, a microprocessor with custom support chips is the right choice.",
+              "choices": [
+                "When you want to save power",
+                "Only for laptop computers",
+                "Microprocessors are always better",
+                "When you need high performance or complex features that a microcontroller cannot provide"
+              ],
+              "id": "embedded_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a key disadvantage of using a microprocessor?",
+              "answer": "Higher cost and complexity due to extra support chips and board design",
+              "explain": "A microprocessor system costs more to design and manufacture because you need multiple chips, more power management, and careful circuit layout.",
+              "choices": [
+                "Microprocessors need more flash memory",
+                "Microprocessors cannot handle input/output",
+                "Microprocessors run slower",
+                "Higher cost and complexity due to extra support chips and board design"
+              ],
+              "id": "embedded_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which kind of chip is a smartphone's main application processor closest to?",
+              "answer": "A microprocessor, paired with RAM, storage, and power management chips",
+              "explain": "It belongs to the microprocessor family: it runs a full operating system and relies on separate RAM and storage chips, although it also integrates many peripherals as a system on a chip.",
+              "choices": [
+                "A microprocessor with no support chips",
+                "Not a real processor",
+                "A simple microcontroller",
+                "A microprocessor, paired with RAM, storage, and power management chips"
+              ],
+              "id": "embedded_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Memory Types",
+      "tip": "Embedded systems use different types of memory for different jobs. Flash memory holds your program and keeps data after power is off. RAM is fast but loses data when power is lost. EEPROM lets you store data that persists but is slower than RAM.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Flash Memory",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is flash memory used for in embedded systems?",
+              "answer": "Storing the program code and data that must survive power loss",
+              "explain": "Flash memory is non-volatile, meaning data persists even when power is off. Your microcontroller's firmware lives here, and configuration data can too.",
+              "choices": [
+                "Storing the program code and data that must survive power loss",
+                "Fast temporary storage while the program runs",
+                "Only for large files",
+                "Communication with other devices"
+              ],
+              "id": "embedded_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is flash memory called 'non-volatile'?",
+              "answer": "Data stored in flash persists even after power is turned off",
+              "explain": "Non-volatile means the data does not evaporate when power is removed. Flash, magnetic disks, and EEPROM are non-volatile. RAM is volatile because it loses data without power.",
+              "choices": [
+                "It is faster than other memories",
+                "Data stored in flash persists even after power is turned off",
+                "It uses electricity for storage",
+                "It is more expensive than RAM"
+              ],
+              "id": "embedded_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many times can you rewrite the same location in flash memory?",
+              "answer": "Thousands to hundreds of thousands of times, but it eventually wears out",
+              "explain": "Flash memory has a limited lifespan. Each erase-write cycle degrades the cells. Typical flash is rated for roughly 10,000 to 100,000 cycles before it may fail.",
+              "choices": [
+                "Only once",
+                "Never more than 100 times",
+                "Infinite times",
+                "Thousands to hundreds of thousands of times, but it eventually wears out"
+              ],
+              "id": "embedded_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you overwrite data in flash memory?",
+              "answer": "The old data is erased first, then the new data is written",
+              "explain": "Flash cells must be erased before writing. You cannot simply flip bits like in RAM. This erase-write cycle is why flash is slower than RAM.",
+              "choices": [
+                "The old data is erased first, then the new data is written",
+                "Flash memory cannot be overwritten",
+                "The old data is overwritten instantly",
+                "The old data stays and new data is added"
+              ],
+              "id": "embedded_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is flash memory ideal for storing a microcontroller's program?",
+              "answer": "Because the program must survive power loss and rarely changes after deployment",
+              "explain": "Once you write a program to flash, it stays there until you intentionally rewrite it. This is perfect for embedded systems that run the same code forever.",
+              "choices": [
+                "Flash memory has unlimited capacity",
+                "Flash memory uses no power",
+                "Because the program must survive power loss and rarely changes after deployment",
+                "Flash memory is the fastest type"
+              ],
+              "id": "embedded_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "RAM and EEPROM",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is RAM in a microcontroller?",
+              "answer": "Fast, volatile memory used for temporary data while the program runs",
+              "explain": "RAM is where your program's variables live while it executes. It is very fast but loses all data when power is removed.",
+              "choices": [
+                "A backup power supply",
+                "Non-volatile storage for programs",
+                "The same as flash memory",
+                "Fast, volatile memory used for temporary data while the program runs"
+              ],
+              "id": "embedded_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you use EEPROM instead of flash memory?",
+              "answer": "EEPROM allows byte-level writing, while flash requires erasing entire blocks first",
+              "explain": "If you need to update a single byte of configuration data, EEPROM is more convenient. Flash requires erasing a whole block (often 256 or 1024 bytes) before writing.",
+              "choices": [
+                "Flash memory is obsolete",
+                "EEPROM allows byte-level writing, while flash requires erasing entire blocks first",
+                "EEPROM has more capacity",
+                "EEPROM is always faster"
+              ],
+              "id": "embedded_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the trade-off when using EEPROM on a microcontroller?",
+              "answer": "It is smaller and slower than flash, but allows easier byte-level updates",
+              "explain": "EEPROM is convenient for storing configuration values, but microcontrollers usually have much less EEPROM than flash. Writing is also slower.",
+              "choices": [
+                "EEPROM keeps data only while powered",
+                "EEPROM takes up more space",
+                "EEPROM is never slower",
+                "It is smaller and slower than flash, but allows easier byte-level updates"
+              ],
+              "id": "embedded_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much RAM does a typical microcontroller have?",
+              "answer": "From a few hundred bytes up to a few hundred kilobytes",
+              "explain": "Small microcontrollers have 256 or 512 bytes of RAM, mid-range ones have a few kilobytes, and the largest have hundreds of kilobytes. This is still much less than a computer's RAM.",
+              "choices": [
+                "Tens of megabytes at minimum",
+                "Terabytes",
+                "Gigabytes",
+                "From a few hundred bytes up to a few hundred kilobytes"
+              ],
+              "id": "embedded_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to the RAM's contents when you power off a microcontroller?",
+              "answer": "All data is lost",
+              "explain": "RAM needs constant power to maintain its data. Turn off the power and RAM is empty. This is why you must use flash or EEPROM to save anything important.",
+              "choices": [
+                "All data is lost",
+                "Data stays forever",
+                "Data converts to flash automatically",
+                "Data stays for a few hours"
+              ],
+              "id": "embedded_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Communication Interfaces",
+      "tip": "Embedded systems need ways to talk to sensors, displays, and each other. UART, I2C, and SPI are three standard protocols. Each has strengths and weaknesses for different situations.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "UART and Serial Communication",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does UART stand for?",
+              "answer": "Universal Asynchronous Receiver Transmitter",
+              "explain": "UART is one of the oldest and simplest serial communication protocols. Asynchronous means there is no clock signal; devices agree on the speed beforehand.",
+              "choices": [
+                "Universal Automatic Receiver and Transmitter",
+                "Unified Analog Receiver and Transmitter",
+                "Universal Asynchronous Receiver Transmitter",
+                "Universal Audio Recording Transmitter"
+              ],
+              "id": "embedded_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many wires does a basic UART link need?",
+              "answer": "Three: TX, RX, and ground",
+              "explain": "A basic UART link uses a TX line, an RX line, and a common ground. Some links add control signals like CTS and RTS, but three wires is the basic setup.",
+              "choices": [
+                "Only 1 wire",
+                "Exactly 8 wires",
+                "Three: TX, RX, and ground",
+                "Four wires, always"
+              ],
+              "id": "embedded_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is baud rate?",
+              "answer": "The speed at which data is transmitted, measured in bits per second",
+              "explain": "Baud rate is how fast a UART sends data. Common rates are 9600, 115200, and 230400 bits per second. Both devices must use the same rate or communication fails.",
+              "choices": [
+                "How often data is checked for errors",
+                "The speed at which data is transmitted, measured in bits per second",
+                "The distance the signal travels",
+                "The size of the data packet"
+              ],
+              "id": "embedded_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of UART?",
+              "answer": "It is simple and needs no shared clock line",
+              "explain": "UART has been used for decades. It is simple to implement, needs no clock wire, and is easy to debug because you can read human-friendly text.",
+              "choices": [
+                "It supports more devices than other protocols",
+                "It is simple and needs no shared clock line",
+                "It needs the most wires of any protocol",
+                "It is the fastest protocol"
+              ],
+              "id": "embedded_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a disadvantage of UART?",
+              "answer": "It normally connects just two devices, and both must agree on the baud rate",
+              "explain": "UART is point-to-point: one transmitter and one receiver. For multiple devices you need multiple UART connections, and mismatched baud rates garble the data.",
+              "choices": [
+                "It uses too many wires",
+                "It is not reliable",
+                "It normally connects just two devices, and both must agree on the baud rate",
+                "It cannot send text"
+              ],
+              "id": "embedded_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "I2C and SPI Protocols",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does I2C stand for?",
+              "answer": "Inter-Integrated Circuit",
+              "explain": "I2C is a bus protocol where multiple devices share the same two wires: SCL (clock) and SDA (data). Devices take turns sending data on the shared bus.",
+              "choices": [
+                "Internal Interface Chip",
+                "Integrated Interface Controller",
+                "Inter-Integrated Circuit",
+                "Internal Integrated Communication"
+              ],
+              "id": "embedded_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many devices can connect to an I2C bus?",
+              "answer": "Many devices, each with a unique address",
+              "explain": "I2C is a multi-controller, multi-target bus. Devices have 7-bit or 10-bit addresses. Usually one controller drives the bus, and the targets listen and respond when their address is called.",
+              "choices": [
+                "Only 8 devices",
+                "Only 2 devices",
+                "Many devices, each with a unique address",
+                "256 devices maximum, no more"
+              ],
+              "id": "embedded_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is SPI?",
+              "answer": "Serial Peripheral Interface, a faster bus protocol that uses separate lines for data in, data out, and clock",
+              "explain": "SPI uses four lines: MOSI (data out), MISO (data in), SCK (clock), and CS (chip select). It is faster than I2C and ideal for high-speed sensors.",
+              "choices": [
+                "A wireless communication method",
+                "Serial Peripheral Interface, a faster bus protocol that uses separate lines for data in, data out, and clock",
+                "A slower version of I2C",
+                "A power distribution protocol"
+              ],
+              "id": "embedded_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When would you choose I2C over SPI?",
+              "answer": "When you need to connect many devices with minimal wiring",
+              "explain": "I2C uses only two wires for any number of devices. SPI requires a separate chip select line per device, so adding devices means more wires. I2C is ideal for boards with many sensors.",
+              "choices": [
+                "I2C works over longer distances",
+                "When you need to connect many devices with minimal wiring",
+                "I2C is always faster",
+                "SPI is never used anymore"
+              ],
+              "id": "embedded_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of SPI?",
+              "answer": "It is faster than I2C and ideal for streaming data from sensors",
+              "explain": "SPI can run at higher speeds than I2C, making it a good fit for fast devices like accelerometers and SD cards.",
+              "choices": [
+                "It is faster than I2C and ideal for streaming data from sensors",
+                "It works over longer distances",
+                "It uses fewer wires than I2C",
+                "It supports more devices than I2C"
+              ],
+              "id": "embedded_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Timing, Interrupts, and GPIO",
+      "tip": "Embedded systems need precise timing and ways to respond instantly to external events. GPIO lets you control and sense digital signals. Interrupts let you respond to events without constantly checking. Timers generate precise delays and PWM signals.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Interrupts and Polling",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is polling?",
+              "answer": "Repeatedly checking an input pin to see if its state has changed",
+              "explain": "Polling is simple: your program asks the pin, waits a bit, asks again. It works but wastes power and processing time checking something that might not have changed.",
+              "choices": [
+                "Sending data over a network",
+                "Repeatedly checking an input pin to see if its state has changed",
+                "Ignoring inputs completely",
+                "Asking the input once"
+              ],
+              "id": "embedded_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an interrupt?",
+              "answer": "A signal that pauses the current program to handle an event immediately",
+              "explain": "When an event occurs (like a button press), an interrupt stops the program, runs a handler, then resumes. This is much more efficient than constantly polling.",
+              "choices": [
+                "A signal that pauses the current program to handle an event immediately",
+                "A delay in the program",
+                "An error message",
+                "A broken connection"
+              ],
+              "id": "embedded_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an interrupt handler?",
+              "answer": "A short function that runs when an interrupt is triggered",
+              "explain": "An interrupt handler (also called an interrupt service routine or ISR) responds to the event. It runs, then the program continues where it left off.",
+              "choices": [
+                "A hardware circuit",
+                "A short function that runs when an interrupt is triggered",
+                "A communication protocol",
+                "A type of clock"
+              ],
+              "id": "embedded_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use interrupts instead of polling?",
+              "answer": "When you need fast response times or want to save power",
+              "explain": "Interrupts let your program sleep while waiting for an event, saving power. They also guarantee immediate response, unlike polling which depends on how often you check.",
+              "choices": [
+                "Polling is always better",
+                "Only for wireless communication",
+                "When you need fast response times or want to save power",
+                "Interrupts never work"
+              ],
+              "id": "embedded_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What must you do in an interrupt handler to avoid missing events?",
+              "answer": "Keep it short and return quickly so other interrupts can be processed",
+              "explain": "If your interrupt handler takes too long, other events will be missed. The rule is: save the state, do the minimal work, and return.",
+              "choices": [
+                "Sleep inside the interrupt handler",
+                "Make it as long and detailed as possible",
+                "Keep it short and return quickly so other interrupts can be processed",
+                "Call other interrupt handlers inside it"
+              ],
+              "id": "embedded_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Timers and PWM",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a timer do?",
+              "answer": "Counts clock pulses to measure time or trigger events at regular intervals",
+              "explain": "Timers are essential for precise timing. They count up or down, and when they reach a value, they trigger an interrupt or toggle an output pin.",
+              "choices": [
+                "Transmits data over the network",
+                "Measures wall clock time only",
+                "Stores data",
+                "Counts clock pulses to measure time or trigger events at regular intervals"
+              ],
+              "id": "embedded_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is PWM?",
+              "answer": "Pulse-Width Modulation: rapidly switching a pin on and off to simulate variable output",
+              "explain": "PWM turns a digital signal into an analog-like effect. By varying how long it stays on versus off, you control the average power or brightness.",
+              "choices": [
+                "A type of memory",
+                "Pulse-Width Modulation: rapidly switching a pin on and off to simulate variable output",
+                "A communication protocol",
+                "Power Waste Monitoring"
+              ],
+              "id": "embedded_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the duty cycle in PWM?",
+              "answer": "The percentage of time the signal stays high versus low",
+              "explain": "If PWM switches at 50% duty cycle, the pin is on half the time and off half the time. 75% duty cycle means on longer. This percentage controls the output level.",
+              "choices": [
+                "The distance the signal travels",
+                "The percentage of time the signal stays high versus low",
+                "The frequency of switching",
+                "The power consumed"
+              ],
+              "id": "embedded_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can you do with PWM?",
+              "answer": "Dim an LED, control motor speed, or generate analog-like signals",
+              "explain": "PWM is incredibly useful. Dim an LED to any brightness. Control a motor from 0 to full speed. Generate audio signals. All with just on-off switching.",
+              "choices": [
+                "Dim an LED, control motor speed, or generate analog-like signals",
+                "Only measure time",
+                "Only toggle digital pins on and off",
+                "Only transmit data"
+              ],
+              "id": "embedded_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How fast must PWM switch to dim an LED smoothly?",
+              "answer": "Roughly 100 Hz or more, and 1 kHz or higher is common",
+              "explain": "At low frequencies your eye sees flicker. Somewhere around 100 Hz and above it looks smooth. Most microcontroller PWM runs at 1 kHz or faster.",
+              "choices": [
+                "10 Hz is enough",
+                "1 Hz is enough",
+                "No minimum speed needed",
+                "Roughly 100 Hz or more, and 1 kHz or higher is common"
+              ],
+              "id": "embedded_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Power and Firmware",
+      "tip": "Embedded systems operate under tight power budgets, especially battery-powered ones. Understanding power consumption, sleep modes, and how firmware gets into the chip is critical for practical design.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Power Constraints and Sleep Modes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main power constraint in battery-powered embedded systems?",
+              "answer": "Battery capacity limits runtime, so power consumption must be minimized",
+              "explain": "A smartwatch battery holds a fixed amount of energy. Every milliamp of current, every minute the CPU runs, drains the battery. Low power is essential.",
+              "choices": [
+                "Battery capacity limits runtime, so power consumption must be minimized",
+                "Batteries are always unlimited",
+                "Power constraints only apply to large computers",
+                "The power supply is too powerful"
+              ],
+              "id": "embedded_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a sleep mode?",
+              "answer": "A low-power state where the CPU is paused but can wake on an interrupt",
+              "explain": "In a typical sleep mode, the CPU is paused, RAM stays powered, and the device wakes quickly when an interrupt fires. Deeper sleep modes save more power but may lose RAM contents.",
+              "choices": [
+                "Turning off the device",
+                "A low-power state where the CPU is paused but can wake on an interrupt",
+                "Stopping all clocks permanently",
+                "Reducing brightness only"
+              ],
+              "id": "embedded_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much power can sleep mode save?",
+              "answer": "Often 100 to 1000 times less than active mode",
+              "explain": "Active mode might use 20 mA. Sleep might use 20 uA. The difference is huge. Devices that sleep most of the time can run for months on a coin cell battery.",
+              "choices": [
+                "Sleep saves very little power",
+                "Often 100 to 1000 times less than active mode",
+                "Sleep mode is never used",
+                "Sleep uses more power"
+              ],
+              "id": "embedded_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does running the CPU slower reduce power consumption?",
+              "answer": "Power usage scales with both voltage and frequency",
+              "explain": "Lower clock speed means fewer transistor switches per second. Lowering voltage is even more effective because power scales with voltage squared.",
+              "choices": [
+                "Slower CPU means the program runs longer",
+                "Slower CPUs do not consume less power",
+                "Batteries provide less voltage to slower CPUs",
+                "Power usage scales with both voltage and frequency"
+              ],
+              "id": "embedded_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is dynamic voltage and frequency scaling?",
+              "answer": "Lowering CPU speed and voltage when full performance is not needed",
+              "explain": "Many microcontrollers can adjust their clock and voltage based on the workload. Heavy tasks run at full speed. Idle time runs at minimal power.",
+              "choices": [
+                "Lowering CPU speed and voltage when full performance is not needed",
+                "Keeping CPU speed constant",
+                "Stopping the clock completely",
+                "A type of sleep mode"
+              ],
+              "id": "embedded_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Bootloaders and Firmware",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is firmware?",
+              "answer": "The program that runs on a microcontroller, stored in flash memory",
+              "explain": "Firmware is the software component of embedded systems. It is stored in flash and runs when the device powers up.",
+              "choices": [
+                "The power supply circuit",
+                "A wireless signal",
+                "The program that runs on a microcontroller, stored in flash memory",
+                "Hardware that is very old"
+              ],
+              "id": "embedded_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bootloader?",
+              "answer": "A small program that runs first, sets up the system, and jumps to the main firmware",
+              "explain": "The bootloader is the first code to run. It initializes the CPU, sets up memory, configures clocks, and then starts your application. It is also how you program new firmware.",
+              "choices": [
+                "A small program that runs first, sets up the system, and jumps to the main firmware",
+                "The main program",
+                "A hardware circuit",
+                "A type of virus"
+              ],
+              "id": "embedded_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you program a microcontroller?",
+              "answer": "Connect a programmer or bootloader port and upload the hex file",
+              "explain": "You write code, compile it to a hex file, and use a programmer (like JTAG or the bootloader over serial) to write that file to flash memory.",
+              "choices": [
+                "Send the code over the internet",
+                "Connect a programmer or bootloader port and upload the hex file",
+                "Type the code into the chip with a keyboard",
+                "Microcontrollers cannot be programmed"
+              ],
+              "id": "embedded_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of a bootloader over a hardware programmer?",
+              "answer": "Bootloaders allow uploading new firmware without special hardware",
+              "explain": "Many microcontrollers include a bootloader that lets you program via USB or serial without needing a separate programmer. This makes development and field updates much easier.",
+              "choices": [
+                "Bootloaders only work once",
+                "Bootloaders allow uploading new firmware without special hardware",
+                "Hardware programmers are obsolete",
+                "Bootloaders are slower"
+              ],
+              "id": "embedded_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if firmware becomes corrupted?",
+              "answer": "The device no longer runs correctly or may not start at all",
+              "explain": "If the bootloader or application firmware is corrupted, the device may be unusable until it is reflashed. That can need an external programmer or a recovery mode.",
+              "choices": [
+                "Corrupted firmware never happens",
+                "The device automatically fixes it",
+                "The device continues running old firmware",
+                "The device no longer runs correctly or may not start at all"
+              ],
+              "id": "embedded_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
