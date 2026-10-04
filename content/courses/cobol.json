@@ -1,0 +1,904 @@
+{
+  "id": "cobol",
+  "name": "COBOL",
+  "category": "programming",
+  "icon": "fa-solid fa-building-columns",
+  "level": "Business Computing",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What COBOL Is and Where It Runs",
+      "tip": "COBOL (Common Business-Oriented Language) was invented in 1959 to handle business data processing. It remains in use today for financial systems, government agencies, and large corporations handling very large volumes of money and records.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "History and Purpose",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does COBOL stand for?",
+              "answer": "Common Business-Oriented Language",
+              "explain": "COBOL was designed in 1959 specifically for business and administrative systems that process large amounts of data.",
+              "choices": [
+                "Common Business-Oriented Language",
+                "Common Byte-Order Logic",
+                "Compiled Object-Based Open Language",
+                "Computer Business Operations Layer"
+              ],
+              "id": "cobol_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What decade was COBOL invented?",
+              "answer": "1950s",
+              "explain": "COBOL was developed in 1959 and first standardized in 1961, making it one of the oldest high-level languages still in use.",
+              "choices": [
+                "1970s",
+                "1950s",
+                "1960s",
+                "1980s"
+              ],
+              "id": "cobol_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For what type of work was COBOL designed?",
+              "answer": "Business data processing and administration",
+              "explain": "COBOL was created to solve business problems like payroll, inventory, and financial record-keeping, not scientific computing.",
+              "choices": [
+                "Scientific calculations",
+                "Web development",
+                "Business data processing and administration",
+                "Operating system development"
+              ],
+              "id": "cobol_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these sectors is COBOL still widely used in today?",
+              "answer": "Banking and government",
+              "explain": "Legacy COBOL systems handle enormous financial transactions and government records because replacing them would be too costly and risky.",
+              "choices": [
+                "Social media platforms",
+                "Mobile app development",
+                "Video game development",
+                "Banking and government"
+              ],
+              "id": "cobol_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why has COBOL remained in use for over 60 years?",
+              "answer": "It is stable, reliable, and replacing it would be extremely expensive",
+              "explain": "Huge amounts of working COBOL code run mission-critical data. Rewriting those systems in modern languages is costly and risky.",
+              "choices": [
+                "It is stable, reliable, and replacing it would be extremely expensive",
+                "It is easier to learn than Java",
+                "It is more powerful than modern languages",
+                "It is required by law in all countries"
+              ],
+              "id": "cobol_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "COBOL Program Structure",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a COBOL program?",
+              "answer": "A file containing one or more divisions of code",
+              "explain": "A COBOL program is organized into divisions, each serving a specific purpose in the overall structure.",
+              "choices": [
+                "Only the PROCEDURE division",
+                "A file containing one or more divisions of code",
+                "A single section with all code mixed together",
+                "A web application written in COBOL"
+              ],
+              "id": "cobol_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many main divisions does COBOL have?",
+              "answer": "Four",
+              "explain": "COBOL has four divisions: IDENTIFICATION, ENVIRONMENT, DATA, and PROCEDURE. Each serves a distinct purpose.",
+              "choices": [
+                "Five",
+                "Two",
+                "Four",
+                "Three"
+              ],
+              "id": "cobol_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which division describes the program's name and purpose?",
+              "answer": "IDENTIFICATION",
+              "explain": "The IDENTIFICATION division contains metadata like the program name, author, and date of creation.",
+              "choices": [
+                "ENVIRONMENT",
+                "DATA",
+                "PROCEDURE",
+                "IDENTIFICATION"
+              ],
+              "id": "cobol_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is the order of divisions in a COBOL program flexible?",
+              "answer": "No, they must appear in a fixed order",
+              "explain": "COBOL requires divisions in this exact order: IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE. Changing the order causes a syntax error.",
+              "choices": [
+                "No, they must appear in a fixed order",
+                "Only PROCEDURE must be last",
+                "Yes, any order works",
+                "Only IDENTIFICATION must be first"
+              ],
+              "id": "cobol_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which division must come last in a COBOL program?",
+              "answer": "PROCEDURE",
+              "explain": "The fixed order is IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE, so the executable statements in PROCEDURE come last.",
+              "choices": [
+                "IDENTIFICATION",
+                "ENVIRONMENT",
+                "DATA",
+                "PROCEDURE"
+              ],
+              "id": "cobol_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "The Four Divisions",
+      "tip": "Each COBOL division has a specific role. IDENTIFICATION tells what the program is. ENVIRONMENT tells it where files and hardware are. DATA defines the structure of data. PROCEDURE contains the actual instructions.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "IDENTIFICATION and ENVIRONMENT Divisions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What information goes in the IDENTIFICATION division?",
+              "answer": "Program name, author, date, and purpose",
+              "explain": "The IDENTIFICATION division is metadata. It includes PROGRAM-ID, AUTHOR, DATE-WRITTEN, and other descriptive paragraphs.",
+              "choices": [
+                "All file names and locations",
+                "All data definitions",
+                "Program name, author, date, and purpose",
+                "All COBOL verbs and instructions"
+              ],
+              "id": "cobol_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which paragraph is required in the IDENTIFICATION division?",
+              "answer": "PROGRAM-ID",
+              "explain": "PROGRAM-ID is mandatory; it gives the program a name. Other paragraphs like AUTHOR and DATE-WRITTEN are optional.",
+              "choices": [
+                "VERSION",
+                "AUTHOR",
+                "DATE-WRITTEN",
+                "PROGRAM-ID"
+              ],
+              "id": "cobol_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the ENVIRONMENT division?",
+              "answer": "To declare files and input/output devices",
+              "explain": "The ENVIRONMENT division maps logical file names to physical files, tapes, and hardware devices.",
+              "choices": [
+                "To declare files and input/output devices",
+                "To define all variables",
+                "To contain all program logic",
+                "To declare the program's author"
+              ],
+              "id": "cobol_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What section of the ENVIRONMENT division defines how files are used?",
+              "answer": "INPUT-OUTPUT SECTION",
+              "explain": "The INPUT-OUTPUT SECTION contains the FILE-CONTROL paragraph that links logical file names to physical files.",
+              "choices": [
+                "CONFIGURATION SECTION",
+                "INPUT-OUTPUT SECTION",
+                "FILE SECTION",
+                "PROCEDURE SECTION"
+              ],
+              "id": "cobol_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where in the ENVIRONMENT division would you declare that a file is on disk?",
+              "answer": "In FILE-CONTROL paragraph under INPUT-OUTPUT SECTION",
+              "explain": "FILE-CONTROL uses SELECT ... ASSIGN entries to link each logical file name to a physical file or device.",
+              "choices": [
+                "In the DATA division",
+                "In CONFIGURATION SECTION",
+                "In FILE-CONTROL paragraph under INPUT-OUTPUT SECTION",
+                "In the PROCEDURE division"
+              ],
+              "id": "cobol_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "DATA and PROCEDURE Divisions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the DATA division?",
+              "answer": "To define the structure and format of all data used by the program",
+              "explain": "The DATA division declares every variable, file record, and work area the program will use, with their types and sizes.",
+              "choices": [
+                "To contain all instructions",
+                "To list program authors",
+                "To declare input/output devices",
+                "To define the structure and format of all data used by the program"
+              ],
+              "id": "cobol_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which section of the DATA division describes file record layouts?",
+              "answer": "FILE SECTION",
+              "explain": "The FILE SECTION defines the structure of records in each file declared in ENVIRONMENT division.",
+              "choices": [
+                "FILE SECTION",
+                "WORKING-STORAGE SECTION",
+                "LINKAGE SECTION",
+                "REPORT SECTION"
+              ],
+              "id": "cobol_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is WORKING-STORAGE SECTION?",
+              "answer": "Variables and temporary storage used by the program",
+              "explain": "WORKING-STORAGE holds variables created and used during program execution, separate from file data.",
+              "choices": [
+                "Data from external files",
+                "Variables and temporary storage used by the program",
+                "Input parameters from the operating system",
+                "Program constants only"
+              ],
+              "id": "cobol_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the PROCEDURE division contain?",
+              "answer": "The executable statements and logic of the program",
+              "explain": "The PROCEDURE division holds the actual verbs (MOVE, PERFORM, READ, etc.) that make the program do its work.",
+              "choices": [
+                "File input/output setup",
+                "Data variable declarations",
+                "The executable statements and logic of the program",
+                "Program metadata and author information"
+              ],
+              "id": "cobol_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is the PROCEDURE division organized?",
+              "answer": "Into paragraphs and sections containing named procedures",
+              "explain": "PROCEDURE division code is split into named paragraphs (like MAIN, PROCESS-RECORDS) that can be called with PERFORM.",
+              "choices": [
+                "Into a single block of code",
+                "Into objects like in C++",
+                "Into functions like in Java",
+                "Into paragraphs and sections containing named procedures"
+              ],
+              "id": "cobol_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Data Definition and PIC Clauses",
+      "tip": "Data items in COBOL are defined with PIC (picture) clauses that describe their format. Numeric items use 9, alphabetic use A, alphanumeric use X. The clause tells COBOL how to store and display data.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "PIC Clause Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does PIC stand for in COBOL?",
+              "answer": "Picture clause",
+              "explain": "PIC is short for PICTURE, which describes the format and size of a data item.",
+              "choices": [
+                "Picture clause",
+                "Process input command",
+                "Procedure input code",
+                "Parameter input class"
+              ],
+              "id": "cobol_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a PIC clause, what does the character '9' represent?",
+              "answer": "A numeric digit (0-9)",
+              "explain": "PIC 9 means one numeric digit. PIC 999 means a three-digit number. PIC 9(5) means five numeric digits.",
+              "choices": [
+                "Any character",
+                "A numeric digit (0-9)",
+                "A letter",
+                "A space or number"
+              ],
+              "id": "cobol_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What PIC clause defines an alphabetic field?",
+              "answer": "PIC A",
+              "explain": "PIC A allows only letters and spaces. PIC A(10) allows 10 such characters. Digits and special characters are not allowed.",
+              "choices": [
+                "PIC 9",
+                "PIC X",
+                "PIC A",
+                "PIC N"
+              ],
+              "id": "cobol_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What PIC clause allows any character (letters, numbers, symbols)?",
+              "answer": "PIC X",
+              "explain": "PIC X is alphanumeric. PIC X(20) allows 20 characters of any type.",
+              "choices": [
+                "PIC 9",
+                "PIC A",
+                "PIC C",
+                "PIC X"
+              ],
+              "id": "cobol_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which PIC clause uses a repeat count to define a 5-digit number?",
+              "answer": "PIC 9(5)",
+              "explain": "PIC 9(5) means five numeric digits. The parentheses are a repeat count for the 9.",
+              "choices": [
+                "PIC 9(5)",
+                "PIC 5",
+                "PIC 9-5",
+                "PIC N5"
+              ],
+              "id": "cobol_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Data Levels and Hierarchies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'data level' in COBOL?",
+              "answer": "A number indicating how data items relate hierarchically",
+              "explain": "Data levels (01, 05, 10, etc.) show nesting. Level 01 is the top group; higher numbers are sub-items.",
+              "choices": [
+                "A priority ranking for variables",
+                "A number indicating how data items relate hierarchically",
+                "The number of digits a variable holds",
+                "How many times a variable is used"
+              ],
+              "id": "cobol_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does level '01' represent in COBOL data?",
+              "answer": "A top-level record or group item",
+              "explain": "Level 01 is the highest level, usually a complete record. All other levels are subordinate to it.",
+              "choices": [
+                "A single character",
+                "An input field only",
+                "A top-level record or group item",
+                "A file name"
+              ],
+              "id": "cobol_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a sub-field within a record?",
+              "answer": "Use a higher data level number (05, 10, etc.) for nested items",
+              "explain": "If a level-01 record contains a customer address, the street, city, state would be level-05 items.",
+              "choices": [
+                "Use level 01 for each sub-field",
+                "Use negative numbers",
+                "Sub-fields cannot exist in COBOL",
+                "Use a higher data level number (05, 10, etc.) for nested items"
+              ],
+              "id": "cobol_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In COBOL, can a level-05 item belong to two different level-01 records?",
+              "answer": "No, it belongs only to the nearest higher-level item",
+              "explain": "A level-05 belongs to the most recent level-01 or other parent level above it.",
+              "choices": [
+                "No, it belongs only to the nearest higher-level item",
+                "Yes, it can",
+                "Only if explicitly linked",
+                "Only in the PROCEDURE division"
+              ],
+              "id": "cobol_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'group item' in COBOL?",
+              "answer": "A data item that contains multiple sub-items",
+              "explain": "A group item (like an address) has no PIC clause; it is composed of smaller fields (street, city, state).",
+              "choices": [
+                "An item used multiple times",
+                "A data item that contains multiple sub-items",
+                "An array of numbers",
+                "A file of records"
+              ],
+              "id": "cobol_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The PROCEDURE Division and Basic Operations",
+      "tip": "The PROCEDURE division is where the actual work happens. It reads data, processes it, performs calculations, and writes results. The basic structure uses paragraphs that can be called by PERFORM.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "MOVE and Arithmetic Verbs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the MOVE verb do in COBOL?",
+              "answer": "Copies a value from one variable to another",
+              "explain": "MOVE copies data. The source keeps its value; the destination gets a copy. Example: MOVE employee-name TO report-name",
+              "choices": [
+                "Deletes a variable",
+                "Reads data from a file",
+                "Copies a value from one variable to another",
+                "Performs a calculation"
+              ],
+              "id": "cobol_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you MOVE a shorter value to a longer field?",
+              "answer": "The shorter value is padded with spaces (or zeros for numeric fields)",
+              "explain": "COBOL adjusts the length. Text is left-aligned and padded right with spaces; numbers are right-aligned and padded left with zeros.",
+              "choices": [
+                "An error occurs",
+                "The values swap",
+                "The longer field is truncated",
+                "The shorter value is padded with spaces (or zeros for numeric fields)"
+              ],
+              "id": "cobol_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which verb adds two numbers in COBOL?",
+              "answer": "ADD",
+              "explain": "ADD adds values. Example: ADD hours-worked TO total-hours",
+              "choices": [
+                "ADD",
+                "SUM",
+                "PLUS",
+                "CALCULATE"
+              ],
+              "id": "cobol_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you subtract in COBOL?",
+              "answer": "SUBTRACT",
+              "explain": "SUBTRACT subtracts one value from another. Example: SUBTRACT deductions FROM gross-pay GIVING net-pay",
+              "choices": [
+                "REMOVE",
+                "SUBTRACT",
+                "MINUS",
+                "TAKE-AWAY"
+              ],
+              "id": "cobol_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the MULTIPLY verb used for?",
+              "answer": "To multiply two values together",
+              "explain": "MULTIPLY multiplies values. Example: MULTIPLY price BY quantity GIVING total",
+              "choices": [
+                "To copy data",
+                "To read a file",
+                "To multiply two values together",
+                "To create a loop"
+              ],
+              "id": "cobol_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "PERFORM and Program Flow",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the PERFORM verb do?",
+              "answer": "Calls a named paragraph or section",
+              "explain": "PERFORM jumps to a paragraph, executes it, and returns. It is similar to a function call in other languages.",
+              "choices": [
+                "Performs arithmetic",
+                "Reads the next record",
+                "Performs all operations once",
+                "Calls a named paragraph or section"
+              ],
+              "id": "cobol_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does PERFORM ... UNTIL do?",
+              "answer": "Repeats a paragraph until a condition is true",
+              "explain": "PERFORM ... UNTIL loops, executing the paragraph repeatedly until the condition becomes true.",
+              "choices": [
+                "Repeats a paragraph until a condition is true",
+                "Performs once and stops",
+                "Repeats forever",
+                "Performs only if a condition is false"
+              ],
+              "id": "cobol_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens after a PERFORM completes?",
+              "answer": "Control returns to the statement after the PERFORM",
+              "explain": "PERFORM calls a paragraph and waits for it to finish, then continues with the next statement.",
+              "choices": [
+                "The program ends",
+                "Control returns to the statement after the PERFORM",
+                "The paragraph is called again",
+                "The condition is reset"
+              ],
+              "id": "cobol_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you execute a paragraph 10 times in COBOL?",
+              "answer": "PERFORM paragraph-name 10 TIMES",
+              "explain": "This syntax tells COBOL to call the paragraph exactly 10 times.",
+              "choices": [
+                "PERFORM 10 paragraph-name",
+                "PERFORM paragraph-name LOOP 10",
+                "PERFORM paragraph-name 10 TIMES",
+                "REPEAT paragraph-name 10"
+              ],
+              "id": "cobol_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does PERFORM VARYING do?",
+              "answer": "Repeats a paragraph while incrementing a counter variable",
+              "explain": "PERFORM VARYING is like a for-loop, incrementing a variable each time until a condition is met.",
+              "choices": [
+                "Changes the paragraph name",
+                "Varies the data in a file",
+                "Performs multiple paragraphs",
+                "Repeats a paragraph while incrementing a counter variable"
+              ],
+              "id": "cobol_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Conditionals and Decision Making",
+      "tip": "COBOL uses IF statements to make decisions based on conditions. You can test equality, inequality, and numeric comparisons. Conditions can be combined with AND, OR, and NOT.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "IF Statements and Comparisons",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the basic structure of an IF statement in COBOL?",
+              "answer": "IF condition THEN statement(s) ELSE statement(s) END-IF",
+              "explain": "IF checks a condition. If true, the first statements execute. If false, the ELSE statements execute (if present).",
+              "choices": [
+                "IF condition THEN statement(s) ELSE statement(s) END-IF",
+                "CONDITION IF statement",
+                "statement IF condition",
+                "CHECK condition THEN statement"
+              ],
+              "id": "cobol_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you test if two values are equal in COBOL?",
+              "answer": "IF value1 = value2",
+              "explain": "The = operator tests equality. Example: IF employee-salary = 50000",
+              "choices": [
+                "IF value1 == value2",
+                "IF value1 = value2",
+                "IF value1 EQUALS value2",
+                "IF value1 IS value2"
+              ],
+              "id": "cobol_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you test if a value is greater than another?",
+              "answer": "IF value1 > value2",
+              "explain": "The > operator tests if the first value is greater. < tests less than, = tests equal.",
+              "choices": [
+                "IF value1 >> value2",
+                "IF value1 ABOVE value2",
+                "IF value1 > value2",
+                "IF value1 MORE value2"
+              ],
+              "id": "cobol_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you combine two conditions with AND in COBOL?",
+              "answer": "IF condition1 AND condition2",
+              "explain": "AND requires both conditions to be true. If either is false, the whole condition is false.",
+              "choices": [
+                "IF condition1 && condition2",
+                "IF condition1 ALSO condition2",
+                "IF (condition1) (condition2)",
+                "IF condition1 AND condition2"
+              ],
+              "id": "cobol_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does OR do in a COBOL condition?",
+              "answer": "Makes the condition true if either condition is true",
+              "explain": "OR requires at least one condition to be true. If either is true, the whole condition is true.",
+              "choices": [
+                "Makes the condition true if either condition is true",
+                "Makes both conditions true",
+                "Reverses the condition",
+                "Removes the condition"
+              ],
+              "id": "cobol_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Nested Conditions and Negation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you test if a value is NOT equal in COBOL?",
+              "answer": "IF value1 NOT = value2",
+              "explain": "NOT placed before the relational operator reverses it, so NOT = means not equal.",
+              "choices": [
+                "IF value1 != value2",
+                "IF value1 NOT = value2",
+                "IF value1 =/= value2",
+                "IF value1 ISNT value2"
+              ],
+              "id": "cobol_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can IF statements be nested inside each other?",
+              "answer": "Yes, one IF can be inside another IF",
+              "explain": "Nested IFs allow complex decision trees. An IF inside an IF's THEN or ELSE clause executes conditionally.",
+              "choices": [
+                "No, only one IF per program",
+                "Only in the PROCEDURE division",
+                "Yes, one IF can be inside another IF",
+                "Only at the top level"
+              ],
+              "id": "cobol_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does EVALUATE do in COBOL?",
+              "answer": "Tests one value against multiple conditions (like a switch statement)",
+              "explain": "EVALUATE works like a switch or case statement and is cleaner than many nested IFs when testing one value against many.",
+              "choices": [
+                "Performs arithmetic evaluation",
+                "Calculates average values",
+                "Evaluates IF statements",
+                "Tests one value against multiple conditions (like a switch statement)"
+              ],
+              "id": "cobol_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which statement tests that WS-COUNT is less than 10?",
+              "answer": "IF WS-COUNT < 10",
+              "explain": "The < operator tests less than. COBOL also accepts IS LESS THAN.",
+              "choices": [
+                "IF WS-COUNT < 10",
+                "IF WS-COUNT << 10",
+                "IF WS-COUNT LESSER 10",
+                "IF WS-COUNT BELOW 10"
+              ],
+              "id": "cobol_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'END-IF' do in COBOL?",
+              "answer": "Marks the end of an IF statement block",
+              "explain": "END-IF clearly closes the IF statement, making code more readable, especially with nested IFs.",
+              "choices": [
+                "Ends the entire program",
+                "Marks the end of an IF statement block",
+                "Reverses the IF condition",
+                "Skips the IF statement"
+              ],
+              "id": "cobol_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Files, Records, and I/O",
+      "tip": "COBOL reads and writes files containing records. A file is declared in ENVIRONMENT, its structure in DATA, and READ/WRITE operations happen in PROCEDURE. Sequential files are processed one record at a time.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "File Organization and Records",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'record' in COBOL?",
+              "answer": "A collection of related fields treated as one unit",
+              "explain": "A record (like an employee record) groups fields (name, salary, ID) together. Each file contains one or more records.",
+              "choices": [
+                "A single data value",
+                "A file name",
+                "A collection of related fields treated as one unit",
+                "A program statement"
+              ],
+              "id": "cobol_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'sequential file' in COBOL?",
+              "answer": "Records stored in order, must be read one after another",
+              "explain": "In a sequential file, you read the first record, then the second, then the third, in order. You cannot jump to record 10.",
+              "choices": [
+                "A file that can be accessed randomly",
+                "A file that cannot be written to",
+                "A file that stores only numbers",
+                "Records stored in order, must be read one after another"
+              ],
+              "id": "cobol_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where is a file's structure defined in COBOL?",
+              "answer": "In the FILE SECTION of the DATA division",
+              "explain": "FILE SECTION describes the layout and fields of each record in a file.",
+              "choices": [
+                "In the FILE SECTION of the DATA division",
+                "In the PROCEDURE division",
+                "In the ENVIRONMENT division",
+                "In the IDENTIFICATION division"
+              ],
+              "id": "cobol_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'FD' stand for in COBOL file definitions?",
+              "answer": "File Description",
+              "explain": "FD introduces a file description entry. It is followed by the file name and then the record layout.",
+              "choices": [
+                "File Description",
+                "File Directory",
+                "File Data",
+                "Format Data"
+              ],
+              "id": "cobol_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a file have multiple record types with different structures?",
+              "answer": "Yes, with several 01 record descriptions under the FD or with REDEFINES",
+              "explain": "A file might have header records, detail records, and trailer records with different layouts.",
+              "choices": [
+                "No, all records must be identical",
+                "Only if in separate files",
+                "Yes, with several 01 record descriptions under the FD or with REDEFINES",
+                "Only with EVALUATE statements"
+              ],
+              "id": "cobol_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "READ and WRITE Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the READ verb do?",
+              "answer": "Reads the next record from a file into memory",
+              "explain": "READ fetches one record from the current file position. After reading, you can process it.",
+              "choices": [
+                "Displays a record on the screen",
+                "Deletes a record from a file",
+                "Searches for a record",
+                "Reads the next record from a file into memory"
+              ],
+              "id": "cobol_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the WRITE verb do?",
+              "answer": "Outputs a record to a file",
+              "explain": "WRITE sends a record from working storage to an output file.",
+              "choices": [
+                "Outputs a record to a file",
+                "Reads from a file",
+                "Deletes a record",
+                "Displays data on screen"
+              ],
+              "id": "cobol_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'AT END' clause in a READ statement?",
+              "answer": "Specifies what to do when the file ends",
+              "explain": "AT END executes if READ tries to read past the last record (end-of-file). Example: READ input-file AT END MOVE 1 TO eof-flag",
+              "choices": [
+                "The last record in the file",
+                "Specifies what to do when the file ends",
+                "When to close the file",
+                "The file location at the end"
+              ],
+              "id": "cobol_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you process all records in a file?",
+              "answer": "READ the first record, then PERFORM a loop UNTIL the end-of-file flag is set",
+              "explain": "Read the first record before the loop. In the loop, process the record and READ the next one, setting a flag in AT END, until the flag is set.",
+              "choices": [
+                "Use a single READ statement",
+                "Use WRITE to loop",
+                "READ the first record, then PERFORM a loop UNTIL the end-of-file flag is set",
+                "Use MOVE in a loop"
+              ],
+              "id": "cobol_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What verb closes a file in COBOL?",
+              "answer": "CLOSE",
+              "explain": "CLOSE flushes any buffered data and releases the file. Always close files when done with them.",
+              "choices": [
+                "END",
+                "RELEASE",
+                "STOP",
+                "CLOSE"
+              ],
+              "id": "cobol_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

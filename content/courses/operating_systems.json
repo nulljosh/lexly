@@ -1,0 +1,904 @@
+{
+  "id": "operating_systems",
+  "name": "Operating Systems",
+  "category": "programming",
+  "icon": "fa-solid fa-window-restore",
+  "level": "How the OS Works",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Kernel vs User Space",
+      "tip": "The kernel is the core of the OS that controls hardware directly. User space is where applications run with restricted access. This separation protects the system from buggy or malicious programs.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Kernel and Its Role",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the OS kernel?",
+              "answer": "The core software that directly controls hardware and manages resources",
+              "explain": "The kernel is the most privileged part of the OS. It handles the CPU, memory, disks, and other hardware.",
+              "choices": [
+                "The core software that directly controls hardware and manages resources",
+                "A type of hardware",
+                "A user application",
+                "A file system"
+              ],
+              "id": "operating_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'user space' in an operating system?",
+              "answer": "The restricted environment where applications run",
+              "explain": "User space is where programs execute with limited access to hardware. The kernel isolates user programs from each other and the hardware.",
+              "choices": [
+                "Memory reserved for the user's files",
+                "The restricted environment where applications run",
+                "The fastest part of the CPU",
+                "Direct access to all hardware"
+              ],
+              "id": "operating_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a program in user space directly access the hard drive?",
+              "answer": "No, it must ask the kernel via system calls",
+              "explain": "User programs cannot directly touch hardware. They request the kernel to perform I/O on their behalf.",
+              "choices": [
+                "Yes, directly",
+                "Only if it is a file manager",
+                "No, it must ask the kernel via system calls",
+                "Only for reading, not writing"
+              ],
+              "id": "operating_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What prevents a buggy user program from crashing the kernel?",
+              "answer": "Privileged mode protection and memory isolation",
+              "explain": "The kernel runs in privileged mode and has its own protected memory. User programs cannot access kernel memory or hardware directly.",
+              "choices": [
+                "Nothing, any crash affects the kernel",
+                "User programs are always verified",
+                "The kernel is immune to crashes",
+                "Privileged mode protection and memory isolation"
+              ],
+              "id": "operating_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What mode does the CPU run in for kernel operations?",
+              "answer": "Privileged mode (kernel mode)",
+              "explain": "The CPU has two modes: kernel mode (privileged, full access) and user mode (restricted). The kernel mode allows direct hardware access.",
+              "choices": [
+                "Privileged mode (kernel mode)",
+                "User mode only",
+                "Safe mode",
+                "Debug mode"
+              ],
+              "id": "operating_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "User Mode and Isolation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why does the OS separate kernel and user space?",
+              "answer": "To protect the system from buggy or malicious programs",
+              "explain": "If one program could crash the kernel or access another program's memory, the system would be unstable and insecure.",
+              "choices": [
+                "To make programs run faster",
+                "To protect the system from buggy or malicious programs",
+                "To save disk space",
+                "To support multiple languages"
+              ],
+              "id": "operating_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can one user program directly access another program's memory?",
+              "answer": "No, the kernel enforces memory protection",
+              "explain": "The kernel isolates each program's memory. Attempts to cross boundaries are blocked, keeping programs from interfering with each other.",
+              "choices": [
+                "Yes, if they are from the same user",
+                "Yes, always",
+                "No, the kernel enforces memory protection",
+                "Only on older systems"
+              ],
+              "id": "operating_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a user program tries to access kernel memory?",
+              "answer": "The CPU raises an exception and the kernel terminates the program",
+              "explain": "Memory protection is enforced by the CPU. Illegal memory access triggers a fault that the kernel handles by killing the offending program.",
+              "choices": [
+                "The memory is accessed",
+                "The program is slowed down",
+                "The request is logged but ignored",
+                "The CPU raises an exception and the kernel terminates the program"
+              ],
+              "id": "operating_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What privilege level do typical user applications run at?",
+              "answer": "User mode (lower privilege)",
+              "explain": "User mode restricts direct access to hardware and other programs' memory. Only the kernel has full privilege.",
+              "choices": [
+                "User mode (lower privilege)",
+                "Kernel mode",
+                "It depends on the program",
+                "Both equally"
+              ],
+              "id": "operating_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a user program request a privileged operation like file I/O?",
+              "answer": "By making a system call to the kernel",
+              "explain": "User programs make system calls (like read, write, open) that transition to kernel mode, perform the operation safely, then return.",
+              "choices": [
+                "It requests elevated privilege",
+                "By making a system call to the kernel",
+                "It asks another program",
+                "It cannot perform privileged operations"
+              ],
+              "id": "operating_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Processes and Threads",
+      "tip": "A process is an isolated running program with its own memory and resources. A thread is a lightweight execution path within a process. Multiple threads in one process share memory but run independently.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Processes and Process Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a process?",
+              "answer": "An instance of a running program with its own memory and resources",
+              "explain": "Each process is isolated. When you open Firefox, the OS creates a process for it. Each process has a process ID (PID).",
+              "choices": [
+                "A CPU instruction",
+                "A program on disk",
+                "An instance of a running program with its own memory and resources",
+                "A file system"
+              ],
+              "id": "operating_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'process ID' (PID)?",
+              "answer": "A unique number identifying a running process",
+              "explain": "The OS assigns each process a PID when it starts. You use PIDs to track, manage, or terminate processes.",
+              "choices": [
+                "How much memory it uses",
+                "The processor's speed",
+                "The process's priority level",
+                "A unique number identifying a running process"
+              ],
+              "id": "operating_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two processes share memory directly?",
+              "answer": "No, each process has isolated memory. Sharing requires explicit mechanisms.",
+              "explain": "OS memory protection keeps process memory separate. Processes that need to share data use inter-process communication (pipes, sockets, shared memory).",
+              "choices": [
+                "No, each process has isolated memory. Sharing requires explicit mechanisms.",
+                "Yes, always",
+                "Only if they are related",
+                "Only on multi-core systems"
+              ],
+              "id": "operating_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the kernel do when a process terminates?",
+              "answer": "Reclaims its memory and file descriptors, and updates process tables",
+              "explain": "Process cleanup ensures resources are freed so they are not wasted or leaked.",
+              "choices": [
+                "Immediately restarts it",
+                "Reclaims its memory and file descriptors, and updates process tables",
+                "Keeps it in memory indefinitely",
+                "Archives it to disk"
+              ],
+              "id": "operating_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'parent process' of a new process?",
+              "answer": "The process that created (forked) it",
+              "explain": "Process creation is hierarchical. A parent process spawns child processes. Parent responsibility includes reaping zombie processes.",
+              "choices": [
+                "The first process created",
+                "The kernel",
+                "The process that created (forked) it",
+                "Always the OS"
+              ],
+              "id": "operating_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Threads and Concurrency",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a thread?",
+              "answer": "A lightweight execution path within a process",
+              "explain": "Threads share the same process memory and resources but execute independently. Multiple threads in one process can run concurrently.",
+              "choices": [
+                "A separate process",
+                "A CPU core",
+                "A type of system call",
+                "A lightweight execution path within a process"
+              ],
+              "id": "operating_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main difference between threads and processes?",
+              "answer": "Threads share memory; processes are isolated",
+              "explain": "Threads in one process share heap memory. Processes cannot access each other's memory. This makes threads lighter but less safe.",
+              "choices": [
+                "Threads share memory; processes are isolated",
+                "Processes are slower",
+                "Processes cannot run on multiple cores",
+                "Threads are always single-core"
+              ],
+              "id": "operating_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two threads in the same process access the same variable?",
+              "answer": "Yes, they share the same memory space",
+              "explain": "Threads in one process share the same heap and global variables (each has its own stack). This makes communication easy but requires synchronization to avoid race conditions.",
+              "choices": [
+                "Only if the kernel copies it between them",
+                "Yes, they share the same memory space",
+                "No, each thread has separate memory",
+                "Only with kernel intervention"
+              ],
+              "id": "operating_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is creating a thread cheaper than creating a process?",
+              "answer": "Yes, threads are much lighter than processes",
+              "explain": "Creating a process requires allocating memory and kernel structures. Creating a thread is cheaper because it reuses the process memory.",
+              "choices": [
+                "No, they cost the same",
+                "It depends on the OS",
+                "Yes, threads are much lighter than processes",
+                "Process creation is cheaper"
+              ],
+              "id": "operating_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'race condition'?",
+              "answer": "When two threads access shared data simultaneously and the result depends on timing",
+              "explain": "Race conditions occur when threads access shared data without synchronization and at least one writes. The program's behavior becomes unpredictable.",
+              "choices": [
+                "When threads are prioritized",
+                "A competition between processes",
+                "When the CPU runs at maximum speed",
+                "When two threads access shared data simultaneously and the result depends on timing"
+              ],
+              "id": "operating_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "CPU Scheduling and Context Switches",
+      "tip": "The scheduler decides which process runs next on the CPU. A context switch saves one process's state and loads another's. Modern systems use preemption to fairly share the CPU among many processes.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Scheduling and the Scheduler",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the CPU scheduler do?",
+              "answer": "Decides which process runs on the CPU at any given moment",
+              "explain": "The scheduler is a kernel component that chooses the next process to execute from the ready queue.",
+              "choices": [
+                "Decides which process runs on the CPU at any given moment",
+                "Runs all processes simultaneously",
+                "Manages memory allocation",
+                "Handles file I/O"
+              ],
+              "id": "operating_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'time quantum' or 'time slice'?",
+              "answer": "The maximum time a process runs before being interrupted",
+              "explain": "The scheduler gives each process a time slice (often 10-100 milliseconds). When it expires, the scheduler switches to another process.",
+              "choices": [
+                "The total time a process runs",
+                "The maximum time a process runs before being interrupted",
+                "The memory allocated to a process",
+                "How often scheduling happens"
+              ],
+              "id": "operating_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'preemption'?",
+              "answer": "Forcibly interrupting a running process to switch to another",
+              "explain": "Preemptive scheduling interrupts a running process even if it is not done. This ensures fair CPU sharing among all processes.",
+              "choices": [
+                "A process voluntarily giving up the CPU",
+                "Preventing a process from running",
+                "Forcibly interrupting a running process to switch to another",
+                "Allocating memory to a process"
+              ],
+              "id": "operating_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'ready queue'?",
+              "answer": "The list of processes waiting for CPU time",
+              "explain": "Processes that are ready to run but waiting for a free CPU are in the ready queue. The scheduler picks the next process from this queue.",
+              "choices": [
+                "Processes in main memory",
+                "Processes that have finished",
+                "Processes blocked waiting for I/O",
+                "The list of processes waiting for CPU time"
+              ],
+              "id": "operating_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does round-robin scheduling work?",
+              "answer": "Each process gets a time slice, then goes to the back of the queue",
+              "explain": "Round-robin (RR) is fair: process 1 runs for one time slice, then process 2, then 3, cycling back to 1. Fair but not always efficient.",
+              "choices": [
+                "Each process gets a time slice, then goes to the back of the queue",
+                "Processes with higher priority run first",
+                "Processes with shorter jobs run first",
+                "The oldest process runs first"
+              ],
+              "id": "operating_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Context Switches",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'context switch'?",
+              "answer": "Saving one process's state and loading another's to run on the CPU",
+              "explain": "The kernel saves the running process's registers and program counter, then restores another process's saved state so it can run.",
+              "choices": [
+                "Switching the CPU from user mode to kernel mode",
+                "Saving one process's state and loading another's to run on the CPU",
+                "Moving a process between CPU cores",
+                "Changing a process's priority"
+              ],
+              "id": "operating_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'context' that is saved during a switch?",
+              "answer": "CPU registers, program counter, memory-mapping info, and other process data",
+              "explain": "The context includes everything needed to resume a process exactly where it left off.",
+              "choices": [
+                "Only memory allocated to the process",
+                "Only the program counter",
+                "CPU registers, program counter, memory-mapping info, and other process data",
+                "Just the process ID"
+              ],
+              "id": "operating_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is a context switch expensive in terms of performance?",
+              "answer": "Yes, it wastes CPU cycles and cache",
+              "explain": "Context switches cost time to save and restore state, and the new process often finds the CPU caches and address-translation caches full of the old one's data. Too many switches reduce efficiency.",
+              "choices": [
+                "Only on older CPUs",
+                "No, it is free",
+                "It depends on the process size",
+                "Yes, it wastes CPU cycles and cache"
+              ],
+              "id": "operating_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What triggers a context switch?",
+              "answer": "Timer interrupt, I/O request, or system call",
+              "explain": "Context switches are triggered by: time quantum expiration, process blocking (I/O), or system events.",
+              "choices": [
+                "Timer interrupt, I/O request, or system call",
+                "Only I/O requests",
+                "Only timer interrupts",
+                "Manual kernel commands only"
+              ],
+              "id": "operating_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After a context switch, does a process resume from exactly where it stopped?",
+              "answer": "Yes, the saved context allows exact resumption",
+              "explain": "The kernel saves the program counter and all registers. When the process runs again, it resumes at the exact same instruction.",
+              "choices": [
+                "No, it starts from the beginning",
+                "Yes, the saved context allows exact resumption",
+                "Only if the process is small",
+                "It depends on the OS"
+              ],
+              "id": "operating_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Virtual Memory and Paging",
+      "tip": "Virtual memory allows each process to see a large, contiguous address space even if physical RAM is small or fragmented. The kernel uses paging to map virtual addresses to physical memory.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Virtual Memory Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'virtual memory'?",
+              "answer": "An abstraction that gives each process a large, contiguous address space",
+              "explain": "Virtual memory frees programs from physical memory constraints. Each process sees its own address space independent of actual RAM.",
+              "choices": [
+                "Fast cache memory",
+                "Memory stored on disk",
+                "An abstraction that gives each process a large, contiguous address space",
+                "Read-only memory"
+              ],
+              "id": "operating_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'address space' of a process?",
+              "answer": "The range of virtual memory addresses it can use",
+              "explain": "A process's address space is the range of virtual addresses it can use. It is up to 2^32 bytes on a 32-bit system and far larger on 64-bit, regardless of physical RAM.",
+              "choices": [
+                "The disk space available",
+                "The size of RAM on the computer",
+                "The CPU cache size",
+                "The range of virtual memory addresses it can use"
+              ],
+              "id": "operating_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which hardware component translates virtual addresses to physical addresses?",
+              "answer": "The memory management unit (MMU)",
+              "explain": "The MMU translates virtual addresses to physical addresses on every access, using page tables the kernel sets up. Programs use virtual addresses; the hardware does the mapping.",
+              "choices": [
+                "The memory management unit (MMU)",
+                "The scheduler",
+                "The disk controller",
+                "The ALU"
+              ],
+              "id": "operating_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two processes use the same virtual address?",
+              "answer": "Yes, they map to different physical addresses",
+              "explain": "Each process has its own page tables. Virtual address 0x1000 in process A maps to different physical memory than 0x1000 in process B.",
+              "choices": [
+                "No, all addresses are global",
+                "Yes, they map to different physical addresses",
+                "Only if they share memory",
+                "Never, addresses must be unique"
+              ],
+              "id": "operating_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'page' in virtual memory?",
+              "answer": "A fixed-size block of virtual memory (typically 4KB)",
+              "explain": "Memory is divided into pages (and frames for physical memory). This allows efficient management and paging.",
+              "choices": [
+                "A single memory location",
+                "A file on disk",
+                "A fixed-size block of virtual memory (typically 4KB)",
+                "A CPU register"
+              ],
+              "id": "operating_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Paging and Page Tables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'paging'?",
+              "answer": "Moving pages between RAM and disk to extend available memory",
+              "explain": "Paging allows the kernel to swap less-used pages to disk, freeing RAM for other pages. This extends the effective memory size.",
+              "choices": [
+                "Organizing memory into fixed blocks",
+                "Allocating memory to processes",
+                "Dividing processes into sections",
+                "Moving pages between RAM and disk to extend available memory"
+              ],
+              "id": "operating_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'page table'?",
+              "answer": "A data structure mapping virtual page numbers to physical frames",
+              "explain": "Each process has a page table that the MMU consults to translate virtual to physical addresses.",
+              "choices": [
+                "A data structure mapping virtual page numbers to physical frames",
+                "A list of processes",
+                "A schedule of page reads",
+                "A hardware cache"
+              ],
+              "id": "operating_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'page fault'?",
+              "answer": "An exception when a process accesses a page not currently in RAM",
+              "explain": "A page fault occurs when a virtual page is on disk. The kernel loads it into RAM, which is slow but transparent to the process.",
+              "choices": [
+                "A hardware error",
+                "An exception when a process accesses a page not currently in RAM",
+                "A security violation",
+                "A corrupt page"
+              ],
+              "id": "operating_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the kernel do when a page fault occurs?",
+              "answer": "Loads the page from disk into RAM and updates the page table",
+              "explain": "Page fault handling is invisible to the program. The kernel fetches the page, places it in RAM, updates mappings, and resumes the process.",
+              "choices": [
+                "Terminates the process",
+                "Raises an error to the program",
+                "Loads the page from disk into RAM and updates the page table",
+                "Allocates more RAM"
+              ],
+              "id": "operating_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'thrashing'?",
+              "answer": "Excessive paging where pages are swapped constantly",
+              "explain": "Thrashing occurs when the system spends more time paging than running processes. Performance plummets.",
+              "choices": [
+                "A hardware malfunction",
+                "A scheduler bug",
+                "A memory leak",
+                "Excessive paging where pages are swapped constantly"
+              ],
+              "id": "operating_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "System Calls and File Systems",
+      "tip": "System calls are the interface between user programs and the kernel. Programs use them for I/O, memory management, and process control. File systems organize data on disks using hierarchical structures.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "System Calls and Kernel Transitions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'system call'?",
+              "answer": "A function that transitions from user mode to kernel mode",
+              "explain": "System calls allow programs to request privileged operations like file I/O, network access, and memory management.",
+              "choices": [
+                "A function that transitions from user mode to kernel mode",
+                "A function call between programs",
+                "A thread function",
+                "A signal handler"
+              ],
+              "id": "operating_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a system call change the CPU mode?",
+              "answer": "Via a trap (software interrupt) that switches to kernel mode",
+              "explain": "A system call executes a trap instruction that switches the CPU from user mode to kernel mode, allowing privileged operations.",
+              "choices": [
+                "It requests permission from the scheduler",
+                "Via a trap (software interrupt) that switches to kernel mode",
+                "It manually changes a privilege flag",
+                "The process runs privileged instructions"
+              ],
+              "id": "operating_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which set contains only system calls on a Unix-like system?",
+              "answer": "read, write, open",
+              "explain": "These are fundamental system calls for file I/O. Others include fork, exec, brk, and many more.",
+              "choices": [
+                "print, call, run",
+                "malloc, free, new",
+                "read, write, open",
+                "start, stop, pause"
+              ],
+              "id": "operating_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'return value' of a system call?",
+              "answer": "Data returned by the kernel to the user program",
+              "explain": "System calls return status codes or data. For example, read() returns the number of bytes read.",
+              "choices": [
+                "A change to the process state",
+                "A memory address",
+                "A kernel function name",
+                "Data returned by the kernel to the user program"
+              ],
+              "id": "operating_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is a system call faster or slower than a regular function call?",
+              "answer": "Slower, because of the mode switch overhead",
+              "explain": "System calls add overhead: a trap into the kernel, a mode switch, and argument checks. They are typically slower than an ordinary function call.",
+              "choices": [
+                "Slower, because of the mode switch overhead",
+                "Much faster",
+                "About the same speed",
+                "Faster only for file operations"
+              ],
+              "id": "operating_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "File Systems and Inodes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'file system'?",
+              "answer": "Software that organizes files and directories on a disk",
+              "explain": "A file system manages storage. It handles file names, directories, permissions, and the mapping of data to disk blocks.",
+              "choices": [
+                "A network protocol",
+                "Software that organizes files and directories on a disk",
+                "A type of hardware",
+                "A memory manager"
+              ],
+              "id": "operating_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'inode'?",
+              "answer": "A data structure storing metadata about a file",
+              "explain": "Inodes store file size, permissions, ownership, timestamps, and pointers to data blocks. Each file has one inode.",
+              "choices": [
+                "An input node",
+                "A file name",
+                "A data structure storing metadata about a file",
+                "A directory entry"
+              ],
+              "id": "operating_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What information does an inode contain?",
+              "answer": "Size, permissions, owner, timestamps, and block pointers",
+              "explain": "Inodes store everything about a file except its name. Names are stored in directory entries that point to inodes.",
+              "choices": [
+                "Only the file name",
+                "Only file size",
+                "Only timestamps",
+                "Size, permissions, owner, timestamps, and block pointers"
+              ],
+              "id": "operating_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two file names point to the same inode?",
+              "answer": "Yes, via hard links",
+              "explain": "Hard links are multiple directory entries pointing to the same inode. Deleting one link does not remove the file.",
+              "choices": [
+                "Yes, via hard links",
+                "No, each file must have one name",
+                "Only on some file systems",
+                "Only for directories"
+              ],
+              "id": "operating_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'directory'?",
+              "answer": "A file containing a table of names and their corresponding inodes",
+              "explain": "Directories are special files that map file names to inodes. They create the hierarchical folder structure.",
+              "choices": [
+                "A region of memory",
+                "A file containing a table of names and their corresponding inodes",
+                "A reserved area of RAM for file caching",
+                "A network location"
+              ],
+              "id": "operating_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Synchronization, Deadlock, and Interrupts",
+      "tip": "Synchronization mechanisms prevent race conditions when multiple threads access shared data. Deadlock occurs when threads block forever waiting for each other. Interrupts signal the CPU of hardware events.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Synchronization Primitives",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'race condition'?",
+              "answer": "When the result of concurrent access depends on timing",
+              "explain": "Race conditions occur when multiple threads access shared data unsynchronized. The outcome becomes unpredictable.",
+              "choices": [
+                "When the CPU runs faster",
+                "A fast execution path",
+                "When the result of concurrent access depends on timing",
+                "A priority boost"
+              ],
+              "id": "operating_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'mutex' (mutual exclusion)?",
+              "answer": "A lock allowing only one thread into a critical section at a time",
+              "explain": "Mutexes protect shared data. Only the thread holding the mutex can enter the critical section.",
+              "choices": [
+                "A CPU register",
+                "A thread scheduler",
+                "A memory location",
+                "A lock allowing only one thread into a critical section at a time"
+              ],
+              "id": "operating_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'critical section'?",
+              "answer": "Code that accesses shared data and must not run concurrently",
+              "explain": "Critical sections must be protected from concurrent execution. Mutexes ensure only one thread runs them at a time.",
+              "choices": [
+                "Code that accesses shared data and must not run concurrently",
+                "The main program logic",
+                "A privileged kernel section",
+                "A system call"
+              ],
+              "id": "operating_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'semaphore'?",
+              "answer": "A counter-based synchronization primitive controlling access to resources",
+              "explain": "Semaphores maintain a count. Threads wait if the count is zero; operations decrement the count.",
+              "choices": [
+                "A flag in memory",
+                "A counter-based synchronization primitive controlling access to resources",
+                "A type of interrupt",
+                "A memory address"
+              ],
+              "id": "operating_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a thread tries to acquire a locked mutex?",
+              "answer": "It blocks and waits until the mutex is released",
+              "explain": "Blocked threads do not consume CPU; they wait in a queue for the lock to be released.",
+              "choices": [
+                "An error is raised",
+                "It acquires the lock anyway",
+                "It blocks and waits until the mutex is released",
+                "It spins and retries immediately"
+              ],
+              "id": "operating_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Deadlock and Interrupts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'deadlock'?",
+              "answer": "A situation where threads block forever waiting for each other",
+              "explain": "Deadlock occurs when thread A holds lock 1 and waits for lock 2, while thread B holds lock 2 and waits for lock 1.",
+              "choices": [
+                "A slow system",
+                "A scheduling error",
+                "A type of interrupt",
+                "A situation where threads block forever waiting for each other"
+              ],
+              "id": "operating_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the four conditions necessary for deadlock?",
+              "answer": "Mutual exclusion, hold-and-wait, no preemption, circular wait",
+              "explain": "All four must be present. Removing any one prevents deadlock.",
+              "choices": [
+                "Mutual exclusion, hold-and-wait, no preemption, circular wait",
+                "Blocking, waiting, sleeping, spinning",
+                "Mutex, semaphore, monitor, lock",
+                "CPU, memory, I/O, interrupt"
+              ],
+              "id": "operating_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you prevent deadlock?",
+              "answer": "Break one of the four necessary conditions",
+              "explain": "Methods include: avoiding circular waits, preempting locks, or forcing lock ordering.",
+              "choices": [
+                "Always use mutexes",
+                "Break one of the four necessary conditions",
+                "Increase the number of threads",
+                "Use a faster CPU"
+              ],
+              "id": "operating_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'interrupt'?",
+              "answer": "A signal to the CPU to stop execution and handle an event",
+              "explain": "Interrupts allow hardware (disk, network, timer) to notify the CPU of events. The CPU pauses the current process and runs an interrupt handler.",
+              "choices": [
+                "A process stopping",
+                "A context switch",
+                "A signal to the CPU to stop execution and handle an event",
+                "A system call"
+              ],
+              "id": "operating_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a timer interrupt fires?",
+              "answer": "The kernel runs its timer handler, which may trigger a context switch",
+              "explain": "Timer interrupts give the kernel regular control so the scheduler can switch processes, implementing preemptive multitasking.",
+              "choices": [
+                "An error is reported",
+                "The current process is terminated",
+                "The CPU powers down briefly",
+                "The kernel runs its timer handler, which may trigger a context switch"
+              ],
+              "id": "operating_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
