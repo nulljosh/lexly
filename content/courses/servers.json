@@ -57,13 +57,13 @@
             {
               "type": "mathChoice",
               "question": "What is localhost?",
-              "answer": "An address referring to the current computer's server",
-              "explain": "Localhost (127.0.0.1) is a loopback address that refers to the computer you are working on. It lets you run and test a server on your own machine.",
+              "answer": "The name for the computer you are working on, as seen from itself",
+              "explain": "Localhost (127.0.0.1) is a loopback address that points back to the computer you are working on. It lets you run and test a server on your own machine.",
               "choices": [
                 "A server on the internet",
                 "A server in another country",
                 "A backup copy of your server",
-                "An address referring to the current computer's server"
+                "The name for the computer you are working on, as seen from itself"
               ],
               "id": "servers_u1l1_3"
             },
@@ -412,9 +412,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "What REST principle says each resource should have a unique URL?",
+              "question": "Which REST idea says every resource should have its own unique URL?",
               "answer": "Resources should be uniquely identifiable",
-              "explain": "In REST, each resource has its own endpoint. For example, /api/users/123 uniquely identifies the user with id 123, and /api/users/456 identifies user 456.",
+              "explain": "In REST, each resource has its own identifier. For example, /api/users/123 identifies the user with id 123, and /api/users/456 identifies user 456.",
               "choices": [
                 "Statelessness",
                 "Client-server separation",
@@ -563,7 +563,7 @@
               "type": "mathChoice",
               "question": "What is a load balancer?",
               "answer": "A system that distributes incoming requests across multiple servers",
-              "explain": "A load balancer receives requests and sends each one to one of several backend servers, usually choosing the least busy one. This spreads the load evenly.",
+              "explain": "A load balancer receives requests and sends each one to one of several backend servers, using a strategy such as round robin or fewest active connections. This spreads the load.",
               "choices": [
                 "A system that distributes incoming requests across multiple servers",
                 "A type of database",
@@ -764,7 +764,7 @@
               "type": "mathChoice",
               "question": "What does HTTPS do differently than HTTP?",
               "answer": "It encrypts the data sent between client and server",
-              "explain": "HTTPS uses SSL/TLS encryption to protect data in transit. Without it, data like passwords sent over HTTP can be intercepted by attackers.",
+              "explain": "HTTPS uses TLS encryption to protect data in transit. Without it, data like passwords sent over HTTP can be intercepted by attackers.",
               "choices": [
                 "It makes requests faster",
                 "It stores data on the client",
@@ -835,7 +835,7 @@
               "type": "mathChoice",
               "question": "What is uptime?",
               "answer": "The percentage of time a server is running and available",
-              "explain": "Uptime is measured as a percentage. 99.9% uptime means the server is down less than 9 hours per year. Higher uptime is more reliable.",
+              "explain": "Uptime is measured as a percentage. 99.9% uptime means the server is down for under 9 hours per year. Higher uptime is more reliable.",
               "choices": [
                 "The percentage of time a server is running and available",
                 "The amount of storage available",

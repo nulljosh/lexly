@@ -194,7 +194,7 @@
               "type": "mathChoice",
               "question": "What is a natural key?",
               "answer": "A column with real-world meaning that uniquely identifies a row",
-              "explain": "Natural keys are based on actual data. For example, an email address or SSN could be a natural key because they're inherently unique.",
+              "explain": "Natural keys are based on real-world data. For example, a book's ISBN could be a natural key because each book has its own.",
               "choices": [
                 "A column with real-world meaning that uniquely identifies a row",
                 "A randomly generated ID",
@@ -206,13 +206,13 @@
             {
               "type": "mathChoice",
               "question": "What is a surrogate key?",
-              "answer": "An artificial ID created by the database to uniquely identify rows",
-              "explain": "Surrogate keys are auto-generated, like an incrementing integer. They have no real-world meaning but are stable and simple to use.",
+              "answer": "An artificial ID with no real-world meaning, used to uniquely identify rows",
+              "explain": "Surrogate keys are artificial, like an incrementing integer or a random UUID. They have no real-world meaning but are stable and simple to use.",
               "choices": [
                 "A backup key",
                 "A natural key",
                 "A temporary key",
-                "An artificial ID created by the database to uniquely identify rows"
+                "An artificial ID with no real-world meaning, used to uniquely identify rows"
               ],
               "id": "databases_u2l1_3"
             },
@@ -631,7 +631,7 @@
               "explain": "Without normalization, data gets duplicated. If a student's phone number is stored in every enrollment, changing it requires updating every row. Normalization stores it once.",
               "choices": [
                 "It encrypts data",
-                "It reduces storage space",
+                "It removes the need for primary keys",
                 "It makes queries faster",
                 "It prevents data redundancy and update anomalies"
               ],
@@ -711,10 +711,10 @@
             {
               "type": "mathChoice",
               "question": "How does horizontal partitioning help scalability?",
-              "answer": "It distributes rows across multiple servers based on a condition",
-              "explain": "Partitioning splits data. You might store orders from 2020 on one server and 2021 orders on another. Queries can skip irrelevant partitions.",
+              "answer": "It splits a table's rows into smaller parts based on a condition",
+              "explain": "Partitioning splits data. You might keep 2020 orders in one partition and 2021 orders in another. Queries can skip irrelevant partitions, and partitions can be spread across servers.",
               "choices": [
-                "It distributes rows across multiple servers based on a condition",
+                "It splits a table's rows into smaller parts based on a condition",
                 "It combines multiple tables",
                 "It creates backups",
                 "It deletes old data"
@@ -730,7 +730,7 @@
                 "A set of reusable database connections kept ready for applications",
                 "A data type",
                 "A backup strategy",
-                "A encryption method"
+                "An encryption method"
               ],
               "id": "databases_u5l2_3"
             },
@@ -847,11 +847,11 @@
             {
               "type": "mathChoice",
               "question": "What is a primary-replica replication setup?",
-              "answer": "One primary server accepts writes, secondary servers replicate copies for reads",
-              "explain": "The primary receives all write operations, then copies changes to secondary servers. Reads can happen on secondaries, distributing load.",
+              "answer": "One primary server accepts writes, and replica servers hold copies for reads",
+              "explain": "The primary receives all write operations, then copies changes to its replicas. Reads can happen on the replicas, distributing load.",
               "choices": [
                 "Both servers can write",
-                "One primary server accepts writes, secondary servers replicate copies for reads",
+                "One primary server accepts writes, and replica servers hold copies for reads",
                 "No replication occurs",
                 "Only backups happen"
               ],
