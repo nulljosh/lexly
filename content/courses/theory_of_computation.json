@@ -1,0 +1,904 @@
+{
+  "id": "theory_of_computation",
+  "name": "Theory of Computation",
+  "category": "programming",
+  "icon": "fa-solid fa-square-root-variable",
+  "level": "What Can Be Computed",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Finite Automata and Regular Languages",
+      "tip": "Finite automata are simple machines that recognize patterns. They have a finite set of states and move between them based on input symbols. Regular languages are exactly the languages that finite automata can recognize.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "States and Transitions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a finite automaton (FA)?",
+              "answer": "A machine with a finite number of states that processes input sequentially",
+              "explain": "A finite automaton reads input symbols one at a time and transitions between states. It accepts or rejects the input based on which state it ends in.",
+              "choices": [
+                "A device that generates random symbols",
+                "A mathematical formula for counting",
+                "A computer with limited memory",
+                "A machine with a finite number of states that processes input sequentially"
+              ],
+              "id": "theory_of_computation_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a state in an automaton?",
+              "answer": "A configuration that determines which state to move to next",
+              "explain": "States represent the automaton's current condition. Upon reading an input symbol, the automaton transitions to a new state based on a transition function.",
+              "choices": [
+                "The memory of the machine",
+                "A configuration that determines which state to move to next",
+                "The input being read",
+                "A list of symbols"
+              ],
+              "id": "theory_of_computation_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a transition in an automaton?",
+              "answer": "A move from one state to another when reading a symbol",
+              "explain": "A transition is defined by the current state, the input symbol, and the next state. It is typically written as delta(state, symbol) = next_state.",
+              "choices": [
+                "Storing data in memory",
+                "Reading multiple symbols at once",
+                "A rejection of input",
+                "A move from one state to another when reading a symbol"
+              ],
+              "id": "theory_of_computation_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an accepting state in an automaton?",
+              "answer": "A state where the automaton accepts the input",
+              "explain": "If the automaton ends in an accepting state after reading all input, the string is accepted. Otherwise, it is rejected.",
+              "choices": [
+                "A state that reads input",
+                "A state where the automaton accepts the input",
+                "The starting state",
+                "A state that never transitions"
+              ],
+              "id": "theory_of_computation_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a deterministic finite automaton (DFA)?",
+              "answer": "An FA where each state has exactly one transition per symbol",
+              "explain": "In a DFA, the next state is uniquely determined by the current state and input symbol. There is no ambiguity about what happens next.",
+              "choices": [
+                "An automaton that accepts all strings",
+                "An automaton with only one state",
+                "An FA where each state has exactly one transition per symbol",
+                "An automaton with random transitions"
+              ],
+              "id": "theory_of_computation_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Regular Languages",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a regular language?",
+              "answer": "A language that can be recognized by a finite automaton",
+              "explain": "A regular language is a set of strings that a DFA or NFA can accept or reject. Regular languages are among the simplest classes of formal languages.",
+              "choices": [
+                "A language with repeated words",
+                "A language with no special characters",
+                "A language that can be recognized by a finite automaton",
+                "A language used in everyday speech"
+              ],
+              "id": "theory_of_computation_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What operation can be performed on regular languages?",
+              "answer": "Union, concatenation, and Kleene star",
+              "explain": "Regular languages are closed under union (A or B), concatenation (AB), and Kleene star (A*). These operations on regular languages produce regular languages.",
+              "choices": [
+                "No operations are possible",
+                "Only concatenation",
+                "Union, concatenation, and Kleene star",
+                "Only union"
+              ],
+              "id": "theory_of_computation_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Kleene star operation?",
+              "answer": "Repeating a pattern zero or more times",
+              "explain": "If A is a language, A* includes the empty string and all strings formed by concatenating any number of strings from A.",
+              "choices": [
+                "Deleting parts of a string",
+                "Repeating a pattern exactly once",
+                "Repeating a pattern zero or more times",
+                "Reversing a string"
+              ],
+              "id": "theory_of_computation_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a finite automaton recognize all languages?",
+              "answer": "No, some languages require more power than finite automata",
+              "explain": "Finite automata cannot recognize all languages. For example, they cannot recognize balanced parentheses or languages requiring unbounded counting.",
+              "choices": [
+                "Only languages with one symbol",
+                "No, some languages require more power than finite automata",
+                "All languages except English",
+                "Yes, all languages are regular"
+              ],
+              "id": "theory_of_computation_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pumping lemma for regular languages?",
+              "answer": "A condition that every regular language must satisfy",
+              "explain": "The pumping lemma states that long enough strings in a regular language have a repeatable substring. It is used to prove languages are not regular.",
+              "choices": [
+                "A type of finite automaton",
+                "A way to combine automata",
+                "A condition that every regular language must satisfy",
+                "A rule for writing regular expressions"
+              ],
+              "id": "theory_of_computation_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Regular Expressions",
+      "tip": "Regular expressions are a notation for describing regular languages. They use symbols and operators to specify patterns. Every regular expression corresponds to a finite automaton that recognizes the same language.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Regular Expressions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a regular expression?",
+              "answer": "A notation for describing patterns of strings",
+              "explain": "Regular expressions use symbols and operators like +, *, |, and . to build patterns. They describe exactly the regular languages.",
+              "choices": [
+                "A type of mathematical equation",
+                "A database query",
+                "A notation for describing patterns of strings",
+                "A programming language"
+              ],
+              "id": "theory_of_computation_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the | symbol mean in a regular expression?",
+              "answer": "Alternation: choose one of the alternatives",
+              "explain": "The | operator means or. For example, 'a|b' matches either 'a' or 'b'.",
+              "choices": [
+                "Alternation: choose one of the alternatives",
+                "Concatenation",
+                "Kleene star",
+                "Repetition exactly once"
+              ],
+              "id": "theory_of_computation_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does * mean in a regular expression?",
+              "answer": "Zero or more repetitions of the preceding element",
+              "explain": "The * operator is the Kleene star. 'a*' matches '', 'a', 'aa', 'aaa', and so on.",
+              "choices": [
+                "Zero or more repetitions of the preceding element",
+                "One or more repetitions",
+                "Exponentiation",
+                "Exactly one"
+              ],
+              "id": "theory_of_computation_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does + mean in a regular expression?",
+              "answer": "One or more repetitions of the preceding element",
+              "explain": "The + operator requires at least one occurrence. 'a+' matches 'a', 'aa', 'aaa', but not the empty string.",
+              "choices": [
+                "One or more repetitions of the preceding element",
+                "Alternation",
+                "Zero or more repetitions",
+                "Addition"
+              ],
+              "id": "theory_of_computation_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ? mean in a regular expression?",
+              "answer": "Zero or one occurrence of the preceding element",
+              "explain": "The ? operator makes the preceding element optional. 'a?' matches '' or 'a'.",
+              "choices": [
+                "Zero or one occurrence of the preceding element",
+                "A question about the pattern",
+                "One or more occurrences",
+                "Zero or more occurrences"
+              ],
+              "id": "theory_of_computation_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Regular Expressions and Finite Automata",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between regular expressions and finite automata?",
+              "answer": "They describe exactly the same languages",
+              "explain": "Every regular expression corresponds to an FA that recognizes the same strings, and vice versa. They are equivalent ways to describe regular languages.",
+              "choices": [
+                "Regular expressions are more powerful",
+                "FAs are more powerful",
+                "They have no connection",
+                "They describe exactly the same languages"
+              ],
+              "id": "theory_of_computation_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you convert a regular expression to a finite automaton?",
+              "answer": "Yes, using the Thompson construction algorithm",
+              "explain": "The Thompson construction takes a regular expression and builds an equivalent NFA step by step, following the recursive structure of the regex.",
+              "choices": [
+                "Only for simple expressions",
+                "No, they are incompatible",
+                "Only manually for small cases",
+                "Yes, using the Thompson construction algorithm"
+              ],
+              "id": "theory_of_computation_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an NFA?",
+              "answer": "A nondeterministic finite automaton with multiple possible next states",
+              "explain": "An NFA allows one state and symbol to lead to multiple next states, or no next state. NFAs are equivalent to DFAs but often simpler.",
+              "choices": [
+                "An automaton that rejects all input",
+                "A faster version of DFA",
+                "A nondeterministic finite automaton with multiple possible next states",
+                "An automaton with no states"
+              ],
+              "id": "theory_of_computation_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are NFAs and DFAs equivalent in power?",
+              "answer": "Yes, both recognize exactly the regular languages",
+              "explain": "Every NFA can be converted to an equivalent DFA using subset construction. They have the same computational power.",
+              "choices": [
+                "They recognize different classes of languages",
+                "No, NFAs are more powerful",
+                "Yes, both recognize exactly the regular languages",
+                "No, DFAs are more powerful"
+              ],
+              "id": "theory_of_computation_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is epsilon-closure in an NFA?",
+              "answer": "The set of states reachable by zero or more epsilon transitions",
+              "explain": "An epsilon transition moves without reading input. Epsilon-closure(q) is all states reachable from q using only epsilon moves.",
+              "choices": [
+                "The set of states reachable by zero or more epsilon transitions",
+                "The starting state",
+                "A rejected string",
+                "A final state"
+              ],
+              "id": "theory_of_computation_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Context-Free Grammars and Pushdown Automata",
+      "tip": "Context-free grammars (CFGs) describe languages with recursive structure, like nested parentheses. Pushdown automata (PDAs) are finite automata with a stack for memory. CFGs and PDAs are equivalent: every CFG language can be recognized by a PDA.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Context-Free Grammars",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a context-free grammar (CFG)?",
+              "answer": "A rule system for generating strings with nested structure",
+              "explain": "A CFG has rules like A -> BC | a that specify how to build strings. It is used to describe programming languages and other structured languages.",
+              "choices": [
+                "A finite list of strings",
+                "A set of symbols only",
+                "A machine that rejects input",
+                "A rule system for generating strings with nested structure"
+              ],
+              "id": "theory_of_computation_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a nonterminal in a CFG?",
+              "answer": "A symbol that can be replaced by other symbols",
+              "explain": "Nonterminals (like A, B, S) appear on the left side of rules. They are replaced during derivation, eventually reaching terminals.",
+              "choices": [
+                "A symbol that can be replaced by other symbols",
+                "A number in the grammar",
+                "A rejected rule",
+                "A word that appears only once"
+              ],
+              "id": "theory_of_computation_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a terminal in a CFG?",
+              "answer": "A symbol that cannot be replaced, appearing in the final string",
+              "explain": "Terminals (like 'a', 'b', '(', ')') are the actual symbols that form strings. They never appear on the left side of a rule.",
+              "choices": [
+                "A nonterminal",
+                "A rejected input",
+                "A symbol at the end of a rule",
+                "A symbol that cannot be replaced, appearing in the final string"
+              ],
+              "id": "theory_of_computation_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which language cannot be generated by any CFG?",
+              "answer": "Strings with equal counts of three symbols, like a^n b^n c^n",
+              "explain": "The language {a^n b^n c^n : n >= 0} needs three counts to match. A stack can match two counts but not three, and the pumping lemma for context-free languages proves no CFG generates it.",
+              "choices": [
+                "Nested parentheses",
+                "Alternating symbols",
+                "Balanced parentheses",
+                "Strings with equal counts of three symbols, like a^n b^n c^n"
+              ],
+              "id": "theory_of_computation_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an ambiguous grammar?",
+              "answer": "A grammar where one string has multiple parse trees",
+              "explain": "An ambiguous grammar produces the same string in different ways. This is a problem in compiler design.",
+              "choices": [
+                "A grammar that rejects all input",
+                "A grammar where one string has multiple parse trees",
+                "A grammar with no rules",
+                "A grammar with only one rule"
+              ],
+              "id": "theory_of_computation_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Pushdown Automata",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a pushdown automaton (PDA)?",
+              "answer": "A finite automaton with an additional stack for memory",
+              "explain": "A PDA has states like a DFA but can also push and pop symbols on a stack. This extra memory lets it recognize context-free languages.",
+              "choices": [
+                "A finite automaton with an additional stack for memory",
+                "A machine with infinite memory",
+                "An automaton with no states",
+                "An automaton that recognizes only finite languages"
+              ],
+              "id": "theory_of_computation_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can a PDA do that a DFA cannot?",
+              "answer": "Recognize nested structures like balanced parentheses",
+              "explain": "A PDA can push '(' onto the stack and pop for ')'. A DFA with no stack cannot count arbitrary nesting depth.",
+              "choices": [
+                "Nothing, they have the same power",
+                "Accept fewer languages",
+                "Run faster",
+                "Recognize nested structures like balanced parentheses"
+              ],
+              "id": "theory_of_computation_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a transition in a PDA?",
+              "answer": "A change of state based on input, state, and stack top",
+              "explain": "A PDA transition is delta(state, symbol, stack_top) = (new_state, stack_change). It reads input, checks the stack, and updates both.",
+              "choices": [
+                "Only a state change",
+                "A change of state based on input, state, and stack top",
+                "Only a stack operation",
+                "A rejection of input"
+              ],
+              "id": "theory_of_computation_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are PDAs and CFGs equivalent?",
+              "answer": "Yes, both recognize exactly the context-free languages",
+              "explain": "Every CFG has an equivalent PDA and vice versa. They are two ways to describe the same language class.",
+              "choices": [
+                "They describe different languages",
+                "No, CFGs are more powerful",
+                "No, PDAs are more powerful",
+                "Yes, both recognize exactly the context-free languages"
+              ],
+              "id": "theory_of_computation_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What makes a PDA deterministic vs nondeterministic?",
+              "answer": "Deterministic has one next action per (state, symbol, stack_top); nondeterministic may have multiple",
+              "explain": "A deterministic PDA has a unique next move given the current state, input, and stack top. Nondeterministic PDAs can have multiple options.",
+              "choices": [
+                "Number of states",
+                "Stack size",
+                "Acceptance method",
+                "Deterministic has one next action per (state, symbol, stack_top); nondeterministic may have multiple"
+              ],
+              "id": "theory_of_computation_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Turing Machines",
+      "tip": "A Turing machine is a theoretical model of computation: a finite control with a read/write tape head. Turing machines can compute anything a real computer can, making them the benchmark for computability. They show the limits of what can be computed.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Turing Machine Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a Turing machine?",
+              "answer": "An abstract model with a control unit, tape, and read/write head",
+              "explain": "A Turing machine has a finite control (states), an infinite tape (memory), and a read/write head. It is the theoretical model for what is computable.",
+              "choices": [
+                "A device that solves all problems",
+                "An abstract model with a control unit, tape, and read/write head",
+                "An early computer from the 1950s",
+                "A programming language"
+              ],
+              "id": "theory_of_computation_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a Turing machine's tape represent?",
+              "answer": "Unlimited memory",
+              "explain": "The infinite tape gives a Turing machine unlimited storage capacity. This distinguishes it from finite automata and PDAs.",
+              "choices": [
+                "A program counter",
+                "The input only",
+                "Unlimited memory",
+                "A queue"
+              ],
+              "id": "theory_of_computation_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Church-Turing thesis?",
+              "answer": "The idea that Turing machines can compute anything computable",
+              "explain": "The Church-Turing thesis (not a theorem, an observation) states that Turing machines capture the intuitive notion of computability.",
+              "choices": [
+                "A rule for programming",
+                "The idea that Turing machines can compute anything computable",
+                "A type of language",
+                "A proof about logic"
+              ],
+              "id": "theory_of_computation_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a Turing machine do in each step?",
+              "answer": "Read, write, move the head, and change state",
+              "explain": "Each step reads the current cell, writes a symbol, moves left or right, and transitions to a new state. This repeats until the machine halts.",
+              "choices": [
+                "Only change the state",
+                "Only read the input",
+                "Only move the tape",
+                "Read, write, move the head, and change state"
+              ],
+              "id": "theory_of_computation_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a Turing machine solve every problem?",
+              "answer": "No, some problems are uncomputable even for Turing machines",
+              "explain": "Some problems cannot be solved by any algorithm. The halting problem is the famous example.",
+              "choices": [
+                "No, some problems are uncomputable even for Turing machines",
+                "Yes, Turing machines are all-powerful",
+                "Only practical problems",
+                "Only if the problem is finite"
+              ],
+              "id": "theory_of_computation_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Variants of Turing Machines",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Do multitape Turing machines have more power than single-tape machines?",
+              "answer": "No, both can compute the same functions",
+              "explain": "Multitape Turing machines are faster but not more powerful. Anything a multitape machine computes, a single-tape machine can also compute.",
+              "choices": [
+                "Yes, multitape is more powerful",
+                "Power depends on the number of states",
+                "Single-tape is more powerful",
+                "No, both can compute the same functions"
+              ],
+              "id": "theory_of_computation_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a nondeterministic Turing machine?",
+              "answer": "A machine with multiple possible next moves per state",
+              "explain": "A nondeterministic Turing machine can choose between options at each step. It accepts if any path leads to acceptance.",
+              "choices": [
+                "A machine that always rejects",
+                "A machine that crashes randomly",
+                "A machine with multiple possible next moves per state",
+                "A machine with no states"
+              ],
+              "id": "theory_of_computation_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are nondeterministic Turing machines more powerful than deterministic ones?",
+              "answer": "No, both recognize the same languages",
+              "explain": "Nondeterminism may make a machine faster, but a deterministic machine can simulate every path of a nondeterministic one. Both recognize exactly the same languages.",
+              "choices": [
+                "No, both recognize the same languages",
+                "For finite languages only",
+                "Yes, nondeterministic is more powerful",
+                "Only in practice"
+              ],
+              "id": "theory_of_computation_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a universal Turing machine?",
+              "answer": "A Turing machine that can simulate any other Turing machine",
+              "explain": "A universal Turing machine takes as input an encoding of another TM and its input, then simulates it. This is the theoretical model for a general-purpose computer.",
+              "choices": [
+                "A machine with infinite states",
+                "A machine that solves all problems",
+                "The fastest Turing machine",
+                "A Turing machine that can simulate any other Turing machine"
+              ],
+              "id": "theory_of_computation_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a Turing machine to halt?",
+              "answer": "It enters an accepting or rejecting state and stops",
+              "explain": "A Turing machine halts when it enters its accept state or its reject state. A machine that loops forever never halts.",
+              "choices": [
+                "It enters an accepting or rejecting state and stops",
+                "It loops forever",
+                "It moves to the right forever",
+                "It erases the tape"
+              ],
+              "id": "theory_of_computation_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Decidability and the Halting Problem",
+      "tip": "A problem is decidable if some Turing machine can solve it: always halting with yes or no. The halting problem, asking whether a given program halts on a given input, is undecidable: no Turing machine can solve it. Undecidability shows fundamental limits on computation.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Decidable Problems",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a decidable problem?",
+              "answer": "A problem solvable by a Turing machine that always halts",
+              "explain": "A decidable problem has an algorithm (Turing machine) that answers yes or no and always terminates. Most practical problems are decidable.",
+              "choices": [
+                "A problem that computers solve quickly",
+                "A problem with only one solution",
+                "A problem with no solution",
+                "A problem solvable by a Turing machine that always halts"
+              ],
+              "id": "theory_of_computation_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a recognizable (recursively enumerable) language?",
+              "answer": "A language accepted by a Turing machine that may not halt on rejection",
+              "explain": "A Turing machine recognizes a language if it accepts every string in the language. It may loop forever on strings outside the language.",
+              "choices": [
+                "A language with no strings",
+                "A language accepted by a Turing machine that may not halt on rejection",
+                "A decidable language",
+                "A finite language"
+              ],
+              "id": "theory_of_computation_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is every decidable language recognizable?",
+              "answer": "Yes, if a TM decides a language, it also recognizes it",
+              "explain": "A deciding TM always halts, so it always accepts or rejects. This means it recognizes and decides simultaneously.",
+              "choices": [
+                "Depends on the TM",
+                "No, they are different",
+                "Yes, if a TM decides a language, it also recognizes it",
+                "Only for finite languages"
+              ],
+              "id": "theory_of_computation_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is every recognizable language decidable?",
+              "answer": "No, some recognizable languages have no machine that always halts",
+              "explain": "A recognizer may halt and accept strings in the language but loop forever on strings outside it. If both a language and its complement are recognizable, the language is decidable.",
+              "choices": [
+                "Yes, they are equivalent",
+                "Depends on the alphabet",
+                "Only for finite languages",
+                "No, some recognizable languages have no machine that always halts"
+              ],
+              "id": "theory_of_computation_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complement of a language?",
+              "answer": "The set of all strings not in the language",
+              "explain": "If L is a language, its complement is the set of all strings over the alphabet that are not in L.",
+              "choices": [
+                "An empty language",
+                "The language in reverse",
+                "The language itself",
+                "The set of all strings not in the language"
+              ],
+              "id": "theory_of_computation_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "The Halting Problem",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the halting problem?",
+              "answer": "Determining if a given program halts on a given input",
+              "explain": "The halting problem asks: given program P and input I, does P halt? This problem is undecidable: no algorithm can solve it.",
+              "choices": [
+                "Testing if a program is correct",
+                "Determining if a given program halts on a given input",
+                "Making programs run faster",
+                "Programming languages that are slow"
+              ],
+              "id": "theory_of_computation_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a problem to be undecidable?",
+              "answer": "No Turing machine can solve it",
+              "explain": "An undecidable problem has no algorithm that always terminates with the correct answer. This doesn't mean it's unsolvable for specific cases.",
+              "choices": [
+                "No Turing machine can solve it",
+                "It takes infinite time",
+                "It is very hard to solve",
+                "Only humans can solve it"
+              ],
+              "id": "theory_of_computation_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is the halting problem recognizable?",
+              "answer": "Yes, but not decidable",
+              "explain": "You can run program P on input I and accept if it halts. But you cannot reject if it loops forever, so the problem is not decidable.",
+              "choices": [
+                "Only for finite programs",
+                "Yes, and it is decidable",
+                "No, it is completely unrecognizable",
+                "Yes, but not decidable"
+              ],
+              "id": "theory_of_computation_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is undecidability proven for the halting problem?",
+              "answer": "By contradiction: assume a halting-solver exists, then derive a contradiction",
+              "explain": "The proof uses diagonalization. If a halting solver existed, we could build a machine that contradicts itself, so no such solver can exist.",
+              "choices": [
+                "By testing all possible programs",
+                "By contradiction: assume a halting-solver exists, then derive a contradiction",
+                "By empirical testing",
+                "By finding a slower algorithm"
+              ],
+              "id": "theory_of_computation_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is diagonalization?",
+              "answer": "A proof technique using self-reference to show impossibility",
+              "explain": "Diagonalization constructs an object that contradicts the assumption, proving the assumption false. It is used to prove the halting problem is undecidable.",
+              "choices": [
+                "A proof technique using self-reference to show impossibility",
+                "A sorting algorithm",
+                "A matrix operation",
+                "A debugging method"
+              ],
+              "id": "theory_of_computation_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Complexity: P, NP, and NP-Completeness",
+      "tip": "Complexity classes sort problems by how hard they are to solve. P is solvable in polynomial time. NP problems can be verified in polynomial time. NP-completeness identifies the hardest problems in NP. Whether P equals NP is unsolved, and most experts believe they differ.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Complexity Classes P and NP",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is complexity class P?",
+              "answer": "Problems solvable by a deterministic Turing machine in polynomial time",
+              "explain": "P is the class of decision problems with yes/no answers that can be solved in polynomial time (not exponential). Most practical algorithms are in P.",
+              "choices": [
+                "Problems that computers reject",
+                "Problems with no solution",
+                "Problems solvable by a deterministic Turing machine in polynomial time",
+                "Problems solvable in constant time"
+              ],
+              "id": "theory_of_computation_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is complexity class NP?",
+              "answer": "Problems whose solutions can be verified in polynomial time",
+              "explain": "NP is the class of problems where, given a proposed solution, you can verify it is correct in polynomial time. Solving may be much harder.",
+              "choices": [
+                "Problems unsolvable by computers",
+                "Problems whose solutions can be verified in polynomial time",
+                "Problems in P only",
+                "Problems with no solutions"
+              ],
+              "id": "theory_of_computation_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is P a subset of NP?",
+              "answer": "Yes, everything in P can be verified in polynomial time",
+              "explain": "If you can solve a problem in polynomial time, you can verify a solution in polynomial time. So P is a subset of NP.",
+              "choices": [
+                "NP is a subset of P",
+                "Only partially",
+                "No, they are disjoint",
+                "Yes, everything in P can be verified in polynomial time"
+              ],
+              "id": "theory_of_computation_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the P versus NP problem?",
+              "answer": "Whether every problem verifiable in polynomial time is also solvable in polynomial time",
+              "explain": "P=NP is the biggest unsolved question in computer science. Most believe P and NP are different, but no proof exists.",
+              "choices": [
+                "Only a theoretical concern",
+                "A proven equivalence",
+                "Whether every problem verifiable in polynomial time is also solvable in polynomial time",
+                "A problem in number theory"
+              ],
+              "id": "theory_of_computation_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a well-known NP-complete problem?",
+              "answer": "The traveling salesman problem (decision version)",
+              "explain": "The decision version asks whether a route shorter than a given length exists. Verifying a proposed route takes polynomial time, but no polynomial-time way to find one is known. The other choices are all solvable in polynomial time.",
+              "choices": [
+                "Sorting a list",
+                "The traveling salesman problem (decision version)",
+                "Finding the largest element",
+                "Multiplication of two numbers"
+              ],
+              "id": "theory_of_computation_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "NP-Completeness",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an NP-complete problem?",
+              "answer": "Among the hardest problems in NP; if one is solvable in polynomial time, all of NP is",
+              "explain": "NP-complete problems are both in NP and at least as hard as every other NP problem. Examples include SAT and the decision version of the traveling salesman problem.",
+              "choices": [
+                "A problem that cannot be solved",
+                "Among the hardest problems in NP; if one is solvable in polynomial time, all of NP is",
+                "A problem that is always easy",
+                "A problem unsolvable by computers"
+              ],
+              "id": "theory_of_computation_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a reduction between problems?",
+              "answer": "A way to transform one problem into another to compare hardness",
+              "explain": "A reduction from problem A to problem B means if you can solve B quickly, you can solve A quickly. Reductions compare problem difficulty.",
+              "choices": [
+                "Removing code",
+                "Solving a problem faster",
+                "A way to transform one problem into another to compare hardness",
+                "Simplifying code"
+              ],
+              "id": "theory_of_computation_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SAT problem?",
+              "answer": "Determining if a boolean formula can be made true",
+              "explain": "SAT (Boolean Satisfiability) asks if there is an assignment of true/false to variables making a formula true. It is NP-complete.",
+              "choices": [
+                "A programming language",
+                "Determining if a boolean formula can be made true",
+                "A type of sorting algorithm",
+                "Finding the value of a variable"
+              ],
+              "id": "theory_of_computation_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does NP-hardness mean?",
+              "answer": "At least as hard as the hardest NP problem",
+              "explain": "An NP-hard problem is at least as difficult as any NP problem. Not all NP-hard problems are in NP; the halting problem is NP-hard and undecidable.",
+              "choices": [
+                "Only in exponential time",
+                "Impossible to solve",
+                "At least as hard as the hardest NP problem",
+                "Requires infinite memory"
+              ],
+              "id": "theory_of_computation_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If P=NP, what happens to NP-complete problems?",
+              "answer": "All NP-complete problems become solvable in polynomial time",
+              "explain": "If P equals NP, then every problem verifiable in polynomial time can be solved in polynomial time. This would solve all NP-complete problems.",
+              "choices": [
+                "Nothing changes",
+                "They remain hard",
+                "Only some become solvable",
+                "All NP-complete problems become solvable in polynomial time"
+              ],
+              "id": "theory_of_computation_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

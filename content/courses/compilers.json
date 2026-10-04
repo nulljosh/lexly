@@ -1,0 +1,904 @@
+{
+  "id": "compilers",
+  "name": "Compilers",
+  "category": "programming",
+  "icon": "fa-solid fa-gears",
+  "level": "How Code Becomes Programs",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Compilers vs Interpreters",
+      "tip": "A compiler translates an entire program into machine code before it runs. An interpreter reads and executes code line by line as it goes. Both turn source code into something the computer can execute, but they work differently.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "How Compilers Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a compiler do?",
+              "answer": "Translates an entire program into machine code before execution",
+              "explain": "A compiler reads all the source code, analyzes it, and produces executable machine code that can run later without the compiler present.",
+              "choices": [
+                "Translates an entire program into machine code before execution",
+                "Executes code line by line",
+                "Runs programs in a sandbox",
+                "Only checks for spelling mistakes"
+              ],
+              "id": "compilers_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of a compiler?",
+              "answer": "An executable file containing machine code",
+              "explain": "After compilation, you have a binary file (like a .exe on Windows or a Mach-O binary on macOS) that the operating system can run directly.",
+              "choices": [
+                "An executable file containing machine code",
+                "A list of errors",
+                "Source code in another language",
+                "Debugging information only"
+              ],
+              "id": "compilers_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Name a programming language that is typically compiled.",
+              "answer": "C",
+              "explain": "C, C++, Rust, and Go are compiled languages where code is translated to machine code before running. Java is a partial exception with bytecode compilation.",
+              "choices": [
+                "JavaScript",
+                "Ruby",
+                "Python",
+                "C"
+              ],
+              "id": "compilers_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is a compiled program's code translated to machine code?",
+              "answer": "Before the program runs",
+              "explain": "Compilation happens once during a separate build step, before the executable is distributed or run. This is different from interpretation.",
+              "choices": [
+                "As the program runs",
+                "Before the program runs",
+                "After the program finishes",
+                "While the program is being installed"
+              ],
+              "id": "compilers_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a major advantage of compiled languages?",
+              "answer": "Compiled executables run very fast because translation is already done",
+              "explain": "Since compilation happens before execution, the program runs at full machine speed without any translation overhead. Interpreters must translate as they go.",
+              "choices": [
+                "They are easier to write",
+                "Compiled executables run very fast because translation is already done",
+                "They never have bugs",
+                "They use less hard drive space"
+              ],
+              "id": "compilers_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "How Interpreters Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an interpreter do?",
+              "answer": "Reads and executes source code line by line",
+              "explain": "An interpreter processes code statement by statement at runtime, translating and executing each piece as it encounters it.",
+              "choices": [
+                "Only checks syntax",
+                "Reads and executes source code line by line",
+                "Compresses the source code",
+                "Converts source code into machine code files"
+              ],
+              "id": "compilers_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Name a programming language that is typically interpreted.",
+              "answer": "Python",
+              "explain": "Python, JavaScript, Ruby, and PHP are commonly interpreted languages. Code runs directly without a separate compilation step.",
+              "choices": [
+                "Rust",
+                "Go",
+                "Python",
+                "C++"
+              ],
+              "id": "compilers_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When do you need the interpreter to run an interpreted program?",
+              "answer": "Every time the program runs",
+              "explain": "Interpreters must be present when the program executes because they perform translation at runtime. Compiled programs need only the binary.",
+              "choices": [
+                "Never if you run it once",
+                "Only when the code changes",
+                "Only during development",
+                "Every time the program runs"
+              ],
+              "id": "compilers_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a major advantage of interpreted languages?",
+              "answer": "Code runs immediately without a separate build step",
+              "explain": "You can write code and run it right away. There is no compile step, which is faster for development and testing.",
+              "choices": [
+                "Interpreters never encounter bugs",
+                "They use less memory",
+                "Code runs immediately without a separate build step",
+                "Code runs faster than compiled code"
+              ],
+              "id": "compilers_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is interpreted code usually slower than compiled code?",
+              "answer": "Translation happens at runtime, slowing execution",
+              "explain": "The interpreter must translate code as it runs, adding overhead. Compiled code is already in machine language, so it runs directly.",
+              "choices": [
+                "Interpreters are poorly designed",
+                "Interpreted languages are weaker",
+                "Interpreters use more memory",
+                "Translation happens at runtime, slowing execution"
+              ],
+              "id": "compilers_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Lexing and Tokens",
+      "tip": "Lexing is the first step of compilation. It breaks source code into small pieces called tokens: keywords, operators, identifiers, and literals. Tokens are the building blocks that later steps understand and work with.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Breaking Code into Tokens",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a token?",
+              "answer": "A basic building block of source code with a type and value",
+              "explain": "A token is an atomic piece: a keyword like 'if', an operator like '+', an identifier like 'x', or a number. The lexer produces a stream of tokens.",
+              "choices": [
+                "An error message",
+                "A mistake in the code",
+                "A basic building block of source code with a type and value",
+                "A comment in the source code"
+              ],
+              "id": "compilers_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is lexical analysis?",
+              "answer": "The process of breaking source code into tokens",
+              "explain": "Lexical analysis (also called lexing) reads the source code character by character and groups them into meaningful tokens.",
+              "choices": [
+                "The process of breaking source code into tokens",
+                "Optimizing code for speed",
+                "Checking that the code is correct",
+                "Translating code to machine code"
+              ],
+              "id": "compilers_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a lexer do?",
+              "answer": "Scans source code and produces a list of tokens",
+              "explain": "A lexer (lexical analyzer) reads source code and identifies tokens, removing whitespace and comments in the process.",
+              "choices": [
+                "Stores code in memory",
+                "Converts code to machine language",
+                "Checks if the code is syntactically correct",
+                "Scans source code and produces a list of tokens"
+              ],
+              "id": "compilers_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What information does a token contain?",
+              "answer": "Type and value, such as NUMBER or IDENTIFIER",
+              "explain": "Each token has a type (like KEYWORD, OPERATOR, NUMBER) and a value (the actual text or number). For example, the token '+' has type OPERATOR and value '+'.",
+              "choices": [
+                "Type and value, such as NUMBER or IDENTIFIER",
+                "Only the line number",
+                "Only the text of the token",
+                "Memory address only"
+              ],
+              "id": "compilers_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the code 'x = 5 + 3', how many tokens are there?",
+              "answer": "5",
+              "explain": "The tokens are: x (IDENTIFIER), = (OPERATOR), 5 (NUMBER), + (OPERATOR), 3 (NUMBER). Whitespace is ignored.",
+              "choices": [
+                "4",
+                "6",
+                "3",
+                "5"
+              ],
+              "id": "compilers_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Token Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a keyword in a programming language?",
+              "answer": "A reserved word that has a special meaning",
+              "explain": "Keywords like if, else, while, return, and function are reserved by the language. They have predefined meanings and cannot be used as variable names.",
+              "choices": [
+                "A reserved word that has a special meaning",
+                "Any word in the code",
+                "A word that appears frequently",
+                "A comment in the code"
+              ],
+              "id": "compilers_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an identifier?",
+              "answer": "A name given to a variable, function, or class",
+              "explain": "Identifiers are names chosen by the programmer: x, name, calculateSum, or MyClass. They must follow language rules, such as starting with a letter or underscore and containing no spaces.",
+              "choices": [
+                "A built-in function",
+                "A number in the code",
+                "A symbol like + or -",
+                "A name given to a variable, function, or class"
+              ],
+              "id": "compilers_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an operator?",
+              "answer": "A symbol that performs an operation on values",
+              "explain": "Operators like +, -, *, /, =, ==, and && perform arithmetic, assignment, comparison, or logical operations on operands.",
+              "choices": [
+                "A comment",
+                "A variable name",
+                "A symbol that performs an operation on values",
+                "A keyword"
+              ],
+              "id": "compilers_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a literal?",
+              "answer": "An actual value written directly in the code",
+              "explain": "Literals are concrete values: the number 42, the string 'hello', or the boolean true. They represent themselves directly.",
+              "choices": [
+                "A variable name",
+                "A keyword",
+                "An error",
+                "An actual value written directly in the code"
+              ],
+              "id": "compilers_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of the following is a keyword in most languages?",
+              "answer": "if",
+              "explain": "Keywords like if, else, while, for, and return are reserved. They control program flow and have special meaning to the compiler.",
+              "choices": [
+                "if",
+                "data",
+                "calculate",
+                "myVariable"
+              ],
+              "id": "compilers_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Parsing and Abstract Syntax Trees",
+      "tip": "Parsing is the next step after lexing. The parser takes a stream of tokens and builds an abstract syntax tree (AST), which represents the structure of the program. The AST shows which operations depend on which, capturing the program's grammar.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Understanding the Parser",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is parsing?",
+              "answer": "Analyzing the structure of tokens according to grammar rules",
+              "explain": "A parser reads tokens and applies grammar rules to understand the structure. It checks that tokens are arranged in a valid way and builds a tree representation.",
+              "choices": [
+                "Converting code to machine language",
+                "Breaking code into tokens",
+                "Analyzing the structure of tokens according to grammar rules",
+                "Checking for spelling errors"
+              ],
+              "id": "compilers_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a parser produce?",
+              "answer": "An abstract syntax tree (AST)",
+              "explain": "The parser builds an AST that represents the structure of the program. This tree shows the relationships between operations and components.",
+              "choices": [
+                "An abstract syntax tree (AST)",
+                "A list of tokens",
+                "Optimized machine code",
+                "Executable code"
+              ],
+              "id": "compilers_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a grammar in the context of parsing?",
+              "answer": "A set of rules describing valid syntax",
+              "explain": "A grammar defines what sequences of tokens are valid. For example, a grammar rule might say 'an if statement is the keyword if, followed by a condition, followed by a statement.'",
+              "choices": [
+                "A set of rules describing valid syntax",
+                "A dictionary of words",
+                "A list of errors",
+                "Comments in the code"
+              ],
+              "id": "compilers_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a syntax error?",
+              "answer": "Code that violates the grammar rules",
+              "explain": "A syntax error occurs when tokens are arranged in a way that violates the language's grammar. For example, missing a semicolon or unmatched parenthesis.",
+              "choices": [
+                "A warning from the compiler",
+                "A variable with the wrong type",
+                "Code that violates the grammar rules",
+                "An error that happens at runtime"
+              ],
+              "id": "compilers_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does the parser need to check the order of tokens?",
+              "answer": "Token order determines what the program means",
+              "explain": "The sequence of tokens conveys meaning. 'x = 5' and '5 = x' are different due to order. The parser uses grammar rules to interpret this order.",
+              "choices": [
+                "To optimize the code",
+                "To count how many tokens there are",
+                "To remove unnecessary tokens",
+                "Token order determines what the program means"
+              ],
+              "id": "compilers_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Abstract Syntax Trees",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an abstract syntax tree (AST)?",
+              "answer": "A tree representation of the structure of source code",
+              "explain": "An AST is a hierarchical representation where each node represents a construct in the code (operation, assignment, function call). The tree structure shows dependencies.",
+              "choices": [
+                "A diagram of the CPU",
+                "A tree representation of the structure of source code",
+                "An error report",
+                "A list of all variables"
+              ],
+              "id": "compilers_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do the nodes of an AST represent?",
+              "answer": "Constructs like operations, assignments, or function calls",
+              "explain": "Each node in the AST represents a code construct. Internal nodes represent operations; leaf nodes represent values or identifiers.",
+              "choices": [
+                "Error messages",
+                "Constructs like operations, assignments, or function calls",
+                "Memory addresses",
+                "Machine instructions"
+              ],
+              "id": "compilers_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For the expression '2 + 3 * 4', which operation is evaluated first in the AST?",
+              "answer": "3 * 4, because multiplication has higher precedence",
+              "explain": "The AST respects operator precedence. Multiplication appears deeper in the tree than addition, so it is evaluated first.",
+              "choices": [
+                "4 * 3, in reverse order",
+                "2 + 4, skipping the middle number",
+                "2 + 3, left to right",
+                "3 * 4, because multiplication has higher precedence"
+              ],
+              "id": "compilers_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of an AST?",
+              "answer": "To represent program structure for later compilation steps",
+              "explain": "The AST provides a structured representation that semantic analysis, optimization, and code generation can work with.",
+              "choices": [
+                "To detect all variable names",
+                "To make source code smaller",
+                "To represent program structure for later compilation steps",
+                "To display the code on screen"
+              ],
+              "id": "compilers_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which compilation phase comes immediately after parsing?",
+              "answer": "Semantic analysis",
+              "explain": "After the parser builds the AST, semantic analysis examines the tree to check for errors like type mismatches or undefined variables.",
+              "choices": [
+                "Lexing",
+                "Code generation",
+                "Semantic analysis",
+                "Machine code production"
+              ],
+              "id": "compilers_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Semantic Analysis and Type Checking",
+      "tip": "After building an AST, the compiler must check that the code makes sense. Semantic analysis looks for errors that parsing missed: undefined variables, type mismatches, and incorrect operation usage. It enriches the AST with type information.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Semantic Analysis",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is semantic analysis?",
+              "answer": "Checking whether a program's meaning is correct",
+              "explain": "Semantic analysis examines the AST to find errors that syntax cannot catch: using variables that don't exist, type mismatches, or impossible operations.",
+              "choices": [
+                "Converting code to machine language",
+                "Checking whether a program's meaning is correct",
+                "Breaking code into tokens",
+                "Optimizing code for speed"
+              ],
+              "id": "compilers_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a semantic error?",
+              "answer": "Using a variable or function that doesn't exist",
+              "explain": "Semantic errors include undefined variables, type mismatches, and calling functions with wrong argument types. Code is syntactically valid but meaningless.",
+              "choices": [
+                "A runtime crash",
+                "Using a variable or function that doesn't exist",
+                "A typo in the code",
+                "A slow algorithm"
+              ],
+              "id": "compilers_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What information does semantic analysis gather?",
+              "answer": "Type information and symbol tables",
+              "explain": "Semantic analysis builds a symbol table mapping names to their types and declarations. This is used to check type correctness and generate code.",
+              "choices": [
+                "Execution time predictions",
+                "Type information and symbol tables",
+                "Only error messages",
+                "Machine instructions"
+              ],
+              "id": "compilers_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a statically typed language, when does the compiler usually catch type errors?",
+              "answer": "During semantic analysis",
+              "explain": "In statically-typed languages, type errors are caught at compile time during semantic analysis. The compiler checks that operations are valid for the types involved.",
+              "choices": [
+                "During semantic analysis",
+                "Only at runtime",
+                "During lexing",
+                "Never"
+              ],
+              "id": "compilers_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a symbol table?",
+              "answer": "A mapping of names to their types and declarations",
+              "explain": "A symbol table is a data structure that stores information about variables, functions, and classes: their names, types, scopes, and memory locations.",
+              "choices": [
+                "A list of tokens",
+                "A mapping of names to their types and declarations",
+                "A machine code instruction",
+                "A list of syntax errors"
+              ],
+              "id": "compilers_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Type Checking",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is type checking?",
+              "answer": "Verifying that operations are valid for the operands' types",
+              "explain": "Type checking ensures you don't add a string to a number, pass the wrong number of arguments to a function, or perform invalid operations.",
+              "choices": [
+                "Storing types in memory",
+                "Verifying that operations are valid for the operands' types",
+                "Counting how many types exist",
+                "Translating code to machine language"
+              ],
+              "id": "compilers_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is static type checking?",
+              "answer": "Type checking performed by the compiler before the program runs",
+              "explain": "Static type checking happens at compile time. Errors are caught before the program executes, allowing early bug detection.",
+              "choices": [
+                "Checking types only at specific points",
+                "Type checking done by the CPU",
+                "Allowing any type in any operation",
+                "Type checking performed by the compiler before the program runs"
+              ],
+              "id": "compilers_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is dynamic type checking?",
+              "answer": "Type checking performed at runtime as the program executes",
+              "explain": "Dynamic type checking happens while the program runs. Errors are discovered when the problematic code is executed.",
+              "choices": [
+                "Type checking by the compiler",
+                "Ignoring types entirely",
+                "Type checking performed at runtime as the program executes",
+                "Checking types only in comments"
+              ],
+              "id": "compilers_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a type mismatch error?",
+              "answer": "Adding a string to an integer",
+              "explain": "In a statically-typed language, x + y will fail if x is a string and y is an integer because the types don't match for the addition operation.",
+              "choices": [
+                "Spelling a keyword incorrectly",
+                "Adding a string to an integer",
+                "Using a variable before declaring it",
+                "Missing a semicolon"
+              ],
+              "id": "compilers_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does type inference mean?",
+              "answer": "The compiler deduces a variable's type from context",
+              "explain": "Type inference allows languages to figure out types automatically. For example, 'x = 5' infers that x is an integer.",
+              "choices": [
+                "Ignoring types",
+                "The compiler deduces a variable's type from context",
+                "Using only one type in the program",
+                "Requiring all types to be declared"
+              ],
+              "id": "compilers_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Intermediate Representation and Optimization",
+      "tip": "Compilers often convert the AST into an intermediate representation (IR), a language-independent code form. This lets the compiler apply optimizations: removing dead code, simplifying expressions, reordering operations. The IR bridges the source code and machine code.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Intermediate Representation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is intermediate representation (IR)?",
+              "answer": "A simplified code form between source code and machine code",
+              "explain": "IR is a language-independent representation. It is easier for the compiler to optimize and transform than the original source code.",
+              "choices": [
+                "A simplified code form between source code and machine code",
+                "Machine code before linking",
+                "Another name for source code",
+                "Comments in the code"
+              ],
+              "id": "compilers_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do compilers use an intermediate representation?",
+              "answer": "It simplifies optimization and retargeting to different CPUs",
+              "explain": "IR decouples the front end (parsing source code) from the back end (generating machine code). A compiler can optimize IR once and generate code for many targets.",
+              "choices": [
+                "To make the code smaller on disk",
+                "It simplifies optimization and retargeting to different CPUs",
+                "To make the program run slower",
+                "To add more errors"
+              ],
+              "id": "compilers_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does IR typically look like?",
+              "answer": "A sequence of simple instructions like a low-level pseudocode",
+              "explain": "IR often resembles pseudocode or assembly language. Common forms include three-address code (a = b + c) or static single assignment (SSA) form.",
+              "choices": [
+                "High-level source code",
+                "Graphics and diagrams",
+                "A sequence of simple instructions like a low-level pseudocode",
+                "Natural language explanations"
+              ],
+              "id": "compilers_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is three-address code?",
+              "answer": "IR where each instruction has at most three operands",
+              "explain": "Three-address code is a simple IR form: 'a = b + c' is one instruction with three operands. It is easy to optimize and translate to machine code.",
+              "choices": [
+                "IR where each instruction has at most three operands",
+                "Three types of programming languages",
+                "Three passes through the compiler",
+                "Machine code for three processors"
+              ],
+              "id": "compilers_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which step comes immediately before generating intermediate representation?",
+              "answer": "Semantic analysis",
+              "explain": "After semantic analysis enriches the AST with type information, the compiler can generate IR that embeds those decisions.",
+              "choices": [
+                "Semantic analysis",
+                "Lexing",
+                "Code generation",
+                "Parsing"
+              ],
+              "id": "compilers_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Code Optimization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is code optimization?",
+              "answer": "Improving code to run faster, use less memory, or be smaller",
+              "explain": "Optimization transforms code while preserving its behavior. Goals include reducing execution time, memory usage, or code size.",
+              "choices": [
+                "Adding more features",
+                "Making code compile faster",
+                "Writing cleaner code",
+                "Improving code to run faster, use less memory, or be smaller"
+              ],
+              "id": "compilers_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is dead code elimination?",
+              "answer": "Removing code that is never executed",
+              "explain": "Dead code is unreachable: after a return statement or inside a never-true condition. Removing it makes the program smaller without changing behavior.",
+              "choices": [
+                "Shortening variable names",
+                "Removing error messages",
+                "Removing code that is never executed",
+                "Deleting all comments"
+              ],
+              "id": "compilers_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is constant folding?",
+              "answer": "Computing constant expressions at compile time",
+              "explain": "Instead of computing 2 + 3 when the program runs, the compiler evaluates it to 5 at compile time. This saves runtime computation.",
+              "choices": [
+                "Computing constant expressions at compile time",
+                "Folding paper for origami",
+                "Reducing the number of variables",
+                "Storing data in a constant variable"
+              ],
+              "id": "compilers_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is loop unrolling?",
+              "answer": "Repeating loop body code to reduce loop overhead",
+              "explain": "Instead of looping 4 times, unroll it to repeat the body 4 times inline. This reduces loop counter checks but increases code size.",
+              "choices": [
+                "Running loops in parallel",
+                "Removing all loops",
+                "Repeating loop body code to reduce loop overhead",
+                "Turning a loop inside out"
+              ],
+              "id": "compilers_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does optimization happen at the IR level rather than on source code?",
+              "answer": "IR is simpler and language-independent, making patterns easier to recognize",
+              "explain": "IR abstracts away language-specific features. Patterns like constant expressions and dead code are easier to spot and manipulate in IR form.",
+              "choices": [
+                "Optimizing source code takes too long",
+                "Source code cannot be optimized",
+                "IR is simpler and language-independent, making patterns easier to recognize",
+                "Machine code is created first"
+              ],
+              "id": "compilers_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Code Generation, Linking, and JIT",
+      "tip": "Code generation translates IR (or AST) into machine code or assembly. The linker then combines code modules and resolves references. Just-in-time compilation dynamically compiles code while a program runs, offering speed and flexibility.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Code Generation and Assembly",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is code generation?",
+              "answer": "Translating IR or AST into machine code or assembly",
+              "explain": "Code generation transforms high-level IR into low-level instructions the CPU can execute. It chooses which registers to use and emits the actual machine instructions.",
+              "choices": [
+                "Debugging programs",
+                "Translating IR or AST into machine code or assembly",
+                "Writing source code",
+                "Parsing tokens"
+              ],
+              "id": "compilers_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is assembly language?",
+              "answer": "A low-level language with one instruction per machine operation",
+              "explain": "Assembly is a human-readable form of machine code. Each instruction directly corresponds to a CPU operation: MOV, ADD, JMP.",
+              "choices": [
+                "A high-level programming language",
+                "Pseudocode for algorithms",
+                "Source code in multiple files",
+                "A low-level language with one instruction per machine operation"
+              ],
+              "id": "compilers_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do code generators need to allocate registers?",
+              "answer": "Registers are fast storage that code generation must use efficiently",
+              "explain": "CPUs have a limited number of registers (fast memory). Code generation chooses which values to store in registers and when to spill to main memory.",
+              "choices": [
+                "Registers are fast storage that code generation must use efficiently",
+                "To store error messages",
+                "To avoid using the CPU",
+                "To increase code size"
+              ],
+              "id": "compilers_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is register allocation?",
+              "answer": "Assigning variables to registers and memory",
+              "explain": "Register allocation decides which variables live in fast registers and which go to slower main memory. Good allocation improves performance significantly.",
+              "choices": [
+                "Allocating memory for the stack",
+                "Allocating space for error handling",
+                "Assigning variables to registers and memory",
+                "Registering a program with the OS"
+              ],
+              "id": "compilers_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What must a code generator know about the target CPU?",
+              "answer": "Instruction set, register count, memory addressing modes",
+              "explain": "Code generation is CPU-specific. Different CPUs have different instruction sets, number of registers, and memory models.",
+              "choices": [
+                "The price of the CPU",
+                "Instruction set, register count, memory addressing modes",
+                "The name of the manufacturer",
+                "Only the clock speed"
+              ],
+              "id": "compilers_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Linking and JIT Compilation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is linking?",
+              "answer": "Combining compiled code modules and resolving references between them",
+              "explain": "After compilation, separate object files contain machine code and symbols. The linker combines them, resolving function calls and global references.",
+              "choices": [
+                "Optimizing memory usage",
+                "Combining compiled code modules and resolving references between them",
+                "Checking for syntax errors",
+                "Parsing source code"
+              ],
+              "id": "compilers_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an external reference in compiled code?",
+              "answer": "A call to a function defined in another module",
+              "explain": "When module A calls a function in module B, the compiler generates a reference that the linker must resolve to the function's address.",
+              "choices": [
+                "An include directive",
+                "A call to a function defined in another module",
+                "A comment about external resources",
+                "A variable declared but never used"
+              ],
+              "id": "compilers_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is just-in-time (JIT) compilation?",
+              "answer": "Compiling code at runtime during program execution",
+              "explain": "JIT compilers translate bytecode or hot code paths to machine code while the program runs. This combines the flexibility of interpretation with the speed of compilation.",
+              "choices": [
+                "Compiling code at runtime during program execution",
+                "Linking object files",
+                "Interpreting code one line at a time",
+                "Compiling code before running it"
+              ],
+              "id": "compilers_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a major advantage of JIT compilation?",
+              "answer": "It can optimize based on runtime information unavailable at compile time",
+              "explain": "JIT sees actual execution patterns. It can optimize hot code paths and specialize for observed types and branch patterns.",
+              "choices": [
+                "It is faster than all other methods",
+                "It requires no compilation step",
+                "It can optimize based on runtime information unavailable at compile time",
+                "It uses no memory"
+              ],
+              "id": "compilers_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is bytecode?",
+              "answer": "An intermediate code format that can be interpreted or compiled",
+              "explain": "Bytecode (like Java's .class format) is IR stored in files. It can be interpreted directly or JIT-compiled for speed.",
+              "choices": [
+                "An intermediate code format that can be interpreted or compiled",
+                "A method of memory allocation",
+                "Machine code for a single byte",
+                "An error code from the compiler"
+              ],
+              "id": "compilers_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
