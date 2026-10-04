@@ -1,0 +1,904 @@
+{
+  "id": "communications",
+  "name": "Communication Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-tower-broadcast",
+  "level": "Sending Information",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Signals, Channels, and Noise",
+      "tip": "Communication systems transmit information from a source to a destination through a channel. Every channel has noise and bandwidth limits. A signal carries information; noise is unwanted interference. Understanding these basic concepts is essential for all communication systems.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What is a Signal",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a signal in communication?",
+              "answer": "A physical representation of information that can be transmitted",
+              "explain": "Signals carry information from a transmitter to a receiver. They can be electrical (voltage), electromagnetic (radio waves), or optical (light). The signal encodes the information.",
+              "choices": [
+                "The receiving device",
+                "A physical representation of information that can be transmitted",
+                "Noise in a communication channel",
+                "A type of antenna"
+              ],
+              "id": "communications_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is noise in a communication system?",
+              "answer": "Unwanted interference that distorts the signal",
+              "explain": "Noise comes from thermal effects, electromagnetic interference, and other sources. It adds randomness to the signal and can cause errors if strong enough.",
+              "choices": [
+                "The frequency of transmission",
+                "Unwanted interference that distorts the signal",
+                "The desired signal",
+                "The information being sent"
+              ],
+              "id": "communications_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a communication channel?",
+              "answer": "The medium through which a signal travels from sender to receiver",
+              "explain": "Channels include copper wires, fiber optic cables, air (for radio), free space (for satellite), and other media. Every channel has limits on what signals it can carry.",
+              "choices": [
+                "The medium through which a signal travels from sender to receiver",
+                "A type of signal",
+                "A wireless antenna",
+                "Noise in the system"
+              ],
+              "id": "communications_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a source in communication?",
+              "answer": "The device or person originating the information",
+              "explain": "The source creates the information to be sent. It could be a microphone, camera, keyboard, sensor, or any device that generates data.",
+              "choices": [
+                "The transmission cable",
+                "The device or person originating the information",
+                "The receiving device",
+                "Noise in the channel"
+              ],
+              "id": "communications_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the destination in communication?",
+              "answer": "The device or person intended to receive the information",
+              "explain": "The destination receives and decodes the signal. It could be a speaker, display, printer, or any device that receives and interprets data.",
+              "choices": [
+                "The transmitting antenna",
+                "The source sending the message",
+                "The device or person intended to receive the information",
+                "Interference in the channel"
+              ],
+              "id": "communications_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Channel Capacity and Information",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What determines how much information a channel can carry?",
+              "answer": "Bandwidth and the signal-to-noise ratio",
+              "explain": "Bandwidth is the range of frequencies the channel can handle. Signal-to-noise ratio (SNR) determines how accurately information can be recovered. Both limit channel capacity.",
+              "choices": [
+                "The color of the cable",
+                "Bandwidth and the signal-to-noise ratio",
+                "Only the length of the cable",
+                "The type of modulation only"
+              ],
+              "id": "communications_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is bandwidth?",
+              "answer": "The range of frequencies a channel can transmit",
+              "explain": "Bandwidth is measured in hertz. A wider bandwidth allows higher data rates. A telephone line might have a bandwidth of a few kilohertz; optical fiber can have gigahertz or more.",
+              "choices": [
+                "The range of frequencies a channel can transmit",
+                "The type of modulation used",
+                "The distance a signal travels",
+                "The power of a signal"
+              ],
+              "id": "communications_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is the information capacity of a channel measured?",
+              "answer": "In bits per second",
+              "explain": "Channel capacity tells how much data can be transmitted per second. It is measured in bits per second (bps) or kilobits per second (kbps) and depends on bandwidth and noise.",
+              "choices": [
+                "In bits per second",
+                "In volts",
+                "In hertz only",
+                "In watts"
+              ],
+              "id": "communications_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Shannon capacity formula?",
+              "answer": "Capacity equals bandwidth times the logarithm of one plus signal-to-noise ratio",
+              "explain": "Shannon's formula (C = B * log2(1 + SNR)) shows that capacity increases with bandwidth and with higher SNR. It sets the theoretical maximum data rate for a channel.",
+              "choices": [
+                "Capacity equals bandwidth times signal-to-noise ratio",
+                "Capacity equals signal power times bandwidth",
+                "Capacity equals bandwidth divided by noise",
+                "Capacity equals bandwidth times the logarithm of one plus signal-to-noise ratio"
+              ],
+              "id": "communications_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a channel has 1000 hertz of bandwidth and an SNR of 100, what is the maximum capacity (approximately)?",
+              "answer": "About 6600 bits per second",
+              "explain": "Using C = B * log2(1 + SNR): C = 1000 * log2(101) = 1000 * 6.66 = 6660 bps. This shows that even with limited bandwidth, good SNR allows useful capacity.",
+              "choices": [
+                "10 bits per second",
+                "About 6600 bits per second",
+                "100,000 bits per second",
+                "1000 bits per second"
+              ],
+              "id": "communications_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Bandwidth and Information Rate",
+      "tip": "Bandwidth limits the rate at which a signal can change. Higher bandwidth allows faster signal changes and therefore higher data rates. The Nyquist theorem relates bandwidth to the sampling rate needed to faithfully represent a signal.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Bandwidth and Data Rate",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is greater bandwidth needed for higher data rates?",
+              "answer": "Higher data rates require faster signal changes, which need higher frequencies",
+              "explain": "Faster signal changes contain higher frequency components. A channel must have bandwidth to handle these components or data will be lost.",
+              "choices": [
+                "Higher data rates require faster signal changes, which need higher frequencies",
+                "Higher bandwidth is cheaper",
+                "Higher bandwidth reduces interference",
+                "Data rate and bandwidth are unrelated"
+              ],
+              "id": "communications_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist theorem?",
+              "answer": "A signal must be sampled at least twice per cycle to preserve all frequency information",
+              "explain": "The Nyquist theorem states the minimum sampling rate is twice the highest frequency in the signal. Without this, information is lost. This is called the Nyquist rate.",
+              "choices": [
+                "Signals must be sampled continuously",
+                "Sampling rate has no effect on signal recovery",
+                "Signals must be sampled at the signal frequency",
+                "A signal must be sampled at least twice per cycle to preserve all frequency information"
+              ],
+              "id": "communications_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A signal's highest frequency component is 4000 hertz. According to the Nyquist theorem, what is the minimum sampling rate needed to represent it?",
+              "answer": "8000 samples per second",
+              "explain": "The Nyquist rate is twice the highest frequency: 2 * 4000 = 8000 samples per second. Sampling at or above this rate captures the signal.",
+              "choices": [
+                "2000 samples per second",
+                "16,000 samples per second",
+                "8000 samples per second",
+                "4000 samples per second"
+              ],
+              "id": "communications_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is aliasing in digital signal processing?",
+              "answer": "Distortion that occurs when sampling is slower than the Nyquist rate",
+              "explain": "If you sample too slowly, high frequencies appear as lower frequencies. This cannot be undone, so it is essential to sample faster than the Nyquist rate.",
+              "choices": [
+                "Distortion that occurs when sampling is slower than the Nyquist rate",
+                "High frequency distortion only",
+                "A type of modulation",
+                "The best sampling method"
+              ],
+              "id": "communications_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between bandwidth and the number of bits per second in a digital signal?",
+              "answer": "Higher bandwidth allows higher bit rates because signal changes can be faster",
+              "explain": "Each bit is represented by a signal change. Faster changes need higher frequencies. Greater bandwidth means the channel can handle faster signal changes.",
+              "choices": [
+                "No relationship",
+                "Bit rate depends only on the modulation type",
+                "Lower bandwidth always gives higher bit rates",
+                "Higher bandwidth allows higher bit rates because signal changes can be faster"
+              ],
+              "id": "communications_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Frequency and Time Domain",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the frequency domain?",
+              "answer": "A representation of a signal as a function of frequency",
+              "explain": "The frequency domain shows which frequencies are present in a signal and their strengths. It is often shown as a plot of amplitude versus frequency.",
+              "choices": [
+                "The power consumed by a signal",
+                "A representation of a signal as a function of frequency",
+                "The modulation technique used",
+                "The time it takes to transmit"
+              ],
+              "id": "communications_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the time domain?",
+              "answer": "A representation of a signal as a function of time",
+              "explain": "The time domain shows how a signal's amplitude changes over time. It is what an oscilloscope displays and what we hear when listening to audio.",
+              "choices": [
+                "A frequency spectrum",
+                "The modulation technique",
+                "A representation of a signal as a function of time",
+                "The bandwidth of a signal"
+              ],
+              "id": "communications_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the spectrum of a signal?",
+              "answer": "The range of frequencies present in the signal and their amplitudes",
+              "explain": "The spectrum shows all frequency components. A sine wave has one frequency; a complex signal has many. The spectrum is determined by the signal's shape.",
+              "choices": [
+                "The time duration of the signal",
+                "The power consumption",
+                "The transmission distance",
+                "The range of frequencies present in the signal and their amplitudes"
+              ],
+              "id": "communications_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to the spectrum of a square wave compared to a sine wave?",
+              "answer": "A square wave has many harmonic frequencies; a sine wave has one",
+              "explain": "A sine wave is pure one frequency. A square wave contains the fundamental frequency plus many odd harmonics. This is why square waves need more bandwidth.",
+              "choices": [
+                "They are identical",
+                "A sine wave has more harmonics",
+                "Square waves have no spectrum",
+                "A square wave has many harmonic frequencies; a sine wave has one"
+              ],
+              "id": "communications_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does a sharp-edged digital pulse train need more bandwidth than a smooth sine wave of the same repetition rate?",
+              "answer": "Sharp signal transitions in digital create higher frequency components",
+              "explain": "Sharp rising and falling edges contain many high frequency components. A smooth sine wave has only one frequency, so it fits in far less bandwidth.",
+              "choices": [
+                "Sharp signal transitions in digital create higher frequency components",
+                "Analog is less efficient",
+                "There is no difference",
+                "Digital is inherently larger"
+              ],
+              "id": "communications_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Modulation",
+      "tip": "Modulation encodes information onto a carrier signal by varying its amplitude, frequency, or phase. Analog modulation includes AM and FM. Digital modulation uses discrete symbols: ASK varies amplitude, FSK changes frequency, PSK changes phase, and QAM combines amplitude and phase changes.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Amplitude and Frequency Modulation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is modulation?",
+              "answer": "Encoding information onto a carrier signal by varying its properties",
+              "explain": "Modulation takes a baseband signal (information) and encodes it onto a carrier wave. The receiver then extracts the information by demodulating.",
+              "choices": [
+                "Encoding information onto a carrier signal by varying its properties",
+                "Amplifying a signal",
+                "Compressing data",
+                "Filtering noise from a signal"
+              ],
+              "id": "communications_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Amplitude Modulation (AM)?",
+              "answer": "Varying the amplitude of a carrier wave according to the information signal",
+              "explain": "In AM, the amplitude of a high-frequency carrier is modulated by the information signal. The envelope of the wave follows the original signal's shape.",
+              "choices": [
+                "Compressing the signal",
+                "Varying the phase of a carrier",
+                "Varying the frequency of a carrier",
+                "Varying the amplitude of a carrier wave according to the information signal"
+              ],
+              "id": "communications_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Frequency Modulation (FM)?",
+              "answer": "Varying the frequency of a carrier wave according to the information signal",
+              "explain": "In FM, the frequency of the carrier changes based on the information signal. Higher amplitude information increases frequency; lower amplitude decreases it.",
+              "choices": [
+                "Varying the frequency of a carrier wave according to the information signal",
+                "Varying the amplitude of a carrier",
+                "Shifting the signal in time",
+                "Varying the phase of a carrier"
+              ],
+              "id": "communications_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is FM less susceptible to noise than AM?",
+              "answer": "Noise mainly affects amplitude; FM receivers ignore amplitude variations",
+              "explain": "FM receivers extract information from frequency changes, ignoring amplitude. Noise is typically amplitude variation. AM receivers must decode amplitude, so noise directly affects the signal.",
+              "choices": [
+                "Noise mainly affects amplitude; FM receivers ignore amplitude variations",
+                "FM does not use a carrier",
+                "FM uses lower power",
+                "FM has narrower bandwidth"
+              ],
+              "id": "communications_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which requires more bandwidth, AM or FM?",
+              "answer": "FM requires more bandwidth than AM",
+              "explain": "For broadcast radio, FM typically uses many times the bandwidth of AM for the same baseband signal. This extra bandwidth provides FM's noise resistance.",
+              "choices": [
+                "They require the same bandwidth",
+                "AM requires more bandwidth",
+                "Bandwidth depends on the carrier frequency",
+                "FM requires more bandwidth than AM"
+              ],
+              "id": "communications_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Digital Modulation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is digital modulation?",
+              "answer": "Encoding digital bits onto a carrier wave using discrete symbols",
+              "explain": "Digital modulation represents each bit or group of bits as a distinct signal state. Different modulation schemes use different sets of symbols.",
+              "choices": [
+                "Removing noise from signals",
+                "Amplifying digital signals",
+                "Encoding digital bits onto a carrier wave using discrete symbols",
+                "Converting analog to digital"
+              ],
+              "id": "communications_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Amplitude Shift Keying (ASK)?",
+              "answer": "Representing 0 and 1 by different amplitude levels of a carrier",
+              "explain": "In ASK, a 0 might be no carrier signal (amplitude 0) and a 1 might be full amplitude. It is simple but susceptible to noise.",
+              "choices": [
+                "Shifting the frequency of a carrier",
+                "Changing the bandwidth",
+                "Shifting the phase of a carrier",
+                "Representing 0 and 1 by different amplitude levels of a carrier"
+              ],
+              "id": "communications_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Frequency Shift Keying (FSK)?",
+              "answer": "Representing 0 and 1 by different frequencies of a carrier",
+              "explain": "In FSK, a 0 might be represented by one frequency and a 1 by another. It is more resistant to noise than ASK.",
+              "choices": [
+                "Changing the phase for each symbol",
+                "Varying amplitude for each bit",
+                "Combining amplitude and frequency",
+                "Representing 0 and 1 by different frequencies of a carrier"
+              ],
+              "id": "communications_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Phase Shift Keying (PSK)?",
+              "answer": "Representing bits by different phase angles of a carrier",
+              "explain": "In PSK, a 0 might be 0 degrees phase and a 1 might be 180 degrees phase. More complex versions like QPSK use four phase angles for two bits per symbol.",
+              "choices": [
+                "Combining AM and FM",
+                "Shifting the frequency of a carrier",
+                "Shifting the amplitude of a carrier",
+                "Representing bits by different phase angles of a carrier"
+              ],
+              "id": "communications_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Quadrature Amplitude Modulation (QAM)?",
+              "answer": "Combining changes in both amplitude and phase to represent more bits per symbol",
+              "explain": "QAM uses a grid of amplitude and phase combinations. 16-QAM has 16 symbols, allowing 4 bits per symbol. 64-QAM has 64 symbols for 6 bits per symbol.",
+              "choices": [
+                "Amplitude modulation only",
+                "Combining changes in both amplitude and phase to represent more bits per symbol",
+                "Phase modulation only",
+                "Frequency modulation only"
+              ],
+              "id": "communications_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Multiplexing",
+      "tip": "Multiplexing allows multiple signals to share one channel. Frequency Division Multiplexing (FDM) assigns different frequency bands to each signal. Time Division Multiplexing (TDM) gives each signal a time slot. Code Division Multiplexing (CDM) assigns unique codes to each signal.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Frequency and Time Division",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is multiplexing?",
+              "answer": "Sending multiple signals through a single channel",
+              "explain": "Multiplexing allows efficient use of channels. Many signals share the bandwidth, frequencies, time slots, or codes, depending on the multiplexing type.",
+              "choices": [
+                "Filtering a signal",
+                "Modulating a signal",
+                "Amplifying a signal",
+                "Sending multiple signals through a single channel"
+              ],
+              "id": "communications_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Frequency Division Multiplexing (FDM)?",
+              "answer": "Assigning different frequency bands to different signals in one channel",
+              "explain": "Each signal is modulated to a different carrier frequency, so all signals occupy the channel but in different frequency bands. This is used in radio broadcasting.",
+              "choices": [
+                "Using the same frequency for all signals",
+                "Code-dividing signals",
+                "Time-dividing a channel",
+                "Assigning different frequency bands to different signals in one channel"
+              ],
+              "id": "communications_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Time Division Multiplexing (TDM)?",
+              "answer": "Assigning different time slots to different signals in one channel",
+              "explain": "TDM rapidly switches between signals, giving each a time slot. Each signal gets the full bandwidth but only for its time slot. This is used in digital telephony.",
+              "choices": [
+                "Assigning different time slots to different signals in one channel",
+                "Using different modulation for each signal",
+                "Assigning different frequency bands",
+                "Combining amplitude and phase"
+              ],
+              "id": "communications_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is FDM a natural fit for analog signals?",
+              "answer": "Each continuous analog signal can be shifted to its own frequency band without being sampled first",
+              "explain": "Analog signals are continuous, so each can be modulated onto its own carrier and sent continuously in its own band. TDM would first need to sample them.",
+              "choices": [
+                "Each continuous analog signal can be shifted to its own frequency band without being sampled first",
+                "Analog modulation requires FDM",
+                "FDM is always better",
+                "FDM uses less bandwidth"
+              ],
+              "id": "communications_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is TDM better suited for digital signals?",
+              "answer": "Digital data is already discrete, so bits from several sources can be interleaved into time slots",
+              "explain": "Digital data is made of discrete bits, so bits or bytes from several sources can be interleaved into time slots with no extra conversion. This is efficient and needs only one carrier.",
+              "choices": [
+                "TDM requires less bandwidth",
+                "TDM is always better",
+                "Digital signals cannot use FDM",
+                "Digital data is already discrete, so bits from several sources can be interleaved into time slots"
+              ],
+              "id": "communications_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Code Division Multiplexing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is Code Division Multiplexing (CDM)?",
+              "answer": "Assigning unique spreading codes to each signal so they can share the same frequency band",
+              "explain": "CDM (also called CDMA) assigns each signal a unique code. The receiver uses the code to extract its signal from a mix of signals occupying the same spectrum.",
+              "choices": [
+                "Assigning different frequencies",
+                "Modulating with phase shift",
+                "Assigning different time slots",
+                "Assigning unique spreading codes to each signal so they can share the same frequency band"
+              ],
+              "id": "communications_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a spreading code in CDM?",
+              "answer": "A pattern of bits that spreads the signal over a wider bandwidth",
+              "explain": "Each user's data is multiplied by their unique spreading code, expanding it across the channel's bandwidth. The receiver multiplies by the same code to recover the original data.",
+              "choices": [
+                "A frequency range",
+                "A time slot assignment",
+                "A type of modulation",
+                "A pattern of bits that spreads the signal over a wider bandwidth"
+              ],
+              "id": "communications_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of CDM?",
+              "answer": "Many users can transmit at the same time in the same frequency band",
+              "explain": "CDM does not need separate time slots or frequency bands for each user. Each user's unique code lets the receiver extract that user's signal even while others transmit.",
+              "choices": [
+                "It eliminates all interference",
+                "It provides better modulation",
+                "Many users can transmit at the same time in the same frequency band",
+                "It uses less power"
+              ],
+              "id": "communications_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if two users' spreading codes are identical in CDM?",
+              "answer": "The receiver cannot distinguish between them and gets both signals mixed together",
+              "explain": "Spreading codes must be orthogonal (uncorrelated) to enable separation. If codes are identical, the receiver sees both users' signals as one.",
+              "choices": [
+                "One signal is blocked",
+                "The signals combine constructively",
+                "The receiver cannot distinguish between them and gets both signals mixed together",
+                "The frequency automatically changes"
+              ],
+              "id": "communications_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many users can share a CDM channel?",
+              "answer": "As many as there are unique orthogonal spreading codes available",
+              "explain": "The number of users is limited by the number of distinct orthogonal codes. More codes allow more simultaneous users. The spreading factor and code length determine code availability.",
+              "choices": [
+                "Two users maximum",
+                "Only one user per frequency",
+                "As many as there are unique orthogonal spreading codes available",
+                "Unlimited users"
+              ],
+              "id": "communications_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Noise and Error Management",
+      "tip": "Signal-to-noise ratio (SNR) measures signal strength relative to noise. Higher SNR allows more reliable communication. Error detection finds corrupted data using parity bits and checksums. Error correction uses redundancy to fix errors without retransmission.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Signal-to-Noise Ratio and Quality",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is signal-to-noise ratio (SNR)?",
+              "answer": "The ratio of signal power to noise power",
+              "explain": "SNR is measured in decibels (dB). SNR = 10 * log10(Signal Power / Noise Power). Higher SNR means a stronger signal relative to noise, enabling more reliable transmission.",
+              "choices": [
+                "The bandwidth of the channel",
+                "The modulation scheme",
+                "The ratio of signal power to noise power",
+                "The frequency of the signal"
+              ],
+              "id": "communications_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does SNR affect the bit error rate?",
+              "answer": "Higher SNR results in lower bit error rate",
+              "explain": "With higher SNR, the signal is clearer relative to noise, reducing the chance of bit errors. Better SNR allows detection of weaker signals and use of more efficient modulation.",
+              "choices": [
+                "Higher SNR results in lower bit error rate",
+                "Lower SNR gives lower error rate",
+                "SNR affects modulation only",
+                "SNR has no effect on error rate"
+              ],
+              "id": "communications_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What sources contribute to noise in a communication channel?",
+              "answer": "Thermal noise, electromagnetic interference, and other environmental sources",
+              "explain": "Thermal noise comes from random electron motion in conductors. EMI comes from nearby electrical equipment. Cosmic radiation and other sources also contribute.",
+              "choices": [
+                "Thermal noise, electromagnetic interference, and other environmental sources",
+                "Only modulation errors",
+                "Only the receiver",
+                "Only the transmitter"
+              ],
+              "id": "communications_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is SNR expressed in decibels?",
+              "answer": "Because power ratios are very large and decibels compress the scale logarithmically",
+              "explain": "Decibels (dB) allow easy comparison of ratios. A signal might be 10,000 times the noise power, which equals 40 dB. This logarithmic scale is convenient for communication engineering.",
+              "choices": [
+                "To measure frequency response",
+                "Because power ratios are very large and decibels compress the scale logarithmically",
+                "It is easier to measure",
+                "To measure only digital signals"
+              ],
+              "id": "communications_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a signal has 1000 watts of power and noise has 10 watts, what is the SNR in decibels?",
+              "answer": "20 decibels",
+              "explain": "SNR = 10 * log10(1000/10) = 10 * log10(100) = 10 * 2 = 20 dB. This shows a good signal-to-noise ratio.",
+              "choices": [
+                "20 decibels",
+                "10 decibels",
+                "100 decibels",
+                "30 decibels"
+              ],
+              "id": "communications_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Error Detection and Correction",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is error detection?",
+              "answer": "Adding extra bits to a message to identify if corruption occurred",
+              "explain": "Error detection uses redundancy to detect errors but not fix them. If an error is detected, the data is discarded or retransmitted.",
+              "choices": [
+                "Correcting all errors",
+                "Removing noise from signals",
+                "Preventing transmission errors",
+                "Adding extra bits to a message to identify if corruption occurred"
+              ],
+              "id": "communications_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a parity bit?",
+              "answer": "An extra bit added to make the total number of ones even or odd",
+              "explain": "Parity bits detect single-bit errors. Even parity means the total number of ones is even; odd parity means it is odd. If parity changes, an error occurred.",
+              "choices": [
+                "A bit that indicates the frequency",
+                "A spreading code",
+                "A modulation technique",
+                "An extra bit added to make the total number of ones even or odd"
+              ],
+              "id": "communications_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a checksum?",
+              "answer": "A value computed from data to verify its integrity",
+              "explain": "A checksum is computed by adding or using other operations on data bits. If the message is corrupted, the checksum will not match, indicating an error.",
+              "choices": [
+                "A type of modulation",
+                "A spreading technique",
+                "A value computed from data to verify its integrity",
+                "A frequency band"
+              ],
+              "id": "communications_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is error correction?",
+              "answer": "Adding extra bits so errors can be identified and fixed without retransmission",
+              "explain": "Error correction uses more redundancy than detection. The extra bits allow the receiver to identify which bits are wrong and correct them.",
+              "choices": [
+                "Adding extra bits so errors can be identified and fixed without retransmission",
+                "Removing noise entirely",
+                "Detecting errors only",
+                "Preventing all errors"
+              ],
+              "id": "communications_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is error correction important for wireless and satellite communication?",
+              "answer": "Retransmission is slow or impractical due to long delays and poor connectivity",
+              "explain": "In wireless and satellite systems, retransmission is expensive due to long propagation delays or poor links. Error correction allows reliable transmission without asking for retransmission.",
+              "choices": [
+                "Retransmission is slow or impractical due to long delays and poor connectivity",
+                "Satellites cannot receive signals",
+                "Wireless signals are always corrupted",
+                "Wireless uses different modulation"
+              ],
+              "id": "communications_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Antennas and Transmission",
+      "tip": "Antennas convert electrical signals into electromagnetic waves for transmission, or receive electromagnetic waves and convert them back to electrical signals. The size and shape of an antenna relate to the wavelength of the signal. Understanding antenna fundamentals helps explain how radio, television, and wireless systems work.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Antenna Principles",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an antenna?",
+              "answer": "A device that converts electrical signals to electromagnetic waves or vice versa",
+              "explain": "An antenna is the interface between a transmission line and free space. A transmitting antenna radiates EM waves; a receiving antenna captures them.",
+              "choices": [
+                "A device that converts electrical signals to electromagnetic waves or vice versa",
+                "A type of amplifier",
+                "A modulation technique",
+                "A type of transmitter"
+              ],
+              "id": "communications_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is antenna length related to wavelength?",
+              "answer": "Common antenna lengths are half-wavelength or quarter-wavelength",
+              "explain": "A half-wave dipole antenna is about half a wavelength long. A quarter-wave antenna is about one-quarter wavelength. These lengths resonate with the radio frequency.",
+              "choices": [
+                "Common antenna lengths are half-wavelength or quarter-wavelength",
+                "Antennas are always one full wavelength",
+                "Length depends only on the power",
+                "Antenna length does not depend on wavelength"
+              ],
+              "id": "communications_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between frequency and wavelength?",
+              "answer": "Wavelength equals the speed of light divided by frequency",
+              "explain": "The formula is wavelength = c / f, where c is the speed of light (about 300,000 km/s). Higher frequencies have shorter wavelengths.",
+              "choices": [
+                "They are independent",
+                "Wavelength equals the speed of light divided by frequency",
+                "They are directly proportional",
+                "Wavelength increases with frequency"
+              ],
+              "id": "communications_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For a frequency of 1000 megahertz, what is the wavelength?",
+              "answer": "0.3 meters (30 centimeters)",
+              "explain": "Using wavelength = c / f: wavelength = 300,000,000 m/s / 1,000,000,000 Hz = 0.3 meters. This shows why UHF antennas are relatively small.",
+              "choices": [
+                "0.3 meters (30 centimeters)",
+                "3 meters",
+                "30 meters",
+                "3000 meters"
+              ],
+              "id": "communications_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why must an antenna size match the wavelength of the signal?",
+              "answer": "Antennas work efficiently when their length resonates with the wavelength",
+              "explain": "Resonance occurs when antenna dimensions are a fraction of wavelength. A half-wave antenna at the right frequency radiates efficiently. Mismatched sizes lead to poor radiation.",
+              "choices": [
+                "Frequency does not affect antenna design",
+                "Antennas work efficiently when their length resonates with the wavelength",
+                "Size never matters for antennas",
+                "Longer antennas are always better"
+              ],
+              "id": "communications_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Signal Propagation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the path loss in radio propagation?",
+              "answer": "The reduction in signal power as it travels through space",
+              "explain": "Path loss occurs because the transmitter's power spreads over an increasingly large area as distance increases. Path loss is proportional to the square of the distance and frequency.",
+              "choices": [
+                "The reduction in signal power as it travels through space",
+                "Loss from using a short antenna",
+                "Noise in the receiver",
+                "Power wasted in the transmitter"
+              ],
+              "id": "communications_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does signal strength decrease with distance in free space?",
+              "answer": "Inversely with the square of the distance",
+              "explain": "Signal power decreases as 1/d^2. If you double the distance, the signal is one-fourth as strong. This is the inverse square law of wave propagation.",
+              "choices": [
+                "Linearly with distance",
+                "Exponentially with distance",
+                "Signal does not decrease",
+                "Inversely with the square of the distance"
+              ],
+              "id": "communications_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is fading in wireless communication?",
+              "answer": "Temporary reduction in received signal strength due to reflections and obstacles",
+              "explain": "Fading occurs when signals bounce off buildings and terrain, arriving at the receiver from multiple paths with different delays. These paths can reinforce or cancel each other.",
+              "choices": [
+                "Slow decrease in antenna performance",
+                "Temporary reduction in received signal strength due to reflections and obstacles",
+                "Increase in transmitter power over time",
+                "Loss of signal due to distance"
+              ],
+              "id": "communications_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is multipath propagation?",
+              "answer": "When a signal reaches the receiver via multiple reflected paths with different delays",
+              "explain": "Multipath occurs when reflections from buildings and terrain reach the receiver along with, or instead of, the direct signal, each with a different delay. This can cause interference and fading.",
+              "choices": [
+                "Using different modulation schemes",
+                "Using multiple transmitter antennas",
+                "Increasing transmitter power",
+                "When a signal reaches the receiver via multiple reflected paths with different delays"
+              ],
+              "id": "communications_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is higher frequency more susceptible to path loss than lower frequency?",
+              "answer": "A receiving antenna of fixed design captures less of the spread-out power at higher frequencies",
+              "explain": "Free-space spreading depends only on distance. The frequency term in path loss appears because an antenna's effective area shrinks with wavelength, so it captures less power at higher frequencies. Higher frequencies are also absorbed and blocked more by obstacles and atmosphere.",
+              "choices": [
+                "Frequency does not affect path loss",
+                "Lower frequency antennas are always better",
+                "A receiving antenna of fixed design captures less of the spread-out power at higher frequencies",
+                "Higher frequency waves travel more slowly"
+              ],
+              "id": "communications_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

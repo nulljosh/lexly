@@ -1,0 +1,904 @@
+{
+  "id": "power_systems",
+  "name": "Power Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-industry",
+  "level": "Electricity at Scale",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Energy and Electricity Basics",
+      "tip": "Electricity is the flow of electrons through a conductor, driven by a difference in electrical potential called voltage. Current measures the rate of flow, and resistance opposes it. Understanding voltage, current, and resistance is the foundation for all electrical systems.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Voltage, Current, and Resistance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does voltage measure in an electrical circuit?",
+              "answer": "The electrical potential difference between two points",
+              "explain": "Voltage is the push or pressure that drives electrons through a circuit. It is measured in volts and represents the potential energy available per unit charge.",
+              "choices": [
+                "The brightness of a light bulb",
+                "The electrical potential difference between two points",
+                "The color of a wire",
+                "The speed of electrons"
+              ],
+              "id": "power_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does current measure?",
+              "answer": "The rate at which charge flows through a conductor",
+              "explain": "Current is measured in amperes and represents how many electrons pass a point per second. Higher current means more charge flowing.",
+              "choices": [
+                "The rate at which charge flows through a conductor",
+                "The temperature of a wire",
+                "The length of a wire",
+                "The amount of copper in a wire"
+              ],
+              "id": "power_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is electrical resistance?",
+              "answer": "Opposition to the flow of current",
+              "explain": "Resistance is measured in ohms and represents how much a material opposes electron flow. Materials with high resistance convert electrical energy to heat.",
+              "choices": [
+                "The strength of a magnet",
+                "The insulation on a wire",
+                "Opposition to the flow of current",
+                "The weight of a conductor"
+              ],
+              "id": "power_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Ohm's Law states the relationship between voltage, current, and resistance. Which is correct?",
+              "answer": "Voltage equals current times resistance",
+              "explain": "Ohm's Law (V = I * R) is fundamental. Voltage is proportional to current and resistance, so doubling either one doubles the voltage.",
+              "choices": [
+                "Voltage equals current times resistance",
+                "Voltage equals current divided by resistance",
+                "Voltage equals resistance divided by current",
+                "Voltage equals current plus resistance"
+              ],
+              "id": "power_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a resistor has 10 volts across it and a current of 2 amperes flows through it, what is its resistance?",
+              "answer": "5 ohms",
+              "explain": "Using Ohm's Law (V = I * R), rearranged to R = V / I: R = 10 / 2 = 5 ohms.",
+              "choices": [
+                "12 ohms",
+                "5 ohms",
+                "20 ohms",
+                "0.2 ohms"
+              ],
+              "id": "power_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Power and Energy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does electrical power measure?",
+              "answer": "The rate at which energy is consumed or delivered",
+              "explain": "Power is measured in watts (W). It tells you how much energy is used per second. A higher wattage device uses more energy faster.",
+              "choices": [
+                "The rate at which energy is consumed or delivered",
+                "The type of current flowing",
+                "The voltage of a battery",
+                "The resistance in a circuit"
+              ],
+              "id": "power_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the formula for electrical power?",
+              "answer": "Power equals voltage times current",
+              "explain": "The power formula (P = V * I) shows that power depends on both the voltage pushing electrons and the number of electrons (current) flowing.",
+              "choices": [
+                "Power equals voltage plus current",
+                "Power equals voltage times current",
+                "Power equals voltage divided by current",
+                "Power equals voltage squared times current"
+              ],
+              "id": "power_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A light bulb operates at 120 volts with a current of 0.5 amperes. What is its power consumption?",
+              "answer": "60 watts",
+              "explain": "Using P = V * I: P = 120 * 0.5 = 60 watts. This 60-watt bulb consumes 60 joules of energy per second.",
+              "choices": [
+                "0.5 watts",
+                "120 watts",
+                "240 watts",
+                "60 watts"
+              ],
+              "id": "power_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between power and energy?",
+              "answer": "Power is the rate of energy use; energy is the total amount used over time",
+              "explain": "Power is instantaneous (watts), like the speed of a car. Energy is cumulative (kilowatt-hours), like the distance traveled. Energy = Power * Time.",
+              "choices": [
+                "Power is electrical; energy is mechanical",
+                "Power and energy are the same thing",
+                "Energy is the rate of power use",
+                "Power is the rate of energy use; energy is the total amount used over time"
+              ],
+              "id": "power_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a 2000-watt heater runs for 3 hours, how much electrical energy does it consume?",
+              "answer": "6 kilowatt-hours",
+              "explain": "Energy = Power * Time. 2000 watts = 2 kilowatts. 2 kW * 3 hours = 6 kilowatt-hours (kWh).",
+              "choices": [
+                "3 kilowatt-hours",
+                "6 kilowatt-hours",
+                "2 kilowatt-hours",
+                "666 kilowatt-hours"
+              ],
+              "id": "power_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "AC vs DC Power",
+      "tip": "Direct current (DC) flows in one direction, while alternating current (AC) reverses direction periodically. AC became the standard for power grids because transformers can easily raise and lower its voltage, which makes long-distance transmission and local distribution practical.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Direct and Alternating Current",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is direct current (DC)?",
+              "answer": "Electrical current that flows in one direction only",
+              "explain": "DC maintains a constant direction of electron flow. Batteries provide DC. In a circuit diagram, DC is shown with a + and - terminal.",
+              "choices": [
+                "Current that flows in both directions",
+                "Current found only in AC generators",
+                "Current that changes speed randomly",
+                "Electrical current that flows in one direction only"
+              ],
+              "id": "power_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is alternating current (AC)?",
+              "answer": "Electrical current that reverses direction periodically",
+              "explain": "AC changes direction back and forth at a regular frequency, typically 50 or 60 times per second in different regions. This is represented by a sine wave.",
+              "choices": [
+                "Current that flows only during certain times",
+                "A stronger type of direct current",
+                "Current that only powers lights",
+                "Electrical current that reverses direction periodically"
+              ],
+              "id": "power_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What devices typically use DC power?",
+              "answer": "Batteries, phones, computers, and solar cells",
+              "explain": "DC is used in portable and low-voltage applications. Batteries naturally produce DC. Mobile devices, laptops, and LED lights often use DC internally.",
+              "choices": [
+                "Batteries, phones, computers, and solar cells",
+                "Large power generators",
+                "Household wall outlets",
+                "Transmission line towers"
+              ],
+              "id": "power_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does the power grid primarily use AC instead of DC?",
+              "answer": "AC can be stepped up or down with transformers, making long-distance transmission efficient",
+              "explain": "Transformers work only with AC. They step voltage up for transmission (reducing current and losses) and step it down for use. DC requires expensive and inefficient converters.",
+              "choices": [
+                "DC is too expensive to generate",
+                "DC generators are harder to build",
+                "AC is safer than DC",
+                "AC can be stepped up or down with transformers, making long-distance transmission efficient"
+              ],
+              "id": "power_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What frequency do many grids use for AC power?",
+              "answer": "50 or 60 hertz depending on the region",
+              "explain": "AC frequency varies by region. Many grids use 50 Hz or 60 Hz (cycles per second). This frequency is maintained by the power system for synchronization.",
+              "choices": [
+                "10 hertz",
+                "1000 hertz",
+                "100 hertz",
+                "50 or 60 hertz depending on the region"
+              ],
+              "id": "power_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Grid Distribution and AC Advantages",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is transmitting at high voltage beneficial for long distances?",
+              "answer": "High voltage reduces current, which reduces energy loss in transmission lines",
+              "explain": "Power loss in wires is proportional to current squared (P = I^2 * R). By stepping voltage up and current down, the same power can travel with much less loss.",
+              "choices": [
+                "High voltage requires fewer wires",
+                "High voltage is safer for workers",
+                "High voltage reduces current, which reduces energy loss in transmission lines",
+                "High voltage is cheaper to generate"
+              ],
+              "id": "power_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the role of a power substation in an AC grid?",
+              "answer": "To step voltage up or down between transmission lines and local distribution",
+              "explain": "Substations contain transformers that adjust voltage. They step up for long-distance transmission and step down to the lower voltages used in homes.",
+              "choices": [
+                "To store electricity",
+                "To step voltage up or down between transmission lines and local distribution",
+                "To prevent AC from flowing",
+                "To generate all the electricity"
+              ],
+              "id": "power_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens at a step-down transformer in the distribution system?",
+              "answer": "Voltage is reduced and current is increased for local use",
+              "explain": "Step-down transformers near homes reduce high transmission voltages (thousands of volts) to safer household levels. As voltage decreases, current increases proportionally.",
+              "choices": [
+                "Voltage is reduced and current is increased for local use",
+                "Power is lost to heat",
+                "AC is converted to DC",
+                "Voltage is increased to household levels"
+              ],
+              "id": "power_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can transformers not work with DC?",
+              "answer": "Transformers require a changing magnetic field, which only AC produces",
+              "explain": "Transformers work by electromagnetic induction. DC creates a constant magnetic field with no change, so no voltage is induced in the secondary coil. AC's changing direction creates a changing field that induces voltage.",
+              "choices": [
+                "Transformers are only invented for AC",
+                "DC is too powerful for transformers",
+                "DC transformers are too expensive",
+                "Transformers require a changing magnetic field, which only AC produces"
+              ],
+              "id": "power_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a step-up transformer increases voltage from 10,000 volts to 100,000 volts, what happens to the current?",
+              "answer": "Current decreases by a factor of 10",
+              "explain": "In an ideal transformer, power input equals power output (V1 * I1 = V2 * I2). If voltage increases 10 times, current must decrease 10 times to maintain the same power.",
+              "choices": [
+                "Current increases by 100,000 amperes",
+                "Current stays the same",
+                "Current increases 10 times",
+                "Current decreases by a factor of 10"
+              ],
+              "id": "power_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Power Generation and Distribution",
+      "tip": "Power generation converts mechanical or chemical energy into electricity at power plants using large generators. Distribution systems move this power from generation sites through transmission lines, substations, and local feeders to homes and businesses.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "How Generators Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a generator?",
+              "answer": "A machine that converts mechanical energy into electrical energy",
+              "explain": "Generators use electromagnetic induction. A spinning coil or magnet inside a magnetic field induces electrical current. All power grids rely on generators.",
+              "choices": [
+                "A battery",
+                "A device that reduces voltage",
+                "A device that stores electricity",
+                "A machine that converts mechanical energy into electrical energy"
+              ],
+              "id": "power_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the basic principle a generator uses to create electricity?",
+              "answer": "Electromagnetic induction: a moving conductor in a magnetic field creates voltage",
+              "explain": "When a conductor moves through a magnetic field, the field exerts a force on electrons, pushing them through a circuit. This creates an electric current.",
+              "choices": [
+                "Chemical reactions between metals",
+                "Static electricity buildup",
+                "Friction between rotating parts",
+                "Electromagnetic induction: a moving conductor in a magnetic field creates voltage"
+              ],
+              "id": "power_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What must spin to generate electricity in a power plant?",
+              "answer": "A turbine connected to a generator rotor",
+              "explain": "A turbine converts energy (from wind, water, steam, etc.) into rotational motion. This spinning motion turns the rotor inside the generator, inducing electrical current.",
+              "choices": [
+                "A turbine connected to a generator rotor",
+                "A transformer",
+                "Only the generator coil",
+                "Power lines"
+              ],
+              "id": "power_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which energy source does NOT require a spinning turbine in a generator?",
+              "answer": "Solar photovoltaic cells",
+              "explain": "Solar PV cells convert light directly into electricity using the photovoltaic effect, with no moving parts. Hydro, wind, thermal, and nuclear all use turbines.",
+              "choices": [
+                "Coal-fired power plants",
+                "Wind turbines",
+                "Solar photovoltaic cells",
+                "Hydroelectric dams"
+              ],
+              "id": "power_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do generators in power plants produce AC instead of DC?",
+              "answer": "The rotating coil naturally creates an alternating voltage as it spins through the magnetic field",
+              "explain": "As a coil spins, one side moves into the field then out, then the other side does the same. This creates a voltage that alternates in direction. No mechanical switching is needed.",
+              "choices": [
+                "DC is harder to generate",
+                "The rotating coil naturally creates an alternating voltage as it spins through the magnetic field",
+                "Laws require generators to produce AC",
+                "AC is cheaper to produce"
+              ],
+              "id": "power_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Transmission and Distribution Networks",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the power grid?",
+              "answer": "An interconnected system of generators, transmission lines, and distribution networks",
+              "explain": "The power grid connects power plants, high-voltage transmission lines, substations, and local distribution wiring. It moves electricity from where it is generated to where it is used.",
+              "choices": [
+                "A single power plant",
+                "An interconnected system of generators, transmission lines, and distribution networks",
+                "A backup battery system",
+                "Only household wiring"
+              ],
+              "id": "power_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is transmission in the power grid?",
+              "answer": "Moving power over long distances at high voltage",
+              "explain": "Transmission lines carry power from generators to cities and regions. They use very high voltages (tens to hundreds of kilovolts) to minimize losses over long distances.",
+              "choices": [
+                "Storing electricity in batteries",
+                "Moving power over long distances at high voltage",
+                "Converting AC to DC",
+                "Converting electricity into heat"
+              ],
+              "id": "power_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is distribution in the power grid?",
+              "answer": "Moving power from substations to homes and businesses at lower voltages",
+              "explain": "Distribution systems step voltage down to household levels and deliver it through local feeders and neighborhood lines to end users.",
+              "choices": [
+                "Generating electricity at power plants",
+                "Moving power from substations to homes and businesses at lower voltages",
+                "High-voltage transmission over long distances",
+                "Storing energy for peak hours"
+              ],
+              "id": "power_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are transmission lines typically made of aluminum instead of copper?",
+              "answer": "Aluminum is lighter and cheaper, though copper has better conductivity",
+              "explain": "For long-distance transmission, cost and weight matter. Aluminum is lighter (important for tall towers) and less expensive. The lower conductivity is acceptable over long distances.",
+              "choices": [
+                "Aluminum is safer than copper",
+                "There is no reason; copper is always used",
+                "Aluminum is lighter and cheaper, though copper has better conductivity",
+                "Aluminum conducts electricity better"
+              ],
+              "id": "power_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What determines the capacity of a transmission line?",
+              "answer": "The voltage it operates at, the current it can safely carry, and the material",
+              "explain": "Capacity depends on how much voltage can be applied, how much current the conductors can handle without overheating, and the resistance of the material.",
+              "choices": [
+                "Only the material used",
+                "The voltage it operates at, the current it can safely carry, and the material",
+                "How old the line is",
+                "Only the length of the line"
+              ],
+              "id": "power_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Three-Phase Power",
+      "tip": "Three-phase power uses three alternating currents that are offset by 120 degrees. This system is more efficient than single-phase power for large motors and industrial equipment. The three phases can be distributed to homes and businesses with different line-to-line and line-to-neutral voltages.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Three-Phase Systems",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is three-phase power?",
+              "answer": "Three alternating currents that are offset by 120 degrees in time",
+              "explain": "Three-phase systems have three AC currents, each reaching its peak at different times. This creates more constant power flow and smoother operation.",
+              "choices": [
+                "Three types of electrical devices",
+                "Three alternating currents that are offset by 120 degrees in time",
+                "Three separate power plants working together",
+                "Three parallel wires with the same current"
+              ],
+              "id": "power_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is three-phase power more efficient for motors than single-phase?",
+              "answer": "Three-phase power provides more continuous torque with less ripple",
+              "explain": "Single-phase power pulses twice per cycle, causing vibration. Three-phase power is always flowing, with peaks offset so the combined power is constant, providing smooth operation.",
+              "choices": [
+                "Three-phase motors have no moving parts",
+                "Three-phase power provides more continuous torque with less ripple",
+                "Three-phase is cheaper to generate",
+                "Single-phase motors do not exist"
+              ],
+              "id": "power_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the phase angle between each phase in a three-phase system?",
+              "answer": "120 degrees",
+              "explain": "The three phases are evenly spaced around a complete 360-degree cycle: 0 degrees, 120 degrees, and 240 degrees. This spacing creates balanced power flow.",
+              "choices": [
+                "120 degrees",
+                "90 degrees",
+                "180 degrees",
+                "60 degrees"
+              ],
+              "id": "power_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a balanced three-phase system, what is the sum of the three phase currents at any instant?",
+              "answer": "Zero",
+              "explain": "Because the three phases are balanced and offset by 120 degrees, their phasors add up to zero. This is why a three-phase system does not need a return conductor for balance.",
+              "choices": [
+                "Half the single-phase current",
+                "Three times the single-phase current",
+                "Zero",
+                "Equal to the single-phase current"
+              ],
+              "id": "power_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a balanced three-phase system, what is the minimum number of conductors needed to carry the power?",
+              "answer": "Three",
+              "explain": "Three phase conductors are enough because balanced currents sum to zero. A fourth neutral wire is added in some distribution systems to serve single-phase loads or unbalanced loads. Ground is separate.",
+              "choices": [
+                "Two",
+                "Six",
+                "Three",
+                "Four"
+              ],
+              "id": "power_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Three-Phase Applications",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What types of loads typically require three-phase power?",
+              "answer": "Large motors, compressors, and industrial equipment",
+              "explain": "Three-phase motors run more efficiently and smoothly. Industrial facilities use three-phase because it delivers more power per wire.",
+              "choices": [
+                "Household lights and outlets",
+                "Small appliances",
+                "Large motors, compressors, and industrial equipment",
+                "Computers and electronics"
+              ],
+              "id": "power_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is line-to-line voltage?",
+              "answer": "The voltage measured between any two phase conductors",
+              "explain": "In three-phase systems, the voltage between two phases is higher than the voltage between a phase and neutral. For example, if phase-to-neutral is 120V, phase-to-phase is about 208V.",
+              "choices": [
+                "The voltage from the utility company",
+                "The voltage between a phase and ground",
+                "The voltage inside a transformer",
+                "The voltage measured between any two phase conductors"
+              ],
+              "id": "power_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between line-to-line voltage and line-to-neutral voltage in a balanced three-phase system?",
+              "answer": "Line-to-line is about 1.73 times line-to-neutral (the square root of 3)",
+              "explain": "The line-to-line voltage is 1.732 (square root of 3) times the line-to-neutral voltage. If line-to-neutral is 120V, line-to-line is approximately 208V.",
+              "choices": [
+                "Line-to-line is about 1.73 times line-to-neutral (the square root of 3)",
+                "There is no relationship",
+                "Line-to-line is twice line-to-neutral",
+                "They are equal"
+              ],
+              "id": "power_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can single-phase power be derived from a three-phase distribution system?",
+              "answer": "Yes, by connecting across one phase and the neutral",
+              "explain": "Single-phase loads can be connected between a phase wire and neutral. This is how homes get power from a three-phase utility grid.",
+              "choices": [
+                "Never; single-phase is incompatible",
+                "Only with a transformer",
+                "Yes, by connecting across one phase and the neutral",
+                "No, only three-phase loads work"
+              ],
+              "id": "power_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a phase sequence?",
+              "answer": "The order in which the three phases reach their peak voltages",
+              "explain": "Phase sequence matters for motors. Reversing the phase sequence reverses motor rotation. Balanced systems have phase sequence A, B, C or A, C, B.",
+              "choices": [
+                "The order in which the three phases reach their peak voltages",
+                "The types of loads connected",
+                "The spacing between three-phase lines",
+                "The distance between conductors"
+              ],
+              "id": "power_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Transformers and Power Loss",
+      "tip": "Transformers transfer electrical energy between circuits at different voltages by using electromagnetic induction. Ideal transformers are 100 percent efficient, but real transformers lose some energy as heat in the core and windings. Understanding efficiency is key to managing grid losses.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "How Transformers Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a transformer?",
+              "answer": "A device that transfers electrical energy between two or more circuits with different voltages",
+              "explain": "Transformers use a magnetic core and two coils. AC current in the primary coil creates a changing magnetic field that induces voltage in the secondary coil.",
+              "choices": [
+                "A device that transfers electrical energy between two or more circuits with different voltages",
+                "A device that stores electrical energy",
+                "A device that converts DC to AC",
+                "A device that reduces current"
+              ],
+              "id": "power_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the transformer equation relating primary and secondary voltages and turns?",
+              "answer": "Voltage ratio equals the ratio of secondary turns to primary turns",
+              "explain": "V2/V1 = N2/N1. If the secondary has twice as many turns as the primary, the secondary voltage is twice the primary voltage. This is Faraday's law of induction.",
+              "choices": [
+                "Voltage is inversely proportional to the number of turns",
+                "Voltage is always the same on both sides",
+                "Voltage ratio equals the ratio of secondary turns to primary turns",
+                "Voltage depends only on current"
+              ],
+              "id": "power_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a step-up transformer?",
+              "answer": "A transformer with more secondary turns than primary turns, increasing voltage",
+              "explain": "Step-up transformers increase voltage and decrease current. The secondary coil has more turns, so the secondary voltage is higher than the primary.",
+              "choices": [
+                "A transformer that converts DC to AC",
+                "A transformer with more secondary turns than primary turns, increasing voltage",
+                "A transformer with a metal core",
+                "A transformer that increases current"
+              ],
+              "id": "power_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a transformer has a primary voltage of 200 volts and 100 turns in the primary, and 50 turns in the secondary, what is the secondary voltage?",
+              "answer": "100 volts",
+              "explain": "Using V2/V1 = N2/N1: V2/200 = 50/100, so V2 = 100 volts. Fewer turns in the secondary means lower voltage.",
+              "choices": [
+                "50 volts",
+                "100 volts",
+                "400 volts",
+                "200 volts"
+              ],
+              "id": "power_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the core of a transformer usually made of?",
+              "answer": "Laminated iron or steel to conduct magnetic flux efficiently",
+              "explain": "Iron and steel are ferromagnetic and conduct magnetic fields well, multiplying the flux and improving transformer efficiency. Lamination reduces eddy current losses.",
+              "choices": [
+                "Air",
+                "Copper wire",
+                "Laminated iron or steel to conduct magnetic flux efficiently",
+                "Plastic"
+              ],
+              "id": "power_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Efficiency and Power Loss",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What causes power loss in transmission lines?",
+              "answer": "Resistance in the conductors converting electrical energy to heat",
+              "explain": "Power loss is proportional to current squared (P_loss = I^2 * R). Higher current causes more heating. This is why transmission uses high voltage and low current.",
+              "choices": [
+                "Transformers not working",
+                "Too many substations",
+                "The length of the wire",
+                "Resistance in the conductors converting electrical energy to heat"
+              ],
+              "id": "power_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is transformer efficiency?",
+              "answer": "The ratio of power delivered to the secondary to power supplied to the primary",
+              "explain": "Efficiency = (Power out / Power in) * 100 percent. Large modern transformers can be 98-99 percent efficient. Losses occur in resistance and core magnetization.",
+              "choices": [
+                "The voltage it can handle",
+                "The ratio of power delivered to the secondary to power supplied to the primary",
+                "The weight of the copper",
+                "How fast it works"
+              ],
+              "id": "power_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the two main sources of loss in a transformer?",
+              "answer": "Copper loss in windings and core loss in the magnetic material",
+              "explain": "Copper loss is I^2 * R in the wires. Core loss comes from eddy currents and magnetization losses. Good design minimizes both.",
+              "choices": [
+                "Copper loss in windings and core loss in the magnetic material",
+                "Weight and size only",
+                "The age of the transformer",
+                "Whether it is step-up or step-down"
+              ],
+              "id": "power_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does transmitting at higher voltage reduce power loss?",
+              "answer": "Higher voltage allows lower current for the same power, and loss is proportional to current squared",
+              "explain": "Since P = V * I, if you increase V and decrease I proportionally, power stays constant but loss (I^2 * R) decreases dramatically because of the squared relationship with current.",
+              "choices": [
+                "Higher voltage allows lower current for the same power, and loss is proportional to current squared",
+                "Lower voltage is always better",
+                "There is no relationship",
+                "Higher voltage makes conductors last longer"
+              ],
+              "id": "power_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A transmission line carries 100 megawatts. At 100,000 volts, the current is 1000 amperes. At 10,000 volts, the current would be 10,000 amperes. How many times greater is the power loss at 10,000 volts?",
+              "answer": "100 times",
+              "explain": "Power loss is proportional to I^2. At 10,000V, current is 10 times higher. Loss increases by 10^2 = 100 times. This shows why high-voltage transmission is essential.",
+              "choices": [
+                "1000 times",
+                "The same",
+                "100 times",
+                "10 times"
+              ],
+              "id": "power_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Grid Protection and Balance",
+      "tip": "Power grids must maintain frequency balance by matching supply to demand at every instant. Protection systems use fuses and circuit breakers to prevent damage from faults. Grounding systems ensure safety by providing a path for fault currents. Power factor is the share of apparent power that does real work.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Protection and Safety",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a circuit breaker?",
+              "answer": "An automatic switch that opens when current exceeds a safe level",
+              "explain": "Circuit breakers protect circuits from overcurrent. Unlike fuses, they can be reset. They use electromagnetic or thermal triggers to open the circuit when current gets dangerously high.",
+              "choices": [
+                "A grounding rod",
+                "A type of transformer",
+                "A device that increases current",
+                "An automatic switch that opens when current exceeds a safe level"
+              ],
+              "id": "power_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of grounding in an electrical system?",
+              "answer": "To provide a safe path for fault currents to dissipate into the earth",
+              "explain": "Grounding gives fault currents an alternative path to ground instead of through people. This protects people and equipment. All systems must be properly grounded.",
+              "choices": [
+                "To provide a safe path for fault currents to dissipate into the earth",
+                "To increase the voltage",
+                "To reduce power consumption",
+                "To speed up current flow"
+              ],
+              "id": "power_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fuse?",
+              "answer": "A one-time-use device that breaks when current exceeds its rating",
+              "explain": "A fuse contains a wire that melts when excessive current flows, breaking the circuit. Unlike circuit breakers, fuses cannot be reused and must be replaced.",
+              "choices": [
+                "A safety ground",
+                "A one-time-use device that breaks when current exceeds its rating",
+                "A conductor for current",
+                "A type of transformer"
+              ],
+              "id": "power_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a ground fault circuit interrupter (GFCI)?",
+              "answer": "A device that cuts power if it detects current flowing to ground",
+              "explain": "GFCIs detect when current is flowing through a person to ground and quickly shut off power. They are used near water where electrocution risk is high.",
+              "choices": [
+                "A device that cuts power if it detects current flowing to ground",
+                "A type of fuse",
+                "A protection for overload only",
+                "A transformer for low voltage"
+              ],
+              "id": "power_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What causes a fault in a power system?",
+              "answer": "An unintended connection between conductors or to ground",
+              "explain": "Faults occur when insulation fails, wires are damaged, or connections become loose, allowing current to flow where it should not. Protective devices must operate quickly.",
+              "choices": [
+                "Too much copper in transformers",
+                "High frequency operation",
+                "An unintended connection between conductors or to ground",
+                "Too many generators"
+              ],
+              "id": "power_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Frequency and Power Factor",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is grid frequency?",
+              "answer": "The frequency at which AC voltage cycles in the power system",
+              "explain": "Grid frequency is typically 50 or 60 hertz. It must be maintained constant for equipment to operate correctly. Many grids use 50 Hz or 60 Hz.",
+              "choices": [
+                "The voltage of the grid",
+                "The speed of power generation",
+                "How often loads change",
+                "The frequency at which AC voltage cycles in the power system"
+              ],
+              "id": "power_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if grid frequency drops?",
+              "answer": "Generators slow down and may be unable to meet load demand",
+              "explain": "Frequency drops when demand exceeds supply. If frequency drops too much, generators cannot stay synchronized and blackouts can occur. Supply must match demand.",
+              "choices": [
+                "Generators speed up",
+                "Generators slow down and may be unable to meet load demand",
+                "Voltage increases",
+                "Nothing; frequency is always stable"
+              ],
+              "id": "power_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is power factor?",
+              "answer": "The ratio of real power to apparent power in an AC circuit",
+              "explain": "Power factor accounts for reactive power (from inductance and capacitance). A power factor of 1.0 means all of the apparent power does real work. Less than 1.0 means part of the current only circulates reactive energy, which loads the lines without doing useful work.",
+              "choices": [
+                "The ratio of real power to apparent power in an AC circuit",
+                "The phase angle only",
+                "How much power a device uses",
+                "The voltage divided by current"
+              ],
+              "id": "power_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is real power?",
+              "answer": "The actual power dissipated and converted to useful work",
+              "explain": "Real power (measured in watts) does useful work. It is dissipated as heat in resistances, or converted to mechanical work in motors.",
+              "choices": [
+                "Power stored in capacitors",
+                "The actual power dissipated and converted to useful work",
+                "Power that appears on paper only",
+                "Power from reactive components"
+              ],
+              "id": "power_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is reactive power?",
+              "answer": "Power that oscillates between the source and reactive components but does no useful work",
+              "explain": "Reactive power comes from inductors and capacitors storing and returning energy. It is measured in vars (volt-amperes reactive). It does not do work but must be accounted for.",
+              "choices": [
+                "Power wasted in transmission",
+                "Power dissipated as heat",
+                "Power that oscillates between the source and reactive components but does no useful work",
+                "Power from transformers"
+              ],
+              "id": "power_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
