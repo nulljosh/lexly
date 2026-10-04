@@ -1,0 +1,904 @@
+{
+  "id": "concurrency",
+  "name": "Concurrency",
+  "category": "programming",
+  "icon": "fa-solid fa-shuffle",
+  "level": "Doing Many Things at Once",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Concurrency vs Parallelism",
+      "tip": "Concurrency is about managing multiple tasks that can start, run, and finish in overlapping periods. Parallelism is running tasks simultaneously on multiple processors. A single-core CPU can do concurrency but not parallelism.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding Concurrency",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is concurrency?",
+              "answer": "Multiple tasks making progress during overlapping time periods",
+              "explain": "Concurrency means tasks are interleaved and can start before others finish. A single core can achieve concurrency by switching between tasks.",
+              "choices": [
+                "Multiple tasks making progress during overlapping time periods",
+                "Only working on one thing at a time",
+                "Multiple tasks running at the exact same time on different cores",
+                "Tasks waiting for each other to complete"
+              ],
+              "id": "concurrency_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a single-core processor achieve concurrency?",
+              "answer": "Yes, by switching between tasks quickly",
+              "explain": "A single core can switch between tasks so fast it appears concurrent. The operating system uses a scheduler to allocate CPU time to different tasks.",
+              "choices": [
+                "Only if tasks never block",
+                "No, concurrency requires multiple cores",
+                "Only if tasks are running on different machines",
+                "Yes, by switching between tasks quickly"
+              ],
+              "id": "concurrency_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the primary advantage of concurrent programming?",
+              "answer": "Tasks can make progress while others wait for I/O",
+              "explain": "When one task blocks on I/O (disk, network, user input), the scheduler switches to another task. This keeps the processor busy instead of idle.",
+              "choices": [
+                "It always makes programs faster",
+                "It guarantees tasks complete in order",
+                "Tasks can make progress while others wait for I/O",
+                "It eliminates the need for operating systems"
+              ],
+              "id": "concurrency_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a web server handling client requests, why is concurrency useful?",
+              "answer": "While one client waits for database results, the server handles other clients",
+              "explain": "Concurrency allows a server to accept a new request while another is blocked waiting for data. This improves throughput and responsiveness.",
+              "choices": [
+                "It reduces memory usage",
+                "It eliminates security issues",
+                "While one client waits for database results, the server handles other clients",
+                "It makes each individual request faster"
+              ],
+              "id": "concurrency_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of concurrency in a smartphone?",
+              "answer": "Playing music while browsing the web and downloading a file",
+              "explain": "Even on a phone with a few cores, the OS schedules many tasks: music playback, network downloads, UI rendering, and background services. They interleave to appear simultaneous.",
+              "choices": [
+                "Completing all tasks in strict order",
+                "Running tasks only when the user is active",
+                "Opening one app at a time",
+                "Playing music while browsing the web and downloading a file"
+              ],
+              "id": "concurrency_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Concurrency vs Parallelism",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is parallelism?",
+              "answer": "Multiple tasks running simultaneously on different processors",
+              "explain": "Parallelism requires multiple cores or processors. Tasks run at the same wall-clock time, not just interleaved.",
+              "choices": [
+                "Multiple tasks running simultaneously on different processors",
+                "Multiple tasks interleaved on one core",
+                "Tasks communicating with each other",
+                "Tasks running in sequence one after another"
+              ],
+              "id": "concurrency_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you have concurrency without parallelism?",
+              "answer": "Yes, on a single-core processor",
+              "explain": "Concurrency is a software concept about overlapping task periods. Parallelism is a hardware capability. Concurrency works on single-core via task switching.",
+              "choices": [
+                "Yes, on a single-core processor",
+                "Only on modern multi-core systems",
+                "Only if tasks don't use the CPU",
+                "No, they are the same thing"
+              ],
+              "id": "concurrency_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which statement correctly contrasts concurrency and parallelism?",
+              "answer": "Concurrency is about structuring tasks to overlap in time; parallelism is about executing them at the same instant",
+              "explain": "Concurrency describes how a program is organized so tasks can overlap. Parallelism describes tasks literally running at the same moment on separate processors.",
+              "choices": [
+                "Concurrency only exists on multi-core machines",
+                "They are exactly the same thing",
+                "Parallelism is about structuring tasks; concurrency requires multiple processors",
+                "Concurrency is about structuring tasks to overlap in time; parallelism is about executing them at the same instant"
+              ],
+              "id": "concurrency_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A dual-core CPU running two tasks: which term applies?",
+              "answer": "Both concurrency and parallelism",
+              "explain": "Parallelism describes the hardware execution (two cores, simultaneous). Concurrency describes the program design (two independent tasks). Both terms are correct.",
+              "choices": [
+                "Neither, they are sequential",
+                "Only parallelism",
+                "Both concurrency and parallelism",
+                "Only concurrency"
+              ],
+              "id": "concurrency_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is concurrent design important even on single-core systems?",
+              "answer": "It allows responsive programs that don't block the user interface",
+              "explain": "Concurrency prevents long tasks from freezing the UI. Even on one core, concurrent design lets background work happen while the UI remains responsive.",
+              "choices": [
+                "It makes the program run faster",
+                "It allows responsive programs that don't block the user interface",
+                "It is only useful on multi-core systems",
+                "It eliminates all blocking operations"
+              ],
+              "id": "concurrency_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Threads and Processes",
+      "tip": "A process is an independent program with its own memory and resources. A thread is a lightweight unit of execution within a process that shares memory with other threads. Threads are cheaper to create and switch between than processes.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Processes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a process?",
+              "answer": "An independent program instance with its own memory and resources",
+              "explain": "A process is an isolated execution environment. Each process has its own heap, stack, file descriptors, and system resources. The OS protects processes from interfering with each other.",
+              "choices": [
+                "A single task within a program",
+                "An independent program instance with its own memory and resources",
+                "A request from the user",
+                "A function call"
+              ],
+              "id": "concurrency_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is memory isolation important between processes?",
+              "answer": "One process crash does not take down others; malicious code cannot easily access other programs",
+              "explain": "Process isolation protects stability and security. If one process crashes, it does not corrupt memory belonging to other processes. A bug in one program cannot directly read another's data.",
+              "choices": [
+                "It makes programs run faster",
+                "One process crash does not take down others; malicious code cannot easily access other programs",
+                "It eliminates the need for synchronization",
+                "It reduces the number of cores needed"
+              ],
+              "id": "concurrency_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do two processes communicate?",
+              "answer": "Through operating system mechanisms: pipes, sockets, message queues, shared files",
+              "explain": "Processes cannot directly read each other's memory. They must use OS-provided IPC (inter-process communication) mechanisms to exchange data.",
+              "choices": [
+                "They cannot communicate",
+                "Through operating system mechanisms: pipes, sockets, message queues, shared files",
+                "Only through the file system",
+                "By reading each other's memory directly"
+              ],
+              "id": "concurrency_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the cost of creating a new process?",
+              "answer": "High; each process needs its own memory space and OS resources",
+              "explain": "Creating a process is expensive. The OS must allocate memory, set up a page table, initialize file descriptors, and other overhead. This is much heavier than creating a thread.",
+              "choices": [
+                "High; each process needs its own memory space and OS resources",
+                "Nearly free",
+                "Negligible compared to computation",
+                "The same as creating a thread"
+              ],
+              "id": "concurrency_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a multitasking OS, what happens when a process blocks on I/O?",
+              "answer": "The OS scheduler switches to another process; the blocked process is suspended",
+              "explain": "When a process blocks (waits for network, disk, or user input), the scheduler pauses it and runs another process. The blocked process resumes once its I/O completes.",
+              "choices": [
+                "The OS scheduler switches to another process; the blocked process is suspended",
+                "The process spins in a loop checking for I/O completion",
+                "The blocked process gets more CPU time to compensate",
+                "All processes freeze until the I/O completes"
+              ],
+              "id": "concurrency_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Threads",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a thread?",
+              "answer": "A lightweight unit of execution within a process that shares memory with other threads",
+              "explain": "A thread is a path of execution within a process. Multiple threads in one process share the same heap and global variables but each has its own stack.",
+              "choices": [
+                "A function in a program",
+                "A lightweight unit of execution within a process that shares memory with other threads",
+                "A CPU core",
+                "An independent program with its own memory"
+              ],
+              "id": "concurrency_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do threads in the same process share data?",
+              "answer": "They directly access the shared heap and global variables",
+              "explain": "Threads within one process share address space. They can read and write the same memory without system calls. This is fast but requires synchronization.",
+              "choices": [
+                "They directly access the shared heap and global variables",
+                "Through message passing only",
+                "Through operating system mechanisms like sockets",
+                "They cannot share data directly"
+              ],
+              "id": "concurrency_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of threads over processes?",
+              "answer": "Threads are lightweight and cheap to create; data sharing is fast",
+              "explain": "Creating a thread is much faster than creating a process. Threads can share data via memory without IPC overhead. Threads in one process are cheaper to manage.",
+              "choices": [
+                "Threads cannot crash the program",
+                "Threads are more secure",
+                "Threads are lightweight and cheap to create; data sharing is fast",
+                "Threads run on multiple cores automatically"
+              ],
+              "id": "concurrency_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When one thread crashes, what happens to other threads in the same process?",
+              "answer": "The entire process usually terminates",
+              "explain": "If one thread crashes (undefined behavior, segfault), it damages the process's shared memory. The OS usually kills the whole process to prevent data corruption.",
+              "choices": [
+                "Other threads are temporarily paused then resume",
+                "The OS automatically isolates the crashed thread",
+                "The entire process usually terminates",
+                "Other threads continue unaffected"
+              ],
+              "id": "concurrency_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is true about thread stacks?",
+              "answer": "Each thread has its own stack but shares the heap",
+              "explain": "Threads have separate stacks so local variables and return addresses are independent. But they share the heap, global variables, and file descriptors.",
+              "choices": [
+                "Each thread has its own stack but shares the heap",
+                "All threads share one stack",
+                "Each thread has its own heap",
+                "Stacks are not used in threaded programs"
+              ],
+              "id": "concurrency_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Race Conditions and Critical Sections",
+      "tip": "A race condition occurs when the result of a concurrent program depends on the timing of thread execution. A critical section is a code segment that accesses shared data and must run without interference from other threads.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Race Conditions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a race condition?",
+              "answer": "The outcome depends on the relative timing of concurrent thread operations",
+              "explain": "A race condition occurs when the result of a program is unpredictable because different thread orderings produce different results. The outcome races between threads.",
+              "choices": [
+                "Two threads trying to access the same file",
+                "A thread accessing memory that was deleted",
+                "A thread waiting too long for another",
+                "The outcome depends on the relative timing of concurrent thread operations"
+              ],
+              "id": "concurrency_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Consider two threads incrementing a shared counter. Without synchronization, what can go wrong?",
+              "answer": "Lost updates: both threads may read the old value, increment it, and write the same result",
+              "explain": "Increment is not atomic. Thread A reads 5, Thread B reads 5, both increment, both write 6. The final result is 6 instead of 7. Updates are lost.",
+              "choices": [
+                "The counter becomes negative",
+                "Only one thread can increment at a time",
+                "The counter crashes",
+                "Lost updates: both threads may read the old value, increment it, and write the same result"
+              ],
+              "id": "concurrency_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is x++ not thread-safe?",
+              "answer": "It is three operations (read, increment, write) that can interleave between threads",
+              "explain": "x++ expands to: temp = x; temp++; x = temp. Threads can interleave, causing lost updates.",
+              "choices": [
+                "The compiler removes it",
+                "It only works with integers",
+                "It is three operations (read, increment, write) that can interleave between threads",
+                "The CPU does not understand ++"
+              ],
+              "id": "concurrency_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a race condition is hard to reproduce?",
+              "answer": "It occurs only with specific thread timing combinations that are rare",
+              "explain": "Race conditions often appear sporadically. They depend on CPU scheduling, cache behavior, and thread timing, which vary. A crash might occur once in a million runs.",
+              "choices": [
+                "It only happens on multi-core systems",
+                "The bug is in the testing code",
+                "The race condition does not really exist",
+                "It occurs only with specific thread timing combinations that are rare"
+              ],
+              "id": "concurrency_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can race conditions cause data corruption?",
+              "answer": "Threads read partially-written data or overwrite each other's writes",
+              "explain": "If Thread A is writing a struct and Thread B reads it mid-write, B sees garbage. Or Thread A overwrites what Thread B just wrote, losing B's update.",
+              "choices": [
+                "The operating system always prevents it",
+                "Only by directly deleting the data",
+                "Race conditions only affect speed, not correctness",
+                "Threads read partially-written data or overwrite each other's writes"
+              ],
+              "id": "concurrency_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Critical Sections and Mutual Exclusion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a critical section?",
+              "answer": "Code that accesses shared data and must run without interference from other threads",
+              "explain": "A critical section is a region where only one thread should execute at a time. Entering a critical section without permission from other threads causes races.",
+              "choices": [
+                "Code that accesses shared data and must run without interference from other threads",
+                "A thread priority setting",
+                "An error handling section",
+                "The main function of a program"
+              ],
+              "id": "concurrency_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is mutual exclusion (mutex)?",
+              "answer": "Ensuring only one thread enters a critical section at a time",
+              "explain": "Mutual exclusion means mutually excluding other threads. Only one thread can be in the critical section; others wait outside.",
+              "choices": [
+                "Ensuring only one thread enters a critical section at a time",
+                "Preventing all threads from running",
+                "Eliminating shared data",
+                "Allowing multiple threads to run in parallel"
+              ],
+              "id": "concurrency_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which line is the critical section in: print('start'); shared.count++; print('done');",
+              "answer": "shared.count++",
+              "explain": "Only shared.count++ touches shared data, so only it needs protection. The print lines use no shared state.",
+              "choices": [
+                "print('done')",
+                "print('start')",
+                "shared.count++",
+                "All three lines equally"
+              ],
+              "id": "concurrency_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the goal of critical section protection?",
+              "answer": "Maintain consistency of shared data and prevent unpredictable interleaving",
+              "explain": "Protected critical sections guarantee that operations complete atomically. Shared data stays consistent. Results are predictable regardless of thread timing.",
+              "choices": [
+                "To eliminate multithreading",
+                "To make the program run faster",
+                "To reduce memory usage",
+                "Maintain consistency of shared data and prevent unpredictable interleaving"
+              ],
+              "id": "concurrency_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why not just protect everything with locks?",
+              "answer": "Locking too much reduces parallelism and performance; only critical sections need protection",
+              "explain": "Excessive locking serializes the program and defeats concurrency benefits. Only code that accesses shared data needs protection. Other code runs in parallel.",
+              "choices": [
+                "Locking too much reduces parallelism and performance; only critical sections need protection",
+                "Locks are slow and always cause deadlocks",
+                "All code must be protected equally",
+                "Locks do not actually protect anything"
+              ],
+              "id": "concurrency_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Locks and Mutexes",
+      "tip": "A lock is a synchronization primitive that protects critical sections. A mutex (mutual exclusion lock) is the simplest lock type. A thread acquires a lock before entering a critical section and releases it when done.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Mutex Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does a mutex work?",
+              "answer": "Only one thread can hold the mutex at a time; others wait",
+              "explain": "A mutex is a binary lock. A thread acquires it before entering a critical section. Other threads block waiting for it. The owner releases it when done.",
+              "choices": [
+                "Only one thread can hold the mutex at a time; others wait",
+                "All threads can hold it simultaneously",
+                "It automatically fixes race conditions",
+                "It prevents threads from running"
+              ],
+              "id": "concurrency_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does lock() do?",
+              "answer": "Acquires the mutex; waits if another thread holds it",
+              "explain": "lock() is a blocking call. If the mutex is free, it acquires it immediately. If held by another thread, the caller blocks until released.",
+              "choices": [
+                "Destroys the mutex",
+                "Releases the mutex immediately",
+                "Acquires the mutex; waits if another thread holds it",
+                "Checks if the mutex is locked without blocking"
+              ],
+              "id": "concurrency_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does unlock() do?",
+              "answer": "Releases the mutex so other waiting threads can acquire it",
+              "explain": "unlock() releases ownership. If threads are waiting, the OS scheduler picks one to wake up and acquire the mutex.",
+              "choices": [
+                "Destroys the mutex",
+                "Releases the mutex so other waiting threads can acquire it",
+                "Locks the mutex again",
+                "Wakes all threads"
+              ],
+              "id": "concurrency_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why must you always unlock a mutex you locked?",
+              "answer": "Otherwise other threads wait forever (deadlock); the program hangs",
+              "explain": "Forgetting unlock() is a critical bug. The mutex remains held. Threads waiting for it block indefinitely. The program appears hung.",
+              "choices": [
+                "Unlocking is optional",
+                "It wastes CPU",
+                "The mutex automatically unlocks after a timeout",
+                "Otherwise other threads wait forever (deadlock); the program hangs"
+              ],
+              "id": "concurrency_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a common pattern for using mutexes?",
+              "answer": "lock(); try { ... } finally { unlock(); }",
+              "explain": "This ensures unlock() runs even if an exception occurs. Some languages use RAII or defer to automate this.",
+              "choices": [
+                "Unlock before locking",
+                "Never unlock, just create a new mutex",
+                "lock(); try { ... } finally { unlock(); }",
+                "lock(); ... unlock(); at different times"
+              ],
+              "id": "concurrency_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Lock Semantics and Issues",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a reentrant lock?",
+              "answer": "A lock that the same thread can acquire multiple times",
+              "explain": "A reentrant (recursive) lock allows one thread to lock it multiple times. It has a counter. Each lock increments; each unlock decrements.",
+              "choices": [
+                "A lock that the same thread can acquire multiple times",
+                "A lock shared by all processes",
+                "A lock that prevents threads from entering",
+                "A lock that cannot be used"
+              ],
+              "id": "concurrency_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What typically happens if a non-reentrant mutex is locked twice by the same thread?",
+              "answer": "Deadlock: the thread waits for itself forever",
+              "explain": "The thread already holds the mutex. Trying to lock it again blocks the thread on a lock it owns. This typically deadlocks, though some mutexes report an error instead.",
+              "choices": [
+                "The second lock is granted immediately",
+                "The mutex disappears",
+                "Deadlock: the thread waits for itself forever",
+                "The thread is woken up automatically"
+              ],
+              "id": "concurrency_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is lock contention?",
+              "answer": "Multiple threads competing for the same lock, causing waiting and reduced parallelism",
+              "explain": "High contention means many threads want the same lock. Most block waiting. Throughput drops because threads serialize. Low contention means fast lock acquisition.",
+              "choices": [
+                "A thread that never releases a lock",
+                "A type of deadlock",
+                "Multiple threads competing for the same lock, causing waiting and reduced parallelism",
+                "A lock that is poorly designed"
+              ],
+              "id": "concurrency_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you reduce lock contention?",
+              "answer": "Use fine-grained locks, protect smaller critical sections, minimize time holding locks",
+              "explain": "Instead of one big lock, use multiple locks for different data. Keep critical sections short. Release locks as soon as possible. This lets threads run in parallel longer.",
+              "choices": [
+                "Use a global lock for all data",
+                "Use fine-grained locks, protect smaller critical sections, minimize time holding locks",
+                "Increase the number of threads",
+                "Never use locks"
+              ],
+              "id": "concurrency_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a spinlock?",
+              "answer": "A lock that makes waiting threads spin in a loop instead of blocking",
+              "explain": "A spinlock is a busy-wait mechanism. The waiting thread loops checking the lock instead of sleeping. Spinlocks waste CPU but have low latency for short waits.",
+              "choices": [
+                "A type of condition variable",
+                "A lock that makes waiting threads spin in a loop instead of blocking",
+                "A rotating mechanical lock",
+                "A lock for threads"
+              ],
+              "id": "concurrency_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Deadlock and Synchronization",
+      "tip": "Deadlock occurs when threads wait for each other in a cycle and none can proceed. Atomic operations ensure an operation completes without interruption. Synchronization primitives like semaphores coordinate multiple threads.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Deadlock",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is deadlock?",
+              "answer": "Threads waiting for each other in a cycle, unable to proceed",
+              "explain": "Deadlock is a permanent block. Thread A holds lock X and waits for Y. Thread B holds Y and waits for X. Neither can proceed. The program hangs.",
+              "choices": [
+                "Threads waiting for each other in a cycle, unable to proceed",
+                "A memory error",
+                "Multiple threads running",
+                "A slow CPU"
+              ],
+              "id": "concurrency_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the four conditions necessary for deadlock?",
+              "answer": "Mutual exclusion, hold and wait, no preemption, circular wait",
+              "explain": "Mutual exclusion: locks are exclusive. Hold and wait: threads hold locks while waiting for others. No preemption: locks cannot be forcibly taken. Circular wait: a cycle of waiting.",
+              "choices": [
+                "Input, output, processing, storage",
+                "Threads, memory, CPU, time",
+                "Mutual exclusion, hold and wait, no preemption, circular wait",
+                "Locks, files, messages, events"
+              ],
+              "id": "concurrency_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you prevent deadlock by imposing lock ordering?",
+              "answer": "All threads acquire locks in the same order, breaking circular wait",
+              "explain": "If all threads acquire lock A before lock B, a cycle cannot form. Thread holding A waits for B (not B for A). This breaks the circular wait condition.",
+              "choices": [
+                "Never use locks together",
+                "Use only one lock",
+                "All threads acquire locks in the same order, breaking circular wait",
+                "Increase thread priority"
+              ],
+              "id": "concurrency_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a classic example of deadlock?",
+              "answer": "Two people, two chopsticks, each needs both to eat (Dining Philosophers)",
+              "explain": "Each philosopher picks up one chopstick then waits for the other. If all pick left first, no one gets right. All wait forever.",
+              "choices": [
+                "Too many threads",
+                "Two people, two chopsticks, each needs both to eat (Dining Philosophers)",
+                "A thread reading a variable twice",
+                "Two threads sharing one variable"
+              ],
+              "id": "concurrency_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you detect if your program is deadlocked?",
+              "answer": "The program hangs and does not respond; threads are waiting on locks",
+              "explain": "Deadlock shows as the program freezing. Debugging tools show all threads blocked waiting for locks, often in a cycle. No thread is making progress.",
+              "choices": [
+                "The program crashes immediately",
+                "The program uses too much memory",
+                "The program hangs and does not respond; threads are waiting on locks",
+                "The program is too fast"
+              ],
+              "id": "concurrency_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Atomic Operations and Semaphores",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an atomic operation?",
+              "answer": "An operation that completes entirely without interruption by other threads",
+              "explain": "Atomic means indivisible. An atomic operation either happens fully or not at all. Other threads cannot observe a partial state.",
+              "choices": [
+                "An operation that completes entirely without interruption by other threads",
+                "An operation on an atom data type",
+                "A slow operation",
+                "An operation using atoms"
+              ],
+              "id": "concurrency_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an atomic variable?",
+              "answer": "A variable whose read and write operations are guaranteed atomic",
+              "explain": "Languages like Java and C++ offer atomic variables. Load, store, and compare-and-swap operations are atomic without explicit locks.",
+              "choices": [
+                "A variable in a separate thread",
+                "A variable that cannot change",
+                "A variable that loses updates",
+                "A variable whose read and write operations are guaranteed atomic"
+              ],
+              "id": "concurrency_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a semaphore?",
+              "answer": "A synchronization primitive with a counter; threads wait until the counter is positive",
+              "explain": "A semaphore is an integer with two operations: wait() (decrement, block if 0) and signal() (increment, wake waiting threads). Used for resource counting.",
+              "choices": [
+                "A synchronization primitive with a counter; threads wait until the counter is positive",
+                "A traffic signal",
+                "A type of mutex",
+                "A memory error detector"
+              ],
+              "id": "concurrency_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a binary semaphore differ from a regular semaphore?",
+              "answer": "A binary semaphore is 0 or 1 only; a regular semaphore can be any non-negative integer",
+              "explain": "A binary semaphore acts like a mutex (two states). A regular semaphore counts resources, allowing N threads to enter if initialized to N.",
+              "choices": [
+                "They are the same thing",
+                "Binary semaphores are faster",
+                "A binary semaphore is 0 or 1 only; a regular semaphore can be any non-negative integer",
+                "Binary semaphores are unsafe"
+              ],
+              "id": "concurrency_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can a semaphore control access to a pool of N resources?",
+              "answer": "Initialize the semaphore to N; each thread wait() on it before using a resource",
+              "explain": "If there are 5 printers, create a semaphore initialized to 5. Each thread wait() (acquire) before printing, signal() (release) after. At most 5 print concurrently.",
+              "choices": [
+                "Use a mutex for each resource",
+                "Semaphores cannot control pools",
+                "Initialize the semaphore to N; each thread wait() on it before using a resource",
+                "Use one semaphore per resource"
+              ],
+              "id": "concurrency_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced Concurrency",
+      "tip": "Async/await simplifies concurrent code by allowing functions to pause and resume. Event loops schedule tasks without explicit thread management. Message passing avoids shared mutable state.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Async/Await and Event Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is async/await?",
+              "answer": "Language syntax allowing functions to pause waiting for I/O and resume later",
+              "explain": "async/await lets you write concurrent code that looks sequential. The function pauses at an await point, letting other code run. When I/O completes, it resumes.",
+              "choices": [
+                "A type of mutex",
+                "A loop construct",
+                "A way to make threads faster",
+                "Language syntax allowing functions to pause waiting for I/O and resume later"
+              ],
+              "id": "concurrency_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an event loop?",
+              "answer": "A scheduler that runs tasks and I/O callbacks, processing one at a time",
+              "explain": "An event loop sits in a loop waiting for events (I/O completion, timers, signals). When an event fires, it calls the registered handler. No explicit threads needed.",
+              "choices": [
+                "A scheduler that runs tasks and I/O callbacks, processing one at a time",
+                "A loop in your code",
+                "A type of deadlock",
+                "A thread that runs continuously"
+              ],
+              "id": "concurrency_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an event loop enable concurrency without threads?",
+              "answer": "Tasks yield while waiting for I/O; the loop runs other tasks instead of blocking",
+              "explain": "When a task awaits I/O, it yields control. The event loop runs other tasks. When I/O completes, the event loop resumes the first task. No extra threads are needed.",
+              "choices": [
+                "Tasks yield while waiting for I/O; the loop runs other tasks instead of blocking",
+                "It uses multiple CPUs",
+                "It eliminates I/O altogether",
+                "Threads are hidden inside"
+              ],
+              "id": "concurrency_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you call a blocking function inside an async task?",
+              "answer": "It blocks the entire event loop; other tasks cannot run",
+              "explain": "Blocking calls pause the whole event loop. If a task does a synchronous file read, no other task runs until it completes. This defeats the purpose of async.",
+              "choices": [
+                "It blocks the entire event loop; other tasks cannot run",
+                "Only that task blocks",
+                "The event loop automatically handles it",
+                "The event loop ignores it"
+              ],
+              "id": "concurrency_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What languages commonly use async/await?",
+              "answer": "JavaScript, Python, C#, Rust, and others",
+              "explain": "Async/await is a widely adopted pattern. C# introduced it, and JavaScript, Python, Rust, and Kotlin adopted it. It simplifies concurrent I/O operations.",
+              "choices": [
+                "No languages support it",
+                "Only Python",
+                "Only Java",
+                "JavaScript, Python, C#, Rust, and others"
+              ],
+              "id": "concurrency_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Message Passing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is message passing?",
+              "answer": "Threads communicate by sending messages through channels instead of sharing memory",
+              "explain": "Message passing avoids shared mutable state. One thread sends a message to another. The receiver reads the message. No locks or race conditions on the message itself.",
+              "choices": [
+                "Threads reading each other's memory",
+                "A type of mutex",
+                "Threads communicate by sending messages through channels instead of sharing memory",
+                "Email between computers"
+              ],
+              "id": "concurrency_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a channel?",
+              "answer": "A queue connecting two or more threads for message passing",
+              "explain": "A channel is a bounded or unbounded queue. One end is a sender, the other a receiver. Sending adds a message; receiving removes it.",
+              "choices": [
+                "A network port",
+                "A queue connecting two or more threads for message passing",
+                "A type of mutex",
+                "A communication protocol"
+              ],
+              "id": "concurrency_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is message passing safer than shared memory?",
+              "answer": "No race conditions on message contents; ownership transfers from sender to receiver",
+              "explain": "The sender and receiver do not both access the same message. Ownership is explicit. Languages like Rust enforce this at compile time.",
+              "choices": [
+                "It is slower so bugs hide",
+                "It uses more memory",
+                "No race conditions on message contents; ownership transfers from sender to receiver",
+                "Channels cannot fail"
+              ],
+              "id": "concurrency_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a receiver waits on an empty channel and a sender is still alive but never sends?",
+              "answer": "The receiver blocks indefinitely",
+              "explain": "With no message arriving and a sender still open, the receiver waits forever. If all senders are closed, most channel designs report that instead of blocking.",
+              "choices": [
+                "The receiver blocks indefinitely",
+                "The program crashes",
+                "The receiver unblocks immediately",
+                "The receiver gets a default value"
+              ],
+              "id": "concurrency_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does Rust enforce safety in message passing?",
+              "answer": "Sending a value moves ownership, so the sender can no longer use it",
+              "explain": "Rust's ownership system moves a value into the channel. The compiler then rejects any later use by the sender, so two threads never access it at once.",
+              "choices": [
+                "Rust does not enforce safety",
+                "Sending a value moves ownership, so the sender can no longer use it",
+                "Using runtime checks only",
+                "Rust uses message passing instead of channels"
+              ],
+              "id": "concurrency_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

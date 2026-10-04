@@ -1,0 +1,904 @@
+{
+  "id": "digital_logic",
+  "name": "Digital Logic",
+  "category": "engineering",
+  "icon": "fa-solid fa-toggle-on",
+  "level": "Gates and Bits",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Binary and Boolean Algebra",
+      "tip": "Digital circuits use binary: 0 and 1. Boolean algebra is the math of true and false. AND, OR, and NOT are the basic operations. Every digital circuit is built on these foundations.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Binary Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What do the digits 0 and 1 represent in binary?",
+              "answer": "False and true, or off and on",
+              "explain": "In digital logic, 0 represents false or an off state (low voltage), and 1 represents true or an on state (high voltage). These are the only two possible values.",
+              "choices": [
+                "Nothing and everything",
+                "Positive and negative",
+                "False and true, or off and on",
+                "Night and day"
+              ],
+              "id": "digital_logic_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do computers use binary instead of decimal?",
+              "answer": "Electrical circuits naturally have two stable states: on and off",
+              "explain": "Representing two states is simple and reliable. Creating circuits with ten states would be noisy and error-prone. Binary maps perfectly to electrical on/off.",
+              "choices": [
+                "Mathematicians prefer it",
+                "Electrical circuits naturally have two stable states: on and off",
+                "It uses less memory",
+                "Decimal is too old"
+              ],
+              "id": "digital_logic_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Convert the binary number 1010 to decimal.",
+              "answer": "10",
+              "explain": "1010 in binary is 1*8 + 0*4 + 1*2 + 0*1 = 8 + 2 = 10 in decimal.",
+              "choices": [
+                "20",
+                "10",
+                "1010",
+                "5"
+              ],
+              "id": "digital_logic_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Convert the decimal number 7 to binary.",
+              "answer": "111",
+              "explain": "7 = 4 + 2 + 1 = 1*4 + 1*2 + 1*1, so 7 in decimal is 111 in binary.",
+              "choices": [
+                "111",
+                "101",
+                "110",
+                "1000"
+              ],
+              "id": "digital_logic_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bit?",
+              "answer": "A single binary digit, either 0 or 1",
+              "explain": "Bit stands for binary digit. It is the fundamental unit of information in digital systems. One bit can represent two states.",
+              "choices": [
+                "A voltage level",
+                "A piece of data",
+                "A single binary digit, either 0 or 1",
+                "Eight ones"
+              ],
+              "id": "digital_logic_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Boolean Algebra",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is Boolean algebra?",
+              "answer": "The mathematics of true and false values and their combinations",
+              "explain": "Boolean algebra defines operations on binary values (true/false, 1/0). It is the foundation of digital logic design.",
+              "choices": [
+                "An electrical theory",
+                "The mathematics of true and false values and their combinations",
+                "The study of mountains",
+                "A programming language"
+              ],
+              "id": "digital_logic_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the OR operation?",
+              "answer": "Returns true if at least one input is true",
+              "explain": "OR is true when any input is true. 0 OR 0 = 0, 0 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1. It is inclusive.",
+              "choices": [
+                "Returns true if both inputs are true",
+                "Returns true if both inputs are false",
+                "Returns true if at least one input is true",
+                "Returns false always"
+              ],
+              "id": "digital_logic_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the AND operation?",
+              "answer": "Returns true only if all inputs are true",
+              "explain": "AND is true when every input is true. 0 AND 0 = 0, 0 AND 1 = 0, 1 AND 0 = 0, 1 AND 1 = 1.",
+              "choices": [
+                "Returns true only if all inputs are true",
+                "Returns true if inputs are different",
+                "Returns true if any input is true",
+                "Returns false always"
+              ],
+              "id": "digital_logic_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the NOT operation?",
+              "answer": "Inverts the input: 0 becomes 1, 1 becomes 0",
+              "explain": "NOT is a unary operation (one input). It flips the bit. Also called a negation or complement.",
+              "choices": [
+                "Returns the input unchanged",
+                "Inverts the input: 0 becomes 1, 1 becomes 0",
+                "Returns true for both 0 and 1",
+                "Does nothing"
+              ],
+              "id": "digital_logic_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Evaluate: 1 AND (0 OR 1)",
+              "answer": "1",
+              "explain": "0 OR 1 = 1, then 1 AND 1 = 1. Parentheses are evaluated first.",
+              "choices": [
+                "1",
+                "Undefined",
+                "0",
+                "Both 0 and 1"
+              ],
+              "id": "digital_logic_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Logic Gates",
+      "tip": "Logic gates are the building blocks of digital circuits. They implement Boolean operations. AND, OR, NOT, NAND, NOR, and XOR gates process 0s and 1s to produce outputs.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Gates",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a logic gate?",
+              "answer": "A digital circuit that performs a Boolean operation on inputs and produces an output",
+              "explain": "Logic gates are hardware implementations of Boolean operations. Transistors are combined to create gates. Gates are combined to build larger circuits.",
+              "choices": [
+                "A digital circuit that performs a Boolean operation on inputs and produces an output",
+                "A physical gate made of wood",
+                "An electrical switch",
+                "A software function"
+              ],
+              "id": "digital_logic_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the inputs and outputs of an AND gate?",
+              "answer": "Two or more binary inputs; one binary output",
+              "explain": "An AND gate typically has two inputs and one output. Both inputs must be 1 for the output to be 1.",
+              "choices": [
+                "Two or more binary inputs; one binary output",
+                "No inputs or outputs",
+                "Exactly one input; one output",
+                "One input, two outputs"
+              ],
+              "id": "digital_logic_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of a NOT gate when the input is 0?",
+              "answer": "1",
+              "explain": "NOT inverts. Input 0 becomes output 1. Also called a negation or inverter gate.",
+              "choices": [
+                "Depends on the time of day",
+                "No output",
+                "0",
+                "1"
+              ],
+              "id": "digital_logic_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the NAND gate?",
+              "answer": "NOT AND: outputs 1 unless both inputs are 1",
+              "explain": "NAND is AND followed by NOT. It outputs 0 only when both inputs are 1. NAND is universal: all gates can be built from NAND gates.",
+              "choices": [
+                "NOT AND: outputs 1 unless both inputs are 1",
+                "A combination of NOT and OR",
+                "An exclusive gate",
+                "Another name for AND"
+              ],
+              "id": "digital_logic_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the NOR gate?",
+              "answer": "NOT OR: outputs 1 only if both inputs are 0",
+              "explain": "NOR is OR followed by NOT. It outputs 1 only when both inputs are 0. NOR is also universal for circuit construction.",
+              "choices": [
+                "A slower gate",
+                "NOT OR: outputs 1 only if both inputs are 0",
+                "Another name for OR",
+                "A combination of NOT and AND"
+              ],
+              "id": "digital_logic_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "XOR and Gate Combinations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the XOR gate?",
+              "answer": "Outputs 1 if inputs are different",
+              "explain": "XOR is true when inputs differ. 0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0. It detects inequality.",
+              "choices": [
+                "A gate that always outputs 1",
+                "Another name for AND",
+                "Outputs 1 if inputs are the same",
+                "Outputs 1 if inputs are different"
+              ],
+              "id": "digital_logic_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is XNOR?",
+              "answer": "Outputs 1 if inputs are the same",
+              "explain": "XNOR (equivalence) outputs 1 when both inputs are equal. 0 XNOR 0 = 1, 0 XNOR 1 = 0, 1 XNOR 0 = 0, 1 XNOR 1 = 1.",
+              "choices": [
+                "Outputs 1 if inputs are the same",
+                "Another name for NOR",
+                "A gate that never outputs 1",
+                "Outputs 1 if inputs are different"
+              ],
+              "id": "digital_logic_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is gate fanout?",
+              "answer": "The number of other gates that can be driven by one gate's output",
+              "explain": "A gate has a maximum fanout: the number of inputs it can reliably drive. Exceeding fanout degrades signal quality.",
+              "choices": [
+                "The number of inputs a gate has",
+                "The time delay through a gate",
+                "The number of other gates that can be driven by one gate's output",
+                "The power consumption of a gate"
+              ],
+              "id": "digital_logic_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you build an AND gate using only NAND gates?",
+              "answer": "Yes, AND is NAND followed by NOT, and NOT is NAND with inputs tied",
+              "explain": "NAND is universal. A NAND with both inputs tied to the same signal acts as NOT. NAND followed by NOT creates AND.",
+              "choices": [
+                "No, NAND cannot implement AND",
+                "Yes, AND is NAND followed by NOT, and NOT is NAND with inputs tied",
+                "Never, they are incompatible",
+                "Only if you use an OR gate"
+              ],
+              "id": "digital_logic_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a universal gate?",
+              "answer": "A gate from which all other gates can be constructed",
+              "explain": "NAND and NOR are universal. Using only NAND (or only NOR) gates, you can build AND, OR, NOT, XOR, and any other digital circuit.",
+              "choices": [
+                "A gate that requires no power",
+                "A gate used in all computers",
+                "A gate that outputs 1 always",
+                "A gate from which all other gates can be constructed"
+              ],
+              "id": "digital_logic_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Truth Tables and De Morgan's Laws",
+      "tip": "A truth table lists all input combinations and their outputs. De Morgan's laws describe how to transform AND/OR operations. They are essential for simplifying and designing digital circuits.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Truth Tables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a truth table?",
+              "answer": "A table listing all input combinations and the output for each",
+              "explain": "Truth tables enumerate every possible input state and the corresponding output. For n inputs, there are 2^n rows.",
+              "choices": [
+                "A list of Boolean variables",
+                "A table of true statements",
+                "A circuit diagram",
+                "A table listing all input combinations and the output for each"
+              ],
+              "id": "digital_logic_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many rows does a truth table have for a 3-input gate?",
+              "answer": "8",
+              "explain": "2^3 = 8 rows. Each of the three inputs can be 0 or 1 independently, yielding 8 combinations.",
+              "choices": [
+                "9",
+                "6",
+                "8",
+                "3"
+              ],
+              "id": "digital_logic_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Given the truth table for OR: (0,0)=0, (0,1)=1, (1,0)=1, (1,1)=1. What does (1,0)=1 mean?",
+              "answer": "When first input is 1 and second is 0, the output is 1",
+              "explain": "The pair (1,0) represents the input values. The output 1 means OR produces 1 for that combination. This is consistent with OR logic.",
+              "choices": [
+                "The gate is broken",
+                "When first input is 1 and second is 0, the output is 1",
+                "The inputs are always true",
+                "The first operation outputs 1"
+              ],
+              "id": "digital_logic_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which gates produce the same truth table?",
+              "answer": "No two basic gates are identical",
+              "explain": "Each basic gate has a unique truth table. AND, OR, XOR, NAND, NOR, and XNOR all have distinct outputs for at least one input combination.",
+              "choices": [
+                "NAND and NOR",
+                "XOR and NAND",
+                "AND and OR",
+                "No two basic gates are identical"
+              ],
+              "id": "digital_logic_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the truth table used for?",
+              "answer": "Specifying exact behavior of a circuit; designing and verifying gates",
+              "explain": "Truth tables are the precise specification of digital logic. They define what a gate does for all inputs. They are used to design circuits and verify correctness.",
+              "choices": [
+                "Choosing gate colors",
+                "Only for documentation",
+                "Specifying exact behavior of a circuit; designing and verifying gates",
+                "Testing circuit speed"
+              ],
+              "id": "digital_logic_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "De Morgan's Laws",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are De Morgan's laws?",
+              "answer": "Rules for transforming AND/OR expressions using NOT",
+              "explain": "De Morgan's laws allow you to convert between AND and OR operations with negations. They are used to simplify and transform Boolean expressions.",
+              "choices": [
+                "Rules for transforming AND/OR expressions using NOT",
+                "Gate reliability rules",
+                "Mathematical constants",
+                "Laws of physics"
+              ],
+              "id": "digital_logic_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does De Morgan's law say NOT(A AND B) equals?",
+              "answer": "(NOT A) OR (NOT B)",
+              "explain": "The negation of an AND is the OR of the negations.",
+              "choices": [
+                "(NOT A) AND (NOT B)",
+                "A OR B",
+                "(NOT A) OR (NOT B)",
+                "A XOR B"
+              ],
+              "id": "digital_logic_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does De Morgan's law say NOT(A OR B) equals?",
+              "answer": "(NOT A) AND (NOT B)",
+              "explain": "The negation of an OR is the AND of the negations.",
+              "choices": [
+                "A AND B",
+                "(NOT A) OR (NOT B)",
+                "A XOR B",
+                "(NOT A) AND (NOT B)"
+              ],
+              "id": "digital_logic_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Simplify using De Morgan's law: NOT(1 AND 0)",
+              "answer": "1",
+              "explain": "NOT(1 AND 0) = (NOT 1) OR (NOT 0) = 0 OR 1 = 1. Apply De Morgan's law, then evaluate.",
+              "choices": [
+                "Both 0 and 1",
+                "1",
+                "Undefined",
+                "0"
+              ],
+              "id": "digital_logic_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are De Morgan's laws useful in circuit design?",
+              "answer": "They allow transforming circuits to use fewer or cheaper gate types",
+              "explain": "Sometimes using NOR instead of AND saves gates or cost. De Morgan's laws let you convert designs while maintaining logic.",
+              "choices": [
+                "They allow transforming circuits to use fewer or cheaper gate types",
+                "They eliminate the need for gates",
+                "They make circuits faster",
+                "They add redundancy"
+              ],
+              "id": "digital_logic_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Combinational Circuits",
+      "tip": "Combinational circuits have no memory; outputs depend only on current inputs. Adders, multiplexers, and decoders are common combinational circuits.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Adders and Multiplexers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a combinational circuit?",
+              "answer": "A circuit with no memory whose output depends only on current inputs",
+              "explain": "Combinational circuits are stateless. Given the same inputs, they always produce the same outputs. Unlike sequential circuits, they have no stored state.",
+              "choices": [
+                "A circuit with no memory whose output depends only on current inputs",
+                "A circuit that remembers past inputs",
+                "A circuit that combines multiple chips",
+                "A circuit that changes over time"
+              ],
+              "id": "digital_logic_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a half adder?",
+              "answer": "A circuit that adds two bits and produces sum and carry",
+              "explain": "A half adder takes two 1-bit inputs and outputs a sum bit and a carry bit. It is the building block for larger adders.",
+              "choices": [
+                "An incomplete addition circuit",
+                "A circuit that adds two bits and produces sum and carry",
+                "An adder that sometimes works",
+                "A circuit that only adds 0s"
+              ],
+              "id": "digital_logic_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a full adder?",
+              "answer": "A circuit that adds three bits (two operands and a carry in) producing sum and carry out",
+              "explain": "A full adder handles a carry from a previous stage. It takes three 1-bit inputs and outputs sum and carry. Full adders are cascaded for multi-bit addition.",
+              "choices": [
+                "An adder without carries",
+                "An adder for full numbers",
+                "A circuit that adds three bits (two operands and a carry in) producing sum and carry out",
+                "A subtraction circuit"
+              ],
+              "id": "digital_logic_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a multiplexer?",
+              "answer": "A circuit that selects one of many inputs and routes it to a single output",
+              "explain": "A multiplexer has N data inputs, one output, and log2(N) select lines. The select lines choose which input to pass through.",
+              "choices": [
+                "A circuit that selects one of many inputs and routes it to a single output",
+                "A circuit that multiplies numbers",
+                "A circuit that splits one input to many outputs",
+                "A circuit that adds inputs"
+              ],
+              "id": "digital_logic_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many select lines does an 8-to-1 multiplexer need?",
+              "answer": "3",
+              "explain": "2^3 = 8. Three select lines can represent 8 different values (000 to 111), one for each input.",
+              "choices": [
+                "3",
+                "1",
+                "2",
+                "8"
+              ],
+              "id": "digital_logic_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Decoders and Other Combinational Circuits",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a decoder?",
+              "answer": "A circuit that activates one of many outputs based on an N-bit input",
+              "explain": "A decoder has N inputs and 2^N outputs. It activates exactly one output corresponding to the input value. It does roughly the reverse of an encoder.",
+              "choices": [
+                "A circuit that selects inputs",
+                "A circuit that converts analog to digital",
+                "A circuit that activates one of many outputs based on an N-bit input",
+                "A circuit that decodes encrypted data"
+              ],
+              "id": "digital_logic_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many outputs does a 3-to-8 decoder have?",
+              "answer": "8",
+              "explain": "A 3-to-8 decoder has 3 inputs and 8 outputs. The name indicates the ratio. 2^3 = 8.",
+              "choices": [
+                "16",
+                "8",
+                "3",
+                "5"
+              ],
+              "id": "digital_logic_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an encoder?",
+              "answer": "A circuit that converts one active input to an N-bit output code",
+              "explain": "An encoder outputs the binary code representing which of its inputs is active. Opposite of a decoder. 2^N inputs and N outputs.",
+              "choices": [
+                "A circuit that encodes data",
+                "A circuit that converts one active input to an N-bit output code",
+                "A circuit that adds inputs",
+                "A circuit that multiplies inputs"
+              ],
+              "id": "digital_logic_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a priority encoder?",
+              "answer": "An encoder that activates the highest priority active input when multiple inputs are high",
+              "explain": "When multiple inputs are active, a priority encoder outputs the code for the highest-priority one instead of producing an error.",
+              "choices": [
+                "An encoder that activates the highest priority active input when multiple inputs are high",
+                "An encoder that uses less power",
+                "An encoder with fewer inputs",
+                "An encoder that works faster"
+              ],
+              "id": "digital_logic_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a comparator?",
+              "answer": "A circuit that compares two numbers and outputs whether they are equal or which is greater",
+              "explain": "A comparator takes two N-bit numbers and produces outputs indicating less than, equal, or greater than.",
+              "choices": [
+                "A circuit that samples data",
+                "A circuit that compresses data",
+                "A circuit that compares two numbers and outputs whether they are equal or which is greater",
+                "A circuit that measures distance"
+              ],
+              "id": "digital_logic_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Sequential Logic and Memory",
+      "tip": "Sequential circuits have memory; output depends on input history. Latches and flip-flops are memory elements. Clocks synchronize operations in complex circuits.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Latches and Flip-Flops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between combinational and sequential circuits?",
+              "answer": "Combinational has no memory; sequential has memory of past states",
+              "explain": "Combinational output depends only on current input. Sequential output depends on input history. Sequential circuits use memory elements (latches, flip-flops).",
+              "choices": [
+                "Sequential circuits are slower",
+                "Combinational has no memory; sequential has memory of past states",
+                "Sequential uses fewer gates",
+                "They are the same thing"
+              ],
+              "id": "digital_logic_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a latch?",
+              "answer": "A memory element that stores one bit and can be asynchronously set or reset",
+              "explain": "A latch is the simplest memory element. It has two stable states (0 and 1). The SR (set-reset) latch is common. Latches respond immediately to input changes.",
+              "choices": [
+                "A door lock",
+                "A circuit that has no memory",
+                "A memory element that stores one bit and can be asynchronously set or reset",
+                "A gate that combines inputs"
+              ],
+              "id": "digital_logic_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a flip-flop?",
+              "answer": "A synchronous memory element that changes state on a clock edge",
+              "explain": "A flip-flop is a clocked latch. It updates only on clock transitions (rising or falling edge). Flip-flops enable synchronous designs.",
+              "choices": [
+                "Another name for a latch",
+                "A circuit that inverts inputs",
+                "A clothing item",
+                "A synchronous memory element that changes state on a clock edge"
+              ],
+              "id": "digital_logic_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a D flip-flop?",
+              "answer": "A flip-flop that captures and holds the D input value when clocked",
+              "explain": "A D flip-flop stores the value on its D input when the clock edge arrives. The output Q reflects the stored value. Used for data storage.",
+              "choices": [
+                "A flip-flop that captures and holds the D input value when clocked",
+                "A flip-flop that only ever outputs 0",
+                "A flip-flop with no inputs",
+                "A decoder flip-flop"
+              ],
+              "id": "digital_logic_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a JK flip-flop?",
+              "answer": "A flip-flop with J and K inputs controlling set, reset, and toggle behavior",
+              "explain": "A JK flip-flop has flexibility. J sets, K resets, and when both are 1 it toggles. It is more versatile than SR or D flip-flops.",
+              "choices": [
+                "A flip-flop that never toggles",
+                "A flip-flop with no control",
+                "A flip-flop with J and K inputs controlling set, reset, and toggle behavior",
+                "A jump-kill flip-flop"
+              ],
+              "id": "digital_logic_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Clocks and Timing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a clock in digital logic?",
+              "answer": "A periodic signal (usually square wave) that synchronizes all operations",
+              "explain": "A clock is a timing signal. Flip-flops and sequential circuits respond to clock edges. The clock frequency determines the circuit speed.",
+              "choices": [
+                "A periodic signal (usually square wave) that synchronizes all operations",
+                "A device that tells time",
+                "A gate delay",
+                "A timing error"
+              ],
+              "id": "digital_logic_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is clock frequency?",
+              "answer": "The number of clock cycles per second, measured in Hz",
+              "explain": "Clock frequency determines how fast the circuit operates. A 1 GHz clock completes 1 billion cycles per second.",
+              "choices": [
+                "The shape of the clock wave",
+                "The voltage of the clock signal",
+                "The time between clock edges",
+                "The number of clock cycles per second, measured in Hz"
+              ],
+              "id": "digital_logic_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is clock period?",
+              "answer": "The time for one full clock cycle",
+              "explain": "Period is the inverse of frequency. A 1 GHz clock has a period of 1 nanosecond. Period = 1 / Frequency.",
+              "choices": [
+                "The clock voltage",
+                "The number of clock cycles",
+                "The clock frequency",
+                "The time for one full clock cycle"
+              ],
+              "id": "digital_logic_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is setup time?",
+              "answer": "The minimum time before a clock edge that input must be stable",
+              "explain": "Setup time is a constraint. Data on D must be stable at least this long before the clock edge, or the flip-flop may not capture it correctly.",
+              "choices": [
+                "The minimum time before a clock edge that input must be stable",
+                "The time to start the circuit",
+                "The time after the clock edge",
+                "The clock frequency"
+              ],
+              "id": "digital_logic_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is hold time?",
+              "answer": "The minimum time after a clock edge that input must remain stable",
+              "explain": "Hold time is a constraint. Data on D must not change for at least this long after the clock edge, or corruption may occur.",
+              "choices": [
+                "The input voltage range",
+                "The time before the clock edge",
+                "The minimum time after a clock edge that input must remain stable",
+                "The clock period"
+              ],
+              "id": "digital_logic_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Registers, Counters, and FSMs",
+      "tip": "Registers store multiple bits. Counters increment or decrement on clock edges. Finite state machines control circuits based on state transitions.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Registers and Counters",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a register?",
+              "answer": "A collection of flip-flops that store multiple bits together",
+              "explain": "A register is a group of flip-flops. An N-bit register stores N bits. All flip-flops share a clock for synchronized updates.",
+              "choices": [
+                "A log of operations",
+                "A collection of flip-flops that store multiple bits together",
+                "A memory address",
+                "A single flip-flop"
+              ],
+              "id": "digital_logic_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a shift register?",
+              "answer": "A register where data shifts one position per clock cycle",
+              "explain": "A shift register routes each flip-flop output to the next flip-flop input. On each clock, data shifts left or right by one position.",
+              "choices": [
+                "A register that cannot be read",
+                "A register that has been moved",
+                "A register where data shifts one position per clock cycle",
+                "A register with no inputs"
+              ],
+              "id": "digital_logic_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a counter?",
+              "answer": "A sequential circuit that increments or decrements on clock edges",
+              "explain": "A counter stores a count value in a register. On each clock edge, it adds or subtracts one. Counters are used for timing and sequencing.",
+              "choices": [
+                "A sequential circuit that increments or decrements on clock edges",
+                "A register with no feedback",
+                "A person who counts",
+                "A circuit that divides by 2"
+              ],
+              "id": "digital_logic_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an N-bit counter?",
+              "answer": "A counter that stores an N-bit value and counts from 0 to 2^N-1",
+              "explain": "An N-bit counter has N flip-flops. It can represent 2^N different values. A 4-bit counter counts 0 to 15.",
+              "choices": [
+                "A counter with N clock inputs",
+                "A counter that stores an N-bit value and counts from 0 to 2^N-1",
+                "A counter that counts N things",
+                "A counter with N inputs"
+              ],
+              "id": "digital_logic_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a modulo-N counter?",
+              "answer": "A counter that wraps around after reaching N-1, returning to 0",
+              "explain": "A modulo-N counter counts 0, 1, 2, ..., N-1, then wraps to 0 and repeats. A modulo-10 counter is a decimal counter.",
+              "choices": [
+                "A counter that counts N things",
+                "A counter that has N outputs",
+                "A counter that counts N times faster",
+                "A counter that wraps around after reaching N-1, returning to 0"
+              ],
+              "id": "digital_logic_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Finite State Machines",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a finite state machine (FSM)?",
+              "answer": "A circuit with a fixed number of states that transitions between states based on inputs",
+              "explain": "An FSM has a state register holding the current state. On each clock, inputs determine which state to transition to. FSMs control complex behavior.",
+              "choices": [
+                "A circuit with a fixed number of states that transitions between states based on inputs",
+                "A machine that can break",
+                "A circuit with infinite states",
+                "A machine with no states"
+              ],
+              "id": "digital_logic_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a state in an FSM?",
+              "answer": "A configuration stored in the state register, determining the circuit's behavior",
+              "explain": "Each state represents a condition or mode of operation. States are typically represented as binary values stored in flip-flops.",
+              "choices": [
+                "A configuration stored in the state register, determining the circuit's behavior",
+                "A static condition",
+                "An input signal",
+                "A permanent memory"
+              ],
+              "id": "digital_logic_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a state transition?",
+              "answer": "A change from one state to another triggered by input and clock edge",
+              "explain": "Transitions occur on clock edges. The next state is determined by the current state and inputs using combinational logic.",
+              "choices": [
+                "Moving to a different location",
+                "A state that never returns",
+                "A change from one state to another triggered by input and clock edge",
+                "A permanent change"
+              ],
+              "id": "digital_logic_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Mealy machine?",
+              "answer": "An FSM whose output depends on both current state and current inputs",
+              "explain": "In a Mealy machine, outputs can change immediately with inputs (during a state). A Moore machine outputs depend only on state.",
+              "choices": [
+                "An FSM whose output depends on both current state and current inputs",
+                "A machine made of meal",
+                "An FSM with no inputs",
+                "A machine that is slow"
+              ],
+              "id": "digital_logic_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Moore machine?",
+              "answer": "An FSM whose output depends only on the current state",
+              "explain": "In a Moore machine, outputs are functions of state alone. Output changes only when the state changes, not on input changes.",
+              "choices": [
+                "An FSM whose output depends only on the current state",
+                "A fast machine",
+                "An FSM with many inputs",
+                "An FSM whose output depends only on its inputs"
+              ],
+              "id": "digital_logic_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
