@@ -1,0 +1,904 @@
+{
+  "id": "ruby",
+  "name": "Ruby",
+  "category": "programming",
+  "icon": "fa-solid fa-gem",
+  "level": "Expressive Scripting",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Objects Everywhere",
+      "tip": "In Ruby, everything is an object. Numbers, strings, arrays, even the value true are all objects with methods you can call. Understanding this is the foundation of Ruby programming.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Everything is an Object",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Ruby consider to be an object?",
+              "answer": "Every value: numbers, strings, arrays, symbols, even true and false",
+              "explain": "In Ruby, every value is an object. Even basic values like integers and booleans are objects with methods you can call on them.",
+              "choices": [
+                "Only custom classes you define",
+                "Only things made with the class keyword",
+                "Only collections like arrays and hashes",
+                "Every value: numbers, strings, arrays, symbols, even true and false"
+              ],
+              "id": "ruby_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the .class method tell you?",
+              "answer": "The class (type) of an object",
+              "explain": "Calling .class on any object returns its class. For example, 5.class returns Integer, and 'hello'.class returns String.",
+              "choices": [
+                "The class (type) of an object",
+                "How to create a new object",
+                "How many methods an object has",
+                "Whether an object is an instance"
+              ],
+              "id": "ruby_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Ruby, what is a method?",
+              "answer": "A named piece of code you call on an object, usually with a dot",
+              "explain": "Methods are named pieces of code that objects can run. You usually call them with dot notation, like 'hello'.upcase or 5.to_s.",
+              "choices": [
+                "A variable that stores data",
+                "Only defined inside classes",
+                "A named piece of code you call on an object, usually with a dot",
+                "A mathematical calculation"
+              ],
+              "id": "ruby_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 5.to_s do?",
+              "answer": "Converts the number 5 to the string '5'",
+              "explain": "The to_s method converts an object to its string representation. This is one of the most common type conversion methods in Ruby.",
+              "choices": [
+                "Converts the string to a number",
+                "Adds 5 to a string",
+                "Converts the number 5 to the string '5'",
+                "Shows the type of 5"
+              ],
+              "id": "ruby_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello'.length return?",
+              "answer": "5",
+              "explain": "The length method returns the number of characters in a string. 'hello' has 5 characters.",
+              "choices": [
+                "nil",
+                "6",
+                "5",
+                "hello"
+              ],
+              "id": "ruby_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Objects Have Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 5.even? return?",
+              "answer": "false",
+              "explain": "The even? method returns true if a number is even and false if it is odd. 5 is odd, so it returns false.",
+              "choices": [
+                "true",
+                "nil",
+                "5",
+                "false"
+              ],
+              "id": "ruby_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello'.upcase return?",
+              "answer": "'HELLO'",
+              "explain": "The upcase method returns a new string with all letters converted to uppercase.",
+              "choices": [
+                "Hello",
+                "'hello'",
+                "'HELLO'",
+                "true"
+              ],
+              "id": "ruby_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'WORLD'.downcase return?",
+              "answer": "'world'",
+              "explain": "The downcase method converts all uppercase letters to lowercase.",
+              "choices": [
+                "'World'",
+                "'world'",
+                "nil",
+                "'WORLD'"
+              ],
+              "id": "ruby_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 3.5.to_i return?",
+              "answer": "3",
+              "explain": "The to_i method converts a float to an integer by removing the decimal part.",
+              "choices": [
+                "'3.5'",
+                "4",
+                "3.5",
+                "3"
+              ],
+              "id": "ruby_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does '123'.to_i return?",
+              "answer": "123",
+              "explain": "The to_i method converts a string containing digits to an integer.",
+              "choices": [
+                "123",
+                "null",
+                "'123'",
+                "string"
+              ],
+              "id": "ruby_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Variables and Symbols",
+      "tip": "Variables store values so you can reuse them. In Ruby, a variable can hold any type of object. Symbols are like lightweight strings often used as labels or keys.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Creating and Using Variables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this code do: name = 'Alice'?",
+              "answer": "Creates a variable named 'name' and stores the string 'Alice' in it",
+              "explain": "This assigns the string 'Alice' to a variable called 'name'. You can then use that variable later.",
+              "choices": [
+                "Prints Alice to the screen",
+                "Creates a string called Alice",
+                "Creates a variable named 'name' and stores the string 'Alice' in it",
+                "Checks if name equals Alice"
+              ],
+              "id": "ruby_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code return: age = 25; age + 5?",
+              "answer": "30",
+              "explain": "The variable age holds 25. Adding 5 to it gives 30.",
+              "choices": [
+                "30",
+                "age",
+                "25 + 5",
+                "25"
+              ],
+              "id": "ruby_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a variable change its type in Ruby?",
+              "answer": "Yes, a variable can hold any type and can change types",
+              "explain": "Ruby is dynamically typed. A variable can hold a number, then later hold a string or array. The same variable name can store different types.",
+              "choices": [
+                "Yes, a variable can hold any type and can change types",
+                "Only in special cases",
+                "No, Ruby requires types to stay the same",
+                "Only if you declare the type first"
+              ],
+              "id": "ruby_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the value of x after: x = 'hello'; x = 42?",
+              "answer": "42",
+              "explain": "The first line assigns 'hello' to x, then the second line changes x to 42. The final value is 42.",
+              "choices": [
+                "'hello'",
+                "'hello42'",
+                "42",
+                "nil"
+              ],
+              "id": "ruby_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do: x = y = 5?",
+              "answer": "Assigns 5 to both x and y",
+              "explain": "Ruby allows chained assignment. This assigns 5 to y first, then assigns that result to x, so both variables now hold 5.",
+              "choices": [
+                "Only assigns 5 to y",
+                "Creates a list [5, 5]",
+                "Compares x and y",
+                "Assigns 5 to both x and y"
+              ],
+              "id": "ruby_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Symbols",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a symbol in Ruby?",
+              "answer": "A lightweight label or key, written with a colon like :name",
+              "explain": "Symbols are similar to strings but immutable and more efficient. They are often used as hash keys or labels. You write them with a leading colon.",
+              "choices": [
+                "A lightweight label or key, written with a colon like :name",
+                "The same as a string",
+                "A special variable name",
+                "Only used in mathematical equations"
+              ],
+              "id": "ruby_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between :name and 'name'?",
+              "answer": ":name is a symbol (immutable, efficient), 'name' is a string",
+              "explain": "Symbols are immutable and use less memory. Strings are mutable and used for text data. Symbols are better for keys and labels.",
+              "choices": [
+                "No difference, they are the same",
+                ":name is a symbol (immutable, efficient), 'name' is a string",
+                ":name is a string, 'name' is a symbol",
+                "Only :name works in Ruby"
+              ],
+              "id": "ruby_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does :hello.to_s return?",
+              "answer": "'hello'",
+              "explain": "The to_s method converts a symbol to a string. :hello becomes 'hello'.",
+              "choices": [
+                ":hello",
+                "nil",
+                "an error",
+                "'hello'"
+              ],
+              "id": "ruby_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is commonly used as a hash key?",
+              "answer": "Symbols, because they are efficient and immutable",
+              "explain": "While strings can be hash keys, symbols are the Ruby convention for hash keys because they are faster and use less memory.",
+              "choices": [
+                "Symbols, because they are efficient and immutable",
+                "Variables only",
+                "Strings only",
+                "Numbers only"
+              ],
+              "id": "ruby_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does :ruby.class return?",
+              "answer": "Symbol",
+              "explain": "The class method on a symbol returns Symbol, confirming that :ruby is an object of the Symbol class.",
+              "choices": [
+                "String",
+                "Object",
+                "Symbol",
+                ":ruby"
+              ],
+              "id": "ruby_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Strings and Text",
+      "tip": "Strings are sequences of characters. Ruby provides many methods to manipulate strings: upcase, downcase, reverse, include?, and others. String interpolation lets you embed variables inside strings.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "String Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello world'.reverse return?",
+              "answer": "'dlrow olleh'",
+              "explain": "The reverse method returns a new string with characters in reverse order.",
+              "choices": [
+                "'olleh dlrow'",
+                "'world hello'",
+                "'hello world'",
+                "'dlrow olleh'"
+              ],
+              "id": "ruby_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'ruby'.include?('by') return?",
+              "answer": "true",
+              "explain": "The include? method returns true if the substring 'by' is found in 'ruby'.",
+              "choices": [
+                "false",
+                "true",
+                "'by'",
+                "2"
+              ],
+              "id": "ruby_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello'.start_with?('he') return?",
+              "answer": "true",
+              "explain": "The start_with? method checks if a string begins with the given substring.",
+              "choices": [
+                "false",
+                "0",
+                "'he'",
+                "true"
+              ],
+              "id": "ruby_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'RUBY'.end_with?('BY') return?",
+              "answer": "true",
+              "explain": "The end_with? method returns true if the string ends with the given substring.",
+              "choices": [
+                "false",
+                "'BY'",
+                "true",
+                "2"
+              ],
+              "id": "ruby_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello hello'.gsub('hello', 'hi') return?",
+              "answer": "'hi hi'",
+              "explain": "The gsub method replaces all occurrences of a pattern with a replacement string.",
+              "choices": [
+                "'hello hello'",
+                "'hello hi'",
+                "'hi hello'",
+                "'hi hi'"
+              ],
+              "id": "ruby_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "String Interpolation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this code return: name = 'Alice'; \"Hello, #{name}!\"?",
+              "answer": "'Hello, Alice!'",
+              "explain": "String interpolation with double quotes and #{} inserts the variable value into the string. Single quotes do not interpolate.",
+              "choices": [
+                "Prints Hello, Alice! to the screen",
+                "'Hello, Alice!'",
+                "'Hello, name!'",
+                "'Hello, #{name}!'"
+              ],
+              "id": "ruby_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code return: x = 10; 'x = #{x}'?",
+              "answer": "'x = #{x}'",
+              "explain": "Single quotes do not interpolate. The #{x} is treated as literal text, not evaluated.",
+              "choices": [
+                "'x = 10'",
+                "x = 10",
+                "'10'",
+                "'x = #{x}'"
+              ],
+              "id": "ruby_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code return: a = 5; b = 3; \"#{a} + #{b} = #{a + b}\"?",
+              "answer": "'5 + 3 = 8'",
+              "explain": "Interpolation can include expressions. Inside #{}, any Ruby code is evaluated.",
+              "choices": [
+                "'a + b'",
+                "'5 + 3 = a + b'",
+                "'5 + 3 = 8'",
+                "'8'"
+              ],
+              "id": "ruby_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hello' + ' ' + 'world' return?",
+              "answer": "'hello world'",
+              "explain": "The + operator concatenates (joins) strings together.",
+              "choices": [
+                "'hello world'",
+                "2",
+                "'helloworld'",
+                "nil"
+              ],
+              "id": "ruby_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between single and double quotes?",
+              "answer": "Double quotes allow interpolation with #{}, single quotes do not",
+              "explain": "In double quotes, #{} expressions are evaluated and inserted. In single quotes, #{} stays as plain text.",
+              "choices": [
+                "Single quotes are faster",
+                "No difference in Ruby",
+                "Single quotes are for longer strings",
+                "Double quotes allow interpolation with #{}, single quotes do not"
+              ],
+              "id": "ruby_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Arrays and Hashes",
+      "tip": "Arrays store ordered lists of items. Hashes store key-value pairs. Both are collections that let you group related data together and access it efficiently.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Arrays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3][0] return?",
+              "answer": "1",
+              "explain": "Arrays use zero-based indexing. Index 0 is the first element, so [0] returns 1.",
+              "choices": [
+                "1",
+                "[1]",
+                "3",
+                "0"
+              ],
+              "id": "ruby_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ['a', 'b', 'c'].length return?",
+              "answer": "3",
+              "explain": "The length method returns the number of elements in the array.",
+              "choices": [
+                "1",
+                "2",
+                "3",
+                "0"
+              ],
+              "id": "ruby_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3] << 4 do?",
+              "answer": "Adds 4 to the end of the array, resulting in [1, 2, 3, 4]",
+              "explain": "The << operator (shovel operator) appends an element to the end of an array.",
+              "choices": [
+                "Returns 4",
+                "Removes 4 from the array",
+                "Adds 4 to the end of the array, resulting in [1, 2, 3, 4]",
+                "Returns [4]"
+              ],
+              "id": "ruby_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3].first return?",
+              "answer": "1",
+              "explain": "The first method returns the first element of the array.",
+              "choices": [
+                "[1]",
+                "1",
+                "0",
+                "3"
+              ],
+              "id": "ruby_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3].last return?",
+              "answer": "3",
+              "explain": "The last method returns the last element of the array.",
+              "choices": [
+                "1",
+                "2",
+                "3",
+                "nil"
+              ],
+              "id": "ruby_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Hashes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does { name: 'Alice', age: 30 } create?",
+              "answer": "A hash with keys :name and :age",
+              "explain": "This creates a hash using the symbol shorthand syntax. The keys are symbols :name and :age.",
+              "choices": [
+                "A hash with keys :name and :age",
+                "Two variables",
+                "An array",
+                "A string"
+              ],
+              "id": "ruby_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does { name: 'Alice', age: 30 }[:name] return?",
+              "answer": "'Alice'",
+              "explain": "Accessing a hash with a key returns the value associated with that key. The key :name has the value 'Alice'.",
+              "choices": [
+                "30",
+                "name",
+                "'Alice'",
+                ":name"
+              ],
+              "id": "ruby_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does { a: 1, b: 2 }[:c] return?",
+              "answer": "nil",
+              "explain": "Accessing a hash with a non-existent key returns nil.",
+              "choices": [
+                "false",
+                "error",
+                "0",
+                "nil"
+              ],
+              "id": "ruby_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does person = { name: 'Bob' }; person[:age] = 25 do?",
+              "answer": "Adds the key :age with the value 25 to the hash",
+              "explain": "You can add new key-value pairs to a hash by assigning to a new key.",
+              "choices": [
+                "Creates a new hash",
+                "Replaces the entire hash",
+                "Adds the key :age with the value 25 to the hash",
+                "Raises an error"
+              ],
+              "id": "ruby_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does { x: 10, y: 20 }.keys return?",
+              "answer": "[:x, :y]",
+              "explain": "The keys method returns an array of all the keys in the hash.",
+              "choices": [
+                "[:x, :y]",
+                "2",
+                "[10, 20]",
+                "{:x, :y}"
+              ],
+              "id": "ruby_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Methods and Blocks",
+      "tip": "Methods are reusable pieces of code. Blocks are snippets you pass to methods like each, map, and select to operate on collections. Iterators let you loop through arrays and hashes efficiently.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Defining and Calling Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this code do: def greet(name); \"Hello, #{name}\"; end?",
+              "answer": "Defines a method called greet that takes one parameter",
+              "explain": "The def keyword defines a method. greet is the name, and name is the parameter. The method returns the last expression evaluated.",
+              "choices": [
+                "Defines a method called greet that takes one parameter",
+                "Creates a string",
+                "Calls a method",
+                "Declares a variable"
+              ],
+              "id": "ruby_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does add(2, 3) return if add is defined as: def add(a, b); a + b; end?",
+              "answer": "5",
+              "explain": "The method adds its two parameters. Ruby returns the last expression evaluated, so a + b becomes the return value, with no explicit return needed.",
+              "choices": [
+                "nil",
+                "'a + b'",
+                "23",
+                "5"
+              ],
+              "id": "ruby_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does greet('Alice') do if greet is defined as: def greet(name); \"Hello, #{name}\"; end?",
+              "answer": "Returns 'Hello, Alice'",
+              "explain": "Calling greet('Alice') passes 'Alice' as the name parameter, and the method returns the greeting string.",
+              "choices": [
+                "Returns 'Hello, name'",
+                "Prints to the screen",
+                "Returns 'Hello, Alice'",
+                "Raises an error"
+              ],
+              "id": "ruby_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a method with no explicit return statement return?",
+              "answer": "The last expression evaluated in the method",
+              "explain": "In Ruby, the last expression is automatically returned, even without an explicit return keyword.",
+              "choices": [
+                "nil",
+                "undefined",
+                "The last expression evaluated in the method",
+                "An empty string"
+              ],
+              "id": "ruby_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you call greet without arguments when greet(name) expects one?",
+              "answer": "It raises an error",
+              "explain": "If a method expects a parameter and has no default, you must provide it. Missing arguments raise an ArgumentError.",
+              "choices": [
+                "It returns nil",
+                "It uses default values",
+                "It raises an error",
+                "It runs with empty string"
+              ],
+              "id": "ruby_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Blocks and Iterators",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3].each { |x| puts x } do?",
+              "answer": "Prints each element on a separate line",
+              "explain": "The each method iterates over the array. The block { |x| puts x } is executed for each element, where x is the current element.",
+              "choices": [
+                "Creates a hash",
+                "Returns the sum, 6",
+                "Prints [1, 2, 3]",
+                "Prints each element on a separate line"
+              ],
+              "id": "ruby_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3].map { |x| x * 2 } return?",
+              "answer": "[2, 4, 6]",
+              "explain": "The map method transforms each element using the block. It multiplies each element by 2 and returns a new array.",
+              "choices": [
+                "[2, 4, 6, 2, 4, 6]",
+                "6",
+                "[2, 4, 6]",
+                "[1, 2, 3]"
+              ],
+              "id": "ruby_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [1, 2, 3, 4, 5].select { |x| x > 2 } return?",
+              "answer": "[3, 4, 5]",
+              "explain": "The select method filters the array, keeping only elements where the block returns a truthy value. It returns a new array with elements greater than 2.",
+              "choices": [
+                "3",
+                "[3, 4, 5]",
+                "[1, 2]",
+                "[1, 2, 3, 4, 5]"
+              ],
+              "id": "ruby_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the block in: [1, 2, 3].map { |x| x + 1 }?",
+              "answer": "{ |x| x + 1 }",
+              "explain": "A block is the code between curly braces or do...end. It receives |x| as the parameter and evaluates x + 1.",
+              "choices": [
+                "{ |x| x + 1 }",
+                "|x|",
+                "[1, 2, 3]",
+                "map"
+              ],
+              "id": "ruby_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does { a: 1, b: 2 }.each { |k, v| puts k } do?",
+              "answer": "Prints a, then b, each on its own line",
+              "explain": "When iterating over a hash with each, the block receives the key and value as k and v. The block only prints k, and puts shows a symbol without its colon, so you see a then b.",
+              "choices": [
+                "Prints 1, then 2, each on its own line",
+                "Prints {a: 1, b: 2} on one line",
+                "Prints a, 1, b, 2, each on its own line",
+                "Prints a, then b, each on its own line"
+              ],
+              "id": "ruby_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Classes and Modules",
+      "tip": "Classes are blueprints for creating objects. Modules are reusable code collections. Together, they organize your Ruby code and enable object-oriented programming.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Defining Classes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'class Dog; end' do?",
+              "answer": "Defines a new class called Dog",
+              "explain": "The class keyword creates a new class. You can then add methods and attributes to it.",
+              "choices": [
+                "Defines a new class called Dog",
+                "Creates a string 'Dog'",
+                "Creates an instance of Dog",
+                "Renames an object"
+              ],
+              "id": "ruby_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the initialize method do?",
+              "answer": "It is called when you create a new instance of a class",
+              "explain": "The initialize method sets up a new object. It runs automatically when you create one with ClassName.new.",
+              "choices": [
+                "It is called when you create a new instance of a class",
+                "It ends the class definition",
+                "It defines the class",
+                "It creates a global variable"
+              ],
+              "id": "ruby_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Dog.new do?",
+              "answer": "Creates a new instance of the Dog class",
+              "explain": "The .new method creates a new instance (object) of the class and calls initialize.",
+              "choices": [
+                "Defines a new class",
+                "Sets a variable",
+                "Creates a new instance of the Dog class",
+                "Returns the class name"
+              ],
+              "id": "ruby_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a variable starting with a single @ represent?",
+              "answer": "Instance variables that belong to each object",
+              "explain": "Instance variables (starting with @) store data specific to each object instance. Each object has its own copy.",
+              "choices": [
+                "Global variables",
+                "Instance variables that belong to each object",
+                "Constants",
+                "Local variables"
+              ],
+              "id": "ruby_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In an instance method, what does 'self' refer to?",
+              "answer": "The current object (the instance the method is called on)",
+              "explain": "self is a keyword that refers to the object the method is being called on. It lets you refer to the object itself.",
+              "choices": [
+                "The class definition",
+                "The current object (the instance the method is called on)",
+                "The method name",
+                "The parent class"
+              ],
+              "id": "ruby_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Truthiness and Modules",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What values are falsy in Ruby?",
+              "answer": "Only nil and false",
+              "explain": "In Ruby, only nil and false are falsy. Everything else (0, empty strings, empty arrays) is truthy.",
+              "choices": [
+                "Only nil and false",
+                "All values are truthy",
+                "nil, false, 0, empty strings",
+                "Only nil"
+              ],
+              "id": "ruby_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is the number 0 truthy or falsy in Ruby?",
+              "answer": "Truthy",
+              "explain": "In Ruby, 0 is truthy. Only nil and false are falsy. This is different from some other languages.",
+              "choices": [
+                "Truthy",
+                "Depends on the context",
+                "Falsy",
+                "Neither"
+              ],
+              "id": "ruby_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens with 'if x' when x = 0?",
+              "answer": "The condition passes because 0 is truthy",
+              "explain": "Since 0 is truthy in Ruby, the if block will execute. In some languages 0 counts as false, but Ruby is different.",
+              "choices": [
+                "The condition fails because 0 is falsy",
+                "The condition passes because 0 is truthy",
+                "It raises an error",
+                "It compares x to true"
+              ],
+              "id": "ruby_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a module in Ruby?",
+              "answer": "A collection of methods and constants that can be mixed into classes",
+              "explain": "Modules are like classes but do not create instances. They are used to group related methods and share code across classes.",
+              "choices": [
+                "A collection of methods and constants that can be mixed into classes",
+                "A global variable",
+                "The same as a class",
+                "A file in your project"
+              ],
+              "id": "ruby_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'include ModuleName' do in a class?",
+              "answer": "Mixes in the module's methods as instance methods",
+              "explain": "The include method adds the module's instance methods to the class, so every object of that class can call them.",
+              "choices": [
+                "Mixes in the module's methods as instance methods",
+                "Defines a new method",
+                "Imports a file",
+                "Creates a global variable"
+              ],
+              "id": "ruby_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

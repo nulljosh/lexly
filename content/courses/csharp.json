@@ -1,0 +1,904 @@
+{
+  "id": "csharp",
+  "name": "C#",
+  "category": "programming",
+  "icon": "fa-solid fa-hashtag",
+  "level": "Managed Programming",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Data Types",
+      "tip": "Variables are named containers that store data in your program. C# is strongly typed, meaning each variable has a specific data type that determines what kind of value it holds. Learning to declare and use variables correctly is the foundation of all C# programming.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Declaring Variables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this line do? int x = 5;",
+              "answer": "Declares an integer variable named x and assigns it the value 5",
+              "explain": "The 'int' keyword declares x as an integer, and the equals sign assigns the value 5 to it. The semicolon ends the statement.",
+              "choices": [
+                "Declares an integer variable named x and assigns it the value 5",
+                "Assigns the name x to the number 5",
+                "Declares a variable that can hold any type of value",
+                "Creates a function named x"
+              ],
+              "id": "csharp_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is a valid variable name in C#?",
+              "answer": "_myVariable",
+              "explain": "Variable names can start with a letter or underscore and contain letters, numbers, and underscores. _myVariable follows these rules.",
+              "choices": [
+                "my variable",
+                "_myVariable",
+                "my-variable",
+                "123start"
+              ],
+              "id": "csharp_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword lets the compiler work out a variable's type from the value you assign to it?",
+              "answer": "var",
+              "explain": "The 'var' keyword lets the compiler infer the type from the assigned value. The type is still fixed at compile time and cannot change afterward.",
+              "choices": [
+                "unknown",
+                "var",
+                "dynamic",
+                "auto"
+              ],
+              "id": "csharp_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you declare a local variable but do not initialize it?",
+              "answer": "You get a compiler error if you use it before assigning a value",
+              "explain": "C# requires local variables to be assigned a value before they are used. Using an uninitialized local variable causes a compilation error.",
+              "choices": [
+                "The variable gets a default value of 0",
+                "The variable automatically becomes null",
+                "You get a compiler error if you use it before assigning a value",
+                "The program crashes at runtime"
+              ],
+              "id": "csharp_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does const mean when declaring a variable?",
+              "answer": "The variable cannot be changed after it is initialized",
+              "explain": "A const variable is a constant. You must assign its value when you declare it, and you cannot change it later.",
+              "choices": [
+                "The variable is automatically public",
+                "The variable cannot be changed after it is initialized",
+                "The variable is only accessible inside a function",
+                "The variable is created in memory only once"
+              ],
+              "id": "csharp_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Primitive Data Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the range of a byte in C#?",
+              "answer": "0 to 255",
+              "explain": "A byte is an unsigned integer that uses 8 bits. It can store values from 0 to 255.",
+              "choices": [
+                "-128 to 127",
+                "0 to 128",
+                "0 to 255",
+                "0 to 1000"
+              ],
+              "id": "csharp_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What data type should you use for text in C#?",
+              "answer": "string",
+              "explain": "The string type represents a sequence of characters. You can declare it like: string name = \"John\";",
+              "choices": [
+                "array",
+                "text",
+                "char",
+                "string"
+              ],
+              "id": "csharp_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the size of an int in C#?",
+              "answer": "32 bits",
+              "explain": "An int is a 32-bit signed integer, ranging from about -2.1 billion to 2.1 billion.",
+              "choices": [
+                "32 bits",
+                "16 bits",
+                "64 bits",
+                "8 bits"
+              ],
+              "id": "csharp_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which type can hold a fractional number?",
+              "answer": "double",
+              "explain": "The double type is a floating-point number that can hold decimals. float is similar but less precise.",
+              "choices": [
+                "int",
+                "double",
+                "bool",
+                "byte"
+              ],
+              "id": "csharp_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the bool type represent?",
+              "answer": "A value that is either true or false",
+              "explain": "Boolean variables hold exactly two possible values: true or false. They are used in conditions and logic.",
+              "choices": [
+                "A collection of items",
+                "A text string",
+                "A numeric value",
+                "A value that is either true or false"
+              ],
+              "id": "csharp_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Control Flow",
+      "tip": "Control flow determines which statements your program executes and in what order. Conditionals (if/else) let you make decisions. Loops (while, for, foreach) let you repeat code. Mastering control flow lets you write programs that respond to different situations.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Conditionals and Operators",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the == operator do?",
+              "answer": "Checks if two values are equal",
+              "explain": "The == operator compares two values and returns true if they are equal, false otherwise. It does not assign a value.",
+              "choices": [
+                "Checks if two values are equal",
+                "Checks if two values are not equal",
+                "Adds two values",
+                "Assigns a value to a variable"
+              ],
+              "id": "csharp_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between = and ==?",
+              "answer": "= assigns a value; == compares two values",
+              "explain": "A single = is assignment. A double == is comparison for use in conditionals.",
+              "choices": [
+                "== is for assignment; = is for comparison",
+                "= assigns a value; == compares two values",
+                "= is for variables; == is for functions",
+                "They do the same thing"
+              ],
+              "id": "csharp_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the && operator do?",
+              "answer": "Returns true only if both conditions are true",
+              "explain": "The && operator is AND. It requires both sides to be true. If either side is false, the result is false.",
+              "choices": [
+                "Returns true if either condition is true",
+                "Returns true only if both conditions are true",
+                "Checks if two values are not equal",
+                "Joins two values together"
+              ],
+              "id": "csharp_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? if (x > 5) { Console.WriteLine(\"yes\"); }",
+              "answer": "Prints \"yes\" if x is greater than 5",
+              "explain": "The if statement checks the condition. If x is greater than 5, the code inside the braces runs. Otherwise, it is skipped.",
+              "choices": [
+                "Prints x",
+                "Always prints \"yes\"",
+                "Assigns x the value 5",
+                "Prints \"yes\" if x is greater than 5"
+              ],
+              "id": "csharp_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the else clause?",
+              "answer": "Executes code when the if condition is false",
+              "explain": "The else clause runs only if the if condition is false. It lets you provide an alternative branch.",
+              "choices": [
+                "Executes code when the if condition is false",
+                "Creates a loop",
+                "Repeats the if check",
+                "Executes code before the if statement"
+              ],
+              "id": "csharp_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Loops and Iteration",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a for loop do?",
+              "answer": "Repeats code a set number of times",
+              "explain": "A for loop runs the same code multiple times. You specify when to start, when to stop, and how to change the counter each iteration.",
+              "choices": [
+                "Creates a function",
+                "Repeats code a set number of times",
+                "Skips code conditionally",
+                "Declares multiple variables"
+              ],
+              "id": "csharp_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many times does the body of this loop run? for (int i = 0; i < 5; i++) { }",
+              "answer": "5 times, with i going from 0 to 4",
+              "explain": "i starts at 0, the loop runs while i is less than 5, and i increments by 1 each iteration. So it runs for i = 0, 1, 2, 3, 4.",
+              "choices": [
+                "Once",
+                "4 times",
+                "5 times, with i going from 0 to 4",
+                "6 times"
+              ],
+              "id": "csharp_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a while loop do?",
+              "answer": "Repeats code as long as a condition is true",
+              "explain": "A while loop checks the condition before each iteration. If true, it runs the code. If false, it stops.",
+              "choices": [
+                "Runs code only once",
+                "Repeats code as long as a condition is true",
+                "Repeats code once for each item in a collection",
+                "Jumps to a label"
+              ],
+              "id": "csharp_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the foreach loop do?",
+              "answer": "Iterates through each item in a collection",
+              "explain": "foreach loops through each element in an array or list without needing a counter variable.",
+              "choices": [
+                "Iterates through each item in a collection",
+                "Sorts a collection",
+                "Creates a collection",
+                "Loops forever"
+              ],
+              "id": "csharp_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the break statement do in a loop?",
+              "answer": "Exits the loop immediately",
+              "explain": "The break keyword stops the loop and continues with the code after it, even if the loop condition is still true.",
+              "choices": [
+                "Pauses the loop",
+                "Exits the loop immediately",
+                "Restarts the loop",
+                "Skips the current iteration"
+              ],
+              "id": "csharp_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Classes and Objects",
+      "tip": "Classes are blueprints for objects. An object is an instance of a class, created from that blueprint. Each object has state (fields) and behavior (methods). Classes let you organize related data and functionality together.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Classes and Instances",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a class in C#?",
+              "answer": "A blueprint for creating objects",
+              "explain": "A class defines the structure and behavior of objects. You create objects (instances) from a class template.",
+              "choices": [
+                "A type of variable",
+                "A folder that groups source files",
+                "A loop statement",
+                "A blueprint for creating objects"
+              ],
+              "id": "csharp_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'instantiation' mean?",
+              "answer": "Creating an object from a class",
+              "explain": "Instantiation is the act of creating a new instance of a class using the 'new' keyword.",
+              "choices": [
+                "Creating a class",
+                "Declaring a variable",
+                "Assigning a value",
+                "Creating an object from a class"
+              ],
+              "id": "csharp_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'new' keyword do?",
+              "answer": "Allocates memory and creates an instance of a class",
+              "explain": "The new keyword instantiates a class, allocates memory for the object, and calls the constructor.",
+              "choices": [
+                "Allocates memory and creates an instance of a class",
+                "Declares a new variable",
+                "Creates a new class",
+                "Deletes an object"
+              ],
+              "id": "csharp_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a constructor?",
+              "answer": "A method that initializes an object when it is created",
+              "explain": "A constructor is a special method with the same name as the class. It runs when you instantiate the class using 'new'.",
+              "choices": [
+                "A variable that stores data",
+                "A method that destroys an object",
+                "A function that returns a value",
+                "A method that initializes an object when it is created"
+              ],
+              "id": "csharp_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a class have multiple constructors?",
+              "answer": "Yes, using constructor overloading",
+              "explain": "A class can have multiple constructors with different parameters. This is called overloading.",
+              "choices": [
+                "No, constructors are optional",
+                "No, only one constructor per class",
+                "Only if the class extends another class",
+                "Yes, using constructor overloading"
+              ],
+              "id": "csharp_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Methods and Members",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a method in a class?",
+              "answer": "A function that defines the behavior of an object",
+              "explain": "Methods are functions inside a class. They define what actions an object can perform.",
+              "choices": [
+                "A function that defines the behavior of an object",
+                "A comment in the code",
+                "A variable inside a class",
+                "A type of constructor"
+              ],
+              "id": "csharp_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a field in a class?",
+              "answer": "A variable that holds the state of an object",
+              "explain": "Fields are variables inside a class that store data for each object instance.",
+              "choices": [
+                "A variable that holds the state of an object",
+                "A constant",
+                "A method",
+                "A parameter"
+              ],
+              "id": "csharp_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'this' keyword refer to?",
+              "answer": "The current instance of the class",
+              "explain": "The 'this' keyword refers to the object you are currently working with. Use it to access fields and methods of the current object.",
+              "choices": [
+                "The parent class",
+                "A static variable",
+                "The current instance of the class",
+                "The class definition"
+              ],
+              "id": "csharp_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'public' mean when modifying a method?",
+              "answer": "The method can be called from anywhere",
+              "explain": "public means the method is accessible from outside the class. private limits it to inside the class.",
+              "choices": [
+                "The method can be called from anywhere",
+                "The method cannot be changed",
+                "The method is hidden",
+                "The method runs automatically"
+              ],
+              "id": "csharp_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a method return?",
+              "answer": "A value of the type given in its signature, or nothing if it is void",
+              "explain": "A method returns a value of the type written before its name. 'void' means it returns nothing.",
+              "choices": [
+                "A value of the type given in its signature, or nothing if it is void",
+                "Always a number",
+                "Always a string",
+                "Nothing, methods do not return values"
+              ],
+              "id": "csharp_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Properties and Interfaces",
+      "tip": "Properties are a controlled way to access and modify object data. Interfaces define a contract that classes must follow. Both are key to writing clean, maintainable code and enable polymorphism.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Properties and Encapsulation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a property in C#?",
+              "answer": "A member that provides controlled access to a field",
+              "explain": "Properties use get and set accessors to control how data is accessed and modified. They provide encapsulation.",
+              "choices": [
+                "A variable inside a method",
+                "A static value",
+                "A member that provides controlled access to a field",
+                "A type of class"
+              ],
+              "id": "csharp_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the get accessor of a property?",
+              "answer": "Returns the value of the property",
+              "explain": "The get accessor lets you read the property value. It runs when you access the property on the right side of an assignment.",
+              "choices": [
+                "Sets the value of the property",
+                "Deletes the property",
+                "Returns the value of the property",
+                "Validates the property"
+              ],
+              "id": "csharp_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the set accessor of a property?",
+              "answer": "Assigns a new value to the property",
+              "explain": "The set accessor lets you write to the property. It runs when you assign a value to the property on the left side of an equals sign.",
+              "choices": [
+                "Returns the property value",
+                "Deletes the property",
+                "Compares two properties",
+                "Assigns a new value to the property"
+              ],
+              "id": "csharp_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an auto-property in C#?",
+              "answer": "A property whose backing field the compiler generates automatically",
+              "explain": "With an auto-property like 'public int Age { get; set; }', the compiler creates a hidden backing field for you.",
+              "choices": [
+                "A static property",
+                "A property without a get accessor",
+                "A property whose backing field the compiler generates automatically",
+                "A property that runs automatically"
+              ],
+              "id": "csharp_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why use properties instead of public fields?",
+              "answer": "Properties provide control over data access and allow validation",
+              "explain": "Properties let you add logic in the get and set accessors. You can validate data or trigger side effects.",
+              "choices": [
+                "Properties are faster",
+                "Properties are required in C#",
+                "Properties use less memory than fields",
+                "Properties provide control over data access and allow validation"
+              ],
+              "id": "csharp_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Interfaces",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an interface in C#?",
+              "answer": "A contract that specifies what members a class must implement",
+              "explain": "An interface defines a set of methods, properties, and events that implementing classes must provide.",
+              "choices": [
+                "A base class for all classes",
+                "A type of property",
+                "A contract that specifies what members a class must implement",
+                "A class that cannot be instantiated"
+              ],
+              "id": "csharp_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a class to implement an interface?",
+              "answer": "The class provides code for the members that the interface requires",
+              "explain": "When a class implements an interface, it must provide code for each method and property the interface requires.",
+              "choices": [
+                "The class creates an instance of the interface",
+                "The class becomes an interface",
+                "The class can no longer be instantiated",
+                "The class provides code for the members that the interface requires"
+              ],
+              "id": "csharp_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a class implement multiple interfaces?",
+              "answer": "Yes, separated by commas",
+              "explain": "A class can implement as many interfaces as needed. List them in the class declaration like: class MyClass : IInterface1, IInterface2",
+              "choices": [
+                "No, only one interface per class",
+                "Only if they have the same methods",
+                "Only if it extends another class",
+                "Yes, separated by commas"
+              ],
+              "id": "csharp_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is polymorphism?",
+              "answer": "Using objects of different types through a shared interface or base type",
+              "explain": "Polymorphism lets you use a variable of an interface or base type to refer to objects of different classes, and each one responds in its own way.",
+              "choices": [
+                "Copying one object into another",
+                "Inheriting from multiple classes",
+                "Creating multiple classes with the same name",
+                "Using objects of different types through a shared interface or base type"
+              ],
+              "id": "csharp_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do interface names typically start with in C#?",
+              "answer": "The letter I",
+              "explain": "By convention, interface names start with 'I' (like ICollection, IComparable). This makes interfaces easy to identify.",
+              "choices": [
+                "An underscore",
+                "The word 'Interface'",
+                "The word 'Abstract'",
+                "The letter I"
+              ],
+              "id": "csharp_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Collections and LINQ",
+      "tip": "Collections are containers for multiple objects. List and Dictionary are the most common. LINQ lets you query and transform collections with methods like Where and Select. Together, they make it easy to work with groups of data.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Lists and Dictionaries",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a List<T> in C#?",
+              "answer": "A dynamic array that can grow or shrink",
+              "explain": "List<T> is a generic collection that holds multiple items of type T. You can add, remove, and access items by index.",
+              "choices": [
+                "A type of string",
+                "A linked list only",
+                "A fixed-size array",
+                "A dynamic array that can grow or shrink"
+              ],
+              "id": "csharp_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add an item to a List<int>?",
+              "answer": "list.Add(item);",
+              "explain": "The Add method adds an item to the end of the list. You can also use Insert to add at a specific index.",
+              "choices": [
+                "list.Add(item);",
+                "list.Put(item);",
+                "list.Push(item);",
+                "list[0] = item;"
+              ],
+              "id": "csharp_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Dictionary<TKey, TValue>?",
+              "answer": "A collection of key-value pairs where each key maps to a value",
+              "explain": "Dictionary stores data as pairs. You access values using their keys, not by index like in a list.",
+              "choices": [
+                "A sorted collection",
+                "A type of array",
+                "A collection of key-value pairs where each key maps to a value",
+                "A list of definitions"
+              ],
+              "id": "csharp_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get an item from a Dictionary<string, int> using a key?",
+              "answer": "dict[key];",
+              "explain": "You access dictionary values using square brackets and a key. dict[\"name\"] returns the value associated with \"name\", and throws an exception if that key is not in the dictionary.",
+              "choices": [
+                "dict.Lookup(key);",
+                "dict.Get(key);",
+                "dict.Value(key);",
+                "dict[key];"
+              ],
+              "id": "csharp_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Count property do on a List or Dictionary?",
+              "answer": "Returns the number of items in the collection",
+              "explain": "Count tells you how many items are in the collection. It is read-only and updates automatically.",
+              "choices": [
+                "Sorts the collection",
+                "Adds an item",
+                "Removes all items",
+                "Returns the number of items in the collection"
+              ],
+              "id": "csharp_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "LINQ Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does LINQ stand for?",
+              "answer": "Language Integrated Query",
+              "explain": "LINQ lets you write SQL-like queries directly in C# to filter and transform collections.",
+              "choices": [
+                "Linear Integration Query",
+                "List Integrated Notation",
+                "Language Integrated Query",
+                "List Item Named Query"
+              ],
+              "id": "csharp_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Where method do?",
+              "answer": "Filters a collection to include only items that match a condition",
+              "explain": "Where takes a condition and returns only the items for which the condition is true.",
+              "choices": [
+                "Sorts the collection",
+                "Removes all items",
+                "Returns the first item",
+                "Filters a collection to include only items that match a condition"
+              ],
+              "id": "csharp_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Select method do?",
+              "answer": "Transforms each item in a collection to a new form",
+              "explain": "Select applies a transformation to every item and returns a new collection with the transformed items.",
+              "choices": [
+                "Sorts the collection",
+                "Returns the first matching item",
+                "Filters the collection",
+                "Transforms each item in a collection to a new form"
+              ],
+              "id": "csharp_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does FirstOrDefault do?",
+              "answer": "Returns the first item that matches a condition or a default value if none match",
+              "explain": "FirstOrDefault is safer than First because it returns a default value (null for reference types, 0 for numbers) instead of throwing an exception.",
+              "choices": [
+                "Returns all items",
+                "Returns the last item",
+                "Returns the first item that matches a condition or a default value if none match",
+                "Returns the first item unconditionally"
+              ],
+              "id": "csharp_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Count do on a LINQ query?",
+              "answer": "Returns the number of items in the query result",
+              "explain": "Count executes the query and returns how many items match the criteria.",
+              "choices": [
+                "Removes items",
+                "Adds items to the collection",
+                "Sorts the items",
+                "Returns the number of items in the query result"
+              ],
+              "id": "csharp_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Type System and Error Handling",
+      "tip": "C# distinguishes between value types and reference types, which affects how they are stored and passed. Exceptions are errors that occur at runtime. Understanding both is essential for writing robust programs.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Value and Reference Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a value type in C#?",
+              "answer": "A type whose variable holds the actual data",
+              "explain": "Value types store their data directly in the variable. int, double, bool, and struct are value types.",
+              "choices": [
+                "A type that cannot be modified",
+                "A type used only for collections",
+                "A type whose variable holds the actual data",
+                "A type whose variable holds a reference to data"
+              ],
+              "id": "csharp_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a reference type in C#?",
+              "answer": "A type whose variable holds a reference to data stored elsewhere",
+              "explain": "Reference types store a reference to the actual data. Classes and strings are reference types.",
+              "choices": [
+                "A type whose variable holds a reference to data stored elsewhere",
+                "A type that is always null",
+                "A type used for math operations",
+                "A type that stores data directly"
+              ],
+              "id": "csharp_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does boxing mean in C#?",
+              "answer": "Converting a value type to a reference type",
+              "explain": "Boxing wraps a value type inside an object on the heap, for example when you assign an int to an object variable. Unboxing does the opposite.",
+              "choices": [
+                "Converting a reference type to a value type",
+                "Converting a value type to a reference type",
+                "Storing multiple values",
+                "Creating a new variable"
+              ],
+              "id": "csharp_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between int and Int32?",
+              "answer": "int and Int32 are the same type (int is an alias)",
+              "explain": "int is a language keyword alias for System.Int32. They are identical.",
+              "choices": [
+                "int and Int32 are the same type (int is an alias)",
+                "int is smaller",
+                "int is a reference type",
+                "Int32 is smaller"
+              ],
+              "id": "csharp_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does passing a variable by reference do?",
+              "answer": "The method can modify the original variable",
+              "explain": "Using the 'ref' keyword allows a method to change the original variable, not just its local copy.",
+              "choices": [
+                "Prevents the variable from being used",
+                "Creates a copy of the variable",
+                "The method can modify the original variable",
+                "Makes the variable read-only"
+              ],
+              "id": "csharp_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Exception Handling",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an exception in C#?",
+              "answer": "An error that occurs during program execution",
+              "explain": "An exception is an event that disrupts normal execution, like dividing an integer by zero or accessing a member of a null reference.",
+              "choices": [
+                "A type of variable",
+                "An error that occurs during program execution",
+                "A method parameter",
+                "A loop statement"
+              ],
+              "id": "csharp_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does try do in exception handling?",
+              "answer": "Wraps code that might throw an exception",
+              "explain": "The try block contains code that you think might fail. If an exception occurs, it jumps to the catch block.",
+              "choices": [
+                "Prevents exceptions",
+                "Logs errors",
+                "Fixes errors automatically",
+                "Wraps code that might throw an exception"
+              ],
+              "id": "csharp_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does catch do?",
+              "answer": "Runs code when an exception is thrown",
+              "explain": "The catch block runs when an exception occurs in the try block. You can specify the exception type to catch.",
+              "choices": [
+                "Tests the code",
+                "Declares an exception",
+                "Runs code when an exception is thrown",
+                "Prevents exceptions"
+              ],
+              "id": "csharp_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the finally block do?",
+              "answer": "Runs regardless of whether an exception occurred",
+              "explain": "Finally runs whether or not an exception occurred or was caught. Use it for cleanup code.",
+              "choices": [
+                "Prevents exceptions",
+                "Runs regardless of whether an exception occurred",
+                "Runs only if an exception occurs",
+                "Runs only if no exception occurs"
+              ],
+              "id": "csharp_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does null represent in C#?",
+              "answer": "The absence of a value or no object",
+              "explain": "null means a reference type variable points to nothing. Accessing a member of null throws a NullReferenceException.",
+              "choices": [
+                "The absence of a value or no object",
+                "Empty string",
+                "False",
+                "Zero"
+              ],
+              "id": "csharp_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

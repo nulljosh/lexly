@@ -1,0 +1,904 @@
+{
+  "id": "bash",
+  "name": "Bash Scripting",
+  "category": "programming",
+  "icon": "fa-solid fa-terminal",
+  "level": "Shell Automation",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Shebang and Permissions",
+      "tip": "A shebang line at the start of a script tells the system which interpreter to use. Making a file executable with chmod allows the system to run it directly as a command.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding the Shebang",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the shebang line do in a bash script?",
+              "answer": "Tells the system which interpreter to use when running the script",
+              "explain": "The shebang (#!/bin/bash) is read by the kernel when the file is run. It names the interpreter, so the script runs under bash and not another shell.",
+              "choices": [
+                "Tells the system which interpreter to use when running the script",
+                "Makes the file executable",
+                "Marks the file as a Python script",
+                "Encrypts the script"
+              ],
+              "id": "bash_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a valid shebang line for a bash script?",
+              "answer": "#!/bin/bash",
+              "explain": "#!/bin/bash is a valid shebang that points straight at the bash interpreter. The #! must be the very first two characters of the file, in that order.",
+              "choices": [
+                "#!/bin/bash",
+                "#/bin/bash",
+                "!#/bin/bash",
+                "// #!/bin/bash"
+              ],
+              "id": "bash_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why use #!/usr/bin/env bash instead of #!/bin/bash?",
+              "answer": "It finds bash in the PATH, making scripts portable across systems",
+              "explain": "Some systems have bash in different locations. Using env finds it anywhere in PATH, so the script works on more machines.",
+              "choices": [
+                "It finds bash in the PATH, making scripts portable across systems",
+                "It runs faster",
+                "It requires fewer permissions",
+                "It skips the shebang"
+              ],
+              "id": "bash_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can a shebang line point to?",
+              "answer": "Any interpreter, such as bash, sh or python3",
+              "explain": "The shebang names whatever program should run the file, so #!/usr/bin/python3 works just as well as #!/bin/bash. The kernel hands the script to that program.",
+              "choices": [
+                "Any interpreter, such as bash, sh or python3",
+                "Only bash",
+                "Only files that end in .sh",
+                "Only programs in the current directory"
+              ],
+              "id": "bash_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What two characters must a shebang line start with?",
+              "answer": "#!",
+              "explain": "The shebang always starts with #!, a magic number the kernel recognizes. It must be the very first two bytes of the file.",
+              "choices": [
+                "#!",
+                "//",
+                "/*",
+                "##"
+              ],
+              "id": "bash_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "File Permissions and Execution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does chmod +x do?",
+              "answer": "Adds execute permission to a file",
+              "explain": "chmod +x myscript.sh adds the execute permission so the file can be run as a program. The x means execute.",
+              "choices": [
+                "Adds execute permission to a file",
+                "Removes read permission",
+                "Encrypts the file",
+                "Compresses the file"
+              ],
+              "id": "bash_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between running ./myscript.sh and bash myscript.sh?",
+              "answer": "./myscript.sh uses the shebang; bash myscript.sh ignores it",
+              "explain": "When you type ./myscript.sh, the kernel reads the shebang and uses that interpreter. With bash myscript.sh, bash is already in charge.",
+              "choices": [
+                "./myscript.sh uses the shebang; bash myscript.sh ignores it",
+                "They do the same thing",
+                "Only bash myscript.sh works",
+                "./myscript.sh is faster"
+              ],
+              "id": "bash_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the command ls -l show about file permissions?",
+              "answer": "Read, write, and execute permissions for owner, group, and others",
+              "explain": "ls -l prints one line per file: the mode (such as -rwxr-xr-x), links, owner, group, size, date, and name. The first character is the file type and the next nine are the permissions.",
+              "choices": [
+                "Read, write, and execute permissions for owner, group, and others",
+                "Only the filename",
+                "Only the file size",
+                "Encryption status"
+              ],
+              "id": "bash_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a script has no execute permission, what error do you get when you run ./myscript.sh?",
+              "answer": "Permission denied",
+              "explain": "Without execute permission, trying ./myscript.sh gives a Permission denied error. Add execute permission with chmod +x.",
+              "choices": [
+                "Permission denied",
+                "File not found",
+                "Syntax error",
+                "No error, it runs anyway"
+              ],
+              "id": "bash_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does chmod 755 myscript.sh do?",
+              "answer": "Sets owner to rwx, group to rx, others to rx",
+              "explain": "chmod 755 means 7 (rwx) for owner, 5 (rx) for group, 5 (rx) for others. This is common for scripts meant to be run by anyone.",
+              "choices": [
+                "Sets owner to rwx, group to rx, others to rx",
+                "Makes the file read-only",
+                "Encrypts the file",
+                "Deletes the file"
+              ],
+              "id": "bash_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Variables and Quoting",
+      "tip": "Variables store values in bash. Quoting controls how bash interprets special characters and spaces. Single quotes preserve literal text; double quotes allow variable expansion.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Declaring and Using Variables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you assign a value to a variable in bash?",
+              "answer": "name=value with no spaces around =",
+              "explain": "In bash, name=value assigns the value to name. Spaces around = are treated as separate words, causing an error.",
+              "choices": [
+                "name=value with no spaces around =",
+                "name = value with spaces",
+                "let name = value",
+                "var name = value"
+              ],
+              "id": "bash_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you retrieve the value of a variable?",
+              "answer": "Use $variablename",
+              "explain": "The $ prefix tells bash to expand the variable to its value. $name expands name to its stored value.",
+              "choices": [
+                "Use $variablename",
+                "Use #variablename",
+                "Use &variablename",
+                "Use variablename alone"
+              ],
+              "id": "bash_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of echo $USER in a shell?",
+              "answer": "Your current login username",
+              "explain": "$USER is an environment variable that holds your login name. It is set when you log in, so echo $USER prints it.",
+              "choices": [
+                "Your current login username",
+                "The literal string '$USER'",
+                "The word 'user'",
+                "An error"
+              ],
+              "id": "bash_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between $name and ${name}?",
+              "answer": "Both work the same; ${name} is safer when followed by letters",
+              "explain": "${name} uses braces to delimit the variable name, preventing accidental concatenation with following text. ${name}file expands to the value of name, then file.",
+              "choices": [
+                "Both work the same; ${name} is safer when followed by letters",
+                "${name} is slower",
+                "$name works only in functions",
+                "They are not equivalent"
+              ],
+              "id": "bash_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which kind of variable is inherited by the programs a shell starts?",
+              "answer": "Environment variables",
+              "explain": "Environment variables, such as HOME and PATH, are passed down to every program the shell starts. A variable you set yourself stays private to the shell until you export it.",
+              "choices": [
+                "Environment variables",
+                "Local variables",
+                "Positional parameters",
+                "Reserved words"
+              ],
+              "id": "bash_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Quoting and Escaping",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between single quotes and double quotes?",
+              "answer": "Single quotes preserve literals; double quotes allow variable expansion",
+              "explain": "In 'text', everything is literal. In \"text\", variables like $name are expanded. echo 'Hello $name' prints Hello $name; echo \"Hello $name\" prints Hello followed by the value of name.",
+              "choices": [
+                "Double quotes are faster",
+                "Single quotes preserve literals; double quotes allow variable expansion",
+                "Single quotes are for strings, double for numbers",
+                "They do the same thing"
+              ],
+              "id": "bash_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does echo 'Hello $USER' output?",
+              "answer": "Hello $USER",
+              "explain": "Single quotes prevent variable expansion. The literal text $USER is printed, not your username.",
+              "choices": [
+                "Hello joshua",
+                "Hello $USER",
+                "Hello",
+                "An error"
+              ],
+              "id": "bash_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does echo \"Hello $USER\" output?",
+              "answer": "Hello followed by your username",
+              "explain": "Double quotes allow $USER to expand. If your user is joshua, it outputs Hello joshua.",
+              "choices": [
+                "Hello $USER",
+                "Hello followed by your username",
+                "Hello",
+                "An error"
+              ],
+              "id": "bash_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you include a literal single quote inside single quotes?",
+              "answer": "End the quotes, add an escaped quote, and start quotes again: 'It'\\''s'",
+              "explain": "Nothing can be escaped inside single quotes, so you step outside them. 'It'\\''s' is 'It', then \\', then 's', and together they print It's. Double quotes also work: \"It's\".",
+              "choices": [
+                "Use \\' inside single quotes",
+                "End the quotes, add an escaped quote, and start quotes again: 'It'\\''s'",
+                "Use \\\" inside single quotes",
+                "It is impossible"
+              ],
+              "id": "bash_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the backslash do in bash?",
+              "answer": "Escapes the next character, removing its special meaning",
+              "explain": "A backslash tells bash to treat the next character literally. \\$ prints a literal $ instead of expanding a variable.",
+              "choices": [
+                "Runs the command in the background",
+                "Escapes the next character, removing its special meaning",
+                "Starts a comment",
+                "Deletes the next character"
+              ],
+              "id": "bash_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Exit Codes and Conditionals",
+      "tip": "Every command returns an exit code: 0 means success, non-zero means failure. Conditionals use [ ] or [[ ]] to test conditions. [[ ]] is safer and has more features.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Understanding Exit Codes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an exit code of 0 mean?",
+              "answer": "The command succeeded",
+              "explain": "Exit code 0 indicates success. Any non-zero code means the command failed. The $? variable holds the last exit code.",
+              "choices": [
+                "The command failed",
+                "The command succeeded",
+                "The script paused",
+                "An error occurred"
+              ],
+              "id": "bash_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check the exit code of the last command?",
+              "answer": "Check the $? variable",
+              "explain": "$? holds the exit code of the most recent command. echo $? prints it. After any new command, $? is updated.",
+              "choices": [
+                "Use the exit command",
+                "Check the $? variable",
+                "Use the status variable",
+                "Use the code variable"
+              ],
+              "id": "bash_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does exit 1 do in a script?",
+              "answer": "Terminates the script with exit code 1 (failure)",
+              "explain": "exit 1 ends the script and sets its exit code to 1, which signals failure. exit 0 signals success. A script that simply reaches the end returns the exit code of its last command.",
+              "choices": [
+                "Pauses execution",
+                "Terminates the script with exit code 1 (failure)",
+                "Sets a variable",
+                "Prints the number 1"
+              ],
+              "id": "bash_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the && operator do in bash?",
+              "answer": "Runs the next command only if the previous one succeeds",
+              "explain": "cmd1 && cmd2 runs cmd2 only if cmd1 exits with 0. This chains commands based on success.",
+              "choices": [
+                "Runs both commands in parallel",
+                "Runs the next command only if the previous one succeeds",
+                "Combines two variables",
+                "Comments out the line"
+              ],
+              "id": "bash_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the || operator do in bash?",
+              "answer": "Runs the next command only if the previous one fails",
+              "explain": "cmd1 || cmd2 runs cmd2 only if cmd1 exits with non-zero. This provides a fallback.",
+              "choices": [
+                "Runs both commands in parallel",
+                "Runs the next command only if the previous one fails",
+                "Combines two variables",
+                "Adds line numbers"
+              ],
+              "id": "bash_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Using Conditionals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between [ ] and [[ ]]?",
+              "answer": "[[ ]] is safer, handles patterns and regex",
+              "explain": "[[ ]] is a bash keyword (not part of POSIX sh) with fewer quoting surprises, and it supports pattern matching like [[ $var == *word* ]]. [ ] is the POSIX test command and has more edge cases.",
+              "choices": [
+                "[ ] is faster",
+                "[[ ]] is safer, handles patterns and regex",
+                "[[ ]] is only for numbers",
+                "They are identical"
+              ],
+              "id": "bash_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [[ -f filename ]] test?",
+              "answer": "Whether the file exists and is a regular file",
+              "explain": "The -f operator returns true if the path is a regular file. Other file tests: -d for directory, -e for existence, -r for readable.",
+              "choices": [
+                "Whether the file is empty",
+                "Whether the file exists and is a regular file",
+                "Whether the file is executable",
+                "Whether the file has permissions"
+              ],
+              "id": "bash_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [[ -d directory ]] test?",
+              "answer": "Whether the path is a directory",
+              "explain": "The -d operator returns true for directories. -f is for files, -L is for symlinks.",
+              "choices": [
+                "Whether the path is a file",
+                "Whether the path is a directory",
+                "Whether the path is empty",
+                "Whether the path has read permission"
+              ],
+              "id": "bash_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [[ $a == \"$b\" ]] test?",
+              "answer": "Whether the strings are equal",
+              "explain": "== tests string equality. Quoting the right side, as in \"$b\", makes bash compare it literally. Unquoted, the right side is treated as a pattern. A single = does the same job inside [[ ]].",
+              "choices": [
+                "Whether they are the same variable",
+                "Whether the strings are equal",
+                "Whether they are numbers",
+                "Whether they have the same length"
+              ],
+              "id": "bash_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [[ $a != \"$b\" ]] test?",
+              "answer": "Whether the strings are not equal",
+              "explain": "!= tests inequality. It is the opposite of ==.",
+              "choices": [
+                "Whether they are the same variable",
+                "Whether the strings are not equal",
+                "Whether one is empty",
+                "Whether one is undefined"
+              ],
+              "id": "bash_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Loops",
+      "tip": "Loops repeat commands. for loops iterate over a list. while loops repeat while a condition is true. Loops use break to exit early and continue to skip to the next iteration.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "For Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this loop do: for i in 1 2 3; do echo $i; done?",
+              "answer": "Prints 1, 2 and 3, each on its own line",
+              "explain": "The for loop sets i to each value in the list. In each iteration, echo $i prints the current value.",
+              "choices": [
+                "Prints the word i three times",
+                "Prints 1 2 3 on one line",
+                "Prints 1, 2 and 3, each on its own line",
+                "Sets three variables"
+              ],
+              "id": "bash_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the loop header for file in *.txt; do go through?",
+              "answer": "All .txt files in the current directory",
+              "explain": "The shell expands *.txt to the names of all matching files. The loop sets file to each name in turn.",
+              "choices": [
+                "Nothing, it creates new .txt files",
+                "The number of .txt files",
+                "All .txt files in the current directory",
+                "The contents of each .txt file"
+              ],
+              "id": "bash_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does for i in {1..5}; do echo $i; done do?",
+              "answer": "Prints numbers 1 through 5",
+              "explain": "{1..5} is a brace expansion that creates the list 1 2 3 4 5. The loop iterates over it.",
+              "choices": [
+                "Deletes files 1 through 5",
+                "Creates a file named {1..5}",
+                "Prints numbers 1 through 5",
+                "Counts to 5 seconds"
+              ],
+              "id": "bash_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does break do inside a loop?",
+              "answer": "Exits the loop immediately",
+              "explain": "break terminates the loop, even if more iterations remain. Execution continues after the done.",
+              "choices": [
+                "Pauses the script",
+                "Skips to the next iteration",
+                "Exits the loop immediately",
+                "Ends the script"
+              ],
+              "id": "bash_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does continue do inside a loop?",
+              "answer": "Skips to the next iteration",
+              "explain": "continue jumps to the next cycle of the loop, skipping any remaining code in the current iteration.",
+              "choices": [
+                "Pauses the script",
+                "Exits the loop",
+                "Skips to the next iteration",
+                "Ends the script"
+              ],
+              "id": "bash_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "While Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How long does while [[ $n -lt 5 ]]; do keep repeating?",
+              "answer": "As long as n is less than 5",
+              "explain": "-lt tests whether the left number is less than the right. The loop keeps going while that is true and stops once n is 5 or more.",
+              "choices": [
+                "Five times, no matter what n starts as",
+                "As long as n is greater than 5",
+                "As long as n is less than 5",
+                "Once, then it stops"
+              ],
+              "id": "bash_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does -gt mean in bash?",
+              "answer": "Greater than",
+              "explain": "[[ 5 -gt 3 ]] is true. -lt is less than, -eq is equal, -ne is not equal.",
+              "choices": [
+                "Less than",
+                "Greater than or equal",
+                "Greater than",
+                "Not equal"
+              ],
+              "id": "bash_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does -eq mean in bash?",
+              "answer": "Equal to",
+              "explain": "[[ 5 -eq 5 ]] is true. Use -eq for numeric comparison, == for string comparison.",
+              "choices": [
+                "Greater than",
+                "Not equal",
+                "Equal to",
+                "Less than"
+              ],
+              "id": "bash_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an infinite loop?",
+              "answer": "A loop that never stops because the condition is always true",
+              "explain": "while true; do ... done repeats forever. To stop it, use Ctrl-C or a break statement inside the loop.",
+              "choices": [
+                "A loop with no iterations",
+                "A loop that stops immediately",
+                "A loop that never stops because the condition is always true",
+                "A syntax error"
+              ],
+              "id": "bash_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you increment a variable in bash?",
+              "answer": "Use ((n++)) or n=$((n+1))",
+              "explain": "((n++)) is an arithmetic command that adds 1 to n. n=$((n+1)) does the same using arithmetic expansion.",
+              "choices": [
+                "Use n = n + 1",
+                "Use n += 1",
+                "Use ((n++)) or n=$((n+1))",
+                "Use n++; without parentheses"
+              ],
+              "id": "bash_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Functions",
+      "tip": "Functions are reusable blocks of code. Define them with function name() { ... } or name() { ... }. Call them like any command. Positional parameters $1, $2, etc. are the arguments.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Defining and Calling Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in bash?",
+              "answer": "function name() { commands; }",
+              "explain": "function is optional. Both function name() { ... } and name() { ... } work. The body is enclosed in braces.",
+              "choices": [
+                "define name { commands }",
+                "def name(): ...",
+                "function name() { commands; }",
+                "func name() { commands }"
+              ],
+              "id": "bash_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function named greet?",
+              "answer": "Type greet just like any command",
+              "explain": "Once defined, a function is called by name. Arguments follow the name: greet arg1 arg2.",
+              "choices": [
+                "Use greet()",
+                "Use call greet",
+                "Type greet just like any command",
+                "Use execute greet"
+              ],
+              "id": "bash_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $1 represent in a function?",
+              "answer": "The first argument passed to the function",
+              "explain": "$1 is the first positional parameter. $2 is the second, $3 is the third, and so on.",
+              "choices": [
+                "The exit code",
+                "The function name",
+                "The first argument passed to the function",
+                "The last argument"
+              ],
+              "id": "bash_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $@ represent in a function?",
+              "answer": "All arguments passed to the function",
+              "explain": "$@ expands to all positional parameters as separate words. \"$@\" preserves quoting and spaces in arguments.",
+              "choices": [
+                "The exit code",
+                "The current directory",
+                "All arguments passed to the function",
+                "The function name"
+              ],
+              "id": "bash_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $# represent?",
+              "answer": "The number of arguments passed",
+              "explain": "$# is the count of positional parameters. In a function with 3 arguments, $# is 3.",
+              "choices": [
+                "The first argument",
+                "The function name",
+                "The number of arguments passed",
+                "The last argument"
+              ],
+              "id": "bash_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Return Values and Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does return 0 do in a function?",
+              "answer": "Exits the function with exit code 0 (success)",
+              "explain": "return ends the function and sets its exit status, which the caller reads with $?. With no number, return passes back the exit status of the last command that ran in the function.",
+              "choices": [
+                "Prints 0 to the screen",
+                "Sets a variable named return to 0",
+                "Ends the whole script",
+                "Exits the function with exit code 0 (success)"
+              ],
+              "id": "bash_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get the output of a function?",
+              "answer": "Use command substitution: $(function_name)",
+              "explain": "echo inside the function sends text to stdout. $(func) captures it. The return value (exit code) is separate.",
+              "choices": [
+                "Use the $result variable",
+                "Use the return statement",
+                "Use the exit code",
+                "Use command substitution: $(function_name)"
+              ],
+              "id": "bash_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After a function has run, are the variables it set visible outside it?",
+              "answer": "Yes, unless you use local",
+              "explain": "By default, variables set in a function are global, so they stay set after it returns. Use local var to keep one inside the function.",
+              "choices": [
+                "Only if they start with $",
+                "No, they are always local",
+                "Only if you use return",
+                "Yes, unless you use local"
+              ],
+              "id": "bash_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does local var do?",
+              "answer": "Keeps var from leaking outside the function",
+              "explain": "local limits a variable to the function, so setting it does not change a variable of the same name outside. Without local, the variable stays set after the function returns.",
+              "choices": [
+                "Exports the variable",
+                "Makes var global",
+                "Deletes the variable",
+                "Keeps var from leaking outside the function"
+              ],
+              "id": "bash_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function call another function?",
+              "answer": "Yes, functions can call other functions",
+              "explain": "Functions are reusable, so one function can call another. This is useful for breaking down complex tasks.",
+              "choices": [
+                "Only if they return a value",
+                "No, functions cannot nest",
+                "Only if they are in the same file",
+                "Yes, functions can call other functions"
+              ],
+              "id": "bash_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Pipes, Redirection, and Command Substitution",
+      "tip": "Pipes (|) send output from one command to another. Redirection (>, >>, <) sends output to files or reads input from them. Command substitution $(...) captures command output. These are the glue that makes shell scripting powerful.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Pipes and Redirection",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the pipe (|) operator do?",
+              "answer": "Sends the output of one command to the input of another",
+              "explain": "cmd1 | cmd2 sends cmd1's output to cmd2 as its input. grep error log.txt | wc -l counts the lines that contain error.",
+              "choices": [
+                "Creates a backup",
+                "Saves the output of a command to a file",
+                "Combines multiple files",
+                "Sends the output of one command to the input of another"
+              ],
+              "id": "bash_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does > do in bash?",
+              "answer": "Redirects output to a file, overwriting it",
+              "explain": "echo hello > file.txt writes hello to file.txt, replacing any existing content.",
+              "choices": [
+                "Sends output to the next command",
+                "Redirects input from a file",
+                "Appends to a file",
+                "Redirects output to a file, overwriting it"
+              ],
+              "id": "bash_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does >> do in bash?",
+              "answer": "Appends output to a file without overwriting",
+              "explain": "echo hello >> file.txt adds hello to the end of file.txt, preserving existing content.",
+              "choices": [
+                "Compares two files",
+                "Overwrites a file",
+                "Deletes a file",
+                "Appends output to a file without overwriting"
+              ],
+              "id": "bash_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does < do in bash?",
+              "answer": "Redirects input from a file",
+              "explain": "wc < file.txt reads file.txt and sends it as input to wc.",
+              "choices": [
+                "Creates a file",
+                "Redirects output to a file",
+                "Appends to a file",
+                "Redirects input from a file"
+              ],
+              "id": "bash_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 2> do?",
+              "answer": "Redirects stderr (error output) to a file",
+              "explain": "2 is the file descriptor for standard error. 2> file sends error messages to file.",
+              "choices": [
+                "Redirects stdout and stderr together to a file",
+                "Redirects stdout",
+                "Deletes errors",
+                "Redirects stderr (error output) to a file"
+              ],
+              "id": "bash_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Command Substitution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does $(ls) do?",
+              "answer": "Captures the output of ls and substitutes it in place",
+              "explain": "$(command) runs the command and replaces itself with the output. echo $(ls) lists files and passes them to echo.",
+              "choices": [
+                "Creates a backup of ls",
+                "Runs ls in the background",
+                "Lists files in a variable",
+                "Captures the output of ls and substitutes it in place"
+              ],
+              "id": "bash_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between $(command) and `command`?",
+              "answer": "$(command) is the modern form and nests cleanly; both capture output",
+              "explain": "Both forms capture a command's output. $(command) is the modern syntax and nests cleanly, while backticks need awkward escaping when nested.",
+              "choices": [
+                "Only $(command) captures output",
+                "$(command) is slower",
+                "Backticks run the command in the background",
+                "$(command) is the modern form and nests cleanly; both capture output"
+              ],
+              "id": "bash_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does count=$(wc -l file.txt) do?",
+              "answer": "Runs wc and stores the output in the count variable",
+              "explain": "The command runs and its output is assigned to the variable count. wc -l file.txt prints the line count followed by the file name, so count holds both. wc -l < file.txt gives just the count.",
+              "choices": [
+                "Deletes file.txt",
+                "Compares count to file.txt",
+                "Writes the line count into file.txt",
+                "Runs wc and stores the output in the count variable"
+              ],
+              "id": "bash_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does for n in $(seq 1 3); do echo $n; done print?",
+              "answer": "1, 2 and 3, each on its own line",
+              "explain": "$(seq 1 3) is replaced by its output, the numbers 1 2 3. The loop then runs once for each, so echo prints each on its own line.",
+              "choices": [
+                "The literal text $(seq 1 3), once",
+                "Only the number 3",
+                "An error, because seq cannot run inside a loop",
+                "1, 2 and 3, each on its own line"
+              ],
+              "id": "bash_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of echo The date is $(date)?",
+              "answer": "The words The date is, then the current date",
+              "explain": "$(date) runs the date command and substitutes its output into the string.",
+              "choices": [
+                "An error",
+                "The literal string \"The date is $(date)\"",
+                "Just the date",
+                "The words The date is, then the current date"
+              ],
+              "id": "bash_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "category": "programming",
+  "icon": "fa-brands fa-php",
+  "level": "Server-Side Scripting",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What PHP Is & Variables",
+      "tip": "PHP is a server-side scripting language that runs on web servers and generates HTML sent to browsers. All variables in PHP start with a dollar sign ($). PHP code runs on the server, not in the user's browser.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Introducing PHP",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does PHP stand for?",
+              "answer": "PHP: Hypertext Preprocessor",
+              "explain": "PHP originally stood for Personal Home Page, but now stands for PHP: Hypertext Preprocessor. It is a recursive acronym.",
+              "choices": [
+                "PHP: Hypertext Preprocessor",
+                "Personal HTML Processor",
+                "Programmable Home Page",
+                "PHP Hypertext Protocol"
+              ],
+              "id": "php_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where does PHP code execute?",
+              "answer": "On the web server",
+              "explain": "PHP runs on the server, processes the code, and sends the result (usually HTML) to the browser. The browser never sees the PHP code itself.",
+              "choices": [
+                "In the user's browser",
+                "On the web server",
+                "In the database",
+                "On the user's computer"
+              ],
+              "id": "php_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do you use to mark the start of PHP code?",
+              "answer": "<?php",
+              "explain": "PHP code starts with <?php and usually ends with ?>. Everything between those tags is run as PHP. Anything outside the tags is sent to the browser as it is, such as plain HTML.",
+              "choices": [
+                "<php>",
+                "<script type=\"php\">",
+                "<?php",
+                "{php}"
+              ],
+              "id": "php_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a variable in PHP?",
+              "answer": "Use a dollar sign followed by the variable name: $name",
+              "explain": "All PHP variables start with $. Variable names are case-sensitive, and the name after the $ must begin with a letter or underscore.",
+              "choices": [
+                "Use a percent sign: %name",
+                "Use an @ symbol: @name",
+                "Use a hashtag: #name",
+                "Use a dollar sign followed by the variable name: $name"
+              ],
+              "id": "php_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a PHP statement?",
+              "answer": "A complete instruction that ends with a semicolon",
+              "explain": "A PHP statement is one instruction. A simple statement like $age = 25; ends with a semicolon (;). If you forget it, you usually get a syntax error.",
+              "choices": [
+                "A complete instruction that ends with a semicolon",
+                "A variable declaration only",
+                "A comment in the code",
+                "A function definition"
+              ],
+              "id": "php_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Variables and Assignment",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? $age = 25;",
+              "answer": "Creates a variable named $age and assigns it the value 25",
+              "explain": "The = operator assigns a value to a variable. After this line, $age holds the number 25.",
+              "choices": [
+                "Compares $age to 25",
+                "Creates a variable named $age and assigns it the value 25",
+                "Declares a constant",
+                "Adds 25 to $age"
+              ],
+              "id": "php_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are variable names in PHP case-sensitive?",
+              "answer": "Yes, $name and $Name are different variables",
+              "explain": "PHP is case-sensitive for variable names. $count and $Count are two separate variables.",
+              "choices": [
+                "Only if they start with uppercase",
+                "No, they are the same",
+                "Yes, $name and $Name are different variables",
+                "Only inside functions"
+              ],
+              "id": "php_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can you name a PHP variable?",
+              "answer": "Any word starting with a letter or underscore, followed by letters, numbers, or underscores",
+              "explain": "Variable names must start with $ followed by a letter (a-z, A-Z) or underscore (_). After that, you can use letters, numbers, or underscores. No spaces, hyphens, or other punctuation.",
+              "choices": [
+                "Only numbers after the dollar sign",
+                "Any special characters are allowed",
+                "Any word with a dollar sign",
+                "Any word starting with a letter or underscore, followed by letters, numbers, or underscores"
+              ],
+              "id": "php_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between $x and x in PHP?",
+              "answer": "$x is a variable; x is not a variable",
+              "explain": "In PHP, $x is a variable. Without the $, the word x is not a variable. PHP reads it as the name of a constant, so it will not find your data.",
+              "choices": [
+                "$x is a variable; x is not a variable",
+                "x is faster",
+                "They are the same thing",
+                "x is a variable; $x is plain text"
+              ],
+              "id": "php_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which variable name is valid in PHP?",
+              "answer": "$my_var",
+              "explain": "$my_var follows the rules: starts with $, then a letter, then letters and underscores. The others contain a space, start with a digit, or contain a hyphen.",
+              "choices": [
+                "$my var",
+                "$my_var",
+                "$123var",
+                "$my-var"
+              ],
+              "id": "php_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Data Types and Strings",
+      "tip": "PHP has basic data types: integers, floats, strings, and booleans. A string is text, enclosed in single or double quotes. You can combine strings together using concatenation with the dot (.) operator.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Data Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the four basic data types in PHP?",
+              "answer": "Integer, Float, String, and Boolean",
+              "explain": "Integers are whole numbers (5, -10). Floats are decimal numbers (3.14). Strings are text ('hello'). Booleans are true or false. Each holds a single simple value. PHP also has arrays, objects, and null.",
+              "choices": [
+                "Number, Text, Date, and Array",
+                "String, Object, Resource, and Null",
+                "Integer, Float, String, and Boolean",
+                "Variable, Constant, Function, and Class"
+              ],
+              "id": "php_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an integer in PHP?",
+              "answer": "A whole number without a decimal point",
+              "explain": "An integer is any whole number like 5, -100, or 0. Integers cannot have decimal points.",
+              "choices": [
+                "Any number with a decimal",
+                "A string inside quotes",
+                "Text that looks like a number",
+                "A whole number without a decimal point"
+              ],
+              "id": "php_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a float in PHP?",
+              "answer": "A number with a decimal point",
+              "explain": "A float (floating-point number) has a decimal point, like 3.14, 2.5, or -0.5. It represents fractions and decimals.",
+              "choices": [
+                "A number with a decimal point",
+                "A whole number",
+                "Text in quotes",
+                "A boolean value"
+              ],
+              "id": "php_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a boolean in PHP?",
+              "answer": "A value that is either true or false",
+              "explain": "A boolean can only be true or false. It is used in conditions and comparisons.",
+              "choices": [
+                "A comparison operator",
+                "A value that is either true or false",
+                "A number from 0 to 1",
+                "A string like 'yes' or 'no'"
+              ],
+              "id": "php_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does var_dump() do in PHP?",
+              "answer": "Shows the type and value of a variable",
+              "explain": "var_dump() is a debugging function that outputs the type (string, int, bool) and the value of a variable. Useful for understanding what data you have.",
+              "choices": [
+                "Deletes a variable",
+                "Converts a variable to a string",
+                "Shows the type and value of a variable",
+                "Creates a backup of data"
+              ],
+              "id": "php_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Strings and Concatenation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a string in PHP?",
+              "answer": "Text enclosed in single or double quotes",
+              "explain": "A string is any text data. Strings must be enclosed in quotes: 'hello' or \"hello\" are both strings. Without quotes, PHP reads a bare word as the name of a constant, not as text.",
+              "choices": [
+                "A variable that starts with s",
+                "A command in PHP",
+                "A number written as text",
+                "Text enclosed in single or double quotes"
+              ],
+              "id": "php_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between single and double quotes?",
+              "answer": "Double quotes interpret variables; single quotes don't",
+              "explain": "In double quotes, variables like $name are replaced with their value. In single quotes, $name is printed as literal text.",
+              "choices": [
+                "Double quotes interpret variables; single quotes don't",
+                "Single quotes can only hold one character",
+                "Double quotes only work outside functions",
+                "There is no difference"
+              ],
+              "id": "php_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? $name = 'Alice'; echo \"Hello $name\";",
+              "answer": "Hello Alice",
+              "explain": "Double quotes interpret the variable $name and replace it with its value 'Alice'. The output is the literal text with the variable substituted.",
+              "choices": [
+                "Error: undefined variable",
+                "Hello Alice",
+                "Hello $name",
+                "$name Alice"
+              ],
+              "id": "php_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you concatenate (join) two strings in PHP?",
+              "answer": "Use the dot (.) operator",
+              "explain": "The dot . operator joins strings together. 'Hello' . ' World' produces 'Hello World'.",
+              "choices": [
+                "Use the plus (+) operator",
+                "Use the pipe (|) operator",
+                "Use the dot (.) operator",
+                "Use the ampersand (&) operator"
+              ],
+              "id": "php_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? echo 'Hello' . ' ' . 'World';",
+              "answer": "Hello World",
+              "explain": "The dot operator concatenates the three strings together. 'Hello' is joined with a space ' ', then joined with 'World'.",
+              "choices": [
+                "'Hello' ' ' 'World'",
+                "HelloWorld",
+                "Hello World (with an error)",
+                "Hello World"
+              ],
+              "id": "php_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Arrays",
+      "tip": "An array is a collection of values stored in a single variable. Indexed arrays use numbers to access values (0, 1, 2...). Associative arrays use string keys to access values. Arrays can hold any type of data.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Indexed Arrays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an indexed array in PHP?",
+              "answer": "An array where values are accessed by numeric position",
+              "explain": "In an indexed array, each value has a numeric index starting at 0. The first element is at index 0, the second at index 1, and so on.",
+              "choices": [
+                "An array where values are accessed by numeric position",
+                "An array with string keys",
+                "An array that is sorted",
+                "An array with only numbers"
+              ],
+              "id": "php_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an indexed array in PHP?",
+              "answer": "array('apple', 'banana', 'orange') or ['apple', 'banana', 'orange']",
+              "explain": "You can use either array(...) or the short array syntax [...]. Both create indexed arrays the same way.",
+              "choices": [
+                "$var = new array('apple', 'banana');",
+                "array('apple', 'banana', 'orange') or ['apple', 'banana', 'orange']",
+                "$array = string[];",
+                "array = apple, banana, orange"
+              ],
+              "id": "php_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the index of the first element in a PHP array?",
+              "answer": "0",
+              "explain": "PHP arrays are zero-indexed. The first element is at index 0, not index 1.",
+              "choices": [
+                "1",
+                "a",
+                "0",
+                "-1"
+              ],
+              "id": "php_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the third element of an array $colors?",
+              "answer": "$colors[2]",
+              "explain": "The third element is at index 2 (since counting starts at 0). To access it, use square brackets with the index number.",
+              "choices": [
+                "$colors[3]",
+                "$colors(2)",
+                "$colors.2",
+                "$colors[2]"
+              ],
+              "id": "php_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? $fruits = array('apple', 'banana', 'orange'); echo $fruits[1];",
+              "answer": "banana",
+              "explain": "Index 1 refers to the second element, which is 'banana'. Index 0 is 'apple', index 1 is 'banana', index 2 is 'orange'.",
+              "choices": [
+                "banana",
+                "apple",
+                "orange",
+                "Error"
+              ],
+              "id": "php_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Associative Arrays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an associative array in PHP?",
+              "answer": "An array where values are accessed by string keys",
+              "explain": "In an associative array, each value has a string key instead of a number. You use the key to access the value.",
+              "choices": [
+                "An array sorted alphabetically",
+                "An array where values are accessed by string keys",
+                "An array with numeric keys",
+                "An array that is connected to a database"
+              ],
+              "id": "php_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an associative array?",
+              "answer": "$person = array('name' => 'John', 'age' => 30);",
+              "explain": "Use the => operator to map string keys to values. 'name' is a key that maps to the value 'John'.",
+              "choices": [
+                "$person = array('John', 30);",
+                "$person = ('name': 'John', 'age': 30);",
+                "$person = array('name' => 'John', 'age' => 30);",
+                "$person = 'name' = 'John';"
+              ],
+              "id": "php_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a value in an associative array?",
+              "answer": "Use the key in square brackets: $arr['key']",
+              "explain": "To get a value from an associative array, use the key inside square brackets. If $person = array('name' => 'Alice'), you access it with $person['name'].",
+              "choices": [
+                "Use the key in parentheses: $arr('key')",
+                "Use a dot notation: $arr.key",
+                "Use an arrow: $arr->key",
+                "Use the key in square brackets: $arr['key']"
+              ],
+              "id": "php_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? $car = array('brand' => 'Toyota', 'color' => 'blue'); echo $car['color'];",
+              "answer": "blue",
+              "explain": "The key 'color' maps to the value 'blue'. The code echoes the value associated with the 'color' key.",
+              "choices": [
+                "blue",
+                "color",
+                "Toyota",
+                "Error"
+              ],
+              "id": "php_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add a new key-value pair to an associative array?",
+              "answer": "$arr['newkey'] = 'newvalue';",
+              "explain": "You can add to an array by assigning a value to a new key using square brackets. This creates the key if it doesn't exist.",
+              "choices": [
+                "$arr.append('newvalue');",
+                "$arr['newkey'] = 'newvalue';",
+                "$arr->push('newkey', 'newvalue');",
+                "array_add($arr, 'newkey', 'newvalue');"
+              ],
+              "id": "php_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Control Flow",
+      "tip": "Control flow lets you make decisions and repeat actions. If-else statements make decisions based on conditions. Loops (for, while, foreach) repeat code multiple times. Conditions use comparison operators like ==, >, <, !=, and logical operators like &&, ||.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "If-Else Statements",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an if statement do?",
+              "answer": "Runs code only if a condition is true",
+              "explain": "An if statement checks a condition. If the condition is true, the code inside the braces runs. If it is false, the code is skipped.",
+              "choices": [
+                "Repeats code forever",
+                "Always runs the code",
+                "Runs code only if a condition is true",
+                "Stops the program"
+              ],
+              "id": "php_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between == and ===?",
+              "answer": "== checks value; === checks value and type",
+              "explain": "== compares values (5 == '5' is true). === compares values and type (5 === '5' is false because one is a number and one is a string).",
+              "choices": [
+                "=== is faster",
+                "== works only with numbers",
+                "They are the same",
+                "== checks value; === checks value and type"
+              ],
+              "id": "php_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? if (5 > 3) { echo 'yes'; } else { echo 'no'; }",
+              "answer": "yes",
+              "explain": "The condition 5 > 3 is true, so the code in the if block runs and outputs 'yes'. The else block is skipped.",
+              "choices": [
+                "yes",
+                "no",
+                "Both yes and no",
+                "Error"
+              ],
+              "id": "php_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an else-if statement?",
+              "answer": "A way to test multiple conditions in sequence",
+              "explain": "else-if (written as elseif or else if) lets you test another condition if the first one is false. You can chain multiple elseif blocks.",
+              "choices": [
+                "The same as else",
+                "A way to test multiple conditions in sequence",
+                "A replacement for if",
+                "A loop"
+              ],
+              "id": "php_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the != operator do?",
+              "answer": "Checks if two values are not equal",
+              "explain": "!= means 'not equal'. It returns true if the values are different and false if they are the same.",
+              "choices": [
+                "Assigns a value",
+                "Checks if one value is not a number",
+                "Checks if two values are not equal",
+                "Inverts a boolean"
+              ],
+              "id": "php_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a loop do?",
+              "answer": "Repeats a block of code multiple times",
+              "explain": "A loop executes the same code over and over. You can loop through arrays, count numbers, or repeat until a condition changes.",
+              "choices": [
+                "Runs code only once",
+                "Stops the program",
+                "Creates a new variable",
+                "Repeats a block of code multiple times"
+              ],
+              "id": "php_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a foreach loop used for?",
+              "answer": "Looping through each element of an array",
+              "explain": "foreach loops through an array one element at a time. It is perfect for arrays because it automatically gets each value.",
+              "choices": [
+                "Looping through each element of an array",
+                "Looping a specific number of times",
+                "Looping while a condition is true",
+                "Creating an array"
+              ],
+              "id": "php_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? for ($i = 1; $i <= 3; $i++) { echo $i; }",
+              "answer": "123",
+              "explain": "The for loop starts at 1, runs while $i <= 3, and increments $i each time. So it echoes 1, then 2, then 3.",
+              "choices": [
+                "1 2 3",
+                "123",
+                "112233",
+                "Error"
+              ],
+              "id": "php_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a while loop?",
+              "answer": "A loop that runs as long as a condition is true",
+              "explain": "A while loop repeats as long as the condition is true. As soon as the condition becomes false, the loop stops.",
+              "choices": [
+                "A loop that runs forever",
+                "A loop that runs a fixed number of times",
+                "A loop that runs as long as a condition is true",
+                "A loop inside another loop"
+              ],
+              "id": "php_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you stop a loop early in PHP?",
+              "answer": "Use the break statement",
+              "explain": "The break statement immediately exits the loop. If you want to skip just the current iteration, use continue instead.",
+              "choices": [
+                "Use the stop statement",
+                "Use the halt statement",
+                "Use the quit statement",
+                "Use the break statement"
+              ],
+              "id": "php_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Functions",
+      "tip": "A function is a reusable block of code that performs a task. You define a function with the function keyword, then call it by name with parentheses. Functions can take parameters (inputs) and return values (outputs).",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Defining and Calling Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a function in PHP?",
+              "answer": "A reusable block of code that performs a task",
+              "explain": "A function is a set of statements grouped together. You define it once and can call it many times, saving code and making programs clearer.",
+              "choices": [
+                "A reusable block of code that performs a task",
+                "A variable that stores a value",
+                "A loop that runs forever",
+                "A type of array"
+              ],
+              "id": "php_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in PHP?",
+              "answer": "function functionName() { code }",
+              "explain": "Use the function keyword, followed by the function name and parentheses. The code goes inside curly braces.",
+              "choices": [
+                "def functionName() { code }",
+                "function functionName() { code }",
+                "func functionName() { code }",
+                "define functionName { code }"
+              ],
+              "id": "php_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function in PHP?",
+              "answer": "Use the function name followed by parentheses: functionName()",
+              "explain": "To run a function, type its name with parentheses. If the function takes parameters, put the values inside the parentheses.",
+              "choices": [
+                "Use the define keyword: define functionName",
+                "Use the call keyword: call functionName",
+                "Use the function name followed by parentheses: functionName()",
+                "Use arrow notation: ->functionName()"
+              ],
+              "id": "php_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are parameters in a function?",
+              "answer": "Variables that receive input values when the function is called",
+              "explain": "Parameters are placeholders inside the function definition. When you call the function, you pass arguments (actual values) that fill these placeholders.",
+              "choices": [
+                "The output of a function",
+                "Stored in a database",
+                "Always optional",
+                "Variables that receive input values when the function is called"
+              ],
+              "id": "php_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? function greet($name) { echo 'Hello ' . $name; } greet('Alice');",
+              "answer": "Defines a function and calls it, outputting 'Hello Alice'",
+              "explain": "The function greet takes one parameter $name. When called with 'Alice', it outputs 'Hello ' concatenated with 'Alice'.",
+              "choices": [
+                "Defines a function and calls it, outputting 'Hello Alice'",
+                "Creates two variables",
+                "Outputs only 'Hello'",
+                "Error: undefined function"
+              ],
+              "id": "php_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Return Values",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the return statement do?",
+              "answer": "Sends a value back from the function to where it was called",
+              "explain": "return ends the function and gives back a value. This value can be stored in a variable or used in an expression.",
+              "choices": [
+                "Exits the entire program",
+                "Sends a value back from the function to where it was called",
+                "Prints a value",
+                "Creates a new variable"
+              ],
+              "id": "php_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code output? function add($a, $b) { return $a + $b; } echo add(3, 5);",
+              "answer": "8",
+              "explain": "The function add returns the sum of $a and $b. When called with 3 and 5, it returns 8, which is echoed.",
+              "choices": [
+                "3 5",
+                "Error",
+                "8",
+                "add(3, 5)"
+              ],
+              "id": "php_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can a function send back several values at once?",
+              "answer": "Return an array that holds them",
+              "explain": "A function returns one value, but that value can be an array holding many values. The caller can then read each value from the array.",
+              "choices": [
+                "Separate them with commas: return $a, $b;",
+                "Use return twice in a row",
+                "Return an array that holds them",
+                "It is not possible in PHP"
+              ],
+              "id": "php_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a function does not have a return statement?",
+              "answer": "The function returns NULL",
+              "explain": "If there is no return statement, PHP returns NULL (no value). This is different from returning an empty string or zero.",
+              "choices": [
+                "The function returns NULL",
+                "The function returns an empty string",
+                "The function returns 0",
+                "Error: missing return"
+              ],
+              "id": "php_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a default parameter value?",
+              "answer": "A value assigned to a parameter if no argument is provided",
+              "explain": "You can set a default value in the function definition. If the caller does not provide a value, the default is used.",
+              "choices": [
+                "A return value",
+                "A value assigned to a parameter if no argument is provided",
+                "A global variable",
+                "A constant"
+              ],
+              "id": "php_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Objects, Classes, Superglobals & Files",
+      "tip": "Classes define objects, which bundle data and functions together. Superglobals like $_GET and $_POST collect data from web forms and URLs. File functions let you read, write, and delete files on the server. These are advanced tools for building interactive, data-driven websites.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Classes and Objects",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a class in PHP?",
+              "answer": "A blueprint for creating objects with properties and methods",
+              "explain": "A class defines what data (properties) and actions (methods) an object will have. You create objects (instances) from a class.",
+              "choices": [
+                "A type of array",
+                "A loop structure",
+                "A blueprint for creating objects with properties and methods",
+                "A built-in PHP function"
+              ],
+              "id": "php_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an object in PHP?",
+              "answer": "An instance of a class with its own data and methods",
+              "explain": "An object is a concrete thing created from a class. If a class is a blueprint, an object is the actual house built from that blueprint.",
+              "choices": [
+                "A type of string",
+                "A function",
+                "A database table",
+                "An instance of a class with its own data and methods"
+              ],
+              "id": "php_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an object in PHP?",
+              "answer": "$obj = new ClassName();",
+              "explain": "Use the new keyword followed by the class name and parentheses. This creates a new instance of the class.",
+              "choices": [
+                "$obj = new ClassName();",
+                "$obj = ClassName();",
+                "$obj = create ClassName;",
+                "$obj = ClassName->new();"
+              ],
+              "id": "php_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a property of an object?",
+              "answer": "$obj->propertyName",
+              "explain": "Use the arrow (->) operator to access properties and methods. $obj->name means the 'name' property of the $obj object.",
+              "choices": [
+                "$obj.propertyName",
+                "$obj->propertyName",
+                "$obj['propertyName']",
+                "$obj:propertyName"
+              ],
+              "id": "php_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a method in a class?",
+              "answer": "A function defined inside a class",
+              "explain": "A method is a function that belongs to a class. It describes what actions the object can perform.",
+              "choices": [
+                "A variable",
+                "A type of loop",
+                "A function defined inside a class",
+                "A database query"
+              ],
+              "id": "php_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Superglobals and Files",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a superglobal in PHP?",
+              "answer": "A built-in variable that is available everywhere in your script",
+              "explain": "Superglobals are special variables provided by PHP. Examples include $_GET (URL parameters), $_POST (form data), and $_SERVER (server information).",
+              "choices": [
+                "A variable declared with global",
+                "A variable in a class",
+                "A constant",
+                "A built-in variable that is available everywhere in your script"
+              ],
+              "id": "php_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $_GET contain?",
+              "answer": "Data sent through the URL as query parameters",
+              "explain": "When a form is submitted with method='get' or a URL has ?name=value, the data appears in $_GET. It is visible in the URL.",
+              "choices": [
+                "Data sent through the URL as query parameters",
+                "Data from a POST form",
+                "Server variables",
+                "Cookie data"
+              ],
+              "id": "php_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $_POST contain?",
+              "answer": "Data sent through an HTML form with method='post'",
+              "explain": "When a form submits with method='post', the data travels in the request body instead of the URL and appears in $_POST.",
+              "choices": [
+                "Data from the URL",
+                "Data sent through an HTML form with method='post'",
+                "Server variables",
+                "Global variables"
+              ],
+              "id": "php_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which line reads an entire file into a single string in PHP?",
+              "answer": "$content = file_get_contents('filename.txt');",
+              "explain": "file_get_contents() reads an entire file into a string. You provide the file path (relative or absolute) and it returns the contents.",
+              "choices": [
+                "$content = read_file('filename.txt');",
+                "$content = open('filename.txt');",
+                "$content = file_get_contents('filename.txt');",
+                "$content = load_file('filename.txt');"
+              ],
+              "id": "php_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write data to a file in PHP?",
+              "answer": "file_put_contents('filename.txt', $data);",
+              "explain": "file_put_contents() writes data to a file. If the file does not exist, it creates it. If it does exist, it overwrites the contents unless you pass the FILE_APPEND flag.",
+              "choices": [
+                "write_file('filename.txt', $data);",
+                "file_write('filename.txt', $data);",
+                "save_file('filename.txt', $data);",
+                "file_put_contents('filename.txt', $data);"
+              ],
+              "id": "php_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

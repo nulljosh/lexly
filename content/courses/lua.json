@@ -1,0 +1,904 @@
+{
+  "id": "lua",
+  "name": "Lua",
+  "category": "programming",
+  "icon": "fa-solid fa-moon",
+  "level": "Lightweight Scripting",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Scope",
+      "tip": "Lua variables are containers for values. By default, variables are global and visible everywhere. Use the local keyword to create variables that exist only within a function or block.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Creating and Using Variables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a variable in Lua?",
+              "answer": "A named container that stores a value",
+              "explain": "Variables hold values and have names. You use them to store data and access it later in your program.",
+              "choices": [
+                "A named container that stores a value",
+                "A type of function",
+                "A keyword like if or while",
+                "A mathematical formula"
+              ],
+              "id": "lua_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a variable in Lua?",
+              "answer": "Write the variable name followed by = and a value",
+              "explain": "Simple assignment like x = 5 creates a global variable, unless a local x is already in scope. You do not need to declare a type; Lua figures it out.",
+              "choices": [
+                "Use the word variable first",
+                "Write the variable name followed by = and a value",
+                "Declare it in curly braces",
+                "Import it from another file"
+              ],
+              "id": "lua_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the local keyword do?",
+              "answer": "Makes a variable visible only within its block or function",
+              "explain": "local x = 5 creates a variable that exists only in that function or code block. Without local, a new variable is global.",
+              "choices": [
+                "Locks the variable so its value cannot change",
+                "Prevents the variable from being used",
+                "Makes a variable visible only within its block or function",
+                "Converts the variable to a string"
+              ],
+              "id": "lua_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the scope of a global variable?",
+              "answer": "It can be accessed from anywhere in the program",
+              "explain": "A variable created without local is global. Any function or block can read and change it.",
+              "choices": [
+                "It can only be used in one function",
+                "It disappears after one line",
+                "It must be declared at the top of the file",
+                "It can be accessed from anywhere in the program"
+              ],
+              "id": "lua_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Lua, can a variable start with a number?",
+              "answer": "No, variable names must start with a letter or underscore",
+              "explain": "Valid names are like x, _value, or myVar. Invalid names are 1x or 2name because they start with digits.",
+              "choices": [
+                "Yes, any character works",
+                "Only if it is a local variable",
+                "Only for global variables",
+                "No, variable names must start with a letter or underscore"
+              ],
+              "id": "lua_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Local vs Global Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Inside a function, what happens when you assign to a name that has no local declared in scope?",
+              "answer": "It creates or modifies a global variable",
+              "explain": "In Lua, x = 5 inside a function creates a global variable, not a local one, unless a local x is already in scope. You must write local x = 5 for it to be local.",
+              "choices": [
+                "It creates a local variable",
+                "It throws an error",
+                "It is ignored by the interpreter",
+                "It creates or modifies a global variable"
+              ],
+              "id": "lua_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between local x = 5 and x = 5?",
+              "answer": "local limits x to its block; x without local is global",
+              "explain": "local x = 5 creates x only in that function or block. x = 5 on its own creates a global variable accessible everywhere, unless a local x is already in scope.",
+              "choices": [
+                "They are the same",
+                "local limits x to its block; x without local is global",
+                "5 must be a number, x must be a string",
+                "local is slower than global"
+              ],
+              "id": "lua_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a block in Lua?",
+              "answer": "A section of code like a function, if statement, or loop body",
+              "explain": "A block is a section where local variables are confined. if/then/end, for loops, while loops, and functions all create blocks.",
+              "choices": [
+                "A comment",
+                "A global variable",
+                "A section of code like a function, if statement, or loop body",
+                "A type of data"
+              ],
+              "id": "lua_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you define a local variable inside an if statement, can you use it after the if block?",
+              "answer": "No, local variables are confined to their block",
+              "explain": "Once the if block ends, the local variable no longer exists. You cannot access it outside the block.",
+              "choices": [
+                "Yes, local variables are global unless you say otherwise",
+                "Only if the if statement is true",
+                "No, local variables are confined to their block",
+                "Yes, but only if you use global"
+              ],
+              "id": "lua_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is using local variables considered good practice?",
+              "answer": "They avoid accidental changes to other parts of code",
+              "explain": "Local variables prevent bugs where a function accidentally modifies a global variable it did not mean to touch.",
+              "choices": [
+                "The interpreter requires it",
+                "They avoid accidental changes to other parts of code",
+                "They let every file in the program share the variable",
+                "They convert the value to a number automatically"
+              ],
+              "id": "lua_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Data Types and Nil",
+      "tip": "Lua is dynamically typed: variables can hold any type without declaration. The main types are number, string, boolean, table, function, and nil. nil represents the absence of a value.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which list names every basic type in Lua?",
+              "answer": "number, string, boolean, table, function, nil, userdata, and thread",
+              "explain": "Lua has eight basic types. number covers integers and floats, nil means no value, userdata holds custom data from C, and thread is a coroutine.",
+              "choices": [
+                "only number and string",
+                "integer, float, and character",
+                "variable, constant, and parameter",
+                "number, string, boolean, table, function, nil, userdata, and thread"
+              ],
+              "id": "lua_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does nil represent in Lua?",
+              "answer": "The absence of a value or undefined",
+              "explain": "nil is Lua's way of saying nothing. A variable that was never assigned is nil, and so is a table key that does not exist.",
+              "choices": [
+                "An empty string",
+                "The absence of a value or undefined",
+                "A false boolean",
+                "The number zero"
+              ],
+              "id": "lua_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a string in Lua?",
+              "answer": "A sequence of characters enclosed in quotes",
+              "explain": "Strings in Lua are text. You can write them with single quotes, double quotes, or multiline brackets: 'hello', \"world\", or [[multi line]].",
+              "choices": [
+                "A list of numbers",
+                "A single character only",
+                "A sequence of characters enclosed in quotes",
+                "A type of function"
+              ],
+              "id": "lua_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a boolean in Lua?",
+              "answer": "A value that is either true or false",
+              "explain": "Booleans are used in conditions. true and false are keywords. nil and false are falsy; everything else is truthy.",
+              "choices": [
+                "A number",
+                "A value that is either true or false",
+                "A type of table",
+                "A string"
+              ],
+              "id": "lua_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean that Lua is dynamically typed?",
+              "answer": "A variable can hold any type without prior declaration",
+              "explain": "You do not declare types. x = 5 creates a number, then x = \"hello\" changes it to a string. Lua figures out the type automatically.",
+              "choices": [
+                "Variables must be declared before use",
+                "Only numbers and strings are allowed",
+                "A variable can hold any type without prior declaration",
+                "Types are checked by external tools"
+              ],
+              "id": "lua_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Type Checking and Conversion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you check the type of a variable in Lua?",
+              "answer": "Use the type() function",
+              "explain": "type(x) returns a string naming the type, such as \"number\", \"string\", \"boolean\", \"table\", \"function\", or \"nil\".",
+              "choices": [
+                "Check the variable name",
+                "Call the getType() method",
+                "Use the type() function",
+                "Use the typeof operator"
+              ],
+              "id": "lua_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does type(42) return?",
+              "answer": "\"number\"",
+              "explain": "type(42) returns the string \"number\" because 42 is a number literal.",
+              "choices": [
+                "\"number\"",
+                "42",
+                "\"value\"",
+                "\"integer\""
+              ],
+              "id": "lua_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you add a number and a string in Lua?",
+              "answer": "Lua converts the string to a number if possible, or raises an error",
+              "explain": "5 + \"3\" equals 8 because the string \"3\" is converted to the number 3. If the string cannot be converted, such as \"abc\", an error occurs.",
+              "choices": [
+                "Lua converts the string to a number if possible, or raises an error",
+                "The number is converted to a string",
+                "An error always occurs",
+                "The result is always a string"
+              ],
+              "id": "lua_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you convert a string to a number in Lua?",
+              "answer": "Use tonumber()",
+              "explain": "tonumber(\"42\") returns 42 as a number. If the string is not a valid number, tonumber returns nil.",
+              "choices": [
+                "Use parseInt()",
+                "Use tonum()",
+                "Use tonumber()",
+                "Use number()"
+              ],
+              "id": "lua_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you convert a number to a string in Lua?",
+              "answer": "Use tostring()",
+              "explain": "tostring(42) returns \"42\". You can also concatenate with .. operator: 42 .. \" items\".",
+              "choices": [
+                "Use string()",
+                "Use toString()",
+                "Use tostring()",
+                "Use stringify()"
+              ],
+              "id": "lua_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Tables as Data Structures",
+      "tip": "Tables are Lua's only built-in data structure. They work as arrays (with 1-based indexing), dictionaries (key-value pairs), or records. An empty table is created with {}, and {key = value} creates one with a field already set.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Tables as Arrays and Dictionaries",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a table in Lua?",
+              "answer": "A collection of values accessed by keys or indices",
+              "explain": "Tables are Lua's main data structure. They can be arrays (indexed by numbers) or dictionaries (indexed by strings or other keys).",
+              "choices": [
+                "A database record",
+                "A type of variable",
+                "A function parameter",
+                "A collection of values accessed by keys or indices"
+              ],
+              "id": "lua_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In an array-style table like {10, 20, 30}, which index holds the first value?",
+              "answer": "1",
+              "explain": "Lua uses 1-based indexing. The first element is at index 1, not 0. This differs from many other languages.",
+              "choices": [
+                "1",
+                "-1",
+                "Depends on the table",
+                "0"
+              ],
+              "id": "lua_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an empty table in Lua?",
+              "answer": "Use curly braces: {}",
+              "explain": "t = {} creates an empty table. You can then add values with t[1] = \"hello\" or t.name = \"Alice\".",
+              "choices": [
+                "Use parentheses: ()",
+                "Use the table() function",
+                "Use curly braces: {}",
+                "Use square brackets: []"
+              ],
+              "id": "lua_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the first element of a table t?",
+              "answer": "t[1]",
+              "explain": "Because Lua uses 1-based indexing, the first element is at t[1], not t[0].",
+              "choices": [
+                "t.first",
+                "t:get(1)",
+                "t[1]",
+                "t[0]"
+              ],
+              "id": "lua_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add a key-value pair to a table?",
+              "answer": "Write t.key = value or t[\"key\"] = value",
+              "explain": "t.name = \"Bob\" and t[\"name\"] = \"Bob\" do the same thing. Both add a key called name with value \"Bob\".",
+              "choices": [
+                "Use t[key] only",
+                "Tables are immutable",
+                "Write t.key = value or t[\"key\"] = value",
+                "Use t:add(key, value)"
+              ],
+              "id": "lua_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Working with Tables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you loop through all values in a table?",
+              "answer": "Use a for loop with pairs() for key-value or ipairs() for indexed values",
+              "explain": "for k, v in pairs(t) loops through all key-value pairs. for i, v in ipairs(t) loops through numbered indices starting at 1.",
+              "choices": [
+                "Tables cannot be looped",
+                "Use a foreach function",
+                "Use a for loop with pairs() for key-value or ipairs() for indexed values",
+                "Write for v in t do with no function call"
+              ],
+              "id": "lua_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ipairs() do?",
+              "answer": "Iterates through a table by numeric index starting at 1",
+              "explain": "ipairs() loops through indices 1, 2, 3, etc. It stops at the first nil, so it is best for array-like tables.",
+              "choices": [
+                "Converts a table to a string",
+                "Iterates through a table by numeric index starting at 1",
+                "Checks if a table is empty",
+                "Iterates through all keys and values"
+              ],
+              "id": "lua_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you find the length of a table in Lua?",
+              "answer": "Use the # operator: #t",
+              "explain": "For an array-like table with no gaps, #t is the number of elements. If the table has nil gaps, the result is not reliable.",
+              "choices": [
+                "Use t:size()",
+                "Use table.length(t)",
+                "Use the # operator: #t",
+                "Use t.length"
+              ],
+              "id": "lua_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does table.insert(t, value) do?",
+              "answer": "Adds a value to the end of the array portion of the table",
+              "explain": "table.insert(t, \"hello\") appends \"hello\" to the table. You can also use table.insert(t, index, value) to insert at a specific position.",
+              "choices": [
+                "Adds a value to the end of the array portion of the table",
+                "Removes a value",
+                "Replaces all values",
+                "Checks if a value exists"
+              ],
+              "id": "lua_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does table.remove(t) do?",
+              "answer": "Removes and returns the last element of the table",
+              "explain": "table.remove(t) removes the last value from the array portion and returns it. table.remove(t, i) removes the element at index i.",
+              "choices": [
+                "Removes the first element",
+                "Reverses the table",
+                "Removes and returns the last element of the table",
+                "Deletes the entire table"
+              ],
+              "id": "lua_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Control Flow",
+      "tip": "Control flow lets you make decisions and repeat actions. if/then/else makes choices based on conditions. for and while loops repeat code. Conditions use comparison operators and logical operators.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "If Statements and Conditions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an if statement?",
+              "answer": "A way to run different code based on a condition",
+              "explain": "if condition then code end runs code only if the condition is true. if/then/else runs one block if true, another if false.",
+              "choices": [
+                "A type of variable",
+                "A loop construct",
+                "A function definition",
+                "A way to run different code based on a condition"
+              ],
+              "id": "lua_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the correct syntax for an if statement in Lua?",
+              "answer": "if condition then code end",
+              "explain": "Lua uses if/then/end. You must end every if with end. The then keyword is required.",
+              "choices": [
+                "if condition then code end",
+                "if (condition) {code}",
+                "if condition code endif",
+                "if: condition code"
+              ],
+              "id": "lua_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do comparison operators do?",
+              "answer": "Compare two values and return true or false",
+              "explain": "Operators like ==, ~=, <, >, <=, >= compare values. == is equal, ~= is not equal.",
+              "choices": [
+                "They change one value to another",
+                "They are only used in variables",
+                "They execute code immediately",
+                "Compare two values and return true or false"
+              ],
+              "id": "lua_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the not equal operator in Lua?",
+              "answer": "~=",
+              "explain": "~= means not equal. So 5 ~= 3 is true because 5 is not equal to 3.",
+              "choices": [
+                "!=",
+                "~=",
+                "!==",
+                "<>"
+              ],
+              "id": "lua_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do the logical operators and, or, and not do?",
+              "answer": "Combine or negate conditions",
+              "explain": "and is true only when both sides are true. or is true when at least one side is true. not reverses the result.",
+              "choices": [
+                "They declare variables",
+                "Combine or negate conditions",
+                "They execute code",
+                "They are used only in loops"
+              ],
+              "id": "lua_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a loop?",
+              "answer": "Code that repeats until a condition is met",
+              "explain": "Loops run the same code many times. for loops repeat a fixed number of times. while loops repeat while a condition is true.",
+              "choices": [
+                "A type of variable",
+                "A function call",
+                "A syntax error",
+                "Code that repeats until a condition is met"
+              ],
+              "id": "lua_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a numeric for loop, such as for i = 1, 5 do ... end?",
+              "answer": "A loop that repeats a fixed number of times",
+              "explain": "for i = 1, 5 do code end runs code 5 times with i going from 1 to 5. You can add a step: for i = 1, 10, 2 counts by 2s.",
+              "choices": [
+                "A loop that repeats a fixed number of times",
+                "A loop that repeats while a condition is true",
+                "A loop that never stops",
+                "A type of if statement"
+              ],
+              "id": "lua_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a while loop?",
+              "answer": "A loop that repeats as long as a condition is true",
+              "explain": "while condition do code end keeps running code while the condition is true. Once it is false, the loop stops.",
+              "choices": [
+                "A loop that repeats as long as a condition is true",
+                "A loop that repeats a fixed number of times",
+                "A loop that does not repeat",
+                "A type of variable"
+              ],
+              "id": "lua_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the break statement do in a loop?",
+              "answer": "Exits the loop immediately",
+              "explain": "break stops the loop at that moment and continues with code after the loop. It is useful to exit early when a condition is met.",
+              "choices": [
+                "Skips the next iteration",
+                "Pauses the loop",
+                "Exits the loop immediately",
+                "Stops the program"
+              ],
+              "id": "lua_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the continue statement do in Lua?",
+              "answer": "Lua has no continue statement; use goto or restructure the loop",
+              "explain": "Unlike some languages, Lua does not have continue. To skip to the next iteration, restructure the loop logic or jump to a label at the end of the loop body with goto.",
+              "choices": [
+                "Restarts the loop",
+                "Skips to the next iteration",
+                "Stops the loop",
+                "Lua has no continue statement; use goto or restructure the loop"
+              ],
+              "id": "lua_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Functions and Closures",
+      "tip": "Functions are reusable blocks of code. Define them with function name(params) code end. They can return values. Closures are functions that capture variables from their surrounding scope.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Defining and Calling Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in Lua?",
+              "answer": "Use function name(params) code end",
+              "explain": "function greet(name) print(\"Hello \" .. name) end defines a function called greet that takes one parameter.",
+              "choices": [
+                "Use def name(params): code",
+                "Use func name(params) { code }",
+                "Use method name(params) code",
+                "Use function name(params) code end"
+              ],
+              "id": "lua_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function in Lua?",
+              "answer": "Write the function name followed by arguments in parentheses",
+              "explain": "greet(\"Alice\") calls the function greet with the argument \"Alice\". With no arguments you still write empty parentheses, as in greet().",
+              "choices": [
+                "Write the function name followed by a colon",
+                "Use the call() method",
+                "Type the function definition again",
+                "Write the function name followed by arguments in parentheses"
+              ],
+              "id": "lua_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a parameter in a function?",
+              "answer": "A variable that receives a value when the function is called",
+              "explain": "In function add(a, b), a and b are parameters. When you call add(3, 5), a gets 3 and b gets 5.",
+              "choices": [
+                "A variable that receives a value when the function is called",
+                "A value that the function sends back",
+                "A global variable",
+                "A type of comment"
+              ],
+              "id": "lua_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you return a value from a function?",
+              "answer": "Use the return keyword",
+              "explain": "function add(a, b) return a + b end. The return statement exits the function and gives the value to the caller.",
+              "choices": [
+                "Use the output keyword",
+                "Assign to a global variable",
+                "Print the value",
+                "Use the return keyword"
+              ],
+              "id": "lua_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function return multiple values in Lua?",
+              "answer": "Yes, separate them with commas",
+              "explain": "function pair() return 3, 5 end returns two values. You can receive both: a, b = pair().",
+              "choices": [
+                "Yes, separate them with commas",
+                "No, only one return value allowed",
+                "Only in tables",
+                "Only as an array"
+              ],
+              "id": "lua_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Closures and Function Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a closure?",
+              "answer": "A function that captures variables from its surrounding scope",
+              "explain": "A closure is a function that remembers variables from where it was defined, not where it is called.",
+              "choices": [
+                "A function with no parameters",
+                "A function that is only called once",
+                "A function that returns nil",
+                "A function that captures variables from its surrounding scope"
+              ],
+              "id": "lua_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function be stored in a variable?",
+              "answer": "Yes, functions are first-class values",
+              "explain": "local f = function(x) return x * 2 end stores a function in f. You call it with f(5).",
+              "choices": [
+                "No, functions are not values",
+                "Only if declared with local",
+                "Yes, functions are first-class values",
+                "Only global functions"
+              ],
+              "id": "lua_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does local scope mean for a function?",
+              "answer": "The function's name is only visible within its block",
+              "explain": "local function f() end defines f only in that block. Outside the block, f is nil.",
+              "choices": [
+                "The function can be called from anywhere",
+                "The function has no access to variables",
+                "The function cannot return values",
+                "The function's name is only visible within its block"
+              ],
+              "id": "lua_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function call itself?",
+              "answer": "Yes, this is called recursion",
+              "explain": "A function can call itself. function fact(n) if n <= 1 then return 1 else return n * fact(n-1) end end is recursive.",
+              "choices": [
+                "No, this causes an error",
+                "Only for anonymous functions",
+                "Only once per program",
+                "Yes, this is called recursion"
+              ],
+              "id": "lua_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an anonymous function?",
+              "answer": "A function with no name, often stored in a variable",
+              "explain": "function(x) return x + 1 end is an anonymous function. You often store it: local inc = function(x) return x + 1 end.",
+              "choices": [
+                "A function that has no code",
+                "A function that does not return anything",
+                "A built-in function",
+                "A function with no name, often stored in a variable"
+              ],
+              "id": "lua_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Strings, Metatables, and Embedding",
+      "tip": "Strings are sequences of characters. Lua provides string operations like concatenation (..) and string libraries. Metatables allow you to define custom behavior for tables. Lua is often embedded in applications.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "String Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you concatenate strings in Lua?",
+              "answer": "Use the .. operator",
+              "explain": "\"Hello \" .. \"World\" produces \"Hello World\". You can also concatenate numbers: \"Value: \" .. 42.",
+              "choices": [
+                "Use the & operator",
+                "Use the + operator",
+                "Use the comma operator",
+                "Use the .. operator"
+              ],
+              "id": "lua_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does string.len(s) return?",
+              "answer": "The length of string s",
+              "explain": "string.len(\"hello\") returns 5. You can also use #s as a shorthand. The length counts bytes, which matches characters for plain English text.",
+              "choices": [
+                "The first character",
+                "The last character",
+                "True or false",
+                "The length of string s"
+              ],
+              "id": "lua_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you convert a string to uppercase?",
+              "answer": "Use string.upper()",
+              "explain": "string.upper(\"hello\") returns \"HELLO\". string.lower() does the opposite.",
+              "choices": [
+                "Use string.upper()",
+                "Use string.toUpper()",
+                "Use toUpperCase()",
+                "Use string.capitalize()"
+              ],
+              "id": "lua_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get a substring in Lua?",
+              "answer": "Use string.sub(s, i, j)",
+              "explain": "string.sub(\"hello\", 2, 4) returns \"ell\". Here i is the start position and j is the end position, and both are 1-based.",
+              "choices": [
+                "Use string.sub(s, i, j)",
+                "Use string.slice()",
+                "Use s[i:j]",
+                "Substrings are not supported"
+              ],
+              "id": "lua_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does string.rep(s, n) do?",
+              "answer": "Returns string s repeated n times",
+              "explain": "string.rep(\"x\", 3) returns \"xxx\". It is useful for generating patterns.",
+              "choices": [
+                "Returns string s repeated n times",
+                "Reverses the string",
+                "Replaces characters",
+                "Removes duplicates"
+              ],
+              "id": "lua_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Metatables and Embedding",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a metatable in Lua?",
+              "answer": "A table that defines custom behavior for another table",
+              "explain": "Metatables let you define what happens when you use operators or access missing keys. Every table can have one metatable.",
+              "choices": [
+                "A table that contains other tables",
+                "A built-in table type",
+                "A deprecated feature",
+                "A table that defines custom behavior for another table"
+              ],
+              "id": "lua_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you set a metatable on a table?",
+              "answer": "Use setmetatable(table, metatable)",
+              "explain": "setmetatable(t, mt) sets mt as the metatable for t. You can later retrieve it with getmetatable(t).",
+              "choices": [
+                "Use setmetatable(table, metatable)",
+                "Use t.metatable = mt",
+                "Use t:setMetatable(mt)",
+                "Metatables cannot be set"
+              ],
+              "id": "lua_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a metamethod?",
+              "answer": "A special function defined in a metatable that handles specific operations",
+              "explain": "Metamethods like __add, __index, __tostring define what happens when you use +, access a missing key, or convert to string.",
+              "choices": [
+                "A special function defined in a metatable that handles specific operations",
+                "A type of regular method",
+                "A loop construct",
+                "A built-in library"
+              ],
+              "id": "lua_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where is Lua commonly embedded?",
+              "answer": "In game add-ons, editors like Neovim, servers like Redis, and other applications",
+              "explain": "Lua is lightweight and easy to embed. Games, editors, databases, and many other programs use it as a built-in scripting language.",
+              "choices": [
+                "In game add-ons, editors like Neovim, servers like Redis, and other applications",
+                "Only in terminals",
+                "In databases only",
+                "Lua is not embedded anywhere"
+              ],
+              "id": "lua_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is Lua popular for embedding?",
+              "answer": "It is small, simple, and easy to integrate with C",
+              "explain": "Lua is designed to be embedded. It has a small interpreter, a simple C API, and minimal dependencies.",
+              "choices": [
+                "It requires no CPU",
+                "It is small, simple, and easy to integrate with C",
+                "It is only for games",
+                "It is faster than all other languages"
+              ],
+              "id": "lua_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

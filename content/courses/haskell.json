@@ -1,0 +1,904 @@
+{
+  "id": "haskell",
+  "name": "Haskell",
+  "category": "programming",
+  "icon": "fa-solid fa-infinity",
+  "level": "Functional Programming",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Functions and Types",
+      "tip": "Haskell is built around pure functions: functions that always return the same output for the same input and never change the state of the program. Every function has a type, and a type signature spells out what types it accepts and returns.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding Pure Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a pure function?",
+              "answer": "A function that always returns the same output for the same input and has no side effects",
+              "explain": "A pure function depends only on its inputs and never modifies global state or produces side effects. This makes code predictable and testable.",
+              "choices": [
+                "A function that always returns the same output for the same input and has no side effects",
+                "A function declared with the keyword pure",
+                "A function with no parameters",
+                "A function that returns a pure value"
+              ],
+              "id": "haskell_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a side effect?",
+              "answer": "Printing to the screen or modifying a global variable",
+              "explain": "Side effects are actions that change the state of the program or interact with the outside world. Pure functions avoid them.",
+              "choices": [
+                "Using the + operator",
+                "Printing to the screen or modifying a global variable",
+                "Accepting a parameter",
+                "Returning a value"
+              ],
+              "id": "haskell_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is this function pure? double x = x * 2",
+              "answer": "Yes, it always returns 2x for any input x",
+              "explain": "This function takes x and returns 2x every time. It has no side effects and depends only on its input.",
+              "choices": [
+                "No, because it is too simple",
+                "No, because x is a variable",
+                "Yes, it always returns 2x for any input x",
+                "No, it uses multiplication"
+              ],
+              "id": "haskell_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are pure functions useful in Haskell?",
+              "answer": "They are predictable, testable, and easier to reason about",
+              "explain": "Pure functions eliminate hidden dependencies and side effects, making code easier to understand, test, and parallelize.",
+              "choices": [
+                "They use less memory",
+                "They do not need to be debugged",
+                "They run faster than impure functions",
+                "They are predictable, testable, and easier to reason about"
+              ],
+              "id": "haskell_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does immutability mean in Haskell?",
+              "answer": "Once a variable is bound to a value, it cannot be changed",
+              "explain": "In Haskell, variables are immutable. If you want a different value, you create a new variable. This eliminates a whole class of bugs.",
+              "choices": [
+                "Once a variable is bound to a value, it cannot be changed",
+                "Variables must be declared before use",
+                "Variables must have a type annotation",
+                "Variables can only hold numbers"
+              ],
+              "id": "haskell_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Type Signatures and Declarations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a type signature?",
+              "answer": "A declaration stating what types a function accepts and returns",
+              "explain": "A type signature like add :: Int -> Int -> Int tells you the function accepts two Ints and returns an Int. The :: means has type.",
+              "choices": [
+                "A comment explaining what the function does",
+                "A declaration stating what types a function accepts and returns",
+                "A variable name",
+                "A security feature"
+              ],
+              "id": "haskell_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the -> in a type signature mean?",
+              "answer": "Separates argument types from the return type",
+              "explain": "In add :: Int -> Int -> Int, the arrows separate parameters and lead to the return type. Int -> Int -> Int means two Ints, returns Int.",
+              "choices": [
+                "Points to memory",
+                "Assigns a value to a variable",
+                "Separates argument types from the return type",
+                "Starts a comment"
+              ],
+              "id": "haskell_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this type signature mean? greet :: String -> String",
+              "answer": "A function that takes a String and returns a String",
+              "explain": "greet accepts one String argument and returns a String. For example, greet might add Hello to the input.",
+              "choices": [
+                "A String variable",
+                "Two String types",
+                "A function that returns two Strings",
+                "A function that takes a String and returns a String"
+              ],
+              "id": "haskell_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are type signatures important in Haskell?",
+              "answer": "They make code explicit, enable compiler checking, and serve as documentation",
+              "explain": "Type signatures tell the compiler what types are expected, catch errors before runtime, and tell the next programmer what a function does.",
+              "choices": [
+                "They make code explicit, enable compiler checking, and serve as documentation",
+                "They are required by law",
+                "They reduce the amount of code",
+                "They make code run faster"
+              ],
+              "id": "haskell_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the return type of this function? add x y = x + y",
+              "answer": "Numeric types like Int or Double, depending on the input",
+              "explain": "If x and y are Ints, the result is Int. If they are Doubles, the result is Double. This is called polymorphism.",
+              "choices": [
+                "Always Double",
+                "Numeric types like Int or Double, depending on the input",
+                "Always Int",
+                "Unknown until runtime"
+              ],
+              "id": "haskell_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Lists and Pattern Matching",
+      "tip": "Lists are the backbone of Haskell. A list is either empty or a head element followed by a tail (another list). Pattern matching lets you destructure lists and other data, extracting the values you need.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Working with Lists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a list in Haskell?",
+              "answer": "An ordered collection of elements of the same type",
+              "explain": "[1, 2, 3] is a list of numbers. [\"apple\", \"banana\"] is a list of Strings. All elements must have the same type.",
+              "choices": [
+                "An unordered collection",
+                "A single value",
+                "An ordered collection of elements of the same type",
+                "A type annotation"
+              ],
+              "id": "haskell_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the empty list?",
+              "answer": "[] (square brackets with nothing inside)",
+              "explain": "[] is the empty list. Every finite list is built by adding elements onto [], so [1, 2] is really 1 : (2 : []).",
+              "choices": [
+                "None",
+                "null",
+                "[empty]",
+                "[] (square brackets with nothing inside)"
+              ],
+              "id": "haskell_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the : operator do in Haskell?",
+              "answer": "Prepends an element to the front of a list (cons operator)",
+              "explain": "1 : [2, 3] gives [1, 2, 3]. It puts the element on the left at the head and the list on the right as the tail.",
+              "choices": [
+                "Prepends an element to the front of a list (cons operator)",
+                "Appends an element to the end",
+                "Concatenates two lists",
+                "Separates list elements"
+              ],
+              "id": "haskell_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you concatenate two lists?",
+              "answer": "Using the ++ operator: [1, 2] ++ [3, 4] gives [1, 2, 3, 4]",
+              "explain": "The ++ operator joins two lists. The first list is traversed to find its end, then the second list is attached.",
+              "choices": [
+                "Using the + operator",
+                "Using the ++ operator: [1, 2] ++ [3, 4] gives [1, 2, 3, 4]",
+                "Lists cannot be concatenated",
+                "Using the : operator"
+              ],
+              "id": "haskell_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type does the list [True, False, True] have?",
+              "answer": "[Bool] (a list of Bools)",
+              "explain": "[Bool] means a list of Bools. In the same way, [\"a\", \"b\"] has type [String], a list of Strings.",
+              "choices": [
+                "List",
+                "Bool",
+                "[Bool] (a list of Bools)",
+                "Tuple"
+              ],
+              "id": "haskell_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Pattern Matching and List Comprehensions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is pattern matching?",
+              "answer": "Destructuring data by matching it against a pattern",
+              "explain": "Pattern matching lets you extract values from structures. For example, matching [1, 2, 3] against (x:xs) binds x to 1 and xs to [2, 3].",
+              "choices": [
+                "Finding text patterns in a string",
+                "Sorting a list",
+                "Checking if two values are equal",
+                "Destructuring data by matching it against a pattern"
+              ],
+              "id": "haskell_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (x:xs) match against in pattern matching?",
+              "answer": "A non-empty list, binding the head to x and the tail to xs",
+              "explain": "For [1, 2, 3], the pattern (x:xs) binds x = 1 and xs = [2, 3]. It matches any list that has at least one element.",
+              "choices": [
+                "A non-empty list, binding the head to x and the tail to xs",
+                "Two-element lists only",
+                "Only lists of numbers",
+                "Only empty lists"
+              ],
+              "id": "haskell_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a list comprehension?",
+              "answer": "A concise syntax for creating lists by applying an expression to elements",
+              "explain": "[x * 2 | x <- [1, 2, 3]] creates [2, 4, 6] by doubling each element. The <- means drawn from.",
+              "choices": [
+                "A comparison between lists",
+                "A concise syntax for creating lists by applying an expression to elements",
+                "A way to comment on lists",
+                "A type of list pattern"
+              ],
+              "id": "haskell_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this list comprehension produce? [x | x <- [1..5], x > 2]",
+              "answer": "[3, 4, 5]",
+              "explain": "x <- [1..5] iterates over 1 to 5, and x > 2 filters to keep only values greater than 2.",
+              "choices": [
+                "[1, 2]",
+                "[2, 3, 4, 5]",
+                "[3, 4, 5]",
+                "[1, 2, 3, 4, 5]"
+              ],
+              "id": "haskell_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What list does the range [1..10] produce?",
+              "answer": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+              "explain": "The range [1..10] generates the numbers from 1 to 10, including both ends. A step can be given too: [1, 3..9] gives [1, 3, 5, 7, 9].",
+              "choices": [
+                "An error",
+                "[1, 10]",
+                "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+                "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+              ],
+              "id": "haskell_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Recursion",
+      "tip": "Recursion is how Haskell handles repetition. A recursive function calls itself with simpler inputs until it reaches a base case that stops the recursion. Every recursive function needs a base case and a recursive case.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Recursive Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is recursion?",
+              "answer": "A function calling itself with simpler inputs until reaching a base case",
+              "explain": "Recursion breaks a problem into smaller versions of itself. factorial n = n * factorial (n - 1) keeps shrinking n until it reaches a base case such as factorial 0 = 1.",
+              "choices": [
+                "A function calling itself with simpler inputs until reaching a base case",
+                "A loop construct",
+                "Repeating the same code twice",
+                "A type of error"
+              ],
+              "id": "haskell_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a base case in recursion?",
+              "answer": "The stopping condition that prevents infinite recursion",
+              "explain": "Without a base case, a recursive function would call itself forever. For factorial, the base case is factorial 0 = 1.",
+              "choices": [
+                "The most complex part",
+                "The stopping condition that prevents infinite recursion",
+                "An error case",
+                "The first line of the function"
+              ],
+              "id": "haskell_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the base case for this recursive function? mySum [] = 0; mySum (x:xs) = x + mySum xs",
+              "answer": "mySum [] = 0, which stops recursion when the list is empty",
+              "explain": "When the list is empty, we return 0 instead of calling mySum again. This stops the recursion.",
+              "choices": [
+                "The x in (x:xs)",
+                "mySum (x:xs) = x + mySum xs",
+                "mySum [] = 0, which stops recursion when the list is empty",
+                "There is no base case"
+              ],
+              "id": "haskell_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many times is mySum called for mySum [1, 2, 3]?",
+              "answer": "4 times: mySum [1,2,3], mySum [2,3], mySum [3], and mySum []",
+              "explain": "Each call peels off the first element. When the list becomes empty, the base case mySum [] = 0 stops it.",
+              "choices": [
+                "Infinite times",
+                "Once",
+                "3 times",
+                "4 times: mySum [1,2,3], mySum [2,3], mySum [3], and mySum []"
+              ],
+              "id": "haskell_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this recursive function do? len [] = 0; len (_:xs) = 1 + len xs",
+              "answer": "Counts the number of elements in a list",
+              "explain": "The underscore _ ignores the head. We add 1 for each element and recurse on the tail until the list is empty.",
+              "choices": [
+                "Counts the number of elements in a list",
+                "Removes all elements",
+                "Adds up all elements",
+                "Finds the maximum element"
+              ],
+              "id": "haskell_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Tail Recursion and Efficiency",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is tail recursion?",
+              "answer": "Recursion where the recursive call is the last operation",
+              "explain": "In tail recursion, the result of the recursive call is returned immediately. The compiler can optimize it to not use extra stack space.",
+              "choices": [
+                "Recursion at the end of a file",
+                "Recursion where the recursive call is the last operation",
+                "Recursion inside a tail",
+                "Using the tail function"
+              ],
+              "id": "haskell_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is this tail recursive? mySum [] = 0; mySum (x:xs) = x + mySum xs",
+              "answer": "No, because the recursive call is not the last operation (+ is applied after)",
+              "explain": "The result of mySum xs is used in x + mySum xs, so this is not tail recursive. A tail recursive version would accumulate the total as a parameter.",
+              "choices": [
+                "Only if x is positive",
+                "Yes",
+                "No, because the recursive call is not the last operation (+ is applied after)",
+                "Only if the list is short"
+              ],
+              "id": "haskell_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an accumulator in tail recursion?",
+              "answer": "An extra parameter that builds up the result as we recurse",
+              "explain": "An accumulator collects intermediate results. sumAcc [] acc = acc; sumAcc (x:xs) acc = sumAcc xs (x + acc) uses acc as an accumulator.",
+              "choices": [
+                "A cache of function results",
+                "A list of all previous results",
+                "A keyword that marks a function as tail recursive",
+                "An extra parameter that builds up the result as we recurse"
+              ],
+              "id": "haskell_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can tail recursion be more efficient than regular recursion?",
+              "answer": "The compiler can optimize it to reuse the same stack frame, avoiding stack overflow",
+              "explain": "Tail recursion can be compiled to a loop. Regular recursion stacks up frames, potentially causing stack overflow on deep recursion. In Haskell the accumulator often needs to be evaluated strictly to get this benefit.",
+              "choices": [
+                "The compiler can optimize it to reuse the same stack frame, avoiding stack overflow",
+                "It is always faster",
+                "It is not more efficient",
+                "It uses less memory for the data"
+              ],
+              "id": "haskell_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of recursion over loops in functional programming?",
+              "answer": "It works naturally with immutable data, since each call binds new values instead of changing old ones",
+              "explain": "A loop usually updates a counter in place, which is mutation. Recursion passes new values into each call, so nothing is changed, which fits immutable data.",
+              "choices": [
+                "There is no advantage",
+                "It works naturally with immutable data, since each call binds new values instead of changing old ones",
+                "Recursion is always faster",
+                "Recursion never needs a base case"
+              ],
+              "id": "haskell_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Higher-Order Functions",
+      "tip": "Higher-order functions accept functions as arguments or return functions as results. map applies a function to each list element, filter selects elements, and fold reduces a list to a single value. These are the workhorse functions of functional programming.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Map, Filter, and Basic HOFs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a higher-order function?",
+              "answer": "A function that takes a function as an argument or returns a function",
+              "explain": "map, filter, and fold are higher-order because they accept a function (like (+ 1) or (> 5)) as an argument.",
+              "choices": [
+                "A function that is called many times",
+                "A function with a high return value",
+                "A function that takes a function as an argument or returns a function",
+                "A function with many parameters"
+              ],
+              "id": "haskell_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does map do?",
+              "answer": "Applies a function to each element of a list and returns a new list",
+              "explain": "map (*2) [1, 2, 3] applies (*2) to each element, giving [2, 4, 6].",
+              "choices": [
+                "Sorts a list",
+                "Removes duplicates",
+                "Finds an element in a list",
+                "Applies a function to each element of a list and returns a new list"
+              ],
+              "id": "haskell_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does filter do?",
+              "answer": "Selects elements from a list that satisfy a condition",
+              "explain": "filter (> 5) [1, 3, 7, 2, 9] keeps only elements > 5, returning [7, 9].",
+              "choices": [
+                "Selects elements from a list that satisfy a condition",
+                "Sorts a list",
+                "Removes all elements",
+                "Counts elements"
+              ],
+              "id": "haskell_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of map (+ 1) [1, 2, 3]?",
+              "answer": "[2, 3, 4]",
+              "explain": "map applies (+ 1) to each element, so 1 becomes 2, 2 becomes 3, and 3 becomes 4.",
+              "choices": [
+                "1",
+                "[2, 3, 4]",
+                "[3]",
+                "[1, 2, 3, 1]"
+              ],
+              "id": "haskell_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of filter even [1, 2, 3, 4, 5]? (even is a built-in function that checks whether a number is even)",
+              "answer": "[2, 4]",
+              "explain": "filter even keeps only elements where even returns True, so only 2 and 4 are kept.",
+              "choices": [
+                "[1, 2, 3, 4, 5]",
+                "[1, 3, 5]",
+                "[2, 4]",
+                "[]"
+              ],
+              "id": "haskell_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Fold and Function Composition",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a fold, such as foldl, do?",
+              "answer": "Reduces a list to a single value by applying a function cumulatively",
+              "explain": "foldl (+) 0 [1, 2, 3] starts with 0, adds 1 to get 1, adds 2 to get 3, adds 3 to get 6.",
+              "choices": [
+                "Sorts a list",
+                "Doubles every element",
+                "Filters elements",
+                "Reduces a list to a single value by applying a function cumulatively"
+              ],
+              "id": "haskell_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of foldl (+) 0 [1, 2, 3, 4]?",
+              "answer": "10",
+              "explain": "Starting with 0: 0 + 1 = 1, 1 + 2 = 3, 3 + 3 = 6, 6 + 4 = 10.",
+              "choices": [
+                "10",
+                "1",
+                "4",
+                "[1, 2, 3, 4]"
+              ],
+              "id": "haskell_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does function composition do?",
+              "answer": "Combines two functions into one by applying them in sequence",
+              "explain": "f . g means apply g first, then f to the result. If f x = x * 2 and g x = x + 1, then (f . g) 5 = f (g 5) = f 6 = 12.",
+              "choices": [
+                "Multiplies function results",
+                "Combines two functions into one by applying them in sequence",
+                "Adds two functions together",
+                "Divides functions"
+              ],
+              "id": "haskell_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the . operator called?",
+              "answer": "The composition operator",
+              "explain": "The . operator composes functions. f . g reads as f after g.",
+              "choices": [
+                "The access operator",
+                "The concatenation operator",
+                "The composition operator",
+                "The method operator"
+              ],
+              "id": "haskell_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does map ((*2) . (+1)) [1, 2, 3] return?",
+              "answer": "[4, 6, 8]",
+              "explain": "For each element, first add 1, then multiply by 2. 1 becomes 2, then 4. 2 becomes 3, then 6. 3 becomes 4, then 8.",
+              "choices": [
+                "[1, 2, 3]",
+                "[2, 4, 6]",
+                "[3, 5, 7]",
+                "[4, 6, 8]"
+              ],
+              "id": "haskell_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "The Type System",
+      "tip": "Haskell's type system goes beyond just Int and String. Maybe represents an optional value (a Maybe Int is either Nothing or Just with an Int inside, like Just 5). Type classes group types that share behavior, like Eq for equality or Ord for ordering.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Maybe and Optional Values",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Maybe type?",
+              "answer": "A type that represents an optional value: either Just a value or Nothing",
+              "explain": "A Maybe Int is either Just 5 (has a value) or Nothing (no value). It is safer than null in other languages because the type shows when a value might be missing.",
+              "choices": [
+                "A type that represents an optional value: either Just a value or Nothing",
+                "A type that is uncertain",
+                "An error type",
+                "A type that is always Nothing"
+              ],
+              "id": "haskell_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Just 5 mean?",
+              "answer": "A Maybe value that contains the number 5",
+              "explain": "Just wraps a value inside a Maybe. Just 5 is a Maybe holding the number 5.",
+              "choices": [
+                "An error",
+                "A Maybe value that contains the number 5",
+                "A tuple of the word Just and the number 5",
+                "A list containing 5"
+              ],
+              "id": "haskell_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Nothing mean?",
+              "answer": "A Maybe value that represents the absence of a value",
+              "explain": "Nothing is used when there is no value to return. For example, searching a list for an element that is not there gives Nothing.",
+              "choices": [
+                "An empty list",
+                "Zero",
+                "A Maybe value that represents the absence of a value",
+                "An error"
+              ],
+              "id": "haskell_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does Haskell use Maybe where many other languages use null?",
+              "answer": "Because it makes optional values explicit and makes the programmer deal with the Nothing case",
+              "explain": "Maybe makes missing values explicit in the type. You cannot use a Maybe Int as a plain Int, so you have to deal with the Nothing case, usually by pattern matching.",
+              "choices": [
+                "Because zero cannot be stored in an ordinary type",
+                "Because Maybe and null mean exactly the same thing",
+                "Because it lets the program ignore missing values",
+                "Because it makes optional values explicit and makes the programmer deal with the Nothing case"
+              ],
+              "id": "haskell_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of Just True?",
+              "answer": "Maybe Bool",
+              "explain": "Just True has type Maybe Bool. The Just constructor wraps a Bool inside a Maybe.",
+              "choices": [
+                "Maybe Bool",
+                "Maybe",
+                "Just",
+                "Bool"
+              ],
+              "id": "haskell_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Type Classes and Polymorphism",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a type class?",
+              "answer": "A group of types that share common behavior or operations",
+              "explain": "Eq is a type class for equality. All types in Eq support ==. Ord is a type class for ordering, supporting <, >, etc.",
+              "choices": [
+                "A class used in object-oriented programming",
+                "A group of types that share common behavior or operations",
+                "A module that groups related functions",
+                "A type that is uncertain"
+              ],
+              "id": "haskell_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Eq type class provide?",
+              "answer": "The == and /= operators for comparing equality",
+              "explain": "Any type in Eq supports == (equality) and /= (inequality). Int, String, and many others are instances of Eq.",
+              "choices": [
+                "Ordering",
+                "Functions for sorting lists",
+                "The == and /= operators for comparing equality",
+                "The = assignment operator"
+              ],
+              "id": "haskell_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Ord type class provide?",
+              "answer": "Ordering operators like <, >, <=, >= and the compare function",
+              "explain": "Ord lets you compare values. compare 5 3 returns GT (greater than), compare 2 2 returns EQ (equal).",
+              "choices": [
+                "Only the < operator",
+                "String operations",
+                "List operations",
+                "Ordering operators like <, >, <=, >= and the compare function"
+              ],
+              "id": "haskell_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this type signature mean? sort :: Ord a => [a] -> [a]",
+              "answer": "sort works on any list where the element type is in the Ord class",
+              "explain": "Ord a => means the type a must be an instance of Ord. So sort [3, 1, 2] works, and so does sorting a list of Strings, but a list of functions cannot be sorted because functions have no ordering.",
+              "choices": [
+                "sort works on any list where the element type is in the Ord class",
+                "sort works only on lists of numbers",
+                "sort turns a list into a single Ord value",
+                "sort works on lists of any type"
+              ],
+              "id": "haskell_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a function to be polymorphic?",
+              "answer": "It works on values of many different types instead of just one",
+              "explain": "map works on a list of any element type, and sort works on any list whose elements can be ordered (Ord). One definition covers many types.",
+              "choices": [
+                "It has several different names",
+                "It works on values of many different types instead of just one",
+                "It changes its own type while the program runs",
+                "It must be rewritten separately for every type"
+              ],
+              "id": "haskell_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Lazy Evaluation",
+      "tip": "Haskell evaluates expressions only when needed, not all at once. This is called lazy evaluation. It allows you to work with infinite lists and avoid unnecessary computation. You do not pay to compute values you never use.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Understanding Lazy Evaluation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is lazy evaluation?",
+              "answer": "Evaluating expressions only when their values are needed",
+              "explain": "In Haskell, if you define x = 1 + 2 but never use x, the addition is never computed. This is different from eager languages that compute immediately.",
+              "choices": [
+                "Not evaluating expressions at all",
+                "Evaluating expressions in reverse order",
+                "Evaluating expressions only when their values are needed",
+                "Skipping type checks until the program runs"
+              ],
+              "id": "haskell_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main benefit of lazy evaluation?",
+              "answer": "You can work with infinite data structures and avoid unnecessary computation",
+              "explain": "You can define [1..] (an infinite list) because elements are generated only as you access them. Unused computations are skipped entirely.",
+              "choices": [
+                "Code is shorter",
+                "No benefit, it is just different",
+                "Programs run faster",
+                "You can work with infinite data structures and avoid unnecessary computation"
+              ],
+              "id": "haskell_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which definition creates an infinite list of 1s?",
+              "answer": "ones = 1 : ones",
+              "explain": "ones = 1 : ones creates [1, 1, 1, ...] infinitely, because the list is its own tail. Each element is generated when accessed, so take 5 ones gives [1, 1, 1, 1, 1]. The built-in repeat 1 does the same job.",
+              "choices": [
+                "ones = 1 : ones",
+                "ones = [1, 1, 1, ...]",
+                "ones = take 1 [1..]",
+                "ones = 1 + ones"
+              ],
+              "id": "haskell_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does take 3 [1, 2, 3, 4, 5] return?",
+              "answer": "[1, 2, 3]",
+              "explain": "take n lst returns the first n elements of a list. take 3 [1, 2, 3, 4, 5] returns [1, 2, 3].",
+              "choices": [
+                "[1, 2, 3, 4, 5]",
+                "[1, 2, 3]",
+                "[3]",
+                "[]"
+              ],
+              "id": "haskell_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you safely write take 5 [1..]?",
+              "answer": "Yes, take 5 [1..] returns [1, 2, 3, 4, 5] without infinite loops",
+              "explain": "take 5 terminates after 5 elements, so [1..] (infinite) is safe to use with take. Lazy evaluation ensures the list is generated only as needed.",
+              "choices": [
+                "No, [1..] is infinite",
+                "Yes, but it takes forever",
+                "Yes, take 5 [1..] returns [1, 2, 3, 4, 5] without infinite loops",
+                "Only if you sort the list first"
+              ],
+              "id": "haskell_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Laziness in Practice",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a thunk?",
+              "answer": "An unevaluated computation deferred until its value is needed",
+              "explain": "When Haskell sees an expression like 1 + 2, it creates a thunk (a suspended computation). When you actually need the value, it is evaluated.",
+              "choices": [
+                "An error message",
+                "A type of memory block",
+                "A function parameter",
+                "An unevaluated computation deferred until its value is needed"
+              ],
+              "id": "haskell_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might lazy evaluation cause unexpected memory usage?",
+              "answer": "Thunks accumulate, building up unevaluated computations that consume memory",
+              "explain": "If you build a large structure of thunks without forcing evaluation, they pile up. This is called a space leak.",
+              "choices": [
+                "Thunks accumulate, building up unevaluated computations that consume memory",
+                "It has no effect on memory",
+                "Lazy functions are slower",
+                "It always uses less memory"
+              ],
+              "id": "haskell_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you evaluate head (map (*2) [1..])?",
+              "answer": "It returns 2, because only the first element is ever computed",
+              "explain": "map is lazy, so it produces its result one element at a time as each is asked for. head asks for just the first, so 1 * 2 is computed and the rest of [1..] is never touched.",
+              "choices": [
+                "It never finishes, because map must double every element first",
+                "It returns 2, because only the first element is ever computed",
+                "It returns an error, because the list is infinite",
+                "It returns the whole list [2, 4, 6, ...] at once"
+              ],
+              "id": "haskell_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does filter (> 5) [1..] return?",
+              "answer": "An infinite list of numbers greater than 5, computed only as they are accessed",
+              "explain": "filter (> 5) [1..] returns an infinite list of numbers greater than 5. Each element is computed lazily when accessed.",
+              "choices": [
+                "An empty list",
+                "An error",
+                "An infinite list of numbers greater than 5, computed only as they are accessed",
+                "It tries to filter the whole list first and hangs"
+              ],
+              "id": "haskell_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is take important when working with infinite lists?",
+              "answer": "It limits the result to a finite number of elements, so evaluation can stop",
+              "explain": "take limits evaluation to a finite prefix of an infinite list, making infinite lists practical to use without hanging.",
+              "choices": [
+                "It sorts the list",
+                "It deletes elements",
+                "It removes duplicates",
+                "It limits the result to a finite number of elements, so evaluation can stop"
+              ],
+              "id": "haskell_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

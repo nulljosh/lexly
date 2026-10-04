@@ -1,0 +1,904 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin",
+  "category": "programming",
+  "icon": "fa-solid fa-mobile-screen",
+  "level": "Modern JVM Language",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Types",
+      "tip": "Kotlin has two kinds of variables. A val is read-only: it cannot be reassigned once set. A var is mutable: it can be reassigned. Type inference means Kotlin figures out the type automatically from the assigned value, but you can also declare types explicitly.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "val vs var",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between val and var in Kotlin?",
+              "answer": "val cannot be reassigned; var can be reassigned",
+              "explain": "val stands for value: once it is set, it cannot be reassigned. var stands for variable and can be reassigned multiple times.",
+              "choices": [
+                "val cannot be reassigned; var can be reassigned",
+                "val is for integers; var is for strings",
+                "val is faster; var is slower",
+                "val requires type declaration; var does not"
+              ],
+              "id": "kotlin_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which declaration is valid in Kotlin?",
+              "answer": "val name = \"Alice\"",
+              "explain": "val creates a read-only variable that cannot be reassigned, so val name = \"Alice\" is valid. int x = 5 is Java syntax, not Kotlin, and val count = 5; count = 6 fails because a val cannot be reassigned.",
+              "choices": [
+                "int x = 5",
+                "val name = \"Alice\"",
+                "val count = 5; count = 6",
+                "Both var and val can be reassigned"
+              ],
+              "id": "kotlin_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use val instead of var?",
+              "answer": "When the variable will not change after assignment",
+              "explain": "Using val by default makes code safer and more predictable. Only use var when the value truly needs to change.",
+              "choices": [
+                "When storing strings",
+                "When the variable stores a number",
+                "When the variable will not change after assignment",
+                "When the variable is global"
+              ],
+              "id": "kotlin_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you try to reassign a val?",
+              "answer": "Compilation error",
+              "explain": "val variables are final and cannot be reassigned. The compiler catches this error before runtime.",
+              "choices": [
+                "It silently fails",
+                "It creates a new variable",
+                "It converts to var automatically",
+                "Compilation error"
+              ],
+              "id": "kotlin_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A value is set once and never changes. Which declaration follows best practice?",
+              "answer": "val age = 25",
+              "explain": "Using val by default is Kotlin best practice. It makes your intent clear and prevents accidental reassignment, and var is only needed when the value really changes.",
+              "choices": [
+                "val age = 25",
+                "var age = 25; age = 26",
+                "var age = 25",
+                "age = 25 (no declaration)"
+              ],
+              "id": "kotlin_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Types and Type Inference",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does type inference mean in Kotlin?",
+              "answer": "The compiler automatically determines variable types",
+              "explain": "Kotlin infers the type from the assigned value, so you often do not need to specify Int, String, etc. explicitly.",
+              "choices": [
+                "You must always declare types explicitly",
+                "The compiler automatically determines variable types",
+                "Variables have no type until runtime",
+                "Type checking is optional"
+              ],
+              "id": "kotlin_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the line val x = 42, what is the inferred type of x?",
+              "answer": "Int",
+              "explain": "42 is a whole number literal, so Kotlin infers x as type Int.",
+              "choices": [
+                "String",
+                "Long",
+                "Int",
+                "Double"
+              ],
+              "id": "kotlin_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you explicitly declare a variable type in Kotlin?",
+              "answer": "val name: String = \"Alice\"",
+              "explain": "The type goes after the variable name, separated by a colon.",
+              "choices": [
+                "String val name = \"Alice\"",
+                "val String name = \"Alice\"",
+                "val name = String(\"Alice\")",
+                "val name: String = \"Alice\""
+              ],
+              "id": "kotlin_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the inferred type of val pi = 3.14?",
+              "answer": "Double",
+              "explain": "A floating-point literal like 3.14 defaults to Double in Kotlin.",
+              "choices": [
+                "Double",
+                "Float",
+                "Int",
+                "Number"
+              ],
+              "id": "kotlin_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is valid Kotlin?",
+              "answer": "val message: String = \"Hello\"",
+              "explain": "This declares a val with an explicit String type and assigns a string value.",
+              "choices": [
+                "val message: Int = \"Hello\"",
+                "val message: String = \"Hello\"",
+                "val: String message = \"Hello\"",
+                "String: val message = \"Hello\""
+              ],
+              "id": "kotlin_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Null Safety",
+      "tip": "Kotlin addresses null pointer exceptions by requiring you to explicitly mark nullable types with a question mark (?). The safe call operator (?.) and Elvis operator (?:) handle nulls gracefully, while the not-null assertion operator (!!), sometimes called the force operator, should only be used when you are certain a value exists.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Nullable Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a nullable variable in Kotlin?",
+              "answer": "val name: String? = null",
+              "explain": "The question mark (?) marks a type as nullable, meaning it can hold null. Without ?, a variable cannot be null.",
+              "choices": [
+                "val name: ?String = null",
+                "nullable String name",
+                "val name: String? = null",
+                "val name: String = null"
+              ],
+              "id": "kotlin_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between String and String? in Kotlin?",
+              "answer": "String cannot be null; String? can be null",
+              "explain": "String is a non-nullable type and always holds a value. String? is nullable and can hold null.",
+              "choices": [
+                "String is faster",
+                "They are the same",
+                "String is for empty strings",
+                "String cannot be null; String? can be null"
+              ],
+              "id": "kotlin_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you assign null to a non-nullable variable?",
+              "answer": "No, the compiler prevents it",
+              "explain": "Non-nullable types cannot hold null. The compiler enforces this at compile time, which helps avoid null pointer exceptions.",
+              "choices": [
+                "No, the compiler prevents it",
+                "Yes, anytime",
+                "Only at runtime",
+                "Only with explicit casting"
+              ],
+              "id": "kotlin_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the primary benefit of Kotlin's nullable types?",
+              "answer": "Catching possible null pointer errors at compile time",
+              "explain": "By marking types as nullable or non-nullable, Kotlin catches many potential null issues before the code runs.",
+              "choices": [
+                "Making code run faster",
+                "Catching possible null pointer errors at compile time",
+                "Allowing more memory for variables",
+                "Simplifying function syntax"
+              ],
+              "id": "kotlin_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which declaration is correct?",
+              "answer": "val age: Int? = 25",
+              "explain": "This declares a nullable Int and assigns a non-null value 25. This is valid; nullable types can hold non-null values.",
+              "choices": [
+                "val age: Int = null",
+                "val age? = 25",
+                "val age: Int? = 25",
+                "val age = null: Int"
+              ],
+              "id": "kotlin_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Safe Operators",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the safe call operator (?.) do?",
+              "answer": "Calls a method only if the object is not null",
+              "explain": "The ?. operator calls a method or accesses a property only if the object is not null. If null, the expression returns null.",
+              "choices": [
+                "Converts null to a string",
+                "Casts a type",
+                "Safely deletes a variable",
+                "Calls a method only if the object is not null"
+              ],
+              "id": "kotlin_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Elvis operator (?:) used for?",
+              "answer": "Providing a default value when the left side is null",
+              "explain": "The ?: operator returns the left side if not null, otherwise the right side. It is useful for providing defaults.",
+              "choices": [
+                "Providing a default value when the left side is null",
+                "Concatenating strings",
+                "Deleting null values",
+                "Creating a new object"
+              ],
+              "id": "kotlin_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does val name = person.getName() ?: \"Unknown\" do?",
+              "answer": "Calls getName(); if null, uses \"Unknown\"",
+              "explain": "The Elvis operator ?: returns the left expression if not null, otherwise the right. This safely defaults to \"Unknown\" if getName() returns null.",
+              "choices": [
+                "Throws an error if getName() is null",
+                "Calls getName(); if null, uses \"Unknown\"",
+                "Always returns \"Unknown\"",
+                "Concatenates the results"
+              ],
+              "id": "kotlin_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use the force operator (!!)?",
+              "answer": "Only when you are certain the value is not null",
+              "explain": "!! asserts that a value is not null. Use it rarely; it throws an exception if the value is null.",
+              "choices": [
+                "Instead of the safe call operator",
+                "Always, for safety",
+                "Only when you are certain the value is not null",
+                "When dealing with strings"
+              ],
+              "id": "kotlin_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you use !! on a null value?",
+              "answer": "Throws a NullPointerException",
+              "explain": "The !! operator asserts non-null and crashes with NullPointerException if the value is actually null.",
+              "choices": [
+                "Returns null silently",
+                "Converts to empty string",
+                "Returns a default value",
+                "Throws a NullPointerException"
+              ],
+              "id": "kotlin_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Lambdas",
+      "tip": "Functions in Kotlin are declared with the fun keyword and can return values explicitly. Lambdas are shorthand anonymous functions, often passed as arguments. The last expression in a lambda is its return value.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Function Declarations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a function in Kotlin?",
+              "answer": "fun greet(name: String): String { return \"Hello, $name\" }",
+              "explain": "Functions start with fun, followed by the name, parameters in parentheses with types, the return type after a colon, and the body in braces.",
+              "choices": [
+                "fun greet(name: String): String { return \"Hello, $name\" }",
+                "function greet(name) { return \"Hello\" }",
+                "greet(name: String) = \"Hello\"",
+                "def greet(name): \"Hello\""
+              ],
+              "id": "kotlin_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a function parameter declaration like count: Int mean?",
+              "answer": "The parameter count must be an Int",
+              "explain": "In Kotlin, parameters require a type after a colon. count: Int means the parameter must be an integer.",
+              "choices": [
+                "count is optional",
+                "The parameter count must be an Int",
+                "count can be any type",
+                "count is a default parameter"
+              ],
+              "id": "kotlin_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you specify a function's return type?",
+              "answer": "fun add(a: Int, b: Int): Int { return a + b }",
+              "explain": "The return type goes after the parameter list, preceded by a colon. Here, the function returns an Int.",
+              "choices": [
+                "fun add(a, b) Int",
+                "fun Int add(a, b)",
+                "fun add(a: Int, b: Int): Int { return a + b }",
+                "fun add(a: Int, b: Int) returns Int"
+              ],
+              "id": "kotlin_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a function with a block body, how do you send a value back to the caller?",
+              "answer": "Use the return keyword followed by the value",
+              "explain": "In a function with a block body in braces, return sends a value back to the caller and ends the function.",
+              "choices": [
+                "Print the value with println",
+                "Assign the value to the function's name",
+                "Use the out keyword",
+                "Use the return keyword followed by the value"
+              ],
+              "id": "kotlin_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the return type of fun printMessage(msg: String) { println(msg) }?",
+              "answer": "Unit",
+              "explain": "Since no return type is declared, it defaults to Unit, which means the function returns no meaningful value.",
+              "choices": [
+                "Unit",
+                "String",
+                "Int",
+                "Void"
+              ],
+              "id": "kotlin_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Lambdas and Functional Programming",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a lambda in Kotlin?",
+              "answer": "An anonymous function passed as a value",
+              "explain": "Lambdas are shorthand anonymous functions enclosed in braces. They can be assigned to variables or passed as arguments.",
+              "choices": [
+                "A loop construct",
+                "An anonymous function passed as a value",
+                "A named function",
+                "A type declaration"
+              ],
+              "id": "kotlin_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a lambda that adds two numbers?",
+              "answer": "{ a, b -> a + b }",
+              "explain": "Lambda syntax is { parameters -> expression }. The last expression is the return value.",
+              "choices": [
+                "{ a, b } a + b",
+                "fun (a, b) { a + b }",
+                "{ a, b -> a + b }",
+                "lambda a, b = a + b"
+              ],
+              "id": "kotlin_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a lambda, what is the return value?",
+              "answer": "The last expression",
+              "explain": "Lambdas implicitly return the value of the last expression. No explicit return statement is needed.",
+              "choices": [
+                "Always null",
+                "The first expression",
+                "Only if you use return",
+                "The last expression"
+              ],
+              "id": "kotlin_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a function's last parameter is a lambda, where can you write the lambda?",
+              "answer": "Outside the parentheses, in braces after the call",
+              "explain": "Kotlin allows trailing lambda syntax: when the lambda is the last parameter, it can go in braces after the parentheses, as in list.map { it * 2 }. You can also pass it inside the parentheses.",
+              "choices": [
+                "Outside the parentheses, in braces after the call",
+                "Only inside the parentheses",
+                "Only as the first argument",
+                "Lambdas cannot be passed as arguments"
+              ],
+              "id": "kotlin_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does list.map { it * 2 } do?",
+              "answer": "Returns a new list with each element doubled",
+              "explain": "map applies the lambda { it * 2 } to each element. it is a shorthand for the current element.",
+              "choices": [
+                "Modifies the list in place",
+                "Returns a new list with each element doubled",
+                "Counts the elements",
+                "Filters even numbers"
+              ],
+              "id": "kotlin_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Control Flow with When",
+      "tip": "The when expression replaces switch statements and is more powerful. It can match exact values, ranges, types, or conditions. When you use it as an expression it returns a value, and it must cover every possible case, usually with an else branch.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Basic When Expressions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Kotlin equivalent of a switch statement?",
+              "answer": "when expression",
+              "explain": "when replaces switch and is more flexible and concise.",
+              "choices": [
+                "if-else chain",
+                "match statement",
+                "when expression",
+                "case statement"
+              ],
+              "id": "kotlin_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? when (x) { 1 -> \"one\"; 2 -> \"two\"; else -> \"other\" }",
+              "answer": "Returns \"one\" if x is 1, \"two\" if x is 2, otherwise \"other\"",
+              "explain": "when checks the value of x against each branch and returns the matching string.",
+              "choices": [
+                "Assigns values to x",
+                "Throws an error",
+                "Modifies x",
+                "Returns \"one\" if x is 1, \"two\" if x is 2, otherwise \"other\""
+              ],
+              "id": "kotlin_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is when a statement or an expression in Kotlin?",
+              "answer": "An expression; it returns a value",
+              "explain": "when is an expression, so it can be assigned to a variable or returned from a function.",
+              "choices": [
+                "An expression; it returns a value",
+                "Only a statement",
+                "A loop that repeats until a branch matches",
+                "Neither"
+              ],
+              "id": "kotlin_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the else branch in when do?",
+              "answer": "Handles any value not matched by other branches",
+              "explain": "else matches anything not covered by the earlier branches. When when is used as an expression and its branches do not cover every possible value, an else branch is needed.",
+              "choices": [
+                "Runs before the other branches",
+                "Handles any value not matched by other branches",
+                "Throws an exception",
+                "Ends the when block"
+              ],
+              "id": "kotlin_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you assign the result of a when to a variable?",
+              "answer": "Yes, val result = when (x) { ... }",
+              "explain": "Since when is an expression, it returns a value that can be assigned to a variable.",
+              "choices": [
+                "No, when always returns null",
+                "Only inside a function",
+                "Yes, val result = when (x) { ... }",
+                "Only if x is an Int"
+              ],
+              "id": "kotlin_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Advanced When Patterns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you match a range in a when expression?",
+              "answer": "in 1..10 -> \"in range\"",
+              "explain": "The in operator checks if a value falls within a range.",
+              "choices": [
+                "1 to 10 -> \"in range\"",
+                "between 1 and 10",
+                "range 1..10",
+                "in 1..10 -> \"in range\""
+              ],
+              "id": "kotlin_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does when (x) { is String -> ... } do?",
+              "answer": "Checks if x is a String type",
+              "explain": "is checks the type of the value, allowing type-safe checking.",
+              "choices": [
+                "Checks if x is a String type",
+                "Checks if x equals a string",
+                "Converts x to a string",
+                "Creates a new String"
+              ],
+              "id": "kotlin_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use multiple values in a single when branch?",
+              "answer": "Yes, 1, 2, 3 -> \"small\"",
+              "explain": "You can comma-separate multiple values to match any of them.",
+              "choices": [
+                "No, one value per branch",
+                "Yes, 1, 2, 3 -> \"small\"",
+                "Only with ranges",
+                "Only with strings"
+              ],
+              "id": "kotlin_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is smart casting in when?",
+              "answer": "After an is check, the variable is automatically treated as that type",
+              "explain": "After checking is String, the variable is automatically treated as a String inside that branch, with no explicit cast needed.",
+              "choices": [
+                "Only for primitives",
+                "An optimization for when blocks",
+                "After an is check, the variable is automatically treated as that type",
+                "A way to rename variables"
+              ],
+              "id": "kotlin_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does when (x) { else -> \"default\" } do?",
+              "answer": "Always matches and returns \"default\"",
+              "explain": "when with only an else branch always matches, effectively providing a single fallback.",
+              "choices": [
+                "Never matches",
+                "Matches only null values",
+                "Throws an error",
+                "Always matches and returns \"default\""
+              ],
+              "id": "kotlin_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Classes and Objects",
+      "tip": "Classes define blueprints for objects. Kotlin allows properties and functions to be defined in a single, concise way. Data classes automatically generate equals(), hashCode(), toString(), and copy() methods, making them perfect for holding data.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Classes and Constructors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a class in Kotlin?",
+              "answer": "class Person { }",
+              "explain": "Classes are declared with the class keyword, followed by a name and a body in braces.",
+              "choices": [
+                "class Person { }",
+                "object Person { }",
+                "new Person { }",
+                "define Person { }"
+              ],
+              "id": "kotlin_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which declaration uses a primary constructor that also creates properties?",
+              "answer": "class Person(val name: String, val age: Int) { }",
+              "explain": "The primary constructor is defined in the class header. Parameters marked val or var automatically become class properties.",
+              "choices": [
+                "class Person { constructor() {} }",
+                "class Person(val name: String, val age: Int) { }",
+                "class Person { init {} }",
+                "class Person() { constructor }"
+              ],
+              "id": "kotlin_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the init block used for?",
+              "answer": "Initialization code that runs when an object is created",
+              "explain": "The init block executes when the object is instantiated, useful for initialization logic.",
+              "choices": [
+                "Declaring class properties",
+                "Defining functions",
+                "Initialization code that runs when an object is created",
+                "Extending another class"
+              ],
+              "id": "kotlin_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an instance of a class?",
+              "answer": "val person = Person(\"Alice\", 25)",
+              "explain": "Instantiate a class by calling its constructor without the new keyword.",
+              "choices": [
+                "Person.create(\"Alice\", 25)",
+                "new Person(\"Alice\", 25)",
+                "val person: Person(\"Alice\", 25)",
+                "val person = Person(\"Alice\", 25)"
+              ],
+              "id": "kotlin_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you define functions inside a class?",
+              "answer": "Yes, methods are functions defined in a class",
+              "explain": "Classes contain both properties and functions (methods) that operate on the object's data.",
+              "choices": [
+                "Yes, methods are functions defined in a class",
+                "No, classes only hold data",
+                "Only in abstract classes",
+                "Only through inheritance"
+              ],
+              "id": "kotlin_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Data Classes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a data class in Kotlin?",
+              "answer": "A class that holds data and auto-generates utility methods",
+              "explain": "Data classes automatically generate equals(), hashCode(), toString(), and copy() methods based on their properties.",
+              "choices": [
+                "A class that only holds variables",
+                "A class that holds data and auto-generates utility methods",
+                "A class that cannot be instantiated",
+                "A type of interface"
+              ],
+              "id": "kotlin_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a data class?",
+              "answer": "data class Person(val name: String, val age: Int)",
+              "explain": "Use the data keyword before class to make it a data class.",
+              "choices": [
+                "class data Person(val name: String)",
+                "class Person(data val name: String)",
+                "data class Person(val name: String, val age: Int)",
+                "dataclass Person { }"
+              ],
+              "id": "kotlin_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the copy() method do?",
+              "answer": "Creates a new object with the same values, optionally changing some",
+              "explain": "copy() returns a new instance with the same property values, and you can override chosen properties. The original object is not changed, which is useful for immutable updates.",
+              "choices": [
+                "Changes the original object's properties in place",
+                "Deletes the original object",
+                "Merges two objects",
+                "Creates a new object with the same values, optionally changing some"
+              ],
+              "id": "kotlin_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does toString() do on a data class?",
+              "answer": "Returns a string representation of the object",
+              "explain": "Data classes auto-generate toString() to show property names and values in a readable format.",
+              "choices": [
+                "Returns a string representation of the object",
+                "Converts to Int",
+                "Prints to console",
+                "Throws an error"
+              ],
+              "id": "kotlin_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which statement about data classes is true?",
+              "answer": "Data classes must have at least one property",
+              "explain": "The primary constructor of a data class needs at least one parameter, and each parameter must be marked val or var.",
+              "choices": [
+                "Data classes cannot have methods",
+                "Data classes must have at least one property",
+                "Data classes are slower than regular classes",
+                "Data classes cannot be instantiated"
+              ],
+              "id": "kotlin_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Collections and Extension Functions",
+      "tip": "Kotlin provides List, Set, and Map for storing multiple values. Extension functions let you add new methods to existing classes without inheritance. Many are built-in, like filter(), map(), and fold(), that work on collections.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Collections",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a List in Kotlin?",
+              "answer": "An ordered collection of elements",
+              "explain": "A List is a collection where elements have a specific order and can be accessed by index.",
+              "choices": [
+                "A random collection",
+                "A single value",
+                "An ordered collection of elements",
+                "A key-value pair"
+              ],
+              "id": "kotlin_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a List in Kotlin?",
+              "answer": "val list = listOf(1, 2, 3)",
+              "explain": "listOf() creates a read-only List from the provided elements.",
+              "choices": [
+                "val list = [1, 2, 3]",
+                "val list = List(1, 2, 3)",
+                "val list: List = 1, 2, 3",
+                "val list = listOf(1, 2, 3)"
+              ],
+              "id": "kotlin_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between List and Set?",
+              "answer": "List is ordered and allows duplicates; Set holds only unique elements",
+              "explain": "A List keeps its elements in order, accessible by index, and can contain the same value more than once. A Set stores each value at most once and is not accessed by index.",
+              "choices": [
+                "List is ordered and allows duplicates; Set holds only unique elements",
+                "They are the same",
+                "Set keeps duplicates; List removes them",
+                "List only holds strings"
+              ],
+              "id": "kotlin_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Map in Kotlin?",
+              "answer": "A collection of key-value pairs",
+              "explain": "A Map stores pairs of keys and values, allowing you to look up values by key.",
+              "choices": [
+                "A geographic representation",
+                "A collection of key-value pairs",
+                "A list of unique items",
+                "A function type"
+              ],
+              "id": "kotlin_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access an element in a List by index?",
+              "answer": "list[0] or list.get(0)",
+              "explain": "Both bracket notation and the get() method access list elements by index.",
+              "choices": [
+                "list.item(0)",
+                "list.at(0)",
+                "list[0] or list.get(0)",
+                "list(0)"
+              ],
+              "id": "kotlin_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Extension Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an extension function in Kotlin?",
+              "answer": "A function added to an existing class without inheritance",
+              "explain": "Extension functions let you add new methods to classes, even if you do not control their definition.",
+              "choices": [
+                "A function that extends the program",
+                "A constructor",
+                "A static method",
+                "A function added to an existing class without inheritance"
+              ],
+              "id": "kotlin_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you define an extension function on String?",
+              "answer": "fun String.exclaim(): String { return this + \"!\" }",
+              "explain": "Extension syntax is fun ReceiverType.functionName() { }. this refers to the receiver object, here the String the function is called on.",
+              "choices": [
+                "fun String.exclaim(): String { return this + \"!\" }",
+                "fun exclaim(String): String { }",
+                "String.fun exclaim()",
+                "extend String { fun exclaim() }"
+              ],
+              "id": "kotlin_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this refer to in an extension function?",
+              "answer": "The object on which the extension function is called",
+              "explain": "this is the implicit receiver of the extension function.",
+              "choices": [
+                "The class that defines the extension",
+                "The object on which the extension function is called",
+                "The return type",
+                "The parameter"
+              ],
+              "id": "kotlin_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does list.filter { it > 5 } do?",
+              "answer": "Returns a new list with elements greater than 5",
+              "explain": "filter is a built-in extension function that selects elements matching the condition.",
+              "choices": [
+                "Removes elements greater than 5",
+                "Modifies the list in place",
+                "Returns a new list with elements greater than 5",
+                "Throws an error"
+              ],
+              "id": "kotlin_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of built-in extension functions like map and filter?",
+              "answer": "To transform and select elements in collections",
+              "explain": "These extension functions enable functional programming patterns for manipulating collections.",
+              "choices": [
+                "To sort every collection alphabetically",
+                "To delete elements",
+                "To replace the collection type",
+                "To transform and select elements in collections"
+              ],
+              "id": "kotlin_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

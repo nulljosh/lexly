@@ -1,0 +1,904 @@
+{
+  "id": "assembly",
+  "name": "Assembly Language",
+  "category": "programming",
+  "icon": "fa-solid fa-memory",
+  "level": "Close to the Machine",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What Assembly Is & Machine Code",
+      "tip": "Assembly language is a low-level programming language that represents CPU instructions as short text mnemonics. Each assembly instruction corresponds to a single machine instruction that the CPU executes. Understanding assembly helps you see how high-level code becomes instructions the hardware runs.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Assembly and Machine Code Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is assembly language?",
+              "answer": "A low-level language with mnemonics that map to machine instructions",
+              "explain": "Assembly uses short abbreviations (mnemonics) like MOV and ADD to represent machine instructions. Each instruction line of assembly becomes one CPU instruction.",
+              "choices": [
+                "A low-level language with mnemonics that map to machine instructions",
+                "A high-level language like Python",
+                "A type of compiler",
+                "A file format for binary data"
+              ],
+              "id": "assembly_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is machine code?",
+              "answer": "Binary instructions the CPU directly executes",
+              "explain": "Machine code is sequences of 0s and 1s. The CPU reads machine code and performs the operations. Assembly is human-readable text that assembles into machine code.",
+              "choices": [
+                "Text written in English",
+                "Binary instructions the CPU directly executes",
+                "A type of programming language syntax",
+                "Code that runs on a web browser"
+              ],
+              "id": "assembly_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'assembler'?",
+              "answer": "A program that converts assembly text into machine code",
+              "explain": "An assembler reads assembly mnemonics and outputs binary machine code. The CPU runs the machine code, not the assembly text.",
+              "choices": [
+                "A CPU",
+                "A type of operating system",
+                "A program that converts assembly text into machine code",
+                "A hardware debugger"
+              ],
+              "id": "assembly_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is assembly harder to write than C or Python?",
+              "answer": "You must manage memory, registers, and control flow manually",
+              "explain": "High-level languages handle these details for you. In assembly, you write every step: which register holds data, where memory goes, jump destinations. One mistake can crash the program.",
+              "choices": [
+                "Assembly is always slower",
+                "Assemblers are harder to install",
+                "Assembly uses binary syntax",
+                "You must manage memory, registers, and control flow manually"
+              ],
+              "id": "assembly_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'x86' refer to?",
+              "answer": "A family of CPU instruction sets that began with Intel's 8086 chip",
+              "explain": "x86 is the instruction set family that started with Intel's 8086 chip and grew through 32-bit versions. x86-64 (also called amd64) is its 64-bit extension. All of them share the same instruction style.",
+              "choices": [
+                "A family of CPU instruction sets that began with Intel's 8086 chip",
+                "A type of memory",
+                "An operating system",
+                "A programming language"
+              ],
+              "id": "assembly_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Why Assembly Exists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "When is assembly language most useful?",
+              "answer": "For OS kernels, embedded systems, and performance-critical code",
+              "explain": "Assembly lets you control the CPU directly. Kernels need this for jobs like booting and switching between programs, which plain C cannot express. Tight inner loops are sometimes hand-tuned too.",
+              "choices": [
+                "For writing websites",
+                "For OS kernels, embedded systems, and performance-critical code",
+                "For machine learning",
+                "For mobile apps"
+              ],
+              "id": "assembly_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a C compiler use assembly?",
+              "answer": "It translates C code to assembly, which the assembler then converts to machine code",
+              "explain": "A C compiler translates C code into assembly, and an assembler turns that into machine code. Some compilers have the assembler built in, but the two steps are still there. You can ask the compiler to show its assembly to see how C becomes instructions.",
+              "choices": [
+                "It copies the C source text into the executable unchanged",
+                "It only uses assembly when the programmer writes inline assembly",
+                "It translates C code to assembly, which the assembler then converts to machine code",
+                "C and assembly are the same thing"
+              ],
+              "id": "assembly_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'opcode'?",
+              "answer": "The part of a machine instruction that specifies which operation to perform",
+              "explain": "Each machine instruction has an opcode (operation code), which tells the CPU what to do. In assembly, a mnemonic like ADD or MOV is a readable name for an opcode.",
+              "choices": [
+                "A register name",
+                "A type of variable",
+                "A memory address",
+                "The part of a machine instruction that specifies which operation to perform"
+              ],
+              "id": "assembly_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you run machine code directly without assembly?",
+              "answer": "Yes, but writing machine code by hand is impractical",
+              "explain": "The CPU runs machine code (binary). You could write it by hand, but it would be all 0s and 1s. Assembly mnemonics make it readable.",
+              "choices": [
+                "Yes, but writing machine code by hand is impractical",
+                "Only on old computers",
+                "No, the CPU cannot run machine code",
+                "Only if you use a compiler"
+              ],
+              "id": "assembly_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'inline assembly'?",
+              "answer": "Assembly code embedded inside a high-level language like C",
+              "explain": "Sometimes C cannot do what you need. You can write a few assembly lines inside C using inline assembly blocks. The compiler inserts the machine code at that spot.",
+              "choices": [
+                "Writing only assembly",
+                "Assembly code embedded inside a high-level language like C",
+                "A slower version of assembly",
+                "Machine code written in binary"
+              ],
+              "id": "assembly_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Registers and Memory",
+      "tip": "Registers are tiny, fast memory slots inside the CPU where instructions work. Memory is a large, slower array of bytes addressed by location. Assembly works directly with registers and memory: move data between them, read from memory, write to memory.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Registers and Basic Storage",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a register?",
+              "answer": "A small, ultra-fast storage location inside the CPU",
+              "explain": "Registers hold data during computation. They are built into the CPU and are much faster than main memory. x86-64 has 16 general-purpose registers.",
+              "choices": [
+                "A hard drive",
+                "A section of main memory",
+                "A small, ultra-fast storage location inside the CPU",
+                "A file on disk"
+              ],
+              "id": "assembly_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the size of a 64-bit register?",
+              "answer": "8 bytes (64 bits)",
+              "explain": "A 64-bit register holds 64 bits of data, which is 8 bytes. You can store an 8-byte integer or an address in a 64-bit register.",
+              "choices": [
+                "1 byte",
+                "4 bytes",
+                "16 bytes",
+                "8 bytes (64 bits)"
+              ],
+              "id": "assembly_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On x86-64, what is RAX?",
+              "answer": "A 64-bit general-purpose register used for data and addresses",
+              "explain": "RAX is a primary register. R means 64-bit, AX is the traditional name from 16-bit x86. You use RAX to hold values, return values from functions, and more.",
+              "choices": [
+                "A 64-bit general-purpose register used for data and addresses",
+                "An instruction mnemonic",
+                "A type of memory chip",
+                "A flag bit"
+              ],
+              "id": "assembly_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On x86-64, what does 'EAX' refer to?",
+              "answer": "The lower 32 bits of the RAX register",
+              "explain": "On x86-64, RAX is 64 bits. EAX (E for extended, 32 bits) is the lower half of it. Writing to EAX zeros the upper 32 bits of RAX. On an older 32-bit system, EAX was the whole register.",
+              "choices": [
+                "A separate register from RAX",
+                "The lower 32 bits of the RAX register",
+                "The upper 32 bits of RAX",
+                "A memory address"
+              ],
+              "id": "assembly_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do registers need names like RAX, RBX, RCX?",
+              "answer": "To identify which register you mean in instructions",
+              "explain": "Each register has a unique name. RAX, RBX, RCX, RDX, RSI, RDI, RBP, RSP are the main ones. The name tells the CPU which register to use.",
+              "choices": [
+                "They store memory addresses only",
+                "They are old FORTRAN conventions",
+                "To identify which register you mean in instructions",
+                "Each register stores only one type of data"
+              ],
+              "id": "assembly_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Memory Addressing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'memory addressing'?",
+              "answer": "Using an address (a number) to locate a byte in RAM",
+              "explain": "RAM is a long array of bytes. Each byte has a number (address): 0, 1, 2, 3, etc. To read or write a byte, you provide its address.",
+              "choices": [
+                "A process of writing memory contents",
+                "An instruction that calls a function",
+                "A list of variable names",
+                "Using an address (a number) to locate a byte in RAM"
+              ],
+              "id": "assembly_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'mov rax, [rbx]' do?",
+              "answer": "Load the 8 bytes from memory at the address in RBX into RAX",
+              "explain": "Square brackets [ ] mean 'memory at this address'. RBX holds an address. [RBX] loads from that address. Without brackets, MOV RAX, RBX copies the address itself.",
+              "choices": [
+                "Load the 8 bytes from memory at the address in RBX into RAX",
+                "Subtract RBX from RAX",
+                "Copy the address RBX into RAX",
+                "Write RAX to memory"
+              ],
+              "id": "assembly_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'mov rax, 0x1000' do?",
+              "answer": "Load the number 0x1000 (4096) directly into RAX",
+              "explain": "Without brackets, 0x1000 is a literal number. The instruction loads that constant into RAX. With brackets [0x1000], it would load from memory address 4096.",
+              "choices": [
+                "Load memory at address 0x1000 into RAX",
+                "Load the number 0x1000 (4096) directly into RAX",
+                "Store RAX at address 0x1000",
+                "Compare RAX with 0x1000"
+              ],
+              "id": "assembly_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'pointer'?",
+              "answer": "A register or variable holding a memory address",
+              "explain": "If RAX holds the value 0x1000, then RAX is a pointer to address 0x1000. [RAX] dereferences it, loading the value at that address.",
+              "choices": [
+                "A type of instruction",
+                "A CPU speed measurement",
+                "A register or variable holding a memory address",
+                "A jump target"
+              ],
+              "id": "assembly_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'base plus offset' addressing?",
+              "answer": "Using a base address plus an offset to calculate the target address",
+              "explain": "Example: mov rax, [rbx + 8] loads 8 bytes from memory at (RBX + 8). The base address is RBX and the offset is 8. Useful for structures. For arrays, x86 can also add a scaled index register, as in [rbx + rcx*8].",
+              "choices": [
+                "Storing an index number",
+                "Loading data one byte at a time",
+                "Reading from a register index",
+                "Using a base address plus an offset to calculate the target address"
+              ],
+              "id": "assembly_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Basic Instructions",
+      "tip": "Instructions are the operations the CPU can perform. MOV copies data between registers and memory. ADD adds two numbers. SUB subtracts. These simple instructions are the building blocks of all programs.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "MOV and Data Movement",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does MOV stand for?",
+              "answer": "Move: copy data from source to destination",
+              "explain": "MOV does not actually move (remove) data. It copies. After 'mov rax, rbx', both RAX and RBX have the same value.",
+              "choices": [
+                "Move: copy data from source to destination",
+                "Modify",
+                "Memory Operations Vector",
+                "Modulo Operation"
+              ],
+              "id": "assembly_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is 'mov [rax], [rbx]' valid assembly?",
+              "answer": "No: MOV cannot take two memory operands on x86",
+              "explain": "A single x86 MOV can touch memory with at most one operand. To copy memory to memory, load into a register first, then store from it. (Special string instructions like MOVSB can copy memory to memory, but plain MOV cannot.)",
+              "choices": [
+                "Yes, it moves from one memory address to another",
+                "No: MOV cannot take two memory operands on x86",
+                "Only if the addresses are aligned",
+                "Yes, but it is slower"
+              ],
+              "id": "assembly_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'mov rax, 0' do?",
+              "answer": "Load the constant 0 into RAX, clearing it",
+              "explain": "This is a common way to zero a register. After this instruction, RAX = 0. Compilers often use 'xor eax, eax' instead, because it gives the same result in fewer bytes of machine code, though it also changes the flags.",
+              "choices": [
+                "Load the contents of memory address 0 into RAX",
+                "Clear all registers",
+                "Load the constant 0 into RAX, clearing it",
+                "Jump to address 0"
+              ],
+              "id": "assembly_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'movsx rax, bl' do?",
+              "answer": "Load BL into RAX and sign-extend the value",
+              "explain": "MOVSX (Move with Sign eXtension) copies a smaller value into a larger register and fills the new upper bits with copies of the sign bit. If BL holds -5 (a signed 8-bit number), RAX becomes -5 as a 64-bit number. For a 32-bit source, the instruction is spelled MOVSXD.",
+              "choices": [
+                "Copy BL into RAX and fill the upper bits with zeros",
+                "Add BL to RAX",
+                "Swap RAX and RBX",
+                "Load BL into RAX and sign-extend the value"
+              ],
+              "id": "assembly_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'movzx' (move zero-extend)?",
+              "answer": "Copy a smaller value to a larger register, filling with zeros",
+              "explain": "MOVZX copies a value and zero-extends. If you movzx rax, al (8-bit to 64-bit), the upper 56 bits become 0. Used for unsigned data.",
+              "choices": [
+                "Copy a smaller value to a larger register, filling with zeros",
+                "Delete the zero bits",
+                "Move data to zero",
+                "Compare zero values"
+              ],
+              "id": "assembly_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Arithmetic Instructions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'add rax, 5' do?",
+              "answer": "Add 5 to RAX and store the result in RAX",
+              "explain": "ADD adds the source (5) to the destination (RAX). The result replaces RAX. After 'add rax, 5', RAX = RAX + 5.",
+              "choices": [
+                "Add 5 to a memory address",
+                "Add 5 to RAX and store the result in RAX",
+                "Load 5 into RAX",
+                "Create a new register with 5"
+              ],
+              "id": "assembly_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'sub rax, rbx' do?",
+              "answer": "Subtract RBX from RAX and store the result in RAX",
+              "explain": "SUB subtracts the source (RBX) from the destination (RAX). After 'sub rax, rbx', RAX = RAX - RBX.",
+              "choices": [
+                "Subtract RAX from RBX",
+                "Load the difference into a new register",
+                "Subtract RBX from RAX and store the result in RAX",
+                "Swap RAX and RBX"
+              ],
+              "id": "assembly_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'add rax, [rbx]' do?",
+              "answer": "Add the value from memory (at address in RBX) to RAX",
+              "explain": "The square brackets [RBX] dereference: load the value at the address in RBX. That value is added to RAX.",
+              "choices": [
+                "Add the address RBX to RAX",
+                "Store RAX at address RBX",
+                "Load the address RBX and add 1",
+                "Add the value from memory (at address in RBX) to RAX"
+              ],
+              "id": "assembly_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are 'flags' or 'condition codes'?",
+              "answer": "Special bits that record results of arithmetic (zero, negative, overflow, carry)",
+              "explain": "After ADD or SUB, flags are set: the Zero Flag (ZF) if the result is 0, the Sign Flag (SF) if it is negative, the Carry Flag (CF) if an unsigned add carried out or a subtract borrowed, and the Overflow Flag (OF) if a signed result did not fit. Conditional jumps use these flags.",
+              "choices": [
+                "Special bits that record results of arithmetic (zero, negative, overflow, carry)",
+                "Addresses of jump targets",
+                "Register names",
+                "Instructions that change values"
+              ],
+              "id": "assembly_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Does 'add rax, rbx' change RBX?",
+              "answer": "No, only RAX is modified; RBX stays the same",
+              "explain": "ADD modifies only the destination (RAX). The source (RBX) is read but not changed. Most two-operand x86 instructions work this way, with exceptions like XCHG, which swaps both.",
+              "choices": [
+                "Yes, both RAX and RBX are added",
+                "No, only RAX is modified; RBX stays the same",
+                "Yes, RBX is cleared",
+                "Yes, RBX is negated"
+              ],
+              "id": "assembly_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The Stack",
+      "tip": "The stack is a section of memory organized as LIFO (Last In, First Out). PUSH moves the stack pointer down and writes a value there. POP reads the value and moves the pointer back up. The stack holds function return addresses, local variables, and some parameters.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Stack Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'LIFO' in the context of a stack?",
+              "answer": "Last In, First Out: the last item pushed is the first one popped",
+              "explain": "Stack behavior is LIFO. If you push A, then B, then pop, you get B first, then A. Like a stack of plates: you take from the top.",
+              "choices": [
+                "Load Instructions For Objects",
+                "List of In-Foo Operations",
+                "Last In, First Out: the last item pushed is the first one popped",
+                "Logical If First Or Third"
+              ],
+              "id": "assembly_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'push rax' do?",
+              "answer": "Decrease the stack pointer by 8, then store RAX at the new top of the stack",
+              "explain": "PUSH decrements the stack pointer (RSP), then stores the value there. On x86-64, PUSH RAX moves RSP down by 8 and writes 8 bytes. The stack grows toward lower addresses.",
+              "choices": [
+                "Load a value from the stack into RAX",
+                "Store RAX at the top of the stack without changing the stack pointer",
+                "Copy RAX into another register",
+                "Decrease the stack pointer by 8, then store RAX at the new top of the stack"
+              ],
+              "id": "assembly_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'pop rbx' do?",
+              "answer": "Read the value at the top of the stack into RBX, then increase the stack pointer by 8",
+              "explain": "POP reads from the current stack position (RSP), loads it into RBX, then increments RSP by 8 on x86-64. That removes the item from the stack.",
+              "choices": [
+                "Read the value at the top of the stack into RBX, then increase the stack pointer by 8",
+                "Write RBX to the stack",
+                "Discard the top of the stack without reading it",
+                "Swap two stack items"
+              ],
+              "id": "assembly_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is RSP in assembly?",
+              "answer": "The stack pointer register, pointing to the top of the stack",
+              "explain": "RSP (or ESP on 32-bit x86) always points to the current top of the stack. PUSH decrements it; POP increments it. Functions also subtract from it to make room for local variables.",
+              "choices": [
+                "Return sequence pointer",
+                "The stack pointer register, pointing to the top of the stack",
+                "Repeated store procedure",
+                "Register set pointer"
+              ],
+              "id": "assembly_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you push too many values and run out of stack space?",
+              "answer": "The stack overflows: writes go past the stack's limit and corrupt other memory or crash the program",
+              "explain": "Stack overflow means writing past the end of the stack space. That can overwrite other program memory, which is a serious bug. The OS often places a guard page after the stack so the program crashes instead.",
+              "choices": [
+                "The CPU automatically expands the stack",
+                "New values are thrown away",
+                "The stack overflows: writes go past the stack's limit and corrupt other memory or crash the program",
+                "PUSH fails silently"
+              ],
+              "id": "assembly_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Function Calls and Return",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the 'call' instruction do?",
+              "answer": "Push the next instruction address onto the stack, then jump to the function",
+              "explain": "CALL pushes the return address (address of the next instruction after CALL), then jumps to the function. When the function returns, the return address is on the stack.",
+              "choices": [
+                "Jump to a function without remembering where it was called from",
+                "Copy a function onto the stack",
+                "Load a function address",
+                "Push the next instruction address onto the stack, then jump to the function"
+              ],
+              "id": "assembly_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'ret' instruction do?",
+              "answer": "Pop the return address from the stack and jump to it",
+              "explain": "RET pops the top of the stack into the instruction pointer, resuming execution where CALL was made. If the top of the stack is not a return address, RET jumps to a wrong address and the program usually crashes.",
+              "choices": [
+                "Pop the return address from the stack and jump to it",
+                "Jump to a fixed address",
+                "Return a value",
+                "Clear the stack"
+              ],
+              "id": "assembly_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On x86-64 System V (used by Linux and macOS), which registers pass the first three integer parameters, in order?",
+              "answer": "RDI, RSI, RDX",
+              "explain": "On x86-64 System V, the first six integer arguments go in RDI, RSI, RDX, RCX, R8, R9. Windows x64 uses RCX, RDX, R8, R9 for the first four. Know which convention your target uses.",
+              "choices": [
+                "RAX, RBX, RCX",
+                "RDI, RSI, RDX",
+                "RSI, RDI, RBX",
+                "RAX, RAX, RAX"
+              ],
+              "id": "assembly_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where does a function put an integer return value?",
+              "answer": "In RAX (or RDX:RAX for 128-bit values)",
+              "explain": "By convention, an integer or pointer result comes back in RAX. A 128-bit value uses RDX for the high half. The caller expects the result in RAX.",
+              "choices": [
+                "On the stack",
+                "In the first parameter register",
+                "In RAX (or RDX:RAX for 128-bit values)",
+                "In memory"
+              ],
+              "id": "assembly_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On x86-64 System V, what is the 'red zone'?",
+              "answer": "A 128-byte area below the stack pointer reserved for leaf functions",
+              "explain": "On x86-64 System V, the 128 bytes below RSP are reserved: signal handlers will not overwrite them. Leaf functions (those that do not call others) can use this space without adjusting RSP. Windows x64 has no red zone.",
+              "choices": [
+                "A register that is off-limits",
+                "An error condition",
+                "A page that crashes the program when the stack overflows",
+                "A 128-byte area below the stack pointer reserved for leaf functions"
+              ],
+              "id": "assembly_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Control Flow",
+      "tip": "Control flow changes which instruction runs next. Conditional jumps (like JZ, JNZ) test flags from previous instructions and jump if a condition is true. Unconditional jumps (JMP) always jump. Labels are targets for jumps.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Flags and Conditional Jumps",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Zero Flag' (ZF)?",
+              "answer": "A flag set to 1 when an arithmetic or compare instruction gives a result of zero",
+              "explain": "After ADD, SUB, or CMP, the Zero Flag is set if the result is exactly zero, cleared otherwise. Conditional jumps test this flag. Some instructions, like MOV, leave the flags alone.",
+              "choices": [
+                "A flag set to 1 when an arithmetic or compare instruction gives a result of zero",
+                "A register that stores zero",
+                "An instruction that clears memory",
+                "A memory location"
+              ],
+              "id": "assembly_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'CMP' instruction do?",
+              "answer": "Subtract the second operand from the first and set flags, without storing the result",
+              "explain": "CMP is like SUB but discards the result. It exists purely to set flags. After 'cmp rax, 0', the Zero Flag tells you if RAX is zero.",
+              "choices": [
+                "Copy one register to another",
+                "Subtract the second operand from the first and set flags, without storing the result",
+                "Jump if equal",
+                "Clear memory"
+              ],
+              "id": "assembly_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'jz' (jump if zero) do?",
+              "answer": "Jump to the target if the Zero Flag is set",
+              "explain": "JZ jumps only if the previous operation resulted in zero. Usually used after CMP. If ZF=1, jump; if ZF=0, continue to the next instruction.",
+              "choices": [
+                "Jump unconditionally",
+                "Jump if RAX holds zero, no matter what ran before",
+                "Jump to the target if the Zero Flag is set",
+                "Load a zero value"
+              ],
+              "id": "assembly_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'jnz' (jump if not zero) do?",
+              "answer": "Jump to the target if the Zero Flag is clear (the result was not zero)",
+              "explain": "JNZ jumps when ZF=0, meaning the previous result was not zero. It is the opposite of JZ.",
+              "choices": [
+                "Jump if zero",
+                "Never jump",
+                "Jump if the operand is negative",
+                "Jump to the target if the Zero Flag is clear (the result was not zero)"
+              ],
+              "id": "assembly_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Sign Flag' (SF)?",
+              "answer": "A flag set to 1 if the result is negative (the sign bit is set)",
+              "explain": "After arithmetic, if the high bit of the result is 1, the Sign Flag is set. For signed numbers, this means the value is negative. Jumps like JS and JNS test this.",
+              "choices": [
+                "A flag set to 1 if the result is negative (the sign bit is set)",
+                "A flag that marks unsigned numbers",
+                "A register for signatures",
+                "An instruction modifier"
+              ],
+              "id": "assembly_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Jumps and Labels",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'label' in assembly?",
+              "answer": "A named location in code that can be a jump target",
+              "explain": "Labels mark positions. You write a label name followed by a colon (loop_start:). Then 'jmp loop_start' jumps back to it. Assembler replaces labels with actual addresses.",
+              "choices": [
+                "A comment",
+                "A named location in code that can be a jump target",
+                "A variable",
+                "An instruction"
+              ],
+              "id": "assembly_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'jmp' (unconditional jump) do?",
+              "answer": "Always jump to the target, regardless of flags or conditions",
+              "explain": "JMP is unconditional: it jumps every time. Used for loops, error paths, and skipping code. Unlike conditional jumps, it needs no prior operation.",
+              "choices": [
+                "Jump if zero",
+                "Jump if the operand is nonzero",
+                "Always jump to the target, regardless of flags or conditions",
+                "Load a jump address"
+              ],
+              "id": "assembly_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does the assembler resolve a label in 'jmp loop_start'?",
+              "answer": "It replaces the label with the numeric address or offset of that spot in the machine code",
+              "explain": "When you write a label like 'loop_start:', the assembler remembers its position. When it sees 'jmp loop_start', it works out the address or offset and encodes that number into the machine instruction.",
+              "choices": [
+                "It stores the label as a string",
+                "It jumps to a random location",
+                "It creates a new register for the label",
+                "It replaces the label with the numeric address or offset of that spot in the machine code"
+              ],
+              "id": "assembly_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you jump backward in code?",
+              "answer": "Yes, jumps to earlier code create loops",
+              "explain": "There is no restriction on jump direction. Jumps backward form loops. A typical loop: compute, check condition, jump back if needed.",
+              "choices": [
+                "Yes, jumps to earlier code create loops",
+                "No, only forward jumps are allowed",
+                "Only in functions",
+                "Only with the call instruction"
+              ],
+              "id": "assembly_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'JL' (jump if less) instruction?",
+              "answer": "Jump if the Sign Flag differs from the Overflow Flag (signed less than)",
+              "explain": "After CMP a, b, JL jumps when a is less than b as signed numbers. A negative result (SF=1) alone can be misleading if the subtraction overflowed, so the CPU checks whether SF differs from OF.",
+              "choices": [
+                "Jump if a load succeeds",
+                "Jump if the Sign Flag differs from the Overflow Flag (signed less than)",
+                "Jump if low bit is set",
+                "Jump if linked"
+              ],
+              "id": "assembly_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "How Functions Work in Assembly",
+      "tip": "A C function becomes a block of assembly. Parameters arrive in registers (or on the stack). The function works with those values, modifies registers and memory, then returns a value in RAX. Understanding function calling conventions lets you write code that cooperates correctly.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "C Function Calls in Assembly",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'calling convention'?",
+              "answer": "A standard agreement about how to pass parameters and receive return values",
+              "explain": "Calling conventions specify which registers hold parameters, where return values go, which registers are caller-saved vs. callee-saved. Different architectures and OSes use different conventions.",
+              "choices": [
+                "A style of writing assembly",
+                "A compiler optimization",
+                "A standard agreement about how to pass parameters and receive return values",
+                "A type of jump"
+              ],
+              "id": "assembly_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you call a C function int add(int a, int b), where do a and b appear in assembly on x86-64 System V?",
+              "answer": "a is in RDI, b is in RSI",
+              "explain": "On System V AMD64 ABI (Linux/Unix), first two integer arguments go in RDI and RSI. The function body receives them there.",
+              "choices": [
+                "Both on the stack",
+                "a is in RAX, b is in RBX",
+                "a is in RCX, b is in RDX",
+                "a is in RDI, b is in RSI"
+              ],
+              "id": "assembly_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a C function 'int foo()' pass a status result back to its caller in assembly?",
+              "answer": "In RAX (EAX for an int), with the meaning of each value chosen by the function's author",
+              "explain": "By convention, RAX holds the return value, and the caller reads it. What the numbers mean is up to the function: some return 0 for success, others return nonzero for success. Check the function's documentation.",
+              "choices": [
+                "In RAX (EAX for an int), with the meaning of each value chosen by the function's author",
+                "By setting the Carry Flag",
+                "By jumping to an error label",
+                "By clearing a register"
+              ],
+              "id": "assembly_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are 'caller-saved' registers?",
+              "answer": "Registers the caller must save before a function call, because the callee may overwrite them",
+              "explain": "On x86-64 System V, RAX, RCX, RDX, RSI, RDI, and R8-R11 are caller-saved. If you call a function and still need those values, save them to the stack first.",
+              "choices": [
+                "Registers the function must preserve",
+                "Registers the caller must save before a function call, because the callee may overwrite them",
+                "Registers used for return values",
+                "Registers for local variables"
+              ],
+              "id": "assembly_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are 'callee-saved' registers?",
+              "answer": "Registers the function must restore before returning, if it overwrites them",
+              "explain": "On x86-64 System V, RBX, RBP, R12-R15 are callee-saved. If a function modifies them, it must save and restore them. The caller assumes these registers are unchanged.",
+              "choices": [
+                "Registers used to pass parameters",
+                "Registers for return values",
+                "Registers the function must restore before returning, if it overwrites them",
+                "Registers the caller clears"
+              ],
+              "id": "assembly_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Parameters and Return Values",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "If a C function is declared 'int square(int x)', which assembly computes x squared and leaves it as the return value?",
+              "answer": "mov eax, edi, then imul eax, edi (EAX is part of RAX)",
+              "explain": "x arrives in EDI (the low half of RDI). The result must be in EAX (the low half of RAX). MOV copies x into EAX, then the two-operand IMUL (signed multiply) multiplies EAX by EDI. The three-operand IMUL form takes a constant as its last operand, so it cannot square a register.",
+              "choices": [
+                "add eax, edi",
+                "sub eax, edi",
+                "mov eax, edi",
+                "mov eax, edi, then imul eax, edi (EAX is part of RAX)"
+              ],
+              "id": "assembly_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'RBP' (base pointer)?",
+              "answer": "A register often used to track the base of the current stack frame",
+              "explain": "Many functions set up a stack frame: 'push rbp; mov rbp, rsp'. RBP points to the saved previous RBP. Local variables are accessed as offsets from RBP.",
+              "choices": [
+                "A register often used to track the base of the current stack frame",
+                "A register only for return values",
+                "The base address of the program",
+                "A special purpose register for branching"
+              ],
+              "id": "assembly_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'stack frame'?",
+              "answer": "The memory region allocated on the stack for a function's local variables and saved registers",
+              "explain": "When a function starts, it builds a frame: saves RBP, allocates space for locals (by decrementing RSP), and uses RBP and RSP to track the frame. When the function returns, it restores the frame.",
+              "choices": [
+                "A single stack push",
+                "The memory region allocated on the stack for a function's local variables and saved registers",
+                "A jump to a function",
+                "A register that holds the stack address"
+              ],
+              "id": "assembly_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On x86-64 System V, a function is declared 'void process(int a, int b, int c, int d, int e, int f, int g)'. Where is the seventh parameter g?",
+              "answer": "On the stack, just above the return address, since only six integer parameters go in registers",
+              "explain": "RDI, RSI, RDX, RCX, R8, R9 hold the first six. The seventh goes on the stack, pushed by the caller before the CALL. When the function starts, [RSP] holds the return address, so g is at [RSP + 8].",
+              "choices": [
+                "In RBX",
+                "In R8",
+                "On the stack, just above the return address, since only six integer parameters go in registers",
+                "In RAX"
+              ],
+              "id": "assembly_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'leaf function', and what shortcut can it take on x86-64 System V?",
+              "answer": "A function that calls no other functions; it can skip building a stack frame and use the red zone",
+              "explain": "A leaf function does not CALL anything. It can skip the PUSH RBP / MOV RBP, RSP prologue and use the 128-byte red zone below RSP without adjusting RSP. That saves a few instructions.",
+              "choices": [
+                "A function that returns no value",
+                "A function stored in a leaf node",
+                "A function called only once",
+                "A function that calls no other functions; it can skip building a stack frame and use the red zone"
+              ],
+              "id": "assembly_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
