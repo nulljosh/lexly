@@ -433,6 +433,11 @@ function getCourseProgress(subjectId) {
     return { done, total };
 }
 
+function getWeakQuestions(subjectId) {
+    const weakWords = getWordData()[subjectId] || {};
+    return (questions[subjectId] || []).filter((question) => hasWeakWord(weakWords, question));
+}
+
 function getQuestionsForLesson(subjectId, subset) {
     // When a skill-tree lesson is chosen, play exactly its exercises; otherwise
     // draw from the whole subject (review mode), due cards first.
@@ -1423,6 +1428,26 @@ function renderSkillTree(pack) {
         cta.addEventListener('click', () => startLesson(next.lesson.id));
         host.appendChild(cta);
     }
+    const weakCount = getWeakQuestions(pack.id).length;
+    if (weakCount) {
+        const weak = document.createElement('button');
+        weak.className = 'tree-continue';
+        weak.setAttribute('aria-label', `Practice weak words: ${weakCount} exercises`);
+        const wtext = document.createElement('span');
+        const wkicker = document.createElement('span');
+        wkicker.className = 'tree-continue-kicker';
+        wkicker.textContent = 'Practice';
+        const wtitle = document.createElement('span');
+        wtitle.className = 'tree-continue-title';
+        wtitle.textContent = 'Your weak words';
+        const wwhere = document.createElement('span');
+        wwhere.className = 'tree-continue-where';
+        wwhere.textContent = `${weakCount} exercises to fix`;
+        wtext.append(wkicker, wtitle, wwhere);
+        weak.append(wtext, makeIcon('fa-solid fa-arrow-right'));
+        weak.addEventListener('click', () => startLesson(null, true));
+        host.appendChild(weak);
+    }
     let flatIndex = 0;
     units.forEach((unit) => {
         const unitEl = document.createElement('div');
@@ -1519,7 +1544,7 @@ function currentLang() {
     return (meta && meta.lang) || LANG_CODES[gameState.selectedSubject] || 'en-US';
 }
 
-async function startLesson(lessonId) {
+async function startLesson(lessonId, weakOnly) {
     gameState.selectedLesson = lessonId || null;
     document.getElementById('subjectSelection').style.display = 'none';
     document.getElementById('skillTree').classList.remove('active');
@@ -1528,7 +1553,8 @@ async function startLesson(lessonId) {
     gameState.correctAnswers = 0;
     gameState.hearts = 5;
     await loadCourse(gameState.selectedSubject);
-    const subset = lessonId ? getLessonExercises(gameState.selectedSubject, lessonId) : null;
+    const subset = weakOnly ? getWeakQuestions(gameState.selectedSubject).sort(() => Math.random() - 0.5).slice(0, 10)
+        : lessonId ? getLessonExercises(gameState.selectedSubject, lessonId) : null;
     gameState.lessonQuestions = getQuestionsForLesson(gameState.selectedSubject, subset);
     gameState.totalQuestions = gameState.lessonQuestions.length || 10;
     updateStats();
