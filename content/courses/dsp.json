@@ -1,0 +1,904 @@
+{
+  "id": "dsp",
+  "name": "Digital Signal Processing",
+  "category": "engineering",
+  "icon": "fa-solid fa-signal",
+  "level": "Processing Signals in Software",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Sampling and Quantisation",
+      "tip": "To store a real-world signal in a computer, you must sample it at discrete times and round the values to discrete levels. Sampling captures snapshots, quantisation limits the precision, and both introduce information loss.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Sampling Does",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is sampling in signal processing?",
+              "answer": "Taking measurements of a continuous signal at specific time intervals",
+              "explain": "Sampling converts a continuous signal into a discrete sequence by measuring it at regular times. The distance between samples is determined by the sampling rate.",
+              "choices": [
+                "Taking measurements of a continuous signal at specific time intervals",
+                "Reducing noise from a signal",
+                "Storing an entire signal in memory at once",
+                "Converting analog audio to speakers"
+              ],
+              "id": "dsp_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the sampling rate or sampling frequency?",
+              "answer": "The number of samples taken per second, measured in Hertz",
+              "explain": "Sampling rate is how many times per second you measure the signal. Audio CDs use 44.1 kHz (44,100 samples per second). Higher rates capture faster changes.",
+              "choices": [
+                "The time between samples in milliseconds",
+                "The number of samples taken per second, measured in Hertz",
+                "The error introduced by sampling",
+                "The volume level of a sample"
+              ],
+              "id": "dsp_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a signal is sampled at 48 kHz, how many samples are taken per second?",
+              "answer": "48,000",
+              "explain": "A sampling rate of 48 kHz means 48,000 samples are taken every second. The kilohertz unit means thousands of cycles per second.",
+              "choices": [
+                "48",
+                "480,000",
+                "4,800",
+                "48,000"
+              ],
+              "id": "dsp_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the sampling period?",
+              "answer": "The time between consecutive samples",
+              "explain": "Sampling period is 1 divided by the sampling rate. For 44.1 kHz, the period is about 22.7 microseconds. Higher rates mean shorter periods.",
+              "choices": [
+                "The time between consecutive samples",
+                "The total duration of the signal",
+                "The rate at which samples are taken",
+                "The number of bits per sample"
+              ],
+              "id": "dsp_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to information about rapid changes when you sample slowly?",
+              "answer": "The rapid changes are not captured in the samples",
+              "explain": "If a signal changes quickly but you sample slowly, you miss the rapid variations. You only record values at your sample times, losing what happens between samples.",
+              "choices": [
+                "The rapid changes are amplified",
+                "The rapid changes are not captured in the samples",
+                "The rapid changes are smoothed out by filtering",
+                "The sampling rate automatically increases"
+              ],
+              "id": "dsp_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Quantisation and Bit Depth",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is quantisation?",
+              "answer": "Rounding continuous signal values to discrete levels for storage",
+              "explain": "Quantisation converts the infinite precision of an analog signal into a finite set of discrete values. This introduces quantisation error but allows digital storage.",
+              "choices": [
+                "Measuring the strength of a signal",
+                "Removing high-frequency noise from a signal",
+                "Rounding continuous signal values to discrete levels for storage",
+                "Determining when to sample a signal"
+              ],
+              "id": "dsp_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is bit depth?",
+              "answer": "The number of bits used to represent each sample value",
+              "explain": "Bit depth determines how many discrete levels are available. 16-bit audio has 65,536 possible values per sample (2^16). Higher bit depth means finer resolution.",
+              "choices": [
+                "The number of bits used to represent each sample value",
+                "The sampling rate in bits per second",
+                "The speed of digital signal processing",
+                "The total storage in megabytes"
+              ],
+              "id": "dsp_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many distinct levels can an 8-bit sample represent?",
+              "answer": "256",
+              "explain": "With 8 bits, you can represent 2^8 = 256 different values. This is common for audio and image pixels, but provides less precision than 16-bit.",
+              "choices": [
+                "512",
+                "64",
+                "256",
+                "8"
+              ],
+              "id": "dsp_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is quantisation error?",
+              "answer": "The difference between the true signal value and the rounded quantised value",
+              "explain": "Quantisation error is the noise introduced by rounding. You can only represent discrete levels, so continuous values must be rounded to the nearest level.",
+              "choices": [
+                "The difference between the true signal value and the rounded quantised value",
+                "Errors from filtering the signal",
+                "Errors from sampling too slowly",
+                "Errors in the recording device"
+              ],
+              "id": "dsp_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does increasing bit depth affect quantisation error?",
+              "answer": "Quantisation error decreases because more discrete levels are available",
+              "explain": "With more bits, you have more discrete levels to choose from, so you can round to a closer level. This reduces the maximum error per sample.",
+              "choices": [
+                "Quantisation error stays the same",
+                "Quantisation error becomes unpredictable",
+                "Quantisation error decreases because more discrete levels are available",
+                "Quantisation error increases"
+              ],
+              "id": "dsp_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "The Sampling Theorem and Aliasing",
+      "tip": "The Nyquist sampling theorem tells you the minimum sample rate needed to capture a signal without information loss. Sample too slowly and high frequencies fold down to create aliasing.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "The Nyquist Theorem",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist sampling theorem?",
+              "answer": "A signal must be sampled at twice the highest frequency it contains",
+              "explain": "To accurately capture a signal without loss, your sampling rate must be at least twice the highest frequency present. This is called the Nyquist rate.",
+              "choices": [
+                "A signal must be sampled at twice the highest frequency it contains",
+                "A signal must be quantised to 16 bits minimum",
+                "A signal loses quality when sampled at all",
+                "A signal can be sampled at any rate and still be accurate"
+              ],
+              "id": "dsp_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist frequency?",
+              "answer": "Half the sampling rate, the highest frequency that can be accurately captured",
+              "explain": "The Nyquist frequency is the maximum frequency your sampled signal can represent. For a 44.1 kHz sample rate, the Nyquist frequency is 22.05 kHz.",
+              "choices": [
+                "The rate at which samples are taken",
+                "The frequency of quantisation error",
+                "Half the sampling rate, the highest frequency that can be accurately captured",
+                "The lowest frequency in a signal"
+              ],
+              "id": "dsp_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For a sampling rate of 44.1 kHz, what is the Nyquist frequency?",
+              "answer": "22.05 kHz",
+              "explain": "The Nyquist frequency is half the sampling rate: 44.1 kHz / 2 = 22.05 kHz. This is why audio CDs at 44.1 kHz can capture frequencies up to about 22 kHz.",
+              "choices": [
+                "22.05 kHz",
+                "88.2 kHz",
+                "44.1 kHz",
+                "11.025 kHz"
+              ],
+              "id": "dsp_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a signal contains a 10 kHz component, what is the minimum sampling rate needed?",
+              "answer": "20 kHz",
+              "explain": "By the Nyquist theorem, you must sample at twice the highest frequency. For 10 kHz, you need at least 20 kHz (20,000 samples per second).",
+              "choices": [
+                "10 kHz",
+                "20 kHz",
+                "5 kHz",
+                "40 kHz"
+              ],
+              "id": "dsp_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you sample below the Nyquist rate?",
+              "answer": "Information is lost and cannot be recovered from the samples",
+              "explain": "Sampling below the Nyquist rate is called undersampling. The original signal cannot be perfectly reconstructed from the samples because information about high frequencies is lost.",
+              "choices": [
+                "The sampling rate automatically increases",
+                "Information is lost and cannot be recovered from the samples",
+                "Quantisation error increases instead",
+                "The signal is automatically filtered"
+              ],
+              "id": "dsp_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Aliasing and Anti-Aliasing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is aliasing in signal processing?",
+              "answer": "High frequencies being misrepresented as lower frequencies due to undersampling",
+              "explain": "Aliasing happens when a signal is sampled too slowly. High-frequency components get folded down and appear as false lower-frequency signals in the samples.",
+              "choices": [
+                "Quantising a signal to lower bit depth",
+                "Filtering a signal to remove noise",
+                "High frequencies being misrepresented as lower frequencies due to undersampling",
+                "Using a different name for a signal"
+              ],
+              "id": "dsp_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When a 50 kHz signal is sampled at 40 kHz, what frequency does it alias to?",
+              "answer": "10 kHz",
+              "explain": "Sampling at 40 kHz repeats the spectrum every 40 kHz, so 50 kHz looks the same as 50 - 40 = 10 kHz. Equivalently, it is 30 kHz above the 20 kHz Nyquist frequency, so it folds back to 20 - 30 = -10 kHz, which appears as 10 kHz.",
+              "choices": [
+                "50 kHz",
+                "10 kHz",
+                "40 kHz",
+                "5 kHz"
+              ],
+              "id": "dsp_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an anti-aliasing filter?",
+              "answer": "A low-pass filter applied before sampling to remove frequencies above the Nyquist frequency",
+              "explain": "An anti-aliasing filter removes high frequencies before sampling. This prevents those frequencies from folding down and creating false signals in the sampled data.",
+              "choices": [
+                "A filter applied after sampling to recover lost frequencies",
+                "A filter that removes all frequencies below 20 kHz",
+                "A device that increases the sampling rate automatically",
+                "A low-pass filter applied before sampling to remove frequencies above the Nyquist frequency"
+              ],
+              "id": "dsp_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is an anti-aliasing filter necessary before sampling audio?",
+              "answer": "To remove frequencies above the Nyquist frequency that would otherwise create audible artifacts",
+              "explain": "Without an anti-aliasing filter, high frequencies in the input fold down to audible lower frequencies, creating a distorted or 'metallic' sound. The filter removes these high frequencies before sampling.",
+              "choices": [
+                "To improve sound quality by removing all noise",
+                "To reduce the storage space needed for audio",
+                "To make the sampling rate unnecessary",
+                "To remove frequencies above the Nyquist frequency that would otherwise create audible artifacts"
+              ],
+              "id": "dsp_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you sample at 48 kHz without an anti-aliasing filter, what is the highest frequency that will not alias?",
+              "answer": "24 kHz",
+              "explain": "The Nyquist frequency at 48 kHz is 24 kHz. Any frequency above 24 kHz will alias. Without filtering, those high frequencies create false signals in the 0-24 kHz range.",
+              "choices": [
+                "96 kHz",
+                "24 kHz",
+                "48 kHz",
+                "12 kHz"
+              ],
+              "id": "dsp_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Discrete-Time Signals",
+      "tip": "A discrete-time signal is a sequence of numbers, one for each sample. You can analyse it with operations like convolution and apply transforms to understand its frequency content.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Signal Representation and Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a discrete-time signal?",
+              "answer": "A sequence of numbers indexed by sample number or time",
+              "explain": "A discrete-time signal is written as x[n] where n is the sample index. After sampling, the continuous-time signal becomes a sequence of values.",
+              "choices": [
+                "A frequency-domain representation",
+                "A sequence of numbers indexed by sample number or time",
+                "A continuous waveform without sampling",
+                "The output of a quantiser only"
+              ],
+              "id": "dsp_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the notation x[n] represent?",
+              "answer": "The value of signal x at sample number n",
+              "explain": "In discrete-time notation, x[n] is the signal value at the n-th sample. This is used instead of x(t) for continuous signals, where t is time.",
+              "choices": [
+                "The maximum value of the signal",
+                "The frequency of the signal",
+                "The value of signal x at sample number n",
+                "The number of samples in the signal"
+              ],
+              "id": "dsp_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is signal scaling?",
+              "answer": "Multiplying each sample by a constant to change amplitude",
+              "explain": "Scaling by a constant c means computing y[n] = c * x[n]. Scaling by 0.5 halves the amplitude; scaling by 2 doubles it.",
+              "choices": [
+                "Filtering out low frequencies",
+                "Changing the sampling rate",
+                "Multiplying each sample by a constant to change amplitude",
+                "Shifting the signal in time"
+              ],
+              "id": "dsp_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to add two discrete-time signals?",
+              "answer": "Adding corresponding samples: y[n] = x1[n] + x2[n]",
+              "explain": "Signal addition is sample-by-sample: the n-th output sample is the sum of the n-th samples from both input signals. This is useful for mixing signals.",
+              "choices": [
+                "Concatenating the samples end-to-end",
+                "Multiplying all samples together",
+                "Adding corresponding samples: y[n] = x1[n] + x2[n]",
+                "Replacing one signal with the other"
+              ],
+              "id": "dsp_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to shift a discrete-time signal in time?",
+              "answer": "Moving the signal forward or backward by delaying or advancing samples",
+              "explain": "A time shift by M samples gives y[n] = x[n - M]. If M is positive, the signal is delayed; if negative, advanced.",
+              "choices": [
+                "Changing the frequency content of the signal",
+                "Scaling the signal amplitude",
+                "Adding white noise to the signal",
+                "Moving the signal forward or backward by delaying or advancing samples"
+              ],
+              "id": "dsp_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Signal Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the length of a discrete-time signal?",
+              "answer": "The number of samples in the sequence",
+              "explain": "Signal length is how many data points the signal contains. A 1-second audio clip at 44.1 kHz has a length of 44,100 samples.",
+              "choices": [
+                "The duration of the signal in seconds",
+                "The highest frequency in the signal",
+                "The sampling rate used",
+                "The number of samples in the sequence"
+              ],
+              "id": "dsp_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the energy of a discrete-time signal?",
+              "answer": "The sum of the squares of all sample values",
+              "explain": "Signal energy is the sum of x[n]^2 over all n. It is useful for measuring how strong a signal is and for normalisation.",
+              "choices": [
+                "The average of all sample values",
+                "The product of all sample values",
+                "The highest sample value",
+                "The sum of the squares of all sample values"
+              ],
+              "id": "dsp_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a periodic discrete-time signal?",
+              "answer": "A signal that repeats with a fixed period N, where x[n] = x[n + N]",
+              "explain": "A periodic signal repeats exactly every N samples. The smallest N for which this is true is the period. Many signals in DSP are periodic.",
+              "choices": [
+                "A signal that repeats with a fixed period N, where x[n] = x[n + N]",
+                "A signal with only one frequency component",
+                "A signal with zero mean",
+                "A signal that never repeats"
+              ],
+              "id": "dsp_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the mean (average) of a discrete-time signal?",
+              "answer": "The sum of all samples divided by the number of samples",
+              "explain": "The mean is calculated as (1/N) * sum of x[n]. It represents the DC (constant) component of the signal.",
+              "choices": [
+                "The value that appears most often",
+                "The highest sample value",
+                "The middle value when samples are sorted",
+                "The sum of all samples divided by the number of samples"
+              ],
+              "id": "dsp_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a causal discrete-time signal?",
+              "answer": "A signal that is zero for all negative time indices, x[n] = 0 for n < 0",
+              "explain": "A causal signal only has values at n >= 0. This models real-world signals that start at a specific time and do not have a past before that.",
+              "choices": [
+                "A signal that is zero for all negative time indices, x[n] = 0 for n < 0",
+                "A signal with a specific frequency content",
+                "A signal with maximum energy",
+                "A signal with periodic repetition"
+              ],
+              "id": "dsp_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The DFT and FFT",
+      "tip": "The Discrete Fourier Transform converts a signal from the time domain to the frequency domain, showing what frequencies are present. The Fast Fourier Transform is an efficient algorithm for computing it.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "The Discrete Fourier Transform",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Discrete Fourier Transform (DFT)?",
+              "answer": "A transform that converts a discrete-time signal from time domain to frequency domain",
+              "explain": "The DFT shows what frequencies are present in a signal and their strengths. It converts a sequence of time samples into a sequence of frequency components.",
+              "choices": [
+                "A way to compress audio files",
+                "A sampling technique",
+                "A transform that converts a discrete-time signal from time domain to frequency domain",
+                "A method for removing noise"
+              ],
+              "id": "dsp_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the time domain show?",
+              "answer": "The signal value at each point in time",
+              "explain": "The time domain is the original representation: samples x[n] plotted against time or sample index. It shows what the signal looks like as it evolves.",
+              "choices": [
+                "The frequencies present in a signal",
+                "The energy at each frequency",
+                "The signal value at each point in time",
+                "The rate of change of the signal"
+              ],
+              "id": "dsp_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the frequency domain show?",
+              "answer": "The strength of each frequency component in a signal",
+              "explain": "The frequency domain, output by the DFT, shows the magnitude and phase of each frequency. It tells you which frequencies are present and how strong they are.",
+              "choices": [
+                "The sampling rate used",
+                "The time at which each sample occurs",
+                "The strength of each frequency component in a signal",
+                "The signal values in order"
+              ],
+              "id": "dsp_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a discrete signal has N samples, how many frequency components does its DFT have?",
+              "answer": "N",
+              "explain": "The DFT of an N-sample signal produces N frequency components. Each component corresponds to a different frequency bin.",
+              "choices": [
+                "N^2",
+                "2N",
+                "N",
+                "N/2"
+              ],
+              "id": "dsp_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the inverse DFT?",
+              "answer": "A transform that converts frequency-domain data back to the time domain",
+              "explain": "The inverse DFT (IDFT) reconstructs the original time-domain signal from its frequency components. Together, DFT and IDFT allow conversion between domains.",
+              "choices": [
+                "An operation that removes frequencies",
+                "An alternative to the DFT for complex signals",
+                "A transform that converts frequency-domain data back to the time domain",
+                "A method to increase frequency resolution"
+              ],
+              "id": "dsp_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "The Fast Fourier Transform",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Fast Fourier Transform (FFT)?",
+              "answer": "An efficient algorithm for computing the DFT quickly",
+              "explain": "The FFT is a clever algorithm that reduces the computation needed to calculate the DFT. Without it, processing large signals would be impractically slow.",
+              "choices": [
+                "A method to remove high frequencies",
+                "An alternative to sampling",
+                "An efficient algorithm for computing the DFT quickly",
+                "A more accurate version of the DFT"
+              ],
+              "id": "dsp_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many multiplications does a naive DFT require for N samples?",
+              "answer": "About N squared (N^2)",
+              "explain": "A direct DFT computation requires roughly N^2 operations. For N = 1024, that is over 1 million operations. This is impractical for real-time audio.",
+              "choices": [
+                "About N squared (N^2)",
+                "N",
+                "2N",
+                "Log(N)"
+              ],
+              "id": "dsp_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many multiplications does the FFT require for N samples?",
+              "answer": "About N log(N)",
+              "explain": "The FFT reduces complexity to roughly N log(N) operations. For N = 1024, that is about 10,000 operations, roughly 100 times faster than the naive DFT.",
+              "choices": [
+                "N",
+                "About N log(N)",
+                "2N",
+                "N squared"
+              ],
+              "id": "dsp_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does the FFT work efficiently?",
+              "answer": "It exploits symmetries in the DFT computation to avoid redundant calculations",
+              "explain": "The FFT uses divide-and-conquer and exploits the periodic nature of complex exponentials. It breaks the problem into smaller subproblems that share intermediate results.",
+              "choices": [
+                "It uses a different mathematical formula",
+                "It is a statistical approximation of the DFT",
+                "It exploits symmetries in the DFT computation to avoid redundant calculations",
+                "It uses lower precision arithmetic"
+              ],
+              "id": "dsp_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Cooley-Tukey FFT algorithm?",
+              "answer": "A divide-and-conquer algorithm that recursively decomposes the DFT into smaller DFTs",
+              "explain": "The Cooley-Tukey algorithm, published in 1965, is the most common FFT method. It works best when the signal length N is a power of 2.",
+              "choices": [
+                "A divide-and-conquer algorithm that recursively decomposes the DFT into smaller DFTs",
+                "A quantisation technique for the frequency domain",
+                "A method for removing aliasing",
+                "An alternative to the DFT for real-time processing"
+              ],
+              "id": "dsp_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Filters and Convolution",
+      "tip": "Filters modify signals by enhancing or removing frequency components. Convolution is the mathematical operation that applies a filter. FIR filters are finite impulse response, IIR filters have feedback. Windowing reduces spectral leakage.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "FIR vs IIR Filters and Convolution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a digital filter?",
+              "answer": "A mathematical operation that selectively amplifies or attenuates frequencies in a signal",
+              "explain": "A digital filter processes a signal to enhance some frequencies and reduce others. Low-pass, high-pass, band-pass, and band-stop are common types.",
+              "choices": [
+                "A physical device for sound quality",
+                "A method for sampling signals",
+                "Analog circuits used in computers",
+                "A mathematical operation that selectively amplifies or attenuates frequencies in a signal"
+              ],
+              "id": "dsp_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an FIR filter?",
+              "answer": "A Finite Impulse Response filter that depends only on current and past input samples",
+              "explain": "An FIR filter has a finite number of non-zero coefficients and depends only on past inputs: y[n] = b0*x[n] + b1*x[n-1] + b2*x[n-2] + ... It is always stable.",
+              "choices": [
+                "A filter that uses infinite past input samples",
+                "A filter used only for high frequencies",
+                "A Finite Impulse Response filter that depends only on current and past input samples",
+                "An analog circuit used in recording"
+              ],
+              "id": "dsp_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an IIR filter?",
+              "answer": "An Infinite Impulse Response filter that uses both input and feedback from past outputs",
+              "explain": "An IIR filter has feedback: y[n] = b0*x[n] + b1*x[n-1] + ... - a1*y[n-1] - a2*y[n-2] - ... It can be more efficient than FIR but can become unstable if not designed carefully.",
+              "choices": [
+                "A type of sampling method",
+                "A filter with no feedback",
+                "An Infinite Impulse Response filter that uses both input and feedback from past outputs",
+                "A filter that removes all frequencies above 1 kHz"
+              ],
+              "id": "dsp_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is convolution in signal processing?",
+              "answer": "A mathematical operation that applies a filter to a signal by sliding and multiplying",
+              "explain": "Convolution combines a signal with a filter kernel. Each output sample is the sum of products of the signal and filter coefficients, like a weighted average sliding along the signal.",
+              "choices": [
+                "A method for removing noise using the Fourier transform",
+                "A sampling technique for reducing aliasing",
+                "An alternative to the DFT",
+                "A mathematical operation that applies a filter to a signal by sliding and multiplying"
+              ],
+              "id": "dsp_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When implementing a digital filter in code, what does an FIR filter require?",
+              "answer": "Storage for a buffer of past input samples and coefficients",
+              "explain": "An FIR filter maintains a delay line (buffer) of past input samples. As new samples arrive, you compute the weighted sum and shift the buffer.",
+              "choices": [
+                "Storage for a buffer of past input samples and coefficients",
+                "The entire signal in memory at once",
+                "A real-time FFT computation at every sample",
+                "Recursive calculations that depend on previous output"
+              ],
+              "id": "dsp_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Windowing and Filter Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a low-pass filter?",
+              "answer": "A filter that passes low frequencies and attenuates high frequencies",
+              "explain": "A low-pass filter allows frequencies below a cutoff to pass through and reduces frequencies above the cutoff. It smooths signals and removes high-frequency noise.",
+              "choices": [
+                "A filter applied only during sampling",
+                "A filter that removes all frequencies",
+                "A filter that passes low frequencies and attenuates high frequencies",
+                "A filter that amplifies frequencies near the Nyquist rate"
+              ],
+              "id": "dsp_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a high-pass filter?",
+              "answer": "A filter that passes high frequencies and attenuates low frequencies",
+              "explain": "A high-pass filter removes low-frequency components, such as DC offset and slow drift. It allows rapid changes to pass through.",
+              "choices": [
+                "A filter that passes high frequencies and attenuates low frequencies",
+                "A filter that removes all frequencies",
+                "A filter that equalises all frequencies",
+                "A filter that only passes frequencies above the Nyquist rate"
+              ],
+              "id": "dsp_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is windowing in the context of filter design?",
+              "answer": "Multiplying a filter kernel by a window function to reduce spectral leakage",
+              "explain": "A window function tapers the filter coefficients toward zero at the edges, reducing ripple and spectral leakage. Hamming, Hann, and Blackman are common windows.",
+              "choices": [
+                "Multiplying a filter kernel by a window function to reduce spectral leakage",
+                "Removing silent portions of a signal",
+                "Limiting the filter to process only a portion of the signal",
+                "Adjusting the cutoff frequency of a filter"
+              ],
+              "id": "dsp_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is spectral leakage?",
+              "answer": "Energy from one frequency spilling into adjacent frequency bins during analysis",
+              "explain": "Spectral leakage occurs when a signal does not fit exactly into the FFT bins. The rectangular window inherently causes leakage. Windowing reduces it.",
+              "choices": [
+                "Losing frequency information when the sampling rate is too low",
+                "Aliasing of high frequencies",
+                "Energy from one frequency spilling into adjacent frequency bins during analysis",
+                "The main lobe of a frequency response"
+              ],
+              "id": "dsp_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the cutoff frequency of a filter?",
+              "answer": "The frequency at which the filter transitions from pass band to stop band",
+              "explain": "The cutoff frequency (or corner frequency) is where the filter gain drops to 70.7% (-3 dB). It marks the boundary between frequencies that pass and those that are attenuated.",
+              "choices": [
+                "The frequency with the most energy",
+                "The frequency at which the filter transitions from pass band to stop band",
+                "The Nyquist frequency of the signal",
+                "The highest frequency in the input signal"
+              ],
+              "id": "dsp_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Applications in Audio and Images",
+      "tip": "Digital signal processing is essential in audio recording, compression, effects, and image processing. The same principles apply across domains: filtering, Fourier analysis, and convolution.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Audio Processing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does lossy audio compression such as MP3 do?",
+              "answer": "Shrinks the file by discarding detail that is hard for listeners to hear",
+              "explain": "Lossy compression uses psychoacoustics: detail humans hear poorly is discarded to save space. Lossless formats such as FLAC keep every sample and shrink the file without discarding anything.",
+              "choices": [
+                "Limiting the frequency range to 20 Hz to 20 kHz",
+                "Applying a high-pass filter",
+                "Reducing the volume of audio",
+                "Shrinks the file by discarding detail that is hard for listeners to hear"
+              ],
+              "id": "dsp_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a graphic equaliser?",
+              "answer": "A tool that uses multiple filters to boost or cut specific frequency bands",
+              "explain": "A graphic EQ divides the audio spectrum into bands (bass, mids, treble) and allows adjustment of each. It uses multiple filters working in parallel.",
+              "choices": [
+                "A tool that uses multiple filters to boost or cut specific frequency bands",
+                "A tool for recording audio",
+                "A device that measures sound intensity",
+                "A type of speaker"
+              ],
+              "id": "dsp_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an audio reverb effect use convolution?",
+              "answer": "Convolving the input signal with an impulse response recorded from an acoustic space",
+              "explain": "Convolution reverb convolves the dry signal with the impulse response of a real room. This simulates the reflections and resonances of that space.",
+              "choices": [
+                "By multiplying the signal by a constant factor",
+                "Convolving the input signal with an impulse response recorded from an acoustic space",
+                "By applying a high-pass filter repeatedly",
+                "By delaying the signal by a fixed amount"
+              ],
+              "id": "dsp_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an impulse response in audio?",
+              "answer": "The output of a system when given a brief, sharp input signal",
+              "explain": "An impulse response characterises how a system (room, speaker, microphone) affects sound. It captures the system's behaviour completely and is used in convolution reverb.",
+              "choices": [
+                "The delay between input and output",
+                "The output of a system when given a brief, sharp input signal",
+                "The volume increase when audio is compressed",
+                "The frequency response of a speaker"
+              ],
+              "id": "dsp_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do noise-cancelling headphones use DSP?",
+              "answer": "By playing an inverted copy of the ambient noise so the two cancel out",
+              "explain": "Microphones pick up ambient sound, a filter (often adaptive) produces an inverted copy, and the speaker plays it. The two waves are in opposite phase, so destructive interference reduces the noise.",
+              "choices": [
+                "By using a very high sampling rate",
+                "By playing an inverted copy of the ambient noise so the two cancel out",
+                "By increasing the volume of the desired signal",
+                "By removing all frequencies above a cutoff"
+              ],
+              "id": "dsp_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Image Processing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does image filtering relate to audio filtering?",
+              "answer": "Both use convolution; audio is 1D, images are 2D",
+              "explain": "Image filters apply convolution with a 2D kernel (small matrix) to produce effects like blur, sharpening, or edge detection. The mathematics is the same as audio filtering.",
+              "choices": [
+                "Audio filtering uses FFT, image filtering does not",
+                "They are completely unrelated",
+                "Image filtering is slower than audio filtering",
+                "Both use convolution; audio is 1D, images are 2D"
+              ],
+              "id": "dsp_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a blur filter do?",
+              "answer": "Applies a weighted average over a neighbourhood of pixels to smooth the image",
+              "explain": "A blur filter uses a kernel with positive coefficients that average nearby pixels. This reduces sharp transitions and noise but also removes detail.",
+              "choices": [
+                "Applies a weighted average over a neighbourhood of pixels to smooth the image",
+                "Increases the contrast of the image",
+                "Removes all low frequencies",
+                "Detects edges in the image"
+              ],
+              "id": "dsp_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does an edge-detection filter do?",
+              "answer": "Highlights areas where pixel values change rapidly",
+              "explain": "Edge detection filters, like Sobel or Laplacian, amplify regions where the image changes sharply (edges). They suppress uniform areas.",
+              "choices": [
+                "Highlights areas where pixel values change rapidly",
+                "Removes all edges from the image",
+                "Inverts the colours of the image",
+                "Smooths the image uniformly"
+              ],
+              "id": "dsp_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is the 2D Fourier Transform used in image processing?",
+              "answer": "To analyse the frequency content of an image in the horizontal and vertical directions",
+              "explain": "The 2D FFT decomposes an image into its spatial frequencies. Low frequencies represent overall brightness; high frequencies represent edges and detail.",
+              "choices": [
+                "To analyse the frequency content of an image in the horizontal and vertical directions",
+                "To remove all colour information",
+                "To compress images without loss",
+                "To convert the image to grayscale"
+              ],
+              "id": "dsp_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is downsampling in image processing?",
+              "answer": "Reducing the resolution by keeping fewer pixels, usually using a low-pass filter first",
+              "explain": "Downsampling reduces image size. To avoid aliasing, a low-pass filter is applied first to remove detail above the new Nyquist frequency.",
+              "choices": [
+                "Reducing the resolution by keeping fewer pixels, usually using a low-pass filter first",
+                "Converting to a different colour space",
+                "Increasing the brightness of the image",
+                "Applying a sharpen filter"
+              ],
+              "id": "dsp_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

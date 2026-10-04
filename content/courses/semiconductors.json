@@ -1,0 +1,904 @@
+{
+  "id": "semiconductors",
+  "name": "Semiconductors",
+  "category": "engineering",
+  "icon": "fa-solid fa-atom",
+  "level": "How Chips Work Physically",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Conductors, Insulators, and Semiconductors",
+      "tip": "Electrical materials fall into three categories based on how easily electrons flow. Conductors allow current freely, insulators block it, and semiconductors can do either depending on conditions.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Electrical Properties of Materials",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an electrical conductor?",
+              "answer": "A material that allows electric current to flow easily",
+              "explain": "Conductors have electrons that are loosely bound and can move freely through the material. Copper, aluminium, and silver are common conductors.",
+              "choices": [
+                "A type of insulator",
+                "A material that blocks electric current completely",
+                "A device that measures electricity",
+                "A material that allows electric current to flow easily"
+              ],
+              "id": "semiconductors_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an electrical insulator?",
+              "answer": "A material that resists the flow of electric current",
+              "explain": "Insulators have electrons tightly bound to atoms, making current flow very difficult. Rubber, glass, and plastic are good insulators.",
+              "choices": [
+                "A material that allows current to flow easily",
+                "A type of conductor",
+                "A material that stores electrical charge",
+                "A material that resists the flow of electric current"
+              ],
+              "id": "semiconductors_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a semiconductor?",
+              "answer": "A material that can conduct or insulate depending on conditions like temperature and applied voltage",
+              "explain": "Semiconductors like silicon and germanium have electrical properties between conductors and insulators. By adding impurities or applying voltage, you control their conductivity.",
+              "choices": [
+                "A material that can conduct or insulate depending on conditions like temperature and applied voltage",
+                "A material that is always a conductor",
+                "A type of metal alloy",
+                "A material that is always an insulator"
+              ],
+              "id": "semiconductors_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What determines how easily electrons flow through a material?",
+              "answer": "How tightly electrons are bound to atoms",
+              "explain": "Loosely bound electrons (like in copper) flow easily, making a conductor. Tightly bound electrons (like in rubber) resist flow, making an insulator.",
+              "choices": [
+                "The size of the material",
+                "The colour of the material",
+                "The age of the material",
+                "How tightly electrons are bound to atoms"
+              ],
+              "id": "semiconductors_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is electrical resistance?",
+              "answer": "The opposition to the flow of electric current through a material",
+              "explain": "Resistance measures how much a material opposes current flow. Conductors have low resistance; insulators have high resistance. Resistance is measured in ohms.",
+              "choices": [
+                "The speed at which electrons move",
+                "The opposition to the flow of electric current through a material",
+                "The amount of charge stored in a material",
+                "The number of atoms in a material"
+              ],
+              "id": "semiconductors_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Silicon and Germanium",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is silicon used in semiconductors?",
+              "answer": "It is abundant, has good electrical properties, and forms a stable oxide insulator",
+              "explain": "Silicon is the second most abundant element in Earth's crust, after oxygen. It forms silicon dioxide (SiO2), a stable, high-quality insulator that suits transistors.",
+              "choices": [
+                "It is abundant, has good electrical properties, and forms a stable oxide insulator",
+                "It is the cheapest material available",
+                "It conducts better than copper",
+                "It is easier to mine than other semiconductors"
+              ],
+              "id": "semiconductors_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the atomic number of silicon?",
+              "answer": "14",
+              "explain": "Silicon (Si) has 14 protons and 14 electrons. It has 4 valence electrons in its outer shell, which makes it ideal for forming bonds in crystal structures.",
+              "choices": [
+                "14",
+                "12",
+                "8",
+                "16"
+              ],
+              "id": "semiconductors_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is germanium used for?",
+              "answer": "A semiconductor for transistors and optical devices, though less common than silicon",
+              "explain": "Germanium (Ge) is also a group IV semiconductor. It was used in early transistors but is less common today because silicon is cheaper and more stable.",
+              "choices": [
+                "An insulator for protection",
+                "A semiconductor for transistors and optical devices, though less common than silicon",
+                "A conductor for wiring",
+                "A superconductor at low temperatures"
+              ],
+              "id": "semiconductors_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many valence electrons does silicon have?",
+              "answer": "4",
+              "explain": "Silicon has 4 electrons in its outer (valence) shell. This allows it to form 4 covalent bonds with neighbouring atoms, creating a strong crystal lattice.",
+              "choices": [
+                "4",
+                "3",
+                "2",
+                "5"
+              ],
+              "id": "semiconductors_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a pure silicon crystal at room temperature, why is the conductivity low?",
+              "answer": "All valence electrons are locked in covalent bonds, so few are free to move",
+              "explain": "At room temperature, pure silicon's 4 valence electrons form covalent bonds with neighbours. There are few free electrons, so current cannot flow easily.",
+              "choices": [
+                "Silicon is too cold at room temperature",
+                "Silicon naturally has very high resistance",
+                "Silicon atoms repel electrons",
+                "All valence electrons are locked in covalent bonds, so few are free to move"
+              ],
+              "id": "semiconductors_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Energy Bands and Electron-Hole Pairs",
+      "tip": "Electrons in atoms occupy discrete energy levels. In a crystal, these merge into energy bands. An electron promoted above the band gap leaves a 'hole' that also acts as a charge carrier.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Energy Bands",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an energy band in a solid?",
+              "answer": "A range of allowed energies for electrons in a crystal",
+              "explain": "In an isolated atom, electrons occupy discrete levels. In a crystal with many atoms, these levels spread into broad bands of allowed energies.",
+              "choices": [
+                "A single energy level for all electrons",
+                "A range of allowed energies for electrons in a crystal",
+                "The energy difference between atoms",
+                "The energy released when an electron moves"
+              ],
+              "id": "semiconductors_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the valence band?",
+              "answer": "The energy band occupied by valence electrons that participate in bonding",
+              "explain": "The valence band is the filled (or partially filled) band containing valence electrons. These electrons are involved in chemical bonds.",
+              "choices": [
+                "The energy band occupied by valence electrons that participate in bonding",
+                "The band where free electrons exist",
+                "The highest energy band",
+                "The band created by temperature"
+              ],
+              "id": "semiconductors_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the conduction band?",
+              "answer": "The energy band where free electrons can move and carry current",
+              "explain": "The conduction band is empty (or partially empty) at low temperature. Electrons here are free to move and conduct current.",
+              "choices": [
+                "The band that becomes full in conductors",
+                "The energy band where free electrons can move and carry current",
+                "The lowest energy band",
+                "The band occupied by valence electrons"
+              ],
+              "id": "semiconductors_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the band gap?",
+              "answer": "The energy difference between the top of the valence band and the bottom of the conduction band",
+              "explain": "The band gap is the forbidden zone where no electron states exist. An electron must gain at least this much energy to jump from the valence to the conduction band.",
+              "choices": [
+                "The energy difference between the top of the valence band and the bottom of the conduction band",
+                "The energy released by an electron moving",
+                "The width of one energy band",
+                "The space between atoms in a crystal"
+              ],
+              "id": "semiconductors_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does silicon have intermediate conductivity compared to conductors and insulators?",
+              "answer": "Its band gap is moderate, so thermal energy can excite electrons from valence to conduction band",
+              "explain": "Silicon's band gap is about 1.1 eV. At room temperature, thermal energy can promote some electrons across the gap, giving it moderate conductivity.",
+              "choices": [
+                "Silicon is not a true semiconductor",
+                "Silicon atoms are special and conduct electricity naturally",
+                "Electrons in silicon move faster than in other materials",
+                "Its band gap is moderate, so thermal energy can excite electrons from valence to conduction band"
+              ],
+              "id": "semiconductors_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Electrons and Holes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an electron-hole pair?",
+              "answer": "A free electron in the conduction band and a missing electron (hole) in the valence band",
+              "explain": "When an electron gains energy and jumps to the conduction band, it leaves behind an empty state in the valence band called a hole. Both can carry current.",
+              "choices": [
+                "A free electron in the conduction band and a missing electron (hole) in the valence band",
+                "A neutron and a proton bonded together",
+                "Two atoms sharing electrons",
+                "Two electrons moving in the same direction"
+              ],
+              "id": "semiconductors_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a hole in semiconductor physics?",
+              "answer": "A missing electron in a covalent bond that acts as a positive charge carrier",
+              "explain": "A hole is the absence of an electron. It behaves like a positive charge that can move through the crystal. Electrons can move into holes, making the hole move.",
+              "choices": [
+                "A physical cavity in the crystal",
+                "A missing electron in a covalent bond that acts as a positive charge carrier",
+                "A defect in the material",
+                "An empty space between atoms"
+              ],
+              "id": "semiconductors_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does thermal energy create electron-hole pairs?",
+              "answer": "Thermal vibrations give electrons enough energy to jump across the band gap",
+              "explain": "Thermal energy causes atoms to vibrate. This energy can be transferred to electrons, promoting them across the band gap and creating electron-hole pairs.",
+              "choices": [
+                "Heat removes electrons from the material",
+                "Heat melts the crystal structure",
+                "Thermal vibrations give electrons enough energy to jump across the band gap",
+                "Thermal energy reduces the band gap"
+              ],
+              "id": "semiconductors_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a hole move through a crystal?",
+              "answer": "When a nearby electron moves into the hole, the hole effectively moves in the opposite direction",
+              "explain": "Electrons fill holes by moving into them. This makes the hole appear to move in the opposite direction. Hole motion is like the movement of a bubble through water.",
+              "choices": [
+                "Holes are pushed by external forces",
+                "When a nearby electron moves into the hole, the hole effectively moves in the opposite direction",
+                "Holes do not move at all",
+                "Holes physically move through the material"
+              ],
+              "id": "semiconductors_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can both electrons and holes carry current?",
+              "answer": "Electrons and holes move in opposite directions, but their currents add up in the same direction",
+              "explain": "Electrons (negative) move one way and holes (positive) move the other way, so their contributions to current point the same way and add together.",
+              "choices": [
+                "Only electrons can carry current",
+                "Electrons and holes move in opposite directions, but their currents add up in the same direction",
+                "Only holes can carry current",
+                "Neither electrons nor holes carry current directly"
+              ],
+              "id": "semiconductors_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Doping and the PN Junction",
+      "tip": "Doping adds impurities to pure silicon to control its electrical properties. N-type doping adds free electrons; p-type adds holes. A PN junction where the two types meet is the basis for diodes and transistors.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Doping and N-Type / P-Type Semiconductors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is doping in semiconductor physics?",
+              "answer": "Adding trace amounts of impurity atoms to pure semiconductor to change its electrical properties",
+              "explain": "Doping increases conductivity and allows control of electron and hole concentrations. A tiny amount of impurity, often parts per million or even fewer, dramatically changes the material.",
+              "choices": [
+                "Coating the semiconductor surface",
+                "Adding trace amounts of impurity atoms to pure semiconductor to change its electrical properties",
+                "Heating the semiconductor",
+                "Applying electrical voltage"
+              ],
+              "id": "semiconductors_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is N-type doping?",
+              "answer": "Adding donor atoms (like phosphorus) that contribute free electrons",
+              "explain": "N-type (negative) doping uses donor atoms with 5 valence electrons. They form 4 bonds with silicon and have 1 extra electron that is easily freed.",
+              "choices": [
+                "Creating holes in the crystal",
+                "Adding atoms with 3 valence electrons",
+                "Adding donor atoms (like phosphorus) that contribute free electrons",
+                "Removing electrons from silicon"
+              ],
+              "id": "semiconductors_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is P-type doping?",
+              "answer": "Adding acceptor atoms (like boron) that create holes by accepting electrons",
+              "explain": "P-type (positive) doping uses acceptor atoms with 3 valence electrons. They form 4 bonds with silicon but have a missing electron (hole) that accepts electrons.",
+              "choices": [
+                "Adding acceptor atoms (like boron) that create holes by accepting electrons",
+                "Removing holes from silicon",
+                "Adding atoms with 5 valence electrons",
+                "Creating free electrons"
+              ],
+              "id": "semiconductors_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a donor impurity?",
+              "answer": "An atom that donates electrons to the conduction band",
+              "explain": "Donor atoms (like phosphorus or arsenic) have 5 valence electrons. The extra electron is weakly bound and easily freed, contributing to n-type conductivity.",
+              "choices": [
+                "An atom that blocks current flow",
+                "An atom used to create insulators",
+                "An atom that donates electrons to the conduction band",
+                "An atom that accepts electrons from the valence band"
+              ],
+              "id": "semiconductors_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an acceptor impurity?",
+              "answer": "An atom that accepts electrons from the valence band, creating holes",
+              "explain": "Acceptor atoms (like boron or gallium) have 3 valence electrons. They form 4 bonds by accepting electrons from the valence band, creating holes.",
+              "choices": [
+                "An atom that emits energy",
+                "An atom used in conductors",
+                "An atom that accepts electrons from the valence band, creating holes",
+                "An atom that donates electrons"
+              ],
+              "id": "semiconductors_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "The PN Junction",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a PN junction?",
+              "answer": "The boundary between p-type and n-type semiconductor materials",
+              "explain": "A PN junction is created by joining p-type (hole-rich) and n-type (electron-rich) materials. This interface forms the basis of diodes and transistors.",
+              "choices": [
+                "The boundary between p-type and n-type semiconductor materials",
+                "A junction between silicon and another metal",
+                "A region with no doping",
+                "A connection between two wires"
+              ],
+              "id": "semiconductors_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens at a PN junction in equilibrium (no applied voltage)?",
+              "answer": "Electrons and holes diffuse across the junction and recombine, creating a depletion region",
+              "explain": "Electrons diffuse from n-type to p-type; holes diffuse the opposite way. Recombination near the junction creates a depleted region with no mobile charges.",
+              "choices": [
+                "Electrons and holes diffuse across the junction and recombine, creating a depletion region",
+                "Current flows continuously",
+                "No interaction occurs between the two sides",
+                "Electrons and holes move faster"
+              ],
+              "id": "semiconductors_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the depletion region?",
+              "answer": "A region near the PN junction depleted of mobile charge carriers",
+              "explain": "Recombination removes free electrons and holes near the junction, leaving behind a region with only immobile positive and negative ions. This creates an electric field.",
+              "choices": [
+                "A region near the PN junction depleted of mobile charge carriers",
+                "The edge of the crystal",
+                "The entire n-type region",
+                "The region where doping is strongest"
+              ],
+              "id": "semiconductors_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the built-in potential (or barrier potential)?",
+              "answer": "The voltage across the depletion region that opposes further diffusion",
+              "explain": "The built-in potential arises from the depletion region's electric field. It opposes the diffusion of charges and is roughly 0.6 to 0.8 V for silicon junctions, depending on doping.",
+              "choices": [
+                "An external voltage applied to the junction",
+                "The voltage across the depletion region that opposes further diffusion",
+                "The voltage needed to break down the material",
+                "The total voltage in the circuit"
+              ],
+              "id": "semiconductors_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when forward voltage is applied to a PN junction?",
+              "answer": "The depletion region narrows and carriers can flow across the junction easily",
+              "explain": "Forward bias reduces the built-in potential barrier. Electrons and holes can now cross the junction easily, allowing large current to flow.",
+              "choices": [
+                "The depletion region narrows and carriers can flow across the junction easily",
+                "No change occurs",
+                "Current flows backwards",
+                "The depletion region widens"
+              ],
+              "id": "semiconductors_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "How Diodes Work",
+      "tip": "A diode is a PN junction that allows current in one direction (forward bias) and blocks it in the other (reverse bias). This fundamental asymmetry is used for rectification and switching.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Diode Operation and Characteristics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a diode?",
+              "answer": "A semiconductor device with a PN junction that conducts in one direction and blocks in the other",
+              "explain": "A diode is the simplest semiconductor device. It allows large current when forward-biased and blocks current when reverse-biased.",
+              "choices": [
+                "A component that amplifies signals",
+                "A device that generates light",
+                "A semiconductor device with a PN junction that conducts in one direction and blocks in the other",
+                "A device that stores electrical charge"
+              ],
+              "id": "semiconductors_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is forward bias?",
+              "answer": "Applying voltage to reduce the depletion region and allow current to flow",
+              "explain": "Forward bias applies a positive voltage to the p-type side relative to n-type. This reduces the barrier and allows large currents.",
+              "choices": [
+                "Applying voltage that widens the depletion region",
+                "Removing voltage from the junction",
+                "Applying voltage to reduce the depletion region and allow current to flow",
+                "A naturally occurring voltage"
+              ],
+              "id": "semiconductors_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is reverse bias?",
+              "answer": "Applying voltage to widen the depletion region and block current",
+              "explain": "Reverse bias applies a positive voltage to the n-type side relative to p-type. This widens the barrier and blocks most current.",
+              "choices": [
+                "Removing all voltage from the device",
+                "Applying voltage to reduce the depletion region",
+                "Applying voltage to widen the depletion region and block current",
+                "The natural state of all diodes"
+              ],
+              "id": "semiconductors_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is reverse saturation current in a diode?",
+              "answer": "A small leakage current that flows even when the diode is reverse-biased",
+              "explain": "Even when reverse-biased, thermal generation of electron-hole pairs creates a small current. This is the reverse saturation current, which is usually very small.",
+              "choices": [
+                "A small leakage current that flows even when the diode is reverse-biased",
+                "Current created by external sources",
+                "The maximum current a diode can conduct",
+                "Current that flows only in forward direction"
+              ],
+              "id": "semiconductors_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the I-V characteristic of a diode?",
+              "answer": "A curve showing exponential current increase with forward voltage and small reverse leakage",
+              "explain": "The I-V curve shows exponential increase in forward current above the threshold voltage, and nearly zero current in reverse until breakdown occurs.",
+              "choices": [
+                "A random pattern with no meaning",
+                "A curve showing exponential current increase with forward voltage and small reverse leakage",
+                "A straight line indicating constant resistance",
+                "A horizontal line at constant current"
+              ],
+              "id": "semiconductors_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Diode Applications",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is rectification?",
+              "answer": "Converting AC current to DC by allowing current in only one direction",
+              "explain": "A diode rectifies AC to DC by conducting on positive half-cycles and blocking on negative. Multiple diodes in a bridge rectifier improve efficiency.",
+              "choices": [
+                "Removing noise from a signal",
+                "Increasing the voltage of a source",
+                "Converting AC current to DC by allowing current in only one direction",
+                "Making an electrical signal stronger"
+              ],
+              "id": "semiconductors_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is avalanche breakdown in a reverse-biased diode?",
+              "answer": "A rapid increase in current when reverse voltage exceeds a critical value",
+              "explain": "At high reverse voltage, the electric field is strong enough to accelerate carriers into ionisation, creating more carriers in a runaway process.",
+              "choices": [
+                "A slow, controlled increase in reverse current",
+                "A rapid increase in current when reverse voltage exceeds a critical value",
+                "A heating effect in the diode",
+                "The normal operation of a diode"
+              ],
+              "id": "semiconductors_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the breakdown voltage of a diode?",
+              "answer": "The reverse voltage at which the reverse current rises sharply",
+              "explain": "The breakdown voltage is the reverse voltage at which the reverse current rises sharply. It varies by design and doping level, and ordinary diodes can be damaged if the current is not limited.",
+              "choices": [
+                "The maximum current the diode can handle",
+                "The temperature at which the diode fails",
+                "The reverse voltage at which the reverse current rises sharply",
+                "The forward voltage needed to conduct current"
+              ],
+              "id": "semiconductors_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Zener diode?",
+              "answer": "A heavily doped diode designed to operate in reverse breakdown for voltage regulation",
+              "explain": "A Zener diode is deliberately designed to break down at a specific voltage. It maintains a nearly constant voltage across it, making it useful for voltage regulation.",
+              "choices": [
+                "A high-frequency diode",
+                "A diode that conducts in both directions",
+                "A diode optimised for forward conduction",
+                "A heavily doped diode designed to operate in reverse breakdown for voltage regulation"
+              ],
+              "id": "semiconductors_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a photodiode?",
+              "answer": "A diode that generates current when light hits the junction",
+              "explain": "A photodiode converts light into electrical current. The photons excite electron-hole pairs at the junction, creating photocurrent.",
+              "choices": [
+                "A diode used only in dark environments",
+                "A diode that emits light",
+                "A diode that generates current when light hits the junction",
+                "A diode that measures temperature"
+              ],
+              "id": "semiconductors_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "How MOSFETs Work",
+      "tip": "A MOSFET is a transistor controlled by voltage applied to an insulated gate. The gate voltage modulates a conducting channel between source and drain, allowing current control.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "MOSFET Structure and Modes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does MOSFET stand for?",
+              "answer": "Metal-Oxide-Semiconductor Field-Effect Transistor",
+              "explain": "A MOSFET has a metal (or poly-Si) gate separated from the semiconductor by an insulating oxide layer, typically silicon dioxide.",
+              "choices": [
+                "Metal-Operated Semiconductor Field-Effect Transistor",
+                "Multiple Operating System Field-Effect Transistor",
+                "Metal-Oxide-Semiconductor Field-Effect Transistor",
+                "Modulated Output Switch Field-Effect Transistor"
+              ],
+              "id": "semiconductors_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the gate in a MOSFET?",
+              "answer": "An insulated electrode that creates an electric field to control current flow",
+              "explain": "The gate is a metal or poly-Si electrode separated from the semiconductor by oxide. Voltage on the gate creates an electric field that modulates the channel.",
+              "choices": [
+                "An insulated electrode that creates an electric field to control current flow",
+                "A heat sink",
+                "The source of electrons",
+                "A physical opening in the transistor"
+              ],
+              "id": "semiconductors_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the channel in a MOSFET?",
+              "answer": "The region of semiconductor between source and drain where current flows",
+              "explain": "The channel is the conducting path created by the gate's electric field. The gate voltage controls whether the channel conducts strongly or weakly.",
+              "choices": [
+                "The oxide insulator",
+                "The metal gate",
+                "The region of semiconductor between source and drain where current flows",
+                "The substrate material"
+              ],
+              "id": "semiconductors_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is threshold voltage (Vth)?",
+              "answer": "The gate voltage at which the channel just begins to conduct",
+              "explain": "Threshold voltage is the minimum gate voltage needed to create a conductive channel. Below Vth, no channel forms and only a tiny leakage current flows.",
+              "choices": [
+                "The gate voltage that destroys the transistor",
+                "The voltage that reverse-biases the junction",
+                "The voltage between source and drain",
+                "The gate voltage at which the channel just begins to conduct"
+              ],
+              "id": "semiconductors_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between n-channel and p-channel MOSFETs?",
+              "answer": "N-channel uses electrons as carriers; p-channel uses holes, so their polarities are opposite",
+              "explain": "In n-channel, applying positive gate voltage attracts electrons to form the channel. In p-channel, negative gate voltage attracts holes. Both can be used in complementary pairs.",
+              "choices": [
+                "N-channel is faster",
+                "P-channel is stronger",
+                "There is no practical difference",
+                "N-channel uses electrons as carriers; p-channel uses holes, so their polarities are opposite"
+              ],
+              "id": "semiconductors_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "MOSFET Operation and Applications",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the cutoff region in MOSFET operation?",
+              "answer": "When gate voltage is below threshold and no current flows",
+              "explain": "In cutoff (off state), the gate voltage is insufficient to create a conducting channel. The transistor blocks current.",
+              "choices": [
+                "When gate voltage is below threshold and no current flows",
+                "When the transistor is conducting maximum current",
+                "When the gate voltage is very high",
+                "When the channel is pinched off by drain voltage"
+              ],
+              "id": "semiconductors_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the triode (linear) region?",
+              "answer": "When gate voltage exceeds threshold and drain voltage is low, so resistance is controlled by gate",
+              "explain": "In the triode region, the channel is conducting and its resistance varies with gate voltage, so the MOSFET acts like a voltage-controlled resistor. It is also the usual on state of a switch.",
+              "choices": [
+                "When source and drain are shorted",
+                "When the transistor is turned off",
+                "When gate voltage exceeds threshold and drain voltage is low, so resistance is controlled by gate",
+                "When the transistor reaches breakdown"
+              ],
+              "id": "semiconductors_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the saturation region?",
+              "answer": "When gate voltage exceeds threshold and drain voltage is high, so current is nearly independent of drain voltage",
+              "explain": "In saturation, increasing drain voltage does not increase current much. The current depends mainly on gate voltage, making this region useful for amplification.",
+              "choices": [
+                "When the transistor is physically flooded with charge",
+                "When the transistor is off",
+                "When gate voltage exceeds threshold and drain voltage is high, so current is nearly independent of drain voltage",
+                "When current reaches zero"
+              ],
+              "id": "semiconductors_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is a MOSFET used as a switch?",
+              "answer": "By toggling between cutoff (off) and triode (on) with gate voltage",
+              "explain": "In switching, the gate voltage is driven below and above threshold. The transistor toggles between nearly zero current (off, cutoff) and a low-resistance conducting state (on, triode).",
+              "choices": [
+                "By applying AC to the source",
+                "By changing the substrate voltage",
+                "By modulating the drain voltage",
+                "By toggling between cutoff (off) and triode (on) with gate voltage"
+              ],
+              "id": "semiconductors_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are MOSFETs the dominant transistor technology in modern chips?",
+              "answer": "They are simple, small, consume little power, and switch very fast",
+              "explain": "MOSFETs can be scaled to nanometre dimensions, use very little power when idle, and switch in a fraction of a nanosecond. Billions fit on a single chip.",
+              "choices": [
+                "They work at very high voltages",
+                "They were invented first",
+                "They need no power supply to operate",
+                "They are simple, small, consume little power, and switch very fast"
+              ],
+              "id": "semiconductors_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Integrated Circuits",
+      "tip": "Integrated circuits pack millions or billions of transistors on one chip. MOSFETs are fabricated in lithographic layers. The same physics scales from discrete diodes to advanced processors.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "IC Fabrication and Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an integrated circuit (IC)?",
+              "answer": "Multiple transistors, diodes, and other components fabricated on a single semiconductor chip",
+              "explain": "An IC combines thousands to billions of components on one piece of silicon. This enables complex circuits at low cost.",
+              "choices": [
+                "A single transistor with multiple leads",
+                "A circuit made of discrete components connected by wires",
+                "Multiple transistors, diodes, and other components fabricated on a single semiconductor chip",
+                "A component used only in amplifiers"
+              ],
+              "id": "semiconductors_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is photolithography in chip fabrication?",
+              "answer": "Using light through a mask to define circuit patterns on a wafer",
+              "explain": "Photolithography is the primary technique for patterning circuits. Light is shone through a mask onto photoresist-coated silicon, defining small features.",
+              "choices": [
+                "A technique for measuring chip size",
+                "Using light through a mask to define circuit patterns on a wafer",
+                "A method for cooling chips",
+                "A way to add colour to chips"
+              ],
+              "id": "semiconductors_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a feature size in chip manufacturing?",
+              "answer": "The smallest dimension of transistors and connections that can be fabricated",
+              "explain": "Feature size refers to the smallest dimensions that can be made, such as gate length and minimum spacing. Modern node names are mostly marketing labels, but smaller features still allow more transistors and faster switching.",
+              "choices": [
+                "The size of the entire chip",
+                "The thickness of the silicon wafer",
+                "The number of layers in the chip",
+                "The smallest dimension of transistors and connections that can be fabricated"
+              ],
+              "id": "semiconductors_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to scale down transistors?",
+              "answer": "Making transistors smaller and packing more onto the same area",
+              "explain": "Scaling reduces feature size. Smaller transistors switch faster, consume less power, and more fit on a chip, following Moore's Law trends.",
+              "choices": [
+                "Reducing the number of transistors on a chip",
+                "Making transistors smaller and packing more onto the same area",
+                "Changing the material from silicon to germanium",
+                "Increasing the size of transistors"
+              ],
+              "id": "semiconductors_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a wafer in semiconductor fabrication?",
+              "answer": "A thin, circular slice of silicon on which multiple chips are fabricated",
+              "explain": "A wafer is typically 300mm in diameter and a fraction of a millimetre thick. Hundreds of chips are made on a single wafer, then separated.",
+              "choices": [
+                "A protective coating on chips",
+                "A single transistor",
+                "A tool used in manufacturing",
+                "A thin, circular slice of silicon on which multiple chips are fabricated"
+              ],
+              "id": "semiconductors_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Digital Circuits and Logic Gates",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How is a CMOS inverter (NOT gate) built?",
+              "answer": "Using complementary n-channel and p-channel MOSFETs that are always in opposite states",
+              "explain": "A CMOS inverter uses one n-channel and one p-channel MOSFET. When one is on, the other is off. This provides fast switching with minimal power.",
+              "choices": [
+                "Using only n-channel MOSFETs",
+                "Using complementary n-channel and p-channel MOSFETs that are always in opposite states",
+                "Using two resistors and a transistor",
+                "Using diodes and resistors"
+              ],
+              "id": "semiconductors_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is CMOS technology?",
+              "answer": "Complementary MOS, using both n-channel and p-channel transistors for low power consumption",
+              "explain": "CMOS uses complementary transistor pairs that draw power only during switching. This makes it much more power-efficient than older NMOS technology.",
+              "choices": [
+                "Complementary MOS, using both n-channel and p-channel transistors for low power consumption",
+                "Conducting Metal Operating System",
+                "A type of memory technology",
+                "A single type of MOSFET"
+              ],
+              "id": "semiconductors_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are computer logic circuits built as digital on/off circuits rather than analogue ones?",
+              "answer": "Binary (on/off) operation is more robust to noise and easier to design at large scale",
+              "explain": "Digital circuits use transistors as switches (on/off), not amplifiers. This makes them less sensitive to parameter variations and noise.",
+              "choices": [
+                "Digital circuits are always faster",
+                "Binary (on/off) operation is more robust to noise and easier to design at large scale",
+                "Analogue circuits use different components entirely",
+                "MOSFETs cannot amplify analogue signals"
+              ],
+              "id": "semiconductors_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a logic gate?",
+              "answer": "A circuit built from transistors that performs Boolean operations on binary inputs",
+              "explain": "Logic gates (AND, OR, NOT) are built from MOSFETs. They take binary inputs and produce a binary output according to a logical function.",
+              "choices": [
+                "A physical gate in the manufacturing process",
+                "A type of diode",
+                "A component used only in power supplies",
+                "A circuit built from transistors that performs Boolean operations on binary inputs"
+              ],
+              "id": "semiconductors_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do processors scale to billions of transistors without overheating?",
+              "answer": "Using efficient CMOS switching, clock gating, and thermal management techniques",
+              "explain": "Modern processors use low-power designs, turn off unused circuits, and dissipate heat through heat sinks. Each transistor draws little power, so billions can fit.",
+              "choices": [
+                "Transistors do not generate heat",
+                "Using efficient CMOS switching, clock gating, and thermal management techniques",
+                "By reducing the supply voltage to zero",
+                "Large processors inherently cannot scale further"
+              ],
+              "id": "semiconductors_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
