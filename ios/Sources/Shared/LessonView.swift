@@ -192,7 +192,11 @@ struct LessonView: View {
     private func check(_ exercise: Exercise) {
         let correct = exercise.type == "match"
             ? !matchMissed
-            : normalize(given(for: exercise)) == normalize(exercise.answer)
+            // A tapped choice is compared exactly: normalizing made "# comment" equal
+            // "// comment" and "String" equal "string", so wrong choices graded as right.
+            : exercise.choices != nil && exercise.type != "sentence"
+                ? given(for: exercise) == exercise.answer
+                : normalize(given(for: exercise)) == normalize(exercise.answer)
         // A recovered miss counts, but never past the lesson's real length.
         if correct { correctCount = min(correctCount + 1, lesson.exercises.count) }
         if !correct, !retried.contains(exercise.id) {
