@@ -26,3 +26,11 @@
 
 /content/*
   Cache-Control: public, max-age=300, must-revalidate
+
+# CSS and JS: 5 minutes at the edge. The default 4 hours kept an old neutral.css live after a
+# deploy and the landing page stayed red. The ?v= tag on each link is the second guard.
+/css/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/js/*
+  Cache-Control: public, max-age=300, must-revalidate

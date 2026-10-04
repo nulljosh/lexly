@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lexly-v6';
+const CACHE_VERSION = 'tonchi-v7';
 
 const APP_SHELL = [
     './',
