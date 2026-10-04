@@ -1,0 +1,904 @@
+{
+  "id": "computer_architecture",
+  "name": "Computer Architecture",
+  "category": "programming",
+  "icon": "fa-solid fa-microchip",
+  "level": "How Processors Are Organised",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Fundamentals",
+      "tip": "The von Neumann architecture describes how computers work: a CPU, memory, and a control unit that fetches instructions from memory and executes them. The instruction cycle repeats billions of times per second: fetch, decode, execute, writeback.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Von Neumann Model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the von Neumann architecture define?",
+              "answer": "A computer with a CPU, memory, and control unit executing stored instructions",
+              "explain": "The von Neumann model is the foundational computer architecture still used today. It separates computation (CPU) from storage (memory), both storing data and instructions.",
+              "choices": [
+                "A computer with a CPU, memory, and control unit executing stored instructions",
+                "Only the speed of processors",
+                "How to build a robot",
+                "A programming language"
+              ],
+              "id": "computer_architecture_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'von Neumann bottleneck'?",
+              "answer": "A theoretical limitation: a single bus connecting CPU and memory limits bandwidth",
+              "explain": "The von Neumann bottleneck describes how CPU performance is limited by the bandwidth of the connection to main memory. Modern architectures use caches to mitigate this.",
+              "choices": [
+                "A theoretical limitation: a single bus connecting CPU and memory limits bandwidth",
+                "A slow hard drive",
+                "Too many transistors in a chip",
+                "Excessive heat generation"
+              ],
+              "id": "computer_architecture_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is stored in a computer's memory?",
+              "answer": "Both program instructions and data",
+              "explain": "Von Neumann architecture stores both the program and the data it operates on in the same memory. This allows programs to be modified during execution.",
+              "choices": [
+                "Both program instructions and data",
+                "Only program instructions",
+                "Only data",
+                "Nothing, memory is temporary only"
+              ],
+              "id": "computer_architecture_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the control unit in a CPU?",
+              "answer": "A circuit that directs operations and manages instruction fetching",
+              "explain": "The control unit interprets instructions and directs other CPU components on what to do. It coordinates the fetch-decode-execute cycle.",
+              "choices": [
+                "A circuit that directs operations and manages instruction fetching",
+                "Where calculations happen",
+                "The temporary storage inside the CPU",
+                "A heat sink for cooling"
+              ],
+              "id": "computer_architecture_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a register?",
+              "answer": "The fastest temporary storage directly inside the CPU",
+              "explain": "Registers are small, fast memory locations inside the CPU used to hold data during computation. They are much faster than RAM but limited in number.",
+              "choices": [
+                "The fastest temporary storage directly inside the CPU",
+                "A book recording transactions",
+                "Permanent storage on disk",
+                "A type of memory bus"
+              ],
+              "id": "computer_architecture_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "The Instruction Cycle",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the stages of the instruction cycle?",
+              "answer": "Fetch, Decode, Execute, Writeback",
+              "explain": "The instruction cycle repeats: fetch an instruction from memory, decode it to determine what to do, execute the operation, and write results back.",
+              "choices": [
+                "Fetch, Decode, Execute, Writeback",
+                "Read, Compile, Run, Stop",
+                "Store, Process, Output, Repeat",
+                "Input, Calculate, Save, Load"
+              ],
+              "id": "computer_architecture_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens in the 'fetch' stage?",
+              "answer": "An instruction is retrieved from memory using the program counter",
+              "explain": "The fetch stage reads the next instruction from memory at the address specified by the program counter (PC). The instruction is then stored in the instruction register.",
+              "choices": [
+                "An instruction is retrieved from memory using the program counter",
+                "The instruction is executed immediately",
+                "Operands are loaded from registers",
+                "Results are written back to memory"
+              ],
+              "id": "computer_architecture_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens in the 'decode' stage?",
+              "answer": "The instruction is interpreted and control signals are generated",
+              "explain": "The decode stage reads the instruction and determines which operation to perform and which operands to use. Control signals are generated for the rest of the cycle.",
+              "choices": [
+                "The instruction is interpreted and control signals are generated",
+                "Data is retrieved from main memory",
+                "The actual computation happens",
+                "The program counter is incremented"
+              ],
+              "id": "computer_architecture_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens in the 'execute' stage?",
+              "answer": "The ALU performs the operation specified by the instruction",
+              "explain": "The execute stage carries out the actual computation or operation. For an add instruction, the ALU adds two operands and produces a result.",
+              "choices": [
+                "The ALU performs the operation specified by the instruction",
+                "The instruction is fetched from memory",
+                "The result is stored in memory",
+                "The program counter is updated"
+              ],
+              "id": "computer_architecture_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the program counter (PC)?",
+              "answer": "A register holding the address of the next instruction to fetch",
+              "explain": "The program counter stores the memory address of the next instruction. After each instruction, the PC is incremented to point to the following instruction.",
+              "choices": [
+                "A register holding the address of the next instruction to fetch",
+                "A counter of how many programs run",
+                "The number of instructions executed",
+                "A timer measuring CPU speed"
+              ],
+              "id": "computer_architecture_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Datapath and Control",
+      "tip": "The datapath is the hardware that processes data, including the ALU, registers, and buses. The control unit sends signals that direct the datapath. Together they implement the instruction cycle.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "The Datapath",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the ALU?",
+              "answer": "The Arithmetic Logic Unit that performs calculations and logical operations",
+              "explain": "The ALU is the part of the CPU that actually performs arithmetic (add, subtract, multiply) and logical (AND, OR, NOT) operations on data.",
+              "choices": [
+                "The Arithmetic Logic Unit that performs calculations and logical operations",
+                "A type of memory",
+                "A device for storing instructions",
+                "A cooling mechanism"
+              ],
+              "id": "computer_architecture_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bus in computer architecture?",
+              "answer": "A set of wires connecting components for data transfer",
+              "explain": "A bus is a communication pathway. The data bus carries data, the address bus carries addresses, and the control bus carries control signals between CPU, memory, and peripherals.",
+              "choices": [
+                "A set of wires connecting components for data transfer",
+                "A slow storage device",
+                "The part that cools the CPU",
+                "A type of instruction"
+              ],
+              "id": "computer_architecture_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the multiplexer in the datapath?",
+              "answer": "To select which input goes to the ALU or register file",
+              "explain": "Multiplexers are switches that select one of several inputs to pass through. They allow the datapath to route data flexibly based on control signals.",
+              "choices": [
+                "To select which input goes to the ALU or register file",
+                "To increase the speed of memory",
+                "To encrypt data during transfer",
+                "To eliminate unused transistors"
+              ],
+              "id": "computer_architecture_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the register file?",
+              "answer": "A collection of registers providing fast temporary storage for data",
+              "explain": "The register file is a small, ultra-fast memory inside the CPU containing many registers. The CPU reads and writes registers very quickly.",
+              "choices": [
+                "A collection of registers providing fast temporary storage for data",
+                "A list of all CPU registers on disk",
+                "A backup storage for memory",
+                "A device that caches disk data"
+              ],
+              "id": "computer_architecture_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the accumulator register?",
+              "answer": "To store intermediate results during computation",
+              "explain": "The accumulator is a special register used to store the results of operations, particularly in older architectures. Modern CPUs have more general-purpose registers.",
+              "choices": [
+                "To store intermediate results during computation",
+                "To hold the program counter",
+                "To control the clock speed",
+                "To manage memory addresses only"
+              ],
+              "id": "computer_architecture_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Control Signals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are control signals?",
+              "answer": "Commands from the control unit directing what the datapath should do",
+              "explain": "Control signals tell components when to read, write, or operate. Different instructions generate different control signal sequences.",
+              "choices": [
+                "Data values being processed",
+                "Commands from the control unit directing what the datapath should do",
+                "The clock pulses synchronizing the CPU",
+                "Error messages from the CPU"
+              ],
+              "id": "computer_architecture_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the control unit generate from an instruction?",
+              "answer": "A sequence of control signals for the datapath",
+              "explain": "The control unit decodes the instruction and generates a sequence of signals that tell registers when to store data, when the ALU should compute, and when memory should read or write.",
+              "choices": [
+                "Numeric data for the ALU",
+                "A sequence of control signals for the datapath",
+                "The next instruction to execute",
+                "Interrupts for the operating system"
+              ],
+              "id": "computer_architecture_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a microinstruction?",
+              "answer": "A low-level instruction controlling one operation on the datapath",
+              "explain": "A single machine instruction may be broken into multiple microinstructions, each controlling a single step of the datapath (like loading a register or performing an ALU operation).",
+              "choices": [
+                "A tiny program that runs inside the operating system",
+                "A low-level instruction controlling one operation on the datapath",
+                "An instruction for the operating system",
+                "A security mechanism in modern CPUs"
+              ],
+              "id": "computer_architecture_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does the clock synchronize the datapath?",
+              "answer": "Pulse edges trigger state changes in registers and latches",
+              "explain": "The clock sends regular pulses. On rising or falling clock edges, registers capture new values, synchronizing all operations and preventing data corruption.",
+              "choices": [
+                "It speeds up the ALU",
+                "Pulse edges trigger state changes in registers and latches",
+                "It encrypts signals",
+                "It eliminates memory delays"
+              ],
+              "id": "computer_architecture_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the instruction register?",
+              "answer": "A register holding the current instruction being executed",
+              "explain": "The instruction register stores the instruction fetched from memory. The control unit reads the instruction register to determine what control signals to generate.",
+              "choices": [
+                "A record of all past instructions",
+                "A register holding the current instruction being executed",
+                "The sequence of instructions in a program",
+                "A backup register for crashes"
+              ],
+              "id": "computer_architecture_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Performance Optimization",
+      "tip": "Pipelining overlaps instruction stages to increase throughput. Caching exploits locality to hide memory latency. Memory hierarchies balance speed and capacity. These techniques hide the von Neumann bottleneck.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Pipelining and Hazards",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is pipelining?",
+              "answer": "Overlapping instruction stages so multiple instructions execute in parallel",
+              "explain": "In a pipeline, while one instruction is being executed, the next is being decoded and the one after is being fetched. This increases throughput.",
+              "choices": [
+                "Executing instructions one at a time sequentially",
+                "Overlapping instruction stages so multiple instructions execute in parallel",
+                "Storing pipelines of data in memory",
+                "A method to cool the CPU"
+              ],
+              "id": "computer_architecture_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pipeline hazard?",
+              "answer": "A situation where pipelined instructions cannot execute independently",
+              "explain": "Hazards occur when one instruction depends on results from another still in the pipeline. Data hazards, control hazards, and structural hazards can stall the pipeline.",
+              "choices": [
+                "A dangerous electrical condition",
+                "A situation where pipelined instructions cannot execute independently",
+                "A malfunction in the fetch stage",
+                "An instruction that takes too long"
+              ],
+              "id": "computer_architecture_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a data hazard?",
+              "answer": "When one instruction needs the result of a previous instruction still in the pipeline",
+              "explain": "A data hazard occurs when an instruction tries to use data that hasn't been written by a previous instruction yet. The pipeline must stall or use forwarding.",
+              "choices": [
+                "When data is lost",
+                "When one instruction needs the result of a previous instruction still in the pipeline",
+                "When memory is full",
+                "When the cache is corrupted"
+              ],
+              "id": "computer_architecture_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a control hazard?",
+              "answer": "When a branch instruction changes the program counter, flushing the pipeline",
+              "explain": "Control hazards occur with branches and jumps. The CPU doesn't know the next instruction until the branch is executed, potentially wasting pipelined instructions.",
+              "choices": [
+                "When control signals are lost",
+                "When a branch instruction changes the program counter, flushing the pipeline",
+                "When the CPU loses power",
+                "When too many registers are used"
+              ],
+              "id": "computer_architecture_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is forwarding in pipelines?",
+              "answer": "Passing results directly from one stage to another, bypassing registers",
+              "explain": "Forwarding allows an instruction to get results from a previous instruction still in the pipeline without waiting for writeback. This reduces data hazards.",
+              "choices": [
+                "Moving data through multiple stages",
+                "Passing results directly from one stage to another, bypassing registers",
+                "Storing results for later use",
+                "Sending instructions ahead in time"
+              ],
+              "id": "computer_architecture_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Cache and Memory Hierarchy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is temporal locality?",
+              "answer": "Recently accessed data is likely to be accessed again soon",
+              "explain": "Temporal locality means the same data is often used multiple times. Caches exploit this by keeping recently used data close to the CPU.",
+              "choices": [
+                "Data stored in the same location",
+                "Recently accessed data is likely to be accessed again soon",
+                "Data accessed from the same address space",
+                "Data that takes a long time to fetch"
+              ],
+              "id": "computer_architecture_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is spatial locality?",
+              "answer": "Data near accessed locations is likely to be accessed soon",
+              "explain": "Spatial locality means when you access data at an address, nearby data is often accessed shortly after. Caches load blocks of data together.",
+              "choices": [
+                "Data in different locations",
+                "Data near accessed locations is likely to be accessed soon",
+                "Data stored permanently",
+                "Data in secondary storage"
+              ],
+              "id": "computer_architecture_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a cache level?",
+              "answer": "L1, L2, L3 caches at different distances from the CPU",
+              "explain": "L1 cache is smallest and fastest (inside CPU). L2 and L3 are larger and slower. Main memory is even slower. The hierarchy balances speed and capacity.",
+              "choices": [
+                "A layer of insulation",
+                "L1, L2, L3 caches at different distances from the CPU",
+                "A floor in a building",
+                "A version of software"
+              ],
+              "id": "computer_architecture_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a cache line?",
+              "answer": "The smallest unit of data transferred between cache and memory",
+              "explain": "A cache line is typically 64 bytes. When the CPU needs a byte, the entire cache line is fetched. This exploits spatial locality.",
+              "choices": [
+                "A queue of cache requests",
+                "The smallest unit of data transferred between cache and memory",
+                "A single bit of cache data",
+                "A delayed response from cache"
+              ],
+              "id": "computer_architecture_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a cache miss?",
+              "answer": "When requested data is not in the cache and must be fetched from memory",
+              "explain": "A cache miss forces the CPU to fetch data from slower memory, causing a significant delay. Cache design tries to minimize miss rates.",
+              "choices": [
+                "When cache is completely empty",
+                "When requested data is not in the cache and must be fetched from memory",
+                "A damaged part of cache",
+                "When the cache controller fails"
+              ],
+              "id": "computer_architecture_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Instruction Set Design",
+      "tip": "RISC (Reduced Instruction Set) uses simple instructions and many registers. CISC (Complex Instruction Set) uses fewer but more powerful instructions. Each approach has tradeoffs in performance, power, and complexity.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "RISC and CISC Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is RISC architecture?",
+              "answer": "Reduced Instruction Set Computer with simple, fast instructions",
+              "explain": "RISC uses a small set of simple instructions, many registers, and relies on compilers to generate efficient code. Examples: ARM, MIPS, RISC-V.",
+              "choices": [
+                "A slow computer system",
+                "A security feature",
+                "Reduced Instruction Set Computer with simple, fast instructions",
+                "A type of memory"
+              ],
+              "id": "computer_architecture_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is CISC architecture?",
+              "answer": "Complex Instruction Set Computer with powerful, multi-step instructions",
+              "explain": "CISC uses a large set of complex instructions that perform multiple operations. Examples: x86, x64. CISC instructions are more powerful but harder to pipeline.",
+              "choices": [
+                "A simple architecture",
+                "A network design",
+                "Complex Instruction Set Computer with powerful, multi-step instructions",
+                "A storage system"
+              ],
+              "id": "computer_architecture_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of RISC design?",
+              "answer": "Simple instructions are easier to pipeline and optimize",
+              "explain": "RISC's simple instructions allow deeper pipelines and better performance. Uniform instruction format and load-store architecture simplify hardware design.",
+              "choices": [
+                "Programs always need fewer instructions",
+                "Requires less memory for programs",
+                "Simple instructions are easier to pipeline and optimize",
+                "Doesn't need caches"
+              ],
+              "id": "computer_architecture_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of CISC design?",
+              "answer": "Fewer instructions needed to perform complex tasks",
+              "explain": "CISC instructions can do more work per instruction, potentially using less code memory and requiring fewer memory accesses.",
+              "choices": [
+                "Easier for humans to understand",
+                "Faster than RISC always",
+                "Fewer instructions needed to perform complex tasks",
+                "Doesn't need pipelining"
+              ],
+              "id": "computer_architecture_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the load-store architecture in RISC?",
+              "answer": "Only load and store instructions access memory; ALU works with registers",
+              "explain": "In load-store architecture, data is moved to registers with load instructions, processed by the ALU, then moved back with store instructions. This simplifies pipelining.",
+              "choices": [
+                "A way to organize hard drives",
+                "A security measure",
+                "Only load and store instructions access memory; ALU works with registers",
+                "A memory caching technique"
+              ],
+              "id": "computer_architecture_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Instruction Format and Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an instruction format?",
+              "answer": "The bit layout of an instruction specifying opcode and operands",
+              "explain": "Instruction formats define where the opcode, register addresses, and immediates appear in an instruction. Different formats support different addressing modes.",
+              "choices": [
+                "A style of writing instructions",
+                "A summary of CPU capabilities",
+                "The bit layout of an instruction specifying opcode and operands",
+                "A timing specification"
+              ],
+              "id": "computer_architecture_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an immediate value?",
+              "answer": "A constant embedded in the instruction itself",
+              "explain": "An immediate is a fixed value that is part of the instruction, like add R1, R2, 5. The 5 is the immediate value.",
+              "choices": [
+                "A value computed immediately when needed",
+                "A register that changes frequently",
+                "A constant embedded in the instruction itself",
+                "A memory address"
+              ],
+              "id": "computer_architecture_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an addressing mode?",
+              "answer": "A way of specifying where an operand is located",
+              "explain": "Addressing modes include register (value in register), immediate (value in instruction), direct (value at memory address), and indirect (memory address in register).",
+              "choices": [
+                "A type of CPU",
+                "A memory caching strategy",
+                "A way of specifying where an operand is located",
+                "A power saving mode"
+              ],
+              "id": "computer_architecture_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an opcode?",
+              "answer": "The part of the instruction specifying the operation to perform",
+              "explain": "The opcode identifies the operation: add, subtract, load, store, branch, etc. The control unit decodes the opcode to generate control signals.",
+              "choices": [
+                "A code for security",
+                "The memory address of an operand",
+                "The part of the instruction specifying the operation to perform",
+                "A data value"
+              ],
+              "id": "computer_architecture_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the MIPS architecture, what are the three main instruction formats?",
+              "answer": "R-type (register), I-type (immediate), and J-type (jump)",
+              "explain": "MIPS uses R-type for register operations (three registers), I-type for an immediate with two registers, and J-type for jumps. Other ISAs use different formats.",
+              "choices": [
+                "Simple, medium, and complex",
+                "Load, store, and compute",
+                "R-type (register), I-type (immediate), and J-type (jump)",
+                "Conditional, unconditional, and special"
+              ],
+              "id": "computer_architecture_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Advanced Features",
+      "tip": "Branch prediction guesses which way a conditional branch will go, preventing pipeline stalls. Speculative execution runs instructions along the predicted path and throws the work away if the guess was wrong. These techniques hide control hazards.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Branch Prediction",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is branch prediction?",
+              "answer": "Guessing which way a conditional branch will go before execution",
+              "explain": "Branch predictors try to guess whether a branch will be taken before the condition is actually evaluated. Correct predictions avoid pipeline stalls.",
+              "choices": [
+                "Preventing all branches",
+                "Storing all possible branch outcomes",
+                "Guessing which way a conditional branch will go before execution",
+                "Executing both branches simultaneously"
+              ],
+              "id": "computer_architecture_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a branch predictor table?",
+              "answer": "Hardware storing history of past branch outcomes",
+              "explain": "Branch predictor tables use history to predict the next outcome. If a branch was recently taken, the predictor guesses it will be taken again.",
+              "choices": [
+                "A list of all branch instructions",
+                "A decision tree of all possible branches",
+                "Hardware storing history of past branch outcomes",
+                "Memory for storing branch targets"
+              ],
+              "id": "computer_architecture_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a branch misprediction?",
+              "answer": "When the predictor guesses wrong, requiring pipeline flush and restart",
+              "explain": "When the predictor guesses incorrectly, the CPU must discard speculatively executed instructions and restart. Modern CPUs tolerate some mispredictions.",
+              "choices": [
+                "A broken branch instruction",
+                "Too many branches in a program",
+                "When the predictor guesses wrong, requiring pipeline flush and restart",
+                "A security vulnerability"
+              ],
+              "id": "computer_architecture_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the branch target buffer?",
+              "answer": "A cache storing branch targets to speed up prediction",
+              "explain": "The branch target buffer (BTB) caches where recent branches jump to, allowing the next instruction address to be predicted even before the branch executes.",
+              "choices": [
+                "A storage device for instructions",
+                "A register holding branch conditions",
+                "A cache storing branch targets to speed up prediction",
+                "A memory for storing program code"
+              ],
+              "id": "computer_architecture_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a return address stack?",
+              "answer": "Hardware speeding up function calls by predicting return addresses",
+              "explain": "A return address stack stores the return addresses of function calls, making prediction very accurate for returns which are highly predictable.",
+              "choices": [
+                "The main memory stack",
+                "A list of all function definitions",
+                "Hardware speeding up function calls by predicting return addresses",
+                "A backup storage for register values"
+              ],
+              "id": "computer_architecture_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Speculative Execution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is speculative execution?",
+              "answer": "Executing instructions before knowing if they should be executed",
+              "explain": "The CPU runs instructions along the predicted path before knowing the branch result. If the prediction was right it commits the results; if wrong it discards them.",
+              "choices": [
+                "Executing instructions very quickly",
+                "Running instructions in any order",
+                "Predicting instruction outcomes",
+                "Executing instructions before knowing if they should be executed"
+              ],
+              "id": "computer_architecture_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is architectural state vs. microarchitectural state?",
+              "answer": "Architectural is visible to software; microarchitectural is internal to CPU",
+              "explain": "Architectural state (registers, memory) is what the ISA guarantees. Microarchitectural state (speculative buffers) is internal. Only committed architectural state survives.",
+              "choices": [
+                "Architectural is memory; microarchitectural is registers",
+                "They are the same thing",
+                "Microarchitectural is permanent, architectural is temporary",
+                "Architectural is visible to software; microarchitectural is internal to CPU"
+              ],
+              "id": "computer_architecture_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a reorder buffer?",
+              "answer": "A queue that commits results in correct order even if execution is out-of-order",
+              "explain": "The reorder buffer holds speculative results until it's known they should be committed. Results are committed in program order.",
+              "choices": [
+                "A buffer that reorders instructions randomly",
+                "A memory storage system",
+                "A cache for branch instructions",
+                "A queue that commits results in correct order even if execution is out-of-order"
+              ],
+              "id": "computer_architecture_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is branch flush penalty?",
+              "answer": "Cycles wasted when a misprediction is detected and the pipeline restarts",
+              "explain": "When a branch misprediction is detected, the CPU must flush all speculative instructions and restart. This causes a delay proportional to pipeline depth.",
+              "choices": [
+                "The time to clear cache",
+                "Energy used by the CPU",
+                "Memory bandwidth lost",
+                "Cycles wasted when a misprediction is detected and the pipeline restarts"
+              ],
+              "id": "computer_architecture_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is out-of-order execution?",
+              "answer": "Executing instructions before all previous ones complete if results independent",
+              "explain": "Out-of-order execution allows independent instructions to execute ahead of others, improving throughput. Results are still committed in program order.",
+              "choices": [
+                "Random instruction execution",
+                "Loading memory in any order",
+                "Discarding branch instructions",
+                "Executing instructions before all previous ones complete if results independent"
+              ],
+              "id": "computer_architecture_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Parallelism",
+      "tip": "Multicore processors integrate multiple cores on one chip for true parallel execution. SIMD executes one operation on multiple data elements. Both overcome instruction-level parallelism limits.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Multicore Processors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a multicore processor?",
+              "answer": "A single chip with multiple independent CPU cores",
+              "explain": "Each core can execute instructions independently. Multicore processors exploit thread-level parallelism, running different threads on different cores simultaneously.",
+              "choices": [
+                "Multiple CPUs in one computer",
+                "A processor with multiple pipelines",
+                "A CPU with very fast cache",
+                "A single chip with multiple independent CPU cores"
+              ],
+              "id": "computer_architecture_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a homogeneous multicore?",
+              "answer": "All cores are identical with the same instruction set and performance",
+              "explain": "Homogeneous multicores have uniform cores. All cores are the same, making them simpler to program and balance load evenly.",
+              "choices": [
+                "Cores with different speeds",
+                "Cores with different instruction sets",
+                "One large core and many small cores",
+                "All cores are identical with the same instruction set and performance"
+              ],
+              "id": "computer_architecture_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a heterogeneous multicore?",
+              "answer": "Cores with different performance characteristics or instruction sets",
+              "explain": "Heterogeneous designs use high-performance cores for demanding tasks and power-efficient cores for light tasks. ARM big.LITTLE is an example.",
+              "choices": [
+                "All cores are identical",
+                "Only for specialized applications",
+                "Never used in practice",
+                "Cores with different performance characteristics or instruction sets"
+              ],
+              "id": "computer_architecture_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is cache coherence?",
+              "answer": "Ensuring all cores see consistent data when sharing memory",
+              "explain": "With multiple cores, each might have its own cache. Cache coherence protocols ensure that when one core modifies data, others see the change.",
+              "choices": [
+                "Combining multiple caches into one",
+                "Preventing cores from accessing cache",
+                "Making all caches the same size",
+                "Ensuring all cores see consistent data when sharing memory"
+              ],
+              "id": "computer_architecture_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Amdahl's Law?",
+              "answer": "The speedup from parallelism is limited by the serial fraction of work",
+              "explain": "Amdahl's Law says that if a fraction s of the work must run serially, the maximum speedup is 1/s no matter how many cores are added. This limits multicore benefit.",
+              "choices": [
+                "Doubling cores doubles speed",
+                "Parallel execution has no overhead",
+                "Cores always work at the same speed",
+                "The speedup from parallelism is limited by the serial fraction of work"
+              ],
+              "id": "computer_architecture_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "SIMD and Parallel Execution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is SIMD?",
+              "answer": "Single Instruction Multiple Data: one operation on many data elements",
+              "explain": "SIMD executes the same operation on many data elements in parallel. Examples: SSE, AVX on x86; NEON on ARM; vector units.",
+              "choices": [
+                "Multiple instructions on single data",
+                "Sequential instruction execution",
+                "A type of memory cache",
+                "Single Instruction Multiple Data: one operation on many data elements"
+              ],
+              "id": "computer_architecture_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is vectorization in SIMD?",
+              "answer": "Transforming scalar code to use SIMD operations on multiple elements",
+              "explain": "Vectorization rewrites loops to operate on vectors of data instead of one element at a time. Compilers can auto-vectorize or developers can manually vectorize.",
+              "choices": [
+                "Using vector graphics",
+                "Moving vectors in memory",
+                "Creating lists of data",
+                "Transforming scalar code to use SIMD operations on multiple elements"
+              ],
+              "id": "computer_architecture_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are vector registers?",
+              "answer": "Wide registers holding multiple data elements for SIMD operations",
+              "explain": "Vector registers like XMM (128-bit), YMM (256-bit), or ZMM (512-bit) hold multiple integers or floats. SIMD instructions operate on all elements in parallel.",
+              "choices": [
+                "Registers that store addresses",
+                "Cache for vector graphics",
+                "Special memory locations",
+                "Wide registers holding multiple data elements for SIMD operations"
+              ],
+              "id": "computer_architecture_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is instruction-level parallelism?",
+              "answer": "Executing multiple independent instructions simultaneously",
+              "explain": "ILP exploits parallelism within a single instruction stream. Pipelining, out-of-order execution, and superscalar designs all exploit ILP.",
+              "choices": [
+                "Running multiple programs",
+                "Storing more instructions",
+                "Compressing instruction size",
+                "Executing multiple independent instructions simultaneously"
+              ],
+              "id": "computer_architecture_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a superscalar processor?",
+              "answer": "A CPU that executes multiple instructions per clock cycle",
+              "explain": "Superscalar processors issue and execute multiple independent instructions in the same clock cycle, improving throughput beyond single-issue pipelines.",
+              "choices": [
+                "A very large processor",
+                "A processor for matrix operations",
+                "A specialized gaming processor",
+                "A CPU that executes multiple instructions per clock cycle"
+              ],
+              "id": "computer_architecture_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

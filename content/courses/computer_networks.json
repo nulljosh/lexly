@@ -1,0 +1,904 @@
+{
+  "id": "computer_networks",
+  "name": "Computer Networks",
+  "category": "programming",
+  "icon": "fa-solid fa-network-wired",
+  "level": "How Networks Work",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Network Foundations",
+      "tip": "A network is a system of computers connected together to share data and resources. Networks enable communication between devices using shared rules called protocols. Every device on a network has a unique identifier so others can find and reach it.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Networks Enable",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary purpose of a computer network?",
+              "answer": "Share data and resources between computers",
+              "explain": "Networks enable computers to communicate and share resources like files, printers, and internet access with each other.",
+              "choices": [
+                "To eliminate the need for power supplies",
+                "To make computers run faster",
+                "To create electricity automatically",
+                "Share data and resources between computers"
+              ],
+              "id": "computer_networks_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is bandwidth in a network?",
+              "answer": "The maximum amount of data that can be transmitted per second",
+              "explain": "Bandwidth is measured in bits per second (Mbps, Gbps). Higher bandwidth means more data can travel simultaneously, like a wider highway for data.",
+              "choices": [
+                "The physical width of network cables",
+                "How many devices can connect",
+                "The amount of data a network cable weighs",
+                "The maximum amount of data that can be transmitted per second"
+              ],
+              "id": "computer_networks_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is latency in networking?",
+              "answer": "The delay between sending data and receiving it",
+              "explain": "Latency is the time it takes for data to travel from sender to receiver, measured in milliseconds. Low latency is critical for real-time applications like gaming.",
+              "choices": [
+                "The delay between sending data and receiving it",
+                "A type of network protocol",
+                "The speed of light in network cables",
+                "The total amount of data transmitted"
+              ],
+              "id": "computer_networks_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a protocol in networking?",
+              "answer": "The agreed-upon rules that specify how data is formatted and sent",
+              "explain": "Protocols are agreed-upon rules that specify how data is formatted, sent, and received. Examples include HTTP, TCP, IP, and DNS.",
+              "choices": [
+                "A physical cable type",
+                "The agreed-upon rules that specify how data is formatted and sent",
+                "A method to encrypt data",
+                "A device that connects networks"
+              ],
+              "id": "computer_networks_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a node represent in a network?",
+              "answer": "Any device connected to and participating in the network",
+              "explain": "A node is any endpoint on a network: computers, phones, printers, servers, or switches. Each node typically has a unique address.",
+              "choices": [
+                "Any device connected to and participating in the network",
+                "The center of the network",
+                "A wireless connection point",
+                "A type of data packet"
+              ],
+              "id": "computer_networks_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Network Types and Topology",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between LAN and WAN?",
+              "answer": "LAN is local, WAN connects distant networks across large areas",
+              "explain": "A LAN (Local Area Network) covers a small area like an office or home. A WAN (Wide Area Network) spans cities or countries. The internet is the largest WAN.",
+              "choices": [
+                "LAN is local, WAN connects distant networks across large areas",
+                "LANs use cables, WANs use wireless only",
+                "LANs connect more devices than WANs",
+                "WANs are faster than LANs"
+              ],
+              "id": "computer_networks_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is network topology?",
+              "answer": "The physical or logical arrangement of devices in a network",
+              "explain": "Topology describes how devices are connected: bus, star, ring, mesh, or hybrid. The topology affects how data flows and network reliability.",
+              "choices": [
+                "The list of all devices on a network",
+                "The encryption method used",
+                "The speed of network cables",
+                "The physical or logical arrangement of devices in a network"
+              ],
+              "id": "computer_networks_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a star topology, what is the center device called?",
+              "answer": "A hub or switch",
+              "explain": "In a star topology, all devices connect to a central hub or switch. If the center fails, the entire network goes down, but individual device failures don't affect others.",
+              "choices": [
+                "A firewall",
+                "A router",
+                "A hub or switch",
+                "A gateway"
+              ],
+              "id": "computer_networks_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a mesh network?",
+              "answer": "A network where devices connect to multiple other devices for redundancy",
+              "explain": "In a mesh topology, each device connects to several others. If one path fails, data can take alternate routes. Mesh networks are reliable but expensive.",
+              "choices": [
+                "A network that uses no cables",
+                "A temporary wireless connection",
+                "A network with no connections",
+                "A network where devices connect to multiple other devices for redundancy"
+              ],
+              "id": "computer_networks_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'scalability' mean for a network?",
+              "answer": "The ability to grow and add more devices without degrading performance",
+              "explain": "A scalable network can accommodate more users and devices while maintaining performance. Poor scalability means adding devices slows the network.",
+              "choices": [
+                "The ability to grow and add more devices without degrading performance",
+                "Making the network physically larger",
+                "Using the same topology everywhere",
+                "Increasing the speed of network cables"
+              ],
+              "id": "computer_networks_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Layered Models",
+      "tip": "Networks use layered models to organize communication. The TCP/IP model has four layers: link, internet, transport, and application. Each layer handles specific tasks and passes data to the next layer, like an assembly line.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "The TCP/IP Model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How many layers does the classic TCP/IP model (RFC 1122) have?",
+              "answer": "Four layers",
+              "explain": "The TCP/IP model consists of link layer, internet layer, transport layer, and application layer. Each layer has specific responsibilities.",
+              "choices": [
+                "Two layers",
+                "Three layers",
+                "Four layers",
+                "Seven layers"
+              ],
+              "id": "computer_networks_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the link layer handle?",
+              "answer": "Physical transmission of data between directly connected devices",
+              "explain": "The link layer manages how data physically travels on cables or wireless, handling things like electrical signals, Ethernet, and WiFi.",
+              "choices": [
+                "Routing data across the internet",
+                "Translating domain names to IP addresses",
+                "Physical transmission of data between directly connected devices",
+                "Ensuring reliable message delivery"
+              ],
+              "id": "computer_networks_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What responsibility does the internet layer have?",
+              "answer": "Routing data across networks using IP addresses",
+              "explain": "The internet layer handles IP addressing, routing, and how data finds paths between different networks using routers.",
+              "choices": [
+                "Providing user-friendly applications",
+                "Routing data across networks using IP addresses",
+                "Managing file transfers",
+                "Encoding data into bits"
+              ],
+              "id": "computer_networks_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the transport layer manage?",
+              "answer": "Reliable or best-effort delivery of data between applications",
+              "explain": "The transport layer uses protocols like TCP and UDP. TCP ensures reliable delivery; UDP prioritizes speed. Applications use different protocols depending on their needs.",
+              "choices": [
+                "How electrical signals travel in cables",
+                "Reliable or best-effort delivery of data between applications",
+                "Storing data on hard drives",
+                "Translating IP addresses to names"
+              ],
+              "id": "computer_networks_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the application layer include?",
+              "answer": "User-facing protocols like HTTP, DNS, SMTP, and FTP",
+              "explain": "The application layer contains the protocols that users and applications interact with directly: web browsers use HTTP, email uses SMTP, file transfers use FTP.",
+              "choices": [
+                "Only wireless connections",
+                "User-facing protocols like HTTP, DNS, SMTP, and FTP",
+                "Electrical signals and voltages",
+                "Physical hardware components"
+              ],
+              "id": "computer_networks_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "How Layers Work Together",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'encapsulation' mean in networking?",
+              "answer": "Wrapping data with headers at each layer as it travels down the stack",
+              "explain": "As data moves down the layers, each layer adds its own header with its own information. The application layer data becomes the transport layer's payload, which becomes the internet layer's payload.",
+              "choices": [
+                "Hiding data from unauthorized users",
+                "Wrapping data with headers at each layer as it travels down the stack",
+                "Compressing data to send it faster",
+                "Breaking data into smaller pieces"
+              ],
+              "id": "computer_networks_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'de-encapsulation' describe?",
+              "answer": "Removing headers and unwrapping data as it travels up the layers",
+              "explain": "When data arrives at the destination, each layer removes its own header and passes the remaining data upward. The application layer finally receives the original message.",
+              "choices": [
+                "Routing data to the correct destination",
+                "Speeding up network transmission",
+                "Encrypting data for security",
+                "Removing headers and unwrapping data as it travels up the layers"
+              ],
+              "id": "computer_networks_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is the layered model useful?",
+              "answer": "It separates concerns so each layer can be designed and improved independently",
+              "explain": "The layered approach means changes to one layer don't break others. A better WiFi standard doesn't require changes to HTTP or TCP.",
+              "choices": [
+                "It separates concerns so each layer can be designed and improved independently",
+                "It makes networks slower",
+                "It reduces the number of devices needed",
+                "It eliminates the need for cables"
+              ],
+              "id": "computer_networks_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you type a URL in your browser?",
+              "answer": "The application layer creates the HTTP request, transport layer adds TCP headers, internet layer adds IP routing info, link layer sends it physically",
+              "explain": "The data flows down the layers: HTTP request (app), TCP header (transport), IP header (internet), Ethernet frame (link). Each layer wraps the data.",
+              "choices": [
+                "Only the internet layer is involved",
+                "The application layer creates the HTTP request, transport layer adds TCP headers, internet layer adds IP routing info, link layer sends it physically",
+                "All layers work simultaneously without order",
+                "Only the application layer does work"
+              ],
+              "id": "computer_networks_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If the TCP layer detects an error in transmission, what happens?",
+              "answer": "The affected segment is retransmitted",
+              "explain": "TCP includes error checking. If a packet arrives corrupted or is missing, TCP detects this and asks the sender to retransmit that specific segment.",
+              "choices": [
+                "The data is discarded silently",
+                "The application layer handles it automatically",
+                "The affected segment is retransmitted",
+                "The entire connection must start over"
+              ],
+              "id": "computer_networks_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Link and Network Layers",
+      "tip": "The link layer handles physical device-to-device communication using MAC addresses and Ethernet. The network layer routes data globally using IP addresses. IP addresses are logical and can change, while MAC addresses are tied to the hardware and are normally fixed.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Ethernet and MAC Addresses",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a MAC address?",
+              "answer": "A hardware identifier unique to every network interface card",
+              "explain": "MAC (Media Access Control) addresses are 48-bit identifiers assigned to network cards during manufacturing. Format: 00:1A:2B:3C:4D:5E. They are normally fixed, though software can override them.",
+              "choices": [
+                "An abbreviation for Main Access Code",
+                "A hardware identifier unique to every network interface card",
+                "The same as an IP address",
+                "A software address assigned by the operating system"
+              ],
+              "id": "computer_networks_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Ethernet?",
+              "answer": "A link-layer protocol for wired local network communication",
+              "explain": "Ethernet defines how devices on the same LAN physically transmit data using cables. It uses MAC addresses to find devices on the local network segment.",
+              "choices": [
+                "The internet backbone",
+                "A type of wireless connection",
+                "A routing algorithm",
+                "A link-layer protocol for wired local network communication"
+              ],
+              "id": "computer_networks_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a device find another device on its local network?",
+              "answer": "Using ARP (Address Resolution Protocol) to map IP addresses to MAC addresses",
+              "explain": "ARP is a protocol that broadcasts a query asking which device has a specific IP address. The device with that IP responds with its MAC address.",
+              "choices": [
+                "DNS translates it to a MAC address",
+                "The router automatically delivers it",
+                "By broadcasting the IP address repeatedly",
+                "Using ARP (Address Resolution Protocol) to map IP addresses to MAC addresses"
+              ],
+              "id": "computer_networks_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a network switch do?",
+              "answer": "Learns MAC addresses and forwards frames to the correct physical port",
+              "explain": "A switch builds a table of MAC addresses and the ports they connect to. When a frame arrives, the switch forwards it only to the port with that MAC address.",
+              "choices": [
+                "Routes traffic across the internet",
+                "Encrypts all network traffic",
+                "Converts wireless signals to cables",
+                "Learns MAC addresses and forwards frames to the correct physical port"
+              ],
+              "id": "computer_networks_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a broadcast frame in Ethernet?",
+              "answer": "A frame with MAC address FF:FF:FF:FF:FF:FF that reaches all devices on the LAN",
+              "explain": "Broadcast MAC address is all ones. Switches forward broadcast frames to every port except the incoming one, so all devices on the segment see it.",
+              "choices": [
+                "A frame sent only to the gateway",
+                "A frame that travels multiple hops",
+                "A frame with MAC address FF:FF:FF:FF:FF:FF that reaches all devices on the LAN",
+                "An encrypted communication frame"
+              ],
+              "id": "computer_networks_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "IP Addressing and Subnets",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How is an IPv4 address structured?",
+              "answer": "Four octets separated by dots, each 0-255",
+              "explain": "IPv4 addresses like 192.168.1.1 have four numbers (octets), each representing 8 bits. Total address space is 2^32 or about 4.3 billion addresses.",
+              "choices": [
+                "Twelve digits with letters",
+                "Four octets separated by dots, each 0-255",
+                "Similar to MAC addresses",
+                "A random 128-bit number"
+              ],
+              "id": "computer_networks_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a subnet mask?",
+              "answer": "Determines which part of an IP address is the network and which is the host",
+              "explain": "A subnet mask like 255.255.255.0 defines the network portion. Devices with the same network portion can reach each other directly.",
+              "choices": [
+                "The physical address of a network",
+                "A password for network access",
+                "Determines which part of an IP address is the network and which is the host",
+                "A method to hide IP addresses"
+              ],
+              "id": "computer_networks_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does CIDR notation like /24 mean?",
+              "answer": "The first 24 bits are the network address, the last 8 are for hosts",
+              "explain": "CIDR notation shows the number of bits in the network portion. /24 means 24 network bits and 8 host bits, matching subnet mask 255.255.255.0.",
+              "choices": [
+                "The address expires after 24 hours",
+                "The first 24 bits are the network address, the last 8 are for hosts",
+                "24 devices can connect",
+                "24 megabits per second bandwidth"
+              ],
+              "id": "computer_networks_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a /24 subnet, how many usable host addresses are available?",
+              "answer": "254",
+              "explain": "8 host bits allow 2^8 = 256 addresses. The first is the network address, the last is the broadcast address, leaving 254 usable host addresses.",
+              "choices": [
+                "252",
+                "255",
+                "256",
+                "254"
+              ],
+              "id": "computer_networks_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is IPv6?",
+              "answer": "The newer IP version with 128-bit addresses supporting 2^128 unique addresses",
+              "explain": "IPv6 was designed to replace IPv4 because IPv4 addresses are running out. IPv6 addresses look like 2001:0db8:85a3:0000:0000:8a2e:0370:7334.",
+              "choices": [
+                "Designed to replace MAC addresses",
+                "A faster version of IPv4",
+                "Only used for wireless networks",
+                "The newer IP version with 128-bit addresses supporting 2^128 unique addresses"
+              ],
+              "id": "computer_networks_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Routing and Transport",
+      "tip": "Routers forward packets across networks using routing tables and the destination IP address. The transport layer provides two different delivery models: TCP ensures reliable in-order delivery, while UDP offers fast best-effort delivery.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Routing and Forwarding",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a router do?",
+              "answer": "Forwards packets to the next router based on the destination IP address",
+              "explain": "A router examines the destination IP of each packet, consults its routing table, and forwards the packet toward the destination network. Routers are connected to multiple networks.",
+              "choices": [
+                "Forwards packets to the next router based on the destination IP address",
+                "Delivers all packets to the first available network",
+                "Translates between MAC and IP addresses",
+                "Stores all network traffic on a disk"
+              ],
+              "id": "computer_networks_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a routing table?",
+              "answer": "A table mapping IP address ranges to the next hop router",
+              "explain": "Routers maintain routing tables listing which networks are reachable and through which interface or next router. Packets are forwarded by matching their destination against the table.",
+              "choices": [
+                "A list of all devices connected to the network",
+                "A history of all packets that have passed through",
+                "A table mapping IP address ranges to the next hop router",
+                "The address of the nearest server"
+              ],
+              "id": "computer_networks_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the default route in a routing table?",
+              "answer": "The catch-all route matching any destination not explicitly listed",
+              "explain": "The default route (0.0.0.0/0) matches any IP address not found in the routing table. Traffic matching the default route is usually sent to the internet gateway.",
+              "choices": [
+                "The route with the shortest path",
+                "The fastest available path",
+                "The most expensive path",
+                "The catch-all route matching any destination not explicitly listed"
+              ],
+              "id": "computer_networks_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a hop in network routing?",
+              "answer": "Each time a packet passes through a router to another network",
+              "explain": "Each router the packet passes through counts as one hop. The TTL (Time To Live) field limits hops to prevent infinite loops.",
+              "choices": [
+                "Each time a packet passes through a router to another network",
+                "A direct connection between two devices",
+                "A physical cable connection",
+                "The speed at which data travels"
+              ],
+              "id": "computer_networks_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is BGP (Border Gateway Protocol)?",
+              "answer": "The routing protocol that connects large networks on the internet",
+              "explain": "BGP allows internet service providers to exchange routing information, determining the best paths between autonomous systems (networks).",
+              "choices": [
+                "A method to encrypt routing information",
+                "A protocol for managing IP addresses",
+                "The routing protocol that connects large networks on the internet",
+                "A protocol for local network switching"
+              ],
+              "id": "computer_networks_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "TCP and UDP",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main difference between TCP and UDP?",
+              "answer": "TCP is reliable and ordered, UDP is fast and best-effort",
+              "explain": "TCP guarantees all packets arrive in order and without errors. UDP does not guarantee delivery or order but is much faster. Different applications use different protocols.",
+              "choices": [
+                "UDP is slower than TCP",
+                "TCP is reliable and ordered, UDP is fast and best-effort",
+                "TCP uses more ports than UDP",
+                "They handle different IP versions"
+              ],
+              "id": "computer_networks_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does TCP guarantee?",
+              "answer": "Reliable, ordered delivery with error checking and retransmission",
+              "explain": "TCP ensures every packet is delivered in the order sent. If a packet is lost or corrupted, TCP detects it and requests retransmission.",
+              "choices": [
+                "Avoidance of all network congestion",
+                "Fastest possible transmission",
+                "Encryption of all data",
+                "Reliable, ordered delivery with error checking and retransmission"
+              ],
+              "id": "computer_networks_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is UDP preferred over TCP?",
+              "answer": "For low-latency applications where speed matters more than reliability",
+              "explain": "Online games, video conferencing, and live streaming use UDP because speed is critical. A few lost packets are tolerable.",
+              "choices": [
+                "For all file transfers",
+                "For low-latency applications where speed matters more than reliability",
+                "When data must never be lost",
+                "Because UDP is always faster"
+              ],
+              "id": "computer_networks_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the TCP handshake?",
+              "answer": "A three-step process (SYN, SYN-ACK, ACK) to establish a connection",
+              "explain": "Before sending data, TCP establishes a connection: client sends SYN, server replies with SYN-ACK, client sends ACK. This ensures both sides are ready.",
+              "choices": [
+                "A three-step process (SYN, SYN-ACK, ACK) to establish a connection",
+                "Sending all data in one packet",
+                "A way to verify MAC addresses",
+                "A method to encrypt traffic"
+              ],
+              "id": "computer_networks_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when TCP detects a lost packet?",
+              "answer": "It waits for a timeout and retransmits the missing packet",
+              "explain": "TCP uses acknowledgments. If the sender doesn't receive an ACK for a packet within a timeout period, it resends that packet.",
+              "choices": [
+                "It waits for a timeout and retransmits the missing packet",
+                "It sends the entire message again from the start",
+                "The connection terminates immediately",
+                "The application layer must handle it"
+              ],
+              "id": "computer_networks_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Application Layer Services",
+      "tip": "Applications communicate using well-known ports: HTTP uses 80, HTTPS 443, DNS 53, SMTP 25. Sockets are endpoints for communication. TLS encrypts data traveling between client and server, preventing eavesdropping.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "DNS and Domain Names",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is DNS?",
+              "answer": "Domain Name System, translating human-readable names to IP addresses",
+              "explain": "DNS is the phonebook of the internet. When you type a domain name, DNS translates it to an IP address so your browser knows where to connect.",
+              "choices": [
+                "A routing protocol",
+                "A network topology",
+                "A method to encrypt domains",
+                "Domain Name System, translating human-readable names to IP addresses"
+              ],
+              "id": "computer_networks_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a DNS query?",
+              "answer": "A request from a client asking for the IP address of a domain name",
+              "explain": "When you type a URL, your browser sends a DNS query to a DNS resolver server asking what IP address corresponds to that domain.",
+              "choices": [
+                "A list of all domains on the internet",
+                "A request from a client asking for the IP address of a domain name",
+                "An encryption key for a domain",
+                "A response from a server"
+              ],
+              "id": "computer_networks_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a DNS record?",
+              "answer": "Data mapping a domain name to an IP address or other information",
+              "explain": "DNS records include A records (IPv4), AAAA records (IPv6), CNAME (aliases), MX (mail), and others. Each provides different information about a domain.",
+              "choices": [
+                "Data mapping a domain name to an IP address or other information",
+                "A timestamp of when a domain was registered",
+                "A log of all DNS queries",
+                "A list of all nameservers"
+              ],
+              "id": "computer_networks_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DNS caching?",
+              "answer": "Storing DNS query results locally to avoid repeated queries",
+              "explain": "Your computer and ISP cache DNS responses. The next time you visit the same domain, the IP address comes from cache, avoiding a full DNS lookup.",
+              "choices": [
+                "Storing DNS query results locally to avoid repeated queries",
+                "Deleting old DNS records",
+                "Preventing access to a domain",
+                "Encrypting DNS queries"
+              ],
+              "id": "computer_networks_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DNS propagation?",
+              "answer": "The time it takes for DNS changes to spread across all servers globally",
+              "explain": "When you change a DNS record, it doesn't instantly update everywhere. Propagation can take hours or days as caches expire and update.",
+              "choices": [
+                "Blocking access to a domain",
+                "The time it takes for DNS changes to spread across all servers globally",
+                "Compressing domain names",
+                "Spreading malware through DNS"
+              ],
+              "id": "computer_networks_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Ports, Sockets, and TLS",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a port in networking?",
+              "answer": "A number identifying which process on a device should receive the data",
+              "explain": "Ports range 0-65535. Your computer runs multiple services, each listening on a specific port. HTTP uses 80, HTTPS uses 443, SSH uses 22.",
+              "choices": [
+                "A wireless access point",
+                "A security gateway",
+                "A number identifying which process on a device should receive the data",
+                "A physical connector on a device"
+              ],
+              "id": "computer_networks_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a socket?",
+              "answer": "An endpoint for network communication combining an IP address and port",
+              "explain": "A socket is uniquely identified by protocol, IP address, and port. Example: TCP 192.168.1.1:8080. Sockets are the actual communication endpoints.",
+              "choices": [
+                "A method to filter traffic",
+                "A physical network jack",
+                "An endpoint for network communication combining an IP address and port",
+                "A firewall rule"
+              ],
+              "id": "computer_networks_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are well-known ports?",
+              "answer": "Reserved ports 0-1023 assigned to standard services by IANA",
+              "explain": "IANA (Internet Assigned Numbers Authority) reserves ports 0-1023 for standard services. Port 80 is HTTP, 443 is HTTPS, 22 is SSH, 25 is SMTP.",
+              "choices": [
+                "Reserved ports 0-1023 assigned to standard services by IANA",
+                "The most commonly used ports",
+                "Ports that are publicly known to be unsafe",
+                "Ports that don't require authentication"
+              ],
+              "id": "computer_networks_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does TLS do?",
+              "answer": "Encrypts communication so data cannot be read by eavesdroppers",
+              "explain": "TLS (Transport Layer Security) is the protocol behind HTTPS. It encrypts data between client and server, preventing unauthorized viewing.",
+              "choices": [
+                "Encrypts communication so data cannot be read by eavesdroppers",
+                "Routes packets more efficiently",
+                "Speeds up network traffic",
+                "Eliminates the need for passwords"
+              ],
+              "id": "computer_networks_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a TLS handshake?",
+              "answer": "Initial exchange where client and server establish encrypted communication",
+              "explain": "During the TLS handshake, client and server agree on encryption algorithms and exchange keys. This happens before any application data is sent.",
+              "choices": [
+                "A way to detect network intrusions",
+                "Initial exchange where client and server establish encrypted communication",
+                "The process of terminating a connection",
+                "A method to verify passwords"
+              ],
+              "id": "computer_networks_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Network Mechanics",
+      "tip": "Data travels as packets with headers from each layer. NAT (Network Address Translation) lets private networks share a single public IP. Firewalls block or allow traffic based on rules. Understanding how packets move and addresses are translated helps debug network problems.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "How Packets Travel",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a packet?",
+              "answer": "A unit of data with headers and payload sent across a network",
+              "explain": "Packets contain: application data (payload), and headers from each layer (TCP/UDP, IP, Ethernet) that control delivery and processing.",
+              "choices": [
+                "A complete file transfer",
+                "A unit of data with headers and payload sent across a network",
+                "A single bit of information",
+                "The entire connection between two computers"
+              ],
+              "id": "computer_networks_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is MTU in networking?",
+              "answer": "Maximum Transmission Unit, the largest packet size allowed on a network",
+              "explain": "MTU is typically 1500 bytes on Ethernet. Packets larger than MTU are fragmented. Too small MTU wastes bandwidth with more headers.",
+              "choices": [
+                "A method to trace network paths",
+                "The time packets can live on the network",
+                "A security protocol",
+                "Maximum Transmission Unit, the largest packet size allowed on a network"
+              ],
+              "id": "computer_networks_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is fragmentation in IP networking?",
+              "answer": "Breaking large packets into smaller pieces to fit MTU limits",
+              "explain": "If an IPv4 packet exceeds the MTU, it can be fragmented into smaller packets. The receiving end reassembles them. Fragmentation increases overhead.",
+              "choices": [
+                "Distributing packets across multiple paths",
+                "Breaking large packets into smaller pieces to fit MTU limits",
+                "Compressing packet payloads",
+                "Deleting old network data"
+              ],
+              "id": "computer_networks_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is TTL in IP?",
+              "answer": "Time To Live, a counter decremented at each hop to prevent infinite loops",
+              "explain": "Each packet has a TTL value. When it reaches a router, the TTL decreases by one. If TTL reaches zero, the packet is discarded.",
+              "choices": [
+                "The time a packet can stay cached",
+                "Time To Live, a counter decremented at each hop to prevent infinite loops",
+                "The timeout for establishing connections",
+                "The number of retransmissions allowed"
+              ],
+              "id": "computer_networks_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does traceroute work?",
+              "answer": "Sends packets with increasing TTL to identify each hop to a destination",
+              "explain": "Traceroute sends packets with TTL 1, 2, 3 etc. Each router that decrements TTL to zero responds, revealing the path taken to the destination.",
+              "choices": [
+                "It uses DNS to find the path",
+                "It directly connects to the target and lists all routers",
+                "Sends packets with increasing TTL to identify each hop to a destination",
+                "It measures bandwidth on the connection"
+              ],
+              "id": "computer_networks_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Network Address Translation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is NAT?",
+              "answer": "Network Address Translation, mapping private IPs to a single public IP",
+              "explain": "NAT lets multiple devices on a private network share one public IP address. Your home router uses NAT to share your ISP's IP with all your devices.",
+              "choices": [
+                "Network Address Translation, mapping private IPs to a single public IP",
+                "A method to encrypt network traffic",
+                "A routing protocol",
+                "A DNS feature"
+              ],
+              "id": "computer_networks_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are private IP address ranges?",
+              "answer": "10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16",
+              "explain": "These ranges are reserved for private networks. Routers don't route these on the internet, allowing reuse across organizations.",
+              "choices": [
+                "Addresses used only by governments",
+                "10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16",
+                "Addresses that are completely blocked",
+                "Addresses assigned by ICANN"
+              ],
+              "id": "computer_networks_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is port forwarding?",
+              "answer": "Mapping an external port to an internal device and port",
+              "explain": "Port forwarding lets external traffic reach a device on your private network. Forward port 8080 to 192.168.1.5:8080 to expose a local service.",
+              "choices": [
+                "Changing the order packets arrive",
+                "Deleting network traffic",
+                "Mapping an external port to an internal device and port",
+                "Blocking certain ports"
+              ],
+              "id": "computer_networks_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a firewall?",
+              "answer": "A network device filtering traffic based on security rules",
+              "explain": "Firewalls allow or deny packets based on IP, port, protocol, and other criteria. They protect networks from unauthorized access.",
+              "choices": [
+                "A method to boost WiFi signal",
+                "A protocol for encryption",
+                "A network device filtering traffic based on security rules",
+                "A router that speeds up traffic"
+              ],
+              "id": "computer_networks_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DHCP?",
+              "answer": "Dynamic Host Configuration Protocol, automatically assigning IP addresses",
+              "explain": "DHCP servers automatically assign IP addresses to devices on a network. When you connect to WiFi, DHCP gives your device a temporary IP.",
+              "choices": [
+                "A security encryption method",
+                "A method to prioritize network traffic",
+                "Dynamic Host Configuration Protocol, automatically assigning IP addresses",
+                "A DNS server"
+              ],
+              "id": "computer_networks_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
