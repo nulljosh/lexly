@@ -557,6 +557,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .btn {
@@ -2065,6 +2066,11 @@ body.demo #profileBtn,
 body.demo .category-tabs,
 body.demo #skipBtn {
     display: none;
+}
+
+/* The streak/xp pills are hidden, so the hearts pill must not keep their divider */
+body.demo .stat-group .stat-item {
+    border-left: 0;
 }
 
 body.demo .header-inner::after {
