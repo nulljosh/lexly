@@ -1,0 +1,904 @@
+{
+  "id": "cybersecurity",
+  "name": "Cybersecurity",
+  "category": "programming",
+  "icon": "fa-solid fa-shield-halved",
+  "level": "Defending Systems",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "The Security Framework",
+      "tip": "Cybersecurity rests on three pillars: confidentiality, integrity, and availability (the CIA triad). Threats come from attackers with different skills and motivations. Understanding what you are defending against and why helps you prioritize defenses.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The CIA Triad",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the CIA triad stand for in cybersecurity?",
+              "answer": "Confidentiality, Integrity, and Availability",
+              "explain": "The CIA triad is the foundation of security. Confidentiality keeps secrets. Integrity prevents tampering. Availability ensures systems work when needed.",
+              "choices": [
+                "Central, Internal, and Automated",
+                "Cryptography, Infrastructure, and Auditing",
+                "Compliance, Investigation, and Assessment",
+                "Confidentiality, Integrity, and Availability"
+              ],
+              "id": "cybersecurity_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'confidentiality' mean in security?",
+              "answer": "Only authorized people can access sensitive information",
+              "explain": "Confidentiality protects secrets. Customer data, medical records, and trade secrets all need confidentiality. Encryption and access control provide this.",
+              "choices": [
+                "All users have the same access level",
+                "Information is accurate and consistent",
+                "Systems are always running",
+                "Only authorized people can access sensitive information"
+              ],
+              "id": "cybersecurity_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'integrity' mean in security?",
+              "answer": "Data is accurate, complete, and has not been modified by unauthorized parties",
+              "explain": "Integrity ensures data trustworthiness. You need it to detect tampering. Checksums, signatures, and logging help verify integrity.",
+              "choices": [
+                "Data is kept secret",
+                "Data is accurate, complete, and has not been modified by unauthorized parties",
+                "Systems never crash",
+                "All users have write access"
+              ],
+              "id": "cybersecurity_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'availability' mean in security?",
+              "answer": "Authorized users can access systems and data when they need them",
+              "explain": "Availability ensures services work reliably. Redundancy, backups, and DDoS protection provide this. Without availability, even perfect secrecy and integrity are useless.",
+              "choices": [
+                "Authorized users can access systems and data when they need them",
+                "Everyone can access everything",
+                "Systems are offline for safety",
+                "Data is encrypted"
+              ],
+              "id": "cybersecurity_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these scenarios violates confidentiality?",
+              "answer": "An attacker reads customer credit card numbers from a database",
+              "explain": "Confidentiality is broken when unauthorized people access sensitive data. This harms customer trust and may violate privacy laws.",
+              "choices": [
+                "A backup copy of data is stored offsite",
+                "An attacker reads customer credit card numbers from a database",
+                "A manager updates employee contact information",
+                "A system is down for scheduled maintenance"
+              ],
+              "id": "cybersecurity_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Threats and Attack Surfaces",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an 'attack surface'?",
+              "answer": "All the ways an attacker could enter or exploit a system",
+              "explain": "Attack surface includes open ports, user input fields, APIs, and any path into your system. Smaller attack surfaces are easier to defend.",
+              "choices": [
+                "The physical office building",
+                "The internet bandwidth",
+                "The number of employees",
+                "All the ways an attacker could enter or exploit a system"
+              ],
+              "id": "cybersecurity_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'vulnerability'?",
+              "answer": "A weakness in a system that an attacker can exploit",
+              "explain": "Vulnerabilities are flaws: unpatched software, weak passwords, poor architecture. Not all vulnerabilities are exploited, but they create risk.",
+              "choices": [
+                "A strong password",
+                "A successful attack",
+                "A firewall rule",
+                "A weakness in a system that an attacker can exploit"
+              ],
+              "id": "cybersecurity_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'exploit'?",
+              "answer": "Code or technique that takes advantage of a vulnerability",
+              "explain": "An exploit is a tool or method to turn a vulnerability into a working attack. Exploits are why patching matters: patches remove exploitable flaws.",
+              "choices": [
+                "Code or technique that takes advantage of a vulnerability",
+                "A user password",
+                "A security policy",
+                "A type of malware"
+              ],
+              "id": "cybersecurity_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What types of attackers have different motivations?",
+              "answer": "Criminals, activists, nation-states, competitors, and insiders",
+              "explain": "Different attackers have different goals. Criminals want money. Nation-states want secrets. Insiders want revenge or profit. Defenses should consider who might attack.",
+              "choices": [
+                "Only external attackers pose risks",
+                "Only criminals attack",
+                "Attackers all want the same thing",
+                "Criminals, activists, nation-states, competitors, and insiders"
+              ],
+              "id": "cybersecurity_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'threat modeling'?",
+              "answer": "Identifying potential attackers, their goals, and the assets they might target",
+              "explain": "Threat modeling helps you focus defenses where they matter. You map attackers and assets, then design defenses to protect valuable things from likely threats.",
+              "choices": [
+                "Ignoring possible attacks",
+                "Modeling threat actors as people",
+                "Identifying potential attackers, their goals, and the assets they might target",
+                "Creating threats to test security"
+              ],
+              "id": "cybersecurity_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Access Control Systems",
+      "tip": "Access control determines who can do what. Authentication proves identity. Authorization decides what authenticated users are allowed to access. Together, they form the foundation of defensive security.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Authentication Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'authentication'?",
+              "answer": "Verifying that a person is who they claim to be",
+              "explain": "Authentication proves identity. Passwords, biometrics, and security tokens all authenticate. Without authentication, you do not know if the person requesting access is who they say they are.",
+              "choices": [
+                "Detecting all attacks",
+                "Allowing everyone access",
+                "Verifying that a person is who they claim to be",
+                "Encrypting all data"
+              ],
+              "id": "cybersecurity_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the three types of authentication factors?",
+              "answer": "Something you know, something you have, something you are",
+              "explain": "Knowledge (password), possession (phone), and inherence (fingerprint) are the three factors. Multi-factor authentication combines two or more.",
+              "choices": [
+                "Something you know, something you have, something you are",
+                "Encryption, hashing, and signatures",
+                "Passwords, usernames, and security questions",
+                "Public keys, private keys, and certificates"
+              ],
+              "id": "cybersecurity_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'multi-factor authentication' (MFA)?",
+              "answer": "Requiring two or more types of authentication proof",
+              "explain": "MFA greatly raises the bar. An attacker who steals your password still needs your second factor, such as your phone, to log in.",
+              "choices": [
+                "Requiring two or more types of authentication proof",
+                "Changing the password frequently",
+                "Using multiple passwords",
+                "Storing passwords in multiple places"
+              ],
+              "id": "cybersecurity_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'biometric authentication'?",
+              "answer": "Using physical characteristics like fingerprints or face recognition to verify identity",
+              "explain": "Biometrics are convenient and cannot be forgotten, but they can still be spoofed and cannot be changed if leaked. They work well as one factor in MFA.",
+              "choices": [
+                "Using physical characteristics like fingerprints or face recognition to verify identity",
+                "A type of password",
+                "Requiring multiple passwords",
+                "Storing passwords in the cloud"
+              ],
+              "id": "cybersecurity_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'session token'?",
+              "answer": "A temporary credential issued after successful authentication",
+              "explain": "After logging in, you get a session token (like a cookie). The token proves you already authenticated without re-entering your password for each request.",
+              "choices": [
+                "Your permanent password",
+                "An encryption key",
+                "A temporary credential issued after successful authentication",
+                "Your username"
+              ],
+              "id": "cybersecurity_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Authorization and Access Control",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'authorization'?",
+              "answer": "Deciding what an authenticated user is allowed to access or do",
+              "explain": "Authorization controls permissions. After you prove who you are (authentication), authorization determines whether you can read that file or delete that record.",
+              "choices": [
+                "Deciding what an authenticated user is allowed to access or do",
+                "Detecting intrusions",
+                "Proving who you are",
+                "Encrypting data"
+              ],
+              "id": "cybersecurity_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Role-Based Access Control' (RBAC)?",
+              "answer": "Granting permissions to users based on their assigned role",
+              "explain": "RBAC simplifies management. Instead of assigning permissions individually, you assign roles. A Manager role gets specific permissions automatically.",
+              "choices": [
+                "Using passwords for everything",
+                "Granting permissions to users based on their assigned role",
+                "Denying all access by default",
+                "Allowing everyone the same access"
+              ],
+              "id": "cybersecurity_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Attribute-Based Access Control' (ABAC)?",
+              "answer": "Granting access based on user attributes, resource attributes, and context",
+              "explain": "ABAC is more flexible than RBAC. It can say: allow access if user is in department X AND device is encrypted AND login time is business hours.",
+              "choices": [
+                "Using only passwords",
+                "Allowing access to attributes only",
+                "Granting access based on user attributes, resource attributes, and context",
+                "Denying all access"
+              ],
+              "id": "cybersecurity_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'access control list' (ACL)?",
+              "answer": "A list specifying which users or groups can access a resource",
+              "explain": "ACLs are simple and easy to read, but can become hard to manage at scale. A file ACL might say: Owner can read/write, Group can read, Others have no access.",
+              "choices": [
+                "A list of all passwords",
+                "A backup of user data",
+                "A list specifying which users or groups can access a resource",
+                "A firewall rule"
+              ],
+              "id": "cybersecurity_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'separation of duties'?",
+              "answer": "Splitting critical tasks so no single person can approve and execute them",
+              "explain": "Separation of duties prevents fraud. One person requests a payment, another approves it, a third executes it. This catches errors and prevents embezzlement.",
+              "choices": [
+                "Hiding work from managers",
+                "Doing all work alone",
+                "Splitting critical tasks so no single person can approve and execute them",
+                "Making all tasks identical"
+              ],
+              "id": "cybersecurity_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Web Application Vulnerabilities",
+      "tip": "Web applications accept user input. Attackers exploit this by injecting code, stealing sessions, or bypassing checks. Common web flaws include SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Injection Attacks and Input Validation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an 'injection attack'?",
+              "answer": "Inserting malicious code into input that the application processes as code",
+              "explain": "Injection exploits apps that do not properly validate input. An attacker sends code instead of data, and the app executes it.",
+              "choices": [
+                "Stealing a password",
+                "Inserting malicious code into input that the application processes as code",
+                "Breaking a firewall",
+                "Physically injecting something into a server"
+              ],
+              "id": "cybersecurity_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'SQL injection'?",
+              "answer": "Sending SQL code through input fields to manipulate database queries",
+              "explain": "SQL injection happens when apps build SQL queries by concatenating user input. An attacker enters SQL instead of normal data, changing the query.",
+              "choices": [
+                "Sending SQL code through input fields to manipulate database queries",
+                "Deleting SQL databases",
+                "Inserting data directly into a database",
+                "Creating new SQL tables"
+              ],
+              "id": "cybersecurity_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is SQL injection prevented?",
+              "answer": "Using parameterized queries that separate code from data",
+              "explain": "Parameterized queries treat user input as data, not code. The SQL structure is fixed, and input is safely substituted into placeholders.",
+              "choices": [
+                "Hiding error messages",
+                "Using parameterized queries that separate code from data",
+                "Blocking all input",
+                "Disabling databases"
+              ],
+              "id": "cybersecurity_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'input validation'?",
+              "answer": "Checking that user input matches expected format, type, and values",
+              "explain": "Input validation rejects unexpected data. If a phone number field gets letters, reject it. Validate length, format, and content.",
+              "choices": [
+                "Sending input to the cloud",
+                "Encrypting all input",
+                "Accepting all input as valid",
+                "Checking that user input matches expected format, type, and values"
+              ],
+              "id": "cybersecurity_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'command injection'?",
+              "answer": "Sending operating system commands through input that the app executes",
+              "explain": "If an app builds OS commands by concatenating input (like exec), an attacker can inject shell commands and take over the server.",
+              "choices": [
+                "Injecting electricity",
+                "Sending operating system commands through input that the app executes",
+                "Deleting files",
+                "Stealing passwords directly"
+              ],
+              "id": "cybersecurity_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "XSS, CSRF, and Session Security",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'Cross-Site Scripting' (XSS)?",
+              "answer": "Injecting JavaScript into a website to steal user data or hijack sessions",
+              "explain": "XSS happens when a site displays user input without escaping HTML. An attacker injects JavaScript that runs in other users' browsers.",
+              "choices": [
+                "A security feature",
+                "A way to organize code into sites",
+                "Injecting JavaScript into a website to steal user data or hijack sessions",
+                "A programming language"
+              ],
+              "id": "cybersecurity_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'stored XSS'?",
+              "answer": "Malicious JavaScript stored in the database and displayed to other users",
+              "explain": "Stored XSS is persistent. An attacker posts malicious code in a comment, it is stored, then every visitor sees it and it runs in their browser.",
+              "choices": [
+                "JavaScript that runs once",
+                "JavaScript in email",
+                "JavaScript stored on your hard drive",
+                "Malicious JavaScript stored in the database and displayed to other users"
+              ],
+              "id": "cybersecurity_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'reflected XSS'?",
+              "answer": "Malicious JavaScript in a URL that is executed when the victim clicks the link",
+              "explain": "Reflected XSS does not persist. An attacker crafts a malicious URL and tricks someone into clicking it. The script runs in their browser from the site's response.",
+              "choices": [
+                "JavaScript that bounces around networks",
+                "JavaScript reflected in logs",
+                "Malicious JavaScript in a URL that is executed when the victim clicks the link",
+                "Reflected in a mirror"
+              ],
+              "id": "cybersecurity_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Cross-Site Request Forgery' (CSRF)?",
+              "answer": "Tricking a user into making unintended requests on a site where they are logged in",
+              "explain": "CSRF exploits trust. If you are logged into your bank, an attacker tricks you into clicking a link that transfers money without your permission.",
+              "choices": [
+                "A firewall rule",
+                "A type of encryption",
+                "Tricking a user into making unintended requests on a site where they are logged in",
+                "Requesting information across sites"
+              ],
+              "id": "cybersecurity_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is CSRF prevented?",
+              "answer": "Using tokens that are checked before state-changing actions",
+              "explain": "CSRF tokens are unpredictable values generated per session. Forms include them, and the server rejects requests without a valid token.",
+              "choices": [
+                "Logging out automatically",
+                "Disabling all forms",
+                "Using tokens that are checked before state-changing actions",
+                "Hiding the URL"
+              ],
+              "id": "cybersecurity_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Malware and Threat Actors",
+      "tip": "Malware is software designed to harm your system or steal data. Ransomware, trojans, worms, and rootkits have different behaviors and spread methods. Understanding malware helps you defend against it and avoid infection.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Types of Malware Beyond the Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'worm'?",
+              "answer": "Malware that spreads by replicating and sending itself to other computers",
+              "explain": "Worms spread without user interaction. Unlike viruses, they do not attach to files. They use network access to propagate and can consume bandwidth or drop payloads.",
+              "choices": [
+                "A virus that infects documents",
+                "Ransomware",
+                "Malware that spreads by replicating and sending itself to other computers",
+                "A type of firewall"
+              ],
+              "id": "cybersecurity_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'trojan horse'?",
+              "answer": "Malware disguised as legitimate software that performs malicious actions after installation",
+              "explain": "Trojans trick users into running them. Once installed, they open back doors, steal data, or install other malware. They do not self-replicate.",
+              "choices": [
+                "Malware disguised as legitimate software that performs malicious actions after installation",
+                "A network attack",
+                "A virus in a file",
+                "A weak password"
+              ],
+              "id": "cybersecurity_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'rootkit'?",
+              "answer": "Malware that hides itself and other malware at the OS level",
+              "explain": "Rootkits compromise the OS itself. They hide files, processes, and network connections from users and security tools. They are very hard to detect and remove.",
+              "choices": [
+                "Malware that hides itself and other malware at the OS level",
+                "A type of backup",
+                "A security patch",
+                "A virus targeting routers"
+              ],
+              "id": "cybersecurity_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ransomware'?",
+              "answer": "Malware that encrypts your files and demands payment to decrypt them",
+              "explain": "Ransomware blocks access to files or the system. Victims are told to pay a ransom for a decryption key. Regular backups can defeat it without paying.",
+              "choices": [
+                "A password manager",
+                "Antivirus software",
+                "A type of firewall",
+                "Malware that encrypts your files and demands payment to decrypt them"
+              ],
+              "id": "cybersecurity_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'botnet'?",
+              "answer": "A network of compromised computers controlled by an attacker",
+              "explain": "Botnets consist of infected computers (bots) controlled remotely. They launch DDoS attacks, send spam, or steal data. Owners often don't know their device is compromised.",
+              "choices": [
+                "A type of game",
+                "A network of compromised computers controlled by an attacker",
+                "A robot on the internet",
+                "A firewall rule"
+              ],
+              "id": "cybersecurity_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Social Engineering and Human Factors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'social engineering'?",
+              "answer": "Manipulating people to divulge secrets or perform actions that compromise security",
+              "explain": "Social engineering exploits human nature, not software. Attackers impersonate authority, create urgency, or build false trust to trick people.",
+              "choices": [
+                "Using social media",
+                "Designing buildings for safety",
+                "Teaching people about security",
+                "Manipulating people to divulge secrets or perform actions that compromise security"
+              ],
+              "id": "cybersecurity_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'pretext'?",
+              "answer": "A fabricated scenario an attacker uses to manipulate someone",
+              "explain": "A pretext is a cover story. An attacker might pose as IT support: 'We need to reset your password for security.' The victim provides credentials thinking they are helping.",
+              "choices": [
+                "A type of malware",
+                "An encryption method",
+                "A security policy",
+                "A fabricated scenario an attacker uses to manipulate someone"
+              ],
+              "id": "cybersecurity_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'pretexting'?",
+              "answer": "Using false pretenses to extract information or access",
+              "explain": "Pretexting is social engineering via deception. Attackers call claiming to be vendors, create fake invoices, or pretend to be employees.",
+              "choices": [
+                "Protesting against security",
+                "Using false pretenses to extract information or access",
+                "Testing passwords",
+                "Protecting data"
+              ],
+              "id": "cybersecurity_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'baiting'?",
+              "answer": "Offering something enticing that contains malware",
+              "explain": "Baiting exploits curiosity. An attacker leaves a USB drive labeled Salaries in a parking lot. Someone picks it up, plugs it in, and gets infected.",
+              "choices": [
+                "Testing a trap",
+                "Stealing passwords",
+                "Creating fake websites",
+                "Offering something enticing that contains malware"
+              ],
+              "id": "cybersecurity_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do organizations defend against social engineering?",
+              "answer": "Training, verification procedures, and security policies enforced by culture",
+              "explain": "People are the first line of defense. Training teaches recognition. Policies require verification (call back official numbers). Culture makes reporting attacks normal.",
+              "choices": [
+                "Banning all communication",
+                "Ignoring social attacks",
+                "Training, verification procedures, and security policies enforced by culture",
+                "Isolating all employees"
+              ],
+              "id": "cybersecurity_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Defensive Strategies",
+      "tip": "Good defense combines multiple layers: least privilege limits damage, defense in depth means no single point of failure, and patching removes known exploitable flaws. Together, these principles make attacks harder and slower.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Least Privilege and Defense in Depth",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the 'principle of least privilege'?",
+              "answer": "Users and processes should have only the minimum permissions they need to do their job",
+              "explain": "Least privilege limits damage if an account is compromised. A database user needs SELECT but not DROP permissions. A regular user should not run as admin.",
+              "choices": [
+                "Everyone has the same access",
+                "Permissions are secret",
+                "Everyone gets full admin access",
+                "Users and processes should have only the minimum permissions they need to do their job"
+              ],
+              "id": "cybersecurity_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is least privilege important?",
+              "answer": "It limits what an attacker can do if they compromise an account",
+              "explain": "If an attacker gets a junior engineer's credentials with full admin access, they can steal everything and delete all backups. With least privilege, damage is limited.",
+              "choices": [
+                "It reduces costs",
+                "It limits what an attacker can do if they compromise an account",
+                "It makes the system faster",
+                "It makes passwords easier"
+              ],
+              "id": "cybersecurity_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'defense in depth'?",
+              "answer": "Using multiple layers of security so no single breach is catastrophic",
+              "explain": "Defense in depth means if one layer fails, others protect you. Firewall, antivirus, intrusion detection, backups, and monitoring form overlapping defenses.",
+              "choices": [
+                "Using multiple layers of security so no single breach is catastrophic",
+                "Using very strong passwords",
+                "Hiding all data",
+                "Never connecting to the internet"
+              ],
+              "id": "cybersecurity_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'firewall'?",
+              "answer": "A system that controls incoming and outgoing network traffic based on rules",
+              "explain": "Firewalls block unauthorized access at the network boundary. A host firewall controls traffic on one machine. A network firewall protects an entire network.",
+              "choices": [
+                "A system that controls incoming and outgoing network traffic based on rules",
+                "A type of malware",
+                "A password protection method",
+                "A physical wall that blocks fire"
+              ],
+              "id": "cybersecurity_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'zero trust' mean?",
+              "answer": "Never trust any request; always verify identity and check permissions",
+              "explain": "Zero trust assumes no network is safe. Every request must prove who they are and what they can access, even if they are inside the network.",
+              "choices": [
+                "Trusting based on IP address",
+                "Never trust any request; always verify identity and check permissions",
+                "No security checks",
+                "Trust all internal users"
+              ],
+              "id": "cybersecurity_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Patching and Vulnerability Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'patch'?",
+              "answer": "A software update that fixes a security vulnerability or bug",
+              "explain": "Patches close security holes. Attackers write exploits for known vulnerabilities. Patching quickly is critical because exploits often come within days of public disclosure.",
+              "choices": [
+                "A piece of fabric",
+                "A firewall rule",
+                "A software update that fixes a security vulnerability or bug",
+                "A backup copy"
+              ],
+              "id": "cybersecurity_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'vulnerability management'?",
+              "answer": "The process of finding, assessing, and fixing security vulnerabilities",
+              "explain": "Vulnerability management includes scanning for weaknesses, prioritizing by severity, testing patches, and deploying them. It is continuous, not one-time.",
+              "choices": [
+                "The process of finding, assessing, and fixing security vulnerabilities",
+                "Creating vulnerabilities",
+                "Hiding security flaws",
+                "Ignoring all vulnerabilities"
+              ],
+              "id": "cybersecurity_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'CVE' (Common Vulnerabilities and Exposures)?",
+              "answer": "A standardized identifier for known public security flaws",
+              "explain": "CVEs like CVE-2021-44228 identify specific vulnerabilities. Security teams track CVEs, patch management systems use them, and news reports reference them.",
+              "choices": [
+                "A standardized identifier for known public security flaws",
+                "A password format",
+                "A firewall feature",
+                "A type of malware"
+              ],
+              "id": "cybersecurity_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is patching quickly important?",
+              "answer": "Exploits are written for public vulnerabilities; delaying patches gives attackers time",
+              "explain": "Attackers develop exploits rapidly after vulnerabilities are disclosed. A zero-day exploit exists before a patch. Patching within days of release is critical.",
+              "choices": [
+                "Most vulnerabilities are not exploitable",
+                "Exploits are written for public vulnerabilities; delaying patches gives attackers time",
+                "Patches are always perfect",
+                "Patching slows systems down"
+              ],
+              "id": "cybersecurity_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'zero-day exploit'?",
+              "answer": "An attack that exploits a vulnerability before a patch exists",
+              "explain": "Zero-day exploits target flaws the vendor does not yet know about or has not fixed. They are dangerous because no patch exists, so defense leans on layered controls, detection and response.",
+              "choices": [
+                "An exploit that lasts zero seconds",
+                "A patch that fixes nothing",
+                "An attack that happens on the first day of deployment",
+                "An attack that exploits a vulnerability before a patch exists"
+              ],
+              "id": "cybersecurity_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Incident Response and Recovery",
+      "tip": "No defense is perfect. Incidents happen. Detection catches attacks before they spread. Response contains damage. Post-incident analysis improves defenses. Together, these capabilities minimize harm.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Detecting and Responding to Incidents",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'security incident'?",
+              "answer": "A confirmed or suspected breach of security or violation of policy",
+              "explain": "Incidents range from detected intrusions to policy violations. Some are accidental, some malicious. Rapid detection and response minimize damage.",
+              "choices": [
+                "A network delay",
+                "A slow computer",
+                "A fire in a server room",
+                "A confirmed or suspected breach of security or violation of policy"
+              ],
+              "id": "cybersecurity_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'incident detection'?",
+              "answer": "Finding and identifying that a security incident is happening or has happened",
+              "explain": "Detection uses logs, monitoring, alerts, and user reports. Fast detection is critical because every hour of undetected compromise allows more damage.",
+              "choices": [
+                "Hiding incidents",
+                "Creating incidents",
+                "Finding and identifying that a security incident is happening or has happened",
+                "Reporting weather"
+              ],
+              "id": "cybersecurity_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'Incident Response Plan'?",
+              "answer": "A documented procedure for detecting, containing, and recovering from incidents",
+              "explain": "An IR plan defines roles, escalation paths, communication procedures, and recovery steps. It is useless in a drawer; teams must practice it regularly.",
+              "choices": [
+                "A documented procedure for detecting, containing, and recovering from incidents",
+                "A password policy",
+                "A plan to cause incidents",
+                "A backup strategy"
+              ],
+              "id": "cybersecurity_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'containment' in incident response?",
+              "answer": "Stopping an ongoing incident to prevent further damage",
+              "explain": "Containment is urgent. Disconnect infected systems, revoke compromised credentials, patch exploited services. Stop the bleeding before investigating.",
+              "choices": [
+                "Deleting all evidence",
+                "Keeping the incident secret",
+                "Stopping an ongoing incident to prevent further damage",
+                "Ignoring the incident"
+              ],
+              "id": "cybersecurity_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'eradication' in incident response?",
+              "answer": "Removing the attacker and their tools, closing the vulnerability they exploited",
+              "explain": "Eradication is after containment. Remove malware, patch exploited systems, reset credentials. Close every way the attacker entered.",
+              "choices": [
+                "Killing an animal",
+                "Deleting all data",
+                "Removing the attacker and their tools, closing the vulnerability they exploited",
+                "Burning the building"
+              ],
+              "id": "cybersecurity_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Post-Incident Analysis and Resilience",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'post-incident review'?",
+              "answer": "Analysis after an incident to understand what happened and improve defenses",
+              "explain": "Post-incident reviews document the timeline, root cause, detection gaps, and corrective actions. They improve future response and prevent recurrence.",
+              "choices": [
+                "Keeping the incident secret",
+                "Blaming the person responsible",
+                "Analysis after an incident to understand what happened and improve defenses",
+                "Firing employees"
+              ],
+              "id": "cybersecurity_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'root cause analysis'?",
+              "answer": "Finding the fundamental reason why an incident occurred",
+              "explain": "Root cause goes beyond the symptom. If ransomware spread, why was backup offline? Why was segmentation missing? Fix the root cause to prevent recurrence.",
+              "choices": [
+                "Finding the fundamental reason why an incident occurred",
+                "Ignoring the incident",
+                "Guessing what went wrong",
+                "Blaming external hackers"
+              ],
+              "id": "cybersecurity_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'recovery'?",
+              "answer": "Restoring systems and data to normal operation after an incident",
+              "explain": "Recovery involves testing restored systems, validating data integrity, and verifying no backdoors remain. It is often the longest phase.",
+              "choices": [
+                "Restoring systems and data to normal operation after an incident",
+                "Buying new computers",
+                "Finding the attacker",
+                "Changing all passwords"
+              ],
+              "id": "cybersecurity_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'cyber resilience'?",
+              "answer": "The ability to detect, respond to, and recover from incidents quickly",
+              "explain": "Resilience acknowledges that breaches happen. It focuses on detecting fast, containing quickly, and recovering completely. Resilience beats prevention alone.",
+              "choices": [
+                "Having backup systems",
+                "The ability to detect, respond to, and recover from incidents quickly",
+                "Never getting hacked",
+                "Preventing all attacks"
+              ],
+              "id": "cybersecurity_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'lessons learned'?",
+              "answer": "Documentation of what was learned and what will change to prevent recurrence",
+              "explain": "Lessons learned become new policies, training, or technical fixes. They ensure the organization improves after each incident.",
+              "choices": [
+                "Documentation of what was learned and what will change to prevent recurrence",
+                "Blaming individuals",
+                "Keeping it secret",
+                "Ignoring the incident"
+              ],
+              "id": "cybersecurity_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "cryptography",
+  "name": "Cryptography",
+  "category": "programming",
+  "icon": "fa-solid fa-key",
+  "level": "Secrets and Trust",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Cryptography",
+      "tip": "Cryptography is the science of protecting information by converting it into code that only authorized people can read. The goal is always to solve a security problem: keeping a secret, proving identity, or ensuring data hasn't been tampered with. Understanding why we need crypto is the foundation for everything else.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Why Cryptography Matters",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary purpose of cryptography?",
+              "answer": "Protect information from being read or altered by unauthorized people",
+              "explain": "Cryptography keeps data private and verifiable. Without it, passwords, bank transactions, and secret messages would be readable to anyone with network access.",
+              "choices": [
+                "Protect information from being read or altered by unauthorized people",
+                "Make data impossible to store",
+                "Replace passwords completely",
+                "Speed up internet connections"
+              ],
+              "id": "cryptography_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is NOT a core security goal that cryptography addresses?",
+              "answer": "Increasing the speed of data transmission",
+              "explain": "Cryptography solves confidentiality (keeping secrets), integrity (detecting tampering), and authenticity (proving identity). Speed is a performance concern, not a security goal.",
+              "choices": [
+                "Increasing the speed of data transmission",
+                "Keeping information secret",
+                "Ensuring a message hasn't been changed",
+                "Proving that a message came from a specific person"
+              ],
+              "id": "cryptography_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'cipher'?",
+              "answer": "An algorithm for transforming plaintext into ciphertext",
+              "explain": "A cipher is a set of instructions for encoding data. The simplest example is the Caesar cipher, which shifts each letter by a fixed number. Modern ciphers are much more complex.",
+              "choices": [
+                "A secret password",
+                "A person who works in security",
+                "A type of code that cannot be broken",
+                "An algorithm for transforming plaintext into ciphertext"
+              ],
+              "id": "cryptography_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'plaintext' in cryptography?",
+              "answer": "The original, unencrypted message",
+              "explain": "Plaintext is the data before encryption. Once encrypted, it becomes ciphertext, which looks like random gibberish to anyone without the key.",
+              "choices": [
+                "A type of file format",
+                "The original, unencrypted message",
+                "A message written in plain language only",
+                "An encrypted message"
+              ],
+              "id": "cryptography_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'key' in cryptography?",
+              "answer": "Secret information needed to encrypt or decrypt data",
+              "explain": "A key is like a password for an algorithm. The same algorithm with different keys produces completely different ciphertext. The strength of encryption depends partly on key secrecy.",
+              "choices": [
+                "A physical object that unlocks doors",
+                "The plaintext message",
+                "Secret information needed to encrypt or decrypt data",
+                "The ciphertext output"
+              ],
+              "id": "cryptography_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Confidentiality, Integrity, and Authenticity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'confidentiality' mean in security?",
+              "answer": "Only authorized people can read the information",
+              "explain": "Confidentiality keeps secrets secret. Encryption provides confidentiality by scrambling data so only someone with the correct key can read it.",
+              "choices": [
+                "Only authorized people can read the information",
+                "Information is shared with everyone",
+                "Messages are sent slowly",
+                "Data is stored in a safe location"
+              ],
+              "id": "cryptography_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'integrity' mean in security?",
+              "answer": "Data has not been changed or corrupted",
+              "explain": "Integrity ensures data is complete and unmodified. A hash or message authentication code proves that a message hasn't been altered in transit.",
+              "choices": [
+                "The data is encrypted",
+                "Data has not been changed or corrupted",
+                "Only one person can access the data",
+                "Data is backed up regularly"
+              ],
+              "id": "cryptography_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'authenticity' mean in security?",
+              "answer": "Proof that a message came from who it claims to come from",
+              "explain": "Authenticity verifies identity. Digital signatures prove that a specific person created a message and haven't denied creating it.",
+              "choices": [
+                "The message is very long",
+                "The message was sent quickly",
+                "The message is encrypted",
+                "Proof that a message came from who it claims to come from"
+              ],
+              "id": "cryptography_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which scenario demonstrates a breach of integrity?",
+              "answer": "An attacker intercepts a message and changes the amount in a bank transfer",
+              "explain": "Integrity is broken when data is modified. The attacker didn't need to read the original message, just alter it. Detection requires integrity checks like hashes.",
+              "choices": [
+                "An encrypted message arrives at its destination",
+                "Data is sent over a secure connection",
+                "An attacker intercepts a message and changes the amount in a bank transfer",
+                "A person receives a message with their correct name on it"
+              ],
+              "id": "cryptography_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are all three of confidentiality, integrity, and authenticity important?",
+              "answer": "Each protects against different types of attacks",
+              "explain": "Confidentiality alone doesn't stop tampering. Integrity alone doesn't stop eavesdropping. Authenticity alone doesn't prevent impersonation. A complete security system needs all three.",
+              "choices": [
+                "They are required by law",
+                "They make passwords unnecessary",
+                "They make encryption faster",
+                "Each protects against different types of attacks"
+              ],
+              "id": "cryptography_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Symmetric Encryption",
+      "tip": "Symmetric encryption uses the same key for both encoding and decoding. It is fast and works well for protecting data in bulk. The challenge is keeping the key secret and sharing it safely with anyone who needs to read the message.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "How Symmetric Keys Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'symmetric encryption'?",
+              "answer": "Using the same key to encrypt and decrypt",
+              "explain": "In symmetric crypto, if Alice encrypts a message with key K, Bob decrypts it with the same key K. It is called symmetric because both sides use the same key.",
+              "choices": [
+                "Using the same key to encrypt and decrypt",
+                "Using a different key to decrypt than to encrypt",
+                "Sharing keys publicly",
+                "Encoding data without using a key"
+              ],
+              "id": "cryptography_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of symmetric encryption?",
+              "answer": "It is fast and efficient for large amounts of data",
+              "explain": "Symmetric algorithms like AES are much faster than asymmetric algorithms. They are used for encrypting files, disks, and bulk data because speed matters.",
+              "choices": [
+                "It is fast and efficient for large amounts of data",
+                "It proves the identity of the sender",
+                "It works over the internet without any setup",
+                "It does not need a key"
+              ],
+              "id": "cryptography_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main challenge of symmetric encryption?",
+              "answer": "The key must be kept secret and shared securely",
+              "explain": "Both parties need the same key, but if it is sent over an insecure channel, an attacker can intercept it. Sharing keys securely is the biggest practical problem.",
+              "choices": [
+                "The key must be kept secret and shared securely",
+                "It cannot encrypt very long messages",
+                "It cannot be used on computers",
+                "It is slower than all other methods"
+              ],
+              "id": "cryptography_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if an attacker learns the symmetric key?",
+              "answer": "They can decrypt all messages encrypted with that key",
+              "explain": "Because the key is the same for encryption and decryption, anyone with the key can read all encrypted messages. Key security is critical.",
+              "choices": [
+                "The encrypted message is destroyed",
+                "The sender is notified immediately",
+                "The encryption becomes stronger",
+                "They can decrypt all messages encrypted with that key"
+              ],
+              "id": "cryptography_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is an example of a symmetric cipher?",
+              "answer": "AES (Advanced Encryption Standard)",
+              "explain": "AES is the current standard for symmetric encryption used worldwide. DES (its predecessor) is obsolete, but both are symmetric. RSA is asymmetric, not symmetric.",
+              "choices": [
+                "AES (Advanced Encryption Standard)",
+                "RSA",
+                "ECDSA",
+                "Diffie-Hellman"
+              ],
+              "id": "cryptography_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Block Ciphers and Stream Ciphers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'block cipher'?",
+              "answer": "An algorithm that encrypts data in fixed-size chunks called blocks",
+              "explain": "Block ciphers like AES encrypt data in blocks (typically 128 bits). If the message is longer, it is split into blocks. If shorter, it is padded.",
+              "choices": [
+                "A cipher that cannot be broken",
+                "A method of physically securing data",
+                "A cipher that only works on square-shaped data",
+                "An algorithm that encrypts data in fixed-size chunks called blocks"
+              ],
+              "id": "cryptography_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'stream cipher'?",
+              "answer": "An algorithm that encrypts data one bit or byte at a time",
+              "explain": "Stream ciphers generate a keystream and XOR it with the plaintext continuously. They work well for streaming data like video or audio.",
+              "choices": [
+                "An algorithm that encrypts data one bit or byte at a time",
+                "A cipher that only works on the internet",
+                "The reverse of a block cipher",
+                "A cipher that produces encrypted video"
+              ],
+              "id": "cryptography_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does AES work at a high level?",
+              "answer": "It applies multiple mathematical operations in rounds to transform plaintext to ciphertext",
+              "explain": "AES uses substitution, permutation, and XOR operations repeated many times (10, 12, or 14 rounds depending on key size). Each round makes the output more diffused and non-linear.",
+              "choices": [
+                "It shifts each letter by a fixed number",
+                "It stores the plaintext in memory and hides it",
+                "It splits data into two halves and swaps them",
+                "It applies multiple mathematical operations in rounds to transform plaintext to ciphertext"
+              ],
+              "id": "cryptography_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'padding' in block ciphers?",
+              "answer": "Adding extra bytes to make the message fit exactly into blocks",
+              "explain": "If a message is not a multiple of the block size, dummy bytes are added. The receiver must know how many bytes were padding and remove them after decryption.",
+              "choices": [
+                "Hiding the message inside other data",
+                "Encrypting the message twice",
+                "Adding extra bytes to make the message fit exactly into blocks",
+                "Making the ciphertext longer to improve security"
+              ],
+              "id": "cryptography_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When would you choose a stream cipher over a block cipher?",
+              "answer": "When encrypting continuous data like a video or network stream",
+              "explain": "Stream ciphers suit data that arrives continuously and has to be processed as it comes in, such as a live audio or network stream, without waiting to fill a block.",
+              "choices": [
+                "Stream ciphers are always faster",
+                "Never, block ciphers are always preferred",
+                "When encrypting continuous data like a video or network stream",
+                "Stream ciphers are always more secure"
+              ],
+              "id": "cryptography_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Hash Functions and Message Authentication",
+      "tip": "Hash functions turn any amount of data into a fixed-size fingerprint. If even one bit of the input changes, the hash completely changes. Hashes prove integrity and form the basis of digital signatures and message authentication codes.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Understanding Hash Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'hash function'?",
+              "answer": "An algorithm that produces a fixed-size output from any input",
+              "explain": "Hash functions like SHA-256 turn a 1-byte message or a 1-gigabyte file into a 256-bit fingerprint. The same input always produces the same hash.",
+              "choices": [
+                "An algorithm that produces a fixed-size output from any input",
+                "A function that reverses encryption",
+                "A type of password storage",
+                "A method of encrypting data"
+              ],
+              "id": "cryptography_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the key property of cryptographic hash functions?",
+              "answer": "Changing any bit of the input changes the entire hash unpredictably",
+              "explain": "This property is called the avalanche effect. It is essential for security. A good hash function makes it impossible to predict the output or find two inputs with the same hash.",
+              "choices": [
+                "Changing any bit of the input changes the entire hash unpredictably",
+                "They are reversible",
+                "They are very fast",
+                "They produce the same hash for similar inputs"
+              ],
+              "id": "cryptography_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a hash to be 'one-way'?",
+              "answer": "You cannot reverse it to recover the original input",
+              "explain": "One-way means given a hash, you cannot compute the original data. This is different from encryption, where decryption reverses the process.",
+              "choices": [
+                "It becomes invalid after some time",
+                "It only works on text, not binary data",
+                "You can only compute it on Tuesday",
+                "You cannot reverse it to recover the original input"
+              ],
+              "id": "cryptography_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'hash collision'?",
+              "answer": "Two different inputs producing the same hash",
+              "explain": "Collisions break hash security. If an attacker can create a collision, they can forge files or messages. Good hash functions make collisions infeasible to find.",
+              "choices": [
+                "A hash that is very long",
+                "A hash that cannot be computed",
+                "Two identical inputs",
+                "Two different inputs producing the same hash"
+              ],
+              "id": "cryptography_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is NOT a property of a secure cryptographic hash?",
+              "answer": "Easy to compute the inverse",
+              "explain": "A secure hash must be one-way (hard to invert), resist collision attacks, and show the avalanche effect. Being easy to invert would break its security.",
+              "choices": [
+                "Easy to compute the inverse",
+                "Fast to compute for any input",
+                "Small change in input causes large change in output",
+                "Hard to find two inputs with the same output"
+              ],
+              "id": "cryptography_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "MACs and Authenticated Encryption",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'Message Authentication Code' (MAC)?",
+              "answer": "A tag computed from a message and a secret key to prove integrity and authenticity",
+              "explain": "A MAC is built from a secret key and a message, often using a hash function (as in HMAC). Only someone with the key can compute or verify the tag. It shows the message came from someone with that key and was not modified.",
+              "choices": [
+                "An email address",
+                "A type of encryption algorithm",
+                "A tag computed from a message and a secret key to prove integrity and authenticity",
+                "A network protocol"
+              ],
+              "id": "cryptography_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a MAC differ from a simple hash?",
+              "answer": "A MAC uses a secret key, a hash does not",
+              "explain": "A hash is public and doesn't prove authenticity. A MAC includes a secret key, so only the holder of that key can generate a valid MAC. This proves identity.",
+              "choices": [
+                "A MAC only works on short messages",
+                "A MAC is faster",
+                "A MAC uses a secret key, a hash does not",
+                "A hash cannot be computed"
+              ],
+              "id": "cryptography_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'authenticated encryption'?",
+              "answer": "Encryption combined with authentication to provide both confidentiality and integrity",
+              "explain": "Authenticated encryption modes like GCM encrypt the data and produce an authentication tag in one step. This is safer and faster than encrypting then hashing separately.",
+              "choices": [
+                "Encryption combined with authentication to provide both confidentiality and integrity",
+                "Using very long encryption keys",
+                "Storing plaintext with a hash",
+                "Encrypting a message twice"
+              ],
+              "id": "cryptography_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can a MAC guarantee?",
+              "answer": "The message has not been altered and came from the key holder",
+              "explain": "A MAC proves integrity (the message is unchanged) and authenticity (it came from someone with the key). It does not provide confidentiality if the message is not encrypted.",
+              "choices": [
+                "The message is secret",
+                "The message has not been altered and came from the key holder",
+                "The message is very long",
+                "The message was sent instantly"
+              ],
+              "id": "cryptography_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is HMAC?",
+              "answer": "Hash-based Message Authentication Code, a standard way to build a MAC from any hash function",
+              "explain": "HMAC applies the hash function in a specific way with a key to produce a secure MAC. It is simple, proven, and widely used.",
+              "choices": [
+                "A method of storing passwords",
+                "A type of encryption algorithm",
+                "Hash-based Message Authentication Code, a standard way to build a MAC from any hash function",
+                "A network security protocol"
+              ],
+              "id": "cryptography_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Asymmetric Encryption and Public-Key Cryptography",
+      "tip": "Asymmetric encryption uses a pair of keys: a public key anyone can see and a private key only the owner knows. The public key encrypts, the private key decrypts. This solves the key-sharing problem that haunts symmetric crypto, but is slower.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "The Power of Public-Key Cryptography",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'asymmetric encryption'?",
+              "answer": "Using different keys for encryption and decryption",
+              "explain": "In asymmetric crypto, data encrypted with the public key can only be decrypted with the private key. It is asymmetric because the keys are different.",
+              "choices": [
+                "A method that does not use any key",
+                "Using different keys for encryption and decryption",
+                "Using the same key twice",
+                "A slow form of symmetric encryption"
+              ],
+              "id": "cryptography_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'public key'?",
+              "answer": "A key that can be safely shared with anyone and is used to encrypt",
+              "explain": "The public key is meant to be public. You can post it online, email it, or publish it. Only its matching private key can decrypt data encrypted with it.",
+              "choices": [
+                "A key that must be kept secret",
+                "A key used only once",
+                "A backup of the private key",
+                "A key that can be safely shared with anyone and is used to encrypt"
+              ],
+              "id": "cryptography_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'private key'?",
+              "answer": "A secret key owned by one person that decrypts messages sent to them",
+              "explain": "The private key must be protected at all costs. If someone else obtains it, they can decrypt all messages sent to you and forge your signatures.",
+              "choices": [
+                "A shortened version of the public key",
+                "A secret key owned by one person that decrypts messages sent to them",
+                "A key used for temporary storage",
+                "A key everyone can use"
+              ],
+              "id": "cryptography_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does asymmetric encryption solve the key-sharing problem?",
+              "answer": "The public key can be shared openly without compromising security",
+              "explain": "With symmetric crypto, sharing the key over an insecure channel risks exposure. Asymmetric solves this: the public key is public, so anyone can encrypt to you without a secret channel.",
+              "choices": [
+                "Both keys are kept secret",
+                "The public key can be shared openly without compromising security",
+                "The keys are shorter so easier to remember",
+                "It does not solve any problem"
+              ],
+              "id": "cryptography_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main disadvantage of asymmetric encryption?",
+              "answer": "It is much slower than symmetric encryption",
+              "explain": "Asymmetric algorithms are computationally expensive. They are used for key exchange and signing, but symmetric encryption (initialized via asymmetric methods) encrypts the actual data.",
+              "choices": [
+                "It is much slower than symmetric encryption",
+                "It only works on small messages",
+                "It requires sharing the private key",
+                "It does not provide confidentiality"
+              ],
+              "id": "cryptography_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "How RSA Works Conceptually",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is RSA?",
+              "answer": "An asymmetric cipher based on the difficulty of factoring large numbers",
+              "explain": "RSA uses the mathematical fact that multiplying two large primes is easy, but factoring their product back into primes is very hard. This one-way property provides security.",
+              "choices": [
+                "A symmetric encryption algorithm",
+                "An asymmetric cipher based on the difficulty of factoring large numbers",
+                "A method of generating random numbers",
+                "A hash function"
+              ],
+              "id": "cryptography_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are RSA keys generated?",
+              "answer": "By multiplying two large prime numbers and using mathematical operations on the result",
+              "explain": "To generate an RSA key pair, two large primes are chosen, multiplied to create the modulus, and the public and private exponents are computed from this modulus.",
+              "choices": [
+                "By multiplying two large prime numbers and using mathematical operations on the result",
+                "By dividing one large number",
+                "By copying one key twice",
+                "By counting random numbers"
+              ],
+              "id": "cryptography_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is data encrypted with RSA?",
+              "answer": "By raising the plaintext to the public exponent modulo the modulus",
+              "explain": "RSA encryption is C = M^e mod n, where M is the message, e is the public exponent, and n is the modulus. Only knowing d (private exponent) allows decryption.",
+              "choices": [
+                "By applying a hash function",
+                "By raising the plaintext to the public exponent modulo the modulus",
+                "By adding the public key to the plaintext",
+                "By dividing the plaintext by the public key"
+              ],
+              "id": "cryptography_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is factoring the RSA modulus considered hard?",
+              "answer": "No known fast algorithm exists for factoring products of large primes",
+              "explain": "The RSA security depends on this fact. Computers cannot factor a 2048-bit number (product of two 1024-bit primes) in reasonable time with current algorithms.",
+              "choices": [
+                "No known fast algorithm exists for factoring products of large primes",
+                "Factoring requires quantum computers",
+                "Factoring is forbidden by law",
+                "Prime numbers do not have factors"
+              ],
+              "id": "cryptography_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which RSA key size is generally considered the minimum acceptable for security?",
+              "answer": "2048 bits or larger",
+              "explain": "2048-bit RSA keys are widely treated as the minimum, and some systems use 3072 or 4096 bits for extra margin. Keys of 1024 bits or less are now considered too weak.",
+              "choices": [
+                "1024 bits",
+                "16 bits",
+                "512 bits",
+                "2048 bits or larger"
+              ],
+              "id": "cryptography_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Digital Signatures and Key Exchange",
+      "tip": "Digital signatures use asymmetric keys to prove you created a message. The private key signs, the public key verifies. Key exchange protocols like Diffie-Hellman let two people agree on a shared secret over an insecure channel, starting secure communication.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Digital Signatures Explained",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'digital signature'?",
+              "answer": "A cryptographic proof that you created a message and cannot later deny it",
+              "explain": "A digital signature uses your private key to prove authenticity and non-repudiation. Anyone with your public key can verify the signature, but only you can create it.",
+              "choices": [
+                "A cryptographic proof that you created a message and cannot later deny it",
+                "An encrypted password",
+                "Your typed name at the end of an email",
+                "Your photograph"
+              ],
+              "id": "cryptography_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are digital signatures created?",
+              "answer": "By signing a hash of the message with the private key",
+              "explain": "The process is: hash the message, then sign the hash with the private key (in RSA, this is a private-key operation on the hash). Only the owner of that key could have produced that signature.",
+              "choices": [
+                "By signing a hash of the message with the private key",
+                "By sending the plaintext with a password",
+                "By encrypting the entire message",
+                "By adding the public key to the message"
+              ],
+              "id": "cryptography_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are digital signatures verified?",
+              "answer": "By checking the signature against the message hash using the public key",
+              "explain": "Verification: hash the message, then use the public key to check that the signature matches that hash. If it does, the signature is valid.",
+              "choices": [
+                "By checking if the message is readable",
+                "By asking the signer if they created it",
+                "By checking the signature against the message hash using the public key",
+                "By comparing the signature length to the message length"
+              ],
+              "id": "cryptography_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'non-repudiation' mean?",
+              "answer": "The signer cannot deny creating the message",
+              "explain": "Digital signatures provide non-repudiation. If you signed a message with your private key, you cannot convincingly claim someone else signed it.",
+              "choices": [
+                "The message cannot be encrypted",
+                "The signer cannot deny creating the message",
+                "The signature works for any message",
+                "The signature cannot be seen"
+              ],
+              "id": "cryptography_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is the message hashed before signing?",
+              "answer": "To create a fixed-size input, making signing faster",
+              "explain": "Signing directly would be slow for large messages. Hashing reduces any message to a short fixed-size hash, which is then signed efficiently.",
+              "choices": [
+                "To remove the original message",
+                "To encrypt the message",
+                "To make the message invisible",
+                "To create a fixed-size input, making signing faster"
+              ],
+              "id": "cryptography_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Key Exchange and Diffie-Hellman",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'key exchange'?",
+              "answer": "A process where two parties agree on a shared secret over an insecure channel",
+              "explain": "Key exchange solves the bootstrap problem. Both parties end up knowing a secret that an eavesdropper cannot compute, even if they see all traffic.",
+              "choices": [
+                "Changing passwords regularly",
+                "Sending keys by email",
+                "Storing keys on a server",
+                "A process where two parties agree on a shared secret over an insecure channel"
+              ],
+              "id": "cryptography_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Diffie-Hellman' key exchange?",
+              "answer": "A protocol allowing two parties to derive a shared secret without prior secret communication",
+              "explain": "Diffie-Hellman uses modular exponentiation with public numbers. Each party chooses a secret, computes a public value, and derives the shared secret from the other party's public value.",
+              "choices": [
+                "A hash function",
+                "An encryption algorithm",
+                "A method of breaking encryption",
+                "A protocol allowing two parties to derive a shared secret without prior secret communication"
+              ],
+              "id": "cryptography_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is Diffie-Hellman useful?",
+              "answer": "It lets people securely agree on a symmetric key before using symmetric encryption",
+              "explain": "Diffie-Hellman is not used to encrypt bulk data. It only lets two parties agree on a shared key. Once both have it, they switch to fast symmetric encryption.",
+              "choices": [
+                "It works without both parties communicating",
+                "It does not require any mathematics",
+                "It is faster than symmetric encryption",
+                "It lets people securely agree on a symmetric key before using symmetric encryption"
+              ],
+              "id": "cryptography_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ECDH' (Elliptic Curve Diffie-Hellman)?",
+              "answer": "A variant of Diffie-Hellman using elliptic curve arithmetic for faster key exchange",
+              "explain": "ECDH provides the same security as Diffie-Hellman with smaller keys and faster computation. It is now preferred for key exchange.",
+              "choices": [
+                "A type of hash function",
+                "A variant of Diffie-Hellman using elliptic curve arithmetic for faster key exchange",
+                "A method of storing passwords",
+                "An encryption algorithm"
+              ],
+              "id": "cryptography_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if an attacker sees all Diffie-Hellman public values exchanged?",
+              "answer": "They cannot compute the shared secret because the private values were never transmitted",
+              "explain": "Diffie-Hellman security rests on the discrete logarithm problem. An attacker needs the private exponent to compute the shared secret, and this is computationally infeasible.",
+              "choices": [
+                "They can compute the shared secret because the public values are exchanged",
+                "They immediately know the shared secret",
+                "The protocol fails and stops working",
+                "They cannot compute the shared secret because the private values were never transmitted"
+              ],
+              "id": "cryptography_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Certificates, PKI, and Cryptographic Best Practices",
+      "tip": "Digital certificates prove that a public key belongs to a specific person or organization. A chain of trusted certificates forms Public Key Infrastructure (PKI). Modern cryptography is not just algorithms but also wise choices about using proven methods and avoiding invention.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Certificates and Public Key Infrastructure",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'digital certificate'?",
+              "answer": "A document binding a public key to an identity, signed by a trusted authority",
+              "explain": "A certificate proves that a public key belongs to a specific person or organization. It includes the public key, identity info, and a signature from a Certificate Authority.",
+              "choices": [
+                "A method of encrypting files",
+                "A password",
+                "A document binding a public key to an identity, signed by a trusted authority",
+                "A private key"
+              ],
+              "id": "cryptography_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'Certificate Authority' (CA)?",
+              "answer": "A trusted organization that issues and signs digital certificates",
+              "explain": "A CA verifies identity, creates certificates, and signs them with their private key. If you trust the CA, you can trust any certificate they issued.",
+              "choices": [
+                "A type of database",
+                "A trusted organization that issues and signs digital certificates",
+                "A person who keeps certificates",
+                "A government agency"
+              ],
+              "id": "cryptography_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Public Key Infrastructure' (PKI)?",
+              "answer": "A system for issuing, managing, and trusting digital certificates",
+              "explain": "PKI is the entire ecosystem. It includes CAs, intermediate CAs, certificate stores, revocation lists, and the policies that make it work.",
+              "choices": [
+                "A network protocol",
+                "A public password system",
+                "An encryption algorithm",
+                "A system for issuing, managing, and trusting digital certificates"
+              ],
+              "id": "cryptography_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'certificate chain' or 'chain of trust'?",
+              "answer": "A series of certificates, each signed by the next, linking a site certificate to a trusted root",
+              "explain": "Your browser has root certificates for major CAs. A website provides its certificate and intermediate certificates. The chain proves the website certificate is valid.",
+              "choices": [
+                "A list of passwords",
+                "A type of network adapter",
+                "A series of certificates, each signed by the next, linking a site certificate to a trusted root",
+                "A method of breaking encryption"
+              ],
+              "id": "cryptography_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does HTTPS use to secure web connections?",
+              "answer": "TLS, which combines asymmetric crypto for key exchange with symmetric encryption for data",
+              "explain": "HTTPS uses TLS to establish trust (via certificates), exchange keys (via Diffie-Hellman), and then encrypt all traffic with a symmetric key.",
+              "choices": [
+                "Random number generation",
+                "Passwords alone",
+                "TLS, which combines asymmetric crypto for key exchange with symmetric encryption for data",
+                "Physical locks"
+              ],
+              "id": "cryptography_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Why Not to Invent Your Own Crypto",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is inventing your own cipher dangerous?",
+              "answer": "Subtle flaws in design can break security in ways only experts notice",
+              "explain": "Crypto design looks easy but is extremely hard. Weak ciphers have failed in ways creators did not predict. Broken ciphers are everywhere in history.",
+              "choices": [
+                "Subtle flaws in design can break security in ways only experts notice",
+                "It cannot be used on computers",
+                "It is against the law",
+                "It is slower than published ciphers"
+              ],
+              "id": "cryptography_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the principle of 'crypto agility'?",
+              "answer": "Designing systems to support multiple algorithms so broken ones can be replaced",
+              "explain": "Algorithms get broken. Good systems can swap to a new one without redesigning. Hardcoding one algorithm means your entire system fails when it breaks.",
+              "choices": [
+                "Encrypting data twice",
+                "Changing passwords every day",
+                "Designing systems to support multiple algorithms so broken ones can be replaced",
+                "Using very long keys"
+              ],
+              "id": "cryptography_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it important to use established, peer-reviewed cryptographic algorithms?",
+              "answer": "They have been scrutinized by experts and flaws are documented and fixed",
+              "explain": "Published algorithms are analyzed by cryptographers worldwide. Hidden flaws are found over time. This scrutiny is impossible for secret algorithms.",
+              "choices": [
+                "They do not need keys",
+                "They are always faster",
+                "They are marketing friendly",
+                "They have been scrutinized by experts and flaws are documented and fixed"
+              ],
+              "id": "cryptography_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'cryptographic best practice'?",
+              "answer": "Using standard, proven algorithms with proper key management and expert review",
+              "explain": "Best practices include using AES or ChaCha for encryption, SHA-256 or better for hashing, and letting cryptographers design key management.",
+              "choices": [
+                "Using standard, proven algorithms with proper key management and expert review",
+                "Using very short keys to be memorable",
+                "Keeping algorithms secret",
+                "Inventing new algorithms frequently"
+              ],
+              "id": "cryptography_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do if you need cryptography in your system?",
+              "answer": "Use a well-tested library and rely on experts, not your own implementation",
+              "explain": "Even expert cryptographers make mistakes. Using a library like OpenSSL or libsodium is far safer than writing your own. Libraries have been reviewed by thousands.",
+              "choices": [
+                "Invent your own algorithm",
+                "Use a password as the only security",
+                "Use a well-tested library and rely on experts, not your own implementation",
+                "Skip cryptography if it seems complicated"
+              ],
+              "id": "cryptography_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
