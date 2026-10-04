@@ -1,0 +1,904 @@
+{
+  "id": "plank",
+  "name": "Plank",
+  "category": "programming",
+  "icon": "fa-solid fa-ruler-horizontal",
+  "level": "One-File Compiled Language",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Getting Started with Plank",
+      "tip": "Plank is a compiled language whose whole compiler fits in one Python file. The command 'plank run file.pk' compiles and runs a program in one step, and 'plank build file.pk' makes a native binary. Every program starts at fn main().",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Running Your First Program",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the entry point for a Plank program?",
+              "answer": "A function named main()",
+              "explain": "Every Plank program must have a fn main() function with no parameters. The program starts there.",
+              "choices": [
+                "A function named start()",
+                "A function named main()",
+                "The first function in the file",
+                "A function named execute()"
+              ],
+              "id": "plank_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which command compiles and runs hello.pk in one step?",
+              "answer": "plank run hello.pk",
+              "explain": "The command 'plank run hello.pk' compiles and runs the program in one step. Any extra words after the file name are passed to the program.",
+              "choices": [
+                "plank run hello.pk",
+                "plank execute hello.pk",
+                "plank start hello.pk",
+                "run hello.pk"
+              ],
+              "id": "plank_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the print function do?",
+              "answer": "Prints its arguments separated by spaces, then a newline",
+              "explain": "print(a, b, c) outputs each argument separated by a space and ends with a newline. print() alone prints a blank line.",
+              "choices": [
+                "Prints its arguments separated by spaces, then a newline",
+                "Prints a single string only",
+                "Prints to a file",
+                "Returns a string without printing"
+              ],
+              "id": "plank_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these starts a comment in Plank?",
+              "answer": "# comment",
+              "explain": "Comments in Plank start with # and run to the end of the line. The compiler ignores them.",
+              "choices": [
+                "// comment",
+                "# comment",
+                "/* comment */",
+                "-- comment"
+              ],
+              "id": "plank_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What command compiles a Plank file into a native binary?",
+              "answer": "plank build file.pk",
+              "explain": "The 'plank build' command compiles to a native binary. By default it goes next to the source, or use -o to pick a name.",
+              "choices": [
+                "plank emit file.pk",
+                "plank compile file.pk",
+                "plank build file.pk",
+                "plank export file.pk"
+              ],
+              "id": "plank_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Program Structure",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does it mean that Plank statements end at the newline?",
+              "answer": "A line break ends a statement, so no semicolons are used",
+              "explain": "Plank ends a statement at the newline, so you do not write semicolons. A semicolon in Plank source is an error.",
+              "choices": [
+                "A line break ends a statement, so no semicolons are used",
+                "Every statement must end with a semicolon",
+                "Line breaks are ignored, like spaces",
+                "Every statement must end with a period"
+              ],
+              "id": "plank_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In what order must you declare functions in Plank?",
+              "answer": "Functions can be declared in any order",
+              "explain": "Plank allows forward references, so you can use a function before you define it. Functions and structs can be in any order.",
+              "choices": [
+                "Functions must be declared before use",
+                "Functions can be declared in any order",
+                "Functions must be in alphabetical order",
+                "main() must come first"
+              ],
+              "id": "plank_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What parameters does fn main() take in Plank?",
+              "answer": "No parameters",
+              "explain": "The main() function takes no parameters and no return type. To access command-line arguments, use the args() function.",
+              "choices": [
+                "An int for the argument count",
+                "An array of strings",
+                "No parameters",
+                "A string array and an int"
+              ],
+              "id": "plank_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get command-line arguments in a Plank program?",
+              "answer": "Call args()",
+              "explain": "The args() built-in returns a list of strings. Running 'plank run tool.pk a b' gives [\"a\", \"b\"].",
+              "choices": [
+                "Call args()",
+                "Through parameters to main()",
+                "From a global variable",
+                "They are not available"
+              ],
+              "id": "plank_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a function with a return type can reach its end without returning a value?",
+              "answer": "The compiler refuses it",
+              "explain": "Plank requires that every path through a function with a return type actually return a value. A function cannot fall off the end.",
+              "choices": [
+                "It returns false",
+                "The compiler refuses it",
+                "It returns 0",
+                "It returns nil"
+              ],
+              "id": "plank_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Values, Types, and Variables",
+      "tip": "Plank has int, float, bool, and str as its basic types. let binds a name once and var can be reassigned. Types are inferred from values, but you can state one with a colon.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Types and Literals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the four basic value types in Plank?",
+              "answer": "int, float, bool, and str",
+              "explain": "Plank's basic types are int (a signed 64-bit whole number), float (a 64-bit double), bool (true or false), and str (UTF-8 text).",
+              "choices": [
+                "int, float, bool, and str",
+                "int, double, boolean, string",
+                "number, text, flag, word",
+                "integer, real, bit, character"
+              ],
+              "id": "plank_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of the value 42 in Plank?",
+              "answer": "int",
+              "explain": "A whole number like 42 is an int. If you write 42.0, it is a float.",
+              "choices": [
+                "int",
+                "float",
+                "number",
+                "double"
+              ],
+              "id": "plank_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 3.14?",
+              "answer": "float",
+              "explain": "A number with a decimal point is a float. Float literals must have digits on both sides of the dot.",
+              "choices": [
+                "double",
+                "int",
+                "float",
+                "decimal"
+              ],
+              "id": "plank_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Plank, what are the two boolean literal values?",
+              "answer": "true and false",
+              "explain": "Bools in Plank are true or false, used for conditions and logic.",
+              "choices": [
+                "true and false",
+                "1 and 0",
+                "yes and no",
+                "True and False"
+              ],
+              "id": "plank_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write a string literal in Plank?",
+              "answer": "Surrounded by double quotes",
+              "explain": "Strings use double quotes like \"hello\". Single quotes are not used for strings in Plank.",
+              "choices": [
+                "Surrounded by backticks",
+                "Surrounded by single quotes",
+                "Surrounded by double quotes",
+                "Without any quotes"
+              ],
+              "id": "plank_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Variables and Type Inference",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between let and var?",
+              "answer": "let binds once, var can be reassigned",
+              "explain": "let binds a name once, so it cannot be reassigned. var makes a name you can reassign. Both infer their type from the initial value.",
+              "choices": [
+                "They are identical",
+                "let is global, var is local",
+                "let binds once, var can be reassigned",
+                "var is faster than let"
+              ],
+              "id": "plank_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'type inference' mean in Plank?",
+              "answer": "The compiler figures out types from values",
+              "explain": "You usually do not need to write types. let name = \"plank\" infers str. You can state a type with a colon if needed.",
+              "choices": [
+                "Types are guessed randomly",
+                "The compiler figures out types from values",
+                "You must write every type",
+                "There are no types"
+              ],
+              "id": "plank_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a variable with an explicit type in Plank?",
+              "answer": "var count: int = 0",
+              "explain": "Use a colon after the variable name to state its type explicitly. Type annotation comes before the initial value.",
+              "choices": [
+                "var: int count = 0",
+                "var count: int = 0",
+                "var count int = 0",
+                "int var count = 0"
+              ],
+              "id": "plank_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Plank, are there implicit type conversions?",
+              "answer": "No, conversions must be explicit",
+              "explain": "1 + 2.0 is an error. Use int(x), float(x), or str(x) to convert explicitly.",
+              "choices": [
+                "Only for comparison",
+                "No, conversions must be explicit",
+                "Yes, like most languages",
+                "Only for arithmetic"
+              ],
+              "id": "plank_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does x += 1 mean in Plank?",
+              "answer": "x = x + 1",
+              "explain": "Compound assignment operators like += are shorthand. They work with +=, -=, *=, /=, and %=. For strings, += joins them.",
+              "choices": [
+                "x = 1",
+                "Add 1 to x and return it",
+                "x = x + 1",
+                "x + 1 and ignore the result"
+              ],
+              "id": "plank_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Strings and String Features",
+      "tip": "Strings in Plank are UTF-8 and support escape sequences like \\n and \\t. String interpolation with \\() drops any expression into a string, for example \"n is \\(n)\".",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "String Literals and Escapes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which escape sequence puts a newline in a Plank string?",
+              "answer": "Use \\n",
+              "explain": "The escape sequence \\n represents a newline. Other escapes are \\t for tab, \\\" for a quote, and \\\\ for a backslash. An unknown one such as \\r is an error.",
+              "choices": [
+                "Use %n",
+                "Use \\r",
+                "Use \\n",
+                "Use \\l"
+              ],
+              "id": "plank_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What escape sequences does Plank support in strings?",
+              "answer": "\\n, \\t, \\\", \\\\ and \\0",
+              "explain": "Plank recognizes these escapes for newline, tab, quote, backslash, and null. Anything else after a backslash is an error except \\( which starts interpolation.",
+              "choices": [
+                "\\n, \\t, \\\", \\\\ and \\0",
+                "Just \\n and \\t",
+                "All of \\a through \\z",
+                "Only \\n"
+              ],
+              "id": "plank_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can Plank strings contain UTF-8 characters?",
+              "answer": "Yes, strings are UTF-8",
+              "explain": "Plank strings are UTF-8 encoded. You can write \"\u4e16\u754c\" directly in a string literal and it works.",
+              "choices": [
+                "Only if you escape them",
+                "Yes, strings are UTF-8",
+                "Only ASCII letters",
+                "No, only ASCII"
+              ],
+              "id": "plank_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you include a double quote inside a string?",
+              "answer": "Use \\\"",
+              "explain": "The escape sequence \\\" produces a literal double-quote character inside the string.",
+              "choices": [
+                "You cannot",
+                "Use \\q",
+                "Use \\\"",
+                "Use ''"
+              ],
+              "id": "plank_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you use an unknown escape sequence in a Plank string?",
+              "answer": "It is an error",
+              "explain": "Any backslash followed by an unknown character is an error, except \\( which starts interpolation.",
+              "choices": [
+                "It produces a backslash",
+                "It is an error",
+                "It is ignored",
+                "It is treated as the character"
+              ],
+              "id": "plank_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "String Interpolation and Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you embed an expression in a Plank string?",
+              "answer": "Use \\(expression)",
+              "explain": "String interpolation uses \\( and ) to drop any expression into a string. For example: \"n is \\(n)\" or \"big: \\(x > 100)\".",
+              "choices": [
+                "Use %(expression)s",
+                "Use ${}",
+                "Use \\(expression)",
+                "Use #{}"
+              ],
+              "id": "plank_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does \"hello\".upper() return?",
+              "answer": "\"HELLO\"",
+              "explain": "The upper() method returns a new string with ASCII letters converted to uppercase. It does not change the original.",
+              "choices": [
+                "\"Hello\"",
+                "\"HELLO\"",
+                "\"hello\"",
+                "An error"
+              ],
+              "id": "plank_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does \"a, b ,c\".split(\",\") return?",
+              "answer": "[\"a\", \" b \", \"c\"]",
+              "explain": "split() divides a string by a separator and returns a list. It keeps whitespace in the results unless you trim them.",
+              "choices": [
+                "An error",
+                "[\"a\", \"b\", \"c\"]",
+                "[\"a\", \" b \", \"c\"]",
+                "\"abc\""
+              ],
+              "id": "plank_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get the length of a string?",
+              "answer": "len(string)",
+              "explain": "The len() function returns the number of characters. For \"\u4e16\u754c\" it returns 2 (counts Unicode characters, not bytes).",
+              "choices": [
+                "string.len()",
+                "size(string)",
+                "len(string)",
+                "string.length"
+              ],
+              "id": "plank_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does \"plank\".find(\"an\") return?",
+              "answer": "2",
+              "explain": "find() returns the position of a substring, or nil if not found. \"an\" starts at position 2 in \"plank\".",
+              "choices": [
+                "3",
+                "2",
+                "1",
+                "nil"
+              ],
+              "id": "plank_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Control Flow",
+      "tip": "Plank uses if and else to choose, while and for to loop, and match to pick between cases. Conditions must be bool, so if 1 { ... } is an error. A for variable cannot be reassigned inside the body, and in a range loop like for i in 0..10 it is an int.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "If, Else If, and Else",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What must the condition after if evaluate to in Plank?",
+              "answer": "A bool value",
+              "explain": "Conditions in if statements must be bool. if 1 { ... } is an error; you need if 1 > 0 { ... }.",
+              "choices": [
+                "A comparison operator",
+                "Any value",
+                "A bool value",
+                "An int or float"
+              ],
+              "id": "plank_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check if x is not equal to 5 in Plank?",
+              "answer": "x != 5",
+              "explain": "The != operator checks inequality. You can use it with any type that supports ==.",
+              "choices": [
+                "x is not 5",
+                "x !is 5",
+                "x != 5",
+                "x <> 5"
+              ],
+              "id": "plank_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do the comparison operators <, >, <=, and >= return?",
+              "answer": "A bool value",
+              "explain": "Comparisons return bool: true or false. You use them to control if statements and loops.",
+              "choices": [
+                "A string",
+                "A bool value",
+                "A float",
+                "An int"
+              ],
+              "id": "plank_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After let x = 5, what does if x > 3 { print(\"big\") } else { print(\"small\") } print?",
+              "answer": "big",
+              "explain": "Since 5 > 3 is true, the if branch runs and prints \"big\".",
+              "choices": [
+                "An error",
+                "small",
+                "big",
+                "big and small"
+              ],
+              "id": "plank_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use if as an expression in Plank?",
+              "answer": "Yes, to assign a value",
+              "explain": "let size = if n > 100 { \"big\" } else { \"small\" } uses if as an expression. Both branches must have the same type.",
+              "choices": [
+                "Yes, to assign a value",
+                "Only with numbers",
+                "No, only as a statement",
+                "Only in loops"
+              ],
+              "id": "plank_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Loops and Match",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does for i in 0..10 do?",
+              "answer": "Loops from 0 through 9",
+              "explain": "The range 0..10 includes 0 but excludes 10, so it loops through 0 to 9. The variable i is a read-only int.",
+              "choices": [
+                "Loops 10 times starting at 1",
+                "Loops from 1 through 10",
+                "Loops from 0 through 10",
+                "Loops from 0 through 9"
+              ],
+              "id": "plank_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you loop over items in a list?",
+              "answer": "for x in list { ... }",
+              "explain": "for x in xs walks the list. You can also use for i, x in xs to get the index and value.",
+              "choices": [
+                "while list { ... }",
+                "for x in list { ... }",
+                "for (x : list) { ... }",
+                "for i = 0; i < len(list); i++ { ... }"
+              ],
+              "id": "plank_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword leaves a loop early and carries on with the code after the loop?",
+              "answer": "Use break",
+              "explain": "break exits a while or for loop immediately. continue skips to the next iteration. return would leave the whole function and exit would stop the program.",
+              "choices": [
+                "Use return",
+                "Use exit",
+                "Use stop",
+                "Use break"
+              ],
+              "id": "plank_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does match do on an int?",
+              "answer": "It picks a case based on the int value",
+              "explain": "match on ints, floats, bools, and strings lists constants as arms, and else catches the rest.",
+              "choices": [
+                "It prints the value",
+                "It always fails",
+                "It tries to convert it",
+                "It picks a case based on the int value"
+              ],
+              "id": "plank_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When n is 2, which arm runs in match n { 1, 2, 3 { ... } else { ... } }?",
+              "answer": "The 1, 2, 3 arm",
+              "explain": "You can list multiple values in one case separated by commas. 2 matches the 1, 2, 3 case.",
+              "choices": [
+                "An error",
+                "Neither arm",
+                "The else arm",
+                "The 1, 2, 3 arm"
+              ],
+              "id": "plank_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Functions and Structs",
+      "tip": "Functions take parameters and return values, and parameters can have defaults and labels. A function can take a type parameter in angle brackets, like fn first<T>(xs: [T]) -> T, and Plank works out T from the arguments at each call. Structs group fields and methods, and methods reach their fields with self.fieldname.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Function Definitions and Parameters",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a function that takes two ints and returns their sum?",
+              "answer": "fn add(a: int, b: int) -> int { return a + b }",
+              "explain": "Function syntax is fn name(parameters) -> return_type { body }. Parameter types are required.",
+              "choices": [
+                "function add(a, b) { return a + b }",
+                "fn add(int a, int b) { return a + b }",
+                "add(int a, int b) { return a + b }",
+                "fn add(a: int, b: int) -> int { return a + b }"
+              ],
+              "id": "plank_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In fn first<T>(xs: [T]) -> T, what is T?",
+              "answer": "A type parameter that Plank works out from the arguments at each call",
+              "explain": "The angle brackets after the function name declare a type parameter. Plank works out T from the arguments at each call, so first([7, 8]) uses int and first([\"x\"]) uses str.",
+              "choices": [
+                "A type parameter that Plank works out from the arguments at each call",
+                "A struct named T that you must define yourself",
+                "A variable that holds the first item",
+                "A type that always means int"
+              ],
+              "id": "plank_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function with labeled arguments?",
+              "answer": "func(name: value, age: 36)",
+              "explain": "You can use labels by name like func(name: \"alice\", age: 36). Once one argument has a label, the ones after it need labels too.",
+              "choices": [
+                "func([name: value, age: 36])",
+                "func(name = value, age = 36)",
+                "func(value=name, 36=age)",
+                "func(name: value, age: 36)"
+              ],
+              "id": "plank_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a function parameter default do?",
+              "answer": "Provides a value when the argument is omitted",
+              "explain": "fn greet(greeting: str = \"hello\") means greet() uses \"hello\", and greet(\"hi\") uses \"hi\".",
+              "choices": [
+                "Converts the argument type",
+                "Returns if the argument is nil",
+                "Always replaces the argument",
+                "Provides a value when the argument is omitted"
+              ],
+              "id": "plank_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a function with no return statement ends?",
+              "answer": "It returns nothing (void)",
+              "explain": "A function without a return type or return statement is void. It runs for side effects like print().",
+              "choices": [
+                "It returns 0",
+                "An error occurs",
+                "It returns nil",
+                "It returns nothing (void)"
+              ],
+              "id": "plank_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Structs and Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a struct do in Plank?",
+              "answer": "Groups named fields and methods",
+              "explain": "A struct is like a record with named fields and functions (methods) that work on it.",
+              "choices": [
+                "Groups named fields and methods",
+                "Renames a type",
+                "Creates a temporary variable",
+                "Defines a sequence of values"
+              ],
+              "id": "plank_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an instance of Account with owner \"ada\" and balance 100?",
+              "answer": "Account(owner: \"ada\", balance: 100) or Account(\"ada\", 100)",
+              "explain": "You call the struct name with fields by label or by position. A default field can be left out.",
+              "choices": [
+                "{owner: \"ada\", balance: 100}",
+                "Account { owner: \"ada\", balance: 100 }",
+                "new Account(owner: \"ada\", balance: 100)",
+                "Account(owner: \"ada\", balance: 100) or Account(\"ada\", 100)"
+              ],
+              "id": "plank_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a struct method, how do you access the instance it runs on?",
+              "answer": "self",
+              "explain": "Methods receive self implicitly. Use self.fieldname to read a field or self.field += 1 to change it.",
+              "choices": [
+                "instance",
+                "me",
+                "this",
+                "self"
+              ],
+              "id": "plank_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are structs in Plank shared or copied?",
+              "answer": "Shared, like lists",
+              "explain": "Structs are shared references. Pass one to a function and the function sees and changes the same struct.",
+              "choices": [
+                "Deleted when passed",
+                "Shared, like lists",
+                "Always immutable",
+                "Copied on assignment"
+              ],
+              "id": "plank_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a struct field have a default value?",
+              "answer": "Yes, with = after the type",
+              "explain": "struct Account { balance: int = 0 } makes balance default to 0. You can omit it when building.",
+              "choices": [
+                "Only if declared separately",
+                "No, all fields are required",
+                "Only for the last field",
+                "Yes, with = after the type"
+              ],
+              "id": "plank_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Collections and Advanced Types",
+      "tip": "Lists and dicts hold collections. Optionals represent values that might be nil, and a Result is either ok(value) or err(message) when an error is part of the answer. Enums with match are exhaustive, and closures are functions as values.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Lists and Dicts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create an empty list in Plank?",
+              "answer": "let xs: [int] = []",
+              "explain": "Empty lists need a type declared because the compiler cannot infer it. let xs = [1, 2] infers [int].",
+              "choices": [
+                "let xs = list()",
+                "let xs: [] = []",
+                "let xs = []",
+                "let xs: [int] = []"
+              ],
+              "id": "plank_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does xs[-1] refer to in a Plank list?",
+              "answer": "The last element",
+              "explain": "Negative indexes count from the end. -1 is the last, -2 is second-to-last, etc.",
+              "choices": [
+                "The last element",
+                "nil",
+                "An error",
+                "The first element"
+              ],
+              "id": "plank_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add an item to a list?",
+              "answer": "xs.append(item)",
+              "explain": "The append method adds to the end. You can also use xs[index] = value to replace.",
+              "choices": [
+                "xs.push(item)",
+                "xs.append(item)",
+                "xs += item",
+                "xs.add(item)"
+              ],
+              "id": "plank_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a dict with string keys?",
+              "answer": "[\"a\": 1, \"b\": 2]",
+              "explain": "Dict literals use colons between key and value. An empty dict is [:].",
+              "choices": [
+                "dict(a: 1, b: 2)",
+                "[\"a\" = 1, \"b\" = 2]",
+                "{\"a\": 1, \"b\": 2}",
+                "[\"a\": 1, \"b\": 2]"
+              ],
+              "id": "plank_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ages.get(\"bob\", -1) do if \"bob\" is not in the dict?",
+              "answer": "Returns -1",
+              "explain": "get() with a second argument returns that default when the key is missing. With one argument, ages.get(\"bob\") gives nil instead, while reading ages[\"bob\"] directly stops the program.",
+              "choices": [
+                "Returns an empty dict",
+                "Throws an error",
+                "Returns nil",
+                "Returns -1"
+              ],
+              "id": "plank_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Optionals, Results, Enums, and Closures",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the two forms of a Result value in Plank?",
+              "answer": "ok(value) and err(message)",
+              "explain": "A Result<T> is either ok(value) or err(message). A function returns one when an error is part of the answer, like Result.ok(2) or Result.err(\"3 is odd\").",
+              "choices": [
+                "ok(value) and err(message)",
+                "some(value) and none",
+                "true and false",
+                "value and nil"
+              ],
+              "id": "plank_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you extract the value from an optional int?",
+              "answer": "if let i = x { ... } or x ?? default or x!",
+              "explain": "if let unwraps safely and runs the body only if x is not nil. ?? provides a fallback. ! forces it and stops if nil.",
+              "choices": [
+                "(int)x",
+                "if let i = x { ... } or x ?? default or x!",
+                "x.unwrap()",
+                "x as int"
+              ],
+              "id": "plank_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an enum in Plank?",
+              "answer": "One of a set of cases, each can carry values",
+              "explain": "enum Shape { circle(r: float) rect(w: float, h: float) dot } defines three cases. Use match to handle each.",
+              "choices": [
+                "A type alias",
+                "A list that holds values of one type",
+                "A function that returns",
+                "One of a set of cases, each can carry values"
+              ],
+              "id": "plank_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the compiler check about match on an enum?",
+              "answer": "That every case is handled",
+              "explain": "match is exhaustive. The compiler refuses a match that forgets a case, and refuses an else arm that can never run.",
+              "choices": [
+                "That else is always present",
+                "That every case is handled",
+                "That one case runs",
+                "Nothing special"
+              ],
+              "id": "plank_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [5, 3, 8].filter(fn(x) => x > 4) return?",
+              "answer": "[5, 8]",
+              "explain": "filter keeps items where the closure returns true. Only 5 and 8 are greater than 4.",
+              "choices": [
+                "[3]",
+                "[5, 3, 8]",
+                "[]",
+                "[5, 8]"
+              ],
+              "id": "plank_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

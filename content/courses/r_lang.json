@@ -1,0 +1,904 @@
+{
+  "id": "r_lang",
+  "name": "R",
+  "category": "programming",
+  "icon": "fa-brands fa-r-project",
+  "level": "Statistics and Data",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Vectors and Assignment",
+      "tip": "Vectors are the fundamental building block in R. You create them with the c() function and assign them to names using <-. R thinks in terms of vectors, not single values.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Creating and Using Vectors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which function combines several values into one vector?",
+              "answer": "c()",
+              "explain": "The c() function combines elements into a vector. c(1, 2, 3) creates a vector with three numeric values.",
+              "choices": [
+                "vector(1, 2, 3)",
+                "c()",
+                "vec()",
+                "v()"
+              ],
+              "id": "r_lang_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you assign a value to a variable name in R?",
+              "answer": "Using the <- operator",
+              "explain": "The <- operator assigns the right-hand side to the left-hand side. x <- 5 creates a variable x with value 5. R also accepts = for assignment at the top level, but <- is the standard style.",
+              "choices": [
+                "Using the = operator only",
+                "Using the => operator",
+                "Using the <- operator",
+                "Using the := operator"
+              ],
+              "id": "r_lang_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the expression x <- c(2, 4, 6) do?",
+              "answer": "Creates a vector with three numbers and assigns it to x",
+              "explain": "This combines three numbers into a single vector and stores it in the variable x. You can now refer to all three values as x.",
+              "choices": [
+                "Creates a vector with three numbers and assigns it to x",
+                "Multiplies 2, 4, and 6",
+                "Creates three separate variables",
+                "Adds 2 plus 4 plus 6"
+              ],
+              "id": "r_lang_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In R, can you apply a function to an entire vector at once?",
+              "answer": "Yes, many built-in functions work on every element at once",
+              "explain": "R is vectorized. If you have x <- c(1, 2, 3) and type sqrt(x), it returns the square root of each element without needing a loop. This works for many functions, not only math ones: toupper() on a character vector changes every element too.",
+              "choices": [
+                "Only for mathematical functions",
+                "No, you must use a loop",
+                "Only if you write special vector code",
+                "Yes, many built-in functions work on every element at once"
+              ],
+              "id": "r_lang_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the length of the vector c(10, 20, 30, 40)?",
+              "answer": "4",
+              "explain": "The length() function counts how many elements are in a vector. This vector has four elements, so its length is 4.",
+              "choices": [
+                "4",
+                "40",
+                "100",
+                "1"
+              ],
+              "id": "r_lang_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Sequences and Repetition",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a sequence from 1 to 5 in R?",
+              "answer": "1:5",
+              "explain": "The : operator creates a sequence. 1:5 generates a vector containing 1, 2, 3, 4, 5.",
+              "choices": [
+                "range(1, 5)",
+                "sequence(1, 5)",
+                "from 1 to 5",
+                "1:5"
+              ],
+              "id": "r_lang_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the seq() function do?",
+              "answer": "Creates a sequence with control over start, end, and step",
+              "explain": "seq(1, 10, by=2) creates 1, 3, 5, 7, 9. It is more flexible than the : operator.",
+              "choices": [
+                "Sorts elements in order",
+                "Creates a sequence with control over start, end, and step",
+                "Adds elements together",
+                "Returns a single number"
+              ],
+              "id": "r_lang_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does rep(c(1, 2), times=3) produce?",
+              "answer": "c(1, 2, 1, 2, 1, 2)",
+              "explain": "The rep() function repeats its input. times=3 means repeat the whole vector three times.",
+              "choices": [
+                "c(1, 2)",
+                "c(1, 2, 1, 2, 1, 2)",
+                "c(1, 1, 1, 2, 2, 2)",
+                "c(3, 3, 3, 3, 3, 3)"
+              ],
+              "id": "r_lang_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the : operator produce when used as 5:2?",
+              "answer": "c(5, 4, 3, 2)",
+              "explain": "The : operator works in both directions. 5:2 counts down from 5 to 2.",
+              "choices": [
+                "c(5, 4, 3, 2)",
+                "c(5, 2)",
+                "c(2, 3, 4, 5)",
+                "An error"
+              ],
+              "id": "r_lang_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you do x <- 1:100, how many elements does x have?",
+              "answer": "100",
+              "explain": "The sequence 1:100 generates every integer from 1 to 100, so there are 100 elements.",
+              "choices": [
+                "2",
+                "100",
+                "10000",
+                "50"
+              ],
+              "id": "r_lang_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Data Types",
+      "tip": "R has several data types: numeric (numbers), character (text), logical (TRUE/FALSE), and integer. Vectors must contain elements of the same type. Understanding type conversion and coercion is key.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Numeric, Character, and Logical Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the data type of c(1.5, 2.7, 3.2)?",
+              "answer": "numeric",
+              "explain": "Decimal numbers are numeric. R stores them as doubles, and class() reports them as 'numeric'. They are not integers.",
+              "choices": [
+                "integer",
+                "character",
+                "numeric",
+                "factor"
+              ],
+              "id": "r_lang_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the data type of c('apple', 'banana', 'cherry')?",
+              "answer": "character",
+              "explain": "Text inside quotes is character type. It represents text strings, not numbers.",
+              "choices": [
+                "character",
+                "word",
+                "string",
+                "text"
+              ],
+              "id": "r_lang_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the data type of c(TRUE, FALSE, TRUE)?",
+              "answer": "logical",
+              "explain": "TRUE and FALSE are logical values. Logical vectors are used for conditions and comparisons.",
+              "choices": [
+                "numeric",
+                "boolean",
+                "logical",
+                "character"
+              ],
+              "id": "r_lang_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you combine c(1, 2, 'three')?",
+              "answer": "Everything converts to character: c('1', '2', 'three')",
+              "explain": "When a vector mixes types, R converts all elements to the most flexible type. Character is more flexible than numeric.",
+              "choices": [
+                "Only numeric values are kept",
+                "An error is thrown",
+                "The word 'three' is converted to the number 3",
+                "Everything converts to character: c('1', '2', 'three')"
+              ],
+              "id": "r_lang_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check the class of a vector, such as 'numeric' or 'character'?",
+              "answer": "Using the class() function",
+              "explain": "class(x) returns the class of x, such as 'numeric', 'character' or 'logical'.",
+              "choices": [
+                "Using the data() function",
+                "Using the class() function",
+                "Using the kind() function",
+                "Using the type() function"
+              ],
+              "id": "r_lang_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Factors and Type Conversion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a factor in R?",
+              "answer": "A data type for categorical data with predefined levels",
+              "explain": "Factors represent categories like 'small', 'medium', 'large' or 'male', 'female'. Each unique value is a level.",
+              "choices": [
+                "A function that analyzes data",
+                "A way to store dates and times",
+                "A data type for categorical data with predefined levels",
+                "A mathematical multiplier"
+              ],
+              "id": "r_lang_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a factor from c('red', 'blue', 'red', 'green')?",
+              "answer": "factor(c('red', 'blue', 'red', 'green'))",
+              "explain": "The factor() function converts a character vector into a factor. The unique values become levels.",
+              "choices": [
+                "factor(c('red', 'blue', 'red', 'green'))",
+                "factors <- 'red', 'blue', 'red', 'green'",
+                "create.factor()",
+                "c('red', 'blue', 'red', 'green') automatically"
+              ],
+              "id": "r_lang_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does as.numeric(c('1', '2', '3')) return?",
+              "answer": "c(1, 2, 3) as numeric values",
+              "explain": "as.numeric() converts text that looks like numbers into actual numeric values. The quotes are removed.",
+              "choices": [
+                "c(123)",
+                "c('1', '2', '3') unchanged",
+                "An error because the values are text",
+                "c(1, 2, 3) as numeric values"
+              ],
+              "id": "r_lang_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does as.character(c(10, 20, 30)) return?",
+              "answer": "c('10', '20', '30')",
+              "explain": "as.character() converts numbers to text. Each number becomes a quoted string.",
+              "choices": [
+                "c('10', '20', '30')",
+                "c(10, 20, 30) unchanged",
+                "60",
+                "An error"
+              ],
+              "id": "r_lang_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you have a factor with levels c('low', 'medium', 'high'), what can the values be?",
+              "answer": "Only 'low', 'medium', or 'high'",
+              "explain": "Once a factor is created with specific levels, those are the only allowed values. A value outside the levels becomes NA, so a new level has to be added explicitly.",
+              "choices": [
+                "Any numeric value",
+                "Any value that sounds like a category",
+                "Only 'low', 'medium', or 'high'",
+                "Any text value"
+              ],
+              "id": "r_lang_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Data Frames and Indexing",
+      "tip": "A data frame is a table with rows and columns, where each column is a vector. Indexing in R starts at 1, not 0. You access elements using [row, column] notation or $ for named columns.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Creating and Exploring Data Frames",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a data frame in R?",
+              "answer": "A table whose columns are vectors that can each have a different type",
+              "explain": "A data frame is R's main data structure for tables of data. It looks like a spreadsheet but is actually a list of equal-length vectors, so each column can hold a different type. A matrix holds a single type.",
+              "choices": [
+                "A single numeric vector",
+                "A matrix",
+                "A table whose columns are vectors that can each have a different type",
+                "A function"
+              ],
+              "id": "r_lang_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a simple data frame with columns name and age?",
+              "answer": "data.frame(name=c('Alice', 'Bob'), age=c(25, 30))",
+              "explain": "The data.frame() function takes named arguments where each argument is a vector. The vectors must have the same length.",
+              "choices": [
+                "frame(name='Alice', 'Bob', age=25, 30)",
+                "data.frame(name=c('Alice', 'Bob'), age=c(25, 30))",
+                "table(name, age)",
+                "create.frame()"
+              ],
+              "id": "r_lang_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you see the first few rows of a data frame?",
+              "answer": "Using the head() function",
+              "explain": "head(df) shows the first 6 rows by default. tail(df) shows the last 6 rows.",
+              "choices": [
+                "Using the head() function",
+                "Using the view() function",
+                "Using the peek() function",
+                "Using the first() function"
+              ],
+              "id": "r_lang_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does str() tell you about a data frame?",
+              "answer": "The structure: column names, types, and first few values",
+              "explain": "str() (structure) gives a compact display of the data frame's layout, showing each column's name, type, and sample values.",
+              "choices": [
+                "The structure: column names, types, and first few values",
+                "The memory it uses in bytes",
+                "Whether it is sorted",
+                "The number of characters in the data frame"
+              ],
+              "id": "r_lang_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does dim() return for a data frame?",
+              "answer": "c(number of rows, number of columns)",
+              "explain": "dim() returns the dimensions: how many rows and how many columns the data frame has.",
+              "choices": [
+                "Just the number of rows",
+                "Just the number of columns",
+                "A string describing the size",
+                "c(number of rows, number of columns)"
+              ],
+              "id": "r_lang_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Indexing with 1-Based Positions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In R, what is the index of the first element in a vector?",
+              "answer": "1",
+              "explain": "R uses 1-based indexing. The first element is at position 1, not 0. This is different from many other languages.",
+              "choices": [
+                "1",
+                "2",
+                "-1",
+                "0"
+              ],
+              "id": "r_lang_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If x <- c(10, 20, 30), what is x[2]?",
+              "answer": "20",
+              "explain": "Index 2 refers to the second element in the vector, which is 20.",
+              "choices": [
+                "2",
+                "10",
+                "20",
+                "30"
+              ],
+              "id": "r_lang_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the first column of a data frame df?",
+              "answer": "df[, 1] or df[[1]]",
+              "explain": "df[, 1] gets column 1 (leaving the row index blank means all rows). df[[1]] extracts the first column as a vector. If the column has a name, df$name gets it too.",
+              "choices": [
+                "df.column1",
+                "df[1, ]",
+                "df[, 1] or df[[1]]",
+                "df[0, ]"
+              ],
+              "id": "r_lang_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does df[3, 2] select in a data frame?",
+              "answer": "The value in row 3, column 2",
+              "explain": "In [row, column] notation, the first number is the row and the second is the column. df[3, 2] is the cell at row 3, column 2.",
+              "choices": [
+                "The value in row 2, column 3",
+                "The whole third row",
+                "The whole second column",
+                "The value in row 3, column 2"
+              ],
+              "id": "r_lang_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does x[c(1, 3, 5)] return?",
+              "answer": "Returns elements at positions 1, 3, and 5",
+              "explain": "Passing a vector of indices returns the elements at those positions. x[c(1, 3, 5)] returns the first, third, and fifth elements.",
+              "choices": [
+                "Returns elements at positions 1, 3, and 5",
+                "An error",
+                "Returns only position 3",
+                "Returns every element between 1 and 5"
+              ],
+              "id": "r_lang_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Functions and Control Flow",
+      "tip": "Functions let you write reusable code. Define them with function() and call them by name. Control flow with if/else and for loops lets you make decisions and repeat tasks.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Writing and Calling Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in R?",
+              "answer": "function_name <- function(arguments) { body }",
+              "explain": "You assign a function to a name using <-. The function() keyword defines the function, with arguments in parentheses and code in braces.",
+              "choices": [
+                "function_name: function(arguments) { body }",
+                "function_name <- function(arguments) { body }",
+                "def function_name(arguments): body",
+                "create function_name(arguments)"
+              ],
+              "id": "r_lang_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the return() statement do in a function?",
+              "answer": "Sends a value back to the caller",
+              "explain": "return() exits the function and returns a value. In R, the last expression is automatically returned if you don't use return().",
+              "choices": [
+                "Prints the value",
+                "Sends a value back to the caller",
+                "Saves the value to disk",
+                "Restarts the function"
+              ],
+              "id": "r_lang_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function named add_numbers with arguments 5 and 3?",
+              "answer": "add_numbers(5, 3)",
+              "explain": "You call a function by typing its name followed by arguments in parentheses. Arguments are separated by commas.",
+              "choices": [
+                "add_numbers(5, 3)",
+                "call add_numbers(5, 3)",
+                "add_numbers 5 3",
+                "add_numbers <- 5, 3"
+              ],
+              "id": "r_lang_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a default argument in a function?",
+              "answer": "A value used if the caller does not provide that argument",
+              "explain": "You define defaults in the function signature. For example, function(x, y=10) uses y=10 if the caller doesn't supply y.",
+              "choices": [
+                "A value used if the caller does not provide that argument",
+                "An argument that must be provided",
+                "An argument that is always multiplied",
+                "The first argument"
+              ],
+              "id": "r_lang_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can an R function send back several values at once?",
+              "answer": "Bundle them into a list or vector and return that",
+              "explain": "A function returns one object, but that object can hold many values. return(list(a=1, b=2)) sends back both in a list, and the caller can use result$a and result$b.",
+              "choices": [
+                "Bundle them into a list or vector and return that",
+                "Use the special keyword multireturn",
+                "Write return(a, b) with two arguments",
+                "Call return() twice in a row"
+              ],
+              "id": "r_lang_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "If, Else, and Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does if (x > 5) { print('big') } do?",
+              "answer": "Prints 'big' only if x is greater than 5",
+              "explain": "The if statement checks a condition. If true, it runs the code in braces. If false, it skips to the next statement.",
+              "choices": [
+                "Prints 'big' only if x is greater than 5",
+                "Returns the value 5",
+                "Multiplies x by 5",
+                "Always prints 'big'"
+              ],
+              "id": "r_lang_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you run code when a condition is false?",
+              "answer": "Using else { code }",
+              "explain": "else follows if. If the condition is false, else runs its code. You can chain if/else if/else for multiple conditions.",
+              "choices": [
+                "Using else if { code }",
+                "Using unless { code }",
+                "Using not if { code }",
+                "Using else { code }"
+              ],
+              "id": "r_lang_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does for (i in 1:5) { print(i) } do?",
+              "answer": "Prints each number from 1 to 5",
+              "explain": "The for loop iterates over a vector. i takes each value in 1:5, and the code runs once for each value.",
+              "choices": [
+                "Prints the number 5 once",
+                "Prints each number from 1 to 5",
+                "Prints 5 five times",
+                "Returns the number 5"
+              ],
+              "id": "r_lang_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a while loop do?",
+              "answer": "Repeats code while a condition is true",
+              "explain": "while (condition) { code } keeps running code as long as the condition is true. Once the condition becomes false, the loop stops.",
+              "choices": [
+                "Runs code a fixed number of times",
+                "Reverses the code",
+                "Runs code once",
+                "Repeats code while a condition is true"
+              ],
+              "id": "r_lang_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does break do inside a loop?",
+              "answer": "Immediately exits the loop",
+              "explain": "break stops the loop at that point, even if more iterations remain. It is useful for escaping early.",
+              "choices": [
+                "Restarts the loop",
+                "Skips the current iteration",
+                "Breaks all loops in the program",
+                "Immediately exits the loop"
+              ],
+              "id": "r_lang_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "The Apply Family",
+      "tip": "Apply functions let you repeat operations across vectors or lists without writing explicit loops. apply, lapply, and sapply are the core functions. They are usually shorter and clearer than for loops.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "apply, lapply, and sapply",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the apply() function do?",
+              "answer": "Applies a function to rows or columns of a matrix",
+              "explain": "apply(matrix, MARGIN, function) applies a function to each row (MARGIN=1) or each column (MARGIN=2).",
+              "choices": [
+                "Applies a function to a vector only",
+                "Applies a function globally to all data",
+                "Applies a function to rows or columns of a matrix",
+                "Applies formatting to text"
+              ],
+              "id": "r_lang_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does lapply(list, function) return?",
+              "answer": "A list with the function applied to each element",
+              "explain": "lapply (list apply) returns a list. Each element of the result is the function applied to one element of the input list.",
+              "choices": [
+                "A plain numeric vector",
+                "A list with the function applied to each element",
+                "A matrix",
+                "A single number"
+              ],
+              "id": "r_lang_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does sapply(list, function) return?",
+              "answer": "A simplified vector or matrix (not always a list)",
+              "explain": "sapply (simplified apply) tries to simplify the result. If the output is simple enough, it returns a vector instead of a list.",
+              "choices": [
+                "Always a list",
+                "Always a vector",
+                "A single value",
+                "A simplified vector or matrix (not always a list)"
+              ],
+              "id": "r_lang_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When would you use lapply instead of sapply?",
+              "answer": "When you want to keep the result as a list",
+              "explain": "lapply always returns a list. Use lapply when you want consistency (always a list) or when simplification would lose structure.",
+              "choices": [
+                "When the function takes no arguments",
+                "When you want a vector output",
+                "When working with matrices only",
+                "When you want to keep the result as a list"
+              ],
+              "id": "r_lang_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does sapply(c(1, 2, 3), sqrt) return?",
+              "answer": "A numeric vector of the square roots: about 1, 1.414, 1.732",
+              "explain": "sqrt is applied to each element. sapply simplifies the result to a numeric vector, which R prints as 1.000000 1.414214 1.732051.",
+              "choices": [
+                "A single number",
+                "A list containing the square roots",
+                "A numeric vector of the square roots: about 1, 1.414, 1.732",
+                "An error"
+              ],
+              "id": "r_lang_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Replacing Loops with Apply",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a common reason to use sapply() instead of a for loop?",
+              "answer": "It is shorter and builds the result vector for you",
+              "explain": "sapply(x, f) applies f to each element and collects the results, so you skip writing the loop and the code that builds the result. It is not always faster than a well-written loop.",
+              "choices": [
+                "It runs on multiple computers",
+                "It is shorter and builds the result vector for you",
+                "It is always much faster than a loop",
+                "It never fails"
+              ],
+              "id": "r_lang_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can lapply() and sapply() work on a data frame column by column?",
+              "answer": "A data frame is a list of columns, so each column is one element",
+              "explain": "Data frames are lists of columns, so lapply and sapply visit each column in turn. lapply returns a list, sapply tries to simplify. apply() is the one that first converts a data frame to a matrix.",
+              "choices": [
+                "A data frame is a list of columns, so each column is one element",
+                "They only look at the first column",
+                "They convert the data frame to a matrix first",
+                "They only accept data frames as input"
+              ],
+              "id": "r_lang_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an anonymous function in R?",
+              "answer": "A function defined without a name, used once",
+              "explain": "sapply(1:3, function(x) x^2) uses an anonymous function. It is not assigned to a name, just used in place.",
+              "choices": [
+                "A function that returns nothing",
+                "A function defined without a name, used once",
+                "A built-in function",
+                "A function with no arguments"
+              ],
+              "id": "r_lang_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does sapply(1:5, function(x) x*2) return?",
+              "answer": "c(2, 4, 6, 8, 10)",
+              "explain": "The anonymous function multiplies each element by 2. sapply applies it to 1, 2, 3, 4, 5 and simplifies to a vector.",
+              "choices": [
+                "A list with five elements",
+                "c(1, 2, 3, 4, 5)",
+                "c(2, 4, 6, 8, 10)",
+                "10"
+              ],
+              "id": "r_lang_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use lapply on a vector?",
+              "answer": "Yes, it runs the function on each element and returns a list",
+              "explain": "lapply works on any list-like object. A vector is converted to a list, the function runs on each element, and the result is a list.",
+              "choices": [
+                "Yes, it runs the function on each element and returns a list",
+                "Only on columns",
+                "Only on numeric vectors",
+                "No, only on lists"
+              ],
+              "id": "r_lang_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Visualization and NA Handling",
+      "tip": "R makes it easy to create plots with plot(), hist(), and boxplot(). Missing data (NA) is common in real datasets. You must handle NA values explicitly using functions like is.na(), na.omit(), or the na.rm parameter.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Basic Plotting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does plot(x, y) create?",
+              "answer": "A scatter plot with x on the horizontal axis and y on the vertical axis",
+              "explain": "plot() creates an x-y scatter plot. Each point represents (x[i], y[i]). It is the basic plotting function.",
+              "choices": [
+                "A line plot only",
+                "A histogram",
+                "A scatter plot with x on the horizontal axis and y on the vertical axis",
+                "A bar chart"
+              ],
+              "id": "r_lang_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does hist(x) create?",
+              "answer": "A histogram showing the distribution of values in x",
+              "explain": "hist() divides the data into bins and shows how many values fall into each bin. It shows the shape of the distribution.",
+              "choices": [
+                "A time series",
+                "A histogram showing the distribution of values in x",
+                "A scatter plot",
+                "A box plot"
+              ],
+              "id": "r_lang_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does boxplot(x, y) do?",
+              "answer": "Creates side-by-side box plots comparing distributions",
+              "explain": "boxplot() shows the median, quartiles, and outliers. Multiple box plots let you compare distributions visually.",
+              "choices": [
+                "Creates side-by-side box plots comparing distributions",
+                "Creates a histogram",
+                "Creates a scatter plot",
+                "Creates a line graph"
+              ],
+              "id": "r_lang_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which argument adds a title to a plot made with plot()?",
+              "answer": "main, as in plot(x, y, main='Title')",
+              "explain": "The main argument adds a title. xlab and ylab add axis labels, and sub adds a subtitle. The separate title() function can also add one after the plot is drawn.",
+              "choices": [
+                "title, as in plot(x, y, title='Title')",
+                "label, as in plot(x, y, label='Title')",
+                "main, as in plot(x, y, main='Title')",
+                "header, as in plot(x, y, header='Title')"
+              ],
+              "id": "r_lang_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does abline(a, b) do on a plot?",
+              "answer": "Adds a line with intercept a and slope b",
+              "explain": "abline() adds a straight line to an existing plot. y = a + b*x. This is useful for showing trends or regression lines.",
+              "choices": [
+                "Draws a box around the plot",
+                "Adds a line with intercept a and slope b",
+                "Creates a new plot",
+                "Removes a plot"
+              ],
+              "id": "r_lang_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Handling Missing Data",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does NA represent in R?",
+              "answer": "Not Available, a missing value",
+              "explain": "NA is a special value that represents missing data. It is not the same as 0, FALSE, or an empty string.",
+              "choices": [
+                "Not Available, a missing value",
+                "A type of number",
+                "Zero",
+                "A function"
+              ],
+              "id": "r_lang_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check if a value is NA?",
+              "answer": "Using is.na(x)",
+              "explain": "is.na(x) returns TRUE if x is NA and FALSE otherwise. Use is.na(c(1, NA, 3)) to check each element.",
+              "choices": [
+                "Using x = NA",
+                "Using x == NA",
+                "Using check.na(x)",
+                "Using is.na(x)"
+              ],
+              "id": "r_lang_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does sum(c(1, 2, NA, 4)) return?",
+              "answer": "NA",
+              "explain": "If any value is NA, most operations return NA. You must remove or handle the NA first.",
+              "choices": [
+                "11",
+                "NA",
+                "7",
+                "An error"
+              ],
+              "id": "r_lang_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you sum a vector ignoring NA values?",
+              "answer": "sum(x, na.rm=TRUE)",
+              "explain": "The na.rm (NA remove) parameter is TRUE to skip NA values. sum(c(1, 2, NA, 4), na.rm=TRUE) returns 7.",
+              "choices": [
+                "sum(x, ignore.na=TRUE)",
+                "sum(x, na.rm=TRUE)",
+                "sum.na(x)",
+                "sum(x, skip=NA)"
+              ],
+              "id": "r_lang_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does na.omit(df) do to a data frame df?",
+              "answer": "Removes rows with any NA values",
+              "explain": "na.omit() drops every row that contains an NA in any column. Use it to create a clean dataset before analysis. On a plain vector it drops the NA elements.",
+              "choices": [
+                "Replaces NA with zero",
+                "Converts NA to text",
+                "Removes rows with any NA values",
+                "Checks for NA but does not remove it"
+              ],
+              "id": "r_lang_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "dart",
+  "name": "Dart",
+  "category": "programming",
+  "icon": "fa-solid fa-bullseye",
+  "level": "App Language",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Declarations",
+      "tip": "Variables store data in your program. Dart offers three keywords to declare them: var for type inference, final for variables that cannot change after assignment, and const for compile-time constants. Choosing the right keyword makes your code clearer and safer.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "var and Dynamic Typing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the 'var' keyword do in Dart?",
+              "answer": "It declares a variable and lets the compiler infer its type",
+              "explain": "var tells Dart to figure out the type from the initial value. var x = 5; makes x an int. The type cannot change later.",
+              "choices": [
+                "It declares a variable and lets the compiler infer its type",
+                "It makes a variable dynamic and allows type changes",
+                "It is identical to const",
+                "It prevents the variable from being used"
+              ],
+              "id": "dart_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of x after 'var x = 42;' in Dart?",
+              "answer": "int",
+              "explain": "The compiler sees 42 (an integer literal) and infers that x has type int. The type is fixed from that moment.",
+              "choices": [
+                "dynamic",
+                "num",
+                "int",
+                "var"
+              ],
+              "id": "dart_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a variable declared with 'var' change its type at runtime?",
+              "answer": "No, the type is fixed from the initial assignment",
+              "explain": "var infers the type once at declaration. After that, assigning a different type causes a compile error. Use 'dynamic' if you need type flexibility.",
+              "choices": [
+                "No, the type is fixed from the initial assignment",
+                "Yes, var is like dynamic",
+                "Only if you use var with a number",
+                "Only after you call a method on it"
+              ],
+              "id": "dart_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'dynamic' mean in Dart?",
+              "answer": "A type that can hold any value and allows any operation",
+              "explain": "dynamic is Dart's escape hatch. A dynamic variable can hold an int, a string, or anything else, and the compiler does not check which members you call on it.",
+              "choices": [
+                "A type that can hold any value and allows any operation",
+                "The same as var",
+                "A keyword for declaring constants",
+                "A type that can never hold null"
+              ],
+              "id": "dart_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type does Dart infer for 'var x = 3.14;'?",
+              "answer": "double",
+              "explain": "3.14 is a decimal literal, so the compiler infers that x has type double. The type is fixed from that moment.",
+              "choices": [
+                "int",
+                "num",
+                "double",
+                "dynamic"
+              ],
+              "id": "dart_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "final and const",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'final' mean in Dart?",
+              "answer": "A variable whose value cannot be changed after first assignment",
+              "explain": "final x = 5; makes x immutable. You can assign it once, then never reassign it. The type is still inferred if not specified.",
+              "choices": [
+                "A variable whose value cannot be changed after first assignment",
+                "A variable that must be a constant at compile time",
+                "The same as var",
+                "A variable that is deleted after use"
+              ],
+              "id": "dart_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'const' mean in Dart?",
+              "answer": "A variable that must be a constant value known at compile time",
+              "explain": "const x = 5; creates a compile-time constant. const values cannot be computed at runtime. Use final if you need immutability with runtime initialization.",
+              "choices": [
+                "A variable that can be reassigned once",
+                "A variable that is only immutable in one scope",
+                "A variable that must be a constant value known at compile time",
+                "The same as final"
+              ],
+              "id": "dart_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is 'const int x = DateTime.now().millisecondsSinceEpoch;' valid Dart?",
+              "answer": "No, const requires a compile-time constant",
+              "explain": "DateTime.now() is computed at runtime, so it cannot be used with const. Use final instead: final int x = DateTime.now().millisecondsSinceEpoch;",
+              "choices": [
+                "No, const requires a compile-time constant",
+                "Yes, const works with any value",
+                "Only if you add a semicolon",
+                "Only in a function"
+              ],
+              "id": "dart_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you reassign a final variable?",
+              "answer": "No, once assigned, a final variable cannot be changed",
+              "explain": "final x = 5; x = 10; is a compile error. If you need to reassign, use var or a typed variable instead.",
+              "choices": [
+                "No, once assigned, a final variable cannot be changed",
+                "Yes, final is like var",
+                "Yes, if it holds a list",
+                "Yes, but only inside a function"
+              ],
+              "id": "dart_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between 'final x = [1, 2, 3];' and 'const x = [1, 2, 3];'?",
+              "answer": "final creates a runtime list; const creates a compile-time immutable list",
+              "explain": "Both prevent reassignment. But final x allows x[0] = 99 (modifying contents), while const prevents that too. const is stricter.",
+              "choices": [
+                "final creates a runtime list; const creates a compile-time immutable list",
+                "final is immutable, const is not",
+                "They are identical",
+                "const is only for strings"
+              ],
+              "id": "dart_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Types and Null Safety",
+      "tip": "Dart is a statically typed language with sound null safety. Types are non-nullable by default, and you add a question mark (?) to allow null. This catches null errors before the program runs.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Dart Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are Dart's built-in types?",
+              "answer": "int, double, String, bool, List, Map, Set, and others",
+              "explain": "Dart provides primitive types (int, double, String, bool) and collection types (List, Map, Set). Everything, including functions, is an object.",
+              "choices": [
+                "int, double, String, bool, List, Map, Set, and others",
+                "Only int, double, and String",
+                "Only primitives, no collections",
+                "int and String only"
+              ],
+              "id": "dart_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 'hello' in Dart?",
+              "answer": "String",
+              "explain": "Single and double quotes both create strings in Dart. The type is String. Dart is case-sensitive, so 'string' and 'String' are different.",
+              "choices": [
+                "char",
+                "string",
+                "String",
+                "dynamic"
+              ],
+              "id": "dart_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 'true' in Dart?",
+              "answer": "bool",
+              "explain": "Dart has a bool type with only two values: true and false. There is no truthy/falsy coercion; 1 is not true.",
+              "choices": [
+                "bool",
+                "int",
+                "Boolean",
+                "dynamic"
+              ],
+              "id": "dart_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'num' mean in Dart?",
+              "answer": "The parent type for int and double",
+              "explain": "num is a supertype. Both int (whole numbers) and double (decimals) are subtypes of num. You can use num when you want to accept either.",
+              "choices": [
+                "A type for numbers with decimals only",
+                "A type for whole numbers only",
+                "The parent type for int and double",
+                "The same as int"
+              ],
+              "id": "dart_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type annotation for a list of strings in Dart?",
+              "answer": "List<String>",
+              "explain": "List<String> is a generic type. It means a list that contains only strings. If you try to add an int, the compiler reports an error.",
+              "choices": [
+                "List<String>",
+                "String[]",
+                "[String]",
+                "StringList"
+              ],
+              "id": "dart_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Null Safety",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'null safety' mean in Dart?",
+              "answer": "Variables are non-nullable by default; use ? to allow null",
+              "explain": "In Dart, String means non-null. String? means it can be String or null. The compiler enforces this, preventing null errors.",
+              "choices": [
+                "Variables are non-nullable by default; use ? to allow null",
+                "Null cannot be used anywhere",
+                "All variables can be null",
+                "Null is always unsafe"
+              ],
+              "id": "dart_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 'x' in 'String? x = null;'?",
+              "answer": "A nullable String",
+              "explain": "String? means the variable x can hold a String or null. The question mark explicitly allows null.",
+              "choices": [
+                "String only",
+                "null only",
+                "A nullable String",
+                "dynamic"
+              ],
+              "id": "dart_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the null coalescing operator in Dart?",
+              "answer": "?? (question mark question mark)",
+              "explain": "x ?? y returns x if x is not null, otherwise y. It is shorthand for a null check.",
+              "choices": [
+                "?? (question mark question mark)",
+                "|| (double pipe)",
+                "& (ampersand)",
+                "?: (ternary)"
+              ],
+              "id": "dart_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'x?.length' mean in Dart?",
+              "answer": "Return length if x is not null, otherwise return null",
+              "explain": "The ?. operator is safe navigation. If x is null, it returns null without calling length. If x is not null, it calls length.",
+              "choices": [
+                "Return length if x is not null, otherwise return null",
+                "Return length unconditionally",
+                "Throw an error if x is null",
+                "Always return 0 if x is null"
+              ],
+              "id": "dart_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is this valid Dart: 'String x = null;'?",
+              "answer": "No, String does not allow null",
+              "explain": "String is non-nullable by default. To allow null, write String? x = null; The compiler prevents assigning null to a non-nullable type.",
+              "choices": [
+                "No, String does not allow null",
+                "Yes, null is allowed everywhere",
+                "Only inside a function",
+                "Only with var"
+              ],
+              "id": "dart_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions",
+      "tip": "Functions are reusable blocks of code that take input and return output. Dart supports named parameters, default values, and arrow syntax for short functions. Functions are first-class objects and can be passed to other functions.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Function Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a function that takes an int and returns a String?",
+              "answer": "String greet(int age) { ... }",
+              "explain": "The return type comes first, then the name, then parameters in parentheses, then the body.",
+              "choices": [
+                "int age -> String greet() { ... }",
+                "function greet(age) { ... }",
+                "greet: String(int age) { ... }",
+                "String greet(int age) { ... }"
+              ],
+              "id": "dart_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a function with no return statement return?",
+              "answer": "null (it is usually declared void)",
+              "explain": "A function with no return statement gives back null. Functions that return nothing useful are normally declared with return type void.",
+              "choices": [
+                "An error",
+                "0",
+                "An empty string",
+                "null (it is usually declared void)"
+              ],
+              "id": "dart_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are 'named parameters' in Dart?",
+              "answer": "Parameters you call by name, not position",
+              "explain": "In Dart, {required int age, required String name} are named parameters. You call them as greet(age: 30, name: 'Alice'). Order does not matter.",
+              "choices": [
+                "Parameters that must come first",
+                "Parameters with a required keyword",
+                "Parameters that are always final",
+                "Parameters you call by name, not position"
+              ],
+              "id": "dart_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a required named parameter in Dart?",
+              "answer": "void greet({required int age, required String name}) {}",
+              "explain": "Named parameters go inside curly braces. Put 'required' before one to make it mandatory. Without 'required', a named parameter is optional.",
+              "choices": [
+                "void greet(int age!, String name!) {}",
+                "void greet(int age?, String name?) {}",
+                "void greet(int age [required], String name [required]) {}",
+                "void greet({required int age, required String name}) {}"
+              ],
+              "id": "dart_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are 'default values' for parameters in Dart?",
+              "answer": "Values used if the caller does not provide an argument",
+              "explain": "void greet([String name = 'Guest']) {} means if you call greet() with no argument, name is 'Guest'. Named parameters can have defaults too.",
+              "choices": [
+                "Values that the function always uses",
+                "The same as null",
+                "Required parameters",
+                "Values used if the caller does not provide an argument"
+              ],
+              "id": "dart_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Arrow Functions and Callbacks",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the arrow syntax for a function in Dart?",
+              "answer": "int add(int a, int b) => a + b;",
+              "explain": "The => operator (fat arrow) is shorthand for a function that returns a value. int add(int a, int b) => a + b; is equivalent to { return a + b; }",
+              "choices": [
+                "int add(int a, int b) -> a + b;",
+                "int add(int a, int b) : a + b;",
+                "int add(int a, int b) = a + b;",
+                "int add(int a, int b) => a + b;"
+              ],
+              "id": "dart_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use arrow syntax for a function with multiple statements?",
+              "answer": "No, arrow syntax is only for single expressions",
+              "explain": "=> is shorthand for return. If you need multiple statements, use curly braces and an explicit return.",
+              "choices": [
+                "Yes, with a semicolon",
+                "Only with named parameters",
+                "Only if you use final",
+                "No, arrow syntax is only for single expressions"
+              ],
+              "id": "dart_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'callback' in Dart?",
+              "answer": "A function passed as an argument to another function",
+              "explain": "Callbacks let you pass behavior as data. list.forEach((item) => print(item)); passes an anonymous function to forEach.",
+              "choices": [
+                "A function that calls itself",
+                "The same as a return value",
+                "A function that only runs once",
+                "A function passed as an argument to another function"
+              ],
+              "id": "dart_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'Function' (capitalized) mean in Dart?",
+              "answer": "The type for any function",
+              "explain": "Function is a type that represents any callable. It is less specific than a function type like String Function(int).",
+              "choices": [
+                "A keyword for creating functions",
+                "The same as var",
+                "A return value",
+                "The type for any function"
+              ],
+              "id": "dart_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of this callback: 'void Function(String) onUpdate'?",
+              "answer": "A function that takes a String and returns void",
+              "explain": "Function(String) is a function type. It takes one String argument and returns void (nothing).",
+              "choices": [
+                "A class named Function",
+                "A callback named String",
+                "A function that takes a String and returns void",
+                "A String parameter"
+              ],
+              "id": "dart_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Collections",
+      "tip": "Collections store multiple values. Dart offers List for ordered sequences, Map for key-value pairs, and Set for unique values. All are generic and can enforce type safety.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Lists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a list in Dart?",
+              "answer": "List<int> nums = [1, 2, 3]; or var nums = [1, 2, 3];",
+              "explain": "Square brackets [1, 2, 3] create a list. Dart infers the type as List<int>. You can also write List<int> nums = [1, 2, 3];",
+              "choices": [
+                "List nums = {1, 2, 3};",
+                "List<int> nums = (1, 2, 3);",
+                "List<int> nums = [1, 2, 3]; or var nums = [1, 2, 3];",
+                "nums = [1, 2, 3];"
+              ],
+              "id": "dart_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the first element of a list?",
+              "answer": "list[0]",
+              "explain": "Lists are zero-indexed. list[0] is the first element, list[1] is the second, and so on.",
+              "choices": [
+                "list[1]",
+                "list.first()",
+                "list[0]",
+                "list.get(0)"
+              ],
+              "id": "dart_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add an element to a list?",
+              "answer": "list.add(element)",
+              "explain": "The add method appends an element to the end of the list. list.add(42) adds 42 to the end.",
+              "choices": [
+                "list.push(element)",
+                "list += element",
+                "list[list.length] = element",
+                "list.add(element)"
+              ],
+              "id": "dart_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the length of an empty list?",
+              "answer": "0",
+              "explain": "An empty list [] has length 0. You can check the length with list.length.",
+              "choices": [
+                "null",
+                "1",
+                "undefined",
+                "0"
+              ],
+              "id": "dart_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does list.forEach(callback) do?",
+              "answer": "Runs the callback for each element in the list",
+              "explain": "forEach iterates over each element and calls the callback with that element. It is used for side effects, not to transform the list.",
+              "choices": [
+                "Returns a new list",
+                "Removes elements from the list",
+                "Runs the callback for each element in the list",
+                "Stops at the first match"
+              ],
+              "id": "dart_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Maps and Sets",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a map in Dart?",
+              "answer": "Map<String, int> ages = {'Alice': 30, 'Bob': 25};",
+              "explain": "Maps use curly braces with key:value pairs. The generic type is Map<KeyType, ValueType>.",
+              "choices": [
+                "Map ages = ['Alice': 30, 'Bob': 25];",
+                "Map ages = ('Alice': 30, 'Bob': 25);",
+                "Map<String, int> ages = {'Alice': 30, 'Bob': 25};",
+                "Map ages = <'Alice', 30>;"
+              ],
+              "id": "dart_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a value in a map?",
+              "answer": "map['key']",
+              "explain": "Use square brackets with the key. ages['Alice'] returns 30. If the key does not exist, it returns null.",
+              "choices": [
+                "map.get('key')",
+                "map('key')",
+                "map['key']",
+                "map.key"
+              ],
+              "id": "dart_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a set in Dart?",
+              "answer": "Set<int> nums = {1, 2, 3};",
+              "explain": "Sets use curly braces like maps, but with no colons. Type it as Set<T> to avoid ambiguity. Sets store unique values only.",
+              "choices": [
+                "Set nums = [1, 2, 3];",
+                "Set<int> nums = (1, 2, 3);",
+                "Set<int> nums = {1, 2, 3};",
+                "Set nums = <1, 2, 3>"
+              ],
+              "id": "dart_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you add a duplicate to a set?",
+              "answer": "The duplicate is silently ignored",
+              "explain": "Sets enforce uniqueness. Adding {1, 2, 2} results in a set with only {1, 2}. The second 2 is not added.",
+              "choices": [
+                "The set now has two copies of the value",
+                "An error is thrown",
+                "The duplicate is silently ignored",
+                "The first value is replaced"
+              ],
+              "id": "dart_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a Map and a Set in Dart?",
+              "answer": "A Map stores key-value pairs; a Set stores unique values only",
+              "explain": "Map<String, int> stores pairs like 'Alice':30. Set<int> stores only unique values like {1, 2, 3}. Sets have no keys.",
+              "choices": [
+                "Sets are faster than maps",
+                "Maps enforce uniqueness; sets do not",
+                "A Map stores key-value pairs; a Set stores unique values only",
+                "They are the same"
+              ],
+              "id": "dart_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Classes and Objects",
+      "tip": "Classes are blueprints for objects. Dart is object-oriented: everything is an object. Constructors initialize objects, properties store data, and methods define behavior. Use const constructors to create immutable objects.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Classes and Constructors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a class in Dart?",
+              "answer": "A blueprint for creating objects with properties and methods",
+              "explain": "A class defines the structure (properties) and behavior (methods) of objects. class Person { ... } is a template. new Person() creates an instance.",
+              "choices": [
+                "A type that can only be used once",
+                "A collection of functions",
+                "An alias for a type",
+                "A blueprint for creating objects with properties and methods"
+              ],
+              "id": "dart_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a constructor in Dart?",
+              "answer": "A method that initializes a new object",
+              "explain": "A constructor is a special member with the same name as the class. It sets up a new object when you create one.",
+              "choices": [
+                "A method that returns a value",
+                "A way to delete an object",
+                "A property of a class",
+                "A method that initializes a new object"
+              ],
+              "id": "dart_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the shorthand constructor syntax in Dart?",
+              "answer": "class Person { Person(this.name, this.age); }",
+              "explain": "Instead of repeating assignments, use this.name to automatically set the property. Dart infers types from the properties.",
+              "choices": [
+                "class Person { Person(name, age); }",
+                "class Person { Person => (name, age); }",
+                "class Person { this.name = name; }",
+                "class Person { Person(this.name, this.age); }"
+              ],
+              "id": "dart_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a named constructor in Dart?",
+              "answer": "A constructor with a custom name, like Person.guest()",
+              "explain": "Named constructors provide multiple ways to create objects. Person() might require all fields, while Person.guest() sets defaults.",
+              "choices": [
+                "A constructor that requires named parameters",
+                "A constructor with a custom name, like Person.guest()",
+                "The same as a regular constructor",
+                "A constructor that is private"
+              ],
+              "id": "dart_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a const constructor do?",
+              "answer": "Creates objects that are compile-time constants and immutable",
+              "explain": "A const constructor lets you write const Person('Alice') to get a compile-time constant. All instance fields of the class must be final.",
+              "choices": [
+                "It is the same as a regular constructor",
+                "It prevents objects from being created",
+                "Creates objects that are compile-time constants and immutable",
+                "It requires all parameters to be optional"
+              ],
+              "id": "dart_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Properties and Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a property in Dart?",
+              "answer": "A variable that belongs to an object",
+              "explain": "Properties store state. class Person { String? name; } defines a name property. Access it as person.name.",
+              "choices": [
+                "A method that returns nothing",
+                "A variable that belongs to an object",
+                "A type annotation",
+                "A function parameter"
+              ],
+              "id": "dart_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a method in Dart?",
+              "answer": "A function that belongs to an object",
+              "explain": "Methods define behavior. void greet() { print('Hi'); } inside a class is a method. Call it as person.greet().",
+              "choices": [
+                "A property with a getter",
+                "A function that belongs to an object",
+                "A constructor",
+                "A global function"
+              ],
+              "id": "dart_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'this' in Dart?",
+              "answer": "A reference to the current object",
+              "explain": "this refers to the object itself. this.name = name; assigns the parameter name to the object's name property.",
+              "choices": [
+                "A keyword for static methods",
+                "A reference to the current object",
+                "A way to create a new object",
+                "The superclass"
+              ],
+              "id": "dart_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a getter in Dart?",
+              "answer": "A method that looks like a property and returns a value",
+              "explain": "String get fullName => '$firstName $lastName'; is a getter. Access it as person.fullName (no parentheses).",
+              "choices": [
+                "A method that requires parameters",
+                "A method that looks like a property and returns a value",
+                "The same as a constructor",
+                "A way to store data"
+              ],
+              "id": "dart_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a property and a getter?",
+              "answer": "A property stores data; a getter computes a value on access",
+              "explain": "String name; stores data. String get name => compute(); computes the value each time you access it.",
+              "choices": [
+                "They are the same",
+                "A property stores data; a getter computes a value on access",
+                "A getter is faster",
+                "A property is required, a getter is optional"
+              ],
+              "id": "dart_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Asynchronous Programming",
+      "tip": "Asynchronous code lets a program wait for slow work, such as a network request, without freezing. Dart uses Futures to represent values that will be available later. async and await are syntactic sugar that make async code read like sync code.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Futures and Async Concepts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a Future in Dart?",
+              "answer": "An object representing a value that will be available in the future",
+              "explain": "A Future<int> might represent an HTTP request that will return an int. It encapsulates async work. You can listen for success or failure.",
+              "choices": [
+                "A function that runs on a separate thread",
+                "An object representing a value that will be available in the future",
+                "The same as a callback",
+                "A type of loop"
+              ],
+              "id": "dart_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a Future to 'complete'?",
+              "answer": "The async operation finishes and a value or error is available",
+              "explain": "A Future starts in an incomplete state. When the async work is done, it completes with a value (success) or an error (failure).",
+              "choices": [
+                "The Future is destroyed",
+                "The async operation finishes and a value or error is available",
+                "The Future is paused",
+                "The code runs synchronously"
+              ],
+              "id": "dart_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'then' do on a Future?",
+              "answer": "Registers a callback to run when the Future completes successfully",
+              "explain": "future.then((value) => print(value)); runs the callback only if the Future completes with a value, not an error.",
+              "choices": [
+                "Blocks the program until the Future completes",
+                "Registers a callback to run when the Future completes successfully",
+                "Converts the Future into a String",
+                "Cancels the Future"
+              ],
+              "id": "dart_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'catchError' do on a Future?",
+              "answer": "Registers a callback to run if the Future completes with an error",
+              "explain": "future.catchError((error) => print(error)); runs the callback only if the Future fails. Use it to handle exceptions.",
+              "choices": [
+                "Prevents the Future from running",
+                "Registers a callback to run if the Future completes with an error",
+                "Converts the Future into a String",
+                "Returns null"
+              ],
+              "id": "dart_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between synchronous and asynchronous code in Dart?",
+              "answer": "Sync code waits for each step to finish; async code lets other work run while it waits",
+              "explain": "Synchronous code runs line by line, and a slow step holds everything up. Asynchronous code (using Futures) lets the program carry on with other work while it waits, so the UI stays responsive.",
+              "choices": [
+                "Sync is faster",
+                "Async requires more code",
+                "Sync code waits for each step to finish; async code lets other work run while it waits",
+                "They are equivalent"
+              ],
+              "id": "dart_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "async and await",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'async' do in a function declaration?",
+              "answer": "Marks the function as asynchronous and returns a Future",
+              "explain": "Future<String> greet() async { ... } returns a Future<String>. Inside, you can use await. Even if you return a plain string, the function returns a Future.",
+              "choices": [
+                "Makes the function run faster",
+                "Marks the function as asynchronous and returns a Future",
+                "Prevents the function from using parameters",
+                "The same as sync"
+              ],
+              "id": "dart_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'await' do?",
+              "answer": "Pauses execution until a Future completes",
+              "explain": "int result = await fetchNumber(); waits for fetchNumber() to finish, then assigns the result. Only valid inside an async function.",
+              "choices": [
+                "Ignores the Future and returns null",
+                "Pauses execution until a Future completes",
+                "Cancels the Future",
+                "Turns the function into a loop"
+              ],
+              "id": "dart_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use await outside an async function?",
+              "answer": "No, await is only valid inside async functions",
+              "explain": "The compiler requires that await is inside an async function. It is a syntax error to write await in a regular function.",
+              "choices": [
+                "Yes, anywhere",
+                "No, await is only valid inside async functions",
+                "Only at the top level",
+                "Only in constructors"
+              ],
+              "id": "dart_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does calling 'Future<String> greet() async' give back if its body returns the text Hi?",
+              "answer": "Future<String>, a Future that completes with 'Hi'",
+              "explain": "The async keyword wraps the return value in a Future. So returning 'Hi' becomes Future<String> that completes with 'Hi'.",
+              "choices": [
+                "String, just 'Hi'",
+                "Future<String>, a Future that completes with 'Hi'",
+                "null",
+                "An error"
+              ],
+              "id": "dart_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you handle errors with async/await?",
+              "answer": "Use try/catch around await statements",
+              "explain": "try { int result = await fetchNumber(); } catch (e) { print(e); } catches errors from the Future.",
+              "choices": [
+                "Use .catch() on the Future",
+                "Use try/catch around await statements",
+                "Errors cannot be caught",
+                "Use an if statement"
+              ],
+              "id": "dart_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

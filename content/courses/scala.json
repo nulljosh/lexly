@@ -1,0 +1,904 @@
+{
+  "id": "scala",
+  "name": "Scala",
+  "category": "programming",
+  "icon": "fa-solid fa-stairs",
+  "level": "Functional Meets Objects",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Values",
+      "tip": "Scala distinguishes between val (immutable) and var (mutable) bindings. val is the default and safer; var lets you reassign. Understanding this difference is fundamental to writing reliable code.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Immutable Bindings",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does val mean in Scala?",
+              "answer": "An immutable binding that cannot be reassigned",
+              "explain": "val creates a binding that cannot be changed. Once assigned, val x = 5 means x always refers to 5 for its lifetime.",
+              "choices": [
+                "A temporary variable that expires",
+                "A constant available everywhere",
+                "A mutable variable like var",
+                "An immutable binding that cannot be reassigned"
+              ],
+              "id": "scala_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you try to reassign a val?",
+              "answer": "The code does not compile; it is a compiler error",
+              "explain": "Scala's compiler rejects reassignment to val. The error occurs at compile time, before the program runs, catching the mistake early.",
+              "choices": [
+                "Only the second assignment is used",
+                "The assignment silently fails at runtime",
+                "The code does not compile; it is a compiler error",
+                "The value becomes a var automatically"
+              ],
+              "id": "scala_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use val instead of var?",
+              "answer": "By default, always use val unless you need to reassign",
+              "explain": "val is safer and easier to reason about. Use it first; only use var if the specific code requires reassignment. This is the Scala style.",
+              "choices": [
+                "var is faster so prefer it",
+                "val is only for numbers",
+                "By default, always use val unless you need to reassign",
+                "They are interchangeable"
+              ],
+              "id": "scala_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the lifetime of a val?",
+              "answer": "From its binding until the enclosing scope ends",
+              "explain": "A val exists from the point it is bound until the block, method, or class containing it ends. After that scope, the name is no longer available.",
+              "choices": [
+                "Until the garbage collector runs",
+                "From its binding until the enclosing scope ends",
+                "Until the program exits",
+                "For exactly one line of code"
+              ],
+              "id": "scala_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a val hold a mutable object like an ArrayBuffer?",
+              "answer": "Yes; val means the binding is immutable, not the object inside",
+              "explain": "val buf = ArrayBuffer(1, 2, 3) is valid, and buf += 4 changes its contents. The binding buf cannot be reassigned, but the object it points to can still change. val protects the binding, not what the object contains.",
+              "choices": [
+                "No; val can only hold immutable types",
+                "Yes; val means the binding is immutable, not the object inside",
+                "The question has no meaning",
+                "Only if the ArrayBuffer is created with val"
+              ],
+              "id": "scala_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Mutable Variables and Assignment",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does var mean in Scala?",
+              "answer": "A mutable variable that can be reassigned",
+              "explain": "var creates a binding that can be reassigned. var x = 5; x = 10 is valid and x now refers to 10.",
+              "choices": [
+                "A temporary variable",
+                "A variable that exists only in memory",
+                "An immutable value like val",
+                "A mutable variable that can be reassigned"
+              ],
+              "id": "scala_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of reassigning a var?",
+              "answer": "var x = 5; x = 10; x now refers to 10",
+              "explain": "The second line reassigns x to 10. The binding x now points to the value 10 instead of 5.",
+              "choices": [
+                "var x = 5; val x = 10",
+                "You cannot reassign in Scala",
+                "var x = 5; x = 10; x now refers to 10",
+                "val x = 5; x = 10"
+              ],
+              "id": "scala_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is var ever necessary for Scala code?",
+              "answer": "Rarely; most Scala is written with val and immutability",
+              "explain": "Functional style in Scala avoids var. Loops and counters use recursion or functional methods instead. var exists for compatibility with imperative patterns.",
+              "choices": [
+                "Rarely; most Scala is written with val and immutability",
+                "They are equally common",
+                "var is required for every program",
+                "var is more efficient so use it"
+              ],
+              "id": "scala_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a var change type during reassignment?",
+              "answer": "No; the type is fixed at the binding and cannot change",
+              "explain": "var x = 5 binds x to Int. You can only assign Int values to it. Assigning x = \"hello\" is a compile error.",
+              "choices": [
+                "Only with explicit conversion",
+                "Type checking is disabled for var",
+                "Yes; var allows any type",
+                "No; the type is fixed at the binding and cannot change"
+              ],
+              "id": "scala_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does Scala prefer val over var?",
+              "answer": "Immutability makes code easier to reason about and safer",
+              "explain": "Immutable values cannot change unexpectedly, so there are fewer bugs from unexpected mutations. Immutability also enables parallelization and optimization.",
+              "choices": [
+                "There is no reason; they are equivalent",
+                "val uses less memory",
+                "val is faster than var",
+                "Immutability makes code easier to reason about and safer"
+              ],
+              "id": "scala_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Type System and Inference",
+      "tip": "Scala infers types automatically in most cases, so you rarely write type annotations. When you do write types, Scala uses them for safety and clarity. Int, String, Boolean, and Double are the basic types.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Type Inference",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is type inference?",
+              "answer": "The compiler deduces a variable's type from its value",
+              "explain": "Scala examines the right side of a binding and infers the type. val x = 5 infers x is Int without you writing a type annotation.",
+              "choices": [
+                "The compiler deduces a variable's type from its value",
+                "Types are optional and ignored",
+                "You must write types for every variable",
+                "Types are checked at runtime"
+              ],
+              "id": "scala_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In val x = 5, what type does the compiler infer for x?",
+              "answer": "Int",
+              "explain": "The literal 5 is an integer, so Scala infers x is of type Int. No annotation needed.",
+              "choices": [
+                "Double",
+                "Number",
+                "Long",
+                "Int"
+              ],
+              "id": "scala_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you write an explicit type annotation?",
+              "answer": "When the inferred type is ambiguous or you want to be explicit",
+              "explain": "Type annotations like val x: Int = 5 make intent clear and can help catch errors. Use them for public functions and when inference might be unclear.",
+              "choices": [
+                "When the inferred type is ambiguous or you want to be explicit",
+                "Always; inference is unreliable",
+                "Never; annotations are redundant",
+                "Only for var, not val"
+              ],
+              "id": "scala_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of val message = \"hello\"?",
+              "answer": "String",
+              "explain": "String literals like \"hello\" infer the type String. Scala knows a quoted sequence of characters is a String.",
+              "choices": [
+                "Char",
+                "Array",
+                "Object",
+                "String"
+              ],
+              "id": "scala_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of val flag = true?",
+              "answer": "Boolean",
+              "explain": "Boolean literals true and false infer type Boolean. Boolean values represent truth or falsity.",
+              "choices": [
+                "Bit",
+                "Int",
+                "Byte",
+                "Boolean"
+              ],
+              "id": "scala_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Basic Types and Type Annotations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the four main numeric types in Scala?",
+              "answer": "Int, Long, Float, Double",
+              "explain": "Int is a 32-bit integer, Long is 64-bit, Float is 32-bit decimal, Double is 64-bit decimal. These match Java's types.",
+              "choices": [
+                "Number, Integer, Fraction, Percent",
+                "Int, Long, Float, Double",
+                "Int, Real, Decimal, BigNum",
+                "Byte, Short, Decimal, Complex"
+              ],
+              "id": "scala_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write a Long literal in Scala?",
+              "answer": "Add an L suffix: 1000L",
+              "explain": "1000 alone is Int; 1000L is Long. The L tells the compiler to treat the literal as 64-bit.",
+              "choices": [
+                "Add an L suffix: 1000L",
+                "Use long in place of val",
+                "Write Long(1000)",
+                "Add a Long suffix: 1000Long"
+              ],
+              "id": "scala_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for an explicit type annotation?",
+              "answer": "val name: Type = value",
+              "explain": "The colon and type name go between the variable name and the equals sign. val x: Int = 5 explicitly states x is Int.",
+              "choices": [
+                "val Type name = value",
+                "val name: Type = value",
+                "val name = Type(value)",
+                "Type val name = value"
+              ],
+              "id": "scala_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the type Unit represent?",
+              "answer": "No value; used for side effects like printing",
+              "explain": "Unit is like void in Java. Functions that print, write to disk, or only cause effects return Unit, not a useful value.",
+              "choices": [
+                "The base type of all values",
+                "No value; used for side effects like printing",
+                "A single numeric value",
+                "A collection of one element"
+              ],
+              "id": "scala_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between Int and BigInt?",
+              "answer": "Int is fixed 32-bit; BigInt is arbitrary precision",
+              "explain": "Int wraps at boundaries (overflow). BigInt can represent any integer, no matter how large, but is slower.",
+              "choices": [
+                "Int is fixed 32-bit; BigInt is arbitrary precision",
+                "BigInt is faster",
+                "Int is for decimals",
+                "BigInt only works on positive numbers"
+              ],
+              "id": "scala_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Methods",
+      "tip": "Functions are first-class values that accept parameters and return results. Methods are functions defined inside a class or object. def defines a method, and a method can be passed wherever a function is expected. Parameters are declared with their types, and the return type comes before the equals sign.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Defining Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What keyword defines a function in Scala?",
+              "answer": "def",
+              "explain": "def name(params): ReturnType = body is the syntax. def greet(name: String): String = \"Hello, \" + name",
+              "choices": [
+                "fn",
+                "fun",
+                "def",
+                "function"
+              ],
+              "id": "scala_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a function that takes one parameter?",
+              "answer": "def functionName(paramName: Type): ReturnType = body",
+              "explain": "Parameters go in parentheses with their type. def add(x: Int): Int = x + 1 defines a function that takes an Int.",
+              "choices": [
+                "functionName(paramName: Type): ReturnType = body",
+                "def Type functionName paramName = body",
+                "def functionName paramName Type = body",
+                "def functionName(paramName: Type): ReturnType = body"
+              ],
+              "id": "scala_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the return type of def test() = 5?",
+              "answer": "Int, inferred from the literal 5",
+              "explain": "Scala infers the return type from the last expression in the function body. 5 is Int, so the return type is Int.",
+              "choices": [
+                "Always Any",
+                "No return type in Scala",
+                "Undefined behavior",
+                "Int, inferred from the literal 5"
+              ],
+              "id": "scala_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you explicitly declare a return type?",
+              "answer": "Write it after the parameter list: def name(): ReturnType = body",
+              "explain": "def greet(): String = \"hello\" explicitly states the return type is String. The annotation is usually optional, because the compiler can infer it.",
+              "choices": [
+                "Write it after the parameter list: def name(): ReturnType = body",
+                "Use a return keyword like Java",
+                "Wrap the type in brackets",
+                "Return types cannot be explicit"
+              ],
+              "id": "scala_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function take no parameters?",
+              "answer": "Yes; use empty parentheses: def name() = body",
+              "explain": "def greet() = \"hello\" is a valid function with no parameters. Empty parentheses indicate zero parameters.",
+              "choices": [
+                "Yes; use empty parentheses: def name() = body",
+                "Only with a special marker",
+                "No; every function needs parameters",
+                "Scala does not support parameterless functions"
+              ],
+              "id": "scala_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Parameters and Return Values",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare multiple parameters?",
+              "answer": "Separate them with commas: def add(x: Int, y: Int): Int = x + y",
+              "explain": "Each parameter is named and typed. def multiply(a: Int, b: Int) = a * b takes two Int parameters.",
+              "choices": [
+                "Separate them with commas: def add(x: Int, y: Int): Int = x + y",
+                "List them without commas",
+                "Scala functions take only one parameter",
+                "Use semicolons: def add(x: Int; y: Int)"
+              ],
+              "id": "scala_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a parameter is not used in the function body?",
+              "answer": "No error; unused parameters are legal but often a code smell",
+              "explain": "Scala allows unused parameters. However, it is often a sign of a mistake or incomplete code. Some tools warn about them.",
+              "choices": [
+                "The parameter is set to null automatically",
+                "No error; unused parameters are legal but often a code smell",
+                "Compiler error required",
+                "Parameters must be used or removed"
+              ],
+              "id": "scala_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you reassign a function parameter inside the function body?",
+              "answer": "No; parameters are immutable, like a val",
+              "explain": "Function parameters behave like vals, not vars. Reassigning one is a compile error. This prevents accidental mutations.",
+              "choices": [
+                "Only if declared var",
+                "It depends on the type",
+                "Yes; parameters are mutable like a var",
+                "No; parameters are immutable, like a val"
+              ],
+              "id": "scala_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the last expression in a function?",
+              "answer": "The return value; no return keyword needed",
+              "explain": "def add(x: Int, y: Int) = x + y returns x + y automatically. Scala returns the last expression without a return keyword.",
+              "choices": [
+                "A syntax error",
+                "The return value; no return keyword needed",
+                "The function's type declaration",
+                "Ignored; you must use return"
+              ],
+              "id": "scala_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use a return keyword in Scala?",
+              "answer": "Yes, but it is discouraged in modern Scala",
+              "explain": "return exists for compatibility but functional style avoids it. The last expression is implicit return and cleaner.",
+              "choices": [
+                "Yes, but it is discouraged in modern Scala",
+                "No; Scala has no return keyword",
+                "Always required",
+                "Only in imperative functions"
+              ],
+              "id": "scala_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Immutable Collections",
+      "tip": "Scala provides immutable collections: List, Set, and Map. These do not change after creation; operations return new collections. Immutable collections prevent bugs and enable safe parallelism. List preserves order; Set holds unique elements; Map stores key-value pairs.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Lists and Sequences",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a List in Scala?",
+              "answer": "List(1, 2, 3) or 1 :: 2 :: 3 :: Nil",
+              "explain": "List(elements) is the most common. The :: operator prepends to a list; Nil is the empty list. Both syntaxes are valid.",
+              "choices": [
+                "[1, 2, 3]",
+                "Array(1, 2, 3)",
+                "createList(1, 2, 3)",
+                "List(1, 2, 3) or 1 :: 2 :: 3 :: Nil"
+              ],
+              "id": "scala_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does List.head return?",
+              "answer": "The first element of the list",
+              "explain": "head is the first element. For List(1, 2, 3), head is 1. Calling head on Nil throws an error.",
+              "choices": [
+                "The last element",
+                "The first element of the list",
+                "All elements except the last",
+                "The count of elements"
+              ],
+              "id": "scala_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does List.tail return?",
+              "answer": "All elements except the first",
+              "explain": "tail is the rest of the list after head. For List(1, 2, 3), tail is List(2, 3).",
+              "choices": [
+                "The last element only",
+                "The reversed list",
+                "All elements except the last",
+                "All elements except the first"
+              ],
+              "id": "scala_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you prepend an element to a List?",
+              "answer": "Use the :: operator: 0 :: List(1, 2, 3)",
+              "explain": "0 :: List(1, 2, 3) returns List(0, 1, 2, 3). :: is pronounced 'cons' and prepends on the left.",
+              "choices": [
+                "Lists cannot be modified",
+                "Use .add(0, element)",
+                "Use the :: operator: 0 :: List(1, 2, 3)",
+                "Use .prepend(0)"
+              ],
+              "id": "scala_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is modifying a List in-place possible?",
+              "answer": "No; Lists are immutable; operations return new Lists",
+              "explain": "val list = List(1, 2, 3); val newList = 0 :: list creates newList without changing list. The original is untouched.",
+              "choices": [
+                "Yes; use .update() or .set()",
+                "Scala does not have lists",
+                "No; Lists are immutable; operations return new Lists",
+                "Only with explicit .mutable"
+              ],
+              "id": "scala_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Sets and Maps",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a Set in Scala?",
+              "answer": "A collection of unique elements in no particular order",
+              "explain": "Set(1, 2, 3, 2) becomes Set(1, 2, 3). Duplicates are removed. Sets are unordered and check membership quickly.",
+              "choices": [
+                "An ordered list of elements",
+                "A key-value mapping",
+                "A collection of unique elements in no particular order",
+                "A collection with index access"
+              ],
+              "id": "scala_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check if a Set contains an element?",
+              "answer": "Use contains: set.contains(2), or call the set like a function: set(2)",
+              "explain": "set.contains(2) returns true or false. A Set also works as a function from element to Boolean, so set(2) gives the same result.",
+              "choices": [
+                "Use .index(element)",
+                "Use contains: set.contains(2), or call the set like a function: set(2)",
+                "Check with .find()",
+                "Sets do not support membership checks"
+              ],
+              "id": "scala_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a Map in Scala?",
+              "answer": "Map(key1 -> value1, key2 -> value2)",
+              "explain": "Map(1 -> \"one\", 2 -> \"two\") creates a map. The -> operator creates a key-value pair (a tuple).",
+              "choices": [
+                "Map[key, value]",
+                "Map(key1 -> value1, key2 -> value2)",
+                "map(key: value)",
+                "createMap(key, value)"
+              ],
+              "id": "scala_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you look up a value in a Map?",
+              "answer": "Use parentheses or the get method: map(key) or map.get(key)",
+              "explain": "map(1) for Map(1 -> \"one\") returns \"one\". map.get(key) returns an Option, which is safer if the key might not exist.",
+              "choices": [
+                "Use parentheses or the get method: map(key) or map.get(key)",
+                "Maps do not support lookup",
+                "Use .find(key)",
+                "Use .fetch(key)"
+              ],
+              "id": "scala_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between map(key) and map.get(key)?",
+              "answer": "map(key) throws if missing; map.get returns an Option",
+              "explain": "map(5) on Map(1 -> \"one\") throws an error. map.get(5) returns None, which is safer. Use get when the key might be missing.",
+              "choices": [
+                "get is faster",
+                "map(key) throws if missing; map.get returns an Option",
+                "map(key) is safer",
+                "They are the same"
+              ],
+              "id": "scala_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Functional Programming Basics",
+      "tip": "Functions are values in Scala and can be passed to other functions. Higher-order functions take functions as parameters. Lambda syntax x => expression defines inline functions. Map, filter, and fold are the core operations for transforming collections.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Higher-Order Functions and Lambdas",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a higher-order function?",
+              "answer": "A function that takes another function as a parameter",
+              "explain": "def apply(f: Int => Int, x: Int) = f(x) takes a function and a value. Higher-order functions are a core functional programming tool.",
+              "choices": [
+                "A function that takes another function as a parameter",
+                "A function with multiple parameters",
+                "A function that returns nothing",
+                "A nested function"
+              ],
+              "id": "scala_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a lambda function?",
+              "answer": "x => x + 1",
+              "explain": "x => x + 1 is a function that takes x and returns x + 1. Lambdas are inline anonymous functions. No def keyword needed.",
+              "choices": [
+                "{x} => x + 1",
+                "function x: x + 1",
+                "[x] => x + 1",
+                "x => x + 1"
+              ],
+              "id": "scala_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type is the function (x: Int) => x + 1?",
+              "answer": "Int => Int (a function from Int to Int)",
+              "explain": "The function takes an Int and returns an Int. The type is written as Int => Int, meaning function from Int to Int.",
+              "choices": [
+                "Int => Int (a function from Int to Int)",
+                "Function",
+                "Lambda",
+                "Int"
+              ],
+              "id": "scala_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you pass a lambda to a higher-order function?",
+              "answer": "Pass it directly: apply(x => x + 1, 5)",
+              "explain": "apply(x => x + 1, 5) passes the lambda x => x + 1 to apply. Lambdas are values and can be passed like any other value.",
+              "choices": [
+                "Lambdas cannot be passed",
+                "Wrap it in a def",
+                "Pass it directly: apply(x => x + 1, 5)",
+                "Use .lambda syntax"
+              ],
+              "id": "scala_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a multi-parameter lambda look like?",
+              "answer": "(x, y) => x + y",
+              "explain": "(x, y) => x + y is a lambda with two parameters. Parentheses group multiple parameters.",
+              "choices": [
+                "x => y => x + y",
+                "x y => x + y",
+                "Multiple parameters are not allowed",
+                "(x, y) => x + y"
+              ],
+              "id": "scala_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Map, Filter, and Fold",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does List.map do?",
+              "answer": "Applies a function to each element and returns a new List",
+              "explain": "List(1, 2, 3).map(x => x * 2) returns List(2, 4, 6). map transforms every element.",
+              "choices": [
+                "Sums all elements",
+                "Applies a function to each element and returns a new List",
+                "Reorders the List",
+                "Removes duplicates"
+              ],
+              "id": "scala_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does List.filter do?",
+              "answer": "Returns a new List with only elements that satisfy a condition",
+              "explain": "List(1, 2, 3, 4).filter(x => x > 2) returns List(3, 4). filter keeps elements for which the function returns true.",
+              "choices": [
+                "Removes all elements",
+                "Sorts the List",
+                "Combines all elements",
+                "Returns a new List with only elements that satisfy a condition"
+              ],
+              "id": "scala_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does List.fold do?",
+              "answer": "Combines elements into a single value using a function",
+              "explain": "List(1, 2, 3).fold(0)((acc, x) => acc + x) sums the list. fold starts with an initial value and applies a function to accumulate.",
+              "choices": [
+                "fold is not a real method",
+                "Returns a subset",
+                "Combines elements into a single value using a function",
+                "Sorts the List"
+              ],
+              "id": "scala_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you chain map and filter?",
+              "answer": "Yes; List(1,2,3,4).filter(x => x > 2).map(x => x * 2) works",
+              "explain": "Operations on immutable collections chain naturally. Each returns a List, which supports the next operation.",
+              "choices": [
+                "Chaining is inefficient",
+                "Only with explicit chaining syntax",
+                "No; only one operation per statement",
+                "Yes; List(1,2,3,4).filter(x => x > 2).map(x => x * 2) works"
+              ],
+              "id": "scala_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for fold with two parameters?",
+              "answer": "fold(initialValue)((accumulator, element) => ...)",
+              "explain": "fold takes an initial value, then a function with two parameters: the accumulator and the current element. The accumulator carries the result forward.",
+              "choices": [
+                "fold does not exist",
+                "fold((accumulator, element) => ...)",
+                "fold(element => ...)",
+                "fold(initialValue)((accumulator, element) => ...)"
+              ],
+              "id": "scala_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced Patterns",
+      "tip": "Pattern matching destructures values and handles multiple cases. Case classes represent immutable data with automatic equality and copy. Option represents an optional value as Some(value) or None. Traits define shared behavior across multiple classes.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Pattern Matching and Case Classes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is pattern matching in Scala?",
+              "answer": "A way to destructure values and handle multiple cases with match",
+              "explain": "match allows you to test a value against many patterns. val result = x match { case 1 => \"one\" case _ => \"other\" } picks a case by pattern.",
+              "choices": [
+                "Type checking at runtime",
+                "Finding text with regular expressions",
+                "A way to destructure values and handle multiple cases with match",
+                "A loop construct"
+              ],
+              "id": "scala_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the underscore _ mean in a pattern match?",
+              "answer": "A wildcard that matches anything",
+              "explain": "case _ => result is the default case, matching any value that did not match earlier cases. It is like else in other languages.",
+              "choices": [
+                "A wildcard that matches anything",
+                "A forbidden value",
+                "The end of the match",
+                "An error placeholder"
+              ],
+              "id": "scala_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a case class?",
+              "answer": "A class that pairs with pattern matching and auto-generates equals, hashCode, and copy",
+              "explain": "case class Point(x: Int, y: Int) is immutable, has structural equality, and supports destructuring. Great for data containers.",
+              "choices": [
+                "A class that can only be used in match statements",
+                "A class without methods",
+                "A class that pairs with pattern matching and auto-generates equals, hashCode, and copy",
+                "A temporary class"
+              ],
+              "id": "scala_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you extract fields from a case class?",
+              "answer": "Pattern matching: case Point(x, y) => ... or case p: Point => p.x",
+              "explain": "case Point(x, y) => x + y destructures a Point into x and y. You can use them directly in the body.",
+              "choices": [
+                ".extract()",
+                "Direct field access only",
+                ".get(fieldName)",
+                "Pattern matching: case Point(x, y) => ... or case p: Point => p.x"
+              ],
+              "id": "scala_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you modify a case class field after creation?",
+              "answer": "No; case classes are immutable; use .copy() to create a modified version",
+              "explain": "case class Point(x: Int, y: Int); val p = Point(1, 2); val p2 = p.copy(x = 3) returns a new Point with x=3, leaving p unchanged.",
+              "choices": [
+                "Yes; use .set()",
+                "Yes; fields are public",
+                "No; case classes are immutable; use .copy() to create a modified version",
+                "Only through reflection"
+              ],
+              "id": "scala_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Option and Traits",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is Option in Scala?",
+              "answer": "A type representing an optional value: Some(value) or None",
+              "explain": "Option[T] is either Some(value) or None. It replaces null and forces you to handle missing values explicitly.",
+              "choices": [
+                "Only used in collections",
+                "A type representing an optional value: Some(value) or None",
+                "A special integer type",
+                "A mutable container"
+              ],
+              "id": "scala_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Some(5) represent?",
+              "answer": "An Option containing the value 5",
+              "explain": "Some is the case when a value exists. Option[Int] is either Some(5) or None.",
+              "choices": [
+                "An error state",
+                "An array with one element",
+                "A null reference",
+                "An Option containing the value 5"
+              ],
+              "id": "scala_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you extract a value from Some?",
+              "answer": "Pattern match: case Some(x) => x or use .get: opt.get (but .get throws if None)",
+              "explain": "case Some(value) => ... is safe. opt.get extracts but throws an error if it is None. Pattern matching is preferred.",
+              "choices": [
+                "Direct field access",
+                ".value",
+                "Pattern match: case Some(x) => x or use .get: opt.get (but .get throws if None)",
+                ".extract()"
+              ],
+              "id": "scala_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a trait in Scala?",
+              "answer": "An interface-like construct that classes and other traits can mix in",
+              "explain": "trait Drawable { def draw(): Unit } defines a behavior. Classes can extend or mix in traits with extends or with. Traits can have fields and methods.",
+              "choices": [
+                "A loop",
+                "A type alias",
+                "An interface-like construct that classes and other traits can mix in",
+                "A data structure"
+              ],
+              "id": "scala_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a class extend multiple traits?",
+              "answer": "Yes; use with: class Shape extends Drawable with Moveable",
+              "explain": "class Circle extends Shape with Drawable with Colored mixes in multiple traits. This is Scala's form of multiple inheritance.",
+              "choices": [
+                "Scala does not support traits",
+                "Yes; use with: class Shape extends Drawable with Moveable",
+                "No; one trait only",
+                "Only with special syntax"
+              ],
+              "id": "scala_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
