@@ -824,7 +824,7 @@ body {
 
 .achievement-toast {
     position: fixed;
-    top: -80px;
+    bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -835,12 +835,12 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--correct-border);
     border-radius: var(--radius-lg);
-    transition: top 0.3s var(--spring);
+    transition: bottom 0.3s var(--spring);
     max-width: 90vw;
 }
 
 .achievement-toast.show {
-    top: calc(env(safe-area-inset-top, 0px) + 80px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
 }
 
 .achievement-toast-icon {
@@ -2163,3 +2163,6 @@ body.demo .header-inner::after {
 .feedback-teach { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.6rem; color: var(--text-primary); font-weight: 400; }
 .feedback-hear { flex: none; width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--card-border); background: var(--bg-primary); color: var(--text-primary); cursor: pointer; }
 .feedback-hear:hover { border-color: var(--text-secondary); }
+
+/* Phones: the stats pills need the room, the icon alone says Lexly. */
+@media (max-width: 480px) { .logo span { display: none; } }

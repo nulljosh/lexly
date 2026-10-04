@@ -1998,19 +1998,22 @@ function meaningOf(answer) {
 
 // Every language answer gets a "hear it" button and, when known, its meaning.
 function appendTeach(feedback, question) {
-    if (!LANGUAGE_SUBJECTS.has(gameState.selectedSubject) || question.type === 'match' || question.type === 'cloze') return;
+    if (!LANGUAGE_SUBJECTS.has(gameState.selectedSubject) || question.type === 'match') return;
+    // A blank is only learned in context: say and show the whole sentence, filled in.
+    const said = question.type === 'cloze' ? question.question.replace(/_{2,}/, question.answer) : question.answer;
     const row = document.createElement('div');
     row.className = 'feedback-teach';
     const hear = document.createElement('button');
     hear.type = 'button';
     hear.className = 'feedback-hear';
-    hear.setAttribute('aria-label', `Hear ${question.answer}`);
+    hear.setAttribute('aria-label', `Hear ${said}`);
     hear.append(makeIcon('fa-solid fa-volume-high'));
-    hear.addEventListener('click', () => speak(question.answer, currentLang()));
+    hear.addEventListener('click', () => speak(said, currentLang()));
     row.appendChild(hear);
-    const meaning = question.type === 'listening' ? meaningOf(question.answer) : question.question;
+    const meaning = question.type === 'listening' ? meaningOf(question.answer)
+        : question.type === 'cloze' ? meaningOf(said) : question.question;
     const text = document.createElement('span');
-    text.textContent = meaning ? `${question.answer} means "${meaning}"` : question.answer;
+    text.textContent = meaning ? `${said} means "${meaning}"` : said;
     row.appendChild(text);
     feedback.appendChild(row);
 }
