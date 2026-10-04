@@ -1,0 +1,904 @@
+{
+  "id": "git_terminal",
+  "name": "Git and the Terminal",
+  "category": "programming",
+  "icon": "fa-solid fa-terminal",
+  "level": "Developer Essentials",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Understanding the Command Line",
+      "tip": "The terminal is a text-based interface to your computer. You type commands, the computer executes them and shows results. A shell is the program that reads your commands and talks to the operating system.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What is a Shell",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a shell?",
+              "answer": "A program that interprets your text commands and communicates with the operating system",
+              "explain": "The shell reads commands you type, translates them into instructions the OS understands, and displays the results. Bash and Zsh are popular shells.",
+              "choices": [
+                "A file manager",
+                "A program that interprets your text commands and communicates with the operating system",
+                "A security system",
+                "A web browser"
+              ],
+              "id": "git_terminal_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the dollar sign ($) at the start of a terminal line represent?",
+              "answer": "The command prompt, where you type commands",
+              "explain": "The shell displays $ (or # for root) to show it is ready for input. Everything after $ is the command you type.",
+              "choices": [
+                "A currency symbol",
+                "An error message",
+                "The command prompt, where you type commands",
+                "A file extension"
+              ],
+              "id": "git_terminal_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the current working directory in a terminal?",
+              "answer": "The folder where commands execute and files are accessed by default",
+              "explain": "Your shell always operates from a specific folder. Commands work relative to this location unless you specify a full path.",
+              "choices": [
+                "The home folder",
+                "The root folder",
+                "The folder where commands execute and files are accessed by default",
+                "A temporary folder"
+              ],
+              "id": "git_terminal_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does pwd stand for?",
+              "answer": "Print Working Directory",
+              "explain": "pwd displays the full path to the current folder. Use it to confirm where you are in the file system.",
+              "choices": [
+                "Previous Working Directory",
+                "Print Working Directory",
+                "Path With Directory",
+                "Password Window Directory"
+              ],
+              "id": "git_terminal_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does cd do?",
+              "answer": "Changes the current working directory to another folder",
+              "explain": "cd stands for Change Directory. Type cd followed by a folder name or path to move into that folder.",
+              "choices": [
+                "Creates a new directory",
+                "Changes the current working directory to another folder",
+                "Copies a directory",
+                "Closes the directory"
+              ],
+              "id": "git_terminal_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Navigating Paths and Listing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does ls do?",
+              "answer": "Lists the files and folders in the current directory",
+              "explain": "ls shows all visible items in the current folder. Add flags like -a to show hidden files or -l for detailed information.",
+              "choices": [
+                "Loads a shell script",
+                "Lists the files and folders in the current directory",
+                "Links a script",
+                "Logs into a system"
+              ],
+              "id": "git_terminal_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an absolute path?",
+              "answer": "A path that starts from the root (/) and specifies the complete location",
+              "explain": "An absolute path shows the full route from the root directory. Example: /Users/joshua/Documents/file.txt works from anywhere.",
+              "choices": [
+                "A path starting from the home folder",
+                "A path that starts from the root (/) and specifies the complete location",
+                "A path that uses special characters",
+                "A shortened path using abbreviations"
+              ],
+              "id": "git_terminal_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a relative path?",
+              "answer": "A path specified from the current working directory",
+              "explain": "Relative paths work from where you are now. Example: if you are in Documents, typing ./file.txt refers to file.txt in the current folder.",
+              "choices": [
+                "A path that never changes",
+                "A path specified from the current working directory",
+                "A path used only in Git",
+                "A path with uppercase letters"
+              ],
+              "id": "git_terminal_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the tilde (~) represent in a terminal path?",
+              "answer": "Your home directory",
+              "explain": "~ is a shortcut for your user's home folder. Typing cd ~ takes you home from anywhere.",
+              "choices": [
+                "The root directory",
+                "The current folder",
+                "Your home directory",
+                "A temporary directory"
+              ],
+              "id": "git_terminal_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do the two dots (..) mean in a path?",
+              "answer": "Go up one level to the parent directory",
+              "explain": ".. is a shortcut to the folder above the current one. cd .. moves up one level in the folder hierarchy.",
+              "choices": [
+                "Go to the home directory",
+                "Go up one level to the parent directory",
+                "Go to the root directory",
+                "Go to the last folder you visited"
+              ],
+              "id": "git_terminal_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Working with Files and Directories",
+      "tip": "You can create, copy, move, and delete files entirely from the terminal. Understanding these commands and redirection lets you work with data efficiently without a graphical interface.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Creating and Organizing Files",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does mkdir do?",
+              "answer": "Creates a new directory (folder)",
+              "explain": "mkdir stands for Make Directory. Use mkdir foldername to create a new folder in the current location.",
+              "choices": [
+                "Modifies a directory",
+                "Creates a new directory (folder)",
+                "Moves a directory",
+                "Removes a directory"
+              ],
+              "id": "git_terminal_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does cp do?",
+              "answer": "Copies a file or directory",
+              "explain": "cp copies files or folders. Use cp source destination to create a copy. Add -r flag to copy entire directories.",
+              "choices": [
+                "Compresses a file",
+                "Copies a file or directory",
+                "Chains programs together",
+                "Checks a file"
+              ],
+              "id": "git_terminal_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does mv do?",
+              "answer": "Moves or renames a file or directory",
+              "explain": "mv moves files between folders or renames them. Use mv oldname newname to rename, or mv file folder/ to move.",
+              "choices": [
+                "Makes a file visible",
+                "Moves or renames a file or directory",
+                "Modifies file permissions",
+                "Multiplies file size"
+              ],
+              "id": "git_terminal_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does rm do?",
+              "answer": "Removes (deletes) a file",
+              "explain": "rm deletes files permanently. Be careful: deleted files cannot be recovered. Add -r to delete directories with contents.",
+              "choices": [
+                "Renames a file",
+                "Removes (deletes) a file",
+                "Restores a file",
+                "Reads a file"
+              ],
+              "id": "git_terminal_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does cat do?",
+              "answer": "Displays the contents of a file in the terminal",
+              "explain": "cat shows file contents on screen. Use cat filename to view a text file. It is short for concatenate.",
+              "choices": [
+                "Creates a new file",
+                "Compresses a file",
+                "Displays the contents of a file in the terminal",
+                "Copies a file"
+              ],
+              "id": "git_terminal_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Pipes and Redirection",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the pipe (|) operator do?",
+              "answer": "Sends the output of one command as input to another command",
+              "explain": "Pipes chain commands together. Example: cat file.txt | grep word finds lines containing a word in a file.",
+              "choices": [
+                "Separates multiple commands",
+                "Creates a new file",
+                "Sends the output of one command as input to another command",
+                "Comments out a command"
+              ],
+              "id": "git_terminal_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the > operator do?",
+              "answer": "Redirects output to a file, overwriting it",
+              "explain": "The > symbol saves command output to a file. Example: echo hello > file.txt creates file.txt with hello inside.",
+              "choices": [
+                "Compares two files",
+                "Redirects output to a file, overwriting it",
+                "Checks if output is larger than input",
+                "Sends output to another command"
+              ],
+              "id": "git_terminal_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the >> operator do?",
+              "answer": "Appends output to the end of a file",
+              "explain": ">> adds new content to the end of a file without deleting what is there. Example: echo world >> file.txt adds world to the end.",
+              "choices": [
+                "Overwrites a file",
+                "Appends output to the end of a file",
+                "Deletes part of a file",
+                "Copies a file"
+              ],
+              "id": "git_terminal_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the < operator do?",
+              "answer": "Sends the contents of a file as input to a command",
+              "explain": "The < symbol redirects a file as input. Example: grep word < file.txt searches for word inside file.txt.",
+              "choices": [
+                "Checks if input is smaller than output",
+                "Sends the contents of a file as input to a command",
+                "Creates a new file",
+                "Deletes a file"
+              ],
+              "id": "git_terminal_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the command grep pattern file.txt | sort, what happens?",
+              "answer": "grep finds lines, then sort arranges them alphabetically",
+              "explain": "grep finds all matching lines in file.txt, then the pipe (|) sends those lines to sort, which orders them.",
+              "choices": [
+                "sort is executed first",
+                "grep finds lines, then sort arranges them alphabetically",
+                "Both commands run at the same time",
+                "Only grep executes; sort is ignored"
+              ],
+              "id": "git_terminal_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Introducing Git Concepts",
+      "tip": "Git is a version control system that tracks changes to files. A repository stores your entire project history. Your working tree is where you edit files. The staging area is where you prepare changes before saving them.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Core Git Ideas",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a Git repository?",
+              "answer": "A directory that contains your project and its entire version history",
+              "explain": "A repository (repo) stores all your files, changes, and history. It includes a hidden .git folder with all version information.",
+              "choices": [
+                "A website for code sharing",
+                "A directory that contains your project and its entire version history",
+                "A type of database server",
+                "A backup service"
+              ],
+              "id": "git_terminal_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a commit?",
+              "answer": "A snapshot of changes saved with a descriptive message",
+              "explain": "A commit records what changed, who made the change, and when. It is like saving a labeled version of your project.",
+              "choices": [
+                "A conversation between developers",
+                "A snapshot of changes saved with a descriptive message",
+                "A command to delete files",
+                "A backup of the entire repository"
+              ],
+              "id": "git_terminal_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the working tree in Git?",
+              "answer": "The actual files and folders in your directory that you edit",
+              "explain": "The working tree is where you see and modify files. It is different from the Git history stored in .git.",
+              "choices": [
+                "The entire version history",
+                "The actual files and folders in your directory that you edit",
+                "A remote server",
+                "A backup location"
+              ],
+              "id": "git_terminal_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the staging area?",
+              "answer": "A temporary holding area where you select which changes to commit",
+              "explain": "The staging area (also called the index) lets you choose which edits to include in the next commit.",
+              "choices": [
+                "The remote server",
+                "A temporary holding area where you select which changes to commit",
+                "The completed project",
+                "A list of all developers"
+              ],
+              "id": "git_terminal_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the .git folder contain?",
+              "answer": "All version history, metadata, and configuration for the repository",
+              "explain": "The .git folder (hidden by default) stores commits, branches, configuration, and everything Git needs to track your project.",
+              "choices": [
+                "Only the most recent version",
+                "All version history, metadata, and configuration for the repository",
+                "User passwords",
+                "Temporary backup files"
+              ],
+              "id": "git_terminal_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "The Git Workflow",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In Git, what is the typical sequence: edit files, ?, commit?",
+              "answer": "Stage changes with git add",
+              "explain": "The workflow is: edit files, stage them with git add, then commit. This lets you choose what goes in each commit.",
+              "choices": [
+                "Push to the server",
+                "Stage changes with git add",
+                "Create a new branch",
+                "Merge into main"
+              ],
+              "id": "git_terminal_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git status show?",
+              "answer": "Which files have changed and which are staged for commit",
+              "explain": "git status tells you the current state: modified files, untracked files, and what is in the staging area.",
+              "choices": [
+                "The list of all commits",
+                "Which files have changed and which are staged for commit",
+                "The remote server address",
+                "All developers on the project"
+              ],
+              "id": "git_terminal_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git add filename do?",
+              "answer": "Stages the file for the next commit",
+              "explain": "git add places a modified or new file into the staging area. You can then commit all staged changes together.",
+              "choices": [
+                "Creates a new file",
+                "Stages the file for the next commit",
+                "Deletes the file",
+                "Uploads the file to the server"
+              ],
+              "id": "git_terminal_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git commit -m \"message\" do?",
+              "answer": "Saves all staged changes as a commit with a description",
+              "explain": "git commit creates a snapshot. The -m flag lets you add a message describing the changes.",
+              "choices": [
+                "Sends changes to the server",
+                "Saves all staged changes as a commit with a description",
+                "Deletes the last commit",
+                "Shows the commit history"
+              ],
+              "id": "git_terminal_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git log show?",
+              "answer": "A history of all commits with messages and timestamps",
+              "explain": "git log displays the commit history in reverse order (newest first). Each entry shows the author, date, and message.",
+              "choices": [
+                "Files in the current directory",
+                "A history of all commits with messages and timestamps",
+                "Errors in the code",
+                "Remote server status"
+              ],
+              "id": "git_terminal_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Daily Git Commands",
+      "tip": "Once you understand the basics, everyday Git work involves initializing repositories, cloning existing ones, viewing differences, and managing changes. These commands are the foundation of collaborative development.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Starting and Viewing History",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does git init do?",
+              "answer": "Creates a new empty Git repository in the current directory",
+              "explain": "git init sets up a .git folder and prepares the directory for version control.",
+              "choices": [
+                "Initializes a connection to a server",
+                "Creates a new empty Git repository in the current directory",
+                "Imports files from another project",
+                "Sets up a backup"
+              ],
+              "id": "git_terminal_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git clone url do?",
+              "answer": "Downloads an entire repository from a server and copies it locally",
+              "explain": "git clone gets a full copy of a project, including all history and branches, from a remote location.",
+              "choices": [
+                "Backs up a repository",
+                "Downloads an entire repository from a server and copies it locally",
+                "Uploads changes to the server",
+                "Deletes the original repository"
+              ],
+              "id": "git_terminal_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git diff show?",
+              "answer": "Changes in your working tree that you have not staged yet",
+              "explain": "Plain git diff compares your files to the staging area, so it shows edits you have not staged. Use git diff --staged to see what is staged for the next commit.",
+              "choices": [
+                "The commit history",
+                "Changes in your working tree that you have not staged yet",
+                "Remote server status",
+                "The list of all branches"
+              ],
+              "id": "git_terminal_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git show commitid do?",
+              "answer": "Displays the changes made in a specific commit",
+              "explain": "git show lets you see what changed in a particular commit, including the message and diff.",
+              "choices": [
+                "Shows all commits",
+                "Displays the changes made in a specific commit",
+                "Deletes a commit",
+                "Uploads a commit"
+              ],
+              "id": "git_terminal_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git add . do?",
+              "answer": "Stages all modified and new files for the next commit",
+              "explain": "git add . (dot) stages every change in the current directory and subdirectories.",
+              "choices": [
+                "Creates a new file",
+                "Stages all modified and new files for the next commit",
+                "Deletes all files",
+                "Uploads all files"
+              ],
+              "id": "git_terminal_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Managing Changes and Undoing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does git restore filename do?",
+              "answer": "Discards changes to a file and restores the last committed version",
+              "explain": "git restore reverts a file to its state in the last commit. Unsaved changes are lost.",
+              "choices": [
+                "Stages a file for commit",
+                "Discards changes to a file and restores the last committed version",
+                "Uploads a file",
+                "Creates a backup"
+              ],
+              "id": "git_terminal_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git reset HEAD filename do?",
+              "answer": "Unstages a file that was added to the staging area",
+              "explain": "git reset removes a file from the staging area without changing your working tree.",
+              "choices": [
+                "Deletes a file",
+                "Unstages a file that was added to the staging area",
+                "Commits a file",
+                "Uploads a file"
+              ],
+              "id": "git_terminal_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the command git log --oneline do?",
+              "answer": "Shows the commit history with one commit per line and short hashes",
+              "explain": "The --oneline flag makes git log compact and readable, showing just the commit hash and message.",
+              "choices": [
+                "Shows only the last commit",
+                "Shows the commit history with one commit per line and short hashes",
+                "Shows only errors",
+                "Shows only your commits"
+              ],
+              "id": "git_terminal_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do before committing?",
+              "answer": "Review your changes with git diff and git status",
+              "explain": "Always check what you are committing to catch mistakes and write accurate messages.",
+              "choices": [
+                "Delete old files",
+                "Review your changes with git diff and git status",
+                "Upload immediately",
+                "Create a backup"
+              ],
+              "id": "git_terminal_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What makes a good commit message?",
+              "answer": "Short, clear, and describes what changed and why",
+              "explain": "Good messages start with a verb (Add, Fix, Refactor) and explain the purpose. Avoid vague messages like update or changes.",
+              "choices": [
+                "Very long and detailed",
+                "Short, clear, and describes what changed and why",
+                "Using only emojis",
+                "Anything that is not empty"
+              ],
+              "id": "git_terminal_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Branches and Merging",
+      "tip": "Branches let you work on separate features without affecting the main code. You can create, switch between, and merge branches. Merge conflicts happen when two branches change the same lines, and you must resolve them manually.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Creating and Switching Branches",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a branch in Git?",
+              "answer": "A separate line of development that diverges from the main code",
+              "explain": "Branches let multiple developers work on different features simultaneously without interfering.",
+              "choices": [
+                "A backup of the entire project",
+                "A separate line of development that diverges from the main code",
+                "A type of file",
+                "A remote server"
+              ],
+              "id": "git_terminal_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git branch do?",
+              "answer": "Lists all local branches or creates a new branch",
+              "explain": "git branch with no arguments lists branches. git branch name creates a new branch.",
+              "choices": [
+                "Deletes a branch",
+                "Lists all local branches or creates a new branch",
+                "Merges branches",
+                "Switches to another branch"
+              ],
+              "id": "git_terminal_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git switch branchname do?",
+              "answer": "Changes your working tree to a different branch",
+              "explain": "git switch moves you to another branch. Your files update to match that branch's state.",
+              "choices": [
+                "Creates a new branch",
+                "Changes your working tree to a different branch",
+                "Deletes a branch",
+                "Merges branches"
+              ],
+              "id": "git_terminal_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git branch -d branchname do?",
+              "answer": "Deletes a local branch",
+              "explain": "git branch -d removes a branch. Use -D (capital) to force delete even if not merged.",
+              "choices": [
+                "Creates a new branch",
+                "Switches to a branch",
+                "Deletes a local branch",
+                "Lists all branches"
+              ],
+              "id": "git_terminal_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git switch -c branchname do?",
+              "answer": "Creates a new branch and switches to it immediately",
+              "explain": "git switch -c (create) does both steps at once. You start working on the new branch right away.",
+              "choices": [
+                "Lists all branches",
+                "Creates a new branch and switches to it immediately",
+                "Deletes a branch",
+                "Merges branches"
+              ],
+              "id": "git_terminal_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Merging and Handling Conflicts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does git merge branchname do?",
+              "answer": "Combines the changes from another branch into the current branch",
+              "explain": "git merge integrates commits from one branch into your current branch. Usually you merge features back into main.",
+              "choices": [
+                "Deletes a branch",
+                "Combines the changes from another branch into the current branch",
+                "Switches to another branch",
+                "Uploads the branch"
+              ],
+              "id": "git_terminal_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a merge conflict?",
+              "answer": "A situation where two branches changed the same lines and Git cannot automatically merge",
+              "explain": "Conflicts happen when different commits modify overlapping code. You must manually choose which changes to keep.",
+              "choices": [
+                "A connection error",
+                "A situation where two branches changed the same lines and Git cannot automatically merge",
+                "A deleted branch",
+                "A failed upload"
+              ],
+              "id": "git_terminal_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do the conflict markers <<<<<<, ======, and >>>>>> indicate?",
+              "answer": "The boundaries between conflicting versions that need to be resolved",
+              "explain": "These markers show your version (between <<<< and ====) and the other branch's version (between ==== and >>>>).",
+              "choices": [
+                "The start of a comment",
+                "The boundaries between conflicting versions that need to be resolved",
+                "Deleted lines",
+                "Valid code syntax"
+              ],
+              "id": "git_terminal_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you resolve a merge conflict?",
+              "answer": "Edit the conflicted files, remove conflict markers, choose which changes to keep, then add and commit",
+              "explain": "Open the conflicted files, manually choose between versions or combine them, delete the markers, stage, and commit.",
+              "choices": [
+                "Automatically delete the conflicting lines",
+                "Edit the conflicted files, remove conflict markers, choose which changes to keep, then add and commit",
+                "Revert the entire merge",
+                "Ask someone else to decide"
+              ],
+              "id": "git_terminal_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fast-forward merge?",
+              "answer": "A merge where the target branch has no new commits, so history is linear",
+              "explain": "A fast-forward merge happens when one branch is directly ahead of another with no diverging commits.",
+              "choices": [
+                "A merge that is faster than normal",
+                "A merge where the target branch has no new commits, so history is linear",
+                "A failed merge",
+                "A merge that requires conflict resolution"
+              ],
+              "id": "git_terminal_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Remotes and Teamwork",
+      "tip": "A remote is a version of your repository on a server like GitHub. Push sends your commits to the remote. Pull gets commits from others. Fetch downloads without merging. Pull requests are proposals to merge branches and integrate team changes.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Working with Remote Repositories",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a remote in Git?",
+              "answer": "A version of your repository on a server, usually a central shared location",
+              "explain": "Remotes let teams share code. origin is the default remote, usually pointing to GitHub or another server.",
+              "choices": [
+                "A backup copy on your computer",
+                "A version of your repository on a server, usually a central shared location",
+                "A branch on your machine",
+                "An error message"
+              ],
+              "id": "git_terminal_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git remote -v do?",
+              "answer": "Shows the addresses of all configured remotes",
+              "explain": "git remote -v (verbose) displays remote names and URLs. Most projects have origin pointing to their main server.",
+              "choices": [
+                "Deletes a remote",
+                "Shows the addresses of all configured remotes",
+                "Creates a new remote",
+                "Uploads to a remote"
+              ],
+              "id": "git_terminal_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git push origin branchname do?",
+              "answer": "Uploads your commits to the remote server on the specified branch",
+              "explain": "git push sends your local commits to the remote. origin is the remote, branchname is the target branch.",
+              "choices": [
+                "Downloads commits from the server",
+                "Uploads your commits to the remote server on the specified branch",
+                "Deletes a remote branch",
+                "Merges with the remote"
+              ],
+              "id": "git_terminal_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git pull do?",
+              "answer": "Fetches commits from the remote and merges them into your current branch",
+              "explain": "git pull is equivalent to git fetch followed by git merge. It updates your branch with remote changes.",
+              "choices": [
+                "Only downloads without merging",
+                "Fetches commits from the remote and merges them into your current branch",
+                "Uploads your commits",
+                "Deletes local branches"
+              ],
+              "id": "git_terminal_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does git fetch do?",
+              "answer": "Downloads commits from the remote without merging",
+              "explain": "git fetch gets new commits from the server and updates remote tracking branches. Use it to see what others have done before merging.",
+              "choices": [
+                "Downloads and automatically merges",
+                "Downloads commits from the remote without merging",
+                "Uploads your commits",
+                "Deletes local files"
+              ],
+              "id": "git_terminal_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Pull Requests and Collaboration",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a pull request?",
+              "answer": "A proposal to merge one branch into another, usually for code review before merging",
+              "explain": "Pull requests let teams review changes, discuss improvements, and approve before integrating into main.",
+              "choices": [
+                "A command to download files",
+                "A proposal to merge one branch into another, usually for code review before merging",
+                "A type of branch",
+                "A backup mechanism"
+              ],
+              "id": "git_terminal_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On which platform do you create a pull request?",
+              "answer": "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
+              "explain": "Pull requests are created on the server interface, not from the terminal. They live alongside your code online.",
+              "choices": [
+                "In the terminal with git pr",
+                "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
+                "In a text editor",
+                "Automatically after pushing"
+              ],
+              "id": "git_terminal_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should you do before creating a pull request?",
+              "answer": "Push your branch, ensure commits are clean, and verify changes work",
+              "explain": "Review your commits, test your changes, and push to the remote before opening a pull request.",
+              "choices": [
+                "Nothing, just create it",
+                "Push your branch, ensure commits are clean, and verify changes work",
+                "Merge into main first",
+                "Delete old branches"
+              ],
+              "id": "git_terminal_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a code review in a pull request involve?",
+              "answer": "Team members checking the changes, discussing improvements, and approving before merge",
+              "explain": "Code reviews catch bugs, ensure quality, share knowledge, and maintain standards.",
+              "choices": [
+                "Only checking spelling",
+                "Team members checking the changes, discussing improvements, and approving before merge",
+                "Running the code automatically",
+                "Nothing, it is automatic"
+              ],
+              "id": "git_terminal_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the typical workflow: create feature branch, make changes, ?, merge?",
+              "answer": "Push to remote and create a pull request for review",
+              "explain": "After commits, push your branch and create a pull request. Team members review, then merge to main.",
+              "choices": [
+                "Delete your branch",
+                "Push to remote and create a pull request for review",
+                "Start a new branch",
+                "Update your resume"
+              ],
+              "id": "git_terminal_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
