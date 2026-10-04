@@ -1,0 +1,904 @@
+{
+  "id": "gpus",
+  "name": "Graphics Processors",
+  "category": "engineering",
+  "icon": "fa-solid fa-display",
+  "level": "Parallel Computing Hardware",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "CPU vs GPU Architecture",
+      "tip": "CPUs and GPUs are both processors but designed for different jobs. A CPU has few powerful cores optimized for sequential execution and complex logic. A GPU has many simple cores designed for parallel work on identical tasks. This architectural difference makes GPUs ideal for tasks where the same operation runs on many data elements.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Fundamental Differences",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary design focus of a CPU?",
+              "answer": "Sequential execution with complex logic and branch prediction",
+              "explain": "CPUs are optimized to run one instruction stream very quickly with advanced features. They handle variable workloads, loops, and conditions efficiently.",
+              "choices": [
+                "Graphics rendering only",
+                "Processing many identical operations in parallel",
+                "Maximum memory bandwidth",
+                "Sequential execution with complex logic and branch prediction"
+              ],
+              "id": "gpus_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the primary design focus of a GPU?",
+              "answer": "Executing the same operation on many pieces of data in parallel",
+              "explain": "GPUs have thousands of simple cores all doing the same work simultaneously. This is perfect for data-parallel tasks.",
+              "choices": [
+                "Running complex conditional logic",
+                "Sequential performance",
+                "Minimizing power consumption",
+                "Executing the same operation on many pieces of data in parallel"
+              ],
+              "id": "gpus_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many cores does a typical CPU have compared to a GPU?",
+              "answer": "A CPU has few cores; a GPU has thousands",
+              "explain": "CPUs typically have a handful to a few dozen cores. GPUs have thousands of simpler cores doing parallel work.",
+              "choices": [
+                "They have the same number",
+                "A CPU has more cores",
+                "It depends only on the year manufactured",
+                "A CPU has few cores; a GPU has thousands"
+              ],
+              "id": "gpus_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'latency hiding' in GPU design?",
+              "answer": "Using many threads to keep cores busy while one thread waits for memory",
+              "explain": "When memory access is slow, a GPU switches to another thread. With thousands of threads, there is always work available.",
+              "choices": [
+                "Storing data very close to the CPU",
+                "Slowing down memory requests",
+                "Predicting memory access patterns",
+                "Using many threads to keep cores busy while one thread waits for memory"
+              ],
+              "id": "gpus_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do GPU cores run slower clock speeds than CPU cores?",
+              "answer": "They are simpler designs optimized for volume and parallelism, not individual speed",
+              "explain": "GPU cores are stripped-down, simple cores. Each core runs slower, but there are so many that throughput is much higher overall.",
+              "choices": [
+                "It saves power only",
+                "They are simpler designs optimized for volume and parallelism, not individual speed",
+                "GPUs have less cooling",
+                "Modern GPUs run as fast as CPUs"
+              ],
+              "id": "gpus_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Types of GPU Hardware",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an integrated GPU?",
+              "answer": "A GPU built into the CPU or chipset, sharing system memory",
+              "explain": "Integrated GPUs share RAM with the CPU, reducing cost and power but with lower bandwidth. They are common in laptops and mobile devices.",
+              "choices": [
+                "A GPU built into the CPU or chipset, sharing system memory",
+                "A GPU that can only run one application",
+                "A GPU that only displays text",
+                "A software-based graphics processor"
+              ],
+              "id": "gpus_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a dedicated GPU?",
+              "answer": "A separate graphics card with its own dedicated memory",
+              "explain": "Dedicated GPUs have their own VRAM, usually their own power input, and connect through a slot such as PCIe. They offer much higher performance than integrated GPUs.",
+              "choices": [
+                "A GPU shared between multiple computers",
+                "A separate graphics card with its own dedicated memory",
+                "A GPU that can only run one application",
+                "A GPU that requires internet connection"
+              ],
+              "id": "gpus_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of a dedicated GPU over an integrated one?",
+              "answer": "Dedicated GPUs have more VRAM, higher bandwidth, and more processing power",
+              "explain": "Dedicated cards have independent memory and computation resources, enabling much higher performance for demanding tasks.",
+              "choices": [
+                "There is no performance difference",
+                "Integrated GPUs are more reliable",
+                "Dedicated GPUs have more VRAM, higher bandwidth, and more processing power",
+                "Integrated GPUs are faster"
+              ],
+              "id": "gpus_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a PCIe slot?",
+              "answer": "The connection standard that allows a dedicated GPU to connect to a motherboard",
+              "explain": "PCIe (PCI Express) is the high-speed bus connecting expansion cards like dedicated GPUs to the motherboard.",
+              "choices": [
+                "A type of memory module",
+                "The connection standard that allows a dedicated GPU to connect to a motherboard",
+                "A power connector",
+                "A physical security lock"
+              ],
+              "id": "gpus_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might someone choose an integrated GPU over a dedicated one?",
+              "answer": "Lower cost, lower power consumption, and simpler installation for basic tasks",
+              "explain": "Integrated GPUs are sufficient for everyday computing, web browsing, and light graphics work while using less power.",
+              "choices": [
+                "Lower cost, lower power consumption, and simpler installation for basic tasks",
+                "Integrated GPUs are always faster",
+                "They are easier to upgrade",
+                "Integrated GPUs have more dedicated memory"
+              ],
+              "id": "gpus_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "GPU Cores and Parallelism",
+      "tip": "GPU cores are organized in groups that execute the same instruction on different data. Modern GPUs have thousands of these cores arranged in streaming multiprocessors. Each core is built around a simple arithmetic logic unit (ALU), and the multiprocessor provides registers, shared memory, and cache. The massive number of cores enables GPUs to perform trillions of operations per second.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Core Organization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a GPU core?",
+              "answer": "A simple processor unit that performs basic arithmetic and logic operations",
+              "explain": "GPU cores are simpler than CPU cores. Each has an ALU for computation, but lacks complex branch prediction and caching found in CPU cores.",
+              "choices": [
+                "A type of memory module",
+                "A simple processor unit that performs basic arithmetic and logic operations",
+                "The entire GPU chip",
+                "A thermal sensor"
+              ],
+              "id": "gpus_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is SIMD execution?",
+              "answer": "Single Instruction, Multiple Data: one instruction executes on many data elements simultaneously",
+              "explain": "SIMD is the core idea behind GPU execution. A group of cores performs the same operation on different data in lockstep. Some vendors call their variant SIMT.",
+              "choices": [
+                "Synchronized Interrupt Multi-Dispatch",
+                "Software Integrated Memory Debug",
+                "Single Instruction, Multiple Data: one instruction executes on many data elements simultaneously",
+                "Single Instruction, Many Devices"
+              ],
+              "id": "gpus_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a warp or wavefront?",
+              "answer": "A group of cores executing the same instruction in lockstep on different data",
+              "explain": "A warp (in some GPU designs) or wavefront (in others) is a batch of threads all executing the same instruction simultaneously.",
+              "choices": [
+                "A memory access pattern",
+                "A type of graphics primitive",
+                "A group of cores executing the same instruction in lockstep on different data",
+                "A GPU scheduling algorithm"
+              ],
+              "id": "gpus_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of GPU registers?",
+              "answer": "Fast storage for a single core to hold intermediate computation results",
+              "explain": "Registers are the fastest memory available, local to each core. They store values being actively computed.",
+              "choices": [
+                "Storing entire programs",
+                "Communicating between GPUs",
+                "Fast storage for a single core to hold intermediate computation results",
+                "Backing up GPU memory"
+              ],
+              "id": "gpus_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many threads can a GPU typically keep in flight at once?",
+              "answer": "Far more than its core count, often tens of thousands or more",
+              "explain": "GPUs keep many more threads resident than they have cores, so that some are always ready to run while others wait on memory.",
+              "choices": [
+                "The same as CPU core count",
+                "A few hundred",
+                "Always exactly one per core",
+                "Far more than its core count, often tens of thousands or more"
+              ],
+              "id": "gpus_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Parallelism Models",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is data parallelism?",
+              "answer": "Running the same operation on many pieces of data simultaneously",
+              "explain": "Data parallelism is the GPU's strength. Process millions of pixels, particles, or data elements with the same kernel in parallel.",
+              "choices": [
+                "Storing data in parallel across networks",
+                "Running the same operation on many pieces of data simultaneously",
+                "Splitting data between hard drives",
+                "Copying data multiple times"
+              ],
+              "id": "gpus_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a GPU thread?",
+              "answer": "An independent execution context running a portion of a kernel program",
+              "explain": "Each GPU thread runs the same kernel code, but on different data. A single kernel launch can create millions of threads.",
+              "choices": [
+                "A single CPU core",
+                "A type of memory allocation",
+                "A network connection",
+                "An independent execution context running a portion of a kernel program"
+              ],
+              "id": "gpus_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a GPU kernel?",
+              "answer": "A small program that runs on thousands of GPU threads in parallel",
+              "explain": "A kernel is the function executed by every GPU thread. It processes one data element per thread.",
+              "choices": [
+                "A small program that runs on thousands of GPU threads in parallel",
+                "The operating system",
+                "A graphics API",
+                "A type of GPU memory"
+              ],
+              "id": "gpus_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'occupancy' in GPU computing?",
+              "answer": "The ratio of active warps to the maximum a GPU multiprocessor can hold",
+              "explain": "High occupancy means a multiprocessor has many warps ready to run, which helps hide memory delays. Low occupancy leaves less work available to switch to.",
+              "choices": [
+                "The amount of memory used",
+                "The power consumption rate",
+                "The ratio of active warps to the maximum a GPU multiprocessor can hold",
+                "The temperature of the GPU"
+              ],
+              "id": "gpus_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do GPUs launch millions of threads despite having fewer cores?",
+              "answer": "Threads block on memory; GPU switches to other threads, hiding latency",
+              "explain": "When one thread waits for memory, the GPU schedules thousands of others. This keeps cores busy and hides memory delays.",
+              "choices": [
+                "For compatibility with older software",
+                "To increase power consumption",
+                "More threads always run faster",
+                "Threads block on memory; GPU switches to other threads, hiding latency"
+              ],
+              "id": "gpus_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Graphics Pipeline on Hardware",
+      "tip": "The graphics pipeline is a series of stages that transform 3D models into 2D images on screen. Geometry is processed, then rasterized into pixels, then colored through shading. Some stages use fixed-function hardware, such as rasterization, while the programmable stages run as shaders on the GPU cores.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Pipeline Stages",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the graphics pipeline?",
+              "answer": "A series of hardware stages that convert 3D models into pixels on screen",
+              "explain": "The pipeline includes vertex processing, rasterization, fragment shading, and output merging. Each stage is optimized for its job.",
+              "choices": [
+                "A series of hardware stages that convert 3D models into pixels on screen",
+                "A single GPU core",
+                "Memory bandwidth measurement",
+                "A type of graphics API"
+              ],
+              "id": "gpus_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is vertex processing?",
+              "answer": "The stage that transforms 3D vertex positions and prepares per-vertex data",
+              "explain": "Vertex processing takes 3D coordinates and transforms them based on the camera and object position. It can also compute data such as normals and texture coordinates.",
+              "choices": [
+                "The stage that transforms 3D vertex positions and prepares per-vertex data",
+                "Detecting mouse clicks",
+                "Converting pixels to colors",
+                "Storing texture data"
+              ],
+              "id": "gpus_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is rasterization?",
+              "answer": "Converting 3D geometric shapes into 2D pixels for the screen",
+              "explain": "Rasterization determines which screen pixels are covered by each triangle or polygon, preparing them for color computation.",
+              "choices": [
+                "Compressing image files",
+                "Converting 3D geometric shapes into 2D pixels for the screen",
+                "Reading a mouse or keyboard",
+                "Creating 3D models from images"
+              ],
+              "id": "gpus_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fragment in the graphics pipeline?",
+              "answer": "A candidate pixel produced by rasterization that may or may not appear in the final image",
+              "explain": "Fragments are potential pixels. Shading and depth testing determine which fragments actually contribute to the final image.",
+              "choices": [
+                "A type of memory",
+                "A candidate pixel produced by rasterization that may or may not appear in the final image",
+                "A texture coordinate",
+                "A piece of 3D geometry"
+              ],
+              "id": "gpus_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the final stage of the graphics pipeline?",
+              "answer": "Output merging, which combines fragments into the final pixel colors in the framebuffer",
+              "explain": "Output merging performs depth testing, blending, and writes final colors to video memory for display.",
+              "choices": [
+                "Texture mapping",
+                "Output merging, which combines fragments into the final pixel colors in the framebuffer",
+                "Vertex transformation",
+                "Compression"
+              ],
+              "id": "gpus_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Shaders and Programmability",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a shader?",
+              "answer": "A program that runs on GPU hardware to compute colors, positions, or other visual attributes",
+              "explain": "Shaders are small programs. Vertex shaders process vertices; fragment shaders compute pixel colors. They run in parallel on thousands of cores.",
+              "choices": [
+                "A program that runs on GPU hardware to compute colors, positions, or other visual attributes",
+                "A type of light source",
+                "A memory optimization",
+                "A graphics file format"
+              ],
+              "id": "gpus_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a vertex shader?",
+              "answer": "A program that runs once per vertex, transforming positions and calculating per-vertex properties",
+              "explain": "Vertex shaders execute in parallel on every vertex. They transform coordinates, compute lighting contributions, and prepare data for rasterization.",
+              "choices": [
+                "A program that processes every pixel",
+                "A program that runs once per vertex, transforming positions and calculating per-vertex properties",
+                "A program that detects collisions",
+                "A program that compresses data"
+              ],
+              "id": "gpus_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fragment shader?",
+              "answer": "A program that runs once per fragment, computing the final color for that screen pixel",
+              "explain": "Fragment shaders run in parallel on millions of fragments. They determine colors based on textures, lighting, and other inputs.",
+              "choices": [
+                "A program that creates models",
+                "A program that processes vertices",
+                "A program that runs once per fragment, computing the final color for that screen pixel",
+                "A program that reads keyboard input"
+              ],
+              "id": "gpus_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'shader compilation'?",
+              "answer": "Converting shader source code into machine instructions for the GPU",
+              "explain": "Shaders are compiled by the GPU driver into code the GPU can execute. This happens at runtime or offline.",
+              "choices": [
+                "Loading textures into memory",
+                "Storing shader data",
+                "Converting shader source code into machine instructions for the GPU",
+                "Creating a shadow effect"
+              ],
+              "id": "gpus_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'branching' in shaders mean?",
+              "answer": "Using if-then-else logic where different threads may take different code paths",
+              "explain": "Branching can be slow on GPUs when threads in the same warp take different paths, because the hardware must run each path in turn. This is called divergence and reduces parallelism.",
+              "choices": [
+                "GPU-to-GPU communication",
+                "Using if-then-else logic where different threads may take different code paths",
+                "Memory allocation",
+                "Creating tree structures"
+              ],
+              "id": "gpus_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "GPU Memory Hierarchy",
+      "tip": "GPUs have multiple levels of memory with different speeds and sizes. Register memory is fastest but smallest, local to each core. Shared memory is fast and shared within a work group. Global memory is large but slower. The memory hierarchy is crucial to GPU performance: accessing register or shared memory is fast; accessing global memory takes hundreds of cycles.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Memory Types and Speed",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is VRAM in a GPU?",
+              "answer": "Video RAM, the main memory attached to the GPU for storing textures, models, and framebuffers",
+              "explain": "VRAM is dedicated memory on the graphics card. It holds all data the GPU needs: images, geometry, and computed results.",
+              "choices": [
+                "Video RAM, the main memory attached to the GPU for storing textures, models, and framebuffers",
+                "A type of GPU core",
+                "System RAM only",
+                "Virtual RAM on the hard drive"
+              ],
+              "id": "gpus_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is GPU memory bandwidth?",
+              "answer": "The amount of data that can be read from or written to memory per unit time",
+              "explain": "Bandwidth is critical to GPU performance. GPUs prioritize bandwidth over latency, with wide memory buses accessing gigabytes per second.",
+              "choices": [
+                "The amount of data that can be read from or written to memory per unit time",
+                "The size of memory",
+                "The frequency of memory clock",
+                "The delay to access memory"
+              ],
+              "id": "gpus_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are GPU registers?",
+              "answer": "The fastest memory, local to each core, storing active computation values",
+              "explain": "Registers are on-core memory with the lowest access time. Space is limited, so each thread can use only a limited number of registers.",
+              "choices": [
+                "A type of network connection",
+                "An indexing data structure",
+                "The fastest memory, local to each core, storing active computation values",
+                "Secondary storage on disk"
+              ],
+              "id": "gpus_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is shared memory on a GPU?",
+              "answer": "Fast memory shared by all cores in a thread block or work group",
+              "explain": "Shared memory is faster than global memory but slower than registers. Multiple cores can access it, enabling data sharing within a group.",
+              "choices": [
+                "A network resource",
+                "The same as global memory",
+                "System RAM accessed by the GPU",
+                "Fast memory shared by all cores in a thread block or work group"
+              ],
+              "id": "gpus_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is cache memory on a GPU?",
+              "answer": "Transparent hardware that automatically stores recently accessed memory to speed access",
+              "explain": "GPU caches (L1, L2) automatically keep frequently accessed data nearby, reducing average memory latency.",
+              "choices": [
+                "A backup copy of data",
+                "Encrypted data storage",
+                "Memory you manage manually in code",
+                "Transparent hardware that automatically stores recently accessed memory to speed access"
+              ],
+              "id": "gpus_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Memory Access Patterns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'coalesced memory access'?",
+              "answer": "When multiple threads access adjacent memory locations, allowing efficient parallel reads",
+              "explain": "Coalescing combines multiple memory requests into fewer transactions. It is crucial for GPU performance.",
+              "choices": [
+                "When multiple threads access adjacent memory locations, allowing efficient parallel reads",
+                "Splitting a single memory access",
+                "Slowing down memory access",
+                "Encrypting memory data"
+              ],
+              "id": "gpus_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens with non-coalesced memory access?",
+              "answer": "Multiple memory transactions are needed for what could be a single transaction, reducing efficiency",
+              "explain": "When threads access scattered locations, the GPU must issue many separate memory requests, wasting bandwidth.",
+              "choices": [
+                "The GPU shuts down",
+                "Data is automatically reorganized",
+                "Access becomes faster",
+                "Multiple memory transactions are needed for what could be a single transaction, reducing efficiency"
+              ],
+              "id": "gpus_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is memory striding?",
+              "answer": "Accessing memory at regular intervals, which can prevent coalescing if the stride is poor",
+              "explain": "If threads access every nth element, they may not coalesce. Choosing stride carefully is important for performance.",
+              "choices": [
+                "Storing data in order",
+                "Walking while reading",
+                "Buffering incoming data",
+                "Accessing memory at regular intervals, which can prevent coalescing if the stride is poor"
+              ],
+              "id": "gpus_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'bank conflict' in shared memory?",
+              "answer": "When multiple threads access different addresses in the same memory bank at once, serializing the access",
+              "explain": "Shared memory is divided into banks. If several threads hit different addresses in the same bank, the requests serialize, reducing parallelism.",
+              "choices": [
+                "A GPU shutdown",
+                "A firewall configuration",
+                "When multiple threads access different addresses in the same memory bank at once, serializing the access",
+                "A memory overflow"
+              ],
+              "id": "gpus_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is memory access pattern optimization important for GPU performance?",
+              "answer": "Memory throughput is a bottleneck; efficient patterns maximize parallelism and bandwidth utilization",
+              "explain": "CPUs rely on deep caches to hide memory delays. GPUs rely on bandwidth and many threads, making access patterns critical to performance.",
+              "choices": [
+                "It encrypts data",
+                "Memory throughput is a bottleneck; efficient patterns maximize parallelism and bandwidth utilization",
+                "It prevents hardware failure",
+                "It allows code to be human-readable"
+              ],
+              "id": "gpus_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "General-Purpose GPU Computing",
+      "tip": "GPUs are not just for graphics. General-Purpose GPU (GPGPU) computing uses GPUs for scientific simulations, machine learning, data processing, and other compute tasks. The same massive parallelism that renders images can train neural networks or simulate physics. GPGPU frameworks allow programmers to write general compute kernels that run on GPU cores.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Beyond Graphics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is GPGPU computing?",
+              "answer": "Using GPUs for general-purpose compute tasks beyond graphics rendering",
+              "explain": "GPGPU leverages the same parallel hardware for machine learning, scientific computing, signal processing, and data analysis.",
+              "choices": [
+                "Rendering video files",
+                "Using GPUs for general-purpose compute tasks beyond graphics rendering",
+                "Graphics processing only",
+                "A type of CPU processor"
+              ],
+              "id": "gpus_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do GPUs accelerate machine learning?",
+              "answer": "Neural network computations involve massive matrix operations that GPUs execute in parallel",
+              "explain": "Training and inference require multiplying huge matrices. GPUs execute millions of independent multiplications simultaneously.",
+              "choices": [
+                "Machine learning runs only on CPUs",
+                "They understand machine learning algorithms",
+                "Neural network computations involve massive matrix operations that GPUs execute in parallel",
+                "GPUs store the training data more cheaply"
+              ],
+              "id": "gpus_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a compute shader?",
+              "answer": "A shader program that performs general computations, not tied to graphics",
+              "explain": "Compute shaders run arbitrary parallel algorithms. They are decoupled from the graphics pipeline.",
+              "choices": [
+                "A shader program that performs general computations, not tied to graphics",
+                "A shader that requires a monitor",
+                "A shader that darkens surfaces",
+                "A shader that only works on textures"
+              ],
+              "id": "gpus_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What types of problems benefit most from GPU acceleration?",
+              "answer": "Data-parallel problems with millions of independent operations on structured data",
+              "explain": "GPUs excel when the same operation runs on many data elements. Simulations, machine learning, and image processing are ideal.",
+              "choices": [
+                "Sequential decision trees",
+                "Problems with deep recursion",
+                "Data-parallel problems with millions of independent operations on structured data",
+                "Tasks requiring fast memory latency"
+              ],
+              "id": "gpus_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a problem not benefit from GPU acceleration?",
+              "answer": "If it requires sequential processing, has many branches, or data transfers overshadow computation",
+              "explain": "GPUs are worst at sequential workloads, heavily branched code, and moving data on and off the card.",
+              "choices": [
+                "The problem is too difficult",
+                "If it requires sequential processing, has many branches, or data transfers overshadow computation",
+                "GPUs always provide speedup",
+                "GPU hardware is always slower"
+              ],
+              "id": "gpus_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "GPU Computing Frameworks",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a GPU computing framework?",
+              "answer": "A programming interface allowing you to write parallel compute kernels for GPUs",
+              "explain": "Frameworks abstract the GPU hardware, letting programmers write compute programs without low-level graphics knowledge.",
+              "choices": [
+                "A programming interface allowing you to write parallel compute kernels for GPUs",
+                "A network protocol",
+                "A physical building for GPU servers",
+                "A type of cooling system"
+              ],
+              "id": "gpus_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do compute shaders and compute frameworks such as OpenCL have in common?",
+              "answer": "Both let programmers run general computation on the GPU",
+              "explain": "Compute shaders live inside graphics APIs, while frameworks such as OpenCL are separate compute-focused interfaces. Both run parallel kernels on GPU hardware.",
+              "choices": [
+                "Compute shaders replace frameworks",
+                "They are the same product",
+                "Both let programmers run general computation on the GPU",
+                "Frameworks only draw graphics"
+              ],
+              "id": "gpus_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is data transfer between CPU and GPU important to performance?",
+              "answer": "Transferring data to the GPU takes time; if computation time is short, transfer overhead dominates",
+              "explain": "PCIe bandwidth is much lower than GPU memory bandwidth. Large transfers can negate acceleration benefits.",
+              "choices": [
+                "Transfer speed is always fast",
+                "Data transfer is not important",
+                "Transferring data to the GPU takes time; if computation time is short, transfer overhead dominates",
+                "Data always transfers instantly"
+              ],
+              "id": "gpus_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'arithmetic intensity' in GPU computing?",
+              "answer": "The ratio of arithmetic operations to memory access, indicating GPU utilization potential",
+              "explain": "High arithmetic intensity means lots of computation per byte loaded. Low intensity means memory bottleneck dominates.",
+              "choices": [
+                "The ratio of arithmetic operations to memory access, indicating GPU utilization potential",
+                "The power consumption rate",
+                "The error rate in calculations",
+                "How hard the GPU works"
+              ],
+              "id": "gpus_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is GPU acceleration most valuable for a compute task?",
+              "answer": "When arithmetic intensity is high and the algorithm is data-parallel",
+              "explain": "High arithmetic intensity means computation outweighs memory transfer overhead. Data parallelism matches GPU strengths.",
+              "choices": [
+                "Never, CPUs are always better",
+                "For sequential algorithms only",
+                "When arithmetic intensity is high and the algorithm is data-parallel",
+                "For all tasks equally"
+              ],
+              "id": "gpus_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Power and Cooling",
+      "tip": "GPUs consume significant electrical power, generating substantial heat. Power consumption scales with the number of cores and clock speed. Heat dissipation requires effective cooling: massive heatsinks and fans, or liquid cooling in extreme cases. Power delivery must be robust to avoid voltage drops that reduce performance or stability.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Power Consumption",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What determines GPU power consumption?",
+              "answer": "Number of cores active, clock speed, and voltage supplied to the chip",
+              "explain": "Power use scales with core count and clock frequency. Voltage has a quadratic effect, so even small reductions save significant power.",
+              "choices": [
+                "Only the number of cores",
+                "Internet speed",
+                "Number of cores active, clock speed, and voltage supplied to the chip",
+                "The monitor brightness"
+              ],
+              "id": "gpus_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'throttling' in GPU operation?",
+              "answer": "Automatically reducing clock speed or voltage to stay within power and thermal limits",
+              "explain": "Throttling prevents overheating and power supply failure. It trades performance for stability when thermal limits approach.",
+              "choices": [
+                "Automatically reducing clock speed or voltage to stay within power and thermal limits",
+                "Stopping a network connection",
+                "Erasing GPU memory",
+                "Closing the GPU connection"
+              ],
+              "id": "gpus_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do many high-end dedicated GPUs require external power connectors?",
+              "answer": "The PCIe slot supplies only limited power, so additional connectors deliver the rest",
+              "explain": "High-end GPUs can draw hundreds of watts, but the PCIe slot supplies only a small share of that. Extra connectors deliver the rest.",
+              "choices": [
+                "The PCIe slot supplies only limited power, so additional connectors deliver the rest",
+                "For network connectivity",
+                "To reduce heat",
+                "For data transfer only"
+              ],
+              "id": "gpus_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'power efficiency' in GPUs?",
+              "answer": "How much computation is performed per unit of electrical power consumed",
+              "explain": "Efficiency measures performance per watt. Better efficiency means less heat and lower electricity bills.",
+              "choices": [
+                "The memory size",
+                "How fast a GPU runs",
+                "How much computation is performed per unit of electrical power consumed",
+                "The cooling system quality"
+              ],
+              "id": "gpus_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'dynamic voltage and frequency scaling' (DVFS)?",
+              "answer": "Adjusting voltage and clock speed in real time based on workload to save power",
+              "explain": "DVFS lowers power consumption during light loads and boosts it for demanding work, balancing performance and efficiency.",
+              "choices": [
+                "A cooling system",
+                "A graphics API",
+                "Adjusting voltage and clock speed in real time based on workload to save power",
+                "A security feature"
+              ],
+              "id": "gpus_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Thermal Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why do GPUs require cooling systems?",
+              "answer": "High power consumption generates heat; cooling prevents overheating and ensures reliable operation",
+              "explain": "Modern GPUs are compact but consume hundreds of watts. Without cooling, silicon temperature would exceed operational limits.",
+              "choices": [
+                "High power consumption generates heat; cooling prevents overheating and ensures reliable operation",
+                "For comfort of nearby people",
+                "To reduce noise",
+                "Because data centers prefer cold rooms"
+              ],
+              "id": "gpus_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a heatsink in GPU cooling?",
+              "answer": "A metal structure with large surface area that transfers heat from the GPU to the air",
+              "explain": "Heatsinks use fins to increase surface area. Air passing through carries heat away from the GPU.",
+              "choices": [
+                "A metal structure with large surface area that transfers heat from the GPU to the air",
+                "A thermal sensor",
+                "A fan only",
+                "A water container"
+              ],
+              "id": "gpus_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is thermal paste in GPU installation?",
+              "answer": "A conductive material placed between the GPU and heatsink to improve heat transfer",
+              "explain": "Thermal paste fills microscopic gaps, creating better contact and allowing heat to flow efficiently to the heatsink.",
+              "choices": [
+                "An insulating barrier",
+                "A waterproofing compound",
+                "A cooling liquid",
+                "A conductive material placed between the GPU and heatsink to improve heat transfer"
+              ],
+              "id": "gpus_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is liquid cooling in GPUs?",
+              "answer": "Circulating liquid through channels to absorb and transport GPU heat away efficiently",
+              "explain": "Liquid cooling handles extreme heat loads better than air cooling. It is common in overclocked systems and data centres.",
+              "choices": [
+                "Circulating liquid through channels to absorb and transport GPU heat away efficiently",
+                "Cooling only the memory",
+                "A type of thermal paste",
+                "Using water to power the GPU"
+              ],
+              "id": "gpus_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the junction temperature of a GPU?",
+              "answer": "The maximum safe operating temperature at the silicon junction where transistors operate",
+              "explain": "Exceeding junction temperature can damage the chip, so GPUs throttle first. Limits are roughly 85 to 110 degrees Celsius depending on the model.",
+              "choices": [
+                "The room temperature where the GPU sits",
+                "The cooling system temperature",
+                "A network connection point",
+                "The maximum safe operating temperature at the silicon junction where transistors operate"
+              ],
+              "id": "gpus_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

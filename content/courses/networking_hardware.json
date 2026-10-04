@@ -1,0 +1,904 @@
+{
+  "id": "networking_hardware",
+  "name": "Networking Hardware",
+  "category": "engineering",
+  "icon": "fa-solid fa-ethernet",
+  "level": "The Gear Behind Networks",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Network Fundamentals",
+      "tip": "A network is a set of computers and devices connected together to share data and resources. Data travels between devices along physical paths called links. Every device on a network has a unique address to identify it.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Networks Are",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary purpose of a computer network?",
+              "answer": "To allow devices to communicate and share resources",
+              "explain": "Networks connect computers and devices so they can exchange data, share printers, access files, and communicate with each other over distances.",
+              "choices": [
+                "To store data permanently",
+                "To increase the speed of a single computer",
+                "To replace telephone lines",
+                "To allow devices to communicate and share resources"
+              ],
+              "id": "networking_hardware_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'node' in a network?",
+              "answer": "Any device connected to the network that can send or receive data",
+              "explain": "A node is any device that participates in the network, such as a computer, printer, router, or mobile phone.",
+              "choices": [
+                "A security protocol",
+                "A type of cable",
+                "A software application",
+                "Any device connected to the network that can send or receive data"
+              ],
+              "id": "networking_hardware_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a network address identify?",
+              "answer": "A unique location for a device on the network",
+              "explain": "Every device on a network needs a unique address so data can be routed to it. This allows devices to find and communicate with each other.",
+              "choices": [
+                "The manufacturer of a device",
+                "A unique location for a device on the network",
+                "The age of a device",
+                "The type of cables used"
+              ],
+              "id": "networking_hardware_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'link' in networking?",
+              "answer": "The physical or logical connection between two devices",
+              "explain": "A link is the path data travels along. It can be a physical cable, wireless connection, or any medium connecting two nodes.",
+              "choices": [
+                "A wireless frequency",
+                "A firewall rule",
+                "The physical or logical connection between two devices",
+                "A hyperlink on a webpage"
+              ],
+              "id": "networking_hardware_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a LAN and the internet?",
+              "answer": "A LAN connects nearby devices; the internet connects networks across the world",
+              "explain": "A LAN (Local Area Network) is small and local, like in a home or office. The internet is a global network of networks.",
+              "choices": [
+                "The internet is faster",
+                "LANs use cables; the internet uses wireless",
+                "LANs are more secure",
+                "A LAN connects nearby devices; the internet connects networks across the world"
+              ],
+              "id": "networking_hardware_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "How Data Travels",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'packet' in networking?",
+              "answer": "A small unit of data divided for transmission across a network",
+              "explain": "Data is broken into packets before transmission. Each packet contains the destination address and a piece of the original data.",
+              "choices": [
+                "A device on a network",
+                "A small unit of data divided for transmission across a network",
+                "A type of wireless signal",
+                "The physical cable connecting devices"
+              ],
+              "id": "networking_hardware_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'routing'?",
+              "answer": "The process of directing data packets toward their destination",
+              "explain": "Routing determines the path packets take across a network. Routers examine the destination address and forward packets along the best available path.",
+              "choices": [
+                "Encrypting network traffic",
+                "Organizing cables",
+                "The process of directing data packets toward their destination",
+                "Creating backups of data"
+              ],
+              "id": "networking_hardware_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is data split into packets rather than sent as one large unit?",
+              "answer": "Packets allow efficient sharing of the network and easier error recovery",
+              "explain": "Smaller packets let multiple devices share the network without one message blocking others. If a packet is lost, only that small piece needs to be resent.",
+              "choices": [
+                "Packets use less electricity",
+                "Packets are easier to store",
+                "Packets travel faster",
+                "Packets allow efficient sharing of the network and easier error recovery"
+              ],
+              "id": "networking_hardware_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'bandwidth' describe?",
+              "answer": "The maximum rate at which data can be transmitted over a connection",
+              "explain": "Bandwidth is how much data can flow through a connection in a given time, like the width of a pipe determines water flow.",
+              "choices": [
+                "The distance between devices",
+                "The maximum rate at which data can be transmitted over a connection",
+                "The security level of a network",
+                "The physical width of a cable"
+              ],
+              "id": "networking_hardware_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'latency' in networking?",
+              "answer": "The delay time for data to travel from source to destination",
+              "explain": "Latency is the time it takes for a packet to reach its destination. Lower latency means faster response times.",
+              "choices": [
+                "The number of devices on a network",
+                "The total amount of data transmitted",
+                "The delay time for data to travel from source to destination",
+                "The strength of a wireless signal"
+              ],
+              "id": "networking_hardware_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Physical Connections and Cables",
+      "tip": "Networks rely on physical media to transmit signals between devices. Different cable types carry data in different ways: copper wires transmit electrical signals, fiber optic cables transmit light, and coaxial cables shield signals from interference. Twisted pair is the most common in modern networks.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Cable Types and Media",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is twisted pair cable?",
+              "answer": "Copper wire twisted in pairs to reduce electrical interference",
+              "explain": "Twisted pair uses twisted pairs of copper conductors. The twist pattern minimizes electromagnetic interference from surrounding sources.",
+              "choices": [
+                "A type of wireless transmission",
+                "Cable made from plastic material",
+                "Cables used only in telephone systems",
+                "Copper wire twisted in pairs to reduce electrical interference"
+              ],
+              "id": "networking_hardware_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of fiber optic cable over copper?",
+              "answer": "It transmits light signals immune to electromagnetic interference and over longer distances",
+              "explain": "Fiber optic uses pulses of light through glass fibers. Light is not affected by electrical interference and can travel much farther without loss.",
+              "choices": [
+                "It transmits light signals immune to electromagnetic interference and over longer distances",
+                "It is easier to install",
+                "It is cheaper than copper",
+                "It requires less maintenance"
+              ],
+              "id": "networking_hardware_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is coaxial cable?",
+              "answer": "A cable with a center conductor surrounded by a shield to block interference",
+              "explain": "Coaxial cable has a copper core surrounded by insulation, a conducting shield, and an outer jacket. The shield blocks external interference.",
+              "choices": [
+                "Cable used in fiber optic systems",
+                "A cable with a center conductor surrounded by a shield to block interference",
+                "The same as twisted pair",
+                "Cable used only for audio"
+              ],
+              "id": "networking_hardware_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'attenuation' in networking cables?",
+              "answer": "The weakening of the signal as it travels over distance",
+              "explain": "Attenuation is signal loss that occurs naturally over distance. Longer cables suffer more attenuation, which is why repeaters and amplifiers are used.",
+              "choices": [
+                "The type of connector used",
+                "The interference between cables",
+                "The weakening of the signal as it travels over distance",
+                "The speed of the signal"
+              ],
+              "id": "networking_hardware_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'repeater' in networking?",
+              "answer": "A device that extends a signal by amplifying it for longer distances",
+              "explain": "Repeaters read incoming weak signals and retransmit them at full strength, allowing signals to travel farther than a single cable run.",
+              "choices": [
+                "A security firewall",
+                "A type of router",
+                "A device that extends a signal by amplifying it for longer distances",
+                "A type of connector"
+              ],
+              "id": "networking_hardware_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Connectors and Standards",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a network interface card (NIC)?",
+              "answer": "The hardware that connects a device to a network",
+              "explain": "A NIC is the component that enables a computer or device to connect to a network. It handles converting network signals for the device.",
+              "choices": [
+                "A router component",
+                "A security encryption device",
+                "The hardware that connects a device to a network",
+                "A type of cable"
+              ],
+              "id": "networking_hardware_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a NIC use to identify itself on a network?",
+              "answer": "A MAC address (Media Access Control address)",
+              "explain": "Every NIC has a unique MAC address, usually written as six pairs of hexadecimal digits, used to identify it on the local network.",
+              "choices": [
+                "A MAC address (Media Access Control address)",
+                "A password",
+                "A serial number",
+                "An IP address only"
+              ],
+              "id": "networking_hardware_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a MAC address and an IP address?",
+              "answer": "MAC addresses identify devices on a local network; IP addresses route across the internet",
+              "explain": "MAC addresses work on the local network segment. IP addresses work globally and route data across the internet.",
+              "choices": [
+                "They are the same thing",
+                "MAC addresses are faster",
+                "MAC addresses identify devices on a local network; IP addresses route across the internet",
+                "IP addresses are only for wireless"
+              ],
+              "id": "networking_hardware_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an RJ45 connector?",
+              "answer": "The standard connector for twisted pair Ethernet cables",
+              "explain": "RJ45 is the eight-pin connector used for Ethernet cables. It is the most common connector for network cables in homes and offices.",
+              "choices": [
+                "A wireless antenna connector",
+                "A coaxial cable connector",
+                "A type of fiber optic connector",
+                "The standard connector for twisted pair Ethernet cables"
+              ],
+              "id": "networking_hardware_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the role of a connector in networking?",
+              "answer": "To provide a physical interface for cables to attach to network devices",
+              "explain": "Connectors allow cables to be attached and detached from equipment. They ensure proper electrical contact and signal transmission.",
+              "choices": [
+                "To boost signal strength",
+                "To encrypt network traffic",
+                "To provide a physical interface for cables to attach to network devices",
+                "To filter out interference"
+              ],
+              "id": "networking_hardware_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Network Devices",
+      "tip": "Networks use specialized devices to manage connections and direct traffic. Switches connect devices on the same network segment. Routers connect different networks and direct traffic between them. Hubs are older devices that broadcast to all ports. Each device has a specific role in how data moves.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Switches and Hubs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a network hub?",
+              "answer": "An older device that broadcasts data to all connected ports",
+              "explain": "A hub repeats any incoming data to all other ports without filtering. It is inefficient and creates collisions, so switches have replaced it.",
+              "choices": [
+                "A device that routes data between networks",
+                "A security device",
+                "A type of cable",
+                "An older device that broadcasts data to all connected ports"
+              ],
+              "id": "networking_hardware_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a network switch?",
+              "answer": "A device that forwards data only to the port where the destination device is located",
+              "explain": "A switch learns which devices are connected to which ports. It only sends data to the specific port needed, not to all ports.",
+              "choices": [
+                "A device that forwards data only to the port where the destination device is located",
+                "A device that routes data between networks",
+                "An older version of a hub",
+                "A wireless router"
+              ],
+              "id": "networking_hardware_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of a switch over a hub?",
+              "answer": "Switches reduce collisions and use bandwidth more efficiently by directing traffic",
+              "explain": "Switches forward frames only to the appropriate port, reducing wasted traffic and collisions that slow down networks.",
+              "choices": [
+                "Switches reduce collisions and use bandwidth more efficiently by directing traffic",
+                "Switches are cheaper",
+                "Switches are easier to install",
+                "Switches are smaller"
+              ],
+              "id": "networking_hardware_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a port on a switch?",
+              "answer": "A physical connection point where network cables are attached",
+              "explain": "Each port on a switch is a physical socket. Most are RJ45 sockets for copper cable, and some take fiber modules. Data flows in and out through these ports.",
+              "choices": [
+                "A security firewall rule",
+                "A type of protocol",
+                "A physical connection point where network cables are attached",
+                "A software setting"
+              ],
+              "id": "networking_hardware_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a switch learn through normal operation?",
+              "answer": "Which MAC addresses are connected to which physical ports",
+              "explain": "Switches build a MAC address table by observing the source addresses of frames arriving on each port. This allows them to forward frames intelligently.",
+              "choices": [
+                "All IP addresses on the internet",
+                "Which MAC addresses are connected to which physical ports",
+                "The speed of all networks",
+                "All passwords on the network"
+              ],
+              "id": "networking_hardware_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Routers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary function of a router?",
+              "answer": "To forward data between different networks using IP addresses",
+              "explain": "Routers connect separate networks and direct packets between them. They examine IP addresses to determine the best path forward.",
+              "choices": [
+                "To connect all devices to the internet simultaneously",
+                "To forward data between different networks using IP addresses",
+                "To amplify wireless signals",
+                "To encrypt all network traffic"
+              ],
+              "id": "networking_hardware_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a router differ from a switch?",
+              "answer": "Switches use MAC addresses for local networks; routers use IP addresses across networks",
+              "explain": "Switches operate locally within a network segment using MAC addresses. Routers operate across network boundaries using IP addresses.",
+              "choices": [
+                "Routers are slower",
+                "There is no difference",
+                "Switches are wireless; routers are wired",
+                "Switches use MAC addresses for local networks; routers use IP addresses across networks"
+              ],
+              "id": "networking_hardware_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a routing table?",
+              "answer": "A list of network destinations and the paths routers use to reach them",
+              "explain": "A routing table stores information about available routes. Routers consult it to decide where to send each packet.",
+              "choices": [
+                "A security permission list",
+                "A list of all users on a network",
+                "A table of network speeds",
+                "A list of network destinations and the paths routers use to reach them"
+              ],
+              "id": "networking_hardware_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a default gateway?",
+              "answer": "The router a device sends traffic to when the destination is on another network",
+              "explain": "When a device needs to reach another network, it hands the packet to its default gateway, which is a router that forwards it toward the destination.",
+              "choices": [
+                "The destination device",
+                "The router a device sends traffic to when the destination is on another network",
+                "The internet service provider itself",
+                "The nearest switch"
+              ],
+              "id": "networking_hardware_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'routing overhead'?",
+              "answer": "The time and processing required for a router to examine packets and forward them",
+              "explain": "Routing adds latency because routers must read packet headers, look up routes, and process the data. This is necessary overhead.",
+              "choices": [
+                "The cost of network equipment",
+                "The time and processing required for a router to examine packets and forward them",
+                "The physical weight of cables",
+                "The noise level in server rooms"
+              ],
+              "id": "networking_hardware_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Wireless Networks and Access Points",
+      "tip": "Wireless networks transmit data through the air using radio waves on specific frequency bands. Access points (APs) create wireless networks and bridge between wireless devices and wired networks. Wi-Fi bands determine range, speed, and interference characteristics. Many devices and access points can use more than one band.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Wi-Fi Bands and Frequencies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an access point (AP)?",
+              "answer": "A device that creates a wireless network and allows devices to connect wirelessly",
+              "explain": "An AP broadcasts a wireless signal and accepts connections from wireless devices. It bridges wireless devices to the wired network.",
+              "choices": [
+                "A type of router",
+                "A security firewall device",
+                "A device that creates a wireless network and allows devices to connect wirelessly",
+                "A physical network cable"
+              ],
+              "id": "networking_hardware_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 2.4 GHz Wi-Fi band known for?",
+              "answer": "Better range and penetration through walls than higher frequency bands",
+              "explain": "The 2.4 GHz band has longer wavelengths that diffract around obstacles better. This gives it better range but more potential interference.",
+              "choices": [
+                "Most secure channel",
+                "Fastest speeds",
+                "Uses less power",
+                "Better range and penetration through walls than higher frequency bands"
+              ],
+              "id": "networking_hardware_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 5 GHz Wi-Fi band known for?",
+              "answer": "Higher speeds and less interference due to more available channels",
+              "explain": "The 5 GHz band has higher frequency, shorter wavelengths, less interference, and more available channels for faster speeds.",
+              "choices": [
+                "Better range through walls",
+                "Higher speeds and less interference due to more available channels",
+                "Lower power consumption",
+                "More devices can connect"
+              ],
+              "id": "networking_hardware_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'channel overlap' in Wi-Fi?",
+              "answer": "When multiple APs on the same band use overlapping frequency ranges, causing interference",
+              "explain": "Wi-Fi channels are defined frequency ranges. Overlapping channels interfere with each other, reducing speed and reliability.",
+              "choices": [
+                "When multiple APs on the same band use overlapping frequency ranges, causing interference",
+                "Using multiple network names",
+                "Having too many connected devices",
+                "Switching between bands automatically"
+              ],
+              "id": "networking_hardware_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In which unit is Wi-Fi signal strength usually reported?",
+              "answer": "dBm (decibels relative to one milliwatt)",
+              "explain": "Signal strength is measured in dBm. Closer to zero (like -30 dBm) is stronger; more negative numbers (like -80 dBm) are weaker.",
+              "choices": [
+                "Ohms",
+                "Voltage",
+                "Megahertz",
+                "dBm (decibels relative to one milliwatt)"
+              ],
+              "id": "networking_hardware_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Wireless Network Architecture",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between ad-hoc and infrastructure wireless networks?",
+              "answer": "Ad-hoc devices connect directly; infrastructure uses an access point as central hub",
+              "explain": "In ad-hoc, devices communicate directly with each other. In infrastructure mode, all wireless devices connect to an AP.",
+              "choices": [
+                "Infrastructure is only for homes",
+                "Ad-hoc is more secure",
+                "Ad-hoc devices connect directly; infrastructure uses an access point as central hub",
+                "They are the same thing"
+              ],
+              "id": "networking_hardware_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a mesh network?",
+              "answer": "A wireless network where multiple APs relay data to extend range",
+              "explain": "In a mesh network, APs cooperate and relay each other's signals to expand coverage. A device can connect through any AP.",
+              "choices": [
+                "A wireless network where multiple APs relay data to extend range",
+                "A type of encryption",
+                "A network of printers only",
+                "A network with no wires"
+              ],
+              "id": "networking_hardware_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What role does an access point play in a wireless network?",
+              "answer": "It broadcasts a wireless signal and bridges wireless devices to the wired network",
+              "explain": "An AP creates the wireless network signal and connects wireless devices to the rest of the network infrastructure.",
+              "choices": [
+                "It blocks unauthorized devices",
+                "It broadcasts a wireless signal and bridges wireless devices to the wired network",
+                "It encrypts all wireless traffic",
+                "It amplifies internet speed"
+              ],
+              "id": "networking_hardware_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an SSID?",
+              "answer": "The network name broadcast by an access point that devices use to identify it",
+              "explain": "SSID (Service Set Identifier) is the wireless network name you see when scanning for available networks.",
+              "choices": [
+                "A type of wireless channel",
+                "An encryption standard",
+                "The network name broadcast by an access point that devices use to identify it",
+                "A security password"
+              ],
+              "id": "networking_hardware_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is roaming in wireless networks?",
+              "answer": "The ability of a device to move between APs without losing connection",
+              "explain": "Roaming allows a device to automatically connect to the strongest available AP in a network. This enables continuous coverage.",
+              "choices": [
+                "Changing Wi-Fi frequencies",
+                "The ability of a device to move between APs without losing connection",
+                "Moving between different networks",
+                "Traveling to different countries"
+              ],
+              "id": "networking_hardware_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Modems, PoE, and Network Security",
+      "tip": "Modems convert signals from internet service providers into usable network connections. Power over Ethernet (PoE) delivers electrical power and data through the same cable, enabling remote devices like access points. Firewalls filter traffic based on rules to protect networks from unauthorized access.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Modems and Power",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a modem?",
+              "answer": "A device that converts signals from an ISP into data a computer can use",
+              "explain": "A modem (modulator-demodulator) takes the signal from your ISP and converts it into a form your router and devices can use, such as Ethernet data.",
+              "choices": [
+                "A device that converts signals from an ISP into data a computer can use",
+                "A security encryption device",
+                "A type of router",
+                "A device that amplifies wireless signals"
+              ],
+              "id": "networking_hardware_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Power over Ethernet (PoE)?",
+              "answer": "A system that delivers electrical power through the same cables as network data",
+              "explain": "PoE allows powered devices like APs, IP cameras, and phones to receive power from network cables, eliminating the need for separate power cables.",
+              "choices": [
+                "A system that delivers electrical power through the same cables as network data",
+                "A wireless power standard",
+                "A type of security protocol",
+                "A way to boost internet speed"
+              ],
+              "id": "networking_hardware_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a PoE injector?",
+              "answer": "A device that adds power to network cables to supply remote devices",
+              "explain": "A PoE injector takes a standard network cable and adds power to it, allowing remote devices to be powered without separate electrical lines.",
+              "choices": [
+                "A type of router",
+                "A device that adds power to network cables to supply remote devices",
+                "A wireless repeater",
+                "A firewall device"
+              ],
+              "id": "networking_hardware_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is PoE useful for network infrastructure?",
+              "answer": "It simplifies installation by eliminating separate power cables for remote devices",
+              "explain": "PoE reduces installation complexity and cost by combining power and data into one cable, especially useful for rooftop APs and remote cameras.",
+              "choices": [
+                "It simplifies installation by eliminating separate power cables for remote devices",
+                "It provides better security",
+                "It increases network speed",
+                "It uses less bandwidth"
+              ],
+              "id": "networking_hardware_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of a combined modem-router device?",
+              "answer": "It reduces the number of devices and simplifies setup for home networks",
+              "explain": "A modem-router combo does the job of two devices in one, saving space and simplifying installation for residential customers.",
+              "choices": [
+                "It is always faster than separate devices",
+                "It uses less power",
+                "It is more secure than separate devices",
+                "It reduces the number of devices and simplifies setup for home networks"
+              ],
+              "id": "networking_hardware_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Firewalls and Network Protection",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a firewall?",
+              "answer": "A device or software that filters network traffic based on security rules",
+              "explain": "A firewall examines incoming and outgoing traffic and blocks or allows it based on configured rules. It acts as a barrier between networks.",
+              "choices": [
+                "A device or software that filters network traffic based on security rules",
+                "A type of cable",
+                "A backup power system",
+                "A physical barrier around a server room"
+              ],
+              "id": "networking_hardware_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a hardware firewall and a software firewall?",
+              "answer": "A hardware firewall protects an entire network; a software firewall protects a single device",
+              "explain": "A hardware firewall sits between the network and the internet, protecting all devices. A software firewall runs on individual machines.",
+              "choices": [
+                "A hardware firewall protects an entire network; a software firewall protects a single device",
+                "There is no difference",
+                "Software firewalls are faster",
+                "Hardware firewalls are always better"
+              ],
+              "id": "networking_hardware_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a firewall rule?",
+              "answer": "A policy that specifies what traffic is allowed or blocked based on conditions",
+              "explain": "Firewall rules define which packets are permitted or denied based on source, destination, port, protocol, and other criteria.",
+              "choices": [
+                "A backup procedure",
+                "A password requirement",
+                "A policy that specifies what traffic is allowed or blocked based on conditions",
+                "A type of cable"
+              ],
+              "id": "networking_hardware_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is stateful firewall inspection?",
+              "answer": "A firewall that tracks connections and allows related traffic automatically",
+              "explain": "Stateful inspection remembers established connections. It allows response traffic for connections it approved, improving efficiency.",
+              "choices": [
+                "A firewall that blocks all traffic",
+                "A firewall that uses passwords",
+                "A firewall that only works for wireless",
+                "A firewall that tracks connections and allows related traffic automatically"
+              ],
+              "id": "networking_hardware_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 'default deny' firewall policy mean?",
+              "answer": "Deny all traffic except what is explicitly allowed",
+              "explain": "Default deny blocks everything and allows only approved traffic. This is the safer starting point because anything not listed is refused.",
+              "choices": [
+                "Block wireless only",
+                "Allow all traffic by default",
+                "Deny all traffic except what is explicitly allowed",
+                "Allow everything except known threats"
+              ],
+              "id": "networking_hardware_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Network Architectures",
+      "tip": "Home networks and data centre networks have different designs based on their needs. Home networks prioritize simplicity and cost, using few devices and shared internet connections. Data centres prioritize redundancy and capacity, with multiple independent systems, load balancers, and backup connections. Understanding these architectures shows how network scale drives design choices.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Home Network Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the typical structure of a home network?",
+              "answer": "An internet connection from the ISP, a modem-router, and devices connecting wirelessly or by cable",
+              "explain": "Home networks are simple: a modem converts the ISP signal, a router creates the local network, and devices connect directly to it.",
+              "choices": [
+                "Separate departments with their own networks",
+                "Multiple redundant internet connections",
+                "An internet connection from the ISP, a modem-router, and devices connecting wirelessly or by cable",
+                "Physical separation of devices"
+              ],
+              "id": "networking_hardware_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a home network gateway?",
+              "answer": "The router that connects the home network to the internet",
+              "explain": "The gateway is the entry point for external traffic. It routes packets between home devices and the internet.",
+              "choices": [
+                "A physical gate around the house",
+                "An access point",
+                "A security camera system",
+                "The router that connects the home network to the internet"
+              ],
+              "id": "networking_hardware_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is network address translation (NAT)?",
+              "answer": "A router function that translates between private local IP addresses and public internet addresses",
+              "explain": "NAT lets many home devices share a single public IP address by rewriting packet headers. Its main purpose is to conserve public addresses.",
+              "choices": [
+                "A wireless security protocol",
+                "A type of cable",
+                "A method of encrypting data",
+                "A router function that translates between private local IP addresses and public internet addresses"
+              ],
+              "id": "networking_hardware_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a private IP address?",
+              "answer": "An address used only within a local network, not routable on the internet",
+              "explain": "Private IP ranges (like 192.168.x.x) are reserved for local use. Routers do not forward these addresses on the internet.",
+              "choices": [
+                "A type of encryption key",
+                "An address that is secret",
+                "An address that changes daily",
+                "An address used only within a local network, not routable on the internet"
+              ],
+              "id": "networking_hardware_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do home routers often have built-in Wi-Fi access points?",
+              "answer": "To provide both wired and wireless connectivity from a single device, simplifying setup",
+              "explain": "Combining a router and AP in one device reduces clutter and setup complexity for homes. Devices can connect via cable or Wi-Fi.",
+              "choices": [
+                "To block unwanted traffic",
+                "To increase network speed",
+                "Wireless is more secure",
+                "To provide both wired and wireless connectivity from a single device, simplifying setup"
+              ],
+              "id": "networking_hardware_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Data Centre Network Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a key difference between a data centre network and a home network?",
+              "answer": "Data centres use redundancy; home networks prioritize simplicity",
+              "explain": "Data centres have multiple connections, switches, and routers so no single failure disrupts service. Home networks have one internet connection.",
+              "choices": [
+                "They are structurally identical",
+                "Data centres use only wireless",
+                "Data centres use redundancy; home networks prioritize simplicity",
+                "Home networks are more complex"
+              ],
+              "id": "networking_hardware_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a load balancer?",
+              "answer": "A device that distributes network traffic across multiple servers to prevent overload",
+              "explain": "Load balancers receive traffic and forward it to available servers, spreading the load. This increases capacity and availability.",
+              "choices": [
+                "A backup power system",
+                "A router that blocks traffic",
+                "A device that distributes network traffic across multiple servers to prevent overload",
+                "A device that encrypts traffic"
+              ],
+              "id": "networking_hardware_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'redundancy' mean in data centre networks?",
+              "answer": "Having multiple independent copies of critical systems so no single failure causes downtime",
+              "explain": "Redundant systems mean if one fails, another takes over seamlessly. Data centres have redundant power, cooling, internet, and switches.",
+              "choices": [
+                "Having multiple independent copies of critical systems so no single failure causes downtime",
+                "Backup tapes only",
+                "Using the same hardware twice",
+                "Excessive data storage"
+              ],
+              "id": "networking_hardware_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a data centre tier?",
+              "answer": "A classification level describing a data centre's reliability and capacity based on infrastructure redundancy",
+              "explain": "Tier levels (I through IV) define how many independent systems, cooling, power, and connectivity exist. Higher tiers mean higher availability.",
+              "choices": [
+                "A security clearance",
+                "A type of server",
+                "A physical floor in a building",
+                "A classification level describing a data centre's reliability and capacity based on infrastructure redundancy"
+              ],
+              "id": "networking_hardware_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do data centres use multiple internet service providers?",
+              "answer": "If one ISP connection fails, traffic can route through another, maintaining internet access",
+              "explain": "Multiple ISP connections provide independence; a failure at one provider does not disconnect the data centre.",
+              "choices": [
+                "To increase internet speed",
+                "To support more devices",
+                "To reduce costs",
+                "If one ISP connection fails, traffic can route through another, maintaining internet access"
+              ],
+              "id": "networking_hardware_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
