@@ -6,7 +6,7 @@
 
 Learn a language, or anything else, five minutes at a time. Streaks, hearts, XP. Web, iOS, macOS and Apple Watch.
 
-Live at [lexly.heyitsmejosh.com](https://lexly.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
+Live at [tonchi.heyitsmejosh.com](https://tonchi.heyitsmejosh.com) · [App Store](https://apps.apple.com/app/id6783501611)
 
 <p>
   <img src="screenshots/catalog.png" width="260" alt="Course catalog">
