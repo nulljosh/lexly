@@ -1,0 +1,904 @@
+{
+  "id": "servers",
+  "name": "Servers",
+  "category": "programming",
+  "icon": "fa-solid fa-server",
+  "level": "How the Backend Works",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Client and Server Basics",
+      "tip": "A server is a computer that listens for requests from clients and sends back responses. Clients and servers communicate by sending data across a network. The client makes a request, the server processes it and sends back a result.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Client-Server Model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In the client-server model, what is a client?",
+              "answer": "A computer that makes requests to a server",
+              "explain": "A client is any device or program that sends a request to a server, like a web browser on your computer or a mobile app.",
+              "choices": [
+                "A computer that stores data",
+                "A computer that makes requests to a server",
+                "A computer that never sends data",
+                "A type of database"
+              ],
+              "id": "servers_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a server do when it receives a request from a client?",
+              "answer": "Process the request and send back a response",
+              "explain": "Servers are designed to accept requests, process them using their logic or data, and return appropriate responses back to the client.",
+              "choices": [
+                "Ignore all requests",
+                "Process the request and send back a response",
+                "Store the request on a disk",
+                "Forward it to another client"
+              ],
+              "id": "servers_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a port in the context of servers?",
+              "answer": "A virtual endpoint on a computer where a server listens for connections",
+              "explain": "A port is a numbered endpoint (0-65535) on a computer. Servers listen on specific ports to receive requests. For example, web servers typically listen on port 80 or 443.",
+              "choices": [
+                "A physical cable connection",
+                "A virtual endpoint on a computer where a server listens for connections",
+                "The speed of data transfer",
+                "A type of network protocol"
+              ],
+              "id": "servers_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is localhost?",
+              "answer": "An address referring to the current computer's server",
+              "explain": "Localhost (127.0.0.1) is a loopback address that refers to the computer you are working on. It lets you run and test a server on your own machine.",
+              "choices": [
+                "A server on the internet",
+                "A server in another country",
+                "An address referring to the current computer's server",
+                "A backup copy of your server"
+              ],
+              "id": "servers_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a client know where to send its request?",
+              "answer": "Using the server's address and port number",
+              "explain": "A client needs two pieces of information: the server's network address (IP address or domain name) and the port number it should connect to.",
+              "choices": [
+                "It guesses randomly",
+                "It asks other clients",
+                "Using the server's address and port number",
+                "The server sends it a notification"
+              ],
+              "id": "servers_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Requests and Responses",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a request in client-server communication?",
+              "answer": "Data sent from a client to a server asking for an action",
+              "explain": "A request is a message from the client that specifies what action it wants the server to perform, like 'fetch a file' or 'save data'.",
+              "choices": [
+                "Data stored on the server",
+                "Data sent from a client to a server asking for an action",
+                "A connection that never closes",
+                "A message sent by all clients at once"
+              ],
+              "id": "servers_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should a response contain?",
+              "answer": "The result of processing the client's request",
+              "explain": "A response is what the server sends back to the client after processing. It includes the data requested, a success/error message, or other relevant information.",
+              "choices": [
+                "The client's original request",
+                "The result of processing the client's request",
+                "A list of all other clients",
+                "Instructions for the server"
+              ],
+              "id": "servers_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the request-response cycle?",
+              "answer": "Client sends request, server processes it and sends response back",
+              "explain": "This is the fundamental pattern of server communication: the client initiates by sending a request, the server receives and processes it, then sends a response, and the cycle completes.",
+              "choices": [
+                "Clients and servers send data at random times",
+                "The server sends data without clients asking",
+                "Client sends request, server processes it and sends response back",
+                "Responses arrive before requests are sent"
+              ],
+              "id": "servers_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a client continue doing other work while waiting for a server response?",
+              "answer": "Yes, if the request is asynchronous",
+              "explain": "In asynchronous requests, the client doesn't block and wait. It sends the request and continues working. When the response arrives later, a callback handles it.",
+              "choices": [
+                "No, the client must stop everything",
+                "Yes, if the request is asynchronous",
+                "Only if the response is very fast",
+                "No, responses always freeze the client"
+              ],
+              "id": "servers_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a response and an error?",
+              "answer": "An error is a kind of response that reports a problem",
+              "explain": "A server answers a bad or failed request with an error response, such as a 404 or a 500. It is still a response, with a status code that says what went wrong.",
+              "choices": [
+                "A response always succeeds",
+                "An error means the server crashed",
+                "An error is a kind of response that reports a problem",
+                "Responses are only for GET requests"
+              ],
+              "id": "servers_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "HTTP in Depth",
+      "tip": "HTTP is the protocol clients and servers use to communicate on the web. It defines how requests are formatted, what actions they can request, and how responses are structured. Status codes tell you whether a request succeeded or what went wrong.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "HTTP Methods and Status Codes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What HTTP method is used to fetch data from a server?",
+              "answer": "GET",
+              "explain": "GET requests ask the server to retrieve and return data without changing anything. They are safe and can be cached.",
+              "choices": [
+                "POST",
+                "GET",
+                "DELETE",
+                "PUT"
+              ],
+              "id": "servers_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What HTTP method is used to send new data to a server?",
+              "answer": "POST",
+              "explain": "POST requests send data to the server to create a new resource. The data is included in the request body, not in the URL.",
+              "choices": [
+                "GET",
+                "POST",
+                "HEAD",
+                "PATCH"
+              ],
+              "id": "servers_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 200 status code mean?",
+              "answer": "The request succeeded",
+              "explain": "Status codes in the 2xx range (200-299) indicate success. 200 specifically means OK, the request worked perfectly.",
+              "choices": [
+                "The request failed",
+                "The request succeeded",
+                "The server is too busy",
+                "The resource was not found"
+              ],
+              "id": "servers_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 404 status code mean?",
+              "answer": "The requested resource was not found",
+              "explain": "4xx status codes indicate client errors. 404 specifically means the server could not find the requested resource.",
+              "choices": [
+                "The request succeeded",
+                "The server crashed",
+                "The requested resource was not found",
+                "The server is processing the request"
+              ],
+              "id": "servers_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 500 status code indicate?",
+              "answer": "A server error occurred",
+              "explain": "5xx status codes indicate server errors. 500 means the server encountered an unexpected problem while processing the request.",
+              "choices": [
+                "The client sent bad data",
+                "A server error occurred",
+                "The resource was not found",
+                "The request is still being processed"
+              ],
+              "id": "servers_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Headers and Cookies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are HTTP headers?",
+              "answer": "Metadata sent with requests and responses that describe the content",
+              "explain": "Headers provide information about the data being sent, like content type, length, caching rules, and authentication info. They come before the actual body.",
+              "choices": [
+                "The main data in the response",
+                "Metadata sent with requests and responses that describe the content",
+                "Security certificates",
+                "Abbreviated status messages"
+              ],
+              "id": "servers_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a cookie used for?",
+              "answer": "Storing data on the client that can be sent back to the server",
+              "explain": "Cookies let servers send small pieces of data to clients, which the clients store and send back with future requests. They're useful for remembering user preferences or session info.",
+              "choices": [
+                "Encrypting data",
+                "Storing data on the client that can be sent back to the server",
+                "Speeding up network connections",
+                "Filtering spam requests"
+              ],
+              "id": "servers_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a server sets a cookie in a response?",
+              "answer": "The client stores it and sends it back in future requests",
+              "explain": "When a server includes a Set-Cookie header in a response, the client (browser) stores that cookie. On subsequent requests to the same server, the client includes it again.",
+              "choices": [
+                "The cookie disappears immediately",
+                "The client deletes it",
+                "The client stores it and sends it back in future requests",
+                "Only other servers can see it"
+              ],
+              "id": "servers_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does a client send an Authorization header with a request?",
+              "answer": "To prove the client has permission to access a resource",
+              "explain": "The Authorization header typically contains a token or credentials that tell the server the client is authenticated and authorized. The server checks it before allowing access.",
+              "choices": [
+                "To identify the programming language used",
+                "To prove the client has permission to access a resource",
+                "To tell the client what language to use",
+                "To reject all requests"
+              ],
+              "id": "servers_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Content-Type header used for?",
+              "answer": "Describing the format of the data being sent",
+              "explain": "Content-Type tells the recipient whether the data is HTML, JSON, plain text, an image, or another format. This helps the client or server process the data correctly.",
+              "choices": [
+                "Counting how many bytes are being sent",
+                "Describing the format of the data being sent",
+                "Compressing the data",
+                "Routing the request to the right port"
+              ],
+              "id": "servers_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "APIs and REST",
+      "tip": "An API is a set of rules for how clients and servers communicate. REST is a common style for building web APIs using HTTP. APIs expose endpoints where clients can request specific data or actions.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "API Concepts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an API?",
+              "answer": "A set of rules for how different programs communicate",
+              "explain": "An API defines what requests a client can make, what the server will do with them, and what format the response will be in. It's a contract between client and server.",
+              "choices": [
+                "A way to physically connect computers",
+                "A set of rules for how different programs communicate",
+                "A type of database",
+                "A security protocol"
+              ],
+              "id": "servers_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an endpoint in an API?",
+              "answer": "A specific URL path where the API accepts requests",
+              "explain": "An endpoint is like a function the API offers. For example, '/api/users' might be an endpoint that returns a list of users when you make a GET request to it.",
+              "choices": [
+                "The final response from the server",
+                "A specific URL path where the API accepts requests",
+                "The encryption method used",
+                "A backup server location"
+              ],
+              "id": "servers_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is JSON?",
+              "answer": "A text format for representing structured data",
+              "explain": "JSON (JavaScript Object Notation) is a human-readable format used to send structured data between clients and servers. It uses key-value pairs, arrays, and nested objects.",
+              "choices": [
+                "A programming language",
+                "A text format for representing structured data",
+                "A type of server",
+                "An HTTP method"
+              ],
+              "id": "servers_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might an API require an authentication token?",
+              "answer": "To verify the client is authorized to use the API",
+              "explain": "Tokens prove the client has been authenticated and is allowed to access the API's resources. Without one, the server can reject unauthorized requests.",
+              "choices": [
+                "To compress the request data",
+                "To verify the client is authorized to use the API",
+                "To route requests to the correct server",
+                "To store user passwords"
+              ],
+              "id": "servers_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a client send an authentication token in a request?",
+              "answer": "In the Authorization header",
+              "explain": "Clients typically include the token in an Authorization header with a format like 'Bearer <token>' or 'Basic <credentials>'. The server reads this header to verify the token.",
+              "choices": [
+                "In the URL path",
+                "In the request body only",
+                "In the Authorization header",
+                "In a separate file"
+              ],
+              "id": "servers_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "REST Architecture",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does REST stand for?",
+              "answer": "Representational State Transfer",
+              "explain": "REST is an architectural style for building web APIs. It uses standard HTTP methods and emphasizes resources identified by URLs.",
+              "choices": [
+                "Remote Electronic Service Transfer",
+                "Representational State Transfer",
+                "Reliable Server Exchange Technology",
+                "Request-Response Exchange System"
+              ],
+              "id": "servers_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In REST, what does a resource represent?",
+              "answer": "An entity that can be accessed and modified via the API",
+              "explain": "Resources are the core concept in REST. A user, a product, or a blog post are all resources. Each resource has a unique identifier (URL).",
+              "choices": [
+                "A server's storage space",
+                "An entity that can be accessed and modified via the API",
+                "A type of network connection",
+                "A backup copy of data"
+              ],
+              "id": "servers_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What REST principle says each resource should have a unique URL?",
+              "answer": "Resources should be uniquely identifiable",
+              "explain": "In REST, each resource has its own endpoint. For example, /api/users/123 uniquely identifies the user with id 123, and /api/users/456 identifies user 456.",
+              "choices": [
+                "Statelessness",
+                "Cacheability",
+                "Resources should be uniquely identifiable",
+                "Client-server separation"
+              ],
+              "id": "servers_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What HTTP method is typically used to update an existing resource in REST?",
+              "answer": "PUT or PATCH",
+              "explain": "PUT replaces the entire resource, while PATCH modifies only specified fields. Both are used for updates in REST APIs.",
+              "choices": [
+                "POST",
+                "GET",
+                "PUT or PATCH",
+                "DELETE"
+              ],
+              "id": "servers_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What HTTP method deletes a resource in REST?",
+              "answer": "DELETE",
+              "explain": "The DELETE method removes a resource from the server. A DELETE request to /api/users/123 would delete the user with id 123.",
+              "choices": [
+                "POST",
+                "PUT",
+                "DELETE",
+                "REMOVE"
+              ],
+              "id": "servers_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Running and Managing Servers",
+      "tip": "Running a server means starting a process that listens on a port and handles requests. Servers need configuration through environment variables, produce logs for debugging, and often sit behind reverse proxies that route traffic to them.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Server Processes and Configuration",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a server process?",
+              "answer": "A running program that listens for and handles requests",
+              "explain": "A server process is a program executing on a computer. It continuously listens on a specific port and processes incoming requests in a loop.",
+              "choices": [
+                "A frozen snapshot of data",
+                "A running program that listens for and handles requests",
+                "A file stored on disk",
+                "A scheduled task that runs once"
+              ],
+              "id": "servers_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are environment variables used for in server configuration?",
+              "answer": "Storing configuration values without hardcoding them",
+              "explain": "Environment variables let you set values like database URLs, API keys, and port numbers outside the code. This allows the same code to run in different environments with different configs.",
+              "choices": [
+                "Compiling the source code",
+                "Storing configuration values without hardcoding them",
+                "Encrypting the data",
+                "Identifying the programming language"
+              ],
+              "id": "servers_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should sensitive data like API keys be stored in environment variables instead of code?",
+              "answer": "To prevent accidentally exposing secrets in version control",
+              "explain": "If API keys are hardcoded in source files and those files are committed to a public repository, anyone can see the keys. Environment variables keep secrets out of the code.",
+              "choices": [
+                "It makes the code run faster",
+                "To prevent accidentally exposing secrets in version control",
+                "It reduces the server's memory usage",
+                "It improves the user interface"
+              ],
+              "id": "servers_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are server logs?",
+              "answer": "Records of events and errors that happened on the server",
+              "explain": "Logs capture what the server did: requests it received, errors it encountered, warnings about unusual activity. They help with debugging and monitoring.",
+              "choices": [
+                "Files uploaded by clients",
+                "Records of events and errors that happened on the server",
+                "Copies of the source code",
+                "Encrypted user data"
+              ],
+              "id": "servers_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are server logs important?",
+              "answer": "They help debug problems and understand what the server is doing",
+              "explain": "Logs provide a detailed history of server activity. When something goes wrong, logs show what happened and can help trace the root cause.",
+              "choices": [
+                "They make the server more secure",
+                "They help debug problems and understand what the server is doing",
+                "They increase the server's speed",
+                "They encrypt user data"
+              ],
+              "id": "servers_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Reverse Proxies and Load Balancing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a reverse proxy?",
+              "answer": "A server that forwards client requests to backend servers",
+              "explain": "A reverse proxy sits in front of backend servers. It receives client requests, forwards them to the appropriate backend server, gets the response, and sends it back to the client.",
+              "choices": [
+                "A server that makes requests to clients",
+                "A server that forwards client requests to backend servers",
+                "A backup copy of the main server",
+                "A tool for compressing data"
+              ],
+              "id": "servers_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might you use a reverse proxy?",
+              "answer": "To hide backend servers, distribute traffic, or cache responses",
+              "explain": "Reverse proxies provide benefits like hiding the real server locations (security), distributing traffic across multiple backends, and caching common responses.",
+              "choices": [
+                "To store user passwords",
+                "To hide backend servers, distribute traffic, or cache responses",
+                "To slow down the server",
+                "To eliminate the need for databases"
+              ],
+              "id": "servers_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a load balancer?",
+              "answer": "A system that distributes incoming requests across multiple servers",
+              "explain": "A load balancer receives requests and sends each one to one of several backend servers, usually choosing the least busy one. This spreads the load evenly.",
+              "choices": [
+                "A tool for backing up data",
+                "A system that distributes incoming requests across multiple servers",
+                "A type of database",
+                "A security firewall"
+              ],
+              "id": "servers_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do companies use multiple backend servers with a load balancer?",
+              "answer": "To handle more traffic and improve reliability",
+              "explain": "If one server crashes, the others keep running. If traffic spikes, multiple servers can handle it. This provides better availability and performance.",
+              "choices": [
+                "To reduce costs",
+                "To handle more traffic and improve reliability",
+                "To simplify the code",
+                "To eliminate the need for databases"
+              ],
+              "id": "servers_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a load balancer checks server health?",
+              "answer": "It verifies each server is running and responding",
+              "explain": "Health checks send regular requests to each backend server to confirm it's working. If a server stops responding, the load balancer stops sending traffic to it.",
+              "choices": [
+                "It checks for viruses",
+                "It verifies each server is running and responding",
+                "It compresses the data",
+                "It encrypts all communications"
+              ],
+              "id": "servers_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Hosting and Scaling",
+      "tip": "As an application grows, you need to decide how to host it and handle more users. Options range from virtual machines to containers to serverless platforms. Scaling means increasing capacity by adding more resources (horizontal) or upgrading existing ones (vertical).",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Hosting Options",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a virtual machine?",
+              "answer": "A simulated computer running its own operating system",
+              "explain": "A virtual machine is software that simulates a complete computer. Multiple VMs can run on one physical machine, each with its own OS and applications.",
+              "choices": [
+                "A backup of your computer",
+                "A simulated computer running its own operating system",
+                "A very small computer",
+                "A network of computers"
+              ],
+              "id": "servers_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does cloud hosting provide over running servers in your office?",
+              "answer": "You can scale up or down on demand",
+              "explain": "Cloud platforms let you easily add or remove server capacity as your needs change. You pay for what you use instead of maintaining expensive hardware.",
+              "choices": [
+                "It guarantees no bugs",
+                "You can scale up or down on demand",
+                "It requires less internet",
+                "It eliminates the need for databases"
+              ],
+              "id": "servers_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is containerization?",
+              "answer": "Packaging an application with its dependencies into a lightweight unit",
+              "explain": "A container is a standardized package that includes the application, libraries, and configuration. Containers are lightweight, portable, and consistent across environments.",
+              "choices": [
+                "A backup method",
+                "Packaging an application with its dependencies into a lightweight unit",
+                "A type of database",
+                "A protocol for network communication"
+              ],
+              "id": "servers_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is serverless computing?",
+              "answer": "Running code without managing servers, paying only for execution",
+              "explain": "In serverless, you deploy functions that run only when triggered. You don't manage server infrastructure; the platform handles scaling and maintenance.",
+              "choices": [
+                "Running servers at a discount",
+                "Running code without managing servers, paying only for execution",
+                "A backup strategy",
+                "Using only one server for everything"
+              ],
+              "id": "servers_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a CDN used for?",
+              "answer": "Distributing content from servers close to users geographically",
+              "explain": "A CDN is a network of servers in different locations worldwide. It caches your content so users download from the nearest server, reducing latency.",
+              "choices": [
+                "Encrypting all data",
+                "Distributing content from servers close to users geographically",
+                "Replacing databases",
+                "Securing passwords"
+              ],
+              "id": "servers_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Scaling Strategies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is horizontal scaling?",
+              "answer": "Adding more servers to handle increased traffic",
+              "explain": "Horizontal scaling means adding additional machines to your system. A load balancer distributes traffic across them. This is often easier and more flexible than vertical scaling.",
+              "choices": [
+                "Buying a bigger server",
+                "Adding more servers to handle increased traffic",
+                "Using compression to reduce data",
+                "Deleting old data"
+              ],
+              "id": "servers_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is vertical scaling?",
+              "answer": "Upgrading the hardware of existing servers",
+              "explain": "Vertical scaling means making your current server more powerful: more CPU, RAM, or storage. It has limits and can require downtime.",
+              "choices": [
+                "Adding more servers",
+                "Upgrading the hardware of existing servers",
+                "Using a load balancer",
+                "Caching more data"
+              ],
+              "id": "servers_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When might caching improve server performance?",
+              "answer": "When the same data is requested multiple times",
+              "explain": "Caching stores frequently requested data in memory. This eliminates expensive lookups and makes responses faster, reducing server load.",
+              "choices": [
+                "When processing new data",
+                "When the same data is requested multiple times",
+                "When security is the priority",
+                "When users have slow connections"
+              ],
+              "id": "servers_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to cache at the edge?",
+              "answer": "Storing copies of data at CDN servers close to users",
+              "explain": "Edge caching places content copies on geographically distributed servers. Users get responses from nearby servers instead of traveling to your origin server.",
+              "choices": [
+                "Deleting data from the server",
+                "Storing copies of data at CDN servers close to users",
+                "Backing up the database",
+                "Compressing files"
+              ],
+              "id": "servers_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is auto-scaling?",
+              "answer": "Automatically adding or removing servers based on traffic",
+              "explain": "Auto-scaling monitors server load and automatically adds new servers when traffic increases, or removes them when traffic decreases. This optimizes cost and performance.",
+              "choices": [
+                "Manually starting servers",
+                "Automatically adding or removing servers based on traffic",
+                "Buying more storage",
+                "Changing network settings"
+              ],
+              "id": "servers_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Security and Reliability",
+      "tip": "Servers must be secure against attackers and reliable for users. HTTPS encrypts traffic, firewalls block unwanted connections, rate limiting prevents abuse, and backups protect against data loss. Uptime measures how consistently a server stays running.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Security Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does HTTPS do differently than HTTP?",
+              "answer": "It encrypts the data sent between client and server",
+              "explain": "HTTPS uses SSL/TLS encryption to protect data in transit. Without it, data like passwords sent over HTTP can be intercepted by attackers.",
+              "choices": [
+                "It makes requests faster",
+                "It encrypts the data sent between client and server",
+                "It stores data on the client",
+                "It eliminates the need for passwords"
+              ],
+              "id": "servers_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is TLS?",
+              "answer": "A protocol that encrypts data during transmission",
+              "explain": "TLS (Transport Layer Security) is the modern encryption protocol used by HTTPS. It ensures data sent between client and server cannot be read by others.",
+              "choices": [
+                "A type of server",
+                "A protocol that encrypts data during transmission",
+                "A backup system",
+                "A programming language"
+              ],
+              "id": "servers_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a firewall?",
+              "answer": "A system that controls which network connections are allowed",
+              "explain": "A firewall is software or hardware that filters incoming and outgoing network traffic based on rules. It blocks unwanted connections and allows legitimate ones.",
+              "choices": [
+                "Software that removes bugs",
+                "A system that controls which network connections are allowed",
+                "A type of backup",
+                "A database tool"
+              ],
+              "id": "servers_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is rate limiting?",
+              "answer": "Restricting how many requests a client can make in a time period",
+              "explain": "Rate limiting protects servers from abuse and brute force attacks. It slows down clients that make too many requests, keeping the server available for legitimate users.",
+              "choices": [
+                "Limiting server memory",
+                "Restricting how many requests a client can make in a time period",
+                "Deleting old data",
+                "Preventing cached responses"
+              ],
+              "id": "servers_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should servers never expose sensitive error messages to clients?",
+              "answer": "To avoid revealing information that attackers could exploit",
+              "explain": "Detailed error messages might reveal database structure, file paths, or software versions that help attackers plan attacks. Return generic errors to clients; log full details server-side.",
+              "choices": [
+                "It makes the user experience better",
+                "To avoid revealing information that attackers could exploit",
+                "It speeds up the server",
+                "It reduces server load"
+              ],
+              "id": "servers_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Reliability and Backups",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is uptime?",
+              "answer": "The percentage of time a server is running and available",
+              "explain": "Uptime is measured as a percentage. 99.9% uptime means the server is down less than 9 hours per year. Higher uptime is more reliable.",
+              "choices": [
+                "The time it takes to start a server",
+                "The percentage of time a server is running and available",
+                "The speed of the server",
+                "The amount of storage available"
+              ],
+              "id": "servers_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a backup in the context of servers?",
+              "answer": "A copy of data stored separately for recovery",
+              "explain": "Backups are duplicate copies of your data stored in a different location. If the main server fails or data is corrupted, you can restore from a backup.",
+              "choices": [
+                "An extra server that has no data",
+                "A copy of data stored separately for recovery",
+                "A way to speed up queries",
+                "A compression method"
+              ],
+              "id": "servers_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a full backup and an incremental backup?",
+              "answer": "Full backs up everything; incremental backs up only changes since last backup",
+              "explain": "A full backup copies all data, taking more time and space but being simpler to restore. An incremental backup copies only what changed, saving time and space.",
+              "choices": [
+                "Full backups are smaller",
+                "Incremental backups are for permanent deletion",
+                "Full backs up everything; incremental backs up only changes since last backup",
+                "They are the same thing"
+              ],
+              "id": "servers_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should backup copies be stored in a different physical location?",
+              "answer": "To protect against data loss from physical disasters",
+              "explain": "If a fire or flood destroys the main server location, local backups are lost too. Storing copies elsewhere ensures you can recover even from catastrophic events.",
+              "choices": [
+                "To make backups faster",
+                "To protect against data loss from physical disasters",
+                "To reduce storage costs",
+                "To improve network speed"
+              ],
+              "id": "servers_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is redundancy in server design?",
+              "answer": "Having duplicate components so failure of one doesn't stop the system",
+              "explain": "Redundancy means having backup resources. Multiple servers, duplicate databases, and failover systems ensure the application keeps running if one component fails.",
+              "choices": [
+                "Storing extra copies of the code",
+                "Having duplicate components so failure of one doesn't stop the system",
+                "Running the same process twice",
+                "Compressing the data multiple times"
+              ],
+              "id": "servers_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

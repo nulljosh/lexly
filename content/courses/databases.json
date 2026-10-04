@@ -1,0 +1,904 @@
+{
+  "id": "databases",
+  "name": "Databases",
+  "category": "programming",
+  "icon": "fa-solid fa-database",
+  "level": "Storing Data",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Database Fundamentals",
+      "tip": "A database is an organized collection of data stored in a structured way. Instead of saving data randomly in files, databases use tables with rows and columns. This organization makes it fast and easy to find, update, and manage data.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Tables, Rows, and Columns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a table in a database?",
+              "answer": "A structured collection of related data organized in rows and columns",
+              "explain": "A table is the basic unit of a database. Each column represents an attribute (like name or email), and each row is one record. All rows in a table have the same columns.",
+              "choices": [
+                "A file stored on disk",
+                "A structured collection of related data organized in rows and columns",
+                "A backup copy of data",
+                "A visual chart"
+              ],
+              "id": "databases_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a row represent in a database table?",
+              "answer": "One record or entry in the table",
+              "explain": "A row is a single record. In a users table, each row represents one person with their name, email, age, and other attributes.",
+              "choices": [
+                "All the data in the table",
+                "One record or entry in the table",
+                "A backup copy",
+                "A temporary cache"
+              ],
+              "id": "databases_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a column represent in a database table?",
+              "answer": "A field or attribute that all rows share",
+              "explain": "A column defines one type of data stored for each record. The 'email' column contains email addresses for every row, the 'age' column contains ages, and so on.",
+              "choices": [
+                "A single record",
+                "A field or attribute that all rows share",
+                "A backup file",
+                "An error log"
+              ],
+              "id": "databases_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is storing data in a database better than just using text files?",
+              "answer": "Databases are organized, fast to search, and support multiple users accessing data simultaneously",
+              "explain": "Databases provide structured organization, efficient indexing for fast searches, control over data types, and mechanisms for multiple users to work safely without conflicts.",
+              "choices": [
+                "Text files are just as good",
+                "Databases cost less",
+                "Databases are organized, fast to search, and support multiple users accessing data simultaneously",
+                "Databases use less storage"
+              ],
+              "id": "databases_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a schema in a database?",
+              "answer": "The definition of how data is organized in tables and columns",
+              "explain": "A schema describes the structure: what tables exist, what columns each has, what data types they hold, and constraints like 'this must be unique'. The schema defines the blueprint.",
+              "choices": [
+                "A backup copy of data",
+                "The definition of how data is organized in tables and columns",
+                "A list of users",
+                "An error message"
+              ],
+              "id": "databases_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Data Types and Constraints",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a data type in a database?",
+              "answer": "A specification for what kind of data a column can hold",
+              "explain": "Data types define what values are allowed. Common types include integers, text strings, dates, and boolean values. Using the right type prevents invalid data.",
+              "choices": [
+                "A backup of the data",
+                "A specification for what kind of data a column can hold",
+                "An encryption method",
+                "A sorting method"
+              ],
+              "id": "databases_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a NOT NULL constraint?",
+              "answer": "A requirement that a value must always be provided for that column",
+              "explain": "NOT NULL means every row must have a value in that column; leaving it empty is not allowed. This ensures critical data is never missing.",
+              "choices": [
+                "A backup requirement",
+                "A requirement that a value must always be provided for that column",
+                "An encryption method",
+                "A sorting rule"
+              ],
+              "id": "databases_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a UNIQUE constraint?",
+              "answer": "A requirement that no two rows can have the same value in that column",
+              "explain": "UNIQUE ensures values don't repeat. For example, an email column might be UNIQUE so no two accounts have the same email address.",
+              "choices": [
+                "A backup protection",
+                "A requirement that no two rows can have the same value in that column",
+                "An encryption method",
+                "A display format"
+              ],
+              "id": "databases_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a DEFAULT value in a database column?",
+              "answer": "A value automatically used if none is provided when inserting a row",
+              "explain": "If you insert a row but don't provide a value for a column with a DEFAULT, the database uses the default value. For example, 'created_at' might default to the current date.",
+              "choices": [
+                "The value used when backing up",
+                "A value automatically used if none is provided when inserting a row",
+                "An error message",
+                "A sorting rule"
+              ],
+              "id": "databases_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you use a CHECK constraint?",
+              "answer": "To ensure values meet certain conditions before being stored",
+              "explain": "CHECK constraints validate data. For example, you might check that age is between 0 and 150, or that a price is not negative. Invalid data is rejected.",
+              "choices": [
+                "To backup the database",
+                "To ensure values meet certain conditions before being stored",
+                "To encrypt the data",
+                "To delete old records"
+              ],
+              "id": "databases_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Keys and Relationships",
+      "tip": "Keys identify rows and connect tables together. A primary key uniquely identifies each row. Foreign keys link rows in one table to rows in another. Understanding relationships is crucial for organizing data efficiently.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Primary Keys and Identifiers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a primary key?",
+              "answer": "A column or set of columns that uniquely identifies each row",
+              "explain": "A primary key ensures every row is distinct and can be found. No two rows can have the same primary key value. It's often an ID number.",
+              "choices": [
+                "A password for accessing the database",
+                "A column or set of columns that uniquely identifies each row",
+                "A backup copy of a row",
+                "A sorting method"
+              ],
+              "id": "databases_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What makes a good primary key?",
+              "answer": "It's unique, never changes, and never empty",
+              "explain": "Primary keys should be stable and unchanging. An ID number is better than a name because names can change. The value must always be present.",
+              "choices": [
+                "It's the most frequently searched column",
+                "It's unique, never changes, and never empty",
+                "It's the largest column",
+                "It's created last"
+              ],
+              "id": "databases_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a natural key?",
+              "answer": "A column with real-world meaning that uniquely identifies a row",
+              "explain": "Natural keys are based on actual data. For example, an email address or SSN could be a natural key because they're inherently unique.",
+              "choices": [
+                "A randomly generated ID",
+                "A column with real-world meaning that uniquely identifies a row",
+                "A backup column",
+                "A sorted column"
+              ],
+              "id": "databases_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a surrogate key?",
+              "answer": "An artificial ID created by the database to uniquely identify rows",
+              "explain": "Surrogate keys are auto-generated, like an incrementing integer. They have no real-world meaning but are stable and simple to use.",
+              "choices": [
+                "A natural key",
+                "An artificial ID created by the database to uniquely identify rows",
+                "A backup key",
+                "A temporary key"
+              ],
+              "id": "databases_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are surrogate keys often preferred over natural keys?",
+              "answer": "They're stable, simple, and less likely to need changing",
+              "explain": "Surrogate keys don't depend on real data that might change. An email (natural key) might change, breaking relationships. A numeric ID (surrogate) remains stable.",
+              "choices": [
+                "They're more secure",
+                "They're stable, simple, and less likely to need changing",
+                "They use less storage",
+                "They're faster to sort"
+              ],
+              "id": "databases_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Foreign Keys and Table Relationships",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a foreign key?",
+              "answer": "A column that references a primary key in another table",
+              "explain": "Foreign keys create links between tables. A foreign key in one table holds the primary key value from another table, creating a relationship.",
+              "choices": [
+                "A password for accessing the database",
+                "A column that references a primary key in another table",
+                "A backup copy",
+                "A sorting method"
+              ],
+              "id": "databases_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a one-to-many relationship?",
+              "answer": "One row in table A can relate to many rows in table B",
+              "explain": "In a one-to-many relationship, a single parent record has multiple child records. For example, one user can have many orders.",
+              "choices": [
+                "Many rows relate to many other rows",
+                "One row in table A can relate to many rows in table B",
+                "All rows in both tables are identical",
+                "Rows never relate to other tables"
+              ],
+              "id": "databases_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a many-to-many relationship?",
+              "answer": "Many rows in table A can relate to many rows in table B",
+              "explain": "In a many-to-many relationship, multiple records in one table link to multiple records in another. For example, students can enroll in many courses, and courses have many students.",
+              "choices": [
+                "One row relates to one other row",
+                "Many rows in one table relate to one row in another",
+                "Many rows in table A can relate to many rows in table B",
+                "Rows never relate to other tables"
+              ],
+              "id": "databases_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you implement a many-to-many relationship in a relational database?",
+              "answer": "With a join table that contains foreign keys to both tables",
+              "explain": "A join table (or junction table) has foreign keys pointing to both original tables. For students and courses, an 'enrollments' table links them together.",
+              "choices": [
+                "By storing a list in a single column",
+                "By combining the two tables into one",
+                "With a join table that contains foreign keys to both tables",
+                "It's impossible in relational databases"
+              ],
+              "id": "databases_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does referential integrity mean?",
+              "answer": "Foreign keys always point to existing primary keys",
+              "explain": "Referential integrity ensures you can't reference a non-existent row. If you have a foreign key to a user, that user must exist.",
+              "choices": [
+                "All tables have the same structure",
+                "Foreign keys always point to existing primary keys",
+                "No data can be deleted",
+                "Backups are automatic"
+              ],
+              "id": "databases_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Querying and Filtering Data",
+      "tip": "Retrieving the right data from a database requires queries that specify what you want, how to filter it, and how to sort it. Understanding these concepts helps you extract meaningful information efficiently.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Filtering and Sorting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of a WHERE clause in a database query?",
+              "answer": "To filter rows based on conditions",
+              "explain": "WHERE clauses let you specify which rows to retrieve. For example, 'WHERE age > 18' returns only rows where age is greater than 18.",
+              "choices": [
+                "To sort the results",
+                "To filter rows based on conditions",
+                "To create new tables",
+                "To delete data"
+              ],
+              "id": "databases_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does sorting data with ORDER BY work?",
+              "answer": "It arranges rows in ascending or descending order by specified columns",
+              "explain": "ORDER BY sorts results. You can sort by one or more columns in ascending (ASC) or descending (DESC) order. This helps organize data for readability.",
+              "choices": [
+                "It deletes duplicate rows",
+                "It arranges rows in ascending or descending order by specified columns",
+                "It combines multiple tables",
+                "It creates indexes"
+              ],
+              "id": "databases_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does LIMIT do in a query?",
+              "answer": "It restricts how many rows are returned",
+              "explain": "LIMIT specifies a maximum number of rows to retrieve. This is useful for pagination or when you only need a sample of data.",
+              "choices": [
+                "It filters data",
+                "It restricts how many rows are returned",
+                "It sorts the data",
+                "It deletes rows"
+              ],
+              "id": "databases_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between AND and OR in WHERE clauses?",
+              "answer": "AND requires all conditions to be true; OR requires at least one",
+              "explain": "AND narrows results (both conditions must match). OR broadens results (at least one condition must match).",
+              "choices": [
+                "They're the same",
+                "AND requires all conditions to be true; OR requires at least one",
+                "OR is faster",
+                "AND is for deleting"
+              ],
+              "id": "databases_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does DISTINCT do in a query?",
+              "answer": "It removes duplicate rows from the results",
+              "explain": "DISTINCT returns only unique rows, eliminating duplicates. Useful if you want a list of cities without seeing the same city multiple times.",
+              "choices": [
+                "It sorts the data",
+                "It removes duplicate rows from the results",
+                "It creates new rows",
+                "It deletes data"
+              ],
+              "id": "databases_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Joins and Aggregation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a join in database queries?",
+              "answer": "Combining rows from multiple tables based on related columns",
+              "explain": "A join combines data from different tables using a relationship, like matching orders to customers via customer ID. This lets you see related data together.",
+              "choices": [
+                "Creating a new table",
+                "Combining rows from multiple tables based on related columns",
+                "Sorting data",
+                "Backing up data"
+              ],
+              "id": "databases_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an aggregation function?",
+              "answer": "A function that combines multiple row values into a single result",
+              "explain": "Aggregation functions like COUNT, SUM, AVG, MIN, and MAX compute a single value from multiple rows. COUNT returns how many rows match, SUM adds values up.",
+              "choices": [
+                "A function that deletes rows",
+                "A function that combines multiple row values into a single result",
+                "A function that sorts data",
+                "A function that creates tables"
+              ],
+              "id": "databases_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When would you use GROUP BY in a query?",
+              "answer": "To aggregate data by categories and show results for each group",
+              "explain": "GROUP BY organizes rows into groups (like by country or category), then applies aggregation to each group. This lets you see summaries like 'total sales by region'.",
+              "choices": [
+                "To delete duplicate rows",
+                "To aggregate data by categories and show results for each group",
+                "To sort rows alphabetically",
+                "To create new tables"
+              ],
+              "id": "databases_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between WHERE and HAVING?",
+              "answer": "WHERE filters before grouping; HAVING filters after aggregation",
+              "explain": "WHERE runs first and filters individual rows. HAVING runs after GROUP BY and filters groups based on aggregate values.",
+              "choices": [
+                "They're the same",
+                "WHERE filters before grouping; HAVING filters after aggregation",
+                "HAVING is faster",
+                "WHERE only works with one table"
+              ],
+              "id": "databases_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a COUNT aggregation return?",
+              "answer": "The number of rows that match the query criteria",
+              "explain": "COUNT tallies how many rows exist matching your conditions. COUNT(*) counts all rows, COUNT(column) counts non-null values in that column.",
+              "choices": [
+                "The sum of all values",
+                "The number of rows that match the query criteria",
+                "The average value",
+                "A list of row IDs"
+              ],
+              "id": "databases_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Modifying Data and Transactions",
+      "tip": "Inserting, updating, and deleting data must be done carefully and consistently. Transactions ensure that related changes either all succeed or all fail together, preventing partial updates that leave data in an inconsistent state.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "INSERT, UPDATE, DELETE",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an INSERT operation do?",
+              "answer": "Adds a new row to a table with specified values",
+              "explain": "INSERT creates a new record. You provide values for the columns you want to fill. Columns with defaults or that allow NULL get those values if omitted.",
+              "choices": [
+                "Updates existing rows",
+                "Adds a new row to a table with specified values",
+                "Deletes a row",
+                "Copies a table"
+              ],
+              "id": "databases_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does an UPDATE operation do?",
+              "answer": "Modifies existing values in one or more rows",
+              "explain": "UPDATE changes data in existing rows. You specify which rows with a WHERE clause and which columns to change with SET.",
+              "choices": [
+                "Creates a new row",
+                "Modifies existing values in one or more rows",
+                "Deletes a row",
+                "Copies data to another table"
+              ],
+              "id": "databases_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you run an UPDATE without a WHERE clause?",
+              "answer": "All rows in the table get updated",
+              "explain": "Without WHERE, the UPDATE applies to every row. This is usually a mistake. Always include WHERE to target specific rows.",
+              "choices": [
+                "Nothing happens",
+                "All rows in the table get updated",
+                "Only the first row is updated",
+                "It returns an error"
+              ],
+              "id": "databases_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a DELETE operation do?",
+              "answer": "Removes rows from a table based on a condition",
+              "explain": "DELETE removes rows. Like UPDATE, specify which rows with WHERE. Without WHERE, all rows are deleted.",
+              "choices": [
+                "Empties the entire database",
+                "Removes rows from a table based on a condition",
+                "Renames a table",
+                "Deletes a database"
+              ],
+              "id": "databases_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it important to be careful with DELETE statements?",
+              "answer": "Deleted data is usually permanent and cannot be easily recovered",
+              "explain": "Unlike some programs where you can undo, database deletions are typically final unless you have a backup. Always use WHERE to target only the rows you intend to delete.",
+              "choices": [
+                "They're very slow",
+                "They use too much memory",
+                "Deleted data is usually permanent and cannot be easily recovered",
+                "They break other tables"
+              ],
+              "id": "databases_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Transactions and ACID",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a transaction in a database?",
+              "answer": "A sequence of operations that must all succeed or all fail together",
+              "explain": "A transaction is a unit of work. Either all the operations complete, or if any fails, all are rolled back. This keeps data consistent.",
+              "choices": [
+                "A single SELECT query",
+                "A sequence of operations that must all succeed or all fail together",
+                "A backup operation",
+                "A deleted row"
+              ],
+              "id": "databases_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ACID stand for?",
+              "answer": "Atomicity, Consistency, Isolation, Durability",
+              "explain": "ACID are the four properties that make transactions reliable. Atomicity (all or nothing), Consistency (valid states), Isolation (no interference), Durability (saved permanently).",
+              "choices": [
+                "Aggregation, Classification, Identity, Division",
+                "Atomicity, Consistency, Isolation, Durability",
+                "Availability, Concurrency, Indexing, Data",
+                "Application, Content, Integration, Distribution"
+              ],
+              "id": "databases_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Atomicity mean in ACID?",
+              "answer": "A transaction is all-or-nothing; it either fully completes or doesn't happen at all",
+              "explain": "Atomicity ensures you can't have partial updates. If a transaction fails halfway, all changes are undone, leaving data consistent.",
+              "choices": [
+                "Data is broken into small units",
+                "A transaction is all-or-nothing; it either fully completes or doesn't happen at all",
+                "Only one user can access data at a time",
+                "Data is permanently saved"
+              ],
+              "id": "databases_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Consistency mean in ACID?",
+              "answer": "Data always moves from one valid state to another valid state",
+              "explain": "Consistency means rules and constraints are always followed. If a transaction violates a constraint, it's rejected and rolled back.",
+              "choices": [
+                "All data is identical",
+                "Data is sorted the same way",
+                "Data always moves from one valid state to another valid state",
+                "Data never changes"
+              ],
+              "id": "databases_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Durability mean in ACID?",
+              "answer": "Once a transaction is committed, the changes are permanent",
+              "explain": "Durability guarantees that data is safely stored. Even if the server crashes immediately after, committed changes survive.",
+              "choices": [
+                "Data lasts forever",
+                "Backups are made automatically",
+                "Once a transaction is committed, the changes are permanent",
+                "Users cannot change data"
+              ],
+              "id": "databases_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Design and Performance",
+      "tip": "Organizing data efficiently through normalization prevents redundancy and inconsistency. Indexes speed up searches but use extra storage. Understanding trade-offs helps you design databases that are both fast and maintainable.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Normalization and Optimization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is database normalization?",
+              "answer": "Organizing tables to reduce redundancy and improve data consistency",
+              "explain": "Normalization structures data to minimize duplication and dependency issues. A student's name shouldn't be repeated in every enrollment record; instead, reference the student record.",
+              "choices": [
+                "Making all tables the same size",
+                "Organizing tables to reduce redundancy and improve data consistency",
+                "Sorting data alphabetically",
+                "Creating exact copies of tables"
+              ],
+              "id": "databases_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What problem does normalization solve?",
+              "answer": "It prevents data redundancy and update anomalies",
+              "explain": "Without normalization, data gets duplicated. If a student's phone number is stored in every enrollment, changing it requires updating every row. Normalization stores it once.",
+              "choices": [
+                "It makes queries faster",
+                "It prevents data redundancy and update anomalies",
+                "It reduces storage space",
+                "It encrypts data"
+              ],
+              "id": "databases_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an index in a database?",
+              "answer": "A data structure that speeds up searches and sorting",
+              "explain": "An index works like a book's index. Instead of scanning every row, the database uses the index to find matching rows quickly.",
+              "choices": [
+                "A backup copy of the table",
+                "A data structure that speeds up searches and sorting",
+                "A list of primary keys",
+                "A deleted row marker"
+              ],
+              "id": "databases_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might you not index every column?",
+              "answer": "Indexes use extra storage and slow down INSERT/UPDATE/DELETE operations",
+              "explain": "Indexes speed up reads but add overhead when modifying data. You need to update the index every time a row changes. Index only columns frequently searched.",
+              "choices": [
+                "Indexes don't help",
+                "Indexes use extra storage and slow down INSERT/UPDATE/DELETE operations",
+                "It reduces security",
+                "It's not possible"
+              ],
+              "id": "databases_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is query optimization?",
+              "answer": "Structuring queries to run faster and use fewer resources",
+              "explain": "Query optimization means writing queries efficiently. Selecting only needed columns, using appropriate indexes, and using the right join strategy all help.",
+              "choices": [
+                "Running the same query twice",
+                "Structuring queries to run faster and use fewer resources",
+                "Deleting unused data",
+                "Creating more indexes"
+              ],
+              "id": "databases_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Trade-offs and Scalability",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the trade-off between storage and speed?",
+              "answer": "Indexes and denormalization use more storage to make queries faster",
+              "explain": "To speed up queries, you might store redundant data or create indexes. This uses more storage but retrieves data faster.",
+              "choices": [
+                "There is no trade-off",
+                "Indexes and denormalization use more storage to make queries faster",
+                "Storage always determines speed",
+                "Speed always requires less storage"
+              ],
+              "id": "databases_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is denormalization?",
+              "answer": "Deliberately storing redundant data to improve query performance",
+              "explain": "Denormalization breaks normalization rules to optimize for reads. You might store a user's city in both the user table and order table to avoid joins.",
+              "choices": [
+                "The same as normalization",
+                "Deliberately storing redundant data to improve query performance",
+                "Deleting unnecessary columns",
+                "Creating more tables"
+              ],
+              "id": "databases_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does horizontal partitioning help scalability?",
+              "answer": "It distributes rows across multiple servers based on a condition",
+              "explain": "Partitioning splits data. You might store orders from 2020 on one server and 2021 orders on another. Queries can skip irrelevant partitions.",
+              "choices": [
+                "It deletes old data",
+                "It distributes rows across multiple servers based on a condition",
+                "It combines multiple tables",
+                "It creates backups"
+              ],
+              "id": "databases_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a connection pool?",
+              "answer": "A set of reusable database connections kept ready for applications",
+              "explain": "Connection pooling reuses connections instead of creating new ones for each query. This reduces overhead and speeds up applications.",
+              "choices": [
+                "A backup strategy",
+                "A set of reusable database connections kept ready for applications",
+                "A encryption method",
+                "A data type"
+              ],
+              "id": "databases_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does caching help database performance?",
+              "answer": "It stores frequently accessed data in memory to avoid repeated queries",
+              "explain": "Caching keeps hot data in fast memory. Repeated reads of the same data don't hit disk. This dramatically improves performance for read-heavy applications.",
+              "choices": [
+                "It deletes unused data",
+                "It stores frequently accessed data in memory to avoid repeated queries",
+                "It encrypts the database",
+                "It creates more indexes"
+              ],
+              "id": "databases_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Beyond Relational Databases",
+      "tip": "Not all data fits the relational table model. Key-value stores, document databases, and graph databases each excel at different problems. Understanding when to use each type helps you choose the right tool.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Alternative Database Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a key-value store?",
+              "answer": "A database that stores simple key-value pairs for fast retrieval",
+              "explain": "Key-value stores are very simple: you give a key, you get a value. They're extremely fast but don't support complex queries. Good for caching and sessions.",
+              "choices": [
+                "A relational database",
+                "A database that stores simple key-value pairs for fast retrieval",
+                "A backup system",
+                "A type of index"
+              ],
+              "id": "databases_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a document database?",
+              "answer": "A database that stores data as flexible, self-describing documents",
+              "explain": "Document databases store data as JSON-like documents. Each document can have a different structure, making them flexible for varied data.",
+              "choices": [
+                "A database for text files",
+                "A database that stores data as flexible, self-describing documents",
+                "A backup service",
+                "A relational database"
+              ],
+              "id": "databases_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a graph database?",
+              "answer": "A database optimized for data with complex relationships",
+              "explain": "Graph databases store data as nodes and edges. They're perfect for social networks, recommendation systems, and any highly connected data.",
+              "choices": [
+                "A visual display of data",
+                "A database optimized for data with complex relationships",
+                "A backup method",
+                "A type of index"
+              ],
+              "id": "databases_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When would you use a key-value store instead of a relational database?",
+              "answer": "When you need extremely fast simple lookups without complex queries",
+              "explain": "Key-value stores are best for caching, sessions, and real-time data where speed matters more than query flexibility.",
+              "choices": [
+                "Always, for all use cases",
+                "When you need extremely fast simple lookups without complex queries",
+                "Never, relational is always better",
+                "For backups only"
+              ],
+              "id": "databases_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you choose a document database for a project?",
+              "answer": "Because your data has varying structures that don't fit a fixed schema",
+              "explain": "Document databases are flexible. If some records need different fields or data structures change often, documents adapt better than rigid tables.",
+              "choices": [
+                "They're always faster",
+                "Because your data has varying structures that don't fit a fixed schema",
+                "They're cheaper",
+                "They're easier to learn"
+              ],
+              "id": "databases_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Replication and Backup Strategies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is database replication?",
+              "answer": "Copying data to multiple servers for redundancy and availability",
+              "explain": "Replication maintains identical copies on different servers. If one fails, others keep serving. This improves reliability and can improve read performance.",
+              "choices": [
+                "Backing up the database",
+                "Copying data to multiple servers for redundancy and availability",
+                "Deleting old data",
+                "Splitting one table into multiple"
+              ],
+              "id": "databases_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a primary-replica replication setup?",
+              "answer": "One primary server accepts writes, secondary servers replicate copies for reads",
+              "explain": "The primary receives all write operations, then copies changes to secondary servers. Reads can happen on secondaries, distributing load.",
+              "choices": [
+                "Both servers can write",
+                "One primary server accepts writes, secondary servers replicate copies for reads",
+                "No replication occurs",
+                "Only backups happen"
+              ],
+              "id": "databases_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a backup in database terms?",
+              "answer": "A complete copy of the database at a specific point in time",
+              "explain": "Backups capture all data at one moment. You can restore to that point if data is corrupted or lost. Regular backups are essential.",
+              "choices": [
+                "A temporary cache",
+                "A complete copy of the database at a specific point in time",
+                "A list of deleted rows",
+                "An index"
+              ],
+              "id": "databases_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should backups be stored in a different location from the main database?",
+              "answer": "To protect against data loss from physical disasters at the main location",
+              "explain": "If fire or flood destroys the server location, local backups are gone too. Remote backups ensure you can recover even from catastrophic events.",
+              "choices": [
+                "To make backups faster",
+                "To protect against data loss from physical disasters at the main location",
+                "To reduce costs",
+                "To improve query speed"
+              ],
+              "id": "databases_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the recovery time objective (RTO)?",
+              "answer": "The maximum acceptable time to restore a database after a failure",
+              "explain": "RTO defines how quickly you need to be back online. Critical systems might have an RTO of minutes, while non-critical systems might tolerate hours.",
+              "choices": [
+                "The time required to make a backup",
+                "The maximum acceptable time to restore a database after a failure",
+                "The speed of queries",
+                "The storage capacity needed"
+              ],
+              "id": "databases_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
