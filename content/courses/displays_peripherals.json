@@ -1,0 +1,904 @@
+{
+  "id": "displays_peripherals",
+  "name": "Displays and Peripherals",
+  "category": "engineering",
+  "icon": "fa-solid fa-keyboard",
+  "level": "How You Touch the Machine",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "How Screens Work",
+      "tip": "Displays create images by controlling light. LCD screens use a backlight and liquid crystals to block or allow light through. OLED screens emit their own light from individual pixels.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "LCD Displays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does LCD stand for?",
+              "answer": "Liquid Crystal Display",
+              "explain": "LCD is the technology behind most monitors and older phone screens. Liquid crystals twist to control how much light passes through.",
+              "choices": [
+                "Light Crystal Display",
+                "Liquid Crystal Display",
+                "Liquid Color Display",
+                "Light Control Device"
+              ],
+              "id": "displays_peripherals_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an LCD screen produce light?",
+              "answer": "A backlight shines through liquid crystals",
+              "explain": "LCD screens have a bright light source behind them. Liquid crystal layers twist to block or pass light, creating the image you see.",
+              "choices": [
+                "A backlight shines through liquid crystals",
+                "Electricity flows through liquid directly",
+                "Magnets attract and repel light particles",
+                "Chemical reactions produce light"
+              ],
+              "id": "displays_peripherals_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pixel?",
+              "answer": "The smallest colored dot that makes up a display",
+              "explain": "Pixels are tiny colored lights. Thousands or millions of pixels arranged in a grid create the image on your screen.",
+              "choices": [
+                "A measurement of screen size",
+                "A type of light bulb",
+                "The smallest colored dot that makes up a display",
+                "A wire inside the screen"
+              ],
+              "id": "displays_peripherals_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are subpixels?",
+              "answer": "Tiny red, green, or blue parts that make up each pixel",
+              "explain": "Each pixel contains three subpixels: red, green, and blue. By mixing light from these three colors at different brightness levels, any color can be created.",
+              "choices": [
+                "Light-blocking filters",
+                "Smaller screens",
+                "Liquid crystal molecules",
+                "Tiny red, green, or blue parts that make up each pixel"
+              ],
+              "id": "displays_peripherals_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do LCD screens need a backlight?",
+              "answer": "Liquid crystals only block or pass light, they don't produce it",
+              "explain": "Liquid crystals are like tiny shutters. They control light but don't create it, so a backlight behind them is essential.",
+              "choices": [
+                "Liquid crystals only block or pass light, they don't produce it",
+                "To make the image brighter",
+                "To reduce power consumption",
+                "To prevent eye strain"
+              ],
+              "id": "displays_peripherals_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "OLED Displays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does OLED stand for?",
+              "answer": "Organic Light-Emitting Diode",
+              "explain": "OLED is a newer display technology where each pixel produces its own light instead of relying on a shared backlight.",
+              "choices": [
+                "Optical Light Emitting Diode",
+                "Optimized Light Emission Device",
+                "Output Light Electronic Display",
+                "Organic Light-Emitting Diode"
+              ],
+              "id": "displays_peripherals_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do OLED pixels produce light?",
+              "answer": "Each pixel emits light when current flows through it",
+              "explain": "OLED pixels are self-luminous. When electricity passes through the organic material, it glows. No backlight needed.",
+              "choices": [
+                "They reflect external light",
+                "A backlight shines through them",
+                "Mirrors bounce light from below",
+                "Each pixel emits light when current flows through it"
+              ],
+              "id": "displays_peripherals_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when an OLED pixel turns off?",
+              "answer": "No light is produced from that pixel",
+              "explain": "In an OLED screen, off pixels produce zero light, creating true blacks. This saves power and improves contrast compared to LCD.",
+              "choices": [
+                "It reflects ambient light",
+                "It displays gray instead",
+                "A backlight shines through it",
+                "No light is produced from that pixel"
+              ],
+              "id": "displays_peripherals_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do OLED screens typically have better contrast than LCD?",
+              "answer": "OLED pixels produce true black when off",
+              "explain": "LCD screens always have some backlight coming through, so blacks are actually dark gray. OLED pixels can turn completely off, creating perfect black and infinite contrast.",
+              "choices": [
+                "OLED uses more color subpixels",
+                "OLED pixels produce true black when off",
+                "OLED pixels are larger",
+                "OLED screens use stronger backlights"
+              ],
+              "id": "displays_peripherals_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a disadvantage of OLED displays?",
+              "answer": "Pixels can wear out over time, causing burn-in",
+              "explain": "OLED pixels gradually dim with use. If the same image stays on screen for weeks, those pixels may be permanently darker than the rest.",
+              "choices": [
+                "They are less bright than LCD",
+                "Pixels can wear out over time, causing burn-in",
+                "They use more power than LCD",
+                "They cannot display dark colors"
+              ],
+              "id": "displays_peripherals_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Resolution and Pixel Density",
+      "tip": "Resolution is how many pixels fit on the screen, measured as width by height. Pixel density measures how closely packed pixels are, making the image sharper.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Understanding Resolution",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a resolution of 1920x1080 mean?",
+              "answer": "1920 pixels wide and 1080 pixels tall",
+              "explain": "Resolution describes the grid size. 1920x1080 means the screen contains 1920 columns and 1080 rows of pixels.",
+              "choices": [
+                "1920 colors and 1080 shades",
+                "A zoom level of 1920 percent",
+                "1920 inches wide and 1080 inches tall",
+                "1920 pixels wide and 1080 pixels tall"
+              ],
+              "id": "displays_peripherals_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do higher resolutions show more detail?",
+              "answer": "More pixels means finer details can be drawn",
+              "explain": "With more pixels, images can contain finer details and smoother curves. Each pixel is smaller, so the image looks sharper.",
+              "choices": [
+                "Higher resolutions require less power",
+                "The screen becomes physically larger",
+                "Higher resolutions use brighter light",
+                "More pixels means finer details can be drawn"
+              ],
+              "id": "displays_peripherals_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 4K resolution?",
+              "answer": "Approximately 4000 pixels wide, around 3840x2160",
+              "explain": "4K is an ultra-high resolution with roughly four times the pixels of 1080p. It provides extremely sharp images for detailed work.",
+              "choices": [
+                "A screen that costs 4000 dollars",
+                "4000 colors on the screen",
+                "Four layers of LCD",
+                "Approximately 4000 pixels wide, around 3840x2160"
+              ],
+              "id": "displays_peripherals_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two screens have the same resolution but look different?",
+              "answer": "Yes, if they are different sizes the pixel density differs",
+              "explain": "A 1080p 24-inch monitor and a 1080p 32-inch monitor have the same resolution but different pixel densities. The larger screen looks less sharp.",
+              "choices": [
+                "Only if one uses LCD and one uses OLED",
+                "Yes, if they are different sizes the pixel density differs",
+                "Only if the colors are different",
+                "No, resolution determines how things look"
+              ],
+              "id": "displays_peripherals_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'native resolution' mean?",
+              "answer": "The number of pixels the screen physically has",
+              "explain": "Native resolution is the actual pixel count. Scaling images to a different resolution can look blurry or stretched.",
+              "choices": [
+                "A standard set by the government",
+                "The number of pixels the screen physically has",
+                "The resolution used in movies",
+                "The fastest resolution for gaming"
+              ],
+              "id": "displays_peripherals_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Pixel Density and Sharpness",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is pixel density measured in?",
+              "answer": "Pixels per inch (PPI) or dots per inch (DPI)",
+              "explain": "Pixel density tells you how many pixels fit in one inch of screen. Higher density means sharper images because pixels are smaller.",
+              "choices": [
+                "Gigahertz of light",
+                "Pixels per inch (PPI) or dots per inch (DPI)",
+                "Megapixels per square inch",
+                "Lumens per centimeter"
+              ],
+              "id": "displays_peripherals_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to image sharpness when pixel size increases?",
+              "answer": "The image becomes pixelated and less sharp",
+              "explain": "Larger pixels are more visible, making the image look blocky. You can see individual dots instead of smooth lines and curves.",
+              "choices": [
+                "The brightness doubles",
+                "The image becomes sharper",
+                "The image becomes pixelated and less sharp",
+                "Colors become more vibrant"
+              ],
+              "id": "displays_peripherals_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phone screens typically have higher pixel density than monitor screens?",
+              "answer": "Phones are held closer to your eyes, so pixels are more visible",
+              "explain": "Your phone is a few inches from your eyes, while a monitor is farther away. Pixels are more noticeable at close distances, so phones need higher density to look sharp.",
+              "choices": [
+                "Phone screens are newer technology",
+                "Phones are more expensive",
+                "Phones are held closer to your eyes, so pixels are more visible",
+                "Phones have stronger backlights"
+              ],
+              "id": "displays_peripherals_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'retina display' mean?",
+              "answer": "Pixel density high enough that individual pixels are not visible",
+              "explain": "A retina display has enough pixels per inch that, from normal viewing distance, the human eye cannot see individual pixels. The image looks smooth and continuous.",
+              "choices": [
+                "A display that uses LED technology",
+                "A display with red, green, and blue pixels",
+                "Pixel density high enough that individual pixels are not visible",
+                "A display that reduces eye strain"
+              ],
+              "id": "displays_peripherals_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does viewing distance affect perceived sharpness?",
+              "answer": "Closer viewing distances require higher pixel density for sharpness",
+              "explain": "When you hold a device close, individual pixels become visible at lower densities. Farther viewing distances forgive lower pixel density.",
+              "choices": [
+                "Viewing distance does not affect sharpness",
+                "Closer viewing distances require higher pixel density for sharpness",
+                "Pixel density changes with viewing distance",
+                "Farther distances require higher pixel density"
+              ],
+              "id": "displays_peripherals_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Color and Bit Depth",
+      "tip": "Colors on screens are made by mixing red, green, and blue light at different brightness levels. Bit depth determines how many colors can be displayed.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "RGB Color Model",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does RGB stand for?",
+              "answer": "Red, Green, Blue",
+              "explain": "RGB is the color model used by all screens. By controlling the intensity of red, green, and blue light in each pixel, any color can be created.",
+              "choices": [
+                "Red, Green, Blue",
+                "Red, Gold, Blue",
+                "Radio, Graphite, Band",
+                "Retina, Graphics, Brightness"
+              ],
+              "id": "displays_peripherals_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many values can each color channel have in 8-bit color?",
+              "answer": "256 values, from 0 to 255",
+              "explain": "8 bits per channel means 2 to the power of 8 = 256 possible brightness levels for each color, from off (0) to full brightness (255).",
+              "choices": [
+                "100 values",
+                "256 values, from 0 to 255",
+                "8 values",
+                "1024 values"
+              ],
+              "id": "displays_peripherals_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What color does pure red look like in RGB?",
+              "answer": "Red at 255, Green at 0, Blue at 0",
+              "explain": "To show pure red, the red channel is at maximum (255) while green and blue are off (0). Mixing equal amounts of all three colors makes white.",
+              "choices": [
+                "Red at 0, Green at 0, Blue at 255",
+                "Red at 200, Green at 55, Blue at 55",
+                "Red at 128, Green at 128, Blue at 128",
+                "Red at 255, Green at 0, Blue at 0"
+              ],
+              "id": "displays_peripherals_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is white displayed in RGB?",
+              "answer": "Red, Green, and Blue all at maximum brightness",
+              "explain": "When all three colors are at full brightness (255, 255, 255), they mix together to create white light.",
+              "choices": [
+                "All channels are at half brightness (128)",
+                "Red, Green, and Blue all at maximum brightness",
+                "A special white channel is used",
+                "Only red is displayed at maximum"
+              ],
+              "id": "displays_peripherals_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What color is displayed when all RGB channels are at 0?",
+              "answer": "Black",
+              "explain": "When red, green, and blue are all off (0, 0, 0), no light is produced. The pixel appears black.",
+              "choices": [
+                "Dark blue",
+                "Gray",
+                "Transparent",
+                "Black"
+              ],
+              "id": "displays_peripherals_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Color Depth and Gamut",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is color depth?",
+              "answer": "The number of bits used per pixel to store color information",
+              "explain": "Color depth determines how many colors can be displayed. A display using 8 bits per pixel shows only 256 colors, far fewer than the over 16 million of 24 bits per pixel.",
+              "choices": [
+                "The saturation of a color",
+                "The brightness level of a color",
+                "The number of bits used per pixel to store color information",
+                "How far colors fade"
+              ],
+              "id": "displays_peripherals_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many colors can a 24-bit display show?",
+              "answer": "Over 16 million colors",
+              "explain": "24-bit color uses 8 bits per channel (RGB). Since each channel has 256 values, the total is 256 x 256 x 256 = 16,777,216 possible colors.",
+              "choices": [
+                "Over 16 million colors",
+                "256 colors",
+                "65,536 colors",
+                "2 billion colors"
+              ],
+              "id": "displays_peripherals_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is color gamut?",
+              "answer": "The range of colors a display can actually produce",
+              "explain": "Gamut describes which colors are possible on a specific screen. Not all displays can show the same colors, even with the same bit depth.",
+              "choices": [
+                "The number of color bits",
+                "How fast colors change",
+                "The range of colors a display can actually produce",
+                "How bright a color appears"
+              ],
+              "id": "displays_peripherals_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might two displays show the same image differently?",
+              "answer": "They have different color gamuts and calibrations",
+              "explain": "Each display has its own gamut, brightness range, and color balance. A photo might look warmer on one monitor and cooler on another.",
+              "choices": [
+                "They have different resolutions",
+                "One uses more bits than the other",
+                "They have different color gamuts and calibrations",
+                "One is always more accurate"
+              ],
+              "id": "displays_peripherals_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is HDR in displays?",
+              "answer": "High Dynamic Range, allowing brighter whites and darker blacks",
+              "explain": "HDR displays can show a wider range of brightness, from very bright whites to very dark blacks, with more details in both extremes.",
+              "choices": [
+                "Hardware Data Refresh",
+                "High Density Rendering",
+                "High Dynamic Range, allowing brighter whites and darker blacks",
+                "High Definition Resolution"
+              ],
+              "id": "displays_peripherals_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Refresh Rate and Motion",
+      "tip": "Refresh rate measures how many times per second the screen redraws the image. Response time measures how quickly pixels change color. Both affect motion smoothness.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Refresh Rates",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is refresh rate measured in?",
+              "answer": "Hertz (Hz), cycles per second",
+              "explain": "Refresh rate is how many times per second the screen redraws. 60 Hz means the image refreshes 60 times per second.",
+              "choices": [
+                "Hertz (Hz), cycles per second",
+                "Frames per minute",
+                "Milliseconds",
+                "Inches per second"
+              ],
+              "id": "displays_peripherals_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 60 Hz monitor refresh?",
+              "answer": "The image 60 times per second",
+              "explain": "A 60 Hz display updates the image 60 times each second. This provides smooth motion for most everyday tasks.",
+              "choices": [
+                "The image 60 times per minute",
+                "The image 60 times per hour",
+                "The image 60 times per second",
+                "Only 60 percent of the image"
+              ],
+              "id": "displays_peripherals_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do gaming monitors often have 144 Hz or higher?",
+              "answer": "Higher refresh rates show motion more smoothly",
+              "explain": "More frames per second means motion looks smoother and each step between frames is smaller, which helps in fast-paced games. The difference between 60 Hz and 144 Hz is easy to notice.",
+              "choices": [
+                "Higher refresh rates show motion more smoothly",
+                "Higher refresh rates use less power",
+                "Higher refresh rates improve color accuracy",
+                "Higher refresh rates are brighter"
+              ],
+              "id": "displays_peripherals_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you see the difference between 60 Hz and 120 Hz?",
+              "answer": "Yes, especially during fast motion or scrolling",
+              "explain": "Most people notice smoother motion at 120 Hz compared to 60 Hz. The difference becomes less noticeable beyond 120 Hz for most people.",
+              "choices": [
+                "Only if you look very carefully",
+                "Only in dark rooms",
+                "No, the human eye cannot tell the difference",
+                "Yes, especially during fast motion or scrolling"
+              ],
+              "id": "displays_peripherals_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if your graphics card cannot keep up with the monitor refresh rate?",
+              "answer": "Some frames are displayed twice, or the image tears",
+              "explain": "If the GPU finishes a frame after the monitor has already started redrawing, either frames are duplicated or the screen shows parts of different frames.",
+              "choices": [
+                "The refresh rate has no effect",
+                "Some frames are displayed twice, or the image tears",
+                "The image automatically becomes clearer",
+                "The monitor automatically slows down"
+              ],
+              "id": "displays_peripherals_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Response Time and Motion Artifacts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is response time in a display?",
+              "answer": "How fast a pixel changes from one color to another",
+              "explain": "Response time measures how quickly pixels react to new input. Measured in milliseconds, it affects how sharp moving objects appear.",
+              "choices": [
+                "How fast the screen refreshes",
+                "How long data takes to reach the pixel",
+                "How bright the screen can get",
+                "How fast a pixel changes from one color to another"
+              ],
+              "id": "displays_peripherals_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do gaming monitors advertise low response times?",
+              "answer": "Slow response time causes blur during motion",
+              "explain": "When pixels are slow to change, moving objects appear blurry. Low response times keep movement sharp and clear.",
+              "choices": [
+                "Response time does not affect gaming",
+                "Low response time causes blur during motion",
+                "Low response time makes the image brighter",
+                "Slow response time causes blur during motion"
+              ],
+              "id": "displays_peripherals_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is ghosting in displays?",
+              "answer": "A blurry shadow or trail following moving objects",
+              "explain": "Ghosting occurs when pixels are slow to respond. You see a faint copy of the object trailing behind its actual position.",
+              "choices": [
+                "Random flickering on the screen",
+                "Color changing randomly",
+                "Dead pixels that don't light up",
+                "A blurry shadow or trail following moving objects"
+              ],
+              "id": "displays_peripherals_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is screen tearing?",
+              "answer": "Horizontal lines where the screen shows two different frames at once",
+              "explain": "Tearing happens when the monitor shows part of one frame and part of the next. It creates a visible line where they don't match up.",
+              "choices": [
+                "Colors bleeding into each other",
+                "A permanent crack in the screen",
+                "Horizontal lines where the screen shows two different frames at once",
+                "Flashing between bright and dark"
+              ],
+              "id": "displays_peripherals_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does VSync do?",
+              "answer": "Synchronizes the GPU with the monitor refresh rate to prevent tearing",
+              "explain": "VSync forces the GPU to wait for the monitor's refresh. This prevents tearing but can add input delay.",
+              "choices": [
+                "Reduces response time",
+                "Increases the refresh rate automatically",
+                "Synchronizes the GPU with the monitor refresh rate to prevent tearing",
+                "Brightens the image"
+              ],
+              "id": "displays_peripherals_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Touchscreens and Input Devices",
+      "tip": "Touchscreens detect where you touch them using different technologies. Keyboards and mice send input signals. Each input method has different accuracy and responsiveness.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Touchscreen Technologies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a capacitive touchscreen?",
+              "answer": "A screen that detects touch by sensing electrical conductivity",
+              "explain": "Capacitive screens detect when your finger changes the electrical properties of the screen surface. They are sensitive and work with bare fingers.",
+              "choices": [
+                "A screen that uses light reflection",
+                "A screen that uses heat to detect touch",
+                "A screen that detects touch by sensing electrical conductivity",
+                "A screen that uses pressure sensing"
+              ],
+              "id": "displays_peripherals_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do capacitive touchscreens not work with gloves?",
+              "answer": "Gloves block the electrical connection between your finger and the screen",
+              "explain": "Most gloves are insulators, so they prevent the electrical signal from reaching the screen. Special conductive gloves are needed.",
+              "choices": [
+                "The screen cannot see through gloves",
+                "Gloves reflect light away",
+                "Gloves are too thick",
+                "Gloves block the electrical connection between your finger and the screen"
+              ],
+              "id": "displays_peripherals_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a resistive touchscreen?",
+              "answer": "A screen that detects touch by pressure between two conductive layers",
+              "explain": "Resistive screens have two layers that come together when you press. They work with any object, including gloved fingers or styluses.",
+              "choices": [
+                "A screen that only works with special pens",
+                "A screen that detects touch by pressure between two conductive layers",
+                "A screen that resists your touches",
+                "A screen that detects touch with infrared beams"
+              ],
+              "id": "displays_peripherals_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a disadvantage of resistive touchscreens?",
+              "answer": "They are less accurate and require more pressure than capacitive",
+              "explain": "Resistive screens need visible pressure to register a touch. This makes them less responsive and less precise than capacitive screens.",
+              "choices": [
+                "They are less accurate and require more pressure than capacitive",
+                "They are too expensive",
+                "They do not work with fingers",
+                "They cannot detect multiple touches"
+              ],
+              "id": "displays_peripherals_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is multi-touch on a screen?",
+              "answer": "The ability to detect multiple finger touches at the same time",
+              "explain": "Multi-touch allows pinch-to-zoom, two-finger scrolling, and other gestures. Capacitive screens naturally support multi-touch.",
+              "choices": [
+                "Touching the screen multiple times in a row",
+                "Using multiple screens together",
+                "The ability to detect multiple finger touches at the same time",
+                "Touching different parts of the screen rapidly"
+              ],
+              "id": "displays_peripherals_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Keyboards and Mice",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between membrane and mechanical keyboards?",
+              "answer": "Mechanical has individual switches under each key; membrane uses a rubber sheet",
+              "explain": "Mechanical keyboards have tactile switches that provide feedback. Membrane keyboards use a rubber dome under a single sheet, feeling mushy.",
+              "choices": [
+                "Membrane keyboards last longer",
+                "Mechanical keyboards are wireless",
+                "Mechanical has individual switches under each key; membrane uses a rubber sheet",
+                "Mechanical keyboards are cheaper"
+              ],
+              "id": "displays_peripherals_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do gamers prefer mechanical keyboards?",
+              "answer": "Tactile feedback and faster actuation improve response",
+              "explain": "Mechanical switches give clear physical feedback when a key registers, and many have short travel before activating, which gamers value for control and timing.",
+              "choices": [
+                "Tactile feedback and faster actuation improve response",
+                "Mechanical keyboards last one year",
+                "Mechanical keyboards are cheaper",
+                "Mechanical keyboards are quieter"
+              ],
+              "id": "displays_peripherals_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a mouse sensor detect?",
+              "answer": "Movement across a surface",
+              "explain": "Mouse sensors track how far the mouse has moved. Different sensor types (optical, laser) use different methods but all measure movement.",
+              "choices": [
+                "Movement across a surface",
+                "Light and darkness only",
+                "Color changes on the surface",
+                "Electrical signals from the surface"
+              ],
+              "id": "displays_peripherals_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DPI in mouse settings?",
+              "answer": "Dots Per Inch, how much the cursor moves per mouse movement",
+              "explain": "DPI controls sensitivity. High DPI makes the cursor move far when you move the mouse slightly. Low DPI requires more movement.",
+              "choices": [
+                "Digital Pixel Input",
+                "Data Process Interval",
+                "Display Performance Index",
+                "Dots Per Inch, how much the cursor moves per mouse movement"
+              ],
+              "id": "displays_peripherals_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a laser mouse typically differ from an optical mouse?",
+              "answer": "Laser mice are more sensitive and work on more surfaces",
+              "explain": "Laser sensors read finer surface detail, so they can track on glossy surfaces such as glass, where many optical sensors struggle.",
+              "choices": [
+                "Laser mice are more sensitive and work on more surfaces",
+                "Optical mice do not use any light",
+                "Laser mice do not need electricity",
+                "Laser mice are wireless"
+              ],
+              "id": "displays_peripherals_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Connectors and Ports",
+      "tip": "Connectors are the physical plugs that attach devices to computers. Different connectors carry different types of data and power. Modern standards aim for faster speeds and reversibility.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Display Connectors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does HDMI stand for?",
+              "answer": "High-Definition Multimedia Interface",
+              "explain": "HDMI is a standard connector that carries video and audio together over one cable. It is the most common display connector.",
+              "choices": [
+                "Horizontal Display Media Interface",
+                "High-Density Media Interface",
+                "High-Definition Multimedia Interface",
+                "High Data Multimedia Input"
+              ],
+              "id": "displays_peripherals_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DisplayPort?",
+              "answer": "A digital display standard used mainly on computer monitors to carry video and audio",
+              "explain": "DisplayPort was designed with computers in mind and supports high resolutions and refresh rates. It competes with HDMI.",
+              "choices": [
+                "A type of USB connector",
+                "A wireless connection standard",
+                "An HDMI adapter",
+                "A digital display standard used mainly on computer monitors to carry video and audio"
+              ],
+              "id": "displays_peripherals_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can DisplayPort and HDMI be used on the same monitor?",
+              "answer": "Yes, monitors often have both connectors",
+              "explain": "Most modern monitors include both HDMI and DisplayPort inputs. You pick whichever one your computer supports.",
+              "choices": [
+                "Yes, monitors often have both connectors",
+                "Only gaming monitors have both",
+                "You must choose one when buying",
+                "No, a monitor uses only one"
+              ],
+              "id": "displays_peripherals_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is USB-C video output?",
+              "answer": "USB-C ports that can transmit video signals as well as power and data",
+              "explain": "USB-C is becoming a universal connector. Some USB-C ports support video output, allowing one cable to handle video and power.",
+              "choices": [
+                "A replacement for HDMI",
+                "Only used for charging",
+                "USB-C ports that can transmit video signals as well as power and data",
+                "A wireless video standard"
+              ],
+              "id": "displays_peripherals_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is USB-C becoming popular for displays?",
+              "answer": "It carries power, data, and video in one reversible connector",
+              "explain": "USB-C simplifies device connections by combining multiple functions in one universal standard. The plug works either way up.",
+              "choices": [
+                "It is cheaper than HDMI",
+                "It is only for mobile devices",
+                "It carries power, data, and video in one reversible connector",
+                "It has no limit on cable length"
+              ],
+              "id": "displays_peripherals_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Data and Power Connectors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does USB stand for?",
+              "answer": "Universal Serial Bus",
+              "explain": "USB is the standard for connecting peripherals to computers. It handles both data transfer and power delivery.",
+              "choices": [
+                "Ultra Speed Bus",
+                "Unified Serial Bandwidth",
+                "User System Bridge",
+                "Universal Serial Bus"
+              ],
+              "id": "displays_peripherals_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main difference between USB 2.0 and USB 3.0?",
+              "answer": "USB 3.0 is much faster",
+              "explain": "USB 3.0 moves data many times faster than USB 2.0. Later USB versions are faster still.",
+              "choices": [
+                "USB 3.0 only works with phones",
+                "USB 2.0 is wireless",
+                "USB 3.0 costs more",
+                "USB 3.0 is much faster"
+              ],
+              "id": "displays_peripherals_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is USB-C called reversible?",
+              "answer": "The connector works when inserted either direction",
+              "explain": "USB-C can be plugged in upside down or right-side up. Older USB-A connectors only worked one way.",
+              "choices": [
+                "The connector works when inserted either direction",
+                "It rotates on the cable",
+                "It works in wireless mode",
+                "The cable can be reversed"
+              ],
+              "id": "displays_peripherals_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Thunderbolt?",
+              "answer": "A high-speed data standard that works over USB-C connectors",
+              "explain": "Thunderbolt is a very fast data link that uses the USB-C connector shape. Speeds have risen with each version.",
+              "choices": [
+                "A high-speed data standard that works over USB-C connectors",
+                "A wireless standard",
+                "A power delivery system",
+                "A type of battery"
+              ],
+              "id": "displays_peripherals_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do USB ports need different standards?",
+              "answer": "Different devices need different speeds and power levels",
+              "explain": "A keyboard needs little power and slow speeds, while an external hard drive needs fast speeds. USB standards give flexibility for these variations.",
+              "choices": [
+                "There is no reason, it is just tradition",
+                "Manufacturers want to sell more cables",
+                "Older devices are incompatible with new standards",
+                "Different devices need different speeds and power levels"
+              ],
+              "id": "displays_peripherals_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

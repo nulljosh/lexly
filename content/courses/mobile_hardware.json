@@ -1,0 +1,904 @@
+{
+  "id": "mobile_hardware",
+  "name": "Mobile Hardware",
+  "category": "engineering",
+  "icon": "fa-solid fa-mobile-screen-button",
+  "level": "Inside a Phone",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "System on a Chip",
+      "tip": "A System on a Chip (SoC) combines the CPU, GPU, memory controllers, and other components into a single piece of silicon. This integration saves space and power, making it ideal for phones.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What is a SoC",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does SoC stand for?",
+              "answer": "System on a Chip",
+              "explain": "A SoC integrates the main processor, graphics processor, memory controllers, and other components into a single chip.",
+              "choices": [
+                "System on a Chip",
+                "Software on Computer",
+                "Screen on Chip",
+                "Secure on Cloud"
+              ],
+              "id": "mobile_hardware_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phones use SoCs instead of separate processors and chips?",
+              "answer": "SoCs save space and power by integrating everything",
+              "explain": "Combining components into one chip means fewer separate pieces, less wiring, and lower power consumption. This is essential for thin, battery-powered devices.",
+              "choices": [
+                "Separate chips are more reliable",
+                "SoCs are always faster",
+                "SoCs save space and power by integrating everything",
+                "SoCs reduce the cost dramatically"
+              ],
+              "id": "mobile_hardware_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the CPU in a SoC?",
+              "answer": "The processor that executes most software and programs",
+              "explain": "The CPU handles running apps, processing logic, and managing the operating system. In a SoC, multiple CPU cores work together.",
+              "choices": [
+                "The processor that executes most software and programs",
+                "The component that stores files",
+                "The wireless antenna",
+                "The part that draws images"
+              ],
+              "id": "mobile_hardware_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the GPU in a SoC?",
+              "answer": "The processor specialized for drawing graphics and images",
+              "explain": "The GPU accelerates graphics rendering, games, and video. It is much faster at graphics than the CPU but handles different tasks.",
+              "choices": [
+                "The processor specialized for drawing graphics and images",
+                "The main processor",
+                "The wireless radio",
+                "The battery management system"
+              ],
+              "id": "mobile_hardware_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What else besides CPU and GPU is in a typical SoC?",
+              "answer": "Memory controllers, image processors, neural engines",
+              "explain": "Modern SoCs include specialized components for handling images, AI tasks, and memory. Each handles different jobs efficiently.",
+              "choices": [
+                "Memory controllers, image processors, neural engines",
+                "The power supply",
+                "Only CPU and GPU",
+                "The screen and battery"
+              ],
+              "id": "mobile_hardware_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "ARM Architecture",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is ARM in mobile processors?",
+              "answer": "A processor architecture designed for low power and efficiency",
+              "explain": "ARM is an instruction set design used in most phone processors. It prioritizes power efficiency, making it ideal for battery-powered devices.",
+              "choices": [
+                "A company that makes screens",
+                "An operating system",
+                "A type of antenna",
+                "A processor architecture designed for low power and efficiency"
+              ],
+              "id": "mobile_hardware_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is ARM architecture common in phones?",
+              "answer": "It uses less power and heat than x86 architecture",
+              "explain": "ARM processors are designed from the ground up for efficiency. Traditional x86 PC processors were built for performance and drew more power and made more heat.",
+              "choices": [
+                "It uses less power and heat than x86 architecture",
+                "ARM works better with iOS",
+                "ARM is cheaper to manufacture",
+                "ARM processors are always faster"
+              ],
+              "id": "mobile_hardware_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an instruction set?",
+              "answer": "The set of operations a processor can execute",
+              "explain": "An instruction set defines what a processor can do. ARM and x86 are different instruction sets. Software must be compiled for the correct architecture.",
+              "choices": [
+                "The set of operations a processor can execute",
+                "The heat dissipation system",
+                "The memory storage in a processor",
+                "The speed at which a processor runs"
+              ],
+              "id": "mobile_hardware_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a phone app written for ARM run on an x86 processor?",
+              "answer": "Not without emulation or recompilation",
+              "explain": "Apps are compiled for a specific architecture. An ARM app cannot run on x86 without translation software, which is slower.",
+              "choices": [
+                "ARM and x86 are the same",
+                "Yes, they are compatible",
+                "Only on certain phones",
+                "Not without emulation or recompilation"
+              ],
+              "id": "mobile_hardware_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does core count mean in a processor?",
+              "answer": "How many processing units work in parallel",
+              "explain": "A quad-core processor has four cores. More cores mean more tasks can run at once, but each core may be slower.",
+              "choices": [
+                "How fast the processor runs",
+                "How many processing units work in parallel",
+                "The number of transistors",
+                "How much memory the processor has"
+              ],
+              "id": "mobile_hardware_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Batteries and Power Management",
+      "tip": "Phone batteries are lithium-ion cells that store chemical energy and release it as electricity. Battery capacity is measured in milliamp-hours (mAh). Batteries degrade over time.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Lithium-Ion Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a lithium-ion battery?",
+              "answer": "A rechargeable battery using chemical reactions to generate electricity",
+              "explain": "Lithium-ion batteries move lithium ions between terminals, creating electrical flow. They are lightweight, rechargeable, and safe when maintained properly.",
+              "choices": [
+                "A battery that never runs out",
+                "A rechargeable battery using chemical reactions to generate electricity",
+                "A battery that uses lithium light",
+                "A solar-powered battery"
+              ],
+              "id": "mobile_hardware_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does mAh mean in battery capacity?",
+              "answer": "Milliamp-hours, a measure of electrical charge",
+              "explain": "mAh measures how much current a battery can supply over time. A larger mAh means the battery can power a device longer.",
+              "choices": [
+                "Milliamp-hours, a measure of electrical charge",
+                "Minutes and hours",
+                "Maximum amount of heat",
+                "Mobile amp-hours"
+              ],
+              "id": "mobile_hardware_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a charge cycle?",
+              "answer": "One complete discharge and recharge of the battery",
+              "explain": "A charge cycle is the use of 100 percent of a battery's capacity in total. Using 50 percent on two different days adds up to one cycle.",
+              "choices": [
+                "One complete discharge and recharge of the battery",
+                "Charging the phone once",
+                "The time it takes to charge",
+                "A year of daily charging"
+              ],
+              "id": "mobile_hardware_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do lithium-ion batteries degrade over time?",
+              "answer": "Chemical reactions inside the battery degrade the materials",
+              "explain": "Each charge cycle involves chemical changes. Over time, the materials inside wear out, reducing the battery's capacity.",
+              "choices": [
+                "Heat from the processor damages them",
+                "They run out of electricity",
+                "Chemical reactions inside the battery degrade the materials",
+                "Dust builds up inside"
+              ],
+              "id": "mobile_hardware_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many charge cycles does a typical phone battery last?",
+              "answer": "Several hundred cycles before capacity noticeably drops",
+              "explain": "Phone batteries are typically designed to keep around 80 percent of their capacity after several hundred full cycles. The exact number varies by design.",
+              "choices": [
+                "Only 10 cycles",
+                "Several hundred cycles before capacity noticeably drops",
+                "10,000 cycles guaranteed",
+                "Forever without degradation"
+              ],
+              "id": "mobile_hardware_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Power Efficiency and Thermal Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is power efficiency important in phone processors?",
+              "answer": "More efficient processors use less battery and produce less heat",
+              "explain": "Phone batteries are limited. Efficient processors get more work done per unit of power, extending battery life.",
+              "choices": [
+                "Efficiency is only marketing",
+                "Efficient processors are faster",
+                "More efficient processors use less battery and produce less heat",
+                "Efficiency makes phones cheaper"
+              ],
+              "id": "mobile_hardware_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a processor gets too hot?",
+              "answer": "It throttles down to reduce heat production",
+              "explain": "If a processor overheats, the phone automatically slows it down. This protects the device but reduces performance temporarily.",
+              "choices": [
+                "It throttles down to reduce heat production",
+                "The processor burns out",
+                "The phone turns off forever",
+                "The battery explodes"
+              ],
+              "id": "mobile_hardware_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phones get hot during gaming or video recording?",
+              "answer": "The processor and GPU work intensely, generating significant heat",
+              "explain": "Games and video processing are demanding tasks. The processor and GPU run at high speeds, producing more heat than normal use.",
+              "choices": [
+                "The processor and GPU work intensely, generating significant heat",
+                "The battery is failing",
+                "The phone is charging",
+                "The screen is too bright"
+              ],
+              "id": "mobile_hardware_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is thermal throttling?",
+              "answer": "Slowing down the processor when it gets too hot",
+              "explain": "Thermal throttling is a safety feature. It reduces processor speed to allow heat to dissipate, protecting the device.",
+              "choices": [
+                "Removing the thermal paste",
+                "Slowing down the processor when it gets too hot",
+                "Turning off the phone when hot",
+                "Using a fan to cool down"
+              ],
+              "id": "mobile_hardware_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do phones dissipate heat without a fan?",
+              "answer": "Through the metal frame and conductive materials",
+              "explain": "Phone frames are designed to conduct heat away from the processor to the outer surface, where it dissipates into the air.",
+              "choices": [
+                "Through the metal frame and conductive materials",
+                "They keep heat inside",
+                "Fans are built in but hidden",
+                "They use liquid cooling"
+              ],
+              "id": "mobile_hardware_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Wireless Technologies",
+      "tip": "Phones contain multiple wireless radios that work simultaneously. Cellular, Wi-Fi, and Bluetooth communicate using different frequencies and standards. GPS is a satellite positioning system.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Cellular and Network Radios",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a cellular network?",
+              "answer": "A wireless system connecting phones through towers",
+              "explain": "Cellular networks use towers to create coverage areas. Phones connect to the nearest tower, which handles voice and data.",
+              "choices": [
+                "A subscription service",
+                "A wireless system connecting phones through towers",
+                "A system of wires under the ground",
+                "A network for cell biology"
+              ],
+              "id": "mobile_hardware_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of a cellular radio in a phone?",
+              "answer": "To transmit and receive signals to and from network towers",
+              "explain": "The cellular radio is the antenna and transmitter. It converts digital data to radio waves and vice versa.",
+              "choices": [
+                "To listen to FM radio",
+                "To power the phone",
+                "To transmit and receive signals to and from network towers",
+                "To store text messages"
+              ],
+              "id": "mobile_hardware_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Wi-Fi?",
+              "answer": "A wireless local area network using radio frequencies",
+              "explain": "Wi-Fi allows phones to connect to routers without cellular networks. It is faster and more efficient than cellular for local data.",
+              "choices": [
+                "A type of cellular network",
+                "A brand name for routers",
+                "Internet that uses wires",
+                "A wireless local area network using radio frequencies"
+              ],
+              "id": "mobile_hardware_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phones have both Wi-Fi and cellular radios?",
+              "answer": "Wi-Fi is faster locally; cellular provides coverage anywhere",
+              "explain": "Wi-Fi is ideal when near a router, but cellular works everywhere. Having both gives flexibility and backup.",
+              "choices": [
+                "Cellular is obsolete",
+                "They are the same thing",
+                "Wi-Fi is faster locally; cellular provides coverage anywhere",
+                "Wi-Fi is obsolete"
+              ],
+              "id": "mobile_hardware_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 5G mean?",
+              "answer": "The fifth generation of cellular network technology",
+              "explain": "Each cellular generation brings higher speeds and lower delay than the one before it.",
+              "choices": [
+                "The fifth generation of cellular network technology",
+                "Five gigahertz frequency",
+                "A brand of network provider",
+                "Five antennas"
+              ],
+              "id": "mobile_hardware_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Bluetooth, NFC, and Positioning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is Bluetooth?",
+              "answer": "A short-range wireless standard for connecting nearby devices",
+              "explain": "Bluetooth is used for wireless headphones, speakers, and accessories. Its typical range is around 10 meters, and it uses very little power.",
+              "choices": [
+                "A short-range wireless standard for connecting nearby devices",
+                "A type of cellular network",
+                "A brand of wireless headphones",
+                "A feature of the internet"
+              ],
+              "id": "mobile_hardware_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is NFC?",
+              "answer": "Near Field Communication, very short-range wireless for payments",
+              "explain": "NFC allows phones to communicate with cards and readers by being very close together. It is used for contactless payments.",
+              "choices": [
+                "A type of Bluetooth",
+                "National Frequency Code",
+                "Near Field Communication, very short-range wireless for payments",
+                "Network File Connection"
+              ],
+              "id": "mobile_hardware_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is GPS?",
+              "answer": "Global Positioning System, using satellites to determine location",
+              "explain": "GPS receives signals from satellites to calculate your position. It is used for maps, navigation, and location tagging.",
+              "choices": [
+                "A mobile network protocol",
+                "A type of Wi-Fi",
+                "General Page Server",
+                "Global Positioning System, using satellites to determine location"
+              ],
+              "id": "mobile_hardware_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does GPS work on a phone without transmitting location?",
+              "answer": "It receives signals from satellites; only the phone knows its position",
+              "explain": "GPS is one-way. Satellites transmit signals to the phone. The phone calculates its position but does not transmit it.",
+              "choices": [
+                "It connects to the internet",
+                "It sends location data to carriers",
+                "It receives signals from satellites; only the phone knows its position",
+                "It uses cellular towers"
+              ],
+              "id": "mobile_hardware_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Assisted GPS (A-GPS) do?",
+              "answer": "Uses network data to speed up GPS position calculation",
+              "explain": "A-GPS combines GPS signals with cellular or Wi-Fi data. This helps GPS lock faster, especially indoors.",
+              "choices": [
+                "It only works outdoors",
+                "It is the same as regular GPS",
+                "Uses network data to speed up GPS position calculation",
+                "It disables GPS for privacy"
+              ],
+              "id": "mobile_hardware_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Cameras and Image Capture",
+      "tip": "Phone cameras consist of sensors, lenses, and apertures that work together to capture light and create images. Different sensor sizes and lens designs produce different results.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Camera Sensors and Optics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a camera sensor?",
+              "answer": "A chip that captures light and converts it to digital data",
+              "explain": "Camera sensors are arrays of light-sensitive pixels. Each pixel detects light intensity, creating the image data.",
+              "choices": [
+                "A mechanical shutter",
+                "A chip that captures light and converts it to digital data",
+                "A flash unit",
+                "A lens that focuses light"
+              ],
+              "id": "mobile_hardware_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a camera lens do?",
+              "answer": "Focuses light onto the sensor",
+              "explain": "Lenses are curved glass that bend light rays. They focus light from a scene onto the sensor to create a clear image.",
+              "choices": [
+                "Stores images",
+                "Focuses light onto the sensor",
+                "Produces color",
+                "Captures light"
+              ],
+              "id": "mobile_hardware_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is aperture in a camera?",
+              "answer": "The opening that controls how much light enters the lens",
+              "explain": "Aperture is like the pupil of an eye. A larger aperture lets more light in, while a smaller aperture lets less light in.",
+              "choices": [
+                "The distance to focus",
+                "The frame rate of video",
+                "The opening that controls how much light enters the lens",
+                "The size of the sensor"
+              ],
+              "id": "mobile_hardware_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phone cameras have flash?",
+              "answer": "To provide light when the scene is too dark",
+              "explain": "Flash is an LED light that illuminates dark subjects. Most phone cameras use LED flash instead of older xenon bulbs.",
+              "choices": [
+                "To detect motion",
+                "To provide light when the scene is too dark",
+                "To record audio",
+                "To focus the lens"
+              ],
+              "id": "mobile_hardware_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a larger camera sensor provide?",
+              "answer": "Better low-light performance and higher image quality",
+              "explain": "Larger sensors collect more light and have larger pixels, producing cleaner images with less noise.",
+              "choices": [
+                "Better zoom capability",
+                "Faster autofocus",
+                "Smaller file sizes",
+                "Better low-light performance and higher image quality"
+              ],
+              "id": "mobile_hardware_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Image Processing and Computation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is image signal processing?",
+              "answer": "Processing that turns raw sensor data into viewable photos",
+              "explain": "Raw sensor data is processed by a specialized chip and algorithms. This adds color correction, noise reduction, and enhancement.",
+              "choices": [
+                "The physical lens system",
+                "Transmitting photos over the network",
+                "Storing photos on disk",
+                "Processing that turns raw sensor data into viewable photos"
+              ],
+              "id": "mobile_hardware_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is computational photography?",
+              "answer": "Using software to enhance images beyond what the sensor captures",
+              "explain": "Computational photography merges multiple shots, applies AI enhancements, and creates effects the hardware alone cannot.",
+              "choices": [
+                "Using software to enhance images beyond what the sensor captures",
+                "Taking photos with a computer",
+                "Organizing photos in albums",
+                "Deleting bad photos"
+              ],
+              "id": "mobile_hardware_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does HDR photography do?",
+              "answer": "Combines multiple exposures to capture more detail in bright and dark areas",
+              "explain": "HDR takes several photos at different exposures and blends them. The result shows detail in both shadows and highlights.",
+              "choices": [
+                "Adds filters to photos",
+                "Makes photos sharper",
+                "Reduces file size",
+                "Combines multiple exposures to capture more detail in bright and dark areas"
+              ],
+              "id": "mobile_hardware_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is portrait mode in cameras?",
+              "answer": "Uses depth information to blur the background while keeping the subject sharp",
+              "explain": "Portrait mode uses the camera or depth sensors to detect foreground and background. Software blurs the background for a professional look.",
+              "choices": [
+                "A lens that only works for people",
+                "A type of video mode",
+                "Uses depth information to blur the background while keeping the subject sharp",
+                "A setting that crops photos"
+              ],
+              "id": "mobile_hardware_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are multi-camera systems used for?",
+              "answer": "Different focal lengths and zoom capabilities",
+              "explain": "Multi-camera phones have wide, ultra-wide, and telephoto lenses. Together they provide flexible framing options.",
+              "choices": [
+                "To take two photos at once",
+                "To see in the dark",
+                "To record stereoscopic video only",
+                "Different focal lengths and zoom capabilities"
+              ],
+              "id": "mobile_hardware_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Storage and Flash Memory",
+      "tip": "Phone storage uses flash memory, the same technology as USB drives and SD cards. Flash storage is fast and reliable. Storage capacity affects how many apps and files you can store.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Flash Storage Technology",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is flash memory?",
+              "answer": "Non-volatile memory that stores data without power",
+              "explain": "Flash memory uses electrons trapped in transistors to store data. It retains data even when the device is off.",
+              "choices": [
+                "Non-volatile memory that stores data without power",
+                "A type of battery",
+                "Temporary storage like RAM",
+                "A bright light used for photography"
+              ],
+              "id": "mobile_hardware_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phones use flash storage instead of spinning hard drives?",
+              "answer": "Flash is faster, more reliable, and uses much less power",
+              "explain": "Flash has no moving parts. It responds almost instantly, is not harmed by vibration the way spinning disks are, and uses less battery.",
+              "choices": [
+                "Hard drives are too expensive",
+                "Flash is faster, more reliable, and uses much less power",
+                "Flash is the same as hard drives",
+                "Hard drives are not invented yet"
+              ],
+              "id": "mobile_hardware_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between storage and RAM?",
+              "answer": "Storage is permanent; RAM is fast but temporary",
+              "explain": "Storage holds apps and files permanently. RAM is much faster but loses everything when powered off.",
+              "choices": [
+                "Storage is permanent; RAM is fast but temporary",
+                "Storage loses its data when powered off",
+                "RAM holds music and videos",
+                "They are the same thing"
+              ],
+              "id": "mobile_hardware_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much storage space do typical phone photos take?",
+              "answer": "Several megabytes each for standard photos, gigabytes for video",
+              "explain": "A 12-megapixel photo is usually 3-5 MB. Videos consume much more space, easily filling storage quickly.",
+              "choices": [
+                "No space, they are stored in the cloud",
+                "Bytes per photo",
+                "Several megabytes each for standard photos, gigabytes for video",
+                "Kilobytes for high quality"
+              ],
+              "id": "mobile_hardware_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a phone's storage is full?",
+              "answer": "New apps and files cannot be installed until space is freed",
+              "explain": "A full phone cannot install new apps or take photos. Users must delete files or uninstall apps to make space.",
+              "choices": [
+                "New apps and files cannot be installed until space is freed",
+                "The phone formats itself",
+                "Old files are automatically deleted",
+                "New apps install automatically over time"
+              ],
+              "id": "mobile_hardware_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Sensors and Device Orientation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an accelerometer in a phone?",
+              "answer": "A sensor that detects movement and acceleration",
+              "explain": "Accelerometers sense motion and tilt. They are used for rotating the screen, counting steps, and detecting drops.",
+              "choices": [
+                "A component that speeds up the phone",
+                "A type of camera",
+                "A wireless receiver",
+                "A sensor that detects movement and acceleration"
+              ],
+              "id": "mobile_hardware_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a gyroscope do?",
+              "answer": "Detects rotational motion and angular velocity",
+              "explain": "Gyroscopes sense spinning and rotation. Combined with accelerometers, they enable more precise motion tracking.",
+              "choices": [
+                "Measures air pressure",
+                "Measures the phone's battery temperature",
+                "Detects rotational motion and angular velocity",
+                "Controls the vibration motor"
+              ],
+              "id": "mobile_hardware_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a proximity sensor?",
+              "answer": "A sensor that detects when an object, such as your face, is close to the screen",
+              "explain": "Proximity sensors turn off the screen during calls to save power and prevent accidental touches.",
+              "choices": [
+                "A sensor that tracks your location",
+                "A sensor that finds nearby Wi-Fi networks",
+                "A sensor that detects when an object, such as your face, is close to the screen",
+                "A sensor that detects light"
+              ],
+              "id": "mobile_hardware_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does an ambient light sensor do?",
+              "answer": "Adjusts screen brightness based on surrounding light",
+              "explain": "Light sensors detect ambient brightness and automatically adjust the screen. Brighter screens in sunlight, dimmer indoors.",
+              "choices": [
+                "Adjusts screen brightness based on surrounding light",
+                "Improves camera flash",
+                "Detects color of objects",
+                "Counts light particles"
+              ],
+              "id": "mobile_hardware_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a barometer sensor?",
+              "answer": "A sensor that measures air pressure",
+              "explain": "Barometers detect altitude and air pressure. They are used in fitness tracking and weather apps.",
+              "choices": [
+                "A sensor that measures humidity",
+                "A sensor that measures temperature",
+                "A type of compass",
+                "A sensor that measures air pressure"
+              ],
+              "id": "mobile_hardware_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Thermal Design and System Integration",
+      "tip": "Phone hardware must fit in a thin package while managing heat from the processor. Component integration and material choices balance performance with thermal limits.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Heat Management in Phones",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is thermal management critical in thin phones?",
+              "answer": "Less space means heat cannot dissipate easily",
+              "explain": "Thin phones have little room for cooling. Heat from the processor cannot escape quickly, risking thermal throttling.",
+              "choices": [
+                "Less space means heat cannot dissipate easily",
+                "Thermal management is not important",
+                "Thin phones do not generate heat",
+                "All phones have active cooling fans"
+              ],
+              "id": "mobile_hardware_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What materials help conduct heat away from the processor?",
+              "answer": "Aluminum, copper, and graphite in the frame and internal layers",
+              "explain": "Metals and carbon-based materials such as graphite conduct heat well. Phone designers use heat pipes and conductive layers to channel heat to the outside.",
+              "choices": [
+                "No materials help",
+                "Glass is the best heat conductor",
+                "Aluminum, copper, and graphite in the frame and internal layers",
+                "Plastic exclusively"
+              ],
+              "id": "mobile_hardware_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a heat pipe?",
+              "answer": "A tube filled with liquid that moves heat away from hot components",
+              "explain": "Heat pipes contain fluid that evaporates near hot spots and condenses elsewhere, efficiently moving heat.",
+              "choices": [
+                "A tube filled with liquid that moves heat away from hot components",
+                "A metal rod attached to the processor",
+                "A fan inside the phone",
+                "A pipe that supplies cool water"
+              ],
+              "id": "mobile_hardware_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do phone cases reduce thermal performance?",
+              "answer": "Cases trap heat that would otherwise dissipate into the air",
+              "explain": "Cases insulate the phone, preventing heat from escaping. Thicker cases cause more thermal buildup.",
+              "choices": [
+                "Cases absorb electricity",
+                "Cases do not affect temperature",
+                "Cases trap heat that would otherwise dissipate into the air",
+                "Cases improve cooling"
+              ],
+              "id": "mobile_hardware_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens during intensive workloads like gaming?",
+              "answer": "The processor runs at high power, generating significant heat",
+              "explain": "Games demand sustained high performance. The processor and GPU consume lots of power, producing heat faster than it can be removed.",
+              "choices": [
+                "The processor runs at high power, generating significant heat",
+                "No heat is produced",
+                "The processor stops using electricity",
+                "The battery supplies unlimited energy"
+              ],
+              "id": "mobile_hardware_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Component Integration and Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a major advantage of integrating components into a SoC?",
+              "answer": "Saves space, power, and cost compared to separate chips",
+              "explain": "Fewer separate components means a smaller circuit board. Less wiring means lower power loss and better efficiency.",
+              "choices": [
+                "Increases heat generation",
+                "Saves space, power, and cost compared to separate chips",
+                "Uses more battery",
+                "Makes the phone thicker"
+              ],
+              "id": "mobile_hardware_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a modem in a phone?",
+              "answer": "A component that handles cellular communication",
+              "explain": "Modems convert between digital data and radio signals. They manage all cellular network communication.",
+              "choices": [
+                "A storage device",
+                "The power management system",
+                "A component that handles cellular communication",
+                "A speaker system"
+              ],
+              "id": "mobile_hardware_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a power management IC do?",
+              "answer": "Controls power distribution to all phone components",
+              "explain": "Power management ICs regulate voltage and current to each component. They protect the battery and prevent overcharging.",
+              "choices": [
+                "Measures screen brightness",
+                "Stores electrical energy",
+                "Controls power distribution to all phone components",
+                "Generates electricity"
+              ],
+              "id": "mobile_hardware_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a specialized coprocessor used for?",
+              "answer": "Handling specific tasks like motion tracking or AI processing",
+              "explain": "Coprocessors like motion processors and neural engines offload work from the main CPU, improving efficiency.",
+              "choices": [
+                "Storing data",
+                "Replacing the main processor",
+                "Nothing, they are obsolete",
+                "Handling specific tasks like motion tracking or AI processing"
+              ],
+              "id": "mobile_hardware_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are phone internals carefully arranged?",
+              "answer": "To manage heat, protect components, and minimize interference",
+              "explain": "Component placement affects thermal paths, electromagnetic shielding, and signal integrity. Careful layout is critical.",
+              "choices": [
+                "Just for looks",
+                "There is no reason for arrangement",
+                "To manage heat, protect components, and minimize interference",
+                "To make repairs easier"
+              ],
+              "id": "mobile_hardware_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
