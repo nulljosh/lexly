@@ -142,7 +142,8 @@ let gameState = {
     currentQuestionData: null,
     completedSubjects: [],
     selectedLesson: null,
-    placement: null
+    placement: null,
+    retried: new Set()
 };
 
 // `/app/?demo=1` plays one real lesson with no account, so the landing page can
@@ -1588,6 +1589,7 @@ function currentLang() {
 async function startLesson(lessonId, weakOnly, placement) {
     gameState.selectedLesson = lessonId || null;
     gameState.placement = placement || null;
+    gameState.retried = new Set();
     document.querySelector('.result-title').textContent = 'Lesson Complete';
     document.querySelector('.result-subtitle').textContent = 'Here is how you did.';
     document.getElementById('subjectSelection').style.display = 'none';
@@ -1981,6 +1983,38 @@ function toggleWord(chip) {
 
 // The "why" behind an answer, shown either way (right or wrong) so a correct
 // guess still teaches the rule behind it. Optional: most exercises have none.
+// What a target-language answer means, pulled from the course's own translation
+// and match exercises, so a miss on "Type what you hear" still teaches "Hola = Hello".
+function meaningOf(answer) {
+    const subjectId = gameState.selectedSubject;
+    if (!LANGUAGE_SUBJECTS.has(subjectId) || typeof answer !== 'string') return null;
+    const key = answer.trim().toLowerCase();
+    for (const q of questions[subjectId] || []) {
+        if ((q.type === 'translation' || q.type === 'sentence') && q.answer?.trim().toLowerCase() === key) return q.question;
+        for (const [english, target] of q.pairs || []) if (target.trim().toLowerCase() === key) return english;
+    }
+    return null;
+}
+
+// Every language answer gets a "hear it" button and, when known, its meaning.
+function appendTeach(feedback, question) {
+    if (!LANGUAGE_SUBJECTS.has(gameState.selectedSubject) || question.type === 'match' || question.type === 'cloze') return;
+    const row = document.createElement('div');
+    row.className = 'feedback-teach';
+    const hear = document.createElement('button');
+    hear.type = 'button';
+    hear.className = 'feedback-hear';
+    hear.setAttribute('aria-label', `Hear ${question.answer}`);
+    hear.append(makeIcon('fa-solid fa-volume-high'));
+    hear.addEventListener('click', () => speak(question.answer, currentLang()));
+    row.appendChild(hear);
+    const meaning = question.type === 'listening' ? meaningOf(question.answer) : question.question;
+    const text = document.createElement('span');
+    text.textContent = meaning ? `${question.answer} means "${meaning}"` : question.answer;
+    row.appendChild(text);
+    feedback.appendChild(row);
+}
+
 function appendExplain(feedback, question) {
     if (!question.explain) return;
     const p = document.createElement('p');
@@ -2026,6 +2060,7 @@ function checkAnswer() {
         feedback.className = 'feedback correct show';
         feedback.textContent = 'Correct.';
         appendExplain(feedback, question);
+        appendTeach(feedback, question);
         gameState.correctAnswers += 1;
         gameState.xp += 10;
         vibrate(50);
@@ -2047,6 +2082,14 @@ function checkAnswer() {
         strong.textContent = question.answer;
         feedback.appendChild(strong);
         appendExplain(feedback, question);
+        appendTeach(feedback, question);
+        // A miss comes back once at the end of the lesson, so the lesson teaches it
+        // instead of only marking it wrong. Not in placement, where it would skew the probe.
+        if (!gameState.placement && !gameState.retried.has(question)) {
+            gameState.retried.add(question);
+            gameState.lessonQuestions.push(question);
+            gameState.totalQuestions += 1;
+        }
         gameState.hearts -= 1;
         vibrate([50, 30, 50]);
         questionCard.classList.add('incorrect-anim');
@@ -2076,7 +2119,7 @@ function vibrate(pattern) {
 }
 
 function spawnConfetti() {
-    const colors = ['#3d9e6a', '#d4a843', '#e8e4da', '#8a9e90', '#5a8a6a'];
+    const colors = ['#9bb04f', '#d4a843', '#e8e4da', '#c98a5a', '#b5502c'];
     for (let index = 0; index < 30; index += 1) {
         const piece = document.createElement('div');
         piece.className = 'confetti-piece';
@@ -2172,7 +2215,7 @@ function showResults() {
     // every question crowned the lesson with zero correct answers.
     const lessonsCompleted = { ...progress.lessons_completed };
     if (gameState.selectedLesson
-        && lessonPassed(gameState.correctAnswers, gameState.totalQuestions, gameState.hearts)) {
+        && lessonPassed(Math.min(gameState.correctAnswers, gameState.totalQuestions - gameState.retried.size), gameState.totalQuestions - gameState.retried.size, gameState.hearts)) {
         lessonsCompleted[gameState.selectedSubject] = {
             ...(lessonsCompleted[gameState.selectedSubject] || {}),
             [gameState.selectedLesson]: true,
