@@ -168,7 +168,7 @@
               "type": "mathChoice",
               "question": "What are heading tags used for?",
               "answer": "Creating titles and subtitles that structure page content hierarchically",
-              "explain": "Heading tags <h1> through <h6> organize content. <h1> is the largest and most important; <h6> is smallest.",
+              "explain": "Heading tags <h1> through <h6> organize content. <h1> is the most important and by default the largest; <h6> is the least important and smallest.",
               "choices": [
                 "Making all text large",
                 "Creating links",
@@ -181,7 +181,7 @@
               "type": "mathChoice",
               "question": "What is the difference between <h1> and <h6>?",
               "answer": "<h1> is the most important heading; <h6> is the least important",
-              "explain": "h1 is largest; h6 is smallest. Use h1 for main page title, h2 for sections, and so on.",
+              "explain": "h1 is the top level and h6 the lowest, and by default h1 is shown largest. Use h1 for the main page title, h2 for sections, and so on.",
               "choices": [
                 "They are used for different pages",
                 "No difference",
@@ -265,7 +265,7 @@
               "type": "mathChoice",
               "question": "What is the <img> tag?",
               "answer": "A tag that embeds an image in the page",
-              "explain": "<img> displays pictures. It is a self-closing tag. The src attribute specifies the image file.",
+              "explain": "<img> displays pictures. It is a void element, so it has no closing tag. The src attribute specifies the image file.",
               "choices": [
                 "A form tag",
                 "A text tag",
@@ -369,7 +369,7 @@
               "type": "mathChoice",
               "question": "What does the <footer> tag contain?",
               "answer": "Secondary information like copyright, links, and contact details",
-              "explain": "Footers appear at the bottom and contain site-wide information, not specific to one page.",
+              "explain": "Footers usually sit at the bottom of a page or section and hold secondary information such as copyright, related links and contact details.",
               "choices": [
                 "Secondary information like copyright, links, and contact details",
                 "Images",
@@ -404,7 +404,7 @@
               "explain": "<input> creates text fields, checkboxes, radio buttons, and more. The type attribute determines the input kind.",
               "choices": [
                 "Styles text",
-                "Creates a button",
+                "Groups form fields together",
                 "Creates a field where users can enter data",
                 "Displays data"
               ],
@@ -587,7 +587,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is the inheritance in CSS?",
+              "question": "What is inheritance in CSS?",
               "answer": "Child elements automatically inherit certain properties from their parents",
               "explain": "Properties like color and font-size pass down to child elements. Some properties like margin do not inherit.",
               "choices": [
@@ -667,10 +667,10 @@
               "type": "mathChoice",
               "question": "How do you set equal padding on all four sides?",
               "answer": "padding: 10px;",
-              "explain": "One value sets all sides equal. Four values set top, right, bottom, left.",
+              "explain": "One value sets all four sides equal. (Four values also work, in the order top, right, bottom, left, but one value is the shortest way.)",
               "choices": [
                 "all-padding: 10px;",
-                "padding: 10px 10px 10px 10px;",
+                "padding: all 10px;",
                 "padding: 10px;",
                 "padding: 10px, 10px, 10px, 10px;"
               ],
@@ -690,7 +690,7 @@
               "choices": [
                 "How an element behaves: inline, block, or other layout modes",
                 "The element's color",
-                "Whether the element is visible",
+                "The stacking order of overlapping elements",
                 "The font size"
               ],
               "id": "html_css_u5l2_0"
@@ -788,7 +788,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "How do you write a media query for screens smaller than 768px?",
+              "question": "How do you write a media query for screens 768px wide or narrower?",
               "answer": "@media (max-width: 768px) { }",
               "explain": "This rule applies styles only to devices with screens 768px wide or smaller.",
               "choices": [
@@ -803,7 +803,7 @@
               "type": "mathChoice",
               "question": "What is the viewport meta tag?",
               "answer": "A meta tag that tells mobile browsers how to scale and display your page",
-              "explain": "The viewport tag prevents zooming out on mobile. Use: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+              "explain": "Without it, many mobile browsers lay the page out at a wide desktop width and shrink it down. The tag makes the page match the device width: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
               "choices": [
                 "A meta tag that tells mobile browsers how to scale and display your page",
                 "An HTML form element",

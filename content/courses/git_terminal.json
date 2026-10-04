@@ -103,7 +103,7 @@
               "type": "mathChoice",
               "question": "What is an absolute path?",
               "answer": "A path that starts from the root (/) and specifies the complete location",
-              "explain": "An absolute path shows the full route from the root directory. Example: /Users/joshua/Documents/file.txt works from anywhere.",
+              "explain": "An absolute path shows the full route from the root directory. Example: /Users/sam/Documents/file.txt works from anywhere.",
               "choices": [
                 "A path starting from the home folder",
                 "A shortened path using abbreviations",
@@ -207,7 +207,7 @@
               "type": "mathChoice",
               "question": "What does rm do?",
               "answer": "Removes (deletes) a file",
-              "explain": "rm deletes files permanently. Be careful: deleted files cannot be recovered. Add -r to delete directories with contents.",
+              "explain": "rm deletes files permanently. Be careful: deleted files are usually not recoverable. Add -r to delete directories with contents.",
               "choices": [
                 "Restores a file",
                 "Reads a file",
@@ -296,7 +296,7 @@
                 "grep finds lines, then sort arranges them alphabetically",
                 "sort is executed first",
                 "Only grep executes; sort is ignored",
-                "Both commands run at the same time"
+                "sort searches for the pattern and grep orders the lines"
               ],
               "id": "git_terminal_u2l2_4"
             }
@@ -537,7 +537,7 @@
               "type": "mathChoice",
               "question": "What does git restore filename do?",
               "answer": "Discards changes to a file and restores the last committed version",
-              "explain": "git restore reverts a file to its state in the last commit. Unsaved changes are lost.",
+              "explain": "git restore overwrites the file in your working tree with the version in the staging area, which is the last committed version if nothing is staged. Unsaved changes are lost.",
               "choices": [
                 "Discards changes to a file and restores the last committed version",
                 "Uploads a file",
@@ -710,9 +710,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "What do the conflict markers <<<<<<, ======, and >>>>>> indicate?",
+              "question": "What do the conflict markers <<<<<<<, =======, and >>>>>>> indicate?",
               "answer": "The boundaries between conflicting versions that need to be resolved",
-              "explain": "These markers show your version (between <<<< and ====) and the other branch's version (between ==== and >>>>).",
+              "explain": "These markers show your current branch's version (between <<<<<<< and =======) and the other branch's version (between ======= and >>>>>>>).",
               "choices": [
                 "The start of a comment",
                 "Valid code syntax",
@@ -846,13 +846,13 @@
             },
             {
               "type": "mathChoice",
-              "question": "On which platform do you create a pull request?",
-              "answer": "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
-              "explain": "Pull requests are created on the server interface, not from the terminal. They live alongside your code online.",
+              "question": "Where is a pull request normally opened and reviewed?",
+              "answer": "On the hosting service, such as GitHub, GitLab or Bitbucket",
+              "explain": "Pull requests are a feature of the hosting service, not of Git itself, and there is no built-in git pr command. Helper tools can open one from the terminal, but it still lives on the host.",
               "choices": [
+                "On the hosting service, such as GitHub, GitLab or Bitbucket",
                 "In a text editor",
-                "In the terminal with git pr",
-                "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
+                "With a built-in git pr command",
                 "Automatically after pushing"
               ],
               "id": "git_terminal_u6l2_1"
