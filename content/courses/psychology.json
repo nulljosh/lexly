@@ -1,0 +1,904 @@
+{
+  "id": "psychology",
+  "name": "Psychology",
+  "category": "skills",
+  "icon": "fa-solid fa-brain",
+  "level": "Mind and Behaviour",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Psychology",
+      "tip": "Psychology is the scientific study of behaviour and mental processes. It asks how people think, feel, and act, and why. Psychologists use careful research methods to understand the mind.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Psychology Studies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main focus of psychology?",
+              "answer": "The study of behaviour and mental processes",
+              "explain": "Psychology examines how people and animals think, feel, perceive, remember, and behave. It combines biology, observation, and experimentation.",
+              "choices": [
+                "The diagnosis and treatment of disease",
+                "The study of brain anatomy only",
+                "The study of mental illness only",
+                "The study of behaviour and mental processes"
+              ],
+              "id": "psychology_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of the following is a testable question in psychology?",
+              "answer": "How does sleep deprivation affect memory recall?",
+              "explain": "Testable questions in psychology ask how variables relate and can be measured and observed. Questions about subjective meaning or morality are not scientific questions.",
+              "choices": [
+                "How does sleep deprivation affect memory recall?",
+                "Should people be more ambitious?",
+                "What does it mean to be happy?",
+                "Is love the most important human emotion?"
+              ],
+              "id": "psychology_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'behaviour' in psychology?",
+              "answer": "Any observable action or response",
+              "explain": "In psychology, behaviour includes movements, speech, facial expressions, and reactions. Mental processes like thinking and emotion are inferred from behaviour.",
+              "choices": [
+                "Only actions that are intentional",
+                "Any observable action or response",
+                "Actions that are conscious only",
+                "Moral or immoral actions only"
+              ],
+              "id": "psychology_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do psychologists study animals?",
+              "answer": "To understand basic principles that often apply to humans",
+              "explain": "Animal studies reveal how learning, memory, and motivation work at a fundamental level. Many principles discovered in animals apply to human psychology too.",
+              "choices": [
+                "Because studying animals is easier than studying humans",
+                "To understand basic principles that often apply to humans",
+                "Because animals behave more logically than humans",
+                "Because humans and animals have identical psychology"
+              ],
+              "id": "psychology_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for psychology to be a 'science'?",
+              "answer": "It uses systematic observation and testing to gather evidence",
+              "explain": "Psychology is scientific because it relies on measurable data, testable predictions, and controlled studies rather than opinions or guesses.",
+              "choices": [
+                "It never changes its conclusions",
+                "It can prove anything about human nature",
+                "It studies only things we can see and touch",
+                "It uses systematic observation and testing to gather evidence"
+              ],
+              "id": "psychology_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Research Methods and Correlation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an 'experiment' in psychology?",
+              "answer": "A study where the researcher manipulates one variable to observe its effect",
+              "explain": "In an experiment, the researcher changes one variable (the independent variable) and measures how it affects another (the dependent variable). This helps show cause and effect.",
+              "choices": [
+                "A study where the researcher manipulates one variable to observe its effect",
+                "Any study that gathers data",
+                "A study that only uses observation",
+                "A study that only uses interviews"
+              ],
+              "id": "psychology_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between correlation and causation?",
+              "answer": "Correlation shows two variables relate; causation means one causes the other",
+              "explain": "Two things can correlate (both increase together) without one causing the other. Ice cream sales correlate with drowning deaths, but neither causes the other (both rise in summer).",
+              "choices": [
+                "They mean the same thing",
+                "Causation is weaker than correlation",
+                "Correlation shows two variables relate; causation means one causes the other",
+                "Correlation is a type of causation"
+              ],
+              "id": "psychology_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'control group'?",
+              "answer": "A group that does not receive the treatment being tested",
+              "explain": "The control group is compared to the experimental group. It shows what happens without the treatment, so researchers can measure the treatment's actual effect.",
+              "choices": [
+                "A group that does not receive the treatment being tested",
+                "A group that is easy to control",
+                "A group that always behaves correctly",
+                "A group that receives double the treatment"
+              ],
+              "id": "psychology_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a large sample size important in psychological research?",
+              "answer": "It reduces random variation and makes results more generalizable",
+              "explain": "A larger sample is more likely to represent the wider population, and random quirks average out. Small samples are more easily swayed by chance.",
+              "choices": [
+                "To make the data harder to analyze",
+                "It reduces random variation and makes results more generalizable",
+                "So the study takes longer",
+                "Because more data means more data"
+              ],
+              "id": "psychology_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'confounding variable'?",
+              "answer": "A factor that changes along with the independent variable and clouds the results",
+              "explain": "A confounding variable is an unmeasured or uncontrolled factor that affects the outcome. If not controlled, it makes it hard to know which variable actually caused the effect.",
+              "choices": [
+                "A factor that changes along with the independent variable and clouds the results",
+                "The independent variable in a study",
+                "The same as the dependent variable",
+                "A variable that has no effect"
+              ],
+              "id": "psychology_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Learning Through Association",
+      "tip": "Learning is how behaviour and knowledge change through experience. Classical conditioning and operant conditioning are two fundamental ways organisms learn. Both involve associations between events or between behaviour and consequences.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Classical Conditioning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In classical conditioning, what is the 'unconditioned stimulus'?",
+              "answer": "A stimulus that naturally triggers a response without learning",
+              "explain": "An unconditioned stimulus (like food) automatically produces a response (salivation) without any training. It is inborn, not learned.",
+              "choices": [
+                "A stimulus that naturally triggers a response without learning",
+                "A response that is weakened",
+                "Any stimulus paired with another",
+                "A stimulus that must be learned"
+              ],
+              "id": "psychology_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'acquisition' in classical conditioning?",
+              "answer": "The process of learning the association between the neutral and unconditioned stimulus",
+              "explain": "During acquisition, the neutral stimulus (like a bell) is repeatedly paired with the unconditioned stimulus (like food). Over time, the organism learns to associate them.",
+              "choices": [
+                "The process of learning the association between the neutral and unconditioned stimulus",
+                "Forgetting what was learned",
+                "The strengthening of an inborn response",
+                "The return of a conditioned response"
+              ],
+              "id": "psychology_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'extinction' in classical conditioning?",
+              "answer": "The weakening of the conditioned response when the neutral stimulus is no longer paired with the unconditioned stimulus",
+              "explain": "If the bell rings without food following it many times, the organism stops responding. The learned association weakens and eventually disappears.",
+              "choices": [
+                "The reappearance of a forgotten response",
+                "The prevention of learning",
+                "The weakening of the conditioned response when the neutral stimulus is no longer paired with the unconditioned stimulus",
+                "The strengthening of the conditioned response"
+              ],
+              "id": "psychology_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'stimulus generalization'?",
+              "answer": "Responding to stimuli similar to the conditioned stimulus",
+              "explain": "If conditioned to respond to a bell, an organism may also respond to a similar sound (like a buzzer). The response generalizes to similar stimuli.",
+              "choices": [
+                "Learning to ignore the unconditioned stimulus",
+                "Responding to stimuli similar to the conditioned stimulus",
+                "Responding only to the exact conditioned stimulus",
+                "Forgetting the conditioned response"
+              ],
+              "id": "psychology_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'spontaneous recovery'?",
+              "answer": "The reappearance of an extinguished conditioned response after a time delay",
+              "explain": "After extinction, if time passes and the organism is tested again, the conditioned response may reappear briefly. This shows the learning is not erased, just suppressed.",
+              "choices": [
+                "The reappearance of an extinguished conditioned response after a time delay",
+                "The prevention of extinction",
+                "The weakening of the unconditioned response",
+                "Learning faster the second time"
+              ],
+              "id": "psychology_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Operant Conditioning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'operant conditioning'?",
+              "answer": "Learning where behaviour is shaped by its consequences",
+              "explain": "In operant conditioning, behaviour followed by rewarding consequences is more likely to repeat. Behaviour followed by punishment is less likely. The focus is on actions and their results.",
+              "choices": [
+                "Learning that does not involve rewards",
+                "Learning where behaviour is shaped by its consequences",
+                "Learning that happens only once",
+                "Learning by association of two stimuli"
+              ],
+              "id": "psychology_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'positive reinforcement'?",
+              "answer": "Adding something desirable after a behaviour to increase its frequency",
+              "explain": "Positive reinforcement adds a reward (like praise or money) after behaviour. This increases the likelihood the behaviour will happen again.",
+              "choices": [
+                "Using punishment to reduce behaviour",
+                "Decreasing the frequency of behaviour",
+                "Adding something desirable after a behaviour to increase its frequency",
+                "Removing something unpleasant"
+              ],
+              "id": "psychology_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'negative reinforcement'?",
+              "answer": "Removing something unpleasant after a behaviour to increase its frequency",
+              "explain": "Negative reinforcement removes something unwanted (like nagging) when the desired behaviour happens. This increases the behaviour. It is not punishment.",
+              "choices": [
+                "Removing something unpleasant after a behaviour to increase its frequency",
+                "The same as punishment",
+                "Adding something unpleasant",
+                "Taking away rewards"
+              ],
+              "id": "psychology_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'schedule of reinforcement'?",
+              "answer": "The timing pattern of when rewards are given after behaviour",
+              "explain": "Reinforcement can be given every time (continuous) or only sometimes (partial). Different schedules create different learning patterns and persistence.",
+              "choices": [
+                "The list of all possible rewards",
+                "A plan to avoid punishment",
+                "The type of behaviour being trained",
+                "The timing pattern of when rewards are given after behaviour"
+              ],
+              "id": "psychology_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does partial reinforcement affect learning?",
+              "answer": "It creates behaviour that is slower to learn but more resistant to extinction",
+              "explain": "When rewards come only sometimes, behaviour becomes more persistent. A slot machine is a good example: unpredictable wins create stubborn behaviour patterns.",
+              "choices": [
+                "It makes learning faster and permanent",
+                "It prevents learning entirely",
+                "It has no effect on learning",
+                "It creates behaviour that is slower to learn but more resistant to extinction"
+              ],
+              "id": "psychology_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Memory and Encoding",
+      "tip": "Memory is the system that encodes, stores, and retrieves information. Encoding is how information enters memory. Storage is how it is kept. Retrieval is how we access it. Memory exists in different time scales: seconds and minutes for short-term memory, hours to years for long-term memory.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "How Memory Works",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'encoding' in memory?",
+              "answer": "The process of converting information into a form that can be stored in memory",
+              "explain": "Encoding transforms sensory input (sounds, images, experiences) into neural codes the brain can store. Without encoding, information cannot be remembered.",
+              "choices": [
+                "The process of converting information into a form that can be stored in memory",
+                "Retrieving information from memory",
+                "Forgetting old memories",
+                "Using cryptography to protect memories"
+              ],
+              "id": "psychology_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'storage' in memory?",
+              "answer": "The process of maintaining information in memory over time",
+              "explain": "Storage is how encoded information is held in the brain. It can last seconds (short-term) or decades (long-term), depending on the memory system.",
+              "choices": [
+                "The process of maintaining information in memory over time",
+                "Retrieving information from memory",
+                "The physical location of memories",
+                "Converting information into memory codes"
+              ],
+              "id": "psychology_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'retrieval' in memory?",
+              "answer": "The process of accessing and bringing stored information back to consciousness",
+              "explain": "Retrieval is when we recall or recognize information we have learned. Retrieval cues (like reminders) help bring memories to mind.",
+              "choices": [
+                "The encoding process",
+                "Forgetting information",
+                "The process of accessing and bringing stored information back to consciousness",
+                "Storing new information"
+              ],
+              "id": "psychology_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is retrieval sometimes difficult even when information was encoded?",
+              "answer": "The memory may be stored but not readily accessible, or retrieval cues may be missing",
+              "explain": "We can fail to remember things we once knew if the memory trace weakens, or if the right cues are absent. The tip-of-the-tongue phenomenon is an example.",
+              "choices": [
+                "Because long-term memories cannot be retrieved",
+                "Because retrieval always succeeds immediately",
+                "The memory may be stored but not readily accessible, or retrieval cues may be missing",
+                "Because memories are never actually stored"
+              ],
+              "id": "psychology_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'forgetting'?",
+              "answer": "The loss of the ability to retrieve information from memory",
+              "explain": "Forgetting can happen due to decay (fading over time), interference (new memories disrupting old ones), or failure to retrieve stored information.",
+              "choices": [
+                "Storing information incorrectly",
+                "Learning something new",
+                "The inability to encode information",
+                "The loss of the ability to retrieve information from memory"
+              ],
+              "id": "psychology_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Short-Term and Long-Term Memory",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "By a classic estimate, what is the capacity of short-term memory?",
+              "answer": "Approximately 7 plus or minus 2 items",
+              "explain": "A classic estimate is about 5 to 9 items at once. Some later researchers suggest the true figure is lower, around 4 chunks. Chunking can stretch what each slot holds.",
+              "choices": [
+                "More items than long-term memory",
+                "Only 1 item",
+                "Approximately 7 plus or minus 2 items",
+                "Unlimited"
+              ],
+              "id": "psychology_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How long does information typically last in short-term memory?",
+              "answer": "About 15 to 30 seconds without rehearsal",
+              "explain": "Short-term memory is brief. Without repeating or actively thinking about information, it fades quickly. This is why phone numbers slip from your mind.",
+              "choices": [
+                "Permanently",
+                "About 15 to 30 seconds without rehearsal",
+                "Several hours",
+                "A few milliseconds"
+              ],
+              "id": "psychology_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'chunking'?",
+              "answer": "Grouping individual items into meaningful units to increase short-term memory capacity",
+              "explain": "Chunking combines separate pieces into meaningful units. Instead of remembering 1, 9, 4, 5 as four digits, you remember the year 1945 as one chunk.",
+              "choices": [
+                "Transferring information to long-term memory",
+                "Grouping individual items into meaningful units to increase short-term memory capacity",
+                "Breaking memories into smaller pieces",
+                "Forgetting small details"
+              ],
+              "id": "psychology_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does long-term memory differ from short-term memory?",
+              "answer": "Long-term memory has larger capacity and lasts longer",
+              "explain": "Long-term memory can store vast amounts of information for years or decades, while short-term memory is small and brief.",
+              "choices": [
+                "Short-term memory lasts longer than long-term memory",
+                "Long-term memory has larger capacity and lasts longer",
+                "Long-term memory can only store words",
+                "Short-term and long-term memory are identical"
+              ],
+              "id": "psychology_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'rehearsal'?",
+              "answer": "Repeating information to maintain it in short-term memory or transfer it to long-term memory",
+              "explain": "Rehearsal keeps information active in short-term memory and strengthens the long-term memory trace. Deep, meaningful rehearsal is more effective than rote repetition.",
+              "choices": [
+                "Repeating information to maintain it in short-term memory or transfer it to long-term memory",
+                "Forgetting information on purpose",
+                "Storing information permanently automatically",
+                "Retrieving memories without effort"
+              ],
+              "id": "psychology_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Thinking and Cognitive Biases",
+      "tip": "Cognition is the mental process of thinking, reasoning, and making judgments. The human mind uses shortcuts called heuristics to make quick decisions, but these can lead to systematic errors or biases in thinking. Understanding these patterns helps explain why reasoning sometimes fails.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Heuristics and Biases",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'heuristic'?",
+              "answer": "A mental shortcut that allows quick decisions but can sometimes lead to errors",
+              "explain": "Heuristics are rules of thumb that speed up decision-making. They are usually helpful but can produce mistakes when applied in the wrong situation.",
+              "choices": [
+                "A type of long-term memory",
+                "A logical step-by-step process",
+                "A mental shortcut that allows quick decisions but can sometimes lead to errors",
+                "A method that is always correct"
+              ],
+              "id": "psychology_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'availability bias'?",
+              "answer": "Overestimating the likelihood of events that come to mind easily",
+              "explain": "If plane crashes are vivid in memory, people overestimate how often they happen. Vivid or recent events feel more common than they are.",
+              "choices": [
+                "Forgetting common events",
+                "Always making rational decisions",
+                "Overestimating the likelihood of events that come to mind easily",
+                "Underestimating all risks"
+              ],
+              "id": "psychology_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'anchoring bias'?",
+              "answer": "Relying too heavily on the first number or piece of information when making judgments",
+              "explain": "An initial number pulls later estimates toward it. If people are first asked whether a quantity is above or below some arbitrary number, their own estimates end up closer to that number.",
+              "choices": [
+                "Always using recent information",
+                "Making decisions randomly",
+                "Ignoring all numbers",
+                "Relying too heavily on the first number or piece of information when making judgments"
+              ],
+              "id": "psychology_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'confirmation bias'?",
+              "answer": "Seeking out and remembering information that confirms what we already believe",
+              "explain": "People tend to search for evidence supporting their beliefs and ignore disconfirming evidence. This keeps beliefs stable even when wrong.",
+              "choices": [
+                "Seeking out and remembering information that confirms what we already believe",
+                "Changing beliefs frequently",
+                "Rejecting all familiar information",
+                "Never holding any beliefs"
+              ],
+              "id": "psychology_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'representativeness heuristic'?",
+              "answer": "Judging the likelihood of something based on how much it resembles a typical example",
+              "explain": "If someone fits the stereotype of a librarian, we may judge them likely to be one, ignoring how rare librarians are overall. We judge by similarity rather than statistical base rates.",
+              "choices": [
+                "Ignoring all category information",
+                "Making random judgments",
+                "Using exact statistical calculations",
+                "Judging the likelihood of something based on how much it resembles a typical example"
+              ],
+              "id": "psychology_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Decision-Making and Judgment",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'sunk cost fallacy'?",
+              "answer": "Continuing to invest in something because of past investment, even if the future payoff is poor",
+              "explain": "If you have spent 500 dollars on a broken car, you might spend more to fix it just because of the 500 dollars already spent. The past cost is sunk and should not influence future decisions.",
+              "choices": [
+                "Focusing only on future benefits",
+                "Refusing to invest money",
+                "Continuing to invest in something because of past investment, even if the future payoff is poor",
+                "Always making the best financial decision"
+              ],
+              "id": "psychology_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'framing effect'?",
+              "answer": "Making different choices based on how options are presented rather than their actual content",
+              "explain": "People choose differently if an option is framed as a gain ('90 percent survive') versus a loss ('10 percent die'). The content is the same, but the frame changes the choice.",
+              "choices": [
+                "The inability to make decisions",
+                "Never being influenced by presentation",
+                "Always choosing the obvious option",
+                "Making different choices based on how options are presented rather than their actual content"
+              ],
+              "id": "psychology_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'hindsight bias'?",
+              "answer": "Believing after an outcome occurs that it was predictable all along",
+              "explain": "After an election or sports game, people say they knew the outcome would happen. This false memory of predictability is hindsight bias.",
+              "choices": [
+                "Never making predictions",
+                "Forgetting past events",
+                "Predicting the future accurately",
+                "Believing after an outcome occurs that it was predictable all along"
+              ],
+              "id": "psychology_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'overconfidence bias'?",
+              "answer": "Overestimating the accuracy of one's own knowledge, judgments, or abilities",
+              "explain": "Studies often find that many people rate themselves above average on skills such as driving, and feel more sure of their answers than their accuracy justifies.",
+              "choices": [
+                "Underestimating all abilities",
+                "Overestimating the accuracy of one's own knowledge, judgments, or abilities",
+                "Refusing to make any judgments",
+                "Accurate self-assessment always"
+              ],
+              "id": "psychology_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'prospect theory' suggest about how people evaluate risk?",
+              "answer": "People fear losses more than they value gains of equal size",
+              "explain": "Losing ten dollars tends to feel worse than gaining ten dollars feels good. This loss aversion shapes many choices under risk.",
+              "choices": [
+                "Losses and gains feel equal to everyone",
+                "People fear losses more than they value gains of equal size",
+                "People are perfectly rational about risk",
+                "People always want to take risks"
+              ],
+              "id": "psychology_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Development and Social Influence",
+      "tip": "People grow and change throughout life. Developmental psychology describes patterns of change across ages and stages. Social psychology shows how the presence and actions of other people influence our behaviour, beliefs, and choices.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Developmental Stages",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'developmental stage'?",
+              "answer": "A period of life marked by distinct physical, cognitive, and social changes",
+              "explain": "Developmental stages organize growth into meaningful periods. Infancy, childhood, adolescence, and adulthood are broad stages with characteristic abilities and challenges.",
+              "choices": [
+                "A period of life marked by distinct physical, cognitive, and social changes",
+                "A period of stability with no change",
+                "A type of learning disorder",
+                "A method of teaching"
+              ],
+              "id": "psychology_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What ability characterizes 'object permanence' in infant development?",
+              "answer": "The understanding that objects continue to exist even when out of sight",
+              "explain": "Young infants act as if hidden objects stop existing. During the first year they begin to search for hidden objects. Piaget described this as a major cognitive step.",
+              "choices": [
+                "The ability to walk",
+                "The understanding that objects continue to exist even when out of sight",
+                "The understanding that the infant is separate from others",
+                "The ability to speak first words"
+              ],
+              "id": "psychology_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'attachment' in child development?",
+              "answer": "The emotional bond between infant and caregiver",
+              "explain": "Infants form attachments to caregivers, seeking them for comfort and security. Secure attachment is associated with healthy later development.",
+              "choices": [
+                "Learning motor skills",
+                "The emotional bond between infant and caregiver",
+                "Learning to use language",
+                "The ability to recognize faces"
+              ],
+              "id": "psychology_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'puberty'?",
+              "answer": "The biological process of sexual maturation during adolescence",
+              "explain": "Puberty involves hormonal changes that cause physical growth and sexual maturation. It typically begins somewhere between about ages 8 and 14.",
+              "choices": [
+                "The ability to think abstractly",
+                "A stage of cognitive development",
+                "The start of high school",
+                "The biological process of sexual maturation during adolescence"
+              ],
+              "id": "psychology_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "According to Erikson, what stage of life has 'identity formation' as its central task?",
+              "answer": "Adolescence",
+              "explain": "During adolescence, young people develop a sense of self, explore values, and prepare for adult roles. Identity formation continues into early adulthood.",
+              "choices": [
+                "Early childhood",
+                "Old age",
+                "Adolescence",
+                "Infancy"
+              ],
+              "id": "psychology_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Conformity and Obedience",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'conformity'?",
+              "answer": "Changing behaviour or beliefs to match a group norm",
+              "explain": "People often align their behaviour with group expectations. Conformity can be motivated by a desire to fit in, fear of rejection, or belief in the group's correctness.",
+              "choices": [
+                "Following rules written by authorities",
+                "Changing behaviour or beliefs to match a group norm",
+                "Resisting all group pressure",
+                "Maintaining beliefs regardless of others"
+              ],
+              "id": "psychology_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What did classic conformity studies show about group pressure?",
+              "answer": "People conform even when the group is clearly wrong",
+              "explain": "In line-judging tasks, people often chose the wrong line when other group members chose it. This shows conformity pressure can override perception.",
+              "choices": [
+                "People conform only in private",
+                "People always resist group pressure",
+                "People conform even when the group is clearly wrong",
+                "Groups are never wrong"
+              ],
+              "id": "psychology_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'obedience'?",
+              "answer": "Following orders or commands from an authority figure",
+              "explain": "Obedience differs from conformity. In obedience, a person in authority directs behaviour. Conformity is alignment with peers.",
+              "choices": [
+                "Resisting all directives",
+                "Agreeing with a group of peers",
+                "Following orders or commands from an authority figure",
+                "Rebelling against all orders"
+              ],
+              "id": "psychology_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'foot-in-the-door' technique demonstrate?",
+              "answer": "Compliance to a small request increases compliance to a larger request later",
+              "explain": "If people agree to a small commitment first, they are more likely to agree to a larger request. This shows how initial compliance creates mindset or commitment.",
+              "choices": [
+                "Compliance to a small request increases compliance to a larger request later",
+                "Requests work better in person only",
+                "Large requests are easier than small ones",
+                "People never comply with requests"
+              ],
+              "id": "psychology_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'diffusion of responsibility'?",
+              "answer": "Reduced sense of personal responsibility when in a group",
+              "explain": "In a group, people feel less personally responsible for outcomes. This can lead to inaction in emergencies or lower effort in group tasks.",
+              "choices": [
+                "Reduced sense of personal responsibility when in a group",
+                "Taking on more responsibility in groups",
+                "Always helping in emergencies",
+                "Working harder in groups than alone"
+              ],
+              "id": "psychology_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Motivation and Scientific Inquiry",
+      "tip": "Motivation is why people and animals act. It comes from biological needs, learned drives, and goals. Understanding motivation requires careful research. Psychologists distinguish between correlation (two things relate) and causation (one causes the other), and use different study types to answer different questions.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Motivation and Needs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'motivation'?",
+              "answer": "The force that drives behaviour toward a goal",
+              "explain": "Motivation can come from biological needs (hunger, thirst), psychological desires (achievement, belonging), or external incentives (money, praise).",
+              "choices": [
+                "The force that drives behaviour toward a goal",
+                "The ability to remember things",
+                "The same as intelligence",
+                "Conscious control over actions only"
+              ],
+              "id": "psychology_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'drive'?",
+              "answer": "An internal state of tension that pushes toward a goal",
+              "explain": "Hunger is a drive. It creates tension that motivates eating. Drives are typically biological but can also be learned through experience.",
+              "choices": [
+                "An internal state of tension that pushes toward a goal",
+                "The same as a habit",
+                "A type of learning",
+                "A conscious decision"
+              ],
+              "id": "psychology_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'intrinsic motivation'?",
+              "answer": "The motivation to do something because it is inherently rewarding",
+              "explain": "Playing a game because you enjoy it (intrinsic) differs from playing to win money (extrinsic). Intrinsic motivation is often linked with more persistent effort.",
+              "choices": [
+                "The motivation to do something because it is inherently rewarding",
+                "Motivation from external rewards only",
+                "Always weaker than extrinsic motivation",
+                "The same as obedience"
+              ],
+              "id": "psychology_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'extrinsic motivation'?",
+              "answer": "The motivation to do something for an external reward or to avoid punishment",
+              "explain": "Working for pay is extrinsic motivation. External rewards can be effective, but sometimes reduce intrinsic motivation if overused.",
+              "choices": [
+                "Stronger than intrinsic motivation always",
+                "The motivation to do something for an external reward or to avoid punishment",
+                "Doing something because you enjoy it",
+                "Only found in children"
+              ],
+              "id": "psychology_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'self-actualization'?",
+              "answer": "The drive to develop one's potential and become the best version of oneself",
+              "explain": "In Maslow's hierarchy of needs, self-actualization is fulfilling your capabilities and pursuing meaningful growth, placed at the top of the hierarchy.",
+              "choices": [
+                "The avoidance of responsibility",
+                "Competing against others",
+                "Achieving external success only",
+                "The drive to develop one's potential and become the best version of oneself"
+              ],
+              "id": "psychology_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Study Types and Scientific Logic",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an 'observational study'?",
+              "answer": "A study where the researcher watches behaviour without manipulating variables",
+              "explain": "Observational studies describe what happens naturally. They cannot prove causation but provide valuable descriptions and can inspire testable hypotheses.",
+              "choices": [
+                "A study that requires a control group",
+                "A study where the researcher hides from the subjects",
+                "A study where the researcher watches behaviour without manipulating variables",
+                "A study that always proves causation"
+              ],
+              "id": "psychology_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'case study'?",
+              "answer": "An in-depth investigation of one individual or small group",
+              "explain": "Case studies provide rich detail about a single person or situation. They are useful for exploring complex phenomena but do not generalise to populations.",
+              "choices": [
+                "An in-depth investigation of one individual or small group",
+                "A study that proves a theory",
+                "A study of thousands of people",
+                "A quick survey"
+              ],
+              "id": "psychology_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'survey' or 'questionnaire study'?",
+              "answer": "A study where participants answer questions about their beliefs, behaviours, or attitudes",
+              "explain": "Surveys are efficient for gathering information from large groups. They measure what people report, but self-reports can be biased or inaccurate.",
+              "choices": [
+                "A study only conducted in person",
+                "A study that does not use questions",
+                "A study where participants answer questions about their beliefs, behaviours, or attitudes",
+                "A study that always involves experiments"
+              ],
+              "id": "psychology_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'correlation'?",
+              "answer": "A statistical relationship between two variables",
+              "explain": "A correlation describes how two variables move together (positively or negatively). A strong correlation can suggest a relationship but does not prove causation.",
+              "choices": [
+                "A statistical relationship between two variables",
+                "A definite cause and effect",
+                "A relationship that only exists in the mind",
+                "A random relationship"
+              ],
+              "id": "psychology_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does correlation not prove causation?",
+              "answer": "Because two variables can relate through a third variable, reverse causation, or random chance",
+              "explain": "If studying hours correlates with grades, we cannot say study causes grades. Perhaps motivation causes both. The relationship is real but the direction and mechanism are unclear.",
+              "choices": [
+                "Because research is never trustworthy",
+                "Because two variables can relate through a third variable, reverse causation, or random chance",
+                "Because correlations are always false",
+                "Because statistics is not precise"
+              ],
+              "id": "psychology_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

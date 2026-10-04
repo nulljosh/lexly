@@ -1,0 +1,904 @@
+{
+  "id": "philosophy",
+  "name": "Philosophy",
+  "category": "skills",
+  "icon": "fa-solid fa-landmark",
+  "level": "Big Questions",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What is Philosophy",
+      "tip": "Philosophy means 'love of wisdom'. Philosophers ask fundamental questions about reality, knowledge, ethics, and reason. These questions do not have obvious answers, and many other fields grew out of them.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Big Questions Philosophers Ask",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'philosophy' literally mean?",
+              "answer": "Love of wisdom",
+              "explain": "The word comes from Greek: 'philo' (love) and 'sophia' (wisdom). Philosophers are lovers of wisdom who pursue understanding through reason and inquiry.",
+              "choices": [
+                "Knowledge of all things",
+                "Love of wisdom",
+                "Practice of debate",
+                "Study of the mind"
+              ],
+              "id": "philosophy_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which question is a philosophical question?",
+              "answer": "What makes an action morally right?",
+              "explain": "Philosophical questions ask about fundamental concepts and values. They cannot be answered by observation alone and invite rational reflection and argument.",
+              "choices": [
+                "What makes an action morally right?",
+                "How many people live in Tokyo?",
+                "How fast does light travel?",
+                "When was the printing press invented?"
+              ],
+              "id": "philosophy_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What distinguishes a philosophical question from a scientific one?",
+              "answer": "Philosophical questions ask about fundamental concepts, values, or meaning, not just facts",
+              "explain": "Science answers 'how?' and 'what?'. Philosophy asks 'why?', 'what does it mean?', and 'should we?'. Both use reason, but philosophy examines concepts themselves.",
+              "choices": [
+                "Philosophical questions ask about fundamental concepts, values, or meaning, not just facts",
+                "Philosophers do not use evidence",
+                "Philosophy is older than science",
+                "Scientific questions are always harder"
+              ],
+              "id": "philosophy_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'metaphysics' study?",
+              "answer": "The nature of reality and existence",
+              "explain": "Metaphysics asks what exists, what is real, what is the nature of objects, time, and causation. It examines the fundamental structure of reality.",
+              "choices": [
+                "The study of weather",
+                "The properties of metals",
+                "The nature of reality and existence",
+                "The behavior of animals"
+              ],
+              "id": "philosophy_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'epistemology' study?",
+              "answer": "How we know things and what knowledge is",
+              "explain": "Epistemology examines what counts as knowledge, how we justify beliefs, what makes a belief true, and how we distinguish knowledge from mere opinion.",
+              "choices": [
+                "The history of philosophy",
+                "The rules of proper behavior",
+                "How the brain works",
+                "How we know things and what knowledge is"
+              ],
+              "id": "philosophy_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Branches of Philosophy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'ethics' ask?",
+              "answer": "How should we live and what makes an action right or wrong?",
+              "explain": "Ethics examines what is good, what we ought to do, how to live well, and what makes a choice moral or immoral. It guides practical decisions.",
+              "choices": [
+                "How do we acquire knowledge?",
+                "What is the universe made of?",
+                "How should we live and what makes an action right or wrong?",
+                "What is the best government?"
+              ],
+              "id": "philosophy_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'logic' study?",
+              "answer": "The principles of valid reasoning and correct argument",
+              "explain": "Logic examines what makes arguments valid or invalid, how to reason correctly, and what follows from premises. It is a central tool of philosophy.",
+              "choices": [
+                "The nature of language",
+                "The history of ideas",
+                "The principles of valid reasoning and correct argument",
+                "The study of emotions"
+              ],
+              "id": "philosophy_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'aesthetics' concerned with?",
+              "answer": "The nature of beauty, art, and taste",
+              "explain": "Aesthetics asks what makes something beautiful or ugly, what is art, and what role beauty plays in human life. It examines our judgment of artworks.",
+              "choices": [
+                "The rules of morality",
+                "The structure of society",
+                "The nature of beauty, art, and taste",
+                "How language works"
+              ],
+              "id": "philosophy_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'political philosophy' concerned with?",
+              "answer": "Justice, rights, power, and the proper organization of society",
+              "explain": "Political philosophy asks how society should be organized, what rights people have, what makes a government legitimate, and what is justice.",
+              "choices": [
+                "The history of governments",
+                "The study of elections",
+                "Justice, rights, power, and the proper organization of society",
+                "The nature of money"
+              ],
+              "id": "philosophy_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is logic mainly used for in philosophy?",
+              "answer": "Checking whether a conclusion follows from its premises",
+              "explain": "Philosophers rely on reasoning, and logic supplies the rules for judging whether a conclusion really follows from the premises. Weak reasoning makes conclusions unreliable.",
+              "choices": [
+                "Measuring how old an idea is",
+                "Deciding which premises are morally good",
+                "Counting how many people accept an argument",
+                "Checking whether a conclusion follows from its premises"
+              ],
+              "id": "philosophy_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Logic and Arguments",
+      "tip": "An argument is a set of premises offered as evidence for a conclusion. A valid argument has a structure that guarantees the conclusion follows from the premises. A sound argument is both valid and has true premises. Good reasoning is central to philosophy.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Argument Structure and Validity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'premise'?",
+              "answer": "A statement offered as evidence or reason for a conclusion",
+              "explain": "Premises are the starting points of an argument. They are the claims we accept as true to show the conclusion must be true.",
+              "choices": [
+                "A statement offered as evidence or reason for a conclusion",
+                "A conclusion of an argument",
+                "A statement that is never true",
+                "An opinion with no evidence"
+              ],
+              "id": "philosophy_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'conclusion'?",
+              "answer": "The statement that the premises are supposed to prove or support",
+              "explain": "The conclusion is what the argument is trying to establish. It follows from the premises if the argument is valid.",
+              "choices": [
+                "A premise of an argument",
+                "The first statement in an argument",
+                "Any statement in an argument",
+                "The statement that the premises are supposed to prove or support"
+              ],
+              "id": "philosophy_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'valid' argument?",
+              "answer": "An argument where the conclusion must be true if the premises are true",
+              "explain": "A valid argument has a structure that guarantees the conclusion follows from the premises. If the premises are true and the argument is valid, the conclusion cannot be false.",
+              "choices": [
+                "An argument that persuades everyone",
+                "An argument with true premises",
+                "An argument we agree with",
+                "An argument where the conclusion must be true if the premises are true"
+              ],
+              "id": "philosophy_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'sound' argument?",
+              "answer": "An argument that is both valid and has true premises",
+              "explain": "A sound argument combines correct structure (validity) with true starting points (true premises). A sound argument guarantees a true conclusion.",
+              "choices": [
+                "An argument with a loud presentation",
+                "An argument with no flaws in wording",
+                "An argument that is both valid and has true premises",
+                "An argument everyone believes"
+              ],
+              "id": "philosophy_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can an argument be valid but not sound?",
+              "answer": "Yes, if the premises are false",
+              "explain": "An argument can have perfect structure (valid) but start from false premises. For example: 'All dogs are green. Fido is a dog. So Fido is green.' It is valid but not sound.",
+              "choices": [
+                "Yes, if the conclusion is obvious",
+                "No, soundness comes before validity",
+                "Yes, if the premises are false",
+                "No, valid and sound always go together"
+              ],
+              "id": "philosophy_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Types of Arguments",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'deductive argument'?",
+              "answer": "An argument where the premises are meant to guarantee the conclusion",
+              "explain": "In deductive arguments, if the premises are true, the conclusion must be true. They aim for certainty, not just probability.",
+              "choices": [
+                "An argument from personal experience",
+                "An argument that is probably true",
+                "An argument where the premises are meant to guarantee the conclusion",
+                "An argument that shows a pattern"
+              ],
+              "id": "philosophy_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'inductive argument'?",
+              "answer": "An argument where the premises make the conclusion probably true but not guaranteed",
+              "explain": "Inductive arguments go from specific examples to a general conclusion. They strengthen with more evidence but never guarantee certainty.",
+              "choices": [
+                "An argument where the premises make the conclusion probably true but not guaranteed",
+                "An argument that is logically certain",
+                "An argument that uses numbers",
+                "An argument that always fails"
+              ],
+              "id": "philosophy_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'syllogism'?",
+              "answer": "A deductive argument with two premises and a conclusion",
+              "explain": "A classic syllogism has a major premise, a minor premise, and a conclusion. Example: All humans are mortal. Socrates is human. So Socrates is mortal.",
+              "choices": [
+                "A deductive argument with two premises and a conclusion",
+                "A famous saying",
+                "An argument about a symbol",
+                "An inductive argument"
+              ],
+              "id": "philosophy_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'argument from analogy'?",
+              "answer": "An argument that draws a conclusion based on a similarity between two cases",
+              "explain": "Analogies suggest that because two things are similar in some ways, they are similar in another way. These are inductive: similar does not mean identical.",
+              "choices": [
+                "An argument based on history",
+                "An argument that uses a metaphor",
+                "An argument from deduction",
+                "An argument that draws a conclusion based on a similarity between two cases"
+              ],
+              "id": "philosophy_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is the distinction between deductive and inductive important?",
+              "answer": "It shows what we should expect from an argument's reasoning",
+              "explain": "Deductive arguments make a strong claim: certainty. Inductive arguments make a weaker claim: probability. Understanding which type an argument is helps evaluate it fairly.",
+              "choices": [
+                "Because deductive arguments are always better",
+                "Because inductive arguments never work",
+                "Because it determines if the conclusion is true",
+                "It shows what we should expect from an argument's reasoning"
+              ],
+              "id": "philosophy_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Logical Fallacies",
+      "tip": "A fallacy is an error in reasoning. Logical fallacies are arguments that appear to support a conclusion but actually fail. Recognizing fallacies helps us avoid bad reasoning and spot weak arguments in others.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Common Logical Fallacies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'begging the question'?",
+              "answer": "Using the conclusion as evidence for itself",
+              "explain": "This fallacy assumes what it tries to prove. Example: 'This rule is fair because it is the fairest rule.' The argument is circular and gives no real evidence.",
+              "choices": [
+                "Providing too much evidence",
+                "Asking too many questions",
+                "Using the conclusion as evidence for itself",
+                "Raising a valid objection"
+              ],
+              "id": "philosophy_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ad hominem'?",
+              "answer": "Attacking the person making an argument instead of addressing the argument",
+              "explain": "Ad hominem means 'to the person'. Saying 'Your idea is wrong because you are stupid' attacks the person, not the idea. It ignores the actual argument.",
+              "choices": [
+                "Disagreeing respectfully",
+                "Pointing out someone is wrong",
+                "Attacking the person making an argument instead of addressing the argument",
+                "Showing logical errors in reasoning"
+              ],
+              "id": "philosophy_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'appeal to authority' fallacy?",
+              "answer": "Accepting a claim because a famous or authority figure said it",
+              "explain": "This fallacy treats someone's say-so as proof, especially when they are famous or not an expert on the topic. Citing genuine experts on their own subject is different, because it gives real evidence.",
+              "choices": [
+                "Using scientific studies",
+                "Accepting a claim because a famous or authority figure said it",
+                "Checking expert opinions",
+                "Citing reliable sources"
+              ],
+              "id": "philosophy_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'hasty generalization'?",
+              "answer": "Drawing a broad conclusion from too little evidence",
+              "explain": "Hasty generalization jumps to conclusions. Saying 'I tried one restaurant on that street and it was bad, so every restaurant there is bad' generalizes from a single example.",
+              "choices": [
+                "Using adequate evidence for a conclusion",
+                "Being cautious in claims",
+                "Drawing a broad conclusion from too little evidence",
+                "Avoiding generalizations entirely"
+              ],
+              "id": "philosophy_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'false dilemma'?",
+              "answer": "Presenting only two options when more options exist",
+              "explain": "False dilemma: 'Either you support my plan or you hate progress.' In reality, many middle-ground positions exist. This limits reasoning artificially.",
+              "choices": [
+                "Considering all sides",
+                "Offering reasonable alternatives",
+                "Acknowledging complexity",
+                "Presenting only two options when more options exist"
+              ],
+              "id": "philosophy_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "More Fallacies and Reasoning Errors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'straw man'?",
+              "answer": "Misrepresenting an opponent's argument to make it easier to attack",
+              "explain": "Instead of refuting the actual argument, straw man exaggerates or distorts it. Example: 'He says corporations are powerful' becomes 'He says corporations run everything.'",
+              "choices": [
+                "Quoting someone accurately",
+                "Defending your position",
+                "Summarizing correctly",
+                "Misrepresenting an opponent's argument to make it easier to attack"
+              ],
+              "id": "philosophy_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'appeal to emotion'?",
+              "answer": "Using emotion in place of reasons to convince",
+              "explain": "Appeal to emotion tries to make you feel a certain way instead of giving reasons. 'Think how scared you would feel if you were wrong, so I must be right' is an example. Emotion is only a fallacy when it replaces evidence.",
+              "choices": [
+                "Having genuine feelings",
+                "Presenting logical arguments",
+                "Being honest about facts",
+                "Using emotion in place of reasons to convince"
+              ],
+              "id": "philosophy_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'circular reasoning'?",
+              "answer": "Using the conclusion to prove the conclusion",
+              "explain": "Circular reasoning goes in a circle. Example: 'This machine is reliable because it never fails, and we know it never fails because it is reliable.' No new evidence is added.",
+              "choices": [
+                "Using the conclusion to prove the conclusion",
+                "Admitting we don't know",
+                "Building on previous evidence",
+                "Following logic step by step"
+              ],
+              "id": "philosophy_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'appeal to tradition'?",
+              "answer": "Accepting something as true or right because it has always been done that way",
+              "explain": "Appeal to tradition says 'This is how we have always done it, so it must be right.' Age does not prove truth. Old ideas are sometimes wrong.",
+              "choices": [
+                "Valuing the history of an idea",
+                "Questioning old assumptions",
+                "Accepting something as true or right because it has always been done that way",
+                "Making new discoveries"
+              ],
+              "id": "philosophy_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is recognizing fallacies important in philosophy?",
+              "answer": "It helps distinguish strong arguments from weak ones and improves reasoning",
+              "explain": "Fallacies seem to work but actually fail. Spotting them prevents bad thinking and helps evaluate arguments fairly. It sharpens critical thinking.",
+              "choices": [
+                "To show others are stupid",
+                "To win arguments at any cost",
+                "To avoid all disagreement",
+                "It helps distinguish strong arguments from weak ones and improves reasoning"
+              ],
+              "id": "philosophy_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Epistemology and Knowledge",
+      "tip": "Epistemology asks 'What is knowledge?' and 'How do we know?' Knowledge is more than true belief; it requires justification. Scepticism questions whether we can know anything for certain. Different theories explain what makes beliefs justified.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "What is Knowledge",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the traditional definition of knowledge?",
+              "answer": "Justified true belief",
+              "explain": "Knowledge is traditionally defined as belief that is true and justified (based on good reason). You can have true belief without justification, but that is not knowledge. Many philosophers think even this is not enough, because of cases devised by Edmund Gettier.",
+              "choices": [
+                "Information you have learned",
+                "Justified true belief",
+                "Strong opinion",
+                "Any true statement"
+              ],
+              "id": "philosophy_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is justification necessary for knowledge?",
+              "answer": "To distinguish lucky true guesses from knowledge based on reason",
+              "explain": "If you guess a lottery number correctly, your belief is true but unjustified. Justification means you have good reason to believe. Without it, truth is accidental.",
+              "choices": [
+                "To distinguish lucky true guesses from knowledge based on reason",
+                "To make beliefs difficult to achieve",
+                "To prevent learning",
+                "Because true beliefs need no justification"
+              ],
+              "id": "philosophy_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'a priori knowledge'?",
+              "answer": "Knowledge that is justified independent of experience",
+              "explain": "A priori knowledge comes from reason, logic, or analysis, not experience. Mathematical truths such as 2+2=4 are commonly given as examples: we seem to know them by thinking, not observing.",
+              "choices": [
+                "Knowledge from authority",
+                "Knowledge that is always certain",
+                "Knowledge that is justified independent of experience",
+                "Knowledge from the past"
+              ],
+              "id": "philosophy_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'a posteriori knowledge'?",
+              "answer": "Knowledge that is justified by experience or observation",
+              "explain": "A posteriori knowledge comes from the senses, experiments, or evidence. 'Snow is white' is a posteriori: we know it by observing snow.",
+              "choices": [
+                "Knowledge that is always doubtful",
+                "Knowledge from logic alone",
+                "Knowledge that comes after death",
+                "Knowledge that is justified by experience or observation"
+              ],
+              "id": "philosophy_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between knowledge and belief?",
+              "answer": "Knowledge is true belief with justification; belief can be false or unjustified",
+              "explain": "You can believe something false or without good reason. Knowledge requires all three: belief, truth, and justification. Not all beliefs are knowledge.",
+              "choices": [
+                "Belief is more valuable than knowledge",
+                "Knowledge is true belief with justification; belief can be false or unjustified",
+                "All beliefs are automatically knowledge",
+                "They are the same thing"
+              ],
+              "id": "philosophy_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Scepticism and Justification",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'scepticism' in epistemology?",
+              "answer": "The position that knowledge or certainty may not be possible, or is more limited than we think",
+              "explain": "Sceptics question whether we can really know anything for certain. They raise doubts about the reliability of our senses, reasoning, or beliefs.",
+              "choices": [
+                "Being rude to others",
+                "Believing everything",
+                "Refusing to make any decisions",
+                "The position that knowledge or certainty may not be possible, or is more limited than we think"
+              ],
+              "id": "philosophy_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'problem of the external world'?",
+              "answer": "How can we know that an external physical world exists beyond our perceptions?",
+              "explain": "Sceptics ask: How do you know you are not dreaming or being deceived? Your experience might be illusion. This challenges the assumption that perception shows reality.",
+              "choices": [
+                "How the universe started",
+                "Whether space is infinite",
+                "How can we know that an external physical world exists beyond our perceptions?",
+                "What happens after death"
+              ],
+              "id": "philosophy_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'foundationalism'?",
+              "answer": "The view that knowledge rests on foundational beliefs that are justified without relying on other beliefs",
+              "explain": "Foundationalists say some beliefs (like 'I am in pain') are basic and self-justifying. All other knowledge builds on these foundations.",
+              "choices": [
+                "The view that all beliefs are questionable",
+                "The theory that knowledge is impossible",
+                "The position that experience is all we have",
+                "The view that knowledge rests on foundational beliefs that are justified without relying on other beliefs"
+              ],
+              "id": "philosophy_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'coherentism'?",
+              "answer": "The view that a belief is justified when it coheres with your overall system of beliefs",
+              "explain": "Coherentists say a belief is justified not by being basic, but by fitting consistently with other justified beliefs. Justification comes from coherence, not foundations.",
+              "choices": [
+                "The theory that all beliefs are equal",
+                "The position that experience justifies all beliefs",
+                "The view that a belief is justified when it coheres with your overall system of beliefs",
+                "The view that only basic beliefs are justified"
+              ],
+              "id": "philosophy_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'reliabilism' in epistemology?",
+              "answer": "The view that a belief is justified if it comes from a reliable belief-forming process",
+              "explain": "Reliabilists say a belief is justified if the process that produced it usually generates true beliefs. If perception usually tells truth, perceptual beliefs are justified.",
+              "choices": [
+                "The view that a belief is justified if it comes from a reliable belief-forming process",
+                "The view that all senses are equally reliable",
+                "The theory that nothing is reliable",
+                "The position that justification is impossible"
+              ],
+              "id": "philosophy_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Metaphysics and Reality",
+      "tip": "Metaphysics asks about the fundamental nature of reality. What exists? Is the future fixed or open? Are we free agents or determined? These questions shape how we understand ourselves and the world.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Fundamental Questions of Reality",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'metaphysics'?",
+              "answer": "The philosophical study of the fundamental nature of reality",
+              "explain": "Metaphysics asks what exists, what is real, and what is the basic structure of the world. It examines reality at the deepest level.",
+              "choices": [
+                "The study of the mind",
+                "Speculation without evidence",
+                "The philosophical study of the fundamental nature of reality",
+                "The study of the supernatural"
+              ],
+              "id": "philosophy_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'materialism' or 'physicalism' in metaphysics?",
+              "answer": "The view that only physical matter and energy exist",
+              "explain": "Materialists hold that everything that exists is ultimately physical, and that mind and consciousness are explained by physical processes.",
+              "choices": [
+                "The belief in spiritual beings",
+                "The theory that nothing exists",
+                "The view that money and possessions are important",
+                "The view that only physical matter and energy exist"
+              ],
+              "id": "philosophy_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'dualism' in metaphysics?",
+              "answer": "The view that both physical and non-physical (mental) substances exist",
+              "explain": "Dualists argue that mind and body are different kinds of things, and that mental phenomena are not purely physical.",
+              "choices": [
+                "The belief that the mind controls matter",
+                "The theory that nothing really exists",
+                "The view that only one thing exists",
+                "The view that both physical and non-physical (mental) substances exist"
+              ],
+              "id": "philosophy_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'idealism' in metaphysics?",
+              "answer": "The view that reality is fundamentally mental or based on ideas",
+              "explain": "Idealists argue that physical objects depend on minds to exist. They are not mind-independent; consciousness or ideas are fundamental to reality.",
+              "choices": [
+                "The theory that only bodies exist",
+                "The view that reality is fundamentally mental or based on ideas",
+                "Having high goals",
+                "Believing in the good of humanity"
+              ],
+              "id": "philosophy_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ontology'?",
+              "answer": "The study of what exists and the nature of being",
+              "explain": "Ontology is a central part of metaphysics. It asks what entities exist: Are there abstract objects? Do numbers exist? What is substance?",
+              "choices": [
+                "The study of beauty",
+                "The study of past events",
+                "The study of language",
+                "The study of what exists and the nature of being"
+              ],
+              "id": "philosophy_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Free Will and Determinism",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'determinism'?",
+              "answer": "The view that every event is caused by prior events according to natural laws",
+              "explain": "Determinists argue that the future is fixed by the laws of nature together with past conditions. On this view, given the state of the universe at one time, everything that follows is settled.",
+              "choices": [
+                "The belief that nothing causes anything",
+                "The view that every event is caused by prior events according to natural laws",
+                "The view that people always try hard",
+                "The theory that humans are free"
+              ],
+              "id": "philosophy_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'free will'?",
+              "answer": "The capacity of agents to choose their actions in a way that makes them responsible for them",
+              "explain": "Free will is the capacity to choose and act as an agent. Philosophers disagree about what it requires, for example whether it needs freedom from causation.",
+              "choices": [
+                "The capacity of agents to choose their actions in a way that makes them responsible for them",
+                "Doing whatever feels good",
+                "Having many choices available",
+                "Escaping responsibility"
+              ],
+              "id": "philosophy_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'problem of free will'?",
+              "answer": "Whether free will is possible if every event has prior causes",
+              "explain": "This is the question of how choice and responsibility fit with the idea that every event has causes. Philosophers answer it in different ways, as the next questions show.",
+              "choices": [
+                "Whether free will is possible if every event has prior causes",
+                "Why people disagree",
+                "Whether people want freedom",
+                "Whether freedom is good"
+              ],
+              "id": "philosophy_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'libertarian free will'?",
+              "answer": "The view that we have free will and that determinism is false",
+              "explain": "Libertarians about free will argue that we are free agents and that determinism is false. This is a position in metaphysics, not a political one.",
+              "choices": [
+                "The belief that science proves determinism",
+                "The position that all choices are determined",
+                "The view that we have free will and that determinism is false",
+                "The view that everyone should be free"
+              ],
+              "id": "philosophy_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'compatibilism'?",
+              "answer": "The view that free will and determinism can both be true",
+              "explain": "Compatibilists argue that free will does not require freedom from causation. On their view, if your action flows from your own desires and reasoning, you are free even if determined.",
+              "choices": [
+                "The view that free will and determinism can both be true",
+                "The theory that science solves the problem",
+                "The view that free will and determinism cannot both be true",
+                "The position that neither free will nor determinism exists"
+              ],
+              "id": "philosophy_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Ethics and How to Live",
+      "tip": "Ethics asks how we should live and what makes an action right or wrong. Different ethical theories offer different answers. Consequentialism looks at outcomes. Deontology looks at duties. Virtue ethics looks at character. Each reveals different moral insights.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Ethical Theories",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'consequentialism'?",
+              "answer": "The view that the rightness of an action depends on its consequences",
+              "explain": "Consequentialists judge actions by their results. On this view an action is right if it produces good outcomes and wrong if it produces bad ones.",
+              "choices": [
+                "The theory that we should never do good",
+                "The belief that intentions matter most",
+                "The position that outcomes do not matter",
+                "The view that the rightness of an action depends on its consequences"
+              ],
+              "id": "philosophy_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'utilitarianism'?",
+              "answer": "A form of consequentialism that defines the good as happiness or well-being for the most people",
+              "explain": "Utilitarians hold that we should maximize overall happiness or well-being. The right action is the one that produces the most of it across everyone affected.",
+              "choices": [
+                "Helping only one person",
+                "A form of consequentialism that defines the good as happiness or well-being for the most people",
+                "Using only practical things",
+                "Prioritizing wealth"
+              ],
+              "id": "philosophy_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'deontology'?",
+              "answer": "The view that rightness depends on duties and rules, not just consequences",
+              "explain": "Deontologists hold that some actions are right or wrong regardless of outcomes. They stress duties such as telling the truth, keeping promises, and respecting rights.",
+              "choices": [
+                "The study of teeth",
+                "The belief that nothing has obligations",
+                "The view that rightness depends on duties and rules, not just consequences",
+                "The theory that only outcomes matter"
+              ],
+              "id": "philosophy_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'virtue ethics'?",
+              "answer": "The view that ethics is about developing good character traits",
+              "explain": "Virtue ethicists ask 'What character should I develop?' rather than 'What should I do?' Virtues like courage, honesty, and compassion are central.",
+              "choices": [
+                "The belief that only outcomes matter",
+                "The position that virtue is impossible",
+                "The view that ethics is about developing good character traits",
+                "The theory that ethics is about following rules"
+              ],
+              "id": "philosophy_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'virtue'?",
+              "answer": "A character trait that helps someone flourish and is considered morally good",
+              "explain": "Virtues are qualities like honesty, courage, generosity, and wisdom. They are acquired through practice and habit and help people live well.",
+              "choices": [
+                "A hidden ability",
+                "A character trait that helps someone flourish and is considered morally good",
+                "A violation of ethics",
+                "A special power"
+              ],
+              "id": "philosophy_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Applied Ethics and Moral Concepts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'moral relativism'?",
+              "answer": "The view that moral truth varies by culture, individual, or perspective",
+              "explain": "Relativists argue there are no absolute moral facts. What is right depends on cultural norms or personal beliefs. Different societies may have different valid ethics.",
+              "choices": [
+                "The position that science determines morality",
+                "The theory that nothing is relative",
+                "The belief that morality is absolute",
+                "The view that moral truth varies by culture, individual, or perspective"
+              ],
+              "id": "philosophy_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'moral objectivism'?",
+              "answer": "The view that some moral facts or truths exist independently of what people believe",
+              "explain": "Objectivists claim that some acts are wrong whatever anyone believes about them, so moral truths do not depend on culture or opinion.",
+              "choices": [
+                "The belief that morality is only a feeling",
+                "The position that morality has no basis",
+                "The theory that everyone has their own morality",
+                "The view that some moral facts or truths exist independently of what people believe"
+              ],
+              "id": "philosophy_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ethical egoism'?",
+              "answer": "The view that people should act in their own self-interest",
+              "explain": "Ethical egoists claim that people ought to act in their own self-interest. This differs from psychological egoism, the claim that people in fact always do. Critics debate whether ethical egoism is a defensible moral view.",
+              "choices": [
+                "The belief that others matter most",
+                "The position that we must sacrifice ourselves",
+                "The view that people should act in their own self-interest",
+                "The theory that altruism is always right"
+              ],
+              "id": "philosophy_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'altruism' in ethics?",
+              "answer": "The view that concern for others' well-being is a moral motive",
+              "explain": "Altruists hold that caring about the well-being of others is a moral motive and a good one. It contrasts with pure self-interest.",
+              "choices": [
+                "The view that concern for others' well-being is a moral motive",
+                "The theory that selfishness is best",
+                "Acting only in your own interest",
+                "The belief that helping is never right"
+              ],
+              "id": "philosophy_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'moral dilemma'?",
+              "answer": "A situation where any choice available violates some moral principle",
+              "explain": "Moral dilemmas force a choice between two wrongs. Example: lying to save an innocent life when truth-telling is a duty. They test ethical theories.",
+              "choices": [
+                "A problem with no moral aspect",
+                "A situation where any choice available violates some moral principle",
+                "An easy ethical decision",
+                "A choice between right and wrong"
+              ],
+              "id": "philosophy_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
