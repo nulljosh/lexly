@@ -1,0 +1,904 @@
+{
+  "id": "perl",
+  "name": "Perl",
+  "category": "programming",
+  "icon": "fa-solid fa-code",
+  "level": "Text Processing",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Scalars and Variables",
+      "tip": "Scalars are the simplest data type in Perl, holding a single value: a number, string, or reference. You denote a scalar variable with the dollar sign ($) sigil. Understanding scalars is the foundation for everything else in Perl.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Dollar Sign and Basic Scalars",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What sigil denotes a scalar variable in Perl?",
+              "answer": "$",
+              "explain": "The dollar sign ($) is Perl's scalar sigil. Any variable beginning with $ holds a single scalar value.",
+              "choices": [
+                "%",
+                "@",
+                "&",
+                "$"
+              ],
+              "id": "perl_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a valid scalar variable name?",
+              "answer": "$name",
+              "explain": "$name is a correctly formed scalar variable with the $ sigil followed by a valid identifier.",
+              "choices": [
+                "$name",
+                "@name",
+                "name$",
+                "%name"
+              ],
+              "id": "perl_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this line do? $x = 42;",
+              "answer": "Assigns the number 42 to the scalar variable $x",
+              "explain": "The = operator assigns the value on the right (42) to the variable on the left ($x).",
+              "choices": [
+                "Multiplies $x by 42",
+                "Assigns the number 42 to the scalar variable $x",
+                "Creates a reference to $x",
+                "Compares $x to 42 and returns true if equal"
+              ],
+              "id": "perl_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type of value can a Perl scalar hold?",
+              "answer": "A number, string, or reference",
+              "explain": "A scalar is flexible: it can be a numeric value, a text string, or a reference to another data structure. Perl converts between them as needed.",
+              "choices": [
+                "Only booleans",
+                "Only strings",
+                "A number, string, or reference",
+                "Only numbers"
+              ],
+              "id": "perl_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Perl, are variable names case-sensitive?",
+              "answer": "Yes, $Name and $name are different variables",
+              "explain": "Perl treats variable names as case-sensitive, so $Name, $name, and $NAME are three completely separate variables.",
+              "choices": [
+                "Yes, $Name and $name are different variables",
+                "Case matters only for special variables",
+                "No, Perl ignores case",
+                "Only for string values"
+              ],
+              "id": "perl_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Scalar Operations and Interpolation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does $message = \"Hello\" do with double quotes?",
+              "answer": "Assigns the string \"Hello\" and allows variable interpolation",
+              "explain": "Double-quoted strings in Perl interpolate variables, so $var inside them is replaced with its value. Single quotes do not interpolate.",
+              "choices": [
+                "Creates a reference",
+                "Assigns nothing (double quotes are invalid)",
+                "Creates a bareword",
+                "Assigns the string \"Hello\" and allows variable interpolation"
+              ],
+              "id": "perl_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Given $x = 5 and $y = 3, what is the result of $x + $y?",
+              "answer": "8",
+              "explain": "Perl performs numeric addition on scalar values. 5 + 3 equals 8.",
+              "choices": [
+                "35",
+                "8",
+                "53",
+                "undefined"
+              ],
+              "id": "perl_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $str = \"a\" . \"b\" produce?",
+              "answer": "The string \"ab\"",
+              "explain": "The dot (.) operator concatenates strings in Perl. \"a\" . \"b\" joins them into \"ab\".",
+              "choices": [
+                "An error",
+                "The string \"a.b\"",
+                "The string \"ab\"",
+                "The number 2"
+              ],
+              "id": "perl_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does undef mean in Perl?",
+              "answer": "The absence of a value; undefined state",
+              "explain": "undef is Perl's way of saying \"no value\" or \"undefined\". A variable that has never been assigned has the value undef.",
+              "choices": [
+                "Zero",
+                "An error state",
+                "The absence of a value; undefined state",
+                "Empty string"
+              ],
+              "id": "perl_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you increment a scalar by 1 in Perl?",
+              "answer": "$x++ or $x += 1",
+              "explain": "The ++ operator increments a numeric scalar by one. You can also use $x += 1. Both are common in Perl.",
+              "choices": [
+                "++$x only",
+                "$x = $x + 1 only",
+                "$x = 1",
+                "$x++ or $x += 1"
+              ],
+              "id": "perl_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Arrays",
+      "tip": "Arrays are ordered collections of scalars in Perl. The @ sigil denotes an array, while $ accesses individual elements. Arrays start at index 0 and can grow as large as memory allows.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Array Basics and the @ Sigil",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What sigil denotes an array variable in Perl?",
+              "answer": "@",
+              "explain": "The @ symbol is Perl's array sigil. @array refers to the whole array.",
+              "choices": [
+                "&",
+                "$",
+                "%",
+                "@"
+              ],
+              "id": "perl_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the first element of @array?",
+              "answer": "$array[0]",
+              "explain": "Arrays are zero-indexed in Perl. You access a single element with the $ sigil and square brackets, so the first element is $array[0].",
+              "choices": [
+                "@array{0}",
+                "$array[0]",
+                "&array(0)",
+                "$array(0)"
+              ],
+              "id": "perl_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does @colors = (\"red\", \"green\", \"blue\") create?",
+              "answer": "An array of three string elements",
+              "explain": "This statement creates an array with three strings. Parentheses () group the values, and the comma separates them.",
+              "choices": [
+                "Nothing (invalid syntax)",
+                "A reference",
+                "Three separate variables",
+                "An array of three string elements"
+              ],
+              "id": "perl_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get the number of elements in @array?",
+              "answer": "scalar(@array) or $#array + 1",
+              "explain": "scalar(@array) returns the count of elements. Alternatively, $#array gives the last index, so adding 1 gives the count.",
+              "choices": [
+                "count(@array)",
+                "size(@array)",
+                "scalar(@array) or $#array + 1",
+                "length(@array)"
+              ],
+              "id": "perl_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does $#array represent?",
+              "answer": "The index of the last element in the array",
+              "explain": "$#array is the last valid index. If an array has 5 elements, $#array is 4 (since indexing starts at 0).",
+              "choices": [
+                "The index of the last element in the array",
+                "The number of elements",
+                "An error",
+                "The last element's value"
+              ],
+              "id": "perl_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Array Operations and Indexing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does push(@array, \"new\") do?",
+              "answer": "Adds \"new\" to the end of @array",
+              "explain": "push appends one or more elements to the end of an array. It modifies the original array in place.",
+              "choices": [
+                "Adds \"new\" to the end of @array",
+                "Removes the last element",
+                "Sorts the array",
+                "Adds \"new\" to the beginning"
+              ],
+              "id": "perl_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does pop(@array) return?",
+              "answer": "The last element and removes it from the array",
+              "explain": "pop removes and returns the last element of an array. The array is modified.",
+              "choices": [
+                "The first element",
+                "The last element and removes it from the array",
+                "The array size",
+                "All elements except the last"
+              ],
+              "id": "perl_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does splice(@array, 1, 2) do?",
+              "answer": "Removes 2 elements starting at index 1",
+              "explain": "splice removes and returns elements from an array. splice(array, offset, length) removes length elements starting at offset.",
+              "choices": [
+                "Joins the array into a string",
+                "Adds 2 elements at index 1",
+                "Removes 2 elements starting at index 1",
+                "Reverses the array"
+              ],
+              "id": "perl_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does @slice = @array[0, 2, 4] do?",
+              "answer": "Assigns elements at indices 0, 2, and 4 to @slice",
+              "explain": "This is an array slice: it selects multiple elements by index and assigns them to another array.",
+              "choices": [
+                "An error (invalid syntax)",
+                "Assigns the values 0, 2 and 4 to @slice",
+                "Assigns elements at indices 0, 2, and 4 to @slice",
+                "Assigns the first 5 elements"
+              ],
+              "id": "perl_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you reverse the order of elements in an array?",
+              "answer": "@array = reverse(@array)",
+              "explain": "The reverse function reverses the order of array elements. Assigning it back to the array updates it.",
+              "choices": [
+                "@array = reverse(@array)",
+                "reverse(@array) modifies @array in place",
+                "@array->reverse()",
+                "No built-in way; you must loop manually"
+              ],
+              "id": "perl_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Hashes",
+      "tip": "Hashes are key-value data structures in Perl, like dictionaries or maps in other languages. The % sigil denotes a hash; use $ to access individual values by key. Hashes are unordered, but each key maps to exactly one scalar value.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Hash Basics and the % Sigil",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What sigil denotes a hash variable in Perl?",
+              "answer": "%",
+              "explain": "The percent sign (%) is Perl's hash sigil. %hash refers to the entire hash.",
+              "choices": [
+                "&",
+                "%",
+                "@",
+                "$"
+              ],
+              "id": "perl_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a value in %hash by key?",
+              "answer": "$hash{key}",
+              "explain": "Individual hash values use the $ sigil (because you get a scalar) and curly braces {}, so the value for a key is $hash{key}.",
+              "choices": [
+                "&hash(key)",
+                "$hash{key}",
+                "%hash[key]",
+                "$hash[key]"
+              ],
+              "id": "perl_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does %person = (\"name\" => \"Alice\", \"age\" => 30) create?",
+              "answer": "A hash with two key-value pairs",
+              "explain": "The => operator (fat comma) creates a key-value pair. This hash has keys \"name\" and \"age\" with their corresponding values.",
+              "choices": [
+                "An array with two elements",
+                "A hash with two key-value pairs",
+                "Two separate variables",
+                "A reference"
+              ],
+              "id": "perl_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does keys(%hash) return?",
+              "answer": "A list of all keys in the hash",
+              "explain": "keys returns a list of all the keys in a hash (in no particular order, since hashes are unordered).",
+              "choices": [
+                "A list of all keys in the hash",
+                "A list of all values",
+                "The number of keys",
+                "A single scalar"
+              ],
+              "id": "perl_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does values(%hash) return?",
+              "answer": "A list of all values in the hash",
+              "explain": "values returns a list of all the values in a hash (in the same arbitrary order as keys, since hashes are unordered).",
+              "choices": [
+                "A list of all keys",
+                "A list of all values in the hash",
+                "The number of values",
+                "A single scalar"
+              ],
+              "id": "perl_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Hash Operations and Iteration",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you check if a key exists in %hash?",
+              "answer": "exists($hash{key})",
+              "explain": "The exists function returns true if the key is present in the hash, regardless of whether its value is defined.",
+              "choices": [
+                "defined($hash{key})",
+                "$hash{key} != undef",
+                "exists($hash{key})",
+                "has_key(%hash, key)"
+              ],
+              "id": "perl_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does delete($hash{key}) do?",
+              "answer": "Removes the key-value pair from the hash",
+              "explain": "delete removes a key and its associated value from the hash. The key no longer exists after deletion.",
+              "choices": [
+                "Clears the entire hash",
+                "Sets the value to undef",
+                "Removes the key-value pair from the hash",
+                "Returns the deleted value (nothing happens to the hash)"
+              ],
+              "id": "perl_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this loop do? while (my ($k, $v) = each %hash) { print \"$k: $v\\n\" }",
+              "answer": "Iterates over key-value pairs and prints each one",
+              "explain": "each returns the next key-value pair each time it is called. The while loop continues until each returns no more pairs.",
+              "choices": [
+                "Prints all values only",
+                "Prints all keys only",
+                "An error (invalid syntax)",
+                "Iterates over key-value pairs and prints each one"
+              ],
+              "id": "perl_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get the number of keys in %hash?",
+              "answer": "scalar(keys %hash)",
+              "explain": "keys in scalar context returns the count of keys. You can also use scalar(values %hash).",
+              "choices": [
+                "length(%hash)",
+                "size(%hash)",
+                "count(%hash)",
+                "scalar(keys %hash)"
+              ],
+              "id": "perl_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does %empty = (); do?",
+              "answer": "Creates an empty hash",
+              "explain": "Assigning an empty list () to a hash creates or clears it. All keys and values are removed.",
+              "choices": [
+                "Creates an empty hash",
+                "Deletes the variable",
+                "Creates an empty array",
+                "An error"
+              ],
+              "id": "perl_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Context: Scalar vs List",
+      "tip": "Context in Perl determines how an expression is evaluated. Scalar context expects a single value; list context expects zero or more values. The same expression can return different results depending on context. Understanding context is crucial to mastering Perl.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Understanding Context",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is scalar context in Perl?",
+              "answer": "An evaluation that expects a single scalar value",
+              "explain": "Scalar context occurs when an expression is used where one value is expected, like in an assignment to a scalar or a comparison.",
+              "choices": [
+                "An evaluation that expects a single scalar value",
+                "A string enclosed in quotes",
+                "An evaluation that expects an array",
+                "An evaluation that expects a hash"
+              ],
+              "id": "perl_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is list context in Perl?",
+              "answer": "An evaluation that expects zero or more values",
+              "explain": "List context occurs when an expression is used where a list is expected, like in an assignment to an array or in a function that wants multiple values.",
+              "choices": [
+                "An evaluation that only expects numbers",
+                "An evaluation of a hash",
+                "An evaluation that expects zero or more values",
+                "An evaluation that only expects strings"
+              ],
+              "id": "perl_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does @array in scalar context return?",
+              "answer": "The number of elements in the array",
+              "explain": "When you use @array where a scalar is expected, Perl returns the array's length, not the array itself.",
+              "choices": [
+                "The number of elements in the array",
+                "The first element",
+                "The last element",
+                "A reference to the array"
+              ],
+              "id": "perl_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does if (%hash) { } test?",
+              "answer": "Whether the hash has at least one key",
+              "explain": "A hash in boolean context is true when it holds at least one key and false when it is empty.",
+              "choices": [
+                "Whether the hash is a reference",
+                "Whether the hash has at least one key",
+                "Whether the hash is sorted",
+                "Whether every value is defined"
+              ],
+              "id": "perl_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In this line, what context is @colors? @colors = split(/,/, $string)",
+              "answer": "List context; it receives the list of split values",
+              "explain": "split returns a list of values. The assignment to @colors happens in list context, so @colors receives all the split results.",
+              "choices": [
+                "String context",
+                "Scalar context; it receives one value",
+                "List context; it receives the list of split values",
+                "No context"
+              ],
+              "id": "perl_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Context in Practice",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does $count = @array; do?",
+              "answer": "Assigns the number of elements to $count",
+              "explain": "This is scalar context. @array in scalar context evaluates to the array's element count.",
+              "choices": [
+                "Assigns the number of elements to $count",
+                "Assigns the array to $count",
+                "Assigns the first element to $count",
+                "An error"
+              ],
+              "id": "perl_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ($first, $second) = @array; do?",
+              "answer": "Assigns the first two elements to the two variables",
+              "explain": "This is list context. @array returns its elements as a list, which are assigned to the scalar variables in order.",
+              "choices": [
+                "Assigns the entire array to both variables",
+                "Assigns only the first element",
+                "An error (can't assign array to scalars)",
+                "Assigns the first two elements to the two variables"
+              ],
+              "id": "perl_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does scalar(keys %hash) do?",
+              "answer": "Forces keys to return in scalar context, counting the keys",
+              "explain": "keys in list context returns all keys. Wrapping it in scalar() forces scalar context, which returns the count.",
+              "choices": [
+                "Forces keys to return in scalar context, counting the keys",
+                "Sorts the keys alphabetically",
+                "Returns only one key",
+                "Returns the keys as a string"
+              ],
+              "id": "perl_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In this snippet, what context is split()? if (split(/ /, $line) > 3) { }",
+              "answer": "Scalar context; it returns the number of parts",
+              "explain": "split is used in a numeric comparison (> 3), which forces scalar context. In scalar context split returns the number of fields.",
+              "choices": [
+                "List context; it returns all parts",
+                "Scalar context; it returns the number of parts",
+                "String context",
+                "No context"
+              ],
+              "id": "perl_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does my @copy = @original; do in list context?",
+              "answer": "Copies all elements from @original to @copy",
+              "explain": "This is list context. @original returns all its elements, which are assigned to @copy. Both arrays are now separate copies.",
+              "choices": [
+                "Copies only the first element",
+                "An error",
+                "Creates a reference to @original",
+                "Copies all elements from @original to @copy"
+              ],
+              "id": "perl_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Control Flow",
+      "tip": "Control flow statements like if, while, for, and foreach direct how a program executes. They let you repeat code, make decisions, and skip sections based on conditions. Perl supports both C-style loops and array iteration.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Conditionals and Basic Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does if ($x > 5) { print \"big\"; } do?",
+              "answer": "Prints \"big\" only if $x is greater than 5",
+              "explain": "The if statement evaluates the condition. If true, the block executes. If false, the block is skipped.",
+              "choices": [
+                "Prints \"big\" if $x equals 5",
+                "Prints \"big\" only if $x is greater than 5",
+                "Always prints \"big\"",
+                "An error"
+              ],
+              "id": "perl_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does unless ($error) { proceed(); } do?",
+              "answer": "Calls proceed() only if $error is false",
+              "explain": "unless is the opposite of if. The block executes when the condition is false (not true).",
+              "choices": [
+                "Calls proceed() if $error is true",
+                "Always calls proceed()",
+                "An error",
+                "Calls proceed() only if $error is false"
+              ],
+              "id": "perl_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does while ($i < 10) { print $i; $i++; } do?",
+              "answer": "Prints 0 through 9",
+              "explain": "The while loop repeats as long as the condition is true. Each iteration, $i is printed then incremented until $i is no longer less than 10.",
+              "choices": [
+                "Prints 0 through 9",
+                "Prints nothing",
+                "Prints 1 through 10",
+                "Infinite loop"
+              ],
+              "id": "perl_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does until ($done) { work(); } do?",
+              "answer": "Repeats until $done becomes true",
+              "explain": "until is the opposite of while. The loop continues as long as the condition is false, and exits when it becomes true.",
+              "choices": [
+                "Repeats until $done becomes true",
+                "Never executes",
+                "Repeats while $done is true",
+                "Repeats forever"
+              ],
+              "id": "perl_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does for (my $i = 0; $i < 5; $i++) { print $i; } do?",
+              "answer": "Prints 0, 1, 2, 3, 4",
+              "explain": "The C-style for loop has three parts: initialize ($i = 0), condition ($i < 5), and increment ($i++). It loops while the condition is true.",
+              "choices": [
+                "Prints 0 through 5",
+                "Infinite loop",
+                "Prints 0, 1, 2, 3, 4",
+                "An error"
+              ],
+              "id": "perl_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Loop Control and Advanced Flow",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does foreach $item (@list) { print $item; } do?",
+              "answer": "Iterates over each element in @list and prints it",
+              "explain": "foreach loops over each element of an array. Each iteration, $item holds the current element.",
+              "choices": [
+                "Prints the entire array as one string",
+                "Prints nothing (invalid syntax)",
+                "Prints the index of each element",
+                "Iterates over each element in @list and prints it"
+              ],
+              "id": "perl_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does last; do inside a loop?",
+              "answer": "Exits the loop immediately",
+              "explain": "last is Perl's equivalent of break in other languages. It exits the innermost loop immediately.",
+              "choices": [
+                "Exits the loop immediately",
+                "Does nothing",
+                "Skips to the last iteration",
+                "Restarts the loop"
+              ],
+              "id": "perl_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does next; do inside a loop?",
+              "answer": "Skips to the next iteration",
+              "explain": "next is Perl's equivalent of continue in other languages. It skips the rest of the current iteration and goes to the next one.",
+              "choices": [
+                "Repeats the current iteration",
+                "Does nothing",
+                "Exits the loop",
+                "Skips to the next iteration"
+              ],
+              "id": "perl_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does redo; do inside a loop?",
+              "answer": "Restarts the current iteration without re-evaluating the condition",
+              "explain": "redo jumps back to the beginning of the loop block without re-evaluating the loop condition. It is rarely used.",
+              "choices": [
+                "An error",
+                "Exits the loop",
+                "Restarts the current iteration without re-evaluating the condition",
+                "Skips to the next iteration"
+              ],
+              "id": "perl_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does elsif in an if statement do?",
+              "answer": "Provides an additional condition if the previous if is false",
+              "explain": "elsif (not else if) tests another condition if the first if was false. You can chain multiple elsif blocks.",
+              "choices": [
+                "Always executes",
+                "Exits the program",
+                "An error",
+                "Provides an additional condition if the previous if is false"
+              ],
+              "id": "perl_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Subroutines, Regular Expressions, and File I/O",
+      "tip": "Subroutines are reusable code blocks that accept arguments and return values. Regular expressions are patterns for matching and transforming text. File I/O lets you read from and write to files. These advanced features combine into powerful Perl idioms.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Regular Expressions and File Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the =~ operator do in Perl?",
+              "answer": "Matches a string against a regular expression",
+              "explain": "=~ applies a regex match to a string. It returns true if the pattern matches and false otherwise.",
+              "choices": [
+                "Assigns a value",
+                "Compares two strings for equality",
+                "Performs bitwise AND",
+                "Matches a string against a regular expression"
+              ],
+              "id": "perl_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does if ($str =~ /hello/) { } do?",
+              "answer": "Executes the block if $str contains \"hello\"",
+              "explain": "The regex /hello/ is a literal match. It succeeds if \"hello\" appears anywhere in $str.",
+              "choices": [
+                "Removes \"hello\" from $str",
+                "Executes if $str equals \"hello\" exactly",
+                "Executes the block if $str contains \"hello\"",
+                "An error"
+              ],
+              "id": "perl_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does @matches = $str =~ /(\\w+)/g; do?",
+              "answer": "Extracts all word sequences from $str into @matches",
+              "explain": "The /g flag means global: find all matches. (\\w+) captures one or more word characters. Each match is added to @matches.",
+              "choices": [
+                "Extracts all word sequences from $str into @matches",
+                "Finds the first word only",
+                "An error",
+                "Removes words from $str"
+              ],
+              "id": "perl_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does open(my $fh, \"<\", \"file.txt\") do?",
+              "answer": "Opens file.txt for reading",
+              "explain": "open associates a filehandle ($fh) with a file. \"<\" means read mode. You can then read from $fh.",
+              "choices": [
+                "Opens file.txt for reading",
+                "Deletes file.txt",
+                "Opens file.txt for writing",
+                "Opens file.txt for appending"
+              ],
+              "id": "perl_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does while (my $line = <$fh>) { } do?",
+              "answer": "Reads lines from the filehandle one at a time",
+              "explain": "<$fh> reads the next line from the filehandle. The while loop repeats until no more lines are available (EOF).",
+              "choices": [
+                "Reads the entire file into a single line",
+                "An error",
+                "Writes lines to the filehandle",
+                "Reads lines from the filehandle one at a time"
+              ],
+              "id": "perl_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Subroutines and Common Idioms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a subroutine in Perl?",
+              "answer": "sub name { code }",
+              "explain": "The sub keyword defines a subroutine. Give it a name and a code block. You can call it later with name().",
+              "choices": [
+                "def name { code }",
+                "sub name { code }",
+                "procedure name { code }",
+                "function name { code }"
+              ],
+              "id": "perl_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you pass arguments to a subroutine?",
+              "answer": "Arguments arrive in @_, accessed via $_[0], $_[1], etc.",
+              "explain": "When you call a subroutine, Perl places all arguments in the special array @_. You extract them by index.",
+              "choices": [
+                "Use global variables",
+                "You cannot pass arguments",
+                "Arguments are placed in $ARGV",
+                "Arguments arrive in @_, accessed via $_[0], $_[1], etc."
+              ],
+              "id": "perl_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does return $value; do in a subroutine?",
+              "answer": "Exits the subroutine and sends $value back to the caller",
+              "explain": "return exits the subroutine and specifies what value the caller receives. Without return, the last expression evaluated is returned.",
+              "choices": [
+                "Exits the subroutine and sends $value back to the caller",
+                "Does nothing",
+                "Prints $value",
+                "Stores $value in a global variable"
+              ],
+              "id": "perl_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does chomp($line); do?",
+              "answer": "Removes the trailing newline from $line",
+              "explain": "chomp strips the trailing newline character (\\n). This is essential after reading lines from a file.",
+              "choices": [
+                "Reverses $line",
+                "Removes the trailing newline from $line",
+                "Splits $line into parts",
+                "Removes all whitespace"
+              ],
+              "id": "perl_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does my $var = shift @_; do in a subroutine?",
+              "answer": "Removes the first argument from @_ and stores it in $var",
+              "explain": "shift removes and returns the first element of an array. In a subroutine, it is commonly used to extract the first argument.",
+              "choices": [
+                "An error",
+                "Does nothing",
+                "Removes the last argument",
+                "Removes the first argument from @_ and stores it in $var"
+              ],
+              "id": "perl_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

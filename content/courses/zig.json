@@ -1,0 +1,904 @@
+{
+  "id": "zig",
+  "name": "Zig",
+  "category": "programming",
+  "icon": "fa-solid fa-bolt",
+  "level": "Modern Systems Language",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Language Philosophy",
+      "tip": "Zig is designed to be predictable and give you explicit control. Every operation is visible, no hidden behavior lurks in your code. This predictability makes systems programming safer and easier to reason about.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "No Hidden Control Flow",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Zig mean by 'no hidden control flow'?",
+              "answer": "No implicit function calls or exceptions; flow is only what you write",
+              "explain": "Zig has no operator overloading, destructors or exceptions that silently call code you didn't write. Every flow decision comes from your code.",
+              "choices": [
+                "No implicit function calls or exceptions; flow is only what you write",
+                "Looping never happens silently",
+                "All code must use if-else only",
+                "No hidden control flow"
+              ],
+              "id": "zig_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does Zig prevent hidden control flow?",
+              "answer": "By removing operator overloading, exceptions, and hidden allocations",
+              "explain": "Zig leaves out features like the operator overloading found in C++ that make it hard to see what code does. When you see a + b, it is plain arithmetic, not a hidden function call.",
+              "choices": [
+                "By forcing you to write everything in assembly",
+                "By removing operator overloading, exceptions, and hidden allocations",
+                "By preventing loops and recursion",
+                "By requiring all code to be single-threaded"
+              ],
+              "id": "zig_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of explicit allocation in Zig?",
+              "answer": "You choose when and where memory happens, no garbage collector surprises",
+              "explain": "With explicit allocation via allocators, there are no surprise garbage collection pauses or memory management decisions hidden from you. You are in control.",
+              "choices": [
+                "It requires less memory overall",
+                "It prevents all memory leaks automatically",
+                "You choose when and where memory happens, no garbage collector surprises",
+                "It makes code slower"
+              ],
+              "id": "zig_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an allocator in Zig?",
+              "answer": "An object passed to functions that defines how memory is allocated",
+              "explain": "Allocators are passed explicitly to any function that needs memory. This makes it clear where allocation happens and lets you control the strategy.",
+              "choices": [
+                "A built-in process that runs automatically",
+                "A forbidden feature in Zig",
+                "A keyword for memory reservation",
+                "An object passed to functions that defines how memory is allocated"
+              ],
+              "id": "zig_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does Zig leave out operator overloading?",
+              "answer": "So a + b is always plain arithmetic, never a hidden function call",
+              "explain": "With overloading, a + b could run any code. Without it, an operator does only what it looks like, so you can read control flow straight from the source.",
+              "choices": [
+                "So a + b is always plain arithmetic, never a hidden function call",
+                "Because Zig has no operators",
+                "Because overloading is impossible on computers",
+                "To make code run slower"
+              ],
+              "id": "zig_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Explicit Resource Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What resource does Zig handle explicitly?",
+              "answer": "Memory, file handles, and other operating system resources",
+              "explain": "Zig makes it your job to acquire and release resources. There is no implicit cleanup. This is safe when you use the right patterns.",
+              "choices": [
+                "Only network connections",
+                "Memory, file handles, and other operating system resources",
+                "Only CPU cycles",
+                "Nothing, Zig hides all resource management"
+              ],
+              "id": "zig_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does Zig help you manage resources?",
+              "answer": "Defer statements and manual cleanup patterns you write",
+              "explain": "Zig provides defer to run cleanup code when a scope exits. You write the cleanup; Zig makes sure it runs.",
+              "choices": [
+                "A background daemon",
+                "An automatic garbage collector",
+                "Defer statements and manual cleanup patterns you write",
+                "It forbids resource use"
+              ],
+              "id": "zig_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a defer statement in Zig?",
+              "answer": "Code that runs when a scope exits, even on error",
+              "explain": "Defer lets you write cleanup code right after resource acquisition. It runs when the scope exits, guaranteeing cleanup happens.",
+              "choices": [
+                "A forbidden keyword",
+                "A loop construct",
+                "A delay in execution",
+                "Code that runs when a scope exits, even on error"
+              ],
+              "id": "zig_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is explicit resource management safer than implicit cleanup?",
+              "answer": "You see exactly what happens and when, no surprises during cleanup",
+              "explain": "When cleanup is explicit, you control when it happens and what order resources are freed. No hidden destructors run in unexpected order.",
+              "choices": [
+                "You see exactly what happens and when, no surprises during cleanup",
+                "Explicit cleanup is slower",
+                "It is not safer",
+                "Automatic cleanup never fails"
+              ],
+              "id": "zig_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What design principle guides Zig's approach to resources?",
+              "answer": "You own it, you manage it, nothing is hidden",
+              "explain": "Zig's philosophy is that explicit control prevents bugs. You acquire resources, you decide when to release them.",
+              "choices": [
+                "Resource management is impossible in systems languages",
+                "You own it, you manage it, nothing is hidden",
+                "Resources should be managed by the language automatically",
+                "Only the kernel can manage resources"
+              ],
+              "id": "zig_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Variables and Mutability",
+      "tip": "Variables in Zig are either const (immutable) or var (mutable). Const means the value cannot change once assigned. This distinction catches bugs early and makes code intention clear.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Const vs Var",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does const mean in Zig?",
+              "answer": "The variable is immutable and cannot be reassigned",
+              "explain": "A const variable is assigned once and cannot change. This prevents accidental modification and makes intent explicit.",
+              "choices": [
+                "The variable is temporary",
+                "Const is optional syntax",
+                "The variable is immutable and cannot be reassigned",
+                "The variable is mutable but hidden"
+              ],
+              "id": "zig_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does var mean in Zig?",
+              "answer": "The variable is mutable and can be reassigned",
+              "explain": "A var variable can be assigned multiple times. Use var when you actually need to change the value.",
+              "choices": [
+                "Variable declarations are forbidden",
+                "The variable is immutable",
+                "Var is a type name",
+                "The variable is mutable and can be reassigned"
+              ],
+              "id": "zig_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use const instead of var?",
+              "answer": "When the value never changes after assignment",
+              "explain": "Use const by default. Only use var when you actually reassign the variable. Const catches bugs and documents intent.",
+              "choices": [
+                "When the value never changes after assignment",
+                "When the type is known",
+                "Only in functions",
+                "Never, var is safer"
+              ],
+              "id": "zig_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the type *const i32 mean?",
+              "answer": "A pointer through which the i32 cannot be modified",
+              "explain": "*const i32 is a pointer to an i32 that you can read but not write through. The pointer variable itself can still be reassigned if it is declared with var.",
+              "choices": [
+                "A pointer through which the i32 cannot be modified",
+                "A pointer that can never be reassigned",
+                "A pointer that is always null",
+                "A pointer to a compile-time integer"
+              ],
+              "id": "zig_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What error does reassigning a const variable cause?",
+              "answer": "A compile-time error",
+              "explain": "The compiler catches const reassignments before your code runs. This prevents bugs early.",
+              "choices": [
+                "A warning only",
+                "No error, const is just documentation",
+                "A compile-time error",
+                "A runtime error"
+              ],
+              "id": "zig_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Shadowing and Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is variable shadowing?",
+              "answer": "Declaring a new variable with the same name in an inner scope",
+              "explain": "Shadowing is when an inner block reuses the name of an outer variable, hiding it in that scope. Zig does not allow it.",
+              "choices": [
+                "Making a variable temporarily invisible",
+                "Hiding a function from the compiler",
+                "A memory management technique",
+                "Declaring a new variable with the same name in an inner scope"
+              ],
+              "id": "zig_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is variable shadowing allowed in Zig?",
+              "answer": "No, Zig reports a compile error when a name shadows another",
+              "explain": "Many languages allow shadowing, but Zig rejects a local name that hides another one in an enclosing scope. This avoids confusing which variable you mean.",
+              "choices": [
+                "Yes, Zig permits shadowing in nested scopes",
+                "No, Zig reports a compile error when a name shadows another",
+                "Only in loops",
+                "Only for const variables"
+              ],
+              "id": "zig_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is scope in Zig?",
+              "answer": "The region of code where a variable is visible and accessible",
+              "explain": "A variable is accessible from its declaration until the end of its scope. Scopes are delimited by blocks and functions.",
+              "choices": [
+                "A rule about compile time",
+                "The region of code where a variable is visible and accessible",
+                "The amount of memory a variable uses",
+                "The type of a variable"
+              ],
+              "id": "zig_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when a variable goes out of scope?",
+              "answer": "The variable is no longer accessible; defer blocks run",
+              "explain": "When a scope ends, the variable is gone. Any defer statements in that scope run before the scope exits.",
+              "choices": [
+                "The program crashes",
+                "The variable is deleted from memory",
+                "The variable is no longer accessible; defer blocks run",
+                "Nothing, the variable is still accessible"
+              ],
+              "id": "zig_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you access a variable outside its scope?",
+              "answer": "No, the compiler prevents out-of-scope access",
+              "explain": "Zig's compiler checks scope at compile time. Accessing a variable outside its scope is a compile error.",
+              "choices": [
+                "Only if the variable is const",
+                "Yes, but it is unsafe",
+                "Yes, using pointers",
+                "No, the compiler prevents out-of-scope access"
+              ],
+              "id": "zig_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Basic Types",
+      "tip": "Zig has explicit types for integers (i32, u64), floats (f32, f64), booleans, and arrays. The type system is strict: mixing types usually needs an explicit cast. This prevents silent bugs.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Integers and Floats",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does i32 mean in Zig?",
+              "answer": "A signed 32-bit integer",
+              "explain": "i32 is a signed integer using 32 bits, ranging from -2,147,483,648 to 2,147,483,647. The 'i' means signed, '32' is the bit width.",
+              "choices": [
+                "A signed 32-bit integer",
+                "An unsigned 32-bit integer",
+                "A 32-byte integer",
+                "A floating-point number"
+              ],
+              "id": "zig_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does u64 mean in Zig?",
+              "answer": "An unsigned 64-bit integer",
+              "explain": "u64 is an unsigned integer using 64 bits, ranging from 0 to 18,446,744,073,709,551,615. The 'u' means unsigned, '64' is the bit width.",
+              "choices": [
+                "A pointer to an unsigned integer",
+                "An unsigned 64-bit integer",
+                "A signed 64-bit integer",
+                "A 64-byte integer"
+              ],
+              "id": "zig_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between i32 and u32?",
+              "answer": "i32 is signed (negative allowed), u32 is unsigned (only positive)",
+              "explain": "i32 can hold negative numbers but has a smaller positive range. u32 holds only non-negative numbers, so it can represent larger positive values.",
+              "choices": [
+                "They are the same type",
+                "i32 is faster",
+                "i32 is signed (negative allowed), u32 is unsigned (only positive)",
+                "Only if the type is known"
+              ],
+              "id": "zig_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does f32 represent in Zig?",
+              "answer": "A 32-bit floating-point number",
+              "explain": "f32 is a single-precision float, similar to C's float. It uses 32 bits for approximate decimal numbers.",
+              "choices": [
+                "A function pointer",
+                "A 32-bit fixed-size array",
+                "A 32-bit fixed-point number",
+                "A 32-bit floating-point number"
+              ],
+              "id": "zig_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you implicitly convert i32 to f64 in Zig?",
+              "answer": "No, you must use an explicit cast",
+              "explain": "Zig does not coerce types automatically. Converting an integer to a float requires an explicit cast like @floatFromInt().",
+              "choices": [
+                "No, you must use an explicit cast",
+                "Only in debug builds",
+                "Yes, automatic conversion",
+                "Only for positive integers"
+              ],
+              "id": "zig_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Arrays, Pointers, and Slices",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an array in Zig?",
+              "answer": "A fixed-size sequence of elements of the same type",
+              "explain": "An array has a length known at compile time, and all elements share one type. It lives wherever its variable lives, such as on the stack or inside a struct.",
+              "choices": [
+                "A type synonym",
+                "A fixed-size sequence of elements of the same type",
+                "A variable-size list",
+                "A pointer to memory"
+              ],
+              "id": "zig_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of an array with 10 integers?",
+              "answer": "[10]i32",
+              "explain": "[10]i32 means an array of exactly 10 signed 32-bit integers. The size is part of the type.",
+              "choices": [
+                "Array(10, i32)",
+                "i32[10]",
+                "[10]i32",
+                "*[10]i32"
+              ],
+              "id": "zig_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pointer in Zig?",
+              "answer": "A variable holding the memory address of another value",
+              "explain": "A pointer stores an address. You dereference it with .* to access the value it points to. Pointers are explicit.",
+              "choices": [
+                "A type guarantee",
+                "An error handling mechanism",
+                "A reference that is always safe",
+                "A variable holding the memory address of another value"
+              ],
+              "id": "zig_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of a pointer to i32?",
+              "answer": "*i32",
+              "explain": "*i32 is a pointer to a signed 32-bit integer. The * prefix denotes a pointer type.",
+              "choices": [
+                "*i32",
+                "ptr[i32]",
+                "&i32",
+                "i32*"
+              ],
+              "id": "zig_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a slice in Zig?",
+              "answer": "A view into a contiguous part of an array or buffer",
+              "explain": "A slice is a pointer plus a length. It lets you work with part of an array without knowing the full size at compile time.",
+              "choices": [
+                "A type that cannot be used",
+                "A view into a contiguous part of an array or buffer",
+                "A fixed-size array",
+                "A pointer to a pointer"
+              ],
+              "id": "zig_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Functions",
+      "tip": "Functions in Zig are declared with explicit parameter and return types. They are composable building blocks. Zig supports recursion, optional return values, and error returns.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Function Declaration and Parameters",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a function in Zig?",
+              "answer": "fn name(params) type { body }",
+              "explain": "Zig functions start with fn, followed by a name, parameters, return type, and a block. Parameters and return type are required.",
+              "choices": [
+                "def name(params)",
+                "name() -> type { body }",
+                "fn name(params) type { body }",
+                "function name(params) { body }"
+              ],
+              "id": "zig_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a function parameter declaration look like?",
+              "answer": "name: type",
+              "explain": "Each parameter is declared with a name, a colon, and its type, like x: i32. Multiple parameters are separated by commas.",
+              "choices": [
+                "name type",
+                "type[name]",
+                "type name",
+                "name: type"
+              ],
+              "id": "zig_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you have a function with no parameters?",
+              "answer": "Yes, you must still specify the return type",
+              "explain": "Functions with no parameters still need a return type. The parameter list is empty: fn foo() i32 { return 42; }",
+              "choices": [
+                "Yes, you must still specify the return type",
+                "No, functions need at least one parameter",
+                "Only if the function has no body",
+                "Only in special cases"
+              ],
+              "id": "zig_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between parameters and arguments?",
+              "answer": "Parameters are declared in the function; arguments are passed when calling",
+              "explain": "fn add(a: i32, b: i32) has parameters. When you call add(3, 5), 3 and 5 are arguments.",
+              "choices": [
+                "Arguments are types, parameters are values",
+                "Parameters are declared in the function; arguments are passed when calling",
+                "Parameters are optional",
+                "They are the same thing"
+              ],
+              "id": "zig_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Are function parameters mutable in Zig?",
+              "answer": "No, they are const by default and cannot be reassigned",
+              "explain": "Function parameters are const. If you need to modify a parameter, you assign it to a new var variable.",
+              "choices": [
+                "Only pointers are const",
+                "Only primitive types are const",
+                "No, they are const by default and cannot be reassigned",
+                "Yes, all parameters are mutable"
+              ],
+              "id": "zig_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Return Values and Recursion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you return a value from a function in Zig?",
+              "answer": "Use a return statement with the value",
+              "explain": "return value; sends the value back to the caller. The type must match the declared return type.",
+              "choices": [
+                "Functions cannot return values",
+                "Use an out parameter",
+                "Assign to a result variable",
+                "Use a return statement with the value"
+              ],
+              "id": "zig_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function return multiple values in Zig?",
+              "answer": "Yes, by returning a struct with multiple fields",
+              "explain": "A Zig function returns a single value. To return several, return a struct holding them.",
+              "choices": [
+                "Yes, by returning a struct with multiple fields",
+                "Yes, with a comma-separated return list",
+                "No, only one value allowed",
+                "Yes, via separate return statements"
+              ],
+              "id": "zig_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is recursion?",
+              "answer": "A function calling itself to solve a problem",
+              "explain": "Recursion breaks a problem into smaller versions of itself. Each recursive call should move closer to a base case that stops the recursion.",
+              "choices": [
+                "An error in code",
+                "A function calling itself to solve a problem",
+                "A forbidden pattern",
+                "A loop construct"
+              ],
+              "id": "zig_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a base case in recursion?",
+              "answer": "The condition that stops recursive calls and returns directly",
+              "explain": "The base case is the simplest version of the problem that doesn't require recursion. Without it, recursion never stops.",
+              "choices": [
+                "An error condition",
+                "The deepest recursion level",
+                "The condition that stops recursive calls and returns directly",
+                "The first recursive call"
+              ],
+              "id": "zig_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can Zig functions be recursive?",
+              "answer": "Yes, a function can call itself, but very deep recursion can overflow the stack",
+              "explain": "Zig allows recursion. Each call uses stack space, so recursion needs a base case and a reasonable depth.",
+              "choices": [
+                "Only for void return types",
+                "No, recursion is forbidden",
+                "Only in debug builds",
+                "Yes, a function can call itself, but very deep recursion can overflow the stack"
+              ],
+              "id": "zig_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Error Handling",
+      "tip": "Zig uses error unions, with try and catch, for error handling. An error union can hold either a value or an error. The try keyword propagates errors up the call stack. This makes errors visible and explicit.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Error Unions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an error union in Zig?",
+              "answer": "A type that can hold either a value or an error",
+              "explain": "An error union combines a value type and an error set. It represents an operation that might fail.",
+              "choices": [
+                "A type that can hold either a value or an error",
+                "A debugging tool",
+                "A try statement",
+                "A list of error types"
+              ],
+              "id": "zig_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for an error union type?",
+              "answer": "!ValueType or ErrorSet!ValueType",
+              "explain": "! joins an error set and a value type. For example, !i32 is an i32 that can fail, and FileOpenError!File names exactly which errors can occur.",
+              "choices": [
+                "@error(ValueType)",
+                "!ValueType or ErrorSet!ValueType",
+                "try ValueType",
+                "ErrorType | ValueType"
+              ],
+              "id": "zig_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How must you handle an error union before using its value?",
+              "answer": "Unwrap it with try or catch, or use if with an else |err| branch",
+              "explain": "Use try to propagate the error, catch to handle it, or if/else to branch on it. Using an error union as a plain value is a compile error.",
+              "choices": [
+                "Dereference it like a pointer",
+                "Call an isError() function",
+                "Unwrap it with try or catch, or use if with an else |err| branch",
+                "Check if it is null"
+              ],
+              "id": "zig_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does try do when given an error union?",
+              "answer": "Returns the value if success, propagates the error if failure",
+              "explain": "try unwraps the value on success, or immediately returns the error to the caller on failure.",
+              "choices": [
+                "Crashes the program",
+                "Converts the error to null",
+                "Ignores the error",
+                "Returns the value if success, propagates the error if failure"
+              ],
+              "id": "zig_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function return an error union?",
+              "answer": "Yes, it declares the return type as an error union",
+              "explain": "A function can return ErrorSet!ValueType. Callers must handle the error or propagate it with try.",
+              "choices": [
+                "Yes, it declares the return type as an error union",
+                "Only if it is async",
+                "No, only functions can throw",
+                "Never, errors are implicit"
+              ],
+              "id": "zig_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Try and Catch",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the try keyword do?",
+              "answer": "Unwraps an error union; returns from the function on error",
+              "explain": "try extracts the value from an error union. If an error occurs, try stops execution and returns the error to the caller.",
+              "choices": [
+                "Converts errors to warnings",
+                "Unwraps an error union; returns from the function on error",
+                "Prevents errors from happening",
+                "Catches errors and ignores them"
+              ],
+              "id": "zig_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you use catch in Zig?",
+              "answer": "expression catch |err| handler",
+              "explain": "catch runs if the expression is an error. The err variable holds the error, and handler is code that runs on error.",
+              "choices": [
+                "catch { handler }",
+                "try-catch statement",
+                "expression catch |err| handler",
+                "catch expression handler"
+              ],
+              "id": "zig_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does catch do when the expression succeeds?",
+              "answer": "Nothing, it passes the value through and does not run",
+              "explain": "catch only runs when an error occurs. If the expression succeeds, catch is skipped.",
+              "choices": [
+                "It converts the value to an error",
+                "It runs and gets 0",
+                "It runs and gets null",
+                "Nothing, it passes the value through and does not run"
+              ],
+              "id": "zig_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you ignore an error with catch?",
+              "answer": "Yes, catch can supply a default value instead",
+              "explain": "foo() catch 0 uses 0 whenever foo() fails. Substituting a value like this is a form of handling, but do it deliberately, not carelessly.",
+              "choices": [
+                "Yes, catch can supply a default value instead",
+                "Only in test code",
+                "No, you must handle all errors",
+                "Never, errors must propagate"
+              ],
+              "id": "zig_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between try and catch?",
+              "answer": "Try propagates the error; catch handles it locally",
+              "explain": "try stops and returns the error to the caller. catch runs your code to handle the error without propagating it.",
+              "choices": [
+                "For performance only",
+                "Try propagates the error; catch handles it locally",
+                "Catch is forbidden",
+                "They are the same"
+              ],
+              "id": "zig_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced Concepts",
+      "tip": "Optionals represent values that might not exist. Comptime runs code at compile time for meta-programming. Manual memory management via allocators gives you precise control. C interop lets you call C libraries directly.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Optionals and Comptime",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an optional in Zig?",
+              "answer": "A value that might be null or hold a real value",
+              "explain": "An optional type like ?i32 can hold either an i32 or null. It is safer than C's null pointers because the type system tracks nullability.",
+              "choices": [
+                "A try statement",
+                "A pointer to undefined memory",
+                "A value that might be null or hold a real value",
+                "An operator keyword"
+              ],
+              "id": "zig_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for an optional type?",
+              "answer": "?ValueType",
+              "explain": "? means the value can be null or a ValueType. For example, ?i32 is either null or an i32.",
+              "choices": [
+                "@optional(ValueType)",
+                "optional ValueType",
+                "ValueType?",
+                "?ValueType"
+              ],
+              "id": "zig_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does comptime mean in Zig?",
+              "answer": "Code that runs at compile time to generate or compute results",
+              "explain": "comptime evaluates expressions during compilation, not at runtime. This enables meta-programming and compile-time computation.",
+              "choices": [
+                "Code that runs at compile time to generate or compute results",
+                "A runtime optimization",
+                "A compile error",
+                "A memory allocation mode"
+              ],
+              "id": "zig_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you use comptime?",
+              "answer": "To compute values once at compile time instead of every run",
+              "explain": "comptime reduces runtime work by doing calculations, unrolling loops, or generating code once when the program is built.",
+              "choices": [
+                "Because runtime is forbidden",
+                "To compute values once at compile time instead of every run",
+                "To make code unreadable",
+                "To avoid memory allocation"
+              ],
+              "id": "zig_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can an optional value hold an error?",
+              "answer": "No, optionals hold null or a value; errors use error unions",
+              "explain": "Optionals represent presence or absence. Error unions represent success or failure with a specific error.",
+              "choices": [
+                "Errors are just null values",
+                "Only in special cases",
+                "No, optionals hold null or a value; errors use error unions",
+                "Yes, optionals and errors are the same"
+              ],
+              "id": "zig_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Manual Memory and C Interop",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you allocate memory in Zig?",
+              "answer": "Ask an allocator you pass in, using calls like alloc or create",
+              "explain": "Allocators are passed to functions that need memory. This makes allocation visible and lets you control where memory comes from.",
+              "choices": [
+                "Memory allocation is forbidden",
+                "Use the stack always",
+                "Call malloc automatically",
+                "Ask an allocator you pass in, using calls like alloc or create"
+              ],
+              "id": "zig_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Who frees memory you allocate with an allocator in Zig?",
+              "answer": "You do, explicitly, often with defer",
+              "explain": "Zig has no garbage collector. You release memory yourself, usually by writing defer allocator.free(...) right after allocating.",
+              "choices": [
+                "You do, explicitly, often with defer",
+                "A garbage collector",
+                "The compiler, at the end of the scope",
+                "The operating system, immediately"
+              ],
+              "id": "zig_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is stack allocation in Zig?",
+              "answer": "Memory allocated on the stack; freed automatically when scope exits",
+              "explain": "Stack variables are allocated on the stack and freed when the function returns. No manual deallocation needed.",
+              "choices": [
+                "Allocation via malloc",
+                "Memory allocated on the stack; freed automatically when scope exits",
+                "A forbidden pattern",
+                "Allocation that is always slower"
+              ],
+              "id": "zig_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can Zig call C functions?",
+              "answer": "Yes, by declaring extern functions or importing C headers",
+              "explain": "Zig can call C libraries by declaring extern function signatures or importing C headers. C types can be used directly.",
+              "choices": [
+                "Only via a wrapper",
+                "No, C interop is impossible",
+                "Yes, by declaring extern functions or importing C headers",
+                "Only static libraries"
+              ],
+              "id": "zig_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would you use C interop in Zig?",
+              "answer": "To use existing C libraries and existing mature code",
+              "explain": "C libraries are mature and battle-tested. Zig can leverage them without reimplementing functionality.",
+              "choices": [
+                "For performance only",
+                "To avoid Zig's type system",
+                "Because C is safer",
+                "To use existing C libraries and existing mature code"
+              ],
+              "id": "zig_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "elixir",
+  "name": "Elixir",
+  "category": "programming",
+  "icon": "fa-solid fa-flask",
+  "level": "Concurrent Functional",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Atoms, Immutability, and Pattern Matching",
+      "tip": "Elixir values are immutable: once created, they never change. Atoms are constants where their name is their value, written as :atom. Pattern matching lets you unpack and compare values in a single operation.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Atoms and Immutability",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an atom in Elixir?",
+              "answer": "A constant where the name is the value, written as :name",
+              "explain": "Atoms like :ok, :error, and :hello are constants. The name itself is the value. They are useful as tags and return values.",
+              "choices": [
+                "A constant where the name is the value, written as :name",
+                "A mutable variable that can change",
+                "A number type",
+                "A string literal"
+              ],
+              "id": "elixir_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Elixir, if you write x = 5 and then x = 10, what happens?",
+              "answer": "x is rebound to 10; the old value 5 is not modified",
+              "explain": "Elixir is immutable. The value 5 never changes. Instead, the variable x is rebound to point to the new value 10.",
+              "choices": [
+                "Both x values exist simultaneously",
+                "x is rebound to 10; the old value 5 is not modified",
+                "An error is raised",
+                "The number 5 becomes 10"
+              ],
+              "id": "elixir_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? x = [1, 2, 3]; y = x",
+              "answer": "y now points to the same list [1, 2, 3]",
+              "explain": "y is bound to the same immutable list. Both variables reference the same data structure, so there is no copy overhead.",
+              "choices": [
+                "An error because lists cannot be assigned",
+                "The list is deleted",
+                "y now points to the same list [1, 2, 3]",
+                "y is a copy of the list that can be modified independently"
+              ],
+              "id": "elixir_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a valid atom in Elixir?",
+              "answer": ":hello",
+              "explain": "Atoms are written with a colon prefix and no spaces. :hello is valid. :Hello would also be valid. :hello world is not, because of the space.",
+              "choices": [
+                "atom(hello)",
+                ":hello world",
+                "hello",
+                ":hello"
+              ],
+              "id": "elixir_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the benefit of immutability in concurrent programs?",
+              "answer": "No locks needed; multiple processes can safely share data",
+              "explain": "Because data never changes, multiple processes can read it simultaneously without race conditions or locks.",
+              "choices": [
+                "Variables work like in other languages",
+                "Less memory is used",
+                "No locks needed; multiple processes can safely share data",
+                "Programs run faster"
+              ],
+              "id": "elixir_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Pattern Matching and the Match Operator",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does pattern matching in x = 5 do?",
+              "answer": "Matches x against 5, which binds x to 5",
+              "explain": "The = operator is the match operator in Elixir. It matches the left side against the right side, binding variables as needed.",
+              "choices": [
+                "Matches x against 5, which binds x to 5",
+                "Compares x to 5 and returns true or false",
+                "Assigns 5 to x like a traditional assignment",
+                "Declares x as a number"
+              ],
+              "id": "elixir_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? [head | tail] = [1, 2, 3]",
+              "answer": "head becomes 1, tail becomes [2, 3]",
+              "explain": "The pipe | operator in patterns splits a list into its head (first element) and tail (rest). This is the cons pattern.",
+              "choices": [
+                "head becomes 1, tail becomes [2, 3]",
+                "Both head and tail become 1",
+                "head becomes [1, 2, 3], tail becomes empty",
+                "An error is raised"
+              ],
+              "id": "elixir_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does {a, b} = {10, 20} do?",
+              "answer": "Binds a to 10 and b to 20",
+              "explain": "Pattern matching unpacks tuple elements. The pattern {a, b} matches any 2-element tuple, binding the elements to a and b.",
+              "choices": [
+                "An error because tuples are immutable",
+                "Compares {a, b} to {10, 20}",
+                "Creates two separate tuples",
+                "Binds a to 10 and b to 20"
+              ],
+              "id": "elixir_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if pattern matching fails? Example: {a, b, c} = {1, 2}",
+              "answer": "A MatchError exception is raised",
+              "explain": "If the pattern cannot match the value, Elixir raises a MatchError. You can use guards or case to handle multiple patterns.",
+              "choices": [
+                "A warning is printed",
+                "The code runs silently",
+                "A MatchError exception is raised",
+                "a and b are bound; c becomes nil"
+              ],
+              "id": "elixir_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In pattern matching, what does the underscore _ mean?",
+              "answer": "A wildcard that matches anything but ignores the value",
+              "explain": "The underscore _ discards a value. Use it when you don't need a particular part of the pattern.",
+              "choices": [
+                "The same as nil",
+                "A variable named underscore",
+                "A wildcard that matches anything but ignores the value",
+                "An error in syntax"
+              ],
+              "id": "elixir_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Data Structures: Lists, Tuples, and Maps",
+      "tip": "Elixir has three main collections. Lists are ordered, singly-linked, and support prepending. Tuples are fixed-size, good for grouping related values. Maps are key-value stores, flexible and efficient.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Lists and Tuples",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a list and a tuple in Elixir?",
+              "answer": "Lists are linked lists; tuples are fixed-size and stored contiguously in memory",
+              "explain": "Lists [1, 2, 3] are singly-linked, good for recursion and prepending. Tuples {1, 2, 3} are fixed-size, good for grouping.",
+              "choices": [
+                "Lists are linked lists; tuples are fixed-size and stored contiguously in memory",
+                "Tuples are slower",
+                "Lists use square brackets; tuples use parentheses, not curly braces",
+                "Lists can contain tuples; tuples cannot contain lists"
+              ],
+              "id": "elixir_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you prepend an element to a list efficiently?",
+              "answer": "Use the cons operator: [new_head | old_list]",
+              "explain": "Prepending with [1 | [2, 3]] creates a new list pointing to the old one. This is O(1) and idiomatic Elixir.",
+              "choices": [
+                "Tuples only; lists do not support prepending",
+                "Use List.insert_at(list, 0, value)",
+                "Use the cons operator: [new_head | old_list]",
+                "Call list.prepend(value)"
+              ],
+              "id": "elixir_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.map(list, fn x -> x * 2 end) return?",
+              "answer": "A new list with each element doubled",
+              "explain": "Enum.map applies the function to each element, returning a new list. The original list is unchanged.",
+              "choices": [
+                "An error because lists are immutable",
+                "A single value, the sum",
+                "A new list with each element doubled",
+                "The original list, modified in place"
+              ],
+              "id": "elixir_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of a tuple like {:ok, result}?",
+              "answer": "To group a status tag with a value, used for return conventions",
+              "explain": "Tuples like {:ok, value} or {:error, reason} are Elixir idiom for returning results with status information.",
+              "choices": [
+                "To create a function",
+                "To declare a variable",
+                "To define a module",
+                "To group a status tag with a value, used for return conventions"
+              ],
+              "id": "elixir_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does length([1, 2, 3]) return?",
+              "answer": "3",
+              "explain": "length counts the elements by traversing the linked list. For large lists, this is slower than accessing a tuple element by index.",
+              "choices": [
+                "An error",
+                "nil",
+                "3",
+                "[1, 2, 3]"
+              ],
+              "id": "elixir_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Maps and Key-Value Storage",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a map in Elixir?",
+              "answer": "%{\"key\" => \"value\"} or %{key: value}",
+              "explain": "Maps use %{} syntax. Keys can be strings or atoms. The form %{key: value} is shorthand for %{:key => value}.",
+              "choices": [
+                "%{\"key\" => \"value\"} or %{key: value}",
+                "map(key, value)",
+                "{key, value}",
+                "[key: value]"
+              ],
+              "id": "elixir_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a value in a map with atom key? map = %{name: \"Alice\"}",
+              "answer": "map.name returns \"Alice\"",
+              "explain": "Dot notation map.key works for atom keys. For string keys, use map[\"key\"].",
+              "choices": [
+                "map[name] returns \"Alice\" (strings required)",
+                "map.name returns \"Alice\"",
+                "map(:name) returns \"Alice\"",
+                "map -> name returns \"Alice\""
+              ],
+              "id": "elixir_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add or update a key in an immutable map?",
+              "answer": "Create a new map: %{map | key: new_value} or Map.put(map, key, value)",
+              "explain": "Both create a new map and leave the old one unchanged. The %{map | ...} form only updates keys that already exist; Map.put adds or updates.",
+              "choices": [
+                "Maps cannot be updated",
+                "Create a new map: %{map | key: new_value} or Map.put(map, key, value)",
+                "Call map.key = new_value",
+                "Use map[key] = new_value"
+              ],
+              "id": "elixir_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Map.keys(%{a: 1, b: 2}) return?",
+              "answer": "[:a, :b]",
+              "explain": "Map.keys returns a list of all keys in the map. The order is not guaranteed.",
+              "choices": [
+                "An error",
+                "[:a, :b]",
+                "%{a: 1, b: 2}",
+                "[1, 2]"
+              ],
+              "id": "elixir_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you pattern match on a map? Example: %{\"status\" => status} = response",
+              "answer": "Yes, you bind the matched values to variables",
+              "explain": "You can pattern match map keys and bind their values. This works for both atom and string keys.",
+              "choices": [
+                "Only with tuple keys",
+                "Only if the map is empty",
+                "No, maps do not support pattern matching",
+                "Yes, you bind the matched values to variables"
+              ],
+              "id": "elixir_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Modules",
+      "tip": "Functions in Elixir are first-class values. You define them in modules with def. Multiple clauses and guards let you dispatch on pattern or condition. defp keeps functions private.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Defining Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in Elixir?",
+              "answer": "Use def name(args) do ... end inside a module",
+              "explain": "Functions live in modules. def is for public functions, defp for private ones.",
+              "choices": [
+                "Use def name(args) do ... end inside a module",
+                "Use function -> args",
+                "Use function name(args) { }",
+                "Use fn(args) -> end globally"
+              ],
+              "id": "elixir_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a module in Elixir?",
+              "answer": "A namespace that groups functions and constants",
+              "explain": "Modules are defined with defmodule Name do ... end. They organize code and avoid name clashes.",
+              "choices": [
+                "A type of function",
+                "A namespace that groups functions and constants",
+                "The same as a map",
+                "A library installed from Hex"
+              ],
+              "id": "elixir_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function defined in another module?",
+              "answer": "ModuleName.function_name(args)",
+              "explain": "Qualified call: ModuleName.function_name(args). You can alias the module to shorten it.",
+              "choices": [
+                "ModuleName::function_name(args)",
+                "function_name.ModuleName(args)",
+                "ModuleName.function_name(args)",
+                "@ModuleName function_name(args)"
+              ],
+              "id": "elixir_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are guards in a function clause?",
+              "answer": "Conditions that must be true for the clause to match",
+              "explain": "Guards use when keyword: def double(x) when is_integer(x) do ... end. Only matches if x is an integer.",
+              "choices": [
+                "Error handlers",
+                "Type annotations",
+                "Comments for documentation",
+                "Conditions that must be true for the clause to match"
+              ],
+              "id": "elixir_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does defp mean in Elixir?",
+              "answer": "Define a private function not callable from outside the module",
+              "explain": "defp hides implementation details. Only functions in the same module can call it.",
+              "choices": [
+                "Define a parametric function",
+                "Define a private function not callable from outside the module",
+                "Define a polymorphic function",
+                "Define a pure function"
+              ],
+              "id": "elixir_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Multiple Clauses and Arity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is function arity in Elixir?",
+              "answer": "The number of arguments a function takes",
+              "explain": "Arity is part of the function identity. greet/0 and greet/1 are different functions.",
+              "choices": [
+                "The number of arguments a function takes",
+                "The module name",
+                "The function's speed",
+                "The return type"
+              ],
+              "id": "elixir_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you define multiple functions with the same name but different arities?",
+              "answer": "Yes, they are different functions: name/arity",
+              "explain": "Elixir distinguishes functions by name and arity. You can have add/2 and add/3 in the same module.",
+              "choices": [
+                "Only in different modules",
+                "Yes, they are different functions: name/arity",
+                "No, the second definition overwrites the first",
+                "Only with different return types"
+              ],
+              "id": "elixir_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A module has two clauses: def fact(0), do: 1 and def fact(n), do: n * fact(n - 1). How does Elixir choose between them?",
+              "answer": "Elixir tries clauses top-to-bottom; first match wins",
+              "explain": "Pattern matching on clauses. The base case fact(0) is tried first, then the recursive case.",
+              "choices": [
+                "An error if multiple clauses match",
+                "The most specific clause always runs",
+                "All clauses run and results merge",
+                "Elixir tries clauses top-to-bottom; first match wins"
+              ],
+              "id": "elixir_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A module has two clauses: def greet(:en), do: \"Hello\" and def greet(:fr), do: \"Bonjour\". What happens?",
+              "answer": "Dispatches on the atom argument; :en calls the first, :fr calls the second",
+              "explain": "Pattern matching on atoms. The function behaves differently based on which clause matches.",
+              "choices": [
+                "Only the first clause is used",
+                "An error because they have the same name",
+                "Both clauses run",
+                "Dispatches on the atom argument; :en calls the first, :fr calls the second"
+              ],
+              "id": "elixir_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When writing multiple clauses, where should the base case go?",
+              "answer": "Usually first, so recursion terminates",
+              "explain": "Put base cases before recursive cases to stop infinite recursion. Elixir tries clauses in order.",
+              "choices": [
+                "In a separate function",
+                "It does not matter",
+                "Always last",
+                "Usually first, so recursion terminates"
+              ],
+              "id": "elixir_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The Pipe Operator and Function Composition",
+      "tip": "The pipe operator |> threads data through a sequence of function calls, left to right. data |> f1() |> f2() is cleaner than f2(f1(data)). It makes code flow readable.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Using the Pipe Operator",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the |> operator do?",
+              "answer": "Passes the left value as the first argument to the right function",
+              "explain": "x |> f() is equivalent to f(x). It threads data through a pipeline of transformations.",
+              "choices": [
+                "Passes the left value as the first argument to the right function",
+                "Filters a list",
+                "Compares two values",
+                "Combines two functions"
+              ],
+              "id": "elixir_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is [1, 2, 3] |> Enum.map(fn x -> x * 2 end) |> Enum.sum()?",
+              "answer": "12 (1*2 + 2*2 + 3*2 = 2 + 4 + 6 = 12)",
+              "explain": "The list is piped to map, doubling each element to [2, 4, 6], then piped to sum, which adds them: 2 + 4 + 6 = 12.",
+              "choices": [
+                "An error",
+                "[2, 4, 6]",
+                "6 (the sum of the original list)",
+                "12 (1*2 + 2*2 + 3*2 = 2 + 4 + 6 = 12)"
+              ],
+              "id": "elixir_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is x |> f(a) evaluated?",
+              "answer": "As f(x, a)",
+              "explain": "The piped value becomes the first argument. x |> f(a) is f(x, a).",
+              "choices": [
+                "As f(a) with x ignored",
+                "As x |> f() |> a",
+                "As f(x, a)",
+                "As f(a, x)"
+              ],
+              "id": "elixir_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of pipes over nested function calls?",
+              "answer": "Code reads left-to-right, top-to-bottom, like a narrative",
+              "explain": "Pipes eliminate nesting: String.upcase(String.trim(text)) becomes text |> String.trim() |> String.upcase(), which is easier to read and modify.",
+              "choices": [
+                "Pipes use less memory",
+                "Code reads left-to-right, top-to-bottom, like a narrative",
+                "Pipes allow side effects",
+                "Pipes are faster"
+              ],
+              "id": "elixir_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you pipe into a function that takes multiple arguments?",
+              "answer": "Yes, the piped value is the first argument",
+              "explain": "x |> f(a, b) becomes f(x, a, b). You can add more arguments after the piped one.",
+              "choices": [
+                "Only if the function is defined specially",
+                "Only in modules",
+                "Yes, the piped value is the first argument",
+                "No, pipes only work with single-argument functions"
+              ],
+              "id": "elixir_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Composing Transformations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.filter(list, fn x -> x > 5 end) do?",
+              "answer": "Returns a new list with only elements greater than 5",
+              "explain": "filter keeps elements where the predicate returns true, discarding the rest.",
+              "choices": [
+                "Raises an error if no elements match",
+                "Modifies the list in place",
+                "Returns true or false",
+                "Returns a new list with only elements greater than 5"
+              ],
+              "id": "elixir_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.reduce([1, 2, 3], 0, fn x, acc -> acc + x end) return?",
+              "answer": "6 (the sum: 0 + 1 + 2 + 3)",
+              "explain": "reduce folds over the list, accumulating a single value. It starts with 0, adds 1, then 2, then 3.",
+              "choices": [
+                "0",
+                "[1, 2, 3]",
+                "6 (the sum: 0 + 1 + 2 + 3)",
+                "An error"
+              ],
+              "id": "elixir_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the idiomatic Elixir way to chain several operations on one piece of data?",
+              "answer": "Use pipes: data |> op1() |> op2() |> op3()",
+              "explain": "Pipes make transformation chains readable. Each step transforms the data and passes it to the next.",
+              "choices": [
+                "Create intermediate variables for each step",
+                "Use a loop variable",
+                "Use pipes: data |> op1() |> op2() |> op3()",
+                "Nest function calls: op3(op2(op1(data)))"
+              ],
+              "id": "elixir_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does String.trim(\" hello \") return?",
+              "answer": "\"hello\" (whitespace removed)",
+              "explain": "String.trim removes leading and trailing whitespace. String.trim_leading and String.trim_trailing trim one side.",
+              "choices": [
+                "An error",
+                "\" \"",
+                "\" hello \"",
+                "\"hello\" (whitespace removed)"
+              ],
+              "id": "elixir_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of anonymous functions (fn x -> ... end)?",
+              "answer": "To pass logic as arguments to higher-order functions like map and filter",
+              "explain": "Anonymous functions are closures. They capture variables from the surrounding scope and can be passed around.",
+              "choices": [
+                "To optimize performance",
+                "To define module functions",
+                "To declare a variable",
+                "To pass logic as arguments to higher-order functions like map and filter"
+              ],
+              "id": "elixir_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Recursion and Higher-Order Functions",
+      "tip": "Recursion is Elixir's primary loop mechanism. Functions that take other functions as arguments are higher-order. Tail recursion is optimized by the BEAM VM so the call stack does not grow.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Recursive Patterns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is tail recursion?",
+              "answer": "Recursion where the recursive call is the last operation, optimized by BEAM",
+              "explain": "Tail-recursive functions do not accumulate stack frames because BEAM reuses them, so the call stack does not grow.",
+              "choices": [
+                "Recursion inside a loop",
+                "Recursion where the recursive call is the last operation, optimized by BEAM",
+                "Multiple recursive calls in one function",
+                "Recursion that calls itself"
+              ],
+              "id": "elixir_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write tail-recursive sum? def sum(list, acc \\\\ 0) when is_list(list) do ... end",
+              "answer": "Accumulate the total in acc, return acc when list is empty",
+              "explain": "Tail recursion: base case returns acc, recursive case calls sum(tail, acc + head). The recursive call is last, so BEAM optimizes it.",
+              "choices": [
+                "Add all elements and return the list",
+                "Return the first element",
+                "Accumulate the total in acc, return acc when list is empty",
+                "It is not possible"
+              ],
+              "id": "elixir_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Given def countdown(0), do: :done and def countdown(n), do: countdown(n - 1), what does countdown(3) do?",
+              "answer": "Recurses 3, 2, 1, 0 and returns :done",
+              "explain": "Base case countdown(0) returns :done. The other clause calls countdown(n - 1) as its last step, so it is tail-recursive.",
+              "choices": [
+                "Returns a list of numbers",
+                "Raises an infinite recursion error",
+                "Counts up from 0 to n",
+                "Recurses 3, 2, 1, 0 and returns :done"
+              ],
+              "id": "elixir_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is tail recursion important in Elixir?",
+              "answer": "BEAM turns it into a loop, so the call stack does not grow on large inputs",
+              "explain": "Tail-recursive functions do not grow the stack, so you can recurse over millions of elements.",
+              "choices": [
+                "It is required for modules",
+                "BEAM turns it into a loop, so the call stack does not grow on large inputs",
+                "It lets a function call functions in other modules",
+                "It makes the function run in a separate process"
+              ],
+              "id": "elixir_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.each(list, fn x -> IO.puts(x) end) do?",
+              "answer": "Prints each element, returning :ok",
+              "explain": "each iterates for side effects (printing), not transformation. It ignores the function's return value.",
+              "choices": [
+                "Filters elements",
+                "Returns the sum of elements",
+                "Returns a new list",
+                "Prints each element, returning :ok"
+              ],
+              "id": "elixir_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Higher-Order Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a higher-order function?",
+              "answer": "A function that takes a function as an argument or returns a function",
+              "explain": "map, filter, and reduce are higher-order. They accept a function and apply it to elements.",
+              "choices": [
+                "A function defined in a module",
+                "A function with many arguments",
+                "A function that calls itself",
+                "A function that takes a function as an argument or returns a function"
+              ],
+              "id": "elixir_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.map([1, 2, 3], &(&1 * 2)) return?",
+              "answer": "[2, 4, 6]",
+              "explain": "The &() syntax is shorthand for fn x -> ... end. &(&1 * 2) doubles each element. &1 refers to the first argument.",
+              "choices": [
+                "An error",
+                "[1, 2, 3]",
+                "[2, 4, 6]",
+                "12"
+              ],
+              "id": "elixir_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Enum.all?([1, 2, 3], fn x -> x > 0 end) return?",
+              "answer": "true (all elements are positive)",
+              "explain": "all? returns true if the predicate is true for every element. any? returns true if at least one matches.",
+              "choices": [
+                "[true, true, true]",
+                "An error",
+                "false",
+                "true (all elements are positive)"
+              ],
+              "id": "elixir_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a closure in Elixir?",
+              "answer": "A function that captures variables from its surrounding scope",
+              "explain": "With factor = 3, the function fn x -> x * factor end is a closure: it remembers factor even when it is called elsewhere.",
+              "choices": [
+                "An anonymous function",
+                "A recursive function",
+                "A function defined in a module",
+                "A function that captures variables from its surrounding scope"
+              ],
+              "id": "elixir_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Function.identity(7) return?",
+              "answer": "7, the argument unchanged",
+              "explain": "Function.identity/1 returns its input unchanged. It is useful as a placeholder when a function is required.",
+              "choices": [
+                "14",
+                "An error",
+                "nil",
+                "7, the argument unchanged"
+              ],
+              "id": "elixir_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Processes and Message Passing",
+      "tip": "Processes in Elixir are lightweight, isolated, and communicate by sending messages. They run on the Erlang VM, enabling millions to coexist. Supervisors manage process trees to ensure fault tolerance.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Creating and Managing Processes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you spawn a new process in Elixir?",
+              "answer": "spawn(fn -> code end) or spawn(Module, :function, [args])",
+              "explain": "spawn creates a new process and returns its PID. The process runs the given function independently.",
+              "choices": [
+                "spawn(fn -> code end) or spawn(Module, :function, [args])",
+                "fork()",
+                "create_process(code)",
+                "Process.new()"
+              ],
+              "id": "elixir_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a PID in Elixir?",
+              "answer": "Process ID, a unique identifier for a process",
+              "explain": "PIDs let you refer to and send messages to processes. Each process has a unique PID.",
+              "choices": [
+                "A variable name",
+                "A module reference",
+                "Process ID, a unique identifier for a process",
+                "A function definition"
+              ],
+              "id": "elixir_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does send(pid, message) do?",
+              "answer": "Sends a message to the process with the given PID",
+              "explain": "send is asynchronous. The message goes to the process's mailbox. The sending process does not wait.",
+              "choices": [
+                "Terminates the process",
+                "Waits for the process to respond",
+                "Creates a new process",
+                "Sends a message to the process with the given PID"
+              ],
+              "id": "elixir_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you receive messages in a process?",
+              "answer": "Use receive do ... end to pattern match on messages",
+              "explain": "receive blocks until a matching message arrives, then executes the corresponding code.",
+              "choices": [
+                "You cannot receive messages",
+                "Use get_message()",
+                "Messages arrive in a list",
+                "Use receive do ... end to pattern match on messages"
+              ],
+              "id": "elixir_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a process crashes in Elixir?",
+              "answer": "It dies; linked processes get an exit signal and monitoring processes get a DOWN message",
+              "explain": "Process isolation means a crash does not corrupt other processes. Links and monitors let others learn about the failure.",
+              "choices": [
+                "Nothing; the process recovers",
+                "The entire program crashes",
+                "The VM restarts",
+                "It dies; linked processes get an exit signal and monitoring processes get a DOWN message"
+              ],
+              "id": "elixir_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Message Passing and Supervisors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the actor model?",
+              "answer": "Isolated entities (processes) communicate only by passing messages",
+              "explain": "The actor model underlies Elixir concurrency. No shared memory, no locks, just message passing.",
+              "choices": [
+                "A design pattern for databases",
+                "Shared memory with locks",
+                "A theater framework",
+                "Isolated entities (processes) communicate only by passing messages"
+              ],
+              "id": "elixir_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a supervisor in Elixir?",
+              "answer": "A process that monitors and restarts child processes if they crash",
+              "explain": "Supervisors are part of the fault-tolerance strategy. They form supervision trees, restarting failed processes.",
+              "choices": [
+                "A data storage system",
+                "A process that monitors and restarts child processes if they crash",
+                "A module that exports functions",
+                "A network manager"
+              ],
+              "id": "elixir_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are lightweight processes important in Elixir?",
+              "answer": "You can spawn millions, making concurrent systems scalable",
+              "explain": "Elixir processes are cheap (kilobytes each) compared to OS threads. Millions can run on a single BEAM VM.",
+              "choices": [
+                "They simplify error handling",
+                "They are faster than functions",
+                "They use less CPU",
+                "You can spawn millions, making concurrent systems scalable"
+              ],
+              "id": "elixir_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Erlang VM (BEAM) do?",
+              "answer": "Manages Elixir processes, schedules them, and handles message passing",
+              "explain": "BEAM is the virtual machine underneath Elixir. It provides process scheduling, garbage collection, and hot code reloading.",
+              "choices": [
+                "Stores data persistently",
+                "Provides networking libraries",
+                "Compiles Elixir to machine code",
+                "Manages Elixir processes, schedules them, and handles message passing"
+              ],
+              "id": "elixir_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the benefit of message passing over shared memory?",
+              "answer": "Processes share no mutable data, so they cannot corrupt each other's state",
+              "explain": "With messages, processes do not share memory, so no locks are needed to protect shared data.",
+              "choices": [
+                "It is easier to debug",
+                "Processes share no mutable data, so they cannot corrupt each other's state",
+                "Messages are always faster",
+                "It uses less memory"
+              ],
+              "id": "elixir_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

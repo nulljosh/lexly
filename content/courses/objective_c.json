@@ -1,0 +1,904 @@
+{
+  "id": "objective_c",
+  "name": "Objective-C",
+  "category": "programming",
+  "icon": "fa-brands fa-apple",
+  "level": "Classic Apple Development",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "C Foundation",
+      "tip": "Objective-C is built on top of C, so understanding C basics is essential. You need to know variables, data types, functions, and control flow before learning Objective-C specific features.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Variables and Data Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the correct syntax to declare an integer variable named count in C?",
+              "answer": "int count;",
+              "explain": "In C, integer variables are declared with the int keyword followed by the variable name and a semicolon. This allocates memory for an integer value.",
+              "choices": [
+                "int count;",
+                "integer count;",
+                "count: int;",
+                "var count = int;"
+              ],
+              "id": "objective_c_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the char data type represent in C?",
+              "answer": "A single character",
+              "explain": "The char data type stores a single character, like 'A' or '5'. It occupies 1 byte of memory and can also hold small integer values.",
+              "choices": [
+                "A floating-point number",
+                "A single character",
+                "A string of text",
+                "A boolean true/false value"
+              ],
+              "id": "objective_c_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the float data type?",
+              "answer": "To store decimal numbers with single precision",
+              "explain": "The float type stores floating-point numbers (decimals) with 32-bit precision. For more precision, use double, which is 64-bit.",
+              "choices": [
+                "To store text strings",
+                "To store whole numbers only",
+                "To store decimal numbers with single precision",
+                "To store boolean values"
+              ],
+              "id": "objective_c_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In C, what is the difference between float and double?",
+              "answer": "double has more precision (64-bit vs 32-bit)",
+              "explain": "Both float and double store decimal numbers, but double uses 64 bits for storage while float uses 32 bits. This makes double more precise for calculations.",
+              "choices": [
+                "they are identical, just different names",
+                "float stores integers, double stores decimals",
+                "float is for functions, double is for variables",
+                "double has more precision (64-bit vs 32-bit)"
+              ],
+              "id": "objective_c_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a boolean value in C (before C99)?",
+              "answer": "Use int with 0 for false and non-zero for true",
+              "explain": "Early C did not have a built-in boolean type. Programmers used int values, where 0 means false and any non-zero value means true. C99 added the bool type.",
+              "choices": [
+                "Use int with 0 for false and non-zero for true",
+                "Use the bool keyword",
+                "Use the string \"true\" or \"false\"",
+                "C does not support boolean values"
+              ],
+              "id": "objective_c_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Pointers and Memory",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the unary & operator do in C?",
+              "answer": "Returns the memory address of a variable",
+              "explain": "The & operator is the address-of operator. It returns the memory address where a variable is stored, which can be assigned to a pointer.",
+              "choices": [
+                "Performs a logical AND operation",
+                "Returns the memory address of a variable",
+                "Dereferences a pointer",
+                "Creates a new variable"
+              ],
+              "id": "objective_c_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does *ptr do in an expression, when ptr is a pointer?",
+              "answer": "Dereferences a pointer to access its value",
+              "explain": "The * operator dereferences a pointer, meaning it follows the address stored in the pointer to access the actual value at that location in memory.",
+              "choices": [
+                "Takes the address of the pointer",
+                "Frees the memory the pointer refers to",
+                "Dereferences a pointer to access its value",
+                "Converts the pointer to an integer"
+              ],
+              "id": "objective_c_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the correct syntax to declare a pointer to an integer?",
+              "answer": "int *ptr;",
+              "explain": "A pointer to an integer is declared with int *ptr; The * indicates that ptr stores a memory address, not an integer value directly.",
+              "choices": [
+                "*int ptr;",
+                "pointer int ptr;",
+                "int ptr*;",
+                "int *ptr;"
+              ],
+              "id": "objective_c_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a NULL pointer?",
+              "answer": "A pointer that does not point to any valid object",
+              "explain": "A NULL pointer is a special pointer value that represents no valid address. It is used to indicate that a pointer does not currently refer to anything.",
+              "choices": [
+                "A pointer that does not point to any valid object",
+                "An invalid variable name",
+                "A pointer to the integer 0",
+                "A pointer to the beginning of memory"
+              ],
+              "id": "objective_c_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does malloc() do in C?",
+              "answer": "Allocates memory on the heap and returns a pointer",
+              "explain": "malloc() (memory allocate) dynamically allocates a block of memory on the heap at runtime and returns a pointer to the start of that block.",
+              "choices": [
+                "Initializes a variable",
+                "Allocates memory on the heap and returns a pointer",
+                "Allocates memory on the stack",
+                "Frees allocated memory"
+              ],
+              "id": "objective_c_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Objective-C Basics",
+      "tip": "Objective-C adds object-oriented features to C. The main difference is message sending: instead of calling methods like functions, you send messages to objects using bracket syntax. This makes Objective-C very expressive and flexible.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Objects and Message Sending",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the key difference between Objective-C and C?",
+              "answer": "Objective-C adds object-oriented programming with message sending",
+              "explain": "Objective-C is a superset of C that adds objects, classes, and a message-passing system. You send messages to objects rather than calling functions directly.",
+              "choices": [
+                "Objective-C removes all C features",
+                "Objective-C is slower than C",
+                "Objective-C adds object-oriented programming with message sending",
+                "Objective-C is only for iOS"
+              ],
+              "id": "objective_c_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the correct syntax to send a message to an object in Objective-C?",
+              "answer": "[object method];",
+              "explain": "In Objective-C, you send messages using bracket syntax: [receiver message]. This is different from calling a function. The receiver is the object, and the message is the method.",
+              "choices": [
+                "object.method();",
+                "object::method();",
+                "object->method();",
+                "[object method];"
+              ],
+              "id": "objective_c_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you send a message with parameters in Objective-C?",
+              "answer": "[object method:parameter];",
+              "explain": "Messages with parameters use colons to separate the message parts. For one parameter: [object method:param]. Multiple parameters: [object method:p1 withValue:p2].",
+              "choices": [
+                "[object method:parameter];",
+                "[object method parameter];",
+                "[object method(parameter)];",
+                "object->method(parameter);"
+              ],
+              "id": "objective_c_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an object in Objective-C?",
+              "answer": "An instance of a class that contains data and methods",
+              "explain": "An object is a specific instance of a class. It has instance variables (data) and can receive messages (calls to methods). Objects are created from class definitions.",
+              "choices": [
+                "A variable that stores a number",
+                "An instance of a class that contains data and methods",
+                "A function that performs a task",
+                "A type of memory address"
+              ],
+              "id": "objective_c_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the alloc message do in Objective-C?",
+              "answer": "Allocates memory for a new object",
+              "explain": "The alloc message allocates memory on the heap for a new object instance. It is typically followed by init to initialize that object.",
+              "choices": [
+                "Deallocates object memory",
+                "Sends a message to all objects",
+                "Allocates memory for a new object",
+                "Initializes an object's instance variables"
+              ],
+              "id": "objective_c_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Classes and Instances",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a class in Objective-C?",
+              "answer": "A blueprint that defines the structure and behavior of objects",
+              "explain": "A class is a template. It defines what instance variables objects will have and what methods they can respond to. Specific objects are instances of that class.",
+              "choices": [
+                "A function in C",
+                "An instance of an object",
+                "A memory address",
+                "A blueprint that defines the structure and behavior of objects"
+              ],
+              "id": "objective_c_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an instance of a class named Dog?",
+              "answer": "Dog *myDog = [[Dog alloc] init];",
+              "explain": "To create an instance, you send the alloc message to the class (allocating memory), then send init to that result (initializing it). The variable stores a pointer to the object.",
+              "choices": [
+                "Dog *myDog = [[Dog alloc] init];",
+                "Dog myDog = new Dog();",
+                "Dog myDog;",
+                "alloc Dog myDog;"
+              ],
+              "id": "objective_c_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the init message do?",
+              "answer": "Initializes an object's instance variables to starting values",
+              "explain": "The init method sets up an object after memory is allocated. It initializes instance variables and prepares the object for use.",
+              "choices": [
+                "Allocates memory for the object",
+                "Initializes an object's instance variables to starting values",
+                "Deallocates the object",
+                "Sends a message to another object"
+              ],
+              "id": "objective_c_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Objective-C, what is an instance variable?",
+              "answer": "A variable that belongs to a specific object instance",
+              "explain": "Each object has its own copy of instance variables (also called ivars). These variables store the object's state. For example, a Person object might have a name ivar.",
+              "choices": [
+                "A variable declared in a function",
+                "A global variable",
+                "A variable that belongs to a specific object instance",
+                "A variable that is shared by all objects of a class"
+              ],
+              "id": "objective_c_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a method in Objective-C?",
+              "answer": "A function that belongs to a class and operates on objects of that class",
+              "explain": "A method is similar to a function, but it is associated with a class. Methods can access and modify the instance variables of an object.",
+              "choices": [
+                "A type declaration",
+                "A memory address",
+                "A special pointer to a variable",
+                "A function that belongs to a class and operates on objects of that class"
+              ],
+              "id": "objective_c_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Classes and Methods",
+      "tip": "Every Objective-C class has two parts: @interface declares what a class looks like (instance variables and method signatures), and @implementation defines what those methods do. Understanding this separation is key to reading and writing Objective-C code.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "@interface Declaration",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the @interface section declare in Objective-C?",
+              "answer": "The class name, superclass, instance variables, and method signatures",
+              "explain": "The @interface is the public contract of a class. It tells other code what methods are available and what instance variables the class has. It is usually placed in a header (.h) file.",
+              "choices": [
+                "The class name, superclass, instance variables, and method signatures",
+                "Only the implementation of methods",
+                "Only instance variables",
+                "Only messages that objects respond to"
+              ],
+              "id": "objective_c_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the correct syntax to declare a class Dog that inherits from NSObject?",
+              "answer": "@interface Dog : NSObject { }",
+              "explain": "A class declaration uses @interface ClassName : Superclass. NSObject is the base class for most Objective-C classes. Instance variables go between curly braces.",
+              "choices": [
+                "class Dog(NSObject)",
+                "@interface Dog : NSObject { }",
+                "@class Dog extends NSObject",
+                "@define Dog : NSObject"
+              ],
+              "id": "objective_c_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a method signature in @interface?",
+              "answer": "- (return_type)methodName:(parameter_type)param;",
+              "explain": "Instance method signatures start with -, class methods with +. The return type goes in parentheses, followed by the method name and parameters in the format name:(type)param.",
+              "choices": [
+                "method methodName(param)",
+                "def methodName(self, param):",
+                "- (return_type)methodName:(parameter_type)param;",
+                "func methodName(param) {}"
+              ],
+              "id": "objective_c_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do instance variables in @interface represent?",
+              "answer": "Data stored in each object instance",
+              "explain": "Instance variables (ivars) are declared between { } in the @interface. Each object of the class gets its own copy of these variables to hold its state.",
+              "choices": [
+                "External library dependencies",
+                "Functions that the class can call",
+                "Messages that must be sent",
+                "Data stored in each object instance"
+              ],
+              "id": "objective_c_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between @interface and @implementation?",
+              "answer": "@interface declares what exists, @implementation defines how it works",
+              "explain": "@interface is the specification (public contract), usually in a .h file. @implementation contains the actual code (method bodies), usually in a .m file.",
+              "choices": [
+                "@interface declares what exists, @implementation defines how it works",
+                "@interface is faster than @implementation",
+                "@implementation is only for private classes",
+                "There is no difference"
+              ],
+              "id": "objective_c_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "@implementation and Method Bodies",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the @implementation section contain in Objective-C?",
+              "answer": "The actual code that defines what methods do",
+              "explain": "The @implementation block contains the method implementations (the code inside each method). It corresponds to the method signatures declared in @interface.",
+              "choices": [
+                "Method signatures only",
+                "The actual code that defines what methods do",
+                "Instance variable declarations",
+                "Class inheritance rules"
+              ],
+              "id": "objective_c_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you implement a method in @implementation?",
+              "answer": "- (return_type)methodName:(parameter_type)param { /* code */ }",
+              "explain": "Method implementations match the signature from @interface, with the method body in curly braces. The syntax must match exactly.",
+              "choices": [
+                "func methodName(param) -> returnType",
+                "def methodName(param):",
+                "- (return_type)methodName:(parameter_type)param { /* code */ }",
+                "method methodName { }"
+              ],
+              "id": "objective_c_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the self keyword represent in an Objective-C method?",
+              "answer": "A pointer to the current object instance",
+              "explain": "self is an implicit parameter passed to every instance method. It refers to the object that received the message, so you use it to send messages to the object itself.",
+              "choices": [
+                "The method name",
+                "The superclass",
+                "The class definition",
+                "A pointer to the current object instance"
+              ],
+              "id": "objective_c_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Inside a method, how do you directly access the instance variable that backs a property named age?",
+              "answer": "_age or self->_age",
+              "explain": "A property named age is backed by an instance variable named _age by default. You can reach it directly as _age or as self->_age. Writing self.age calls the getter or setter instead.",
+              "choices": [
+                "_age or self->_age",
+                "get(age)",
+                "age",
+                "self.age"
+              ],
+              "id": "objective_c_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which return type is preferred for an initializer like init in modern Objective-C?",
+              "answer": "instancetype",
+              "explain": "Initialization methods return instancetype, which means they return an instance of the class. This is better than returning id because it provides type safety.",
+              "choices": [
+                "self",
+                "instancetype",
+                "void",
+                "id"
+              ],
+              "id": "objective_c_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Properties and Data",
+      "tip": "Properties are a modern Objective-C feature that simplify working with instance variables. A property generates getter and setter methods automatically. Foundation classes like NSString, NSArray, and NSDictionary are essential for working with collections and strings in Objective-C.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a property in Objective-C?",
+              "answer": "A synthesized getter/setter pair for an instance variable",
+              "explain": "A property is declared in @interface and automatically generates getter and setter methods. Instead of writing methods manually, the compiler creates them for you.",
+              "choices": [
+                "A class-level variable",
+                "A method that accesses a variable",
+                "A synthesized getter/setter pair for an instance variable",
+                "A global variable"
+              ],
+              "id": "objective_c_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a property named name of type NSString?",
+              "answer": "@property (nonatomic, strong) NSString *name;",
+              "explain": "Properties are declared with @property, followed by attributes in parentheses (like nonatomic, strong), then the type and name. This creates automatic getter and setter methods.",
+              "choices": [
+                "property NSString name",
+                "var name: NSString",
+                "NSString name;",
+                "@property (nonatomic, strong) NSString *name;"
+              ],
+              "id": "objective_c_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the (nonatomic) attribute mean in a property?",
+              "answer": "The property is not thread-safe, but faster",
+              "explain": "nonatomic means the getter and setter are not protected for multi-threaded access. This is faster but less safe if multiple threads access the property.",
+              "choices": [
+                "The property is not thread-safe, but faster",
+                "The property must be a whole number",
+                "The property cannot be changed",
+                "The property is stored in an array"
+              ],
+              "id": "objective_c_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the (strong) attribute mean in a property?",
+              "answer": "The object's reference count is incremented when assigned",
+              "explain": "strong means the property holds a strong reference to the object. The reference count increases when assigned, preventing the object from being deallocated.",
+              "choices": [
+                "The property cannot be deleted",
+                "The object's reference count is incremented when assigned",
+                "The property is the main property",
+                "The property must be initialized"
+              ],
+              "id": "objective_c_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the (weak) attribute mean in a property?",
+              "answer": "The property does not prevent the object from being deallocated",
+              "explain": "weak means the property does not increment the reference count. If the referenced object is deallocated, the weak property automatically becomes nil.",
+              "choices": [
+                "The property has weaker access control",
+                "The property is less efficient",
+                "The property does not prevent the object from being deallocated",
+                "The property must be checked before use"
+              ],
+              "id": "objective_c_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "NSString, NSArray, and NSDictionary",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is NSString in Objective-C?",
+              "answer": "An immutable class for storing text strings",
+              "explain": "NSString is a Foundation class that represents text. NSString objects are immutable (cannot be changed). NSMutableString is the mutable version for strings that can be modified.",
+              "choices": [
+                "A C function for text",
+                "A simple char array",
+                "A mutable text container",
+                "An immutable class for storing text strings"
+              ],
+              "id": "objective_c_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an NSString with a literal in Objective-C?",
+              "answer": "NSString *str = @\"Hello\";",
+              "explain": "String literals in Objective-C are created with the @ symbol. @\"Hello\" creates an NSString object. This is the preferred way to create string literals.",
+              "choices": [
+                "NSString *str = @\"Hello\";",
+                "NSString str = \"Hello\";",
+                "NSString *str = \"Hello\";",
+                "NSString(\"Hello\")"
+              ],
+              "id": "objective_c_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is NSArray in Objective-C?",
+              "answer": "An immutable class that stores an ordered collection of objects",
+              "explain": "NSArray is a Foundation class for storing collections of objects in order. NSArray is immutable. NSMutableArray is the mutable version for collections that can change.",
+              "choices": [
+                "A primitive C array",
+                "An immutable class that stores an ordered collection of objects",
+                "A type of dictionary",
+                "A linked list implementation"
+              ],
+              "id": "objective_c_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is NSDictionary in Objective-C?",
+              "answer": "An immutable class that stores key-value pairs",
+              "explain": "NSDictionary is a Foundation class for storing pairs of keys and values. Like NSArray, it is immutable. NSMutableDictionary is mutable.",
+              "choices": [
+                "A mutable key-value store",
+                "An ordered list of objects",
+                "An immutable class that stores key-value pairs",
+                "A function that checks definitions"
+              ],
+              "id": "objective_c_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Using message syntax, how do you access the element at index 0 in an NSArray named array?",
+              "answer": "[array objectAtIndex:0];",
+              "explain": "NSArray elements are accessed with the objectAtIndex: message. In modern Objective-C, you can also use subscript syntax: array[0].",
+              "choices": [
+                "array->0",
+                "array.get(0)",
+                "array(0)",
+                "[array objectAtIndex:0];"
+              ],
+              "id": "objective_c_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Memory Management",
+      "tip": "Memory management is critical in Objective-C. The language uses reference counting to track when objects should be deallocated. Modern Objective-C uses ARC (Automatic Reference Counting), which automatically manages reference counts. Understanding both helps you write safe, efficient code.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Reference Counting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is reference counting in Objective-C?",
+              "answer": "A system that tracks how many pointers reference an object",
+              "explain": "Each Objective-C object has a reference count. When you create a strong reference to an object, its count increases. When references are removed, the count decreases.",
+              "choices": [
+                "A system that tracks how many pointers reference an object",
+                "A way to count how many objects exist",
+                "A method of garbage collection",
+                "A limit on the number of objects"
+              ],
+              "id": "objective_c_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the retain message do in manual memory management?",
+              "answer": "Increments the object's reference count",
+              "explain": "retain increments the reference count, indicating another owner has a reference. The paired release decrements it. When the count reaches zero, the object is deallocated.",
+              "choices": [
+                "Deallocates the object",
+                "Increments the object's reference count",
+                "Allocates memory for an object",
+                "Initializes instance variables"
+              ],
+              "id": "objective_c_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the release message do in manual memory management?",
+              "answer": "Decrements the object's reference count",
+              "explain": "release decrements the reference count. If the count reaches zero, the object is deallocated and its dealloc method is called.",
+              "choices": [
+                "Deallocates the object immediately",
+                "Allocates memory for an object",
+                "Decrements the object's reference count",
+                "Sends a message to the object"
+              ],
+              "id": "objective_c_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When does an object get deallocated in reference counting?",
+              "answer": "When its reference count reaches zero",
+              "explain": "Objects are deallocated when the reference count drops to zero. This means all owners have released their references, and the object is no longer needed.",
+              "choices": [
+                "When the program ends",
+                "Immediately after alloc is called",
+                "When it is no longer visible in code",
+                "When its reference count reaches zero"
+              ],
+              "id": "objective_c_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a retain cycle (or circular reference)?",
+              "answer": "When two objects hold strong references to each other, preventing deallocation",
+              "explain": "If object A holds a strong reference to object B, and B holds a strong reference to A, neither can be deallocated. Using weak references breaks the cycle.",
+              "choices": [
+                "When two objects hold strong references to each other, preventing deallocation",
+                "A normal part of object initialization",
+                "An error in the compiler",
+                "A message passed between objects"
+              ],
+              "id": "objective_c_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "ARC and Automatic Management",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does ARC stand for in Objective-C?",
+              "answer": "Automatic Reference Counting",
+              "explain": "ARC is a compiler feature that automatically manages reference counts. Instead of manually sending retain and release, the compiler inserts them for you.",
+              "choices": [
+                "Advanced Reference Checking",
+                "Automatic Reference Counting",
+                "Array Reference Container",
+                "Application Reference Code"
+              ],
+              "id": "objective_c_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does ARC differ from manual reference counting?",
+              "answer": "ARC automatically inserts retain/release calls at compile time",
+              "explain": "With ARC, you write code without retain/release calls. The compiler analyzes the code and automatically inserts memory management calls where needed.",
+              "choices": [
+                "ARC only works on iOS",
+                "ARC is slower than manual management",
+                "ARC automatically inserts retain/release calls at compile time",
+                "ARC requires more memory"
+              ],
+              "id": "objective_c_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In ARC, what is a strong reference?",
+              "answer": "A reference that keeps an object in memory",
+              "explain": "A strong reference (the default in ARC) increments the reference count and prevents the object from being deallocated as long as the reference exists.",
+              "choices": [
+                "A type of pointer declaration",
+                "A reference that can only be used once",
+                "A reference that points to another reference",
+                "A reference that keeps an object in memory"
+              ],
+              "id": "objective_c_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In ARC, how do you declare a weak local variable?",
+              "answer": "__weak MyClass *ref;",
+              "explain": "The __weak qualifier declares a weak reference. In a property, use the (weak) attribute instead. Weak references do not prevent deallocation and automatically become nil when the object is deallocated.",
+              "choices": [
+                "__weak MyClass *ref;",
+                "@weak",
+                "weak Type *var;",
+                "(weakref)"
+              ],
+              "id": "objective_c_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use a weak reference in ARC?",
+              "answer": "To avoid retain cycles in parent-child relationships",
+              "explain": "Weak references break retain cycles. If a parent object owns a child, the child should use a weak reference back to the parent to prevent them from keeping each other alive.",
+              "choices": [
+                "Always, for all references",
+                "To avoid retain cycles in parent-child relationships",
+                "When you want to save memory",
+                "Instead of strong references"
+              ],
+              "id": "objective_c_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced OOP",
+      "tip": "Protocols define a contract of methods that a class must implement. Categories allow you to add new methods to existing classes. Both features make Objective-C code flexible and reusable, essential for building maintainable Apple applications.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Protocols",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a protocol in Objective-C?",
+              "answer": "A declared set of methods that adopting classes implement",
+              "explain": "A protocol defines a contract. A class that adopts a protocol must implement its required methods, and may implement its optional ones. Similar to interfaces in other languages.",
+              "choices": [
+                "A way to inherit from multiple classes",
+                "A method that communicates between objects",
+                "A declared set of methods that adopting classes implement",
+                "A type of memory management"
+              ],
+              "id": "objective_c_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a protocol in Objective-C?",
+              "answer": "@protocol ProtocolName <NSObject> ... @end",
+              "explain": "Protocols are declared with @protocol ProtocolName, often inheriting from NSObject. Method signatures are listed inside, followed by @end.",
+              "choices": [
+                "@class ProtocolName",
+                "@interface ProtocolName",
+                "protocol ProtocolName",
+                "@protocol ProtocolName <NSObject> ... @end"
+              ],
+              "id": "objective_c_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a class adopt a protocol in Objective-C?",
+              "answer": "@interface ClassName <ProtocolName> ... @end",
+              "explain": "A class adopts a protocol by listing it in angle brackets after the superclass in @interface. The class must then implement all required methods from the protocol.",
+              "choices": [
+                "@interface ClassName <ProtocolName> ... @end",
+                "@implementation ProtocolName",
+                "@class ClassName : ProtocolName",
+                "class ClassName implements ProtocolName"
+              ],
+              "id": "objective_c_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an optional method in a protocol?",
+              "answer": "A method a class may implement but is not required to",
+              "explain": "Methods marked with @optional in a protocol are optional; classes that adopt the protocol do not have to implement them. @required marks methods that must be implemented.",
+              "choices": [
+                "A method that appears once per program",
+                "A method a class may implement but is not required to",
+                "A method that takes no parameters",
+                "A method that returns nothing"
+              ],
+              "id": "objective_c_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are protocols useful in Objective-C?",
+              "answer": "They define contracts and enable flexible polymorphic code",
+              "explain": "Protocols let you specify required functionality without caring about the concrete class. You can write code that works with any object that implements a protocol.",
+              "choices": [
+                "They replace inheritance",
+                "They make code run faster",
+                "They define contracts and enable flexible polymorphic code",
+                "They are only for memory management"
+              ],
+              "id": "objective_c_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Categories",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a category in Objective-C?",
+              "answer": "A way to add methods to an existing class without subclassing",
+              "explain": "Categories extend existing classes by adding new methods. You can add methods to NSString, NSArray, or any class, even if you don't have the source code.",
+              "choices": [
+                "A memory management technique",
+                "A classification system for objects",
+                "A type of protocol",
+                "A way to add methods to an existing class without subclassing"
+              ],
+              "id": "objective_c_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a category in Objective-C?",
+              "answer": "@interface ClassName (CategoryName) ... @end",
+              "explain": "Categories are declared with @interface ClassName (CategoryName). The category name goes in parentheses. Methods are listed inside just like @interface.",
+              "choices": [
+                "@interface ClassName (CategoryName) ... @end",
+                "@category ClassName",
+                "@class ClassName : CategoryName",
+                "class ClassName.CategoryName"
+              ],
+              "id": "objective_c_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can categories add instance variables to a class?",
+              "answer": "No, categories cannot add instance variables",
+              "explain": "Categories cannot add stored instance variables. To add them, you must subclass the class or use a class extension in the class's own source.",
+              "choices": [
+                "Yes, any number of variables",
+                "No, categories cannot add instance variables",
+                "Yes, but only one",
+                "Yes, but only weak references"
+              ],
+              "id": "objective_c_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a class extension in Objective-C?",
+              "answer": "An unnamed category used for private methods and properties",
+              "explain": "A class extension is written as @interface ClassName () ... @end (no name in parentheses). It is typically in the .m file and used for private implementation details.",
+              "choices": [
+                "A type of inheritance",
+                "A public protocol",
+                "An unnamed category used for private methods and properties",
+                "A way to extend protocols"
+              ],
+              "id": "objective_c_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a category and subclassing?",
+              "answer": "Categories add methods to existing classes; subclassing creates a new class hierarchy",
+              "explain": "Categories modify existing classes globally. Subclassing creates a new class that inherits from another. Use categories for convenience methods; use subclassing when you need new ivars or to override behavior selectively.",
+              "choices": [
+                "They are identical",
+                "Categories are faster",
+                "Subclassing is simpler",
+                "Categories add methods to existing classes; subclassing creates a new class hierarchy"
+              ],
+              "id": "objective_c_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

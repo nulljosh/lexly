@@ -1,0 +1,904 @@
+{
+  "id": "fortran",
+  "name": "Fortran",
+  "category": "programming",
+  "icon": "fa-solid fa-calculator",
+  "level": "Numerical Computing",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Fortran's History and Purpose",
+      "tip": "Fortran is one of the oldest high-level programming languages, designed in the 1950s for scientific computing. It remains in widespread use today in numerical simulations, climate modeling, and engineering because it is extremely fast and optimized for mathematical operations.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What is Fortran and Where It's Used",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does FORTRAN originally stand for?",
+              "answer": "FORmula TRANslation",
+              "explain": "FORTRAN was created to translate mathematical formulas into machine code. Its name reflects its original purpose: making it easy to write scientific computations.",
+              "choices": [
+                "FORmula TRANslation",
+                "Function Orientation and Rapid Translation",
+                "Forward Translation",
+                "Formal Training"
+              ],
+              "id": "fortran_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In what decade was Fortran first developed?",
+              "answer": "1950s",
+              "explain": "Fortran was created in the mid-1950s by IBM. It was one of the earliest high-level programming languages and is still used today.",
+              "choices": [
+                "1920s",
+                "1980s",
+                "2000s",
+                "1950s"
+              ],
+              "id": "fortran_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which field most heavily relies on Fortran today?",
+              "answer": "Scientific and numerical computing",
+              "explain": "Climate modeling, weather forecasting, quantum chemistry, and engineering simulations still rely on Fortran. It is optimized for numerical performance.",
+              "choices": [
+                "Video game design",
+                "Scientific and numerical computing",
+                "Mobile app development",
+                "Web development"
+              ],
+              "id": "fortran_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does Fortran remain popular for scientific computing?",
+              "answer": "It produces fast code and optimizes mathematical operations efficiently",
+              "explain": "Fortran compilers generate highly optimized machine code for numerical work. Its design is tightly focused on mathematical performance.",
+              "choices": [
+                "It produces fast code and optimizes mathematical operations efficiently",
+                "It is the newest language available",
+                "It is the easiest to learn",
+                "It has the most libraries of any language"
+              ],
+              "id": "fortran_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type of problems did Fortran originally solve?",
+              "answer": "Complex mathematical and scientific calculations",
+              "explain": "Fortran was designed to help scientists and engineers write programs for calculations that would be tedious and error-prone by hand.",
+              "choices": [
+                "Managing databases",
+                "Creating user interfaces",
+                "Complex mathematical and scientific calculations",
+                "Writing operating systems"
+              ],
+              "id": "fortran_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Modern Fortran",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is modern Fortran often called?",
+              "answer": "Free-form Fortran or Fortran 90+",
+              "explain": "Modern Fortran refers to versions from Fortran 90 onwards, which use free-form syntax (no fixed column rules) and include modules and advanced features.",
+              "choices": [
+                "Scientific C",
+                "Procedural Fortran",
+                "Fortran Classic",
+                "Free-form Fortran or Fortran 90+"
+              ],
+              "id": "fortran_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a major difference between old and modern Fortran syntax?",
+              "answer": "Old Fortran required fixed columns; modern Fortran is free-form",
+              "explain": "Old Fortran (FORTRAN 77) used fixed columns: columns 1-5 for statement labels, column 6 for continuation marks, and columns 7-72 for code. Modern Fortran has no such restrictions.",
+              "choices": [
+                "Old Fortran required fixed columns; modern Fortran is free-form",
+                "Old Fortran had no arrays",
+                "Modern Fortran has no functions",
+                "Old Fortran was slower"
+              ],
+              "id": "fortran_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When was Fortran 90 released?",
+              "answer": "1991",
+              "explain": "Fortran 90 was a major revision released in 1991. It introduced modules, free-form syntax, and modern programming constructs.",
+              "choices": [
+                "1991",
+                "2003",
+                "1985",
+                "2010"
+              ],
+              "id": "fortran_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a key feature added in Fortran 90?",
+              "answer": "Modules for code organization",
+              "explain": "Fortran 90 introduced modules, which allow better code organization, encapsulation, and reusability. This was a major step toward modern programming practices.",
+              "choices": [
+                "Object-oriented syntax",
+                "Automatic memory management",
+                "Garbage collection",
+                "Modules for code organization"
+              ],
+              "id": "fortran_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which Fortran revision added object-oriented features?",
+              "answer": "Fortran 2003",
+              "explain": "Fortran 2003 added object-oriented features such as type extension and type-bound procedures. Fortran 90 added modules and free-form source, but not object orientation.",
+              "choices": [
+                "Fortran 90",
+                "Fortran 2003",
+                "Fortran 66",
+                "Fortran 77"
+              ],
+              "id": "fortran_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Program Structure and Syntax",
+      "tip": "A Fortran program follows a clear structure: a program statement, variable declarations, executable statements, and an end statement. Modern free-form Fortran uses intuitive syntax similar to other languages, with no fixed column restrictions.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Program Structure",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What keyword starts a Fortran program?",
+              "answer": "program",
+              "explain": "A Fortran program begins with the program keyword, followed by a program name. Example: program hello_world",
+              "choices": [
+                "main",
+                "program",
+                "begin",
+                "start"
+              ],
+              "id": "fortran_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What statement marks the end of a Fortran program?",
+              "answer": "end program",
+              "explain": "Programs end with end program, optionally followed by the program name. This clearly marks the conclusion of the program.",
+              "choices": [
+                "finish",
+                "close program",
+                "end program",
+                "exit"
+              ],
+              "id": "fortran_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the correct structure of a minimal Fortran program?",
+              "answer": "program name ... end program",
+              "explain": "A minimal program has a program statement, an end program statement, and executable statements in between. The name is optional in end program but good practice.",
+              "choices": [
+                "program name ... end program",
+                "program name, executable code, exit",
+                "declare variables, write output, stop",
+                "function main(), code, return"
+              ],
+              "id": "fortran_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In free-form Fortran, where must statements appear?",
+              "answer": "Anywhere on a line, with no column restrictions",
+              "explain": "Free-form Fortran allows statements to start anywhere on a line. This is unlike old FORTRAN 77, which required specific column alignment.",
+              "choices": [
+                "Only in columns 7-72",
+                "Only at the end of a line",
+                "Anywhere on a line, with no column restrictions",
+                "Only at the start of a line"
+              ],
+              "id": "fortran_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write a comment in modern Fortran?",
+              "answer": "Use an exclamation mark (!)",
+              "explain": "In modern Fortran, comments start with ! and continue to the end of the line. Example: ! This is a comment",
+              "choices": [
+                "Use // like in C",
+                "Use an exclamation mark (!)",
+                "Use /* */ like in C",
+                "Use -- like in SQL"
+              ],
+              "id": "fortran_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Implicit None and Basic Output",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'implicit none' do?",
+              "answer": "Requires all variables to be explicitly declared before use",
+              "explain": "implicit none disables implicit typing, forcing you to declare every variable. This catches typos and makes code clearer. It is considered best practice.",
+              "choices": [
+                "Requires all variables to be explicitly declared before use",
+                "Allows variables to be used without declaration",
+                "Removes all variable names from output",
+                "Hides all undefined variables"
+              ],
+              "id": "fortran_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where should 'implicit none' appear in a program?",
+              "answer": "After the program statement, before variable declarations",
+              "explain": "implicit none is placed right after the program statement (and any use statements), before you declare any variables. It applies to the whole program unit.",
+              "choices": [
+                "After the program statement, before variable declarations",
+                "At the very end of the program",
+                "It can go anywhere in the program",
+                "After variable declarations"
+              ],
+              "id": "fortran_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the standard way to print output in Fortran?",
+              "answer": "Use the print statement or write statement",
+              "explain": "print * is the simplest form. write(*, *) is more flexible. Both send output to standard output.",
+              "choices": [
+                "Use the output statement",
+                "Use the display command",
+                "Use the print statement or write statement",
+                "Use printf like in C"
+              ],
+              "id": "fortran_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'print *' do in Fortran?",
+              "answer": "Prints output to the screen with default formatting",
+              "explain": "print * outputs variables or text to the screen. The asterisk means the format is chosen automatically by the compiler.",
+              "choices": [
+                "Prints only to a file",
+                "Prints output to the screen with default formatting",
+                "Terminates the program",
+                "Prints a single asterisk character"
+              ],
+              "id": "fortran_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the asterisk (*) represent in 'print *' and 'write(*, *)'?",
+              "answer": "Standard output and list-directed (automatic) formatting",
+              "explain": "The first * means standard output (the screen). The second * means the format is list-directed (Fortran picks reasonable formatting).",
+              "choices": [
+                "A multiplication operator",
+                "An error indicator",
+                "A wildcard matching all files",
+                "Standard output and list-directed (automatic) formatting"
+              ],
+              "id": "fortran_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Data Types and Declarations",
+      "tip": "Fortran has five intrinsic (built-in) data types. The four you meet first are INTEGER for whole numbers, REAL for floating-point numbers, LOGICAL for true/false values, and CHARACTER for text (the fifth is COMPLEX). Each type serves a different purpose and affects how values are stored and computed.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Integer and Real Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the INTEGER type used for?",
+              "answer": "Whole numbers without decimal points",
+              "explain": "INTEGER variables store whole numbers like -5, 0, 100. They cannot represent fractions or decimal values.",
+              "choices": [
+                "Text and strings",
+                "Boolean true/false values",
+                "Whole numbers without decimal points",
+                "Floating-point numbers"
+              ],
+              "id": "fortran_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the REAL type used for?",
+              "answer": "Floating-point numbers with decimal places",
+              "explain": "REAL variables store decimal numbers like 3.14, -2.5, or 0.001. They can represent fractions and are used for scientific calculations.",
+              "choices": [
+                "Floating-point numbers with decimal places",
+                "Boolean values",
+                "Whole numbers only",
+                "Text strings"
+              ],
+              "id": "fortran_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare an INTEGER variable in Fortran?",
+              "answer": "integer :: variable_name",
+              "explain": "The double colon :: separates the type from the variable name. Example: integer :: count",
+              "choices": [
+                "integer: variable_name",
+                "int count;",
+                "declare integer count",
+                "integer :: variable_name"
+              ],
+              "id": "fortran_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a REAL variable in Fortran?",
+              "answer": "real :: variable_name",
+              "explain": "Similar to INTEGER, REAL uses the double colon :: syntax. Example: real :: temperature",
+              "choices": [
+                "double :: variable_name",
+                "float :: variable_name",
+                "real variable_name;",
+                "real :: variable_name"
+              ],
+              "id": "fortran_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is double precision in Fortran?",
+              "answer": "A REAL type with more decimal places for higher accuracy",
+              "explain": "double precision :: x declares a real variable with greater precision than a default REAL (usually twice the storage), useful for calculations needing high accuracy.",
+              "choices": [
+                "A REAL type with more decimal places for higher accuracy",
+                "An INTEGER with extra digits",
+                "A pair of variables",
+                "A variable that holds two numbers"
+              ],
+              "id": "fortran_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Logical and Character Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the LOGICAL type used for?",
+              "answer": "Boolean values: true or false",
+              "explain": "LOGICAL variables hold true or false values, useful for conditions and flags. Example: logical :: is_valid",
+              "choices": [
+                "Decimal numbers",
+                "Boolean values: true or false",
+                "Text and strings",
+                "Whole numbers"
+              ],
+              "id": "fortran_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a LOGICAL variable?",
+              "answer": "logical :: variable_name",
+              "explain": "Use the same double colon syntax. Example: logical :: flag",
+              "choices": [
+                "boolean :: variable_name",
+                "logical :: variable_name",
+                "logic :: variable_name",
+                "bool :: variable_name"
+              ],
+              "id": "fortran_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the CHARACTER type used for?",
+              "answer": "Text strings and individual characters",
+              "explain": "CHARACTER variables store text. Example: character(len=50) :: name stores a string up to 50 characters long.",
+              "choices": [
+                "Single letters only",
+                "Text strings and individual characters",
+                "Whole numbers",
+                "Decimal numbers"
+              ],
+              "id": "fortran_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a CHARACTER variable with a specific length?",
+              "answer": "character(len=N) :: variable_name, where N is the length",
+              "explain": "The len parameter specifies how many characters the string can hold. Example: character(len=20) :: city",
+              "choices": [
+                "character[N] :: variable_name",
+                "string(N) :: variable_name",
+                "character(len=N) :: variable_name, where N is the length",
+                "char(N) :: variable_name"
+              ],
+              "id": "fortran_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does implicit typing mean in old Fortran?",
+              "answer": "Variables starting with certain letters are automatically given a type",
+              "explain": "Without implicit none, variables starting with I-N are INTEGER, and A-H, O-Z are REAL. This can cause bugs from typos, so implicit none is recommended.",
+              "choices": [
+                "No variables can be declared",
+                "Variables starting with certain letters are automatically given a type",
+                "Variables can hold any type",
+                "All variables must be declared"
+              ],
+              "id": "fortran_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Control Flow and Loops",
+      "tip": "Control flow statements direct the order in which code executes. DO loops repeat code, IF statements make decisions, and CASE statements handle multiple conditions. These are essential for writing realistic programs.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "The DO Loop",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a DO loop used for?",
+              "answer": "Repeating a block of code a fixed number of times",
+              "explain": "DO loops iterate over a range of values. They are fundamental for processing arrays and performing repeated calculations.",
+              "choices": [
+                "Declaring variables",
+                "Repeating a block of code a fixed number of times",
+                "Reading input from the user",
+                "Storing data"
+              ],
+              "id": "fortran_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax of a basic DO loop?",
+              "answer": "do i = 1, 10 ... end do",
+              "explain": "This loop runs from i=1 to i=10. The variable i is the loop counter. End do marks the end of the loop.",
+              "choices": [
+                "loop i from 1 to 10 ... end loop",
+                "do i = 1, 10 ... end do",
+                "while (condition) ... end while",
+                "for i = 1 to 10 ... next"
+              ],
+              "id": "fortran_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'do i = 1, n, 2' mean?",
+              "answer": "Loop from 1 to n, incrementing i by 2 each iteration",
+              "explain": "The third number is the step. This loop visits i=1, 3, 5, 7, ... up to n. Omitting the step defaults to 1.",
+              "choices": [
+                "Loop only if n equals 2",
+                "Loop from 1 to n, incrementing i by 2 each iteration",
+                "Loop 2 times from 1 to n",
+                "Loop from 1 to n and then repeat 2 times"
+              ],
+              "id": "fortran_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you exit a DO loop early?",
+              "answer": "Use the exit statement",
+              "explain": "exit immediately terminates the loop. You can use it inside an IF statement to break out when a condition is met.",
+              "choices": [
+                "Use stop",
+                "Use the exit statement",
+                "Use break like in C",
+                "Use return"
+              ],
+              "id": "fortran_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the cycle statement do in a DO loop?",
+              "answer": "Skips the rest of the current iteration and goes to the next one",
+              "explain": "cycle is equivalent to continue in C. It jumps to the next iteration without executing remaining statements in the current iteration.",
+              "choices": [
+                "Pauses the loop",
+                "Skips the rest of the current iteration and goes to the next one",
+                "Exits the entire loop",
+                "Repeats the current iteration"
+              ],
+              "id": "fortran_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Conditional Statements",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an IF statement used for?",
+              "answer": "Executing code only if a condition is true",
+              "explain": "IF statements test a logical condition. If true, code inside executes. If false, it skips to else or end if.",
+              "choices": [
+                "Declaring variables",
+                "Creating loops",
+                "Printing output",
+                "Executing code only if a condition is true"
+              ],
+              "id": "fortran_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax of an IF statement?",
+              "answer": "if (condition) then ... else ... end if",
+              "explain": "The then keyword follows the condition. end if closes the statement. else is optional for handling the false case.",
+              "choices": [
+                "if (condition) ... else ... end if",
+                "if condition then ... end if",
+                "if condition: ... else: ... endif",
+                "if (condition) then ... else ... end if"
+              ],
+              "id": "fortran_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are comparison operators in Fortran?",
+              "answer": "==, /=, <, >, <=, >=",
+              "explain": "These test equality (==), inequality (/=), and magnitudes. Note that /= means not equal in Fortran, unlike other languages.",
+              "choices": [
+                "==, <>, <, >, <=, >=",
+                "=, !=, <, >, <=, >=",
+                "=, ~=, <, >, <=, >=",
+                "==, /=, <, >, <=, >="
+              ],
+              "id": "fortran_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a CASE statement used for?",
+              "answer": "Handling multiple different values of a variable",
+              "explain": "CASE is like switch in C. It tests one variable against many values and executes different code for each.",
+              "choices": [
+                "Handling multiple different values of a variable",
+                "Declaring arrays",
+                "Looping a variable number of times",
+                "Testing boolean conditions"
+              ],
+              "id": "fortran_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax structure of a CASE statement?",
+              "answer": "select case (variable) ... case (value) ... end select",
+              "explain": "select case introduces the statement, case lists each condition, and end select closes it. Each case can handle one or multiple values.",
+              "choices": [
+                "if case (variable) ... then ... endif",
+                "switch (variable) ... case value: ... endswitch",
+                "case (variable, value) ... end case",
+                "select case (variable) ... case (value) ... end select"
+              ],
+              "id": "fortran_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Arrays and Array Operations",
+      "tip": "Arrays store collections of values in a single variable. Fortran is built for array operations and can manipulate entire arrays with simple syntax. This makes it ideal for scientific computing with vectors and matrices.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Declaring and Using Arrays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a 1D array in Fortran?",
+              "answer": "integer :: arr(10) or integer, dimension(10) :: arr",
+              "explain": "Both syntaxes create an array of 10 integers. The dimension is specified in parentheses.",
+              "choices": [
+                "integer array arr[10]",
+                "integer arr{10}",
+                "integer[10] arr",
+                "integer :: arr(10) or integer, dimension(10) :: arr"
+              ],
+              "id": "fortran_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a 2D array (matrix)?",
+              "answer": "real :: matrix(3,4) or real, dimension(3,4) :: matrix",
+              "explain": "This creates a 3x4 matrix (3 rows, 4 columns). Multiple dimensions are separated by commas.",
+              "choices": [
+                "real matrix(3,4);",
+                "real :: matrix 3x4",
+                "real :: matrix[3][4]",
+                "real :: matrix(3,4) or real, dimension(3,4) :: matrix"
+              ],
+              "id": "fortran_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the default starting index for Fortran arrays?",
+              "answer": "1 (arrays are 1-indexed)",
+              "explain": "Fortran uses 1-based indexing by default, unlike C or Python which use 0-based indexing. The first element is arr(1), not arr(0).",
+              "choices": [
+                "Depends on compiler",
+                "0 (zero-indexed)",
+                "1 (arrays are 1-indexed)",
+                "Always 0 for integer arrays and 1 for real arrays"
+              ],
+              "id": "fortran_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the 5th element of an array?",
+              "answer": "arr(5)",
+              "explain": "Array elements are accessed with parentheses. Example: x = arr(5) gets the 5th element.",
+              "choices": [
+                "arr[5]",
+                "arr.5",
+                "arr(5)",
+                "get_element(arr, 5)"
+              ],
+              "id": "fortran_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you assign a value to an array element?",
+              "answer": "arr(index) = value",
+              "explain": "Example: arr(3) = 42 sets the 3rd element to 42. This is standard assignment syntax.",
+              "choices": [
+                "arr(index) <- value",
+                "arr[index] := value",
+                "set arr(index) to value",
+                "arr(index) = value"
+              ],
+              "id": "fortran_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Array Operations and Slicing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is array slicing in Fortran?",
+              "answer": "Selecting a subset of elements from an array using a range",
+              "explain": "arr(2:5) selects elements 2 through 5. arr(1:10:2) selects every 2nd element from 1 to 10.",
+              "choices": [
+                "Selecting a subset of elements from an array using a range",
+                "Finding the largest element",
+                "Sorting array elements",
+                "Cutting an array into equal pieces"
+              ],
+              "id": "fortran_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does arr(2:5) mean?",
+              "answer": "Elements 2 through 5 (inclusive)",
+              "explain": "This is a slice that includes arr(2), arr(3), arr(4), and arr(5). The range is inclusive on both ends.",
+              "choices": [
+                "The 2nd and 5th rows of a matrix",
+                "Elements 2 through 5 (inclusive)",
+                "Elements 2 through 4",
+                "Elements 2 and 5 only"
+              ],
+              "id": "fortran_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a key advantage of Fortran arrays?",
+              "answer": "Operations can be applied to entire arrays at once without explicit loops",
+              "explain": "Fortran supports array operations: arr1 + arr2 adds element-wise. This makes code concise and efficient for numerical computing.",
+              "choices": [
+                "Operations can be applied to entire arrays at once without explicit loops",
+                "Arrays use less memory than scalars",
+                "Arrays can only hold whole numbers",
+                "Arrays can never be passed to procedures"
+              ],
+              "id": "fortran_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you perform element-wise multiplication of two arrays in Fortran?",
+              "answer": "c = a * b (if a and b are the same size)",
+              "explain": "Fortran multiplies element-wise: c(i) = a(i) * b(i) for all i. This is an intrinsic array operation, no loop needed. matmul is matrix multiplication and dot_product returns a single number.",
+              "choices": [
+                "c = a ** b",
+                "c = matmul(a, b)",
+                "c = dot_product(a, b)",
+                "c = a * b (if a and b are the same size)"
+              ],
+              "id": "fortran_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the sum() function do on an array?",
+              "answer": "Returns the sum of all array elements",
+              "explain": "sum(arr) adds all elements: sum([1,2,3,4]) = 10. This is useful for totaling array values.",
+              "choices": [
+                "Sorts the array",
+                "Finds the average",
+                "Returns the sum of all array elements",
+                "Returns the product of all elements"
+              ],
+              "id": "fortran_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Subroutines, Functions, and Modules",
+      "tip": "Subroutines and functions break code into reusable pieces. Modules organize related code and data. These are essential for writing maintainable, large-scale programs in modern Fortran.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Subroutines and Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a subroutine and a function?",
+              "answer": "Functions return a value; subroutines do not",
+              "explain": "Functions compute and return a single value. Subroutines perform tasks but don't return a value (they modify arguments instead).",
+              "choices": [
+                "Functions are only for math",
+                "Functions return a value; subroutines do not",
+                "They are identical",
+                "Subroutines are faster"
+              ],
+              "id": "fortran_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax to declare a function?",
+              "answer": "function name(arguments) result(output) ... end function",
+              "explain": "The result clause names the variable that holds the returned value. Example: function add(x, y) result(total)",
+              "choices": [
+                "function name(arguments) result(output) ... end function",
+                "func name(args): return type",
+                "define name(args) returns value",
+                "function name(args) -> return"
+              ],
+              "id": "fortran_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax to declare a subroutine?",
+              "answer": "subroutine name(arguments) ... end subroutine",
+              "explain": "A subroutine takes arguments but does not have a return type. Example: subroutine print_array(arr)",
+              "choices": [
+                "subroutine name(arguments) ... end subroutine",
+                "subroutine name -> args",
+                "void name(args)",
+                "sub name(args)"
+              ],
+              "id": "fortran_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'return' statement do in a function or subroutine?",
+              "answer": "Exits the procedure immediately and gives control back to the caller",
+              "explain": "return leaves the procedure early and control goes back to the caller. A function's value is whatever its result variable holds at that point. It is optional at the end of a procedure.",
+              "choices": [
+                "Ends the whole program",
+                "Exits the procedure immediately and gives control back to the caller",
+                "Restarts the procedure",
+                "Clears all variables"
+              ],
+              "id": "fortran_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'call' statement do?",
+              "answer": "Invokes a subroutine",
+              "explain": "call subroutine_name(arguments) executes the subroutine. Functions are invoked directly in expressions, not with call.",
+              "choices": [
+                "Declares a subroutine",
+                "Invokes a subroutine",
+                "Ends a program",
+                "Tests a condition"
+              ],
+              "id": "fortran_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Modules and Code Organization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a module in Fortran?",
+              "answer": "A container for related variables, functions, and subroutines",
+              "explain": "Modules group related code and data. They provide encapsulation and make code reusable. A module can be used by multiple programs.",
+              "choices": [
+                "A comment section",
+                "A type of array",
+                "A container for related variables, functions, and subroutines",
+                "A loop structure"
+              ],
+              "id": "fortran_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax to declare a module?",
+              "answer": "module module_name ... end module",
+              "explain": "A module starts with the module keyword and ends with end module. Example: module math_utils ... end module",
+              "choices": [
+                "module: module_name",
+                "define module module_name",
+                "modulename { ... }",
+                "module module_name ... end module"
+              ],
+              "id": "fortran_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you use code from a module in a program?",
+              "answer": "Use the 'use' statement",
+              "explain": "use module_name imports everything from the module. Example: use math_utils makes all functions and variables in math_utils available.",
+              "choices": [
+                "import module_name",
+                "open module_name",
+                "Use the 'use' statement",
+                "include module_name"
+              ],
+              "id": "fortran_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'contains' keyword used for in a module?",
+              "answer": "Marks the start of the subroutines and functions section",
+              "explain": "contains separates the declarations section from the procedures (subroutines and functions). It marks where the code implementations begin.",
+              "choices": [
+                "Imports another module",
+                "Marks the start of the subroutines and functions section",
+                "Starts a loop",
+                "Declares variable types"
+              ],
+              "id": "fortran_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the benefit of using modules?",
+              "answer": "Code organization, reusability, and encapsulation",
+              "explain": "Modules let you group related functionality, reuse code across programs, and hide internal details. This makes large projects more manageable.",
+              "choices": [
+                "Code organization, reusability, and encapsulation",
+                "They are required for all programs",
+                "They make code run faster",
+                "They reduce memory usage"
+              ],
+              "id": "fortran_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

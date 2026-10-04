@@ -1,0 +1,904 @@
+{
+  "id": "julia",
+  "name": "Julia",
+  "category": "programming",
+  "icon": "fa-solid fa-chart-line",
+  "level": "Scientific Computing",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Variables and Types",
+      "tip": "Julia is dynamically typed, meaning you don't declare types upfront, but every value has a type at runtime. Understanding type hierarchy helps you write efficient, predictable code.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Creating Variables and Basic Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In Julia, what is the type of the value 42?",
+              "answer": "Int64",
+              "explain": "Literal integers in Julia have type Int64 (on 64-bit systems). Float literals use a decimal point or exponent notation.",
+              "choices": [
+                "UInt64",
+                "Int64",
+                "Integer",
+                "Num"
+              ],
+              "id": "julia_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you assign a variable in Julia?",
+              "answer": "x = 5",
+              "explain": "Julia uses the equals sign for assignment, just like most languages. The variable name goes on the left, the value on the right.",
+              "choices": [
+                "x := 5",
+                "5 -> x",
+                "x = 5",
+                "var x = 5"
+              ],
+              "id": "julia_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 3.14 in Julia?",
+              "answer": "Float64",
+              "explain": "Numbers with a decimal point are Float64 by default on 64-bit systems. This is Julia's standard floating-point type.",
+              "choices": [
+                "Float64",
+                "Real",
+                "Double",
+                "Float"
+              ],
+              "id": "julia_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check the type of a variable x in Julia?",
+              "answer": "typeof(x)",
+              "explain": "The typeof() function returns the type of its argument. You can use this interactively or in code to inspect types.",
+              "choices": [
+                "typeof(x)",
+                "typeo(x)",
+                "x.type",
+                "type(x)"
+              ],
+              "id": "julia_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of true in Julia?",
+              "answer": "Bool",
+              "explain": "Boolean values true and false have type Bool in Julia. Bool is a concrete type used for logical operations and conditionals.",
+              "choices": [
+                "Bool",
+                "Logical",
+                "TruthValue",
+                "Boolean"
+              ],
+              "id": "julia_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Type Hierarchy and Conversion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the direct supertype of Int64?",
+              "answer": "Signed",
+              "explain": "Int64 is a subtype of Signed (signed integers), which is a subtype of Integer. Understanding this hierarchy helps with multiple dispatch.",
+              "choices": [
+                "Real",
+                "Number",
+                "Signed",
+                "Integer"
+              ],
+              "id": "julia_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you convert an integer to a float in Julia?",
+              "answer": "Float64(x)",
+              "explain": "You call the target type as a constructor. Float64(42) converts the integer 42 to a float.",
+              "choices": [
+                "to_float(x)",
+                "as_float(x)",
+                "x.to_float()",
+                "Float64(x)"
+              ],
+              "id": "julia_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does typeof(3 / 2) return in Julia?",
+              "answer": "Float64",
+              "explain": "Division with / always returns a float in Julia, even if both operands are integers. Use div(a, b) or a ÷ b for integer division.",
+              "choices": [
+                "Float64",
+                "Mixed",
+                "Int64",
+                "Rational"
+              ],
+              "id": "julia_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 'h' in Julia?",
+              "answer": "Char",
+              "explain": "Single characters in single quotes have type Char. Strings use double quotes and have type String.",
+              "choices": [
+                "String",
+                "Int",
+                "Symbol",
+                "Char"
+              ],
+              "id": "julia_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the closest abstract supertype of both Int64 and Float64?",
+              "answer": "Real",
+              "explain": "Both Int64 and Float64 are subtypes of Real, the nearest abstract type they share. Real is itself a subtype of Number, which is farther up the hierarchy.",
+              "choices": [
+                "Numeric",
+                "Signed",
+                "Real",
+                "Number"
+              ],
+              "id": "julia_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Arrays and Indexing",
+      "tip": "Julia arrays are ordered collections of elements. Julia uses 1-based indexing, unlike Python or C. You can create arrays with literals or functions, and access elements by index.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Creating and Indexing Arrays",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In Julia, what is the first index of an array?",
+              "answer": "1",
+              "explain": "Julia uses 1-based indexing. The first element is at index 1, not 0. This is different from Python, C, and JavaScript.",
+              "choices": [
+                "-1",
+                "none (no indexing)",
+                "1",
+                "0"
+              ],
+              "id": "julia_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create an array [1, 2, 3] in Julia?",
+              "answer": "x = [1, 2, 3]",
+              "explain": "Square brackets with comma-separated values create an array. Julia infers the element type from the contents.",
+              "choices": [
+                "x = (1, 2, 3)",
+                "x = [1, 2, 3]",
+                "x = array(1, 2, 3)",
+                "x = {1, 2, 3}"
+              ],
+              "id": "julia_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If x = [10, 20, 30], what is x[1]?",
+              "answer": "10",
+              "explain": "The first element at index 1 is 10. Julia's 1-based indexing means the first element is always at [1].",
+              "choices": [
+                "undefined",
+                "10",
+                "30",
+                "20"
+              ],
+              "id": "julia_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does x[2:4] do on array x?",
+              "answer": "Returns elements from index 2 to 4 (inclusive)",
+              "explain": "Slice notation x[2:4] includes both endpoints. It returns a new array with elements at indices 2, 3, and 4.",
+              "choices": [
+                "Returns element at index 2 repeated 4 times",
+                "Returns elements from index 2 to 4 (inclusive)",
+                "Returns elements 4 through 2",
+                "Returns elements 2 and 3 only"
+              ],
+              "id": "julia_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you get the length of an array x in Julia?",
+              "answer": "length(x)",
+              "explain": "The length() function returns the number of elements in an array. For a 1D array, this is the same as size(x, 1).",
+              "choices": [
+                "length(x)",
+                "len(x)",
+                "x.length",
+                "size(x)"
+              ],
+              "id": "julia_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Array Operations and Slicing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "If x = [1, 2, 3], what does x[end] return?",
+              "answer": "3",
+              "explain": "The special index end refers to the last element of an array. It evaluates to length(x), so x[end] is the last element.",
+              "choices": [
+                "3",
+                "Error",
+                "empty array",
+                "undefined"
+              ],
+              "id": "julia_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between x = [1, 2, 3] and x = 1:3 in Julia?",
+              "answer": "[1,2,3] creates a vector, 1:3 creates a range object",
+              "explain": "Array literals [1,2,3] create a Vector. Colon notation 1:3 creates a Range object, which is memory-efficient and lazy.",
+              "choices": [
+                "[1,2,3] creates a vector, 1:3 creates a range object",
+                "There is no difference",
+                "1:3 is faster",
+                "1:3 only works in loops"
+              ],
+              "id": "julia_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is x[1:2:5] if x = 1:10?",
+              "answer": "Elements at indices 1, 3, 5",
+              "explain": "The notation x[start:step:stop] slices with a step. x[1:2:5] starts at 1, steps by 2, and ends at or before 5.",
+              "choices": [
+                "Elements at indices 1, 3, 5",
+                "5 elements starting at 1",
+                "Element 1, then 2, then 5",
+                "Elements from 1 to 5"
+              ],
+              "id": "julia_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you append a single element to an array x in Julia?",
+              "answer": "push!(x, value)",
+              "explain": "The push!() function modifies the array in place and adds an element to the end. The ! denotes a mutating function.",
+              "choices": [
+                "append(x, value)",
+                "x.append(value)",
+                "push!(x, value)",
+                "x + value"
+              ],
+              "id": "julia_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does x[x .> 5] do on array x = [1, 5, 10, 3]?",
+              "answer": "Returns elements greater than 5",
+              "explain": "x .> 5 creates a boolean array, and x[...] indexes with that boolean mask, returning only elements where the condition is true.",
+              "choices": [
+                "Returns elements greater than 5",
+                "Returns the 5th element",
+                "Returns elements at positions 1, 5, 10",
+                "Returns index positions only"
+              ],
+              "id": "julia_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Broadcasting and Vectorization",
+      "tip": "Broadcasting lets you apply operations to arrays element-wise using the dot syntax. x .+ 1 adds 1 to every element without a loop. Broadcasting is a powerful way to write concise, fast code.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "The Dot Syntax",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the dot (.) in .+ mean in Julia?",
+              "answer": "Apply the operation element-wise (broadcasting)",
+              "explain": "The dot prefix on an operator broadcasts it over arrays. x .+ 1 adds 1 to each element, not the array as a whole.",
+              "choices": [
+                "Apply the operation element-wise (broadcasting)",
+                "It means to use a method",
+                "It is part of the variable name",
+                "It is a decimal point"
+              ],
+              "id": "julia_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If x = [1, 2, 3], what is x .* 2?",
+              "answer": "[2, 4, 6]",
+              "explain": "x .* 2 broadcasts multiplication to each element. Each element is multiplied by 2.",
+              "choices": [
+                "[1, 2, 3]",
+                "Error",
+                "6",
+                "[2, 4, 6]"
+              ],
+              "id": "julia_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use dot notation with user-defined functions in Julia?",
+              "answer": "Yes, f.(x) broadcasts f over array x",
+              "explain": "You can broadcast any function using f.(x) syntax. It applies f to each element of x.",
+              "choices": [
+                "No, only built-in operators",
+                "Only with mathematical functions",
+                "Yes, f.(x) broadcasts f over array x",
+                "No, you must use a loop"
+              ],
+              "id": "julia_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of [1, 2] .+ [3, 4] in Julia?",
+              "answer": "[4, 6]",
+              "explain": "Broadcasting aligns arrays element-wise and applies the operation. [1,2] .+ [3,4] gives [1+3, 2+4] = [4, 6].",
+              "choices": [
+                "[3, 8]",
+                "[4, 6]",
+                "[1, 2, 3, 4]",
+                "Error"
+              ],
+              "id": "julia_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does Julia handle [1, 2, 3] .+ [10] (different lengths)?",
+              "answer": "Broadcasts the smaller array, result is [11, 12, 13]",
+              "explain": "Broadcasting stretches any dimension of size 1 to match the other array. [10] is treated as [10, 10, 10].",
+              "choices": [
+                "Returns [10] only",
+                "Error: shape mismatch",
+                "Concatenates to [1, 2, 3, 10]",
+                "Broadcasts the smaller array, result is [11, 12, 13]"
+              ],
+              "id": "julia_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Advanced Broadcasting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "If x = [1, 2, 3] and y = [4, 5], what is x .+ y' (y transposed)?",
+              "answer": "A 3x2 array of all pairwise sums",
+              "explain": "y' creates a row vector, and broadcasting creates all pairwise combinations of x (column) and y (row).",
+              "choices": [
+                "[1, 2, 3, 4, 5]",
+                "A 3x2 array of all pairwise sums",
+                "[5, 7]",
+                "Error"
+              ],
+              "id": "julia_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is sin.([0, pi/2, pi]) in Julia?",
+              "answer": "[sin(0), sin(pi/2), sin(pi)]",
+              "explain": "sin.([...]) broadcasts the sine function over each element of the array.",
+              "choices": [
+                "A function, not a value",
+                "Error",
+                "[0, 1, 0] exactly",
+                "[sin(0), sin(pi/2), sin(pi)]"
+              ],
+              "id": "julia_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does x .^2 do on x = [1, 2, 3]?",
+              "answer": "[1, 4, 9] (element-wise squaring)",
+              "explain": "The dot-caret .^2 broadcasts the power operation element-wise, squaring each element.",
+              "choices": [
+                "36 (sum of squares)",
+                "[1, 2, 3] (unchanged)",
+                "[1, 4, 9] (element-wise squaring)",
+                "Error"
+              ],
+              "id": "julia_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the @. macro do in Julia?",
+              "answer": "Applies broadcasting to every operation in an expression",
+              "explain": "@. x + y * 2 becomes x .+ y .* 2, with every operation broadcast. It is a convenience for long expressions.",
+              "choices": [
+                "Applies broadcasting to every operation in an expression",
+                "Prints the expression",
+                "Creates a new array",
+                "Nothing, it is ignored"
+              ],
+              "id": "julia_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is broadcasting useful for performance in Julia?",
+              "answer": "It fuses chained dotted operations into one loop with no temporary arrays",
+              "explain": "Chained dotted operations are fused into a single loop, so no temporary arrays are built in between. A hand-written loop can be just as fast, but broadcasting is shorter.",
+              "choices": [
+                "It fuses chained dotted operations into one loop with no temporary arrays",
+                "It has no performance benefit",
+                "It always uses less memory",
+                "It makes Julia skip compiling the code"
+              ],
+              "id": "julia_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Functions and Multiple Dispatch",
+      "tip": "Julia uses multiple dispatch, where a function's behavior depends on the types of all its arguments, not just the first. This is different from object-oriented languages and is the heart of Julia's design.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Defining Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function in Julia?",
+              "answer": "function name(args) ... end",
+              "explain": "Julia functions are defined with function keyword, a name, arguments in parentheses, and end.",
+              "choices": [
+                "-> name(args) ...",
+                "def name(args): ...",
+                "name(args) => ...",
+                "function name(args) ... end"
+              ],
+              "id": "julia_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this function return? function f(x) x + 1 end",
+              "answer": "The value of x + 1",
+              "explain": "Julia functions return the last expression evaluated. Explicit return statements are optional.",
+              "choices": [
+                "The value of x + 1",
+                "Nothing",
+                "Undefined",
+                "Error"
+              ],
+              "id": "julia_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you define an anonymous function in Julia?",
+              "answer": "x -> x + 1",
+              "explain": "The arrow syntax x -> body defines a short, unnamed function. Often used with map or filter.",
+              "choices": [
+                "fun x -> x + 1",
+                "(x) { x + 1 }",
+                "lambda x: x + 1",
+                "x -> x + 1"
+              ],
+              "id": "julia_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of a function in Julia?",
+              "answer": "Each function has its own type, a subtype of Function",
+              "explain": "Functions are values with types. typeof(sin) is a type unique to sin, and it is a subtype of Function.",
+              "choices": [
+                "Each function has its own type, a subtype of Function",
+                "Symbol",
+                "No type, it is code",
+                "Method"
+              ],
+              "id": "julia_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you use map to apply a function f to array x in Julia?",
+              "answer": "map(f, x)",
+              "explain": "map(f, x) applies function f to each element of x, returning a new array. This is like f.(x) in broadcast form.",
+              "choices": [
+                "x.map(f)",
+                "map(f, x)",
+                "f.map(x)",
+                "apply(f, x)"
+              ],
+              "id": "julia_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Multiple Dispatch",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is multiple dispatch in Julia?",
+              "answer": "Method selection based on types of all arguments",
+              "explain": "Multiple dispatch chooses the most specific method based on argument types. Julia calls the right version of f depending on what types you pass.",
+              "choices": [
+                "Method selection based on types of all arguments",
+                "An error handling mechanism",
+                "Calling multiple functions at once",
+                "Sending messages to objects"
+              ],
+              "id": "julia_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you have two functions with the same name but different argument types?",
+              "answer": "Yes, they are different methods of the same function",
+              "explain": "Julia's multiple dispatch allows this. f(x::Int) and f(x::Float64) are two methods of function f.",
+              "choices": [
+                "No, the second shadows the first",
+                "Yes, they are different methods of the same function",
+                "Yes, but only the last one works",
+                "No, it is not allowed in any language"
+              ],
+              "id": "julia_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does function f(x::Int) ... end mean?",
+              "answer": "The parameter x must have type Int",
+              "explain": "The :: syntax adds a type constraint. This method only applies when x is an Int.",
+              "choices": [
+                "The parameter x must have type Int",
+                "It means nothing special",
+                "x is assigned the type Int",
+                "x is a pointer to Int"
+              ],
+              "id": "julia_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you call f(5.0) when only f(x::Int) is defined?",
+              "answer": "Error: no method matches",
+              "explain": "Only the Int method exists, so calling with Float64 raises a MethodError.",
+              "choices": [
+                "It converts 5.0 to 5 and calls the method",
+                "It uses dynamic dispatch to find a match",
+                "Error: no method matches",
+                "It returns undefined"
+              ],
+              "id": "julia_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many methods can the function + have in Julia?",
+              "answer": "Many, one per combination of argument types",
+              "explain": "The + function has many methods, such as Int+Int, Float64+Float64, and Rational+Rational. You can define new ones too.",
+              "choices": [
+                "Two",
+                "One",
+                "It is a built-in, no methods",
+                "Many, one per combination of argument types"
+              ],
+              "id": "julia_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Control Flow",
+      "tip": "Control flow statements like if/else, loops, and comprehensions let you control the order and repetition of code. Julia's syntax is readable and supports multiple styles.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Conditionals and Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for an if statement in Julia?",
+              "answer": "if condition ... end",
+              "explain": "Julia if statements use if keyword, condition, body, and end. Else and elseif are optional.",
+              "choices": [
+                "if (condition) { ... }",
+                "if: condition ...",
+                "condition ? ... : ...",
+                "if condition ... end"
+              ],
+              "id": "julia_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a for loop look like in Julia?",
+              "answer": "for i in 1:10 ... end",
+              "explain": "Julia for loops use for, a variable, in, a collection, and end. The variable iterates over the collection.",
+              "choices": [
+                "for i in 1:10 ... end",
+                "foreach(1:10) { ... }",
+                "for (i=1; i<10; i++) { ... }",
+                "for i = 1:10: ..."
+              ],
+              "id": "julia_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the while loop do in Julia?",
+              "answer": "Repeats code while a condition is true",
+              "explain": "while condition ... end repeats the body as long as condition is true. It evaluates the condition before each iteration.",
+              "choices": [
+                "Repeats code a fixed number of times",
+                "Repeats until a condition becomes true",
+                "Executes code and saves results",
+                "Repeats code while a condition is true"
+              ],
+              "id": "julia_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the ternary operator in Julia?",
+              "answer": "condition ? yes_value : no_value",
+              "explain": "The ternary operator ? : chooses between two values based on a condition. It is like a one-line if/else.",
+              "choices": [
+                "if condition ... else ... end",
+                "condition && yes_value || no_value",
+                "switch(condition) ...",
+                "condition ? yes_value : no_value"
+              ],
+              "id": "julia_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which keyword exits the nearest enclosing loop early and keeps running the code after it?",
+              "answer": "break",
+              "explain": "The break statement exits the nearest enclosing loop immediately.",
+              "choices": [
+                "break",
+                "stop",
+                "exit",
+                "return"
+              ],
+              "id": "julia_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Comprehensions and Advanced Control",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does [x^2 for x in 1:5] do in Julia?",
+              "answer": "Creates array [1, 4, 9, 16, 25]",
+              "explain": "Array comprehensions [expr for x in collection] build an array by evaluating expr for each element.",
+              "choices": [
+                "Defines a function",
+                "Creates array [1, 4, 9, 16, 25]",
+                "Creates a range",
+                "Error: invalid syntax"
+              ],
+              "id": "julia_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [x for x in 1:10 if x > 5] do?",
+              "answer": "Creates [6, 7, 8, 9, 10]",
+              "explain": "Comprehensions support if conditions to filter. Only elements where x > 5 are included.",
+              "choices": [
+                "Creates [6, 7, 8, 9, 10]",
+                "Creates empty array",
+                "Creates [1, 2, 3, 4, 5]",
+                "Error"
+              ],
+              "id": "julia_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you continue to the next iteration of a loop in Julia?",
+              "answer": "continue",
+              "explain": "The continue statement skips the rest of the current iteration and jumps to the next one.",
+              "choices": [
+                "skip",
+                "goto",
+                "continue",
+                "next"
+              ],
+              "id": "julia_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does [(i, j) for i in 1:2, j in 1:2] create?",
+              "answer": "2x2 array of tuples: [(1,1) (1,2); (2,1) (2,2)]",
+              "explain": "Multiple for clauses create nested iterations. Commas separate the for clauses.",
+              "choices": [
+                "[1,2] and [1,2]",
+                "[1,2,1,2]",
+                "2x2 array of tuples: [(1,1) (1,2); (2,1) (2,2)]",
+                "Error"
+              ],
+              "id": "julia_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the do block syntax used for in Julia?",
+              "answer": "Passing a function as an argument without writing it separately",
+              "explain": "do ... end is syntactic sugar for anonymous function arguments. Useful with map, filter, and similar functions.",
+              "choices": [
+                "Looping",
+                "Declaring variables",
+                "Passing a function as an argument without writing it separately",
+                "Error handling"
+              ],
+              "id": "julia_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Performance and Strings",
+      "tip": "Type stability ensures Julia can compile efficient code: when a function always returns the same type for the same input types, the compiler knows what to expect. Strings are sequences of characters, and Julia has powerful string manipulation tools.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Type Stability and Performance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is type stability?",
+              "answer": "A function always returns the same type for the same input types",
+              "explain": "Type stable functions let Julia compile efficient code. Unstable functions (return type depends on values, not types) cause performance problems.",
+              "choices": [
+                "A function always returns the same type for the same input types",
+                "A function never changes its arguments",
+                "Using the same types throughout",
+                "A language feature"
+              ],
+              "id": "julia_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does type stability matter in Julia?",
+              "answer": "It enables aggressive compiler optimizations",
+              "explain": "When the compiler knows the return type, it can specialize and optimize the code. Unstable code must handle multiple types at runtime, which is slow.",
+              "choices": [
+                "It enables aggressive compiler optimizations",
+                "It is required for all code",
+                "It prevents bugs",
+                "It has no effect"
+              ],
+              "id": "julia_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is type inference in Julia?",
+              "answer": "The compiler deduces types from values and operations",
+              "explain": "Julia's compiler uses type inference to figure out types without explicit annotations. This allows dynamic typing with static performance.",
+              "choices": [
+                "Manual type annotation",
+                "A runtime error check",
+                "A validation step",
+                "The compiler deduces types from values and operations"
+              ],
+              "id": "julia_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does @time do in Julia?",
+              "answer": "Measures execution time and memory allocation of an expression",
+              "explain": "@time runs code and prints elapsed time, bytes allocated, and GC info. Useful for identifying performance issues.",
+              "choices": [
+                "Measures execution time and memory allocation of an expression",
+                "Runs code in parallel",
+                "Prints a timestamp",
+                "Defines a timer"
+              ],
+              "id": "julia_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the @profile macro used for?",
+              "answer": "Sampling the call stack to find bottlenecks",
+              "explain": "@profile runs code and samples the call stack, showing which functions consume most time. Used with ProfileView for visualization.",
+              "choices": [
+                "Creating a profile of a user",
+                "Sampling the call stack to find bottlenecks",
+                "Benchmarking memory usage",
+                "Type checking"
+              ],
+              "id": "julia_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Working with Strings",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the type of \"hello\" in Julia?",
+              "answer": "String",
+              "explain": "Double quotes create a String (sequence of characters). Single quotes create a Char.",
+              "choices": [
+                "Array",
+                "String",
+                "Char",
+                "Text"
+              ],
+              "id": "julia_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you concatenate strings s1 and s2 in Julia?",
+              "answer": "s1 * s2",
+              "explain": "The * operator concatenates strings. There is no + operator for strings.",
+              "choices": [
+                "s1 * s2",
+                "concat(s1, s2)",
+                "s1 - s2",
+                "s1 + s2"
+              ],
+              "id": "julia_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does string(42, \" apples\") do in Julia?",
+              "answer": "Converts to string and concatenates: \"42 apples\"",
+              "explain": "The string() function converts arguments to strings and concatenates them.",
+              "choices": [
+                "Returns [42, \"apples\"]",
+                "Error: mixed types",
+                "Returns the number 42",
+                "Converts to string and concatenates: \"42 apples\""
+              ],
+              "id": "julia_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which feature lets you embed an expression directly inside a string literal in Julia?",
+              "answer": "String interpolation with $: \"x = $(x)\"",
+              "explain": "The $ syntax inside a string evaluates the expression and inserts the result.",
+              "choices": [
+                "The format() function",
+                "Concatenation with *",
+                "String interpolation with $: \"x = $(x)\"",
+                "The join() function"
+              ],
+              "id": "julia_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does split(\"hello world\", ' ') return?",
+              "answer": "[\"hello\", \"world\"]",
+              "explain": "split() divides a string by a delimiter and returns an array of substrings.",
+              "choices": [
+                "Error",
+                "\"hello world\"",
+                "[\"h\", \"e\", \"l\", \"l\", \"o\"]",
+                "[\"hello\", \"world\"]"
+              ],
+              "id": "julia_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

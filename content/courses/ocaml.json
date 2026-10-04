@@ -1,0 +1,904 @@
+{
+  "id": "ocaml",
+  "name": "OCaml",
+  "category": "programming",
+  "icon": "fa-solid fa-shapes",
+  "level": "Typed Functional Programming",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Let Bindings and Immutability",
+      "tip": "In OCaml, let bindings create names for values that never change. Once you bind a name with let, that name always refers to the same value. This immutability is core to functional programming.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Creating Values with Let",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this code do? let x = 5",
+              "answer": "Binds the name x to the value 5",
+              "explain": "The let keyword creates a binding. x now refers to 5 everywhere in its scope.",
+              "choices": [
+                "Binds the name x to the value 5",
+                "Changes x to 5 if it already exists",
+                "Creates a variable that can be reassigned",
+                "Deletes any previous definition of x"
+              ],
+              "id": "ocaml_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After let x = 3, can you change the value of x?",
+              "answer": "No, x always refers to 3 in its scope",
+              "explain": "OCaml values are immutable. Once bound, x refers to 3 for its entire scope. You cannot reassign it.",
+              "choices": [
+                "Yes, with x := 4",
+                "No, x always refers to 3 in its scope",
+                "Yes, with x <- 4",
+                "Only in a mutable region"
+              ],
+              "id": "ocaml_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of this code? let x = 2 in let y = 3 in x + y",
+              "answer": "5",
+              "explain": "The inner let binds y to 3, and the expression evaluates to x + y = 2 + 3 = 5.",
+              "choices": [
+                "2",
+                "3",
+                "5",
+                "Error: y is not defined"
+              ],
+              "id": "ocaml_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does this code evaluate to? let x = 10 in let x = 20 in x",
+              "answer": "20",
+              "explain": "The inner let x = 20 shadows the outer x = 10. Inside the inner scope, x refers to 20.",
+              "choices": [
+                "10",
+                "30",
+                "Error: x is already defined",
+                "20"
+              ],
+              "id": "ocaml_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use a value in a let binding that you define later?",
+              "answer": "No, the value must be defined before it is used",
+              "explain": "A name must be bound before it is used. Referring to a name that is only defined later is an unbound value error at compile time.",
+              "choices": [
+                "No, the value must be defined before it is used",
+                "Yes, OCaml figures it out",
+                "Only in function definitions",
+                "Only at the top level"
+              ],
+              "id": "ocaml_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Immutable Values and Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is immutability?",
+              "answer": "A value cannot change once it is created",
+              "explain": "Immutable values provide safety and predictability. Once created, they stay the same, so you cannot accidentally modify them.",
+              "choices": [
+                "A value changes over time",
+                "A value cannot change once it is created",
+                "A value can be stored in memory",
+                "A variable that is reset on every use"
+              ],
+              "id": "ocaml_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the scope of x in this code? let x = 1 in (let y = 2 in x + y)",
+              "answer": "x is in scope for the entire expression",
+              "explain": "The outer let x = 1 creates a scope that extends to the end of in (let y = 2 in x + y). The inner y is only in scope inside its own in block.",
+              "choices": [
+                "x is only in scope inside the inner let",
+                "x is never in scope",
+                "x is in scope for the entire expression",
+                "x and y have the same scope"
+              ],
+              "id": "ocaml_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you use a name that is out of scope?",
+              "answer": "The compiler reports an unbound variable error",
+              "explain": "OCaml's compiler checks that every name is defined before it is used. Using an undefined name is a compile error.",
+              "choices": [
+                "The program runs with that value as 0",
+                "The name refers to a global variable if it exists",
+                "The program crashes at runtime",
+                "The compiler reports an unbound variable error"
+              ],
+              "id": "ocaml_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of this? let x = 5 in let y = x * 2 in y",
+              "answer": "10",
+              "explain": "x is bound to 5. y is bound to x * 2 = 10. The expression evaluates to 10.",
+              "choices": [
+                "10",
+                "5",
+                "2",
+                "Error: x is not defined"
+              ],
+              "id": "ocaml_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the expression let x = 1 in let x = 2 in let x = 3 in x, what value does x have?",
+              "answer": "3",
+              "explain": "Each new let x shadows the previous binding. The innermost let x = 3 shadows all outer x bindings.",
+              "choices": [
+                "1",
+                "3",
+                "2",
+                "Error: x is defined three times"
+              ],
+              "id": "ocaml_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Type System and Inference",
+      "tip": "OCaml figures out the types of your values automatically. Every value has a type: int, float, string, bool, or a composite type. The compiler checks that operations match the types involved, catching bugs before they run.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 42?",
+              "answer": "int",
+              "explain": "Whole numbers like 42 are integers. OCaml calls this type int.",
+              "choices": [
+                "float",
+                "number",
+                "int",
+                "string"
+              ],
+              "id": "ocaml_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of 3.14?",
+              "answer": "float",
+              "explain": "Numbers with a decimal point are floating-point numbers. OCaml calls this type float.",
+              "choices": [
+                "int",
+                "number",
+                "decimal",
+                "float"
+              ],
+              "id": "ocaml_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of \"hello\"?",
+              "answer": "string",
+              "explain": "Text in double quotes is a string. OCaml calls this type string.",
+              "choices": [
+                "string",
+                "text",
+                "char",
+                "bytes"
+              ],
+              "id": "ocaml_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of true?",
+              "answer": "bool",
+              "explain": "true and false are booleans. OCaml calls this type bool.",
+              "choices": [
+                "int",
+                "bool",
+                "logic",
+                "bit"
+              ],
+              "id": "ocaml_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you add an int and a float with +?",
+              "answer": "No, + requires both operands to be int",
+              "explain": "OCaml is strict about types. The + operator works only on ints. Use +. for floats.",
+              "choices": [
+                "Yes, OCaml converts automatically",
+                "Yes, but the result is a string",
+                "No, + requires both operands to be int",
+                "Only if you use parentheses"
+              ],
+              "id": "ocaml_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Type Inference and Checking",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is type inference?",
+              "answer": "The compiler figures out types without you writing them",
+              "explain": "OCaml infers types from the values and operations you use. You rarely need to write type annotations.",
+              "choices": [
+                "You always write types explicitly",
+                "Types are determined at runtime",
+                "Only functions have types",
+                "The compiler figures out types without you writing them"
+              ],
+              "id": "ocaml_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the compiler infer about x in let x = 42?",
+              "answer": "x has type int",
+              "explain": "The compiler sees 42 is an int, so it infers that x is an int.",
+              "choices": [
+                "x has type int",
+                "x has type float",
+                "x has type unknown",
+                "x has no type"
+              ],
+              "id": "ocaml_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What error does let x = 5 + \"hello\" cause?",
+              "answer": "Type error: cannot add int and string",
+              "explain": "The + operator expects two ints. Adding an int and a string is a type error caught at compile time.",
+              "choices": [
+                "No error, it concatenates",
+                "Type error: cannot add int and string",
+                "No error, it returns 0",
+                "Runtime error"
+              ],
+              "id": "ocaml_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When does OCaml check that types match?",
+              "answer": "At compile time, before the program runs",
+              "explain": "Type checking happens during compilation. Mismatched types are caught before you run the program.",
+              "choices": [
+                "At runtime only",
+                "Only when execution reaches the offending line",
+                "At compile time, before the program runs",
+                "Never, types are optional"
+              ],
+              "id": "ocaml_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the benefit of catching type errors at compile time?",
+              "answer": "You find bugs before running the program",
+              "explain": "Compile-time type checking prevents whole classes of bugs. You know the program is type-safe before you run it.",
+              "choices": [
+                "The program runs faster",
+                "You never have to test",
+                "Type errors are impossible",
+                "You find bugs before running the program"
+              ],
+              "id": "ocaml_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Currying",
+      "tip": "Functions in OCaml are first-class values. You define them with let and the fun keyword. Every function can be partially applied: you can call a function with fewer arguments and get back a new function waiting for the rest.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Defining and Calling Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function that adds 1 to its input?",
+              "answer": "let add_one x = x + 1",
+              "explain": "The syntax let name params = body defines a function. add_one takes x and returns x + 1.",
+              "choices": [
+                "let add_one x = x + 1",
+                "function add_one(x) { return x + 1 }",
+                "let add_one = x + 1",
+                "def add_one(x): return x + 1"
+              ],
+              "id": "ocaml_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of (let add_one x = x + 1 in add_one 5)?",
+              "answer": "6",
+              "explain": "The function add_one adds 1 to its input. add_one 5 = 5 + 1 = 6.",
+              "choices": [
+                "5",
+                "6",
+                "1",
+                "Error: add_one is not defined"
+              ],
+              "id": "ocaml_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function with two parameters?",
+              "answer": "let add x y = x + y",
+              "explain": "Just list the parameters separated by spaces. OCaml infers the types from usage. Writing (x, y) would instead define one parameter that is a pair.",
+              "choices": [
+                "let add x, y = x + y",
+                "add(x, y) -> x + y",
+                "let add x y = x + y",
+                "let add = x, y => x + y"
+              ],
+              "id": "ocaml_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of (let add x y = x + y in add 2 3)?",
+              "answer": "5",
+              "explain": "The function add takes two parameters and returns their sum. add 2 3 = 2 + 3 = 5.",
+              "choices": [
+                "2",
+                "3",
+                "Error: too many arguments",
+                "5"
+              ],
+              "id": "ocaml_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use a function as a value?",
+              "answer": "Yes, functions are first-class values in OCaml",
+              "explain": "Functions are values. You can bind them to names, pass them to other functions, and return them from functions.",
+              "choices": [
+                "Yes, functions are first-class values in OCaml",
+                "No, only primitive types are values",
+                "Only in higher-order functions",
+                "Only at the top level"
+              ],
+              "id": "ocaml_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Currying and Partial Application",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is currying?",
+              "answer": "Every function takes one argument and returns either a value or another function",
+              "explain": "Currying is a transformation where a function with multiple parameters becomes a chain of single-parameter functions. This happens automatically in OCaml.",
+              "choices": [
+                "Using functions as arguments",
+                "Every function takes one argument and returns either a value or another function",
+                "Combining multiple functions",
+                "Storing functions in data structures"
+              ],
+              "id": "ocaml_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is partial application?",
+              "answer": "Calling a function with fewer arguments than it needs, getting back a new function",
+              "explain": "Partial application lets you fix some arguments and wait for others. let add_five = add 5 creates a new function that adds 5 to its input.",
+              "choices": [
+                "Applying a function to nothing",
+                "Applying multiple functions at once",
+                "Calling a function with fewer arguments than it needs, getting back a new function",
+                "Applying a function inside another function"
+              ],
+              "id": "ocaml_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Given let add x y = x + y, what is the type of add 5?",
+              "answer": "A function that takes an int and returns an int",
+              "explain": "add 5 fixes the first argument to 5 and waits for the second. It is a new function that adds 5 to whatever you pass it.",
+              "choices": [
+                "int",
+                "The number 5",
+                "Error: not enough arguments",
+                "A function that takes an int and returns an int"
+              ],
+              "id": "ocaml_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is (let add x y = x + y in let add_three = add 3 in add_three 7)?",
+              "answer": "10",
+              "explain": "add_three is the partial application add 3, which waits for one more argument. add_three 7 = 3 + 7 = 10.",
+              "choices": [
+                "10",
+                "3",
+                "7",
+                "Error: too many arguments"
+              ],
+              "id": "ocaml_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is currying useful?",
+              "answer": "It lets you create new functions by partially applying existing ones",
+              "explain": "Currying and partial application enable functional composition and reuse. You can build complex behavior from simple pieces.",
+              "choices": [
+                "It makes code faster",
+                "It lets you create new functions by partially applying existing ones",
+                "It prevents bugs",
+                "It is required for all programs"
+              ],
+              "id": "ocaml_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Pattern Matching",
+      "tip": "Pattern matching lets you destructure values and handle different cases. Instead of nested if statements, you write match expressions that check the shape and content of a value. Patterns can extract parts of data structures.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Match Expressions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a match expression do?",
+              "answer": "Tests a value against multiple patterns and executes the matching case",
+              "explain": "match compares a value against patterns. When a pattern matches, the corresponding code runs. Patterns can extract parts of the value.",
+              "choices": [
+                "Searches for a substring",
+                "Matches two functions",
+                "Tests a value against multiple patterns and executes the matching case",
+                "Finds the best-fitting type"
+              ],
+              "id": "ocaml_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of this? match 5 with | 5 -> \"five\" | _ -> \"other\"",
+              "answer": "\"five\"",
+              "explain": "The pattern 5 matches the value 5, so \"five\" is returned. The | _ pattern matches anything else but is not reached.",
+              "choices": [
+                "\"other\"",
+                "5",
+                "Error: duplicate patterns",
+                "\"five\""
+              ],
+              "id": "ocaml_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the _ pattern do?",
+              "answer": "Matches any value but ignores it",
+              "explain": "_ is a wildcard pattern. It matches anything and is used for cases you don't care about or when you want a default.",
+              "choices": [
+                "Matches any value but ignores it",
+                "Matches only empty values",
+                "Matches nothing",
+                "Requires a variable name"
+              ],
+              "id": "ocaml_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of this? match 10 with | 1 -> \"one\" | 2 -> \"two\" | _ -> \"many\"",
+              "answer": "\"many\"",
+              "explain": "10 does not match 1 or 2, so the wildcard pattern _ matches and returns \"many\".",
+              "choices": [
+                "\"one\"",
+                "\"many\"",
+                "\"two\"",
+                "Error: no matching pattern"
+              ],
+              "id": "ocaml_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if a match expression leaves out a possible case?",
+              "answer": "Yes, the compiler warns about non-exhaustive patterns",
+              "explain": "The OCaml compiler checks that a match covers all possible cases. If you forget one, it warns you about non-exhaustive patterns.",
+              "choices": [
+                "Nothing, the compiler stays silent",
+                "The program silently skips the missing case",
+                "Yes, the compiler warns about non-exhaustive patterns",
+                "Never, undefined cases return false"
+              ],
+              "id": "ocaml_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Destructuring and Complex Patterns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does this pattern do? let (a, b) = (1, 2)",
+              "answer": "Destructures the tuple and binds a to 1 and b to 2",
+              "explain": "Pattern matching with tuples extracts the components. a gets 1 and b gets 2.",
+              "choices": [
+                "Creates a new tuple",
+                "Compares two tuples",
+                "Error: tuples cannot be destructured",
+                "Destructures the tuple and binds a to 1 and b to 2"
+              ],
+              "id": "ocaml_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the result of match (3, 4) with | (a, b) -> a + b?",
+              "answer": "7",
+              "explain": "The pattern (a, b) matches the tuple and binds a to 3 and b to 4. Then a + b = 3 + 4 = 7.",
+              "choices": [
+                "7",
+                "3",
+                "4",
+                "Error: patterns must be constants"
+              ],
+              "id": "ocaml_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between | (a, b) -> ... and | (_, b) -> ...?",
+              "answer": "The first binds a, the second ignores the first component",
+              "explain": "In the first pattern, a is bound to the first component. In the second, _ discards it and a is not available.",
+              "choices": [
+                "They are the same",
+                "The first binds a, the second ignores the first component",
+                "The second is faster",
+                "The first is only for tuples"
+              ],
+              "id": "ocaml_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use multiple patterns in one match?",
+              "answer": "Yes, each case is a separate pattern",
+              "explain": "match expressions have multiple cases, each with a pattern. The first matching pattern's code runs.",
+              "choices": [
+                "No, only one pattern per match",
+                "Only with guards",
+                "Yes, each case is a separate pattern",
+                "Only with tuples"
+              ],
+              "id": "ocaml_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is this pattern? | (1, x) -> x",
+              "answer": "Matches a tuple where the first element is 1 and binds the second to x",
+              "explain": "The pattern 1 matches only the value 1. x is a variable pattern matching anything. So this matches tuples starting with 1.",
+              "choices": [
+                "Matches any tuple",
+                "Matches any pair, whatever its first element",
+                "Error: mixed literal and variable patterns",
+                "Matches a tuple where the first element is 1 and binds the second to x"
+              ],
+              "id": "ocaml_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Composite Data Structures",
+      "tip": "OCaml gives you multiple ways to group values together. Tuples hold a fixed number of values of any type. Lists hold sequences of values of the same type. Records group named fields together. Each structure has strengths for different problems.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Tuples and Lists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a tuple?",
+              "answer": "A fixed-size collection of values, possibly of different types",
+              "explain": "A tuple like (1, \"hello\", true) holds multiple values in a fixed order. Each position can have a different type.",
+              "choices": [
+                "A fixed-size collection of values, possibly of different types",
+                "A list of values",
+                "A mutable array",
+                "A string"
+              ],
+              "id": "ocaml_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a tuple with 2 and \"hi\"?",
+              "answer": "(2, \"hi\")",
+              "explain": "Tuples use parentheses and commas. This creates a tuple holding an int and a string.",
+              "choices": [
+                "[2, \"hi\"]",
+                "(2, \"hi\")",
+                "{2, \"hi\"}",
+                "2, \"hi\""
+              ],
+              "id": "ocaml_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a list?",
+              "answer": "A sequence of values of the same type, variable length",
+              "explain": "A list like [1; 2; 3] holds many values in order, all of the same type, and can have any length.",
+              "choices": [
+                "A tuple with many elements",
+                "A mutable array",
+                "A sequence of values of the same type, variable length",
+                "A string"
+              ],
+              "id": "ocaml_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a list with 1, 2, and 3?",
+              "answer": "[1; 2; 3]",
+              "explain": "Lists use square brackets and semicolons (not commas). This creates a list of three ints.",
+              "choices": [
+                "[1, 2, 3]",
+                "{1, 2, 3}",
+                "(1; 2; 3)",
+                "[1; 2; 3]"
+              ],
+              "id": "ocaml_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between (1, 2) and [1; 2]?",
+              "answer": "Tuple has fixed size, list has variable size and all elements must be the same type",
+              "explain": "Tuples can mix types and have a fixed size. Lists hold one type and can have any length.",
+              "choices": [
+                "Tuple has fixed size, list has variable size and all elements must be the same type",
+                "They are the same",
+                "Tuples are faster",
+                "Lists use different syntax only"
+              ],
+              "id": "ocaml_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Records",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a record?",
+              "answer": "A collection of named fields",
+              "explain": "A record groups related values with names. Like { name = \"Alice\"; age = 30 }. You access fields by name, not position.",
+              "choices": [
+                "A list of names",
+                "A collection of named fields",
+                "A list indexed by names",
+                "A string"
+              ],
+              "id": "ocaml_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a record with a name field \"Bob\" and age field 25?",
+              "answer": "{ name = \"Bob\"; age = 25 }",
+              "explain": "Records use curly braces and semicolons. Fields are name = value pairs.",
+              "choices": [
+                "[name = \"Bob\", age = 25]",
+                "(name = \"Bob\", age = 25)",
+                "{ name = \"Bob\"; age = 25 }",
+                "name: \"Bob\", age: 25"
+              ],
+              "id": "ocaml_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access the name field of a record r?",
+              "answer": "r.name",
+              "explain": "Records use dot notation. r.name accesses the name field of record r.",
+              "choices": [
+                "r[name]",
+                "r['name']",
+                "r->name",
+                "r.name"
+              ],
+              "id": "ocaml_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the advantage of records over tuples?",
+              "answer": "You access fields by name, not position",
+              "explain": "Named fields make code clearer. You do not have to remember which position holds what. Records are self-documenting.",
+              "choices": [
+                "You access fields by name, not position",
+                "Records are faster",
+                "Records are smaller",
+                "Records can mix types but tuples cannot"
+              ],
+              "id": "ocaml_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you modify a field in an immutable record?",
+              "answer": "No, but you can create a new record with the field changed",
+              "explain": "Record fields are immutable by default. To change a field, use { r with name = \"Alice\" } to create a new record with that field updated.",
+              "choices": [
+                "Yes, with r.name <- \"Alice\"",
+                "No, but you can create a new record with the field changed",
+                "Yes, with r.name = \"Alice\"",
+                "Never, all records are read-only"
+              ],
+              "id": "ocaml_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Variants, Options, and Recursion",
+      "tip": "Variant types let you define a value that can be one of several shapes. The option type handles the common case of a value that might not exist. Recursion lets functions call themselves on smaller pieces of data, naturally handling structures like lists and trees.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Variant Types and Option",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a variant type?",
+              "answer": "A type where a value can be one of several named alternatives",
+              "explain": "Variant types let you say a value is one shape or another. type color = Red | Green | Blue. A value is exactly one of these.",
+              "choices": [
+                "A type that changes over time",
+                "A numeric range",
+                "A type where a value can be one of several named alternatives",
+                "A union of primitive types"
+              ],
+              "id": "ocaml_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the option type?",
+              "answer": "A type representing a value that might not exist",
+              "explain": "An 'a option is either Some x (value exists) or None (no value). It handles missing data safely.",
+              "choices": [
+                "A choice between options",
+                "A type that might be wrong",
+                "A type holding either an int or a string",
+                "A type representing a value that might not exist"
+              ],
+              "id": "ocaml_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Some 5 represent?",
+              "answer": "A value that exists and is 5",
+              "explain": "Some wraps a real value. Some 5 means the value is present and equals 5.",
+              "choices": [
+                "A value that exists and is 5",
+                "An option that might be 5",
+                "Five copies of a value",
+                "An error with code 5"
+              ],
+              "id": "ocaml_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does None represent?",
+              "answer": "The absence of a value",
+              "explain": "None indicates there is no value. It is safer than null in other languages because the type forces you to check for it.",
+              "choices": [
+                "Zero",
+                "The absence of a value",
+                "False",
+                "An empty list"
+              ],
+              "id": "ocaml_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you extract the value from Some 10?",
+              "answer": "With pattern matching: match x with | Some v -> v | None -> ...",
+              "explain": "You use match to check if it is Some or None. If Some, you get the value. If None, you handle that case.",
+              "choices": [
+                "With .value",
+                "With unwrap()",
+                "With pattern matching: match x with | Some v -> v | None -> ...",
+                "Never, Some values are hidden"
+              ],
+              "id": "ocaml_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Recursion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is recursion?",
+              "answer": "A function calling itself on a smaller piece of the problem",
+              "explain": "Recursion solves a problem by breaking it into smaller versions. Each recursive call handles a smaller piece until reaching a base case.",
+              "choices": [
+                "Using a loop",
+                "Calling multiple functions",
+                "Repeating code",
+                "A function calling itself on a smaller piece of the problem"
+              ],
+              "id": "ocaml_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a base case in recursion?",
+              "answer": "The case where the function does not call itself",
+              "explain": "The base case is the stopping point. Without it, recursion never ends. For factorial, the base case is n = 0 or n = 1.",
+              "choices": [
+                "The case where the function does not call itself",
+                "The main case",
+                "A catch-all pattern",
+                "An error handler"
+              ],
+              "id": "ocaml_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does let rec define?",
+              "answer": "A function that can call itself",
+              "explain": "let rec is used for recursive functions. Regular let would not let a function call itself. let rec enables recursion.",
+              "choices": [
+                "A record type",
+                "A function that can call itself",
+                "A repeated value",
+                "A list of records"
+              ],
+              "id": "ocaml_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Given let rec countdown n = match n with | 0 -> \"done\" | n -> countdown (n - 1), what is countdown 3?",
+              "answer": "\"done\"",
+              "explain": "countdown 3 calls countdown 2, which calls countdown 1, which calls countdown 0. At 0, the base case returns \"done\".",
+              "choices": [
+                "3",
+                "\"3\"",
+                "\"done\"",
+                "Infinite loop"
+              ],
+              "id": "ocaml_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is recursion natural for lists in OCaml?",
+              "answer": "Lists are recursive: a list is either empty or an element followed by a list",
+              "explain": "A list naturally breaks down into head and tail. Recursion matches this structure perfectly.",
+              "choices": [
+                "Lists are required to use recursion",
+                "Recursion is faster for lists",
+                "Only recursion can process lists",
+                "Lists are recursive: a list is either empty or an element followed by a list"
+              ],
+              "id": "ocaml_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

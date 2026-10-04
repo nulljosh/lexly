@@ -1,0 +1,904 @@
+{
+  "id": "clojure",
+  "name": "Clojure",
+  "category": "programming",
+  "icon": "fa-solid fa-circle-nodes",
+  "level": "Lisp on the JVM",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Prefix Notation and S-Expressions",
+      "tip": "Clojure uses prefix notation where the operator comes first, inside parentheses. (+ 1 2) adds 1 and 2. S-expressions (symbolic expressions) are the fundamental syntax: data and code use the same structure.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding Prefix Notation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the result of (+ 3 4)?",
+              "answer": "7",
+              "explain": "In prefix notation, the operator comes first. (+ 3 4) means 3 plus 4, which equals 7.",
+              "choices": [
+                "7",
+                "34",
+                "Error",
+                "Undefined"
+              ],
+              "id": "clojure_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (- 10 3) evaluate to?",
+              "answer": "7",
+              "explain": "The minus operator in prefix notation is placed first: (- 10 3) subtracts 3 from 10, resulting in 7.",
+              "choices": [
+                "13",
+                "7",
+                "-7",
+                "10"
+              ],
+              "id": "clojure_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you perform multiplication in Clojure?",
+              "answer": "(* 5 6)",
+              "explain": "The multiplication operator * goes first in prefix notation. (* 5 6) multiplies 5 by 6.",
+              "choices": [
+                "(5 * 6)",
+                "5 * 6",
+                "(* 5 6)",
+                "(mul 5 6)"
+              ],
+              "id": "clojure_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an S-expression?",
+              "answer": "A symbolic expression using parentheses with an operator or function first",
+              "explain": "S-expressions are lists enclosed in parentheses. In Clojure, they represent both data and executable code, unified under one structure.",
+              "choices": [
+                "A special string type",
+                "An abbreviation for 'statement expression'",
+                "A security protocol",
+                "A symbolic expression using parentheses with an operator or function first"
+              ],
+              "id": "clojure_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (+ 1 2 3 4) return?",
+              "answer": "10",
+              "explain": "The + operator can take any number of arguments in prefix notation. (+ 1 2 3 4) adds all of them: 1+2+3+4 = 10.",
+              "choices": [
+                "10",
+                "6",
+                "1234",
+                "Error"
+              ],
+              "id": "clojure_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Nested Expressions and Function Calls",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does (+ (* 2 3) 4) evaluate to?",
+              "answer": "10",
+              "explain": "Inner expressions evaluate first: (* 2 3) = 6, then (+ 6 4) = 10.",
+              "choices": [
+                "24",
+                "10",
+                "9",
+                "Error"
+              ],
+              "id": "clojure_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In (- 20 (+ 3 2)), what is evaluated first?",
+              "answer": "(+ 3 2)",
+              "explain": "Inner S-expressions are always evaluated first. (+ 3 2) evaluates to 5, then (- 20 5) evaluates to 15.",
+              "choices": [
+                "(- 20 (+ 3 2))",
+                "The entire expression",
+                "(+ 3 2)",
+                "20"
+              ],
+              "id": "clojure_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the first element in an S-expression?",
+              "answer": "It is the operator or function to apply to the remaining elements",
+              "explain": "The first element tells Clojure what operation to perform on the rest of the arguments that follow.",
+              "choices": [
+                "It is always a comment",
+                "It is stored for later use",
+                "It determines the data type of the entire expression",
+                "It is the operator or function to apply to the remaining elements"
+              ],
+              "id": "clojure_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (* (+ 1 2) (- 5 1)) evaluate to?",
+              "answer": "12",
+              "explain": "(+ 1 2) = 3 and (- 5 1) = 4, so (* 3 4) = 12.",
+              "choices": [
+                "12",
+                "8",
+                "21",
+                "Error"
+              ],
+              "id": "clojure_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What separates the elements in (+ 1 2)?",
+              "answer": "Whitespace",
+              "explain": "Whitespace separates the operator and arguments. (+ 1 2) works, but (+1 2) does not, because +1 is read as the single number 1, not as a call to +.",
+              "choices": [
+                "Semicolons",
+                "Whitespace",
+                "Periods",
+                "Dollar signs"
+              ],
+              "id": "clojure_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Immutable Data Structures",
+      "tip": "Clojure provides four main immutable collections: lists, vectors, maps, and sets. Lists are linked-list sequences optimized for sequential access. Vectors are indexed arrays optimized for random access. Maps store key-value pairs. Sets store unique values.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Vectors and Lists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a vector in Clojure?",
+              "answer": "[1 2 3]",
+              "explain": "Vectors are created using square brackets. [1 2 3] is a vector containing the numbers 1, 2, and 3.",
+              "choices": [
+                "(1 2 3)",
+                "{1 2 3}",
+                "[1 2 3]",
+                "'(1 2 3)"
+              ],
+              "id": "clojure_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of vectors over lists in Clojure?",
+              "answer": "Fast random access by index",
+              "explain": "Vectors are optimized for accessing elements by their index position. You can retrieve any element quickly without traversing the entire sequence.",
+              "choices": [
+                "They use less memory",
+                "They support more data types",
+                "They are easier to write",
+                "Fast random access by index"
+              ],
+              "id": "clojure_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a list in Clojure?",
+              "answer": "'(1 2 3)",
+              "explain": "Lists are created using a single quote before parentheses. '(1 2 3) creates a list. Without the quote, (1 2 3) would be interpreted as a function call.",
+              "choices": [
+                "'(1 2 3)",
+                "[1 2 3]",
+                "(1 2 3)",
+                "{1 2 3}"
+              ],
+              "id": "clojure_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are all Clojure data structures immutable?",
+              "answer": "To enable safe concurrency and predictable code behavior",
+              "explain": "Immutability means data cannot be changed. This prevents race conditions in concurrent programs and makes code more predictable and easier to reason about.",
+              "choices": [
+                "To save memory",
+                "To enable safe concurrency and predictable code behavior",
+                "Because lists and vectors require it",
+                "To prevent errors only"
+              ],
+              "id": "clojure_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (get [10 20 30] 1) return?",
+              "answer": "20",
+              "explain": "Vectors are zero-indexed. Index 0 is 10, index 1 is 20, and index 2 is 30.",
+              "choices": [
+                "10",
+                "30",
+                "20",
+                "Error"
+              ],
+              "id": "clojure_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Maps and Sets",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you create a map in Clojure?",
+              "answer": "{:name \"Alice\" :age 30}",
+              "explain": "Maps are created using curly braces with alternating keys and values. Keys are often keywords (starting with :) for clarity and performance.",
+              "choices": [
+                "[:name \"Alice\" :age 30]",
+                "'(:name \"Alice\" :age 30)",
+                "[{:name \"Alice\"} {:age 30}]",
+                "{:name \"Alice\" :age 30}"
+              ],
+              "id": "clojure_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a keyword in Clojure?",
+              "answer": "An identifier starting with : that evaluates to itself",
+              "explain": "Keywords like :name and :age are often used as map keys. They evaluate to themselves and offer good performance.",
+              "choices": [
+                "An identifier starting with : that evaluates to itself",
+                "A type of file",
+                "A reserved word in Clojure",
+                "A function name"
+              ],
+              "id": "clojure_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does ({:a 1 :b 2} :a) return?",
+              "answer": "1",
+              "explain": "When a map is used as a function with a keyword argument, it looks up that keyword's value. The map {:a 1 :b 2} contains :a with value 1.",
+              "choices": [
+                ":a",
+                "1",
+                "2",
+                "Error"
+              ],
+              "id": "clojure_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you create a set in Clojure?",
+              "answer": "#{1 2 3}",
+              "explain": "Sets are created using #{ }. They store only unique values and are unordered.",
+              "choices": [
+                "[1 2 3]",
+                "{1 2 3}",
+                "#{1 2 3}",
+                "(1 2 3)"
+              ],
+              "id": "clojure_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (#{1 2 3} 2) return?",
+              "answer": "2",
+              "explain": "When a set is used as a function with an argument, it returns that element if it exists in the set, or nil if it doesn't. 2 is in #{1 2 3}, so it returns 2.",
+              "choices": [
+                "true",
+                "nil",
+                "false",
+                "2"
+              ],
+              "id": "clojure_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Bindings",
+      "tip": "Functions are defined with defn and reused throughout your program. The let form binds variables to values within a local scope. Bindings allow you to name intermediate values and organize computations.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Defining Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you define a function that adds two numbers?",
+              "answer": "(defn add [x y] (+ x y))",
+              "explain": "defn defines a named function. [x y] is the parameter list, and (+ x y) is the body. The function can then be called as (add 3 4).",
+              "choices": [
+                "(defn add [x y] (+ x y))",
+                "(def add (x y) (+ x y))",
+                "(fn [x y] (+ x y))",
+                "(function add x y)"
+              ],
+              "id": "clojure_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (defn square [n] (* n n)) define?",
+              "answer": "A function that multiplies a number by itself",
+              "explain": "This defines a function named 'square' that takes one parameter n and returns n multiplied by itself.",
+              "choices": [
+                "A variable holding a number",
+                "A function that multiplies a number by itself",
+                "A list of operations",
+                "A mathematical formula"
+              ],
+              "id": "clojure_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you call a function named greet?",
+              "answer": "(greet \"Alice\")",
+              "explain": "Functions are called using prefix notation with the function name first, followed by arguments in parentheses.",
+              "choices": [
+                "greet(\"Alice\")",
+                "greet \"Alice\"",
+                "(greet \"Alice\")",
+                "call greet"
+              ],
+              "id": "clojure_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the return value of a Clojure function?",
+              "answer": "The result of the last expression evaluated",
+              "explain": "Clojure functions return the value of their last expression. There is no explicit return keyword needed.",
+              "choices": [
+                "Always nil",
+                "The first expression only",
+                "Nothing, functions have side effects only",
+                "The result of the last expression evaluated"
+              ],
+              "id": "clojure_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a Clojure function have multiple parameters?",
+              "answer": "Yes, list them all in the parameter vector",
+              "explain": "Functions can have any number of parameters. All parameters are listed in square brackets: [x y z] for three parameters.",
+              "choices": [
+                "Yes, list them all in the parameter vector",
+                "No, only one parameter allowed",
+                "Only if wrapped in another function",
+                "Yes, but they must be the same type"
+              ],
+              "id": "clojure_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Let Bindings and Variable Scope",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does (let [x 5] (+ x 3)) return?",
+              "answer": "8",
+              "explain": "let binds the symbol x to the value 5 within the let scope. Then (+ x 3) evaluates to 8.",
+              "choices": [
+                "5",
+                "8",
+                "Error",
+                "undefined"
+              ],
+              "id": "clojure_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the scope of a variable defined with let?",
+              "answer": "Only within the let expression",
+              "explain": "Variables bound by let are only available within that let form. Outside the let, the binding disappears.",
+              "choices": [
+                "Global for the entire program",
+                "Until the next function call",
+                "Only within the let expression",
+                "For the entire function"
+              ],
+              "id": "clojure_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you bind multiple variables in a single let?",
+              "answer": "(let [x 1 y 2] (+ x y))",
+              "explain": "Multiple bindings are listed sequentially in the vector: [x 1 y 2] binds x to 1 and y to 2.",
+              "choices": [
+                "(let x 1 y 2 (+ x y))",
+                "(let [x 1] [y 2] (+ x y))",
+                "(let [x=1 y=2] (+ x y))",
+                "(let [x 1 y 2] (+ x y))"
+              ],
+              "id": "clojure_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a later binding in let reference an earlier one?",
+              "answer": "Yes, bindings are sequential",
+              "explain": "In let, each binding is available for subsequent bindings and the body. (let [x 5 y (+ x 1)] y) evaluates to 6.",
+              "choices": [
+                "Yes, bindings are sequential",
+                "No, all bindings are independent",
+                "Only if they are nested lets",
+                "It causes an error"
+              ],
+              "id": "clojure_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (let [x 10] (let [x 5] x)) return?",
+              "answer": "5",
+              "explain": "The inner let creates a new binding for x that shadows the outer one. Inside the inner let, x is 5.",
+              "choices": [
+                "10",
+                "5",
+                "15",
+                "nil"
+              ],
+              "id": "clojure_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Higher-Order Functions",
+      "tip": "Higher-order functions like map, filter, and reduce take functions as arguments or return functions. map applies a function to each element of a sequence. filter keeps only elements that satisfy a condition. reduce accumulates a result by applying a function repeatedly.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Map and Filter",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does (map inc [1 2 3]) return?",
+              "answer": "(2 3 4)",
+              "explain": "map applies inc (increment) to each element. inc adds 1 to each number: 1->2, 2->3, 3->4.",
+              "choices": [
+                "[1 2 3]",
+                "6",
+                "(2 3 4)",
+                "Error"
+              ],
+              "id": "clojure_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the map function?",
+              "answer": "Apply a function to each element and return a new sequence",
+              "explain": "map transforms every element of a sequence by applying a given function, producing a new sequence with the transformed values.",
+              "choices": [
+                "Sort a sequence alphabetically",
+                "Find the maximum element",
+                "Remove duplicates",
+                "Apply a function to each element and return a new sequence"
+              ],
+              "id": "clojure_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (filter even? [1 2 3 4 5]) return?",
+              "answer": "(2 4)",
+              "explain": "filter keeps only elements where the predicate (even?) returns true. 2 and 4 are even, so they remain.",
+              "choices": [
+                "(2 4)",
+                "(1 3 5)",
+                "[2 4]",
+                "4"
+              ],
+              "id": "clojure_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you filter numbers less than 5 from [1 3 5 7]?",
+              "answer": "(filter #(< % 5) [1 3 5 7])",
+              "explain": "#() is shorthand for an anonymous function where % represents the argument. #(< % 5) tests if each number is less than 5.",
+              "choices": [
+                "(filter < 5 [1 3 5 7])",
+                "(filter #(< % 5) [1 3 5 7])",
+                "(filter [1 3 5 7] < 5)",
+                "(filter 5 > [1 3 5 7])"
+              ],
+              "id": "clojure_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (map #(* % 2) [1 2 3]) return?",
+              "answer": "(2 4 6)",
+              "explain": "map applies #(* % 2) to each element, doubling each number: 1*2=2, 2*2=4, 3*2=6.",
+              "choices": [
+                "[2 4 6]",
+                "(1 2 3 2)",
+                "(2 4 6)",
+                "12"
+              ],
+              "id": "clojure_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Reduce and Function Composition",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does (reduce + [1 2 3 4]) return?",
+              "answer": "10",
+              "explain": "reduce applies + repeatedly: start with 1, add 2 to get 3, add 3 to get 6, add 4 to get 10.",
+              "choices": [
+                "9",
+                "24",
+                "Error",
+                "10"
+              ],
+              "id": "clojure_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of reduce?",
+              "answer": "Accumulate a result by applying a function to elements sequentially",
+              "explain": "reduce takes a function and a sequence, combining elements step-by-step to produce a single result. It is useful for summing, multiplying, or aggregating values.",
+              "choices": [
+                "Accumulate a result by applying a function to elements sequentially",
+                "Decrease the size of a sequence",
+                "Remove duplicate elements",
+                "Sort ascending"
+              ],
+              "id": "clojure_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (reduce * 1 [2 3 4]) return?",
+              "answer": "24",
+              "explain": "reduce starts with accumulator 1, then multiplies: 1*2=2, 2*3=6, 6*4=24.",
+              "choices": [
+                "9",
+                "24",
+                "234",
+                "12"
+              ],
+              "id": "clojure_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you combine map and filter?",
+              "answer": "Yes, they return sequences and can be nested or chained",
+              "explain": "Both map and filter return sequences, so you can pass one's result to the other: (map inc (filter even? [1 2 3 4])).",
+              "choices": [
+                "No, they are incompatible",
+                "Only with special syntax",
+                "Yes, they return sequences and can be nested or chained",
+                "Never together"
+              ],
+              "id": "clojure_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (map #(+ % 10) (filter even? [1 2 3 4])) return?",
+              "answer": "(12 14)",
+              "explain": "filter picks [2 4], then map adds 10 to each: 2+10=12, 4+10=14.",
+              "choices": [
+                "(11 12 13 14)",
+                "(101 102 103 104)",
+                "(20 40)",
+                "(12 14)"
+              ],
+              "id": "clojure_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Keywords and Special Forms",
+      "tip": "Keywords are self-evaluating names starting with : used primarily as map keys. Special forms like if and quote are not regular functions but core language constructs. if evaluates one of two branches based on a condition. quote prevents evaluation of a form.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Keywords and Conditionals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a keyword in Clojure syntax?",
+              "answer": "An identifier starting with : that evaluates to itself",
+              "explain": "Keywords like :name or :age evaluate to themselves. They are commonly used as map keys and as identifiers.",
+              "choices": [
+                "An identifier starting with : that evaluates to itself",
+                "A reserved word you cannot use",
+                "A string enclosed in colons",
+                "A type of variable"
+              ],
+              "id": "clojure_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (if (> 5 3) \"yes\" \"no\") return?",
+              "answer": "\"yes\"",
+              "explain": "if evaluates the condition (> 5 3), which is true. So it returns the first branch, \"yes\".",
+              "choices": [
+                "\"no\"",
+                "\"yes\"",
+                "true",
+                "5"
+              ],
+              "id": "clojure_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the structure of an if form?",
+              "answer": "(if condition then-value else-value)",
+              "explain": "if takes three forms: a condition expression, an expression to evaluate if true, and an expression to evaluate if false.",
+              "choices": [
+                "(if then-value else-value condition)",
+                "(if then-value condition)",
+                "(if condition then-value else-value)",
+                "(if condition)"
+              ],
+              "id": "clojure_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (cond (< 2 1) \"A\" (> 3 1) \"B\" :else \"C\") return?",
+              "answer": "\"B\"",
+              "explain": "cond tests conditions in order. (< 2 1) is false, (> 3 1) is true, so it returns \"B\". :else is the default.",
+              "choices": [
+                "\"A\"",
+                "\"C\"",
+                "nil",
+                "\"B\""
+              ],
+              "id": "clojure_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are keywords preferred as map keys over strings?",
+              "answer": "Keywords evaluate to themselves and are more efficient",
+              "explain": "Keywords evaluate to themselves, making them ideal for map keys. They are also faster to compare than strings.",
+              "choices": [
+                "Keywords evaluate to themselves and are more efficient",
+                "Strings are not allowed",
+                "Maps only accept keywords",
+                "Keywords are case-insensitive"
+              ],
+              "id": "clojure_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Quoting and Special Forms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the quote operator (') do?",
+              "answer": "Prevents evaluation of the following form",
+              "explain": "The single quote ' tells Clojure to treat the next form as data, not to evaluate it. '(+ 1 2) returns the list itself, not 3.",
+              "choices": [
+                "Marks the beginning of a string",
+                "Prevents evaluation of the following form",
+                "Concatenates strings",
+                "Defines a variable"
+              ],
+              "id": "clojure_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does '(+ 1 2) return?",
+              "answer": "(+ 1 2)",
+              "explain": "The quote prevents evaluation. '(+ 1 2) returns the list (+ 1 2) as data, not the result 3.",
+              "choices": [
+                "3",
+                "Syntax error",
+                "(+ 1 2)",
+                "nil"
+              ],
+              "id": "clojure_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a special form?",
+              "answer": "A core construct evaluated specially, not as a normal function",
+              "explain": "Special forms like if, def, and quote have special evaluation rules. They are not regular functions and control evaluation flow.",
+              "choices": [
+                "A type of data structure",
+                "A comment",
+                "A macro definition",
+                "A core construct evaluated specially, not as a normal function"
+              ],
+              "id": "clojure_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (quote (1 2 3)) return?",
+              "answer": "(1 2 3)",
+              "explain": "quote returns the list (1 2 3) as data. Without quote, (1 2 3) would attempt to call 1 as a function, which would error.",
+              "choices": [
+                "(1 2 3)",
+                "6",
+                "Syntax error",
+                "123"
+              ],
+              "id": "clojure_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check if a value is nil?",
+              "answer": "(nil? value)",
+              "explain": "nil? is a predicate function that returns true if the value is nil, the Clojure equivalent of null.",
+              "choices": [
+                "(null? value)",
+                "(nil? value)",
+                "(empty? value)",
+                "(false? value)"
+              ],
+              "id": "clojure_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Laziness and Metaprogramming",
+      "tip": "Lazy sequences compute values only when needed, saving memory and enabling infinite sequences. Macros allow code to manipulate and generate code. Code as data means Clojure treats programs like any other data structure, enabling metaprogramming.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Lazy Sequences",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the range function do?",
+              "answer": "Creates a lazy sequence of numbers",
+              "explain": "range generates a sequence of numbers. (range 1 5) produces 1, 2, 3, 4. It is lazy, so numbers are computed only when accessed.",
+              "choices": [
+                "Sets a range for a function",
+                "Sorts numbers in order",
+                "Creates a lazy sequence of numbers",
+                "Returns a random number"
+              ],
+              "id": "clojure_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a lazy sequence?",
+              "answer": "A sequence that computes values only when requested",
+              "explain": "Lazy sequences delay computation until values are actually needed. This enables infinite sequences and efficient memory use.",
+              "choices": [
+                "A sequence sorted in reverse order",
+                "A sequence stored in memory",
+                "A sequence without functions",
+                "A sequence that computes values only when requested"
+              ],
+              "id": "clojure_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (take 3 (range 1 10)) return?",
+              "answer": "(1 2 3)",
+              "explain": "take extracts the first n elements from a sequence. (range 1 10) would produce 1 through 9, but take stops after 3 elements.",
+              "choices": [
+                "(1 2 3)",
+                "(1 2 3 4 5 6 7 8 9)",
+                "[1 2 3]",
+                "(7 8 9)"
+              ],
+              "id": "clojure_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you create an infinite lazy sequence in Clojure?",
+              "answer": "Yes, because values are computed only when accessed",
+              "explain": "(range) with no arguments creates an infinite sequence of natural numbers. You can use it safely because take or other functions can limit how many values you consume.",
+              "choices": [
+                "No, the computer would run out of memory",
+                "Yes, because values are computed only when accessed",
+                "Only with special syntax",
+                "Only inside a macro"
+              ],
+              "id": "clojure_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does (drop 2 [1 2 3 4 5]) return?",
+              "answer": "(3 4 5)",
+              "explain": "drop skips the first n elements. Dropping 2 elements from [1 2 3 4 5] leaves (3 4 5).",
+              "choices": [
+                "(1 2)",
+                "[1 2]",
+                "(3 4 5)",
+                "3"
+              ],
+              "id": "clojure_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Code as Data and Macros",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'code as data' mean in Clojure?",
+              "answer": "Programs are represented as regular data structures that can be manipulated",
+              "explain": "Clojure source code is represented as lists and other data types. This enables macros and metaprogramming: treating code as data you can analyze and transform.",
+              "choices": [
+                "Code must be stored in a file",
+                "Data cannot be used in code",
+                "Code is compiled to binary",
+                "Programs are represented as regular data structures that can be manipulated"
+              ],
+              "id": "clojure_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a macro?",
+              "answer": "Code that generates code at compile time",
+              "explain": "Macros are functions that take unevaluated code as input and return code. They run during compilation to generate new code.",
+              "choices": [
+                "Code that generates code at compile time",
+                "A keyboard shortcut",
+                "A variable",
+                "A type of string"
+              ],
+              "id": "clojure_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are macro arguments different from function arguments?",
+              "answer": "Macro arguments are unevaluated; function arguments are evaluated first",
+              "explain": "Functions receive evaluated values. Macros receive unevaluated code, allowing them to control when and how arguments are evaluated.",
+              "choices": [
+                "They are the same",
+                "Macro arguments are unevaluated; function arguments are evaluated first",
+                "Macros can only have one argument",
+                "Macros use keywords"
+              ],
+              "id": "clojure_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage do macros provide?",
+              "answer": "They enable language extensions and custom syntax",
+              "explain": "Macros let you create new language constructs and syntactic forms. Domain-specific languages and custom control flow are built with macros.",
+              "choices": [
+                "They run faster than functions",
+                "They are only for clarity",
+                "They enable language extensions and custom syntax",
+                "They make code run on more computers"
+              ],
+              "id": "clojure_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does defmacro do?",
+              "answer": "Defines a macro that generates code",
+              "explain": "defmacro is to macros what defn is to functions. It defines a macro by its name, parameter list, and body.",
+              "choices": [
+                "Defines a function",
+                "Compiles code",
+                "Imports a library",
+                "Defines a macro that generates code"
+              ],
+              "id": "clojure_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
