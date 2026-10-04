@@ -71,12 +71,12 @@
               "type": "mathChoice",
               "question": "What does it mean to compile C code?",
               "answer": "Translate source code into machine-executable instructions",
-              "explain": "The compiler reads your C source file and produces an executable binary that the computer can run directly.",
+              "explain": "The compiler reads your C source file and, together with the linker, produces an executable program the computer can run directly.",
               "choices": [
                 "Store the code on disk",
                 "Run the program",
                 "Translate source code into machine-executable instructions",
-                "Check for errors in syntax"
+                "Download libraries from the internet"
               ],
               "id": "c_lang_u1l1_4"
             }
@@ -518,7 +518,7 @@
               "type": "mathChoice",
               "question": "What is NULL?",
               "answer": "A special pointer value meaning no address, used to mark invalid pointers",
-              "explain": "NULL is a macro (usually defined as 0) representing a null pointer. A NULL pointer does not point to any valid memory.",
+              "explain": "NULL is a macro for a null pointer constant, often written 0 or ((void *)0). A NULL pointer does not point to any valid memory.",
               "choices": [
                 "An empty variable",
                 "A special pointer value meaning no address, used to mark invalid pointers",
@@ -541,7 +541,7 @@
               "choices": [
                 "Adding or subtracting integers to move a pointer through memory",
                 "Multiplying pointer addresses",
-                "Mathematical operations on pointer values",
+                "Dereferencing a pointer twice",
                 "Casting pointers to different types"
               ],
               "id": "c_lang_u4l2_0"
@@ -641,7 +641,7 @@
               "type": "mathChoice",
               "question": "How does an array relate to pointers?",
               "answer": "An array name decays to a pointer to its first element",
-              "explain": "arr is equivalent to &arr[0]. When you pass arr to a function, it passes a pointer to the first element.",
+              "explain": "In most expressions, arr becomes &arr[0]. When you pass arr to a function, it passes a pointer to the first element. (Exceptions are sizeof arr and &arr.)",
               "choices": [
                 "Arrays are slower than pointers",
                 "Pointers can only point to arrays",
@@ -652,7 +652,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is the size of an array declaration int arr[10]?",
+              "question": "How much memory does the declaration int arr[10]; reserve?",
               "answer": "10 integers, each typically 4 bytes",
               "explain": "An array of 10 ints typically uses 40 bytes total (10 * 4). The exact size depends on the system.",
               "choices": [
@@ -736,14 +736,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "How do you safely copy a string to avoid overflow?",
-              "answer": "Use strncpy() with a size limit",
-              "explain": "strncpy(dest, src, n) copies at most n characters, so it cannot write past the limit. If the source is too long it leaves no terminator, so set the last byte of dest to '\\0' yourself.",
+              "question": "What does strncpy(dest, src, n) do when src has n or more characters?",
+              "answer": "Copies n characters and does not add a null terminator",
+              "explain": "strncpy copies at most n characters. If src is that long, no null terminator is written, so you must set the last byte of dest to \\0 yourself.",
               "choices": [
-                "Use strcpy() carefully",
-                "Use strncpy() with a size limit",
-                "Use memcpy() instead",
-                "Check the string length first"
+                "Copies the whole string and adds a null terminator",
+                "Copies n characters and does not add a null terminator",
+                "Copies n-1 characters and adds a null terminator",
+                "Returns an error and copies nothing"
               ],
               "id": "c_lang_u5l2_4"
             }
@@ -789,13 +789,13 @@
             {
               "type": "mathChoice",
               "question": "What does free() do?",
-              "answer": "Releases allocated memory back to the system",
+              "answer": "Releases allocated memory so it can be reused",
               "explain": "free deallocates memory allocated by malloc. Failing to free causes a memory leak.",
               "choices": [
                 "Clears a variable",
                 "Allocates memory",
                 "Stops a program",
-                "Releases allocated memory back to the system"
+                "Releases allocated memory so it can be reused"
               ],
               "id": "c_lang_u6l1_2"
             },

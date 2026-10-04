@@ -35,7 +35,7 @@
               "explain": "The TypeScript compiler converts your .ts files to .js files. The JavaScript is what actually runs. All type information is removed.",
               "choices": [
                 "Run the program",
-                "Check for syntax errors",
+                "Download packages from the internet",
                 "Transform TypeScript into plain JavaScript that runs in browsers or Node",
                 "Upload to a server"
               ],
@@ -265,9 +265,9 @@
               "type": "mathChoice",
               "question": "What is the unknown type?",
               "answer": "Like any, but safer: you must check the type before using the value",
-              "explain": "unknown is type-safe. You cannot use it without first narrowing it to a specific type with a typeof check.",
+              "explain": "unknown is type-safe. You cannot use it until you narrow it to a specific type, for example with a typeof check.",
               "choices": [
-                "Like any, but stricter",
+                "A type for values that are always undefined",
                 "A type for undefined values",
                 "A random type",
                 "Like any, but safer: you must check the type before using the value"
@@ -346,7 +346,7 @@
               "explain": "function greet(name?: string) means name can be omitted. It will be undefined if not provided.",
               "choices": [
                 "A parameter with ? that does not have to be provided when the function is called",
-                "A parameter with a default value",
+                "A parameter that always receives null",
                 "A parameter at the end of the list",
                 "A parameter that can be any type"
               ],
@@ -438,9 +438,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "Can you add properties to an object that are not in its type?",
+              "question": "If an object is typed { name: string }, can you add a new property such as person.age = 30?",
               "answer": "No, TypeScript will report a type error",
-              "explain": "If you type an object with { name: string }, you cannot add a new property like age without a type error.",
+              "explain": "No. The type only lists name, so assigning person.age is a type error. TypeScript checks objects against their declared type.",
               "choices": [
                 "No, TypeScript will report a type error",
                 "Only in strict mode",
@@ -494,7 +494,7 @@
               "answer": "Creates a new interface that inherits properties from another",
               "explain": "interface Student extends Person { grade: number; } has all properties of Person plus grade.",
               "choices": [
-                "Combines two interfaces",
+                "Merges two interfaces that share a name",
                 "Marks an interface as required",
                 "Makes the interface longer",
                 "Creates a new interface that inherits properties from another"
@@ -518,7 +518,7 @@
               "type": "mathChoice",
               "question": "Can you use type aliases for objects and union types?",
               "answer": "Yes, type aliases can define any type",
-              "explain": "type can be used for objects, unions, primitives, tuples, and more. interface is limited to objects.",
+              "explain": "type can be used for objects, unions, primitives, tuples, and more. interface can only describe object shapes.",
               "choices": [
                 "Only for objects",
                 "No, only interface can",
@@ -563,7 +563,7 @@
               "type": "mathChoice",
               "question": "Can interfaces and types be used interchangeably?",
               "answer": "Mostly yes for object types, but types are more flexible",
-              "explain": "Both can define object shapes, but type supports unions, tuples, and primitives. For objects, prefer interface for consistency.",
+              "explain": "Both can define object shapes, but type also supports unions, tuples, and primitives, while interfaces can be extended and merged.",
               "choices": [
                 "Only types can define objects",
                 "Always, they are identical",
@@ -652,14 +652,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "How do you check if a value is null or undefined?",
-              "answer": "Using x !== null && x !== undefined or x ?? operations",
-              "explain": "Checking !== null or using the nullish coalescing operator ?? narrows out null and undefined.",
+              "question": "Which check is true only when x is null or undefined?",
+              "answer": "x == null",
+              "explain": "Loose equality treats null and undefined as equal to each other and to nothing else, so x == null catches both. x === null misses undefined, and !x also catches 0 and empty strings.",
               "choices": [
-                "Using x == null",
-                "Using !x",
-                "Using typeof x === 'null'",
-                "Using x !== null && x !== undefined or x ?? operations"
+                "x === null",
+                "x == null",
+                "!x",
+                "typeof x === 'null'"
               ],
               "id": "typescript_u5l1_3"
             },
@@ -730,7 +730,7 @@
                 "[T]",
                 "<T>[]",
                 "Array<T> or T[] where T is the element type",
-                "T[]"
+                "Array[T]"
               ],
               "id": "typescript_u5l2_3"
             },
@@ -885,12 +885,12 @@
             },
             {
               "type": "mathChoice",
-              "question": "Why use enums instead of string literals?",
-              "answer": "Enums provide named constants, preventing typos and making code clearer",
-              "explain": "Direction.Up is clearer and safer than 'up'. Misspelling Direction.Upp is caught by the compiler.",
+              "question": "What is a benefit of an enum over bare numbers like 0, 1, 2?",
+              "answer": "Named members make the values readable and checked by the compiler",
+              "explain": "Direction.Up is clearer than 0, and a misspelled member like Direction.Upp is a compile error.",
               "choices": [
-                "They are faster",
-                "Enums provide named constants, preventing typos and making code clearer",
+                "They run faster",
+                "Named members make the values readable and checked by the compiler",
                 "They use less memory",
                 "They require less typing"
               ],
