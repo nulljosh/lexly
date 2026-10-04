@@ -1,0 +1,904 @@
+{
+  "id": "fpga_verilog",
+  "name": "FPGAs and Verilog",
+  "category": "engineering",
+  "icon": "fa-solid fa-table-cells",
+  "level": "Programmable Hardware",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "FPGAs vs Microcontrollers and ASICs",
+      "tip": "FPGAs are programmable chips that can be reconfigured after manufacturing, unlike ASICs which are fixed. They differ from microcontrollers because they run hardware in parallel, not sequential software instructions.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What an FPGA Is",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does FPGA stand for?",
+              "answer": "Field Programmable Gate Array",
+              "explain": "FPGA is short for Field Programmable Gate Array. Field means it can be programmed after manufacture. Gate Array refers to the grid of programmable logic cells.",
+              "choices": [
+                "Field Programmable Gate Array",
+                "Field Parallel Gate Application",
+                "Flexible Program Gate Assembly",
+                "Fast Processing Generic Architecture"
+              ],
+              "id": "fpga_verilog_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of an FPGA over an ASIC?",
+              "answer": "It can be reprogrammed after manufacture",
+              "explain": "FPGAs are reconfigurable in the field. ASICs are hardwired at the factory and cannot be changed, making them cheaper per unit for high volume but inflexible.",
+              "choices": [
+                "It uses less power than ASICs",
+                "It runs software faster than ASICs",
+                "It can be reprogrammed after manufacture",
+                "It is always cheaper than ASICs"
+              ],
+              "id": "fpga_verilog_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an FPGA differ from a microcontroller?",
+              "answer": "FPGAs run hardware in parallel; microcontrollers run software sequentially",
+              "explain": "Microcontrollers fetch and execute instructions one at a time. FPGAs implement logic circuits that run all at once. This makes FPGAs fast for parallel tasks.",
+              "choices": [
+                "FPGAs require no power to operate",
+                "FPGAs run hardware in parallel; microcontrollers run software sequentially",
+                "FPGAs are always faster for all tasks",
+                "Microcontrollers are programmable but FPGAs are not"
+              ],
+              "id": "fpga_verilog_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an ASIC?",
+              "answer": "An integrated circuit hardwired for a single purpose at manufacture",
+              "explain": "ASIC stands for Application Specific Integrated Circuit. Unlike FPGAs, ASICs are designed for one specific task and cannot be reprogrammed.",
+              "choices": [
+                "A microcontroller with parallel processing",
+                "An integrated circuit hardwired for a single purpose at manufacture",
+                "A type of FPGA that runs software",
+                "An acronym for a programming language"
+              ],
+              "id": "fpga_verilog_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which design path is best when you need many small changes to the logic?",
+              "answer": "FPGA, because it is reprogrammable",
+              "explain": "FPGAs excel when design iterations are frequent or when deployed systems need updates. ASICs are only worth the effort for high-volume, fixed products.",
+              "choices": [
+                "ASIC, because it runs faster",
+                "All three are equally good for changes",
+                "FPGA, because it is reprogrammable",
+                "Microcontroller, because it is cheaper"
+              ],
+              "id": "fpga_verilog_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Hardware vs Software",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the key difference between hardware description and software programming?",
+              "answer": "Hardware is concurrent; software is sequential",
+              "explain": "Software runs one instruction after another. Hardware circuits operate in parallel, all logic gates running at the same time every clock cycle.",
+              "choices": [
+                "Hardware cannot have loops",
+                "Hardware is concurrent; software is sequential",
+                "Software is only for microcontrollers",
+                "Hardware uses more bits than software"
+              ],
+              "id": "fpga_verilog_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might you choose an FPGA instead of a microcontroller for signal processing?",
+              "answer": "FPGAs process data in parallel at high speed",
+              "explain": "Signal processing often needs low latency and high throughput. FPGAs apply the same operations to many data points in parallel, while microcontrollers process them one at a time.",
+              "choices": [
+                "FPGAs process data in parallel at high speed",
+                "Microcontrollers cannot handle mathematics",
+                "FPGAs require no programming",
+                "Microcontrollers have no memory"
+              ],
+              "id": "fpga_verilog_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In FPGA design, what is 'reconfigurability'?",
+              "answer": "The ability to reprogram the logic after deployment",
+              "explain": "You can update the FPGA's behavior in the field by loading a new configuration bitstream, without replacing the chip. This is a defining trait of FPGAs.",
+              "choices": [
+                "The ability to reprogram the logic after deployment",
+                "Running multiple programs at once",
+                "Automatically fixing hardware errors",
+                "The ability to scale the chip size"
+              ],
+              "id": "fpga_verilog_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What must a hardware description language do that a software language does not?",
+              "answer": "Describe concurrent operations and timing explicitly",
+              "explain": "HDLs must express what hardware does in parallel and when it happens relative to clock edges. Software languages usually hide concurrency and timing from the programmer.",
+              "choices": [
+                "Avoid using loops and conditionals",
+                "Convert English to binary",
+                "Use more memory than software",
+                "Describe concurrent operations and timing explicitly"
+              ],
+              "id": "fpga_verilog_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do FPGA designs often run faster than software for the same task?",
+              "answer": "Custom hardware paths eliminate instruction fetching overhead",
+              "explain": "FPGAs implement the exact logic path in transistors. Software must fetch, decode, and execute instructions repeatedly, introducing latency and power overhead.",
+              "choices": [
+                "FPGAs use electricity, software does not",
+                "Software cannot use multiplication",
+                "Custom hardware paths eliminate instruction fetching overhead",
+                "Microcontrollers are intentionally slow"
+              ],
+              "id": "fpga_verilog_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Lookup Tables and Flip-Flops",
+      "tip": "The basic building block of an FPGA is the lookup table, or LUT, which implements combinational logic. Flip-flops store state and synchronize to the clock. Together, LUTs and flip-flops create all logic circuits.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Lookup Tables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a lookup table (LUT) in an FPGA?",
+              "answer": "A small memory that implements any boolean function",
+              "explain": "A LUT is a small RAM preloaded with the truth table for a logic function. A 4-input LUT can implement any boolean function of 4 inputs.",
+              "choices": [
+                "A table of pin assignments",
+                "A timing diagram for the clock",
+                "A list of FPGA prices",
+                "A small memory that implements any boolean function"
+              ],
+              "id": "fpga_verilog_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many different boolean functions can a 4-input LUT implement?",
+              "answer": "2 to the power of 16 (65,536)",
+              "explain": "A 4-input truth table has 16 rows. Each row's output can be 0 or 1, giving 2^16 unique functions that a 4-input LUT can represent.",
+              "choices": [
+                "2 to the power of 16 (65,536)",
+                "4",
+                "16",
+                "256"
+              ],
+              "id": "fpga_verilog_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a LUT more flexible than a hardwired AND gate?",
+              "answer": "A LUT can be programmed to implement any 4-input logic function",
+              "explain": "An AND gate always performs AND. A LUT's contents can be reprogrammed to be AND, OR, XOR, NAND, or any other function, making it universally programmable.",
+              "choices": [
+                "An AND gate uses fewer transistors",
+                "A LUT runs at the system clock frequency",
+                "A LUT can be programmed to implement any 4-input logic function",
+                "A LUT uses less power"
+              ],
+              "id": "fpga_verilog_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'slice' in FPGA terminology?",
+              "answer": "A block containing LUTs, multiplexers, and flip-flops",
+              "explain": "A slice is the basic repeating unit in FPGA fabric. It combines multiple LUTs, carry logic, and storage elements (flip-flops) into one configurable tile.",
+              "choices": [
+                "A layer of silicon in the chip",
+                "A single lookup table",
+                "A block containing LUTs, multiplexers, and flip-flops",
+                "A test pattern for verification"
+              ],
+              "id": "fpga_verilog_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Verilog, which construct maps naturally to a LUT?",
+              "answer": "A combinational always block with a case statement",
+              "explain": "A case statement that lists all outputs for all inputs is decoded by synthesis as a LUT. The synthesizer fills the LUT's memory with the specified outputs.",
+              "choices": [
+                "A combinational always block with a case statement",
+                "always @ (posedge clk)",
+                "A for loop with a fixed range",
+                "An if statement inside a posedge block"
+              ],
+              "id": "fpga_verilog_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Flip-Flops and State",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a flip-flop in digital logic?",
+              "answer": "A 1-bit memory element that stores state synchronously",
+              "explain": "A flip-flop is a bistable latch controlled by the clock. It captures and holds data at the rising (or falling) edge of the clock.",
+              "choices": [
+                "A 1-bit memory element that stores state synchronously",
+                "A part of a SRAM array",
+                "A light switch",
+                "An oscillating output"
+              ],
+              "id": "fpga_verilog_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a D flip-flop do?",
+              "answer": "Captures the value on its D input at the clock edge",
+              "explain": "A D (data) flip-flop samples its input on the clock edge and holds that value. On the next clock edge, it samples again.",
+              "choices": [
+                "Captures the value on its D input at the clock edge",
+                "Counts from 0 to 7",
+                "Delays the signal by one nanosecond",
+                "Inverts the signal each clock"
+              ],
+              "id": "fpga_verilog_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are flip-flops necessary in FPGA logic?",
+              "answer": "To store intermediate values and control timing across clock cycles",
+              "explain": "Flip-flops break combinational paths and synchronize data to the clock. Without them, combinational logic propagates changes instantly, making timing analysis impossible.",
+              "choices": [
+                "To store intermediate values and control timing across clock cycles",
+                "To amplify weak signals",
+                "To reduce power consumption",
+                "To implement multiplication"
+              ],
+              "id": "fpga_verilog_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Verilog, what triggers a flip-flop capture?",
+              "answer": "The clock edge specified in the sensitivity list",
+              "explain": "always @ (posedge clk) updates on rising edges; always @ (negedge clk) updates on falling edges. The clock edge determines when flip-flops sample their inputs.",
+              "choices": [
+                "A reset signal going low",
+                "The clock edge specified in the sensitivity list",
+                "Any change in the input signal",
+                "An enable signal going high"
+              ],
+              "id": "fpga_verilog_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many flip-flops are needed to store an 8-bit value?",
+              "answer": "8",
+              "explain": "Each flip-flop stores one bit. An 8-bit register requires 8 flip-flops, one per bit. This is true in both Verilog and hardware.",
+              "choices": [
+                "16",
+                "1",
+                "8",
+                "4"
+              ],
+              "id": "fpga_verilog_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Verilog Modules and Ports",
+      "tip": "In Verilog, a module is a reusable block of hardware with defined inputs and outputs. Ports describe how signals flow in and out. Well-designed modules are hierarchical, hiding complexity.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Module Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a module in Verilog?",
+              "answer": "A reusable block of logic with inputs and outputs",
+              "explain": "A module is a container for hardware logic. It defines a set of input ports (to receive signals), output ports (to send signals), and internal logic.",
+              "choices": [
+                "A test bench",
+                "A library of predefined functions",
+                "A reusable block of logic with inputs and outputs",
+                "A behavioral simulation model"
+              ],
+              "id": "fpga_verilog_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of port declarations in Verilog?",
+              "answer": "Define the interface signals that connect the module to external logic",
+              "explain": "Ports specify what signals enter and leave a module. This interface allows modules to be composed hierarchically into larger designs.",
+              "choices": [
+                "To select the synthesis tool",
+                "To specify the module's simulation speed",
+                "Define the interface signals that connect the module to external logic",
+                "To initialize internal variables"
+              ],
+              "id": "fpga_verilog_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the three main port types in Verilog?",
+              "answer": "input, output, and inout",
+              "explain": "input ports receive data from outside the module. output ports send data out. inout ports are bidirectional (both send and receive).",
+              "choices": [
+                "input, output, and inout",
+                "data, control, and status",
+                "input, output, and register",
+                "read, write, and clock"
+              ],
+              "id": "fpga_verilog_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you instantiate a module inside another module?",
+              "answer": "List the module name, instance name, and connect ports in parentheses",
+              "explain": "Syntax: moduleName instanceName (.portA(signalA), .portB(signalB)). Each instance is a copy of the module's logic, connected to specific signals.",
+              "choices": [
+                "List the module name, instance name, and connect ports in parentheses",
+                "Declare a variable of the module's type",
+                "Use a new keyword",
+                "Import the module file"
+              ],
+              "id": "fpga_verilog_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'port mapping' in Verilog?",
+              "answer": "Connecting a module instance's ports to specific signals in the parent module",
+              "explain": "Port mapping is how you wire signals. For each input port, you specify which signal it receives. For each output port, you specify where the result goes.",
+              "choices": [
+                "Drawing the circuit on paper",
+                "Setting the module's clock frequency",
+                "Connecting a module instance's ports to specific signals in the parent module",
+                "Writing the module documentation"
+              ],
+              "id": "fpga_verilog_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Wires and Regs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a wire in Verilog?",
+              "answer": "A signal that carries combinational logic continuously",
+              "explain": "A wire represents a connection between logic gates. Its value updates continuously, following the combinational logic that drives it.",
+              "choices": [
+                "A signal that carries combinational logic continuously",
+                "A single bit of storage",
+                "An electrical cable",
+                "A temporary variable"
+              ],
+              "id": "fpga_verilog_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a reg in Verilog?",
+              "answer": "A variable type that can be assigned inside procedural blocks",
+              "explain": "reg is the data type you assign inside always blocks, initial blocks, or functions. Despite the name, a reg may or may not synthesize to a flip-flop.",
+              "choices": [
+                "Always synthesizes to a flip-flop",
+                "A wire that cannot change",
+                "A variable type that can be assigned inside procedural blocks",
+                "Short for regulation"
+              ],
+              "id": "fpga_verilog_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a wire be assigned in an always block?",
+              "answer": "No, wires cannot be assigned in always blocks",
+              "explain": "Wires are for continuous assignment (assign keyword). Regs are for assignment inside always blocks, initial blocks, or functions.",
+              "choices": [
+                "No, wires cannot be assigned in always blocks",
+                "Yes, with any blocking or non-blocking assignment",
+                "Only in combinational always blocks",
+                "Only with the assign keyword inside the block"
+              ],
+              "id": "fpga_verilog_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a continuous assignment (assign statement) do?",
+              "answer": "Continuously updates the left-hand side based on the right-hand expression",
+              "explain": "assign left = right means the left signal always reflects the combinational result of the right expression. It updates immediately without waiting for a clock.",
+              "choices": [
+                "Continuously updates the left-hand side based on the right-hand expression",
+                "Requires a clock edge to apply",
+                "Assigns a value once at simulation start",
+                "Creates a flip-flop"
+              ],
+              "id": "fpga_verilog_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is the correct syntax for a continuous assignment?",
+              "answer": "assign wire_out = signal_a & signal_b;",
+              "explain": "Continuous assignments use the assign keyword at the module level (not inside always blocks). The right side can be any combinational expression.",
+              "choices": [
+                "always assign wire_out = signal_a & signal_b;",
+                "reg wire_out = signal_a & signal_b;",
+                "assign wire_out = signal_a & signal_b;",
+                "wire_out = signal_a & signal_b;"
+              ],
+              "id": "fpga_verilog_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Blocking and Non-Blocking Assignment",
+      "tip": "Blocking and non-blocking assignments behave differently in sequential logic. Non-blocking assignments are required for proper synchronous design because they represent simultaneous, parallel register updates on the clock edge.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Assignment Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between blocking and non-blocking assignment?",
+              "answer": "Blocking updates immediately; non-blocking updates after all expressions are evaluated",
+              "explain": "Blocking (=) executes sequentially. Non-blocking (<=) evaluates all right-hand sides first, then updates all left-hand sides simultaneously, matching parallel register updates.",
+              "choices": [
+                "They are identical and interchangeable",
+                "Non-blocking is only for wires",
+                "Blocking is only legal in testbenches",
+                "Blocking updates immediately; non-blocking updates after all expressions are evaluated"
+              ],
+              "id": "fpga_verilog_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use non-blocking assignment?",
+              "answer": "For all register assignments inside sequential always blocks",
+              "explain": "Non-blocking (<=) is correct for synchronous logic because flip-flops update in parallel on the clock edge, not sequentially.",
+              "choices": [
+                "For all register assignments inside sequential always blocks",
+                "When the signal is a wire",
+                "Never, it is deprecated",
+                "Only for complex expressions"
+              ],
+              "id": "fpga_verilog_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a blocking assignment (=) do?",
+              "answer": "Executes immediately and the next statement can use its updated value",
+              "explain": "Blocking assignment updates the variable right away. The next line sees the new value. This is correct for combinational always blocks.",
+              "choices": [
+                "Prevents the signal from changing",
+                "Matches the behavior of flip-flops",
+                "Executes immediately and the next statement can use its updated value",
+                "Delays the assignment until the next clock"
+              ],
+              "id": "fpga_verilog_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a non-blocking assignment (<=) do?",
+              "answer": "Evaluates all right-hand sides first, then updates all variables simultaneously",
+              "explain": "Non-blocking (<=) is used for sequential logic. All right-hand sides are read based on their values at the start of the clock cycle, then all left-hand sides update together.",
+              "choices": [
+                "Only works for input signals",
+                "Is identical to blocking assignment",
+                "Evaluates all right-hand sides first, then updates all variables simultaneously",
+                "Executes one statement at a time sequentially"
+              ],
+              "id": "fpga_verilog_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can mixing blocking and non-blocking assignments cause bugs?",
+              "answer": "Results can depend on evaluation order, so simulation may not match hardware",
+              "explain": "Blocking updates happen immediately and non-blocking updates are scheduled for later. Mixing them in one block can create race conditions and make simulation disagree with synthesized hardware.",
+              "choices": [
+                "The simulator will run twice as slow",
+                "Results can depend on evaluation order, so simulation may not match hardware",
+                "It is actually recommended for performance",
+                "The synthesis tool will reject the code"
+              ],
+              "id": "fpga_verilog_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Combinational vs Sequential Logic",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is combinational logic?",
+              "answer": "Logic with no memory; outputs depend only on current inputs",
+              "explain": "Combinational logic (AND, OR, MUX, adders) produces outputs that are purely functions of the current inputs. There is no state or history.",
+              "choices": [
+                "Logic with no memory; outputs depend only on current inputs",
+                "Logic that uses many transistors",
+                "Logic controlled by the clock",
+                "Logic that always produces a 1"
+              ],
+              "id": "fpga_verilog_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is sequential logic?",
+              "answer": "Logic with memory; outputs depend on current inputs and past history",
+              "explain": "Sequential logic uses flip-flops to store state. The output depends on both the current inputs and previous states, creating behavior that changes over time.",
+              "choices": [
+                "Logic with memory; outputs depend on current inputs and past history",
+                "Logic controlled by software",
+                "Logic that runs in sequence one step per instruction",
+                "Logic that only uses AND gates"
+              ],
+              "id": "fpga_verilog_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which assignment should you use for combinational always blocks?",
+              "answer": "Blocking assignment (=)",
+              "explain": "Combinational logic has no memory, so blocking assignment is appropriate. The outputs update immediately based on the inputs.",
+              "choices": [
+                "Blocking assignment (=)",
+                "Continuous assignment only",
+                "Either one, they are the same",
+                "Non-blocking assignment (<=)"
+              ],
+              "id": "fpga_verilog_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which assignment should you use for sequential always blocks?",
+              "answer": "Non-blocking assignment (<=)",
+              "explain": "Sequential logic uses flip-flops. Non-blocking assignment models the parallel behavior of flip-flops sampling on the clock edge.",
+              "choices": [
+                "Non-blocking assignment (<=)",
+                "Either one, they work identically for sequential",
+                "Continuous assignment only",
+                "Blocking assignment (=)"
+              ],
+              "id": "fpga_verilog_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a state machine require?",
+              "answer": "Sequential logic with registers to hold the current state",
+              "explain": "A state machine needs memory (flip-flops) to store which state it is in. A sequence of states is a classic example of sequential logic.",
+              "choices": [
+                "Continuous assignments",
+                "A clock faster than 1 GHz",
+                "Sequential logic with registers to hold the current state",
+                "Only combinational logic"
+              ],
+              "id": "fpga_verilog_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Clocks and Resets",
+      "tip": "The clock signal synchronizes all flip-flops in the design, ensuring they update together. Reset signals bring the entire circuit to a known initial state. Both are critical for reliable synchronous design.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Clock Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the role of the clock in synchronous logic?",
+              "answer": "To synchronize all flip-flop updates to the same moment",
+              "explain": "The clock signal tells all flip-flops when to sample their inputs and update outputs. A single clock ensures deterministic, predictable behavior.",
+              "choices": [
+                "To provide power to the circuit",
+                "To reset the design to its initial state",
+                "To synchronize all flip-flop updates to the same moment",
+                "To determine how much power the circuit uses"
+              ],
+              "id": "fpga_verilog_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'clock frequency'?",
+              "answer": "The number of clock cycles per second, measured in Hz",
+              "explain": "Clock frequency is how fast the clock oscillates. A 100 MHz clock completes 100 million cycles per second. Higher frequency allows more computations per second.",
+              "choices": [
+                "The number of clock cycles per second, measured in Hz",
+                "The duration of one clock cycle",
+                "The amount of power the clock consumes",
+                "The number of flip-flops in the design"
+              ],
+              "id": "fpga_verilog_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a clock cycle?",
+              "answer": "One complete oscillation of the clock signal from low to high to low",
+              "explain": "A clock cycle is one period of the clock. If the period is 10 nanoseconds, then the frequency is 100 MHz. One cycle equals one period.",
+              "choices": [
+                "A circuit that generates the clock",
+                "A single rising edge of the clock",
+                "The maximum frequency the design can run",
+                "One complete oscillation of the clock signal from low to high to low"
+              ],
+              "id": "fpga_verilog_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is setup time?",
+              "answer": "The minimum time the input must be stable before the clock edge",
+              "explain": "Setup time is how long data must be present at a flip-flop's input before the clock edge captures it. Violating setup time can cause wrong data to be captured or metastability.",
+              "choices": [
+                "The duration of the clock pulse",
+                "The time to initialize the design",
+                "The minimum time the input must be stable before the clock edge",
+                "The time after reset when the design is ready"
+              ],
+              "id": "fpga_verilog_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is hold time?",
+              "answer": "The minimum time the input must remain stable after the clock edge",
+              "explain": "Hold time is how long data must stay at the flip-flop input after the clock edge. Violating hold time can also cause wrong data to be captured or metastability.",
+              "choices": [
+                "The time between two consecutive clocks",
+                "The minimum time the input must remain stable after the clock edge",
+                "The duration of the clock pulse",
+                "How long to keep the reset signal asserted"
+              ],
+              "id": "fpga_verilog_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Reset Signals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is a reset signal necessary in FPGA designs?",
+              "answer": "To bring all flip-flops to a known initial state at startup",
+              "explain": "Flip-flop values can be unknown at startup (shown as X in simulation, and random in a fabricated ASIC). A reset forces all flip-flops to known values so the design behaves predictably.",
+              "choices": [
+                "To prevent overflow errors",
+                "To measure power consumption",
+                "To bring all flip-flops to a known initial state at startup",
+                "To turn off the clock"
+              ],
+              "id": "fpga_verilog_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is synchronous reset?",
+              "answer": "Reset that takes effect on the rising edge of the clock",
+              "explain": "A synchronous reset is checked only on the active clock edge, so it takes effect at the next clock edge, matching the sequential behavior of the rest of the design.",
+              "choices": [
+                "Reset that lasts for multiple clock cycles",
+                "Reset that happens immediately, regardless of the clock",
+                "Reset that takes effect on the rising edge of the clock",
+                "Reset that is controlled by a state machine"
+              ],
+              "id": "fpga_verilog_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is asynchronous reset?",
+              "answer": "Reset that takes effect immediately, independent of the clock",
+              "explain": "An asynchronous reset does not wait for the clock and clears flip-flops as soon as it is asserted. It is commonly used for power-on initialization.",
+              "choices": [
+                "Reset controlled only by the clock edge",
+                "Reset that only works during simulation",
+                "Reset that takes effect immediately, independent of the clock",
+                "Reset that requires two clock cycles"
+              ],
+              "id": "fpga_verilog_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In Verilog, how do you implement an asynchronous reset in an always block?",
+              "answer": "Include negedge reset in the sensitivity list: always @ (posedge clk or negedge reset)",
+              "explain": "The sensitivity list specifies what events trigger the block. negedge reset means the block runs when reset goes low, allowing immediate asynchronous reset.",
+              "choices": [
+                "Call a separate reset function",
+                "Use if (reset == 0) inside the always block only",
+                "Include negedge reset in the sensitivity list: always @ (posedge clk or negedge reset)",
+                "Use the assign keyword for reset"
+              ],
+              "id": "fpga_verilog_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might asynchronous reset cause problems?",
+              "answer": "It can trigger metastability if reset is released near a clock edge",
+              "explain": "If the reset signal is deasserted near a clock edge, flip-flops may enter a metastable state, producing unpredictable outputs. Proper reset sequencing prevents this.",
+              "choices": [
+                "It prevents combinational logic from working",
+                "It can trigger metastability if reset is released near a clock edge",
+                "It stops the clock from running",
+                "It always takes two clock cycles"
+              ],
+              "id": "fpga_verilog_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Synthesis and Simulation",
+      "tip": "Simulation verifies your design behavior in software before hardware deployment. Synthesis converts the Verilog description into actual FPGA configuration. Both are essential for reliable designs.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Simulation Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is simulation in FPGA design?",
+              "answer": "Running the Verilog code in software to verify correct behavior",
+              "explain": "Simulation executes your Verilog in a simulator (ModelSim, Vivado, etc.) so you can test behavior before downloading to the FPGA.",
+              "choices": [
+                "Soldering wires to the FPGA board",
+                "Running the Verilog code in software to verify correct behavior",
+                "Manufacturing the FPGA",
+                "Programming the FPGA with bitstream"
+              ],
+              "id": "fpga_verilog_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a testbench?",
+              "answer": "A Verilog module that instantiates the design and provides stimulus",
+              "explain": "A testbench is a Verilog file (not synthesizable) that creates an instance of your design and drives its inputs with test signals, allowing you to observe outputs.",
+              "choices": [
+                "A timing diagram tool",
+                "A Verilog module that instantiates the design and provides stimulus",
+                "A physical board for testing",
+                "Part of the synthesis process"
+              ],
+              "id": "fpga_verilog_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is behavioral simulation?",
+              "answer": "Simulation that treats Verilog as algorithmic code without timing details",
+              "explain": "Behavioral simulation executes the Verilog semantically without accurate delay modeling. It is fast for logic verification but ignores timing.",
+              "choices": [
+                "Simulation that treats Verilog as algorithmic code without timing details",
+                "Simulation with waveform generation only",
+                "Simulation after synthesis",
+                "Simulation on a real FPGA board"
+              ],
+              "id": "fpga_verilog_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is post-synthesis simulation?",
+              "answer": "Simulation of the netlist produced by synthesis instead of the original source",
+              "explain": "Post-synthesis simulation runs the gate-level netlist that synthesis produced, which checks that synthesis preserved the intended behavior. It can be functional or include estimated delays, and it is slower than behavioral simulation.",
+              "choices": [
+                "Simulation of the design with test patterns only",
+                "Simulation of the netlist produced by synthesis instead of the original source",
+                "Behavioral simulation with accurate timing",
+                "Simulation after programming the FPGA"
+              ],
+              "id": "fpga_verilog_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a waveform viewer?",
+              "answer": "A tool that displays signals over time as graphical traces",
+              "explain": "Waveform viewers (VCD files, GtkWave, etc.) show how signals change during simulation. You can see timing relationships, find bugs, and verify logic behavior.",
+              "choices": [
+                "Part of the FPGA compiler",
+                "A test pattern generator",
+                "A device that displays the signal on a monitor",
+                "A tool that displays signals over time as graphical traces"
+              ],
+              "id": "fpga_verilog_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Synthesis Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is synthesis?",
+              "answer": "Converting Verilog code into logic gates and FPGA resources",
+              "explain": "Synthesis is the automated translation from high-level Verilog to a netlist of LUTs, flip-flops, and routing. The synthesizer optimizes for area, speed, or power.",
+              "choices": [
+                "Converting Verilog code into logic gates and FPGA resources",
+                "Running simulation software",
+                "Writing test cases",
+                "Programming the FPGA device"
+              ],
+              "id": "fpga_verilog_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'place and route' do?",
+              "answer": "Assigns synthesized logic to physical FPGA resources and connects them with routing",
+              "explain": "After synthesis, place and route distributes LUTs and flip-flops onto the FPGA grid and determines how to connect them via routing resources.",
+              "choices": [
+                "Generates test vectors",
+                "Simulates the design",
+                "Assigns synthesized logic to physical FPGA resources and connects them with routing",
+                "Verifies the Verilog code"
+              ],
+              "id": "fpga_verilog_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a constraint file in FPGA design?",
+              "answer": "A file specifying timing requirements, pin assignments, and design constraints",
+              "explain": "Constraint files (.xdc, .ucf) tell the synthesizer and place-and-route tool about clock frequencies, pin locations, and area constraints.",
+              "choices": [
+                "A test pattern file",
+                "A file that stores simulation results",
+                "A file specifying timing requirements, pin assignments, and design constraints",
+                "A file that limits the number of lines in Verilog"
+              ],
+              "id": "fpga_verilog_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bitstream?",
+              "answer": "The binary file that configures the FPGA's LUTs and routing",
+              "explain": "A bitstream is the compiled output of place-and-route. It contains the configuration data that sets up every LUT and connection on the FPGA.",
+              "choices": [
+                "A constraint file",
+                "The binary file that configures the FPGA's LUTs and routing",
+                "A test file for simulation",
+                "The Verilog source code"
+              ],
+              "id": "fpga_verilog_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does timing analysis verify?",
+              "answer": "That all signals arrive in time to meet clock frequency constraints",
+              "explain": "Timing analysis calculates signal propagation delays and checks if setup and hold times are met. It ensures the design can run at the specified clock frequency.",
+              "choices": [
+                "That all signals arrive in time to meet clock frequency constraints",
+                "That the bitstream file is not corrupted",
+                "That the FPGA has enough LUTs",
+                "That the Verilog code is syntactically correct"
+              ],
+              "id": "fpga_verilog_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

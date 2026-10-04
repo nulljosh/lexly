@@ -1,0 +1,904 @@
+{
+  "id": "chip_design",
+  "name": "Chip Design",
+  "category": "engineering",
+  "icon": "fa-solid fa-layer-group",
+  "level": "From Transistors to Silicon",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Transistors as Switches",
+      "tip": "A transistor is an electrically controlled switch that can turn current on or off. MOSFETs are a type of transistor that form the basis of most modern digital chips. Understanding transistors as switches is essential for grasping chip design.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Transistor Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a transistor?",
+              "answer": "A semiconductor device that acts as an electrically controlled switch",
+              "explain": "A transistor uses a control signal (gate voltage) to allow or block current flow between two terminals. This switching behavior is the basis of all digital logic.",
+              "choices": [
+                "A type of capacitor",
+                "A type of resistor that resists electricity",
+                "A source of power for the chip",
+                "A semiconductor device that acts as an electrically controlled switch"
+              ],
+              "id": "chip_design_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does MOSFET stand for?",
+              "answer": "Metal-Oxide-Semiconductor Field-Effect Transistor",
+              "explain": "MOSFET is a type of transistor. The gate (metal) is insulated (oxide) from the silicon channel. A voltage on the gate controls current flow.",
+              "choices": [
+                "Mobile Operating System for Electronic Transistors",
+                "Multiple-Output Switching Field Electricity Transfer",
+                "Metal-Oxide-Semiconductor Field-Effect Transistor",
+                "Maximum Oxide Semiconductor Frequency Effect"
+              ],
+              "id": "chip_design_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the three main terminals of a MOSFET?",
+              "answer": "Gate, source, and drain",
+              "explain": "The gate is the control input. Current flows from drain to source (or source to drain, depending on type). The gate voltage determines whether the transistor is on or off.",
+              "choices": [
+                "Input, output, and ground",
+                "Positive, negative, and ground",
+                "Base, collector, and emitter",
+                "Gate, source, and drain"
+              ],
+              "id": "chip_design_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an NMOS transistor?",
+              "answer": "An N-channel MOSFET that conducts when the gate voltage is high",
+              "explain": "NMOS transistors turn on (low resistance) when the gate is high (positive voltage). They are used as switches that pull signals to ground.",
+              "choices": [
+                "A transistor that is only used in analog circuits",
+                "A transistor that requires no gate voltage",
+                "An N-channel MOSFET that conducts when the gate voltage is high",
+                "A transistor that always conducts current"
+              ],
+              "id": "chip_design_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a PMOS transistor?",
+              "answer": "A P-channel MOSFET that conducts when the gate voltage is low",
+              "explain": "PMOS transistors turn on (low resistance) when the gate is low (near ground). They are used as switches that pull signals to power supply voltage.",
+              "choices": [
+                "A transistor that cannot switch",
+                "A P-channel MOSFET that conducts when the gate voltage is low",
+                "A transistor used only in power supplies",
+                "A transistor that always conducts current"
+              ],
+              "id": "chip_design_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Switching Behavior",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "When is an NMOS transistor in the ON state?",
+              "answer": "When the gate-source voltage exceeds the threshold voltage",
+              "explain": "NMOS turns on when the gate voltage rises above the source by more than a threshold, typically a fraction of a volt. The transistor then allows current to flow from drain to source.",
+              "choices": [
+                "When the gate voltage is low",
+                "When the gate-source voltage exceeds the threshold voltage",
+                "When the drain current is zero",
+                "Never, NMOS is always off"
+              ],
+              "id": "chip_design_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is a PMOS transistor in the ON state?",
+              "answer": "When the gate-source voltage is below the threshold voltage",
+              "explain": "PMOS turns on when the gate voltage falls far enough below the source voltage. It allows current to flow from source (at supply voltage) to drain.",
+              "choices": [
+                "When the gate-source voltage is below the threshold voltage",
+                "Only during startup",
+                "When the drain voltage equals the source voltage",
+                "When the gate voltage is high"
+              ],
+              "id": "chip_design_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the ON resistance of an ideal transistor?",
+              "answer": "Zero, allowing unlimited current flow",
+              "explain": "In the ideal ON state, a transistor acts like a closed switch with no resistance. Real transistors have small ON resistance, creating some voltage drop.",
+              "choices": [
+                "The same as the OFF resistance",
+                "Proportional to the supply voltage",
+                "Zero, allowing unlimited current flow",
+                "Very high, blocking all current"
+              ],
+              "id": "chip_design_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the OFF resistance of an ideal transistor?",
+              "answer": "Infinite, blocking all current flow",
+              "explain": "In the ideal OFF state, a transistor acts like an open switch with infinite resistance. Real transistors have a small leakage current.",
+              "choices": [
+                "Negative, reversing current direction",
+                "Very low, allowing current flow",
+                "The same as the ON resistance",
+                "Infinite, blocking all current flow"
+              ],
+              "id": "chip_design_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is leakage current a problem in modern chips?",
+              "answer": "It wastes power even when transistors are supposed to be off",
+              "explain": "As transistors shrink, OFF resistance decreases and leakage increases. This static power consumption limits battery life and generates heat.",
+              "choices": [
+                "It increases the clock frequency",
+                "It prevents the transistor from turning on",
+                "It makes the chip larger",
+                "It wastes power even when transistors are supposed to be off"
+              ],
+              "id": "chip_design_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "CMOS Logic Gates",
+      "tip": "CMOS combines NMOS and PMOS transistors to create robust, power-efficient logic gates. Every CMOS gate has a pull-up network (PMOS) and a pull-down network (NMOS).",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "CMOS Inverter and Basic Gates",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a CMOS inverter?",
+              "answer": "One PMOS and one NMOS transistor connected to invert the input",
+              "explain": "A CMOS inverter has a PMOS pull-up transistor and an NMOS pull-down transistor in series. When input is high, NMOS pulls output low; when input is low, PMOS pulls it high.",
+              "choices": [
+                "One PMOS and one NMOS transistor connected to invert the input",
+                "A logic gate that never switches",
+                "A resistor that inverts signals",
+                "Two transistors in parallel"
+              ],
+              "id": "chip_design_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a CMOS inverter, what happens when the input goes high?",
+              "answer": "NMOS turns on, pulling output to ground (low)",
+              "explain": "When input is high, NMOS conducts, creating a low-resistance path to ground. Simultaneously, PMOS turns off. Output becomes low (0).",
+              "choices": [
+                "PMOS turns on, pulling output to supply voltage",
+                "Output stays at the same level",
+                "Both transistors turn off",
+                "NMOS turns on, pulling output to ground (low)"
+              ],
+              "id": "chip_design_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a CMOS inverter, what happens when the input goes low?",
+              "answer": "PMOS turns on, pulling output to supply voltage (high)",
+              "explain": "When input is low, PMOS conducts, creating a low-resistance path to the supply. Simultaneously, NMOS turns off. Output becomes high (1).",
+              "choices": [
+                "Output stays at ground",
+                "Both transistors turn on",
+                "NMOS turns on, pulling output to ground",
+                "PMOS turns on, pulling output to supply voltage (high)"
+              ],
+              "id": "chip_design_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a NAND gate?",
+              "answer": "A logic gate that outputs low only when all inputs are high",
+              "explain": "NAND (NOT AND) is the complement of AND. It outputs low when all inputs are high, and high otherwise. NAND gates are universal (can build any logic from NAND only).",
+              "choices": [
+                "A gate that requires no transistors",
+                "A gate that always outputs the same as the input",
+                "A logic gate that outputs low only when all inputs are high",
+                "A gate with no output"
+              ],
+              "id": "chip_design_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a NOR gate?",
+              "answer": "A gate that outputs high only when all inputs are low",
+              "explain": "NOR (NOT OR) is the complement of OR. It outputs high only when all inputs are low. NOR is also universal for logic synthesis.",
+              "choices": [
+                "A gate that outputs high only when all inputs are low",
+                "A gate with unstable output",
+                "A gate identical to NAND",
+                "A gate that outputs high when any input is high"
+              ],
+              "id": "chip_design_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "CMOS Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of CMOS logic?",
+              "answer": "Low power consumption because one transistor is always off",
+              "explain": "In CMOS, only one of the two series transistors conducts at a time. This eliminates the direct path from supply to ground, reducing static (standby) power.",
+              "choices": [
+                "It works without a power supply",
+                "Low power consumption because one transistor is always off",
+                "It requires no transistors",
+                "It is faster than all other logic families"
+              ],
+              "id": "chip_design_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is static power in CMOS?",
+              "answer": "Power consumed when the circuit is idle, due to leakage current",
+              "explain": "Static power is the baseline power used even when the chip is not switching. It is due to leakage through off transistors. It increases as transistors shrink.",
+              "choices": [
+                "Power consumed when the circuit is idle, due to leakage current",
+                "Power that never changes",
+                "Power used only during startup",
+                "Power from the power supply"
+              ],
+              "id": "chip_design_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is dynamic power in CMOS?",
+              "answer": "Power consumed when transistors switch, charging and discharging capacitances",
+              "explain": "Dynamic power comes from switching activity. Every time a gate switches, capacitors charge and discharge, consuming power proportional to frequency and voltage squared.",
+              "choices": [
+                "Power lost to transistor resistance",
+                "Power consumed when transistors switch, charging and discharging capacitances",
+                "Power that is independent of frequency",
+                "Power consumed only by pull-up transistors"
+              ],
+              "id": "chip_design_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does CMOS noise margin compare to other logic families?",
+              "answer": "CMOS has large noise margins, making it robust to signal degradation",
+              "explain": "CMOS logic swings from ground to supply voltage, using the full range. This large swing makes CMOS robust against noise compared to other families.",
+              "choices": [
+                "CMOS cannot tolerate any noise",
+                "Noise margins are the same for all logic families",
+                "CMOS has very small noise margins",
+                "CMOS has large noise margins, making it robust to signal degradation"
+              ],
+              "id": "chip_design_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is the ratio of PMOS to NMOS transistor sizes important in CMOS gates?",
+              "answer": "To balance the pull-up and pull-down speeds and ensure symmetric switching",
+              "explain": "PMOS transistors are inherently slower than NMOS (lower mobility). PMOS must be larger to match NMOS speed. Incorrect sizing causes asymmetric delays.",
+              "choices": [
+                "To reduce the number of transistors",
+                "To increase the supply voltage",
+                "To save power",
+                "To balance the pull-up and pull-down speeds and ensure symmetric switching"
+              ],
+              "id": "chip_design_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Standard Cells and Libraries",
+      "tip": "Standard cells are pre-designed, pre-characterized logic gates. A standard cell library contains basic gates, flip-flops, and other building blocks. Chip designers mostly use these cells as components instead of designing transistors from scratch.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Standard Cell Concepts",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a standard cell?",
+              "answer": "A pre-designed, pre-verified logic gate ready for use in chip designs",
+              "explain": "Standard cells (inverter, NAND, NOR, flip-flop, etc.) are library components. They have known timing, power, and area characteristics. Designers build chips by placing and connecting cells.",
+              "choices": [
+                "A simulation test case",
+                "A pre-designed, pre-verified logic gate ready for use in chip designs",
+                "A transistor that is not designed yet",
+                "A cell in a battery"
+              ],
+              "id": "chip_design_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is in a standard cell library?",
+              "answer": "A collection of pre-designed gates, flip-flops, and other logic components",
+              "explain": "A cell library includes basic gates (AND, OR, NAND, NOR, inverter), flip-flops, latches, multiplexers, adders, and specialized cells. Each is fully characterized.",
+              "choices": [
+                "A collection of pre-designed gates, flip-flops, and other logic components",
+                "Power supply specifications",
+                "Simulation results only",
+                "A list of transistor sizes"
+              ],
+              "id": "chip_design_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is cell characterization?",
+              "answer": "Measuring and documenting timing, power, and area properties of a cell",
+              "explain": "Characterization determines how long signals take to propagate through a cell (timing), how much power it consumes, and how much area it occupies.",
+              "choices": [
+                "Programming the FPGA",
+                "Designing the transistors inside a cell",
+                "Simulating the entire chip design",
+                "Measuring and documenting timing, power, and area properties of a cell"
+              ],
+              "id": "chip_design_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a flip-flop cell?",
+              "answer": "A standard cell that stores one bit of data, synchronous to a clock",
+              "explain": "A flip-flop cell in a standard library is a pre-designed memory element. It is characterized for timing, setup time, hold time, and other parameters.",
+              "choices": [
+                "A standard cell that stores one bit of data, synchronous to a clock",
+                "A delay element with no state",
+                "A transistor that flips between on and off",
+                "A type of logic gate with no memory"
+              ],
+              "id": "chip_design_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do chip designers use standard cells instead of designing from transistors?",
+              "answer": "Standard cells are pre-verified and pre-characterized, saving time and ensuring quality",
+              "explain": "Designing every gate from transistors is error-prone and slow. Standard cells are thoroughly tested and their timing/power is known, so designs are reliable and efficient.",
+              "choices": [
+                "Standard cells are pre-verified and pre-characterized, saving time and ensuring quality",
+                "Because transistors are unavailable",
+                "Because transistors cannot be used in modern chips",
+                "Because standard cells are always faster"
+              ],
+              "id": "chip_design_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Library Variations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are different cell library 'variants'?",
+              "answer": "Versions of cells optimized for different purposes (speed, area, power)",
+              "explain": "A library may provide fast cells (larger, use more power, run quickly), slow cells (smaller, low power, run slowly), and balanced versions for various tradeoffs.",
+              "choices": [
+                "Versions of cells optimized for different purposes (speed, area, power)",
+                "Transistor types only",
+                "Test patterns for verification",
+                "Different programming languages for design"
+              ],
+              "id": "chip_design_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'fast' cell variant?",
+              "answer": "A cell with larger transistors that switches quickly but uses more power",
+              "explain": "Fast cells have wider transistors for lower resistance and faster switching. They consume more power and area but meet tight timing constraints.",
+              "choices": [
+                "A cell that only works with fast clocks",
+                "A cell used only in simulations",
+                "A cell with larger transistors that switches quickly but uses more power",
+                "A cell that has no delay"
+              ],
+              "id": "chip_design_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'slow' cell variant?",
+              "answer": "A cell with smaller transistors that uses less power but switches slowly",
+              "explain": "Slow cells have narrower transistors to save area and power. They have longer delays but are used where timing is not critical.",
+              "choices": [
+                "A cell that breaks easily",
+                "A cell for low-frequency designs only",
+                "A cell that never reaches its output",
+                "A cell with smaller transistors that uses less power but switches slowly"
+              ],
+              "id": "chip_design_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is PVT derating in standard cells?",
+              "answer": "Adjusting timing predictions based on process, voltage, and temperature variations",
+              "explain": "PVT stands for process, voltage, and temperature. Chips run at different voltages and temperatures and vary from die to die, so PVT derating accounts for how these affect delay and gives designers the worst-case timing.",
+              "choices": [
+                "Removing cells from the library",
+                "Testing cells at the factory",
+                "Reducing the supply voltage",
+                "Adjusting timing predictions based on process, voltage, and temperature variations"
+              ],
+              "id": "chip_design_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why must timing analysis account for process corners?",
+              "answer": "Manufacturing variations cause transistors to behave faster or slower than nominal",
+              "explain": "Different chips from the same design vary in speed due to process variations. Fast and slow process corners represent the extremes. Analysis must work at all corners.",
+              "choices": [
+                "Because the factory is located at a corner",
+                "To test the cell library",
+                "Manufacturing variations cause transistors to behave faster or slower than nominal",
+                "To measure power consumption only"
+              ],
+              "id": "chip_design_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The Design Flow",
+      "tip": "Chip design follows a structured flow from high-level description to silicon. RTL (Register Transfer Level) describes the logic. Synthesis converts RTL to gates. Place and route maps gates to physical locations.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "RTL to Gates",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does RTL stand for?",
+              "answer": "Register Transfer Level, a description of how data moves between registers",
+              "explain": "RTL describes the logic at the register level: what values flow where, on what clock edges, and under what conditions. It is a hardware design abstraction.",
+              "choices": [
+                "Real-Time Logic",
+                "Resistor-Transistor Logic",
+                "Routing and Timing Language",
+                "Register Transfer Level, a description of how data moves between registers"
+              ],
+              "id": "chip_design_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of the synthesis step?",
+              "answer": "Convert RTL into a gate-level netlist of standard cells",
+              "explain": "Synthesis reads RTL (usually Verilog) and produces a netlist: a list of standard cells and the nets (wires) connecting them. This is the input to place and route.",
+              "choices": [
+                "To program the FPGA",
+                "Convert RTL into a gate-level netlist of standard cells",
+                "To verify the design behavior",
+                "To simulate the chip"
+              ],
+              "id": "chip_design_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a netlist?",
+              "answer": "A list of cells and nets describing the connections between gates",
+              "explain": "A netlist specifies which cells are in the design and how their pins are connected by nets (wires). It is the structured description of the gate-level circuit.",
+              "choices": [
+                "A file of timing constraints",
+                "A list of cells and nets describing the connections between gates",
+                "A list of test vectors",
+                "A simulation results file"
+              ],
+              "id": "chip_design_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does place and route (PnR) do?",
+              "answer": "Assigns cells to physical locations and determines the wiring between them",
+              "explain": "PnR takes the netlist and places cells on the chip floorplan, then routes the nets through metal layers. The output is a detailed chip layout.",
+              "choices": [
+                "Simulates the design performance",
+                "Generates test patterns",
+                "Assigns cells to physical locations and determines the wiring between them",
+                "Verifies timing constraints"
+              ],
+              "id": "chip_design_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a design constraint?",
+              "answer": "A specification (timing, power, area) that the design must satisfy",
+              "explain": "Constraints include clock frequency, maximum power, maximum area, pin locations, and timing paths. The design must meet all constraints for signoff.",
+              "choices": [
+                "A transistor that cannot be used",
+                "A specification (timing, power, area) that the design must satisfy",
+                "A warning message from the tool",
+                "A bug in the design"
+              ],
+              "id": "chip_design_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Verification and Signoff",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is design verification?",
+              "answer": "Testing that the design behaves correctly under all conditions",
+              "explain": "Verification includes simulation, formal checking, and other techniques to gain confidence that the design produces correct outputs across the cases that matter.",
+              "choices": [
+                "Programming the FPGA",
+                "Creating documentation",
+                "Testing that the design behaves correctly under all conditions",
+                "Building the physical chip"
+              ],
+              "id": "chip_design_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is functional verification?",
+              "answer": "Verifying that the logic computes the correct outputs",
+              "explain": "Functional verification checks that the design produces the right results for the given inputs. It is done via simulation and test vectors.",
+              "choices": [
+                "Measuring power consumption",
+                "Verifying that the logic computes the correct outputs",
+                "Checking timing delays only",
+                "Testing the physical transistors"
+              ],
+              "id": "chip_design_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is design signoff?",
+              "answer": "The final approval that all verification and analysis requirements are met",
+              "explain": "Signoff means the design is ready for manufacturing. All tests pass, timing is met, power is acceptable, and the layout is correct.",
+              "choices": [
+                "The start of the design process",
+                "The final approval that all verification and analysis requirements are met",
+                "An optional final step",
+                "A mistake in the design"
+              ],
+              "id": "chip_design_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is DRC (Design Rule Check)?",
+              "answer": "Verification that the layout follows all manufacturing rules",
+              "explain": "DRC ensures that metal lines are wide enough, spacing is correct, and all geometric constraints are met so the design can be manufactured.",
+              "choices": [
+                "Simulating the chip",
+                "Testing the power supply",
+                "Checking the design logic",
+                "Verification that the layout follows all manufacturing rules"
+              ],
+              "id": "chip_design_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is LVS (Layout vs Schematic)?",
+              "answer": "Verification that the physical layout matches the circuit schematic",
+              "explain": "LVS checks that the layout accurately represents the original circuit. It compares connectivity and ensures no wires were missed or misrouted.",
+              "choices": [
+                "Testing the power supply",
+                "Measuring transistor sizes",
+                "Verification that the physical layout matches the circuit schematic",
+                "Comparing two different chips"
+              ],
+              "id": "chip_design_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Timing and Power",
+      "tip": "Timing analysis ensures the design runs at the required clock frequency without setup or hold violations. Power analysis predicts how much energy the chip will consume, affecting battery life and heat dissipation.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Timing Analysis",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is static timing analysis (STA)?",
+              "answer": "Analysis that computes worst-case delays through the design without simulation",
+              "explain": "STA is fast and comprehensive. It calculates signal delays and checks that all timing constraints (setup, hold, clock period) are met. It does not require test vectors.",
+              "choices": [
+                "Analysis that computes worst-case delays through the design without simulation",
+                "Testing at the factory",
+                "Measurement with oscilloscopes",
+                "Simulation of the design behavior"
+              ],
+              "id": "chip_design_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a timing path?",
+              "answer": "A sequence of logic gates from an input to an output or register",
+              "explain": "A timing path is the chain of combinational logic between two sequential elements (or input to output). Its delay determines whether timing constraints are satisfied.",
+              "choices": [
+                "A wire on the chip",
+                "A sequence of logic gates from an input to an output or register",
+                "A test procedure",
+                "A manufacturing step"
+              ],
+              "id": "chip_design_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the critical path?",
+              "answer": "The timing path with the longest delay, limiting the maximum clock frequency",
+              "explain": "The critical path determines the maximum clock frequency. If its delay exceeds the clock period, timing fails. It is the target for optimization.",
+              "choices": [
+                "The shortest path in the design",
+                "The power supply path",
+                "A path that is never used",
+                "The timing path with the longest delay, limiting the maximum clock frequency"
+              ],
+              "id": "chip_design_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the setup time of a flip-flop?",
+              "answer": "The minimum time the input must be stable before the clock edge",
+              "explain": "Setup time is specified by the flip-flop cell. If data changes within this time before the clock edge, the flip-flop may go metastable.",
+              "choices": [
+                "The minimum time the input must be stable before the clock edge",
+                "The time to initialize the flip-flop",
+                "The time after reset",
+                "The duration of the clock pulse"
+              ],
+              "id": "chip_design_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is setup slack?",
+              "answer": "The margin between required time and actual arrival time for a signal",
+              "explain": "Positive slack means timing is met with margin. Negative slack indicates a timing violation: the signal arrives too late.",
+              "choices": [
+                "The frequency of the clock",
+                "The area of the chip",
+                "The amount of power saved",
+                "The margin between required time and actual arrival time for a signal"
+              ],
+              "id": "chip_design_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Power Analysis",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the formula for dynamic power?",
+              "answer": "P = C * V^2 * F, where C is capacitance, V is voltage, F is frequency",
+              "explain": "Dynamic power increases with voltage squared and frequency linearly. Reducing voltage or frequency dramatically cuts dynamic power.",
+              "choices": [
+                "P = C * V^2 * F, where C is capacitance, V is voltage, F is frequency",
+                "P = I * R",
+                "P = F / V",
+                "P = V / I"
+              ],
+              "id": "chip_design_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is static power?",
+              "answer": "Power consumed when the circuit is not switching, due to leakage",
+              "explain": "Static power is baseline power from leakage current through off transistors. Leakage rises sharply with temperature and grows with the number of transistors.",
+              "choices": [
+                "Power that cannot be measured",
+                "Power that changes with frequency",
+                "Power consumed when the circuit is not switching, due to leakage",
+                "Power from the power supply only"
+              ],
+              "id": "chip_design_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does voltage scaling affect power consumption?",
+              "answer": "Lower voltage cuts dynamic power quadratically and also reduces leakage",
+              "explain": "Dynamic power scales with V squared, so lowering the supply voltage cuts it sharply. Leakage also falls with lower voltage, which makes voltage scaling a very effective power reduction technique.",
+              "choices": [
+                "Power only depends on frequency",
+                "Lower voltage cuts dynamic power quadratically and also reduces leakage",
+                "Voltage has no effect on power",
+                "Higher voltage reduces power"
+              ],
+              "id": "chip_design_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is clock gating?",
+              "answer": "A technique to disable the clock to inactive parts, saving dynamic power",
+              "explain": "Clock gating stops the clock to parts of the chip that are idle, eliminating unnecessary switching and saving dynamic power.",
+              "choices": [
+                "A form of security",
+                "A barrier that blocks the clock",
+                "A technique to disable the clock to inactive parts, saving dynamic power",
+                "A method to increase clock frequency"
+              ],
+              "id": "chip_design_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What causes power density to be a challenge in modern chips?",
+              "answer": "High power consumption in a small area generates excessive heat",
+              "explain": "Modern chips pack billions of transistors into small areas. If power consumption is not managed, heat buildup requires expensive cooling and reduces reliability.",
+              "choices": [
+                "The clock frequency is too low",
+                "There are too many wires",
+                "The supply voltage is too low",
+                "High power consumption in a small area generates excessive heat"
+              ],
+              "id": "chip_design_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Fabrication and Packaging",
+      "tip": "Fabrication transforms the chip design into physical silicon on a wafer through photolithography and chemical processing. Packaging protects the die and provides electrical connections to the outside world.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Wafer Fabrication",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a wafer?",
+              "answer": "A thin slice of silicon on which many chips are fabricated",
+              "explain": "A wafer is a circular silicon disk, commonly 300mm in diameter in modern fabs. Many chips are patterned on each wafer and then separated.",
+              "choices": [
+                "A measurement of chip size",
+                "A thin slice of silicon on which many chips are fabricated",
+                "A tool used in fabrication",
+                "The final packaged chip"
+              ],
+              "id": "chip_design_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is photolithography?",
+              "answer": "The process of using light and photomasks to transfer patterns onto silicon",
+              "explain": "Photolithography uses ultraviolet light through a mask to define circuit patterns on photoresist-coated wafers. It repeats for each layer of the chip.",
+              "choices": [
+                "The process of using light and photomasks to transfer patterns onto silicon",
+                "Testing finished chips",
+                "Photographing the chip layout",
+                "Printing circuit diagrams"
+              ],
+              "id": "chip_design_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is doping in semiconductor fabrication?",
+              "answer": "Adding impurities to silicon to create N-type or P-type regions",
+              "explain": "Doping introduces donor atoms (N-type) or acceptor atoms (P-type) into silicon regions to create junctions and transistor channels.",
+              "choices": [
+                "Coating the wafer with photoresist",
+                "Polishing the wafer surface",
+                "Measuring chip performance",
+                "Adding impurities to silicon to create N-type or P-type regions"
+              ],
+              "id": "chip_design_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is etching in semiconductor fabrication?",
+              "answer": "Removing material (silicon, metal, oxide) through chemical or plasma processes",
+              "explain": "Etching selectively removes material to create features. Wet etching uses chemicals; dry etching uses plasma. It is precise and repeatable.",
+              "choices": [
+                "Removing material (silicon, metal, oxide) through chemical or plasma processes",
+                "Heating the wafer",
+                "Creating a pattern on photoresist",
+                "Adding new layers to the wafer"
+              ],
+              "id": "chip_design_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is metallization in chip fabrication?",
+              "answer": "Depositing and patterning metal layers to create interconnects",
+              "explain": "Metallization deposits metal (usually copper) and patterns it to form wires and connections between transistors. Modern chips have many metal layers.",
+              "choices": [
+                "Testing the finished chip",
+                "Cutting wafers into individual dies",
+                "Adding impurities to the wafer",
+                "Depositing and patterning metal layers to create interconnects"
+              ],
+              "id": "chip_design_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Chip Packaging and Yield",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a die?",
+              "answer": "An individual chip cut from the wafer",
+              "explain": "A die is one chip unit. After fabrication, the wafer is diced into individual dies. Each die is tested and packaged separately.",
+              "choices": [
+                "An individual chip cut from the wafer",
+                "A test pattern",
+                "A tool for cutting wafers",
+                "A type of transistor"
+              ],
+              "id": "chip_design_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is chip packaging?",
+              "answer": "Mounting the die on a substrate and protecting it with a case",
+              "explain": "Packaging protects the silicon die from mechanical damage and environmental hazards. It provides electrical connections through pins or balls to external circuits.",
+              "choices": [
+                "Testing the chip at the factory",
+                "Mounting the die on a substrate and protecting it with a case",
+                "Designing the circuit layout",
+                "Shipping the wafer"
+              ],
+              "id": "chip_design_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is yield in semiconductor manufacturing?",
+              "answer": "The percentage of chips on a wafer that pass testing",
+              "explain": "Yield is the ratio of working dies to total dies on a wafer. Process defects, contamination, and design issues reduce yield. Low yield increases cost.",
+              "choices": [
+                "The total number of chips manufactured",
+                "The percentage of chips on a wafer that pass testing",
+                "The size of the wafer",
+                "The speed of the manufacturing process"
+              ],
+              "id": "chip_design_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are defects in semiconductor manufacturing?",
+              "answer": "Physical imperfections (particles, voids, patterns) that cause chips to fail",
+              "explain": "Defects include dust particles, voids in metallization, incomplete etching, and pattern imperfections. They cause opens, shorts, or timing failures.",
+              "choices": [
+                "Errors in the circuit design",
+                "Physical imperfections (particles, voids, patterns) that cause chips to fail",
+                "Intentional test points",
+                "Missing circuit elements"
+              ],
+              "id": "chip_design_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does chip area affect manufacturing yield?",
+              "answer": "Larger chips have lower yield because defects are more likely to hit them",
+              "explain": "Yield depends on defect density (defects per unit area). Larger chips expose more area to potential defects, reducing the probability all defects miss the die.",
+              "choices": [
+                "Area has no effect on yield",
+                "Larger chips always have higher yield",
+                "Small chips cannot be fabricated",
+                "Larger chips have lower yield because defects are more likely to hit them"
+              ],
+              "id": "chip_design_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
