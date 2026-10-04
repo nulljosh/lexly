@@ -2226,7 +2226,7 @@ function vibrate(pattern) {
 }
 
 function spawnConfetti() {
-    const colors = ['#9bb04f', '#d4a843', '#e8e4da', '#c98a5a', '#b5502c'];
+    const colors = ['#2e86de', '#5aa9f0', '#9bc7f5', '#1f6fb2', '#d4a843'];
     for (let index = 0; index < 30; index += 1) {
         const piece = document.createElement('div');
         piece.className = 'confetti-piece';

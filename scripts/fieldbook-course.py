@@ -31,6 +31,6 @@ for di, (dom, fs) in enumerate(sorted(by_dom.items()), 1):
     units.append({'id': f'u{di}', 'title': dom, 'tip': f'Read the {dom} entries first at fieldbook.heyitsmejosh.com/#{slug}, then come back and test yourself.', 'lessons': lessons})
 out = {'id': 'fieldbook', 'name': 'Fieldbook', 'category': 'science', 'icon': 'fa-solid fa-compass',
        'level': 'Every field of science and math', 'version': 1, 'units': units}
-json.dump(out, open(root / 'lexly/content/courses/fieldbook.json', 'w'), indent=1)
+json.dump(out, open(root / 'tonchi/content/courses/fieldbook.json', 'w'), indent=1)
 assert i > 400 and all(e['answer'] in e['choices'] and len(set(e['choices'])) == 4 for u in units for l in u['lessons'] for e in l['exercises'])
 print(len(units), 'units', i, 'exercises')

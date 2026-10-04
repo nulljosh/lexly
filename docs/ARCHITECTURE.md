@@ -24,9 +24,7 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 | `css/lingo.css` | All styling, `data-theme` attribute for light/dark mode toggling |
 | `privacy.html` | Privacy policy |
 | `support.html` | Support page |
-| `middleware.js` | Vercel middleware for basic auth on `/school/` (BC curriculum masterclass content) |
 | `onboarding.js` | Shared onboarding modal (reused across multiple Supabase apps) |
-| `devices.css` | Responsive device frame CSS for landing screenshots |
 | `sw.js` | Service worker, network-first for pages, cache-first for assets |
 | `manifest.json` | PWA manifest (app name, icons, start URL, display mode) |
 | `assets/` | SVG icons and images (bundled with service worker) |
@@ -97,7 +95,7 @@ A gamified language and skills learning app featuring 12 languages plus math, sc
 | `content/catalog.json` | Course catalog: categories (languages, math, science, skills, masterclasses) with subjects and packs |
 | `content/courses/*.json` | Course packs: units, lessons, exercises (type + fields specific to renderer) |
 | `content/notes/*.json` | Masterclass notes: sections, blocks (prose, code, callouts, tables, flashcards) |
-| `school/*.html` | BC curriculum masterclass pages (gated by basic auth via middleware.js, noindex) |
+| `school/*.html` | BC curriculum masterclass pages (gated by basic auth via functions/school/_middleware.js, noindex) |
 | `scripts/build-language-course.mjs` | Generates language packs from Tatoeba (CC-BY 2.0 FR) and OpenSubtitles frequency, appends with `t` prefix, safe to re-run |
 | `tools/validate-catalog.js` | Validates catalog structure, all packs/notes/exercises, and renderer field coverage (web + iOS) |
 

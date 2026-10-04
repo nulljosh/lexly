@@ -9,6 +9,14 @@
   --color-hairline: #e4e4e7;
   --color-code-bg: #f4f4f5;
   --text3: rgba(24,24,27,0.38);
+  /* Brand blue replaces the house clay red. Error and wrong-answer red stay in lingo.css. */
+  --clay: #2e86de;
+  --clay-deep: #1f6fb2;
+  --accent: #2e86de;
+  --accent-dot: #2e86de;
+  --color-hairline-strong: #2e86de;
+  --color-underline: rgba(46,134,222,0.45);
+  --color-underline-hover: #2e86de;
 }
 [data-theme="dark"] {
   --color-bg: #111111;
@@ -19,6 +27,13 @@
   --color-hairline: #2c2c2e;
   --color-code-bg: #1c1c1e;
   --text3: rgba(244,244,245,0.38);
+  --clay: #5aa9f0;
+  --clay-deep: #5aa9f0;
+  --accent: #5aa9f0;
+  --accent-dot: #5aa9f0;
+  --color-hairline-strong: #5aa9f0;
+  --color-underline: rgba(90,169,240,0.55);
+  --color-underline-hover: #5aa9f0;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -30,5 +45,12 @@
     --color-hairline: #2c2c2e;
     --color-code-bg: #1c1c1e;
     --text3: rgba(244,244,245,0.38);
+    --clay: #5aa9f0;
+    --clay-deep: #5aa9f0;
+    --accent: #5aa9f0;
+    --accent-dot: #5aa9f0;
+    --color-hairline-strong: #5aa9f0;
+    --color-underline: rgba(90,169,240,0.55);
+    --color-underline-hover: #5aa9f0;
   }
 }
