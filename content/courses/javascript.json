@@ -19,10 +19,10 @@
               "question": "Log to console in JavaScript?",
               "answer": "console.log()",
               "choices": [
+                "printf()",
                 "print()",
                 "console.log()",
-                "echo()",
-                "printf()"
+                "echo()"
               ],
               "id": "javascript_0"
             },
@@ -31,9 +31,9 @@
               "question": "Define a function in JS?",
               "answer": "function name() {}",
               "choices": [
-                "function name() {}",
-                "def name():",
                 "func name() {}",
+                "def name():",
+                "function name() {}",
                 "fn name() {}"
               ],
               "id": "javascript_1"
@@ -43,10 +43,10 @@
               "question": "JavaScript array method to add item?",
               "answer": "push()",
               "choices": [
+                "insert()",
                 "add()",
                 "push()",
-                "append()",
-                "insert()"
+                "append()"
               ],
               "id": "javascript_2"
             },
@@ -55,10 +55,10 @@
               "question": "Check type in JavaScript?",
               "answer": "typeof",
               "choices": [
-                "type()",
-                "typeof",
+                "getType()",
                 "instanceof",
-                "getType()"
+                "type()",
+                "typeof"
               ],
               "id": "javascript_3"
             },
@@ -67,9 +67,9 @@
               "question": "Arrow function syntax?",
               "answer": "() => {}",
               "choices": [
-                "() => {}",
                 "() -> {}",
                 "lambda() {}",
+                "() => {}",
                 "func() {}"
               ],
               "id": "javascript_4"
@@ -79,10 +79,10 @@
               "question": "Declare a constant in JS?",
               "answer": "const",
               "choices": [
-                "const",
-                "let",
                 "var",
-                "final"
+                "let",
+                "final",
+                "const"
               ],
               "id": "javascript_5"
             },
@@ -92,9 +92,9 @@
               "answer": "float",
               "choices": [
                 "string",
+                "undefined",
                 "boolean",
-                "float",
-                "undefined"
+                "float"
               ],
               "id": "javascript_6"
             }
@@ -109,10 +109,10 @@
               "question": "Template literal syntax?",
               "answer": "`Hello ${name}`",
               "choices": [
-                "`Hello ${name}`",
                 "\"Hello ${name}\"",
-                "'Hello ${name}'",
-                "f\"Hello {name}\""
+                "`Hello ${name}`",
+                "f\"Hello {name}\"",
+                "'Hello ${name}'"
               ],
               "id": "javascript_7"
             },
@@ -121,10 +121,10 @@
               "question": "Strict equality operator?",
               "answer": "===",
               "choices": [
-                "===",
-                "==",
                 "!=",
-                "="
+                "=",
+                "===",
+                "=="
               ],
               "id": "javascript_8"
             },
@@ -134,9 +134,9 @@
               "answer": "const { a, b } = obj",
               "choices": [
                 "const { a, b } = obj",
-                "const [a, b] = obj",
+                "const a, b = obj",
                 "const (a, b) = obj",
-                "const a, b = obj"
+                "const [a, b] = obj"
               ],
               "id": "javascript_9"
             },
@@ -145,9 +145,9 @@
               "question": "Promise method for parallel execution?",
               "answer": "Promise.all()",
               "choices": [
-                "Promise.all()",
-                "Promise.race()",
                 "Promise.any()",
+                "Promise.race()",
+                "Promise.all()",
                 "Promise.resolve()"
               ],
               "id": "javascript_10"
@@ -158,8 +158,8 @@
               "answer": "class",
               "choices": [
                 "class",
-                "struct",
                 "object",
+                "struct",
                 "type"
               ],
               "id": "javascript_11"
@@ -169,10 +169,10 @@
               "question": "Spread operator syntax?",
               "answer": "...array",
               "choices": [
-                "...array",
+                "..array",
                 "**array",
                 "*array",
-                "..array"
+                "...array"
               ],
               "id": "javascript_12"
             },
@@ -181,9 +181,9 @@
               "question": "Event loop handles what?",
               "answer": "Async callbacks",
               "choices": [
+                "Garbage collection",
                 "Async callbacks",
                 "Memory allocation",
-                "Garbage collection",
                 "Compilation"
               ],
               "id": "javascript_13"
@@ -199,9 +199,9 @@
               "question": "Optional chaining operator?",
               "answer": "?.",
               "choices": [
+                "?:",
                 "?.",
                 "??",
-                "?:",
                 "?.()"
               ],
               "id": "javascript_14"

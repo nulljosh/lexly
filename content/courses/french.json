@@ -20,10 +20,10 @@
               "answer": "Bonjour",
               "explain": "Bonjour literally means \"good day\" and works any time before evening. After dark, switch to Bonsoir.",
               "choices": [
-                "Bonjour",
                 "Au revoir",
+                "Bonsoir",
                 "Merci",
-                "Bonsoir"
+                "Bonjour"
               ],
               "id": "french_0"
             },
@@ -33,10 +33,10 @@
               "answer": "Merci",
               "explain": "Merci stands alone. To say what for, add pour: merci pour tout, \"thanks for everything\".",
               "choices": [
+                "Bonne nuit",
                 "Merci",
-                "De rien",
                 "Bonjour",
-                "Bonne nuit"
+                "De rien"
               ],
               "id": "french_1"
             },
@@ -46,10 +46,10 @@
               "answer": "Au revoir",
               "explain": "Au revoir means \"until we see each other again\" — revoir is re- (again) + voir (to see).",
               "choices": [
-                "Au revoir",
                 "Bonjour",
+                "Salut",
                 "Bonsoir",
-                "Salut"
+                "Au revoir"
               ],
               "id": "french_2"
             },
@@ -59,10 +59,10 @@
               "answer": "Eau",
               "explain": "Eau is feminine: l'eau, une eau. The silent final letters (e-a-u for one sound) are typical of French spelling.",
               "choices": [
-                "Eau",
-                "Feu",
+                "Terre",
                 "Air",
-                "Terre"
+                "Feu",
+                "Eau"
               ],
               "id": "french_3"
             },
@@ -73,9 +73,9 @@
               "explain": "Chat is masculine (le chat). A female cat is une chatte — the final consonant becomes audible.",
               "choices": [
                 "Chat",
-                "Chien",
                 "Cheval",
-                "Cochon"
+                "Cochon",
+                "Chien"
               ],
               "id": "french_4"
             },
@@ -85,10 +85,10 @@
               "answer": "Maison",
               "explain": "Maison is feminine: la maison. Chez moi (\"at my place\") is the more common way to say \"home\" in speech.",
               "choices": [
-                "Maison",
-                "Jardin",
                 "Chambre",
-                "Cuisine"
+                "Cuisine",
+                "Maison",
+                "Jardin"
               ],
               "id": "french_5"
             },
@@ -98,10 +98,10 @@
               "answer": "S'il vous plait",
               "explain": "Literally \"if it pleases you\". Drop to s'il te plait with someone you'd address as tu.",
               "choices": [
-                "S'il vous plait",
                 "Merci",
+                "Pardon",
                 "De rien",
-                "Pardon"
+                "S'il vous plait"
               ],
               "id": "french_6"
             }
@@ -117,10 +117,10 @@
               "answer": "Oui",
               "explain": "For a positive answer to a negative question (\"Isn't it?\" — \"Actually, yes\"), French uses si instead of oui.",
               "choices": [
-                "Oui",
                 "Non",
-                "Peut-etre",
-                "Jamais"
+                "Oui",
+                "Jamais",
+                "Peut-etre"
               ],
               "id": "french_7"
             },
@@ -246,10 +246,10 @@
               "question": "I'm fine, thank you. And you?",
               "answer": "Je vais bien, merci. Et vous ?",
               "choices": [
-                "Merci à elle.",
                 "Je vais bien, merci. Et vous ?",
-                "Merci pour tout !",
-                "Je vais très bien, merci."
+                "Merci à elle.",
+                "Je vais très bien, merci.",
+                "Merci pour tout !"
               ],
               "id": "french_t1_1_0"
             },
@@ -258,10 +258,10 @@
               "question": "Bien, merci. ____ vous ?",
               "answer": "Et",
               "choices": [
-                "vous",
                 "pour",
-                "dit",
-                "Et"
+                "vous",
+                "Et",
+                "dit"
               ],
               "id": "french_t1_1_1"
             },
@@ -320,10 +320,10 @@
               "question": "Thanks for doing all this.",
               "answer": "Merci de faire tout ça.",
               "choices": [
-                "Merci à vous tous.",
                 "Merci de faire tout ça.",
                 "Bien, merci. Et vous ?",
-                "Rien de plus, merci."
+                "Rien de plus, merci.",
+                "Merci à vous tous."
               ],
               "id": "french_t1_2_0"
             },
@@ -333,9 +333,9 @@
               "answer": "ça",
               "choices": [
                 "avez",
-                "faire",
                 "ça",
-                "vous"
+                "vous",
+                "faire"
               ],
               "id": "french_t1_2_1"
             },
@@ -395,10 +395,10 @@
               "question": "Thanks! Same to you!",
               "answer": "Merci ! À vous de même !",
               "choices": [
-                "Merci pour tout !",
                 "Je vais très bien, merci.",
+                "Merci ! À vous de même !",
                 "Je vais bien, merci.",
-                "Merci ! À vous de même !"
+                "Merci pour tout !"
               ],
               "id": "french_t1_3_0"
             },
@@ -408,9 +408,9 @@
               "answer": "quand",
               "choices": [
                 "même",
+                "que",
                 "quand",
-                "Rien",
-                "que"
+                "Rien"
               ],
               "id": "french_t1_3_1"
             },
@@ -492,8 +492,8 @@
               "answer": "Il est un peu comme son père.",
               "choices": [
                 "Où est ton père ?",
-                "Il est un peu comme son père.",
                 "Où est père ?",
+                "Il est un peu comme son père.",
                 "Tu es mon père."
               ],
               "id": "french_t2_1_0"
@@ -503,10 +503,10 @@
               "question": "Mon père ____ bien.",
               "answer": "va",
               "choices": [
-                "peu",
-                "votre",
+                "va",
                 "sais",
-                "va"
+                "peu",
+                "votre"
               ],
               "id": "french_t2_1_1"
             },
@@ -567,10 +567,10 @@
               "question": "How about your father?",
               "answer": "Et ton père ?",
               "choices": [
-                "Il est ton père.",
-                "Et ton père ?",
+                "Où est mon père ?",
                 "Mon père va bien.",
-                "Où est mon père ?"
+                "Il est ton père.",
+                "Et ton père ?"
               ],
               "id": "french_t2_2_0"
             },
@@ -579,10 +579,10 @@
               "question": "Il est ____ père.",
               "answer": "ton",
               "choices": [
-                "moi",
-                "ton",
                 "bien",
-                "Où"
+                "moi",
+                "Où",
+                "ton"
               ],
               "id": "french_t2_2_1"
             },
@@ -655,10 +655,10 @@
               "question": "Est-ce que tu sais ____ est son père ?",
               "answer": "qui",
               "choices": [
-                "Je",
                 "qui",
-                "Que",
-                "ton"
+                "Je",
+                "ton",
+                "Que"
               ],
               "id": "french_t2_3_1"
             },
@@ -742,10 +742,10 @@
               "question": "It's no use crying over spilt milk.",
               "answer": "Ce qui est fait est fait.",
               "choices": [
-                "Il aime beaucoup manger.",
                 "Ce qui est fait est fait.",
-                "On ne peut pas vivre sans eau.",
-                "Je ne veux plus rien manger."
+                "Je ne veux plus rien manger.",
+                "Il aime beaucoup manger.",
+                "On ne peut pas vivre sans eau."
               ],
               "id": "french_t3_1_0"
             },
@@ -754,10 +754,10 @@
               "question": "Sans eau, ____ de vie.",
               "answer": "pas",
               "choices": [
-                "tu",
-                "personne",
                 "le",
-                "pas"
+                "tu",
+                "pas",
+                "personne"
               ],
               "id": "french_t3_1_1"
             },
@@ -818,10 +818,10 @@
               "question": "Without water, nothing could live.",
               "answer": "Sans eau, rien ne pourrait vivre.",
               "choices": [
-                "On ne peut pas vivre sans eau.",
+                "As-tu quelque chose à manger ?",
                 "Sans eau, rien ne pourrait vivre.",
                 "Je veux manger quelque chose.",
-                "As-tu quelque chose à manger ?"
+                "On ne peut pas vivre sans eau."
               ],
               "id": "french_t3_2_0"
             },
@@ -831,9 +831,9 @@
               "answer": "ne",
               "choices": [
                 "en",
+                "Tu",
                 "tu",
-                "ne",
-                "Tu"
+                "ne"
               ],
               "id": "french_t3_2_1"
             },
@@ -896,10 +896,10 @@
               "question": "Let's go to eat together.",
               "answer": "Allons manger ensemble.",
               "choices": [
-                "Sans eau, personne ne pourrait vivre sur terre.",
-                "On ne peut vivre sans eau.",
+                "Allons manger ensemble.",
                 "Tu ne dois pas manger trop.",
-                "Allons manger ensemble."
+                "On ne peut vivre sans eau.",
+                "Sans eau, personne ne pourrait vivre sur terre."
               ],
               "id": "french_t3_3_0"
             },
@@ -908,9 +908,9 @@
               "question": "Tu ne dois ____ manger trop.",
               "answer": "pas",
               "choices": [
+                "mon",
                 "rien",
                 "pas",
-                "mon",
                 "Tu"
               ],
               "id": "french_t3_3_1"
@@ -994,9 +994,9 @@
               "answer": "Tu es chez toi ?",
               "choices": [
                 "Ma maison est ta maison.",
-                "Tu es chez toi ?",
                 "Je veux être chez moi.",
-                "Je suis à la maison."
+                "Je suis à la maison.",
+                "Tu es chez toi ?"
               ],
               "id": "french_t4_1_0"
             },
@@ -1006,9 +1006,9 @@
               "answer": "chez",
               "choices": [
                 "ne",
-                "Cette",
+                "chez",
                 "veux",
-                "chez"
+                "Cette"
               ],
               "id": "french_t4_1_1"
             },
@@ -1070,9 +1070,9 @@
               "answer": "Je veux aller chez moi maintenant.",
               "choices": [
                 "Tu peux aller chez toi maintenant !",
-                "Je veux aller chez moi maintenant.",
+                "Est-ce que votre mère est chez elle ?",
                 "Ma maison est ta maison.",
-                "Est-ce que votre mère est chez elle ?"
+                "Je veux aller chez moi maintenant."
               ],
               "id": "french_t4_2_0"
             },
@@ -1082,9 +1082,9 @@
               "answer": "chez",
               "choices": [
                 "Il",
+                "maintenant",
                 "chez",
-                "que",
-                "maintenant"
+                "que"
               ],
               "id": "french_t4_2_1"
             },
@@ -1146,10 +1146,10 @@
               "question": "Come to my house.",
               "answer": "Viens à la maison.",
               "choices": [
-                "Je suis encore chez moi.",
-                "Je vais chez moi.",
                 "Tu peux aller chez toi maintenant !",
-                "Viens à la maison."
+                "Je vais chez moi.",
+                "Viens à la maison.",
+                "Je suis encore chez moi."
               ],
               "id": "french_t4_3_0"
             },
@@ -1159,9 +1159,9 @@
               "answer": "bien",
               "choices": [
                 "dois",
-                "bien",
                 "moi",
-                "est"
+                "est",
+                "bien"
               ],
               "id": "french_t4_3_1"
             },
@@ -1244,10 +1244,10 @@
               "question": "I'm going to take my car.",
               "answer": "Je vais prendre ma voiture.",
               "choices": [
-                "Mais je veux une voiture.",
-                "Je vais prendre ma voiture.",
                 "Arrête la voiture, maintenant !",
-                "Je suis cette voiture."
+                "Je vais prendre ma voiture.",
+                "Je suis cette voiture.",
+                "Mais je veux une voiture."
               ],
               "id": "french_t5_1_0"
             },
@@ -1256,10 +1256,10 @@
               "question": "Où est ____ voiture ?",
               "answer": "ma",
               "choices": [
-                "Sa",
+                "ma",
                 "vais",
-                "Ma",
-                "ma"
+                "Sa",
+                "Ma"
               ],
               "id": "french_t5_1_1"
             },
@@ -1320,10 +1320,10 @@
               "question": "Her car is two years old.",
               "answer": "Sa voiture a deux ans.",
               "choices": [
-                "Arrête cette voiture !",
                 "Sa voiture a deux ans.",
+                "Je suis cette voiture.",
                 "Il a une voiture.",
-                "Je suis cette voiture."
+                "Arrête cette voiture !"
               ],
               "id": "french_t5_2_0"
             },
@@ -1332,10 +1332,10 @@
               "question": "Je suis ____ voiture.",
               "answer": "cette",
               "choices": [
-                "Non",
                 "cette",
                 "ma",
-                "vais"
+                "vais",
+                "Non"
               ],
               "id": "french_t5_2_1"
             },
@@ -1408,10 +1408,10 @@
               "question": "Arrête cette ____ !",
               "answer": "voiture",
               "choices": [
-                "une",
                 "voiture",
+                "Nous",
                 "prendre",
-                "Nous"
+                "une"
               ],
               "id": "french_t5_3_1"
             },
@@ -1504,10 +1504,10 @@
               "question": "Elle fait ça ____ le temps.",
               "answer": "tout",
               "choices": [
-                "là",
-                "un",
                 "veux",
-                "tout"
+                "là",
+                "tout",
+                "un"
               ],
               "id": "french_t6_1_1"
             },
@@ -1570,9 +1570,9 @@
               "answer": "Je suis là tout le temps.",
               "choices": [
                 "Je veux du temps.",
+                "Il est temps de faire quelque chose.",
                 "Je suis là tout le temps.",
-                "Vous avez le temps maintenant ?",
-                "Il est temps de faire quelque chose."
+                "Vous avez le temps maintenant ?"
               ],
               "id": "french_t6_2_0"
             },
@@ -1581,10 +1581,10 @@
               "question": "Il est temps ____ le faire.",
               "answer": "de",
               "choices": [
-                "On",
+                "Tu",
                 "de",
-                "Elle",
-                "Tu"
+                "On",
+                "Elle"
               ],
               "id": "french_t6_2_1"
             },
@@ -1645,9 +1645,9 @@
               "answer": "On est dans les temps.",
               "choices": [
                 "Tu as du temps?",
+                "On est dans les temps.",
                 "Est-ce que tu as le temps ?",
-                "Elle fait ça tout le temps.",
-                "On est dans les temps."
+                "Elle fait ça tout le temps."
               ],
               "id": "french_t6_3_0"
             },
@@ -1656,10 +1656,10 @@
               "question": "Tu as ____ temps.",
               "answer": "le",
               "choices": [
+                "très",
                 "un",
                 "le",
-                "On",
-                "très"
+                "On"
               ],
               "id": "french_t6_3_1"
             },
@@ -1742,8 +1742,8 @@
               "question": "It'll work.",
               "answer": "Ça va le faire.",
               "choices": [
-                "Où est mon argent ?",
                 "Ça va le faire.",
+                "Où est mon argent ?",
                 "Sans argent, rien ne se fait.",
                 "À qui est cet argent ?"
               ],
@@ -1754,10 +1754,10 @@
               "question": "Personne ne veut ____ être sans argent.",
               "answer": "jamais",
               "choices": [
-                "de",
                 "votre",
                 "argent",
-                "jamais"
+                "jamais",
+                "de"
               ],
               "id": "french_t7_1_1"
             },
@@ -1819,9 +1819,9 @@
               "answer": "À qui est tout cet argent ?",
               "choices": [
                 "Où va tout cet argent ?",
+                "Je ne veux pas de leur argent.",
                 "À qui est tout cet argent ?",
-                "Où est votre argent ?",
-                "Je ne veux pas de leur argent."
+                "Où est votre argent ?"
               ],
               "id": "french_t7_2_0"
             },
@@ -1830,9 +1830,9 @@
               "question": "Est-ce que tout cet ____ est à toi ?",
               "answer": "argent",
               "choices": [
-                "ne",
                 "argent",
                 "Sans",
+                "ne",
                 "est"
               ],
               "id": "french_t7_2_1"
@@ -1898,10 +1898,10 @@
               "question": "I've got no money.",
               "answer": "Je suis sans argent.",
               "choices": [
-                "Personne ne veut jamais être sans argent.",
-                "Sans argent, rien ne se fait.",
                 "Est-ce ton argent ?",
-                "Je suis sans argent."
+                "Je suis sans argent.",
+                "Personne ne veut jamais être sans argent.",
+                "Sans argent, rien ne se fait."
               ],
               "id": "french_t7_3_0"
             },
@@ -1911,9 +1911,9 @@
               "answer": "de",
               "choices": [
                 "en",
-                "beaucoup",
                 "de",
-                "faire"
+                "faire",
+                "beaucoup"
               ],
               "id": "french_t7_3_1"
             },
@@ -1997,10 +1997,10 @@
               "question": "If you're happy, I'm happy.",
               "answer": "Si ça te va, ça me va.",
               "choices": [
-                "Non, je ne veux pas.",
+                "Plus tu en as, plus tu en veux.",
                 "Si ça te va, ça me va.",
                 "Je te veux.",
-                "Plus tu en as, plus tu en veux."
+                "Non, je ne veux pas."
               ],
               "id": "french_t8_1_0"
             },
@@ -2009,10 +2009,10 @@
               "question": "Ça fait ____ ?",
               "answer": "quoi",
               "choices": [
-                "tu",
-                "va",
                 "pas",
-                "quoi"
+                "va",
+                "quoi",
+                "tu"
               ],
               "id": "french_t8_1_1"
             },
@@ -2071,9 +2071,9 @@
               "question": "I know what I want to do.",
               "answer": "Je sais ce que je veux faire.",
               "choices": [
-                "Je veux le faire bien.",
                 "Je sais ce que je veux faire.",
                 "Je ne veux pas de ça !",
+                "Je veux le faire bien.",
                 "Non, je ne veux pas."
               ],
               "id": "french_t8_2_0"
@@ -2083,10 +2083,10 @@
               "question": "Je ne veux ____ de ça !",
               "answer": "pas",
               "choices": [
-                "va",
                 "pas",
                 "te",
-                "les"
+                "les",
+                "va"
               ],
               "id": "french_t8_2_1"
             },
@@ -2148,9 +2148,9 @@
               "answer": "Je sais ce que tu veux faire.",
               "choices": [
                 "Moi je veux ça.",
+                "Je sais ce que tu veux faire.",
                 "Je veux le faire.",
-                "Je ne le veux plus.",
-                "Je sais ce que tu veux faire."
+                "Je ne le veux plus."
               ],
               "id": "french_t8_3_0"
             },
@@ -2161,8 +2161,8 @@
               "choices": [
                 "ça",
                 "le",
-                "va",
-                "que"
+                "que",
+                "va"
               ],
               "id": "french_t8_3_1"
             },
@@ -2245,10 +2245,10 @@
               "question": "What was the weather like?",
               "answer": "Comment était le temps ?",
               "choices": [
-                "Il fait mauvais temps.",
+                "Le temps a vite changé.",
                 "Comment était le temps ?",
                 "Il fait très mauvais.",
-                "Le temps a vite changé."
+                "Il fait mauvais temps."
               ],
               "id": "french_t9_1_0"
             },
@@ -2257,10 +2257,10 @@
               "question": "Comment est ____ temps ?",
               "answer": "le",
               "choices": [
-                "très",
+                "le",
                 "est",
                 "Bien",
-                "le"
+                "très"
               ],
               "id": "french_t9_1_1"
             },
@@ -2323,8 +2323,8 @@
               "choices": [
                 "Bien le bonjour !",
                 "Il fait super beau.",
-                "Je ne sors pas avec ce temps.",
-                "Quel temps bizarre !"
+                "Quel temps bizarre !",
+                "Je ne sors pas avec ce temps."
               ],
               "id": "french_t9_2_0"
             },
@@ -2333,9 +2333,9 @@
               "question": "Quel temps il ____ dehors ?",
               "answer": "fait",
               "choices": [
-                "aux",
                 "fait",
                 "laisse",
+                "aux",
                 "était"
               ],
               "id": "french_t9_2_1"
@@ -2396,10 +2396,10 @@
               "question": "The weather is really impossible!",
               "answer": "Ce temps est vraiment impossible !",
               "choices": [
-                "Comment est le temps ?",
+                "Ce temps est vraiment impossible !",
                 "Quel temps il fait dehors ?",
-                "Il va faire quel temps ?",
-                "Ce temps est vraiment impossible !"
+                "Comment est le temps ?",
+                "Il va faire quel temps ?"
               ],
               "id": "french_t9_3_0"
             },
@@ -2408,10 +2408,10 @@
               "question": "Quel temps ____ !",
               "answer": "bizarre",
               "choices": [
-                "Il",
+                "fait",
                 "bizarre",
                 "ne",
-                "fait"
+                "Il"
               ],
               "id": "french_t9_3_1"
             },
@@ -2494,10 +2494,10 @@
               "question": "I'm in way over my head.",
               "answer": "Je ne sais pas quoi faire.",
               "choices": [
-                "Personne ne va te faire de mal.",
+                "Je me suis fait mal.",
                 "Je ne sais pas quoi faire.",
-                "Ça ne peut pas vous faire de mal.",
-                "Je me suis fait mal."
+                "Personne ne va te faire de mal.",
+                "Ça ne peut pas vous faire de mal."
               ],
               "id": "french_t10_1_0"
             },
@@ -2506,10 +2506,10 @@
               "question": "Est-ce que ça ____ mal ?",
               "answer": "fait",
               "choices": [
-                "Elle",
-                "pas",
                 "de",
-                "fait"
+                "fait",
+                "pas",
+                "Elle"
               ],
               "id": "french_t10_1_1"
             },
@@ -2570,10 +2570,10 @@
               "question": "Don't hurt anyone.",
               "answer": "Ne fais de mal à personne !",
               "choices": [
-                "Je ne lui ai pas fait de mal.",
                 "Ne fais de mal à personne !",
-                "Ça ne va pas faire mal du tout.",
-                "Est-ce que ça fait mal ?"
+                "Je ne lui ai pas fait de mal.",
+                "Est-ce que ça fait mal ?",
+                "Ça ne va pas faire mal du tout."
               ],
               "id": "french_t10_2_0"
             },
@@ -2582,10 +2582,10 @@
               "question": "Ça vous a ____ mal ?",
               "answer": "fait",
               "choices": [
-                "pas",
-                "fait",
                 "vais",
-                "avait"
+                "fait",
+                "avait",
+                "pas"
               ],
               "id": "french_t10_2_1"
             },
@@ -2649,10 +2649,10 @@
               "question": "He can't hurt you anymore.",
               "answer": "Il ne peut plus te faire de mal.",
               "choices": [
-                "Tu vas te faire mal.",
-                "Ça va faire un peu mal.",
+                "Il ne peut plus te faire de mal.",
                 "Tu as toujours mal ?",
-                "Il ne peut plus te faire de mal."
+                "Tu vas te faire mal.",
+                "Ça va faire un peu mal."
               ],
               "id": "french_t10_3_0"
             },
@@ -2661,10 +2661,10 @@
               "question": "Tu as ____ mal ?",
               "answer": "toujours",
               "choices": [
-                "suis",
+                "fait",
                 "toujours",
-                "me",
-                "fait"
+                "suis",
+                "me"
               ],
               "id": "french_t10_3_1"
             },

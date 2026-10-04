@@ -21,10 +21,10 @@
               "answer": "A computer that makes requests to a server",
               "explain": "A client is any device or program that sends a request to a server, like a web browser on your computer or a mobile app.",
               "choices": [
-                "A computer that stores data",
-                "A computer that makes requests to a server",
                 "A computer that never sends data",
-                "A type of database"
+                "A type of database",
+                "A computer that makes requests to a server",
+                "A computer that stores data"
               ],
               "id": "servers_u1l1_0"
             },
@@ -34,9 +34,9 @@
               "answer": "Process the request and send back a response",
               "explain": "Servers are designed to accept requests, process them using their logic or data, and return appropriate responses back to the client.",
               "choices": [
+                "Store the request on a disk",
                 "Ignore all requests",
                 "Process the request and send back a response",
-                "Store the request on a disk",
                 "Forward it to another client"
               ],
               "id": "servers_u1l1_1"
@@ -47,10 +47,10 @@
               "answer": "A virtual endpoint on a computer where a server listens for connections",
               "explain": "A port is a numbered endpoint (0-65535) on a computer. Servers listen on specific ports to receive requests. For example, web servers typically listen on port 80 or 443.",
               "choices": [
-                "A physical cable connection",
                 "A virtual endpoint on a computer where a server listens for connections",
-                "The speed of data transfer",
-                "A type of network protocol"
+                "A type of network protocol",
+                "A physical cable connection",
+                "The speed of data transfer"
               ],
               "id": "servers_u1l1_2"
             },
@@ -62,8 +62,8 @@
               "choices": [
                 "A server on the internet",
                 "A server in another country",
-                "An address referring to the current computer's server",
-                "A backup copy of your server"
+                "A backup copy of your server",
+                "An address referring to the current computer's server"
               ],
               "id": "servers_u1l1_3"
             },
@@ -73,9 +73,9 @@
               "answer": "Using the server's address and port number",
               "explain": "A client needs two pieces of information: the server's network address (IP address or domain name) and the port number it should connect to.",
               "choices": [
-                "It guesses randomly",
                 "It asks other clients",
                 "Using the server's address and port number",
+                "It guesses randomly",
                 "The server sends it a notification"
               ],
               "id": "servers_u1l1_4"
@@ -92,10 +92,10 @@
               "answer": "Data sent from a client to a server asking for an action",
               "explain": "A request is a message from the client that specifies what action it wants the server to perform, like 'fetch a file' or 'save data'.",
               "choices": [
-                "Data stored on the server",
                 "Data sent from a client to a server asking for an action",
+                "A message sent by all clients at once",
                 "A connection that never closes",
-                "A message sent by all clients at once"
+                "Data stored on the server"
               ],
               "id": "servers_u1l2_0"
             },
@@ -105,10 +105,10 @@
               "answer": "The result of processing the client's request",
               "explain": "A response is what the server sends back to the client after processing. It includes the data requested, a success/error message, or other relevant information.",
               "choices": [
+                "Instructions for the server",
                 "The client's original request",
                 "The result of processing the client's request",
-                "A list of all other clients",
-                "Instructions for the server"
+                "A list of all other clients"
               ],
               "id": "servers_u1l2_1"
             },
@@ -118,10 +118,10 @@
               "answer": "Client sends request, server processes it and sends response back",
               "explain": "This is the fundamental pattern of server communication: the client initiates by sending a request, the server receives and processes it, then sends a response, and the cycle completes.",
               "choices": [
-                "Clients and servers send data at random times",
-                "The server sends data without clients asking",
+                "Responses arrive before requests are sent",
                 "Client sends request, server processes it and sends response back",
-                "Responses arrive before requests are sent"
+                "Clients and servers send data at random times",
+                "The server sends data without clients asking"
               ],
               "id": "servers_u1l2_2"
             },
@@ -131,10 +131,10 @@
               "answer": "Yes, if the request is asynchronous",
               "explain": "In asynchronous requests, the client doesn't block and wait. It sends the request and continues working. When the response arrives later, a callback handles it.",
               "choices": [
-                "No, the client must stop everything",
-                "Yes, if the request is asynchronous",
+                "No, responses always freeze the client",
                 "Only if the response is very fast",
-                "No, responses always freeze the client"
+                "No, the client must stop everything",
+                "Yes, if the request is asynchronous"
               ],
               "id": "servers_u1l2_3"
             },
@@ -144,9 +144,9 @@
               "answer": "An error is a kind of response that reports a problem",
               "explain": "A server answers a bad or failed request with an error response, such as a 404 or a 500. It is still a response, with a status code that says what went wrong.",
               "choices": [
-                "A response always succeeds",
                 "An error means the server crashed",
                 "An error is a kind of response that reports a problem",
+                "A response always succeeds",
                 "Responses are only for GET requests"
               ],
               "id": "servers_u1l2_4"
@@ -170,10 +170,10 @@
               "answer": "GET",
               "explain": "GET requests ask the server to retrieve and return data without changing anything. They are safe and can be cached.",
               "choices": [
-                "POST",
                 "GET",
                 "DELETE",
-                "PUT"
+                "PUT",
+                "POST"
               ],
               "id": "servers_u2l1_0"
             },
@@ -183,10 +183,10 @@
               "answer": "POST",
               "explain": "POST requests send data to the server to create a new resource. The data is included in the request body, not in the URL.",
               "choices": [
-                "GET",
                 "POST",
-                "HEAD",
-                "PATCH"
+                "PATCH",
+                "GET",
+                "HEAD"
               ],
               "id": "servers_u2l1_1"
             },
@@ -196,10 +196,10 @@
               "answer": "The request succeeded",
               "explain": "Status codes in the 2xx range (200-299) indicate success. 200 specifically means OK, the request worked perfectly.",
               "choices": [
-                "The request failed",
-                "The request succeeded",
                 "The server is too busy",
-                "The resource was not found"
+                "The request succeeded",
+                "The resource was not found",
+                "The request failed"
               ],
               "id": "servers_u2l1_2"
             },
@@ -209,10 +209,10 @@
               "answer": "The requested resource was not found",
               "explain": "4xx status codes indicate client errors. 404 specifically means the server could not find the requested resource.",
               "choices": [
-                "The request succeeded",
-                "The server crashed",
+                "The server is processing the request",
                 "The requested resource was not found",
-                "The server is processing the request"
+                "The server crashed",
+                "The request succeeded"
               ],
               "id": "servers_u2l1_3"
             },
@@ -222,10 +222,10 @@
               "answer": "A server error occurred",
               "explain": "5xx status codes indicate server errors. 500 means the server encountered an unexpected problem while processing the request.",
               "choices": [
-                "The client sent bad data",
+                "The request is still being processed",
                 "A server error occurred",
-                "The resource was not found",
-                "The request is still being processed"
+                "The client sent bad data",
+                "The resource was not found"
               ],
               "id": "servers_u2l1_4"
             }
@@ -241,9 +241,9 @@
               "answer": "Metadata sent with requests and responses that describe the content",
               "explain": "Headers provide information about the data being sent, like content type, length, caching rules, and authentication info. They come before the actual body.",
               "choices": [
-                "The main data in the response",
-                "Metadata sent with requests and responses that describe the content",
                 "Security certificates",
+                "Metadata sent with requests and responses that describe the content",
+                "The main data in the response",
                 "Abbreviated status messages"
               ],
               "id": "servers_u2l2_0"
@@ -254,10 +254,10 @@
               "answer": "Storing data on the client that can be sent back to the server",
               "explain": "Cookies let servers send small pieces of data to clients, which the clients store and send back with future requests. They're useful for remembering user preferences or session info.",
               "choices": [
-                "Encrypting data",
-                "Storing data on the client that can be sent back to the server",
                 "Speeding up network connections",
-                "Filtering spam requests"
+                "Encrypting data",
+                "Filtering spam requests",
+                "Storing data on the client that can be sent back to the server"
               ],
               "id": "servers_u2l2_1"
             },
@@ -267,10 +267,10 @@
               "answer": "The client stores it and sends it back in future requests",
               "explain": "When a server includes a Set-Cookie header in a response, the client (browser) stores that cookie. On subsequent requests to the same server, the client includes it again.",
               "choices": [
+                "Only other servers can see it",
                 "The cookie disappears immediately",
                 "The client deletes it",
-                "The client stores it and sends it back in future requests",
-                "Only other servers can see it"
+                "The client stores it and sends it back in future requests"
               ],
               "id": "servers_u2l2_2"
             },
@@ -280,10 +280,10 @@
               "answer": "To prove the client has permission to access a resource",
               "explain": "The Authorization header typically contains a token or credentials that tell the server the client is authenticated and authorized. The server checks it before allowing access.",
               "choices": [
-                "To identify the programming language used",
                 "To prove the client has permission to access a resource",
                 "To tell the client what language to use",
-                "To reject all requests"
+                "To reject all requests",
+                "To identify the programming language used"
               ],
               "id": "servers_u2l2_3"
             },
@@ -293,9 +293,9 @@
               "answer": "Describing the format of the data being sent",
               "explain": "Content-Type tells the recipient whether the data is HTML, JSON, plain text, an image, or another format. This helps the client or server process the data correctly.",
               "choices": [
+                "Compressing the data",
                 "Counting how many bytes are being sent",
                 "Describing the format of the data being sent",
-                "Compressing the data",
                 "Routing the request to the right port"
               ],
               "id": "servers_u2l2_4"
@@ -319,9 +319,9 @@
               "answer": "A set of rules for how different programs communicate",
               "explain": "An API defines what requests a client can make, what the server will do with them, and what format the response will be in. It's a contract between client and server.",
               "choices": [
-                "A way to physically connect computers",
                 "A set of rules for how different programs communicate",
                 "A type of database",
+                "A way to physically connect computers",
                 "A security protocol"
               ],
               "id": "servers_u3l1_0"
@@ -333,9 +333,9 @@
               "explain": "An endpoint is like a function the API offers. For example, '/api/users' might be an endpoint that returns a list of users when you make a GET request to it.",
               "choices": [
                 "The final response from the server",
-                "A specific URL path where the API accepts requests",
+                "A backup server location",
                 "The encryption method used",
-                "A backup server location"
+                "A specific URL path where the API accepts requests"
               ],
               "id": "servers_u3l1_1"
             },
@@ -345,10 +345,10 @@
               "answer": "A text format for representing structured data",
               "explain": "JSON (JavaScript Object Notation) is a human-readable format used to send structured data between clients and servers. It uses key-value pairs, arrays, and nested objects.",
               "choices": [
-                "A programming language",
+                "An HTTP method",
                 "A text format for representing structured data",
                 "A type of server",
-                "An HTTP method"
+                "A programming language"
               ],
               "id": "servers_u3l1_2"
             },
@@ -358,10 +358,10 @@
               "answer": "To verify the client is authorized to use the API",
               "explain": "Tokens prove the client has been authenticated and is allowed to access the API's resources. Without one, the server can reject unauthorized requests.",
               "choices": [
+                "To store user passwords",
                 "To compress the request data",
-                "To verify the client is authorized to use the API",
                 "To route requests to the correct server",
-                "To store user passwords"
+                "To verify the client is authorized to use the API"
               ],
               "id": "servers_u3l1_3"
             },
@@ -371,10 +371,10 @@
               "answer": "In the Authorization header",
               "explain": "Clients typically include the token in an Authorization header with a format like 'Bearer <token>' or 'Basic <credentials>'. The server reads this header to verify the token.",
               "choices": [
-                "In the URL path",
+                "In a separate file",
                 "In the request body only",
                 "In the Authorization header",
-                "In a separate file"
+                "In the URL path"
               ],
               "id": "servers_u3l1_4"
             }
@@ -390,10 +390,10 @@
               "answer": "Representational State Transfer",
               "explain": "REST is an architectural style for building web APIs. It uses standard HTTP methods and emphasizes resources identified by URLs.",
               "choices": [
-                "Remote Electronic Service Transfer",
                 "Representational State Transfer",
-                "Reliable Server Exchange Technology",
-                "Request-Response Exchange System"
+                "Remote Electronic Service Transfer",
+                "Request-Response Exchange System",
+                "Reliable Server Exchange Technology"
               ],
               "id": "servers_u3l2_0"
             },
@@ -404,9 +404,9 @@
               "explain": "Resources are the core concept in REST. A user, a product, or a blog post are all resources. Each resource has a unique identifier (URL).",
               "choices": [
                 "A server's storage space",
+                "A backup copy of data",
                 "An entity that can be accessed and modified via the API",
-                "A type of network connection",
-                "A backup copy of data"
+                "A type of network connection"
               ],
               "id": "servers_u3l2_1"
             },
@@ -417,9 +417,9 @@
               "explain": "In REST, each resource has its own endpoint. For example, /api/users/123 uniquely identifies the user with id 123, and /api/users/456 identifies user 456.",
               "choices": [
                 "Statelessness",
+                "Client-server separation",
                 "Cacheability",
-                "Resources should be uniquely identifiable",
-                "Client-server separation"
+                "Resources should be uniquely identifiable"
               ],
               "id": "servers_u3l2_2"
             },
@@ -442,10 +442,10 @@
               "answer": "DELETE",
               "explain": "The DELETE method removes a resource from the server. A DELETE request to /api/users/123 would delete the user with id 123.",
               "choices": [
-                "POST",
+                "REMOVE",
                 "PUT",
                 "DELETE",
-                "REMOVE"
+                "POST"
               ],
               "id": "servers_u3l2_4"
             }
@@ -468,10 +468,10 @@
               "answer": "A running program that listens for and handles requests",
               "explain": "A server process is a program executing on a computer. It continuously listens on a specific port and processes incoming requests in a loop.",
               "choices": [
-                "A frozen snapshot of data",
-                "A running program that listens for and handles requests",
                 "A file stored on disk",
-                "A scheduled task that runs once"
+                "A scheduled task that runs once",
+                "A frozen snapshot of data",
+                "A running program that listens for and handles requests"
               ],
               "id": "servers_u4l1_0"
             },
@@ -481,9 +481,9 @@
               "answer": "Storing configuration values without hardcoding them",
               "explain": "Environment variables let you set values like database URLs, API keys, and port numbers outside the code. This allows the same code to run in different environments with different configs.",
               "choices": [
-                "Compiling the source code",
-                "Storing configuration values without hardcoding them",
                 "Encrypting the data",
+                "Storing configuration values without hardcoding them",
+                "Compiling the source code",
                 "Identifying the programming language"
               ],
               "id": "servers_u4l1_1"
@@ -495,9 +495,9 @@
               "explain": "If API keys are hardcoded in source files and those files are committed to a public repository, anyone can see the keys. Environment variables keep secrets out of the code.",
               "choices": [
                 "It makes the code run faster",
-                "To prevent accidentally exposing secrets in version control",
+                "It improves the user interface",
                 "It reduces the server's memory usage",
-                "It improves the user interface"
+                "To prevent accidentally exposing secrets in version control"
               ],
               "id": "servers_u4l1_2"
             },
@@ -507,9 +507,9 @@
               "answer": "Records of events and errors that happened on the server",
               "explain": "Logs capture what the server did: requests it received, errors it encountered, warnings about unusual activity. They help with debugging and monitoring.",
               "choices": [
-                "Files uploaded by clients",
                 "Records of events and errors that happened on the server",
                 "Copies of the source code",
+                "Files uploaded by clients",
                 "Encrypted user data"
               ],
               "id": "servers_u4l1_3"
@@ -520,10 +520,10 @@
               "answer": "They help debug problems and understand what the server is doing",
               "explain": "Logs provide a detailed history of server activity. When something goes wrong, logs show what happened and can help trace the root cause.",
               "choices": [
-                "They make the server more secure",
-                "They help debug problems and understand what the server is doing",
+                "They encrypt user data",
                 "They increase the server's speed",
-                "They encrypt user data"
+                "They help debug problems and understand what the server is doing",
+                "They make the server more secure"
               ],
               "id": "servers_u4l1_4"
             }
@@ -540,8 +540,8 @@
               "explain": "A reverse proxy sits in front of backend servers. It receives client requests, forwards them to the appropriate backend server, gets the response, and sends it back to the client.",
               "choices": [
                 "A server that makes requests to clients",
-                "A server that forwards client requests to backend servers",
                 "A backup copy of the main server",
+                "A server that forwards client requests to backend servers",
                 "A tool for compressing data"
               ],
               "id": "servers_u4l2_0"
@@ -552,10 +552,10 @@
               "answer": "To hide backend servers, distribute traffic, or cache responses",
               "explain": "Reverse proxies provide benefits like hiding the real server locations (security), distributing traffic across multiple backends, and caching common responses.",
               "choices": [
-                "To store user passwords",
-                "To hide backend servers, distribute traffic, or cache responses",
                 "To slow down the server",
-                "To eliminate the need for databases"
+                "To eliminate the need for databases",
+                "To hide backend servers, distribute traffic, or cache responses",
+                "To store user passwords"
               ],
               "id": "servers_u4l2_1"
             },
@@ -565,10 +565,10 @@
               "answer": "A system that distributes incoming requests across multiple servers",
               "explain": "A load balancer receives requests and sends each one to one of several backend servers, usually choosing the least busy one. This spreads the load evenly.",
               "choices": [
-                "A tool for backing up data",
                 "A system that distributes incoming requests across multiple servers",
                 "A type of database",
-                "A security firewall"
+                "A security firewall",
+                "A tool for backing up data"
               ],
               "id": "servers_u4l2_2"
             },
@@ -579,9 +579,9 @@
               "explain": "If one server crashes, the others keep running. If traffic spikes, multiple servers can handle it. This provides better availability and performance.",
               "choices": [
                 "To reduce costs",
-                "To handle more traffic and improve reliability",
+                "To eliminate the need for databases",
                 "To simplify the code",
-                "To eliminate the need for databases"
+                "To handle more traffic and improve reliability"
               ],
               "id": "servers_u4l2_3"
             },
@@ -591,10 +591,10 @@
               "answer": "It verifies each server is running and responding",
               "explain": "Health checks send regular requests to each backend server to confirm it's working. If a server stops responding, the load balancer stops sending traffic to it.",
               "choices": [
-                "It checks for viruses",
-                "It verifies each server is running and responding",
+                "It encrypts all communications",
                 "It compresses the data",
-                "It encrypts all communications"
+                "It verifies each server is running and responding",
+                "It checks for viruses"
               ],
               "id": "servers_u4l2_4"
             }
@@ -617,9 +617,9 @@
               "answer": "A simulated computer running its own operating system",
               "explain": "A virtual machine is software that simulates a complete computer. Multiple VMs can run on one physical machine, each with its own OS and applications.",
               "choices": [
-                "A backup of your computer",
                 "A simulated computer running its own operating system",
                 "A very small computer",
+                "A backup of your computer",
                 "A network of computers"
               ],
               "id": "servers_u5l1_0"
@@ -630,10 +630,10 @@
               "answer": "You can scale up or down on demand",
               "explain": "Cloud platforms let you easily add or remove server capacity as your needs change. You pay for what you use instead of maintaining expensive hardware.",
               "choices": [
-                "It guarantees no bugs",
                 "You can scale up or down on demand",
+                "It eliminates the need for databases",
                 "It requires less internet",
-                "It eliminates the need for databases"
+                "It guarantees no bugs"
               ],
               "id": "servers_u5l1_1"
             },
@@ -643,10 +643,10 @@
               "answer": "Packaging an application with its dependencies into a lightweight unit",
               "explain": "A container is a standardized package that includes the application, libraries, and configuration. Containers are lightweight, portable, and consistent across environments.",
               "choices": [
-                "A backup method",
+                "A protocol for network communication",
                 "Packaging an application with its dependencies into a lightweight unit",
-                "A type of database",
-                "A protocol for network communication"
+                "A backup method",
+                "A type of database"
               ],
               "id": "servers_u5l1_2"
             },
@@ -656,10 +656,10 @@
               "answer": "Running code without managing servers, paying only for execution",
               "explain": "In serverless, you deploy functions that run only when triggered. You don't manage server infrastructure; the platform handles scaling and maintenance.",
               "choices": [
+                "Using only one server for everything",
                 "Running servers at a discount",
                 "Running code without managing servers, paying only for execution",
-                "A backup strategy",
-                "Using only one server for everything"
+                "A backup strategy"
               ],
               "id": "servers_u5l1_3"
             },
@@ -669,10 +669,10 @@
               "answer": "Distributing content from servers close to users geographically",
               "explain": "A CDN is a network of servers in different locations worldwide. It caches your content so users download from the nearest server, reducing latency.",
               "choices": [
-                "Encrypting all data",
                 "Distributing content from servers close to users geographically",
+                "Securing passwords",
                 "Replacing databases",
-                "Securing passwords"
+                "Encrypting all data"
               ],
               "id": "servers_u5l1_4"
             }
@@ -688,10 +688,10 @@
               "answer": "Adding more servers to handle increased traffic",
               "explain": "Horizontal scaling means adding additional machines to your system. A load balancer distributes traffic across them. This is often easier and more flexible than vertical scaling.",
               "choices": [
-                "Buying a bigger server",
+                "Deleting old data",
                 "Adding more servers to handle increased traffic",
-                "Using compression to reduce data",
-                "Deleting old data"
+                "Buying a bigger server",
+                "Using compression to reduce data"
               ],
               "id": "servers_u5l2_0"
             },
@@ -701,10 +701,10 @@
               "answer": "Upgrading the hardware of existing servers",
               "explain": "Vertical scaling means making your current server more powerful: more CPU, RAM, or storage. It has limits and can require downtime.",
               "choices": [
-                "Adding more servers",
-                "Upgrading the hardware of existing servers",
                 "Using a load balancer",
-                "Caching more data"
+                "Caching more data",
+                "Upgrading the hardware of existing servers",
+                "Adding more servers"
               ],
               "id": "servers_u5l2_1"
             },
@@ -714,10 +714,10 @@
               "answer": "When the same data is requested multiple times",
               "explain": "Caching stores frequently requested data in memory. This eliminates expensive lookups and makes responses faster, reducing server load.",
               "choices": [
-                "When processing new data",
-                "When the same data is requested multiple times",
                 "When security is the priority",
-                "When users have slow connections"
+                "When users have slow connections",
+                "When the same data is requested multiple times",
+                "When processing new data"
               ],
               "id": "servers_u5l2_2"
             },
@@ -727,10 +727,10 @@
               "answer": "Storing copies of data at CDN servers close to users",
               "explain": "Edge caching places content copies on geographically distributed servers. Users get responses from nearby servers instead of traveling to your origin server.",
               "choices": [
-                "Deleting data from the server",
-                "Storing copies of data at CDN servers close to users",
                 "Backing up the database",
-                "Compressing files"
+                "Compressing files",
+                "Storing copies of data at CDN servers close to users",
+                "Deleting data from the server"
               ],
               "id": "servers_u5l2_3"
             },
@@ -740,10 +740,10 @@
               "answer": "Automatically adding or removing servers based on traffic",
               "explain": "Auto-scaling monitors server load and automatically adds new servers when traffic increases, or removes them when traffic decreases. This optimizes cost and performance.",
               "choices": [
-                "Manually starting servers",
-                "Automatically adding or removing servers based on traffic",
+                "Changing network settings",
                 "Buying more storage",
-                "Changing network settings"
+                "Manually starting servers",
+                "Automatically adding or removing servers based on traffic"
               ],
               "id": "servers_u5l2_4"
             }
@@ -767,8 +767,8 @@
               "explain": "HTTPS uses SSL/TLS encryption to protect data in transit. Without it, data like passwords sent over HTTP can be intercepted by attackers.",
               "choices": [
                 "It makes requests faster",
-                "It encrypts the data sent between client and server",
                 "It stores data on the client",
+                "It encrypts the data sent between client and server",
                 "It eliminates the need for passwords"
               ],
               "id": "servers_u6l1_0"
@@ -779,10 +779,10 @@
               "answer": "A protocol that encrypts data during transmission",
               "explain": "TLS (Transport Layer Security) is the modern encryption protocol used by HTTPS. It ensures data sent between client and server cannot be read by others.",
               "choices": [
-                "A type of server",
+                "A programming language",
                 "A protocol that encrypts data during transmission",
                 "A backup system",
-                "A programming language"
+                "A type of server"
               ],
               "id": "servers_u6l1_1"
             },
@@ -792,10 +792,10 @@
               "answer": "A system that controls which network connections are allowed",
               "explain": "A firewall is software or hardware that filters incoming and outgoing network traffic based on rules. It blocks unwanted connections and allows legitimate ones.",
               "choices": [
-                "Software that removes bugs",
-                "A system that controls which network connections are allowed",
                 "A type of backup",
-                "A database tool"
+                "Software that removes bugs",
+                "A database tool",
+                "A system that controls which network connections are allowed"
               ],
               "id": "servers_u6l1_2"
             },
@@ -806,9 +806,9 @@
               "explain": "Rate limiting protects servers from abuse and brute force attacks. It slows down clients that make too many requests, keeping the server available for legitimate users.",
               "choices": [
                 "Limiting server memory",
+                "Preventing cached responses",
                 "Restricting how many requests a client can make in a time period",
-                "Deleting old data",
-                "Preventing cached responses"
+                "Deleting old data"
               ],
               "id": "servers_u6l1_3"
             },
@@ -818,10 +818,10 @@
               "answer": "To avoid revealing information that attackers could exploit",
               "explain": "Detailed error messages might reveal database structure, file paths, or software versions that help attackers plan attacks. Return generic errors to clients; log full details server-side.",
               "choices": [
-                "It makes the user experience better",
-                "To avoid revealing information that attackers could exploit",
+                "It reduces server load",
                 "It speeds up the server",
-                "It reduces server load"
+                "To avoid revealing information that attackers could exploit",
+                "It makes the user experience better"
               ],
               "id": "servers_u6l1_4"
             }
@@ -837,10 +837,10 @@
               "answer": "The percentage of time a server is running and available",
               "explain": "Uptime is measured as a percentage. 99.9% uptime means the server is down less than 9 hours per year. Higher uptime is more reliable.",
               "choices": [
-                "The time it takes to start a server",
                 "The percentage of time a server is running and available",
-                "The speed of the server",
-                "The amount of storage available"
+                "The amount of storage available",
+                "The time it takes to start a server",
+                "The speed of the server"
               ],
               "id": "servers_u6l2_0"
             },
@@ -850,10 +850,10 @@
               "answer": "A copy of data stored separately for recovery",
               "explain": "Backups are duplicate copies of your data stored in a different location. If the main server fails or data is corrupted, you can restore from a backup.",
               "choices": [
-                "An extra server that has no data",
+                "A compression method",
                 "A copy of data stored separately for recovery",
                 "A way to speed up queries",
-                "A compression method"
+                "An extra server that has no data"
               ],
               "id": "servers_u6l2_1"
             },
@@ -863,9 +863,9 @@
               "answer": "Full backs up everything; incremental backs up only changes since last backup",
               "explain": "A full backup copies all data, taking more time and space but being simpler to restore. An incremental backup copies only what changed, saving time and space.",
               "choices": [
-                "Full backups are smaller",
-                "Incremental backups are for permanent deletion",
                 "Full backs up everything; incremental backs up only changes since last backup",
+                "Incremental backups are for permanent deletion",
+                "Full backups are smaller",
                 "They are the same thing"
               ],
               "id": "servers_u6l2_2"
@@ -876,9 +876,9 @@
               "answer": "To protect against data loss from physical disasters",
               "explain": "If a fire or flood destroys the main server location, local backups are lost too. Storing copies elsewhere ensures you can recover even from catastrophic events.",
               "choices": [
-                "To make backups faster",
-                "To protect against data loss from physical disasters",
                 "To reduce storage costs",
+                "To protect against data loss from physical disasters",
+                "To make backups faster",
                 "To improve network speed"
               ],
               "id": "servers_u6l2_3"
@@ -889,10 +889,10 @@
               "answer": "Having duplicate components so failure of one doesn't stop the system",
               "explain": "Redundancy means having backup resources. Multiple servers, duplicate databases, and failover systems ensure the application keeps running if one component fails.",
               "choices": [
+                "Compressing the data multiple times",
                 "Storing extra copies of the code",
                 "Having duplicate components so failure of one doesn't stop the system",
-                "Running the same process twice",
-                "Compressing the data multiple times"
+                "Running the same process twice"
               ],
               "id": "servers_u6l2_4"
             }

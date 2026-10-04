@@ -19,10 +19,10 @@
               "question": "Go entry point function?",
               "answer": "func main()",
               "choices": [
-                "func main()",
                 "def main():",
+                "function main()",
                 "int main()",
-                "function main()"
+                "func main()"
               ],
               "id": "go_0"
             },
@@ -32,9 +32,9 @@
               "answer": "fmt.Println()",
               "choices": [
                 "fmt.Println()",
-                "print()",
                 "console.log()",
-                "System.out.println()"
+                "System.out.println()",
+                "print()"
               ],
               "id": "go_1"
             },
@@ -43,8 +43,8 @@
               "question": "Declare a variable in Go?",
               "answer": "var x int",
               "choices": [
-                "var x int",
                 "int x",
+                "var x int",
                 "let x: int",
                 "x := int"
               ],
@@ -56,9 +56,9 @@
               "answer": ":=",
               "choices": [
                 ":=",
+                "->",
                 "=",
-                "==",
-                "->"
+                "=="
               ],
               "id": "go_3"
             },
@@ -67,10 +67,10 @@
               "question": "Go concurrency primitive?",
               "answer": "goroutine",
               "choices": [
+                "coroutine",
                 "goroutine",
                 "thread",
-                "async",
-                "coroutine"
+                "async"
               ],
               "id": "go_4"
             },
@@ -79,10 +79,10 @@
               "question": "Channel communication keyword?",
               "answer": "chan",
               "choices": [
-                "chan",
-                "channel",
                 "pipe",
-                "stream"
+                "chan",
+                "stream",
+                "channel"
               ],
               "id": "go_5"
             },
@@ -92,9 +92,9 @@
               "answer": "if err != nil",
               "choices": [
                 "if err != nil",
-                "try/catch",
+                "Result<T, E>",
                 "try/except",
-                "Result<T, E>"
+                "try/catch"
               ],
               "id": "go_6"
             }
@@ -110,8 +110,8 @@
               "answer": "No, only structs",
               "choices": [
                 "No, only structs",
-                "Yes",
                 "Only interfaces",
+                "Yes",
                 "Only traits"
               ],
               "id": "go_7"
@@ -121,9 +121,9 @@
               "question": "Multiple return values?",
               "answer": "Yes, natively",
               "choices": [
-                "Yes, natively",
-                "No",
                 "Only with tuples",
+                "No",
+                "Yes, natively",
                 "Only with arrays"
               ],
               "id": "go_8"
@@ -133,10 +133,10 @@
               "question": "Go build tool?",
               "answer": "go build",
               "choices": [
-                "go build",
                 "make",
-                "cargo build",
-                "gcc"
+                "go build",
+                "gcc",
+                "cargo build"
               ],
               "id": "go_9"
             },
@@ -145,10 +145,10 @@
               "question": "Go slice vs array?",
               "answer": "Slice is dynamic",
               "choices": [
-                "Slice is dynamic",
-                "Array is dynamic",
                 "Both are fixed",
-                "No difference"
+                "No difference",
+                "Slice is dynamic",
+                "Array is dynamic"
               ],
               "id": "go_10"
             },
@@ -157,10 +157,10 @@
               "question": "Defer statement executes when?",
               "answer": "When function returns",
               "choices": [
-                "When function returns",
-                "Immediately",
                 "Never",
-                "At program exit"
+                "At program exit",
+                "When function returns",
+                "Immediately"
               ],
               "id": "go_11"
             },
@@ -169,10 +169,10 @@
               "question": "Exported names start with?",
               "answer": "Uppercase letter",
               "choices": [
-                "Uppercase letter",
-                "Lowercase letter",
                 "Underscore",
-                "pub keyword"
+                "Uppercase letter",
+                "pub keyword",
+                "Lowercase letter"
               ],
               "id": "go_12"
             },
@@ -182,8 +182,8 @@
               "answer": "go.mod",
               "choices": [
                 "go.mod",
-                "package.json",
                 "Cargo.toml",
+                "package.json",
                 "pom.xml"
               ],
               "id": "go_13"
@@ -199,9 +199,9 @@
               "question": "Interface satisfaction in Go?",
               "answer": "Implicit",
               "choices": [
-                "Implicit",
-                "Explicit with implements",
                 "Explicit with extends",
+                "Explicit with implements",
+                "Implicit",
                 "Not supported"
               ],
               "id": "go_14"

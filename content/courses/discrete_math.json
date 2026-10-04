@@ -19,10 +19,10 @@
               "question": "How many ways to order 4 distinct books on a shelf?",
               "answer": "24",
               "choices": [
-                "24",
                 "12",
-                "16",
-                "4"
+                "24",
+                "4",
+                "16"
               ],
               "id": "discrete_math_0"
             },
@@ -31,10 +31,10 @@
               "question": "C(5,2), the number of 2-element subsets of a 5-set",
               "answer": "10",
               "choices": [
-                "10",
                 "20",
-                "25",
-                "5"
+                "5",
+                "10",
+                "25"
               ],
               "id": "discrete_math_1"
             },
@@ -43,10 +43,10 @@
               "question": "How many subsets does a set with 6 elements have?",
               "answer": "64",
               "choices": [
-                "64",
-                "36",
                 "12",
-                "32"
+                "64",
+                "32",
+                "36"
               ],
               "id": "discrete_math_2"
             },
@@ -55,9 +55,9 @@
               "question": "Pigeonhole: 13 people, how many must share a birth month at minimum?",
               "answer": "2",
               "choices": [
-                "2",
                 "3",
                 "1",
+                "2",
                 "12"
               ],
               "id": "discrete_math_3"
@@ -67,10 +67,10 @@
               "question": "Number of binary strings of length 5",
               "answer": "32",
               "choices": [
-                "32",
+                "64",
                 "25",
                 "10",
-                "64"
+                "32"
               ],
               "id": "discrete_math_4"
             },
@@ -79,9 +79,9 @@
               "question": "P(5,2), ordered pairs from 5 distinct items",
               "answer": "20",
               "choices": [
+                "25",
                 "20",
                 "10",
-                "25",
                 "15"
               ],
               "id": "discrete_math_5"
@@ -97,10 +97,10 @@
               "question": "Negate: 'for all x, P(x)'",
               "answer": "there exists x with not P(x)",
               "choices": [
-                "there exists x with not P(x)",
-                "for all x, not P(x)",
                 "there exists x with P(x)",
-                "not for all x"
+                "there exists x with not P(x)",
+                "not for all x",
+                "for all x, not P(x)"
               ],
               "id": "discrete_math_6"
             },
@@ -109,10 +109,10 @@
               "question": "Contrapositive of 'if A then B'",
               "answer": "if not B then not A",
               "choices": [
-                "if not B then not A",
-                "if B then A",
                 "if not A then not B",
-                "A and not B"
+                "if B then A",
+                "A and not B",
+                "if not B then not A"
               ],
               "id": "discrete_math_7"
             },
@@ -121,10 +121,10 @@
               "question": "Which proof technique assumes the negation and derives a falsehood?",
               "answer": "Proof by contradiction",
               "choices": [
-                "Proof by contradiction",
-                "Direct proof",
                 "Induction",
-                "Construction"
+                "Construction",
+                "Direct proof",
+                "Proof by contradiction"
               ],
               "id": "discrete_math_8"
             },
@@ -133,10 +133,10 @@
               "question": "Induction proves a statement for which set?",
               "answer": "All natural numbers",
               "choices": [
-                "All natural numbers",
-                "All reals",
+                "Finite sets only",
                 "One case",
-                "Finite sets only"
+                "All natural numbers",
+                "All reals"
               ],
               "id": "discrete_math_9"
             },
@@ -145,9 +145,9 @@
               "question": "A AND (B OR C) equals",
               "answer": "(A AND B) OR (A AND C)",
               "choices": [
-                "(A AND B) OR (A AND C)",
-                "(A OR B) AND C",
                 "A OR (B AND C)",
+                "(A OR B) AND C",
+                "(A AND B) OR (A AND C)",
                 "NOT A OR B"
               ],
               "id": "discrete_math_10"
@@ -163,10 +163,10 @@
               "question": "17 mod 5",
               "answer": "2",
               "choices": [
-                "2",
+                "4",
                 "3",
-                "1",
-                "4"
+                "2",
+                "1"
               ],
               "id": "discrete_math_11"
             },
@@ -175,8 +175,8 @@
               "question": "gcd(12, 18)",
               "answer": "6",
               "choices": [
-                "6",
                 "2",
+                "6",
                 "12",
                 "3"
               ],
@@ -187,10 +187,10 @@
               "question": "(7 * 8) mod 9",
               "answer": "2",
               "choices": [
-                "2",
-                "5",
                 "3",
-                "7"
+                "7",
+                "5",
+                "2"
               ],
               "id": "discrete_math_13"
             },
@@ -199,10 +199,10 @@
               "question": "2^10 mod 3",
               "answer": "1",
               "choices": [
-                "1",
+                "4",
                 "0",
-                "2",
-                "4"
+                "1",
+                "2"
               ],
               "id": "discrete_math_14"
             },
@@ -211,8 +211,8 @@
               "question": "Is 91 prime?",
               "answer": "No",
               "choices": [
-                "No",
-                "Yes"
+                "Yes",
+                "No"
               ],
               "id": "discrete_math_15"
             },
@@ -221,10 +221,10 @@
               "question": "Inverse of 3 mod 7",
               "answer": "5",
               "choices": [
+                "4",
                 "5",
-                "3",
                 "2",
-                "4"
+                "3"
               ],
               "id": "discrete_math_16"
             }
@@ -240,9 +240,9 @@
               "answer": "14",
               "choices": [
                 "14",
-                "7",
                 "49",
-                "21"
+                "21",
+                "7"
               ],
               "id": "discrete_math_17"
             },
@@ -251,10 +251,10 @@
               "question": "A tree with 10 vertices has how many edges?",
               "answer": "9",
               "choices": [
+                "20",
                 "9",
                 "10",
-                "11",
-                "20"
+                "11"
               ],
               "id": "discrete_math_18"
             },
@@ -264,9 +264,9 @@
               "answer": "10",
               "choices": [
                 "10",
-                "5",
+                "25",
                 "20",
-                "25"
+                "5"
               ],
               "id": "discrete_math_19"
             },
@@ -276,9 +276,9 @@
               "answer": "An equivalence relation",
               "choices": [
                 "An equivalence relation",
-                "A partial order",
                 "A function",
-                "A bijection"
+                "A bijection",
+                "A partial order"
               ],
               "id": "discrete_math_20"
             },
@@ -287,10 +287,10 @@
               "question": "Graph traversal that uses a queue",
               "answer": "Breadth-first search",
               "choices": [
-                "Breadth-first search",
+                "Topological sort",
                 "Depth-first search",
-                "Dijkstra",
-                "Topological sort"
+                "Breadth-first search",
+                "Dijkstra"
               ],
               "id": "discrete_math_21"
             },
@@ -299,10 +299,10 @@
               "question": "A graph is bipartite if and only if it has no",
               "answer": "Odd cycle",
               "choices": [
-                "Odd cycle",
-                "Even cycle",
+                "Loop",
                 "Bridge",
-                "Loop"
+                "Odd cycle",
+                "Even cycle"
               ],
               "id": "discrete_math_22"
             }
@@ -317,10 +317,10 @@
               "question": "Probability of two heads in two fair coin flips",
               "answer": "1/4",
               "choices": [
-                "1/4",
-                "1/2",
                 "1/3",
-                "3/4"
+                "1/2",
+                "3/4",
+                "1/4"
               ],
               "id": "discrete_math_23"
             },
@@ -329,9 +329,9 @@
               "question": "Expected value of one fair six-sided die roll",
               "answer": "3.5",
               "choices": [
-                "3.5",
                 "3",
                 "4",
+                "3.5",
                 "6"
               ],
               "id": "discrete_math_24"
@@ -341,10 +341,10 @@
               "question": "T(n) = 2T(n/2) + n solves to",
               "answer": "O(n log n)",
               "choices": [
-                "O(n log n)",
                 "O(n)",
-                "O(n^2)",
-                "O(log n)"
+                "O(log n)",
+                "O(n log n)",
+                "O(n^2)"
               ],
               "id": "discrete_math_25"
             },
@@ -353,10 +353,10 @@
               "question": "Fibonacci: F(7) with F(1)=F(2)=1",
               "answer": "13",
               "choices": [
-                "13",
                 "21",
-                "8",
-                "11"
+                "13",
+                "11",
+                "8"
               ],
               "id": "discrete_math_26"
             },
@@ -365,10 +365,10 @@
               "question": "Birthday problem: people needed for >50% shared birthday",
               "answer": "23",
               "choices": [
-                "23",
-                "183",
+                "70",
                 "46",
-                "70"
+                "183",
+                "23"
               ],
               "id": "discrete_math_27"
             }

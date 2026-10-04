@@ -19,10 +19,10 @@
               "question": "Select all columns?",
               "answer": "SELECT *",
               "choices": [
-                "SELECT *",
                 "SELECT ALL",
-                "GET *",
-                "FETCH ALL"
+                "FETCH ALL",
+                "SELECT *",
+                "GET *"
               ],
               "id": "sql_0"
             },
@@ -31,10 +31,10 @@
               "question": "Filter rows?",
               "answer": "WHERE",
               "choices": [
-                "WHERE",
+                "IF",
                 "FILTER",
                 "HAVING",
-                "IF"
+                "WHERE"
               ],
               "id": "sql_1"
             },
@@ -43,8 +43,8 @@
               "question": "Sort results?",
               "answer": "ORDER BY",
               "choices": [
-                "ORDER BY",
                 "SORT BY",
+                "ORDER BY",
                 "GROUP BY",
                 "ARRANGE BY"
               ],
@@ -56,9 +56,9 @@
               "answer": "COUNT(*)",
               "choices": [
                 "COUNT(*)",
-                "SUM(*)",
+                "NUM(*)",
                 "TOTAL(*)",
-                "NUM(*)"
+                "SUM(*)"
               ],
               "id": "sql_3"
             },
@@ -68,9 +68,9 @@
               "answer": "JOIN ... ON",
               "choices": [
                 "JOIN ... ON",
-                "MERGE ... WITH",
                 "COMBINE ... WHERE",
-                "LINK ... TO"
+                "LINK ... TO",
+                "MERGE ... WITH"
               ],
               "id": "sql_4"
             },
@@ -79,10 +79,10 @@
               "question": "Remove duplicate rows?",
               "answer": "SELECT DISTINCT",
               "choices": [
-                "SELECT DISTINCT",
                 "SELECT UNIQUE",
-                "SELECT NODUP",
-                "SELECT SINGLE"
+                "SELECT SINGLE",
+                "SELECT DISTINCT",
+                "SELECT NODUP"
               ],
               "id": "sql_5"
             },
@@ -91,10 +91,10 @@
               "question": "Group aggregate results?",
               "answer": "GROUP BY",
               "choices": [
-                "GROUP BY",
-                "ORDER BY",
+                "COLLECT BY",
                 "SORT BY",
-                "COLLECT BY"
+                "GROUP BY",
+                "ORDER BY"
               ],
               "id": "sql_6"
             }
@@ -109,10 +109,10 @@
               "question": "Filter groups after aggregation?",
               "answer": "HAVING",
               "choices": [
-                "HAVING",
-                "WHERE",
+                "WHEN",
                 "FILTER",
-                "WHEN"
+                "WHERE",
+                "HAVING"
               ],
               "id": "sql_7"
             },
@@ -121,10 +121,10 @@
               "question": "Insert a row?",
               "answer": "INSERT INTO ... VALUES",
               "choices": [
-                "INSERT INTO ... VALUES",
+                "CREATE ROW ...",
                 "ADD TO ... VALUES",
-                "PUT INTO ... VALUES",
-                "CREATE ROW ..."
+                "INSERT INTO ... VALUES",
+                "PUT INTO ... VALUES"
               ],
               "id": "sql_8"
             },
@@ -133,10 +133,10 @@
               "question": "Update existing data?",
               "answer": "UPDATE ... SET",
               "choices": [
-                "UPDATE ... SET",
-                "MODIFY ... SET",
+                "ALTER ... SET",
                 "CHANGE ... TO",
-                "ALTER ... SET"
+                "UPDATE ... SET",
+                "MODIFY ... SET"
               ],
               "id": "sql_9"
             },
@@ -145,9 +145,9 @@
               "question": "Delete rows?",
               "answer": "DELETE FROM",
               "choices": [
-                "DELETE FROM",
                 "REMOVE FROM",
                 "DROP FROM",
+                "DELETE FROM",
                 "ERASE FROM"
               ],
               "id": "sql_10"
@@ -157,10 +157,10 @@
               "question": "Create a new table?",
               "answer": "CREATE TABLE",
               "choices": [
-                "CREATE TABLE",
-                "NEW TABLE",
                 "MAKE TABLE",
-                "ADD TABLE"
+                "CREATE TABLE",
+                "ADD TABLE",
+                "NEW TABLE"
               ],
               "id": "sql_11"
             },
@@ -170,9 +170,9 @@
               "answer": "IS NULL",
               "choices": [
                 "IS NULL",
-                "== NULL",
                 "= NULL",
-                "EQUALS NULL"
+                "EQUALS NULL",
+                "== NULL"
               ],
               "id": "sql_12"
             },
@@ -181,10 +181,10 @@
               "question": "Limit number of results?",
               "answer": "LIMIT",
               "choices": [
+                "FIRST",
                 "LIMIT",
                 "TOP",
-                "MAX",
-                "FIRST"
+                "MAX"
               ],
               "id": "sql_13"
             }
@@ -199,10 +199,10 @@
               "question": "Subquery returns one value?",
               "answer": "Scalar subquery",
               "choices": [
+                "Nested query",
                 "Scalar subquery",
-                "Table subquery",
                 "Correlated subquery",
-                "Nested query"
+                "Table subquery"
               ],
               "id": "sql_14"
             }

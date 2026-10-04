@@ -1,0 +1,904 @@
+{
+  "id": "typescript",
+  "name": "TypeScript",
+  "category": "programming",
+  "icon": "fa-solid fa-code",
+  "level": "Typed JavaScript",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Why Types",
+      "tip": "TypeScript adds type annotations to JavaScript, allowing you to specify what type each variable must be. The TypeScript compiler checks your code before it runs, catching errors early. JavaScript runs the compiled result, which is pure JavaScript with no types.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Static vs Dynamic Typing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does TypeScript add to JavaScript?",
+              "answer": "Type annotations and a compile-time type checker",
+              "explain": "TypeScript lets you declare what type each variable is. The compiler checks these types before your code runs, finding bugs early.",
+              "choices": [
+                "New syntax for writing functions",
+                "A new runtime environment",
+                "Type annotations and a compile-time type checker",
+                "A package manager"
+              ],
+              "id": "typescript_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to compile TypeScript?",
+              "answer": "Transform TypeScript into plain JavaScript that runs in browsers or Node",
+              "explain": "The TypeScript compiler converts your .ts files to .js files. The JavaScript is what actually runs. All type information is removed.",
+              "choices": [
+                "Run the program",
+                "Check for syntax errors",
+                "Transform TypeScript into plain JavaScript that runs in browsers or Node",
+                "Upload to a server"
+              ],
+              "id": "typescript_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the benefit of type checking?",
+              "answer": "Catch errors at compile time instead of at runtime",
+              "explain": "With types, the compiler catches mistakes like passing the wrong type to a function. Without types, the error happens when the code runs.",
+              "choices": [
+                "Catch errors at compile time instead of at runtime",
+                "Improve code style",
+                "Make code run faster",
+                "Reduce file size"
+              ],
+              "id": "typescript_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is type inference?",
+              "answer": "The compiler automatically figures out a type from the value",
+              "explain": "If you write let x = 5, TypeScript infers x is a number without you writing : number explicitly.",
+              "choices": [
+                "Checking if a type is correct",
+                "Declaring a type explicitly",
+                "The compiler automatically figures out a type from the value",
+                "Converting one type to another"
+              ],
+              "id": "typescript_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can compiled TypeScript code run without TypeScript?",
+              "answer": "Yes, TypeScript compiles to plain JavaScript which runs anywhere",
+              "explain": "The output is just JavaScript. A browser or Node.js does not know or care that the original was TypeScript.",
+              "choices": [
+                "Only in special TypeScript environments",
+                "Yes, TypeScript compiles to plain JavaScript which runs anywhere",
+                "Only if you keep the .ts files nearby",
+                "No, the environment must support TypeScript"
+              ],
+              "id": "typescript_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Benefits and Setup",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why is TypeScript useful in large projects?",
+              "answer": "Types make code clearer and prevent many bugs before runtime",
+              "explain": "In large codebases, types document what functions expect and return. They also catch refactoring mistakes automatically.",
+              "choices": [
+                "It eliminates the need for testing",
+                "It makes code shorter",
+                "Types make code clearer and prevent many bugs before runtime",
+                "It makes code run faster"
+              ],
+              "id": "typescript_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a tsconfig.json file?",
+              "answer": "Configuration file that controls how TypeScript compiles",
+              "explain": "tsconfig.json specifies compiler options like the target JavaScript version, where to output files, and which files to include.",
+              "choices": [
+                "Configuration file that controls how TypeScript compiles",
+                "A list of dependencies",
+                "A test configuration",
+                "A file for storing types"
+              ],
+              "id": "typescript_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Do TypeScript types exist when the program runs?",
+              "answer": "No, types are erased when the code is compiled to JavaScript",
+              "explain": "Types only exist while the compiler checks your code. The JavaScript it produces has no type annotations, so types cannot be inspected at run time.",
+              "choices": [
+                "Yes, every value carries its TypeScript type",
+                "No, types are erased when the code is compiled to JavaScript",
+                "Only when running in a browser",
+                "Only for classes and interfaces"
+              ],
+              "id": "typescript_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean when you type a function parameter?",
+              "answer": "You specify what type of value the parameter must be",
+              "explain": "function greet(name: string) means the name parameter must be a string. Calling greet(123) is a type error.",
+              "choices": [
+                "You set a default value",
+                "You name the parameter",
+                "You make the parameter optional",
+                "You specify what type of value the parameter must be"
+              ],
+              "id": "typescript_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does TypeScript help during refactoring?",
+              "answer": "The compiler catches places where renamed or changed functions are called incorrectly",
+              "explain": "If you rename a function or change its parameters, TypeScript shows all the places that break immediately during compilation.",
+              "choices": [
+                "It prevents refactoring",
+                "It automatically updates all code",
+                "It makes refactoring unnecessary",
+                "The compiler catches places where renamed or changed functions are called incorrectly"
+              ],
+              "id": "typescript_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Basic Types",
+      "tip": "TypeScript includes primitive types like string, number, and boolean. Arrays can hold specific types. Tuples group values of different types. Any and unknown are escape hatches. Void means no return value.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Primitives and Any",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the string type?",
+              "answer": "A sequence of characters, text data",
+              "explain": "string is the type for text. You can write let name: string = 'Alice' or let message: string = \"hello\".",
+              "choices": [
+                "A list of words",
+                "A template",
+                "A single character",
+                "A sequence of characters, text data"
+              ],
+              "id": "typescript_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the number type?",
+              "answer": "Integers, decimals, and special values like Infinity and NaN",
+              "explain": "number covers all numeric values: 5, 3.14, -10, Infinity, and NaN.",
+              "choices": [
+                "Integers, decimals, and special values like Infinity and NaN",
+                "Only positive numbers",
+                "Only integers",
+                "Only decimal numbers"
+              ],
+              "id": "typescript_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the boolean type?",
+              "answer": "True or false values",
+              "explain": "boolean holds exactly two values: true and false. Used in conditions and logic.",
+              "choices": [
+                "True or false values",
+                "A number 0 or 1",
+                "Conditional expressions",
+                "A string 'true' or 'false'"
+              ],
+              "id": "typescript_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the any type?",
+              "answer": "An escape hatch that disables type checking for that variable",
+              "explain": "any means the variable can hold any type. It bypasses type safety. Avoid it if possible.",
+              "choices": [
+                "A default type",
+                "A type for unknown values",
+                "An escape hatch that disables type checking for that variable",
+                "A type that holds all types"
+              ],
+              "id": "typescript_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use any?",
+              "answer": "Only when you really cannot determine the type, as a last resort",
+              "explain": "Using any defeats the purpose of TypeScript. Use unknown instead if you need flexibility while keeping some safety.",
+              "choices": [
+                "Instead of other types",
+                "When you want fast development",
+                "Always, for simplicity",
+                "Only when you really cannot determine the type, as a last resort"
+              ],
+              "id": "typescript_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Arrays, Tuples, and Special Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you type an array of numbers?",
+              "answer": "number[] or Array<number>",
+              "explain": "Both number[] and Array<number> mean an array containing only numbers. You can use either syntax.",
+              "choices": [
+                "array<number>",
+                "number[] or Array<number>",
+                "[number]",
+                "number*"
+              ],
+              "id": "typescript_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a tuple?",
+              "answer": "An array with a fixed length and specified types at each position",
+              "explain": "A tuple like [string, number] is an array with exactly 2 elements: a string and a number in that order.",
+              "choices": [
+                "An array of fixed size but any types",
+                "A key-value pair",
+                "An array of any type",
+                "An array with a fixed length and specified types at each position"
+              ],
+              "id": "typescript_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the unknown type?",
+              "answer": "Like any, but safer: you must check the type before using the value",
+              "explain": "unknown is type-safe. You cannot use it without first narrowing it to a specific type with a typeof check.",
+              "choices": [
+                "Like any, but stricter",
+                "A type for undefined values",
+                "A random type",
+                "Like any, but safer: you must check the type before using the value"
+              ],
+              "id": "typescript_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the void type?",
+              "answer": "Used for functions that do not return a value",
+              "explain": "A function returning void does not return anything. For example, function log(msg: string): void { console.log(msg); }",
+              "choices": [
+                "Used for functions that do not return a value",
+                "A type for empty objects",
+                "A type for empty arrays",
+                "A type for null values"
+              ],
+              "id": "typescript_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the null type?",
+              "answer": "A type representing the absence of any value",
+              "explain": "null is a specific value meaning nothing, and it is different from undefined. With strict null checks on, a variable can only be null if its type says so.",
+              "choices": [
+                "A type representing the absence of any value",
+                "The same as undefined",
+                "A type for empty objects",
+                "A type for missing properties"
+              ],
+              "id": "typescript_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Functions and Objects",
+      "tip": "Function types specify parameter and return types. Optional parameters use ?. Objects type the shape of data, with property types. Readonly prevents modification. Union types allow multiple possibilities.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Function Parameters and Return Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you type a function parameter?",
+              "answer": "Use a colon and the type after the parameter name",
+              "explain": "function add(a: number, b: number) means both a and b must be numbers.",
+              "choices": [
+                "Use parentheses after the type",
+                "Use a colon and the type after the parameter name",
+                "Write the type before the function name",
+                "Use angle brackets"
+              ],
+              "id": "typescript_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you specify a function return type?",
+              "answer": "Use : type after the parameter list, before the opening brace",
+              "explain": "function add(a: number, b: number): number { return a + b; } returns a number.",
+              "choices": [
+                "Use : type after the parameter list, before the opening brace",
+                "Type the return statement",
+                "Use return(type)",
+                "Write return: type in the function body"
+              ],
+              "id": "typescript_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an optional parameter?",
+              "answer": "A parameter with ? that does not have to be provided when the function is called",
+              "explain": "function greet(name?: string) means name can be omitted. It will be undefined if not provided.",
+              "choices": [
+                "A parameter with ? that does not have to be provided when the function is called",
+                "A parameter with a default value",
+                "A parameter at the end of the list",
+                "A parameter that can be any type"
+              ],
+              "id": "typescript_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you provide a default value for a parameter?",
+              "answer": "Use = value after the type",
+              "explain": "function greet(name: string = 'Alice') means if name is not provided, it defaults to 'Alice'.",
+              "choices": [
+                "Write if (name) name = 'Alice'",
+                "Use = value after the type",
+                "Use ? after the parameter",
+                "Use a separate assignment"
+              ],
+              "id": "typescript_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an arrow function?",
+              "answer": "A concise function syntax using => instead of the function keyword",
+              "explain": "const add = (a: number, b: number): number => a + b is an arrow function. It is equivalent to function add(a, b) { return a + b; }",
+              "choices": [
+                "A function with no parameters",
+                "A concise function syntax using => instead of the function keyword",
+                "A function that returns an arrow",
+                "A function in an object"
+              ],
+              "id": "typescript_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Object Types and Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you type an object with properties?",
+              "answer": "Use { propertyName: type } syntax",
+              "explain": "const person: { name: string; age: number } = { name: 'Alice', age: 30 } specifies object shape.",
+              "choices": [
+                "Use { propertyName: type } syntax",
+                "Use [ ] brackets",
+                "Use ( ) parentheses",
+                "Use < > angle brackets"
+              ],
+              "id": "typescript_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the readonly keyword do?",
+              "answer": "Prevents a property from being modified after assignment",
+              "explain": "const person: { readonly name: string } means person.name cannot be changed after the object is created.",
+              "choices": [
+                "Makes a property optional",
+                "Hides a property",
+                "Makes a property required",
+                "Prevents a property from being modified after assignment"
+              ],
+              "id": "typescript_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a union type?",
+              "answer": "A type that can be one of several specified types",
+              "explain": "string | number means the value can be either a string or a number, but not both.",
+              "choices": [
+                "An object type with multiple properties",
+                "A type that can be one of several specified types",
+                "A type with optional properties",
+                "A combination of all types"
+              ],
+              "id": "typescript_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an optional property?",
+              "answer": "A property with ? that does not have to be present",
+              "explain": "{ name: string; age?: number } means age can be missing. If missing, it is undefined.",
+              "choices": [
+                "A property with a default value",
+                "A property that can be any type",
+                "A property that is readonly",
+                "A property with ? that does not have to be present"
+              ],
+              "id": "typescript_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you add properties to an object that are not in its type?",
+              "answer": "No, TypeScript will report a type error",
+              "explain": "If you type an object with { name: string }, you cannot add a new property like age without a type error.",
+              "choices": [
+                "No, TypeScript will report a type error",
+                "Only in strict mode",
+                "Yes, with any",
+                "Only if you use const"
+              ],
+              "id": "typescript_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Interfaces and Type Aliases",
+      "tip": "Interfaces define object shapes and can extend other interfaces. Type aliases define any type, not just objects. Union and intersection types combine types. Literal types specify exact values.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Interfaces and Type Aliases",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an interface?",
+              "answer": "A named object type that defines the shape of an object",
+              "explain": "interface Person { name: string; age: number; } defines a shape. You can then type variables as Person.",
+              "choices": [
+                "A named object type that defines the shape of an object",
+                "A class definition",
+                "A function type",
+                "A type for all objects"
+              ],
+              "id": "typescript_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a type alias?",
+              "answer": "A name for any type, created with the type keyword",
+              "explain": "type Name = string | null defines a type alias. Type aliases are more flexible than interfaces.",
+              "choices": [
+                "A variable name",
+                "A shorthand for interface",
+                "A function alias",
+                "A name for any type, created with the type keyword"
+              ],
+              "id": "typescript_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does extends do in interfaces?",
+              "answer": "Creates a new interface that inherits properties from another",
+              "explain": "interface Student extends Person { grade: number; } has all properties of Person plus grade.",
+              "choices": [
+                "Combines two interfaces",
+                "Marks an interface as required",
+                "Makes the interface longer",
+                "Creates a new interface that inherits properties from another"
+              ],
+              "id": "typescript_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an intersection type?",
+              "answer": "A type that combines properties of multiple types",
+              "explain": "type Combined = A & B combines types A and B. The result must have all properties from both.",
+              "choices": [
+                "A property that overlaps",
+                "A type that is either of two types",
+                "An interface extension",
+                "A type that combines properties of multiple types"
+              ],
+              "id": "typescript_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you use type aliases for objects and union types?",
+              "answer": "Yes, type aliases can define any type",
+              "explain": "type can be used for objects, unions, primitives, tuples, and more. interface is limited to objects.",
+              "choices": [
+                "Only for objects",
+                "No, only interface can",
+                "Only for union types",
+                "Yes, type aliases can define any type"
+              ],
+              "id": "typescript_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Literal Types and Advanced Patterns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a literal type?",
+              "answer": "A type that represents one exact value",
+              "explain": "type Direction = 'up' | 'down' | 'left' | 'right' allows only those exact strings, not any string.",
+              "choices": [
+                "A type for string literals only",
+                "A type that is always literal",
+                "A type for number literals",
+                "A type that represents one exact value"
+              ],
+              "id": "typescript_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are literal types useful for?",
+              "answer": "Restricting a variable to specific allowed values",
+              "explain": "Using literal types catches mistakes where an invalid value is used, like 'invalid' when only 'up', 'down', 'left', 'right' are allowed.",
+              "choices": [
+                "Making variables immutable",
+                "Restricting a variable to specific allowed values",
+                "Improving performance",
+                "Storing literal data"
+              ],
+              "id": "typescript_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can interfaces and types be used interchangeably?",
+              "answer": "Mostly yes for object types, but types are more flexible",
+              "explain": "Both can define object shapes, but type supports unions, tuples, and primitives. For objects, prefer interface for consistency.",
+              "choices": [
+                "Only types can define objects",
+                "Always, they are identical",
+                "Never, they are different",
+                "Mostly yes for object types, but types are more flexible"
+              ],
+              "id": "typescript_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a discriminated union?",
+              "answer": "A union type where each member has a shared property to distinguish them",
+              "explain": "type Response = { status: 'success'; data: string } | { status: 'error'; error: string }. The status property tells them apart.",
+              "choices": [
+                "A type that includes all fields from all options",
+                "An interface with multiple implementations",
+                "A union type where each member has a shared property to distinguish them",
+                "A union of different types"
+              ],
+              "id": "typescript_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is an interface declaration merged with another?",
+              "answer": "When two interface declarations have the same name",
+              "explain": "TypeScript merges interface Person { name: string; } and interface Person { age: number; } into one with both properties.",
+              "choices": [
+                "When two interface declarations have the same name",
+                "When they have the same properties",
+                "Never",
+                "Automatically with type aliases"
+              ],
+              "id": "typescript_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Narrowing and Generics",
+      "tip": "Narrowing refines a variable's type with checks. typeof checks the type at runtime. Generic functions accept any type while staying type-safe. Constraints limit what generics can be.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Type Narrowing and Type Guards",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is type narrowing?",
+              "answer": "Refining a variable to a more specific type within a code block",
+              "explain": "After if (x !== null), TypeScript knows x is not null in the following block, narrowing its type.",
+              "choices": [
+                "Combining types",
+                "Making a type smaller",
+                "Casting a type",
+                "Refining a variable to a more specific type within a code block"
+              ],
+              "id": "typescript_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a typeof check do?",
+              "answer": "Checks the type of a value at runtime",
+              "explain": "if (typeof x === 'string') narrows x to string in that block. Useful for union types.",
+              "choices": [
+                "Reads the type annotation",
+                "Converts a type",
+                "Checks the type of a value at runtime",
+                "Declares a type"
+              ],
+              "id": "typescript_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a type guard?",
+              "answer": "A runtime check that narrows a variable to a specific type",
+              "explain": "typeof, instanceof, property checks, and custom predicates are type guards. They help TypeScript narrow types safely.",
+              "choices": [
+                "A runtime check that narrows a variable to a specific type",
+                "A function that returns a type",
+                "A type that is guarded",
+                "A compile-time type check"
+              ],
+              "id": "typescript_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you check if a value is null or undefined?",
+              "answer": "Using x !== null && x !== undefined or x ?? operations",
+              "explain": "Checking !== null or using the nullish coalescing operator ?? narrows out null and undefined.",
+              "choices": [
+                "Using x == null",
+                "Using !x",
+                "Using typeof x === 'null'",
+                "Using x !== null && x !== undefined or x ?? operations"
+              ],
+              "id": "typescript_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is instanceof?",
+              "answer": "A check to see if an object is an instance of a class",
+              "explain": "if (err instanceof Error) checks if err is an Error instance. Useful for narrowing to specific classes.",
+              "choices": [
+                "A type cast",
+                "A check to see if an object is an instance of a class",
+                "A property lookup",
+                "A way to create instances"
+              ],
+              "id": "typescript_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Generic Functions and Constraints",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a generic type parameter?",
+              "answer": "A placeholder for a type that is specified when the function is used",
+              "explain": "function identity<T>(x: T): T returns the same type T that was passed in. T is a type parameter.",
+              "choices": [
+                "A type that works with anything",
+                "A placeholder for a type that is specified when the function is used",
+                "A default type",
+                "A type that is generic to all functions"
+              ],
+              "id": "typescript_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why use generics?",
+              "answer": "To write reusable functions that work with any type while preserving type safety",
+              "explain": "Without generics, you would use any and lose type safety. Generics let a function work with multiple types safely.",
+              "choices": [
+                "To write reusable functions that work with any type while preserving type safety",
+                "To avoid writing types",
+                "To use less memory",
+                "To make code shorter"
+              ],
+              "id": "typescript_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a generic constraint?",
+              "answer": "A condition that restricts what types a generic can accept",
+              "explain": "function getLength<T extends { length: number }>(x: T) requires T to have a length property.",
+              "choices": [
+                "A type that is constrained",
+                "A limit on generic names",
+                "A condition that restricts what types a generic can accept",
+                "A requirement for the function body"
+              ],
+              "id": "typescript_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you specify a generic for an array?",
+              "answer": "Array<T> or T[] where T is the element type",
+              "explain": "Array<string> and string[] both mean an array of strings. Use whichever you prefer.",
+              "choices": [
+                "[T]",
+                "<T>[]",
+                "Array<T> or T[] where T is the element type",
+                "T[]"
+              ],
+              "id": "typescript_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a function have multiple generic type parameters?",
+              "answer": "Yes, using comma-separated names like <T, U>",
+              "explain": "function pair<T, U>(a: T, b: U): [T, U] has two type parameters T and U.",
+              "choices": [
+                "Only with extends",
+                "No, only one generic per function",
+                "Only with constraints",
+                "Yes, using comma-separated names like <T, U>"
+              ],
+              "id": "typescript_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Classes and Modules",
+      "tip": "Classes group properties and methods. Access modifiers (public, private, protected) control visibility. Implements uses an interface as a contract. Import and export make code modular. Enums define named constants.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Classes and Access Modifiers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a class?",
+              "answer": "A blueprint for creating objects with properties and methods",
+              "explain": "class Person { name: string; constructor(name: string) { this.name = name; } } defines a Person class.",
+              "choices": [
+                "A type alias",
+                "A blueprint for creating objects with properties and methods",
+                "An object",
+                "An interface"
+              ],
+              "id": "typescript_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does public access modifier mean?",
+              "answer": "The property or method is accessible from outside the class",
+              "explain": "public (or no modifier, which is default) means anyone can access it. const p = new Person('Alice'); console.log(p.name) works.",
+              "choices": [
+                "The property is part of the interface",
+                "The property is shared globally",
+                "The property or method is accessible from outside the class",
+                "The property is in the constructor"
+              ],
+              "id": "typescript_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does private access modifier mean?",
+              "answer": "The property or method can only be accessed from inside the class",
+              "explain": "private secret: string can only be read or written within the class, not from outside.",
+              "choices": [
+                "The property is hidden from the interface",
+                "The property is not exported",
+                "The property is readonly",
+                "The property or method can only be accessed from inside the class"
+              ],
+              "id": "typescript_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does protected access modifier mean?",
+              "answer": "The property is accessible inside the class and in subclasses",
+              "explain": "protected name can be accessed in the class and in any class that extends it, but not from outside.",
+              "choices": [
+                "The property is safe",
+                "The property is required",
+                "The property is private",
+                "The property is accessible inside the class and in subclasses"
+              ],
+              "id": "typescript_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a constructor?",
+              "answer": "A special method that runs when an object is created",
+              "explain": "constructor(name: string) { this.name = name; } is called when you write new Person('Alice').",
+              "choices": [
+                "A function outside the class",
+                "A special method that runs when an object is created",
+                "A property initializer",
+                "A method that builds the class"
+              ],
+              "id": "typescript_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Implements, Imports, Exports, and Enums",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does implements do?",
+              "answer": "Makes a class promise to follow an interface contract",
+              "explain": "class Dog implements Animal ensures Dog has all properties and methods required by the Animal interface.",
+              "choices": [
+                "Extends a class",
+                "Copies an interface into a class",
+                "Declares an interface",
+                "Makes a class promise to follow an interface contract"
+              ],
+              "id": "typescript_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does export do?",
+              "answer": "Makes a value, class, or function available to other files",
+              "explain": "export const PI = 3.14 or export class Person { } lets other files import and use them.",
+              "choices": [
+                "Makes a value, class, or function available to other files",
+                "Ends a file",
+                "Publishes code to the internet",
+                "Compiles a file"
+              ],
+              "id": "typescript_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does import do?",
+              "answer": "Brings a value, class, or function from another file into the current file",
+              "explain": "import { PI } from './constants' or import Person from './Person' makes exported items available locally.",
+              "choices": [
+                "Loads a package",
+                "Downloads code",
+                "Brings a value, class, or function from another file into the current file",
+                "Reads a file"
+              ],
+              "id": "typescript_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an enum?",
+              "answer": "A named set of constants representing related values",
+              "explain": "enum Direction { Up, Down, Left, Right } lets you use Direction.Up instead of magic strings or numbers.",
+              "choices": [
+                "An enumeration algorithm",
+                "A loop construct",
+                "A type of interface",
+                "A named set of constants representing related values"
+              ],
+              "id": "typescript_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why use enums instead of string literals?",
+              "answer": "Enums provide named constants, preventing typos and making code clearer",
+              "explain": "Direction.Up is clearer and safer than 'up'. Misspelling Direction.Upp is caught by the compiler.",
+              "choices": [
+                "They are faster",
+                "Enums provide named constants, preventing typos and making code clearer",
+                "They use less memory",
+                "They require less typing"
+              ],
+              "id": "typescript_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

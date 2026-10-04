@@ -19,10 +19,10 @@
               "question": "Which line prints text to the screen?",
               "answer": "print(\"hi\")",
               "choices": [
-                "print(\"hi\")",
-                "echo(\"hi\")",
+                "printf(\"hi\")",
                 "console.log(\"hi\")",
-                "printf(\"hi\")"
+                "print(\"hi\")",
+                "echo(\"hi\")"
               ],
               "id": "python_0"
             },
@@ -31,10 +31,10 @@
               "question": "How do you start a single-line comment?",
               "answer": "#",
               "choices": [
-                "#",
                 "//",
+                "--",
                 "<!--",
-                "--"
+                "#"
               ],
               "id": "python_1"
             },
@@ -55,10 +55,10 @@
               "question": "What does print() add at the end by default?",
               "answer": "a newline",
               "choices": [
-                "a newline",
-                "a space",
+                "nothing",
                 "a tab",
-                "nothing"
+                "a space",
+                "a newline"
               ],
               "id": "python_3"
             }
@@ -85,10 +85,10 @@
               "question": "Which command runs a script named app.py?",
               "answer": "python app.py",
               "choices": [
-                "python app.py",
+                "exec app.py",
                 "run app.py",
-                "node app.py",
-                "exec app.py"
+                "python app.py",
+                "node app.py"
               ],
               "id": "python_5"
             },
@@ -97,10 +97,10 @@
               "question": "Python is which kind of language?",
               "answer": "interpreted",
               "choices": [
-                "interpreted",
                 "assembly",
-                "compiled to .exe only",
-                "markup"
+                "markup",
+                "interpreted",
+                "compiled to .exe only"
               ],
               "id": "python_6"
             }
@@ -132,8 +132,8 @@
               "question": "What type is the value 3.14?",
               "answer": "float",
               "choices": [
-                "float",
                 "int",
+                "float",
                 "str",
                 "bool"
               ],
@@ -146,8 +146,8 @@
               "choices": [
                 "str",
                 "int",
-                "char",
-                "text"
+                "text",
+                "char"
               ],
               "id": "python_9"
             },
@@ -156,10 +156,10 @@
               "question": "What type is the value True?",
               "answer": "bool",
               "choices": [
-                "bool",
                 "int",
-                "str",
-                "flag"
+                "flag",
+                "bool",
+                "str"
               ],
               "id": "python_10"
             }
@@ -174,10 +174,10 @@
               "question": "Which function returns the type of a value?",
               "answer": "type()",
               "choices": [
-                "type()",
-                "typeof()",
+                "class()",
                 "kind()",
-                "class()"
+                "typeof()",
+                "type()"
               ],
               "id": "python_11"
             },
@@ -186,10 +186,10 @@
               "question": "What does int(\"7\") return?",
               "answer": "7",
               "choices": [
-                "7",
                 "\"7\"",
                 "7.0",
-                "an error"
+                "an error",
+                "7"
               ],
               "id": "python_12"
             },
@@ -198,10 +198,10 @@
               "question": "What does len(\"cat\") return?",
               "answer": "3",
               "choices": [
-                "3",
-                "1",
                 "\"cat\"",
-                "4"
+                "3",
+                "4",
+                "1"
               ],
               "id": "python_13"
             }
@@ -222,9 +222,9 @@
               "question": "What does 7 // 2 evaluate to?",
               "answer": "3",
               "choices": [
+                "1",
                 "3",
                 "3.5",
-                "1",
                 "14"
               ],
               "id": "python_14"
@@ -234,8 +234,8 @@
               "question": "What does 7 % 2 evaluate to?",
               "answer": "1",
               "choices": [
-                "1",
                 "3",
+                "1",
                 "0",
                 "3.5"
               ],
@@ -246,10 +246,10 @@
               "question": "What does 2 ** 3 evaluate to?",
               "answer": "8",
               "choices": [
-                "8",
-                "6",
                 "9",
-                "5"
+                "5",
+                "8",
+                "6"
               ],
               "id": "python_16"
             }
@@ -264,10 +264,10 @@
               "question": "What does \"ab\" + \"cd\" produce?",
               "answer": "\"abcd\"",
               "choices": [
+                "\"abdc\"",
                 "\"abcd\"",
                 "\"ab cd\"",
-                "an error",
-                "\"abdc\""
+                "an error"
               ],
               "id": "python_17"
             },
@@ -276,10 +276,10 @@
               "question": "What does \"hi\" * 3 produce?",
               "answer": "\"hihihi\"",
               "choices": [
-                "\"hihihi\"",
                 "\"hi3\"",
-                "an error",
-                "\"hi hi hi\""
+                "\"hihihi\"",
+                "\"hi hi hi\"",
+                "an error"
               ],
               "id": "python_18"
             },
@@ -288,10 +288,10 @@
               "question": "Which method makes a string uppercase?",
               "answer": ".upper()",
               "choices": [
-                ".upper()",
-                ".caps()",
                 ".toUpper()",
-                ".big()"
+                ".big()",
+                ".upper()",
+                ".caps()"
               ],
               "id": "python_19"
             },
@@ -337,10 +337,10 @@
               "question": "Which keyword handles the alternative branch?",
               "answer": "else",
               "choices": [
-                "else",
-                "elif",
+                "default",
                 "otherwise",
-                "default"
+                "else",
+                "elif"
               ],
               "id": "python_22"
             },
@@ -349,10 +349,10 @@
               "question": "What does Python use to group a block?",
               "answer": "indentation",
               "choices": [
-                "indentation",
-                "curly braces",
                 "begin/end",
-                "parentheses"
+                "parentheses",
+                "curly braces",
+                "indentation"
               ],
               "id": "python_23"
             },
@@ -361,10 +361,10 @@
               "question": "Which is the equality comparison operator?",
               "answer": "==",
               "choices": [
-                "==",
+                "eq",
                 "=",
-                "===",
-                "eq"
+                "==",
+                "==="
               ],
               "id": "python_24"
             }
@@ -379,10 +379,10 @@
               "question": "What does (True and False) evaluate to?",
               "answer": "False",
               "choices": [
+                "an error",
                 "False",
                 "True",
-                "None",
-                "an error"
+                "None"
               ],
               "id": "python_25"
             },
@@ -391,10 +391,10 @@
               "question": "What does (True or False) evaluate to?",
               "answer": "True",
               "choices": [
-                "True",
+                "an error",
                 "False",
-                "None",
-                "an error"
+                "True",
+                "None"
               ],
               "id": "python_26"
             },
@@ -404,8 +404,8 @@
               "answer": "False",
               "choices": [
                 "False",
-                "True",
                 "None",
+                "True",
                 "0"
               ],
               "id": "python_27"
@@ -456,8 +456,8 @@
               "choices": [
                 ".append()",
                 ".add()",
-                ".push()",
-                ".insert()"
+                ".insert()",
+                ".push()"
               ],
               "id": "python_30"
             },
@@ -466,10 +466,10 @@
               "question": "What does [1, 2, 3][-1] return?",
               "answer": "3",
               "choices": [
-                "3",
-                "1",
                 "2",
-                "an error"
+                "an error",
+                "3",
+                "1"
               ],
               "id": "python_31"
             }
@@ -498,9 +498,9 @@
               "answer": "0, 1, 2",
               "choices": [
                 "0, 1, 2",
+                "3",
                 "1, 2, 3",
-                "0, 1, 2, 3",
-                "3"
+                "0, 1, 2, 3"
               ],
               "id": "python_33"
             },
@@ -509,9 +509,9 @@
               "question": "Which keyword stops a loop early?",
               "answer": "break",
               "choices": [
+                "exit",
                 "break",
                 "stop",
-                "exit",
                 "end"
               ],
               "id": "python_34"
@@ -521,10 +521,10 @@
               "question": "Which keyword skips to the next iteration?",
               "answer": "continue",
               "choices": [
-                "continue",
-                "skip",
                 "next",
-                "pass"
+                "pass",
+                "continue",
+                "skip"
               ],
               "id": "python_35"
             }
@@ -545,9 +545,9 @@
               "question": "Which keyword defines a function?",
               "answer": "def",
               "choices": [
-                "def",
-                "func",
                 "function",
+                "func",
+                "def",
                 "fn"
               ],
               "id": "python_36"
@@ -570,10 +570,10 @@
               "question": "Which keyword returns a value from a function?",
               "answer": "return",
               "choices": [
-                "return",
-                "give",
                 "output",
-                "yield"
+                "yield",
+                "give",
+                "return"
               ],
               "id": "python_38"
             },
@@ -582,10 +582,10 @@
               "question": "A value passed into a function is called a(n)?",
               "answer": "argument",
               "choices": [
+                "loop",
                 "argument",
-                "variable",
                 "result",
-                "loop"
+                "variable"
               ],
               "id": "python_39"
             }

@@ -19,10 +19,10 @@
               "question": "Number of permutations: P(5,3)",
               "answer": "60",
               "choices": [
-                "20",
+                "125",
                 "60",
                 "120",
-                "125"
+                "20"
               ],
               "id": "precalc12_u7_l1_0"
             },
@@ -31,8 +31,8 @@
               "question": "Combinations C(5,2) =",
               "answer": "10",
               "choices": [
-                "10",
                 "20",
+                "10",
                 "5",
                 "25"
               ],
@@ -49,9 +49,9 @@
               "question": "Combinations differ from permutations because order...",
               "answer": "does not matter",
               "choices": [
-                "does not matter",
                 "matters",
                 "is reversed",
+                "does not matter",
                 "is squared"
               ],
               "id": "precalc12_u7_l1_3"
@@ -73,10 +73,10 @@
               "question": "A geometric series converges when |r| is...",
               "answer": "less than 1",
               "choices": [
-                "less than 1",
-                "greater than 1",
                 "equal to 1",
-                "equal to 0"
+                "equal to 0",
+                "less than 1",
+                "greater than 1"
               ],
               "id": "precalc12_u7_l2_1"
             }
@@ -98,10 +98,10 @@
               "answer": "an = a1 + (n-1)d",
               "id": "precalc12_u1_l3_1",
               "choices": [
-                "an = a1 + (n-1)d",
-                "an = a1\u00b7r^(n-1)",
+                "an = a1·r^n",
+                "an = a1·r^(n-1)",
                 "an = a1 + nd",
-                "an = a1\u00b7r^n"
+                "an = a1 + (n-1)d"
               ]
             },
             {
@@ -110,10 +110,10 @@
               "answer": "Sn = n/2 (a1 + an)",
               "id": "precalc12_u1_l3_2",
               "choices": [
-                "Sn = n/2 (a1 + an)",
-                "Sn = a1(1-r^n)/(1-r)",
                 "Sn = n(a1 + d)",
-                "Sn = a1/(1-r)"
+                "Sn = a1(1-r^n)/(1-r)",
+                "Sn = a1/(1-r)",
+                "Sn = n/2 (a1 + an)"
               ]
             },
             {
@@ -122,10 +122,10 @@
               "answer": "|r| < 1",
               "id": "precalc12_u1_l3_3",
               "choices": [
-                "|r| < 1",
                 "|r| > 1",
+                "r is an integer",
                 "r > 0",
-                "r is an integer"
+                "|r| < 1"
               ]
             },
             {
@@ -134,10 +134,10 @@
               "answer": "converge",
               "id": "precalc12_u1_l3_4",
               "choices": [
-                "converge",
+                "depends on a1",
                 "diverge",
                 "neither",
-                "depends on a1"
+                "converge"
               ]
             },
             {
@@ -163,10 +163,10 @@
               "question": "y = f(x-3) shifts the graph of f(x)...",
               "answer": "Right 3 units",
               "choices": [
-                "Right 3 units",
-                "Left 3 units",
                 "Up 3 units",
-                "Down 3 units"
+                "Left 3 units",
+                "Down 3 units",
+                "Right 3 units"
               ],
               "id": "precalc12_u1_l1_0"
             },
@@ -176,9 +176,9 @@
               "answer": "x-axis",
               "choices": [
                 "x-axis",
-                "y-axis",
+                "origin",
                 "line y=x",
-                "origin"
+                "y-axis"
               ],
               "id": "precalc12_u1_l1_1"
             },
@@ -187,10 +187,10 @@
               "question": "y = f(-x) reflects f(x) over the...",
               "answer": "y-axis",
               "choices": [
-                "x-axis",
-                "y-axis",
+                "origin",
                 "line y=x",
-                "origin"
+                "y-axis",
+                "x-axis"
               ],
               "id": "precalc12_u1_l1_2"
             },
@@ -205,10 +205,10 @@
               "question": "y = 2f(x) is a vertical...",
               "answer": "stretch by factor 2",
               "choices": [
-                "stretch by factor 2",
+                "shift right 2",
                 "compression by factor 2",
-                "shift up 2",
-                "shift right 2"
+                "stretch by factor 2",
+                "shift up 2"
               ],
               "id": "precalc12_u1_l1_4"
             }
@@ -229,10 +229,10 @@
               "question": "The graph of f^-1(x) is the reflection of f(x) over...",
               "answer": "y = x",
               "choices": [
+                "origin",
                 "y = x",
                 "x-axis",
-                "y-axis",
-                "origin"
+                "y-axis"
               ],
               "id": "precalc12_u1_l2_1"
             },
@@ -265,10 +265,10 @@
               "question": "Which function is one-to-one?",
               "answer": "y = x^3",
               "choices": [
-                "y = x^2",
                 "y = x^3",
                 "y = |x|",
-                "y = x^4"
+                "y = x^4",
+                "y = x^2"
               ],
               "id": "precalc12_u2_l3_0"
             },
@@ -277,10 +277,10 @@
               "question": "The horizontal line test checks whether a function is...",
               "answer": "one-to-one",
               "choices": [
-                "one-to-one",
-                "even",
                 "continuous",
-                "a function"
+                "a function",
+                "even",
+                "one-to-one"
               ],
               "id": "precalc12_u2_l3_1"
             },
@@ -291,8 +291,8 @@
               "id": "precalc12_u2_l3_2",
               "choices": [
                 "(x-2)/3",
-                "3x-2",
                 "(x+2)/3",
+                "3x-2",
                 "3/(x-2)"
               ]
             },
@@ -301,10 +301,10 @@
               "question": "Inverse of f(x) = x^3 + 5:",
               "answer": "(x-5)^(1/3)",
               "choices": [
-                "(x-5)^(1/3)",
                 "x^3 - 5",
                 "(x+5)^(1/3)",
-                "1/(x^3+5)"
+                "1/(x^3+5)",
+                "(x-5)^(1/3)"
               ],
               "id": "precalc12_u2_l3_3"
             },
@@ -349,10 +349,10 @@
               "question": "Remainder Theorem: dividing P(x) by (x-a), the remainder equals...",
               "answer": "P(a)",
               "choices": [
-                "P(a)",
                 "P(0)",
-                "P(1)",
-                "a"
+                "P(a)",
+                "a",
+                "P(1)"
               ],
               "id": "precalc12_u2_l1_1"
             },
@@ -361,10 +361,10 @@
               "question": "By the Factor Theorem, (x-a) is a factor of P(x) if...",
               "answer": "P(a) = 0",
               "choices": [
-                "P(a) = 0",
-                "P(0) = a",
+                "a = 0",
                 "P(a) = 1",
-                "a = 0"
+                "P(0) = a",
+                "P(a) = 0"
               ],
               "id": "precalc12_u2_l1_2"
             },
@@ -392,9 +392,9 @@
               "answer": "infinity",
               "choices": [
                 "infinity",
-                "negative infinity",
                 "0",
-                "1"
+                "1",
+                "negative infinity"
               ],
               "id": "precalc12_u2_l2_0"
             },
@@ -410,9 +410,9 @@
               "answer": "bounces off",
               "choices": [
                 "bounces off",
+                "becomes a hole",
                 "crosses through",
-                "disappears",
-                "becomes a hole"
+                "disappears"
               ],
               "id": "precalc12_u2_l2_2"
             }
@@ -428,10 +428,10 @@
               "answer": "P(a)",
               "id": "precalc12_u3_l3_0",
               "choices": [
-                "P(a)",
                 "P(-a)",
-                "P(0)",
-                "a"
+                "a",
+                "P(a)",
+                "P(0)"
               ]
             },
             {
@@ -440,10 +440,10 @@
               "answer": "P(a) = 0",
               "id": "precalc12_u3_l3_1",
               "choices": [
-                "P(a) = 0",
+                "P'(a) = 0",
                 "P(0) = a",
                 "P(a) = 1",
-                "P'(a) = 0"
+                "P(a) = 0"
               ]
             },
             {
@@ -459,9 +459,9 @@
               "id": "precalc12_u3_l3_3",
               "choices": [
                 "bounces off the x-axis",
-                "crosses the x-axis",
                 "has a vertical asymptote",
-                "is undefined there"
+                "is undefined there",
+                "crosses the x-axis"
               ]
             },
             {
@@ -470,9 +470,9 @@
               "answer": "up on the left, down on the right",
               "id": "precalc12_u3_l3_4",
               "choices": [
-                "up on the left, down on the right",
                 "down on the left, up on the right",
                 "up on both ends",
+                "up on the left, down on the right",
                 "down on both ends"
               ]
             },
@@ -499,10 +499,10 @@
               "question": "Exponential growth model?",
               "answer": "y = a * b^x",
               "choices": [
-                "y = mx + b",
-                "y = a * b^x",
+                "y = a/x",
                 "y = ax^2",
-                "y = a/x"
+                "y = mx + b",
+                "y = a * b^x"
               ],
               "id": "precalc12_exp_l1_0"
             },
@@ -511,10 +511,10 @@
               "question": "If 0 < b < 1 in y = a*b^x, the function represents...",
               "answer": "decay",
               "choices": [
-                "growth",
-                "decay",
                 "a line",
-                "a parabola"
+                "decay",
+                "a parabola",
+                "growth"
               ],
               "id": "precalc12_exp_l1_1"
             },
@@ -554,9 +554,9 @@
               "answer": "log(M) + log(N)",
               "choices": [
                 "log(M) + log(N)",
+                "log(M)/log(N)",
                 "log(M) * log(N)",
-                "log(M) - log(N)",
-                "log(M)/log(N)"
+                "log(M) - log(N)"
               ],
               "id": "precalc12_u6_l1_2"
             },
@@ -592,19 +592,19 @@
               "choices": [
                 "log a + log b",
                 "log a - log b",
-                "log a \u00b7 log b",
+                "log a · log b",
                 "(log a)/(log b)"
               ]
             },
             {
               "type": "mathChoice",
               "question": "log(a^n) =",
-              "answer": "n\u00b7log a",
+              "answer": "n·log a",
               "id": "precalc12_u4_l3_1",
               "choices": [
-                "n\u00b7log a",
-                "(log a)^n",
                 "log a / n",
+                "n·log a",
+                "(log a)^n",
                 "n + log a"
               ]
             },
@@ -614,10 +614,10 @@
               "answer": "log(x)/log(b)",
               "id": "precalc12_u4_l3_2",
               "choices": [
-                "log(x)/log(b)",
                 "log(b)/log(x)",
-                "log(x)\u00b7log(b)",
-                "log(x) - log(b)"
+                "log(x)·log(b)",
+                "log(x) - log(b)",
+                "log(x)/log(b)"
               ]
             },
             {
@@ -632,10 +632,10 @@
               "answer": "the nth root of x",
               "id": "precalc12_u4_l3_4",
               "choices": [
-                "the nth root of x",
-                "x to the power n",
                 "1 divided by x^n",
-                "n times x"
+                "the nth root of x",
+                "n times x",
+                "x to the power n"
               ]
             },
             {
@@ -644,10 +644,10 @@
               "answer": "extraneous solutions",
               "id": "precalc12_u4_l3_5",
               "choices": [
-                "extraneous solutions",
-                "complex roots",
                 "asymptotes",
-                "multiplicity"
+                "multiplicity",
+                "complex roots",
+                "extraneous solutions"
               ]
             }
           ]
@@ -668,9 +668,9 @@
               "answer": "non-permissible values",
               "id": "precalc12_u5_l1_0",
               "choices": [
-                "non-permissible values",
-                "leading coefficient",
                 "degree",
+                "leading coefficient",
+                "non-permissible values",
                 "amplitude"
               ]
             },
@@ -686,9 +686,9 @@
               "answer": "x = 3 and x = -3",
               "id": "precalc12_u5_l1_2",
               "choices": [
-                "x = 3 and x = -3",
-                "x = -2",
                 "x = 9",
+                "x = -2",
+                "x = 3 and x = -3",
                 "x = 0"
               ]
             },
@@ -700,8 +700,8 @@
               "choices": [
                 "LCD",
                 "GCF",
-                "conjugate",
-                "reciprocal"
+                "reciprocal",
+                "conjugate"
               ]
             },
             {
@@ -710,10 +710,10 @@
               "answer": "check for extraneous solutions",
               "id": "precalc12_u5_l1_4",
               "choices": [
-                "check for extraneous solutions",
+                "differentiate",
                 "take the log of both sides",
                 "square both sides",
-                "differentiate"
+                "check for extraneous solutions"
               ]
             },
             {
@@ -758,10 +758,10 @@
               "answer": "hyperbola",
               "id": "precalc12_u5_l2_2",
               "choices": [
-                "hyperbola",
                 "ellipse",
-                "circle",
-                "parabola"
+                "hyperbola",
+                "parabola",
+                "circle"
               ]
             },
             {
@@ -770,10 +770,10 @@
               "answer": "(x-h)^2 + (y-k)^2 = r^2",
               "id": "precalc12_u5_l2_3",
               "choices": [
-                "(x-h)^2 + (y-k)^2 = r^2",
                 "x^2/a^2 + y^2/b^2 = 1",
-                "x^2/a^2 - y^2/b^2 = 1",
-                "y = ax^2"
+                "(x-h)^2 + (y-k)^2 = r^2",
+                "y = ax^2",
+                "x^2/a^2 - y^2/b^2 = 1"
               ]
             },
             {
@@ -782,10 +782,10 @@
               "answer": "ellipse",
               "id": "precalc12_u5_l2_4",
               "choices": [
-                "ellipse",
-                "hyperbola",
                 "circle",
-                "parabola"
+                "parabola",
+                "hyperbola",
+                "ellipse"
               ]
             }
           ]
@@ -811,10 +811,10 @@
               "question": "y = (x+3)(x-5)/(x+3) has a ___ at x = -3",
               "answer": "hole",
               "choices": [
-                "hole",
                 "vertical asymptote",
-                "x-intercept",
-                "horizontal asymptote"
+                "horizontal asymptote",
+                "hole",
+                "x-intercept"
               ],
               "id": "precalc12_u5_l3_2"
             },
@@ -829,10 +829,10 @@
               "question": "In y = (x-1)(x+2)/((x-1)(x-4)), x = 4 is a",
               "answer": "vertical asymptote",
               "choices": [
-                "vertical asymptote",
                 "hole",
-                "x-intercept",
-                "y-intercept"
+                "vertical asymptote",
+                "y-intercept",
+                "x-intercept"
               ],
               "id": "precalc12_u5_l3_4"
             },
@@ -877,9 +877,9 @@
               "question": "Unit circle: cos(pi/2)",
               "answer": "0",
               "choices": [
-                "0",
-                "1",
                 "-1",
+                "1",
+                "0",
                 "sqrt(2)/2"
               ],
               "id": "precalc12_u3_l1_3"
@@ -913,10 +913,10 @@
               "question": "Amplitude of y = 3sin(2x)",
               "answer": "3",
               "choices": [
-                "1",
+                "6",
                 "2",
-                "3",
-                "6"
+                "1",
+                "3"
               ],
               "id": "precalc12_u3_l2_1"
             },
@@ -925,8 +925,8 @@
               "question": "Period of y = sin(2x)",
               "answer": "pi",
               "choices": [
-                "2pi",
                 "pi",
+                "2pi",
                 "pi/2",
                 "4pi"
               ],
@@ -937,10 +937,10 @@
               "question": "Law of Sines?",
               "answer": "a/sin(A) = b/sin(B) = c/sin(C)",
               "choices": [
-                "a^2=b^2+c^2",
                 "a/sin(A) = b/sin(B)",
+                "a/sin(A) = b/sin(B) = c/sin(C)",
                 "sin(A)/a = sin(B)/b",
-                "a/sin(A) = b/sin(B) = c/sin(C)"
+                "a^2=b^2+c^2"
               ],
               "id": "precalc12_u3_l2_3"
             },
@@ -964,26 +964,26 @@
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "In y = a\u00b7sin(b(x-c)) + d, the amplitude is...",
+              "question": "In y = a·sin(b(x-c)) + d, the amplitude is...",
               "answer": "|a|",
               "id": "precalc12_u6_l3_0",
               "choices": [
+                "d",
                 "|a|",
                 "b",
-                "2\u03c0/b",
-                "d"
+                "2π/b"
               ]
             },
             {
               "type": "mathChoice",
-              "question": "In y = a\u00b7sin(b(x-c)) + d, the period is...",
-              "answer": "2\u03c0/b",
+              "question": "In y = a·sin(b(x-c)) + d, the period is...",
+              "answer": "2π/b",
               "id": "precalc12_u6_l3_1",
               "choices": [
-                "2\u03c0/b",
-                "b/2\u03c0",
                 "|a|",
-                "c"
+                "c",
+                "b/2π",
+                "2π/b"
               ]
             },
             {
@@ -992,10 +992,10 @@
               "answer": "(max - min)/2",
               "id": "precalc12_u6_l3_2",
               "choices": [
-                "(max - min)/2",
-                "(max + min)/2",
                 "max - min",
-                "max/min"
+                "(max + min)/2",
+                "max/min",
+                "(max - min)/2"
               ]
             },
             {
@@ -1004,27 +1004,27 @@
               "answer": "(max + min)/2",
               "id": "precalc12_u6_l3_3",
               "choices": [
-                "(max + min)/2",
-                "(max - min)/2",
+                "2π/b",
                 "0",
-                "2\u03c0/b"
+                "(max + min)/2",
+                "(max - min)/2"
               ]
             },
             {
               "type": "mathChoice",
-              "question": "A sinusoid with max=8, min=-8, period=\u03c0 and a peak at x=0 has equation...",
+              "question": "A sinusoid with max=8, min=-8, period=π and a peak at x=0 has equation...",
               "answer": "y = 8cos(2x)",
               "id": "precalc12_u6_l3_4",
               "choices": [
-                "y = 8cos(2x)",
-                "y = 8sin(2x)",
+                "y = 8cos(x/2)",
                 "y = 2cos(8x)",
-                "y = 8cos(x/2)"
+                "y = 8sin(2x)",
+                "y = 8cos(2x)"
               ]
             },
             {
               "type": "math",
-              "question": "Convert 60 degrees to radians (as a multiple of \u03c0, e.g. pi/6):",
+              "question": "Convert 60 degrees to radians (as a multiple of π, e.g. pi/6):",
               "answer": "pi/3",
               "id": "precalc12_u6_l3_5"
             }
@@ -1051,10 +1051,10 @@
               "question": "csc(x) is the reciprocal of...",
               "answer": "sin(x)",
               "choices": [
-                "sin(x)",
+                "cot(x)",
                 "cos(x)",
-                "tan(x)",
-                "cot(x)"
+                "sin(x)",
+                "tan(x)"
               ],
               "id": "precalc12_u4_l1_1"
             },
@@ -1063,10 +1063,10 @@
               "question": "1 + tan^2(x) =",
               "answer": "sec^2(x)",
               "choices": [
-                "sec^2(x)",
                 "csc^2(x)",
+                "1",
                 "cot^2(x)",
-                "1"
+                "sec^2(x)"
               ],
               "id": "precalc12_u4_l1_2"
             },
@@ -1075,10 +1075,10 @@
               "question": "sec(x) is the reciprocal of...",
               "answer": "cos(x)",
               "choices": [
-                "sin(x)",
-                "cos(x)",
                 "tan(x)",
-                "cot(x)"
+                "cot(x)",
+                "cos(x)",
+                "sin(x)"
               ],
               "id": "precalc12_u4_l1_3"
             }
@@ -1114,43 +1114,43 @@
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "sin 2\u03b8 =",
-              "answer": "2 sin\u03b8 cos\u03b8",
+              "question": "sin 2θ =",
+              "answer": "2 sinθ cosθ",
               "id": "precalc12_u7_l3_0",
               "choices": [
-                "2 sin\u03b8 cos\u03b8",
-                "sin\u03b8 + cos\u03b8",
-                "cos\u00b2\u03b8 + sin\u00b2\u03b8",
-                "2 sin\u03b8"
+                "sinθ + cosθ",
+                "2 sinθ cosθ",
+                "2 sinθ",
+                "cos²θ + sin²θ"
               ]
             },
             {
               "type": "mathChoice",
-              "question": "cos 2\u03b8 written using sine only:",
-              "answer": "1 - 2sin\u00b2\u03b8",
+              "question": "cos 2θ written using sine only:",
+              "answer": "1 - 2sin²θ",
               "id": "precalc12_u7_l3_1",
               "choices": [
-                "1 - 2sin\u00b2\u03b8",
-                "2cos\u00b2\u03b8 - 1",
-                "cos\u00b2\u03b8 - sin\u00b2\u03b8",
-                "2sin\u03b8cos\u03b8"
+                "2sinθcosθ",
+                "2cos²θ - 1",
+                "cos²θ - sin²θ",
+                "1 - 2sin²θ"
               ]
             },
             {
               "type": "mathChoice",
-              "question": "1 + tan\u00b2\u03b8 =",
-              "answer": "sec\u00b2\u03b8",
+              "question": "1 + tan²θ =",
+              "answer": "sec²θ",
               "id": "precalc12_u7_l3_2",
               "choices": [
-                "sec\u00b2\u03b8",
-                "csc\u00b2\u03b8",
-                "cot\u00b2\u03b8",
-                "1"
+                "1",
+                "csc²θ",
+                "sec²θ",
+                "cot²θ"
               ]
             },
             {
               "type": "math",
-              "question": "Solve 2cos\u00b2x - sinx = -1 on [0, 2\u03c0). x =",
+              "question": "Solve 2cos²x - sinx = -1 on [0, 2π). x =",
               "answer": "pi/2",
               "id": "precalc12_u7_l3_3"
             },
@@ -1160,10 +1160,10 @@
               "answer": "one side only",
               "id": "precalc12_u7_l3_4",
               "choices": [
-                "one side only",
+                "neither side",
                 "both sides at once",
                 "the equation as a whole",
-                "neither side"
+                "one side only"
               ]
             },
             {
@@ -1173,9 +1173,9 @@
               "id": "precalc12_u7_l3_5",
               "choices": [
                 "positive",
+                "periodic",
                 "undefined",
-                "increasing",
-                "periodic"
+                "increasing"
               ]
             }
           ]
@@ -1191,9 +1191,9 @@
               "id": "precalc12_u7_l4_0",
               "choices": [
                 "cos^2(x)",
-                "sin^2(x)",
                 "1 + sin^2(x)",
-                "cos(x)"
+                "cos(x)",
+                "sin^2(x)"
               ]
             },
             {
@@ -1202,10 +1202,10 @@
               "answer": "cos^2(x)",
               "id": "precalc12_u7_l4_1",
               "choices": [
-                "cos^2(x)",
                 "sin^2(x)",
                 "tan(x)",
-                "1"
+                "1",
+                "cos^2(x)"
               ]
             },
             {
@@ -1214,9 +1214,9 @@
               "answer": "work each side separately",
               "choices": [
                 "work each side separately",
+                "cross-multiply",
                 "add the same term to both sides",
-                "divide both sides by the same thing",
-                "cross-multiply"
+                "divide both sides by the same thing"
               ],
               "id": "precalc12_u7_l4_2"
             },
@@ -1256,10 +1256,10 @@
               "answer": "tan^2(x)",
               "id": "precalc12_u7_l5_2",
               "choices": [
-                "tan^2(x)",
                 "tan(x)",
-                "sec^2(x)",
-                "2tan(x)"
+                "2tan(x)",
+                "tan^2(x)",
+                "sec^2(x)"
               ]
             },
             {
@@ -1279,10 +1279,10 @@
               "question": "If sin(t) = 3/4 and t is in Q2, sin(2t) =",
               "answer": "-3sqrt(7)/8",
               "choices": [
-                "-3sqrt(7)/8",
-                "3sqrt(7)/8",
                 "-3/8",
-                "9/16"
+                "9/16",
+                "-3sqrt(7)/8",
+                "3sqrt(7)/8"
               ],
               "id": "precalc12_u7_l5_5"
             },
@@ -1291,10 +1291,10 @@
               "question": "Best form of cos(2x) to solve cos(2x) + 1 = cos(x)",
               "answer": "2cos^2(x) - 1",
               "choices": [
-                "2cos^2(x) - 1",
-                "cos^2(x) - sin^2(x)",
                 "1 - 2sin^2(x)",
-                "2sin(x)cos(x)"
+                "2sin(x)cos(x)",
+                "2cos^2(x) - 1",
+                "cos^2(x) - sin^2(x)"
               ],
               "id": "precalc12_u7_l5_6"
             },
@@ -1304,10 +1304,10 @@
               "answer": "csc^2(x)",
               "id": "precalc12_u7_l5_7",
               "choices": [
-                "csc^2(x)",
-                "cot^2(x)",
+                "sin^2(x)",
                 "sec^2(x)",
-                "sin^2(x)"
+                "cot^2(x)",
+                "csc^2(x)"
               ]
             }
           ]
@@ -1346,10 +1346,10 @@
               "answer": "x^2",
               "id": "precalc12_u8_l1_3",
               "choices": [
+                "x^2 - 8",
                 "x^2",
-                "x^2 + 8",
                 "(x-4)^2",
-                "x^2 - 8"
+                "x^2 + 8"
               ]
             },
             {
@@ -1359,8 +1359,8 @@
               "id": "precalc12_u8_l1_4",
               "choices": [
                 "(x-4)^2+4",
-                "x^2",
                 "(x+4)^2+4",
+                "x^2",
                 "x^2 - 4"
               ]
             },
@@ -1370,9 +1370,9 @@
               "answer": "usually different (order matters)",
               "choices": [
                 "always equal",
-                "usually different (order matters)",
+                "always linear",
                 "always zero",
-                "always linear"
+                "usually different (order matters)"
               ],
               "id": "precalc12_u8_l1_5"
             }
@@ -1417,10 +1417,10 @@
               "question": "y = sqrt(-x) heads which way?",
               "answer": "up and left",
               "choices": [
-                "up and right",
+                "down and left",
                 "down and right",
                 "up and left",
-                "down and left"
+                "up and right"
               ],
               "id": "precalc12_u8_l2_4"
             },
@@ -1436,9 +1436,9 @@
               "answer": "(4, 3)",
               "choices": [
                 "(4, 3)",
-                "(2, 9)",
+                "(4, 81)",
                 "(16, 9)",
-                "(4, 81)"
+                "(2, 9)"
               ],
               "id": "precalc12_u8_l2_6"
             },
@@ -1447,10 +1447,10 @@
               "question": "The graph of sqrt(f(x)) does not exist where",
               "answer": "f(x) < 0",
               "choices": [
-                "f(x) < 0",
+                "nowhere",
                 "f(x) > 1",
                 "f(x) = 0",
-                "nowhere"
+                "f(x) < 0"
               ],
               "id": "precalc12_u8_l2_7"
             },
@@ -1459,10 +1459,10 @@
               "question": "Points stay put on sqrt(f(x)) where f(x) equals",
               "answer": "0 or 1",
               "choices": [
-                "0 or 1",
                 "1 or 2",
+                "-1 or 1",
                 "0 or 2",
-                "-1 or 1"
+                "0 or 1"
               ],
               "id": "precalc12_u8_l2_8"
             }
@@ -1526,9 +1526,9 @@
               "answer": "compress horizontally",
               "choices": [
                 "compress horizontally",
+                "shift right",
                 "stretch horizontally",
-                "stretch vertically",
-                "shift right"
+                "stretch vertically"
               ],
               "id": "precalc12_u9_l1_7"
             }
@@ -1545,8 +1545,8 @@
               "choices": [
                 "sin(x)/cos(x)",
                 "cos(x)/sin(x)",
-                "1/sin(x)",
-                "sin(x)cos(x)"
+                "sin(x)cos(x)",
+                "1/sin(x)"
               ],
               "id": "precalc12_u9_l2_0"
             },
@@ -1555,9 +1555,9 @@
               "question": "y = tan(x) has vertical asymptotes where",
               "answer": "cos(x) = 0",
               "choices": [
-                "sin(x) = 0",
                 "cos(x) = 0",
                 "tan(x) = 1",
+                "sin(x) = 0",
                 "nowhere"
               ],
               "id": "precalc12_u9_l2_1"
@@ -1581,9 +1581,9 @@
               "id": "precalc12_u9_l2_4",
               "choices": [
                 "sqrt(3)",
-                "1/sqrt(3)",
+                "sqrt(3)/2",
                 "1",
-                "sqrt(3)/2"
+                "1/sqrt(3)"
               ]
             },
             {
@@ -1634,8 +1634,8 @@
               "answer": "4",
               "choices": [
                 "2",
-                "4",
                 "6",
+                "4",
                 "8"
               ],
               "id": "precalc12_u9_l3_5"
@@ -1663,10 +1663,10 @@
               "question": "y = -2^(x+3) + 1 is 2^x...",
               "answer": "reflected over the x-axis, left 3, up 1",
               "choices": [
-                "reflected over the x-axis, left 3, up 1",
                 "reflected over the y-axis, right 3, up 1",
-                "reflected over the x-axis, right 3, down 1",
-                "stretched by 3, up 1"
+                "stretched by 3, up 1",
+                "reflected over the x-axis, left 3, up 1",
+                "reflected over the x-axis, right 3, down 1"
               ],
               "id": "precalc12_u10_l1_1"
             },
@@ -1687,9 +1687,9 @@
               "question": "y = b^x with 0 < b < 1 is",
               "answer": "decay",
               "choices": [
+                "linear",
                 "growth",
                 "decay",
-                "linear",
                 "a log"
               ],
               "id": "precalc12_u10_l1_4"
@@ -1724,9 +1724,9 @@
               "answer": "it does not simplify",
               "choices": [
                 "log a + log b",
+                "log(ab)",
                 "log a * log b",
-                "it does not simplify",
-                "log(ab)"
+                "it does not simplify"
               ],
               "id": "precalc12_u10_l2_3"
             },
@@ -1753,9 +1753,9 @@
               "question": "(1 + 1/x)^x gets close to which number as x grows?",
               "answer": "e (about 2.718)",
               "choices": [
-                "e (about 2.718)",
-                "pi",
                 "2",
+                "pi",
+                "e (about 2.718)",
                 "10"
               ],
               "id": "precalc12_u10_l3_0"
@@ -1777,10 +1777,10 @@
               "question": "Continuous growth formula",
               "answer": "A = A0 e^(rt)",
               "choices": [
-                "A = A0 e^(rt)",
+                "A = A0 r^t",
                 "A = A0 (1 + r)^t",
-                "A = A0 + rt",
-                "A = A0 r^t"
+                "A = A0 e^(rt)",
+                "A = A0 + rt"
               ],
               "id": "precalc12_u10_l3_3"
             }
@@ -1819,10 +1819,10 @@
               "question": "$1000 at 5% compounded annually for 2 years: 1000(1.05)^2 =",
               "answer": "$1102.50",
               "choices": [
-                "$1102.50",
-                "$1100",
+                "$1250",
                 "$1050",
-                "$1250"
+                "$1100",
+                "$1102.50"
               ],
               "id": "precalc12_u10_l4_4"
             },
@@ -1849,10 +1849,10 @@
               "question": "To solve a^t = c for t you",
               "answer": "take the log of both sides",
               "choices": [
-                "take the log of both sides",
-                "square both sides",
+                "subtract t",
                 "divide by a",
-                "subtract t"
+                "square both sides",
+                "take the log of both sides"
               ],
               "id": "precalc12_u10_l4_8"
             }
@@ -1885,10 +1885,10 @@
               "question": "C(6,3) =",
               "answer": "20",
               "choices": [
-                "15",
-                "18",
                 "20",
-                "30"
+                "30",
+                "15",
+                "18"
               ],
               "id": "precalc12_fin_l1_2"
             },

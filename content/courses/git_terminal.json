@@ -22,9 +22,9 @@
               "explain": "The shell reads commands you type, translates them into instructions the OS understands, and displays the results. Bash and Zsh are popular shells.",
               "choices": [
                 "A file manager",
+                "A web browser",
                 "A program that interprets your text commands and communicates with the operating system",
-                "A security system",
-                "A web browser"
+                "A security system"
               ],
               "id": "git_terminal_u1l1_0"
             },
@@ -36,8 +36,8 @@
               "choices": [
                 "A currency symbol",
                 "An error message",
-                "The command prompt, where you type commands",
-                "A file extension"
+                "A file extension",
+                "The command prompt, where you type commands"
               ],
               "id": "git_terminal_u1l1_1"
             },
@@ -60,9 +60,9 @@
               "answer": "Print Working Directory",
               "explain": "pwd displays the full path to the current folder. Use it to confirm where you are in the file system.",
               "choices": [
-                "Previous Working Directory",
-                "Print Working Directory",
                 "Path With Directory",
+                "Print Working Directory",
+                "Previous Working Directory",
                 "Password Window Directory"
               ],
               "id": "git_terminal_u1l1_3"
@@ -92,10 +92,10 @@
               "answer": "Lists the files and folders in the current directory",
               "explain": "ls shows all visible items in the current folder. Add flags like -a to show hidden files or -l for detailed information.",
               "choices": [
-                "Loads a shell script",
+                "Logs into a system",
                 "Lists the files and folders in the current directory",
-                "Links a script",
-                "Logs into a system"
+                "Loads a shell script",
+                "Links a script"
               ],
               "id": "git_terminal_u1l2_0"
             },
@@ -106,9 +106,9 @@
               "explain": "An absolute path shows the full route from the root directory. Example: /Users/joshua/Documents/file.txt works from anywhere.",
               "choices": [
                 "A path starting from the home folder",
-                "A path that starts from the root (/) and specifies the complete location",
+                "A shortened path using abbreviations",
                 "A path that uses special characters",
-                "A shortened path using abbreviations"
+                "A path that starts from the root (/) and specifies the complete location"
               ],
               "id": "git_terminal_u1l2_1"
             },
@@ -119,9 +119,9 @@
               "explain": "Relative paths work from where you are now. Example: if you are in Documents, typing ./file.txt refers to file.txt in the current folder.",
               "choices": [
                 "A path that never changes",
+                "A path with uppercase letters",
                 "A path specified from the current working directory",
-                "A path used only in Git",
-                "A path with uppercase letters"
+                "A path used only in Git"
               ],
               "id": "git_terminal_u1l2_2"
             },
@@ -131,10 +131,10 @@
               "answer": "Your home directory",
               "explain": "~ is a shortcut for your user's home folder. Typing cd ~ takes you home from anywhere.",
               "choices": [
+                "A temporary directory",
                 "The root directory",
-                "The current folder",
                 "Your home directory",
-                "A temporary directory"
+                "The current folder"
               ],
               "id": "git_terminal_u1l2_3"
             },
@@ -144,9 +144,9 @@
               "answer": "Go up one level to the parent directory",
               "explain": ".. is a shortcut to the folder above the current one. cd .. moves up one level in the folder hierarchy.",
               "choices": [
-                "Go to the home directory",
                 "Go up one level to the parent directory",
                 "Go to the root directory",
+                "Go to the home directory",
                 "Go to the last folder you visited"
               ],
               "id": "git_terminal_u1l2_4"
@@ -171,9 +171,9 @@
               "explain": "mkdir stands for Make Directory. Use mkdir foldername to create a new folder in the current location.",
               "choices": [
                 "Modifies a directory",
-                "Creates a new directory (folder)",
+                "Removes a directory",
                 "Moves a directory",
-                "Removes a directory"
+                "Creates a new directory (folder)"
               ],
               "id": "git_terminal_u2l1_0"
             },
@@ -196,10 +196,10 @@
               "answer": "Moves or renames a file or directory",
               "explain": "mv moves files between folders or renames them. Use mv oldname newname to rename, or mv file folder/ to move.",
               "choices": [
-                "Makes a file visible",
                 "Moves or renames a file or directory",
-                "Modifies file permissions",
-                "Multiplies file size"
+                "Multiplies file size",
+                "Makes a file visible",
+                "Modifies file permissions"
               ],
               "id": "git_terminal_u2l1_2"
             },
@@ -209,10 +209,10 @@
               "answer": "Removes (deletes) a file",
               "explain": "rm deletes files permanently. Be careful: deleted files cannot be recovered. Add -r to delete directories with contents.",
               "choices": [
-                "Renames a file",
-                "Removes (deletes) a file",
                 "Restores a file",
-                "Reads a file"
+                "Reads a file",
+                "Renames a file",
+                "Removes (deletes) a file"
               ],
               "id": "git_terminal_u2l1_3"
             },
@@ -222,9 +222,9 @@
               "answer": "Displays the contents of a file in the terminal",
               "explain": "cat shows file contents on screen. Use cat filename to view a text file. It is short for concatenate.",
               "choices": [
-                "Creates a new file",
                 "Compresses a file",
                 "Displays the contents of a file in the terminal",
+                "Creates a new file",
                 "Copies a file"
               ],
               "id": "git_terminal_u2l1_4"
@@ -241,10 +241,10 @@
               "answer": "Sends the output of one command as input to another command",
               "explain": "Pipes chain commands together. Example: cat file.txt | grep word finds lines containing a word in a file.",
               "choices": [
-                "Separates multiple commands",
                 "Creates a new file",
+                "Comments out a command",
                 "Sends the output of one command as input to another command",
-                "Comments out a command"
+                "Separates multiple commands"
               ],
               "id": "git_terminal_u2l2_0"
             },
@@ -254,10 +254,10 @@
               "answer": "Redirects output to a file, overwriting it",
               "explain": "The > symbol saves command output to a file. Example: echo hello > file.txt creates file.txt with hello inside.",
               "choices": [
-                "Compares two files",
-                "Redirects output to a file, overwriting it",
                 "Checks if output is larger than input",
-                "Sends output to another command"
+                "Compares two files",
+                "Sends output to another command",
+                "Redirects output to a file, overwriting it"
               ],
               "id": "git_terminal_u2l2_1"
             },
@@ -267,10 +267,10 @@
               "answer": "Appends output to the end of a file",
               "explain": ">> adds new content to the end of a file without deleting what is there. Example: echo world >> file.txt adds world to the end.",
               "choices": [
-                "Overwrites a file",
+                "Copies a file",
                 "Appends output to the end of a file",
                 "Deletes part of a file",
-                "Copies a file"
+                "Overwrites a file"
               ],
               "id": "git_terminal_u2l2_2"
             },
@@ -280,10 +280,10 @@
               "answer": "Sends the contents of a file as input to a command",
               "explain": "The < symbol redirects a file as input. Example: grep word < file.txt searches for word inside file.txt.",
               "choices": [
-                "Checks if input is smaller than output",
                 "Sends the contents of a file as input to a command",
-                "Creates a new file",
-                "Deletes a file"
+                "Deletes a file",
+                "Checks if input is smaller than output",
+                "Creates a new file"
               ],
               "id": "git_terminal_u2l2_3"
             },
@@ -293,10 +293,10 @@
               "answer": "grep finds lines, then sort arranges them alphabetically",
               "explain": "grep finds all matching lines in file.txt, then the pipe (|) sends those lines to sort, which orders them.",
               "choices": [
-                "sort is executed first",
                 "grep finds lines, then sort arranges them alphabetically",
-                "Both commands run at the same time",
-                "Only grep executes; sort is ignored"
+                "sort is executed first",
+                "Only grep executes; sort is ignored",
+                "Both commands run at the same time"
               ],
               "id": "git_terminal_u2l2_4"
             }
@@ -319,10 +319,10 @@
               "answer": "A directory that contains your project and its entire version history",
               "explain": "A repository (repo) stores all your files, changes, and history. It includes a hidden .git folder with all version information.",
               "choices": [
-                "A website for code sharing",
                 "A directory that contains your project and its entire version history",
+                "A backup service",
                 "A type of database server",
-                "A backup service"
+                "A website for code sharing"
               ],
               "id": "git_terminal_u3l1_0"
             },
@@ -332,10 +332,10 @@
               "answer": "A snapshot of changes saved with a descriptive message",
               "explain": "A commit records what changed, who made the change, and when. It is like saving a labeled version of your project.",
               "choices": [
-                "A conversation between developers",
-                "A snapshot of changes saved with a descriptive message",
                 "A command to delete files",
-                "A backup of the entire repository"
+                "A backup of the entire repository",
+                "A snapshot of changes saved with a descriptive message",
+                "A conversation between developers"
               ],
               "id": "git_terminal_u3l1_1"
             },
@@ -345,10 +345,10 @@
               "answer": "The actual files and folders in your directory that you edit",
               "explain": "The working tree is where you see and modify files. It is different from the Git history stored in .git.",
               "choices": [
-                "The entire version history",
-                "The actual files and folders in your directory that you edit",
+                "A backup location",
                 "A remote server",
-                "A backup location"
+                "The actual files and folders in your directory that you edit",
+                "The entire version history"
               ],
               "id": "git_terminal_u3l1_2"
             },
@@ -371,10 +371,10 @@
               "answer": "All version history, metadata, and configuration for the repository",
               "explain": "The .git folder (hidden by default) stores commits, branches, configuration, and everything Git needs to track your project.",
               "choices": [
-                "Only the most recent version",
+                "Temporary backup files",
                 "All version history, metadata, and configuration for the repository",
                 "User passwords",
-                "Temporary backup files"
+                "Only the most recent version"
               ],
               "id": "git_terminal_u3l1_4"
             }
@@ -391,8 +391,8 @@
               "explain": "The workflow is: edit files, stage them with git add, then commit. This lets you choose what goes in each commit.",
               "choices": [
                 "Push to the server",
-                "Stage changes with git add",
                 "Create a new branch",
+                "Stage changes with git add",
                 "Merge into main"
               ],
               "id": "git_terminal_u3l2_0"
@@ -405,8 +405,8 @@
               "choices": [
                 "The list of all commits",
                 "Which files have changed and which are staged for commit",
-                "The remote server address",
-                "All developers on the project"
+                "All developers on the project",
+                "The remote server address"
               ],
               "id": "git_terminal_u3l2_1"
             },
@@ -416,10 +416,10 @@
               "answer": "Stages the file for the next commit",
               "explain": "git add places a modified or new file into the staging area. You can then commit all staged changes together.",
               "choices": [
-                "Creates a new file",
-                "Stages the file for the next commit",
                 "Deletes the file",
-                "Uploads the file to the server"
+                "Uploads the file to the server",
+                "Stages the file for the next commit",
+                "Creates a new file"
               ],
               "id": "git_terminal_u3l2_2"
             },
@@ -429,10 +429,10 @@
               "answer": "Saves all staged changes as a commit with a description",
               "explain": "git commit creates a snapshot. The -m flag lets you add a message describing the changes.",
               "choices": [
-                "Sends changes to the server",
-                "Saves all staged changes as a commit with a description",
                 "Deletes the last commit",
-                "Shows the commit history"
+                "Saves all staged changes as a commit with a description",
+                "Shows the commit history",
+                "Sends changes to the server"
               ],
               "id": "git_terminal_u3l2_3"
             },
@@ -442,9 +442,9 @@
               "answer": "A history of all commits with messages and timestamps",
               "explain": "git log displays the commit history in reverse order (newest first). Each entry shows the author, date, and message.",
               "choices": [
-                "Files in the current directory",
-                "A history of all commits with messages and timestamps",
                 "Errors in the code",
+                "A history of all commits with messages and timestamps",
+                "Files in the current directory",
                 "Remote server status"
               ],
               "id": "git_terminal_u3l2_4"
@@ -469,9 +469,9 @@
               "explain": "git init sets up a .git folder and prepares the directory for version control.",
               "choices": [
                 "Initializes a connection to a server",
+                "Sets up a backup",
                 "Creates a new empty Git repository in the current directory",
-                "Imports files from another project",
-                "Sets up a backup"
+                "Imports files from another project"
               ],
               "id": "git_terminal_u4l1_0"
             },
@@ -481,10 +481,10 @@
               "answer": "Downloads an entire repository from a server and copies it locally",
               "explain": "git clone gets a full copy of a project, including all history and branches, from a remote location.",
               "choices": [
-                "Backs up a repository",
                 "Downloads an entire repository from a server and copies it locally",
                 "Uploads changes to the server",
-                "Deletes the original repository"
+                "Deletes the original repository",
+                "Backs up a repository"
               ],
               "id": "git_terminal_u4l1_1"
             },
@@ -495,8 +495,8 @@
               "explain": "Plain git diff compares your files to the staging area, so it shows edits you have not staged. Use git diff --staged to see what is staged for the next commit.",
               "choices": [
                 "The commit history",
-                "Changes in your working tree that you have not staged yet",
                 "Remote server status",
+                "Changes in your working tree that you have not staged yet",
                 "The list of all branches"
               ],
               "id": "git_terminal_u4l1_2"
@@ -522,8 +522,8 @@
               "choices": [
                 "Creates a new file",
                 "Stages all modified and new files for the next commit",
-                "Deletes all files",
-                "Uploads all files"
+                "Uploads all files",
+                "Deletes all files"
               ],
               "id": "git_terminal_u4l1_4"
             }
@@ -539,9 +539,9 @@
               "answer": "Discards changes to a file and restores the last committed version",
               "explain": "git restore reverts a file to its state in the last commit. Unsaved changes are lost.",
               "choices": [
-                "Stages a file for commit",
                 "Discards changes to a file and restores the last committed version",
                 "Uploads a file",
+                "Stages a file for commit",
                 "Creates a backup"
               ],
               "id": "git_terminal_u4l2_0"
@@ -565,10 +565,10 @@
               "answer": "Shows the commit history with one commit per line and short hashes",
               "explain": "The --oneline flag makes git log compact and readable, showing just the commit hash and message.",
               "choices": [
+                "Shows only your commits",
                 "Shows only the last commit",
                 "Shows the commit history with one commit per line and short hashes",
-                "Shows only errors",
-                "Shows only your commits"
+                "Shows only errors"
               ],
               "id": "git_terminal_u4l2_2"
             },
@@ -579,8 +579,8 @@
               "explain": "Always check what you are committing to catch mistakes and write accurate messages.",
               "choices": [
                 "Delete old files",
-                "Review your changes with git diff and git status",
                 "Upload immediately",
+                "Review your changes with git diff and git status",
                 "Create a backup"
               ],
               "id": "git_terminal_u4l2_3"
@@ -591,10 +591,10 @@
               "answer": "Short, clear, and describes what changed and why",
               "explain": "Good messages start with a verb (Add, Fix, Refactor) and explain the purpose. Avoid vague messages like update or changes.",
               "choices": [
-                "Very long and detailed",
-                "Short, clear, and describes what changed and why",
                 "Using only emojis",
-                "Anything that is not empty"
+                "Very long and detailed",
+                "Anything that is not empty",
+                "Short, clear, and describes what changed and why"
               ],
               "id": "git_terminal_u4l2_4"
             }
@@ -617,10 +617,10 @@
               "answer": "A separate line of development that diverges from the main code",
               "explain": "Branches let multiple developers work on different features simultaneously without interfering.",
               "choices": [
-                "A backup of the entire project",
-                "A separate line of development that diverges from the main code",
                 "A type of file",
-                "A remote server"
+                "A backup of the entire project",
+                "A remote server",
+                "A separate line of development that diverges from the main code"
               ],
               "id": "git_terminal_u5l1_0"
             },
@@ -630,10 +630,10 @@
               "answer": "Lists all local branches or creates a new branch",
               "explain": "git branch with no arguments lists branches. git branch name creates a new branch.",
               "choices": [
-                "Deletes a branch",
                 "Lists all local branches or creates a new branch",
+                "Switches to another branch",
                 "Merges branches",
-                "Switches to another branch"
+                "Deletes a branch"
               ],
               "id": "git_terminal_u5l1_1"
             },
@@ -643,8 +643,8 @@
               "answer": "Changes your working tree to a different branch",
               "explain": "git switch moves you to another branch. Your files update to match that branch's state.",
               "choices": [
-                "Creates a new branch",
                 "Changes your working tree to a different branch",
+                "Creates a new branch",
                 "Deletes a branch",
                 "Merges branches"
               ],
@@ -656,10 +656,10 @@
               "answer": "Deletes a local branch",
               "explain": "git branch -d removes a branch. Use -D (capital) to force delete even if not merged.",
               "choices": [
-                "Creates a new branch",
-                "Switches to a branch",
                 "Deletes a local branch",
-                "Lists all branches"
+                "Lists all branches",
+                "Switches to a branch",
+                "Creates a new branch"
               ],
               "id": "git_terminal_u5l1_3"
             },
@@ -669,10 +669,10 @@
               "answer": "Creates a new branch and switches to it immediately",
               "explain": "git switch -c (create) does both steps at once. You start working on the new branch right away.",
               "choices": [
-                "Lists all branches",
                 "Creates a new branch and switches to it immediately",
-                "Deletes a branch",
-                "Merges branches"
+                "Merges branches",
+                "Lists all branches",
+                "Deletes a branch"
               ],
               "id": "git_terminal_u5l1_4"
             }
@@ -688,10 +688,10 @@
               "answer": "Combines the changes from another branch into the current branch",
               "explain": "git merge integrates commits from one branch into your current branch. Usually you merge features back into main.",
               "choices": [
-                "Deletes a branch",
+                "Uploads the branch",
                 "Combines the changes from another branch into the current branch",
-                "Switches to another branch",
-                "Uploads the branch"
+                "Deletes a branch",
+                "Switches to another branch"
               ],
               "id": "git_terminal_u5l2_0"
             },
@@ -701,10 +701,10 @@
               "answer": "A situation where two branches changed the same lines and Git cannot automatically merge",
               "explain": "Conflicts happen when different commits modify overlapping code. You must manually choose which changes to keep.",
               "choices": [
-                "A connection error",
                 "A situation where two branches changed the same lines and Git cannot automatically merge",
+                "A failed upload",
                 "A deleted branch",
-                "A failed upload"
+                "A connection error"
               ],
               "id": "git_terminal_u5l2_1"
             },
@@ -715,9 +715,9 @@
               "explain": "These markers show your version (between <<<< and ====) and the other branch's version (between ==== and >>>>).",
               "choices": [
                 "The start of a comment",
-                "The boundaries between conflicting versions that need to be resolved",
+                "Valid code syntax",
                 "Deleted lines",
-                "Valid code syntax"
+                "The boundaries between conflicting versions that need to be resolved"
               ],
               "id": "git_terminal_u5l2_2"
             },
@@ -727,10 +727,10 @@
               "answer": "Edit the conflicted files, remove conflict markers, choose which changes to keep, then add and commit",
               "explain": "Open the conflicted files, manually choose between versions or combine them, delete the markers, stage, and commit.",
               "choices": [
-                "Automatically delete the conflicting lines",
-                "Edit the conflicted files, remove conflict markers, choose which changes to keep, then add and commit",
                 "Revert the entire merge",
-                "Ask someone else to decide"
+                "Ask someone else to decide",
+                "Edit the conflicted files, remove conflict markers, choose which changes to keep, then add and commit",
+                "Automatically delete the conflicting lines"
               ],
               "id": "git_terminal_u5l2_3"
             },
@@ -741,9 +741,9 @@
               "explain": "A fast-forward merge happens when one branch is directly ahead of another with no diverging commits.",
               "choices": [
                 "A merge that is faster than normal",
+                "A merge that requires conflict resolution",
                 "A merge where the target branch has no new commits, so history is linear",
-                "A failed merge",
-                "A merge that requires conflict resolution"
+                "A failed merge"
               ],
               "id": "git_terminal_u5l2_4"
             }
@@ -766,10 +766,10 @@
               "answer": "A version of your repository on a server, usually a central shared location",
               "explain": "Remotes let teams share code. origin is the default remote, usually pointing to GitHub or another server.",
               "choices": [
+                "An error message",
                 "A backup copy on your computer",
-                "A version of your repository on a server, usually a central shared location",
                 "A branch on your machine",
-                "An error message"
+                "A version of your repository on a server, usually a central shared location"
               ],
               "id": "git_terminal_u6l1_0"
             },
@@ -779,10 +779,10 @@
               "answer": "Shows the addresses of all configured remotes",
               "explain": "git remote -v (verbose) displays remote names and URLs. Most projects have origin pointing to their main server.",
               "choices": [
-                "Deletes a remote",
                 "Shows the addresses of all configured remotes",
                 "Creates a new remote",
-                "Uploads to a remote"
+                "Uploads to a remote",
+                "Deletes a remote"
               ],
               "id": "git_terminal_u6l1_1"
             },
@@ -793,9 +793,9 @@
               "explain": "git push sends your local commits to the remote. origin is the remote, branchname is the target branch.",
               "choices": [
                 "Downloads commits from the server",
-                "Uploads your commits to the remote server on the specified branch",
+                "Merges with the remote",
                 "Deletes a remote branch",
-                "Merges with the remote"
+                "Uploads your commits to the remote server on the specified branch"
               ],
               "id": "git_terminal_u6l1_2"
             },
@@ -805,10 +805,10 @@
               "answer": "Fetches commits from the remote and merges them into your current branch",
               "explain": "git pull is equivalent to git fetch followed by git merge. It updates your branch with remote changes.",
               "choices": [
-                "Only downloads without merging",
-                "Fetches commits from the remote and merges them into your current branch",
                 "Uploads your commits",
-                "Deletes local branches"
+                "Deletes local branches",
+                "Fetches commits from the remote and merges them into your current branch",
+                "Only downloads without merging"
               ],
               "id": "git_terminal_u6l1_3"
             },
@@ -818,10 +818,10 @@
               "answer": "Downloads commits from the remote without merging",
               "explain": "git fetch gets new commits from the server and updates remote tracking branches. Use it to see what others have done before merging.",
               "choices": [
-                "Downloads and automatically merges",
-                "Downloads commits from the remote without merging",
+                "Deletes local files",
                 "Uploads your commits",
-                "Deletes local files"
+                "Downloads and automatically merges",
+                "Downloads commits from the remote without merging"
               ],
               "id": "git_terminal_u6l1_4"
             }
@@ -837,9 +837,9 @@
               "answer": "A proposal to merge one branch into another, usually for code review before merging",
               "explain": "Pull requests let teams review changes, discuss improvements, and approve before integrating into main.",
               "choices": [
+                "A type of branch",
                 "A command to download files",
                 "A proposal to merge one branch into another, usually for code review before merging",
-                "A type of branch",
                 "A backup mechanism"
               ],
               "id": "git_terminal_u6l2_0"
@@ -850,9 +850,9 @@
               "answer": "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
               "explain": "Pull requests are created on the server interface, not from the terminal. They live alongside your code online.",
               "choices": [
+                "In a text editor",
                 "In the terminal with git pr",
                 "The web interface of the hosting service (GitHub, GitLab, Bitbucket)",
-                "In a text editor",
                 "Automatically after pushing"
               ],
               "id": "git_terminal_u6l2_1"
@@ -863,10 +863,10 @@
               "answer": "Push your branch, ensure commits are clean, and verify changes work",
               "explain": "Review your commits, test your changes, and push to the remote before opening a pull request.",
               "choices": [
-                "Nothing, just create it",
-                "Push your branch, ensure commits are clean, and verify changes work",
                 "Merge into main first",
-                "Delete old branches"
+                "Delete old branches",
+                "Nothing, just create it",
+                "Push your branch, ensure commits are clean, and verify changes work"
               ],
               "id": "git_terminal_u6l2_2"
             },
@@ -876,10 +876,10 @@
               "answer": "Team members checking the changes, discussing improvements, and approving before merge",
               "explain": "Code reviews catch bugs, ensure quality, share knowledge, and maintain standards.",
               "choices": [
-                "Only checking spelling",
                 "Team members checking the changes, discussing improvements, and approving before merge",
                 "Running the code automatically",
-                "Nothing, it is automatic"
+                "Nothing, it is automatic",
+                "Only checking spelling"
               ],
               "id": "git_terminal_u6l2_3"
             },
@@ -889,9 +889,9 @@
               "answer": "Push to remote and create a pull request for review",
               "explain": "After commits, push your branch and create a pull request. Team members review, then merge to main.",
               "choices": [
+                "Start a new branch",
                 "Delete your branch",
                 "Push to remote and create a pull request for review",
-                "Start a new branch",
                 "Update your resume"
               ],
               "id": "git_terminal_u6l2_4"

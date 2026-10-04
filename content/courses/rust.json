@@ -19,10 +19,10 @@
               "question": "Rust package manager?",
               "answer": "cargo",
               "choices": [
-                "cargo",
+                "rust-pm",
                 "rustc",
                 "crate",
-                "rust-pm"
+                "cargo"
               ],
               "id": "rust_0"
             },
@@ -31,10 +31,10 @@
               "question": "Define variable in Rust?",
               "answer": "let",
               "choices": [
-                "let",
+                "def",
                 "var",
                 "const",
-                "def"
+                "let"
               ],
               "id": "rust_1"
             },
@@ -44,9 +44,9 @@
               "answer": "let mut",
               "choices": [
                 "let mut",
-                "var",
+                "mutable",
                 "mut let",
-                "mutable"
+                "var"
               ],
               "id": "rust_2"
             },
@@ -55,9 +55,9 @@
               "question": "Result type in Rust?",
               "answer": "Ok/Err",
               "choices": [
-                "Ok/Err",
-                "Success/Fail",
                 "True/False",
+                "Success/Fail",
+                "Ok/Err",
                 "Some/None"
               ],
               "id": "rust_3"
@@ -67,10 +67,10 @@
               "question": "Rust memory safety?",
               "answer": "Compile-time",
               "choices": [
-                "Compile-time",
+                "Garbage collected",
                 "Runtime",
-                "Manual",
-                "Garbage collected"
+                "Compile-time",
+                "Manual"
               ],
               "id": "rust_4"
             },
@@ -79,9 +79,9 @@
               "question": "Print to stdout in Rust?",
               "answer": "println!()",
               "choices": [
-                "println!()",
                 "print()",
                 "console.log()",
+                "println!()",
                 "echo()"
               ],
               "id": "rust_5"
@@ -91,10 +91,10 @@
               "question": "Rust string type for owned data?",
               "answer": "String",
               "choices": [
-                "String",
-                "&str",
+                "Str",
                 "str",
-                "Str"
+                "String",
+                "&str"
               ],
               "id": "rust_6"
             }
@@ -110,9 +110,9 @@
               "answer": "One",
               "choices": [
                 "One",
+                "None",
                 "Two",
-                "Unlimited",
-                "None"
+                "Unlimited"
               ],
               "id": "rust_7"
             },
@@ -122,9 +122,9 @@
               "answer": "match",
               "choices": [
                 "match",
-                "switch",
                 "case",
-                "when"
+                "when",
+                "switch"
               ],
               "id": "rust_8"
             },
@@ -133,10 +133,10 @@
               "question": "Define a struct?",
               "answer": "struct Name {}",
               "choices": [
-                "struct Name {}",
+                "object Name {}",
                 "class Name {}",
                 "type Name {}",
-                "object Name {}"
+                "struct Name {}"
               ],
               "id": "rust_9"
             },
@@ -145,10 +145,10 @@
               "question": "Trait is similar to?",
               "answer": "Interface",
               "choices": [
-                "Interface",
                 "Class",
-                "Module",
-                "Package"
+                "Package",
+                "Interface",
+                "Module"
               ],
               "id": "rust_10"
             },
@@ -157,9 +157,9 @@
               "question": "Immutable borrow syntax?",
               "answer": "&value",
               "choices": [
-                "&value",
                 "*value",
                 "ref value",
+                "&value",
                 "@value"
               ],
               "id": "rust_11"
@@ -169,8 +169,8 @@
               "question": "Option type variants?",
               "answer": "Some/None",
               "choices": [
-                "Some/None",
                 "Ok/Err",
+                "Some/None",
                 "True/False",
                 "Just/Nothing"
               ],
@@ -181,10 +181,10 @@
               "question": "Rust loop keyword for infinite loop?",
               "answer": "loop",
               "choices": [
-                "loop",
                 "while true",
+                "repeat",
                 "for ever",
-                "repeat"
+                "loop"
               ],
               "id": "rust_13"
             }
@@ -199,10 +199,10 @@
               "question": "Cargo command to compile + run?",
               "answer": "cargo run",
               "choices": [
-                "cargo run",
                 "cargo build",
-                "cargo exec",
-                "cargo start"
+                "cargo run",
+                "cargo start",
+                "cargo exec"
               ],
               "id": "rust_14"
             }

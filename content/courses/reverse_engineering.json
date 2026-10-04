@@ -19,10 +19,10 @@
               "question": "Turning machine code back into assembly is called",
               "answer": "Disassembly",
               "choices": [
-                "Disassembly",
                 "Decompilation",
+                "Linking",
                 "Compilation",
-                "Linking"
+                "Disassembly"
               ],
               "id": "reverse_engineering_0"
             },
@@ -31,9 +31,9 @@
               "question": "Tool that produces C-like pseudocode from a binary",
               "answer": "Decompiler",
               "choices": [
-                "Decompiler",
-                "Assembler",
                 "Linker",
+                "Assembler",
+                "Decompiler",
                 "Debugger"
               ],
               "id": "reverse_engineering_1"
@@ -43,10 +43,10 @@
               "question": "Free NSA reverse engineering suite",
               "answer": "Ghidra",
               "choices": [
-                "Ghidra",
-                "IDA Pro",
+                "Radare2",
                 "Binary Ninja",
-                "Radare2"
+                "IDA Pro",
+                "Ghidra"
               ],
               "id": "reverse_engineering_2"
             },
@@ -55,10 +55,10 @@
               "question": "Command that lists printable strings in a binary",
               "answer": "strings",
               "choices": [
-                "strings",
-                "nm",
                 "objdump",
-                "file"
+                "strings",
+                "file",
+                "nm"
               ],
               "id": "reverse_engineering_3"
             },
@@ -67,10 +67,10 @@
               "question": "Executable format used on Linux",
               "answer": "ELF",
               "choices": [
-                "ELF",
                 "PE",
                 "Mach-O",
-                "COFF"
+                "COFF",
+                "ELF"
               ],
               "id": "reverse_engineering_4"
             },
@@ -79,10 +79,10 @@
               "question": "Executable format used on macOS and iOS",
               "answer": "Mach-O",
               "choices": [
+                "APK",
                 "Mach-O",
                 "ELF",
-                "PE",
-                "APK"
+                "PE"
               ],
               "id": "reverse_engineering_5"
             }
@@ -98,9 +98,9 @@
               "answer": "rdi",
               "choices": [
                 "rdi",
-                "rax",
                 "rsp",
-                "rbx"
+                "rbx",
+                "rax"
               ],
               "id": "reverse_engineering_6"
             },
@@ -109,9 +109,9 @@
               "question": "Register holding the return value on x86-64",
               "answer": "rax",
               "choices": [
-                "rax",
                 "rdi",
                 "rbp",
+                "rax",
                 "rip"
               ],
               "id": "reverse_engineering_7"
@@ -121,10 +121,10 @@
               "question": "Instruction that sets flags by subtracting without storing",
               "answer": "cmp",
               "choices": [
-                "cmp",
-                "sub",
                 "mov",
-                "test"
+                "test",
+                "cmp",
+                "sub"
               ],
               "id": "reverse_engineering_8"
             },
@@ -133,8 +133,8 @@
               "question": "On ARM64, the return address lives in",
               "answer": "x30 (LR)",
               "choices": [
-                "x30 (LR)",
                 "x0",
+                "x30 (LR)",
                 "sp",
                 "pc"
               ],
@@ -145,9 +145,9 @@
               "question": "What does the stack pointer do on a function call?",
               "answer": "Grows downward",
               "choices": [
+                "Stays fixed",
                 "Grows downward",
                 "Grows upward",
-                "Stays fixed",
                 "Resets to zero"
               ],
               "id": "reverse_engineering_10"
@@ -158,9 +158,9 @@
               "answer": "je",
               "choices": [
                 "je",
+                "call",
                 "jmp",
-                "jne",
-                "call"
+                "jne"
               ],
               "id": "reverse_engineering_11"
             }
@@ -175,10 +175,10 @@
               "question": "Debugger shipped with LLVM and used on macOS",
               "answer": "lldb",
               "choices": [
-                "lldb",
-                "gdb",
                 "windbg",
-                "x64dbg"
+                "gdb",
+                "x64dbg",
+                "lldb"
               ],
               "id": "reverse_engineering_12"
             },
@@ -187,9 +187,9 @@
               "question": "Stopping execution at an address to inspect state",
               "answer": "Breakpoint",
               "choices": [
+                "Hook",
                 "Breakpoint",
                 "Watchpoint",
-                "Hook",
                 "Trap"
               ],
               "id": "reverse_engineering_13"
@@ -199,10 +199,10 @@
               "question": "Linux tool that traces system calls",
               "answer": "strace",
               "choices": [
-                "strace",
-                "ltrace",
                 "perf",
-                "nm"
+                "nm",
+                "strace",
+                "ltrace"
               ],
               "id": "reverse_engineering_14"
             },
@@ -224,8 +224,8 @@
               "answer": "Burp Suite",
               "choices": [
                 "Burp Suite",
-                "Ghidra",
                 "Frida",
+                "Ghidra",
                 "lldb"
               ],
               "id": "reverse_engineering_16"
@@ -235,10 +235,10 @@
               "question": "Defeating certificate pinning requires",
               "answer": "Patching or hooking the app's trust check",
               "choices": [
-                "Patching or hooking the app's trust check",
-                "A faster proxy",
                 "Root DNS access",
-                "Recompiling the OS"
+                "Recompiling the OS",
+                "A faster proxy",
+                "Patching or hooking the app's trust check"
               ],
               "id": "reverse_engineering_17"
             }
@@ -253,10 +253,10 @@
               "question": "Compressing or encrypting a binary to hide its code is called",
               "answer": "Packing",
               "choices": [
-                "Packing",
+                "Fuzzing",
                 "Stripping",
                 "Linking",
-                "Fuzzing"
+                "Packing"
               ],
               "id": "reverse_engineering_18"
             },
@@ -265,10 +265,10 @@
               "question": "Randomizing where code loads in memory",
               "answer": "ASLR",
               "choices": [
-                "ASLR",
+                "PAC",
                 "DEP",
                 "CFI",
-                "PAC"
+                "ASLR"
               ],
               "id": "reverse_engineering_19"
             },
@@ -277,10 +277,10 @@
               "question": "Marking the stack non-executable",
               "answer": "NX / DEP",
               "choices": [
-                "NX / DEP",
-                "ASLR",
                 "Stack canary",
-                "RELRO"
+                "RELRO",
+                "ASLR",
+                "NX / DEP"
               ],
               "id": "reverse_engineering_20"
             },
@@ -289,10 +289,10 @@
               "question": "Value placed before the saved return address to detect overflow",
               "answer": "Stack canary",
               "choices": [
-                "Stack canary",
                 "ASLR slide",
-                "Nonce",
-                "Salt"
+                "Salt",
+                "Stack canary",
+                "Nonce"
               ],
               "id": "reverse_engineering_21"
             },
@@ -301,10 +301,10 @@
               "question": "Removing symbol names from a binary",
               "answer": "Stripping",
               "choices": [
-                "Stripping",
-                "Packing",
                 "Signing",
-                "Fuzzing"
+                "Stripping",
+                "Fuzzing",
+                "Packing"
               ],
               "id": "reverse_engineering_22"
             }
@@ -319,10 +319,10 @@
               "question": "Competition format built around reverse engineering puzzles",
               "answer": "CTF",
               "choices": [
+                "Code golf",
                 "CTF",
                 "Hackathon",
-                "Bug bash",
-                "Code golf"
+                "Bug bash"
               ],
               "id": "reverse_engineering_23"
             },
@@ -331,10 +331,10 @@
               "question": "Automated input generation to find crashes",
               "answer": "Fuzzing",
               "choices": [
-                "Fuzzing",
                 "Linting",
-                "Profiling",
-                "Tracing"
+                "Fuzzing",
+                "Tracing",
+                "Profiling"
               ],
               "id": "reverse_engineering_24"
             },
@@ -343,10 +343,10 @@
               "question": "Reporting a bug to the vendor before publishing",
               "answer": "Responsible disclosure",
               "choices": [
-                "Responsible disclosure",
-                "Full disclosure",
+                "Exploit sale",
                 "Zero disclosure",
-                "Exploit sale"
+                "Full disclosure",
+                "Responsible disclosure"
               ],
               "id": "reverse_engineering_25"
             },
@@ -355,10 +355,10 @@
               "question": "Reverse engineering someone else's software is safest when",
               "answer": "You own it or are authorized",
               "choices": [
+                "It is old",
                 "You own it or are authorized",
                 "It is popular",
-                "It is closed source",
-                "It is old"
+                "It is closed source"
               ],
               "id": "reverse_engineering_26"
             }

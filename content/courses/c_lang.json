@@ -1,0 +1,904 @@
+{
+  "id": "c_lang",
+  "name": "C",
+  "category": "programming",
+  "icon": "fa-solid fa-c",
+  "level": "Systems Programming",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "First Programs",
+      "tip": "C programs start with a main function. Printf outputs text. The compiler translates your source code into executable instructions. Header files declare functions you want to use.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Hello World and Main",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the entry point of a C program?",
+              "answer": "The main() function",
+              "explain": "Every C program starts running from the main() function. The operating system calls main when the program starts.",
+              "choices": [
+                "A function named begin()",
+                "A function named start()",
+                "The first line of code in a file",
+                "The main() function"
+              ],
+              "id": "c_lang_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does printf() do?",
+              "answer": "Prints formatted text to the screen",
+              "explain": "printf outputs text and variables in a formatted way. The f stands for formatted. You need #include <stdio.h> to use it.",
+              "choices": [
+                "Prints formatted text to the screen",
+                "Stores text in memory",
+                "Compiles the program",
+                "Reads input from the user"
+              ],
+              "id": "c_lang_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does #include <stdio.h> do?",
+              "answer": "Includes the standard input/output library",
+              "explain": "Header files like stdio.h declare functions. You must include stdio.h before using printf, scanf, and other I/O functions.",
+              "choices": [
+                "Includes the standard input/output library",
+                "Starts the program",
+                "Compiles the code",
+                "Defines the main function"
+              ],
+              "id": "c_lang_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a semicolon used for in C?",
+              "answer": "To end a statement",
+              "explain": "Every statement in C ends with a semicolon. Forgetting semicolons is a common error that causes compilation to fail.",
+              "choices": [
+                "To declare variables",
+                "To mark a comment",
+                "To start a new line",
+                "To end a statement"
+              ],
+              "id": "c_lang_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to compile C code?",
+              "answer": "Translate source code into machine-executable instructions",
+              "explain": "The compiler reads your C source file and produces an executable binary that the computer can run directly.",
+              "choices": [
+                "Store the code on disk",
+                "Run the program",
+                "Translate source code into machine-executable instructions",
+                "Check for errors in syntax"
+              ],
+              "id": "c_lang_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Comments and Code Structure",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you write a single-line comment in C?",
+              "answer": "Using // before the text",
+              "explain": "A line beginning with // is ignored by the compiler. Everything after // on that line is a comment.",
+              "choices": [
+                "Using // before the text",
+                "Using ; before the text",
+                "Using # before the text",
+                "Using -- before the text"
+              ],
+              "id": "c_lang_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you write a multi-line comment in C?",
+              "answer": "Using /* and */ to wrap the text",
+              "explain": "Comments between /* and */ can span multiple lines. Everything inside is ignored by the compiler.",
+              "choices": [
+                "Using # and #/",
+                "Using -- and --/",
+                "Using /* and */ to wrap the text",
+                "Using // on each line"
+              ],
+              "id": "c_lang_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why should you write comments in code?",
+              "answer": "To explain what the code does and why",
+              "explain": "Comments help you and others understand your code. Good comments explain the intent, not just restate what the code obviously does.",
+              "choices": [
+                "To avoid compilation errors",
+                "To make the code run faster",
+                "To explain what the code does and why",
+                "To reduce the file size"
+              ],
+              "id": "c_lang_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do braces {} do in C?",
+              "answer": "Group statements into blocks",
+              "explain": "Braces define code blocks used in functions, loops, and conditionals. They group related statements together.",
+              "choices": [
+                "Declare variables",
+                "Group statements into blocks",
+                "Mark the start of a comment",
+                "End the program"
+              ],
+              "id": "c_lang_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of indentation in C?",
+              "answer": "To make code more readable for humans",
+              "explain": "Indentation shows the structure of blocks and makes code easier to read. The compiler ignores it, but humans appreciate it.",
+              "choices": [
+                "To make code more readable for humans",
+                "To skip lines",
+                "To declare variables",
+                "To make the program run faster"
+              ],
+              "id": "c_lang_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Types and Operators",
+      "tip": "C has fixed data types: int for integers, float and double for decimals, char for characters. The sizeof operator tells you how many bytes a type uses. Operators perform arithmetic, comparisons, and logic on values.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Integer and Character Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the int type represent?",
+              "answer": "A whole number, positive or negative",
+              "explain": "int is the most common integer type in C. It typically uses 4 bytes and can hold values from about -2 billion to 2 billion.",
+              "choices": [
+                "A true/false value",
+                "A decimal number",
+                "A character",
+                "A whole number, positive or negative"
+              ],
+              "id": "c_lang_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What type should you use to store a single character?",
+              "answer": "char",
+              "explain": "char stores a single character like 'A' or '5'. It uses 1 byte and is represented as an integer ASCII value.",
+              "choices": [
+                "text",
+                "string",
+                "char",
+                "int"
+              ],
+              "id": "c_lang_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the ASCII value used for?",
+              "answer": "To represent characters as numbers in the computer",
+              "explain": "ASCII maps each character to a number. 'A' is 65, 'a' is 97. This allows char (an integer type) to store text.",
+              "choices": [
+                "To store floating-point numbers",
+                "To define colors",
+                "To measure speed",
+                "To represent characters as numbers in the computer"
+              ],
+              "id": "c_lang_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the unsigned keyword used for?",
+              "answer": "To store only non-negative integers",
+              "explain": "unsigned int can only hold 0 or positive numbers, not negative. This doubles the maximum positive value it can hold.",
+              "choices": [
+                "To store floating-point numbers",
+                "To declare variables",
+                "To store signed integers",
+                "To store only non-negative integers"
+              ],
+              "id": "c_lang_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many bytes does a typical int use?",
+              "answer": "4 bytes",
+              "explain": "On most systems, int is 4 bytes (32 bits). However, this can vary. Use sizeof(int) to find the exact size on your system.",
+              "choices": [
+                "2 bytes",
+                "8 bytes",
+                "4 bytes",
+                "1 byte"
+              ],
+              "id": "c_lang_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Floating-Point Numbers and Operators",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What type should you use for decimal numbers?",
+              "answer": "float or double",
+              "explain": "float uses 4 bytes and double uses 8 bytes for floating-point numbers. Double is more precise but uses more memory.",
+              "choices": [
+                "int",
+                "char",
+                "float or double",
+                "decimal"
+              ],
+              "id": "c_lang_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the % operator do in C?",
+              "answer": "Returns the remainder of division",
+              "explain": "The modulo operator % returns what is left over after dividing. For example, 7 % 3 is 1 because 7 divided by 3 is 2 with remainder 1.",
+              "choices": [
+                "Multiplies numbers",
+                "Takes a percentage",
+                "Divides numbers",
+                "Returns the remainder of division"
+              ],
+              "id": "c_lang_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is integer division in C?",
+              "answer": "Division that discards the decimal part",
+              "explain": "When you divide two integers in C, the result is an integer. The decimal part is thrown away. 7 / 2 equals 3, not 3.5.",
+              "choices": [
+                "Division with floating-point precision",
+                "Division that rounds to the nearest whole number",
+                "Division by a whole number only",
+                "Division that discards the decimal part"
+              ],
+              "id": "c_lang_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you compare two values for equality in C?",
+              "answer": "Using ==",
+              "explain": "The == operator tests if two values are equal. It returns 1 (true) or 0 (false). Do not confuse it with = which assigns a value.",
+              "choices": [
+                "Using is",
+                "Using =",
+                "Using =?",
+                "Using =="
+              ],
+              "id": "c_lang_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the && operator represent?",
+              "answer": "Logical AND, true only if both conditions are true",
+              "explain": "&& returns 1 only when both sides are true. (x > 5 && x < 10) is true only if x is between 5 and 10.",
+              "choices": [
+                "Bitwise AND",
+                "Logical AND, true only if both conditions are true",
+                "Logical NOT",
+                "Logical OR"
+              ],
+              "id": "c_lang_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Control Flow and Functions",
+      "tip": "if and switch statements make decisions. for and while loops repeat code. Functions break code into reusable pieces. Pass-by-value means copies of data go into functions, not the originals.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "If, Switch, and Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an if statement do?",
+              "answer": "Executes code only if a condition is true",
+              "explain": "if tests a condition. If it is true, the block runs. If false, it is skipped.",
+              "choices": [
+                "Repeats code multiple times",
+                "Declares a variable",
+                "Executes code only if a condition is true",
+                "Ends the program"
+              ],
+              "id": "c_lang_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the else keyword do?",
+              "answer": "Executes code if the if condition is false",
+              "explain": "else provides an alternative block. If the if condition is false, the else block runs instead.",
+              "choices": [
+                "Starts a new if statement",
+                "Executes code if the if condition is true",
+                "Ends a loop",
+                "Executes code if the if condition is false"
+              ],
+              "id": "c_lang_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use a switch statement?",
+              "answer": "When testing one variable against multiple values",
+              "explain": "switch is cleaner than many if-else statements when comparing a single variable to many possible values.",
+              "choices": [
+                "To test multiple conditions",
+                "When testing one variable against multiple values",
+                "To define functions",
+                "To replace all if statements"
+              ],
+              "id": "c_lang_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a for loop do?",
+              "answer": "Repeats code a specific number of times",
+              "explain": "A for loop has an initializer, condition, and increment. It repeats the block until the condition becomes false.",
+              "choices": [
+                "Declares a variable",
+                "Tests a condition once",
+                "Ends the program",
+                "Repeats code a specific number of times"
+              ],
+              "id": "c_lang_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a while loop do?",
+              "answer": "Repeats code as long as a condition is true",
+              "explain": "A while loop checks a condition at the start of each iteration. If true, it runs the block. If false, it stops.",
+              "choices": [
+                "Tests a condition once",
+                "Repeats code a fixed number of times",
+                "Repeats code as long as a condition is true",
+                "Declares a variable"
+              ],
+              "id": "c_lang_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Functions and Parameters",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does a function declaration do?",
+              "answer": "Tells the compiler what a function looks like before it is defined",
+              "explain": "A function declaration (or prototype) specifies the return type, name, and parameters. It lets you use the function before its definition.",
+              "choices": [
+                "Stores data in memory",
+                "Tells the compiler what a function looks like before it is defined",
+                "Calls a function",
+                "Defines what a function does"
+              ],
+              "id": "c_lang_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the return keyword do?",
+              "answer": "Sends a value back from a function to the caller",
+              "explain": "return ends the function and sends a value back. If a function's return type is int, it must return an int.",
+              "choices": [
+                "Declares a variable",
+                "Sends a value back from a function to the caller",
+                "Ends the program",
+                "Starts a new block"
+              ],
+              "id": "c_lang_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is pass by value?",
+              "answer": "Passing a copy of a variable to a function",
+              "explain": "In C, arguments are passed by value by default. The function gets a copy, so changes inside the function do not affect the original variable.",
+              "choices": [
+                "Passing the original variable directly",
+                "Passing a copy of a variable to a function",
+                "Declaring a global variable",
+                "Using return to send a value"
+              ],
+              "id": "c_lang_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do parameters do?",
+              "answer": "Accept input values into a function",
+              "explain": "Parameters (also called formal arguments) are variables declared in the function's parentheses. They receive values when the function is called.",
+              "choices": [
+                "Store return values",
+                "Accept input values into a function",
+                "Declare local variables outside functions",
+                "Declare global variables"
+              ],
+              "id": "c_lang_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a void return type mean?",
+              "answer": "The function does not return a value",
+              "explain": "void means the function performs an action but sends no value back. You do not use return with a value in void functions.",
+              "choices": [
+                "The function returns zero",
+                "The function returns null",
+                "The function does not return a value",
+                "The function returns a pointer"
+              ],
+              "id": "c_lang_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Pointers",
+      "tip": "A pointer is a variable that stores an address in memory. The & operator gets an address. The * operator accesses the value at that address. Pointers are powerful but require careful handling.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Addresses and Basic Pointers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the & operator do?",
+              "answer": "Returns the address of a variable in memory",
+              "explain": "The & operator is the address-of operator. &x gives the memory address where x is stored.",
+              "choices": [
+                "Performs a logical AND",
+                "Returns the address of a variable in memory",
+                "Combines two values",
+                "Returns the value of a variable"
+              ],
+              "id": "c_lang_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pointer?",
+              "answer": "A variable that stores a memory address",
+              "explain": "A pointer is a variable whose value is an address. Declared as int *p, it can hold the address of an int variable.",
+              "choices": [
+                "A variable that stores a decimal number",
+                "A reference to a function",
+                "A variable that stores a memory address",
+                "A string in memory"
+              ],
+              "id": "c_lang_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the * operator do when applied to a pointer?",
+              "answer": "Accesses the value at the address the pointer points to",
+              "explain": "The * operator dereferences a pointer. If p points to x, then *p gives the value of x.",
+              "choices": [
+                "Defines a memory size",
+                "Accesses the value at the address the pointer points to",
+                "Multiplies two numbers",
+                "Declares a pointer"
+              ],
+              "id": "c_lang_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you declare a pointer to an int?",
+              "answer": "int *p;",
+              "explain": "The asterisk before the variable name declares it as a pointer. int *p declares p as a pointer to an int.",
+              "choices": [
+                "int *p;",
+                "*int p;",
+                "int p;",
+                "ptr int p;"
+              ],
+              "id": "c_lang_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is NULL?",
+              "answer": "A special pointer value meaning no address, used to mark invalid pointers",
+              "explain": "NULL is a macro (usually defined as 0) representing a null pointer. A NULL pointer does not point to any valid memory.",
+              "choices": [
+                "An empty variable",
+                "A special pointer value meaning no address, used to mark invalid pointers",
+                "A data type",
+                "The first memory address"
+              ],
+              "id": "c_lang_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Pointer Arithmetic and Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is pointer arithmetic?",
+              "answer": "Adding or subtracting integers to move a pointer through memory",
+              "explain": "You can add 1 to a pointer to move it to the next element. For int *p, p+1 moves 4 bytes forward (since int is 4 bytes).",
+              "choices": [
+                "Adding or subtracting integers to move a pointer through memory",
+                "Multiplying pointer addresses",
+                "Mathematical operations on pointer values",
+                "Casting pointers to different types"
+              ],
+              "id": "c_lang_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you pass a variable by reference using pointers?",
+              "answer": "Pass the address with & and receive it with a pointer parameter",
+              "explain": "To modify a variable inside a function, pass its address (func(&var)) and receive it as a pointer (void func(int *var)).",
+              "choices": [
+                "Use the return keyword",
+                "Declare the parameter as const",
+                "Pass the address with & and receive it with a pointer parameter",
+                "Use global variables"
+              ],
+              "id": "c_lang_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if you dereference a NULL pointer?",
+              "answer": "Undefined behavior, likely a crash",
+              "explain": "Dereferencing NULL is undefined behavior. It may crash, corrupt memory, or appear to work. Never dereference a NULL pointer.",
+              "choices": [
+                "Undefined behavior, likely a crash",
+                "It returns an error code",
+                "It returns NULL",
+                "It returns 0"
+              ],
+              "id": "c_lang_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a void pointer?",
+              "answer": "A generic pointer that can point to any type of data",
+              "explain": "void *p is a generic pointer. It can hold the address of any data type but must be cast before dereferencing.",
+              "choices": [
+                "A pointer that points to nothing",
+                "A pointer that stores nothing",
+                "A generic pointer that can point to any type of data",
+                "A pointer declared as NULL"
+              ],
+              "id": "c_lang_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a pointer to a pointer do?",
+              "answer": "Stores the address of another pointer",
+              "explain": "int **pp declares a pointer to a pointer. It stores the address of a pointer variable, allowing modification of the pointer itself.",
+              "choices": [
+                "Points to two different variables",
+                "Stores the address of another pointer",
+                "Declares two pointers",
+                "Stores multiple addresses"
+              ],
+              "id": "c_lang_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Arrays and Strings",
+      "tip": "An array is a fixed-size collection of the same type. A string is a null-terminated array of chars. Pointer arithmetic connects arrays and pointers. Buffer overflow occurs when you write past the array's end.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Array Basics and Indexing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How do you declare an array of 5 integers?",
+              "answer": "int arr[5];",
+              "explain": "int arr[5] creates an array that holds 5 ints. Indices go from 0 to 4.",
+              "choices": [
+                "int arr(5);",
+                "array int [5] arr;",
+                "int arr[5];",
+                "int [5] arr;"
+              ],
+              "id": "c_lang_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is array indexing?",
+              "answer": "Accessing elements using their position, starting at 0",
+              "explain": "arr[0] is the first element, arr[1] is the second. Arrays are zero-indexed in C.",
+              "choices": [
+                "Declaring an array size",
+                "Sorting an array",
+                "Creating an array",
+                "Accessing elements using their position, starting at 0"
+              ],
+              "id": "c_lang_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an array relate to pointers?",
+              "answer": "An array name decays to a pointer to its first element",
+              "explain": "arr is equivalent to &arr[0]. When you pass arr to a function, it passes a pointer to the first element.",
+              "choices": [
+                "Arrays are slower than pointers",
+                "Pointers can only point to arrays",
+                "Arrays are the same as pointers",
+                "An array name decays to a pointer to its first element"
+              ],
+              "id": "c_lang_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the size of an array declaration int arr[10]?",
+              "answer": "10 integers, each typically 4 bytes",
+              "explain": "An array of 10 ints typically uses 40 bytes total (10 * 4). The exact size depends on the system.",
+              "choices": [
+                "10 integers, each typically 4 bytes",
+                "Variable size",
+                "10 bytes",
+                "100 bytes"
+              ],
+              "id": "c_lang_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you initialize an array with values?",
+              "answer": "int arr[] = {1, 2, 3, 4, 5};",
+              "explain": "Curly braces provide initial values. The size is inferred from the number of elements.",
+              "choices": [
+                "int arr[5] = [1, 2, 3, 4, 5];",
+                "int arr[5] @ 1, 2, 3, 4, 5;",
+                "int arr[5]: 1, 2, 3, 4, 5;",
+                "int arr[] = {1, 2, 3, 4, 5};"
+              ],
+              "id": "c_lang_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Strings and Buffer Overflow",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a null-terminated string?",
+              "answer": "An array of chars ending with the null character '\\0'",
+              "explain": "Strings in C end with a null terminator (ASCII 0). This marks the end so functions know where the string stops.",
+              "choices": [
+                "A string without any data",
+                "An array of chars ending with the null character '\\0'",
+                "A special string type in C",
+                "A string stored in a pointer"
+              ],
+              "id": "c_lang_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does strlen() do?",
+              "answer": "Counts characters in a string up to the null terminator",
+              "explain": "strlen returns the number of characters before the '\\0'. It does not count the null terminator itself.",
+              "choices": [
+                "Returns the allocated size",
+                "Counts characters in a string up to the null terminator",
+                "Copies a string",
+                "Finds a substring"
+              ],
+              "id": "c_lang_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does strcpy() do?",
+              "answer": "Copies one string to another",
+              "explain": "strcpy copies characters from source to destination until it hits the null terminator. Both strings must be null-terminated.",
+              "choices": [
+                "Reverses a string",
+                "Compares two strings",
+                "Finds a character in a string",
+                "Copies one string to another"
+              ],
+              "id": "c_lang_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a buffer overflow?",
+              "answer": "Writing data past the end of an allocated buffer",
+              "explain": "A buffer overflow occurs when you write more data than a buffer can hold. This corrupts nearby memory and is a major security vulnerability.",
+              "choices": [
+                "Reading past the end of a buffer",
+                "A type of array",
+                "Writing data past the end of an allocated buffer",
+                "An error message"
+              ],
+              "id": "c_lang_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you safely copy a string to avoid overflow?",
+              "answer": "Use strncpy() with a size limit",
+              "explain": "strncpy(dest, src, n) copies at most n characters, so it cannot write past the limit. If the source is too long it leaves no terminator, so set the last byte of dest to '\\0' yourself.",
+              "choices": [
+                "Use strcpy() carefully",
+                "Use strncpy() with a size limit",
+                "Use memcpy() instead",
+                "Check the string length first"
+              ],
+              "id": "c_lang_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Memory and Structs",
+      "tip": "The stack stores local variables and is automatically freed. The heap stores dynamically allocated memory that you must free manually. Structs group related data. Typedef creates an alias for a type.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Stack vs Heap and Dynamic Allocation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Where is local variable memory stored?",
+              "answer": "On the stack",
+              "explain": "Local variables are automatically allocated on the stack when declared and freed when the function exits.",
+              "choices": [
+                "In the CPU",
+                "In global memory",
+                "On the stack",
+                "On the heap"
+              ],
+              "id": "c_lang_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is malloc() used for?",
+              "answer": "To dynamically allocate memory on the heap",
+              "explain": "malloc allocates a block of memory on the heap and returns a pointer. You must free it when done.",
+              "choices": [
+                "To dynamically allocate memory on the heap",
+                "To initialize variables",
+                "To declare arrays",
+                "To allocate stack memory"
+              ],
+              "id": "c_lang_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does free() do?",
+              "answer": "Releases allocated memory back to the system",
+              "explain": "free deallocates memory allocated by malloc. Failing to free causes a memory leak.",
+              "choices": [
+                "Clears a variable",
+                "Allocates memory",
+                "Stops a program",
+                "Releases allocated memory back to the system"
+              ],
+              "id": "c_lang_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a memory leak?",
+              "answer": "Allocated memory that is not freed, wasting resources",
+              "explain": "A memory leak occurs when you malloc but never free. The memory becomes unavailable for reuse, wasting system resources.",
+              "choices": [
+                "Allocated memory that is not freed, wasting resources",
+                "A type of pointer",
+                "An error in the compiler",
+                "A security vulnerability"
+              ],
+              "id": "c_lang_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you allocate space for 10 integers on the heap?",
+              "answer": "int *arr = malloc(10 * sizeof(int));",
+              "explain": "malloc(10 * sizeof(int)) allocates space for 10 ints and returns a pointer. Always multiply by sizeof to get the correct size.",
+              "choices": [
+                "int *arr = malloc(10);",
+                "int *arr = malloc(10 * sizeof(int));",
+                "int arr[10] = malloc(10);",
+                "int arr = malloc(10);"
+              ],
+              "id": "c_lang_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Structs and Typedef",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a struct?",
+              "answer": "A composite data type that groups variables of different types",
+              "explain": "A struct lets you bundle related data together. For example, a struct for a person might have name (string), age (int), and height (float).",
+              "choices": [
+                "A pointer type",
+                "A function",
+                "A composite data type that groups variables of different types",
+                "A type of array"
+              ],
+              "id": "c_lang_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access a struct member?",
+              "answer": "Using the dot operator like s.age",
+              "explain": "The dot operator accesses members of a struct variable. If s is a struct, s.age accesses its age member.",
+              "choices": [
+                "Using brackets like s[age]",
+                "Using the dot operator like s.age",
+                "Using parentheses like s(age)",
+                "Using the arrow operator like s->age"
+              ],
+              "id": "c_lang_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you access struct members through a pointer?",
+              "answer": "Using the arrow operator like p->age",
+              "explain": "The arrow operator (p->age) is shorthand for (*p).age. It dereferences the pointer and accesses the member.",
+              "choices": [
+                "Using the dot operator",
+                "Using the address-of operator",
+                "Using bracket notation",
+                "Using the arrow operator like p->age"
+              ],
+              "id": "c_lang_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does typedef do?",
+              "answer": "Creates an alias for an existing type",
+              "explain": "typedef lets you define a new name for a type. For example, typedef struct Person Person; lets you write Person instead of struct Person.",
+              "choices": [
+                "Declares a variable",
+                "Defines a function",
+                "Allocates memory",
+                "Creates an alias for an existing type"
+              ],
+              "id": "c_lang_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does sizeof() return for a struct?",
+              "answer": "The size of the whole struct in bytes, including any padding",
+              "explain": "sizeof(struct_name) returns the total size. This includes all members and any padding the compiler adds for alignment.",
+              "choices": [
+                "The size of the largest member",
+                "The size of the whole struct in bytes, including any padding",
+                "The number of members",
+                "The size of one member"
+              ],
+              "id": "c_lang_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

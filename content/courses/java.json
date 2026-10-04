@@ -19,10 +19,10 @@
               "question": "Java entry point method?",
               "answer": "public static void main(String[] args)",
               "choices": [
-                "public static void main(String[] args)",
                 "def main():",
-                "int main()",
-                "func main()"
+                "func main()",
+                "public static void main(String[] args)",
+                "int main()"
               ],
               "id": "java_0"
             },
@@ -31,10 +31,10 @@
               "question": "Print to console in Java?",
               "answer": "System.out.println()",
               "choices": [
-                "System.out.println()",
-                "console.log()",
                 "print()",
-                "cout <<"
+                "System.out.println()",
+                "cout <<",
+                "console.log()"
               ],
               "id": "java_1"
             },
@@ -43,10 +43,10 @@
               "question": "Java is compiled to?",
               "answer": "Bytecode",
               "choices": [
-                "Bytecode",
+                "Assembly",
                 "Machine code",
-                "JavaScript",
-                "Assembly"
+                "Bytecode",
+                "JavaScript"
               ],
               "id": "java_2"
             },
@@ -55,8 +55,8 @@
               "question": "Keyword for inheritance?",
               "answer": "extends",
               "choices": [
-                "extends",
                 "inherits",
+                "extends",
                 "implements",
                 "derives"
               ],
@@ -67,10 +67,10 @@
               "question": "Interface keyword?",
               "answer": "implements",
               "choices": [
-                "implements",
-                "extends",
                 "uses",
-                "interface"
+                "interface",
+                "implements",
+                "extends"
               ],
               "id": "java_4"
             },
@@ -79,10 +79,10 @@
               "question": "Java runs on?",
               "answer": "JVM",
               "choices": [
-                "JVM",
                 "CLR",
-                "V8",
-                "LLVM"
+                "LLVM",
+                "JVM",
+                "V8"
               ],
               "id": "java_5"
             },
@@ -91,8 +91,8 @@
               "question": "Immutable string alternative?",
               "answer": "StringBuilder",
               "choices": [
-                "StringBuilder",
                 "StringBuffer",
+                "StringBuilder",
                 "MutableString",
                 "CharArray"
               ],
@@ -109,10 +109,10 @@
               "question": "Java collection for key-value pairs?",
               "answer": "HashMap",
               "choices": [
-                "HashMap",
-                "ArrayList",
+                "TreeSet",
                 "LinkedList",
-                "TreeSet"
+                "ArrayList",
+                "HashMap"
               ],
               "id": "java_7"
             },
@@ -121,10 +121,10 @@
               "question": "Handle exceptions in Java?",
               "answer": "try/catch",
               "choices": [
-                "try/catch",
                 "try/except",
+                "try/handle",
                 "begin/rescue",
-                "try/handle"
+                "try/catch"
               ],
               "id": "java_8"
             },
@@ -133,10 +133,10 @@
               "question": "Access modifier for subclass access?",
               "answer": "protected",
               "choices": [
-                "protected",
                 "private",
-                "public",
-                "default"
+                "default",
+                "protected",
+                "public"
               ],
               "id": "java_9"
             },
@@ -146,8 +146,8 @@
               "answer": "List<String>",
               "choices": [
                 "List<String>",
-                "List[String]",
                 "List(String)",
+                "List[String]",
                 "List{String}"
               ],
               "id": "java_10"
@@ -157,10 +157,10 @@
               "question": "Java 8 lambda syntax?",
               "answer": "(x) -> x + 1",
               "choices": [
-                "(x) -> x + 1",
-                "(x) => x + 1",
                 "lambda x: x + 1",
-                "[](x) { x + 1 }"
+                "(x) -> x + 1",
+                "[](x) { x + 1 }",
+                "(x) => x + 1"
               ],
               "id": "java_11"
             },
@@ -170,9 +170,9 @@
               "answer": "Modification/override",
               "choices": [
                 "Modification/override",
-                "Compilation",
                 "Instantiation",
-                "Importing"
+                "Importing",
+                "Compilation"
               ],
               "id": "java_12"
             },
@@ -181,10 +181,10 @@
               "question": "Abstract class can be instantiated?",
               "answer": "No",
               "choices": [
-                "No",
+                "Only in subclass",
                 "Yes",
                 "Only with factory",
-                "Only in subclass"
+                "No"
               ],
               "id": "java_13"
             }
@@ -199,10 +199,10 @@
               "question": "Java package manager?",
               "answer": "Maven/Gradle",
               "choices": [
-                "Maven/Gradle",
-                "npm",
+                "cargo",
                 "pip",
-                "cargo"
+                "Maven/Gradle",
+                "npm"
               ],
               "id": "java_14"
             }

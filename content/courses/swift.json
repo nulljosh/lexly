@@ -21,10 +21,10 @@
               "answer": "let",
               "explain": "let declares a constant, which cannot be reassigned. var declares a variable, which can be reassigned.",
               "choices": [
-                "var",
                 "let",
-                "const",
-                "immutable"
+                "var",
+                "immutable",
+                "const"
               ],
               "id": "swift_u1l1_0"
             },
@@ -34,10 +34,10 @@
               "answer": "age is a variable holding the integer 25",
               "explain": "var declares a mutable variable. The type Int is inferred from the value 25. The variable age can be reassigned to a different integer later.",
               "choices": [
-                "age is a constant holding 25",
-                "age is a variable holding the integer 25",
                 "age is a string",
-                "age cannot be changed"
+                "age cannot be changed",
+                "age is a variable holding the integer 25",
+                "age is a constant holding 25"
               ],
               "id": "swift_u1l1_1"
             },
@@ -47,10 +47,10 @@
               "answer": "Compilation error: cannot assign to immutable value",
               "explain": "let creates a constant. Once assigned, it cannot be reassigned. The compiler rejects any attempt to change a let binding.",
               "choices": [
+                "name becomes \"AliceBob\"",
                 "name becomes \"Bob\"",
-                "Compilation error: cannot assign to immutable value",
                 "The program ignores the assignment",
-                "name becomes \"AliceBob\""
+                "Compilation error: cannot assign to immutable value"
               ],
               "id": "swift_u1l1_2"
             },
@@ -60,10 +60,10 @@
               "answer": "To prevent accidental changes and show intent",
               "explain": "Using let signals that a value should not change. It prevents bugs from accidental reassignment and makes code clearer to read.",
               "choices": [
-                "let is faster than var",
-                "To prevent accidental changes and show intent",
+                "There is no difference",
                 "let uses less memory",
-                "There is no difference"
+                "let is faster than var",
+                "To prevent accidental changes and show intent"
               ],
               "id": "swift_u1l1_3"
             },
@@ -73,10 +73,10 @@
               "answer": "let cannot be reassigned; var can be reassigned",
               "explain": "let declares an immutable constant; var declares a mutable variable. Both are type-safe, but only var values can be changed after the initial assignment.",
               "choices": [
-                "let is for numbers; var is for text",
                 "let cannot be reassigned; var can be reassigned",
                 "var is deprecated in favor of let",
-                "let requires a type annotation; var does not"
+                "let requires a type annotation; var does not",
+                "let is for numbers; var is for text"
               ],
               "id": "swift_u1l1_4"
             }
@@ -92,10 +92,10 @@
               "answer": "Int",
               "explain": "42 is a whole number, which Swift infers as type Int. Int represents integers without decimal points.",
               "choices": [
+                "Float",
                 "Double",
-                "String",
                 "Int",
-                "Float"
+                "String"
               ],
               "id": "swift_u1l2_0"
             },
@@ -118,10 +118,10 @@
               "answer": "String",
               "explain": "Text surrounded by double quotes is a String. String represents sequences of characters.",
               "choices": [
+                "Array",
                 "Text",
-                "Character",
                 "String",
-                "Array"
+                "Character"
               ],
               "id": "swift_u1l2_2"
             },
@@ -131,9 +131,9 @@
               "answer": "Boolean values for true and false logic",
               "explain": "true and false are Boolean values, which are the type Bool. Booleans are used in conditions and logical operations.",
               "choices": [
-                "String values",
-                "Integer values 1 and 0",
                 "Boolean values for true and false logic",
+                "Integer values 1 and 0",
+                "String values",
                 "Type names"
               ],
               "id": "swift_u1l2_3"
@@ -144,10 +144,10 @@
               "answer": "Swift determines the type automatically from the assigned value",
               "explain": "Type inference means you do not need to write 'let x: Int = 5'. Swift sees the value 5 and knows it is an Int. You write less code without losing type safety.",
               "choices": [
-                "You must always write the type explicitly",
                 "Swift determines the type automatically from the assigned value",
-                "The type is determined at runtime",
-                "Swift guesses and might be wrong"
+                "Swift guesses and might be wrong",
+                "You must always write the type explicitly",
+                "The type is determined at runtime"
               ],
               "id": "swift_u1l2_4"
             }
@@ -170,10 +170,10 @@
               "answer": "Runs the code block if age is 18 or greater",
               "explain": "if evaluates a Boolean condition. If it is true, the code inside the braces runs. If false, it is skipped.",
               "choices": [
-                "Sets age to 18",
+                "Checks if age is less than 18",
                 "Runs the code block if age is 18 or greater",
                 "Prints age",
-                "Checks if age is less than 18"
+                "Sets age to 18"
               ],
               "id": "swift_u2l1_0"
             },
@@ -183,10 +183,10 @@
               "answer": "Run code if the if condition is false",
               "explain": "else provides an alternative code block that runs when the if condition evaluates to false.",
               "choices": [
-                "Run code if the condition is true",
                 "Run code if the if condition is false",
-                "Repeat code",
-                "Exit the program"
+                "Run code if the condition is true",
+                "Exit the program",
+                "Repeat code"
               ],
               "id": "swift_u2l1_1"
             },
@@ -196,8 +196,8 @@
               "answer": "Choosing between many possible values cleanly",
               "explain": "switch is cleaner than multiple if-else statements when checking one value against many options. Each case handles a different value.",
               "choices": [
-                "Turning things on and off",
                 "Choosing between many possible values cleanly",
+                "Turning things on and off",
                 "Looping over a range",
                 "Creating variables"
               ],
@@ -209,10 +209,10 @@
               "answer": "Runs if no other case matches",
               "explain": "default is the fallback case in a switch. If none of the explicit cases match, the default case runs.",
               "choices": [
-                "Sets default values",
+                "Ends the switch",
                 "Runs first",
                 "Runs if no other case matches",
-                "Ends the switch"
+                "Sets default values"
               ],
               "id": "swift_u2l1_3"
             },
@@ -222,10 +222,10 @@
               "answer": "Checks if two values are equal",
               "explain": "== compares two values and returns true if they are equal. Use it in if conditions to make decisions based on equality.",
               "choices": [
-                "Assigns a value",
+                "Concatenates strings",
                 "Checks if two values are equal",
                 "Increments a number",
-                "Concatenates strings"
+                "Assigns a value"
               ],
               "id": "swift_u2l1_4"
             }
@@ -241,9 +241,9 @@
               "answer": "Loops with i from 1 to 5 inclusive",
               "explain": "The ... operator creates a closed range. for-in iterates through each value: 1, 2, 3, 4, 5.",
               "choices": [
+                "Loops from 1 to 4",
                 "Loops 5 times only",
                 "Loops with i from 1 to 5 inclusive",
-                "Loops from 1 to 4",
                 "Creates a range named i"
               ],
               "id": "swift_u2l2_0"
@@ -254,9 +254,9 @@
               "answer": "'...' includes the end; '..<' excludes the end",
               "explain": "1...5 is 1, 2, 3, 4, 5. 1..<5 is 1, 2, 3, 4. Both are ranges; the difference is whether the end value is included.",
               "choices": [
-                "'...' is for loops; '..<' is for switches",
                 "'...' includes the end; '..<' excludes the end",
                 "They are identical",
+                "'...' is for loops; '..<' is for switches",
                 "'..<' is older syntax"
               ],
               "id": "swift_u2l2_1"
@@ -267,10 +267,10 @@
               "answer": "Repeats as long as a condition is true",
               "explain": "while checks a condition before each iteration. If true, the code block runs. If false, the loop ends.",
               "choices": [
-                "Repeats a fixed number of times",
-                "Repeats as long as a condition is true",
                 "Runs once",
-                "Repeats forever"
+                "Repeats forever",
+                "Repeats as long as a condition is true",
+                "Repeats a fixed number of times"
               ],
               "id": "swift_u2l2_2"
             },
@@ -280,10 +280,10 @@
               "answer": "A loop that runs at least once before checking the condition",
               "explain": "repeat-while executes the code block first, then checks the condition. Even if the condition is false, the code runs at least once.",
               "choices": [
-                "A loop that never repeats",
-                "A loop that runs at least once before checking the condition",
                 "Identical to while",
-                "A loop for ranges only"
+                "A loop that never repeats",
+                "A loop for ranges only",
+                "A loop that runs at least once before checking the condition"
               ],
               "id": "swift_u2l2_3"
             },
@@ -293,10 +293,10 @@
               "answer": "Exits the loop immediately",
               "explain": "break stops the loop at once, skipping any remaining iterations. Useful to exit early when a condition is met.",
               "choices": [
-                "Pauses the loop",
-                "Exits the loop immediately",
+                "Restarts the loop",
                 "Skips one iteration",
-                "Restarts the loop"
+                "Exits the loop immediately",
+                "Pauses the loop"
               ],
               "id": "swift_u2l2_4"
             }
@@ -319,10 +319,10 @@
               "answer": "An ordered collection indexed by position starting at 0",
               "explain": "Arrays store multiple values of the same type in order. You access them by index: numbers[0] is the first element.",
               "choices": [
-                "A fixed-size collection",
                 "An ordered collection indexed by position starting at 0",
                 "A collection of unique values",
-                "A key-value store"
+                "A key-value store",
+                "A fixed-size collection"
               ],
               "id": "swift_u3l1_0"
             },
@@ -333,9 +333,9 @@
               "explain": "This is array literal syntax. The type is [String]. fruits[0] is \"apple\", fruits[1] is \"banana\".",
               "choices": [
                 "A dictionary",
-                "An Array of Strings with two elements",
+                "A tuple",
                 "A set",
-                "A tuple"
+                "An Array of Strings with two elements"
               ],
               "id": "swift_u3l1_1"
             },
@@ -347,8 +347,8 @@
               "choices": [
                 "An ordered list of values",
                 "A collection that maps unique keys to values",
-                "A collection of unique values only",
-                "A type of array"
+                "A type of array",
+                "A collection of unique values only"
               ],
               "id": "swift_u3l1_2"
             },
@@ -358,10 +358,10 @@
               "answer": "A dictionary with string keys and string values",
               "explain": "This is dictionary literal syntax with key-value pairs. person[\"name\"] returns \"Alice\".",
               "choices": [
-                "An array of arrays",
-                "A dictionary with string keys and string values",
                 "A set of strings",
-                "A variable named person"
+                "An array of arrays",
+                "A variable named person",
+                "A dictionary with string keys and string values"
               ],
               "id": "swift_u3l1_3"
             },
@@ -371,10 +371,10 @@
               "answer": "Use the append() method",
               "explain": "numbers.append(5) adds 5 to the end of the array. You can also use += with an array literal.",
               "choices": [
-                "Use insert()",
                 "Use the append() method",
+                "Use push()",
                 "Use add()",
-                "Use push()"
+                "Use insert()"
               ],
               "id": "swift_u3l1_4"
             }
@@ -390,10 +390,10 @@
               "answer": "An unordered collection of unique values",
               "explain": "Sets store each value only once. Order does not matter. Perfect for membership testing: 'if numbers.contains(5)'.",
               "choices": [
-                "An ordered list",
+                "An array without duplicates",
                 "An unordered collection of unique values",
                 "A dictionary",
-                "An array without duplicates"
+                "An ordered list"
               ],
               "id": "swift_u3l2_0"
             },
@@ -403,10 +403,10 @@
               "answer": "A set with three unique values: 1, 2, 3",
               "explain": "Sets automatically remove duplicates. The second 2 is discarded. Type annotation is needed because [1, 2, 3] alone is inferred as an Array.",
               "choices": [
-                "An array with four elements",
+                "A dictionary",
                 "A set with four elements",
                 "A set with three unique values: 1, 2, 3",
-                "A dictionary"
+                "An array with four elements"
               ],
               "id": "swift_u3l2_1"
             },
@@ -442,10 +442,10 @@
               "answer": "Checks if a value is in the collection",
               "explain": "array.contains(5) returns true if 5 is in the array, false otherwise. O(1) for Sets, O(n) for Arrays.",
               "choices": [
-                "Removes a value",
-                "Checks if a value is in the collection",
                 "Finds the index of a value",
-                "Adds a value"
+                "Adds a value",
+                "Removes a value",
+                "Checks if a value is in the collection"
               ],
               "id": "swift_u3l2_4"
             }
@@ -468,10 +468,10 @@
               "answer": "Declares a function",
               "explain": "func tells Swift you are defining a reusable block of code. You call it by name with parentheses.",
               "choices": [
-                "Declares a variable",
-                "Declares a function",
+                "Imports a library",
                 "Declares a type",
-                "Imports a library"
+                "Declares a function",
+                "Declares a variable"
               ],
               "id": "swift_u4l1_0"
             },
@@ -483,8 +483,8 @@
               "choices": [
                 "The value returned by a function",
                 "A named value passed into a function",
-                "A local variable only",
-                "A type annotation"
+                "A type annotation",
+                "A local variable only"
               ],
               "id": "swift_u4l1_1"
             },
@@ -496,8 +496,8 @@
               "choices": [
                 "Exits the program",
                 "Specifies the value the function produces",
-                "Calls another function",
-                "Prints a value"
+                "Prints a value",
+                "Calls another function"
               ],
               "id": "swift_u4l1_2"
             },
@@ -507,10 +507,10 @@
               "answer": "A name that describes what a parameter is for when calling a function",
               "explain": "func move(to direction: String) has argument label 'to'. You call it move(to: \"north\"), not move(\"north\").",
               "choices": [
-                "The name of the parameter",
                 "A name that describes what a parameter is for when calling a function",
-                "The type of the return value",
-                "A comment"
+                "A comment",
+                "The name of the parameter",
+                "The type of the return value"
               ],
               "id": "swift_u4l1_3"
             },
@@ -522,8 +522,8 @@
               "choices": [
                 "An input is an Int",
                 "The function returns an Int",
-                "The function creates an Int variable",
-                "An error code"
+                "An error code",
+                "The function creates an Int variable"
               ],
               "id": "swift_u4l1_4"
             }
@@ -539,10 +539,10 @@
               "answer": "A function without a name that captures surrounding variables",
               "explain": "Closures are anonymous functions. They can be passed as arguments or stored in variables, and they can access variables from their enclosing scope.",
               "choices": [
-                "A function with a return type",
                 "A function without a name that captures surrounding variables",
-                "A function parameter",
-                "A type of loop"
+                "A type of loop",
+                "A function with a return type",
+                "A function parameter"
               ],
               "id": "swift_u4l2_0"
             },
@@ -552,9 +552,9 @@
               "answer": "{ (parameters) -> ReturnType in code }",
               "explain": "Closures use { } and the 'in' keyword. Example: { (x: Int) -> Int in return x * 2 } doubles a number.",
               "choices": [
-                "function { code }",
-                "{ (parameters) -> ReturnType in code }",
                 "func { parameters in code }",
+                "{ (parameters) -> ReturnType in code }",
+                "function { code }",
                 "[code]"
               ],
               "id": "swift_u4l2_1"
@@ -565,9 +565,9 @@
               "answer": "Passing code as arguments, callbacks, and asynchronous operations",
               "explain": "Closures are ideal for completion handlers, array transformations (map, filter), and sorting with custom logic.",
               "choices": [
+                "Type annotations",
                 "Declaring variables only",
                 "Passing code as arguments, callbacks, and asynchronous operations",
-                "Type annotations",
                 "Memory management"
               ],
               "id": "swift_u4l2_2"
@@ -578,8 +578,8 @@
               "answer": "Transforms each element in a collection and returns a new collection",
               "explain": "numbers.map { $0 * 2 } doubles every number. It applies the closure to each element and collects the results.",
               "choices": [
-                "Filters elements",
                 "Transforms each element in a collection and returns a new collection",
+                "Filters elements",
                 "Sorts elements",
                 "Removes elements"
               ],
@@ -591,10 +591,10 @@
               "answer": "Returns a new collection with only elements where the closure returns true",
               "explain": "numbers.filter { $0 > 5 } keeps only numbers greater than 5. It tests each element against the closure condition.",
               "choices": [
-                "Transforms all elements",
-                "Returns a new collection with only elements where the closure returns true",
+                "Sorts elements",
                 "Removes the first matching element",
-                "Sorts elements"
+                "Transforms all elements",
+                "Returns a new collection with only elements where the closure returns true"
               ],
               "id": "swift_u4l2_4"
             }
@@ -617,8 +617,8 @@
               "answer": "A value that might be nil or a real value",
               "explain": "Optional<Int> means the value is either an Int or nil. You declare it as Int?, read as 'optional Int'.",
               "choices": [
-                "A value that is always nil",
                 "A value that might be nil or a real value",
+                "A value that is always nil",
                 "A feature you can choose to use",
                 "A type of array"
               ],
@@ -630,10 +630,10 @@
               "answer": "The absence of a value in an Optional",
               "explain": "nil means 'no value'. Only Optionals can be nil. Using nil outside an Optional is a compilation error.",
               "choices": [
-                "Zero",
+                "The same as false",
                 "The absence of a value in an Optional",
                 "An empty string",
-                "The same as false"
+                "Zero"
               ],
               "id": "swift_u5l1_1"
             },
@@ -644,9 +644,9 @@
               "explain": "if let age = maybeAge { ... } unwraps the Optional. If maybeAge is nil, the block is skipped. If it has a value, age holds that value.",
               "choices": [
                 "Checks if a value equals something",
-                "Safely unwraps an Optional and runs code only if it is not nil",
+                "Assigns a value",
                 "Creates a new Optional",
-                "Assigns a value"
+                "Safely unwraps an Optional and runs code only if it is not nil"
               ],
               "id": "swift_u5l1_2"
             },
@@ -656,10 +656,10 @@
               "answer": "Unwraps an Optional and exits early if it is nil",
               "explain": "guard let age = maybeAge else { return } unwraps age. If maybeAge is nil, the code returns immediately. Otherwise, age is available for the rest of the function.",
               "choices": [
-                "Protects a variable from changes",
-                "Unwraps an Optional and exits early if it is nil",
                 "Checks for equality",
-                "Loops until a condition is true"
+                "Loops until a condition is true",
+                "Protects a variable from changes",
+                "Unwraps an Optional and exits early if it is nil"
               ],
               "id": "swift_u5l1_3"
             },
@@ -669,10 +669,10 @@
               "answer": "Extracts the value without checking if it is nil, crashing if it is",
               "explain": "age! assumes age has a value. If it is nil, the app crashes. Avoid ! unless you are certain the value is not nil.",
               "choices": [
-                "Checks if the value is nil",
-                "Extracts the value without checking if it is nil, crashing if it is",
+                "Compares two optionals",
                 "Converts a value to optional",
-                "Compares two optionals"
+                "Checks if the value is nil",
+                "Extracts the value without checking if it is nil, crashing if it is"
               ],
               "id": "swift_u5l1_4"
             }
@@ -688,10 +688,10 @@
               "answer": "Calling methods or accessing properties on an Optional without unwrapping",
               "explain": "If person is an Optional, person?.getName() calls getName only if person is not nil. If person is nil, the call is skipped safely.",
               "choices": [
-                "Unwrapping multiple optionals",
+                "Comparing optionals",
                 "Calling methods or accessing properties on an Optional without unwrapping",
                 "Creating a chain of optionals",
-                "Comparing optionals"
+                "Unwrapping multiple optionals"
               ],
               "id": "swift_u5l2_0"
             },
@@ -703,8 +703,8 @@
               "choices": [
                 "Unwraps an optional",
                 "Performs an operation safely on an Optional, returning nil if the Optional is nil",
-                "Compares two values",
-                "Creates a new optional"
+                "Creates a new optional",
+                "Compares two values"
               ],
               "id": "swift_u5l2_1"
             },
@@ -715,9 +715,9 @@
               "explain": "let age = maybeAge ?? 18 returns maybeAge if it is not nil, or 18 if it is nil. Concise way to handle nil.",
               "choices": [
                 "Checks for nil",
+                "Chains optionals",
                 "Provides a default value if the left Optional is nil",
-                "Unwraps an optional",
-                "Chains optionals"
+                "Unwraps an optional"
               ],
               "id": "swift_u5l2_2"
             },
@@ -727,10 +727,10 @@
               "answer": "When you have a fallback value for nil",
               "explain": "If you want a default value when an Optional is nil, ?? is clean and readable. Example: let name = inputName ?? \"Guest\".",
               "choices": [
+                "To create optionals",
                 "To replace all if let statements",
                 "When you have a fallback value for nil",
-                "To check if a value is zero",
-                "To create optionals"
+                "To check if a value is zero"
               ],
               "id": "swift_u5l2_3"
             },
@@ -741,9 +741,9 @@
               "explain": "This combines optional chaining and if let. It safely accesses age on person, and only enters the block if both person and age are not nil.",
               "choices": [
                 "Checks if person and age are equal",
+                "Calls a method",
                 "Unwraps person, accesses age, and then unwraps age if it exists",
-                "Creates a new optional",
-                "Calls a method"
+                "Creates a new optional"
               ],
               "id": "swift_u5l2_4"
             }
@@ -766,10 +766,10 @@
               "answer": "A value type that groups related data and functions",
               "explain": "struct Person { var name: String } creates a new type. Structs are copied when passed around, so changes do not affect other copies.",
               "choices": [
-                "A fixed array",
-                "A value type that groups related data and functions",
+                "A protocol",
                 "A reference type",
-                "A protocol"
+                "A fixed array",
+                "A value type that groups related data and functions"
               ],
               "id": "swift_u6l1_0"
             },
@@ -779,9 +779,9 @@
               "answer": "A reference type that groups related data and functions",
               "explain": "class Person { var name: String } creates a new type. Classes are shared by reference, so changes to one variable affect all references to the same instance.",
               "choices": [
-                "A value type",
                 "A reference type that groups related data and functions",
                 "A protocol",
+                "A value type",
                 "A built-in type"
               ],
               "id": "swift_u6l1_1"
@@ -792,9 +792,9 @@
               "answer": "Struct is value type; class is reference type",
               "explain": "When you copy a struct, you get a new independent copy. When you copy a class, you get another reference to the same object.",
               "choices": [
+                "Structs are faster",
                 "Classes can have methods; structs cannot",
                 "Struct is value type; class is reference type",
-                "Structs are faster",
                 "Classes cannot have properties"
               ],
               "id": "swift_u6l1_2"
@@ -806,8 +806,8 @@
               "explain": "init is the initializer. init(name: String) { self.name = name } sets up initial values when you create an instance.",
               "choices": [
                 "A function that destroys objects",
-                "A special function that sets up a new instance",
                 "A type annotation",
+                "A special function that sets up a new instance",
                 "A property"
               ],
               "id": "swift_u6l1_3"
@@ -818,10 +818,10 @@
               "answer": "The current instance of the struct or class",
               "explain": "Inside a method, self refers to the instance the method is called on. self.name = name sets the instance's name property.",
               "choices": [
-                "The type itself",
-                "The current instance of the struct or class",
                 "A global variable",
-                "The argument passed in"
+                "The current instance of the struct or class",
+                "The argument passed in",
+                "The type itself"
               ],
               "id": "swift_u6l1_4"
             }
@@ -837,10 +837,10 @@
               "answer": "A contract defining what properties and methods a type must have",
               "explain": "protocol Drawable { func draw() } requires any type adopting it to implement draw(). Protocols enable polymorphism.",
               "choices": [
-                "A data type",
                 "A contract defining what properties and methods a type must have",
+                "A class",
                 "A function",
-                "A class"
+                "A data type"
               ],
               "id": "swift_u6l2_0"
             },
@@ -850,10 +850,10 @@
               "answer": "Implementing all required properties and methods of the protocol",
               "explain": "struct Circle: Drawable implements the Drawable protocol. It must define draw() and any other requirements.",
               "choices": [
-                "Following naming rules",
-                "Implementing all required properties and methods of the protocol",
                 "Using the protocol as a base class",
-                "Importing a library"
+                "Implementing all required properties and methods of the protocol",
+                "Importing a library",
+                "Following naming rules"
               ],
               "id": "swift_u6l2_1"
             },
@@ -863,10 +863,10 @@
               "answer": "A type representing a fixed set of related values",
               "explain": "enum Color { case red, green, blue } defines three color values. Enums organize related options and prevent invalid states.",
               "choices": [
-                "A list of numbers",
                 "A type representing a fixed set of related values",
                 "A string type",
-                "A loop"
+                "A loop",
+                "A list of numbers"
               ],
               "id": "swift_u6l2_2"
             },
@@ -877,9 +877,9 @@
               "explain": "enum Result { case success(String) } allows success to carry a message. Case failure(Error) can carry an error.",
               "choices": [
                 "A related struct",
-                "Extra data attached to an enum case",
+                "A type annotation",
                 "A protocol requirement",
-                "A type annotation"
+                "Extra data attached to an enum case"
               ],
               "id": "swift_u6l2_3"
             },
@@ -889,10 +889,10 @@
               "answer": "A property that calculates its value instead of storing it",
               "explain": "var doubled: Int { return value * 2 } computes doubled each time it is accessed. No stored storage, just calculation.",
               "choices": [
-                "A property that is calculated at compile time",
-                "A property that calculates its value instead of storing it",
                 "A stored property",
-                "A type of class"
+                "A type of class",
+                "A property that is calculated at compile time",
+                "A property that calculates its value instead of storing it"
               ],
               "id": "swift_u6l2_4"
             }

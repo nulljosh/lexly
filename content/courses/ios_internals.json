@@ -20,9 +20,9 @@
               "answer": "Secure Boot Chain",
               "choices": [
                 "Secure Boot Chain",
+                "Gatekeeper",
                 "Keychain",
-                "Sandbox",
-                "Gatekeeper"
+                "Sandbox"
               ],
               "id": "ios_internals_0"
             },
@@ -31,10 +31,10 @@
               "question": "Immutable first-stage bootloader burned into the SoC",
               "answer": "BootROM",
               "choices": [
-                "BootROM",
+                "XNU",
                 "iBoot",
                 "LLB",
-                "XNU"
+                "BootROM"
               ],
               "id": "ios_internals_1"
             },
@@ -43,10 +43,10 @@
               "question": "Name of the iOS/macOS kernel",
               "answer": "XNU",
               "choices": [
-                "XNU",
-                "Linux",
+                "Darwin",
                 "Mach",
-                "Darwin"
+                "XNU",
+                "Linux"
               ],
               "id": "ios_internals_2"
             },
@@ -68,9 +68,9 @@
               "answer": "Entitlements",
               "choices": [
                 "Entitlements",
+                "Keychain",
                 "Provisioning",
-                "Sandbox",
-                "Keychain"
+                "Sandbox"
               ],
               "id": "ios_internals_4"
             },
@@ -79,10 +79,10 @@
               "question": "Requirement that all executable pages be signed",
               "answer": "Code signing enforcement",
               "choices": [
-                "Code signing enforcement",
                 "ASLR",
                 "PAC",
-                "SIP"
+                "SIP",
+                "Code signing enforcement"
               ],
               "id": "ios_internals_5"
             }
@@ -97,10 +97,10 @@
               "question": "A jailbreak fundamentally needs to defeat",
               "answer": "Code signing and the sandbox",
               "choices": [
+                "Face ID",
                 "Code signing and the sandbox",
-                "The App Store",
                 "iCloud",
-                "Face ID"
+                "The App Store"
               ],
               "id": "ios_internals_6"
             },
@@ -110,9 +110,9 @@
               "answer": "Untethered",
               "choices": [
                 "Untethered",
-                "Tethered",
+                "Rootless",
                 "Semi-tethered",
-                "Rootless"
+                "Tethered"
               ],
               "id": "ios_internals_7"
             },
@@ -121,10 +121,10 @@
               "question": "A jailbreak needing a computer at each boot is",
               "answer": "Tethered",
               "choices": [
-                "Tethered",
                 "Untethered",
+                "Rootless",
                 "Semi-untethered",
-                "Rootless"
+                "Tethered"
               ],
               "id": "ios_internals_8"
             },
@@ -133,10 +133,10 @@
               "question": "A jailbreak re-run by opening an app after reboot is",
               "answer": "Semi-untethered",
               "choices": [
-                "Semi-untethered",
+                "Rootful",
                 "Untethered",
                 "Tethered",
-                "Rootful"
+                "Semi-untethered"
               ],
               "id": "ios_internals_9"
             },
@@ -145,8 +145,8 @@
               "question": "checkm8 exploits a bug in",
               "answer": "The BootROM",
               "choices": [
-                "The BootROM",
                 "The kernel",
+                "The BootROM",
                 "WebKit",
                 "Safari"
               ],
@@ -176,9 +176,9 @@
               "answer": "Code execution in a user process",
               "choices": [
                 "Code execution in a user process",
+                "A signed binary",
                 "Kernel read/write",
-                "A root shell",
-                "A signed binary"
+                "A root shell"
               ],
               "id": "ios_internals_12"
             },
@@ -199,10 +199,10 @@
               "question": "Escaping the browser process to attack the kernel is",
               "answer": "A sandbox escape",
               "choices": [
-                "A sandbox escape",
                 "Privilege escalation",
-                "Persistence",
-                "Injection"
+                "Injection",
+                "A sandbox escape",
+                "Persistence"
               ],
               "id": "ios_internals_14"
             },
@@ -211,10 +211,10 @@
               "question": "Reusing existing code snippets to bypass NX is",
               "answer": "ROP",
               "choices": [
-                "ROP",
-                "JOP only",
+                "Heap spray",
                 "Shellcode",
-                "Heap spray"
+                "JOP only",
+                "ROP"
               ],
               "id": "ios_internals_15"
             },
@@ -224,8 +224,8 @@
               "answer": "PAC",
               "choices": [
                 "PAC",
-                "KPP",
                 "KTRR",
+                "KPP",
                 "SIP"
               ],
               "id": "ios_internals_16"
@@ -236,8 +236,8 @@
               "answer": "KTRR",
               "choices": [
                 "KTRR",
-                "PAC",
                 "ASLR",
+                "PAC",
                 "SIP"
               ],
               "id": "ios_internals_17"
@@ -255,8 +255,8 @@
               "choices": [
                 "Cydia",
                 "Homebrew",
-                "APT Store",
-                "TestFlight"
+                "TestFlight",
+                "APT Store"
               ],
               "id": "ios_internals_18"
             },
@@ -265,10 +265,10 @@
               "question": "Runtime patching framework for tweaks",
               "answer": "Cydia Substrate",
               "choices": [
-                "Cydia Substrate",
-                "Frida",
                 "Xcode",
-                "Theos"
+                "Frida",
+                "Theos",
+                "Cydia Substrate"
               ],
               "id": "ios_internals_19"
             },
@@ -277,10 +277,10 @@
               "question": "Build system for writing jailbreak tweaks",
               "answer": "Theos",
               "choices": [
-                "Theos",
-                "CMake",
                 "Bazel",
-                "SwiftPM"
+                "Theos",
+                "SwiftPM",
+                "CMake"
               ],
               "id": "ios_internals_20"
             },
@@ -289,10 +289,10 @@
               "question": "checkra1n and palera1n are based on",
               "answer": "checkm8",
               "choices": [
+                "Fugu",
                 "checkm8",
-                "unc0ver",
                 "Taurine",
-                "Fugu"
+                "unc0ver"
               ],
               "id": "ios_internals_21"
             },
@@ -302,9 +302,9 @@
               "answer": "Rootless",
               "choices": [
                 "Rootless",
-                "Rootful",
                 "Tethered",
-                "Semi-tethered"
+                "Semi-tethered",
+                "Rootful"
               ],
               "id": "ios_internals_22"
             },
@@ -313,10 +313,10 @@
               "question": "Blobs saved to allow downgrading firmware",
               "answer": "SHSH blobs",
               "choices": [
-                "SHSH blobs",
-                "IPSW files",
+                "Provisioning profiles",
                 "Entitlements",
-                "Provisioning profiles"
+                "IPSW files",
+                "SHSH blobs"
               ],
               "id": "ios_internals_23"
             }
@@ -333,8 +333,8 @@
               "choices": [
                 "Security Research Device Program",
                 "Developer Program",
-                "TestFlight",
-                "AppleSeed"
+                "AppleSeed",
+                "TestFlight"
               ],
               "id": "ios_internals_24"
             },
@@ -343,10 +343,10 @@
               "question": "Public database entry identifying a known vulnerability",
               "answer": "CVE",
               "choices": [
-                "CVE",
                 "CWE",
+                "ISO",
                 "RFC",
-                "ISO"
+                "CVE"
               ],
               "id": "ios_internals_25"
             },
@@ -356,9 +356,9 @@
               "answer": "Project Zero",
               "choices": [
                 "Project Zero",
-                "Red Team X",
                 "TAG",
-                "Chronicle"
+                "Chronicle",
+                "Red Team X"
               ],
               "id": "ios_internals_26"
             },
@@ -367,10 +367,10 @@
               "question": "Jailbreaking a device you own in the US is",
               "answer": "Exempted under the DMCA",
               "choices": [
+                "Unregulated worldwide",
                 "Exempted under the DMCA",
                 "Always illegal",
-                "A felony",
-                "Unregulated worldwide"
+                "A felony"
               ],
               "id": "ios_internals_27"
             },
@@ -380,9 +380,9 @@
               "answer": "Report it to Apple",
               "choices": [
                 "Report it to Apple",
-                "Sell it anonymously",
                 "Post the exploit first",
-                "Use it quietly"
+                "Use it quietly",
+                "Sell it anonymously"
               ],
               "id": "ios_internals_28"
             }

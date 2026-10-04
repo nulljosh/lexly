@@ -21,10 +21,10 @@
               "answer": "HyperText Markup Language",
               "explain": "HTML is the standard language for creating web pages. It uses tags to structure content.",
               "choices": [
+                "Hyperlink and Text Markup Language",
                 "High Tech Markup Language",
-                "HyperText Markup Language",
                 "Home Tool Markup Language",
-                "Hyperlink and Text Markup Language"
+                "HyperText Markup Language"
               ],
               "id": "html_css_u1l1_0"
             },
@@ -35,9 +35,9 @@
               "explain": "Tags like <p>, <h1>, and <div> tell the browser what type of content they contain.",
               "choices": [
                 "A comment in the code",
-                "A keyword wrapped in angle brackets that tells the browser how to display content",
+                "A CSS property",
                 "A file name",
-                "A CSS property"
+                "A keyword wrapped in angle brackets that tells the browser how to display content"
               ],
               "id": "html_css_u1l1_1"
             },
@@ -47,10 +47,10 @@
               "answer": "A tag, its attributes, and the content inside it",
               "explain": "An element is complete: the opening tag, everything inside, and the closing tag. Example: <p>Hello</p> is one element.",
               "choices": [
-                "Just the opening tag",
                 "A tag, its attributes, and the content inside it",
+                "A CSS rule",
                 "Just the content",
-                "A CSS rule"
+                "Just the opening tag"
               ],
               "id": "html_css_u1l1_2"
             },
@@ -73,8 +73,8 @@
               "answer": "Reads tags and renders them as formatted web page content on screen",
               "explain": "Browsers interpret HTML tags and display them as text, images, links, and other visual elements.",
               "choices": [
-                "Stores it on your computer",
                 "Reads tags and renders them as formatted web page content on screen",
+                "Stores it on your computer",
                 "Converts it to Python",
                 "Encrypts the content"
               ],
@@ -92,10 +92,10 @@
               "answer": "<!DOCTYPE html>, <html>, <head>, <body>, and closing tags",
               "explain": "Every HTML page starts with DOCTYPE to declare the type, then html root. The head contains metadata; the body contains visible content.",
               "choices": [
-                "<html> alone is enough",
+                "CSS only",
                 "<!DOCTYPE html>, <html>, <head>, <body>, and closing tags",
                 "Just <body> content",
-                "CSS only"
+                "<html> alone is enough"
               ],
               "id": "html_css_u1l2_0"
             },
@@ -105,8 +105,8 @@
               "answer": "Metadata like title, description, links to CSS, and character encoding",
               "explain": "The head contains information about the page (not visible content): title, viewport, stylesheets, scripts.",
               "choices": [
-                "The main page content",
                 "Metadata like title, description, links to CSS, and character encoding",
+                "The main page content",
                 "Just images",
                 "Navigation links"
               ],
@@ -118,10 +118,10 @@
               "answer": "All visible page content like text, images, links, and buttons",
               "explain": "Everything users see on the page goes in the body: headings, paragraphs, images, forms, etc.",
               "choices": [
-                "CSS rules",
+                "Metadata",
                 "All visible page content like text, images, links, and buttons",
                 "Script imports only",
-                "Metadata"
+                "CSS rules"
               ],
               "id": "html_css_u1l2_2"
             },
@@ -131,10 +131,10 @@
               "answer": "Sets the page name shown in the browser tab and search results",
               "explain": "The title appears in the browser tab and helps search engines understand the page.",
               "choices": [
+                "Creates a link",
                 "Creates a heading on the page",
                 "Sets the page name shown in the browser tab and search results",
-                "Applies CSS styling",
-                "Creates a link"
+                "Applies CSS styling"
               ],
               "id": "html_css_u1l2_3"
             },
@@ -171,9 +171,9 @@
               "explain": "Heading tags <h1> through <h6> organize content. <h1> is the largest and most important; <h6> is smallest.",
               "choices": [
                 "Making all text large",
-                "Creating titles and subtitles that structure page content hierarchically",
                 "Creating links",
-                "Styling text"
+                "Styling text",
+                "Creating titles and subtitles that structure page content hierarchically"
               ],
               "id": "html_css_u2l1_0"
             },
@@ -183,10 +183,10 @@
               "answer": "<h1> is the most important heading; <h6> is the least important",
               "explain": "h1 is largest; h6 is smallest. Use h1 for main page title, h2 for sections, and so on.",
               "choices": [
+                "They are used for different pages",
                 "No difference",
                 "<h1> is the most important heading; <h6> is the least important",
-                "h6 comes before h1",
-                "They are used for different pages"
+                "h6 comes before h1"
               ],
               "id": "html_css_u2l1_1"
             },
@@ -196,10 +196,10 @@
               "answer": "A paragraph tag that wraps body text",
               "explain": "Paragraphs are the standard way to format text content. The browser adds space before and after each paragraph.",
               "choices": [
-                "A list tag",
                 "A paragraph tag that wraps body text",
                 "A link tag",
-                "A heading tag"
+                "A heading tag",
+                "A list tag"
               ],
               "id": "html_css_u2l1_2"
             },
@@ -210,9 +210,9 @@
               "explain": "Unordered lists display items with bullets. Ordered lists use <ol> and show numbers instead.",
               "choices": [
                 "A list without formatting",
-                "A list with bullet points, created with <ul> and <li> tags",
+                "A list in a table",
                 "A list of links",
-                "A list in a table"
+                "A list with bullet points, created with <ul> and <li> tags"
               ],
               "id": "html_css_u2l1_3"
             },
@@ -222,10 +222,10 @@
               "answer": "A single item in a list",
               "explain": "<li> stands for list item. Every item in a <ul> or <ol> must be wrapped in <li>.",
               "choices": [
-                "A link",
-                "A single item in a list",
                 "A heading",
-                "A paragraph"
+                "A single item in a list",
+                "A paragraph",
+                "A link"
               ],
               "id": "html_css_u2l1_4"
             }
@@ -241,9 +241,9 @@
               "answer": "A link tag that connects to other pages or resources",
               "explain": "<a> creates clickable links. The href attribute specifies where the link goes.",
               "choices": [
-                "An abbreviation tag",
-                "A link tag that connects to other pages or resources",
                 "An article tag",
+                "A link tag that connects to other pages or resources",
+                "An abbreviation tag",
                 "An alignment tag"
               ],
               "id": "html_css_u2l2_0"
@@ -254,10 +254,10 @@
               "answer": "Specifies the destination URL or page the link points to",
               "explain": "href stands for Hypertext Reference. Example: <a href=\"page.html\">Click here</a> links to page.html.",
               "choices": [
-                "Styles the link",
-                "Specifies the destination URL or page the link points to",
+                "Creates a button",
                 "Adds an image",
-                "Creates a button"
+                "Specifies the destination URL or page the link points to",
+                "Styles the link"
               ],
               "id": "html_css_u2l2_1"
             },
@@ -267,10 +267,10 @@
               "answer": "A tag that embeds an image in the page",
               "explain": "<img> displays pictures. It is a self-closing tag. The src attribute specifies the image file.",
               "choices": [
-                "A link tag",
-                "A tag that embeds an image in the page",
+                "A form tag",
                 "A text tag",
-                "A form tag"
+                "A tag that embeds an image in the page",
+                "A link tag"
               ],
               "id": "html_css_u2l2_2"
             },
@@ -280,10 +280,10 @@
               "answer": "Provides descriptive text when the image cannot be displayed",
               "explain": "Alt text appears if the image fails to load and helps screen readers describe the image for accessibility.",
               "choices": [
-                "Resizes the image",
-                "Provides descriptive text when the image cannot be displayed",
                 "Changes the image quality",
-                "Adds a border"
+                "Provides descriptive text when the image cannot be displayed",
+                "Adds a border",
+                "Resizes the image"
               ],
               "id": "html_css_u2l2_3"
             },
@@ -293,10 +293,10 @@
               "answer": "<a href=\"page.html\">Link text</a>",
               "explain": "Use a relative path (page.html) for pages in your site or a full URL for external links.",
               "choices": [
-                "<a href=\"https://example.com\">Link</a>",
                 "<a href=\"page.html\">Link text</a>",
                 "<link to=\"page.html\">",
-                "<page.html>Link</page.html>"
+                "<page.html>Link</page.html>",
+                "<a href=\"https://example.com\">Link</a>"
               ],
               "id": "html_css_u2l2_4"
             }
@@ -319,10 +319,10 @@
               "answer": "Using tags that describe the meaning of content, not just its appearance",
               "explain": "Semantic tags like <article>, <section>, and <header> tell search engines and accessibility tools what content means.",
               "choices": [
+                "Using only <div> tags",
                 "Using fancy tags",
-                "Using tags that describe the meaning of content, not just its appearance",
                 "Using only styling",
-                "Using only <div> tags"
+                "Using tags that describe the meaning of content, not just its appearance"
               ],
               "id": "html_css_u3l1_0"
             },
@@ -332,10 +332,10 @@
               "answer": "The introductory part of a page or section, usually with title and navigation",
               "explain": "Headers typically contain a logo, title, and navigation links. There can be multiple headers in a page.",
               "choices": [
-                "The top of the browser window",
-                "The introductory part of a page or section, usually with title and navigation",
                 "Column headers in a table",
-                "Meta information"
+                "The top of the browser window",
+                "Meta information",
+                "The introductory part of a page or section, usually with title and navigation"
               ],
               "id": "html_css_u3l1_1"
             },
@@ -345,10 +345,10 @@
               "answer": "Wraps navigation links and menus",
               "explain": "<nav> marks navigation areas. Screen readers and search engines understand it as a navigation section.",
               "choices": [
-                "Creates a menu appearance",
-                "Wraps navigation links and menus",
                 "Styles links",
-                "Creates tooltips"
+                "Creates tooltips",
+                "Wraps navigation links and menus",
+                "Creates a menu appearance"
               ],
               "id": "html_css_u3l1_2"
             },
@@ -358,10 +358,10 @@
               "answer": "The primary content area of the page",
               "explain": "<main> contains the unique content specific to this page. Use it once per page.",
               "choices": [
-                "A heading",
                 "The primary content area of the page",
-                "A navigation area",
-                "Footer content"
+                "A heading",
+                "Footer content",
+                "A navigation area"
               ],
               "id": "html_css_u3l1_3"
             },
@@ -371,10 +371,10 @@
               "answer": "Secondary information like copyright, links, and contact details",
               "explain": "Footers appear at the bottom and contain site-wide information, not specific to one page.",
               "choices": [
-                "Page content",
                 "Secondary information like copyright, links, and contact details",
+                "Images",
                 "Navigation links only",
-                "Images"
+                "Page content"
               ],
               "id": "html_css_u3l1_4"
             }
@@ -390,10 +390,10 @@
               "answer": "A container for input elements that collects user data",
               "explain": "Forms let users enter information. They can be submitted to a server for processing.",
               "choices": [
-                "A formatted table",
-                "A container for input elements that collects user data",
                 "A styling tag",
-                "A navigation menu"
+                "A container for input elements that collects user data",
+                "A navigation menu",
+                "A formatted table"
               ],
               "id": "html_css_u3l2_0"
             },
@@ -403,10 +403,10 @@
               "answer": "Creates a field where users can enter data",
               "explain": "<input> creates text fields, checkboxes, radio buttons, and more. The type attribute determines the input kind.",
               "choices": [
+                "Styles text",
                 "Creates a button",
                 "Creates a field where users can enter data",
-                "Displays data",
-                "Styles text"
+                "Displays data"
               ],
               "id": "html_css_u3l2_1"
             },
@@ -416,9 +416,9 @@
               "answer": "Creates an input field that validates email format",
               "explain": "Email inputs check that the user enters a valid email address before submission.",
               "choices": [
-                "Creates a password field",
-                "Creates an input field that validates email format",
                 "Sends an email",
+                "Creates an input field that validates email format",
+                "Creates a password field",
                 "Displays an email template"
               ],
               "id": "html_css_u3l2_2"
@@ -429,10 +429,10 @@
               "answer": "Associates text with input fields for accessibility and clarity",
               "explain": "Labels describe what each input is for. Screen readers read them. Use the for attribute to connect label to input.",
               "choices": [
-                "Styles form text",
+                "Submits the form",
                 "Associates text with input fields for accessibility and clarity",
-                "Creates a title",
-                "Submits the form"
+                "Styles form text",
+                "Creates a title"
               ],
               "id": "html_css_u3l2_3"
             },
@@ -442,10 +442,10 @@
               "answer": "Creates a clickable button, usually to submit a form or trigger an action",
               "explain": "Buttons can submit forms or run JavaScript code when clicked.",
               "choices": [
-                "Creates a link",
-                "Creates a clickable button, usually to submit a form or trigger an action",
+                "Styles text",
                 "Displays an image",
-                "Styles text"
+                "Creates a link",
+                "Creates a clickable button, usually to submit a form or trigger an action"
               ],
               "id": "html_css_u3l2_4"
             }
@@ -469,9 +469,9 @@
               "explain": "CSS is used to style HTML elements. Cascading means rules can override each other based on specificity.",
               "choices": [
                 "Computer Style System",
+                "Content Style Structure",
                 "Cascading Style Sheets",
-                "Creative Style Syntax",
-                "Content Style Structure"
+                "Creative Style Syntax"
               ],
               "id": "html_css_u4l1_0"
             },
@@ -482,9 +482,9 @@
               "explain": "Selectors like p, .class, and #id choose which elements receive the styles inside the rule.",
               "choices": [
                 "A color choice",
-                "A pattern that targets HTML elements to apply styles to them",
                 "A measurement unit",
-                "A font name"
+                "A font name",
+                "A pattern that targets HTML elements to apply styles to them"
               ],
               "id": "html_css_u4l1_1"
             },
@@ -496,8 +496,8 @@
               "choices": [
                 "An HTML attribute",
                 "The aspect of an element you want to change, like color or size",
-                "A JavaScript variable",
-                "A file name"
+                "A file name",
+                "A JavaScript variable"
               ],
               "id": "html_css_u4l1_2"
             },
@@ -508,9 +508,9 @@
               "explain": "A rule has a selector, then curly braces with property-value pairs separated by colons and semicolons.",
               "choices": [
                 "selector: property value",
-                "property(selector, value)",
+                "selector value property",
                 "selector { property: value; }",
-                "selector value property"
+                "property(selector, value)"
               ],
               "id": "html_css_u4l1_3"
             },
@@ -520,10 +520,10 @@
               "answer": "Classes start with . and can be reused; IDs start with # and are unique to one element",
               "explain": "Use classes for multiple elements; use IDs for single unique elements. Example: .button vs #header",
               "choices": [
-                "Both are the same",
-                "Classes start with . and can be reused; IDs start with # and are unique to one element",
                 "IDs are faster",
-                "Classes are more powerful"
+                "Classes are more powerful",
+                "Classes start with . and can be reused; IDs start with # and are unique to one element",
+                "Both are the same"
               ],
               "id": "html_css_u4l1_4"
             }
@@ -539,10 +539,10 @@
               "answer": "Rules lower in the stylesheet override earlier rules when they conflict",
               "explain": "If two rules apply to the same element, the one written later wins (unless overridden by specificity).",
               "choices": [
-                "Rules are random",
                 "Rules lower in the stylesheet override earlier rules when they conflict",
-                "All rules apply equally",
-                "The first rule always wins"
+                "The first rule always wins",
+                "Rules are random",
+                "All rules apply equally"
               ],
               "id": "html_css_u4l2_0"
             },
@@ -552,10 +552,10 @@
               "answer": "A ranking system that determines which rule applies when multiple selectors target the same element",
               "explain": "ID selectors are most specific, then classes, then element selectors. Higher specificity wins.",
               "choices": [
-                "The color of an element",
-                "A ranking system that determines which rule applies when multiple selectors target the same element",
                 "The order of CSS properties",
-                "The size of a font"
+                "The color of an element",
+                "The size of a font",
+                "A ranking system that determines which rule applies when multiple selectors target the same element"
               ],
               "id": "html_css_u4l2_1"
             },
@@ -565,10 +565,10 @@
               "answer": "A class selector",
               "explain": "Class selectors (.class) beat element selectors (p). ID selectors (#id) beat both.",
               "choices": [
-                "An element selector",
-                "A class selector",
                 "They are equal",
-                "It depends on the browser"
+                "A class selector",
+                "It depends on the browser",
+                "An element selector"
               ],
               "id": "html_css_u4l2_2"
             },
@@ -578,9 +578,9 @@
               "answer": "Forces a rule to apply, overriding other specificity rules",
               "explain": "!important makes a rule high priority. Use it sparingly as it can make debugging harder.",
               "choices": [
-                "Adds a comment",
-                "Forces a rule to apply, overriding other specificity rules",
                 "Creates an error",
+                "Forces a rule to apply, overriding other specificity rules",
+                "Adds a comment",
                 "Hides an element"
               ],
               "id": "html_css_u4l2_3"
@@ -591,9 +591,9 @@
               "answer": "Child elements automatically inherit certain properties from their parents",
               "explain": "Properties like color and font-size pass down to child elements. Some properties like margin do not inherit.",
               "choices": [
-                "Making multiple selectors",
                 "Child elements automatically inherit certain properties from their parents",
                 "Copying styles from another file",
+                "Making multiple selectors",
                 "Using parent selectors"
               ],
               "id": "html_css_u4l2_4"
@@ -617,10 +617,10 @@
               "answer": "The structure of every element: content, padding, border, and margin",
               "explain": "From inside to outside: content (text/images), padding (inside space), border (edge), margin (outside space).",
               "choices": [
-                "A template for websites",
                 "The structure of every element: content, padding, border, and margin",
+                "A color scheme",
                 "A design framework",
-                "A color scheme"
+                "A template for websites"
               ],
               "id": "html_css_u5l1_0"
             },
@@ -630,10 +630,10 @@
               "answer": "Adds space inside the element, between the content and the border",
               "explain": "Padding is inside the box. It pushes the content away from the edges.",
               "choices": [
-                "Adds space outside the element",
                 "Adds space inside the element, between the content and the border",
-                "Creates a border",
-                "Changes the color"
+                "Adds space outside the element",
+                "Changes the color",
+                "Creates a border"
               ],
               "id": "html_css_u5l1_1"
             },
@@ -656,10 +656,10 @@
               "answer": "A line drawn around the padding and content",
               "explain": "Borders can have style (solid, dashed), color, and thickness.",
               "choices": [
-                "The space inside padding",
                 "A line drawn around the padding and content",
-                "The background color",
-                "The margin space"
+                "The space inside padding",
+                "The margin space",
+                "The background color"
               ],
               "id": "html_css_u5l1_3"
             },
@@ -669,10 +669,10 @@
               "answer": "padding: 10px;",
               "explain": "One value sets all sides equal. Four values set top, right, bottom, left.",
               "choices": [
+                "all-padding: 10px;",
                 "padding: 10px 10px 10px 10px;",
                 "padding: 10px;",
-                "padding: 10px, 10px, 10px, 10px;",
-                "all-padding: 10px;"
+                "padding: 10px, 10px, 10px, 10px;"
               ],
               "id": "html_css_u5l1_4"
             }
@@ -688,9 +688,9 @@
               "answer": "How an element behaves: inline, block, or other layout modes",
               "explain": "display changes whether elements stack vertically (block), sit side-by-side (inline), or use flexbox/grid.",
               "choices": [
-                "Whether the element is visible",
                 "How an element behaves: inline, block, or other layout modes",
                 "The element's color",
+                "Whether the element is visible",
                 "The font size"
               ],
               "id": "html_css_u5l2_0"
@@ -702,8 +702,8 @@
               "explain": "Block elements like <div>, <p>, and <h1> stack vertically. Width and margin apply.",
               "choices": [
                 "An element on the same line as others",
-                "An element that takes up the full width and starts on a new line",
                 "An element that floats",
+                "An element that takes up the full width and starts on a new line",
                 "An element that is hidden"
               ],
               "id": "html_css_u5l2_1"
@@ -714,10 +714,10 @@
               "answer": "An element that sits on the same line as other content and only takes up needed width",
               "explain": "Inline elements like <span> and <a> flow with text. Width and height do not apply.",
               "choices": [
-                "An element that always takes up full width",
-                "An element that sits on the same line as other content and only takes up needed width",
                 "An element that is always centered",
-                "An element with no margin"
+                "An element with no margin",
+                "An element that always takes up full width",
+                "An element that sits on the same line as other content and only takes up needed width"
               ],
               "id": "html_css_u5l2_2"
             },
@@ -728,9 +728,9 @@
               "explain": "Flexbox makes it easy to create responsive layouts. Use display: flex on the parent container.",
               "choices": [
                 "A color palette",
+                "A CSS filter",
                 "A layout mode that arranges elements in rows or columns with flexible sizing",
-                "A JavaScript library",
-                "A CSS filter"
+                "A JavaScript library"
               ],
               "id": "html_css_u5l2_3"
             },
@@ -740,8 +740,8 @@
               "answer": "A layout system that arranges elements in rows and columns using a grid template",
               "explain": "Grid is powerful for complex layouts. Use display: grid on the parent container.",
               "choices": [
-                "A table",
                 "A layout system that arranges elements in rows and columns using a grid template",
+                "A table",
                 "A graph tool",
                 "A color scheme"
               ],
@@ -766,10 +766,10 @@
               "answer": "Designing pages that adapt and look good on all screen sizes",
               "explain": "Responsive layouts adjust for phones, tablets, and desktops. Users get a good experience everywhere.",
               "choices": [
-                "Using one fixed width for all devices",
                 "Designing pages that adapt and look good on all screen sizes",
-                "Only designing for mobile",
-                "Using images instead of text"
+                "Using one fixed width for all devices",
+                "Using images instead of text",
+                "Only designing for mobile"
               ],
               "id": "html_css_u6l1_0"
             },
@@ -779,10 +779,10 @@
               "answer": "CSS rules that apply only when certain conditions are met, like screen width",
               "explain": "Media queries let you change styles based on device width, orientation, or other features.",
               "choices": [
+                "A JavaScript feature",
                 "A question about media",
                 "CSS rules that apply only when certain conditions are met, like screen width",
-                "An HTML tag",
-                "A JavaScript feature"
+                "An HTML tag"
               ],
               "id": "html_css_u6l1_1"
             },
@@ -792,10 +792,10 @@
               "answer": "@media (max-width: 768px) { }",
               "explain": "This rule applies styles only to devices with screens 768px wide or smaller.",
               "choices": [
-                "@media min-width: 768px { }",
+                "@mobile { }",
                 "@media (max-width: 768px) { }",
-                "@screen 768px { }",
-                "@mobile { }"
+                "@media min-width: 768px { }",
+                "@screen 768px { }"
               ],
               "id": "html_css_u6l1_2"
             },
@@ -805,10 +805,10 @@
               "answer": "A meta tag that tells mobile browsers how to scale and display your page",
               "explain": "The viewport tag prevents zooming out on mobile. Use: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
               "choices": [
-                "A CSS property",
                 "A meta tag that tells mobile browsers how to scale and display your page",
                 "An HTML form element",
-                "A JavaScript object"
+                "A JavaScript object",
+                "A CSS property"
               ],
               "id": "html_css_u6l1_3"
             },
@@ -820,8 +820,8 @@
               "choices": [
                 "A pixel measurement",
                 "A size that is relative to another value, like the parent element or viewport",
-                "A fixed size",
-                "A color value"
+                "A color value",
+                "A fixed size"
               ],
               "id": "html_css_u6l1_4"
             }
@@ -837,10 +837,10 @@
               "answer": "Designing websites so everyone can use them, including people with disabilities",
               "explain": "Accessibility helps users with vision, hearing, mobility, and cognitive disabilities navigate your site.",
               "choices": [
-                "Making websites fast",
                 "Designing websites so everyone can use them, including people with disabilities",
-                "Using modern frameworks",
-                "Making websites colorful"
+                "Making websites colorful",
+                "Making websites fast",
+                "Using modern frameworks"
               ],
               "id": "html_css_u6l2_0"
             },
@@ -850,10 +850,10 @@
               "answer": "Describing the image for users who cannot see it and for search engines",
               "explain": "Screen readers read alt text. Good alt text describes what the image shows.",
               "choices": [
-                "Resizing images",
                 "Describing the image for users who cannot see it and for search engines",
-                "Changing image quality",
-                "Adding a border"
+                "Resizing images",
+                "Adding a border",
+                "Changing image quality"
               ],
               "id": "html_css_u6l2_1"
             },
@@ -863,10 +863,10 @@
               "answer": "Software that reads page content aloud for users with vision disabilities",
               "explain": "Screen readers navigate HTML. Good semantic HTML and alt text help them work correctly.",
               "choices": [
+                "A magnifying glass",
                 "A web browser",
-                "Software that reads page content aloud for users with vision disabilities",
                 "A scanning tool",
-                "A magnifying glass"
+                "Software that reads page content aloud for users with vision disabilities"
               ],
               "id": "html_css_u6l2_2"
             },
@@ -876,8 +876,8 @@
               "answer": "The difference in brightness between text and background colors",
               "explain": "Good contrast (dark text on light background) helps users with low vision read your site.",
               "choices": [
-                "The color palette",
                 "The difference in brightness between text and background colors",
+                "The color palette",
                 "How colors blend",
                 "The saturation of colors"
               ],
@@ -889,10 +889,10 @@
               "answer": "It tells screen readers and assistive technology the meaning of content",
               "explain": "Semantic tags like <nav>, <button>, and <label> help accessibility tools understand your page.",
               "choices": [
-                "It makes pages load faster",
                 "It tells screen readers and assistive technology the meaning of content",
-                "It reduces file size",
-                "It improves search rankings only"
+                "It improves search rankings only",
+                "It makes pages load faster",
+                "It reduces file size"
               ],
               "id": "html_css_u6l2_4"
             }

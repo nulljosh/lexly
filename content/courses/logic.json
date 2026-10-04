@@ -85,10 +85,10 @@
               "question": "De Morgan's law: NOT(A AND B) = ?",
               "answer": "NOT A OR NOT B",
               "choices": [
-                "NOT A OR NOT B",
-                "NOT A AND NOT B",
                 "A OR B",
-                "A AND B"
+                "NOT A AND NOT B",
+                "A AND B",
+                "NOT A OR NOT B"
               ],
               "id": "logic_10"
             },
@@ -97,10 +97,10 @@
               "question": "Modus ponens: If P then Q, P is true. Q is?",
               "answer": "True",
               "choices": [
-                "True",
-                "False",
+                "Depends",
                 "Unknown",
-                "Depends"
+                "False",
+                "True"
               ],
               "id": "logic_11"
             },
@@ -109,10 +109,10 @@
               "question": "A tautology is always?",
               "answer": "True",
               "choices": [
-                "True",
-                "False",
+                "Contradictory",
                 "Unknown",
-                "Contradictory"
+                "False",
+                "True"
               ],
               "id": "logic_12"
             },
@@ -121,9 +121,9 @@
               "question": "Contrapositive of \"If P then Q\"?",
               "answer": "If NOT Q then NOT P",
               "choices": [
+                "If NOT P then NOT Q",
                 "If NOT Q then NOT P",
                 "If Q then P",
-                "If NOT P then NOT Q",
                 "If P then NOT Q"
               ],
               "id": "logic_13"
@@ -139,10 +139,10 @@
               "question": "How many rows in truth table for 3 variables?",
               "answer": "8",
               "choices": [
-                "4",
+                "16",
                 "6",
-                "8",
-                "16"
+                "4",
+                "8"
               ],
               "id": "logic_14"
             }

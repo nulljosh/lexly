@@ -19,9 +19,9 @@
               "question": "C++ output statement?",
               "answer": "std::cout",
               "choices": [
-                "std::cout",
                 "print()",
                 "printf()",
+                "std::cout",
                 "System.out"
               ],
               "id": "cpp_0"
@@ -31,10 +31,10 @@
               "question": "Include header syntax?",
               "answer": "#include <iostream>",
               "choices": [
-                "#include <iostream>",
                 "import iostream",
-                "using iostream",
-                "require iostream"
+                "#include <iostream>",
+                "require iostream",
+                "using iostream"
               ],
               "id": "cpp_1"
             },
@@ -43,10 +43,10 @@
               "question": "Pointer declaration?",
               "answer": "int* ptr",
               "choices": [
-                "int* ptr",
-                "ptr int",
                 "int &ptr",
-                "pointer<int> ptr"
+                "pointer<int> ptr",
+                "ptr int",
+                "int* ptr"
               ],
               "id": "cpp_2"
             },
@@ -55,10 +55,10 @@
               "question": "Dynamic memory allocation?",
               "answer": "new",
               "choices": [
-                "new",
+                "create",
                 "malloc",
                 "alloc",
-                "create"
+                "new"
               ],
               "id": "cpp_3"
             },
@@ -69,8 +69,8 @@
               "choices": [
                 "std::string",
                 "String",
-                "string",
-                "char[]"
+                "char[]",
+                "string"
               ],
               "id": "cpp_4"
             },
@@ -79,10 +79,10 @@
               "question": "Reference parameter syntax?",
               "answer": "void func(int& x)",
               "choices": [
-                "void func(int& x)",
-                "void func(int* x)",
+                "void func(int x&)",
                 "void func(ref int x)",
-                "void func(int x&)"
+                "void func(int& x)",
+                "void func(int* x)"
               ],
               "id": "cpp_5"
             },
@@ -111,8 +111,8 @@
               "choices": [
                 "Runtime polymorphism",
                 "Compile-time optimization",
-                "Memory management",
-                "Thread safety"
+                "Thread safety",
+                "Memory management"
               ],
               "id": "cpp_7"
             },
@@ -121,10 +121,10 @@
               "question": "Smart pointer that has unique ownership?",
               "answer": "unique_ptr",
               "choices": [
-                "unique_ptr",
                 "shared_ptr",
-                "weak_ptr",
-                "auto_ptr"
+                "unique_ptr",
+                "auto_ptr",
+                "weak_ptr"
               ],
               "id": "cpp_8"
             },
@@ -133,10 +133,10 @@
               "question": "Namespace access operator?",
               "answer": "::",
               "choices": [
-                "::",
+                "=>",
                 ".",
                 "->",
-                "=>"
+                "::"
               ],
               "id": "cpp_9"
             },
@@ -145,10 +145,10 @@
               "question": "C++ lambda syntax?",
               "answer": "[](int x) { return x; }",
               "choices": [
+                "fn(x) -> x",
                 "[](int x) { return x; }",
                 "(x) => x",
-                "lambda x: x",
-                "fn(x) -> x"
+                "lambda x: x"
               ],
               "id": "cpp_10"
             },
@@ -158,9 +158,9 @@
               "answer": "for (auto x : vec)",
               "choices": [
                 "for (auto x : vec)",
-                "for x in vec",
+                "for (x of vec)",
                 "foreach (x in vec)",
-                "for (x of vec)"
+                "for x in vec"
               ],
               "id": "cpp_11"
             },
@@ -169,10 +169,10 @@
               "question": "C++ access modifier default in class?",
               "answer": "private",
               "choices": [
-                "private",
                 "public",
-                "protected",
-                "internal"
+                "internal",
+                "private",
+                "protected"
               ],
               "id": "cpp_12"
             },
@@ -181,10 +181,10 @@
               "question": "Template syntax?",
               "answer": "template<typename T>",
               "choices": [
-                "template<typename T>",
-                "generic<T>",
+                "type T template",
                 "<T> template",
-                "type T template"
+                "template<typename T>",
+                "generic<T>"
               ],
               "id": "cpp_13"
             }
@@ -199,9 +199,9 @@
               "question": "Multiple inheritance supported?",
               "answer": "Yes",
               "choices": [
-                "Yes",
                 "No",
                 "Only interfaces",
+                "Yes",
                 "Only abstract classes"
               ],
               "id": "cpp_14"
