@@ -1,0 +1,904 @@
+{
+  "id": "economics",
+  "name": "Economics",
+  "category": "skills",
+  "icon": "fa-solid fa-scale-balanced",
+  "level": "How Economies Work",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Scarcity and Opportunity Cost",
+      "tip": "Economics exists because resources are limited but wants are unlimited. Scarcity forces choices. Opportunity cost is what you give up by choosing one thing over another. Every decision has a trade-off.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Problem of Scarcity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is scarcity in economics?",
+              "answer": "Limited resources cannot satisfy unlimited wants",
+              "explain": "There is never enough of everything for everyone. Land, labor, time, and money are all scarce. Scarcity is why economics exists.",
+              "choices": [
+                "When prices are very high",
+                "Limited resources cannot satisfy unlimited wants",
+                "A shortage of one specific good",
+                "When a store runs out of inventory"
+              ],
+              "id": "economics_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is scarcity a problem for wealthy people?",
+              "answer": "Yes, even the wealthy face scarcity of time",
+              "explain": "No matter how rich you are, you have only 24 hours a day. Time is scarce for everyone. Money is less scarce for the rich but still finite.",
+              "choices": [
+                "Scarcity does not exist for large economies",
+                "Scarcity affects only natural resources",
+                "Yes, even the wealthy face scarcity of time",
+                "No, scarcity only affects poor people"
+              ],
+              "id": "economics_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the three basic economic resources?",
+              "answer": "Land, labor, and capital",
+              "explain": "Land includes natural resources. Labor is human effort. Capital is tools, buildings, and equipment used to produce. All three are scarce.",
+              "choices": [
+                "Money, goods, and services",
+                "Factories, workers, and customers",
+                "Food, water, and shelter",
+                "Land, labor, and capital"
+              ],
+              "id": "economics_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Because of scarcity, what must every economy decide?",
+              "answer": "What to produce, how to produce it, and who gets the output",
+              "explain": "With limited resources, every economy answers these three questions. Different systems answer them differently.",
+              "choices": [
+                "How to eliminate scarcity",
+                "Only who gets the output",
+                "Whether to have an economy",
+                "What to produce, how to produce it, and who gets the output"
+              ],
+              "id": "economics_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can any economy eliminate scarcity completely?",
+              "answer": "No, scarcity is a fundamental economic reality",
+              "explain": "Even the richest countries face scarcity. Resources are always limited relative to wants. This is why choice matters.",
+              "choices": [
+                "Technology eliminates scarcity",
+                "No, scarcity is a fundamental economic reality",
+                "Yes, wealthy countries eliminate scarcity",
+                "Only command economies eliminate scarcity"
+              ],
+              "id": "economics_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Opportunity Cost and Trade-offs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is opportunity cost?",
+              "answer": "The value of the next best alternative you give up",
+              "explain": "If you choose college over working, the opportunity cost is the wages you do not earn. Every choice has a cost: the path not taken.",
+              "choices": [
+                "The money spent on something",
+                "The time it takes to decide",
+                "The total cost of a purchase",
+                "The value of the next best alternative you give up"
+              ],
+              "id": "economics_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You have 2 hours and can either study or work. Work pays 20 dollars per hour. What is the opportunity cost of studying?",
+              "answer": "40 dollars in forgone wages",
+              "explain": "By studying, you give up 2 hours of work at 20 dollars per hour, totaling 40 dollars. That is your opportunity cost.",
+              "choices": [
+                "2 hours",
+                "You do not have an opportunity cost",
+                "40 dollars in forgone wages",
+                "20 dollars"
+              ],
+              "id": "economics_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is opportunity cost the same for everyone?",
+              "answer": "No, it depends on individual circumstances and alternatives",
+              "explain": "A student giving up study time to work faces different opportunity costs than a professional. Your options shape your costs.",
+              "choices": [
+                "No, it depends on individual circumstances and alternatives",
+                "Yes, it is the same for everyone",
+                "Opportunity cost does not vary",
+                "Only skilled workers have opportunity costs"
+              ],
+              "id": "economics_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a trade-off?",
+              "answer": "Giving up some of one thing to get some of another",
+              "explain": "You cannot have everything, so you trade. More spending on A means less on B. A trade-off shows a choice has costs.",
+              "choices": [
+                "Buying two items at the same time",
+                "Getting something for free",
+                "No relationship between choices",
+                "Giving up some of one thing to get some of another"
+              ],
+              "id": "economics_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A company uses a factory to make cars. If they used the same factory for trucks instead, the opportunity cost is:",
+              "answer": "The cars they would have made",
+              "explain": "Choosing to make trucks means giving up car production. The cars not made are the opportunity cost of that choice.",
+              "choices": [
+                "The workers' wages",
+                "The cars they would have made",
+                "The money spent on the factory",
+                "The government regulation"
+              ],
+              "id": "economics_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Supply and Demand",
+      "tip": "Supply is how much sellers are willing to offer. Demand is how much buyers want. The price adjusts until supply equals demand, creating market equilibrium. When demand rises or supply falls, prices go up.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Understanding Supply and Demand",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is demand in economics?",
+              "answer": "The quantity of a good people want to buy at each price",
+              "explain": "Demand curves show the relationship: lower prices mean more people want to buy, higher prices mean fewer buyers.",
+              "choices": [
+                "The total money spent",
+                "The quantity of a good people want to buy at each price",
+                "How many factories exist",
+                "What sellers want to offer"
+              ],
+              "id": "economics_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is supply in economics?",
+              "answer": "The quantity of a good sellers are willing to offer at each price",
+              "explain": "Supply curves show: lower prices mean sellers offer less, higher prices encourage more production.",
+              "choices": [
+                "The quantity of a good sellers are willing to offer at each price",
+                "Government regulations",
+                "How much buyers want",
+                "The inventory currently in stores"
+              ],
+              "id": "economics_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to demand when a product becomes trendy?",
+              "answer": "Demand increases, people want to buy more",
+              "explain": "A trend makes a product more desirable. At every price, more people now want it. The demand curve shifts right.",
+              "choices": [
+                "Demand increases, people want to buy more",
+                "Price does not change",
+                "Demand decreases",
+                "Supply automatically increases"
+              ],
+              "id": "economics_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to demand for umbrellas during a drought?",
+              "answer": "Demand decreases because fewer people need them",
+              "explain": "Without rain, umbrellas are less useful. People want fewer of them at every price. Demand shifts left.",
+              "choices": [
+                "Demand increases",
+                "Price automatically drops",
+                "Supply changes instead",
+                "Demand decreases because fewer people need them"
+              ],
+              "id": "economics_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A factory's production capacity increases. What happens to supply?",
+              "answer": "Supply increases, more can be produced at each price",
+              "explain": "More capacity means sellers can offer more product without raising prices. The supply curve shifts right.",
+              "choices": [
+                "Only the price changes",
+                "Supply increases, more can be produced at each price",
+                "Demand automatically increases",
+                "Supply decreases"
+              ],
+              "id": "economics_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Equilibrium and Price",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is market equilibrium?",
+              "answer": "The price where quantity supplied equals quantity demanded",
+              "explain": "At equilibrium, sellers want to provide exactly what buyers want to buy. There is no shortage or surplus. The market clears.",
+              "choices": [
+                "When government controls price",
+                "The price where quantity supplied equals quantity demanded",
+                "The highest price ever",
+                "When supply is zero"
+              ],
+              "id": "economics_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when demand exceeds supply?",
+              "answer": "There is a shortage, and prices tend to rise",
+              "explain": "More buyers want the good than sellers supply. The shortage causes prices to increase, encouraging more supply and less demand.",
+              "choices": [
+                "Supply instantly increases",
+                "Prices automatically drop",
+                "Nothing happens",
+                "There is a shortage, and prices tend to rise"
+              ],
+              "id": "economics_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when supply exceeds demand?",
+              "answer": "There is a surplus, and prices tend to fall",
+              "explain": "Sellers have more than buyers want. A surplus pushes prices down, encouraging more buyers and less production.",
+              "choices": [
+                "Nothing happens",
+                "Prices automatically rise",
+                "Demand instantly increases",
+                "There is a surplus, and prices tend to fall"
+              ],
+              "id": "economics_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do prices guide the economy toward equilibrium?",
+              "answer": "Rising prices encourage more supply and less demand; falling prices do the opposite",
+              "explain": "Prices are signals. Shortages raise prices, attracting more producers and fewer buyers until balance is reached.",
+              "choices": [
+                "Government sets all prices",
+                "Rising prices encourage more supply and less demand; falling prices do the opposite",
+                "Prices have no effect",
+                "Only supply changes prices"
+              ],
+              "id": "economics_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If the market price is below what it costs sellers to produce, what do sellers do?",
+              "answer": "Sellers reduce supply or leave the market",
+              "explain": "When the price will not cover costs or give a reasonable profit, sellers cut production or exit, which pushes the price back up.",
+              "choices": [
+                "Buyers automatically buy more",
+                "The price stays fixed",
+                "Sellers reduce supply or leave the market",
+                "Supply increases instantly"
+              ],
+              "id": "economics_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Elasticity and Sensitivity",
+      "tip": "Elasticity measures how responsive quantity demanded or supplied is to price changes. Some goods are elastic (demand drops sharply when price rises), others are inelastic (demand barely changes). Understanding elasticity explains why price increases hurt some industries more than others.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Price Elasticity of Demand",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is price elasticity of demand?",
+              "answer": "How much the quantity demanded changes when price changes",
+              "explain": "Elasticity measures responsiveness. A 10% price increase causes a 5% quantity drop for one good, a 20% drop for another.",
+              "choices": [
+                "How much the quantity demanded changes when price changes",
+                "The total amount people buy",
+                "How sellers set prices",
+                "The highest price anyone will pay"
+              ],
+              "id": "economics_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'elastic' demand?",
+              "answer": "Quantity demanded changes a lot when price changes",
+              "explain": "Elastic goods are price-sensitive. A small price increase causes many buyers to switch or buy less. Examples often include restaurant meals and entertainment.",
+              "choices": [
+                "Quantity demanded does not change",
+                "Only occurs for essential goods",
+                "Impossible in real markets",
+                "Quantity demanded changes a lot when price changes"
+              ],
+              "id": "economics_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'inelastic' demand?",
+              "answer": "Quantity demanded changes very little when price changes",
+              "explain": "Inelastic goods are not price-sensitive. Buyers need them regardless of cost. Examples: insulin, gasoline (short-term).",
+              "choices": [
+                "Never occurs in real markets",
+                "Quantity demanded changes very little when price changes",
+                "Only applies to luxury goods",
+                "Quantity demanded changes dramatically"
+              ],
+              "id": "economics_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If medicine is inelastic and price rises, what happens?",
+              "answer": "Quantity demanded falls only slightly; total revenue likely increases",
+              "explain": "People need medicine whether the price is high or low. A price increase reduces quantity little, so total revenue goes up.",
+              "choices": [
+                "Demand instantly increases",
+                "Price automatically drops",
+                "Quantity demanded drops sharply",
+                "Quantity demanded falls only slightly; total revenue likely increases"
+              ],
+              "id": "economics_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are luxury goods typically elastic in demand?",
+              "answer": "People can choose not to buy them when prices rise",
+              "explain": "Luxury items are not essential. When a restaurant raises prices, people eat out less, choosing home cooking instead.",
+              "choices": [
+                "People can choose not to buy them when prices rise",
+                "Sellers control demand",
+                "They have no substitutes",
+                "They are always scarce"
+              ],
+              "id": "economics_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Price Elasticity of Supply and Cross-elasticity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is price elasticity of supply?",
+              "answer": "How much quantity supplied changes when price changes",
+              "explain": "Supply elasticity measures seller responsiveness. Some goods can be produced faster when profitable; others take time.",
+              "choices": [
+                "What buyers want to purchase",
+                "The cost of production",
+                "Government production limits",
+                "How much quantity supplied changes when price changes"
+              ],
+              "id": "economics_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is agricultural supply often inelastic?",
+              "answer": "Crops take months to grow; farmers cannot quickly increase production",
+              "explain": "Wheat planted now harvests in months. A sudden price rise does not cause next week's harvest to double.",
+              "choices": [
+                "Farmers do not want profit",
+                "Everyone grows the same crops",
+                "Price does not affect farmers",
+                "Crops take months to grow; farmers cannot quickly increase production"
+              ],
+              "id": "economics_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is manufacturing supply more elastic than agriculture?",
+              "answer": "Factories can increase production quickly by adding shifts or workers",
+              "explain": "A factory can shift to higher capacity in weeks or days. Farmers cannot speed crop growth.",
+              "choices": [
+                "No substitutes exist for food",
+                "Manufacturers never change production",
+                "Manufactured goods cost less",
+                "Factories can increase production quickly by adding shifts or workers"
+              ],
+              "id": "economics_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is cross-price elasticity?",
+              "answer": "How demand for one good changes when the price of another good changes",
+              "explain": "If butter becomes expensive, less butter is bought and more margarine is bought. The two goods are substitutes.",
+              "choices": [
+                "Government price controls",
+                "When all prices rise together",
+                "The same as price elasticity",
+                "How demand for one good changes when the price of another good changes"
+              ],
+              "id": "economics_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Cheese and crackers are complements. If cheese prices rise, what happens to crackers?",
+              "answer": "Cracker demand falls because fewer people buy the cheese-cracker combo",
+              "explain": "Complements are used together. When cheese gets more expensive, people buy less cheese, and demand for crackers falls too.",
+              "choices": [
+                "Crackers become a substitute",
+                "Cracker demand falls because fewer people buy the cheese-cracker combo",
+                "Cracker demand rises",
+                "Price has no effect"
+              ],
+              "id": "economics_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Market Structures",
+      "tip": "Markets vary based on the number of sellers and how much power each has. Perfect competition has many sellers with no power. Monopoly has one seller controlling price. Oligopoly has a few large sellers who dominate. Structure shapes pricing power and innovation.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Perfect Competition and Monopoly",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is perfect competition?",
+              "answer": "Many sellers offer identical products; no single seller controls price",
+              "explain": "In perfect competition, each seller is tiny. If one raises price, buyers switch to another. It is an ideal case; some farm markets come close.",
+              "choices": [
+                "Government controls the market",
+                "One company selling everything",
+                "Two competitors only",
+                "Many sellers offer identical products; no single seller controls price"
+              ],
+              "id": "economics_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a monopoly?",
+              "answer": "One seller with no significant competition",
+              "explain": "A monopoly controls supply and can set prices high because buyers have nowhere else to go. Examples: local utility, patent holder.",
+              "choices": [
+                "One seller with no significant competition",
+                "Government-owned business",
+                "Two sellers only",
+                "Many sellers in competition"
+              ],
+              "id": "economics_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a perfect competitor set prices?",
+              "answer": "They accept the market price or exit; they cannot raise prices without losing all customers",
+              "explain": "In perfect competition, any seller trying to raise price above the market rate loses all customers to others.",
+              "choices": [
+                "They set any price they want",
+                "They accept the market price or exit; they cannot raise prices without losing all customers",
+                "Government tells them the price",
+                "They raise prices to maximize profit"
+              ],
+              "id": "economics_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a monopolist set prices?",
+              "answer": "They choose price and quantity to maximize profit; customers have no alternatives",
+              "explain": "A monopolist has pricing power. They can raise prices knowing customers cannot go elsewhere.",
+              "choices": [
+                "Price is set by perfect competition",
+                "They choose price and quantity to maximize profit; customers have no alternatives",
+                "Customers always choose the price",
+                "The market determines the price"
+              ],
+              "id": "economics_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a monopoly feel less pressure to innovate than firms in a competitive market?",
+              "answer": "Without competitors, it faces little threat of losing customers",
+              "explain": "Competitive markets push firms to improve to keep customers. A monopoly can keep earning profit without that pressure, though some still innovate.",
+              "choices": [
+                "It always innovates more than competitors",
+                "Without competitors, it faces little threat of losing customers",
+                "Monopolies never exist",
+                "Innovation is impossible for it"
+              ],
+              "id": "economics_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Oligopoly and Market Power",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an oligopoly?",
+              "answer": "A market with a few large sellers who dominate",
+              "explain": "Oligopolies have a small number of major firms controlling most sales. Commercial aircraft manufacturing is a classic example.",
+              "choices": [
+                "Many competitors with equal power",
+                "A market with a few large sellers who dominate",
+                "Only one seller exists",
+                "Perfect competition always"
+              ],
+              "id": "economics_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do oligopolists influence prices?",
+              "answer": "They have some pricing power but must consider competitor reactions",
+              "explain": "If one oligopolist raises price, others might not, stealing customers. Oligopolists carefully set prices to avoid price wars.",
+              "choices": [
+                "They have some pricing power but must consider competitor reactions",
+                "They set prices like monopolies",
+                "They have no pricing power",
+                "Perfect competition determines price"
+              ],
+              "id": "economics_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'price war'?",
+              "answer": "Competitors repeatedly cut prices trying to undercut each other",
+              "explain": "In price wars, each firm cuts prices to win customers, and everyone's profit drops. They can occur in industries with close rivals, such as airlines.",
+              "choices": [
+                "Government price controls",
+                "When demand exceeds supply",
+                "Setting artificially high prices",
+                "Competitors repeatedly cut prices trying to undercut each other"
+              ],
+              "id": "economics_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might oligopolists avoid price wars?",
+              "answer": "Price wars can shrink every firm's profit",
+              "explain": "If all firms cut prices deeply, margins shrink for everyone. Firms in an oligopoly often prefer to compete on features and brand instead.",
+              "choices": [
+                "There is no reason to avoid them",
+                "Price wars are illegal",
+                "Customers do not like low prices",
+                "Price wars can shrink every firm's profit"
+              ],
+              "id": "economics_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'product differentiation' in oligopoly?",
+              "answer": "Making your product distinct so buyers see rivals' products as poorer substitutes",
+              "explain": "Firms use brand loyalty, unique features, or marketing to stand apart. This reduces direct price competition and gives more room to set prices.",
+              "choices": [
+                "Making your product distinct so buyers see rivals' products as poorer substitutes",
+                "Government regulation",
+                "Making all products identical",
+                "Lowering prices below cost"
+              ],
+              "id": "economics_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "GDP, Inflation, and Unemployment",
+      "tip": "GDP measures total economic output. Inflation is the rise in average prices over time. Unemployment is the percentage of people wanting work who cannot find jobs. Together, these three metrics describe an economy's health.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Measuring the Economy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does GDP stand for?",
+              "answer": "Gross Domestic Product",
+              "explain": "GDP is the total value of final goods and services produced within a country in a given period, usually a year. It measures the size of an economy.",
+              "choices": [
+                "General Development Plan",
+                "Gross Domestic Product",
+                "Government Development Program",
+                "Gross Domestic Profit"
+              ],
+              "id": "economics_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does growing real GDP (adjusted for price changes) indicate?",
+              "answer": "The economy is producing more goods and services",
+              "explain": "Rising real GDP means more output is being produced. It usually goes along with more jobs and rising incomes, and is generally seen as a sign of economic health.",
+              "choices": [
+                "Unemployment is high",
+                "Inflation has occurred",
+                "The economy is producing more goods and services",
+                "Prices are falling"
+              ],
+              "id": "economics_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is inflation?",
+              "answer": "A sustained increase in the average level of prices",
+              "explain": "Inflation means your money buys less. A 3% inflation rate means prices are 3% higher than last year on average.",
+              "choices": [
+                "Government printing money",
+                "A sustained increase in the average level of prices",
+                "When one industry's price rises",
+                "A one-time price increase"
+              ],
+              "id": "economics_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If inflation is 5% and your salary stays the same, what happens?",
+              "answer": "Your purchasing power falls by about 5%",
+              "explain": "With 5% inflation, the same salary buys roughly 5% less (about 4.8% precisely). You are relatively poorer unless your pay rises too.",
+              "choices": [
+                "Your purchasing power falls by about 5%",
+                "Prices do not affect salary",
+                "Your purchasing power stays the same",
+                "You become richer"
+              ],
+              "id": "economics_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the unemployment rate?",
+              "answer": "The percentage of people wanting work who cannot find jobs",
+              "explain": "Unemployment measures joblessness. A 5% rate means 5 out of 100 people wanting work are jobless.",
+              "choices": [
+                "The number of people not working",
+                "People who chose not to work",
+                "The percentage of people wanting work who cannot find jobs",
+                "Total number of jobs available"
+              ],
+              "id": "economics_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Economic Health and Relationships",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What causes inflation?",
+              "answer": "Too much money chasing too few goods, or rising production costs",
+              "explain": "If spending grows faster than the supply of goods, buyers bid prices up. Or if costs of production rise across the economy, prices rise.",
+              "choices": [
+                "A drop in the money supply",
+                "Too much money chasing too few goods, or rising production costs",
+                "Falling demand across the whole economy",
+                "A fall in production costs"
+              ],
+              "id": "economics_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is inflation always bad?",
+              "answer": "Low, stable, predictable inflation is generally tolerable; high or unexpected inflation does more harm",
+              "explain": "Mild, predictable inflation is easy to plan around. High or unexpected inflation erodes savings and creates uncertainty.",
+              "choices": [
+                "Yes, all inflation is bad",
+                "No, inflation is always good",
+                "Inflation does not matter",
+                "Low, stable, predictable inflation is generally tolerable; high or unexpected inflation does more harm"
+              ],
+              "id": "economics_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'deflation'?",
+              "answer": "A sustained decrease in the average level of prices",
+              "explain": "Deflation is the opposite of inflation: prices fall over time. It sounds good, but it can discourage spending and harm growth.",
+              "choices": [
+                "Economic growth",
+                "Lower taxes",
+                "Rising prices",
+                "A sustained decrease in the average level of prices"
+              ],
+              "id": "economics_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When does unemployment typically rise?",
+              "answer": "During recessions when GDP falls",
+              "explain": "When the economy shrinks, businesses lay off workers. Unemployment and falling GDP move together.",
+              "choices": [
+                "When productivity rises",
+                "When inflation is low",
+                "When GDP is growing",
+                "During recessions when GDP falls"
+              ],
+              "id": "economics_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'stagflation'?",
+              "answer": "High unemployment and high inflation happening simultaneously",
+              "explain": "Stagflation is economic stagnation plus inflation. Growth stalls and joblessness is high while prices keep rising, which makes it a hard problem to solve.",
+              "choices": [
+                "Rapid economic growth",
+                "Falling prices and falling wages",
+                "High unemployment and high inflation happening simultaneously",
+                "Perfect economic health"
+              ],
+              "id": "economics_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Trade and Comparative Advantage",
+      "tip": "Comparative advantage explains why trade benefits both parties. Even if one country can produce everything more efficiently, both gain by specializing in what they do relatively best. Trade increases total production and living standards.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Specialization and Trade",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is comparative advantage?",
+              "answer": "The ability to produce something at a lower opportunity cost",
+              "explain": "A country with a comparative advantage in wheat gives up less of other goods to make it than another country does. That lower opportunity cost is why trade makes sense.",
+              "choices": [
+                "The ability to produce something at a lower opportunity cost",
+                "Being the largest producer",
+                "The ability to produce more of everything",
+                "Having the most technology"
+              ],
+              "id": "economics_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can two countries benefit from trade even if one is better at everything?",
+              "answer": "Yes, if each specializes in their comparative advantage",
+              "explain": "Country A might be better at both shoes and wheat. But if it has comparative advantage only in shoes, both gain if A makes shoes and B makes wheat.",
+              "choices": [
+                "Yes, if each specializes in their comparative advantage",
+                "Only if they are equally productive",
+                "Trade never benefits unequal countries",
+                "No, trade only helps the weaker country"
+              ],
+              "id": "economics_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does specialization mean in trade?",
+              "answer": "Each country focuses on what it does relatively best",
+              "explain": "A country specializes by producing what gives it comparative advantage. This increases total production.",
+              "choices": [
+                "Each country focuses on what it does relatively best",
+                "Producing only one good ever",
+                "Making everything domestically",
+                "Refusing to trade with others"
+              ],
+              "id": "economics_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a country import food even though it can produce it?",
+              "answer": "Its resources earn more making other goods, so it gains by trading for food",
+              "explain": "If a country gives up a lot of other output to grow food but makes software at a low opportunity cost, it gains by selling software and buying food.",
+              "choices": [
+                "Its resources earn more making other goods, so it gains by trading for food",
+                "Trade is always bad",
+                "Domestic food is worse quality",
+                "Food imports are always better"
+              ],
+              "id": "economics_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does trade increase?",
+              "answer": "Total production and both countries' living standards",
+              "explain": "When countries specialize and trade, total output can rise. Both can then consume more than they could alone.",
+              "choices": [
+                "Total production and both countries' living standards",
+                "Only one country benefits",
+                "Unemployment in all countries",
+                "The need for less technology"
+              ],
+              "id": "economics_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Externalities and Market Failures",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an externality?",
+              "answer": "A cost or benefit of production affecting people not involved in the transaction",
+              "explain": "A factory's pollution affects neighboring residents. A vaccine benefits people who did not get vaccinated. These are externalities.",
+              "choices": [
+                "A cost or benefit of production affecting people not involved in the transaction",
+                "Cost to consumers only",
+                "Extra profit for the seller",
+                "Benefits to all competitors"
+              ],
+              "id": "economics_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a negative externality?",
+              "answer": "A cost imposed on third parties without compensation",
+              "explain": "Pollution, noise, and congestion are negative externalities. The producer does not pay for the harm caused.",
+              "choices": [
+                "Lower production levels",
+                "High prices for consumers",
+                "Benefit to society",
+                "A cost imposed on third parties without compensation"
+              ],
+              "id": "economics_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a positive externality?",
+              "answer": "A benefit received by third parties without paying",
+              "explain": "Education benefits society beyond the student. A vaccinated person protects others. Positive externalities are free benefits to society.",
+              "choices": [
+                "When everyone buys the same product",
+                "When production increases prices",
+                "A benefit received by third parties without paying",
+                "A high tax burden"
+              ],
+              "id": "economics_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is pollution an example of market failure?",
+              "answer": "The price of goods does not include pollution costs; society pays, not the producer",
+              "explain": "Markets work when prices reflect all costs. Pollution is not priced in, so too much is produced, harming society.",
+              "choices": [
+                "Pollution does not exist in markets",
+                "Markets always price pollution",
+                "Pollution only affects wealthy people",
+                "The price of goods does not include pollution costs; society pays, not the producer"
+              ],
+              "id": "economics_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can government address negative externalities?",
+              "answer": "Tax or regulate the polluting activity to reduce it",
+              "explain": "A tax on pollution makes producers pay for the harm, which internalizes the cost. Regulations limit the activity directly.",
+              "choices": [
+                "Only ask polluters nicely",
+                "Government has no role",
+                "Ignore them and let markets decide",
+                "Tax or regulate the polluting activity to reduce it"
+              ],
+              "id": "economics_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

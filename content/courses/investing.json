@@ -1,0 +1,904 @@
+{
+  "id": "investing",
+  "name": "Investing",
+  "category": "skills",
+  "icon": "fa-solid fa-chart-line",
+  "level": "How Markets Work",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Stocks and Ownership",
+      "tip": "A stock is a share of ownership in a company. When you buy stock, you own a tiny piece of that business and can benefit if it grows in value. Stocks are bought and sold on exchanges where thousands of investors trade daily.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What a Stock Represents",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does owning a stock mean?",
+              "answer": "You own a small percentage of a company",
+              "explain": "A stock is a unit of ownership. If a company has 1,000,000 shares and you own 1,000 shares, you own 0.1% of that company.",
+              "choices": [
+                "You loaned money to the company",
+                "You are guaranteed a fixed return",
+                "You own a small percentage of a company",
+                "You work for the company"
+              ],
+              "id": "investing_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'share'?",
+              "answer": "One unit of ownership in a company",
+              "explain": "A share is the basic unit you buy and sell. Companies divide ownership into many shares to allow investors to own any sized piece.",
+              "choices": [
+                "A company document",
+                "A loan agreement",
+                "A fixed payment from the company",
+                "One unit of ownership in a company"
+              ],
+              "id": "investing_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a company is worth 100 million dollars and has 10 million shares, what is one share worth?",
+              "answer": "10 dollars",
+              "explain": "Dividing total company value by share count gives the price per share. 100,000,000 / 10,000,000 = 10 dollars per share.",
+              "choices": [
+                "10 dollars",
+                "100 dollars",
+                "1 dollar",
+                "5 dollars"
+              ],
+              "id": "investing_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to your share of ownership when a company issues more shares?",
+              "answer": "Your percentage ownership decreases",
+              "explain": "If a company issues more shares, the total number increases. Your fixed number of shares now represents a smaller percentage of the whole.",
+              "choices": [
+                "Your percentage ownership stays the same",
+                "Your percentage ownership decreases",
+                "You automatically receive more shares",
+                "Your percentage ownership increases"
+              ],
+              "id": "investing_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main reason people buy stocks?",
+              "answer": "Hope that the company grows and the stock value increases",
+              "explain": "Investors buy stocks expecting the company to grow, increase profits, and become more valuable. This increases the stock price and investor wealth.",
+              "choices": [
+                "Hope that the company grows and the stock value increases",
+                "Companies require investors to buy shares",
+                "Stocks guarantee a specific return",
+                "To avoid paying income tax"
+              ],
+              "id": "investing_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Stock Exchanges and Prices",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a stock exchange?",
+              "answer": "A marketplace where stocks are bought and sold between investors",
+              "explain": "Stock exchanges allow buyers and sellers to meet and trade. The price changes as supply and demand shift.",
+              "choices": [
+                "A bank that issues stocks",
+                "A government agency",
+                "The company's main office",
+                "A marketplace where stocks are bought and sold between investors"
+              ],
+              "id": "investing_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does a stock price change?",
+              "answer": "Supply and demand: more buyers than sellers drives price up",
+              "explain": "Stock prices move second-to-second based on how many people want to buy versus sell. More demand pushes price up; more selling pressure pushes it down.",
+              "choices": [
+                "It stays fixed once the stock launches",
+                "The company decides to change it",
+                "Government regulators set prices",
+                "Supply and demand: more buyers than sellers drives price up"
+              ],
+              "id": "investing_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you buy a stock at 50 dollars and it rises to 60 dollars, how much profit do you have per share?",
+              "answer": "10 dollars",
+              "explain": "Profit is the selling price minus the buying price. 60 - 50 = 10 dollars of profit per share.",
+              "choices": [
+                "60 dollars",
+                "50 dollars",
+                "10 dollars",
+                "5 dollars"
+              ],
+              "id": "investing_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a stock to be 'volatile'?",
+              "answer": "Its price swings up and down frequently and by large amounts",
+              "explain": "Volatile stocks have big price swings. A stable stock moves little from day to day, while a volatile stock can move a lot in a short time.",
+              "choices": [
+                "It pays dividends",
+                "It only goes up",
+                "Its price swings up and down frequently and by large amounts",
+                "It never changes in value"
+              ],
+              "id": "investing_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you buy 100 shares at 30 dollars per share, how much money do you spend?",
+              "answer": "3,000 dollars",
+              "explain": "100 shares times 30 dollars per share equals 3,000 dollars. Multiply share count by price per share to get total cost.",
+              "choices": [
+                "3,000 dollars",
+                "30,000 dollars",
+                "1,500 dollars",
+                "300 dollars"
+              ],
+              "id": "investing_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Bonds and Lending",
+      "tip": "A bond is a loan you make to a company or government. They borrow your money, promise to pay interest, and return your original amount at maturity. Bonds tend to be less volatile than stocks, but they also tend to offer lower potential returns.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "How Bonds Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a bond?",
+              "answer": "A loan where you lend money and receive interest payments",
+              "explain": "A bond is an IOU. You lend money, the borrower pays you interest regularly, and returns your principal when the bond matures.",
+              "choices": [
+                "A savings certificate",
+                "An ownership stake in a company",
+                "A loan where you lend money and receive interest payments",
+                "A bank account"
+              ],
+              "id": "investing_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Who can issue bonds?",
+              "answer": "Companies and governments seeking to borrow money",
+              "explain": "Bonds are issued by entities that need to raise money. A company might issue a bond to fund expansion; a government might issue a bond to finance infrastructure.",
+              "choices": [
+                "Companies and governments seeking to borrow money",
+                "Stock exchanges",
+                "Only rich individuals",
+                "Only banks"
+              ],
+              "id": "investing_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'face value' or 'principal' of a bond?",
+              "answer": "The amount of money you lent, returned at maturity",
+              "explain": "If you buy a 1,000 dollar bond, the face value is 1,000. That is what the borrower returns when the bond matures (reaches its end date).",
+              "choices": [
+                "The yearly percentage return",
+                "The amount of money you lent, returned at maturity",
+                "The price you pay to buy the bond",
+                "The interest payment you receive"
+              ],
+              "id": "investing_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'maturity' for a bond?",
+              "answer": "The date when the borrower returns your principal",
+              "explain": "A bond has a maturity date set when it is issued. At that date, the borrower repays your full original amount. Until then, you receive interest payments.",
+              "choices": [
+                "How long you own the bond",
+                "The date the bond is issued",
+                "The date when the borrower returns your principal",
+                "The interest payment schedule"
+              ],
+              "id": "investing_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you own a 1,000 dollar bond with a 3% annual interest rate, how much interest do you receive each year?",
+              "answer": "30 dollars",
+              "explain": "Interest is face value times rate. 1,000 * 0.03 = 30 dollars per year. This is paid to you while you own the bond.",
+              "choices": [
+                "10 dollars",
+                "300 dollars",
+                "30 dollars",
+                "3 dollars"
+              ],
+              "id": "investing_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Bond Risk and Returns",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between a stock and a bond?",
+              "answer": "A stock is ownership; a bond is a loan",
+              "explain": "Stock means you own part of a company and share in profits. A bond means you lent money and receive fixed interest payments.",
+              "choices": [
+                "A stock is ownership; a bond is a loan",
+                "Both are the same thing",
+                "A bond is ownership; a stock is a loan",
+                "Stocks only trade on exchanges"
+              ],
+              "id": "investing_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Generally, which is riskier: stocks or bonds?",
+              "answer": "Stocks are riskier; bonds are more stable",
+              "explain": "Bond payments are set in advance, and if the borrower stays sound you get your principal back. Stock prices have no such promise, so they tend to be less stable.",
+              "choices": [
+                "Both carry equal risk",
+                "Stocks are riskier; bonds are more stable",
+                "Bonds are riskier",
+                "Risk depends only on the price"
+              ],
+              "id": "investing_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a bond issuer has 'poor credit'?",
+              "answer": "They might not pay the interest or return your principal",
+              "explain": "Poor credit means a history of failing to pay debts on time. Investors worry the borrower might default on the bond.",
+              "choices": [
+                "They might not pay the interest or return your principal",
+                "The bond price will always go up",
+                "The bond matures immediately",
+                "The bond offers no interest"
+              ],
+              "id": "investing_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might an investor choose a bond over a stock?",
+              "answer": "Bonds offer stable, predictable income with lower risk",
+              "explain": "Bonds pay fixed interest and are typically lower risk. Stocks are volatile but offer higher potential returns. Different investors have different needs.",
+              "choices": [
+                "Bonds always earn more profit",
+                "Bonds offer stable, predictable income with lower risk",
+                "Stocks are no longer available",
+                "Bonds are issued only once per year"
+              ],
+              "id": "investing_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a bond issuer goes bankrupt, what happens to your bond?",
+              "answer": "You might lose part or all of your investment",
+              "explain": "If the borrower cannot pay, you may not receive interest or your principal back. This is why credit quality matters for bonds.",
+              "choices": [
+                "You might lose part or all of your investment",
+                "You become the owner of the company",
+                "The government replaces the money",
+                "You automatically receive full payment"
+              ],
+              "id": "investing_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Risk and Return",
+      "tip": "Risk is the chance you lose money. Higher potential returns usually come with higher risk. Risk comes in many forms: market volatility, company failure, inflation. Risk tolerance and time horizon are the two ideas people use to think about how much risk fits a goal.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Understanding Investment Risk",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is investment risk?",
+              "answer": "The chance that your investment loses value or you lose money",
+              "explain": "Risk means uncertainty. You might gain or lose. A truly guaranteed return would carry no risk, while a volatile stock carries a lot.",
+              "choices": [
+                "The chance that your investment loses value or you lose money",
+                "Not checking your account",
+                "Selling at a loss intentionally",
+                "Owning too many shares"
+              ],
+              "id": "investing_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between risk and potential return?",
+              "answer": "Higher risk investments offer higher potential returns",
+              "explain": "To attract investors to risky investments, they must offer the possibility of bigger gains. Safe investments offer smaller returns.",
+              "choices": [
+                "No relationship exists",
+                "Higher risk investments offer higher potential returns",
+                "Higher risk means lower returns",
+                "Risk and return are the same thing"
+              ],
+              "id": "investing_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You invest 1,000 dollars. The investment returns 10% in year one. How much do you have?",
+              "answer": "1,100 dollars",
+              "explain": "1,000 times 1.10 (meaning 110%) equals 1,100. A 10% return adds 100 dollars to your original 1,000.",
+              "choices": [
+                "10 dollars",
+                "1,010 dollars",
+                "1,100 dollars",
+                "1,090 dollars"
+              ],
+              "id": "investing_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is volatility?",
+              "answer": "How much an investment's price swings up and down",
+              "explain": "Volatile investments jump around in value. Stable investments move less. High volatility means high uncertainty and high risk.",
+              "choices": [
+                "The interest rate",
+                "The total return over time",
+                "The company's profit",
+                "How much an investment's price swings up and down"
+              ],
+              "id": "investing_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do investors demand higher returns for riskier investments?",
+              "answer": "To compensate for the higher chance of loss",
+              "explain": "If an investment has a 50% chance of losing money, investors need the possibility of large gains to justify taking that risk.",
+              "choices": [
+                "To compensate for the higher chance of loss",
+                "There is no reason",
+                "Because it is more fun",
+                "Because the company is newer"
+              ],
+              "id": "investing_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Risk Tolerance and Time Horizon",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'risk tolerance'?",
+              "answer": "How much investment volatility you can handle emotionally and financially",
+              "explain": "Risk tolerance is personal. Some people sleep fine while stocks drop 50%; others panic. Your tolerance shapes your investment choices.",
+              "choices": [
+                "The government's risk limit",
+                "The maximum loss a company can have",
+                "How much investment volatility you can handle emotionally and financially",
+                "The stock market's riskiest investment"
+              ],
+              "id": "investing_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does time horizon affect investment risk?",
+              "answer": "A longer horizon gives more time to ride out downturns",
+              "explain": "If money is needed in 2 years, a drop can hurt. With 30 years there is more time for prices to recover from downturns, though recovery is never guaranteed.",
+              "choices": [
+                "Only age determines risk tolerance",
+                "Shorter time horizons make risk matter less",
+                "A longer horizon gives more time to ride out downturns",
+                "Time horizon has no effect on risk"
+              ],
+              "id": "investing_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "An investor will need a sum of money in 1 year. Which concern matters most for that sum?",
+              "answer": "Avoiding large losses, since there is little time to recover",
+              "explain": "With a 1-year deadline, a large loss may not have time to recover, so stability matters more than chasing high returns.",
+              "choices": [
+                "Avoiding large losses, since there is little time to recover",
+                "Finding the highest-risk option possible",
+                "Owning as many stocks as possible",
+                "Matching what the crowd does"
+              ],
+              "id": "investing_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A sum is held for 40 years before it is needed. What does the long horizon change?",
+              "answer": "There is more time to ride out downturns",
+              "explain": "Over 40 years, short-term drops have more time to recover, so they matter less to the end result. Risk does not disappear and recovery is not guaranteed.",
+              "choices": [
+                "It guarantees gains",
+                "There is more time to ride out downturns",
+                "It makes the investment stop fluctuating",
+                "It removes all risk"
+              ],
+              "id": "investing_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which idea is central to thinking about risk?",
+              "answer": "Match your investments to your time horizon and risk tolerance",
+              "explain": "Risk is judged against two personal factors: when the money is needed and how much volatility the holder can bear.",
+              "choices": [
+                "Copy what other people do",
+                "Buy only the highest-returning investment",
+                "Match your investments to your time horizon and risk tolerance",
+                "Never take any risk"
+              ],
+              "id": "investing_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Diversification",
+      "tip": "Diversification means spreading your money across different types of investments so that one bad investment does not ruin your whole portfolio. A diverse portfolio reduces overall risk without giving up as much potential return.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "The Benefits of Spreading Risk",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is diversification?",
+              "answer": "Spreading investments across different types of assets to reduce risk",
+              "explain": "Instead of putting all your money in one stock, you own multiple stocks, bonds, and other assets. If one fails, others might succeed.",
+              "choices": [
+                "Buying as much as possible of one stock",
+                "Changing your investments every day",
+                "Spreading investments across different types of assets to reduce risk",
+                "Investing only in bonds"
+              ],
+              "id": "investing_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You invest 10,000 dollars entirely in one company stock. The company fails. What happens?",
+              "answer": "You lose most or all of your 10,000 dollars",
+              "explain": "With no diversification, one failure means total loss. This is why 'do not put all eggs in one basket' is investing wisdom.",
+              "choices": [
+                "Your loss is limited to 1,000 dollars",
+                "You lose most or all of your 10,000 dollars",
+                "You still earn profit because others own the stock",
+                "The government replaces the money"
+              ],
+              "id": "investing_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A portfolio of 10,000 dollars is split equally among 10 stocks. One stock fails completely. What is the likely outcome?",
+              "answer": "You lose roughly 1,000 dollars, but keep the other 9,000 dollars",
+              "explain": "Each stock is 10% of your portfolio. One failure costs you about 10%, not 100%. Diversification limits damage.",
+              "choices": [
+                "You lose roughly 1,000 dollars, but keep the other 9,000 dollars",
+                "You lose all 10,000 dollars",
+                "Nothing happens to your money",
+                "You gain money from the failure"
+              ],
+              "id": "investing_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What asset classes can you diversify across?",
+              "answer": "Stocks, bonds, real estate, and cash are all different classes",
+              "explain": "Asset classes are different types of investments. Holding multiple classes means your money is not all affected the same way by market changes.",
+              "choices": [
+                "Real estate only",
+                "Only international stocks",
+                "Only different stocks",
+                "Stocks, bonds, real estate, and cash are all different classes"
+              ],
+              "id": "investing_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Does diversification guarantee you will not lose money?",
+              "answer": "No, but it reduces the damage from any single investment failure",
+              "explain": "Diversification does not prevent all losses, but it prevents one bad investment from destroying your entire portfolio.",
+              "choices": [
+                "Only bonds guarantee safety",
+                "Yes, diversification guarantees a profit",
+                "No, but it reduces the damage from any single investment failure",
+                "Diversification has no effect"
+              ],
+              "id": "investing_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Correlation and Balance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if two investments are 'positively correlated'?",
+              "answer": "They tend to move in the same direction",
+              "explain": "If stocks A and B are positively correlated, when one goes up, the other usually goes up too. Poor diversification if both are positively correlated.",
+              "choices": [
+                "One is a stock and one is a bond",
+                "They are from the same company",
+                "They always move oppositely",
+                "They tend to move in the same direction"
+              ],
+              "id": "investing_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which makes for better diversification?",
+              "answer": "Owning investments that do not all move together",
+              "explain": "If you own assets that are not perfectly correlated, some will gain when others lose, smoothing out your overall results.",
+              "choices": [
+                "Owning investments that do not all move together",
+                "Changing investments daily",
+                "Holding only bonds",
+                "Owning only one type of stock"
+              ],
+              "id": "investing_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you own mostly tech stocks and the tech sector crashes, what happens?",
+              "answer": "Most of your portfolio loses value because it is concentrated in one sector",
+              "explain": "Holding mostly one sector means one bad sector affects most of your money. Diversification spreads across sectors.",
+              "choices": [
+                "Tech stocks never crash",
+                "Only one stock drops",
+                "Your profit increases",
+                "Most of your portfolio loses value because it is concentrated in one sector"
+              ],
+              "id": "investing_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do some investors limit how much goes into any single holding?",
+              "answer": "So one failure cannot do outsized damage to the whole portfolio",
+              "explain": "If one position is very large, its failure can wreck the whole portfolio. Capping position size spreads that risk.",
+              "choices": [
+                "So one failure cannot do outsized damage to the whole portfolio",
+                "To pay less in fees",
+                "Because large holdings cannot be sold",
+                "Because rules require equal amounts in every holding"
+              ],
+              "id": "investing_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'rebalancing'?",
+              "answer": "Adjusting your portfolio back to your target allocation when prices shift",
+              "explain": "If one holding rises from 10% to 15% of a portfolio, rebalancing moves it back toward the target, which keeps the intended level of risk.",
+              "choices": [
+                "Selling everything at once",
+                "Adjusting your portfolio back to your target allocation when prices shift",
+                "Buying only stocks",
+                "Never changing your portfolio"
+              ],
+              "id": "investing_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Index Funds and Stock Picking",
+      "tip": "An index fund owns shares in many companies, tracking a market index. Picking individual stocks means choosing specific companies. Studies often find that many active stock pickers fail to beat a matching index fund over long periods, mostly because of fees and costs.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "How Index Funds Work",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an index fund?",
+              "answer": "A fund that owns shares in many companies, tracking a market index",
+              "explain": "An index fund holds stock in the many companies of a market index. It automatically gives broad diversification.",
+              "choices": [
+                "A fund that owns shares in many companies, tracking a market index",
+                "A loan to multiple companies",
+                "A fund managed by a single person picking stocks",
+                "A type of bond"
+              ],
+              "id": "investing_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean for a fund to 'track an index'?",
+              "answer": "Own the same stocks in the same proportions as the index",
+              "explain": "An index fund holds the same stocks in about the same proportions as the index, so its results closely follow the index.",
+              "choices": [
+                "Avoid the stocks in the index",
+                "Beat the index by picking better stocks",
+                "Own the same stocks in the same proportions as the index",
+                "Only buy the worst-performing stocks"
+              ],
+              "id": "investing_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a market index?",
+              "answer": "A measured basket of stocks used to represent a market",
+              "explain": "An index measures how a chosen group of stocks performs as a whole, which is why index funds can be built to follow one.",
+              "choices": [
+                "A type of bond",
+                "A mutual fund manager",
+                "A measured basket of stocks used to represent a market",
+                "A government savings account"
+              ],
+              "id": "investing_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the advantages of index funds?",
+              "answer": "Low fees, broad diversification, and you do not need to pick stocks",
+              "explain": "Index funds are cheap to run, automatically diversified across many companies, and take the guesswork out of investing.",
+              "choices": [
+                "They guarantee beating the market",
+                "They never lose value",
+                "Low fees, broad diversification, and you do not need to pick stocks",
+                "Guaranteed high returns"
+              ],
+              "id": "investing_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a market index rises 8% in a year and you own a fund that tracks it, what do you earn?",
+              "answer": "Approximately 8% minus fund fees",
+              "explain": "A tracking fund earns roughly the index return. Fees are typically low for index funds, so the result is slightly under 8%.",
+              "choices": [
+                "Exactly 8%, no fees",
+                "Always 10%",
+                "Depends on what the manager chooses",
+                "Approximately 8% minus fund fees"
+              ],
+              "id": "investing_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Individual Stock Picking",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to 'pick stocks'?",
+              "answer": "Choose specific company stocks yourself rather than own an index fund",
+              "explain": "Stock picking means researching companies and deciding which ones to buy. You hope your picks outperform the overall market.",
+              "choices": [
+                "Follow the government's recommendations",
+                "Own only one stock",
+                "Buy bonds only",
+                "Choose specific company stocks yourself rather than own an index fund"
+              ],
+              "id": "investing_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Over long periods, what do studies commonly find about active managers versus a matching index fund?",
+              "answer": "Most active managers fail to beat the index after fees",
+              "explain": "A common finding is that most active managers trail a comparable index fund over long periods once fees are counted. Few beat it consistently.",
+              "choices": [
+                "Active managers always beat it",
+                "Exactly half beat it",
+                "Most active managers fail to beat the index after fees",
+                "Nearly all of them beat it"
+              ],
+              "id": "investing_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do many stock pickers fail to beat index funds?",
+              "answer": "High fees, trading costs, and difficulty timing the market correctly",
+              "explain": "Professional managers charge fees that eat into returns. Trading frequently costs money. And predicting which stocks will win is hard.",
+              "choices": [
+                "Index funds are illegal",
+                "Professional managers are lazy",
+                "Stock pickers never fail",
+                "High fees, trading costs, and difficulty timing the market correctly"
+              ],
+              "id": "investing_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is stock picking impossible to do successfully?",
+              "answer": "Some people pick winning stocks, but results vary and luck plays a role",
+              "explain": "A few stock pickers do outperform the market, but luck plays a large role, and it is hard to know ahead of time who will win.",
+              "choices": [
+                "Yes, no one can ever pick winners",
+                "Index funds always outperform all stocks",
+                "Professional managers always win",
+                "Some people pick winning stocks, but results vary and luck plays a role"
+              ],
+              "id": "investing_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'core and satellite' approach?",
+              "answer": "Holding broad index funds as the core, with a small portion for individual picks",
+              "explain": "Core and satellite splits a portfolio into a broad, diversified core and a smaller part used for individual picks.",
+              "choices": [
+                "Following tips from social media",
+                "Picking stocks exclusively and never holding index funds",
+                "Holding only bonds",
+                "Holding broad index funds as the core, with a small portion for individual picks"
+              ],
+              "id": "investing_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Time and Compounding",
+      "tip": "Compounding means your returns earn returns. Money grows exponentially over decades, not linearly. Time and staying invested are what give compounding its power.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "The Power of Compounding",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is compound interest?",
+              "answer": "Earning interest on your interest, creating exponential growth",
+              "explain": "Year 1: you earn interest on your principal. Year 2: you earn interest on principal plus year 1's interest. The growth accelerates.",
+              "choices": [
+                "Interest that decreases over time",
+                "Simple interest paid once",
+                "Earning interest on your interest, creating exponential growth",
+                "A fixed payment"
+              ],
+              "id": "investing_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You invest 1,000 dollars at 10% annual return. After 1 year, how much do you have?",
+              "answer": "1,100 dollars",
+              "explain": "1,000 plus 10% of 1,000 equals 1,000 plus 100 equals 1,100 dollars.",
+              "choices": [
+                "1,010 dollars",
+                "1,100 dollars",
+                "1,111 dollars",
+                "1,000 dollars"
+              ],
+              "id": "investing_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After year 1 at 10% you have 1,100 dollars. After year 2 at 10%, how much do you have?",
+              "answer": "1,210 dollars",
+              "explain": "1,100 plus 10% of 1,100 equals 1,100 plus 110 equals 1,210. Your interest earned interest.",
+              "choices": [
+                "1,110 dollars",
+                "1,300 dollars",
+                "1,200 dollars",
+                "1,210 dollars"
+              ],
+              "id": "investing_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You start with 5,000 dollars earning 7% per year. Which timeline shows the biggest growth?",
+              "answer": "30 years",
+              "explain": "Compound growth accelerates. At 7% a year, 5,000 dollars becomes about 9,800 after 10 years and about 38,000 after 30 years.",
+              "choices": [
+                "20 years",
+                "1 year",
+                "10 years",
+                "30 years"
+              ],
+              "id": "investing_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Rule of 72'?",
+              "answer": "Divide 72 by your annual return percentage to estimate how long to double your money",
+              "explain": "At 8% annual return, 72/8 equals 9 years to double. At 6%, 72/6 equals 12 years. It is a quick way to think about compounding.",
+              "choices": [
+                "Your money doubles in exactly 72 years",
+                "Divide 72 by your annual return percentage to estimate how long to double your money",
+                "Never relevant to real investing",
+                "Divide 100 by your return to find total profit"
+              ],
+              "id": "investing_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Starting Early and Long-term Strategy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why does starting to invest early matter so much?",
+              "answer": "You give compound interest decades to work, multiplying your money many times",
+              "explain": "At a steady 8% a year, an extra decade of compounding multiplies the final amount by about 2.2 (1.08 to the 10th power). Earlier money has longer to earn returns on returns.",
+              "choices": [
+                "Later investors always catch up",
+                "Early investors guarantee higher returns",
+                "Age has no effect on returns",
+                "You give compound interest decades to work, multiplying your money many times"
+              ],
+              "id": "investing_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You invest 100 dollars at age 25, earning 8% per year until age 65. Approximately how much do you have?",
+              "answer": "About 2,200 dollars",
+              "explain": "100 times 1.08 to the 40th power is about 2,172. As a check, 72/8 = 9 years per doubling, so 40 years is a bit over 4 doublings, about 21 times the start.",
+              "choices": [
+                "About 800 dollars",
+                "About 320 dollars",
+                "About 2,200 dollars",
+                "About 5,000 dollars"
+              ],
+              "id": "investing_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which statement about long-term investing is most accurate?",
+              "answer": "Short-term volatility matters less when you have decades to recover",
+              "explain": "A crash early in a 40-year span has many years to recover or be offset. It is a setback, not necessarily the end result.",
+              "choices": [
+                "Time does not affect investment returns",
+                "Markets never recover from crashes",
+                "Volatility matters the same regardless of time horizon",
+                "Short-term volatility matters less when you have decades to recover"
+              ],
+              "id": "investing_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is dollar-cost averaging?",
+              "answer": "Investing the same amount regularly regardless of the stock price",
+              "explain": "Instead of trying to time the market, you invest a fixed amount every month. You buy more shares when prices are low, fewer when high.",
+              "choices": [
+                "Investing all money at once",
+                "Investing only when you think the price is lowest",
+                "Investing the same amount regularly regardless of the stock price",
+                "Never investing in stocks"
+              ],
+              "id": "investing_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which factors make compounding work harder?",
+              "answer": "More time and returns left invested",
+              "explain": "Compounding grows with time and with returns staying invested to earn further returns. Withdrawals interrupt it and timing is not required.",
+              "choices": [
+                "More time and returns left invested",
+                "Frequent withdrawals",
+                "Perfect market timing",
+                "Only large deposits"
+              ],
+              "id": "investing_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
