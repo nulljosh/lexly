@@ -14,7 +14,7 @@ struct CatalogView: View {
     /// (js/lingo-app.js). Alphabetical sorting put `books` at the top, so a language
     /// app opened as a list of book summaries -- which is also what a reviewer saw.
     private static let categoryOrder = [
-        "languages", "school", "math", "science", "programming", "engineering", "skills", "computers", "books",
+        "languages", "school", "math", "science", "programming", "computer_science", "engineering", "skills", "computers", "books",
     ]
 
     private func orderedCategoryKeys(_ catalog: Catalog) -> [String] {

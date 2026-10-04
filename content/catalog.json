@@ -119,7 +119,7 @@
       ]
     },
     "programming": {
-      "title": "Choose a programming or computer skill",
+      "title": "Choose a programming language",
       "subjects": [
         {
           "id": "javascript",
@@ -171,41 +171,6 @@
           "packPath": "/content/courses/sql.json"
         },
         {
-          "id": "computers",
-          "name": "Computer Basics",
-          "icon": "fa-solid fa-computer",
-          "level": "Digital Literacy",
-          "packPath": "/content/courses/computers.json"
-        },
-        {
-          "id": "ai",
-          "name": "Artificial Intelligence",
-          "icon": "fa-solid fa-robot",
-          "level": "Machine Learning Basics",
-          "packPath": "/content/courses/ai.json"
-        },
-        {
-          "id": "reverse_engineering",
-          "name": "Reverse Engineering",
-          "icon": "fa-solid fa-magnifying-glass-chart",
-          "level": "Beginner to Intermediate",
-          "packPath": "/content/courses/reverse_engineering.json"
-        },
-        {
-          "id": "ios_internals",
-          "name": "iOS Internals & Jailbreaks",
-          "icon": "fa-solid fa-mobile-screen-button",
-          "level": "Intermediate",
-          "packPath": "/content/courses/ios_internals.json"
-        },
-        {
-          "id": "git_terminal",
-          "name": "Git and the Terminal",
-          "icon": "fa-solid fa-terminal",
-          "level": "Developer Essentials",
-          "packPath": "/content/courses/git_terminal.json"
-        },
-        {
           "id": "html_css",
           "name": "HTML and CSS",
           "icon": "fa-brands fa-html5",
@@ -218,27 +183,6 @@
           "icon": "fa-brands fa-swift",
           "level": "Apple Development",
           "packPath": "/content/courses/swift.json"
-        },
-        {
-          "id": "dsa",
-          "name": "Data Structures and Algorithms",
-          "icon": "fa-solid fa-diagram-project",
-          "level": "Computer Science Core",
-          "packPath": "/content/courses/dsa.json"
-        },
-        {
-          "id": "servers",
-          "name": "Servers",
-          "icon": "fa-solid fa-server",
-          "level": "How the Backend Works",
-          "packPath": "/content/courses/servers.json"
-        },
-        {
-          "id": "databases",
-          "name": "Databases",
-          "icon": "fa-solid fa-database",
-          "level": "Storing Data",
-          "packPath": "/content/courses/databases.json"
         },
         {
           "id": "c_lang",
@@ -400,6 +344,67 @@
           "icon": "fa-solid fa-building-columns",
           "level": "Business Computing",
           "packPath": "/content/courses/cobol.json"
+        }
+      ]
+    },
+    "computer_science": {
+      "title": "Choose a computer science topic",
+      "subjects": [
+        {
+          "id": "computers",
+          "name": "Computer Basics",
+          "icon": "fa-solid fa-computer",
+          "level": "Digital Literacy",
+          "packPath": "/content/courses/computers.json"
+        },
+        {
+          "id": "ai",
+          "name": "Artificial Intelligence",
+          "icon": "fa-solid fa-robot",
+          "level": "Machine Learning Basics",
+          "packPath": "/content/courses/ai.json"
+        },
+        {
+          "id": "git_terminal",
+          "name": "Git and the Terminal",
+          "icon": "fa-solid fa-terminal",
+          "level": "Developer Essentials",
+          "packPath": "/content/courses/git_terminal.json"
+        },
+        {
+          "id": "servers",
+          "name": "Servers",
+          "icon": "fa-solid fa-server",
+          "level": "How the Backend Works",
+          "packPath": "/content/courses/servers.json"
+        },
+        {
+          "id": "databases",
+          "name": "Databases",
+          "icon": "fa-solid fa-database",
+          "level": "Storing Data",
+          "packPath": "/content/courses/databases.json"
+        },
+        {
+          "id": "dsa",
+          "name": "Data Structures and Algorithms",
+          "icon": "fa-solid fa-diagram-project",
+          "level": "Computer Science Core",
+          "packPath": "/content/courses/dsa.json"
+        },
+        {
+          "id": "reverse_engineering",
+          "name": "Reverse Engineering",
+          "icon": "fa-solid fa-magnifying-glass-chart",
+          "level": "Beginner to Intermediate",
+          "packPath": "/content/courses/reverse_engineering.json"
+        },
+        {
+          "id": "ios_internals",
+          "name": "iOS Internals & Jailbreaks",
+          "icon": "fa-solid fa-mobile-screen-button",
+          "level": "Intermediate",
+          "packPath": "/content/courses/ios_internals.json"
         },
         {
           "id": "operating_systems",
