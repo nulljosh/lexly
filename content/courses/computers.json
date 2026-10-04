@@ -116,7 +116,7 @@
               "type": "mathChoice",
               "question": "What is 'multitasking' on a computer?",
               "answer": "Running multiple programs at the same time",
-              "explain": "Multitasking means the computer runs multiple programs seemingly at once. The CPU actually switches between them so quickly it seems simultaneous.",
+              "explain": "Multitasking means the computer runs multiple programs seemingly at once. A single CPU core switches between them so quickly it seems simultaneous, and multi-core CPUs can truly run several at once.",
               "choices": [
                 "Stopping programs",
                 "One program at a time",
@@ -193,13 +193,13 @@
             {
               "type": "mathChoice",
               "question": "Why do computers use binary (0 and 1)?",
-              "answer": "Electricity naturally has two states: on and off",
-              "explain": "Electrical circuits are either conducting (on, represents 1) or not conducting (off, represents 0). This two-state system matches binary perfectly.",
+              "answer": "Two-state circuits are simple and reliable",
+              "explain": "Electronic circuits can reliably tell two states apart, such as high and low voltage, which map to 1 and 0. Telling ten states apart would be far less reliable.",
               "choices": [
-                "Electricity naturally has two states: on and off",
+                "Two-state circuits are simple and reliable",
                 "Mathematicians prefer it",
-                "It is easier to understand than decimal",
-                "It uses less energy"
+                "It is easier for people to read than decimal",
+                "Decimal cannot represent numbers"
               ],
               "id": "computers_u2l1_2"
             },
@@ -218,9 +218,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is a 'kilobyte' (KB)?",
+              "question": "In the binary convention, how many bytes make a 'kilobyte' (KB)?",
               "answer": "1,024 bytes",
-              "explain": "A kilobyte is approximately 1,000 bytes (exactly 1,024). Storage sizes are measured in KB, MB, GB, and TB.",
+              "explain": "In the binary convention a kilobyte is 1,024 bytes (2 to the power of 10). Strictly, the SI kilobyte is 1,000 bytes and the binary unit is called a kibibyte (KiB), but KB is often used for 1,024.",
               "choices": [
                 "100 bytes",
                 "1,024 bytes",
@@ -265,7 +265,7 @@
               "type": "mathChoice",
               "question": "What is Unicode?",
               "answer": "A character encoding system supporting characters from all world languages",
-              "explain": "Unicode extends ASCII to support over 100,000 characters, including emoji, Chinese, Arabic, and every other writing system.",
+              "explain": "Unicode extends ASCII to cover well over 100,000 characters, including emoji and most of the world's writing systems, such as Chinese and Arabic.",
               "choices": [
                 "A single-language text system",
                 "A programming language",
@@ -343,7 +343,7 @@
               "type": "mathChoice",
               "question": "What is an SSD?",
               "answer": "Solid State Drive, storage with no moving parts",
-              "explain": "An SSD uses flash memory (like a USB stick) to store data. It is faster and more reliable than mechanical hard drives.",
+              "explain": "An SSD uses flash memory (like a USB stick) to store data. It is usually much faster than a mechanical hard drive and has no parts that spin or move.",
               "choices": [
                 "A type of RAM",
                 "A slow storage device",
@@ -356,7 +356,7 @@
               "type": "mathChoice",
               "question": "What is an HDD?",
               "answer": "Hard Disk Drive, storage using rotating spinning disks",
-              "explain": "An HDD uses spinning magnetic disks and a read/write head, like a record player. They are slower than SSDs but cheaper.",
+              "explain": "An HDD uses spinning magnetic disks and a read/write head, like a record player. They are usually slower than SSDs but cheaper per gigabyte.",
               "choices": [
                 "High Definition Display",
                 "Hard Disk Drive, storage using rotating spinning disks",
@@ -563,7 +563,7 @@
               "type": "mathChoice",
               "question": "What is a 'file extension'?",
               "answer": "The letters after the dot in a filename, showing the file type",
-              "explain": "File extensions tell the OS (and you) what kind of file it is. .txt is plain text, .jpg is an image, .mp3 is audio. The extension determines which programs can open it.",
+              "explain": "File extensions hint to the OS (and you) what kind of file it is. .txt is plain text, .jpg is an image, .mp3 is audio. The extension usually decides which program opens it by default.",
               "choices": [
                 "The file location",
                 "The letters after the dot in a filename, showing the file type",
@@ -576,7 +576,7 @@
               "type": "mathChoice",
               "question": "What is a 'file path'?",
               "answer": "The address that shows where a file is located",
-              "explain": "A file path shows the complete location of a file, starting from the root and showing each folder. Example: /Users/joshua/Documents/file.txt",
+              "explain": "A file path shows the complete location of a file, starting from the root and showing each folder. Example: /Users/sam/Documents/notes.txt",
               "choices": [
                 "The file size",
                 "The address that shows where a file is located",
@@ -641,7 +641,7 @@
               "type": "mathChoice",
               "question": "What does 'IPv4' mean?",
               "answer": "Internet Protocol version 4, the older address format",
-              "explain": "IPv4 addresses have four numbers (like 192.168.1.1). There are only 4 billion possible IPv4 addresses, so IPv6 (with many more) is being adopted.",
+              "explain": "IPv4 addresses have four numbers (like 192.168.1.1). There are only about 4.3 billion possible IPv4 addresses, so IPv6, which has vastly more, was created to replace it.",
               "choices": [
                 "A type of firewall",
                 "A security protocol",
@@ -754,7 +754,7 @@
     {
       "id": "u6",
       "title": "Security Basics",
-      "tip": "Cyber security protects your data and devices from attackers. Strong passwords, two-factor authentication, and awareness of phishing are essential. Never share passwords or personal information online.",
+      "tip": "Cyber security protects your data and devices from attackers. Strong passwords, two-factor authentication, and awareness of phishing are essential. Be careful about who you share passwords and personal information with.",
       "lessons": [
         {
           "id": "u6l1",
@@ -763,10 +763,10 @@
             {
               "type": "mathChoice",
               "question": "What makes a strong password?",
-              "answer": "Long, random, with mix of upper, lower, numbers, symbols",
-              "explain": "A strong password is at least 12 characters and uses uppercase, lowercase, numbers, and symbols. Avoid words, names, or patterns.",
+              "answer": "Long, random, and unique to that account",
+              "explain": "Length and unpredictability matter most. A long random string or passphrase that you use for only one account is far harder to guess than a name, word, or date.",
               "choices": [
-                "Long, random, with mix of upper, lower, numbers, symbols",
+                "Long, random, and unique to that account",
                 "Your pet's name",
                 "A simple word",
                 "Your birthday"
@@ -790,7 +790,7 @@
               "type": "mathChoice",
               "question": "What is 'two-factor authentication' (2FA)?",
               "answer": "A second verification method in addition to a password",
-              "explain": "2FA requires two proof of identity: something you know (password) and something you have (phone) or are (fingerprint). It greatly increases security.",
+              "explain": "2FA requires two different kinds of proof: something you know (password) plus something you have (phone) or are (fingerprint). It greatly increases security.",
               "choices": [
                 "A second verification method in addition to a password",
                 "A backup account",
@@ -803,7 +803,7 @@
               "type": "mathChoice",
               "question": "What is a 'password manager'?",
               "answer": "Software that securely stores and generates passwords",
-              "explain": "A password manager (like Bitwarden or 1Password) stores all your passwords encrypted. It generates strong passwords and autofills login forms.",
+              "explain": "A password manager stores all your passwords encrypted behind one master password. It generates strong passwords and autofills login forms.",
               "choices": [
                 "Software that securely stores and generates passwords",
                 "A notebook",
@@ -814,9 +814,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "Why should you never write passwords on paper or in unsecured notes?",
+              "question": "Why is leaving passwords on a sticky note by your screen risky?",
               "answer": "Anyone with physical access can see them",
-              "explain": "Written passwords can be found, photographed, or stolen. Use a password manager instead, which is encrypted.",
+              "explain": "A note in plain view can be read, photographed, or taken by anyone who can get near it. An encrypted password manager avoids that.",
               "choices": [
                 "It is illegal",
                 "Computers cannot read paper",
@@ -835,7 +835,7 @@
               "type": "mathChoice",
               "question": "What is 'phishing'?",
               "answer": "Fake messages tricking you into revealing personal information",
-              "explain": "Phishing emails pretend to be from banks, PayPal, or social media. They trick you into clicking links or entering passwords on fake websites.",
+              "explain": "Phishing messages pretend to be from banks, shops, or social media. They trick you into clicking links or entering passwords on fake websites.",
               "choices": [
                 "A type of fishing",
                 "A security feature",
@@ -874,7 +874,7 @@
               "type": "mathChoice",
               "question": "What is 'ransomware'?",
               "answer": "Malware that encrypts your files and demands payment to unlock them",
-              "explain": "Ransomware locks your files and demands a ransom. Do not pay; report it to police. Regular backups prevent total data loss.",
+              "explain": "Ransomware locks your files and demands a ransom for the key. Regular offline backups limit how much data is lost.",
               "choices": [
                 "A web filter",
                 "A firewall",
@@ -887,7 +887,7 @@
               "type": "mathChoice",
               "question": "What is 'spyware'?",
               "answer": "Malware that secretly monitors your activity and steals data",
-              "explain": "Spyware tracks your keystrokes, visits websites, steals passwords, and records what you do. Use antivirus software to detect and remove it.",
+              "explain": "Spyware can record your keystrokes, track the websites you visit, steal passwords, and log what you do. Security software can often detect and remove it.",
               "choices": [
                 "A firewall",
                 "A security camera",
