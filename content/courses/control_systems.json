@@ -1,0 +1,904 @@
+{
+  "id": "control_systems",
+  "name": "Control Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-sliders",
+  "level": "Feedback and Stability",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Open Loop vs Closed Loop",
+      "tip": "A control system tells a device what to do. Open loop systems just issue commands without checking results. Closed loop systems measure the output and adjust the input to reach a goal.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Open Loop Control",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an open loop control system?",
+              "answer": "A system that sends commands without measuring or adjusting based on the output",
+              "explain": "Open loop systems apply a fixed input and do not sense the result. A toaster set to 'medium' runs for a fixed time regardless of actual brownness.",
+              "choices": [
+                "A system that has no physical parts",
+                "A system that continuously measures its output",
+                "A system that sends commands without measuring or adjusting based on the output",
+                "A system that only works with electrical signals"
+              ],
+              "id": "control_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is an example of open loop control?",
+              "answer": "A washing machine running through a fixed cycle time",
+              "explain": "A washing machine runs for a set time regardless of how dirty the clothes are. It does not sense cleanliness and adjust.",
+              "choices": [
+                "A thermostat adjusting heating based on room temperature",
+                "A water heater holding tank temperature constant",
+                "A washing machine running through a fixed cycle time",
+                "A cruise control maintaining a car's speed"
+              ],
+              "id": "control_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a major disadvantage of open loop control?",
+              "answer": "It cannot correct for disturbances or changes in the environment",
+              "explain": "Without sensing feedback, an open loop system cannot detect or respond to unexpected changes, like wind affecting an airplane holding a heading.",
+              "choices": [
+                "It is too expensive to build",
+                "It always makes the system unstable",
+                "It cannot correct for disturbances or changes in the environment",
+                "It requires a computer to operate"
+              ],
+              "id": "control_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When can open loop control be a reasonable choice?",
+              "answer": "Because the process is simple and predictable, so a fixed command reliably gives the wanted result",
+              "explain": "If conditions are well known and disturbances are small, a fixed command is cheap and works well. A fixed-time toaster or sprinkler timer is a common case.",
+              "choices": [
+                "Because feedback is never possible in any device",
+                "Because open loop systems cannot be disturbed",
+                "Because open loop is always more accurate than closed loop",
+                "Because the process is simple and predictable, so a fixed command reliably gives the wanted result"
+              ],
+              "id": "control_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'disturbance' mean in control theory?",
+              "answer": "An unexpected change that affects the system output",
+              "explain": "A disturbance is any external change: wind pushing an aircraft, a load added to a motor, or a door opened in a heated room.",
+              "choices": [
+                "The feedback signal from a sensor",
+                "An unexpected change that affects the system output",
+                "A type of controller",
+                "The command input to the system"
+              ],
+              "id": "control_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Closed Loop Control",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a closed loop control system?",
+              "answer": "A system that measures output, compares it to a goal, and adjusts input to match the goal",
+              "explain": "Closed loop systems use feedback. A thermostat measures room temperature, compares it to the setpoint, and turns heat on or off to match.",
+              "choices": [
+                "A system that only uses mechanical parts",
+                "A system that runs at constant speed",
+                "A system that has no inputs or outputs",
+                "A system that measures output, compares it to a goal, and adjusts input to match the goal"
+              ],
+              "id": "control_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is an example of closed loop control?",
+              "answer": "A cruise control system adjusting engine power to maintain a constant speed",
+              "explain": "Cruise control measures vehicle speed and adjusts throttle to keep speed constant even on hills or with changing air resistance.",
+              "choices": [
+                "A cruise control system adjusting engine power to maintain a constant speed",
+                "A door opener that runs for a set time",
+                "A traffic light changing color at a fixed time",
+                "A car accelerating to 60 mph and staying there without any adjustments"
+              ],
+              "id": "control_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'setpoint' or 'reference' in a closed loop system?",
+              "answer": "The desired target value the system is trying to reach",
+              "explain": "The setpoint is the goal: a thermostat's setpoint is the desired room temperature, and a cruise control's setpoint is the desired speed.",
+              "choices": [
+                "The power supply voltage",
+                "The feedback sensor type",
+                "The desired target value the system is trying to reach",
+                "The actual measured value at any moment"
+              ],
+              "id": "control_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when the output differs from the setpoint?",
+              "answer": "The system detects the error and changes the control input to reduce it",
+              "explain": "If actual temperature is below setpoint, the system increases heat. If it is above, heat decreases. This is how feedback achieves goals.",
+              "choices": [
+                "The system turns off immediately",
+                "The setpoint changes automatically",
+                "The sensor stops working",
+                "The system detects the error and changes the control input to reduce it"
+              ],
+              "id": "control_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of closed loop control over open loop?",
+              "answer": "It can automatically correct for disturbances and maintain accuracy",
+              "explain": "Closed loop systems sense and adapt, so they handle unexpected changes. A thermostat holds temperature even if a window opens.",
+              "choices": [
+                "It costs less to build",
+                "It does not need any sensors",
+                "It has no moving parts",
+                "It can automatically correct for disturbances and maintain accuracy"
+              ],
+              "id": "control_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Feedback and Stability",
+      "tip": "Feedback is the signal that tells a control system how close it is to the goal. Negative feedback reduces error and improves stability. Positive feedback makes changes grow and can cause instability.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Negative Feedback",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is negative feedback in control systems?",
+              "answer": "Feedback that opposes the error and drives the system toward the setpoint",
+              "explain": "Negative feedback reduces the difference between actual and desired values. A thermostat that heats when cold is using negative feedback: it opposes the temperature error.",
+              "choices": [
+                "Feedback that makes errors larger",
+                "A signal that turns the system off",
+                "Feedback that opposes the error and drives the system toward the setpoint",
+                "A feedback signal that is always bad for the system"
+              ],
+              "id": "control_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does negative feedback improve system response?",
+              "answer": "It reduces steady-state error and helps the system reach and hold the setpoint",
+              "explain": "Negative feedback makes the system self-correcting. If the output drifts away from setpoint, feedback pushes it back.",
+              "choices": [
+                "It makes the system response slower",
+                "It increases overshoot",
+                "It prevents any control action",
+                "It reduces steady-state error and helps the system reach and hold the setpoint"
+              ],
+              "id": "control_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a home heating system, how is negative feedback achieved?",
+              "answer": "The thermostat senses temperature and turns heat on if too cold, off if too warm",
+              "explain": "The temperature measurement is fed back and compared to setpoint. When actual is below setpoint, the error is positive, so heat turns on (negative feedback opposes the error).",
+              "choices": [
+                "The thermostat ignores the actual temperature",
+                "The thermostat senses temperature and turns heat on if too cold, off if too warm",
+                "Heat intensity increases whenever the setpoint changes",
+                "The furnace always runs at maximum power"
+              ],
+              "id": "control_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'error signal' in a feedback control system?",
+              "answer": "The difference between the setpoint and the measured output",
+              "explain": "Error = setpoint - actual output. A positive error means the output is too low; negative means too high.",
+              "choices": [
+                "The difference between the setpoint and the measured output",
+                "The power supply current",
+                "A signal from a broken component",
+                "The sensor calibration value"
+              ],
+              "id": "control_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is negative feedback called 'negative' if it improves the system?",
+              "answer": "Because the feedback signal opposes (has the opposite sign to) the error",
+              "explain": "If error is positive (too low), negative feedback means the control action increases the output. Negative refers to the mathematical relationship, not the quality.",
+              "choices": [
+                "Because the feedback signal opposes (has the opposite sign to) the error",
+                "Because the feedback voltage is negative",
+                "Because it uses no electrical power",
+                "Because it always makes performance worse"
+              ],
+              "id": "control_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Stability and Positive Feedback",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What makes a control system stable?",
+              "answer": "The output converges to the setpoint and stays there despite disturbances",
+              "explain": "A stable system reaches its goal and holds it. An unstable system diverges and gets worse over time.",
+              "choices": [
+                "The system has no feedback",
+                "The system never changes",
+                "The system is always at maximum output",
+                "The output converges to the setpoint and stays there despite disturbances"
+              ],
+              "id": "control_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is positive feedback?",
+              "answer": "Feedback that reinforces the error and makes it grow",
+              "explain": "Positive feedback amplifies changes. A microphone pointed at a speaker creates positive feedback: sound loops and grows louder (squealing).",
+              "choices": [
+                "Feedback that is always good",
+                "Feedback that reinforces the error and makes it grow",
+                "The main control input",
+                "A signal that reduces error"
+              ],
+              "id": "control_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does positive feedback usually make a system unstable?",
+              "answer": "Because it amplifies errors instead of correcting them, causing the output to grow without bound",
+              "explain": "With positive feedback, any small error gets magnified. The system diverges from setpoint rapidly and can become dangerous.",
+              "choices": [
+                "Because it uses less power",
+                "Because it is slower than negative feedback",
+                "Because it requires no sensors",
+                "Because it amplifies errors instead of correcting them, causing the output to grow without bound"
+              ],
+              "id": "control_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of positive feedback causing instability?",
+              "answer": "An audio speaker feeding sound back into a microphone, causing oscillation and squealing",
+              "explain": "Sound from the speaker re-enters the microphone, gets amplified, comes back out louder, and repeats. The system becomes unstable and audibly fails.",
+              "choices": [
+                "A cruise control holding vehicle speed",
+                "A thermostat maintaining room temperature",
+                "An aircraft autopilot leveling the wings",
+                "An audio speaker feeding sound back into a microphone, causing oscillation and squealing"
+              ],
+              "id": "control_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does negative feedback prevent instability compared to positive feedback?",
+              "answer": "Negative feedback opposes errors, driving the system back to setpoint, while positive feedback magnifies errors",
+              "explain": "Negative feedback is self-correcting. Positive feedback is self-destabilizing. That is why most engineered systems use negative feedback.",
+              "choices": [
+                "Positive feedback is more reliable",
+                "Negative feedback opposes errors, driving the system back to setpoint, while positive feedback magnifies errors",
+                "Negative feedback requires no measurements",
+                "Negative feedback uses more power"
+              ],
+              "id": "control_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Block Diagrams and Transfer Functions",
+      "tip": "Block diagrams visually show how signals flow in a control system. Transfer functions are mathematical descriptions of how a system responds to inputs. Both tools help engineers understand and design controllers.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Block Diagram Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a block diagram in control theory?",
+              "answer": "A graphical representation showing how signals flow through a system",
+              "explain": "Block diagrams use boxes (blocks) for components and arrows for signals. They show the overall structure and feedback loops without detailed math.",
+              "choices": [
+                "A graphical representation showing how signals flow through a system",
+                "A wiring diagram for electronic circuits",
+                "A detailed list of all system parts",
+                "A time vs. output graph"
+              ],
+              "id": "control_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a box (block) represent in a block diagram?",
+              "answer": "A component or process that transforms an input signal into an output signal",
+              "explain": "Each block represents a part of the system: a sensor, controller, motor, or plant. It shows the input-output relationship.",
+              "choices": [
+                "A power supply",
+                "An error in the system",
+                "A component or process that transforms an input signal into an output signal",
+                "A feedback connection"
+              ],
+              "id": "control_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do arrows represent in a block diagram?",
+              "answer": "Signal paths showing how information flows from one block to another",
+              "explain": "Arrows carry signals (values like voltage, temperature, speed) from one component to the next.",
+              "choices": [
+                "Power flow only",
+                "Signal paths showing how information flows from one block to another",
+                "Wires or physical connections only",
+                "Error signals only"
+              ],
+              "id": "control_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a closed loop block diagram, what happens at the summing junction?",
+              "answer": "The reference signal and feedback signal are compared to compute the error",
+              "explain": "A summing point (often shown as a circle with +/-) combines signals. In negative feedback, it computes error = setpoint - feedback.",
+              "choices": [
+                "The reference signal and feedback signal are compared to compute the error",
+                "The controller is activated",
+                "The signal is split into two paths",
+                "The output is amplified"
+              ],
+              "id": "control_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are block diagrams useful for understanding control systems?",
+              "answer": "They show the overall structure and feedback paths without requiring detailed mathematics",
+              "explain": "Block diagrams give a clear visual picture of how components interact and where feedback occurs, before diving into transfer functions.",
+              "choices": [
+                "They guarantee stability automatically",
+                "They are required by law",
+                "They show the overall structure and feedback paths without requiring detailed mathematics",
+                "They eliminate the need for testing"
+              ],
+              "id": "control_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Transfer Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a transfer function?",
+              "answer": "A mathematical description of how a system's output responds to an input",
+              "explain": "Transfer function G(s) relates output to input: output = G(s) * input. It captures the dynamics of a component in one equation.",
+              "choices": [
+                "A wiring connection",
+                "A list of components in the system",
+                "The physical dimensions of a device",
+                "A mathematical description of how a system's output responds to an input"
+              ],
+              "id": "control_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the notation G(s) mean in transfer function language?",
+              "answer": "A transfer function in the Laplace domain, where s is the Laplace variable",
+              "explain": "G(s) is shorthand for the input-output relationship in Laplace form. The variable s encodes frequency and time behavior.",
+              "choices": [
+                "The speed of the system response",
+                "A transfer function in the Laplace domain, where s is the Laplace variable",
+                "A simple proportional relationship",
+                "The gain of the system multiplied by time"
+              ],
+              "id": "control_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a higher transfer function gain affect the system response?",
+              "answer": "A higher gain produces a larger output for the same input, making response faster but risking overshoot",
+              "explain": "High gain amplifies the control signal, speeding up response but potentially causing oscillation. It is a tuning trade-off.",
+              "choices": [
+                "It reduces the control effort",
+                "A higher gain produces a larger output for the same input, making response faster but risking overshoot",
+                "It has no effect on the response",
+                "It always makes the system more stable"
+              ],
+              "id": "control_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do poles of a transfer function determine?",
+              "answer": "The natural frequencies and decay rates of the system response",
+              "explain": "Poles in the left half-plane (negative real part) lead to stable decay. Poles on the right side cause divergence and instability.",
+              "choices": [
+                "The power supply voltage",
+                "The input signal amplitude",
+                "The natural frequencies and decay rates of the system response",
+                "The sensor calibration"
+              ],
+              "id": "control_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are transfer functions useful for control design?",
+              "answer": "They allow engineers to analyze stability and predict response without building a prototype",
+              "explain": "Transfer functions enable simulation and analysis. Engineers can check stability, overshoot, and speed mathematically before hardware testing.",
+              "choices": [
+                "They eliminate all disturbances",
+                "They allow engineers to analyze stability and predict response without building a prototype",
+                "They guarantee perfect control",
+                "They reduce the cost of materials"
+              ],
+              "id": "control_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Step Response Characteristics",
+      "tip": "When you suddenly change the setpoint from 0 to 1, the system's response tells you how well it works. Rise time, overshoot, settling time, and steady-state error are key measures of performance.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Rise Time and Overshoot",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'rise time' in step response analysis?",
+              "answer": "The time it takes for the output to go from 10 percent to 90 percent of the final value",
+              "explain": "Rise time measures how fast the system reacts to a step input. Faster rise time means quicker response.",
+              "choices": [
+                "The time the output overshoots",
+                "The time it takes for the output to go from 10 percent to 90 percent of the final value",
+                "The peak value the output reaches",
+                "The steady-state error of the system"
+              ],
+              "id": "control_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'overshoot' in a step response?",
+              "answer": "The amount by which the output exceeds the setpoint before settling",
+              "explain": "Overshoot happens when the system overshoots its target. A 20 percent overshoot means the peak is 120 percent of the desired value.",
+              "choices": [
+                "The steady-state error",
+                "The final value of the output",
+                "The initial delay before the system responds",
+                "The amount by which the output exceeds the setpoint before settling"
+              ],
+              "id": "control_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why might a fast rise time come with large overshoot?",
+              "answer": "High control effort needed for speed can push the output past the target",
+              "explain": "To accelerate fast, the controller applies strong commands. By the time it realizes it has reached setpoint, inertia has carried it beyond.",
+              "choices": [
+                "Fast systems never have feedback",
+                "High control effort needed for speed can push the output past the target",
+                "Overshoot and rise time are independent",
+                "Slow systems always overshoot"
+              ],
+              "id": "control_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is percent overshoot calculated?",
+              "answer": "((peak - final value) / final value) * 100 percent",
+              "explain": "If the setpoint is 10 and the peak is 12, overshoot is (12-10)/10 * 100 = 20 percent.",
+              "choices": [
+                "(peak / rise time)",
+                "((peak - final value) / final value) * 100 percent",
+                "(peak - final value) in units",
+                "(peak / final value) * 100 percent"
+              ],
+              "id": "control_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In applications like aircraft autopilot, why is low overshoot important?",
+              "answer": "Large overshoots can cause unsafe or uncomfortable maneuvers",
+              "explain": "If an autopilot overshoots altitude by too much, it wastes fuel and discomforts passengers. Precision and smoothness matter.",
+              "choices": [
+                "Overshoot does not affect real systems",
+                "Low overshoot means the system is broken",
+                "Aircraft always need maximum speed",
+                "Large overshoots can cause unsafe or uncomfortable maneuvers"
+              ],
+              "id": "control_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Settling Time and Steady-State Error",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'settling time' in step response?",
+              "answer": "The time it takes for the output to settle within a tolerance band around the final value",
+              "explain": "Settling time is typically defined as reaching and staying within 2 percent of the final value. It includes all oscillations and decay.",
+              "choices": [
+                "The initial rise time",
+                "The time it takes for the output to settle within a tolerance band around the final value",
+                "The steady-state value itself",
+                "The peak of the overshoot"
+              ],
+              "id": "control_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'steady-state error'?",
+              "answer": "The persistent difference between the setpoint and the final output value",
+              "explain": "Steady-state error is the error that remains after the system settles. A good controller minimizes this.",
+              "choices": [
+                "The overshoot of the system",
+                "The time to reach setpoint",
+                "The noise in the measurement",
+                "The persistent difference between the setpoint and the final output value"
+              ],
+              "id": "control_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a longer settling time affect system performance?",
+              "answer": "It means the system takes longer to stabilize, which is undesirable in most applications",
+              "explain": "Long settling times mean the system oscillates or drifts for a long time before settling. Faster settling is better.",
+              "choices": [
+                "It improves stability",
+                "It guarantees zero overshoot",
+                "It reduces steady-state error",
+                "It means the system takes longer to stabilize, which is undesirable in most applications"
+              ],
+              "id": "control_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is steady-state error important to minimize in a temperature control system?",
+              "answer": "To ensure the actual temperature closely matches the desired setpoint value",
+              "explain": "If there is steady-state error, the oven is always a few degrees off setpoint, wasting energy and possibly damaging products.",
+              "choices": [
+                "To eliminate all disturbances",
+                "To ensure the actual temperature closely matches the desired setpoint value",
+                "To reduce the cost of the sensor",
+                "To speed up the rise time"
+              ],
+              "id": "control_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a common trade-off when tuning a system to reduce overshoot?",
+              "answer": "Reducing overshoot by lowering the gain usually makes the rise slower",
+              "explain": "Lowering the gain cuts overshoot but slows the response. Raising the gain speeds the response but risks overshoot. Engineers balance these.",
+              "choices": [
+                "Steady-state error always increases when overshoot decreases",
+                "There is no trade-off, overshoot and speed can both be minimized freely",
+                "Rise time is independent of control gain",
+                "Reducing overshoot by lowering the gain usually makes the rise slower"
+              ],
+              "id": "control_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "PID Control",
+      "tip": "PID stands for Proportional, Integral, Derivative. Each term handles a different aspect of error. Proportional responds to current error, Integral eliminates steady-state error, and Derivative predicts and damps overshoot.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "The Three PID Terms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the Proportional term do in a PID controller?",
+              "answer": "It produces a control effort proportional to the current error",
+              "explain": "P term = Kp * error. The larger the error, the stronger the response. It provides immediate correction.",
+              "choices": [
+                "It prevents overshoot entirely",
+                "It eliminates all steady-state error",
+                "It produces a control effort proportional to the current error",
+                "It increases the system gain infinitely"
+              ],
+              "id": "control_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Integral term do in a PID controller?",
+              "answer": "It accumulates error over time and eliminates steady-state error",
+              "explain": "I term integrates error, building up control effort as long as error persists. This forces the output to match setpoint exactly over time.",
+              "choices": [
+                "It makes the response slower",
+                "It increases overshoot",
+                "It responds only to high-frequency noise",
+                "It accumulates error over time and eliminates steady-state error"
+              ],
+              "id": "control_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the Derivative term do in a PID controller?",
+              "answer": "It responds to the rate of change of error, damping overshoot and oscillation",
+              "explain": "D term = Kd * (de/dt). If error is decreasing fast, D reduces control effort to prevent overshooting. It anticipates the future.",
+              "choices": [
+                "It adds noise to the system",
+                "It responds to the rate of change of error, damping overshoot and oscillation",
+                "It has no effect on transient response",
+                "It accelerates the response"
+              ],
+              "id": "control_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which PID term is most sensitive to measurement noise?",
+              "answer": "The Derivative term, because it amplifies noise in the error signal",
+              "explain": "D term takes the time derivative of error. Noise has very fast changes, so high-frequency noise gets greatly amplified by the derivative.",
+              "choices": [
+                "The Integral term",
+                "All three are equally sensitive",
+                "The Proportional term",
+                "The Derivative term, because it amplifies noise in the error signal"
+              ],
+              "id": "control_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complete PID control law?",
+              "answer": "Control = Kp * error + Ki * integral(error) + Kd * derivative(error)",
+              "explain": "The PID controller sums the three terms: proportional (current error), integral (accumulated error), and derivative (rate of error change).",
+              "choices": [
+                "Control = Kp * error + Ki * integral(error) + Kd * derivative(error)",
+                "Control = Kp + Ki + Kd",
+                "Control = error / (Kp * Ki * Kd)",
+                "Control = Kp * Ki * Kd * error"
+              ],
+              "id": "control_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "PID Behavior and Tuning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the effect of increasing the Proportional gain Kp?",
+              "answer": "Faster response, but higher overshoot and risk of instability if too high",
+              "explain": "High Kp makes the system react more aggressively. Response speeds up but becomes less stable if Kp exceeds a limit.",
+              "choices": [
+                "No change to the response",
+                "Elimination of all overshoot",
+                "Faster response, but higher overshoot and risk of instability if too high",
+                "Slower response and increased steady-state error"
+              ],
+              "id": "control_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if the Integral gain Ki is too high?",
+              "answer": "Steady-state error is eliminated but the system becomes very prone to overshoot and oscillation",
+              "explain": "High Ki accumulates error quickly, pushing hard to eliminate offset. This causes the output to overshoot and ring.",
+              "choices": [
+                "Measurement noise is eliminated",
+                "Steady-state error is eliminated but the system becomes very prone to overshoot and oscillation",
+                "The system response becomes very slow",
+                "The Proportional term is cancelled"
+              ],
+              "id": "control_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does increasing Derivative gain Kd affect the response?",
+              "answer": "It damps overshoot and reduces oscillation, making the response smoother",
+              "explain": "Higher Kd means the controller more aggressively brakes as error decreases, preventing overshoot and smoothing transients.",
+              "choices": [
+                "It makes noise dominate the control signal",
+                "It eliminates steady-state error",
+                "It damps overshoot and reduces oscillation, making the response smoother",
+                "It increases overshoot"
+              ],
+              "id": "control_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a system with significant measurement noise, which PID term should be de-emphasized?",
+              "answer": "The Derivative term, because it amplifies high-frequency noise",
+              "explain": "If sensors are noisy, a high Kd will make the noisy signal changes drive wild control swings. Use moderate Kd in noisy systems.",
+              "choices": [
+                "All terms must be equal strength",
+                "The Integral term",
+                "The Proportional term",
+                "The Derivative term, because it amplifies high-frequency noise"
+              ],
+              "id": "control_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a pure P controller often inadequate for temperature control?",
+              "answer": "It cannot eliminate steady-state error, so the system settles at a temperature offset from setpoint",
+              "explain": "P controller requires error to generate output. At steady state with zero error, P produces zero output, so it cannot hold setpoint if there is any heat loss.",
+              "choices": [
+                "It makes the system too fast",
+                "It requires no tuning",
+                "It cannot eliminate steady-state error, so the system settles at a temperature offset from setpoint",
+                "It causes infinite oscillation"
+              ],
+              "id": "control_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Tuning and Real-World Applications",
+      "tip": "PID tuning is the art of choosing Kp, Ki, and Kd to achieve good performance. Different applications need different trade-offs. Real systems have constraints, nonlinearities, and delays that affect how well theory works in practice.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Tuning Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Ziegler-Nichols tuning method?",
+              "answer": "A classic method: increase P gain until oscillation, then calculate Kp, Ki, and Kd from that critical point",
+              "explain": "Ziegler-Nichols finds the critical gain where the system oscillates at the edge of stability, then scales back to a reasonable operating point.",
+              "choices": [
+                "A method that requires simulation only",
+                "A procedure that guarantees perfect response",
+                "A tuning method that sets all gains to zero",
+                "A classic method: increase P gain until oscillation, then calculate Kp, Ki, and Kd from that critical point"
+              ],
+              "id": "control_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is manual tuning sometimes preferred over automated methods?",
+              "answer": "It allows engineers to account for application-specific priorities and constraints not captured by algorithms",
+              "explain": "An engineer might accept more overshoot for a faster response, or add damping to limit noise sensitivity. Automated methods only optimize the goals they are given, so they may miss application-specific priorities.",
+              "choices": [
+                "Manual tuning is always faster",
+                "It allows engineers to account for application-specific priorities and constraints not captured by algorithms",
+                "Automated methods cannot be implemented in practice",
+                "Automated methods are always unstable"
+              ],
+              "id": "control_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'gain scheduling' in control design?",
+              "answer": "Automatically changing controller gains based on operating conditions or setpoint changes",
+              "explain": "Gain scheduling adjusts Kp, Ki, and Kd as the system changes. For example, a cruise control might use different gains at highway speed vs. slow city speed.",
+              "choices": [
+                "Eliminating feedback entirely",
+                "Using only the Proportional term",
+                "Tuning the controller once and never changing it",
+                "Automatically changing controller gains based on operating conditions or setpoint changes"
+              ],
+              "id": "control_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'model predictive control' (MPC)?",
+              "answer": "A method that predicts future system behavior and optimizes control inputs over a time horizon",
+              "explain": "MPC uses a model of the system to forecast what will happen. It chooses control inputs that minimize a cost function into the future.",
+              "choices": [
+                "A control method that requires no computation",
+                "The same as PID control",
+                "A method that predicts future system behavior and optimizes control inputs over a time horizon",
+                "A method that does not use feedback"
+              ],
+              "id": "control_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is 'anti-windup' important in integral control?",
+              "answer": "To prevent the integral term from growing unboundedly when the system is saturated or cannot respond",
+              "explain": "If the actual output is clamped by a limit (like max power), the integral keeps accumulating error. Anti-windup stops integration when saturation occurs.",
+              "choices": [
+                "To prevent the integral term from growing unboundedly when the system is saturated or cannot respond",
+                "To reduce the effect of measurement noise",
+                "To speed up the Derivative term",
+                "To eliminate the Proportional term"
+              ],
+              "id": "control_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Applications and Design Trade-offs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In a robot arm position control, what is a key design trade-off?",
+              "answer": "Speed of movement vs. precision and smoothness of motion",
+              "explain": "Fast movement requires high gains and aggressive control, which can cause jerky motion and oscillation. Smooth motion needs lower gains and lower speed.",
+              "choices": [
+                "Cost vs. reliability only",
+                "Motor size vs. system weight only",
+                "Using feedback vs. not using feedback",
+                "Speed of movement vs. precision and smoothness of motion"
+              ],
+              "id": "control_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In aircraft altitude hold, why is a low overshoot essential?",
+              "answer": "Large altitude overshoots waste fuel and discomfort passengers",
+              "explain": "Overshooting altitude means the plane climbs too high, then dives to correct. This costs fuel and passenger comfort matters.",
+              "choices": [
+                "Large altitude overshoots waste fuel and discomfort passengers",
+                "Overshoot always makes the plane faster",
+                "The autopilot is not used in aircraft",
+                "Altitude is not important in flight"
+              ],
+              "id": "control_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'time delay' or 'dead time' in a system mean?",
+              "answer": "A lag between applying a control input and observing the effect on the output",
+              "explain": "Dead time makes control harder. By the time the system reacts, the controller has already sent new commands. Excessive dead time causes instability.",
+              "choices": [
+                "A permanent offset in the setpoint",
+                "The time the system is turned off",
+                "A lag between applying a control input and observing the effect on the output",
+                "A measure of the sensor accuracy"
+              ],
+              "id": "control_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does dead time affect PID tuning?",
+              "answer": "Dead time makes the system harder to control, requiring more conservative (lower) gains to maintain stability",
+              "explain": "With dead time, the system response is delayed relative to commands. High gains cause the controller to overcorrect. Dead time limits how fast safe control can be.",
+              "choices": [
+                "Dead time always improves stability",
+                "Dead time eliminates the need for feedback",
+                "Dead time has no effect on tuning",
+                "Dead time makes the system harder to control, requiring more conservative (lower) gains to maintain stability"
+              ],
+              "id": "control_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In an industrial oven, why might the I term be tuned more aggressively than in an aircraft?",
+              "answer": "Oven temperature regulation does not require smoothness, only accuracy, so eliminating steady-state error is the priority",
+              "explain": "A slow rise in temperature to setpoint is acceptable for baking. The goal is correct final temperature, not smooth motion. Aircraft prioritize smooth, predictable response.",
+              "choices": [
+                "Industrial controllers are always better",
+                "Temperature control never uses integral terms",
+                "Oven temperature regulation does not require smoothness, only accuracy, so eliminating steady-state error is the priority",
+                "Ovens are always simpler than aircraft"
+              ],
+              "id": "control_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

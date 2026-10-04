@@ -1,0 +1,904 @@
+{
+  "id": "electromagnetism",
+  "name": "Electromagnetism",
+  "category": "engineering",
+  "icon": "fa-solid fa-magnet",
+  "level": "Fields and Waves",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Electric Charge and Coulomb Law",
+      "tip": "Electric charge is a fundamental property of matter. Charges repel if they have the same sign and attract if opposite. Coulomb law describes how the force between charges depends on their magnitudes and separation.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Electric Charge Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the two types of electric charge?",
+              "answer": "Positive and negative",
+              "explain": "Protons carry positive charge and electrons carry negative charge. Like charges repel; opposite charges attract.",
+              "choices": [
+                "High and low",
+                "Static and dynamic",
+                "Constant and variable",
+                "Positive and negative"
+              ],
+              "id": "electromagnetism_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of electric charge?",
+              "answer": "Coulomb (C)",
+              "explain": "The coulomb is the standard unit. One coulomb equals the charge of about 6.25 billion billion electrons.",
+              "choices": [
+                "Coulomb (C)",
+                "Volt (V)",
+                "Ohm (Ω)",
+                "Ampere (A)"
+              ],
+              "id": "electromagnetism_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the magnitude of the charge of one electron?",
+              "answer": "1.6 × 10^-19 coulombs",
+              "explain": "The elementary charge e is approximately 1.6 × 10^-19 C. This is the fundamental unit of charge.",
+              "choices": [
+                "1.6 × 10^-19 coulombs",
+                "1.6 × 10^-9 coulombs",
+                "1 ampere",
+                "1 coulomb"
+              ],
+              "id": "electromagnetism_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If two charges have the same sign, what happens between them?",
+              "answer": "They repel each other",
+              "explain": "Two positive charges or two negative charges push each other away. The force is repulsive.",
+              "choices": [
+                "They have no interaction",
+                "They repel each other",
+                "They produce heat",
+                "They attract each other"
+              ],
+              "id": "electromagnetism_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If two charges have opposite signs, what happens between them?",
+              "answer": "They attract each other",
+              "explain": "A positive charge and a negative charge pull toward each other. The force is attractive.",
+              "choices": [
+                "They repel each other",
+                "They have no interaction",
+                "They attract each other",
+                "They produce light"
+              ],
+              "id": "electromagnetism_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Coulomb Law",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Coulomb law state?",
+              "answer": "The force between two charges is proportional to their product and inversely proportional to the square of their separation",
+              "explain": "F = k * q1 * q2 / r^2, where k is Coulomb's constant. Doubling charge doubles force; doubling distance reduces force to one-quarter.",
+              "choices": [
+                "Charge is conserved but force is not",
+                "The force between two charges is proportional to their product and inversely proportional to the square of their separation",
+                "The force is independent of distance",
+                "The force is directly proportional to distance"
+              ],
+              "id": "electromagnetism_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the value of Coulomb constant k?",
+              "answer": "Approximately 9 × 10^9 N*m^2/C^2",
+              "explain": "k = 9 × 10^9 in SI units. This constant relates force to charge product and separation in Coulomb's law.",
+              "choices": [
+                "Zero",
+                "Approximately 9 × 10^9 N*m^2/C^2",
+                "1 N/C",
+                "1 × 10^3 N*m^2/C^2"
+              ],
+              "id": "electromagnetism_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If the distance between two charges is doubled, how does the force change?",
+              "answer": "The force becomes one-quarter of its original value",
+              "explain": "Distance appears as r^2 in Coulomb law. Doubling r makes r^2 four times larger, so force becomes 1/4.",
+              "choices": [
+                "The force halves",
+                "The force is unchanged",
+                "The force becomes one-quarter of its original value",
+                "The force doubles"
+              ],
+              "id": "electromagnetism_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If one charge is tripled while the other stays the same, how does the force change?",
+              "answer": "The force triples",
+              "explain": "Force is proportional to each charge. Tripling q1 makes the product 3 times larger, so force is 3 times larger.",
+              "choices": [
+                "The force squares",
+                "The force triples",
+                "The force is unchanged",
+                "The force reduces to one-third"
+              ],
+              "id": "electromagnetism_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a key difference between Coulomb force and gravitational force?",
+              "answer": "Coulomb force can be both attractive and repulsive, while gravity is only attractive",
+              "explain": "Opposite charges attract, same charges repel. Gravity only attracts. This makes electromagnetism unique.",
+              "choices": [
+                "Coulomb force follows a linear relationship with distance",
+                "Gravity is stronger at all distances",
+                "Gravity depends on the medium",
+                "Coulomb force can be both attractive and repulsive, while gravity is only attractive"
+              ],
+              "id": "electromagnetism_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Electric Field and Potential",
+      "tip": "An electric field describes the force a charge would feel in a region of space. Electric potential is the energy per unit charge. Both are fundamental ways to describe how charges influence their surroundings.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Electric Field",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an electric field?",
+              "answer": "A region of space where a charge experiences a force",
+              "explain": "An electric field surrounds every charge. It represents the strength and direction of the force that would act on a test charge.",
+              "choices": [
+                "A measurement of charge",
+                "A region of space where a charge experiences a force",
+                "A circuit component",
+                "A type of material"
+              ],
+              "id": "electromagnetism_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of electric field?",
+              "answer": "Newtons per coulomb (N/C) or volts per meter (V/m)",
+              "explain": "Electric field is force per unit charge. Both N/C and V/m are equivalent ways to express field strength.",
+              "choices": [
+                "Joules",
+                "Coulombs",
+                "Newtons per coulomb (N/C) or volts per meter (V/m)",
+                "Amperes"
+              ],
+              "id": "electromagnetism_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is the electric field defined mathematically?",
+              "answer": "E = F / q, where F is the force on a test charge q",
+              "explain": "Electric field is the force per unit test charge. It tells you how strong the field is at that point.",
+              "choices": [
+                "E = force times charge",
+                "E = q * r^2",
+                "E = F / q, where F is the force on a test charge q",
+                "E = distance squared"
+              ],
+              "id": "electromagnetism_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What direction does the electric field point from a positive charge?",
+              "answer": "Radially outward from the positive charge",
+              "explain": "Electric field lines point away from positive charges and toward negative charges. A positive test charge placed in the field experiences force in the field direction.",
+              "choices": [
+                "Tangent to a circle around the charge",
+                "Parallel to the charge",
+                "Radially inward toward the charge",
+                "Radially outward from the positive charge"
+              ],
+              "id": "electromagnetism_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a dense pattern of electric field lines represent?",
+              "answer": "A strong electric field in that region",
+              "explain": "Field line density indicates field strength. Closely spaced lines mean a strong field; widely spaced lines mean a weak field.",
+              "choices": [
+                "A strong electric field in that region",
+                "A weak electric field",
+                "The location of a charge",
+                "A neutral point with zero field"
+              ],
+              "id": "electromagnetism_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Electric Potential",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electric potential?",
+              "answer": "The energy per unit charge at a point in an electric field",
+              "explain": "Electric potential V is the work done per unit charge to bring a test charge from infinity to that point. It is a scalar, unlike field.",
+              "choices": [
+                "The distance from a charge",
+                "The force on a charge",
+                "The energy per unit charge at a point in an electric field",
+                "The velocity of a charge"
+              ],
+              "id": "electromagnetism_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of electric potential?",
+              "answer": "Volt (V)",
+              "explain": "One volt equals one joule per coulomb. Batteries are rated in volts because they provide energy per coulomb of charge.",
+              "choices": [
+                "Newton (N)",
+                "Volt (V)",
+                "Coulomb (C)",
+                "Joule (J)"
+              ],
+              "id": "electromagnetism_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does electric potential relate to electric field?",
+              "answer": "Electric field is the negative gradient of potential: E = -dV/dr",
+              "explain": "The field points in the direction of decreasing potential. Steep potential changes (high gradient) mean strong field.",
+              "choices": [
+                "They are unrelated",
+                "Potential is always twice the field",
+                "Electric potential is the derivative of electric field",
+                "Electric field is the negative gradient of potential: E = -dV/dr"
+              ],
+              "id": "electromagnetism_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the electric potential at infinity conventionally set to?",
+              "answer": "Zero volts",
+              "explain": "By convention, potential is zero infinitely far from charges. This sets a reference point for measuring potential at finite distances.",
+              "choices": [
+                "One volt",
+                "Negative infinity",
+                "Zero volts",
+                "Positive infinity"
+              ],
+              "id": "electromagnetism_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'potential difference' between two points?",
+              "answer": "The work per unit charge needed to move a test charge between the two points",
+              "explain": "Potential difference (voltage) is V1 - V2. If positive, positive charges naturally move from point 1 to point 2.",
+              "choices": [
+                "The work per unit charge needed to move a test charge between the two points",
+                "The force on a single charge",
+                "The sum of all charges",
+                "The distance between two charges"
+              ],
+              "id": "electromagnetism_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Capacitance and Energy Storage",
+      "tip": "A capacitor stores electric charge and energy by separating opposite charges. Capacitance measures how much charge a device can store at a given voltage. Capacitors are fundamental components in electronics.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Capacitors and Capacitance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a capacitor?",
+              "answer": "A device that stores electric charge by holding opposite charges on two conductors separated by an insulator",
+              "explain": "A capacitor consists of two conducting plates with opposite charges and a dielectric between them. It stores energy in the electric field.",
+              "choices": [
+                "A source of constant voltage",
+                "A wire that connects circuits",
+                "A component that converts electricity to heat",
+                "A device that stores electric charge by holding opposite charges on two conductors separated by an insulator"
+              ],
+              "id": "electromagnetism_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is capacitance?",
+              "answer": "The ratio of charge stored to the voltage applied: C = Q / V",
+              "explain": "Capacitance measures how much charge a capacitor can hold per volt of applied voltage. Higher capacitance stores more charge at the same voltage.",
+              "choices": [
+                "The charge on one plate",
+                "The ratio of charge stored to the voltage applied: C = Q / V",
+                "The current through the device",
+                "The voltage across the device"
+              ],
+              "id": "electromagnetism_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of capacitance?",
+              "answer": "Farad (F)",
+              "explain": "One farad equals one coulomb per volt. It is a large unit; practical capacitors are often microfarads (μF) or nanofarads (nF).",
+              "choices": [
+                "Farad (F)",
+                "Volt (V)",
+                "Amp (A)",
+                "Coulomb (C)"
+              ],
+              "id": "electromagnetism_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does the area of capacitor plates affect capacitance?",
+              "answer": "Larger plate area increases capacitance",
+              "explain": "Capacitance is proportional to plate area: C ∝ A. Bigger plates can hold more charge at the same voltage.",
+              "choices": [
+                "Plate area decreases capacitance",
+                "Smaller plates increase capacitance",
+                "Larger plate area increases capacitance",
+                "Plate area has no effect"
+              ],
+              "id": "electromagnetism_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does the separation between capacitor plates affect capacitance?",
+              "answer": "Smaller separation (closer plates) increases capacitance",
+              "explain": "Capacitance is inversely proportional to separation: C ∝ 1/d. Closer plates create a stronger field and store more charge.",
+              "choices": [
+                "Larger separation increases capacitance",
+                "Separation has no effect on capacitance",
+                "Smaller separation (closer plates) increases capacitance",
+                "Separation affects only the voltage"
+              ],
+              "id": "electromagnetism_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Energy and Dielectrics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How much energy is stored in a charged capacitor?",
+              "answer": "E = (1/2) * C * V^2, where C is capacitance and V is voltage",
+              "explain": "Stored energy is proportional to capacitance and the square of voltage. Doubling voltage stores 4 times more energy.",
+              "choices": [
+                "E = (1/2) * C * V^2, where C is capacitance and V is voltage",
+                "E = Q / C",
+                "E = V / C",
+                "E = C * V"
+              ],
+              "id": "electromagnetism_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a dielectric material?",
+              "answer": "An insulator that reduces the electric field inside a capacitor, increasing its capacitance",
+              "explain": "Dielectrics (like ceramic or plastic) polarize under the electric field. This reduces the internal field and allows more charge storage.",
+              "choices": [
+                "A substance that stores charge by itself",
+                "A conductor that enhances capacitance",
+                "An insulator that reduces the electric field inside a capacitor, increasing its capacitance",
+                "A material that conducts charge easily"
+              ],
+              "id": "electromagnetism_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'dielectric constant' (relative permittivity)?",
+              "answer": "A measure of how much a dielectric material increases the capacitance compared to a vacuum",
+              "explain": "Dielectric constant (κ or εr) is how many times more capacitance you get by filling the space with dielectric vs. empty space.",
+              "choices": [
+                "The thickness of the dielectric",
+                "The resistance of the dielectric",
+                "The voltage rating of the capacitor",
+                "A measure of how much a dielectric material increases the capacitance compared to a vacuum"
+              ],
+              "id": "electromagnetism_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a capacitor is charged and then the dielectric is removed, what happens?",
+              "answer": "Capacitance decreases, voltage increases (if isolated), and stored energy increases",
+              "explain": "Removing the dielectric reduces C. If the charge is fixed (isolated), voltage V = Q/C increases. Energy stored increases because more work is done against the field.",
+              "choices": [
+                "Capacitance increases",
+                "Capacitance decreases, voltage increases (if isolated), and stored energy increases",
+                "Voltage decreases",
+                "Energy decreases"
+              ],
+              "id": "electromagnetism_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are capacitors used to smooth voltage in power supplies?",
+              "answer": "They store energy when voltage is high and release it when voltage dips, keeping voltage relatively constant",
+              "explain": "Capacitors act as a charge reservoir. They absorb excess current when supply voltage spikes and provide current when it dips.",
+              "choices": [
+                "They store energy when voltage is high and release it when voltage dips, keeping voltage relatively constant",
+                "They absorb all power",
+                "They have no effect on voltage",
+                "They create voltage"
+              ],
+              "id": "electromagnetism_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Magnetic Fields and Currents",
+      "tip": "Moving electric charges (currents) create magnetic fields. Magnetic field strength depends on the current magnitude and geometry. Ampere's law relates magnetic field to the current that produces it.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Magnetic Fields from Currents",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What creates a magnetic field?",
+              "answer": "Moving electric charges (electric current)",
+              "explain": "Static charges create only electric fields. A moving charge or flowing current generates a magnetic field around it.",
+              "choices": [
+                "Static electric charge",
+                "Materials alone",
+                "Changing voltage only",
+                "Moving electric charges (electric current)"
+              ],
+              "id": "electromagnetism_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of magnetic field?",
+              "answer": "Tesla (T)",
+              "explain": "One tesla is the field strength that produces one newton of force on one coulomb moving at one meter per second perpendicular to the field.",
+              "choices": [
+                "Volt (V)",
+                "Coulomb (C)",
+                "Tesla (T)",
+                "Ampere (A)"
+              ],
+              "id": "electromagnetism_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a magnetic field circle around a straight current-carrying wire?",
+              "answer": "Concentric circles with the wire at the center, direction given by the right-hand rule",
+              "explain": "If you curl the fingers of your right hand in the field direction, your thumb points in the current direction. The field forms closed circles around the wire.",
+              "choices": [
+                "Radial lines pointing away from the wire",
+                "No field pattern",
+                "Concentric circles with the wire at the center, direction given by the right-hand rule",
+                "A uniform field along the wire"
+              ],
+              "id": "electromagnetism_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the right-hand rule for magnetic field around a wire?",
+              "answer": "Point your thumb in the current direction; your fingers curl in the direction of the magnetic field",
+              "explain": "This rule gives the direction of field lines around a current-carrying conductor. It works for straight wires and coils.",
+              "choices": [
+                "Use your left hand instead",
+                "Point your thumb in the field direction and fingers in the current direction",
+                "Point your thumb in the current direction; your fingers curl in the direction of the magnetic field",
+                "The field is always northward"
+              ],
+              "id": "electromagnetism_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a solenoid?",
+              "answer": "A coil of wire wound in a tight helix that produces a strong magnetic field when current flows",
+              "explain": "Solenoids concentrate magnetic field inside the coil. The field inside is nearly uniform and strong; outside, the field is weak.",
+              "choices": [
+                "A simple straight wire",
+                "A resistor",
+                "A coil of wire wound in a tight helix that produces a strong magnetic field when current flows",
+                "A capacitor"
+              ],
+              "id": "electromagnetism_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Ampere Law Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Ampere law relate?",
+              "answer": "The magnetic field around a closed path to the current enclosed by that path",
+              "explain": "Ampere law: the line integral of magnetic field around a closed loop equals μ0 times the enclosed current. It connects field to source.",
+              "choices": [
+                "Charge to magnetic field",
+                "The magnetic field around a closed path to the current enclosed by that path",
+                "Voltage to current only",
+                "Electric field to magnetic field directly"
+              ],
+              "id": "electromagnetism_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the permeability of free space (μ0)?",
+              "answer": "Approximately 4π × 10^-7 T*m/A",
+              "explain": "μ0 is the proportionality constant in Ampere law and other equations relating current to magnetic field. It defines field strength in vacuum.",
+              "choices": [
+                "Approximately 4π × 10^-7 T*m/A",
+                "1 tesla",
+                "9 × 10^9 N*m^2/C^2",
+                "Zero"
+              ],
+              "id": "electromagnetism_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For a long straight wire carrying current I, what is the magnetic field at distance r?",
+              "answer": "B = (μ0 * I) / (2π * r)",
+              "explain": "This is Ampere law applied to a straight wire. Field strength is proportional to current and inversely proportional to distance.",
+              "choices": [
+                "B = μ0 * I * r",
+                "B = (μ0 * I) / (2π * r)",
+                "B = I / r",
+                "B = constant"
+              ],
+              "id": "electromagnetism_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If current through a wire is doubled, how does the magnetic field change?",
+              "answer": "The magnetic field doubles at every point",
+              "explain": "Magnetic field is directly proportional to current. Double the current, double the field at any given distance.",
+              "choices": [
+                "The field halves",
+                "The magnetic field doubles at every point",
+                "The field is unchanged",
+                "The field squares"
+              ],
+              "id": "electromagnetism_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Inside a solenoid with many turns, why is the magnetic field strong and nearly uniform?",
+              "answer": "Many turns carry current in the same direction, and their fields add constructively inside",
+              "explain": "Each loop of wire creates a field. Inside, all fields from different loops point the same way and add. Outside, they cancel.",
+              "choices": [
+                "Fields subtract inside a solenoid",
+                "Only one turn matters",
+                "Many turns carry current in the same direction, and their fields add constructively inside",
+                "The field strength has no dependence on turn count"
+              ],
+              "id": "electromagnetism_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Electromagnetic Induction",
+      "tip": "A changing magnetic field induces an electric field and can drive current through a conductor. Faraday induction is the basis of generators and transformers. Lenz law tells you the direction of induced current.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Faraday Induction",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electromagnetic induction?",
+              "answer": "The generation of electric field and current when magnetic flux changes",
+              "explain": "When magnetic flux through a circuit loop changes, an electric field is induced that can drive current. This is the principle of generators and transformers.",
+              "choices": [
+                "The constant flow of current through a wire",
+                "The creation of magnetic field by electric charge alone",
+                "The relationship between voltage and resistance",
+                "The generation of electric field and current when magnetic flux changes"
+              ],
+              "id": "electromagnetism_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is magnetic flux?",
+              "answer": "The product of magnetic field strength and the area perpendicular to the field",
+              "explain": "Flux Φ = B * A * cos(θ). It measures how much magnetic field passes through a surface. Units are webers (Wb).",
+              "choices": [
+                "The current in a wire",
+                "The voltage across a device",
+                "The product of magnetic field strength and the area perpendicular to the field",
+                "The magnetic field strength alone"
+              ],
+              "id": "electromagnetism_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Faraday law state mathematically?",
+              "answer": "The induced EMF equals the negative rate of change of magnetic flux: EMF = -dΦ/dt",
+              "explain": "When flux changes, an electric field is induced. The EMF (electromotive force) is proportional to how fast the flux changes.",
+              "choices": [
+                "EMF = I * R",
+                "The induced EMF equals the negative rate of change of magnetic flux: EMF = -dΦ/dt",
+                "EMF = B * A",
+                "EMF = constant"
+              ],
+              "id": "electromagnetism_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you induce a current in a wire loop?",
+              "answer": "Change the magnetic field through the loop, change the loop area, or rotate the loop in a magnetic field",
+              "explain": "Any change in magnetic flux induces an EMF. You can change B (field strength), A (area), or the angle between them.",
+              "choices": [
+                "Apply a constant magnetic field forever",
+                "Only by connecting a battery",
+                "Change the magnetic field through the loop, change the loop area, or rotate the loop in a magnetic field",
+                "By changing the wire resistance only"
+              ],
+              "id": "electromagnetism_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In an AC generator, what produces the changing magnetic flux?",
+              "answer": "A rotating coil in a magnetic field, causing the flux through the coil to vary sinusoidally",
+              "explain": "As the coil rotates, the component of magnetic field through it changes. This oscillating flux induces a sinusoidal EMF.",
+              "choices": [
+                "A rotating coil in a magnetic field, causing the flux through the coil to vary sinusoidally",
+                "A resistor in the circuit",
+                "A battery connected to the coil",
+                "A constant magnetic field alone"
+              ],
+              "id": "electromagnetism_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Lenz Law and Inductance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Lenz law state?",
+              "answer": "The direction of induced current is such that its magnetic field opposes the change in flux that caused it",
+              "explain": "Lenz law is about opposing change. If external flux is increasing, induced current creates a field against it. This is why the negative sign appears in Faraday law.",
+              "choices": [
+                "Induced current has no predictable direction",
+                "Induced current always flows in the direction of the external field",
+                "Induced current is independent of flux change",
+                "The direction of induced current is such that its magnetic field opposes the change in flux that caused it"
+              ],
+              "id": "electromagnetism_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does Lenz law represent energy conservation?",
+              "answer": "The induced current's opposition means work must be done against it, converting mechanical or magnetic energy into electrical energy",
+              "explain": "If induced current did not oppose the change, energy could be created from nothing. Lenz law ensures energy is conserved.",
+              "choices": [
+                "Induced current creates energy",
+                "The induced current's opposition means work must be done against it, converting mechanical or magnetic energy into electrical energy",
+                "Lenz law wastes energy",
+                "Energy conservation has no connection to Lenz law"
+              ],
+              "id": "electromagnetism_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is inductance?",
+              "answer": "A measure of how much magnetic flux is created per unit current, or equivalently, how much EMF resists a current change",
+              "explain": "Inductance L relates flux to current: Φ = L * I. It is also the proportionality factor in the EMF equation: EMF = -L * (dI/dt).",
+              "choices": [
+                "The voltage across a device",
+                "The power consumed",
+                "The resistance of a wire",
+                "A measure of how much magnetic flux is created per unit current, or equivalently, how much EMF resists a current change"
+              ],
+              "id": "electromagnetism_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of inductance?",
+              "answer": "Henry (H)",
+              "explain": "One henry equals one weber per ampere, or one volt per ampere per second. It measures the strength of the inductance effect.",
+              "choices": [
+                "Henry (H)",
+                "Tesla (T)",
+                "Farad (F)",
+                "Coulomb (C)"
+              ],
+              "id": "electromagnetism_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does increasing the number of turns in a coil affect its inductance?",
+              "answer": "Inductance increases roughly with the square of the number of turns",
+              "explain": "L ∝ N^2. More turns create more flux per current, and the induced EMF from each additional turn adds up. The effect is quadratic.",
+              "choices": [
+                "Inductance increases roughly with the square of the number of turns",
+                "Inductance is inversely proportional to turns",
+                "Inductance is independent of turn count",
+                "Inductance decreases with more turns"
+              ],
+              "id": "electromagnetism_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Maxwell Equations and Applications",
+      "tip": "Maxwell unified electricity, magnetism, and light into one framework. His equations show how electric and magnetic fields create waves. Electromagnetic waves include light, radio, and X-rays. Transformers and motors apply these principles in practical devices.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Maxwell Equations and Electromagnetic Waves",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Gauss law state?",
+              "answer": "Electric charge creates electric field; the total flux through a closed surface equals the enclosed charge",
+              "explain": "Gauss law relates electric field to charge distribution. Charges are the source of electric fields, and field lines start/end on charges.",
+              "choices": [
+                "Electric charge creates electric field; the total flux through a closed surface equals the enclosed charge",
+                "Electric field and magnetic field are unrelated",
+                "Magnetic fields are always zero",
+                "Current has no effect on fields"
+              ],
+              "id": "electromagnetism_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Faraday law state?",
+              "answer": "A changing magnetic field creates an electric field",
+              "explain": "This is the basis of electromagnetic induction. Changing magnetic flux generates an induced electric field that can drive current.",
+              "choices": [
+                "Magnetic field is always constant",
+                "Induction is impossible",
+                "Electric field has no effect on magnetism",
+                "A changing magnetic field creates an electric field"
+              ],
+              "id": "electromagnetism_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does Ampere-Maxwell law state?",
+              "answer": "Electric current and changing electric field create magnetic field",
+              "explain": "This law shows both moving charges and changing electric field produce magnetic field. Maxwell completed Ampere law this way.",
+              "choices": [
+                "Electric current and changing electric field create magnetic field",
+                "Electric field creates no effects",
+                "Magnetic field cannot be created",
+                "Only static fields exist"
+              ],
+              "id": "electromagnetism_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an electromagnetic wave?",
+              "answer": "A self-propagating wave of oscillating electric and magnetic fields perpendicular to each other",
+              "explain": "EM waves consist of electric and magnetic fields that oscillate perpendicular to the direction of wave travel, and perpendicular to each other.",
+              "choices": [
+                "A wave in a physical medium like sound",
+                "A static electric field",
+                "A self-propagating wave of oscillating electric and magnetic fields perpendicular to each other",
+                "A current flowing in a wire"
+              ],
+              "id": "electromagnetism_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the speed of electromagnetic waves in vacuum?",
+              "answer": "The speed of light: approximately 3 × 10^8 meters per second",
+              "explain": "All EM waves travel at the same speed in vacuum, denoted c. This is a fundamental constant of nature.",
+              "choices": [
+                "It is zero",
+                "It depends on the medium",
+                "It varies with frequency",
+                "The speed of light: approximately 3 × 10^8 meters per second"
+              ],
+              "id": "electromagnetism_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Transformers and Motors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a transformer?",
+              "answer": "A device using electromagnetic induction to change the voltage level of an alternating current",
+              "explain": "Transformers consist of two coils sharing a magnetic core. AC current in one coil induces AC in the other at a different voltage, determined by the turn ratio.",
+              "choices": [
+                "A resistor",
+                "A component that measures current",
+                "A device using electromagnetic induction to change the voltage level of an alternating current",
+                "A device that stores energy like a capacitor"
+              ],
+              "id": "electromagnetism_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'step-up' transformer?",
+              "answer": "A transformer with more turns on the secondary coil, increasing voltage and decreasing current",
+              "explain": "Step-up transformers have more secondary turns. They increase voltage but decrease current proportionally, keeping power (ideally) constant.",
+              "choices": [
+                "A transformer that decreases voltage",
+                "A capacitor in disguise",
+                "A transformer with more turns on the secondary coil, increasing voltage and decreasing current",
+                "A transformer that stores charge"
+              ],
+              "id": "electromagnetism_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an electric motor?",
+              "answer": "A device that converts electrical energy into mechanical motion using magnetic forces",
+              "explain": "Motors use current-carrying wires in a magnetic field. The force on the wires (F = I*L*B) creates rotation or linear motion.",
+              "choices": [
+                "A storage device",
+                "A resistor that heats up",
+                "A device that converts electrical energy into mechanical motion using magnetic forces",
+                "A device that converts mechanical energy to electricity"
+              ],
+              "id": "electromagnetism_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What force acts on a current-carrying wire in a magnetic field?",
+              "answer": "The Lorentz force, given by F = I*L*B*sin(θ), where I is current, L is wire length, B is field, and θ is the angle",
+              "explain": "A current-carrying conductor in a magnetic field experiences a force perpendicular to both the current and field directions.",
+              "choices": [
+                "Gravitational force",
+                "The Lorentz force, given by F = I*L*B*sin(θ), where I is current, L is wire length, B is field, and θ is the angle",
+                "Coulomb force",
+                "Friction only"
+              ],
+              "id": "electromagnetism_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do transformers require alternating current and not direct current?",
+              "answer": "DC produces a constant magnetic field with no flux change, so no induction occurs; AC creates a changing field that induces voltage",
+              "explain": "Faraday induction requires changing magnetic flux. DC produces constant field (no change), so there is no induced EMF.",
+              "choices": [
+                "AC is easier to measure",
+                "DC produces a constant magnetic field with no flux change, so no induction occurs; AC creates a changing field that induces voltage",
+                "Transformers work equally well with DC",
+                "DC would damage the transformer"
+              ],
+              "id": "electromagnetism_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
