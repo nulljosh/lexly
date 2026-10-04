@@ -1,0 +1,904 @@
+{
+  "id": "personal_finance",
+  "name": "Personal Finance",
+  "category": "skills",
+  "icon": "fa-solid fa-wallet",
+  "level": "Money Basics",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Income and Expenses",
+      "tip": "Income is money you receive. Expenses are money you spend. Understanding both is the foundation of personal finance. The difference between them, called net income or surplus, shows whether you are spending more or less than you earn.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Income and Expenses Are",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is income?",
+              "answer": "Money you receive from work, investments, or other sources",
+              "explain": "Income is any money coming in. Salary from a job, interest from a savings account, or revenue from a business are all income.",
+              "choices": [
+                "Money you receive from work, investments, or other sources",
+                "Money you owe to others",
+                "Money you have saved",
+                "The value of things you own"
+              ],
+              "id": "personal_finance_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an expense?",
+              "answer": "Money you spend on goods, services, or obligations",
+              "explain": "An expense is any money going out. Food, rent, transportation, insurance, and entertainment are all expenses.",
+              "choices": [
+                "Money you receive",
+                "The cost of something you own",
+                "Money you have borrowed",
+                "Money you spend on goods, services, or obligations"
+              ],
+              "id": "personal_finance_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do you call the difference between income and expenses?",
+              "answer": "Surplus if income exceeds expenses, deficit if expenses exceed income",
+              "explain": "If you earn 3000 and spend 2000, you have a 1000 surplus. If you earn 3000 and spend 4000, you have a 1000 deficit.",
+              "choices": [
+                "Net worth",
+                "Tax liability",
+                "Profit, regardless of which is larger",
+                "Surplus if income exceeds expenses, deficit if expenses exceed income"
+              ],
+              "id": "personal_finance_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is tracking income and expenses important?",
+              "answer": "It shows you where your money goes and whether you have surplus or deficit",
+              "explain": "Without tracking, you do not know if you are spending more than you earn or where your money is actually going. Tracking reveals patterns and problems.",
+              "choices": [
+                "It guarantees a surplus",
+                "It eliminates all expenses",
+                "It shows you where your money goes and whether you have surplus or deficit",
+                "It makes you richer"
+              ],
+              "id": "personal_finance_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What categories might you track expenses in?",
+              "answer": "Housing, food, transportation, entertainment, utilities, and more",
+              "explain": "Common expense categories help organize spending. Different people use different categories based on their needs.",
+              "choices": [
+                "Only work and fun",
+                "All expenses are the same category",
+                "Expenses should not be categorized",
+                "Housing, food, transportation, entertainment, utilities, and more"
+              ],
+              "id": "personal_finance_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Gross and Net Income",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is gross income?",
+              "answer": "Total income before any deductions or taxes",
+              "explain": "Gross income is the full amount earned. If a job pays 50000 per year, that is the gross income before deductions.",
+              "choices": [
+                "Total income before any deductions or taxes",
+                "Bonus money only",
+                "Total income after all deductions",
+                "Money you keep in the bank"
+              ],
+              "id": "personal_finance_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is net income?",
+              "answer": "Gross income minus deductions like taxes and benefits",
+              "explain": "Net income is the money you actually receive after deductions. If gross is 50000 and deductions are 10000, net is 40000.",
+              "choices": [
+                "Money you invest",
+                "Money borrowed from others",
+                "Total income before deductions",
+                "Gross income minus deductions like taxes and benefits"
+              ],
+              "id": "personal_finance_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are common deductions from gross income?",
+              "answer": "Taxes, health insurance, retirement contributions",
+              "explain": "Employers often deduct taxes and benefits from pay automatically. These reduce gross income to get net income.",
+              "choices": [
+                "Taxes, health insurance, retirement contributions",
+                "Only voluntary donations",
+                "All personal expenses",
+                "Investments only"
+              ],
+              "id": "personal_finance_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If your gross income is 4000 per month and deductions are 800, what is your net income?",
+              "answer": "3200 per month",
+              "explain": "Net income = Gross income minus Deductions. 4000 minus 800 equals 3200.",
+              "choices": [
+                "4000 per month",
+                "4800 per month",
+                "800 per month",
+                "3200 per month"
+              ],
+              "id": "personal_finance_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it important to know both gross and net income?",
+              "answer": "Gross shows total earning power, net shows actual money available to spend",
+              "explain": "You cannot spend your gross income because deductions take part of it first. You can only spend net income. Both numbers are important for different reasons.",
+              "choices": [
+                "They are the same thing",
+                "Gross shows total earning power, net shows actual money available to spend",
+                "Only gross income matters",
+                "Net income is not important"
+              ],
+              "id": "personal_finance_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Budgeting Basics",
+      "tip": "A budget is a plan for money. It lists expected income and planned spending. Comparing the two shows whether a plan balances and what each goal would take.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Creating and Using a Budget",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a budget?",
+              "answer": "A plan showing expected income and planned spending",
+              "explain": "A budget lists your income sources and plans how to allocate that money to different categories. It is a forward-looking tool.",
+              "choices": [
+                "A plan showing expected income and planned spending",
+                "A savings account",
+                "A list of debts you owe",
+                "A record of past spending only"
+              ],
+              "id": "personal_finance_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a simple budget, what must be known before spending can be planned?",
+              "answer": "How much money is expected to come in",
+              "explain": "A plan for spending starts from the income available. Listing all income sources comes first.",
+              "choices": [
+                "The price of every future purchase",
+                "The interest rate on a savings account",
+                "How much money is expected to come in",
+                "A credit score"
+              ],
+              "id": "personal_finance_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the usual budgeting order, what comes after listing income?",
+              "answer": "Listing and estimating expected expenses in each category",
+              "explain": "Next come the anticipated expenses, such as housing, food, and transportation, each with an estimated amount.",
+              "choices": [
+                "Listing and estimating expected expenses in each category",
+                "Spending all the income at once",
+                "Leaving expenses out of the plan",
+                "Closing a bank account"
+              ],
+              "id": "personal_finance_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If your monthly income is 3500 and total planned expenses are 3200, what is your budgeted surplus?",
+              "answer": "300 per month",
+              "explain": "Budgeted surplus = Income minus Expenses. 3500 minus 3200 equals 300.",
+              "choices": [
+                "3500 per month",
+                "3200 per month",
+                "300 per month",
+                "6700 per month"
+              ],
+              "id": "personal_finance_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a budget show when planned expenses are larger than income?",
+              "answer": "A deficit, a gap that must be covered somehow",
+              "explain": "When planned spending exceeds income, the difference is a deficit. It can only be closed by spending less, earning more, or drawing on savings or borrowing.",
+              "choices": [
+                "A deficit, a gap that must be covered somehow",
+                "A surplus",
+                "Gross income",
+                "Net worth"
+              ],
+              "id": "personal_finance_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Fixed and Variable Expenses",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a fixed expense?",
+              "answer": "An expense that is the same amount each month",
+              "explain": "Fixed expenses do not change. Rent, insurance, and loan payments are typically fixed because the amount is the same every month.",
+              "choices": [
+                "An expense that is the same amount each month",
+                "A one-time purchase",
+                "Money you do not spend",
+                "An expense that changes every month"
+              ],
+              "id": "personal_finance_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a variable expense?",
+              "answer": "An expense that changes from month to month",
+              "explain": "Variable expenses fluctuate. Groceries, dining out, and entertainment vary in cost depending on what you buy.",
+              "choices": [
+                "Money saved in a bank",
+                "Interest earned",
+                "An expense that changes from month to month",
+                "An expense that stays the same"
+              ],
+              "id": "personal_finance_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which are typically fixed expenses?",
+              "answer": "Rent or mortgage, insurance, loan payments",
+              "explain": "These are contracted amounts paid to the same payee each month. You know the exact amount in advance.",
+              "choices": [
+                "All expenses are equally variable",
+                "Gas, transportation, clothing",
+                "Groceries, entertainment, dining",
+                "Rent or mortgage, insurance, loan payments"
+              ],
+              "id": "personal_finance_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which are typically variable expenses?",
+              "answer": "Groceries, entertainment, clothing, dining out",
+              "explain": "These amounts change based on what you buy and how much you choose to spend. They are harder to predict exactly.",
+              "choices": [
+                "Utilities in all cases",
+                "Rent, insurance, loan payments",
+                "Groceries, entertainment, clothing, dining out",
+                "All household expenses are fixed"
+              ],
+              "id": "personal_finance_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do budgets treat fixed and variable expenses differently?",
+              "answer": "Fixed amounts are known in advance, variable amounts must be estimated",
+              "explain": "Fixed expenses repeat at the same amount, so they are easy to plan. Variable expenses change, so a budget uses an estimate for them.",
+              "choices": [
+                "Fixed expenses never have to be paid",
+                "Fixed amounts are known in advance, variable amounts must be estimated",
+                "Variable expenses are always larger",
+                "Variable expenses cannot be recorded"
+              ],
+              "id": "personal_finance_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Saving and Emergency Funds",
+      "tip": "Saving is spending less than is earned and setting the difference aside. An emergency fund is savings set aside for unexpected costs such as a medical bill or loss of income. Its purpose is to absorb financial shocks.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Why and How to Save",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is saving?",
+              "answer": "Spending less than you earn and setting money aside",
+              "explain": "Saving is the act of not spending all your income. The unspent money is set aside for future use.",
+              "choices": [
+                "Earning more money",
+                "Borrowing money",
+                "Spending less than you earn and setting money aside",
+                "Reducing expenses to zero"
+              ],
+              "id": "personal_finance_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can savings be used for?",
+              "answer": "Meeting future goals and absorbing unexpected expenses",
+              "explain": "Savings can fund planned goals or cover surprise costs without borrowing.",
+              "choices": [
+                "Eliminating all expenses",
+                "Replacing the need for any income",
+                "Increasing gross income automatically",
+                "Meeting future goals and absorbing unexpected expenses"
+              ],
+              "id": "personal_finance_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If your monthly surplus is 300, how much would you save in a year?",
+              "answer": "3600",
+              "explain": "Savings per year = Monthly surplus times 12. 300 times 12 equals 3600.",
+              "choices": [
+                "300000",
+                "3600",
+                "300",
+                "36000"
+              ],
+              "id": "personal_finance_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do some people keep savings in an account separate from spending money?",
+              "answer": "Separation makes the money less tempting to spend",
+              "explain": "Money kept apart from everyday spending is less likely to be used for routine purchases.",
+              "choices": [
+                "Separation makes the money less tempting to spend",
+                "It lowers expenses automatically",
+                "Separate accounts always earn more",
+                "It is the only way to save"
+              ],
+              "id": "personal_finance_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'paying yourself first'?",
+              "answer": "Setting aside savings before paying other expenses",
+              "explain": "Instead of saving what is left after spending, decide on a savings amount first and spend what remains. This prioritizes saving.",
+              "choices": [
+                "Paying bills early",
+                "Refusing to save",
+                "Setting aside savings before paying other expenses",
+                "Spending money on yourself"
+              ],
+              "id": "personal_finance_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Emergency Funds",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an emergency fund?",
+              "answer": "Money set aside specifically for unexpected expenses",
+              "explain": "An emergency fund is savings reserved for unexpected costs like medical bills, car repairs, or loss of income. It is often kept apart from other savings.",
+              "choices": [
+                "Money set aside specifically for unexpected expenses",
+                "Money for entertainment",
+                "Money you lend to others",
+                "Money for planned vacations"
+              ],
+              "id": "personal_finance_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do people often keep an emergency fund separate from other savings?",
+              "answer": "To make it harder to spend on non-emergencies",
+              "explain": "A separate fund is less likely to be used for routine purchases, which keeps it available for true emergencies.",
+              "choices": [
+                "It is legally required",
+                "It always earns more interest there",
+                "To make it harder to spend on non-emergencies",
+                "Regular savings should not exist"
+              ],
+              "id": "personal_finance_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is the size of an emergency fund usually described?",
+              "answer": "In months of essential living expenses",
+              "explain": "Funds are often sized as a number of months of essential expenses. The right number depends on a person's situation, so it is not a single fixed target.",
+              "choices": [
+                "In years of total income",
+                "By the number of bank accounts held",
+                "In months of essential living expenses",
+                "As a fixed amount that is the same for everyone"
+              ],
+              "id": "personal_finance_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If essential expenses are 2500 a month, how much does a fund covering four months of them hold?",
+              "answer": "10000",
+              "explain": "Four months of 2500 is 4 times 2500, which equals 10000.",
+              "choices": [
+                "2500",
+                "7500",
+                "10000",
+                "25000"
+              ],
+              "id": "personal_finance_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After an emergency fund has been used, what is true until it is refilled?",
+              "answer": "It is smaller, so it protects against less",
+              "explain": "An emergency fund only protects up to the amount in it. Once money is withdrawn, there is less available for the next emergency.",
+              "choices": [
+                "It has grown automatically",
+                "It has turned into a loan",
+                "Its protection is unchanged",
+                "It is smaller, so it protects against less"
+              ],
+              "id": "personal_finance_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Simple and Compound Interest",
+      "tip": "Interest is the cost of borrowing money or the reward for lending it. Simple interest is calculated on the principal only. Compound interest is calculated on principal plus accumulated interest, making it grow faster.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Understanding Interest",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is interest?",
+              "answer": "The cost of borrowing money or the reward for saving it",
+              "explain": "When you borrow, you pay interest. When you save or invest, you earn interest. Interest is the price of money over time.",
+              "choices": [
+                "A fee for using a bank",
+                "The cost of borrowing money or the reward for saving it",
+                "A tax on money",
+                "The total amount of a loan"
+              ],
+              "id": "personal_finance_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does an interest rate tell you?",
+              "answer": "The percentage of the principal charged or earned over a period, usually a year",
+              "explain": "A rate of 5 percent per year means 5 percent of the principal is charged or earned each year. A higher rate means more interest on the same principal.",
+              "choices": [
+                "The bank's profit",
+                "The percentage of the principal charged or earned over a period, usually a year",
+                "How much total money is owed",
+                "The number of payments"
+              ],
+              "id": "personal_finance_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the principal?",
+              "answer": "The original amount of money borrowed or invested",
+              "explain": "If you borrow 10000, the principal is 10000. Interest is calculated based on this principal.",
+              "choices": [
+                "The original amount of money borrowed or invested",
+                "The interest paid",
+                "The monthly payment",
+                "The total amount owed"
+              ],
+              "id": "personal_finance_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On the same principal, what does doubling the simple interest rate do to the interest per year?",
+              "answer": "It doubles the interest",
+              "explain": "On 1000 at 3 percent simple interest, the interest is 30 per year. At 6 percent it is 60 per year. Double the rate means double the interest.",
+              "choices": [
+                "It squares the interest",
+                "It halves the interest",
+                "It leaves the interest unchanged",
+                "It doubles the interest"
+              ],
+              "id": "personal_finance_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a savings account pays interest?",
+              "answer": "The bank gives you money as a reward for keeping your money there",
+              "explain": "Banks that pay interest on savings do so because they lend out deposited money. The depositor earns a return on the balance held.",
+              "choices": [
+                "The bank borrows from you",
+                "The bank charges you a fee",
+                "You have to pay to keep money there",
+                "The bank gives you money as a reward for keeping your money there"
+              ],
+              "id": "personal_finance_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Simple vs Compound Interest",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is simple interest?",
+              "answer": "Interest calculated only on the principal, not on accumulated interest",
+              "explain": "With simple interest, interest is calculated on the original amount only. Each year you earn the same amount of interest.",
+              "choices": [
+                "Interest that decreases yearly",
+                "Interest that never changes",
+                "Interest calculated only on the principal, not on accumulated interest",
+                "Interest calculated on everything"
+              ],
+              "id": "personal_finance_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you invest 1000 at 5 percent simple interest, how much interest do you earn in year one?",
+              "answer": "50",
+              "explain": "Simple interest = Principal times Rate. 1000 times 0.05 equals 50.",
+              "choices": [
+                "50",
+                "5",
+                "100",
+                "500"
+              ],
+              "id": "personal_finance_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is compound interest?",
+              "answer": "Interest calculated on principal plus previously earned interest",
+              "explain": "With compound interest, interest earns interest. Each year, you calculate interest on a larger amount (principal plus accumulated interest).",
+              "choices": [
+                "Interest that never increases",
+                "Interest paid once per year",
+                "Interest calculated on principal plus previously earned interest",
+                "Interest that stays the same"
+              ],
+              "id": "personal_finance_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you invest 1000 at 5 percent compound interest (compounded annually), how much is it worth after 2 years?",
+              "answer": "1102.50",
+              "explain": "Year 1: 1000 plus 50 interest equals 1050. Year 2: 1050 times 0.05 equals 52.50 interest. 1050 plus 52.50 equals 1102.50.",
+              "choices": [
+                "1050",
+                "1200",
+                "1100",
+                "1102.50"
+              ],
+              "id": "personal_finance_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does compound interest grow faster than simple interest?",
+              "answer": "Interest earns its own interest, creating exponential growth",
+              "explain": "With compound interest, the growing total earns interest each period. Simple interest earns only on the original amount. Over time, compound interest creates much larger growth.",
+              "choices": [
+                "Compound rates are always higher",
+                "Compound interest is the same as simple",
+                "Interest earns its own interest, creating exponential growth",
+                "It does not grow faster"
+              ],
+              "id": "personal_finance_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Debt and Credit Scores",
+      "tip": "Debt is money owed to others. Borrowing has a cost in the form of interest. A credit score is a number that summarizes how reliably someone has repaid borrowed money.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Types of Debt",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is debt?",
+              "answer": "Money you owe to others that must be repaid",
+              "explain": "Debt is an obligation to repay borrowed money. Credit card balances, loans, and mortgages are all debt.",
+              "choices": [
+                "Money you have saved",
+                "Money you invest",
+                "Money you owe to others that must be repaid",
+                "Money you earn"
+              ],
+              "id": "personal_finance_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a loan?",
+              "answer": "A fixed amount of money you borrow and agree to repay with interest",
+              "explain": "A loan is a formal agreement where you borrow a specific amount and must repay it in regular payments, usually including interest.",
+              "choices": [
+                "A savings account",
+                "Money you earn",
+                "Free money given by a bank",
+                "A fixed amount of money you borrow and agree to repay with interest"
+              ],
+              "id": "personal_finance_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a credit card?",
+              "answer": "A card that lets you borrow money up to a limit, which you must repay",
+              "explain": "A credit card allows you to borrow money for purchases. You receive a bill and must repay the amount used, plus interest if you do not pay in full.",
+              "choices": [
+                "A savings account",
+                "A way to earn free money",
+                "A way to store cash",
+                "A card that lets you borrow money up to a limit, which you must repay"
+              ],
+              "id": "personal_finance_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why can credit card debt become expensive?",
+              "answer": "Interest builds on any balance that is not paid in full",
+              "explain": "If only part of the balance is paid, the unpaid amount accrues interest, which adds to what is owed.",
+              "choices": [
+                "Paying in full adds extra interest",
+                "Cards cannot be used to buy things",
+                "Interest builds on any balance that is not paid in full",
+                "Cards never charge interest"
+              ],
+              "id": "personal_finance_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What can a record of on-time repayment do?",
+              "answer": "Build a credit history that lenders can review",
+              "explain": "Borrowing and repaying on time shows lenders a pattern of reliability. It can influence whether and on what terms they lend later, but it guarantees nothing.",
+              "choices": [
+                "Build a credit history that lenders can review",
+                "Guarantee future loan approval",
+                "Raise income",
+                "Remove the need to repay"
+              ],
+              "id": "personal_finance_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Credit Scores and Creditworthiness",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a credit score?",
+              "answer": "A number that measures how reliably you repay borrowed money",
+              "explain": "A credit score summarizes your borrowing and repayment history. Lenders use it to decide whether to lend to you and what interest rate to offer.",
+              "choices": [
+                "The amount of money you have",
+                "Your income",
+                "A number that measures how reliably you repay borrowed money",
+                "Your bank account balance"
+              ],
+              "id": "personal_finance_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What kinds of information do credit scores typically draw on?",
+              "answer": "Payment history, amount owed, length of credit history, new credit",
+              "explain": "Credit scores typically draw on whether payments are made on time, how much is owed compared to limits, how long credit has been used, and how much new credit was recently sought. Details differ between scoring systems.",
+              "choices": [
+                "Only your age",
+                "Only your income",
+                "Random chance",
+                "Payment history, amount owed, length of credit history, new credit"
+              ],
+              "id": "personal_finance_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a higher credit score mean?",
+              "answer": "Lenders see you as a lower risk and more likely to approve your loans",
+              "explain": "A high credit score shows you reliably repay debts. Lenders trust you more and may offer better interest rates.",
+              "choices": [
+                "Credit scores do not matter",
+                "Lenders see you as a lower risk and more likely to approve your loans",
+                "You have more money",
+                "You cannot borrow any money"
+              ],
+              "id": "personal_finance_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What hurts your credit score?",
+              "answer": "Late payments, high debt levels, defaulting on loans",
+              "explain": "Missing payments, carrying large balances, and failing to repay loans all damage your credit score.",
+              "choices": [
+                "Late payments, high debt levels, defaulting on loans",
+                "Saving money",
+                "Paying on time",
+                "Having a job"
+              ],
+              "id": "personal_finance_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which behaviors do credit scores generally reward?",
+              "answer": "Paying on time and keeping balances low relative to limits",
+              "explain": "Consistent on-time payments and moderate balances are the patterns scoring systems generally read as reliable.",
+              "choices": [
+                "Missing payments to show flexibility",
+                "Paying on time and keeping balances low relative to limits",
+                "Closing every account immediately",
+                "Borrowing the maximum on every account"
+              ],
+              "id": "personal_finance_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Insurance and Needs vs Wants",
+      "tip": "Insurance is protection against financial risk. Insurance pools risk across many people so that individuals are protected from large unexpected costs. Needs are essential items and expenses. Wants are things you desire but could live without.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Understanding Insurance",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is insurance?",
+              "answer": "A way to protect yourself financially against unexpected losses or expenses",
+              "explain": "Insurance is an agreement where you pay a regular premium (fee) and the insurance company reimburses you for covered losses or expenses.",
+              "choices": [
+                "A way to earn free money",
+                "A type of savings",
+                "A way to protect yourself financially against unexpected losses or expenses",
+                "A loan you must repay"
+              ],
+              "id": "personal_finance_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a premium in insurance?",
+              "answer": "The regular payment you make to maintain insurance coverage",
+              "explain": "A premium is the cost of insurance. You might pay a monthly or annual premium to keep your insurance policy active.",
+              "choices": [
+                "The regular payment you make to maintain insurance coverage",
+                "Money paid after a loss",
+                "Free insurance money",
+                "The amount the insurance company keeps"
+              ],
+              "id": "personal_finance_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a deductible in insurance?",
+              "answer": "The amount you must pay before the insurance company pays for a loss",
+              "explain": "If your deductible is 500 and you have a 2000 loss, you pay 500 and insurance pays 1500.",
+              "choices": [
+                "A fee for making a claim",
+                "Money the insurance company pays you",
+                "The total cost of insurance",
+                "The amount you must pay before the insurance company pays for a loss"
+              ],
+              "id": "personal_finance_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does health insurance spread across many people?",
+              "answer": "Large, unpredictable medical costs",
+              "explain": "Medical care can be very expensive and hard to predict. Insurance pools the risk so that the cost of a rare large event is shared.",
+              "choices": [
+                "Large, unpredictable medical costs",
+                "The price of groceries",
+                "Changes in interest rates",
+                "Ordinary predictable expenses such as rent"
+              ],
+              "id": "personal_finance_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does insurance risk pooling work?",
+              "answer": "Many people pay premiums so that some who experience losses are covered",
+              "explain": "Insurance companies collect premiums from thousands of people. Most never make a claim, but those who do are protected. This spreads risk across the group.",
+              "choices": [
+                "Only wealthy people have insurance",
+                "Each person insures themselves alone",
+                "Many people pay premiums so that some who experience losses are covered",
+                "Risk pooling does not exist"
+              ],
+              "id": "personal_finance_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Needs vs Wants",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a need?",
+              "answer": "An essential item or expense required for basic living",
+              "explain": "Needs are things you must have to survive and function. Food, housing, utilities, and clothing are needs.",
+              "choices": [
+                "An essential item or expense required for basic living",
+                "Something you want but cannot afford",
+                "Luxuries only",
+                "Anything that makes you happy"
+              ],
+              "id": "personal_finance_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a want?",
+              "answer": "Something you desire but could live without",
+              "explain": "Wants are things you like but are not necessary. Entertainment, dining out, and luxury items are wants.",
+              "choices": [
+                "Something you desire but could live without",
+                "Something you must have",
+                "Money you have saved",
+                "An expense that never changes"
+              ],
+              "id": "personal_finance_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a need?",
+              "answer": "Shelter (housing)",
+              "explain": "Shelter is essential for survival. Entertainment, vacations, and luxury goods are wants, not needs.",
+              "choices": [
+                "A vacation to another country",
+                "A luxury car",
+                "Designer clothing",
+                "Shelter (housing)"
+              ],
+              "id": "personal_finance_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which of these is a want?",
+              "answer": "Dining out at restaurants",
+              "explain": "Dining out is enjoyable but not necessary. You could cook at home. Basic food is a need, but restaurant dining is a want.",
+              "choices": [
+                "Basic food for nutrition",
+                "Dining out at restaurants",
+                "Electricity for the home",
+                "Medical care"
+              ],
+              "id": "personal_finance_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a needs-first budgeting approach, what is covered first?",
+              "answer": "Needs, then wants from what remains",
+              "explain": "Covering essentials first means the remaining money is what is available for wants.",
+              "choices": [
+                "Only wants",
+                "Wants, then needs from what remains",
+                "Neither needs nor wants",
+                "Needs, then wants from what remains"
+              ],
+              "id": "personal_finance_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

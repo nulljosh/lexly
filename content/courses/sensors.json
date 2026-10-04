@@ -1,0 +1,904 @@
+{
+  "id": "sensors",
+  "name": "Sensors and Actuators",
+  "category": "engineering",
+  "icon": "fa-solid fa-satellite-dish",
+  "level": "How Machines Sense and Move",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "What Sensors and Actuators Are",
+      "tip": "Sensors detect the physical world and send information to a machine. Actuators receive signals and move or control something in the physical world. Together, they let machines see, feel, and act.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Sensors: How Machines Detect",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary job of a sensor?",
+              "answer": "Detect physical change and convert it to a signal",
+              "explain": "A sensor measures something in the physical world (light, heat, distance) and turns it into an electrical signal the machine can read.",
+              "choices": [
+                "Display information on a screen",
+                "Store data permanently",
+                "Generate electrical power",
+                "Detect physical change and convert it to a signal"
+              ],
+              "id": "sensors_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of a sensor?",
+              "answer": "A thermometer that measures temperature",
+              "explain": "A thermometer is a sensor because it detects temperature and produces an output (a reading or electrical signal) based on that measurement.",
+              "choices": [
+                "A button that turns on power",
+                "A battery storing energy",
+                "A thermometer that measures temperature",
+                "A motor spinning a fan blade"
+              ],
+              "id": "sensors_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do we call the physical quantity a sensor measures?",
+              "answer": "An input or stimulus",
+              "explain": "The physical quantity being measured (light, temperature, distance, motion) is called the input or stimulus to the sensor.",
+              "choices": [
+                "An input or stimulus",
+                "A digital signal",
+                "A feedback loop",
+                "An output"
+              ],
+              "id": "sensors_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What form does a sensor's output usually take?",
+              "answer": "An electrical signal (voltage or current)",
+              "explain": "Most sensors convert physical measurements into electrical signals that circuits can process. This might be a voltage level or a current flow.",
+              "choices": [
+                "Light beams",
+                "Mechanical pressure",
+                "Sound waves",
+                "An electrical signal (voltage or current)"
+              ],
+              "id": "sensors_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where would you find a sensor in a smartphone?",
+              "answer": "Multiple places, like the accelerometer that detects motion",
+              "explain": "Smartphones contain many sensors: accelerometers (motion), light sensors (for screen brightness), proximity sensors (near your ear), GPS (location), and others.",
+              "choices": [
+                "Only in the battery",
+                "Only in the camera",
+                "Multiple places, like the accelerometer that detects motion",
+                "Sensors are not used in phones"
+              ],
+              "id": "sensors_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Actuators: How Machines Act",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary job of an actuator?",
+              "answer": "Convert a signal into physical movement or control",
+              "explain": "An actuator receives an electrical signal and produces a mechanical action: movement, sound, light, or other physical change.",
+              "choices": [
+                "Detect light changes",
+                "Measure temperature",
+                "Convert a signal into physical movement or control",
+                "Store electrical energy"
+              ],
+              "id": "sensors_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of an actuator?",
+              "answer": "An electric motor that spins a fan",
+              "explain": "A motor is an actuator because it takes an electrical signal (current) and converts it into rotational motion.",
+              "choices": [
+                "A microphone",
+                "An electric motor that spins a fan",
+                "A thermometer",
+                "A light sensor"
+              ],
+              "id": "sensors_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do we call the physical action an actuator produces?",
+              "answer": "An output or response",
+              "explain": "The physical action or change produced by an actuator (movement, light, sound) is called the output or response.",
+              "choices": [
+                "A digital command",
+                "An output or response",
+                "A feedback signal",
+                "An input stimulus"
+              ],
+              "id": "sensors_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What other types of actuators exist besides motors?",
+              "answer": "Solenoids, LED lights, speakers, and hydraulic cylinders",
+              "explain": "Actuators vary widely: solenoids push or pull, LEDs produce light, speakers produce sound, and hydraulic cylinders create strong linear motion.",
+              "choices": [
+                "Only springs and levers",
+                "Solenoids, LED lights, speakers, and hydraulic cylinders",
+                "Only mechanical gears",
+                "Only electric motors"
+              ],
+              "id": "sensors_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do sensors and actuators work together in a system?",
+              "answer": "Sensors detect conditions and send signals that trigger actuators to respond",
+              "explain": "Sensors gather information and send signals to a controller. The controller decides whether to activate an actuator. Example: a motion sensor triggers a light actuator to turn on.",
+              "choices": [
+                "They work independently with no connection",
+                "Only sensors are needed in real systems",
+                "Sensors detect conditions and send signals that trigger actuators to respond",
+                "Actuators detect and sensors act"
+              ],
+              "id": "sensors_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Analog and Digital",
+      "tip": "Sensors and actuators can work with continuous signals (analog) or discrete values (digital). Analog represents a range of values smoothly. Digital represents values as numbers, usually 0 or 1.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Analog Signals and Sensors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an analog signal?",
+              "answer": "A continuous signal that can take any value within a range",
+              "explain": "Analog signals vary smoothly without steps. A sensor might output 0.25 volts at 25 degrees Celsius, 0.26 volts at 26, and values in between at intermediate temperatures.",
+              "choices": [
+                "A signal that only changes at noon and midnight",
+                "A continuous signal that can take any value within a range",
+                "A signal that repeats every second",
+                "A signal that is always either 0 or 1"
+              ],
+              "id": "sensors_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of an analog temperature sensor?",
+              "answer": "A voltage that changes smoothly with temperature",
+              "explain": "An analog temperature sensor outputs a voltage proportional to the temperature. Higher temperature produces higher voltage, with no steps or gaps.",
+              "choices": [
+                "Always exactly 5 volts or 0 volts",
+                "A series of pulses",
+                "A number printed on a screen",
+                "A voltage that changes smoothly with temperature"
+              ],
+              "id": "sensors_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does an analog sensor have?",
+              "answer": "It provides fine, smooth resolution of measured values",
+              "explain": "Analog signals can represent very small changes in the measured quantity with great precision, unlike digital which is limited to discrete steps.",
+              "choices": [
+                "It can store data permanently",
+                "It requires no power to operate",
+                "It provides fine, smooth resolution of measured values",
+                "It is immune to noise"
+              ],
+              "id": "sensors_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What disadvantage does an analog signal have?",
+              "answer": "It is affected by noise and interference",
+              "explain": "Analog signals are vulnerable to electrical noise, which can distort the signal and introduce errors in the measurement.",
+              "choices": [
+                "It cannot represent negative values",
+                "It is too fast for computers",
+                "It is more expensive than digital",
+                "It is affected by noise and interference"
+              ],
+              "id": "sensors_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What device converts an analog sensor's output into digital data?",
+              "answer": "An analog-to-digital converter (ADC)",
+              "explain": "An ADC reads the analog voltage from a sensor and converts it into a digital number that a computer can process. Most microcontrollers have built-in ADCs.",
+              "choices": [
+                "A digital thermometer",
+                "An analog amplifier",
+                "A relay",
+                "An analog-to-digital converter (ADC)"
+              ],
+              "id": "sensors_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Digital Signals and Outputs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a digital signal?",
+              "answer": "A signal that has only discrete values, usually 0 or 1",
+              "explain": "Digital signals are either high (1, a set higher voltage such as 5 or 3.3 volts depending on the system) or low (0, close to 0 volts) with no values in between.",
+              "choices": [
+                "A signal that has only discrete values, usually 0 or 1",
+                "A signal that varies continuously",
+                "A signal that is encrypted",
+                "A signal that repeats in cycles"
+              ],
+              "id": "sensors_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of a digital sensor?",
+              "answer": "A button that outputs high when pressed, low when not",
+              "explain": "A button sensor has two outputs: a high signal when the button is pressed and a low signal when it is released. No values in between.",
+              "choices": [
+                "A button that outputs high when pressed, low when not",
+                "A light dimmer at various brightness levels",
+                "A microphone recording sound",
+                "A thermometer measuring temperature change"
+              ],
+              "id": "sensors_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does a digital sensor have?",
+              "answer": "It is less affected by noise and easier for computers to process",
+              "explain": "Digital signals are robust: small noise does not change a 1 to a 0. Computers process digital signals natively without conversion.",
+              "choices": [
+                "It requires no power",
+                "It can represent values between 0 and 1",
+                "It provides infinite resolution",
+                "It is less affected by noise and easier for computers to process"
+              ],
+              "id": "sensors_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What disadvantage does a digital sensor have?",
+              "answer": "It has limited resolution because it can only represent discrete values",
+              "explain": "A digital sensor cannot represent finer measurements than the size of its step. For example, a 1-bit sensor can only say 0 or 1, not 0.5.",
+              "choices": [
+                "It is damaged by water",
+                "It is slower than analog sensors",
+                "It has limited resolution because it can only represent discrete values",
+                "It cannot work without electricity"
+              ],
+              "id": "sensors_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What device converts a digital signal into an analog output for an actuator?",
+              "answer": "A digital-to-analog converter (DAC)",
+              "explain": "A DAC takes a digital number from a computer and converts it into an analog voltage to control analog actuators like motors or lights.",
+              "choices": [
+                "An amplifier",
+                "A relay switch",
+                "A digital thermometer",
+                "A digital-to-analog converter (DAC)"
+              ],
+              "id": "sensors_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Temperature, Light, and Distance",
+      "tip": "Some of the most common sensors measure temperature, light, and distance. Each uses different physics to detect its target. Understanding their basic principles helps you choose the right sensor for a task.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Temperature and Light Sensors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a thermistor?",
+              "answer": "A resistor whose resistance changes with temperature",
+              "explain": "A thermistor is a temperature sensor that changes its electrical resistance as temperature changes. This resistance change can be measured and converted to temperature.",
+              "choices": [
+                "A thermometer that displays numbers",
+                "A resistor whose resistance changes with temperature",
+                "A thermostat for controlling heat",
+                "A device that heats things up"
+              ],
+              "id": "sensors_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does a photoresistor (light-dependent resistor) work?",
+              "answer": "Its resistance decreases as light intensity increases",
+              "explain": "A photoresistor is made of a light-sensitive material. Brighter light causes more current to flow, which means lower resistance.",
+              "choices": [
+                "It stores light in a battery",
+                "It emits light when powered",
+                "Its resistance decreases as light intensity increases",
+                "It generates electricity from light like a solar cell"
+              ],
+              "id": "sensors_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where would you use a temperature sensor?",
+              "answer": "In a thermostat to control heating and cooling",
+              "explain": "Temperature sensors are used in climate control systems, refrigerators, ovens, and industrial processes to monitor and maintain desired temperatures.",
+              "choices": [
+                "To measure light levels",
+                "In a thermostat to control heating and cooling",
+                "Only in thermometers",
+                "To detect motion"
+              ],
+              "id": "sensors_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Besides emitting light, what can an LED do when light falls on it?",
+              "answer": "Produce a tiny current or voltage, so it can act as a light sensor",
+              "explain": "An LED is a diode, and light hitting it can generate a small current or voltage. This lets an LED double as a simple light sensor, though a very weak one.",
+              "choices": [
+                "Turn into a thermistor",
+                "Emit twice as much light",
+                "Stop working permanently",
+                "Produce a tiny current or voltage, so it can act as a light sensor"
+              ],
+              "id": "sensors_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a light sensor useful in a smartphone?",
+              "answer": "It adjusts screen brightness based on ambient light",
+              "explain": "The light sensor measures how bright the surroundings are and tells the phone to brighten the screen in daylight and dim it in darkness.",
+              "choices": [
+                "It measures temperature",
+                "It detects motion",
+                "It measures battery level",
+                "It adjusts screen brightness based on ambient light"
+              ],
+              "id": "sensors_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Distance Sensors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does an ultrasonic distance sensor work?",
+              "answer": "It sends out sound waves and measures the time until they bounce back",
+              "explain": "An ultrasonic sensor sends a high-frequency sound pulse. It measures how long the pulse takes to reflect off an object and return. Distance is calculated from this time.",
+              "choices": [
+                "It detects magnetic fields",
+                "It uses radio waves to locate objects",
+                "It measures light reflection",
+                "It sends out sound waves and measures the time until they bounce back"
+              ],
+              "id": "sensors_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the working range of a typical ultrasonic sensor?",
+              "answer": "A few centimeters to several meters",
+              "explain": "Many common hobby ultrasonic sensors work from a couple of centimeters to a few meters, depending on the model. They suit short-range distance measurement.",
+              "choices": [
+                "Only for measuring room temperature",
+                "A few centimeters to several meters",
+                "Only millimeters, very close range",
+                "Hundreds of meters"
+              ],
+              "id": "sensors_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an infrared distance sensor work?",
+              "answer": "It sends infrared light and measures the reflection or time of flight",
+              "explain": "An IR sensor sends infrared light and either measures how much reflects back (triangulation) or how long the light takes to return (time-of-flight).",
+              "choices": [
+                "It detects radio signals",
+                "It uses sound waves",
+                "It measures temperature of the object",
+                "It sends infrared light and measures the reflection or time of flight"
+              ],
+              "id": "sensors_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of infrared sensors over ultrasonic?",
+              "answer": "Infrared sensors work in noisy environments and are not affected by sound",
+              "explain": "Ultrasonic sensors rely on sound, which fails in very noisy places. Infrared light works independently of noise.",
+              "choices": [
+                "Ultrasonic is better in all situations",
+                "Infrared is cheaper",
+                "Ultrasonic has no advantages",
+                "Infrared sensors work in noisy environments and are not affected by sound"
+              ],
+              "id": "sensors_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where would you find a distance sensor in a car?",
+              "answer": "In a parking sensor to detect nearby obstacles",
+              "explain": "Modern cars use ultrasonic or radar distance sensors in parking assist systems to detect how close the car is to objects when parking.",
+              "choices": [
+                "Only in the headlights",
+                "Distance sensors are not used in cars",
+                "Only in the engine",
+                "In a parking sensor to detect nearby obstacles"
+              ],
+              "id": "sensors_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Motion and Position Sensors",
+      "tip": "Accelerometers, gyroscopes, and encoders detect motion and position. Accelerometers sense changes in speed. Gyroscopes detect rotation. Encoders track how far something has moved. These sensors are essential in phones, drones, and robots.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Accelerometers and Gyroscopes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an accelerometer measure?",
+              "answer": "Changes in velocity or acceleration in one or more directions",
+              "explain": "An accelerometer detects acceleration (speeding up, slowing down, or changing direction). Most accelerometers measure in three directions: X, Y, and Z.",
+              "choices": [
+                "Changes in velocity or acceleration in one or more directions",
+                "Light intensity",
+                "How fast an object is moving",
+                "The magnetic field"
+              ],
+              "id": "sensors_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a practical use of an accelerometer?",
+              "answer": "Detecting when a phone is rotated or tilted",
+              "explain": "Smartphones use accelerometers to detect rotation from portrait to landscape, or tilting for games. It also detects if the phone is dropped.",
+              "choices": [
+                "Measuring temperature",
+                "Detecting when a phone is rotated or tilted",
+                "Detecting colors",
+                "Measuring light brightness"
+              ],
+              "id": "sensors_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a gyroscope measure?",
+              "answer": "The rate of rotation around one or more axes",
+              "explain": "A gyroscope detects how fast something is spinning or rotating. It measures rotation in three dimensions (pitch, roll, yaw).",
+              "choices": [
+                "Linear acceleration",
+                "Distance to objects",
+                "The rate of rotation around one or more axes",
+                "Temperature changes"
+              ],
+              "id": "sensors_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do accelerometer and gyroscope work together in a drone?",
+              "answer": "Accelerometer detects tilting, gyroscope detects spinning, together they stabilize flight",
+              "explain": "The accelerometer tells the drone if it is tilting. The gyroscope tells the drone if it is spinning. Together they provide full motion information for flight control.",
+              "choices": [
+                "They work independently with no connection",
+                "Only gyroscopes stabilize drones",
+                "Only the accelerometer is needed",
+                "Accelerometer detects tilting, gyroscope detects spinning, together they stabilize flight"
+              ],
+              "id": "sensors_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output of a MEMS accelerometer?",
+              "answer": "Electrical signals proportional to acceleration in X, Y, and Z directions",
+              "explain": "A MEMS (Micro-Electro-Mechanical Systems) accelerometer outputs analog or digital signals showing acceleration in each direction.",
+              "choices": [
+                "Light pulses",
+                "Electrical signals proportional to acceleration in X, Y, and Z directions",
+                "Sound waves",
+                "Only temperature readings"
+              ],
+              "id": "sensors_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Encoders and Position Tracking",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a rotary encoder?",
+              "answer": "A sensor that detects rotation and outputs position or direction",
+              "explain": "A rotary encoder senses how much a shaft has rotated. It outputs digital signals that allow you to calculate the exact angle or number of rotations.",
+              "choices": [
+                "A thermometer for hot objects",
+                "A device that converts rotation into heat",
+                "A sensor that detects rotation and outputs position or direction",
+                "A motor that spins at a fixed speed"
+              ],
+              "id": "sensors_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an optical encoder work?",
+              "answer": "A disk with slots passes through a light sensor, producing pulses that track rotation",
+              "explain": "An optical encoder has a rotating disk with holes or slots. As it spins, the holes interrupt a light beam, creating pulses. Counting these pulses tells you how much the shaft has rotated.",
+              "choices": [
+                "It measures light intensity",
+                "It detects temperature of the disk",
+                "It converts rotation to sound",
+                "A disk with slots passes through a light sensor, producing pulses that track rotation"
+              ],
+              "id": "sensors_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is absolute position measurement in an encoder?",
+              "answer": "Knowing the exact position without counting pulses from a starting point",
+              "explain": "An absolute encoder outputs a unique code for each position, so you always know where it is. A relative encoder requires counting pulses from a known starting point.",
+              "choices": [
+                "Knowing the exact position without counting pulses from a starting point",
+                "Measuring temperature during rotation",
+                "Counting all pulses since power-on",
+                "Detecting when rotation stops"
+              ],
+              "id": "sensors_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where would you use a rotary encoder?",
+              "answer": "In a robot joint to track its angle during movement",
+              "explain": "Robotic arms use encoders on each joint to know the exact angle of each motor, allowing precise control of the arm's position and movements.",
+              "choices": [
+                "Encoders are not used in modern devices",
+                "Only to detect light changes",
+                "In a robot joint to track its angle during movement",
+                "Only to measure temperature"
+              ],
+              "id": "sensors_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What resolution does an encoder have?",
+              "answer": "It depends on the number of slots or code positions it has",
+              "explain": "An encoder with more slots or positions has higher resolution. A 100-slot encoder can detect 100 different positions per rotation. More slots mean more precise position measurement.",
+              "choices": [
+                "Resolution is fixed by physics",
+                "Encoders do not measure resolution",
+                "All encoders have the same resolution",
+                "It depends on the number of slots or code positions it has"
+              ],
+              "id": "sensors_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Motors and Movement",
+      "tip": "Motors convert electrical energy into motion. DC motors are simple and common. Servos add position control. Stepper motors move in fixed steps. Each type is suited to different tasks. Relays and drivers control the power to these actuators.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "DC Motors and Servos",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does a DC motor work?",
+              "answer": "Magnetic force on a current-carrying coil in a magnetic field causes rotation",
+              "explain": "A DC motor has a coil of wire in a magnetic field. Current through the coil creates a force that pushes the coil, making it spin.",
+              "choices": [
+                "It converts light to motion",
+                "It uses chemical reactions",
+                "Magnetic force on a current-carrying coil in a magnetic field causes rotation",
+                "It uses compressed air"
+              ],
+              "id": "sensors_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What control does a DC motor give you?",
+              "answer": "Speed by varying voltage, direction by reversing current",
+              "explain": "A DC motor spins faster with higher voltage and slower with lower voltage. Reversing the current direction makes it spin backwards.",
+              "choices": [
+                "Only on/off control",
+                "No electrical control at all",
+                "Only speed control",
+                "Speed by varying voltage, direction by reversing current"
+              ],
+              "id": "sensors_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a servo motor?",
+              "answer": "A motor with a built-in controller that holds a specific angle",
+              "explain": "A servo motor receives a signal and rotates to a specific angle, then holds that position. It is useful when you need precise position control, not just spinning.",
+              "choices": [
+                "A motor that is quieter than DC motors",
+                "A very fast motor",
+                "A motor with a built-in controller that holds a specific angle",
+                "A motor that only spins in one direction"
+              ],
+              "id": "sensors_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What signal does a servo motor expect?",
+              "answer": "Pulse-width modulation (PWM) that specifies the angle",
+              "explain": "A hobby servo receives PWM signals. The width of the pulse sets the angle. A 1 ms pulse is roughly 0 degrees, 1.5 ms is roughly 90 degrees, and 2 ms is roughly 180 degrees, though exact ranges vary by servo.",
+              "choices": [
+                "Sound frequency",
+                "A serial text command only",
+                "Only analog voltage",
+                "Pulse-width modulation (PWM) that specifies the angle"
+              ],
+              "id": "sensors_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Where would you use a servo motor?",
+              "answer": "Controlling the rudder on an RC airplane or a robot arm joint",
+              "explain": "Servo motors are ideal when you need a motor to move to and hold specific positions, like moving a control surface or positioning a robotic joint.",
+              "choices": [
+                "Only in large industrial machines",
+                "Servo motors are never used",
+                "Controlling the rudder on an RC airplane or a robot arm joint",
+                "Only spinning fans"
+              ],
+              "id": "sensors_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Stepper Motors and Control",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "How does a stepper motor work?",
+              "answer": "Electromagnets move the rotor in fixed steps under computer control",
+              "explain": "A stepper motor has multiple electromagnets arranged around a rotor. The computer energizes them in sequence, making the rotor step from one position to the next.",
+              "choices": [
+                "It uses magnetic repulsion only",
+                "It relies on friction",
+                "Electromagnets move the rotor in fixed steps under computer control",
+                "It uses compressed air"
+              ],
+              "id": "sensors_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a step in a stepper motor?",
+              "answer": "One fixed angular movement between defined positions",
+              "explain": "A stepper motor moves in discrete steps. A 1.8 degree stepper moves 1.8 degrees per step. Step angle depends on the motor design.",
+              "choices": [
+                "A rotation that lasts one second",
+                "One fixed angular movement between defined positions",
+                "The distance the rotor spins",
+                "A change in electrical current"
+              ],
+              "id": "sensors_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does a stepper motor have over a DC motor?",
+              "answer": "Precise position control without needing feedback sensors",
+              "explain": "A stepper motor tracks position by counting the steps sent to it, so it can run without an encoder as long as it does not skip steps under load.",
+              "choices": [
+                "It is quieter",
+                "It needs less power",
+                "Precise position control without needing feedback sensors",
+                "It is always faster"
+              ],
+              "id": "sensors_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a motor usually driven through a motor driver instead of directly from a microcontroller pin?",
+              "answer": "The pin cannot supply the current a motor needs",
+              "explain": "A motor driver takes logic-level signals from a microcontroller and switches a higher-current supply to the motor. A microcontroller pin cannot supply enough current directly.",
+              "choices": [
+                "Microcontrollers cannot output any signals",
+                "Drivers make motors silent",
+                "Motors only accept audio signals",
+                "The pin cannot supply the current a motor needs"
+              ],
+              "id": "sensors_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a relay?",
+              "answer": "A switch controlled by an electromagnet that turns on high-power circuits",
+              "explain": "A relay uses a small electromagnet (controlled by a microcontroller) to mechanically close a switch for a high-power circuit. This isolates the low-power control from the high-power load.",
+              "choices": [
+                "A storage device",
+                "A switch controlled by an electromagnet that turns on high-power circuits",
+                "A light sensor",
+                "A type of resistor"
+              ],
+              "id": "sensors_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Calibration, Noise, and System Integration",
+      "tip": "Real sensors have limitations: they need calibration, they pick up noise, and they must be integrated into larger systems. Understanding these practical challenges is essential for building reliable sensor-based systems.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Sensor Calibration and Accuracy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is sensor calibration?",
+              "answer": "Adjusting the sensor or its output to match known reference values",
+              "explain": "Calibration means checking the sensor against a known standard and adjusting it so the output is accurate. A thermometer might be calibrated against ice and boiling water.",
+              "choices": [
+                "Adjusting the sensor or its output to match known reference values",
+                "Measuring the sensor's temperature",
+                "Increasing the sensor's power supply",
+                "Replacing the sensor with a new one"
+              ],
+              "id": "sensors_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is calibration necessary?",
+              "answer": "Sensors are never perfectly accurate and drift over time",
+              "explain": "Manufacturing tolerances and aging cause all real sensors to deviate from ideal behavior. Calibration corrects for these errors.",
+              "choices": [
+                "Calibration makes sensors more expensive",
+                "Calibration is optional and not really needed",
+                "Sensors are never perfectly accurate and drift over time",
+                "Only very expensive sensors need calibration"
+              ],
+              "id": "sensors_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is sensor accuracy?",
+              "answer": "How close the sensor's reading is to the true value",
+              "explain": "Accuracy measures error. If a temperature sensor reads 25 degrees but the true temperature is 25.5 degrees, the sensor has an error of 0.5 degrees.",
+              "choices": [
+                "How often the sensor needs calibration",
+                "The maximum voltage the sensor can measure",
+                "How quickly the sensor responds",
+                "How close the sensor's reading is to the true value"
+              ],
+              "id": "sensors_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is sensor resolution?",
+              "answer": "The smallest change in input the sensor can detect",
+              "explain": "Resolution is the finest distinction the sensor can make. A thermometer with 0.1 degree resolution cannot detect changes smaller than 0.1 degrees.",
+              "choices": [
+                "How often to calibrate",
+                "The smallest change in input the sensor can detect",
+                "The most accurate possible reading",
+                "The power needed to operate it"
+              ],
+              "id": "sensors_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How often should sensors be calibrated?",
+              "answer": "Regularly, depending on the sensor type and how much it is used",
+              "explain": "Some sensors drift slowly and need calibration every month or year. High-precision sensors in critical systems may need more frequent calibration.",
+              "choices": [
+                "Only once, when new",
+                "Never, sensors stay accurate forever",
+                "Regularly, depending on the sensor type and how much it is used",
+                "Every time the sensor is powered on"
+              ],
+              "id": "sensors_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Noise and System Design",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electrical noise in a sensor signal?",
+              "answer": "Unwanted random fluctuations in the signal caused by interference",
+              "explain": "Noise comes from electromagnetic interference, switching circuits, or thermal effects. It makes the signal jittery and less accurate.",
+              "choices": [
+                "The normal operating signal",
+                "Sound vibrations detected by the sensor",
+                "Unwanted random fluctuations in the signal caused by interference",
+                "Intentional signals for testing"
+              ],
+              "id": "sensors_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you reduce electrical noise in sensor systems?",
+              "answer": "Use shielded cables, filtering, and careful circuit layout",
+              "explain": "Shielding blocks external electromagnetic fields. Filters remove high-frequency noise. Good layout keeps power and signal wires apart.",
+              "choices": [
+                "Use shielded cables, filtering, and careful circuit layout",
+                "Sensors cannot be affected by noise",
+                "Only replace the sensor with a new one",
+                "Use the longest cables possible"
+              ],
+              "id": "sensors_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a low-pass filter in a sensor circuit?",
+              "answer": "A circuit that allows slow signals through and blocks fast noise",
+              "explain": "A low-pass filter lets slower signals (real measurements) through while blocking faster signals (noise). This smooths out noisy readings.",
+              "choices": [
+                "A power supply",
+                "A method to amplify the signal",
+                "A circuit that allows slow signals through and blocks fast noise",
+                "A device that removes all signals"
+              ],
+              "id": "sensors_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is signal conditioning?",
+              "answer": "Processing the sensor signal to improve its quality before use",
+              "explain": "Signal conditioning includes amplification, filtering, and offset correction. It prepares the raw sensor signal for accurate measurement.",
+              "choices": [
+                "Replacing the sensor",
+                "Storing the sensor data",
+                "Processing the sensor signal to improve its quality before use",
+                "Applying power to the sensor"
+              ],
+              "id": "sensors_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do sensor systems often have multiple sensors measuring the same thing?",
+              "answer": "To average out noise and improve reliability through redundancy",
+              "explain": "If one sensor's reading is noisy, averaging multiple readings reduces noise. If one sensor fails, others provide backup data.",
+              "choices": [
+                "Systems never use multiple sensors",
+                "Because it costs less",
+                "To confuse the system intentionally",
+                "To average out noise and improve reliability through redundancy"
+              ],
+              "id": "sensors_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
