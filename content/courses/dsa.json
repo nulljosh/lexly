@@ -71,7 +71,7 @@
               "type": "mathChoice",
               "question": "What does O(n^2) complexity mean?",
               "answer": "Time grows quadratically with input size",
-              "explain": "O(n^2) means nested loops. Doubling input size multiplies time by 4. Bubble sort is O(n^2) in worst case.",
+              "explain": "O(n^2) often comes from nested loops over the input. Doubling input size multiplies time by 4. Bubble sort is O(n^2) in the average and worst case.",
               "choices": [
                 "Time grows logarithmically",
                 "Time is constant",
@@ -88,14 +88,14 @@
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "Which complexity is best?",
-              "answer": "O(1), then O(log n), then O(n)",
-              "explain": "Faster is better. O(1) is constant and fastest. O(log n) is very fast. O(n) is linear. O(n^2) is slow.",
+              "question": "Which of these grows slowest as n increases?",
+              "answer": "O(1)",
+              "explain": "O(1) does not grow at all. O(log n) grows very slowly, O(n) grows linearly, and O(n^2) grows fastest of these.",
               "choices": [
-                "They are all equal",
-                "O(n^2)",
+                "O(1)",
+                "O(log n)",
                 "O(n)",
-                "O(1), then O(log n), then O(n)"
+                "O(n^2)"
               ],
               "id": "dsa_u1l2_0"
             },
@@ -114,14 +114,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "For an input of size 1000, which is faster: O(n^2) or O(n log n)?",
-              "answer": "O(n log n) is much faster",
-              "explain": "O(n^2) = 1,000,000 operations. O(n log n) ≈ 10,000 operations. Logarithmic factors matter hugely.",
+              "question": "As n grows large, which grows more slowly: O(n^2) or O(n log n)?",
+              "answer": "O(n log n)",
+              "explain": "At n = 1000, n^2 is 1,000,000 while n log2 n is about 10,000. The gap keeps widening as n grows.",
               "choices": [
                 "O(n^2)",
-                "O(n log n) is much faster",
-                "They are the same",
-                "Depends on the constant factors"
+                "O(n log n)",
+                "They grow at the same rate",
+                "Neither, both stay constant"
               ],
               "id": "dsa_u1l2_2"
             },
@@ -205,7 +205,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is array deletion complexity?",
+              "question": "What is the complexity of deleting an element from the start or middle of an array?",
               "answer": "O(n) because remaining elements shift",
               "explain": "Deleting position 5 requires shifting all elements after it leftward. Worst case is O(n).",
               "choices": [
@@ -367,7 +367,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What are the complexities of queue operations?",
+              "question": "What are the complexities of queue operations in a typical implementation (linked list or circular buffer)?",
               "answer": "O(1) for enqueue, dequeue, and peek",
               "explain": "Queues maintain two pointers: front and back. Operations at both ends are constant time.",
               "choices": [
@@ -504,10 +504,10 @@
             {
               "type": "mathChoice",
               "question": "What is the search complexity in a balanced BST?",
-              "answer": "O(log n) average case",
-              "explain": "A balanced BST is similar to binary search on an array. Each comparison halves the search space.",
+              "answer": "O(log n)",
+              "explain": "A balanced BST has height about log n, like binary search on an array. Each comparison halves the search space. An unbalanced BST can degrade to O(n).",
               "choices": [
-                "O(log n) average case",
+                "O(log n)",
                 "O(1)",
                 "O(n^2)",
                 "O(n)"
@@ -553,7 +553,7 @@
               "explain": "In a directed graph, edge A->B does not mean B->A. In undirected, if A-B exists, B-A also exists.",
               "choices": [
                 "They are identical",
-                "Undirected is a special case of directed",
+                "Directed graphs always have more edges",
                 "Directed edges have direction (A to B); undirected edges go both ways",
                 "Directed has more nodes"
               ],
@@ -587,9 +587,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "What are the complexities of BFS and DFS?",
+              "question": "What are the complexities of BFS and DFS on a graph stored as adjacency lists?",
               "answer": "Both O(V + E) where V is vertices and E is edges",
-              "explain": "Both visit every vertex once and traverse every edge once. Linear in the size of the graph.",
+              "explain": "Both visit every vertex once and traverse every edge once. Linear in the size of the graph. With an adjacency matrix it would be O(V^2).",
               "choices": [
                 "Depends on the type",
                 "Both O(V + E) where V is vertices and E is edges",
@@ -665,14 +665,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "When is binary search faster than linear search?",
-              "answer": "Always on sorted data with reasonably large input",
-              "explain": "Binary search's O(log n) beats linear's O(n) unless the list is very small. Cost of sorting is worth it.",
+              "question": "What must be true of the data for binary search to work?",
+              "answer": "It must be sorted",
+              "explain": "Binary search compares with the middle and discards half, which only works if the data is ordered. Sorting first costs O(n log n), so it pays off when you search many times.",
               "choices": [
-                "Always on sorted data with reasonably large input",
-                "Never",
-                "Only on arrays",
-                "Only with small data"
+                "It must be sorted",
+                "It must contain no duplicates",
+                "It must be stored in a linked list",
+                "It must have an even length"
               ],
               "id": "dsa_u5l1_4"
             }
@@ -861,7 +861,7 @@
               "type": "mathChoice",
               "question": "What is a greedy algorithm?",
               "answer": "Making the locally optimal choice at each step, hoping for a global optimum",
-              "explain": "Greedy picks the best option now without planning ahead. Works for some problems (coin change), fails for others.",
+              "explain": "Greedy picks the best option now without planning ahead. Works for some problems (activity selection), fails for others (0-1 knapsack).",
               "choices": [
                 "A randomized algorithm",
                 "A sorting algorithm",
@@ -887,7 +887,7 @@
               "type": "mathChoice",
               "question": "What is the difference between DP and greedy?",
               "answer": "DP reuses subproblem solutions; greedy makes one-shot local choices",
-              "explain": "DP is exhaustive and guaranteed optimal. Greedy is fast but not always optimal.",
+              "explain": "DP considers every subproblem choice and is optimal when it applies. Greedy is usually faster but not always optimal.",
               "choices": [
                 "They are the same",
                 "DP is faster",

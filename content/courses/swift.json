@@ -44,13 +44,13 @@
             {
               "type": "mathChoice",
               "question": "After 'let name = \"Alice\"', what happens if you try 'name = \"Bob\"'?",
-              "answer": "Compilation error: cannot assign to immutable value",
+              "answer": "Compilation error: cannot assign to a let constant",
               "explain": "let creates a constant. Once assigned, it cannot be reassigned. The compiler rejects any attempt to change a let binding.",
               "choices": [
                 "name becomes \"AliceBob\"",
                 "name becomes \"Bob\"",
                 "The program ignores the assignment",
-                "Compilation error: cannot assign to immutable value"
+                "Compilation error: cannot assign to a let constant"
               ],
               "id": "swift_u1l1_2"
             },
@@ -242,7 +242,7 @@
               "explain": "The ... operator creates a closed range. for-in iterates through each value: 1, 2, 3, 4, 5.",
               "choices": [
                 "Loops from 1 to 4",
-                "Loops 5 times only",
+                "Loops with i counting down from 5",
                 "Loops with i from 1 to 5 inclusive",
                 "Creates a range named i"
               ],
@@ -367,9 +367,9 @@
             },
             {
               "type": "mathChoice",
-              "question": "How do you add an element to an array?",
+              "question": "Which method adds an element to the end of an array?",
               "answer": "Use the append() method",
-              "explain": "numbers.append(5) adds 5 to the end of the array. You can also use += with an array literal.",
+              "explain": "numbers.append(5) adds 5 to the end of the array. You can also use += with an array literal. insert(_:at:) adds at a chosen index instead.",
               "choices": [
                 "Use the append() method",
                 "Use push()",
@@ -390,7 +390,7 @@
               "answer": "An unordered collection of unique values",
               "explain": "Sets store each value only once. Order does not matter. Perfect for membership testing: 'if numbers.contains(5)'.",
               "choices": [
-                "An array without duplicates",
+                "A sorted array of unique values",
                 "An unordered collection of unique values",
                 "A dictionary",
                 "An ordered list"
@@ -440,7 +440,7 @@
               "type": "mathChoice",
               "question": "What does 'contains()' do?",
               "answer": "Checks if a value is in the collection",
-              "explain": "array.contains(5) returns true if 5 is in the array, false otherwise. O(1) for Sets, O(n) for Arrays.",
+              "explain": "array.contains(5) returns true if 5 is in the array, false otherwise. It is O(1) on average for Sets and O(n) for Arrays.",
               "choices": [
                 "Finds the index of a value",
                 "Adds a value",
@@ -479,7 +479,7 @@
               "type": "mathChoice",
               "question": "What is a parameter?",
               "answer": "A named value passed into a function",
-              "explain": "Parameters appear in the function definition: func greet(name: String). When called, greet(\"Alice\") passes \"Alice\" as the name parameter.",
+              "explain": "Parameters appear in the function definition: func greet(name: String). When called, greet(name: \"Alice\") passes \"Alice\" as the name parameter.",
               "choices": [
                 "The value returned by a function",
                 "A named value passed into a function",
@@ -710,7 +710,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is the nil coalescing operator??",
+              "question": "What is the nil coalescing operator (??)?",
               "answer": "Provides a default value if the left Optional is nil",
               "explain": "let age = maybeAge ?? 18 returns maybeAge if it is not nil, or 18 if it is nil. Concise way to handle nil.",
               "choices": [
@@ -887,7 +887,7 @@
               "type": "mathChoice",
               "question": "What is a 'computed property'?",
               "answer": "A property that calculates its value instead of storing it",
-              "explain": "var doubled: Int { return value * 2 } computes doubled each time it is accessed. No stored storage, just calculation.",
+              "explain": "var doubled: Int { return value * 2 } computes doubled each time it is accessed. It has no storage of its own, just a calculation.",
               "choices": [
                 "A stored property",
                 "A type of class",
