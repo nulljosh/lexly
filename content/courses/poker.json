@@ -1,0 +1,904 @@
+{
+  "id": "poker",
+  "name": "Poker",
+  "category": "skills",
+  "icon": "fa-solid fa-dice",
+  "level": "Texas Hold'em Strategy",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Hand Rankings",
+      "tip": "Poker hands are ranked by rarity and strength. A royal flush beats everything. You need to instantly recognize which hand wins any showdown. Memorizing the rankings from highest to lowest is the first skill.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "The Five-Card Hands",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a royal flush?",
+              "answer": "Ace, King, Queen, Jack, 10 all the same suit",
+              "explain": "A royal flush is the rarest and strongest hand. It is the top of a straight flush sequence.",
+              "choices": [
+                "Ace, King, Queen, Jack, 10 all the same suit",
+                "Five cards with two pairs",
+                "Any five cards of the same suit",
+                "Five cards in order, same suit"
+              ],
+              "id": "poker_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a straight flush?",
+              "answer": "Five cards in order, all the same suit",
+              "explain": "A straight flush is five consecutive cards of the same suit. A 9-8-7-6-5 of hearts is a straight flush. A royal flush is the best straight flush.",
+              "choices": [
+                "Any flush that beats a straight",
+                "Three of a kind in one suit",
+                "Two pairs of the same suit",
+                "Five cards in order, all the same suit"
+              ],
+              "id": "poker_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is four of a kind?",
+              "answer": "All four cards of one rank, plus one other card",
+              "explain": "Four of a kind is four cards of the same rank: four Kings, four 7s, etc. The fifth card is only used as a tiebreaker when two hands have the same four of a kind.",
+              "choices": [
+                "Four cards in sequence",
+                "Four cards with two matching suits",
+                "Four cards of any suit",
+                "All four cards of one rank, plus one other card"
+              ],
+              "id": "poker_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a full house?",
+              "answer": "Three of a kind plus a pair",
+              "explain": "A full house is three cards of one rank and two cards of another rank. Kings and 7s (K-K-K-7-7) is a full house.",
+              "choices": [
+                "Two pairs plus a single card",
+                "Three of a kind plus a pair",
+                "Any three cards of the same suit",
+                "Five cards in any order"
+              ],
+              "id": "poker_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a flush?",
+              "answer": "Five cards all of the same suit, in any order",
+              "explain": "A flush is any five cards of the same suit. They do not need to be in order. An Ace-high flush beats a King-high flush.",
+              "choices": [
+                "Five cards all of the same suit, in any order",
+                "Five cards in order",
+                "Any three cards of the same suit",
+                "Two pairs of the same suit"
+              ],
+              "id": "poker_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Lower Rankings and Comparisons",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a straight?",
+              "answer": "Five cards in order, any suits",
+              "explain": "A straight is five consecutive cards. 9-8-7-6-5 is a straight. The suits do not matter. An Ace can be high (in 10-J-Q-K-A) or low (in A-2-3-4-5).",
+              "choices": [
+                "Five cards in order, any suits",
+                "Three cards in sequence",
+                "Five cards with one pair",
+                "Five cards of the same suit"
+              ],
+              "id": "poker_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What beats a three of a kind in a showdown?",
+              "answer": "A straight, flush, full house, four of a kind, or straight flush",
+              "explain": "Three of a kind is fourth from the bottom of the ladder (high card, pair, two pair, three of a kind). The five hand types above it beat it: straight, flush, full house, four of a kind, and straight flush. Two pair, one pair, and high card lose to three of a kind.",
+              "choices": [
+                "A straight, flush, full house, four of a kind, or straight flush",
+                "A pair with a high kicker",
+                "Only a flush",
+                "Two pair, or a pair of Aces"
+              ],
+              "id": "poker_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a showdown with two pairs, which pair ranks higher?",
+              "answer": "The higher-ranked pair determines the winner",
+              "explain": "Kings and 5s beats Queens and 10s because Kings are ranked higher than Queens. If both players have the same two pairs, the highest fifth card (kicker) wins.",
+              "choices": [
+                "The higher-ranked pair determines the winner",
+                "Pairs always tie in showdown",
+                "The pair that appears first on the board",
+                "The pair with the highest suit"
+              ],
+              "id": "poker_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a kicker?",
+              "answer": "The highest unpaired card that breaks a tie",
+              "explain": "When two players have the same hand (like a pair of 7s), the kicker is the highest other card. An Ace-kicker beats a King-kicker.",
+              "choices": [
+                "A card you can discard",
+                "The highest unpaired card that breaks a tie",
+                "Any card in your hand",
+                "The first card dealt"
+              ],
+              "id": "poker_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which hand is stronger: a pair of Aces or a pair of Kings?",
+              "answer": "A pair of Aces",
+              "explain": "Aces are the highest rank, so a pair of Aces beats every other pair. Suits never break ties in poker.",
+              "choices": [
+                "A pair of Kings",
+                "It depends on the suits",
+                "They tie",
+                "A pair of Aces"
+              ],
+              "id": "poker_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Game Structure",
+      "tip": "Texas Hold'em has a fixed betting sequence. Small blind and big blind post first. The community cards come in stages: the flop (3 cards), the turn (1 card), the river (1 card). Each stage has betting, and players can fold, call, or raise.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Blinds and Betting Rounds",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are the blinds in Texas Hold'em?",
+              "answer": "Forced bets posted before cards are dealt",
+              "explain": "The small blind (SB) and big blind (BB) are mandatory bets. The player to the left of the dealer posts the small blind, and the next player posts the big blind. They ensure there is a pot to play for.",
+              "choices": [
+                "Cards that cannot be folded",
+                "The highest and lowest cards",
+                "Forced bets posted before cards are dealt",
+                "Bets made after the flop"
+              ],
+              "id": "poker_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which statement about the two blinds is correct?",
+              "answer": "The big blind is the larger of the two forced bets",
+              "explain": "The big blind is the larger forced bet and the small blind is typically about half of it. A 1-2 game has blinds of 1 and 2, but some games use other ratios, such as 1-3.",
+              "choices": [
+                "Both blinds are posted after the flop",
+                "The big blind is the larger of the two forced bets",
+                "The small blind is the larger bet",
+                "The two blinds are always equal"
+              ],
+              "id": "poker_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is pre-flop betting?",
+              "answer": "Betting before any community cards are shown",
+              "explain": "Pre-flop happens after the blinds are posted and each player has two hole cards. Everyone acts in order, starting with the player after the big blind, and can fold, call, or raise.",
+              "choices": [
+                "Betting before any community cards are shown",
+                "Betting without hole cards",
+                "Betting by the blinds only",
+                "Betting after the river"
+              ],
+              "id": "poker_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the flop?",
+              "answer": "The first three community cards dealt together",
+              "explain": "After pre-flop betting ends, the dealer burns a card and flops three cards face-up. These cards are shared by all remaining players.",
+              "choices": [
+                "The first three community cards dealt together",
+                "The first player to bet",
+                "The last card dealt",
+                "A failed hand"
+              ],
+              "id": "poker_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After the flop is revealed, what happens next?",
+              "answer": "Betting occurs, then the turn card is revealed",
+              "explain": "Players bet on the flop. After all betting is done, the dealer burns a card and reveals the fourth community card, the turn.",
+              "choices": [
+                "The hand ends in a showdown",
+                "The river is revealed immediately",
+                "All cards are revealed at once",
+                "Betting occurs, then the turn card is revealed"
+              ],
+              "id": "poker_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "The Turn, River, and Showdown",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the turn?",
+              "answer": "The fourth community card, revealed after flop betting",
+              "explain": "After the flop betting round ends, the turn (also called fourth street) is dealt. It is a single card added to the board.",
+              "choices": [
+                "The first card of the flop",
+                "A fold by a player",
+                "The final bet",
+                "The fourth community card, revealed after flop betting"
+              ],
+              "id": "poker_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the river?",
+              "answer": "The fifth and final community card",
+              "explain": "After turn betting, the river (also called fifth street) is dealt. It is the last card to come. After the river, there is one more betting round, then the showdown.",
+              "choices": [
+                "The final bet",
+                "The fifth and final community card",
+                "A form of payment",
+                "A side bet"
+              ],
+              "id": "poker_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many community cards are there in Texas Hold'em?",
+              "answer": "Five",
+              "explain": "Three on the flop, one on the turn, and one on the river. Combined with your two hole cards, you have seven cards total to make your best five-card hand.",
+              "choices": [
+                "Four",
+                "Five",
+                "Six",
+                "Three"
+              ],
+              "id": "poker_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens in a showdown?",
+              "answer": "Players reveal their hole cards and the best hand wins the pot",
+              "explain": "After the river betting round, if more than one player remains, they reveal their hole cards. The player with the best five-card hand wins the pot.",
+              "choices": [
+                "Players reveal their hole cards and the best hand wins the pot",
+                "Only the blinds are shown",
+                "Everyone folds their cards",
+                "Betting continues indefinitely"
+              ],
+              "id": "poker_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If one player bets on the river and everyone else folds, what happens?",
+              "answer": "The remaining player wins the pot without showing cards",
+              "explain": "You never have to show your cards if everyone folds. This is the key to bluffing: no one knows if you had the best hand.",
+              "choices": [
+                "The hand continues",
+                "The player must show their cards",
+                "The remaining player wins the pot without showing cards",
+                "Everyone wins a portion of the pot"
+              ],
+              "id": "poker_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Position and Starting Hands",
+      "tip": "Your position (where you sit relative to the dealer button) determines when you act. Earlier position means you act first, which is a disadvantage. Later position means you act last, which is an advantage. You can play more hands in late position than early position.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Position Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the dealer button?",
+              "answer": "The marker that shows the dealer position, which acts last after the flop",
+              "explain": "The button rotates clockwise after each hand. The player on the button acts last on the flop, turn, and river, which is the strongest position. Before the flop, the big blind acts last.",
+              "choices": [
+                "The first person to bet",
+                "A card in the deck",
+                "The marker that shows the dealer position, which acts last after the flop",
+                "A bet size"
+              ],
+              "id": "poker_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is early position?",
+              "answer": "Acting before most other players, which is a disadvantage",
+              "explain": "Early position includes the player first to act before the flop (just after the big blind). You act with little information about other players' hands, so most players choose fewer hands from there.",
+              "choices": [
+                "Acting last",
+                "Acting before most other players, which is a disadvantage",
+                "Betting first on the river",
+                "Sitting next to the dealer"
+              ],
+              "id": "poker_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is late position?",
+              "answer": "Acting after most other players, which is an advantage",
+              "explain": "Late position includes the button and the cutoff (one seat before the button). You act with the most information. You can play more hands from late position.",
+              "choices": [
+                "Being in the middle",
+                "Acting after most other players, which is an advantage",
+                "Acting before everyone",
+                "Being the small blind"
+              ],
+              "id": "poker_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is late position an advantage?",
+              "answer": "You see other players act first, giving you information to decide",
+              "explain": "Late position lets you react to what others do. You can fold weak hands, call strong hands, or raise to win the pot uncontested.",
+              "choices": [
+                "The blinds are smaller",
+                "You see other players act first, giving you information to decide",
+                "You get bigger hands dealt",
+                "You act more often"
+              ],
+              "id": "poker_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "From which position can a player profitably play more hands?",
+              "answer": "Late position, because you act with more information",
+              "explain": "In early position, fewer hands are worth playing. In late position, more hands become profitable because you see what others do before you decide.",
+              "choices": [
+                "Late position, because you act with more information",
+                "Position does not matter",
+                "Early position, because there are fewer players left",
+                "The small blind"
+              ],
+              "id": "poker_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Hand Strength and Selection",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a premium hand in early position?",
+              "answer": "Pairs of Aces, Kings, Queens, or Ace-King",
+              "explain": "Premium hands are strong before the flop and hold up well against multiple opponents. Most players are happy to play these hands from any position.",
+              "choices": [
+                "Any two cards ten or higher",
+                "Any pair",
+                "Any two face cards",
+                "Pairs of Aces, Kings, Queens, or Ace-King"
+              ],
+              "id": "poker_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to have a weak hand pre-flop?",
+              "answer": "A hand unlikely to win without improvement",
+              "explain": "Weak hands need help from the flop. A 7-4 offsuit is weak because it has low ranks, no pair, and no flush potential.",
+              "choices": [
+                "A hand that folds early",
+                "A hand with only one high card",
+                "A hand with a low kicker",
+                "A hand unlikely to win without improvement"
+              ],
+              "id": "poker_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a connector?",
+              "answer": "Two cards of consecutive rank, like 9-8 or J-10",
+              "explain": "Connectors have draw potential because they can make straights. A 9-8 can make a straight with 7-6-5, 10-7-6, J-10-7, or Q-J-10, four different combinations.",
+              "choices": [
+                "Two cards of consecutive rank, like 9-8 or J-10",
+                "Two unpaired cards",
+                "Two cards of the same suit",
+                "Two high cards"
+              ],
+              "id": "poker_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a gapped hand?",
+              "answer": "Two cards with a rank gap between them, like 9-7",
+              "explain": "A gapped hand like 9-7 has one rank missing (the 8). It is weaker than a connector because it makes fewer straights: 9-7 can make three (with the 8 plus 5-6, 6-10, or 10-J), while 9-8 can make four.",
+              "choices": [
+                "Two cards with a rank gap between them, like 9-7",
+                "A hand that cannot win",
+                "A hand missing one suit",
+                "A hand with no gap"
+              ],
+              "id": "poker_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does suited mean for a starting hand?",
+              "answer": "Both cards are the same suit, giving flush potential",
+              "explain": "A suited hand like K-Q of hearts has flush potential. An unsuited K-Q can only make a flush if four board cards share a suit with one of your cards, which is rare. Suited hands are somewhat stronger than unsuited hands of the same ranks.",
+              "choices": [
+                "Both cards are the same suit, giving flush potential",
+                "The hand is folded",
+                "The cards match the board",
+                "Both cards are the same rank"
+              ],
+              "id": "poker_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Pot Odds and Outs",
+      "tip": "Pot odds compare the price of a call with the size of the pot. Count your outs (cards that improve your hand), estimate the chance of hitting one, and compare that chance with the share of the final pot you must put in. If your chance to win is higher than the share you must put in, the call has positive expectation.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Counting Outs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "If you have 9-8 and the flop is 7-5-2, how many cards make you a straight?",
+              "answer": "Four cards: the four 6s",
+              "explain": "A 6 completes 5-6-7-8-9, a straight. A Jack or a 10 does not complete a straight by itself, because you would still be missing another card. That leaves 4 outs, a gutshot draw.",
+              "choices": [
+                "Nine cards: all straight possibilities",
+                "Five cards: 6, J, and one other",
+                "Eight cards: four 6s and four Jacks",
+                "Four cards: the four 6s"
+              ],
+              "id": "poker_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an out?",
+              "answer": "A card that improves your hand and helps you win",
+              "explain": "Outs are the cards left in the deck that would improve your hand to a likely winner. For example, with four cards to a flush, the remaining cards of that suit are outs.",
+              "choices": [
+                "A card that makes you fold",
+                "Any card you do not want",
+                "A card outside the deck",
+                "A card that improves your hand and helps you win"
+              ],
+              "id": "poker_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you have 9-9 and the flop is K-Q-2, how many outs give you a set?",
+              "answer": "Two cards: the remaining 9s",
+              "explain": "You have a pair of 9s. The two other 9s in the deck will give you three of a kind (a set). You exclude the 9 in your hand.",
+              "choices": [
+                "One card",
+                "Two cards: the remaining 9s",
+                "Four cards",
+                "Three cards"
+              ],
+              "id": "poker_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a flush draw?",
+              "answer": "Four cards of the same suit, needing one more for a flush",
+              "explain": "A flush draw has four suited cards. There are 13 cards of each suit, so 9 cards remain to complete the flush (13 - 4 = 9).",
+              "choices": [
+                "Any four cards",
+                "Four cards of the same suit, needing one more for a flush",
+                "A complete flush",
+                "Three cards of the same suit"
+              ],
+              "id": "poker_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you have a flush draw on the turn, how many cards complete your flush on the river?",
+              "answer": "Nine cards",
+              "explain": "There are 13 cards in each suit. Four of that suit are visible (in your hand and on the board), which leaves 9 cards in the deck to complete the flush.",
+              "choices": [
+                "Four cards",
+                "Nine cards",
+                "Eight cards",
+                "Five cards"
+              ],
+              "id": "poker_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Pot Odds Calculation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are pot odds?",
+              "answer": "The ratio of the pot size to the cost of your call",
+              "explain": "If the pot is 100 and you need to call 20, your pot odds are 100 to 20, or 5 to 1. You win 100 if you win, risk 20 if you lose.",
+              "choices": [
+                "The ratio of the pot size to the cost of your call",
+                "Your hand strength",
+                "The size of the blinds",
+                "The number of players left"
+              ],
+              "id": "poker_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If the pot is 100 and your opponent bets 50, what are your pot odds?",
+              "answer": "3 to 1",
+              "explain": "Total pot after the bet is 150 (100 + 50). You call 50. So 150 to 50 = 3 to 1.",
+              "choices": [
+                "4 to 1",
+                "5 to 1",
+                "3 to 1",
+                "2 to 1"
+              ],
+              "id": "poker_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You have 8 outs on the turn, with one card still to come. What is the chance you hit on the river?",
+              "answer": "About 17%",
+              "explain": "There are 46 unseen cards (52 minus your 2 and the 4 board cards). 8 outs out of 46 is 17.4%. The 'rule of 4' (outs times 4) is only for two cards to come, such as on the flop. With one card to come, outs times 2 is a rough approximation (16%).",
+              "choices": [
+                "About 17%",
+                "About 50%",
+                "About 8%",
+                "About 32%"
+              ],
+              "id": "poker_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You have 9 outs on the flop, with two cards still to come, and the pot odds are 2 to 1. Is calling profitable by this math alone?",
+              "answer": "Yes, about 35% equity beats the 33% needed",
+              "explain": "Exactly, the chance of hitting at least one of 9 outs in two cards is 1 minus (38/47 times 37/46), about 35.0%. Pot odds of 2 to 1 mean you must win 1 time in 3 (33.3%) to break even. 35% is slightly above that. The rule of 4 would give 36%, a quick approximation.",
+              "choices": [
+                "No, 9 outs is never enough",
+                "Yes, about 35% equity beats the 33% needed",
+                "No, you need at least 50% equity",
+                "Yes, because 2 to 1 odds always win"
+              ],
+              "id": "poker_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "You have 6 outs on the flop, with two cards still to come, and the pot odds are 4 to 1. Is calling profitable by this math alone?",
+              "answer": "Yes, about 24% equity beats the 20% needed",
+              "explain": "Exactly, the chance of hitting at least one of 6 outs in two cards is 1 minus (41/47 times 40/46), about 24.1%. Pot odds of 4 to 1 mean you must win 1 time in 5 (20%) to break even. 24% is above that. The rule of 4 gives 24%, a quick approximation.",
+              "choices": [
+                "Yes, about 24% equity beats the 20% needed",
+                "No, 6 outs is never enough",
+                "No, you need at least 30% equity",
+                "Yes, because 4 to 1 odds always win"
+              ],
+              "id": "poker_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Betting Strategy",
+      "tip": "There are two reasons to bet: to win the pot immediately or to get more money in when you have the best hand. A value bet wins money from worse hands. A bluff wins the pot when you are behind. Position, hand strength, and the board texture determine your strategy.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Value Betting and Bluffing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a value bet?",
+              "answer": "A bet made when you believe your hand is the strongest",
+              "explain": "A value bet aims to get called by weaker hands. If you have a pair and bet, you want your opponent to call with a weaker pair or a draw.",
+              "choices": [
+                "A bet made when you believe your hand is the strongest",
+                "A bet that loses automatically",
+                "A bluff that never wins",
+                "A bet equal to the blinds"
+              ],
+              "id": "poker_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bluff?",
+              "answer": "A bet made when you do not have the best hand, hoping everyone folds",
+              "explain": "A bluff tries to win the pot without a showdown. You are betting weak or nothing, but representing strength to convince others to fold.",
+              "choices": [
+                "A bet made when you do not have the best hand, hoping everyone folds",
+                "A call instead of a raise",
+                "Always a losing play",
+                "A bet with a strong hand"
+              ],
+              "id": "poker_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is a bluff most likely to work?",
+              "answer": "When your opponent has a weak hand and the board looks dangerous",
+              "explain": "A bluff works when your opponent is likely to fold. A scary board (lots of cards that could have helped you) makes opponents more likely to fold.",
+              "choices": [
+                "Against players who never fold",
+                "When you have a flush",
+                "When your opponent has a weak hand and the board looks dangerous",
+                "Only on the river"
+              ],
+              "id": "poker_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a semi-bluff?",
+              "answer": "A bet that can win now and has equity if called",
+              "explain": "A semi-bluff like a flush draw has a plan: win now, or make a hand later. You are not purely bluffing because your hand can improve.",
+              "choices": [
+                "A bet that can win now and has equity if called",
+                "A bet only by beginners",
+                "A bet that has no chance of winning",
+                "A fold disguised as a bet"
+              ],
+              "id": "poker_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do strong players mix some bluffs in with their value bets?",
+              "answer": "So opponents cannot tell from a bet alone whether the hand is strong",
+              "explain": "If a player only bet with the best hand, opponents would simply fold every time. Mixing in some weaker hands makes bets harder to read.",
+              "choices": [
+                "Because the rules require it",
+                "Because strong hands should never bet",
+                "So opponents cannot tell from a bet alone whether the hand is strong",
+                "Because bluffs always win"
+              ],
+              "id": "poker_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Bet Sizing and Decisions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What bet size is a common rule of thumb for a value bet?",
+              "answer": "About 50% to 100% of the pot",
+              "explain": "Many players size value bets at roughly half the pot to the full pot. This is an approximation, not a rule: smaller bets get called more often, larger bets win more when called.",
+              "choices": [
+                "The smallest amount possible",
+                "Always the size of the big blind",
+                "About 50% to 100% of the pot",
+                "Always all in"
+              ],
+              "id": "poker_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to check?",
+              "answer": "Passing your turn to act without betting",
+              "explain": "A check is a free action. If everyone checks, the next card is dealt. Checks happen when no one has bet yet in a round.",
+              "choices": [
+                "To match a bet",
+                "Passing your turn to act without betting",
+                "To fold your hand",
+                "To raise"
+              ],
+              "id": "poker_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is a common reason to check?",
+              "answer": "To see the next card cheaply with a mediocre hand",
+              "explain": "A check is only possible when no one has bet yet in that round. Players check with mediocre hands to see the next card without adding chips, or sometimes to hide the strength of a strong hand.",
+              "choices": [
+                "Because betting is never allowed",
+                "Because checking is required with the best hand",
+                "Because checking wins the pot",
+                "To see the next card cheaply with a mediocre hand"
+              ],
+              "id": "poker_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fold?",
+              "answer": "Surrendering your hand and losing any money already bet",
+              "explain": "When you fold, you leave the hand. You cannot win the pot, but you also lose nothing further.",
+              "choices": [
+                "Checking to the next player",
+                "Betting all your chips",
+                "Staying in the hand",
+                "Surrendering your hand and losing any money already bet"
+              ],
+              "id": "poker_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you fold?",
+              "answer": "When your hand is unlikely to win and your odds do not justify the cost",
+              "explain": "Fold when the hand is unlikely to win and the pot odds do not justify the price of a call. Folding means you put no more chips in.",
+              "choices": [
+                "When your hand is unlikely to win and your odds do not justify the cost",
+                "Never fold to build your image",
+                "Only on the river",
+                "When other players suggest it"
+              ],
+              "id": "poker_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Game Concepts and Discipline",
+      "tip": "Poker is a game of incomplete information. Decisions are made without seeing the opponent's hand. Over a long run, sound decisions tend to do better than bad ones, but short runs are dominated by luck. Treating the game as entertainment, with strict limits, and keeping emotions in check keeps the focus on the math, not the feelings.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Reading the Board",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to read the board?",
+              "answer": "Thinking about what hands your opponents might have based on the community cards",
+              "explain": "Reading the board means analyzing which hands are possible. A board of 10-10-5 means a player could hold three 10s or a high pocket pair. A dry board such as K-7-2 in mixed suits leaves few strong possibilities.",
+              "choices": [
+                "Memorizing card values",
+                "Thinking about what hands your opponents might have based on the community cards",
+                "Counting the cards in the deck",
+                "Following the rules"
+              ],
+              "id": "poker_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a wet board?",
+              "answer": "A board with many connected or coordinated cards, creating many possible hands",
+              "explain": "A wet board like 9-8-7 creates many straight possibilities, and with two or three of a suit also flush draws. A dry board like K-7-2 in mixed suits has far fewer.",
+              "choices": [
+                "A board with water on it",
+                "A board with no face cards",
+                "A board where you are losing",
+                "A board with many connected or coordinated cards, creating many possible hands"
+              ],
+              "id": "poker_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a dry board?",
+              "answer": "A board with disconnected, uncoordinated cards, few possibilities",
+              "explain": "A dry board like K-7-2 in mixed suits has few connections. Straights and flushes are very unlikely, so players usually have high card, a single pair, or a weak draw.",
+              "choices": [
+                "A board with disconnected, uncoordinated cards, few possibilities",
+                "A board where you always win",
+                "A board of all low cards",
+                "A board with three of a kind"
+              ],
+              "id": "poker_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If the board is K-Q-J-9, what is a big concern?",
+              "answer": "Your opponent might have made a straight with a 10",
+              "explain": "A 10 makes a straight (10-J-Q-K-9) on this board. This is a wet, connected board that creates many strong hands.",
+              "choices": [
+                "Flushes are impossible",
+                "No one has a hand",
+                "Your opponent might have made a straight with a 10",
+                "The board is always dry"
+              ],
+              "id": "poker_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "On the board A-A-5-2, which two-card hand makes a full house?",
+              "answer": "5-5",
+              "explain": "5-5 plus the board gives 5-5-5-A-A, a full house. K-K makes only two pair, K-Q makes only a pair of Aces, and 7-6 makes a pair of Aces too. (A-K would make three Aces, not a full house.)",
+              "choices": [
+                "K-K",
+                "7-6",
+                "K-Q",
+                "5-5"
+              ],
+              "id": "poker_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Bankroll and Discipline",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is bankroll management?",
+              "answer": "Playing within your means so one downswing does not wipe you out",
+              "explain": "A bankroll is a fixed amount set aside for the game. Managing it means keeping stakes small compared with it, so a normal run of bad luck does not end play.",
+              "choices": [
+                "Borrowing to play more",
+                "Having the most money",
+                "Playing within your means so one downswing does not wipe you out",
+                "Always betting all in"
+              ],
+              "id": "poker_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is tilt?",
+              "answer": "Losing emotional control and making bad decisions due to frustration",
+              "explain": "Tilt is when a player acts on emotion instead of math. Bad beats or losses can cause it, and players on tilt tend to make larger bets and worse decisions.",
+              "choices": [
+                "A winning streak",
+                "Losing emotional control and making bad decisions due to frustration",
+                "Playing good cards only",
+                "Folding every hand"
+              ],
+              "id": "poker_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How can you avoid tilt?",
+              "answer": "Take breaks, stay calm, and focus on making good decisions",
+              "explain": "When frustrated, step away from the game. Remind yourself that bad beats happen to everyone. Focus on the math, not the outcome.",
+              "choices": [
+                "Take breaks, stay calm, and focus on making good decisions",
+                "Blame others",
+                "Bet more to recover losses",
+                "Never fold"
+              ],
+              "id": "poker_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is variance?",
+              "answer": "Natural short-term swings in your results due to luck",
+              "explain": "Even good players lose streaks because of variance. You can play perfectly and still lose in the short term. Variance averages out over many hands.",
+              "choices": [
+                "The difference between players",
+                "A winning strategy",
+                "An excuse for bad play",
+                "Natural short-term swings in your results due to luck"
+              ],
+              "id": "poker_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which mindset do strong players aim for?",
+              "answer": "Judging each decision by its quality, not by one result",
+              "explain": "A good decision can lose and a bad one can win in the short term. Judging plays by the math rather than the outcome helps keep emotions from driving choices.",
+              "choices": [
+                "Only playing when holding strong cards",
+                "Assuming a win means the play was right",
+                "Raising after every loss",
+                "Judging each decision by its quality, not by one result"
+              ],
+              "id": "poker_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
