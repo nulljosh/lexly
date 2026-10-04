@@ -1414,6 +1414,75 @@ function buildUnitIntro(unit) {
     return card;
 }
 
+// "Learn this first": before a lesson's first attempt, show what it will ask, with the
+// answers and the why, so the quiz checks something you were taught.
+// ponytail: capped at 8 rows; long lessons teach their first 8 and quiz the rest.
+function learnRows(lessonQuestions) {
+    const rows = [];
+    lessonQuestions.forEach((q) => {
+        if (q.pairs) q.pairs.forEach(([english, target]) => rows.push([target, english, true]));
+        else if (q.type === 'translation' || q.type === 'sentence') rows.push([q.answer, q.question, true]);
+        else if (q.type === 'listening') rows.push([q.answer, meaningOf(q.answer) || '', true]);
+        else if (q.type === 'cloze') rows.push([q.question.replace(/_{2,}/, q.answer), meaningOf(q.question.replace(/_{2,}/, q.answer)) || '', true]);
+        else rows.push([q.question, q.answer + (q.explain ? `. ${q.explain}` : ''), false]);
+    });
+    const seen = new Set();
+    return rows.filter(([term]) => !seen.has(term) && seen.add(term)).slice(0, 8);
+}
+
+function showLearnCard(lessonId) {
+    const pack = PACK_CACHE[gameState.selectedSubject];
+    const unit = (pack?.units || []).find((u) => (u.lessons || []).some((l) => l.id === lessonId));
+    const rows = learnRows(gameState.lessonQuestions);
+    if (!rows.length) return false;
+    const container = document.getElementById('questionContainer');
+    container.textContent = '';
+    document.getElementById('progressLabel').textContent = 'Learn';
+    const card = document.createElement('div');
+    card.className = 'unit-intro learn-card';
+    const label = document.createElement('div');
+    label.className = 'unit-intro-label';
+    label.textContent = 'Learn this first';
+    card.appendChild(label);
+    if (unit?.tip) {
+        const tip = document.createElement('p');
+        tip.className = 'unit-intro-tip';
+        tip.textContent = unit.tip;
+        card.appendChild(tip);
+    }
+    const list = document.createElement('dl');
+    list.className = 'unit-intro-phrases';
+    const spoken = LANGUAGE_SUBJECTS.has(gameState.selectedSubject);
+    rows.forEach(([term, meaning, sayable]) => {
+        const dt = document.createElement('dt');
+        if (spoken && sayable) {
+            const hear = document.createElement('button');
+            hear.type = 'button';
+            hear.className = 'feedback-hear';
+            hear.setAttribute('aria-label', `Hear ${term}`);
+            hear.append(makeIcon('fa-solid fa-volume-high'));
+            hear.addEventListener('click', () => speak(term, currentLang()));
+            dt.append(hear, ' ');
+        }
+        dt.append(term);
+        const dd = document.createElement('dd');
+        dd.textContent = meaning;
+        list.append(dt, dd);
+    });
+    card.appendChild(list);
+    container.appendChild(card);
+    document.getElementById('feedback').className = 'feedback';
+    document.getElementById('feedback').textContent = '';
+    document.getElementById('skipBtn').hidden = true;
+    // checkBtn also carries a permanent checkAnswer listener; mark answered so it no-ops here.
+    gameState.answered = true;
+    const button = document.getElementById('checkBtn');
+    button.textContent = 'Start the quiz';
+    button.disabled = false;
+    button.onclick = () => { document.getElementById('skipBtn').hidden = false; loadQuestion(); };
+    return true;
+}
+
 function renderSkillTree(pack) {
     const meta = findSubjectMeta(pack.id) || {};
     const treeIcon = document.getElementById('treeIcon');
@@ -1604,6 +1673,8 @@ async function startLesson(lessonId, weakOnly, placement) {
     gameState.lessonQuestions = getQuestionsForLesson(gameState.selectedSubject, subset);
     gameState.totalQuestions = gameState.lessonQuestions.length || 10;
     updateStats();
+    document.getElementById('skipBtn').hidden = false;
+    if (lessonId && !weakOnly && !placement && !isLessonComplete(gameState.selectedSubject, lessonId) && showLearnCard(lessonId)) return;
     loadQuestion();
 }
 

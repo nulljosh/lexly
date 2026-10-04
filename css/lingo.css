@@ -2166,3 +2166,8 @@ body.demo .header-inner::after {
 
 /* Phones: the stats pills need the room, the icon alone says Lexly. */
 @media (max-width: 480px) { .logo span { display: none; } }
+
+/* Learn-first card: the lesson's answers before its quiz. */
+.learn-card .unit-intro-phrases { grid-template-columns: 1fr; gap: 0.15rem; font-size: 0.9375rem; }
+.learn-card dt { display: flex; align-items: center; gap: 0.5rem; }
+.learn-card dd { margin: 0 0 0.75rem; color: var(--text-secondary); }
