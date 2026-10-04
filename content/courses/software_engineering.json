@@ -1,0 +1,904 @@
+{
+  "id": "software_engineering",
+  "name": "Software Engineering",
+  "category": "programming",
+  "icon": "fa-solid fa-screwdriver-wrench",
+  "level": "Building Software Well",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Requirements and Planning",
+      "tip": "Good software starts with clear requirements that define what the system must do. Understanding requirements prevents building the wrong thing. Gathering requirements involves talking to stakeholders and documenting what they need.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding Requirements",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What are software requirements?",
+              "answer": "Detailed specifications of what a software system must do",
+              "explain": "Requirements describe the system's features, behavior, and constraints. They come from stakeholders and define success criteria for the project.",
+              "choices": [
+                "The programming languages used",
+                "Bugs that must be fixed",
+                "Detailed specifications of what a software system must do",
+                "The hardware needed to run the software"
+              ],
+              "id": "software_engineering_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a functional requirement?",
+              "answer": "A description of what the system must do",
+              "explain": "Functional requirements describe capabilities like features and behavior: 'Users must be able to log in' or 'The system must calculate totals.' They define features.",
+              "choices": [
+                "Whether the system uses a database",
+                "A description of what the system must do",
+                "How fast the system must run",
+                "How much memory the system uses"
+              ],
+              "id": "software_engineering_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a non-functional requirement?",
+              "answer": "A constraint on how the system operates",
+              "explain": "Non-functional requirements specify quality attributes like performance, security, and reliability: 'The system must respond in under 1 second' or 'Data must be encrypted.' They constrain behavior.",
+              "choices": [
+                "The programming language to use",
+                "How to store user data",
+                "A constraint on how the system operates",
+                "A feature the system must provide"
+              ],
+              "id": "software_engineering_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a user story in requirements gathering?",
+              "answer": "A brief description of a feature from a user's perspective",
+              "explain": "User stories follow the format: 'As a [role], I want [feature] so that [benefit].' They communicate requirements in everyday language.",
+              "choices": [
+                "A test case",
+                "A brief description of a feature from a user's perspective",
+                "A fictional narrative in the application",
+                "A bug report"
+              ],
+              "id": "software_engineering_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it important to clarify requirements before coding?",
+              "answer": "Fixing requirement mistakes early costs far less than fixing them after implementation",
+              "explain": "Discovering a missing requirement after coding can require rewriting entire systems. Clarity upfront prevents wasted work.",
+              "choices": [
+                "Only management cares about requirements",
+                "Fixing requirement mistakes early costs far less than fixing them after implementation",
+                "Requirements never change",
+                "It is not important; coding can start immediately"
+              ],
+              "id": "software_engineering_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Planning and Estimation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is project planning in software engineering?",
+              "answer": "Breaking down work into tasks, estimating effort, and scheduling",
+              "explain": "Planning defines what needs to be done, how long it will take, and who will do it. It creates a roadmap for the project.",
+              "choices": [
+                "Only used for large projects",
+                "Writing all the code before starting",
+                "The same as requirements gathering",
+                "Breaking down work into tasks, estimating effort, and scheduling"
+              ],
+              "id": "software_engineering_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is estimation in project planning?",
+              "answer": "Predicting how long tasks will take and how many resources are needed",
+              "explain": "Estimation forecasts effort, cost, and timeline. It is never exact, but good estimates prevent overruns.",
+              "choices": [
+                "Recording how long work actually took",
+                "Writing down all project deadlines",
+                "Predicting how long tasks will take and how many resources are needed",
+                "A type of risk management"
+              ],
+              "id": "software_engineering_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'cone of uncertainty'?",
+              "answer": "The uncertainty in estimates narrows as a project progresses",
+              "explain": "Early estimates are very uncertain, with errors that can be large in either direction. As details emerge and work is done, estimates become more accurate.",
+              "choices": [
+                "A security vulnerability",
+                "A type of testing",
+                "A shape used in design",
+                "The uncertainty in estimates narrows as a project progresses"
+              ],
+              "id": "software_engineering_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Gantt chart?",
+              "answer": "A visual timeline showing tasks, duration, and dependencies",
+              "explain": "Gantt charts display project tasks as horizontal bars over time. They show which tasks depend on others and when each must complete.",
+              "choices": [
+                "A code documentation format",
+                "A database schema",
+                "A visual timeline showing tasks, duration, and dependencies",
+                "A type of test case"
+              ],
+              "id": "software_engineering_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is scope creep in a project?",
+              "answer": "Uncontrolled expansion of project requirements beyond the original plan",
+              "explain": "Scope creep happens when new features are added without adjusting timeline or resources. It causes delays and budget overruns.",
+              "choices": [
+                "A safety feature",
+                "A type of testing approach",
+                "Uncontrolled expansion of project requirements beyond the original plan",
+                "The natural progress of a project"
+              ],
+              "id": "software_engineering_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Version Control and Collaboration",
+      "tip": "Version control systems track changes to code over time. They allow multiple developers to work together without losing changes. Git is the most widely used one.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Version Control Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is version control?",
+              "answer": "A system that tracks changes to files over time and allows reverting to earlier versions",
+              "explain": "Version control records who changed what and when. It enables collaboration and provides a safety net if changes break something.",
+              "choices": [
+                "Software for managing team meetings",
+                "A performance monitoring tool",
+                "A way to manage software releases",
+                "A system that tracks changes to files over time and allows reverting to earlier versions"
+              ],
+              "id": "software_engineering_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a repository in version control?",
+              "answer": "The central storage location for all project files and their history",
+              "explain": "A repository (or repo) stores the project's code and the complete history of changes. It can be local or on a server.",
+              "choices": [
+                "A testing environment",
+                "A backup service",
+                "A bug tracking system",
+                "The central storage location for all project files and their history"
+              ],
+              "id": "software_engineering_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a commit in version control?",
+              "answer": "A snapshot of the project at a point in time, with a message describing changes",
+              "explain": "A commit saves the current state of files with a message explaining what changed. Commits create the history.",
+              "choices": [
+                "Uploading files to the internet",
+                "A deployment to production",
+                "A bug report",
+                "A snapshot of the project at a point in time, with a message describing changes"
+              ],
+              "id": "software_engineering_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a branch in version control?",
+              "answer": "An independent line of development that can be worked on separately from the main code",
+              "explain": "Branches let developers work on features without affecting the main branch. Changes can be merged back when ready.",
+              "choices": [
+                "A release version",
+                "An independent line of development that can be worked on separately from the main code",
+                "A copy of the entire repository",
+                "A type of backup"
+              ],
+              "id": "software_engineering_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is merging in version control?",
+              "answer": "Combining changes from one branch into another",
+              "explain": "Merging integrates changes from a feature branch back to the main branch. It can create conflicts if changes overlap.",
+              "choices": [
+                "Deleting a branch",
+                "Uploading to a server",
+                "Combining changes from one branch into another",
+                "Creating a new repository"
+              ],
+              "id": "software_engineering_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Git Workflow and Remote Repositories",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is Git?",
+              "answer": "A distributed version control system widely used in professional software development",
+              "explain": "Git is open-source and tracks changes to files. Each developer has a full copy of the repository history.",
+              "choices": [
+                "A testing framework",
+                "A programming language",
+                "A distributed version control system widely used in professional software development",
+                "A code editor"
+              ],
+              "id": "software_engineering_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a remote repository?",
+              "answer": "A central copy of the repository on a server that multiple developers can access",
+              "explain": "A remote (like GitHub or GitLab) is a central server. Developers push commits to it and pull updates from it.",
+              "choices": [
+                "A local backup",
+                "A central copy of the repository on a server that multiple developers can access",
+                "A copy on a developer's computer",
+                "A test environment"
+              ],
+              "id": "software_engineering_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'git push' do?",
+              "answer": "Uploads local commits to the remote repository",
+              "explain": "Push sends commits from your local machine to the remote server, making them visible to other developers.",
+              "choices": [
+                "Downloads changes from the remote",
+                "Uploads local commits to the remote repository",
+                "Merges two branches",
+                "Creates a new branch"
+              ],
+              "id": "software_engineering_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'git pull' do?",
+              "answer": "Downloads and integrates changes from the remote repository into the local branch",
+              "explain": "Pull fetches new commits from the remote and merges them into your current branch, keeping you synchronized.",
+              "choices": [
+                "Deletes branches",
+                "Downloads and integrates changes from the remote repository into the local branch",
+                "Creates a backup",
+                "Uploads local changes"
+              ],
+              "id": "software_engineering_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a merge conflict?",
+              "answer": "When two branches have incompatible changes to the same lines of code",
+              "explain": "Conflicts occur when merging if both branches changed the same code differently. The developer must resolve it manually.",
+              "choices": [
+                "A backup that failed",
+                "An error in the commit message",
+                "A deleted branch",
+                "When two branches have incompatible changes to the same lines of code"
+              ],
+              "id": "software_engineering_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Testing Levels and Strategies",
+      "tip": "Testing verifies that software works correctly. Different test levels catch different types of bugs. Unit tests check small pieces; integration tests check how pieces work together; end-to-end tests verify complete workflows.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Unit Testing and Test-Driven Development",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a unit test?",
+              "answer": "A test that checks a small, isolated piece of code",
+              "explain": "Unit tests verify single functions or methods work correctly in isolation, such as a function or class. They are fast and easy to maintain.",
+              "choices": [
+                "A security test",
+                "A test of the entire application",
+                "A test that checks a small, isolated piece of code",
+                "A performance test"
+              ],
+              "id": "software_engineering_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a test fixture?",
+              "answer": "The setup (data, objects) needed to run a test",
+              "explain": "Fixtures prepare the test environment. They might create mock objects, initialize databases, or set initial state.",
+              "choices": [
+                "A deployment step",
+                "The setup (data, objects) needed to run a test",
+                "A bug in the code",
+                "A type of assertion"
+              ],
+              "id": "software_engineering_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an assertion in a test?",
+              "answer": "A statement checking that actual behavior matches expected behavior",
+              "explain": "An assertion (e.g., 'assert x == 5') verifies a condition. If it fails, the test fails and reports where.",
+              "choices": [
+                "A comment explaining the code",
+                "A statement checking that actual behavior matches expected behavior",
+                "A way to skip a test",
+                "A performance metric"
+              ],
+              "id": "software_engineering_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is test-driven development (TDD)?",
+              "answer": "Writing tests before writing the code they test",
+              "explain": "In TDD, you write a failing test first, then write code to make it pass, then refactor. It ensures code is testable and correct.",
+              "choices": [
+                "Writing tests before writing the code they test",
+                "Writing tests after shipping code",
+                "Never writing tests",
+                "Testing only after a bug is found"
+              ],
+              "id": "software_engineering_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is test coverage?",
+              "answer": "The percentage of code executed by tests",
+              "explain": "Coverage measures how much of the codebase is tested. 100% coverage means every line is tested, though high coverage does not guarantee all bugs are caught.",
+              "choices": [
+                "How often tests are run",
+                "The percentage of code executed by tests",
+                "The number of bugs found",
+                "The time it takes to run tests"
+              ],
+              "id": "software_engineering_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Integration and End-to-End Testing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an integration test?",
+              "answer": "A test that checks multiple components working together",
+              "explain": "Integration tests verify that different parts of the system (database, API, UI) interact correctly together.",
+              "choices": [
+                "A test of a single function",
+                "A performance benchmark",
+                "A test of the entire application from the user's perspective",
+                "A test that checks multiple components working together"
+              ],
+              "id": "software_engineering_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an end-to-end (E2E) test?",
+              "answer": "A test of a complete user workflow from start to finish",
+              "explain": "E2E tests verify that entire features work correctly. A user logs in, performs actions, and the results are correct.",
+              "choices": [
+                "A test of a complete user workflow from start to finish",
+                "A test of a single unit",
+                "A code review",
+                "A test of the database alone"
+              ],
+              "id": "software_engineering_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a mock object in testing?",
+              "answer": "A fake object that simulates the behavior of a real object for testing",
+              "explain": "Mocks let you test a unit without depending on external systems (databases, APIs). They simulate expected behavior.",
+              "choices": [
+                "A broken deployment",
+                "A fake object that simulates the behavior of a real object for testing",
+                "A bug report",
+                "A test that fails"
+              ],
+              "id": "software_engineering_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the test pyramid?",
+              "answer": "Many unit tests, fewer integration tests, even fewer E2E tests",
+              "explain": "The pyramid shows the ideal balance: lots of fast unit tests (base), some integration tests (middle), and few slow E2E tests (top).",
+              "choices": [
+                "A shape used in design",
+                "All tests should be E2E tests",
+                "Many unit tests, fewer integration tests, even fewer E2E tests",
+                "Only unit tests matter"
+              ],
+              "id": "software_engineering_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a smoke test?",
+              "answer": "A quick test to verify basic functionality is not broken",
+              "explain": "Smoke tests are fast and shallow; they catch obvious breakage early. They are run before deeper testing.",
+              "choices": [
+                "A performance test",
+                "A test that always fails",
+                "A quick test to verify basic functionality is not broken",
+                "A security test"
+              ],
+              "id": "software_engineering_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Code Review and Design Principles",
+      "tip": "Code review is when other developers examine code before it is merged. Good design principles like modularity and low coupling make code easier to understand, test, and change.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Code Review Process",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a code review?",
+              "answer": "A process where other developers examine code before it merges into the main branch",
+              "explain": "Code reviews catch bugs, improve quality, and share knowledge. They also help keep problematic code from being merged.",
+              "choices": [
+                "A process where other developers examine code before it merges into the main branch",
+                "Testing code after it is released",
+                "A way to blame someone for bugs",
+                "An optional process for open-source only"
+              ],
+              "id": "software_engineering_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a pull request (PR)?",
+              "answer": "A request to merge code changes from one branch into another",
+              "explain": "PRs allow developers to propose changes and get feedback, typically reviewed before merging. Reviewers examine the code and approve or request changes.",
+              "choices": [
+                "A deployment to production",
+                "A backup of the codebase",
+                "A request to merge code changes from one branch into another",
+                "Downloading code from the remote"
+              ],
+              "id": "software_engineering_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What should a code reviewer look for?",
+              "answer": "Bugs, style violations, design issues, and test coverage",
+              "explain": "Reviewers check for correctness, maintainability, performance, and security. They ensure code meets team standards.",
+              "choices": [
+                "Only performance issues",
+                "Nothing, all code is fine",
+                "Only syntax errors",
+                "Bugs, style violations, design issues, and test coverage"
+              ],
+              "id": "software_engineering_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is constructive feedback important in code review?",
+              "answer": "It helps the developer learn and improves team communication",
+              "explain": "Harsh criticism damages morale and creates conflict. Constructive feedback explains issues and offers solutions.",
+              "choices": [
+                "It always approves the code",
+                "It is not important",
+                "It assigns blame for bugs",
+                "It helps the developer learn and improves team communication"
+              ],
+              "id": "software_engineering_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a linter in the context of code review?",
+              "answer": "A tool that automatically checks code for style and common mistakes",
+              "explain": "Linters catch issues like unused variables, inconsistent spacing, and undefined functions before human review.",
+              "choices": [
+                "A person who reviews code",
+                "A deployment tool",
+                "A tool that automatically checks code for style and common mistakes",
+                "A type of test"
+              ],
+              "id": "software_engineering_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Design Principles: Modularity and Coupling",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is modularity in software design?",
+              "answer": "Breaking code into independent, reusable pieces with clear responsibilities",
+              "explain": "Modular code is organized into small, focused units (functions, classes, modules). Each has one clear job.",
+              "choices": [
+                "Using only built-in functions",
+                "Writing all code in one large function",
+                "Using a specific design pattern",
+                "Breaking code into independent, reusable pieces with clear responsibilities"
+              ],
+              "id": "software_engineering_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is cohesion in code?",
+              "answer": "The degree to which parts of a module are related and focused",
+              "explain": "High cohesion means related code is grouped together. Low cohesion means unrelated code is mixed.",
+              "choices": [
+                "A performance metric",
+                "The degree to which parts of a module are related and focused",
+                "The number of lines in a file",
+                "How well tests work"
+              ],
+              "id": "software_engineering_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is coupling in code?",
+              "answer": "The degree to which one module depends on another",
+              "explain": "High coupling means modules are tightly dependent; changing one requires changing others. Low coupling is better for flexibility.",
+              "choices": [
+                "How big a file is",
+                "The degree to which one module depends on another",
+                "How many tests pass",
+                "How fast code runs"
+              ],
+              "id": "software_engineering_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Single Responsibility Principle (SRP)?",
+              "answer": "A class or function should have one, and only one, reason to change",
+              "explain": "SRP promotes clarity and testing. A function that handles users, saves files, and sends emails violates SRP.",
+              "choices": [
+                "A class or function should have one, and only one, reason to change",
+                "Only one person can write code",
+                "Code should be as complex as possible",
+                "Functions cannot call other functions"
+              ],
+              "id": "software_engineering_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the DRY principle (Don't Repeat Yourself)?",
+              "answer": "Code logic should exist in one place; avoid duplication",
+              "explain": "DRY reduces bugs and makes updates easier. If you copy-paste code, you have violated DRY.",
+              "choices": [
+                "Never use the same variable name twice",
+                "No two functions can be similar",
+                "Code logic should exist in one place; avoid duplication",
+                "Every file should be different"
+              ],
+              "id": "software_engineering_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Continuous Integration and Delivery",
+      "tip": "Continuous integration automates testing and merging. Continuous delivery automates deployment. Together, they enable teams to release code frequently with confidence.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Continuous Integration Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is continuous integration (CI)?",
+              "answer": "Automatically testing and integrating code changes multiple times per day",
+              "explain": "CI runs tests on every commit to catch bugs early. It prevents integration headaches by catching conflicts early.",
+              "choices": [
+                "Never testing code",
+                "Manually testing code once a month",
+                "Automatically testing and integrating code changes multiple times per day",
+                "Deploying without testing"
+              ],
+              "id": "software_engineering_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a CI/CD pipeline?",
+              "answer": "An automated sequence of steps to build, test, and deploy code",
+              "explain": "A pipeline runs on every code change: compile, test, lint, deploy. It ensures quality and speed.",
+              "choices": [
+                "A water pipe",
+                "An automated sequence of steps to build, test, and deploy code",
+                "A manual deployment process",
+                "A version control system"
+              ],
+              "id": "software_engineering_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a build in CI?",
+              "answer": "Compiling code and dependencies into an executable or deployable artifact",
+              "explain": "A build checks that code compiles correctly. It is the first step in a CI pipeline.",
+              "choices": [
+                "A deployment step",
+                "A code review",
+                "Compiling code and dependencies into an executable or deployable artifact",
+                "A test that fails"
+              ],
+              "id": "software_engineering_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a CI/CD tool?",
+              "answer": "Software that automates the build, test, and deployment pipeline",
+              "explain": "Tools like GitHub Actions, Jenkins, GitLab CI, and Travis CI run automated pipelines on code changes.",
+              "choices": [
+                "A version control system",
+                "Software that automates the build, test, and deployment pipeline",
+                "A database",
+                "A text editor"
+              ],
+              "id": "software_engineering_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean if a CI build fails?",
+              "answer": "Code did not compile or a test failed",
+              "explain": "A failing build indicates a problem; the code cannot merge until it is fixed. The developer must fix the issue and push again.",
+              "choices": [
+                "No one can access the code",
+                "The server is broken",
+                "Code did not compile or a test failed",
+                "The project is cancelled"
+              ],
+              "id": "software_engineering_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Continuous Delivery and Deployment",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is continuous delivery (CD)?",
+              "answer": "Code is automatically tested and prepared for deployment, but humans decide when to deploy",
+              "explain": "CD automates everything up to production. A human presses the button to release. This is safer for critical systems.",
+              "choices": [
+                "Code is automatically tested and prepared for deployment, but humans decide when to deploy",
+                "Deploying only once a year",
+                "Never deploying code",
+                "Deploying code automatically without testing"
+              ],
+              "id": "software_engineering_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is continuous deployment?",
+              "answer": "Code is automatically deployed to production after passing all tests",
+              "explain": "With continuous deployment, passing tests means automatic release. No human approval needed.",
+              "choices": [
+                "Deploying to production without testing",
+                "Deploying once per sprint",
+                "Code is automatically deployed to production after passing all tests",
+                "Deploying to development only"
+              ],
+              "id": "software_engineering_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a staging environment?",
+              "answer": "A production-like environment for testing before deploying to real users",
+              "explain": "Staging mimics production. You can test deployments and user workflows without affecting real users.",
+              "choices": [
+                "A production-like environment for testing before deploying to real users",
+                "The live environment that real users use",
+                "The local development machine",
+                "A backup server"
+              ],
+              "id": "software_engineering_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is blue-green deployment?",
+              "answer": "Running two identical production environments and switching traffic to the new one after testing",
+              "explain": "Blue (old) and green (new) environments run in parallel. If green fails, switch back to blue immediately.",
+              "choices": [
+                "Deploying different code to each server",
+                "Never deploying code",
+                "Running two identical production environments and switching traffic to the new one after testing",
+                "Deploying to two servers at once"
+              ],
+              "id": "software_engineering_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a canary deployment?",
+              "answer": "Deploying to a small percentage of users first, then gradually to everyone",
+              "explain": "Canary deployments reduce risk. If the new version breaks, only a few users are affected.",
+              "choices": [
+                "Deploying to production without testing",
+                "Deploying to a small percentage of users first, then gradually to everyone",
+                "Deploying only at night",
+                "Never deploying code"
+              ],
+              "id": "software_engineering_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Refactoring, Technical Debt, and Methodology",
+      "tip": "Refactoring improves code without changing behavior. Technical debt accumulates when shortcuts are taken. Agile and waterfall are different approaches to managing change and delivery.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Refactoring and Technical Debt",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is refactoring?",
+              "answer": "Improving code structure without changing behavior or adding features",
+              "explain": "Refactoring makes code cleaner and easier to understand. Good tests help confirm that behavior does not change.",
+              "choices": [
+                "Deploying code",
+                "Adding new features",
+                "Improving code structure without changing behavior or adding features",
+                "Fixing bugs"
+              ],
+              "id": "software_engineering_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is technical debt?",
+              "answer": "Shortcuts or poor decisions that create future maintenance costs",
+              "explain": "Debt is taken on when rushing (writing bad code). It accrues interest (more time to fix, more bugs). It must be paid down eventually.",
+              "choices": [
+                "Money owed to other companies",
+                "A type of test",
+                "Shortcuts or poor decisions that create future maintenance costs",
+                "A feature that is missing"
+              ],
+              "id": "software_engineering_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a code smell?",
+              "answer": "A surface-level indicator that deeper problems may exist in the code",
+              "explain": "Smells are not bugs; they suggest issues: long functions, duplicate code, unclear names. They warrant refactoring.",
+              "choices": [
+                "A surface-level indicator that deeper problems may exist in the code",
+                "A test that fails",
+                "A missing feature",
+                "A security vulnerability"
+              ],
+              "id": "software_engineering_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a long method in code review?",
+              "answer": "A function that is too long and should be broken into smaller functions",
+              "explain": "Long methods are hard to understand and test. They often do too many things and violate the Single Responsibility Principle.",
+              "choices": [
+                "A memory leak",
+                "A function that is too long and should be broken into smaller functions",
+                "A slow algorithm",
+                "A missing function"
+              ],
+              "id": "software_engineering_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How should technical debt be managed?",
+              "answer": "Balance new features with paying down debt through refactoring",
+              "explain": "Ignore debt and it compounds. Allocate some time each sprint to refactoring and cleanup.",
+              "choices": [
+                "Only refactor, never add features",
+                "Technical debt does not exist",
+                "Balance new features with paying down debt through refactoring",
+                "Never refactor, always build features"
+              ],
+              "id": "software_engineering_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Methodology: Agile vs. Waterfall",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the waterfall methodology?",
+              "answer": "A linear approach where each phase is completed before the next starts",
+              "explain": "Waterfall is sequential: gather all requirements, design completely, code, test. Each phase (requirements, design, development, testing) must finish before starting the next. Changes are costly and late.",
+              "choices": [
+                "A deployment strategy",
+                "A method for testing code",
+                "A linear approach where each phase is completed before the next starts",
+                "An iterative development method"
+              ],
+              "id": "software_engineering_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the agile methodology?",
+              "answer": "An iterative approach that delivers software in small increments with frequent feedback",
+              "explain": "Agile works in sprints, building small features and getting feedback. Changes are embraced rather than resisted.",
+              "choices": [
+                "A linear methodology",
+                "A type of test",
+                "An iterative approach that delivers software in small increments with frequent feedback",
+                "A code review process"
+              ],
+              "id": "software_engineering_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a sprint in agile?",
+              "answer": "A fixed time period to complete a set of planned work",
+              "explain": "Sprints are time-boxed, usually 1-4 weeks. The team picks work, completes what fits, and reviews what was done.",
+              "choices": [
+                "A deployment",
+                "A bug in the code",
+                "A fixed time period to complete a set of planned work",
+                "A test case"
+              ],
+              "id": "software_engineering_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a sprint review in agile?",
+              "answer": "A meeting where the team shows completed work to stakeholders and gathers feedback",
+              "explain": "Sprint reviews demo completed features. Stakeholders see progress and give input for future sprints.",
+              "choices": [
+                "A code review",
+                "A security audit",
+                "A meeting where the team shows completed work to stakeholders and gathers feedback",
+                "A performance test"
+              ],
+              "id": "software_engineering_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is waterfall appropriate instead of agile?",
+              "answer": "When requirements are stable, changes are expensive, and predictability is critical",
+              "explain": "Waterfall is often used for embedded systems, medical devices, or aerospace, where changes are costly and requirements are fixed.",
+              "choices": [
+                "For all projects",
+                "When requirements are stable, changes are expensive, and predictability is critical",
+                "Never; agile is always better",
+                "For small teams only"
+              ],
+              "id": "software_engineering_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "id": "computer_graphics",
+  "name": "Computer Graphics",
+  "category": "programming",
+  "icon": "fa-solid fa-cube",
+  "level": "Making Pixels",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Raster and Vector Graphics",
+      "tip": "Graphics come in two fundamentally different forms. Raster graphics are made of pixels arranged in a grid, while vector graphics are made of mathematical shapes like lines and curves. Each has strengths depending on the task.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Understanding Raster Images",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a raster image?",
+              "answer": "An image made of a grid of colored pixels",
+              "explain": "Raster images are composed of pixels arranged in rows and columns. Each pixel has a color value. Photos and screenshots are raster images.",
+              "choices": [
+                "An image without any color information",
+                "An image made of mathematical curves",
+                "An image made of a grid of colored pixels",
+                "A vector file format"
+              ],
+              "id": "computer_graphics_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you scale up (enlarge) a raster image?",
+              "answer": "It becomes pixelated and loses detail",
+              "explain": "Raster images have a fixed number of pixels. Enlarging them spreads the same pixels over more space, causing visible pixelation and blurriness.",
+              "choices": [
+                "It becomes pixelated and loses detail",
+                "The file size decreases",
+                "The colors become more saturated",
+                "It automatically adds new pixels smoothly"
+              ],
+              "id": "computer_graphics_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which file formats are raster-based?",
+              "answer": "JPEG, PNG, and GIF",
+              "explain": "JPEG, PNG, and GIF all store images as grids of pixels. SVG and PDF are vector formats.",
+              "choices": [
+                "SVG and PDF only",
+                "JPEG, PNG, and GIF",
+                "PNG and SVG only",
+                "All image formats are vector"
+              ],
+              "id": "computer_graphics_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the resolution of a raster image?",
+              "answer": "The width and height measured in pixels",
+              "explain": "Resolution is specified as width x height in pixels, like 1920x1080. Higher resolution means more pixels and more detail.",
+              "choices": [
+                "How many colors the image contains",
+                "The file size in megabytes",
+                "How sharp the camera lens was",
+                "The width and height measured in pixels"
+              ],
+              "id": "computer_graphics_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much storage does an uncompressed raster image need?",
+              "answer": "Roughly width x height x bytes-per-pixel",
+              "explain": "A 1000x1000 pixel image with 3 bytes per pixel (RGB) needs about 3 megabytes before compression. Larger images need proportionally more storage.",
+              "choices": [
+                "Roughly width x height x bytes-per-pixel",
+                "Only dependent on the file format",
+                "Always exactly 1 megabyte",
+                "The same regardless of dimensions"
+              ],
+              "id": "computer_graphics_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Understanding Vector Graphics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a vector graphic?",
+              "answer": "An image defined by mathematical shapes and curves",
+              "explain": "Vector graphics store instructions for drawing shapes, lines, and curves mathematically. Logos and fonts are typically vector graphics.",
+              "choices": [
+                "An image made of colored pixels",
+                "A 3D model",
+                "An image defined by mathematical shapes and curves",
+                "A photograph"
+              ],
+              "id": "computer_graphics_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when you scale a vector graphic?",
+              "answer": "It scales smoothly with no loss of quality",
+              "explain": "Vector graphics are recalculated at any size. A vector logo looks perfect at any scale from business card to billboard.",
+              "choices": [
+                "It becomes pixelated",
+                "It scales smoothly with no loss of quality",
+                "The file size doubles",
+                "Some colors are lost"
+              ],
+              "id": "computer_graphics_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are common vector file formats?",
+              "answer": "SVG, PDF, and AI",
+              "explain": "SVG is the web standard for vector graphics. PDF and AI (Adobe Illustrator) are also vector formats. PNG and JPEG are raster formats.",
+              "choices": [
+                "PNG and GIF",
+                "SVG, PDF, and AI",
+                "JPEG only",
+                "BMP and TIFF only"
+              ],
+              "id": "computer_graphics_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'path' in vector graphics?",
+              "answer": "A line or curve defined by mathematical points and control handles",
+              "explain": "Paths are the basic building blocks of vector graphics. They are drawn between anchor points and can be curved or straight.",
+              "choices": [
+                "A line or curve defined by mathematical points and control handles",
+                "A file directory location",
+                "A saved version of the image",
+                "The position of a pixel"
+              ],
+              "id": "computer_graphics_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is better for a company logo: raster or vector?",
+              "answer": "Vector, because it scales infinitely without quality loss",
+              "explain": "Logos need to work at any size. Vector graphics maintain perfect quality when scaled, making them ideal for branding.",
+              "choices": [
+                "It depends on the monitor size",
+                "Both are equally good",
+                "Vector, because it scales infinitely without quality loss",
+                "Raster, because it is simpler"
+              ],
+              "id": "computer_graphics_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Pixels and Color Models",
+      "tip": "Pixels are the building blocks of digital images. Each pixel stores one sample of color. To represent colors, we use color models like RGB that combine primary colors at different intensities.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Pixels and Display",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a pixel?",
+              "answer": "The smallest unit of a digital image, a single sample of color",
+              "explain": "A pixel is one dot of color. Millions of pixels arranged in a grid form a complete image. Resolution measures image dimensions in pixels.",
+              "choices": [
+                "A unit of file size",
+                "A measurement of screen brightness",
+                "The smallest unit of a digital image, a single sample of color",
+                "A type of monitor"
+              ],
+              "id": "computer_graphics_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'screen resolution' mean?",
+              "answer": "The number of pixels displayed horizontally and vertically",
+              "explain": "Resolution like 1920x1080 means 1920 pixels wide and 1080 pixels tall. Higher resolution means more pixels and sharper images.",
+              "choices": [
+                "How fast the monitor refreshes",
+                "How bright the monitor is",
+                "The distance from your eyes to the screen",
+                "The number of pixels displayed horizontally and vertically"
+              ],
+              "id": "computer_graphics_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is pixel density (measured in PPI)?",
+              "answer": "The number of pixels per inch on a screen",
+              "explain": "PPI (pixels per inch) measures how densely packed pixels are. Retina displays have higher PPI, making images look sharper and text crisper.",
+              "choices": [
+                "The refresh rate of the display",
+                "How many colors a pixel can show",
+                "The age of the monitor",
+                "The number of pixels per inch on a screen"
+              ],
+              "id": "computer_graphics_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'sub-pixel rendering'?",
+              "answer": "Using individual color components of pixels to improve text clarity",
+              "explain": "Sub-pixel rendering uses the red, green, and blue parts of pixels separately to smooth text edges. It makes text appear smoother on some displays.",
+              "choices": [
+                "Dividing pixels into smaller squares",
+                "Increasing the brightness of pixels",
+                "Removing some pixels from an image",
+                "Using individual color components of pixels to improve text clarity"
+              ],
+              "id": "computer_graphics_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do 4K monitors display sharper text than 1080p?",
+              "answer": "They have more pixels per inch, allowing smoother curves and edges",
+              "explain": "4K (3840x2160) has four times the pixels of 1080p (1920x1080). More pixels means finer detail, smoother text, and less pixelation.",
+              "choices": [
+                "They have more pixels per inch, allowing smoother curves and edges",
+                "They refresh at a higher rate",
+                "They use a different color model",
+                "They use a special font technology"
+              ],
+              "id": "computer_graphics_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Color Models and Representation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the RGB color model?",
+              "answer": "A color model using Red, Green, and Blue values to create any color",
+              "explain": "RGB combines red, green, and blue light at different intensities (0-255 each). Together they can create over 16 million colors.",
+              "choices": [
+                "A model for color blindness",
+                "A color model using Red, Green, and Blue values to create any color",
+                "A system for printing colors",
+                "A color model using only primary pigments"
+              ],
+              "id": "computer_graphics_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many distinct colors can RGB represent with 8 bits per channel?",
+              "answer": "16,777,216",
+              "explain": "Each channel (R, G, B) has 8 bits, allowing 256 values (0-255). Total combinations: 256 x 256 x 256 = 16,777,216 colors.",
+              "choices": [
+                "4,294,967,296",
+                "65,536",
+                "16,777,216",
+                "1,024"
+              ],
+              "id": "computer_graphics_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the RGBA color model?",
+              "answer": "RGB plus an Alpha channel for transparency",
+              "explain": "RGBA adds an Alpha channel (0-255) that controls opacity. Alpha 255 is fully opaque, alpha 0 is fully transparent.",
+              "choices": [
+                "RGB with a Red intensity multiplier",
+                "A system using only primary colors",
+                "RGB plus an Alpha channel for transparency",
+                "A color model for printing"
+              ],
+              "id": "computer_graphics_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the HSL color model?",
+              "answer": "A model using Hue, Saturation, and Lightness for intuitive color selection",
+              "explain": "HSL separates color (hue), intensity (saturation), and brightness (lightness). It matches how humans think about colors.",
+              "choices": [
+                "A model based on printing inks",
+                "A model for grayscale images",
+                "The same as RGB",
+                "A model using Hue, Saturation, and Lightness for intuitive color selection"
+              ],
+              "id": "computer_graphics_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to 'dither' an image?",
+              "answer": "Add controlled noise to simulate more colors with fewer bits",
+              "explain": "Dithering mixes colors to make images look better when limited to fewer colors. It was essential for old displays with limited color depth.",
+              "choices": [
+                "Reduce the image to grayscale",
+                "Blur the image slightly",
+                "Add controlled noise to simulate more colors with fewer bits",
+                "Increase the saturation of colors"
+              ],
+              "id": "computer_graphics_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Coordinate Systems and Transforms",
+      "tip": "Everything in computer graphics lives in a coordinate system. Points are located by x, y (and z in 3D). Transforms like translation, rotation, and scaling move and change objects mathematically.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "2D Coordinates and Transformations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the origin (0, 0) represent in a 2D coordinate system?",
+              "answer": "The reference point where the x and y axes meet",
+              "explain": "The origin is the starting point for all coordinates. In screen graphics, it is often the top-left corner; in math, it is at the center.",
+              "choices": [
+                "The top-right corner",
+                "The reference point where the x and y axes meet",
+                "Where the mouse is located",
+                "The center of the screen"
+              ],
+              "id": "computer_graphics_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a translation transform?",
+              "answer": "Moving an object by adding an offset to all its coordinates",
+              "explain": "Translation shifts an object's position. To move a point (x, y) by 10 units right and 20 units down, add 10 to x and 20 to y.",
+              "choices": [
+                "Making an object larger or smaller",
+                "Spinning an object around a center point",
+                "Moving an object by adding an offset to all its coordinates",
+                "Flipping an object horizontally"
+              ],
+              "id": "computer_graphics_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a rotation transform?",
+              "answer": "Spinning an object around a pivot point by a given angle",
+              "explain": "Rotation uses trigonometry to spin points around a center. A 90-degree rotation turns an object clockwise or counterclockwise.",
+              "choices": [
+                "Changing the size of an object",
+                "Spinning an object around a pivot point by a given angle",
+                "Moving an object to a new position",
+                "Reflecting an object across a line"
+              ],
+              "id": "computer_graphics_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a scale transform?",
+              "answer": "Making an object larger or smaller by multiplying coordinates",
+              "explain": "Scaling multiplies each coordinate by a factor. Multiply by 2 to make it twice as large; multiply by 0.5 to make it half as large.",
+              "choices": [
+                "Making an object larger or smaller by multiplying coordinates",
+                "Moving an object position",
+                "Changing an object's color",
+                "Rotating an object"
+              ],
+              "id": "computer_graphics_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is non-uniform scaling?",
+              "answer": "Applying different scale factors to different axes",
+              "explain": "Non-uniform scaling allows different amounts of stretching in different directions. Scale x by 2 and y by 0.5 to make an object wider and shorter.",
+              "choices": [
+                "Rotating while scaling",
+                "Applying different scale factors to different axes",
+                "Scaling toward the top-left corner",
+                "Scaling all axes equally"
+              ],
+              "id": "computer_graphics_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "3D Coordinates and Perspective",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the z-axis in 3D graphics?",
+              "answer": "The axis perpendicular to the screen, pointing toward and away from the viewer",
+              "explain": "The z-axis extends into or out of the screen. Positive z often points toward the viewer; negative z points away.",
+              "choices": [
+                "The axis perpendicular to the screen, pointing toward and away from the viewer",
+                "The axis running top to bottom",
+                "A fourth color channel",
+                "The axis running left to right"
+              ],
+              "id": "computer_graphics_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is perspective projection?",
+              "answer": "A 3D-to-2D projection where distant objects appear smaller",
+              "explain": "Perspective makes distant objects appear smaller, like railroad tracks converging at the horizon. It creates realistic depth.",
+              "choices": [
+                "Showing the inside of a 3D object",
+                "A 3D-to-2D projection where distant objects appear smaller",
+                "Making all objects the same size",
+                "Viewing objects from directly above"
+              ],
+              "id": "computer_graphics_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is orthographic projection?",
+              "answer": "A 3D-to-2D projection where distance does not affect size",
+              "explain": "Orthographic projection ignores depth; objects stay the same size regardless of distance. It is common in technical drawings and CAD.",
+              "choices": [
+                "A projection where all objects are tilted",
+                "The same as perspective projection",
+                "A 3D-to-2D projection where distance does not affect size",
+                "A projection that shows only 2D objects"
+              ],
+              "id": "computer_graphics_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a camera in 3D graphics?",
+              "answer": "A virtual viewpoint and projection that defines what the viewer sees",
+              "explain": "A camera has a position, direction, and field of view. It defines which part of the 3D world gets rendered to the 2D screen.",
+              "choices": [
+                "A virtual viewpoint and projection that defines what the viewer sees",
+                "A texture file",
+                "A light source",
+                "A shader program"
+              ],
+              "id": "computer_graphics_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the field of view (FOV) of a camera?",
+              "answer": "The angular width and height of the area the camera can see",
+              "explain": "FOV is measured in degrees. A wide FOV (120 degrees) shows more of the scene; narrow FOV (30 degrees) shows less, like a telephoto lens.",
+              "choices": [
+                "The distance from the camera to the nearest object",
+                "The color of the camera's background",
+                "The angular width and height of the area the camera can see",
+                "How fast the camera moves"
+              ],
+              "id": "computer_graphics_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "The Rendering Pipeline",
+      "tip": "Rendering is the process that converts 3D scene data into a 2D image on your screen. The pipeline has distinct stages: vertices are positioned, geometry is rasterized into fragments, and fragments become final pixels.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Vertices and Primitives",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a vertex in 3D graphics?",
+              "answer": "A point in 3D space with position, color, and texture data",
+              "explain": "Vertices are the corners of 3D shapes. A triangle has 3 vertices; a cube has 8. Each vertex can store additional data like color or texture coordinates.",
+              "choices": [
+                "A point in 3D space with position, color, and texture data",
+                "A single pixel on the screen",
+                "A curve in 3D space",
+                "A light source"
+              ],
+              "id": "computer_graphics_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a primitive in graphics?",
+              "answer": "A basic geometric shape like a triangle or line",
+              "explain": "Primitives are the building blocks of 3D graphics. Triangles are the most common; lines, points, and quads are also used.",
+              "choices": [
+                "A texture file",
+                "A color value",
+                "A shading algorithm",
+                "A basic geometric shape like a triangle or line"
+              ],
+              "id": "computer_graphics_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why are triangles the most common primitive?",
+              "answer": "They are guaranteed to be flat and can approximate any surface",
+              "explain": "Triangles are planar (always flat), making them fast to process. Curved surfaces can be approximated using many triangles.",
+              "choices": [
+                "They are the only shape that can be textured",
+                "They are easier to color",
+                "They render faster than other primitives",
+                "They are guaranteed to be flat and can approximate any surface"
+              ],
+              "id": "computer_graphics_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the vertex shader do?",
+              "answer": "Transforms each vertex position, for example from model space into camera and clip space",
+              "explain": "The vertex shader runs once per vertex. It applies transformations such as rotation, translation and scaling, and positions the vertex relative to the camera.",
+              "choices": [
+                "Creates new triangles",
+                "Transforms each vertex position, for example from model space into camera and clip space",
+                "Colors the final pixels",
+                "Loads texture data"
+              ],
+              "id": "computer_graphics_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a mesh in 3D graphics?",
+              "answer": "A collection of vertices and triangles forming a 3D object",
+              "explain": "A mesh is made of triangles connected at shared vertices. A 3D model is a mesh; a character, building, or tree all start as meshes.",
+              "choices": [
+                "A shader algorithm",
+                "A type of light source",
+                "A collection of vertices and triangles forming a 3D object",
+                "A grid of pixels"
+              ],
+              "id": "computer_graphics_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Rasterization and Fragments",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is rasterization?",
+              "answer": "Converting vector graphics (triangles) into raster data (pixels)",
+              "explain": "Rasterization determines which pixels a triangle covers. It fills in the triangle's interior with fragments.",
+              "choices": [
+                "Applying textures to a model",
+                "Compressing image data",
+                "Applying lighting calculations",
+                "Converting vector graphics (triangles) into raster data (pixels)"
+              ],
+              "id": "computer_graphics_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a fragment in the rendering pipeline?",
+              "answer": "A candidate pixel that may become the final pixel if it passes tests",
+              "explain": "A fragment is generated for each covered pixel. It has color, depth, and other data. Tests (depth, stencil) determine if it becomes final.",
+              "choices": [
+                "A candidate pixel that may become the final pixel if it passes tests",
+                "A light in the scene",
+                "A vertex of a triangle",
+                "A piece of a texture"
+              ],
+              "id": "computer_graphics_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the fragment shader do?",
+              "answer": "Determines the color and properties of each fragment",
+              "explain": "The fragment shader runs once per fragment. It calculates final color using textures, lighting, and other material properties.",
+              "choices": [
+                "Applies blur effects",
+                "Creates new geometry",
+                "Determines the color and properties of each fragment",
+                "Transforms vertex positions"
+              ],
+              "id": "computer_graphics_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a render target?",
+              "answer": "A buffer where rendered output is written",
+              "explain": "A render target receives the final pixel colors. The most common target is the framebuffer displayed on your monitor.",
+              "choices": [
+                "A type of texture filter",
+                "A 3D model to render",
+                "A light reflection calculation",
+                "A buffer where rendered output is written"
+              ],
+              "id": "computer_graphics_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the framebuffer?",
+              "answer": "The memory buffer that holds the current frame being displayed",
+              "explain": "The framebuffer stores color, depth, and other data for every pixel on screen. After rendering, it is displayed by the monitor.",
+              "choices": [
+                "A cache of mesh data",
+                "The memory buffer that holds the current frame being displayed",
+                "A shader program",
+                "A type of texture compression"
+              ],
+              "id": "computer_graphics_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Textures, Lighting, and Shading",
+      "tip": "Textures are images applied to 3D surfaces. Lighting calculations simulate how light bounces off objects. Shading determines the color of each pixel based on surface properties and lighting.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Textures and Texture Mapping",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a texture in graphics?",
+              "answer": "An image applied to a 3D surface to add detail",
+              "explain": "Textures are 2D images that map onto 3D geometry. A wood texture makes a polygon look like wood; a bump map adds surface detail.",
+              "choices": [
+                "A light source",
+                "A shader algorithm",
+                "An image applied to a 3D surface to add detail",
+                "A 3D shape"
+              ],
+              "id": "computer_graphics_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are UV coordinates?",
+              "answer": "2D coordinates that map a texture image onto 3D geometry",
+              "explain": "UV (or texture coordinates) tell the GPU where each vertex picks its color from a texture. U and V range from 0 to 1.",
+              "choices": [
+                "Light intensity values",
+                "Color channel values",
+                "2D coordinates that map a texture image onto 3D geometry",
+                "3D world coordinates"
+              ],
+              "id": "computer_graphics_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is texture filtering?",
+              "answer": "A technique to interpolate texture colors when sampling between pixels",
+              "explain": "When a texture pixel (texel) does not align with screen pixels, filtering interpolates nearby texels for smoother results.",
+              "choices": [
+                "A technique to interpolate texture colors when sampling between pixels",
+                "Removing colors from a texture",
+                "Rotating a texture",
+                "Resizing a texture"
+              ],
+              "id": "computer_graphics_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is mipmapping?",
+              "answer": "Creating smaller versions of a texture for distant objects",
+              "explain": "Mipmaps are downsampled copies of a texture. Distant geometry uses smaller mips for efficiency and to avoid aliasing.",
+              "choices": [
+                "A type of texture filter",
+                "A 3D texture coordinate system",
+                "A texture compression format",
+                "Creating smaller versions of a texture for distant objects"
+              ],
+              "id": "computer_graphics_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a normal map do?",
+              "answer": "Encodes surface normal directions to simulate surface detail without more geometry",
+              "explain": "A normal map stores surface slopes as RGB colors. It makes flat polygons appear bumpy without needing more triangles.",
+              "choices": [
+                "Encodes surface normal directions to simulate surface detail without more geometry",
+                "Maps a regular texture onto a surface",
+                "Applies blur effects",
+                "Controls how light reflects off a surface"
+              ],
+              "id": "computer_graphics_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Lighting and Shading Models",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a light source in graphics?",
+              "answer": "An object that emits light and affects how surfaces appear",
+              "explain": "Lights have position, direction, color, and intensity. The rendering algorithm calculates how light from these sources illuminates surfaces.",
+              "choices": [
+                "A color applied to the entire scene",
+                "A texture applied to a surface",
+                "A shader program",
+                "An object that emits light and affects how surfaces appear"
+              ],
+              "id": "computer_graphics_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Phong reflection model?",
+              "answer": "A model that combines ambient, diffuse, and specular lighting",
+              "explain": "Phong lighting has three components: ambient (overall brightness), diffuse (light hitting the surface), and specular (shiny highlights).",
+              "choices": [
+                "A model that combines ambient, diffuse, and specular lighting",
+                "A texture mapping technique",
+                "A way to blend colors",
+                "A method for rendering shadows"
+              ],
+              "id": "computer_graphics_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is ambient lighting?",
+              "answer": "Lighting that affects all surfaces equally, with no direction",
+              "explain": "Ambient light has no direction; it illuminates the scene uniformly. Without it, areas not hit by direct light would be completely black.",
+              "choices": [
+                "Light that creates shadows",
+                "Lighting that affects all surfaces equally, with no direction",
+                "Light from a distant star",
+                "Light that comes from a single point"
+              ],
+              "id": "computer_graphics_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is diffuse lighting?",
+              "answer": "Lighting based on the angle between the surface normal and light direction",
+              "explain": "Diffuse lighting makes surfaces brighter when facing the light and darker when facing away. The amount depends on the angle.",
+              "choices": [
+                "Light that only appears on shiny surfaces",
+                "Light from multiple sources",
+                "Lighting based on the angle between the surface normal and light direction",
+                "A shadow calculation"
+              ],
+              "id": "computer_graphics_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is specular lighting?",
+              "answer": "Bright highlights that appear on shiny surfaces reflecting light toward the viewer",
+              "explain": "Specular highlights appear on glossy surfaces when they reflect light toward the viewer. Rough surfaces have diffuse light; shiny surfaces have specular highlights.",
+              "choices": [
+                "The overall brightness of a surface",
+                "Color applied to a texture",
+                "Light from the sky",
+                "Bright highlights that appear on shiny surfaces reflecting light toward the viewer"
+              ],
+              "id": "computer_graphics_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Depth, Ray Tracing, and Anti-Aliasing",
+      "tip": "The depth buffer prevents objects in front from being hidden by objects behind them. Ray tracing simulates realistic light behavior. Anti-aliasing removes jagged edges caused by pixelation.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "The Depth Buffer and Rendering Order",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the depth buffer (z-buffer)?",
+              "answer": "A buffer that stores the depth of each pixel to determine visibility",
+              "explain": "The depth buffer stores z-values (distance from camera) for each pixel. When rendering, pixels are only drawn if they are closer than the stored value.",
+              "choices": [
+                "A lighting calculation buffer",
+                "A buffer that stores the depth of each pixel to determine visibility",
+                "A buffer storing pixel colors",
+                "A cache of texture data"
+              ],
+              "id": "computer_graphics_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the depth test?",
+              "answer": "A comparison that determines if a new fragment is closer than the existing pixel",
+              "explain": "The depth test checks if a new fragment's depth is less than the stored depth. If yes, the fragment replaces the pixel; if no, it is discarded.",
+              "choices": [
+                "A shadow rendering method",
+                "A comparison that determines if a new fragment is closer than the existing pixel",
+                "A texture filtering technique",
+                "A lighting calculation"
+              ],
+              "id": "computer_graphics_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'near plane' and 'far plane' of a camera?",
+              "answer": "The closest and farthest distances from the camera that can be rendered",
+              "explain": "The near plane (e.g., 0.1) is the closest objects can be to the camera. The far plane (e.g., 1000) is where objects become too distant to render.",
+              "choices": [
+                "The left and right sides of the screen",
+                "The closest and farthest distances from the camera that can be rendered",
+                "The texture resolution",
+                "The top and bottom of the camera's view"
+              ],
+              "id": "computer_graphics_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'z-fighting'?",
+              "answer": "Visual artifacts when two surfaces are at nearly the same depth",
+              "explain": "Z-fighting occurs when depth precision is too low to distinguish which surface is in front. The depth buffer flickers between them.",
+              "choices": [
+                "A texture filtering problem",
+                "Visual artifacts when two surfaces are at nearly the same depth",
+                "A performance optimization",
+                "A lighting calculation error"
+              ],
+              "id": "computer_graphics_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are transparent objects usually handled alongside depth testing?",
+              "answer": "They are sorted and drawn back to front after opaque objects, using blending",
+              "explain": "Blending combines a transparent fragment with what is already behind it, so transparent objects are usually drawn after opaque ones, from farthest to nearest, for correct results.",
+              "choices": [
+                "They are ignored by the depth buffer and never drawn",
+                "They are removed from the scene before rendering",
+                "They are sorted and drawn back to front after opaque objects, using blending",
+                "They are drawn first, in any order"
+              ],
+              "id": "computer_graphics_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Ray Tracing and Anti-Aliasing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is ray tracing?",
+              "answer": "A rendering technique that simulates light rays bouncing around a scene",
+              "explain": "Ray tracing fires rays from the camera through each pixel. It calculates reflections, refractions, and shadows by tracing rays to light sources.",
+              "choices": [
+                "A rendering technique that simulates light rays bouncing around a scene",
+                "A method for applying textures",
+                "A depth testing method",
+                "A type of shader"
+              ],
+              "id": "computer_graphics_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does ray tracing differ from rasterization?",
+              "answer": "Ray tracing simulates light realistically; rasterization is faster but less accurate",
+              "explain": "Rasterization renders from objects to the screen (fast, standard). Ray tracing renders from the camera through pixels (slow, but more realistic).",
+              "choices": [
+                "They are the same technique",
+                "Ray tracing cannot handle reflections",
+                "Ray tracing simulates light realistically; rasterization is faster but less accurate",
+                "Rasterization produces photorealistic images"
+              ],
+              "id": "computer_graphics_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is aliasing in graphics?",
+              "answer": "Jagged, stair-step edges on curved lines and polygon edges",
+              "explain": "Aliasing occurs because pixels are discrete squares. Curved or diagonal lines appear jagged when drawn with pixels.",
+              "choices": [
+                "Incorrect texture filtering",
+                "Jagged, stair-step edges on curved lines and polygon edges",
+                "A blurry image",
+                "Too many triangles in a scene"
+              ],
+              "id": "computer_graphics_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is anti-aliasing?",
+              "answer": "A technique to reduce jagged edges by averaging colors over a pixel area",
+              "explain": "Anti-aliasing smooths edges, often by sampling several points per pixel and blending them. Common methods include FXAA, MSAA, and TAA.",
+              "choices": [
+                "Removing colors from an image",
+                "Making textures sharper",
+                "A type of texture compression",
+                "A technique to reduce jagged edges by averaging colors over a pixel area"
+              ],
+              "id": "computer_graphics_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is MSAA (Multisample Anti-Aliasing)?",
+              "answer": "Rendering at a higher quality by sampling multiple points per pixel",
+              "explain": "MSAA (2x, 4x, 8x) renders multiple samples per pixel and averages them. It reduces jagged edges with reasonable performance cost.",
+              "choices": [
+                "A texture filtering method",
+                "Making the screen resolution higher",
+                "A shadow rendering technique",
+                "Rendering at a higher quality by sampling multiple points per pixel"
+              ],
+              "id": "computer_graphics_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
