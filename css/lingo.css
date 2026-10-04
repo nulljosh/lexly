@@ -2172,3 +2172,8 @@ body.demo .header-inner::after {
 .learn-card .unit-intro-phrases { grid-template-columns: 1fr; gap: 0.15rem; font-size: 0.9375rem; }
 .learn-card dt { display: flex; align-items: center; gap: 0.5rem; }
 .learn-card dd { margin: 0 0 0.75rem; color: var(--text-secondary); }
+
+/* Phones: the tab row scrolls sideways, so fade the right edge to say there is more. */
+@media (max-width: 600px) {
+    .category-tabs { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 1.5rem; }
+}

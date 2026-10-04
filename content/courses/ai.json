@@ -56,11 +56,11 @@
             },
             {
               "type": "mathChoice",
-              "question": "What do all AI systems have in common?",
-              "answer": "They use data and algorithms to solve problems",
-              "explain": "Whether supervised, unsupervised, or reinforcement learning, AI systems process data with algorithms to find patterns and make predictions.",
+              "question": "What do machine learning systems have in common?",
+              "answer": "They use data and algorithms to find patterns",
+              "explain": "Whether supervised, unsupervised, or reinforcement learning, machine learning systems process data with algorithms to find patterns and make predictions.",
               "choices": [
-                "They use data and algorithms to solve problems",
+                "They use data and algorithms to find patterns",
                 "They all use neural networks",
                 "They must always be accurate",
                 "They need human approval for every decision"
@@ -103,7 +103,7 @@
               "type": "mathChoice",
               "question": "What would general AI (AGI) be able to do?",
               "answer": "Learn and solve any intellectual task a human can",
-              "explain": "General artificial intelligence would be as intelligent as a human and able to learn and solve any type of problem. It does not exist yet.",
+              "explain": "General artificial intelligence would match a human's ability to learn and solve any type of problem. It remains a research goal rather than an agreed achievement.",
               "choices": [
                 "Think and feel like a human",
                 "Learn and solve any intellectual task a human can",
@@ -224,7 +224,7 @@
               "choices": [
                 "The model overfit by memorizing training data instead of learning patterns",
                 "The computer ran out of memory",
-                "The training data was too small",
+                "The model was never trained",
                 "Neural networks cannot work on new data"
               ],
               "id": "ai_u2l1_4"
@@ -369,7 +369,7 @@
               "type": "mathChoice",
               "question": "Why are multiple layers needed instead of just one?",
               "answer": "Multiple layers can learn complex, hierarchical patterns",
-              "explain": "A single layer can only learn linear relationships. Multiple layers (deep networks) can learn non-linear, complex patterns in data.",
+              "explain": "A network with no hidden layers can only learn linear relationships. Stacking layers with non-linear activations lets a network build up complex, hierarchical patterns.",
               "choices": [
                 "Because each layer adds different data",
                 "They are just used to make the network bigger",
@@ -388,7 +388,7 @@
               "type": "mathChoice",
               "question": "What is backpropagation?",
               "answer": "An algorithm that calculates errors backwards through the network to adjust weights",
-              "explain": "Backpropagation computes how much each weight contributed to the error, then adjusts all weights to reduce that error.",
+              "explain": "Backpropagation computes how much each weight contributed to the error. An optimizer such as gradient descent then uses that to adjust the weights.",
               "choices": [
                 "An algorithm that calculates errors backwards through the network to adjust weights",
                 "A way to test the network on new data",
@@ -517,10 +517,10 @@
             {
               "type": "mathChoice",
               "question": "How do language models generate text?",
-              "answer": "By predicting the most likely next token repeatedly",
-              "explain": "Language models generate text one token at a time, using previously generated tokens as context to predict the next one.",
+              "answer": "By repeatedly predicting a likely next token",
+              "explain": "Language models generate text one token at a time, using the tokens so far as context to choose the next one.",
               "choices": [
-                "By predicting the most likely next token repeatedly",
+                "By repeatedly predicting a likely next token",
                 "By asking a human what to write",
                 "By copying text from training data",
                 "By flipping a coin for each word"
@@ -631,7 +631,7 @@
               "explain": "If the first response is off, provide more detail, examples, or constraints. Iterating with better prompts usually yields better results.",
               "choices": [
                 "The AI is never wrong",
-                "Switch to a different AI system",
+                "Repeat the same prompt exactly",
                 "Always accept the first response",
                 "Refine the prompt with more specific instructions or examples"
               ],
@@ -669,7 +669,7 @@
               "answer": "Verify the output with a trusted source",
               "explain": "AI can hallucinate or misunderstand. Critical decisions require verification. Check facts, ask domain experts, or use multiple sources.",
               "choices": [
-                "Ask another AI",
+                "Ask the same AI if it is sure",
                 "Flip a coin to decide",
                 "Verify the output with a trusted source",
                 "Assume it is always correct"
@@ -788,7 +788,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is privacy concern with AI?",
+              "question": "What is a privacy concern with AI?",
               "answer": "AI systems may memorize and leak sensitive information from training data",
               "explain": "If AI is trained on personal data, it might memorize and later reproduce sensitive information like addresses, emails, or health data.",
               "choices": [

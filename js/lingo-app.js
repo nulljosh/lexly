@@ -874,6 +874,7 @@ function setupEventListeners() {
         tab.addEventListener('click', () => {
             document.querySelectorAll('.category-tab').forEach((item) => item.classList.remove('active'));
             tab.classList.add('active');
+            tab.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
             gameState.selectedCategory = tab.dataset.category;
             renderSubjects(gameState.selectedCategory);
         });

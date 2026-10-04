@@ -95,7 +95,7 @@
                 "A cooling system",
                 "The set of commands a CPU can directly execute",
                 "A type of memory",
-                "A list of program instructions"
+                "A bundle of installer files"
               ],
               "id": "hardware_u1l2_0"
             },
@@ -127,14 +127,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "Why can a Windows program not run on an iPhone without recompilation?",
-              "answer": "It was built for x86 chips; iPhones use ARM, a different instruction set",
-              "explain": "Programs are compiled for specific instruction sets. A Windows x86 program cannot run on ARM processors unless it is recompiled for ARM.",
+              "question": "Why can a program built for x86 not run directly on an ARM chip?",
+              "answer": "The two use different instruction sets, so the machine code does not match",
+              "explain": "Programs are compiled into machine code for one instruction set. x86 code is not valid ARM code, so the program must be rebuilt for ARM or run through translation.",
               "choices": [
-                "It was built for x86 chips; iPhones use ARM, a different instruction set",
-                "iPhones are not computers",
-                "It is a software choice only",
-                "The programs are identical"
+                "The two use different instruction sets, so the machine code does not match",
+                "ARM chips have no memory",
+                "x86 programs are always too large",
+                "ARM chips only run games"
               ],
               "id": "hardware_u1l2_3"
             },
@@ -142,11 +142,11 @@
               "type": "mathChoice",
               "question": "What advantage does ARM have over x86?",
               "answer": "Lower power consumption, making it ideal for mobile devices",
-              "explain": "ARM instruction sets are simpler and use less power. This is why phones and tablets use ARM; longer battery life matters for portable devices.",
+              "explain": "ARM designs are typically simpler and use less power. This is why phones and tablets use ARM; longer battery life matters for portable devices.",
               "choices": [
                 "Lower power consumption, making it ideal for mobile devices",
                 "ARM is always faster",
-                "ARM is cheaper to manufacture",
+                "ARM runs every x86 program unchanged",
                 "x86 is outdated"
               ],
               "id": "hardware_u1l2_4"
@@ -158,7 +158,7 @@
     {
       "id": "u2",
       "title": "Memory and Storage",
-      "tip": "RAM is fast temporary memory that your computer uses while running programs. Storage (SSD or HDD) holds data permanently. SSDs are faster but more expensive. HDDs are slower but cheaper and hold more data. NVMe is the fastest storage connection.",
+      "tip": "RAM is fast temporary memory that your computer uses while running programs. Storage (SSD or HDD) holds data permanently. SSDs are faster but more expensive. HDDs are slower but cheaper and hold more data. NVMe is a fast storage interface used by many SSDs.",
       "lessons": [
         {
           "id": "u2l1",
@@ -518,7 +518,7 @@
               "type": "mathChoice",
               "question": "What is ray tracing in graphics?",
               "answer": "A rendering technique that simulates realistic light and shadows",
-              "explain": "Ray tracing calculates light paths to create photorealistic images. It is much slower than simple rasterization but produces stunning results.",
+              "explain": "Ray tracing calculates light paths to create realistic reflections, shadows, and lighting. It is much slower than simple rasterization.",
               "choices": [
                 "The speed of a monitor",
                 "Finding defects in components",
@@ -536,13 +536,13 @@
             {
               "type": "mathChoice",
               "question": "What is the difference between IPS and TN display panels?",
-              "answer": "IPS has better colors and viewing angles; TN is faster",
-              "explain": "IPS (In-Plane Switching) shows accurate colors from wide angles. TN (Twisted Nematic) is older, has narrower viewing angles, but faster response times.",
+              "answer": "IPS usually has better colors and viewing angles; TN was usually faster",
+              "explain": "IPS (In-Plane Switching) shows accurate colors from wide angles. TN (Twisted Nematic) is an older type with narrower viewing angles that was typically faster.",
               "choices": [
                 "Only IPS exists now",
                 "They are the same",
                 "TN is always better",
-                "IPS has better colors and viewing angles; TN is faster"
+                "IPS usually has better colors and viewing angles; TN was usually faster"
               ],
               "id": "hardware_u4l2_0"
             },
@@ -666,11 +666,11 @@
             {
               "type": "mathChoice",
               "question": "How do you calculate total power needed for a build?",
-              "answer": "Add the power of CPU, GPU, and other components, then add 20-30% overhead",
-              "explain": "Sum the power draw of major components, then buy a PSU with 20-30% more capacity for stability and longevity.",
+              "answer": "Add the power of CPU, GPU, and other components, then add some headroom",
+              "explain": "Sum the power draw of the major components, then pick a PSU with some extra capacity (often 20 to 30 percent) for stability and longevity.",
               "choices": [
                 "Just guess a high number",
-                "Add the power of CPU, GPU, and other components, then add 20-30% overhead",
+                "Add the power of CPU, GPU, and other components, then add some headroom",
                 "Use the cheapest PSU",
                 "CPU power is all that matters"
               ],
@@ -723,14 +723,14 @@
             },
             {
               "type": "mathChoice",
-              "question": "What is the ideal CPU temperature during normal use?",
-              "answer": "Usually 40-60 degrees Celsius, depending on the processor",
-              "explain": "Different CPUs have different safe ranges. Most are safe up to 90-100C but thermal throttling happens before that. Cooler is always better.",
+              "question": "What does a case fan do?",
+              "answer": "Moves air through the case to carry heat out",
+              "explain": "Fans push cool air in and hot air out, so heat from the CPU and GPU does not build up inside the case.",
               "choices": [
-                "Usually 40-60 degrees Celsius, depending on the processor",
-                "It does not matter",
-                "Always below 20C",
-                "Always above 80C"
+                "Generates power for the case",
+                "Stores heat so the CPU stays cool",
+                "Moves air through the case to carry heat out",
+                "Absorbs electricity to cut power use"
               ],
               "id": "hardware_u5l2_3"
             },
@@ -777,7 +777,7 @@
               "type": "mathChoice",
               "question": "What must you check before installing RAM?",
               "answer": "RAM type, speed, and number of slots on the motherboard",
-              "explain": "Verify you have DDR4 or DDR5 (not mixed), correct speed, and enough DIMM slots. Wrong type will not fit.",
+              "explain": "Verify you have the right DDR generation (they are not interchangeable), a speed the board supports, and enough DIMM slots. The wrong type will not fit.",
               "choices": [
                 "Only the color",
                 "RAM type, speed, and number of slots on the motherboard",
@@ -789,10 +789,10 @@
             {
               "type": "mathChoice",
               "question": "What is an M.2 slot?",
-              "answer": "A connection for NVMe SSDs on the motherboard",
-              "explain": "M.2 is the physical form factor for NVMe drives. Modern motherboards have one or more M.2 slots for fast storage.",
+              "answer": "A small slot on the motherboard for SSDs, commonly NVMe",
+              "explain": "M.2 is a compact form factor for SSDs. Modern motherboards have one or more M.2 slots, and most carry fast NVMe drives.",
               "choices": [
-                "A connection for NVMe SSDs on the motherboard",
+                "A small slot on the motherboard for SSDs, commonly NVMe",
                 "A power connector",
                 "A type of RAM slot",
                 "A cooling port"
@@ -820,7 +820,7 @@
               "choices": [
                 "Wear gloves",
                 "Nothing, it is safe",
-                "Work in a humid room",
+                "Put on a wool sweater first",
                 "Ground yourself to avoid static electricity damaging parts"
               ],
               "id": "hardware_u6l1_4"
@@ -835,7 +835,7 @@
               "type": "mathChoice",
               "question": "What is POST (Power-on Self Test)?",
               "answer": "A check the BIOS runs to verify hardware before booting the OS",
-              "explain": "POST checks that the CPU, RAM, and storage are working. If it fails, you hear beep codes. If successful, the OS boots.",
+              "explain": "POST checks that the CPU, RAM, and other basics are working. If it fails, you may hear beep codes or see debug lights. If it passes, the OS starts loading.",
               "choices": [
                 "A type of storage",
                 "A check the BIOS runs to verify hardware before booting the OS",
@@ -848,7 +848,7 @@
               "type": "mathChoice",
               "question": "What does it mean if a computer beeps repeatedly on startup?",
               "answer": "The POST detected a hardware problem",
-              "explain": "Beep codes indicate specific hardware failures. A continuous beep usually means RAM is not detected or not installed correctly.",
+              "explain": "Beep patterns vary by maker, so check the board manual. Repeated beeps often point to RAM that is missing or not seated correctly.",
               "choices": [
                 "The computer is working fine",
                 "The BIOS needs updating",
@@ -859,7 +859,7 @@
             },
             {
               "type": "mathChoice",
-              "question": "What should you do if your computer will not boot?",
+              "question": "What is a sensible first step if a computer will not boot?",
               "answer": "Reseat RAM, check power connections, then try again",
               "explain": "Many boot failures are caused by loose connections. Reseat RAM (remove and reinstall), check all power plugs, then retry.",
               "choices": [
@@ -887,7 +887,7 @@
               "type": "mathChoice",
               "question": "What is a blue screen of death (BSOD)?",
               "answer": "A critical system error that forces a restart",
-              "explain": "A BSOD indicates a serious problem: driver issue, hardware failure, or bad RAM. It shows an error code and restarts automatically.",
+              "explain": "A BSOD indicates a serious problem such as a driver issue, hardware failure, or bad RAM. It shows an error code and restarts the PC. Newer Windows versions show a black screen instead.",
               "choices": [
                 "A critical system error that forces a restart",
                 "A display setting",
