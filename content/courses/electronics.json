@@ -1,0 +1,904 @@
+{
+  "id": "electronics",
+  "name": "Electronics",
+  "category": "engineering",
+  "icon": "fa-solid fa-plug",
+  "level": "Diodes, Transistors and Amplifiers",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Semiconductor Fundamentals",
+      "tip": "Semiconductors are materials that conduct electricity under the right conditions. Silicon is the most common semiconductor. By adding impurities through doping, we create materials with useful electrical properties.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Semiconductors Are",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a semiconductor?",
+              "answer": "A material that conducts electricity better than insulators but worse than conductors",
+              "explain": "Semiconductors like silicon and germanium fall between conductors and insulators. Their conductivity can be controlled by applying voltage or doping.",
+              "choices": [
+                "A material found only in nature",
+                "A material that completely blocks electricity",
+                "A material that conducts electricity better than insulators but worse than conductors",
+                "A material that conducts electricity as well as copper"
+              ],
+              "id": "electronics_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is silicon the most common semiconductor?",
+              "answer": "It is abundant, has a moderate bandgap, and is easy to purify and process",
+              "explain": "Silicon's bandgap of 1.1 eV is ideal for electronics. It is the second most abundant element in Earth's crust and its processing technology is well-developed.",
+              "choices": [
+                "It is the cheapest material",
+                "It is the best conductor ever made",
+                "It is abundant, has a moderate bandgap, and is easy to purify and process",
+                "It is radioactive and therefore useful"
+              ],
+              "id": "electronics_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the bandgap in a semiconductor?",
+              "answer": "The energy difference between the valence and conduction bands",
+              "explain": "Electrons need enough energy to jump from the valence band (bound to atoms) to the conduction band (free to move). This energy gap determines when the material conducts.",
+              "choices": [
+                "The maximum current the material can handle",
+                "The energy difference between the valence and conduction bands",
+                "The space between two semiconductors",
+                "The distance between atoms in the crystal"
+              ],
+              "id": "electronics_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an electron-hole pair in a semiconductor?",
+              "answer": "An electron in the conduction band and the missing electron it left behind",
+              "explain": "When an electron gains energy and leaves its covalent bond, it creates a hole. Both the free electron and the hole can carry charge.",
+              "choices": [
+                "An electron in the conduction band and the missing electron it left behind",
+                "A positive ion in the semiconductor",
+                "A pair of semiconductors connected in series",
+                "Two electrons bound together"
+              ],
+              "id": "electronics_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In intrinsic (pure) semiconductors at room temperature, what limits conductivity?",
+              "answer": "The energy needed to create electron-hole pairs",
+              "explain": "Pure semiconductors conduct poorly at room temperature because few atoms have enough thermal energy to break their covalent bonds and create mobile charge carriers.",
+              "choices": [
+                "The chemical purity of the material",
+                "The energy needed to create electron-hole pairs",
+                "The size of the crystal",
+                "The color of the material"
+              ],
+              "id": "electronics_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Doping and the PN Junction",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is doping?",
+              "answer": "Adding impurity atoms to a pure semiconductor to change its conductivity",
+              "explain": "Doping introduces elements with more or fewer valence electrons, creating extra free electrons or holes. This dramatically increases conductivity.",
+              "choices": [
+                "Coating the semiconductor with metal",
+                "Cooling the semiconductor to a low temperature",
+                "Adding impurity atoms to a pure semiconductor to change its conductivity",
+                "Heating the semiconductor to high temperature"
+              ],
+              "id": "electronics_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is n-type doping?",
+              "answer": "Adding donor atoms with 5 valence electrons to a semiconductor with 4",
+              "explain": "Donor atoms like phosphorus have 5 electrons, one more than silicon needs. The extra electron is loosely bound and easily becomes a free charge carrier.",
+              "choices": [
+                "Doping with nitrogen gas",
+                "Adding atoms with 3 valence electrons",
+                "Removing electrons from the semiconductor",
+                "Adding donor atoms with 5 valence electrons to a semiconductor with 4"
+              ],
+              "id": "electronics_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is p-type doping?",
+              "answer": "Adding acceptor atoms with 3 valence electrons to a semiconductor with 4",
+              "explain": "Acceptor atoms like boron have 3 electrons, one fewer than silicon needs. The missing electron creates a hole that acts as a positive charge carrier.",
+              "choices": [
+                "Adding acceptor atoms with 3 valence electrons to a semiconductor with 4",
+                "Heating phosphorus into the semiconductor",
+                "Removing all holes from the material",
+                "Adding atoms with 5 valence electrons"
+              ],
+              "id": "electronics_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What forms at the boundary between n-type and p-type regions?",
+              "answer": "A depletion region with an electric field",
+              "explain": "Electrons from the n-side diffuse toward the p-side and holes diffuse toward the n-side, creating a region depleted of mobile charge carriers and an internal electric field.",
+              "choices": [
+                "A conducting bridge",
+                "A depletion region with an electric field",
+                "A perfect conductor",
+                "A magnetic field"
+              ],
+              "id": "electronics_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the built-in voltage of a silicon PN junction at room temperature?",
+              "answer": "Approximately 0.7 volts",
+              "explain": "The built-in potential is about 0.7 V for silicon and 0.3 V for germanium. This is the voltage across the depletion region in equilibrium.",
+              "choices": [
+                "5 volts",
+                "Approximately 0.7 volts",
+                "1.5 volts",
+                "0.3 volts"
+              ],
+              "id": "electronics_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Diodes and Rectifiers",
+      "tip": "A diode is a two-terminal device made from a PN junction. It conducts current easily in one direction (forward bias) and blocks it in the other (reverse bias). Diodes are used to convert alternating current to direct current.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Diode Operation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does forward bias mean for a diode?",
+              "answer": "Applying a voltage that reduces the depletion region and allows current to flow",
+              "explain": "Forward bias shrinks the depletion region and lowers the barrier for charge carriers to cross. Current increases rapidly once the forward voltage exceeds the built-in voltage.",
+              "choices": [
+                "Shining light on the diode",
+                "Heating the diode",
+                "Applying voltage to stop all current",
+                "Applying a voltage that reduces the depletion region and allows current to flow"
+              ],
+              "id": "electronics_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does reverse bias mean for a diode?",
+              "answer": "Applying a voltage that widens the depletion region and blocks current",
+              "explain": "Reverse bias enlarges the depletion region and strengthens the internal electric field. Almost no current flows because charge carriers must overcome a large barrier.",
+              "choices": [
+                "Applying a voltage that widens the depletion region and blocks current",
+                "Applying a voltage that reduces the depletion region",
+                "Connecting the diode backwards by mistake",
+                "Using the diode at low temperature"
+              ],
+              "id": "electronics_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the forward voltage drop across a silicon diode at room temperature?",
+              "answer": "Approximately 0.6 to 0.7 volts",
+              "explain": "A conducting silicon diode has a voltage drop of about 0.6-0.7 V across its PN junction. This is roughly equal to the built-in voltage.",
+              "choices": [
+                "2 volts",
+                "5 volts",
+                "0.1 volts",
+                "Approximately 0.6 to 0.7 volts"
+              ],
+              "id": "electronics_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when the reverse voltage exceeds the breakdown voltage?",
+              "answer": "The depletion region breaks down and reverse current increases rapidly",
+              "explain": "At breakdown, the electric field becomes strong enough to create electron-hole pairs by impact ionization, causing current to surge. This can destroy the diode if not limited.",
+              "choices": [
+                "The diode becomes transparent to light",
+                "The diode becomes a perfect insulator",
+                "The depletion region breaks down and reverse current increases rapidly",
+                "The diode turns into a resistor"
+              ],
+              "id": "electronics_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the I-V (current-voltage) characteristic of an ideal diode?",
+              "answer": "Zero current below the threshold voltage, then infinite conductance above it",
+              "explain": "An ideal diode is a perfect switch: it blocks current when reverse-biased or forward-biased below threshold, and conducts with no voltage drop once forward-biased above threshold.",
+              "choices": [
+                "Constant current regardless of voltage",
+                "Linear resistance for all voltages",
+                "Exponential growth for all voltages",
+                "Zero current below the threshold voltage, then infinite conductance above it"
+              ],
+              "id": "electronics_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Rectifier Circuits",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a half-wave rectifier?",
+              "answer": "A circuit using one diode that passes only the positive half of an AC signal",
+              "explain": "A half-wave rectifier uses a diode that conducts when the AC input is positive and blocks when it is negative. Only half the waveform reaches the output.",
+              "choices": [
+                "A circuit using one diode that passes only the positive half of an AC signal",
+                "A circuit that doubles the voltage",
+                "A circuit that cancels all current",
+                "A circuit that uses two diodes"
+              ],
+              "id": "electronics_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a full-wave rectifier?",
+              "answer": "A circuit using diodes to pass both positive and negative halves of an AC signal",
+              "explain": "A full-wave rectifier uses multiple diodes to flip the negative half of the AC signal into positive. Both halves contribute to the output, giving about twice the average output voltage of a half-wave rectifier.",
+              "choices": [
+                "A circuit that blocks all current",
+                "A circuit that amplifies the signal",
+                "A circuit using diodes to pass both positive and negative halves of an AC signal",
+                "A circuit using one diode only"
+              ],
+              "id": "electronics_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a bridge rectifier?",
+              "answer": "A full-wave rectifier using four diodes arranged in a bridge configuration",
+              "explain": "A bridge rectifier uses four diodes to redirect both halves of an AC signal. It requires no center-tap on the transformer, making it practical for mains rectification.",
+              "choices": [
+                "A rectifier that works only on DC",
+                "A circuit that uses three diodes",
+                "A half-wave rectifier with one diode",
+                "A full-wave rectifier using four diodes arranged in a bridge configuration"
+              ],
+              "id": "electronics_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of a smoothing capacitor in a rectifier?",
+              "answer": "To reduce ripple voltage by storing and releasing charge between peaks",
+              "explain": "A capacitor charges when the rectified voltage is high and discharges through the load when it drops, smoothing out the bumpy DC output into something closer to a steady voltage.",
+              "choices": [
+                "To reduce ripple voltage by storing and releasing charge between peaks",
+                "To increase the voltage",
+                "To block DC current",
+                "To amplify the signal"
+              ],
+              "id": "electronics_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is ripple voltage in a rectifier?",
+              "answer": "The small AC component remaining in the rectified output",
+              "explain": "Even with a smoothing capacitor, the rectified DC voltage is not perfectly flat. The ripple is the variation caused by the capacitor charging and discharging between peaks.",
+              "choices": [
+                "The input AC voltage",
+                "The resistance of the transformer",
+                "The forward drop across the diodes",
+                "The small AC component remaining in the rectified output"
+              ],
+              "id": "electronics_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "LEDs and Current Limiting",
+      "tip": "A light-emitting diode (LED) is a diode that emits light when forward-biased. The color of light depends on the semiconductor material and bandgap. LEDs require a current-limiting resistor to prevent damage.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "LED Technology",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why do LEDs emit light when forward-biased?",
+              "answer": "Electrons and holes recombine, releasing energy as photons",
+              "explain": "When a forward-biased LED is conducting, electrons from the conduction band recombine with holes in the valence band. The energy released comes out as light.",
+              "choices": [
+                "Because the diode is broken",
+                "Because the junction heats up and glows like a filament",
+                "Electrons and holes recombine, releasing energy as photons",
+                "Because heat causes fluorescence"
+              ],
+              "id": "electronics_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What determines the color of an LED?",
+              "answer": "The bandgap energy of the semiconductor material",
+              "explain": "Different materials produce different bandgaps. Red LEDs have a smaller bandgap (about 1.8 eV) and blue LEDs a larger one (about 2.7 eV). The color is set by the photon energy released.",
+              "choices": [
+                "The amount of current flowing through it",
+                "The bandgap energy of the semiconductor material",
+                "The temperature of the surrounding air",
+                "The age of the LED"
+              ],
+              "id": "electronics_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the forward voltage drop of a red LED?",
+              "answer": "Approximately 1.6 to 2.0 volts",
+              "explain": "Red LEDs have the smallest bandgap and lowest forward voltage. Blue and green LEDs have higher forward voltages (around 2.0 to 3.5 volts).",
+              "choices": [
+                "Approximately 1.6 to 2.0 volts",
+                "10 volts",
+                "3.5 volts",
+                "0.7 volts"
+              ],
+              "id": "electronics_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the forward voltage drop of a blue LED?",
+              "answer": "Approximately 3.0 to 3.5 volts",
+              "explain": "Blue LEDs have a large bandgap energy. The photon energy is higher than in red LEDs, so the forward voltage required is also higher.",
+              "choices": [
+                "1.6 volts",
+                "Approximately 3.0 to 3.5 volts",
+                "2.5 volts",
+                "1.0 volt"
+              ],
+              "id": "electronics_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does brightness relate to current in an LED?",
+              "answer": "Brightness increases with forward current, up to the rated maximum",
+              "explain": "More current means more electron-hole recombinations per second, producing more photons and brighter light. But exceeding the rated current causes heat damage.",
+              "choices": [
+                "Brightness decreases as current increases",
+                "Brightness is independent of current",
+                "Brightness increases with forward current, up to the rated maximum",
+                "Brightness only depends on color"
+              ],
+              "id": "electronics_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "LED Circuits and Current Limiting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Why does an LED need a current-limiting resistor?",
+              "answer": "To prevent excessive current from damaging the LED",
+              "explain": "Without a resistor, the LED's low forward resistance causes current to surge once conducting, generating heat and destroying the junction. A resistor controls the current.",
+              "choices": [
+                "To prevent excessive current from damaging the LED",
+                "To store electrical energy",
+                "To increase the brightness of the LED",
+                "To change the color of the LED"
+              ],
+              "id": "electronics_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For an LED with 2 V forward voltage and 20 mA rated current, what series resistor is needed for a 5 V supply?",
+              "answer": "150 ohms",
+              "explain": "Using Ohm's law: R = (V_supply - V_led) / I = (5 V - 2 V) / 20 mA = 3 V / 0.02 A = 150 ohms.",
+              "choices": [
+                "500 ohms",
+                "250 ohms",
+                "150 ohms",
+                "100 ohms"
+              ],
+              "id": "electronics_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if the series resistor is too large?",
+              "answer": "The LED becomes too dim or does not light at all",
+              "explain": "A large resistor limits current below the minimum needed for visible light output. The LED gets insufficient forward current.",
+              "choices": [
+                "The resistor burns out",
+                "The LED becomes too dim or does not light at all",
+                "The LED becomes brighter",
+                "The LED changes color"
+              ],
+              "id": "electronics_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the typical rated current for a standard indicator LED?",
+              "answer": "20 milliamps (mA)",
+              "explain": "Most small indicator LEDs are rated for 10-20 mA. High-power LEDs can handle 100 mA or more, but they are physically larger.",
+              "choices": [
+                "100 amps",
+                "20 milliamps (mA)",
+                "1 amp",
+                "1 milliamp"
+              ],
+              "id": "electronics_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does LED brightness depend on?",
+              "answer": "The forward current and the efficiency of the semiconductor material",
+              "explain": "Brightness increases with current (more photons per second) and with the bandgap and material quality (efficiency determines how much light is produced per electron).",
+              "choices": [
+                "Only the color of the LED",
+                "The age of the LED only",
+                "The forward current and the efficiency of the semiconductor material",
+                "Only the supply voltage"
+              ],
+              "id": "electronics_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Transistors as Switches",
+      "tip": "Transistors are three-terminal devices that can amplify signals or act as fast electronic switches. A small control signal on one terminal can turn on or off a much larger current between the other two terminals.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "BJT Basics and Switching",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does BJT stand for?",
+              "answer": "Bipolar Junction Transistor",
+              "explain": "A BJT has three terminals: base, collector, and emitter. It uses both electrons and holes as charge carriers, making it bipolar.",
+              "choices": [
+                "Bias Joint Terminal",
+                "Boundary Junction Technology",
+                "Basic Junction Test",
+                "Bipolar Junction Transistor"
+              ],
+              "id": "electronics_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the three regions of BJT operation?",
+              "answer": "Cutoff, active, and saturation",
+              "explain": "In cutoff, the BJT is fully off. In active, it amplifies signals. In saturation, it is fully on and acts as a closed switch.",
+              "choices": [
+                "Input, middle, and output",
+                "Off, medium, and strong",
+                "Cutoff, active, and saturation",
+                "Idle, working, and broken"
+              ],
+              "id": "electronics_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the base-emitter voltage when a BJT is turned on?",
+              "answer": "Approximately 0.6 to 0.7 volts for silicon",
+              "explain": "The base-emitter junction is a PN diode. Current flows into the base when this voltage exceeds about 0.6 V, turning on the transistor.",
+              "choices": [
+                "10 volts",
+                "Approximately 0.6 to 0.7 volts for silicon",
+                "5 volts",
+                "0 volts"
+              ],
+              "id": "electronics_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens in saturation for a BJT?",
+              "answer": "The base current is large enough that the collector voltage drops to nearly zero",
+              "explain": "In saturation, the transistor is fully on. The base current is many times larger than needed to keep it conducting, so the transistor acts like a closed switch.",
+              "choices": [
+                "The base current is large enough that the collector voltage drops to nearly zero",
+                "The base current becomes zero",
+                "The emitter voltage increases",
+                "The transistor breaks down"
+              ],
+              "id": "electronics_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the current gain (beta) of a BJT?",
+              "answer": "The ratio of collector current to base current",
+              "explain": "Beta (also called hFE) is typically 50 to 300 for silicon BJTs. It tells you how much the base current is amplified.",
+              "choices": [
+                "The resistance of the base terminal",
+                "The ratio of collector current to base current",
+                "The ratio of voltage to current",
+                "The rate of temperature change"
+              ],
+              "id": "electronics_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "MOSFET Basics and Switching",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does MOSFET stand for?",
+              "answer": "Metal-Oxide-Semiconductor Field-Effect Transistor",
+              "explain": "A MOSFET uses an electric field to control the current flow. The gate terminal applies this field across a thin oxide layer.",
+              "choices": [
+                "Modular Output Switching Electronic Transformer",
+                "Microwave Operating Semiconductor Field Terminal",
+                "Metal-Oxide-Semiconductor Field-Effect Transistor",
+                "Multiple Output Selective Effect Transducer"
+              ],
+              "id": "electronics_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the threshold voltage of a MOSFET?",
+              "answer": "The minimum gate voltage needed to turn the transistor on",
+              "explain": "When the gate voltage exceeds the threshold voltage (typically 1-5 V), an inversion layer forms and current can flow from drain to source.",
+              "choices": [
+                "The maximum gate voltage allowed",
+                "The gate resistance",
+                "The reverse voltage limit",
+                "The minimum gate voltage needed to turn the transistor on"
+              ],
+              "id": "electronics_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of a MOSFET as a switch over a BJT?",
+              "answer": "It requires almost no gate current to drive it",
+              "explain": "A MOSFET is voltage-controlled (gate voltage creates an electric field), while a BJT is current-controlled (base current is needed). MOSFET gates draw negligible current.",
+              "choices": [
+                "It cannot be damaged by static electricity",
+                "It is cheaper to manufacture",
+                "It never needs a power supply",
+                "It requires almost no gate current to drive it"
+              ],
+              "id": "electronics_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an n-channel MOSFET?",
+              "answer": "A MOSFET where electrons carry the current through the channel",
+              "explain": "An n-channel (NMOS) MOSFET conducts electrons from source to drain. A p-channel (PMOS) MOSFET conducts holes.",
+              "choices": [
+                "A MOSFET where electrons carry the current through the channel",
+                "A MOSFET with a negative gate voltage",
+                "A MOSFET made from copper",
+                "A MOSFET that is always off"
+              ],
+              "id": "electronics_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is on-resistance (RDS(on)) of a MOSFET?",
+              "answer": "The resistance between drain and source when the transistor is fully on",
+              "explain": "When fully on, the MOSFET acts like a small resistor. A lower RDS(on) means less power loss. Typical values range from milliohms to ohms.",
+              "choices": [
+                "The resistance between drain and source when the transistor is fully on",
+                "The maximum allowable resistance",
+                "The resistance of the gate terminal",
+                "The resistance between gate and source"
+              ],
+              "id": "electronics_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Transistors as Amplifiers",
+      "tip": "When biased in the active region, transistors can amplify weak signals. A small change in the input produces a larger change at the output. The gain is the ratio of output to input change.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "BJT Amplifiers",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is voltage amplification?",
+              "answer": "The ratio of output voltage change to input voltage change",
+              "explain": "Voltage gain (Av) is how much the transistor amplifies the AC signal. A gain of 100 means a 10 mV input produces a 1 V output.",
+              "choices": [
+                "The total output voltage",
+                "The power supply voltage",
+                "The input impedance",
+                "The ratio of output voltage change to input voltage change"
+              ],
+              "id": "electronics_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is current amplification?",
+              "answer": "The ratio of output current change to input current change",
+              "explain": "Current gain (Ai) is the amplification of AC current. For a BJT, it is approximately equal to the DC current gain (beta).",
+              "choices": [
+                "The total current through the transistor",
+                "The DC bias current",
+                "The ratio of output current change to input current change",
+                "The saturation current"
+              ],
+              "id": "electronics_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of biasing a transistor amplifier?",
+              "answer": "To set the operating point so signals are amplified without distortion",
+              "explain": "Biasing places the transistor in the active region. Without proper bias, the transistor would either cut off or saturate, clipping the signal.",
+              "choices": [
+                "To maximize the base current",
+                "To turn the transistor completely off",
+                "To turn the transistor completely on",
+                "To set the operating point so signals are amplified without distortion"
+              ],
+              "id": "electronics_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a common-emitter amplifier?",
+              "answer": "A BJT amplifier where the emitter is grounded and the signal is applied to the base",
+              "explain": "In a common-emitter configuration, the input is at the base, the output is at the collector, and the emitter is the common terminal. It provides both voltage and current amplification.",
+              "choices": [
+                "An amplifier where the collector is grounded",
+                "A BJT amplifier where the emitter is grounded and the signal is applied to the base",
+                "An amplifier using only two transistors",
+                "An amplifier where the base is grounded"
+              ],
+              "id": "electronics_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does temperature affect BJT gain?",
+              "answer": "Gain typically increases with temperature",
+              "explain": "Beta rises as temperature rises. This can shift the bias point and cause the amplifier to drift, which is why bias circuits are designed to be stable.",
+              "choices": [
+                "Gain decreases with temperature",
+                "Temperature has no effect on gain",
+                "Gain becomes negative",
+                "Gain typically increases with temperature"
+              ],
+              "id": "electronics_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "MOSFET Amplifiers and Frequency Response",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a main input-side advantage of a MOSFET amplifier over a BJT amplifier?",
+              "answer": "Its gate draws almost no DC current, giving a very high input resistance",
+              "explain": "A MOSFET gate is insulated by an oxide layer, so it draws almost no DC current. This gives very high input resistance and loads the signal source very little.",
+              "choices": [
+                "MOSFETs require more input current",
+                "MOSFETs always have higher voltage gain",
+                "Its gate draws almost no DC current, giving a very high input resistance",
+                "MOSFETs are always faster than BJTs"
+              ],
+              "id": "electronics_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is frequency response of an amplifier?",
+              "answer": "How the gain changes across a range of input signal frequencies",
+              "explain": "Frequency response shows which frequencies are amplified most and which are attenuated. Amplifiers have a bandwidth above which gain drops significantly.",
+              "choices": [
+                "How the gain changes across a range of input signal frequencies",
+                "The power supply voltage",
+                "The input impedance at different frequencies",
+                "The maximum frequency the amplifier can handle"
+              ],
+              "id": "electronics_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What causes the high-frequency cutoff in an amplifier?",
+              "answer": "Parasitic capacitances in the transistor and circuit",
+              "explain": "Transistor junctions and wiring have small capacitances. At high frequencies, these capacitances shunt the signal, reducing gain.",
+              "choices": [
+                "Parasitic capacitances in the transistor and circuit",
+                "The input impedance",
+                "The power supply voltage",
+                "The transistor going into saturation"
+              ],
+              "id": "electronics_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What causes the low-frequency cutoff in an amplifier?",
+              "answer": "Coupling capacitors that pass AC but block DC",
+              "explain": "Input and output coupling capacitors are used to pass AC signals while blocking DC. At low frequencies, these capacitors have high impedance and attenuate the signal.",
+              "choices": [
+                "The transistor base resistance",
+                "Parasitic inductance",
+                "Coupling capacitors that pass AC but block DC",
+                "The power supply voltage"
+              ],
+              "id": "electronics_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is bandwidth of an amplifier?",
+              "answer": "The frequency range over which gain remains above 70% of maximum",
+              "explain": "Bandwidth is the range from the lower cutoff frequency to the upper cutoff frequency. These are the points where gain drops by 3 dB (to 70% of maximum).",
+              "choices": [
+                "The total frequency range possible",
+                "The average frequency",
+                "The maximum frequency only",
+                "The frequency range over which gain remains above 70% of maximum"
+              ],
+              "id": "electronics_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Operational Amplifiers and Circuits",
+      "tip": "An operational amplifier (op-amp) is an integrated circuit with two input terminals and one output. It has very high gain, high input impedance, and low output impedance. Op-amps are building blocks for countless analog circuits.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Op-Amp Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does an operational amplifier do?",
+              "answer": "Amplifies the difference between two input signals by a very large amount",
+              "explain": "An op-amp compares the non-inverting input (plus) to the inverting input (minus). The output is the difference, amplified by the open-loop gain.",
+              "choices": [
+                "Amplifies the difference between two input signals by a very large amount",
+                "Filters out high frequencies",
+                "Adds two input signals together",
+                "Multiplies the input signal"
+              ],
+              "id": "electronics_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the open-loop gain of an ideal op-amp?",
+              "answer": "Infinite",
+              "explain": "An ideal op-amp has infinite gain, infinite input impedance, and zero output impedance. Real op-amps approach these limits but are not perfect.",
+              "choices": [
+                "100",
+                "1000",
+                "Infinite",
+                "100,000"
+              ],
+              "id": "electronics_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the input impedance of an ideal op-amp?",
+              "answer": "Infinite",
+              "explain": "An ideal op-amp draws no current from either input terminal. Real op-amps have very high input impedance (megaohms to teraohms).",
+              "choices": [
+                "Infinite",
+                "1000 ohms",
+                "Zero ohms",
+                "Variable"
+              ],
+              "id": "electronics_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the output impedance of an ideal op-amp?",
+              "answer": "Zero",
+              "explain": "An ideal op-amp can supply any current into a load without its output voltage changing. Real op-amps have low output impedance (less than 100 ohms).",
+              "choices": [
+                "Variable",
+                "Zero",
+                "1000 ohms",
+                "Infinite"
+              ],
+              "id": "electronics_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is negative feedback in an op-amp circuit?",
+              "answer": "Feeding part of the output back to the inverting input to control gain",
+              "explain": "Negative feedback reduces the output when it gets too large, stabilizing the circuit. Without feedback, the op-amp output immediately saturates.",
+              "choices": [
+                "Connecting the inverting input to ground",
+                "Feeding part of the output back to the inverting input to control gain",
+                "Disconnecting the non-inverting input",
+                "Reversing the polarity of the input"
+              ],
+              "id": "electronics_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Op-Amp Circuits and Applications",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an inverting amplifier?",
+              "answer": "An op-amp circuit where the input is applied to the inverting terminal",
+              "explain": "In an inverting amplifier, negative feedback sets the gain to -R_feedback / R_input. The output is inverted (180 degrees out of phase) with respect to the input.",
+              "choices": [
+                "An op-amp circuit where the input is applied to the inverting terminal",
+                "An amplifier that turns off when excited",
+                "An amplifier that doubles the input",
+                "An amplifier with no feedback"
+              ],
+              "id": "electronics_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a non-inverting amplifier?",
+              "answer": "An op-amp circuit where the input is applied to the non-inverting terminal",
+              "explain": "In a non-inverting amplifier, the output is in phase with the input. The gain is 1 + R_feedback / R_ground.",
+              "choices": [
+                "An amplifier with no output",
+                "An amplifier with very high gain only",
+                "An op-amp circuit where the input is applied to the non-inverting terminal",
+                "An amplifier that inverts the signal"
+              ],
+              "id": "electronics_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a voltage comparator?",
+              "answer": "An op-amp used without feedback to compare two input voltages",
+              "explain": "A comparator outputs high when the non-inverting input exceeds the inverting input, and low otherwise. It switches instantly and is used in signal detection and analog-to-digital conversion.",
+              "choices": [
+                "A filter circuit",
+                "A summing amplifier",
+                "An amplifier with high gain",
+                "An op-amp used without feedback to compare two input voltages"
+              ],
+              "id": "electronics_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a summing amplifier?",
+              "answer": "An inverting amplifier with multiple inputs that adds weighted input signals",
+              "explain": "A summing amplifier applies different weights (via different input resistors) to each input. The output is the negative sum of weighted inputs.",
+              "choices": [
+                "A circuit that amplifies high frequencies",
+                "An inverting amplifier with multiple inputs that adds weighted input signals",
+                "An amplifier with one input only",
+                "A circuit that multiplies the inputs"
+              ],
+              "id": "electronics_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an active low-pass filter using an op-amp?",
+              "answer": "An amplifier circuit with a capacitor in the feedback path to attenuate high frequencies",
+              "explain": "A capacitor in the feedback path has low impedance at high frequencies, which reduces the amplifier gain there. At low frequencies the capacitor acts almost like an open circuit, so the full gain passes.",
+              "choices": [
+                "A circuit that blocks all frequencies",
+                "An amplifier circuit with a capacitor in the feedback path to attenuate high frequencies",
+                "A circuit with an inductor in the input",
+                "A resistor connected to the output"
+              ],
+              "id": "electronics_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

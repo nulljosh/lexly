@@ -1,0 +1,904 @@
+{
+  "id": "signals_systems",
+  "name": "Signals and Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-wave-square",
+  "level": "The Language of Signals",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Signal Fundamentals",
+      "tip": "A signal is any information that varies over time or space. Signals can be continuous (defined at every moment) or discrete (defined only at certain points). Understanding how to represent and classify signals is essential for signal processing.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Continuous and Discrete Signals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a continuous signal?",
+              "answer": "A signal defined at every point in time",
+              "explain": "A continuous signal, denoted x(t), has a value for every real number t. Sound waves, temperature, and voltage in a circuit are continuous signals.",
+              "choices": [
+                "A signal defined only at integer times",
+                "A signal defined at every point in time",
+                "A signal with a single value",
+                "A signal that never changes"
+              ],
+              "id": "signals_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a discrete signal?",
+              "answer": "A signal defined only at certain points in time",
+              "explain": "A discrete signal, denoted x[n], is defined only at discrete time points, usually integers. Digital music samples and sensor readings taken at intervals are discrete signals.",
+              "choices": [
+                "A signal defined only at certain points in time",
+                "A signal with infinite values",
+                "A signal that repeats forever",
+                "A signal that is always zero"
+              ],
+              "id": "signals_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is sampling?",
+              "answer": "Converting a continuous signal into a discrete signal by measuring it at regular intervals",
+              "explain": "Sampling measures a continuous signal at specific times. The sample rate is the number of samples per second, measured in hertz (Hz).",
+              "choices": [
+                "Converting a continuous signal into a discrete signal by measuring it at regular intervals",
+                "Creating a digital copy of a signal",
+                "Amplifying a weak signal",
+                "Smoothing a noisy signal"
+              ],
+              "id": "signals_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a sample?",
+              "answer": "A single measurement value of a signal at a specific time",
+              "explain": "A sample is one data point taken from a signal at a particular instant. When collected regularly, samples form a discrete signal.",
+              "choices": [
+                "A type of filter",
+                "A frequency component",
+                "The average of all signal values",
+                "A single measurement value of a signal at a specific time"
+              ],
+              "id": "signals_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between sampling interval and sample rate?",
+              "answer": "Sample rate is the reciprocal of the sampling interval",
+              "explain": "If the sampling interval is T seconds, the sample rate is f_s = 1/T samples per second. A 44 kHz sample rate means samples every 1/44000 seconds.",
+              "choices": [
+                "They are the same thing",
+                "Sample rate is the reciprocal of the sampling interval",
+                "They are independent",
+                "Sample interval is always larger"
+              ],
+              "id": "signals_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Periodic and Aperiodic Signals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a periodic signal?",
+              "answer": "A signal that repeats its pattern after a fixed time interval",
+              "explain": "A signal x(t) is periodic with period T if x(t) = x(t + T) for all t. The smallest such T is called the fundamental period.",
+              "choices": [
+                "A signal that repeats its pattern after a fixed time interval",
+                "A signal with zero average value",
+                "A signal that only increases",
+                "A signal that oscillates between two values"
+              ],
+              "id": "signals_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the period of a signal?",
+              "answer": "The time required for the signal to complete one full cycle",
+              "explain": "The period T is the smallest time such that the signal repeats. The sinusoid sin(2*pi*f*t) has period T = 1/f.",
+              "choices": [
+                "The average value of the signal",
+                "The rate of change of the signal",
+                "The time required for the signal to complete one full cycle",
+                "The maximum value of the signal"
+              ],
+              "id": "signals_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a sinusoidal signal?",
+              "answer": "A signal of the form A*sin(2*pi*f*t + phi) or A*cos(2*pi*f*t + phi)",
+              "explain": "Sinusoids are the most important periodic signals. They are defined by amplitude A, frequency f, and phase phi.",
+              "choices": [
+                "A signal that is always positive",
+                "A signal with a constant value",
+                "A signal of the form A*sin(2*pi*f*t + phi) or A*cos(2*pi*f*t + phi)",
+                "A signal that changes randomly"
+              ],
+              "id": "signals_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the amplitude of a sinusoid?",
+              "answer": "The maximum distance the signal reaches from its center value",
+              "explain": "Amplitude A determines the size of the oscillation. A larger amplitude means bigger swings from the center.",
+              "choices": [
+                "The number of cycles per second",
+                "The maximum distance the signal reaches from its center value",
+                "The average value of the signal",
+                "The angle offset of the signal"
+              ],
+              "id": "signals_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an aperiodic signal?",
+              "answer": "A signal that does not repeat after any fixed time interval",
+              "explain": "Aperiodic signals have no repeating pattern. Examples include random noise, a single pulse, and a chirp (swept frequency signal).",
+              "choices": [
+                "A signal that does not repeat after any fixed time interval",
+                "A signal that repeats slowly",
+                "A signal that only exists for a short time",
+                "A signal with very low amplitude"
+              ],
+              "id": "signals_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Frequency and Phase",
+      "tip": "Frequency describes how fast a signal oscillates. Phase describes where in the cycle the signal is at a given moment. Both are fundamental to understanding signal behavior and signal processing.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Frequency and Angular Frequency",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the frequency of a signal?",
+              "answer": "The number of cycles per second, measured in hertz (Hz)",
+              "explain": "Frequency f tells how many complete oscillations occur in one second. A 1 Hz signal completes one cycle per second.",
+              "choices": [
+                "The maximum value of the signal",
+                "The number of cycles per second, measured in hertz (Hz)",
+                "The time for one cycle",
+                "The rate of change of the signal"
+              ],
+              "id": "signals_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is angular frequency?",
+              "answer": "The frequency in radians per second, denoted omega",
+              "explain": "Angular frequency omega = 2*pi*f relates to ordinary frequency by a factor of 2*pi. It is used in the exponential form of sinusoids.",
+              "choices": [
+                "The total angle the signal sweeps",
+                "The frequency measured in cycles per second",
+                "The frequency in radians per second, denoted omega",
+                "The phase of the signal"
+              ],
+              "id": "signals_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between frequency and period?",
+              "answer": "Frequency is the reciprocal of period: f = 1/T",
+              "explain": "If a signal has period T seconds, it repeats T times per second, so frequency f = 1/T. A period of 0.5 seconds means frequency of 2 Hz.",
+              "choices": [
+                "f = 2*pi*T",
+                "Frequency is the reciprocal of period: f = 1/T",
+                "They are independent",
+                "f = T"
+              ],
+              "id": "signals_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the frequency of a sinusoid with period T = 4 seconds?",
+              "answer": "0.25 hertz",
+              "explain": "f = 1/T = 1/4 = 0.25 Hz. This sinusoid completes one quarter of a cycle per second.",
+              "choices": [
+                "8 hertz",
+                "2 hertz",
+                "0.25 hertz",
+                "4 hertz"
+              ],
+              "id": "signals_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the angular frequency omega of a signal with frequency f = 10 Hz?",
+              "answer": "20*pi radians per second (approximately 62.8 rad/s)",
+              "explain": "omega = 2*pi*f = 2*pi*10 = 20*pi rad/s. This is approximately 62.8 rad/s.",
+              "choices": [
+                "100 radians per second",
+                "5 radians per second",
+                "10 radians per second",
+                "20*pi radians per second (approximately 62.8 rad/s)"
+              ],
+              "id": "signals_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Phase and Phase Relationships",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is phase of a sinusoidal signal?",
+              "answer": "The angle offset that determines where in the cycle the signal starts",
+              "explain": "Phase phi (in degrees or radians) shifts the signal left or right in time. sin(t) has zero phase, while sin(t + pi/2) has a pi/2 phase shift.",
+              "choices": [
+                "The rate of change at time zero",
+                "The frequency of the signal",
+                "The maximum value of the signal",
+                "The angle offset that determines where in the cycle the signal starts"
+              ],
+              "id": "signals_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a phase shift of pi/2 radians represent?",
+              "answer": "A quarter-cycle delay or advance",
+              "explain": "pi/2 radians is 90 degrees. A phase shift of pi/2 means the signal starts 90 degrees (one quarter of 360) ahead or behind.",
+              "choices": [
+                "A full cycle",
+                "A quarter-cycle delay or advance",
+                "Half a cycle",
+                "No change"
+              ],
+              "id": "signals_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is phase difference between two signals?",
+              "answer": "The angle difference between them at any given time",
+              "explain": "If signal 1 is sin(t) and signal 2 is sin(t + phi), the phase difference is phi. When phi = 0, they are in phase. When phi = pi, they are out of phase.",
+              "choices": [
+                "The difference in their amplitudes",
+                "The angle difference between them at any given time",
+                "How much one is louder than the other",
+                "The difference in their frequencies"
+              ],
+              "id": "signals_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When are two sinusoids in phase?",
+              "answer": "When their phase difference is zero or a multiple of 2*pi",
+              "explain": "In-phase sinusoids reach their peaks and zeros at the same times. This happens when the phase difference is 0, 2*pi, 4*pi, etc.",
+              "choices": [
+                "When one has zero amplitude",
+                "When they have different frequencies",
+                "When they have the same amplitude",
+                "When their phase difference is zero or a multiple of 2*pi"
+              ],
+              "id": "signals_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When are two sinusoids completely out of phase?",
+              "answer": "When their phase difference is pi or an odd multiple of pi",
+              "explain": "Out-of-phase sinusoids are opposite: when one peaks, the other reaches its minimum. A phase difference of pi, 3*pi, 5*pi, etc. gives complete cancellation when the amplitudes are equal.",
+              "choices": [
+                "When their phase difference is pi or an odd multiple of pi",
+                "When they have the same phase",
+                "When one is much larger",
+                "When they have the same frequency"
+              ],
+              "id": "signals_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Linear Time-Invariant Systems",
+      "tip": "A system is linear if it obeys superposition: the response to a sum of inputs equals the sum of responses to each input. A system is time-invariant if delaying the input only delays the output by the same amount. Most natural and engineered systems are approximately LTI.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "LTI System Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a linear system?",
+              "answer": "A system where the output for a sum of inputs equals the sum of outputs",
+              "explain": "Linearity means y_1(t) + y_2(t) = y(x_1(t) + x_2(t)). This allows decomposing complex signals into simpler ones.",
+              "choices": [
+                "A system where the output for a sum of inputs equals the sum of outputs",
+                "A system that does not saturate",
+                "A system with a straight-line graph",
+                "A system whose output is always larger than its input"
+              ],
+              "id": "signals_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a time-invariant system?",
+              "answer": "A system where delaying the input also delays the output by the same amount",
+              "explain": "In a time-invariant system, the relationship between input and output does not change over time. A circuit with fixed resistors is time-invariant.",
+              "choices": [
+                "A system where delaying the input also delays the output by the same amount",
+                "A system with a time-varying transfer function",
+                "A system that depends on the current time",
+                "A system that changes over time"
+              ],
+              "id": "signals_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an LTI (Linear Time-Invariant) system?",
+              "answer": "A system that is both linear and time-invariant",
+              "explain": "LTI systems are the most important class in signal processing. They can be completely described by their impulse response.",
+              "choices": [
+                "A system that only works at one frequency",
+                "A system with nonlinear elements",
+                "A system that is both linear and time-invariant",
+                "A system with time-varying parameters"
+              ],
+              "id": "signals_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is causality in a system?",
+              "answer": "The output depends only on past and present inputs, not future inputs",
+              "explain": "A causal system is physically realizable. It cannot respond to events that have not yet occurred.",
+              "choices": [
+                "The system causes all effects",
+                "The input causes the output",
+                "The output depends only on past and present inputs, not future inputs",
+                "The system runs backwards in time"
+              ],
+              "id": "signals_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is stability in a system?",
+              "answer": "Bounded inputs produce bounded outputs",
+              "explain": "A stable system (BIBO: bounded-input bounded-output) never produces an output that grows without bound from a bounded input. Unstable systems can blow up.",
+              "choices": [
+                "The system never changes",
+                "The system has zero error",
+                "The system is at equilibrium",
+                "Bounded inputs produce bounded outputs"
+              ],
+              "id": "signals_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Impulse Response and System Characterization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an impulse signal?",
+              "answer": "A signal that is zero everywhere except at one point in time",
+              "explain": "The impulse (delta function) is infinitely tall and infinitely narrow, with unit area. It represents an instantaneous input.",
+              "choices": [
+                "A signal that alternates",
+                "A long-duration signal",
+                "A signal with constant value",
+                "A signal that is zero everywhere except at one point in time"
+              ],
+              "id": "signals_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is impulse response?",
+              "answer": "The output of a system when the input is an impulse",
+              "explain": "The impulse response h(t) completely characterizes an LTI system. Given h(t) and any input, we can compute the output using convolution.",
+              "choices": [
+                "The output of a system when the input is an impulse",
+                "The frequency response of the system",
+                "How the system responds to all inputs",
+                "The gain at DC"
+              ],
+              "id": "signals_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the step response of a system?",
+              "answer": "The output when the input is a unit step function",
+              "explain": "The step response shows how the system settles to a new condition when given a constant input. It reveals rise time, overshoot, and settling time.",
+              "choices": [
+                "How many steps the input takes",
+                "The time derivative of the input",
+                "The frequency response",
+                "The output when the input is a unit step function"
+              ],
+              "id": "signals_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How are impulse response and step response related?",
+              "answer": "The step response is the integral (cumulative sum) of the impulse response",
+              "explain": "If h(t) is impulse response, then integrating h from negative infinity to time t gives the step response. Conversely, the derivative of step response is impulse response.",
+              "choices": [
+                "The step response is the integral (cumulative sum) of the impulse response",
+                "The impulse response is the integral of step response",
+                "They are unrelated",
+                "They are the same thing"
+              ],
+              "id": "signals_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is knowing the impulse response useful?",
+              "answer": "Because it completely determines the system's output for any input signal",
+              "explain": "For LTI systems, convolution of the impulse response with any input gives the output. This makes impulse response the most important system property.",
+              "choices": [
+                "Because it completely determines the system's output for any input signal",
+                "It is just historical tradition",
+                "It tells the frequency response only",
+                "It is easier to measure than other properties"
+              ],
+              "id": "signals_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Convolution and Filtering",
+      "tip": "Convolution is the mathematical operation that combines an input signal with a system's impulse response to produce the output. Filtering shapes a signal by attenuating or amplifying certain frequencies.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Convolution Operation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is convolution?",
+              "answer": "The mathematical operation combining input and impulse response to produce output",
+              "explain": "Convolution is denoted y(t) = x(t) * h(t). It represents how the system's memory and structure shapes the input signal.",
+              "choices": [
+                "The Fourier transform of a signal",
+                "Multiplying two signals together",
+                "Filtering high frequencies",
+                "The mathematical operation combining input and impulse response to produce output"
+              ],
+              "id": "signals_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the convolution integral compute?",
+              "answer": "For each output time t, it sums the weighted input values, weighted by h(t - tau)",
+              "explain": "y(t) = integral of x(tau) * h(t - tau) d(tau). This weights each past input by how far it is in the past (reflected in the impulse response).",
+              "choices": [
+                "For each output time t, it sums the weighted input values, weighted by h(t - tau)",
+                "The energy of the signal",
+                "The frequency content",
+                "The Fourier series of the signal"
+              ],
+              "id": "signals_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is discrete convolution?",
+              "answer": "Convolution for discrete-time signals, using summation instead of integration",
+              "explain": "For discrete signals: y[n] = sum of x[k] * h[n - k]. It computes output samples as weighted sums of past input samples.",
+              "choices": [
+                "Convolution for discrete-time signals, using summation instead of integration",
+                "Convolution that never converges",
+                "Convolution only for periodic signals",
+                "Sampling a continuous convolution"
+              ],
+              "id": "signals_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is convolution commutative?",
+              "answer": "Yes, x(t) * h(t) = h(t) * x(t)",
+              "explain": "Convolution is commutative, meaning the order does not matter. This is mathematically true and reflects that input and system can be swapped.",
+              "choices": [
+                "Only at certain frequencies",
+                "Only for even-length signals",
+                "No, order always matters",
+                "Yes, x(t) * h(t) = h(t) * x(t)"
+              ],
+              "id": "signals_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the computational cost of discrete convolution for N-point signals?",
+              "answer": "Approximately N^2 operations",
+              "explain": "Direct convolution requires N^2 multiplications and additions. Fast algorithms using FFT reduce this to N*log(N).",
+              "choices": [
+                "N*log(N) for all cases",
+                "N operations",
+                "Approximately N^2 operations",
+                "2^N operations"
+              ],
+              "id": "signals_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Filtering Fundamentals",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a filter?",
+              "answer": "A system that selectively attenuates or amplifies signals at different frequencies",
+              "explain": "Filters process signals based on frequency content. A low-pass filter passes low frequencies and blocks high ones; a high-pass filter does the opposite.",
+              "choices": [
+                "A device that amplifies all frequencies equally",
+                "A device that removes all frequencies",
+                "A system that selectively attenuates or amplifies signals at different frequencies",
+                "Something that cleans water only"
+              ],
+              "id": "signals_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a low-pass filter?",
+              "answer": "A filter that passes low frequencies and attenuates high frequencies",
+              "explain": "A low-pass filter has a cutoff frequency. Frequencies below cutoff pass with little attenuation; frequencies above are strongly attenuated.",
+              "choices": [
+                "A filter that passes low frequencies and attenuates high frequencies",
+                "A filter that only works with analog signals",
+                "A filter that removes all frequencies",
+                "A filter that passes high frequencies"
+              ],
+              "id": "signals_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a high-pass filter?",
+              "answer": "A filter that passes high frequencies and attenuates low frequencies",
+              "explain": "A high-pass filter passes signals above its cutoff frequency and blocks those below. It removes DC and low-frequency components.",
+              "choices": [
+                "A filter that passes low frequencies",
+                "A filter that passes all frequencies",
+                "A filter made only from resistors",
+                "A filter that passes high frequencies and attenuates low frequencies"
+              ],
+              "id": "signals_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a cutoff frequency?",
+              "answer": "The frequency where the filter transitions from passing to blocking",
+              "explain": "At the cutoff frequency, the gain is typically 0.707 times the passband gain (or 3 dB down). This marks the edge of the filter's passband.",
+              "choices": [
+                "The frequency that the filter completely blocks",
+                "The frequency where the filter transitions from passing to blocking",
+                "The Nyquist frequency",
+                "The highest frequency in the universe"
+              ],
+              "id": "signals_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a band-pass filter?",
+              "answer": "A filter that passes a range of frequencies and attenuates frequencies outside that range",
+              "explain": "A band-pass filter has a lower and upper cutoff frequency. Frequencies between them pass; frequencies outside are blocked.",
+              "choices": [
+                "A filter that passes only the lowest frequencies",
+                "A filter made from two resistors",
+                "A filter that passes a range of frequencies and attenuates frequencies outside that range",
+                "A filter that passes only the highest frequencies"
+              ],
+              "id": "signals_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Fourier Analysis",
+      "tip": "Fourier analysis decomposes any signal into a sum of sinusoids at different frequencies. The Fourier series works for periodic signals, while the Fourier transform works for all signals. This reveals the frequency content of signals.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Fourier Series",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Fourier series?",
+              "answer": "A representation of a periodic signal as a sum of sinusoids at harmonic frequencies",
+              "explain": "Any periodic signal can be written as a DC component plus sinusoids at frequencies f, 2f, 3f, etc. (multiples of the fundamental frequency).",
+              "choices": [
+                "A formula for calculating frequency",
+                "A method to solve differential equations",
+                "A technique used only in music",
+                "A representation of a periodic signal as a sum of sinusoids at harmonic frequencies"
+              ],
+              "id": "signals_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the fundamental frequency in a Fourier series?",
+              "answer": "The frequency of the periodic signal itself (1/T)",
+              "explain": "If the signal has period T, the fundamental frequency is f_0 = 1/T. All other frequency components are integer multiples of this.",
+              "choices": [
+                "Always 60 Hz",
+                "The highest frequency in the signal",
+                "The Nyquist frequency",
+                "The frequency of the periodic signal itself (1/T)"
+              ],
+              "id": "signals_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are harmonics in a Fourier series?",
+              "answer": "Sinusoids at integer multiples of the fundamental frequency",
+              "explain": "The first harmonic (fundamental) is at f_0, the second at 2*f_0, the third at 3*f_0, and so on. Each harmonic contributes to the shape.",
+              "choices": [
+                "Sounds that are pleasing to hear",
+                "Only even-frequency components",
+                "Sinusoids at integer multiples of the fundamental frequency",
+                "The loudness of a signal"
+              ],
+              "id": "signals_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a Fourier coefficient tell you?",
+              "answer": "The amplitude and phase of each sinusoid in the decomposition",
+              "explain": "The Fourier coefficients describe how much of each harmonic frequency is present in the signal. Larger coefficients mean stronger contributions.",
+              "choices": [
+                "The amplitude and phase of each sinusoid in the decomposition",
+                "Whether the signal is periodic",
+                "The duration of the signal",
+                "The total energy in the signal"
+              ],
+              "id": "signals_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is the Fourier series useful?",
+              "answer": "It reveals which frequencies are present and their relative strengths",
+              "explain": "By decomposing a signal into sinusoids, we learn its frequency content. This is crucial for understanding signal behavior and designing filters.",
+              "choices": [
+                "It simplifies the differential equations only",
+                "It reveals which frequencies are present and their relative strengths",
+                "It changes the fundamental frequency",
+                "It makes signals shorter"
+              ],
+              "id": "signals_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Fourier Transform and Frequency Response",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Fourier transform?",
+              "answer": "A mathematical operation that converts a signal from the time domain to the frequency domain",
+              "explain": "The Fourier transform X(f) shows what frequencies are present in signal x(t). It works for aperiodic signals, where Fourier series only work for periodic ones.",
+              "choices": [
+                "A method to invert a matrix",
+                "A series of sinusoids only",
+                "A mathematical operation that converts a signal from the time domain to the frequency domain",
+                "A technique for amplifying signals"
+              ],
+              "id": "signals_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the frequency spectrum?",
+              "answer": "The magnitude and phase information of a signal at each frequency",
+              "explain": "The magnitude spectrum |X(f)| shows how much of each frequency is present. The phase spectrum tells the phase angle of each component.",
+              "choices": [
+                "The range of frequencies a device can handle",
+                "Only the positive frequencies",
+                "The magnitude and phase information of a signal at each frequency",
+                "The total power in the signal"
+              ],
+              "id": "signals_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is frequency response of a system?",
+              "answer": "The gain and phase shift applied by the system at each frequency",
+              "explain": "Frequency response H(f) describes how the system treats each frequency component. It is the Fourier transform of the impulse response.",
+              "choices": [
+                "How fast the system works",
+                "How often the system updates",
+                "The gain and phase shift applied by the system at each frequency",
+                "The range of input frequencies"
+              ],
+              "id": "signals_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you find the output of an LTI system using Fourier transforms?",
+              "answer": "Multiply the input spectrum by the frequency response, then inverse transform",
+              "explain": "Y(f) = X(f) * H(f), then y(t) is found by inverse Fourier transform. Multiplication in frequency domain equals convolution in time domain.",
+              "choices": [
+                "Multiply the input spectrum by the frequency response, then inverse transform",
+                "No multiplication is needed",
+                "Add the input spectrum to the frequency response",
+                "Divide the input spectrum by the frequency response"
+              ],
+              "id": "signals_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the magnitude response of a filter?",
+              "answer": "The gain (amplitude scaling) at each frequency",
+              "explain": "Magnitude response |H(f)| tells how much each frequency component is amplified or attenuated. It does not include phase information.",
+              "choices": [
+                "The phase shift at each frequency",
+                "The input signal spectrum",
+                "The gain (amplitude scaling) at each frequency",
+                "The time-domain impulse response"
+              ],
+              "id": "signals_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Sampling and Aliasing",
+      "tip": "Sampling converts continuous signals to discrete ones. The Nyquist rate determines the minimum sampling frequency needed to avoid losing information. Aliasing occurs when sampling is too slow, causing high frequencies to appear as low ones.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Sampling Theorem and Nyquist Rate",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist sampling theorem?",
+              "answer": "A signal is perfectly reconstructible if sampled above twice its highest frequency",
+              "explain": "If a signal has highest frequency f_max, the sample rate must exceed 2*f_max. The value 2*f_max is called the Nyquist rate.",
+              "choices": [
+                "A signal must be sampled at least once per cycle",
+                "All signals need sampling at 44 kHz",
+                "Sampling rate does not matter",
+                "A signal is perfectly reconstructible if sampled above twice its highest frequency"
+              ],
+              "id": "signals_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist frequency?",
+              "answer": "Half the sampling rate; the highest frequency that can be represented",
+              "explain": "If sampling at f_s, the Nyquist frequency is f_N = f_s/2. No frequency above this can be accurately represented.",
+              "choices": [
+                "The highest frequency in the signal",
+                "The frequency of the sampling clock",
+                "Half the sampling rate; the highest frequency that can be represented",
+                "Twice the sampling rate"
+              ],
+              "id": "signals_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For a signal with maximum frequency 5 kHz, what is the minimum sampling rate?",
+              "answer": "10 kHz",
+              "explain": "f_s = 2*f_max = 2*5 kHz = 10 kHz. Sampling at exactly 10 kHz is the theoretical minimum (in practice, sample slightly faster).",
+              "choices": [
+                "20 kHz",
+                "2.5 kHz",
+                "5 kHz",
+                "10 kHz"
+              ],
+              "id": "signals_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Nyquist frequency for audio sampled at 44 kHz?",
+              "answer": "22 kHz",
+              "explain": "f_N = f_s/2 = 44 kHz / 2 = 22 kHz. This is slightly above the human hearing range (typically up to 20 kHz).",
+              "choices": [
+                "44 kHz",
+                "22 kHz",
+                "11 kHz",
+                "88 kHz"
+              ],
+              "id": "signals_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can a signal be perfectly reconstructed from its samples?",
+              "answer": "Yes, if the Nyquist rate is satisfied and an ideal low-pass filter is used",
+              "explain": "Perfect reconstruction requires meeting the Nyquist criterion and filtering to remove frequency copies. Ideal filters do not exist in practice.",
+              "choices": [
+                "Yes, if the Nyquist rate is satisfied and an ideal low-pass filter is used",
+                "Never, sampling always loses information",
+                "Only for periodic signals",
+                "Only for very short signals"
+              ],
+              "id": "signals_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Aliasing and Anti-Aliasing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is aliasing?",
+              "answer": "High frequencies appearing as lower frequencies when sampling is too slow",
+              "explain": "When f_s < 2*f_max, high-frequency components fold back into the baseband. A 25 kHz signal sampled at 44 kHz appears as a 19 kHz signal.",
+              "choices": [
+                "High frequencies appearing as lower frequencies when sampling is too slow",
+                "Multiple signals being sampled together",
+                "The process of sampling a signal",
+                "Applying an alias to a function"
+              ],
+              "id": "signals_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is aliasing a problem?",
+              "answer": "It causes high-frequency information to be lost and misrepresented as lower frequencies",
+              "explain": "Aliased frequencies cannot be separated from true signal components after sampling. The information is permanently corrupted.",
+              "choices": [
+                "It has no negative effect",
+                "It increases the sampling rate",
+                "It causes high-frequency information to be lost and misrepresented as lower frequencies",
+                "It makes the signal louder"
+              ],
+              "id": "signals_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an anti-aliasing filter?",
+              "answer": "A low-pass filter applied before sampling to remove frequencies above the Nyquist frequency",
+              "explain": "An anti-aliasing filter prevents aliasing by eliminating high-frequency components before sampling. It is a critical component in analog-to-digital conversion.",
+              "choices": [
+                "A filter that amplifies high frequencies",
+                "A filter applied after sampling",
+                "A filter that removes low frequencies",
+                "A low-pass filter applied before sampling to remove frequencies above the Nyquist frequency"
+              ],
+              "id": "signals_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does an anti-aliasing filter prevent aliasing?",
+              "answer": "By attenuating frequencies above the Nyquist frequency before they can be sampled",
+              "explain": "If all frequency components above f_N are removed before sampling at f_s = 2*f_N, no aliasing can occur.",
+              "choices": [
+                "By increasing the sampling rate",
+                "By removing low frequencies",
+                "By amplifying the signal",
+                "By attenuating frequencies above the Nyquist frequency before they can be sampled"
+              ],
+              "id": "signals_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What cutoff frequency should an anti-aliasing filter have?",
+              "answer": "The Nyquist frequency (half the sampling rate)",
+              "explain": "The anti-aliasing filter's cutoff should be at f_s/2 to allow all valid frequencies (below Nyquist) while removing problematic ones above.",
+              "choices": [
+                "Twice the sampling rate",
+                "The Nyquist frequency (half the sampling rate)",
+                "10 times the lowest frequency",
+                "The signal's center frequency"
+              ],
+              "id": "signals_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
