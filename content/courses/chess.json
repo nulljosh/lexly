@@ -4,207 +4,897 @@
   "category": "skills",
   "icon": "fa-solid fa-chess",
   "level": "Strategy & Tactics",
-  "version": 1,
+  "version": 2,
   "units": [
     {
       "id": "u1",
-      "title": "All",
+      "title": "Board & Pieces",
+      "tip": "Chess is played on an 8x8 board with 32 pieces. Each piece has a unique role and moves differently. Learning the board layout and piece names is the foundation of the game.",
       "lessons": [
         {
           "id": "u1l1",
-          "title": "Lesson 1",
+          "title": "The Board and Setup",
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "How many squares on a chess board?",
+              "question": "How many squares are on a standard chessboard?",
               "answer": "64",
+              "explain": "A chessboard is 8 squares by 8 squares, giving 64 total squares. This standard size has been used for centuries.",
               "choices": [
-                "36",
                 "49",
+                "81",
                 "64",
-                "81"
+                "36"
               ],
-              "id": "chess_0"
+              "id": "chess_u1l1_0"
             },
             {
               "type": "mathChoice",
-              "question": "Which piece can jump over others?",
-              "answer": "Knight",
+              "question": "In the starting position, where does the white queen sit?",
+              "answer": "d1",
+              "explain": "The queen starts on her own color: the white queen on a light square (d1), the black queen on a dark square (d8). This rule helps you set up correctly every time.",
               "choices": [
-                "Knight",
-                "Bishop",
-                "Rook",
-                "Queen"
+                "e1",
+                "d1",
+                "a1",
+                "h1"
               ],
-              "id": "chess_1"
+              "id": "chess_u1l1_1"
             },
             {
               "type": "mathChoice",
-              "question": "How does a pawn capture?",
-              "answer": "Diagonally forward",
+              "question": "How many pawns does each side start with?",
+              "answer": "8",
+              "explain": "Pawns occupy the entire second rank (row) for white and the seventh rank for black. They serve as the army's foot soldiers.",
               "choices": [
-                "Diagonally forward",
-                "Straight forward",
-                "Any direction",
-                "Sideways"
+                "6",
+                "10",
+                "8",
+                "4"
               ],
-              "id": "chess_2"
+              "id": "chess_u1l1_2"
             },
             {
               "type": "mathChoice",
-              "question": "Castling involves which pieces?",
-              "answer": "King and rook",
+              "question": "Which color always moves first?",
+              "answer": "White",
+              "explain": "White moves first by convention. This established tradition, dating back centuries, gives white a small advantage that is well-known to both players.",
               "choices": [
-                "King and rook",
-                "King and queen",
-                "King and bishop",
-                "King and knight"
+                "Black",
+                "Whoever is stronger",
+                "White",
+                "The youngest player"
               ],
-              "id": "chess_3"
+              "id": "chess_u1l1_3"
             },
             {
               "type": "mathChoice",
-              "question": "En passant is a special move for?",
-              "answer": "Pawns",
+              "question": "How many pieces does each player start with?",
+              "answer": "16",
+              "explain": "Each side has 1 king, 1 queen, 2 rooks, 2 bishops, 2 knights, and 8 pawns. That totals 16 pieces per side.",
               "choices": [
-                "Pawns",
-                "Knights",
-                "Bishops",
-                "Rooks"
+                "12",
+                "20",
+                "16",
+                "14"
               ],
-              "id": "chess_4"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Most powerful piece?",
-              "answer": "Queen",
-              "choices": [
-                "Queen",
-                "King",
-                "Rook",
-                "Knight"
-              ],
-              "id": "chess_5"
-            },
-            {
-              "type": "mathChoice",
-              "question": "Stalemate result?",
-              "answer": "Draw",
-              "choices": [
-                "Draw",
-                "Win for attacker",
-                "Loss for defender",
-                "Restart"
-              ],
-              "id": "chess_6"
+              "id": "chess_u1l1_4"
             }
           ]
         },
         {
           "id": "u1l2",
-          "title": "Lesson 2",
+          "title": "The Pieces",
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "Bishop moves?",
-              "answer": "Diagonally",
+              "question": "Which piece is the most powerful on the board?",
+              "answer": "Queen",
+              "explain": "The queen moves any number of squares in any direction (like a rook and bishop combined) and is worth about 9 points. Only the king is more important strategically.",
               "choices": [
-                "Diagonally",
-                "Straight lines",
-                "L-shape",
-                "Any direction"
+                "Rook",
+                "King",
+                "Queen",
+                "Knight"
               ],
-              "id": "chess_7"
+              "id": "chess_u1l2_0"
             },
             {
               "type": "mathChoice",
-              "question": "What is check?",
-              "answer": "King is under attack",
+              "question": "The king is less valuable than the queen in battle but more valuable overall. Why?",
+              "answer": "Losing the king means losing the game",
+              "explain": "Checkmate ends the game, and only the king can be checkmated. The queen is worth more in material value but is replaceable; the king is not.",
               "choices": [
-                "King is under attack",
-                "King is captured",
-                "Game is over",
-                "Pawn reaches end"
+                "The king moves faster",
+                "Losing the king means losing the game",
+                "The king is harder to capture",
+                "The king can jump over pieces"
               ],
-              "id": "chess_8"
+              "id": "chess_u1l2_1"
             },
             {
               "type": "mathChoice",
-              "question": "Pawn promotion happens at?",
-              "answer": "Opposite end of board",
+              "question": "How does a knight move?",
+              "answer": "In an L shape",
+              "explain": "A knight moves two squares in one direction and then one square sideways, an L shape. It is the only piece that can jump over others.",
               "choices": [
-                "Opposite end of board",
-                "Center of board",
-                "After 10 moves",
-                "After capturing"
+                "Diagonally, any distance",
+                "In an L shape",
+                "One square in any direction",
+                "Straight, any distance"
               ],
-              "id": "chess_9"
+              "id": "chess_u1l2_2"
             },
             {
               "type": "mathChoice",
-              "question": "Starting number of pieces per side?",
-              "answer": "16",
+              "question": "What is unique about a bishop's movement?",
+              "answer": "It can only move diagonally",
+              "explain": "Bishops move along diagonals any number of squares. Because they stay on their starting color (light or dark), each bishop controls only half the board.",
               "choices": [
-                "12",
-                "14",
-                "16",
-                "20"
+                "It can jump over pieces",
+                "It moves only forward",
+                "It can only move diagonally",
+                "It moves in an L-shape"
               ],
-              "id": "chess_10"
+              "id": "chess_u1l2_3"
             },
             {
               "type": "mathChoice",
-              "question": "Rook moves?",
-              "answer": "Horizontally and vertically",
+              "question": "Which piece is worth approximately 5 points in material value?",
+              "answer": "Rook",
+              "explain": "A rook is worth about 5 points. Bishops and knights are worth about 3 points each, pawns 1 point. These values help you decide whether a trade is favorable.",
               "choices": [
-                "Horizontally and vertically",
-                "Diagonally",
-                "L-shape",
-                "One square any direction"
+                "Bishop",
+                "Knight",
+                "Pawn",
+                "Rook"
               ],
-              "id": "chess_11"
+              "id": "chess_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "How Pieces Move",
+      "tip": "Each piece has its own movement pattern. Pawns move differently than they capture. The king can only move one square. Understanding these rules is essential to visualizing the game.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Basic Movement Rules",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Can a piece move through other pieces to reach its destination?",
+              "answer": "Only knights can",
+              "explain": "Rooks, bishops, and queens must have a clear path. Pawns and kings also cannot jump. Knights uniquely leap over pieces, making them valuable in crowded positions.",
+              "choices": [
+                "All pieces can",
+                "Only knights can",
+                "No piece can",
+                "Only the queen can"
+              ],
+              "id": "chess_u2l1_0"
             },
             {
               "type": "mathChoice",
-              "question": "What is a fork?",
-              "answer": "One piece attacks two",
+              "question": "Can you move a piece if it would expose your king to check?",
+              "answer": "No, it is illegal",
+              "explain": "You must never put or leave your king in check. A move that does this is illegal and cannot be played, even if it would win material.",
               "choices": [
-                "One piece attacks two",
-                "Two pieces attack one",
-                "Trading pieces",
-                "Blocking a check"
+                "Yes, any move is allowed",
+                "Only if you capture the attacker",
+                "No, it is illegal",
+                "Only in blitz games"
               ],
-              "id": "chess_12"
+              "id": "chess_u2l1_1"
             },
             {
               "type": "mathChoice",
-              "question": "Point value of a knight?",
-              "answer": "3",
+              "question": "What happens if a pawn reaches the opposite end of the board?",
+              "answer": "It must be promoted to another piece",
+              "explain": "When a pawn reaches the 8th rank (for white) or 1st rank (for black), it is promoted to a queen, rook, bishop, or knight. A queen is chosen in most cases.",
               "choices": [
-                "1",
+                "It stops and cannot move",
+                "It must be promoted to another piece",
+                "It stays a pawn",
+                "It is removed from the board"
+              ],
+              "id": "chess_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many squares can a king move in one turn?",
+              "answer": "1",
+              "explain": "The king moves exactly one square in any direction: up, down, left, right, or diagonally. This slow movement is why the king must be protected.",
+              "choices": [
+                "2",
                 "3",
-                "5",
-                "9"
+                "Any number",
+                "1"
               ],
-              "id": "chess_13"
+              "id": "chess_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If white pawn is on e4, can it move to e5?",
+              "answer": "Only if e5 is empty",
+              "explain": "Pawns move forward only to empty squares. They cannot capture directly ahead, only diagonally. A blocked pawn cannot advance.",
+              "choices": [
+                "Yes, always",
+                "Only if it captures a piece",
+                "Only if e5 is empty",
+                "Never, pawns cannot move forward"
+              ],
+              "id": "chess_u2l1_4"
             }
           ]
         },
         {
-          "id": "u1l3",
-          "title": "Lesson 3",
+          "id": "u2l2",
+          "title": "Special Moves",
           "exercises": [
             {
               "type": "mathChoice",
-              "question": "What is checkmate?",
-              "answer": "King cannot escape attack",
+              "question": "What is castling?",
+              "answer": "A move involving the king and rook moving together",
+              "explain": "Castling is a special move where the king moves 2 squares and a rook moves to the square the king crossed. It is the only move where two pieces move at once.",
               "choices": [
-                "King cannot escape attack",
-                "King is in check",
-                "All pieces captured",
-                "Time runs out"
+                "A pawn advancing to the end",
+                "A piece moving backward",
+                "A move involving the king and rook moving together",
+                "A knight making an illegal move"
               ],
-              "id": "chess_14"
+              "id": "chess_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you castle if your king is in check?",
+              "answer": "No, it is illegal",
+              "explain": "Castling is illegal if the king is in check, if the king has moved before, or if the rook has moved before. These restrictions prevent abuse of this powerful move.",
+              "choices": [
+                "Yes, it is always allowed",
+                "Only if you are losing",
+                "No, it is illegal",
+                "Only in the endgame"
+              ],
+              "id": "chess_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is en passant?",
+              "answer": "A special pawn capture",
+              "explain": "En passant allows a pawn to capture an opponent's pawn that has just moved two squares forward, as if it had moved only one square. It must be done immediately.",
+              "choices": [
+                "A move where the king jumps",
+                "A special pawn capture",
+                "A rook's sideways move",
+                "Promoting a pawn"
+              ],
+              "id": "chess_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Can you castle if there are pieces between the king and rook?",
+              "answer": "No, the path must be clear",
+              "explain": "For castling to be legal, every square between the king and rook must be empty. Any piece in the way, even your own, blocks the castle.",
+              "choices": [
+                "Yes, pieces can be in the way",
+                "No, the path must be clear",
+                "Only if they are opponents' pieces",
+                "Only bishops and knights block it"
+              ],
+              "id": "chess_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In kingside castling (also called castling short), which files do the king and rook move to/from?",
+              "answer": "The king goes from e to g, rook from h to f",
+              "explain": "In kingside (short) castling, the king moves two squares toward the kingside (e to g), and the rook on h-file moves to f-file. The opposite is queenside (long) castling.",
+              "choices": [
+                "The king goes from e to c, rook from a to d",
+                "The king goes from e to g, rook from h to f",
+                "The king goes from d to f, rook from c to e",
+                "The king and rook switch places"
+              ],
+              "id": "chess_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Checkmate Patterns",
+      "tip": "Checkmate is the ultimate goal of chess. A king is in checkmate when it is under attack and cannot escape. Learning common patterns helps you recognize winning opportunities.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Recognizing Checkmate",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the definition of checkmate?",
+              "answer": "King is under attack and has no legal move to escape",
+              "explain": "Checkmate requires two things: the king is in check, and it cannot move to any safe square, nor can any piece block or capture the attacker.",
+              "choices": [
+                "King is attacked once",
+                "King is attacked twice",
+                "King is under attack and has no legal move to escape",
+                "A piece cannot move"
+              ],
+              "id": "chess_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is check?",
+              "answer": "The king is under direct attack",
+              "explain": "Check means the king is attacked by an opponent's piece and must respond by moving, blocking, or capturing the attacker. Check is a warning; checkmate is the end.",
+              "choices": [
+                "A piece is captured",
+                "The king is under direct attack",
+                "The game is over",
+                "A pawn is promoted"
+              ],
+              "id": "chess_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If you are in check, are you forced to respond?",
+              "answer": "Yes, you must get out of check",
+              "explain": "When in check, your only legal moves are those that remove the king from danger: moving the king, blocking, or capturing the attacking piece.",
+              "choices": [
+                "No, you can ignore check",
+                "Yes, you must get out of check",
+                "Only if you are losing",
+                "Only in tournament play"
+              ],
+              "id": "chess_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Back rank mate is a common checkmate pattern. Where does it typically occur?",
+              "answer": "On the edge of the board where the king cannot escape",
+              "explain": "Back rank mate happens when a rook or queen attacks a king trapped by its own pawns on the first or eighth rank. The king has no squares to flee to.",
+              "choices": [
+                "In the center of the board",
+                "On the edge of the board where the king cannot escape",
+                "Only with a knight",
+                "When the king is promoted"
+              ],
+              "id": "chess_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What do all checkmate positions have in common?",
+              "answer": "The king is under attack and has no escape",
+              "explain": "Whether it is a queen, rook, bishop, knight, or pawn delivering checkmate, the king must be attacked and have no legal move. Both conditions are required.",
+              "choices": [
+                "The queen delivers the final blow",
+                "The king is under attack and has no escape",
+                "Multiple pieces attack the king",
+                "The king has moved three times"
+              ],
+              "id": "chess_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Delivering Checkmate",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In endgames with a king and queen versus king, the winning side must eventually deliver checkmate. How many moves does a perfect technique require at worst?",
+              "answer": "10 moves",
+              "explain": "With perfect play, king and queen can checkmate a lone king in at most 10 moves from any position. This is known as the KQK endgame.",
+              "choices": [
+                "1 move",
+                "5 moves",
+                "10 moves",
+                "20 moves"
+              ],
+              "id": "chess_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'ladder mate'?",
+              "answer": "Checkmate using rooks to trap the king step by step",
+              "explain": "Ladder mate (also called a rook ladder) uses rooks to push the enemy king to the edge of the board step by step until it is checkmated.",
+              "choices": [
+                "Promotion of a pawn",
+                "Checkmate using rooks to trap the king step by step",
+                "A series of checks that don't lead to mate",
+                "Castling followed by checkmate"
+              ],
+              "id": "chess_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In king and rook versus king, can the defending king force a draw?",
+              "answer": "No, it is always a theoretical loss",
+              "explain": "King and rook vs. king is a theoretical win for the rook side with best play. The defending king has no hope of a draw or win.",
+              "choices": [
+                "Yes, the defending king can draw",
+                "No, it is always a theoretical loss",
+                "Only if the rook is on the back rank",
+                "Only if the king reaches the center"
+              ],
+              "id": "chess_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens if both kings run out of pieces but neither is checkmated?",
+              "answer": "It is a draw (insufficient material)",
+              "explain": "If neither side has enough material to deliver checkmate (e.g., king and bishop vs. king), the game is automatically a draw.",
+              "choices": [
+                "The game continues until one king falls",
+                "It is a draw (insufficient material)",
+                "The player with more pieces wins",
+                "They must play 50 more moves"
+              ],
+              "id": "chess_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "The 'smothered mate' is a checkmate pattern where the king is checkmated by which piece?",
+              "answer": "A knight",
+              "explain": "A smothered mate occurs when a knight delivers checkmate to a king that is trapped by its own pieces. The king cannot escape because its own pawns block the escape squares.",
+              "choices": [
+                "A queen",
+                "A rook",
+                "A bishop",
+                "A knight"
+              ],
+              "id": "chess_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Tactics & Winning Combinations",
+      "tip": "Tactics are short-term combinations that win material or deliver checkmate. Forks, pins, skewers, and sacrifices are the building blocks of successful attacks.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Basic Tactical Motifs",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'fork'?",
+              "answer": "One piece attacks two or more pieces at once",
+              "explain": "A fork is a tactic where a single piece attacks multiple opponent pieces. The opponent can only save one, so you win material. Knights are particularly good at forking.",
+              "choices": [
+                "A move that is blocked",
+                "One piece attacks two or more pieces at once",
+                "A piece that cannot move",
+                "An illegal capture"
+              ],
+              "id": "chess_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'pin'?",
+              "answer": "A piece cannot move without exposing a more valuable piece to attack",
+              "explain": "A pin is when a piece cannot move because doing so would expose a more valuable piece (often the king or queen) to capture by an attacking piece.",
+              "choices": [
+                "A piece that attacks another piece",
+                "A piece cannot move without exposing a more valuable piece to attack",
+                "A piece that moves backwards",
+                "An opening trap"
+              ],
+              "id": "chess_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'skewer'?",
+              "answer": "A piece is forced to move, exposing a less valuable piece behind it",
+              "explain": "A skewer is the opposite of a pin. An attacking piece forces a valuable piece (usually the king) to move, allowing the attacker to capture the piece behind it.",
+              "choices": [
+                "A piece that cannot move",
+                "A piece is forced to move, exposing a less valuable piece behind it",
+                "A double attack by two pieces",
+                "A move that blocks the board"
+              ],
+              "id": "chess_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'discovered attack'?",
+              "answer": "Moving one piece reveals an attack from another piece",
+              "explain": "A discovered attack happens when moving a piece uncovers an attack from another piece (often a bishop, rook, or queen) behind it. This creates a double threat.",
+              "choices": [
+                "A move that blocks an attack",
+                "Moving one piece reveals an attack from another piece",
+                "An illegal capture",
+                "A piece moving backwards"
+              ],
+              "id": "chess_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'double attack'?",
+              "answer": "One move attacks two or more opponent pieces",
+              "explain": "A double attack (or fork) puts pressure on multiple pieces or points at once. The opponent cannot defend all targets, so you gain an advantage.",
+              "choices": [
+                "Two pieces attack one piece",
+                "One move attacks two or more opponent pieces",
+                "Moving twice in a row",
+                "Capturing two pieces at once"
+              ],
+              "id": "chess_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Advanced Tactics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'combination'?",
+              "answer": "A sequence of forcing moves that achieve a goal",
+              "explain": "A combination is a series of moves (often checks, captures, or threats) that together achieve a concrete advantage, like winning material or delivering checkmate.",
+              "choices": [
+                "A single move that wins a piece",
+                "A sequence of forcing moves that achieve a goal",
+                "Moving pieces to the center",
+                "A defensive maneuver"
+              ],
+              "id": "chess_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'quiet move'?",
+              "answer": "A move that does not give check or capture anything",
+              "explain": "A quiet move improves your position without forcing the opponent's response. It might improve piece placement, create threats, or strengthen your position.",
+              "choices": [
+                "A move that ends the game",
+                "A move that does not give check or capture anything",
+                "A move that loses material",
+                "A move that is illegal"
+              ],
+              "id": "chess_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'forcing move'?",
+              "answer": "A move that gives check, captures, or creates an immediate threat",
+              "explain": "Forcing moves limit the opponent's options. A check must be answered, a capture might be recaptured, and a serious threat demands a response.",
+              "choices": [
+                "A move that improves piece placement",
+                "A move that gives check, captures, or creates an immediate threat",
+                "A move that develops a piece",
+                "A move that is slow"
+              ],
+              "id": "chess_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'zwischenzug' (a German term in chess)?",
+              "answer": "An in-between move that disrupts the opponent's plan",
+              "explain": "Zwischenzug (German for 'in-between move') is an unexpected check or threat inserted before the expected response, often winning material or gaining time.",
+              "choices": [
+                "A pawn promotion",
+                "An in-between move that disrupts the opponent's plan",
+                "A castling move",
+                "A backward move"
+              ],
+              "id": "chess_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'tempo'?",
+              "answer": "One move in chess",
+              "explain": "A tempo is a single move or a unit of time in a chess game. Gaining a tempo means forcing the opponent to use a move to respond, putting you ahead in development.",
+              "choices": [
+                "A time period lasting 5 minutes",
+                "One move in chess",
+                "A piece on the board",
+                "A win condition"
+              ],
+              "id": "chess_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Openings & Strategy",
+      "tip": "Openings are the first moves of the game, establishing your position and pieces. Good opening principles guide you toward better positions. Strategy is the long-term plan.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Opening Principles",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary goal of the opening?",
+              "answer": "Develop pieces and control the center",
+              "explain": "Good openings develop pieces toward the center, control central squares, and create safety for the king. The goal is to reach the middlegame with an advantage.",
+              "choices": [
+                "Capture the queen",
+                "Develop pieces and control the center",
+                "Move the king to the center",
+                "Promote a pawn"
+              ],
+              "id": "chess_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which is a good first move for white?",
+              "answer": "e4 or d4",
+              "explain": "e4 and d4 are both excellent first moves because they control the center immediately. Most openings begin with one of these moves.",
+              "choices": [
+                "a3",
+                "h4",
+                "e4 or d4",
+                "f4"
+              ],
+              "id": "chess_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Should you move the same piece twice in the opening?",
+              "answer": "No, develop all pieces first",
+              "explain": "A cardinal opening principle is to develop all your pieces before moving any twice. This ensures rapid mobilization of your army.",
+              "choices": [
+                "Yes, move the queen out early",
+                "No, develop all pieces first",
+                "Only if you are attacking",
+                "In blitz games only"
+              ],
+              "id": "chess_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is controlling the center important in the opening?",
+              "answer": "Central squares give pieces more influence and mobility",
+              "explain": "Pieces on central squares (d4, e4, d5, e5) control more squares and have more mobility. They are better placed to attack and defend.",
+              "choices": [
+                "The king must sit in the center",
+                "Central squares give pieces more influence and mobility",
+                "It is not important",
+                "Only in endgames"
+              ],
+              "id": "chess_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you castle in the opening?",
+              "answer": "After developing knights and bishops, before the center is fully open",
+              "explain": "Castling should happen once your pieces are developed and you have assessed the position. Early castling is often wise to tuck the king to safety.",
+              "choices": [
+                "On the first move",
+                "After developing knights and bishops, before the center is fully open",
+                "Never",
+                "Only when under attack"
+              ],
+              "id": "chess_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Common Openings",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Sicilian Defense'?",
+              "answer": "Black's main response to 1.e4, playing 1...c5",
+              "explain": "The Sicilian Defense (1.e4 c5) is black's most popular response to white's 1.e4. It is a fighting defense that leads to unbalanced, tactical positions.",
+              "choices": [
+                "A move by white",
+                "Black's main response to 1.e4, playing 1...c5",
+                "An endgame strategy",
+                "A type of castling"
+              ],
+              "id": "chess_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Scholar's Mate'?",
+              "answer": "A quick checkmate that begins 1.e4 e5 2.Bc4 Nc6 3.Qh5, threatening mate on f7",
+              "explain": "Scholar's Mate uses the queen and bishop to attack f7, the weakest square. It only works against beginners; experienced players defend easily.",
+              "choices": [
+                "A defensive opening",
+                "A quick checkmate that begins 1.e4 e5 2.Bc4 Nc6 3.Qh5, threatening mate on f7",
+                "A type of endgame",
+                "A long game"
+              ],
+              "id": "chess_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Fool's Mate'?",
+              "answer": "The quickest possible checkmate where white plays f3 and g4, losing in 2 moves",
+              "explain": "Fool's Mate is the fastest checkmate in chess: 1.f3 e5 2.g4 Qh4 mate. White's pawn moves open the diagonal to the king and nothing can block the queen.",
+              "choices": [
+                "A defensive strategy",
+                "The quickest possible checkmate where white plays f3 and g4, losing in 2 moves",
+                "A solid opening",
+                "A pawn endgame"
+              ],
+              "id": "chess_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In the 'Ruy Lopez' (Spanish Opening), what is white's first move sequence?",
+              "answer": "1.e4 e5 2.Nf3 Nc6 3.Bb5",
+              "explain": "The Ruy Lopez (1.e4 e5 2.Nf3 Nc6 3.Bb5) is one of the most popular openings. It puts immediate pressure on black's center.",
+              "choices": [
+                "1.d4 d5 2.Nf3",
+                "1.e4 e5 2.Nf3 Nc6 3.Bb5",
+                "1.e4 c5 2.Nf3",
+                "1.c4 e5"
+              ],
+              "id": "chess_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Queen's Gambit'?",
+              "answer": "1.d4 d5 2.c4, offering a pawn for rapid development",
+              "explain": "The Queen's Gambit (1.d4 d5 2.c4) is a classical opening where white offers a pawn to gain rapid development and space. Black usually accepts or declines the pawn.",
+              "choices": [
+                "1.e4 e5 2.Nf3",
+                "1.d4 d5 2.c4, offering a pawn for rapid development",
+                "1.c4 e5 2.Nc3",
+                "A move by black"
+              ],
+              "id": "chess_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Endgames",
+      "tip": "Endgames happen when few pieces remain. Key knowledge includes how to checkmate with different pieces and when to stop pushing for a win and accept a draw.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Basic Endgame Positions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In the endgame, which piece becomes more active and important?",
+              "answer": "The king",
+              "explain": "In endgames with few pieces, the king becomes a strong attacking piece. Early on, the king hides from danger, but in endgames it fights for the win.",
+              "choices": [
+                "The pawn",
+                "The king",
+                "The queen",
+                "The knight"
+              ],
+              "id": "chess_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'opposition' in pawn endgames?",
+              "answer": "Kings directly facing each other with one square between them",
+              "explain": "Opposition occurs when two kings face each other with exactly one square between them. The player not to move loses this position (it is zugzwang).",
+              "choices": [
+                "A pawn promotion",
+                "Kings directly facing each other with one square between them",
+                "A rook defending a pawn",
+                "A bishop on a diagonal"
+              ],
+              "id": "chess_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'zugzwang'?",
+              "answer": "A position where any move worsens the position",
+              "explain": "Zugzwang (German: compulsion to move) is when a player is better off not moving but is forced to make a move that worsens their position.",
+              "choices": [
+                "A type of checkmate",
+                "A position where any move worsens the position",
+                "A pawn reaching the end",
+                "A player not moving"
+              ],
+              "id": "chess_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In king and pawn versus king, what is the key concept?",
+              "answer": "The pawn must reach the promotion square",
+              "explain": "In K+P vs K, the only way to win is to promote the pawn. The stronger side must keep the enemy king away while advancing the pawn.",
+              "choices": [
+                "Checkmate the king",
+                "The pawn must reach the promotion square",
+                "Create a fortress",
+                "Force a draw"
+              ],
+              "id": "chess_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'fortress' in endgames?",
+              "answer": "A defensive position that cannot be broken through",
+              "explain": "A fortress is a defensive setup where the weaker side holds a draw despite material disadvantage. The defending side uses pieces to block any breakthrough.",
+              "choices": [
+                "An attacking position",
+                "A defensive position that cannot be broken through",
+                "A pawn promotion",
+                "A series of checks"
+              ],
+              "id": "chess_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Practical Endgame Play",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In a queen versus rook endgame, who is winning with best play?",
+              "answer": "The queen side usually wins",
+              "explain": "Queen vs. Rook is generally winning for the queen because of its superior power, though the rook can sometimes hold a draw with careful defense.",
+              "choices": [
+                "The rook side",
+                "The queen side usually wins",
+                "Always a draw",
+                "The side with the king more active"
+              ],
+              "id": "chess_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Is queen and pawn versus rook a win?",
+              "answer": "Usually yes, the queen should win",
+              "explain": "Queen and pawn versus rook usually favors the queen side, especially if the pawn is advanced. The extra material often decides.",
+              "choices": [
+                "No, it is always a draw",
+                "Usually yes, the queen should win",
+                "No, the rook always draws",
+                "It never happens"
+              ],
+              "id": "chess_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In rook endgames, where should the rook ideally be placed?",
+              "answer": "Behind passed pawns, or on the 7th rank when possible",
+              "explain": "Rooks are most effective behind passed pawns (their own or the opponent's) or on the 7th rank attacking the enemy king and pawns.",
+              "choices": [
+                "On the back rank",
+                "Behind passed pawns, or on the 7th rank when possible",
+                "In the corner",
+                "Defending the king"
+              ],
+              "id": "chess_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'passed pawn'?",
+              "answer": "A pawn with no enemy pawns ahead of it on its own or neighbouring files",
+              "explain": "No enemy pawn can block or capture a passed pawn on its way to promotion, so the opponent has to use pieces to stop it. That makes passed pawns very strong in endgames.",
+              "choices": [
+                "A pawn that moved twice",
+                "A pawn with no enemy pawns ahead of it on its own or neighbouring files",
+                "A pawn on the 7th rank",
+                "A pawn that is protected"
+              ],
+              "id": "chess_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Lucena position' used for?",
+              "answer": "Winning with rook and pawn versus rook",
+              "explain": "The Lucena position is the key winning setup in rook and pawn versus rook. The stronger side 'builds a bridge' with the rook to shelter the king from checks and promote the pawn.",
+              "choices": [
+                "Promoting a pawn",
+                "Winning with rook and pawn versus rook",
+                "Defending a fortress",
+                "A stalemate trap"
+              ],
+              "id": "chess_u6l2_4"
             }
           ]
         }
