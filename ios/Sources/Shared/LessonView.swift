@@ -34,13 +34,20 @@ struct LessonView: View {
     @State private var correctCount = 0
     @State private var matchedCount = 0
     @State private var matchMissed = false
+    /// Web parity (js/lingo-app.js): a miss comes back once at the end of the lesson,
+    /// and a first attempt opens on a "Learn this first" card.
+    @State private var queue: [Exercise] = []
+    @State private var retried: Set<String> = []
+    @State private var learning = false
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(alignment: .leading, spacing: 16) {
-                if index < lesson.exercises.count {
-                    let exercise = lesson.exercises[index]
+                if learning {
+                    LearnCard(rows: learnRows, lang: lang) { withAnimation { learning = false } }
+                } else if index < queue.count {
+                    let exercise = queue[index]
                     VStack(alignment: .leading, spacing: 16) {
                         HeartsRow(hearts: store.progress.hearts)
                         Text(prompt(for: exercise)).font(.title3.bold())
@@ -120,7 +127,7 @@ struct LessonView: View {
                         removal: .move(edge: .leading).combined(with: .opacity)
                     ))
                     .onAppear {
-                        if exercise.type == "listening" {
+                        if exercise.type == "listening", !learning {
                             Speech.speak(exercise.audio ?? exercise.answer, lang: lang)
                         }
                     }
@@ -149,7 +156,12 @@ struct LessonView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-        .onAppear { store.startLesson() }
+        .onAppear {
+            store.startLesson()
+            guard queue.isEmpty else { return }
+            queue = lesson.exercises
+            learning = !store.progress.completedLessonIds.contains("\(subjectId):\(lesson.id)") && !learnRows.isEmpty
+        }
         .animation(.spring(response: 0.35, dampingFraction: 0.8), value: feedback)
         // ponytail: driven off the existing feedback state, so the wrong-answer buzz is free.
         // .sensoryFeedback is cross-platform and simply no-ops on macOS, hence no #if fence.
@@ -181,12 +193,17 @@ struct LessonView: View {
         let correct = exercise.type == "match"
             ? !matchMissed
             : normalize(given(for: exercise)) == normalize(exercise.answer)
-        if correct { correctCount += 1 }
+        // A recovered miss counts, but never past the lesson's real length.
+        if correct { correctCount = min(correctCount + 1, lesson.exercises.count) }
+        if !correct, !retried.contains(exercise.id) {
+            retried.insert(exercise.id)
+            queue.append(exercise)
+        }
         store.recordAnswer(correct: correct, exerciseId: exercise.id, lessonId: lesson.id, subjectId: subjectId, exercise: exercise)
         withAnimation {
             feedback = correct
-                ? .correct(exercise.explain)
-                : .incorrect(exercise.answer, exercise.explain)
+                ? .correct(teach(exercise))
+                : .incorrect(exercise.answer, teach(exercise))
         }
     }
 
@@ -196,6 +213,49 @@ struct LessonView: View {
         text.lowercased()
             .trimmingCharacters(in: CharacterSet.punctuationCharacters.union(.whitespaces))
             .replacingOccurrences(of: " ", with: "")
+    }
+
+    /// What the answer means, from this lesson's own translation and match exercises.
+    private func meaning(of target: String) -> String? {
+        let key = normalize(target)
+        for e in lesson.exercises {
+            if e.type == "translation" || e.type == "sentence", normalize(e.answer) == key { return e.question }
+            for pair in e.pairs ?? [] where pair.count == 2 && normalize(pair[1]) == key { return pair[0] }
+        }
+        return nil
+    }
+
+    /// The line under the verdict: the written "why" if there is one, else for a
+    /// language answer what it means, so a miss teaches instead of only marking.
+    private func teach(_ exercise: Exercise) -> String? {
+        if let explain = exercise.explain { return explain }
+        guard lang != nil, exercise.type != "match" else { return nil }
+        let said = exercise.type == "cloze"
+            ? exercise.question.replacingOccurrences(of: "_{2,}", with: exercise.answer, options: .regularExpression)
+            : exercise.answer
+        let means = exercise.type == "translation" || exercise.type == "sentence" ? exercise.question : meaning(of: said)
+        if let means { return "\(said) means \"\(means)\"" }
+        return exercise.type == "cloze" ? said : nil
+    }
+
+    private var learnRows: [LearnRow] {
+        var rows: [LearnRow] = []
+        for e in lesson.exercises {
+            if let pairs = e.pairs {
+                for pair in pairs where pair.count == 2 { rows.append(LearnRow(term: pair[1], meaning: pair[0], sayable: true)) }
+            } else if e.type == "translation" || e.type == "sentence" {
+                rows.append(LearnRow(term: e.answer, meaning: e.question, sayable: true))
+            } else if e.type == "listening" {
+                rows.append(LearnRow(term: e.answer, meaning: meaning(of: e.answer) ?? "", sayable: true))
+            } else if e.type == "cloze" {
+                let full = e.question.replacingOccurrences(of: "_{2,}", with: e.answer, options: .regularExpression)
+                rows.append(LearnRow(term: full, meaning: meaning(of: full) ?? "", sayable: true))
+            } else {
+                rows.append(LearnRow(term: e.question, meaning: e.answer + (e.explain.map { ". \($0)" } ?? ""), sayable: false))
+            }
+        }
+        var seen: Set<String> = []
+        return Array(rows.filter { seen.insert($0.term).inserted }.prefix(8))
     }
 
     private func advance() {
@@ -288,7 +348,7 @@ private struct MatchGrid: View {
     }
 
     private func background(for cell: Cell) -> Color {
-        if matched.contains(cell.key) { return Color(hex: "f0faf4") }
+        if matched.contains(cell.key) { return Color(hex: "f5f5e6") }
         if selection == cell { return Color(hex: "5B9BD5").opacity(0.15) }
         return Color.secondary.opacity(0.12)
     }
@@ -412,6 +472,47 @@ private struct ChoiceButton: View {
     }
 }
 
+struct LearnRow: Identifiable {
+    let term: String
+    let meaning: String
+    let sayable: Bool
+    var id: String { term }
+}
+
+/// "Learn this first": the lesson's answers before its quiz.
+private struct LearnCard: View {
+    let rows: [LearnRow]
+    let lang: String?
+    let start: () -> Void
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("LEARN THIS FIRST").font(.caption).foregroundStyle(.secondary)
+                ForEach(rows) { row in
+                    HStack(alignment: .top, spacing: 10) {
+                        if lang != nil, row.sayable {
+                            Button { Speech.speak(row.term, lang: lang) } label: {
+                                Image(systemName: "speaker.wave.2.fill")
+                            }
+                            .buttonStyle(.bordered)
+                            .accessibilityLabel("Hear \(row.term)")
+                        }
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(row.term).font(.body.weight(.semibold))
+                            if !row.meaning.isEmpty {
+                                Text(row.meaning).font(.subheadline).foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+                Button("Start the quiz", action: start).buttonStyle(.borderedProminent)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+}
+
 enum FeedbackState: Equatable {
     case correct(String?)
     case incorrect(String, String?)
@@ -438,10 +539,10 @@ private struct FeedbackBanner: View {
             }
             Spacer()
         }
-        .foregroundStyle(state.isCorrect ? Color(hex: "2d7a50") : Color(hex: "c44040"))
+        .foregroundStyle(state.isCorrect ? Color(hex: "5c6f1f") : Color(hex: "c44040"))
         .padding()
         .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
-            .fill(state.isCorrect ? Color(hex: "f0faf4") : Color(hex: "faf0f0")))
+            .fill(state.isCorrect ? Color(hex: "f5f5e6") : Color(hex: "faf0f0")))
         .padding()
     }
 
