@@ -1,0 +1,904 @@
+{
+  "id": "distributed_systems",
+  "name": "Distributed Systems",
+  "category": "programming",
+  "icon": "fa-solid fa-circle-nodes",
+  "level": "Many Machines as One",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Why We Distribute",
+      "tip": "A distributed system spreads computation across multiple machines to achieve goals impossible on a single machine. The primary reasons are scaling capacity, surviving failures, and reducing latency.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Scalability and Availability",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a distributed system?",
+              "answer": "Multiple independent computers working together as a single logical system",
+              "explain": "A distributed system coordinates multiple machines to achieve a goal. Each machine is independent, so if one fails, others continue. They communicate over a network.",
+              "choices": [
+                "A network of printers",
+                "A single computer with many processors",
+                "Multiple hard drives on one machine",
+                "Multiple independent computers working together as a single logical system"
+              ],
+              "id": "distributed_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would a system distribute computation across machines?",
+              "answer": "To scale beyond one machine's capacity and survive failures",
+              "explain": "One machine has limits on CPU, RAM, and bandwidth. Distributing adds capacity. If one machine fails, others survive. Distributing also reduces latency for global users.",
+              "choices": [
+                "To scale beyond one machine's capacity and survive failures",
+                "To make computation slower",
+                "To eliminate all network delays",
+                "To use more expensive hardware"
+              ],
+              "id": "distributed_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'horizontal scaling'?",
+              "answer": "Adding more machines to a system to handle more load",
+              "explain": "Horizontal scaling (scale-out) adds more computers to share work. Vertical scaling (scale-up) adds more CPU or RAM to one machine. Horizontal scaling is how large systems handle billions of users.",
+              "choices": [
+                "Making one machine faster",
+                "Using smaller computers",
+                "Adding more machines to a system to handle more load",
+                "Removing machines to reduce cost"
+              ],
+              "id": "distributed_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'high availability'?",
+              "answer": "A system that remains operational despite component failures",
+              "explain": "High availability means the system is up and serving requests almost all the time. Distributed systems achieve this by replicating data and redirecting traffic away from failed machines.",
+              "choices": [
+                "A system that remains operational despite component failures",
+                "A system that uses expensive hardware",
+                "A very fast system",
+                "A system with no bugs"
+              ],
+              "id": "distributed_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'latency' mean in a distributed system?",
+              "answer": "The time it takes for a message to travel between machines",
+              "explain": "Latency is the delay from sending a request to receiving a response. In distributed systems, network latency is often the slowest part, not computation.",
+              "choices": [
+                "The time it takes for a message to travel between machines",
+                "The number of machines in the system",
+                "The cost of a server",
+                "The total amount of data transferred"
+              ],
+              "id": "distributed_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Trade-Offs and Complexity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the main trade-off of distributed systems?",
+              "answer": "Added complexity in exchange for scalability and fault tolerance",
+              "explain": "Distributing increases coordination overhead, makes debugging harder, and introduces new failure modes. You gain scalability and fault tolerance but lose simplicity.",
+              "choices": [
+                "Cheaper hardware with better performance",
+                "Faster computation with no latency",
+                "Added complexity in exchange for scalability and fault tolerance",
+                "Better security with no downsides"
+              ],
+              "id": "distributed_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'node' in a distributed system?",
+              "answer": "A single machine or process that participates in the system",
+              "explain": "A node is an independent computational unit. It can fail independently of other nodes. Nodes communicate by sending messages over the network.",
+              "choices": [
+                "A database file",
+                "A user account",
+                "A network cable",
+                "A single machine or process that participates in the system"
+              ],
+              "id": "distributed_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'asynchronous' system?",
+              "answer": "A system where messages have unbounded delivery time and execution times vary",
+              "explain": "In an asynchronous system, there are no guarantees on when a message arrives or how long a computation takes. The internet is asynchronous. This makes distributed algorithms harder.",
+              "choices": [
+                "A system that never uses threads",
+                "A system with predictable timing",
+                "A system that uses async/await in code",
+                "A system where messages have unbounded delivery time and execution times vary"
+              ],
+              "id": "distributed_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is network 'partitioning' or a 'partition'?",
+              "answer": "When network failures split the system into groups that cannot communicate",
+              "explain": "A network partition occurs when some machines become unreachable from others. It is different from a single machine crash. Partitions are common in distributed systems and must be handled carefully.",
+              "choices": [
+                "When a single machine is overloaded",
+                "When a disk is divided into sections",
+                "When users are separated by geography",
+                "When network failures split the system into groups that cannot communicate"
+              ],
+              "id": "distributed_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Byzantine' in Byzantine Fault Tolerance?",
+              "answer": "A fault where a machine behaves unpredictably or sends conflicting messages",
+              "explain": "Byzantine faults are the hardest faults to handle. A Byzantine node can lie, change its story, or act maliciously. This is different from a crash fault where a machine simply stops.",
+              "choices": [
+                "A software bug in old systems",
+                "A fault where a machine behaves unpredictably or sends conflicting messages",
+                "A fault specific to Byzantine networks",
+                "A security vulnerability"
+              ],
+              "id": "distributed_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Failure and Resilience",
+      "tip": "In distributed systems, failure is not an exception but an expectation. Partial failures are the hardest kind: some parts of the system fail while others continue, making failure detection complex.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Types of Failures",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'crash fault'?",
+              "answer": "A machine suddenly stops and does not recover",
+              "explain": "A crash fault is the simplest kind of failure. The machine stops, all its processes end, and it does not respond to messages. Detecting a crash can be hard over the network.",
+              "choices": [
+                "A user logging out",
+                "A machine suddenly stops and does not recover",
+                "A software bug that corrupts data",
+                "A network cable being unplugged"
+              ],
+              "id": "distributed_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'partial failure'?",
+              "answer": "Some parts of a distributed system fail while others continue operating normally",
+              "explain": "Partial failure is unique to distributed systems. Some nodes crash, some messages are lost, but the system as a whole keeps running. This makes it hard to know what is happening.",
+              "choices": [
+                "All machines fail at the same time",
+                "A failure that recovers automatically",
+                "Some parts of a distributed system fail while others continue operating normally",
+                "A failure that is incomplete"
+              ],
+              "id": "distributed_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is a failure detected in a distributed system?",
+              "answer": "By timeouts when a machine does not respond to ping messages",
+              "explain": "A timeout is the most common failure detector. If a node does not respond within a time limit, it is assumed to be down. But timeouts are imperfect: a slow node might be mistaken for a dead one.",
+              "choices": [
+                "By guessing at random",
+                "By timeouts when a machine does not respond to ping messages",
+                "By waiting for the machine to announce it crashed",
+                "By physically walking to the machine's rack"
+              ],
+              "id": "distributed_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'redundancy'?",
+              "answer": "Duplication of critical components to survive failures",
+              "explain": "Redundancy means having multiple copies of important data or services. If one copy fails, another takes over. Redundancy is the core technique for building fault-tolerant systems.",
+              "choices": [
+                "Duplication of critical components to survive failures",
+                "Encrypting data before it is sent",
+                "Removing unnecessary features",
+                "Compressing data to save space"
+              ],
+              "id": "distributed_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'quorum' in distributed systems?",
+              "answer": "A minimum number of nodes that must agree for a decision to be valid",
+              "explain": "A quorum ensures that even if some nodes fail, the surviving nodes can still make decisions. If a system has 5 nodes, a quorum might be 3 nodes (a majority).",
+              "choices": [
+                "A minimum number of nodes that must agree for a decision to be valid",
+                "The majority of users",
+                "A timeout for waiting for responses",
+                "A backup plan for failures"
+              ],
+              "id": "distributed_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Failure Recovery",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'recovery' in a distributed system?",
+              "answer": "Restoring a failed node to a consistent state and bringing it back online",
+              "explain": "Recovery involves restarting a failed machine, restoring its state from a replica or log, and catching it up with the rest of the system.",
+              "choices": [
+                "Detecting that a node has failed",
+                "Predicting failures before they happen",
+                "Removing a failed node permanently",
+                "Restoring a failed node to a consistent state and bringing it back online"
+              ],
+              "id": "distributed_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'replica'?",
+              "answer": "A copy of data on another node to enable recovery and failover",
+              "explain": "A replica is an independent copy of data stored on a different machine. If the primary fails, a replica takes over. Replicas also reduce latency by enabling reads from nearby copies.",
+              "choices": [
+                "A compressed version of data",
+                "A copy of data on another node to enable recovery and failover",
+                "A cache in a browser",
+                "A backup tape stored offline"
+              ],
+              "id": "distributed_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'replication lag'?",
+              "answer": "The delay between updating the primary and reflecting that change in replicas",
+              "explain": "Replication lag is inevitable: the primary updates, then it sends the update over the network to replicas. During the lag, reading from a replica gives stale data.",
+              "choices": [
+                "The delay before a disk write completes",
+                "The time to detect a failure",
+                "The total time for a network message",
+                "The delay between updating the primary and reflecting that change in replicas"
+              ],
+              "id": "distributed_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'backup' or 'snapshot'?",
+              "answer": "A point-in-time copy of system state used for recovery",
+              "explain": "A snapshot captures the entire state of a system at one moment. If something goes wrong, the system can be restored to the snapshot. Snapshots are periodically saved to stable storage.",
+              "choices": [
+                "A compressed file",
+                "A point-in-time copy of system state used for recovery",
+                "A temporary cache",
+                "A log of user actions"
+              ],
+              "id": "distributed_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'replication factor'?",
+              "answer": "The number of copies of data maintained to ensure durability",
+              "explain": "A replication factor of 3 means each piece of data is stored on 3 machines. Higher factors mean more protection against failures but higher storage cost.",
+              "choices": [
+                "The number of users accessing data",
+                "The size of the dataset",
+                "The speed of data transfer",
+                "The number of copies of data maintained to ensure durability"
+              ],
+              "id": "distributed_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Replication and Consistency",
+      "tip": "Replication copies data to multiple nodes, but different replicas can temporarily disagree about the current state. Consistency models define how strict these agreements must be.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Replication Models",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'synchronous replication'?",
+              "answer": "The primary waits for replicas to acknowledge changes before confirming to the client",
+              "explain": "In synchronous replication, the primary does not report success until replicas have stored the change. This is slow but ensures replicas are always up-to-date.",
+              "choices": [
+                "The primary waits for replicas to acknowledge changes before confirming to the client",
+                "Replicas update whenever they want",
+                "The primary replicates to all nodes at once",
+                "The primary never waits for replicas"
+              ],
+              "id": "distributed_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'asynchronous replication'?",
+              "answer": "The primary confirms changes immediately without waiting for replicas to acknowledge",
+              "explain": "Asynchronous replication is fast: the primary returns success to the client immediately, then sends updates to replicas in the background. But if the primary crashes, recent changes may be lost.",
+              "choices": [
+                "Replicas never see updates",
+                "The primary waits for replicas to finish",
+                "The primary replicates before responding",
+                "The primary confirms changes immediately without waiting for replicas to acknowledge"
+              ],
+              "id": "distributed_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'leader-based replication'?",
+              "answer": "One node (the leader) accepts writes and other nodes (followers) replicate its state",
+              "explain": "Leader-based replication is simple: all writes go to the leader, which streams changes to followers. Followers can serve reads. If the leader fails, one follower is elected as the new leader.",
+              "choices": [
+                "Every node processes writes independently",
+                "The leader only stores backups",
+                "Followers send writes to the leader",
+                "One node (the leader) accepts writes and other nodes (followers) replicate its state"
+              ],
+              "id": "distributed_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'leaderless replication'?",
+              "answer": "Any node can accept writes and distribute them to other replicas",
+              "explain": "In leaderless replication, all nodes are equal. A write can go to any node, which then broadcasts to others. This avoids a single point of failure but makes consistency harder.",
+              "choices": [
+                "Only one node can be written to",
+                "Reads and writes are always consistent",
+                "Any node can accept writes and distribute them to other replicas",
+                "Replicas never communicate"
+              ],
+              "id": "distributed_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'write-ahead log' (WAL)?",
+              "answer": "A log of changes written to disk before applying them, enabling recovery",
+              "explain": "A WAL records each change to stable storage before modifying memory or replicas. If a crash happens, the WAL lets the system recover without losing committed changes.",
+              "choices": [
+                "A cache of recent data",
+                "A record of failed writes",
+                "A log of changes written to disk before applying them, enabling recovery",
+                "A list of all read operations"
+              ],
+              "id": "distributed_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Consistency Models",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'strong consistency'?",
+              "answer": "All clients see the same data at all times after a write completes",
+              "explain": "With strong consistency, once a write is acknowledged, every subsequent read sees that write. This matches intuition but is hard to achieve in distributed systems.",
+              "choices": [
+                "Reads are always fast",
+                "There is no replication latency",
+                "Writes never fail",
+                "All clients see the same data at all times after a write completes"
+              ],
+              "id": "distributed_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'eventual consistency'?",
+              "answer": "All replicas converge to the same state over time if no new writes occur",
+              "explain": "With eventual consistency, replicas may temporarily disagree. Eventually, once writes stop, all replicas reach the same state. This is fast but clients may read stale data.",
+              "choices": [
+                "All machines must agree instantly",
+                "Data is never consistent",
+                "All replicas converge to the same state over time if no new writes occur",
+                "Consistency is guaranteed after one second"
+              ],
+              "id": "distributed_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'read-after-write consistency'?",
+              "answer": "A client always sees its own writes, even if other clients read stale data",
+              "explain": "Read-after-write consistency is a weaker guarantee: a client who writes a change will always see that change in subsequent reads. Other clients might see old data.",
+              "choices": [
+                "A client always sees its own writes, even if other clients read stale data",
+                "There is no consistency guarantee",
+                "All reads must be from the latest replica",
+                "Writes happen before reads"
+              ],
+              "id": "distributed_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'causal consistency'?",
+              "answer": "If a write depends on another write, all clients see them in that order",
+              "explain": "Causal consistency preserves cause-and-effect relationships. If one write causally depends on another, they must be ordered consistently. It is stronger than eventual but weaker than strong consistency.",
+              "choices": [
+                "Consistency is based on time",
+                "If a write depends on another write, all clients see them in that order",
+                "Replicas never need to coordinate",
+                "All writes must be instant"
+              ],
+              "id": "distributed_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does it mean to be 'linearizable'?",
+              "answer": "Operations appear to happen in some total order and each read sees the latest write",
+              "explain": "Linearizability is a strong consistency model: the system behaves as if there is one copy of data and all operations happen sequentially. It is hard to implement but provides clear semantics.",
+              "choices": [
+                "Data is stored in a line",
+                "Operations happen in the order the client sends them",
+                "Consistency is guaranteed eventually",
+                "Operations appear to happen in some total order and each read sees the latest write"
+              ],
+              "id": "distributed_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "CAP Theorem and Consensus",
+      "tip": "The CAP theorem says that when a network partition happens, a system must choose between Consistency and Availability. Consensus algorithms help multiple nodes agree on a value.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "CAP Theorem",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the CAP theorem state?",
+              "answer": "During a network partition, a system cannot be both fully consistent and fully available",
+              "explain": "CAP says that when the network splits, you must choose: stay consistent (some requests are refused) or stay available (some answers may be stale). C is every read returning the latest write, A is every request getting a response, P is surviving partitions.",
+              "choices": [
+                "All distributed systems must sacrifice performance",
+                "During a network partition, a system cannot be both fully consistent and fully available",
+                "Network partitions never happen",
+                "Consistency requires multiple machines"
+              ],
+              "id": "distributed_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Consistency' in the CAP theorem?",
+              "answer": "All nodes see the same data at all times",
+              "explain": "CAP's Consistency means linearizability: the system behaves like a single machine. Every read returns the latest write. This is stricter than eventual consistency.",
+              "choices": [
+                "Every machine has redundant data",
+                "Writes happen quickly",
+                "Data is never corrupted",
+                "All nodes see the same data at all times"
+              ],
+              "id": "distributed_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Availability' in the CAP theorem?",
+              "answer": "Every request to a working node gets a response, even if the data may be stale",
+              "explain": "In CAP, availability means every request to a non-failed node gets a real response, though it might not reflect the latest write. A system that refuses requests during a partition is giving up availability.",
+              "choices": [
+                "The system never crashes",
+                "Response times are always fast",
+                "All users can access the system",
+                "Every request to a working node gets a response, even if the data may be stale"
+              ],
+              "id": "distributed_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Partition tolerance' in the CAP theorem?",
+              "answer": "The system continues operating despite network partitions",
+              "explain": "Partition tolerance means the system can survive when the network splits into isolated groups. Servers on each side of the partition continue handling requests independently.",
+              "choices": [
+                "The network never has delays",
+                "Partitions of a disk never fail",
+                "Every node can always communicate",
+                "The system continues operating despite network partitions"
+              ],
+              "id": "distributed_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do real distributed systems choose between AP and CP, not CA?",
+              "answer": "Because network partitions happen in practice, so partition tolerance is essential",
+              "explain": "Partitions are inevitable in a real network, so a system cannot give up P. The real choice is what to give up during a partition: consistency (CP) or availability (AP).",
+              "choices": [
+                "Because consistency is impossible",
+                "Because availability is never needed",
+                "Because avoiding partitions is easy",
+                "Because network partitions happen in practice, so partition tolerance is essential"
+              ],
+              "id": "distributed_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Consensus Algorithms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'consensus' in distributed systems?",
+              "answer": "Getting multiple nodes to agree on a single value or decision",
+              "explain": "Consensus is hard because nodes can fail and the network can partition. Yet it is essential: leader election, atomic commits, and consistent data replication all need consensus.",
+              "choices": [
+                "When all nodes have the same hardware",
+                "When all nodes are online",
+                "A programming language agreement",
+                "Getting multiple nodes to agree on a single value or decision"
+              ],
+              "id": "distributed_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the Raft algorithm used for?",
+              "answer": "Achieving consensus and leader election among distributed nodes",
+              "explain": "Raft is a consensus algorithm that is easier to understand than Paxos. It uses a leader to coordinate: the leader appends entries to all followers' logs, and once a majority confirms, the entry is committed.",
+              "choices": [
+                "Encrypting data between nodes",
+                "Measuring network latency",
+                "Compressing log files",
+                "Achieving consensus and leader election among distributed nodes"
+              ],
+              "id": "distributed_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Paxos?",
+              "answer": "A consensus algorithm that tolerates crash faults as long as a majority of nodes work",
+              "explain": "Paxos lets nodes agree on a single value even if some nodes crash or messages are lost, as long as a majority can communicate. It does not handle Byzantine (lying) nodes. It uses multiple phases and is notoriously hard to understand and implement.",
+              "choices": [
+                "A file synchronization algorithm",
+                "A network encryption standard",
+                "A database replication protocol",
+                "A consensus algorithm that tolerates crash faults as long as a majority of nodes work"
+              ],
+              "id": "distributed_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'log' in consensus algorithms like Raft?",
+              "answer": "An ordered record of commands that have been decided, enabling recovery",
+              "explain": "The log is an append-only record of commands that all nodes must agree on. Once committed to the log, commands are durable and never lost. Nodes can rebuild their state by replaying the log.",
+              "choices": [
+                "A file of error messages",
+                "An ordered record of commands that have been decided, enabling recovery",
+                "A list of user activity",
+                "A record of network timestamps"
+              ],
+              "id": "distributed_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'commit' mean in a consensus algorithm?",
+              "answer": "A value is decided and will not change, even if nodes fail or partition",
+              "explain": "When a value is committed, it is considered decided. All future executions will respect this decision. Committed values survive failures and must be durable.",
+              "choices": [
+                "A transaction is validated",
+                "A file is saved to disk",
+                "A message is sent",
+                "A value is decided and will not change, even if nodes fail or partition"
+              ],
+              "id": "distributed_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Coordination and Ordering",
+      "tip": "Distributed systems must coordinate actions across nodes, including leader election, atomic operations, and maintaining causal order. Clocks and timestamps help establish ordering.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Leader Election and Coordination",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'leader election'?",
+              "answer": "A process where nodes decide which one will coordinate or make decisions",
+              "explain": "Leader election ensures that exactly one node is the leader. If the leader fails, a new leader is automatically elected. Raft and other consensus algorithms provide leader election.",
+              "choices": [
+                "Choosing the node with the most CPU",
+                "Users voting for a server",
+                "A human selecting a leader",
+                "A process where nodes decide which one will coordinate or make decisions"
+              ],
+              "id": "distributed_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'split brain' in leader election?",
+              "answer": "When a network partition causes two groups to each elect a different leader",
+              "explain": "Split brain is dangerous: two leaders both think they are in charge and make conflicting decisions. Quorum-based consensus prevents split brain by ensuring only one partition can form a quorum.",
+              "choices": [
+                "When a network partition causes two groups to each elect a different leader",
+                "When a node runs out of memory",
+                "When two nodes have the same ID",
+                "When the leader's disk fails"
+              ],
+              "id": "distributed_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'heartbeat' in leader election?",
+              "answer": "Periodic messages from the leader to followers to prove the leader is alive",
+              "explain": "The leader sends heartbeat messages to all followers at regular intervals. If followers stop receiving heartbeats, they assume the leader has failed and trigger a new election.",
+              "choices": [
+                "Periodic messages from the leader to followers to prove the leader is alive",
+                "A measure of system performance",
+                "A failure notification",
+                "A network latency metric"
+              ],
+              "id": "distributed_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'mutual exclusion' lock in distributed systems?",
+              "answer": "A mechanism ensuring only one node can execute a critical section at a time",
+              "explain": "A distributed lock prevents multiple nodes from accessing a shared resource simultaneously. Implementing a reliable distributed lock is non-trivial and often uses consensus.",
+              "choices": [
+                "A backup copy",
+                "A message queue",
+                "A shared variable",
+                "A mechanism ensuring only one node can execute a critical section at a time"
+              ],
+              "id": "distributed_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'ZooKeeper'?",
+              "answer": "A coordination service that provides distributed locks, leader election, and group management",
+              "explain": "ZooKeeper is a system that coordinates state across a group of machines. Applications use it for leader election, configuration management, and distributed locks.",
+              "choices": [
+                "A file compression utility",
+                "A database backup tool",
+                "A coordination service that provides distributed locks, leader election, and group management",
+                "A network router"
+              ],
+              "id": "distributed_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Clocks and Ordering",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'logical clock'?",
+              "answer": "A counter that tracks the partial order of events without relying on physical time",
+              "explain": "A logical clock is a simple counter incremented when an event occurs. It does not measure real time but helps order events causally. Lamport clocks are a common example.",
+              "choices": [
+                "A counter that tracks the partial order of events without relying on physical time",
+                "A timer in a computer",
+                "A measurement of latency",
+                "A synchronized physical clock"
+              ],
+              "id": "distributed_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'Lamport clock'?",
+              "answer": "A logical clock where each node maintains a counter and increments it on every event",
+              "explain": "A Lamport clock is simple: each node has a counter that increments on every local event. A message carries the sender's counter, and the receiver sets its own counter to one more than the larger of the two values.",
+              "choices": [
+                "A network protocol",
+                "A consensus algorithm",
+                "A synchronized physical clock",
+                "A logical clock where each node maintains a counter and increments it on every event"
+              ],
+              "id": "distributed_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'vector clock'?",
+              "answer": "A logical clock that tracks causal relationships between events on multiple nodes",
+              "explain": "A vector clock is a list of counters, one per node. Each node increments its own counter on every event. Vector clocks can determine if one event causally depends on another.",
+              "choices": [
+                "A message ordering protocol",
+                "A logical clock that tracks causal relationships between events on multiple nodes",
+                "A set of physical clocks",
+                "A method to synchronize clocks"
+              ],
+              "id": "distributed_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is clock synchronization hard in distributed systems?",
+              "answer": "Network latency is unbounded, so nodes cannot know exact propagation time",
+              "explain": "To synchronize clocks, nodes must measure how long messages take to travel. But network latency varies and has no upper bound, so perfectly precise synchronization is impossible.",
+              "choices": [
+                "Nodes run different operating systems",
+                "Software cannot read any clock",
+                "Synchronization is actually easy",
+                "Network latency is unbounded, so nodes cannot know exact propagation time"
+              ],
+              "id": "distributed_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'totally ordered broadcast'?",
+              "answer": "Delivering messages to all nodes in the same order, across all nodes",
+              "explain": "Totally ordered broadcast ensures messages are delivered consistently. All nodes deliver the same sequence of messages. It is essential for replicated state machines.",
+              "choices": [
+                "Sending a message to one node",
+                "Random message ordering",
+                "Delivering messages to all nodes in the same order, across all nodes",
+                "Broadcasting a message one at a time"
+              ],
+              "id": "distributed_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced Topics",
+      "tip": "Sharding distributes data across nodes by partitioning keys. Idempotency ensures operations can be safely retried. These patterns are foundational to building scalable, reliable distributed systems.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Sharding and Partitioning",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'sharding'?",
+              "answer": "Partitioning data across multiple nodes so each handles a subset of keys",
+              "explain": "Sharding distributes data by key: node A handles keys 0-999, node B handles 1000-1999. Each node stores less data and handles less traffic. Adding a node requires resharding.",
+              "choices": [
+                "Replicating data to all nodes",
+                "Compressing data on disk",
+                "Partitioning data across multiple nodes so each handles a subset of keys",
+                "Splitting a single file"
+              ],
+              "id": "distributed_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'shard key'?",
+              "answer": "The attribute used to determine which shard stores a piece of data",
+              "explain": "A shard key is chosen (e.g., user ID) and data is routed to shards based on the key. A good shard key distributes data evenly. A bad one causes hotspots where some shards are overloaded.",
+              "choices": [
+                "A backup key for recovery",
+                "A cryptographic key for encryption",
+                "A unique identifier for every record",
+                "The attribute used to determine which shard stores a piece of data"
+              ],
+              "id": "distributed_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'range-based sharding'?",
+              "answer": "Assigning contiguous key ranges to shards (e.g., shard 1 gets keys A-M)",
+              "explain": "Range-based sharding assigns key ranges to shards. It is simple and allows efficient range queries, but can cause hotspots if data is not uniformly distributed.",
+              "choices": [
+                "Sharding based on timestamp",
+                "Storing all data on one shard",
+                "Using a hash function to assign keys",
+                "Assigning contiguous key ranges to shards (e.g., shard 1 gets keys A-M)"
+              ],
+              "id": "distributed_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'hash-based sharding'?",
+              "answer": "Using a hash function to distribute keys uniformly across shards",
+              "explain": "Hash-based sharding applies a hash function to the key, then uses the hash to pick a shard. This distributes keys evenly but makes range queries hard because keys are scattered.",
+              "choices": [
+                "Using a hash function to distribute keys uniformly across shards",
+                "Using a human to assign keys",
+                "Storing data in alphabetical order",
+                "Assigning keys randomly"
+              ],
+              "id": "distributed_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'resharding'?",
+              "answer": "Redistributing data across shards when adding or removing shards",
+              "explain": "When a new shard is added, data must be moved to rebalance the load. Resharding is expensive and must be done carefully to avoid downtime.",
+              "choices": [
+                "Compressing shard data",
+                "Changing the shard key",
+                "Replicating shards",
+                "Redistributing data across shards when adding or removing shards"
+              ],
+              "id": "distributed_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Idempotency and Retries",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'idempotency'?",
+              "answer": "A property where repeating an operation produces the same result as executing it once",
+              "explain": "An idempotent operation is safe to retry: the result is the same whether it runs once or a hundred times. Example: setting x=5 is idempotent; incrementing x is not.",
+              "choices": [
+                "A property where repeating an operation produces the same result as executing it once",
+                "The ability to undo an operation",
+                "A type of encryption",
+                "The speed of an operation"
+              ],
+              "id": "distributed_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is idempotency important in distributed systems?",
+              "answer": "Because operations may be retried after failures, so they must be safe to repeat",
+              "explain": "In distributed systems, a client may not know if a server received or executed a request. Retrying is the safest approach, but it requires operations to be idempotent.",
+              "choices": [
+                "Because operations may be retried after failures, so they must be safe to repeat",
+                "Because it eliminates network latency",
+                "Because it reduces memory usage",
+                "Because it makes operations faster"
+              ],
+              "id": "distributed_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'idempotency key'?",
+              "answer": "A unique token sent with a request to deduplicate retries",
+              "explain": "An idempotency key is a unique identifier (like a UUID) sent with each request. The server tracks keys it has seen and avoids executing the same request twice.",
+              "choices": [
+                "A shard routing key",
+                "A unique token sent with a request to deduplicate retries",
+                "A message encryption key",
+                "A password for authentication"
+              ],
+              "id": "distributed_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'at-least-once' delivery guarantee?",
+              "answer": "A message will be delivered to the recipient one or more times",
+              "explain": "With at-least-once delivery, a message is guaranteed to be delivered, but may arrive multiple times. The recipient must be prepared for duplicates.",
+              "choices": [
+                "A message may or may not be delivered",
+                "A message is delivered exactly once",
+                "A message is delivered only to online nodes",
+                "A message will be delivered to the recipient one or more times"
+              ],
+              "id": "distributed_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'exponential backoff' in retry logic?",
+              "answer": "Increasing the delay between retries exponentially (wait 1s, then 2s, then 4s)",
+              "explain": "Exponential backoff prevents overwhelming a failing server by gradually increasing wait times between retries. It reduces the thundering herd problem when many clients retry simultaneously.",
+              "choices": [
+                "Increasing the delay between retries exponentially (wait 1s, then 2s, then 4s)",
+                "Reducing the delay between retries",
+                "Retrying immediately",
+                "Giving up after one failure"
+              ],
+              "id": "distributed_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

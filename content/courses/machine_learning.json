@@ -1,0 +1,904 @@
+{
+  "id": "machine_learning",
+  "name": "Machine Learning",
+  "category": "programming",
+  "icon": "fa-solid fa-brain",
+  "level": "Learning From Data",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Fundamentals",
+      "tip": "Machine learning is about building models that learn patterns from data. Every dataset has features (inputs) and labels (outputs). A good model generalizes from training data to unseen data.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Features, Labels, and Data",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'feature' in machine learning?",
+              "answer": "An input variable that the model uses to make predictions",
+              "explain": "A feature is an observable property of the data. In predicting house prices, features might be square footage, location, and year built.",
+              "choices": [
+                "An input variable that the model uses to make predictions",
+                "The correct answer for a prediction",
+                "A property of the neural network",
+                "A bug in the code"
+              ],
+              "id": "machine_learning_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'label'?",
+              "answer": "The output or target value that the model learns to predict",
+              "explain": "A label is the ground truth. To predict house prices, the label is the actual price. Features predict the label.",
+              "choices": [
+                "The output or target value that the model learns to predict",
+                "A name for the dataset",
+                "The error in the model",
+                "A description of a feature"
+              ],
+              "id": "machine_learning_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'supervised learning'?",
+              "answer": "Learning from labeled data where each example has a known target output",
+              "explain": "In supervised learning, you have pairs of (features, label). The model learns to map features to labels. Classification and regression are supervised learning tasks.",
+              "choices": [
+                "Learning without any data",
+                "Learning from labeled data where each example has a known target output",
+                "Learning from unlabeled data only",
+                "A human teaching the model step by step"
+              ],
+              "id": "machine_learning_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'unsupervised learning'?",
+              "answer": "Learning patterns from data without labels, finding structure in the data",
+              "explain": "In unsupervised learning, data has no labels. The model finds patterns, clusters, or representations. Clustering is a common unsupervised task.",
+              "choices": [
+                "A model with no training",
+                "Learning patterns from data without labels, finding structure in the data",
+                "Learning with incorrect labels",
+                "Supervised learning in reverse"
+              ],
+              "id": "machine_learning_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'observation' or 'example' in a dataset?",
+              "answer": "A single row of data with feature values and a label",
+              "explain": "An observation is one data point. A dataset of house prices has many observations, each with square footage, location, and price.",
+              "choices": [
+                "A single row of data with feature values and a label",
+                "The average of all data",
+                "The error in predictions",
+                "A test of the model"
+              ],
+              "id": "machine_learning_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Train, Validation, and Test",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the 'training set'?",
+              "answer": "Data used to fit the model and learn its parameters",
+              "explain": "The training set is given to the learning algorithm. The model learns patterns in this data. Typical split is 70-80% of data for training.",
+              "choices": [
+                "Data the model has never seen",
+                "Data used to evaluate the final model",
+                "Data used to fit the model and learn its parameters",
+                "Data with known errors"
+              ],
+              "id": "machine_learning_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'validation set'?",
+              "answer": "Data used to tune hyperparameters and select the best model during training",
+              "explain": "The validation set is used to evaluate model performance while training. You can use it to pick hyperparameters or choose which model variant to use.",
+              "choices": [
+                "Data for final evaluation",
+                "Data that is never seen by the model",
+                "The same as training data",
+                "Data used to tune hyperparameters and select the best model during training"
+              ],
+              "id": "machine_learning_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'test set'?",
+              "answer": "Data held out until the end to evaluate final model performance",
+              "explain": "The test set is unseen during development. You evaluate your final model on the test set to get a realistic estimate of performance on new data.",
+              "choices": [
+                "Data to tune hyperparameters",
+                "Data held out until the end to evaluate final model performance",
+                "Data used to train the model",
+                "Data with incorrect labels"
+              ],
+              "id": "machine_learning_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is it important to split data into train/validation/test?",
+              "answer": "To evaluate how well the model generalizes to unseen data",
+              "explain": "If you evaluate the model on training data, it will always look great but may be overfitting. Test data gives an honest estimate of real-world performance.",
+              "choices": [
+                "To use less data",
+                "To evaluate how well the model generalizes to unseen data",
+                "To make the model simpler",
+                "To make training faster"
+              ],
+              "id": "machine_learning_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'hyperparameter'?",
+              "answer": "A setting of the learning algorithm that is not learned from data but chosen before training",
+              "explain": "Examples: learning rate, number of trees in a forest, k in k-nearest neighbors. These are not learned; you set them before training and often tune them on the validation set.",
+              "choices": [
+                "An error in the model",
+                "An input feature",
+                "A setting of the learning algorithm that is not learned from data but chosen before training",
+                "A weight learned during training"
+              ],
+              "id": "machine_learning_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Regression",
+      "tip": "Regression predicts continuous values. A model learns a function that maps inputs to outputs. Linear regression is the simplest case but extensions handle non-linear relationships.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Linear Regression",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'regression'?",
+              "answer": "Predicting a continuous numerical output from input features",
+              "explain": "Regression outputs a real number, not a category. Predicting house prices, temperature, or stock values are regression tasks.",
+              "choices": [
+                "Predicting a continuous numerical output from input features",
+                "Finding patterns in data",
+                "Predicting a category or class",
+                "Reducing the size of a dataset"
+              ],
+              "id": "machine_learning_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'linear regression'?",
+              "answer": "Fitting a line (or hyperplane) to data to predict continuous values",
+              "explain": "Linear regression assumes a linear relationship: y = mx + b. It finds the best line that fits the training data. Simple but effective.",
+              "choices": [
+                "Removing outliers from data",
+                "Drawing a line on a graph",
+                "Predicting categories",
+                "Fitting a line (or hyperplane) to data to predict continuous values"
+              ],
+              "id": "machine_learning_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'slope' in a linear regression model y = mx + b?",
+              "answer": "The coefficient m that determines how much y changes when x increases",
+              "explain": "The slope m is the learned parameter. If m = 2, then y increases by 2 for every 1 unit increase in x.",
+              "choices": [
+                "The coefficient m that determines how much y changes when x increases",
+                "The y-intercept",
+                "The training data",
+                "The error in predictions"
+              ],
+              "id": "machine_learning_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'intercept' or 'bias' in y = mx + b?",
+              "answer": "The constant b that is added to the prediction regardless of inputs",
+              "explain": "The intercept b is the value of y when x = 0. It shifts the line up or down.",
+              "choices": [
+                "The slope of the line",
+                "The number of features",
+                "The error term",
+                "The constant b that is added to the prediction regardless of inputs"
+              ],
+              "id": "machine_learning_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does linear regression find the best line?",
+              "answer": "By minimizing the sum of squared differences between predicted and actual values",
+              "explain": "Linear regression finds parameters (m and b) that minimize squared error. This is called least squares fitting.",
+              "choices": [
+                "By drawing lines visually",
+                "By minimizing the sum of squared differences between predicted and actual values",
+                "By asking a human",
+                "By randomly trying lines"
+              ],
+              "id": "machine_learning_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Classification and Extensions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'classification'?",
+              "answer": "Predicting a category or class label for an input",
+              "explain": "Classification outputs a discrete label, not a number. Spam vs. not-spam, cat vs. dog, or high/medium/low risk are classification problems.",
+              "choices": [
+                "Drawing boundaries on a plot",
+                "Grouping similar data together",
+                "Predicting a continuous value",
+                "Predicting a category or class label for an input"
+              ],
+              "id": "machine_learning_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'logistic regression'?",
+              "answer": "A regression method adapted for binary classification by predicting probabilities",
+              "explain": "Logistic regression outputs a probability (0 to 1) for the positive class. It uses a logistic function to squash linear predictions into the range [0, 1].",
+              "choices": [
+                "A clustering algorithm",
+                "Predicting multiple continuous values",
+                "A regression method adapted for binary classification by predicting probabilities",
+                "A linear regression with no intercept"
+              ],
+              "id": "machine_learning_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'sigmoid function' in logistic regression?",
+              "answer": "A mathematical function that maps any input to a probability between 0 and 1",
+              "explain": "The sigmoid function is S-shaped. It converts linear predictions to probabilities. It is defined as 1 / (1 + e^(-z)) where z is the linear prediction.",
+              "choices": [
+                "A mathematical function that maps any input to a probability between 0 and 1",
+                "A line in 2D space",
+                "An error measurement",
+                "A random number generator"
+              ],
+              "id": "machine_learning_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'non-linear regression'?",
+              "answer": "Fitting a curve (not a line) to data to model non-linear relationships",
+              "explain": "Real data often has non-linear patterns. Non-linear regression uses polynomials, splines, or other curves. Example: y = ax^2 + bx + c.",
+              "choices": [
+                "Regression that always fails",
+                "Linear regression with errors",
+                "Fitting a curve (not a line) to data to model non-linear relationships",
+                "Classification with probabilities"
+              ],
+              "id": "machine_learning_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'polynomial regression'?",
+              "answer": "Using polynomial features (x, x^2, x^3) to fit non-linear relationships",
+              "explain": "Polynomial regression treats x^2, x^3, etc. as features and applies linear regression. Example: y = a + bx + cx^2 fits a parabola.",
+              "choices": [
+                "Linear regression with regularization",
+                "Using polynomial features (x, x^2, x^3) to fit non-linear relationships",
+                "Using polynomials in the feature names",
+                "A regression with multiple errors"
+              ],
+              "id": "machine_learning_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Decision Trees and Neighbors",
+      "tip": "Decision trees partition feature space by asking yes/no questions. K-nearest neighbors classifies by looking at nearby examples. Both are intuitive and powerful.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Decision Trees",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'decision tree'?",
+              "answer": "A tree-like model that partitions data using a sequence of if-then rules",
+              "explain": "A decision tree asks questions like 'Is age > 30?' If yes, go left; if no, go right. Each question splits the data until you reach a leaf with a prediction.",
+              "choices": [
+                "A file system structure",
+                "A tree-like model that partitions data using a sequence of if-then rules",
+                "A graph of decision-making",
+                "A biological tree for growth"
+              ],
+              "id": "machine_learning_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'split' or 'node' in a decision tree?",
+              "answer": "A question that divides data based on a feature and threshold",
+              "explain": "At each node, the tree selects a feature and a threshold. Data is split into two groups based on whether the feature exceeds the threshold.",
+              "choices": [
+                "A question that divides data based on a feature and threshold",
+                "An error measure",
+                "A prediction output",
+                "A leaf of the tree"
+              ],
+              "id": "machine_learning_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'leaf' in a decision tree?",
+              "answer": "A final node that outputs a prediction without further splits",
+              "explain": "A leaf is the end of a path through the tree. It contains the prediction: the most common class (classification) or average value (regression).",
+              "choices": [
+                "The root of the tree",
+                "A question in the tree",
+                "A final node that outputs a prediction without further splits",
+                "A branch of the tree"
+              ],
+              "id": "machine_learning_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'tree depth'?",
+              "answer": "The number of questions (splits) on the longest path from root to leaf",
+              "explain": "Deeper trees can learn complex patterns but tend to overfit. Shallow trees are simpler but may underfit.",
+              "choices": [
+                "The total number of leaves",
+                "The size of the dataset",
+                "The number of features used",
+                "The number of questions (splits) on the longest path from root to leaf"
+              ],
+              "id": "machine_learning_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do deep decision trees tend to overfit?",
+              "answer": "They ask many questions, fitting noise and details specific to training data",
+              "explain": "A very deep tree can memorize the training data, learning quirks that do not generalize. Limiting tree depth prevents overfitting.",
+              "choices": [
+                "Deep trees are always slower",
+                "Deep trees only work on small datasets",
+                "They ask many questions, fitting noise and details specific to training data",
+                "Depth causes the model to forget"
+              ],
+              "id": "machine_learning_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "K-Nearest Neighbors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'k-nearest neighbors' (kNN)?",
+              "answer": "Classifying by finding the k closest examples in the training set and using their labels",
+              "explain": "kNN is lazy: it stores all training data. To classify a new point, it finds the k nearest neighbors and votes. The prediction is the majority class.",
+              "choices": [
+                "A tree with k branches",
+                "A clustering algorithm",
+                "A regression with k features",
+                "Classifying by finding the k closest examples in the training set and using their labels"
+              ],
+              "id": "machine_learning_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'k' mean in k-nearest neighbors?",
+              "answer": "The number of nearest neighbors to consider when making a prediction",
+              "explain": "With k=3, you look at the 3 closest examples. With k=1, you look at the single closest example. Larger k reduces noise but may miss fine details.",
+              "choices": [
+                "The number of features",
+                "The learning rate",
+                "The number of nearest neighbors to consider when making a prediction",
+                "The size of the dataset"
+              ],
+              "id": "machine_learning_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does kNN measure 'distance' between examples?",
+              "answer": "Using a metric like Euclidean distance: distance = sqrt((x1-x2)^2 + (y1-y2)^2)",
+              "explain": "Euclidean distance is the most common. Other metrics exist: Manhattan distance, cosine distance, etc. The choice affects which neighbors are considered nearest.",
+              "choices": [
+                "Randomly selecting neighbors",
+                "Using a metric like Euclidean distance: distance = sqrt((x1-x2)^2 + (y1-y2)^2)",
+                "By comparing class labels",
+                "By counting features"
+              ],
+              "id": "machine_learning_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is kNN called 'lazy learning'?",
+              "answer": "It does no training; it only stores data and computes predictions at query time",
+              "explain": "kNN has no explicit training phase. When you query, it searches the stored training data. This delays computation until prediction time.",
+              "choices": [
+                "Because it gives lazy results",
+                "It does no training; it only stores data and computes predictions at query time",
+                "Because it uses few features",
+                "Because it learns slowly"
+              ],
+              "id": "machine_learning_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a problem with kNN on large datasets?",
+              "answer": "Storing and searching large amounts of data is slow at prediction time",
+              "explain": "kNN needs to compute distances to all training examples. With millions of examples, this is expensive. It also uses a lot of memory.",
+              "choices": [
+                "It cannot handle multiple classes",
+                "Storing and searching large amounts of data is slow at prediction time",
+                "Training is very slow",
+                "It only works on 2D data"
+              ],
+              "id": "machine_learning_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unsupervised Learning",
+      "tip": "Unsupervised learning finds structure in data without labels. Clustering groups similar examples together. K-means is a simple and popular clustering algorithm.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Clustering Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'clustering'?",
+              "answer": "Grouping similar examples together without using labels",
+              "explain": "Clustering discovers natural groups in data. It is unsupervised: you do not tell the model which group each example belongs to.",
+              "choices": [
+                "Removing duplicates from data",
+                "Grouping similar examples together without using labels",
+                "Predicting a continuous value",
+                "Predicting a class label"
+              ],
+              "id": "machine_learning_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'cluster'?",
+              "answer": "A group of similar examples that the model assigns together",
+              "explain": "A cluster contains examples that are close in feature space. Examples in the same cluster are similar; examples in different clusters are dissimilar.",
+              "choices": [
+                "A decision boundary",
+                "A group of similar examples that the model assigns together",
+                "A feature value",
+                "A single example"
+              ],
+              "id": "machine_learning_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'centroid' in clustering?",
+              "answer": "The center point of a cluster, representing the average position of all examples in the cluster",
+              "explain": "A centroid is like a representative of the cluster. For a cluster of customers, the centroid is the average customer in that group.",
+              "choices": [
+                "The largest example in a cluster",
+                "The center point of a cluster, representing the average position of all examples in the cluster",
+                "The first example in a cluster",
+                "A label for the cluster"
+              ],
+              "id": "machine_learning_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How many clusters should you use?",
+              "answer": "That depends on the data and the application; you may need to experiment",
+              "explain": "There is no single correct answer. You can use methods like the elbow method to find a good number of clusters, but ultimately it depends on your goal.",
+              "choices": [
+                "Always 2 clusters",
+                "The number of features",
+                "The size of the dataset",
+                "That depends on the data and the application; you may need to experiment"
+              ],
+              "id": "machine_learning_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'elbow method'?",
+              "answer": "Plotting cluster quality against number of clusters and finding where it levels off",
+              "explain": "As you increase clusters, quality improves. At some point, adding more clusters helps less. The elbow (the bend) suggests a good number of clusters.",
+              "choices": [
+                "Plotting cluster quality against number of clusters and finding where it levels off",
+                "A medical diagnosis technique",
+                "Using your elbow to press the mouse",
+                "A type of joint in the data"
+              ],
+              "id": "machine_learning_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "K-Means Algorithm",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'k-means clustering'?",
+              "answer": "An algorithm that partitions data into k clusters by iteratively updating centroids",
+              "explain": "K-means initializes k centroids, assigns examples to the nearest centroid, then updates centroids as the mean of assigned examples. It repeats until convergence.",
+              "choices": [
+                "A regression algorithm with k features",
+                "An algorithm that partitions data into k clusters by iteratively updating centroids",
+                "A classifier that uses k neighbors",
+                "A decision tree with k leaves"
+              ],
+              "id": "machine_learning_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the main steps of k-means?",
+              "answer": "Initialize centroids, assign examples to nearest centroid, update centroids, repeat",
+              "explain": "K-means alternates between assigning and updating until centroids stop moving. No iteration increases the total within-cluster distance.",
+              "choices": [
+                "Sort examples by distance",
+                "Label each example",
+                "Remove outliers",
+                "Initialize centroids, assign examples to nearest centroid, update centroids, repeat"
+              ],
+              "id": "machine_learning_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'objective' or 'loss' that k-means minimizes?",
+              "answer": "The sum of squared distances from each example to its assigned centroid",
+              "explain": "K-means minimizes within-cluster variance: sum of squared distances from examples to their cluster centers. Tighter clusters have lower loss.",
+              "choices": [
+                "The sum of squared distances from each example to its assigned centroid",
+                "The distance between centroids",
+                "The size of the largest cluster",
+                "The number of clusters"
+              ],
+              "id": "machine_learning_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why does k-means not always find the global optimum?",
+              "answer": "Initialization and local minima: different starting centroids may lead to different results",
+              "explain": "K-means is greedy and can get stuck in local minima. Running it multiple times with different initializations helps find better solutions.",
+              "choices": [
+                "The data has no global optimum",
+                "It always finds the optimal solution",
+                "Initialization and local minima: different starting centroids may lead to different results",
+                "The algorithm has a bug"
+              ],
+              "id": "machine_learning_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a limitation of k-means?",
+              "answer": "It assumes clusters are roughly spherical and similarly sized",
+              "explain": "K-means works well for round clusters of similar size. It struggles with elongated or very differently sized clusters.",
+              "choices": [
+                "It requires labels",
+                "It cannot handle numerical data",
+                "It assumes clusters are roughly spherical and similarly sized",
+                "It always overfits"
+              ],
+              "id": "machine_learning_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Model Evaluation",
+      "tip": "Evaluating a model tells you how well it works. Different metrics suit different tasks. Accuracy is simple but can be misleading with imbalanced data.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Accuracy and Error Metrics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'accuracy'?",
+              "answer": "The fraction of correct predictions out of all predictions",
+              "explain": "Accuracy = (correct predictions) / (total predictions). With 100 examples and 90 correct, accuracy is 0.90 or 90%.",
+              "choices": [
+                "The fraction of correct predictions out of all predictions",
+                "The cost of training",
+                "The confidence in a prediction",
+                "The speed of a model"
+              ],
+              "id": "machine_learning_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'confusion matrix'?",
+              "answer": "A table showing true positives, true negatives, false positives, and false negatives",
+              "explain": "A confusion matrix breaks down predictions into four categories: correct yes, correct no, wrong yes, wrong no. It reveals what types of mistakes the model makes.",
+              "choices": [
+                "A performance graph",
+                "A matrix that confuses the model",
+                "A table showing true positives, true negatives, false positives, and false negatives",
+                "A list of errors"
+              ],
+              "id": "machine_learning_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'precision'?",
+              "answer": "Of the examples predicted positive, how many were actually positive",
+              "explain": "Precision = TP / (TP + FP). It answers: when the model says yes, how often is it right? Precision matters when false positives are costly.",
+              "choices": [
+                "Of the examples predicted positive, how many were actually positive",
+                "Of the positive examples, how many did the model find",
+                "The average error",
+                "The total number of correct predictions"
+              ],
+              "id": "machine_learning_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'recall' or 'sensitivity'?",
+              "answer": "Of the actual positive examples, how many did the model correctly identify",
+              "explain": "Recall = TP / (TP + FN). It answers: of all actual positives, how many did the model find? Recall matters when missing positives is costly (e.g., disease detection).",
+              "choices": [
+                "The precision of the model",
+                "The training error",
+                "Of the actual positive examples, how many did the model correctly identify",
+                "The number of false positives"
+              ],
+              "id": "machine_learning_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'F1 score'?",
+              "answer": "The harmonic mean of precision and recall, balancing both metrics",
+              "explain": "F1 = 2 * (precision * recall) / (precision + recall). It is useful when you care about both false positives and false negatives.",
+              "choices": [
+                "The accuracy of the model",
+                "The sum of precision and recall",
+                "The harmonic mean of precision and recall, balancing both metrics",
+                "The number of features"
+              ],
+              "id": "machine_learning_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Bias, Variance, and Regularization",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "In the bias-variance trade-off, what does 'bias' mean?",
+              "answer": "The error from a model being too simple and unable to capture true patterns",
+              "explain": "High bias means the model oversimplifies. A straight line fitting curved data has high bias. It underfits.",
+              "choices": [
+                "The difference between prediction and truth",
+                "The error from a model being too simple and unable to capture true patterns",
+                "The intercept term in a model",
+                "A preference for one class over another"
+              ],
+              "id": "machine_learning_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'variance' in machine learning?",
+              "answer": "The error from a model being too complex and fitting noise in the data",
+              "explain": "High variance means the model is sensitive to small changes in training data. It fits quirks and noise. It overfits.",
+              "choices": [
+                "The difference between two models",
+                "The number of features in the model",
+                "The complexity of features",
+                "The error from a model being too complex and fitting noise in the data"
+              ],
+              "id": "machine_learning_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'bias-variance trade-off'?",
+              "answer": "As you reduce bias, variance increases, and vice versa; the goal is to balance both",
+              "explain": "A simple model has high bias but low variance. A complex model has low bias but high variance. The best model balances these two sources of error.",
+              "choices": [
+                "Bias and variance are unrelated",
+                "You should always minimize both",
+                "One is always more important than the other",
+                "As you reduce bias, variance increases, and vice versa; the goal is to balance both"
+              ],
+              "id": "machine_learning_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'regularization'?",
+              "answer": "A technique that penalizes complex models to reduce overfitting",
+              "explain": "Regularization adds a penalty term for model complexity. Larger weights are penalized, discouraging the model from fitting noise.",
+              "choices": [
+                "A technique that penalizes complex models to reduce overfitting",
+                "Sorting data by label",
+                "Splitting data into folds",
+                "Scaling every feature to the same range"
+              ],
+              "id": "machine_learning_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'L2 regularization' or 'ridge regression'?",
+              "answer": "Penalizing the sum of squared weights to prevent large weights",
+              "explain": "L2 adds a term proportional to the sum of squared weights to the loss. It shrinks weights but rarely makes them exactly zero.",
+              "choices": [
+                "Penalizing the sum of squared weights to prevent large weights",
+                "Penalizing the sum of absolute weights",
+                "Requiring all weights to be equal",
+                "Removing features with small weights"
+              ],
+              "id": "machine_learning_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Advanced Metrics and Concepts",
+      "tip": "Beyond accuracy, many metrics help evaluate models fairly. ROC curves, precision-recall curves, and other tools reveal performance trade-offs. Cross-validation gives robust error estimates.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "ROC and Curves",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an 'ROC curve'?",
+              "answer": "A curve showing the trade-off between true positive rate and false positive rate",
+              "explain": "ROC (Receiver Operating Characteristic) plots TPR vs. FPR as the classification threshold changes. A curve closer to the top-left is better.",
+              "choices": [
+                "A curve showing the trade-off between true positive rate and false positive rate",
+                "A graph of predictions over time",
+                "A distribution of features",
+                "A plot of training loss"
+              ],
+              "id": "machine_learning_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'AUC' (Area Under the Curve)?",
+              "answer": "The area under the ROC curve, a single number summarizing model performance",
+              "explain": "AUC ranges from 0 to 1. AUC = 0.5 means random guessing. AUC = 1 means perfect classification. Higher is better.",
+              "choices": [
+                "The average of all errors",
+                "The number of clusters",
+                "The area under the ROC curve, a single number summarizing model performance",
+                "The area under a decision boundary"
+              ],
+              "id": "machine_learning_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'precision-recall curve'?",
+              "answer": "A curve showing the trade-off between precision and recall as the classification threshold changes",
+              "explain": "Like ROC, but for precision and recall. Useful when classes are imbalanced. A curve in the top-right corner is best.",
+              "choices": [
+                "A curve showing the trade-off between precision and recall as the classification threshold changes",
+                "A graph of training accuracy",
+                "A comparison of two models",
+                "A plot of feature values"
+              ],
+              "id": "machine_learning_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'threshold' in classification?",
+              "answer": "The probability cutoff: predictions above it are positive, below are negative",
+              "explain": "By default, the threshold is 0.5. Lowering it makes the model more likely to predict positive (higher recall, lower precision). Raising it does the opposite.",
+              "choices": [
+                "A filter for features",
+                "The accuracy of the model",
+                "The number of classes",
+                "The probability cutoff: predictions above it are positive, below are negative"
+              ],
+              "id": "machine_learning_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use a non-0.5 threshold?",
+              "answer": "When the costs of false positives and false negatives are different",
+              "explain": "If missing a cancer diagnosis (false negative) is much worse than a false alarm (false positive), lower the threshold.",
+              "choices": [
+                "When the costs of false positives and false negatives are different",
+                "Never, the default is best",
+                "When you have many features",
+                "Always, to be safe"
+              ],
+              "id": "machine_learning_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Cross-Validation and Overfitting",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'cross-validation'?",
+              "answer": "A technique that splits data into folds and repeatedly trains and evaluates on different splits",
+              "explain": "Cross-validation uses the data more efficiently than a single train/test split. With k-fold CV, you split into k folds, train k times using different test sets, and average results.",
+              "choices": [
+                "Validating a model multiple times",
+                "Testing on a separate computer",
+                "A technique that splits data into folds and repeatedly trains and evaluates on different splits",
+                "Checking if data is clean"
+              ],
+              "id": "machine_learning_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'k-fold cross-validation'?",
+              "answer": "Splitting data into k folds, training k models leaving one fold out, and averaging the results",
+              "explain": "With 5-fold CV, split data into 5 equal parts. Train 5 models, each leaving one fold for testing. Final score is the average.",
+              "choices": [
+                "Training k models on the same data",
+                "Splitting data into k folds, training k models leaving one fold out, and averaging the results",
+                "Splitting data k times randomly",
+                "Using k features in cross-validation"
+              ],
+              "id": "machine_learning_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'overfitting'?",
+              "answer": "A model that learns training data too well, fitting noise, and fails on new data",
+              "explain": "An overfit model has low training error but high test error. It memorizes rather than generalizes. Signs: training accuracy very high but test accuracy drops.",
+              "choices": [
+                "A good model that generalizes",
+                "A model that learns training data too well, fitting noise, and fails on new data",
+                "Training the model too long",
+                "Using too many features"
+              ],
+              "id": "machine_learning_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'underfitting'?",
+              "answer": "A model that is too simple and fails to learn patterns in the data",
+              "explain": "An underfit model has high error on both training and test data. It is not complex enough. Signs: both accuracies low.",
+              "choices": [
+                "Training on a dataset that is too large",
+                "A model that is too simple and fails to learn patterns in the data",
+                "Overfitting to the validation set",
+                "Using too few features"
+              ],
+              "id": "machine_learning_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you detect overfitting?",
+              "answer": "Compare training and test error: if test error is much higher, the model is overfitting",
+              "explain": "Training error may be low. If test error is high, the model overfit. A learning curve showing diverging training and test errors is a sign.",
+              "choices": [
+                "Overfitting is impossible to detect",
+                "Look at accuracy alone",
+                "Training always produces overfitting",
+                "Compare training and test error: if test error is much higher, the model is overfitting"
+              ],
+              "id": "machine_learning_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
