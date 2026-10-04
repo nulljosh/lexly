@@ -185,13 +185,6 @@
           "packPath": "/content/courses/ai.json"
         },
         {
-          "id": "hardware",
-          "name": "Computer Hardware",
-          "icon": "fa-solid fa-microchip",
-          "level": "How Machines Are Built",
-          "packPath": "/content/courses/hardware.json"
-        },
-        {
           "id": "reverse_engineering",
           "name": "Reverse Engineering",
           "icon": "fa-solid fa-magnifying-glass-chart",
@@ -423,13 +416,6 @@
           "packPath": "/content/courses/computer_networks.json"
         },
         {
-          "id": "computer_architecture",
-          "name": "Computer Architecture",
-          "icon": "fa-solid fa-microchip",
-          "level": "How Processors Are Organised",
-          "packPath": "/content/courses/computer_architecture.json"
-        },
-        {
           "id": "compilers",
           "name": "Compilers",
           "icon": "fa-solid fa-gears",
@@ -484,6 +470,25 @@
           "icon": "fa-solid fa-screwdriver-wrench",
           "level": "Building Software Well",
           "packPath": "/content/courses/software_engineering.json"
+        }
+      ]
+    },
+    "engineering": {
+      "title": "Choose an engineering topic",
+      "subjects": [
+        {
+          "id": "hardware",
+          "name": "Computer Hardware",
+          "icon": "fa-solid fa-microchip",
+          "level": "How Machines Are Built",
+          "packPath": "/content/courses/hardware.json"
+        },
+        {
+          "id": "computer_architecture",
+          "name": "Computer Architecture",
+          "icon": "fa-solid fa-microchip",
+          "level": "How Processors Are Organised",
+          "packPath": "/content/courses/computer_architecture.json"
         }
       ]
     },
