@@ -1,0 +1,904 @@
+{
+  "id": "circuits",
+  "name": "Electric Circuits",
+  "category": "engineering",
+  "icon": "fa-solid fa-bolt",
+  "level": "Electrical Engineering Foundations",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Electric Charge and Current",
+      "tip": "Electric charge is a fundamental property of matter, measured in coulombs. Current is the flow of charge over time. Understanding charge and current is the foundation of all circuit analysis.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Charge and Its Properties",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electric charge?",
+              "answer": "A fundamental property of matter that creates electric fields and forces",
+              "explain": "Charge is carried by electrons (negative) and protons (positive). It is the source of electric forces and fields in circuits.",
+              "choices": [
+                "The speed of electricity",
+                "A type of electrical wire",
+                "The energy stored in a battery",
+                "A fundamental property of matter that creates electric fields and forces"
+              ],
+              "id": "circuits_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of electric charge?",
+              "answer": "The coulomb (C)",
+              "explain": "A coulomb is defined as the charge transferred by one ampere of current in one second: 1 C = 1 A*s.",
+              "choices": [
+                "The ampere (A)",
+                "The coulomb (C)",
+                "The watt (W)",
+                "The volt (V)"
+              ],
+              "id": "circuits_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the charge of an electron?",
+              "answer": "Approximately 1.6 * 10^-19 coulombs (negative)",
+              "explain": "An electron carries a negative elementary charge, the smallest unit of charge. Protons carry the same magnitude but positive.",
+              "choices": [
+                "1 coulomb",
+                "Approximately 1.6 * 10^-19 coulombs (negative)",
+                "1 watt",
+                "1 ampere"
+              ],
+              "id": "circuits_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens when two objects have the same type of charge?",
+              "answer": "They repel each other",
+              "explain": "Like charges repel; opposite charges attract. This is the fundamental force law in electrostatics.",
+              "choices": [
+                "They repel each other",
+                "Nothing happens",
+                "They neutralize",
+                "They attract each other"
+              ],
+              "id": "circuits_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'conservation of charge'?",
+              "answer": "Charge cannot be created or destroyed, only transferred between objects",
+              "explain": "The total charge in an isolated system is constant. Charge can move or redistribute, but the sum never changes.",
+              "choices": [
+                "Charge must be positive",
+                "Charge cannot be created or destroyed, only transferred between objects",
+                "Charge flows only in one direction",
+                "All objects eventually lose charge"
+              ],
+              "id": "circuits_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Electric Current",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electric current?",
+              "answer": "The flow of charge through a conductor per unit time",
+              "explain": "Current measures how much charge passes a point each second. Mathematically, I = Q / t, where Q is charge in coulombs and t is time in seconds.",
+              "choices": [
+                "The speed of electrons in a wire",
+                "The energy stored in a battery",
+                "The resistance of a wire",
+                "The flow of charge through a conductor per unit time"
+              ],
+              "id": "circuits_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of electric current?",
+              "answer": "The ampere (A)",
+              "explain": "An ampere is one coulomb per second: 1 A = 1 C/s. Current is often called 'amps' informally.",
+              "choices": [
+                "The coulomb (C)",
+                "The volt (V)",
+                "The watt (W)",
+                "The ampere (A)"
+              ],
+              "id": "circuits_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If 12 coulombs of charge flow past a point in 3 seconds, what is the current?",
+              "answer": "4 amperes",
+              "explain": "I = Q / t = 12 C / 3 s = 4 A.",
+              "choices": [
+                "36 amperes",
+                "3 amperes",
+                "4 amperes",
+                "12 amperes"
+              ],
+              "id": "circuits_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'conventional current'?",
+              "answer": "Current defined as the flow of positive charge, opposite the actual electron flow",
+              "explain": "Electrons flow from negative to positive, but conventional current is defined as positive charge flowing from positive to negative. This is a historical convention.",
+              "choices": [
+                "Current measured in hertz",
+                "The maximum possible current",
+                "The actual flow of electrons",
+                "Current defined as the flow of positive charge, opposite the actual electron flow"
+              ],
+              "id": "circuits_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If a current of 2 amperes flows for 5 seconds, how much charge has flowed?",
+              "answer": "10 coulombs",
+              "explain": "Q = I * t = 2 A * 5 s = 10 C.",
+              "choices": [
+                "2.5 coulombs",
+                "7 coulombs",
+                "20 coulombs",
+                "10 coulombs"
+              ],
+              "id": "circuits_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Voltage and Resistance",
+      "tip": "Voltage is the electric potential difference that drives charge through a circuit. Resistance opposes the flow of charge. Ohm's law relates voltage, current, and resistance.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Voltage and Potential Difference",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is voltage?",
+              "answer": "The electric potential difference between two points, measured in volts",
+              "explain": "Voltage is the energy per unit charge. A 12-volt battery provides 12 joules of energy per coulomb of charge moved.",
+              "choices": [
+                "The resistance of a wire",
+                "The amount of charge in a circuit",
+                "The electric potential difference between two points, measured in volts",
+                "The speed of current in a wire"
+              ],
+              "id": "circuits_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of voltage?",
+              "answer": "The volt (V)",
+              "explain": "A volt is one joule per coulomb: 1 V = 1 J/C. It is the unit of electric potential and potential difference.",
+              "choices": [
+                "The ohm (Ω)",
+                "The volt (V)",
+                "The watt (W)",
+                "The ampere (A)"
+              ],
+              "id": "circuits_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'potential difference' mean?",
+              "answer": "The difference in electric potential energy per unit charge between two points",
+              "explain": "Potential difference drives charge from higher to lower potential. It is what makes current flow in a circuit.",
+              "choices": [
+                "The total voltage in a circuit",
+                "The voltage at one point",
+                "The rate of change of current",
+                "The difference in electric potential energy per unit charge between two points"
+              ],
+              "id": "circuits_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a battery, what does the voltage rating mean?",
+              "answer": "The potential difference between the positive and negative terminals",
+              "explain": "A 9-volt battery means the positive terminal is 9 volts higher in potential than the negative terminal.",
+              "choices": [
+                "The current the battery can provide",
+                "The size of the battery",
+                "The energy inside the battery",
+                "The potential difference between the positive and negative terminals"
+              ],
+              "id": "circuits_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between voltage and energy?",
+              "answer": "Voltage times charge equals energy: V = E / Q",
+              "explain": "The energy delivered to a charge by a voltage is the product of the voltage and the charge. A 10-volt source delivering 2 coulombs provides 20 joules.",
+              "choices": [
+                "Voltage times charge equals energy: V = E / Q",
+                "Voltage and energy are the same thing",
+                "There is no relationship",
+                "Energy always equals 1 volt"
+              ],
+              "id": "circuits_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Resistance and Ohm's Law",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electrical resistance?",
+              "answer": "Opposition to the flow of current through a material",
+              "explain": "Resistance is caused by collisions between moving charge carriers and the material. Materials with high resistance impede current flow.",
+              "choices": [
+                "The speed of current",
+                "Opposition to the flow of current through a material",
+                "The amount of voltage",
+                "A type of power"
+              ],
+              "id": "circuits_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of resistance?",
+              "answer": "The ohm (Ω)",
+              "explain": "An ohm is defined as one volt per ampere: 1 Ω = 1 V/A. It is named after Georg Simon Ohm.",
+              "choices": [
+                "The watt (W)",
+                "The volt (V)",
+                "The ampere (A)",
+                "The ohm (Ω)"
+              ],
+              "id": "circuits_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is Ohm's law?",
+              "answer": "V = IR, where voltage equals current times resistance",
+              "explain": "Ohm's law is the fundamental relationship in circuits: the voltage across a resistor equals the current through it multiplied by its resistance.",
+              "choices": [
+                "P = IV",
+                "V = I + R",
+                "V = IR, where voltage equals current times resistance",
+                "V = I / R"
+              ],
+              "id": "circuits_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A resistor has a resistance of 5 ohms and a current of 2 amperes flows through it. What is the voltage across it?",
+              "answer": "10 volts",
+              "explain": "V = IR = 2 A * 5 Ω = 10 V.",
+              "choices": [
+                "10 volts",
+                "5 volts",
+                "25 volts",
+                "2.5 volts"
+              ],
+              "id": "circuits_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A 12-volt battery is connected across a 4-ohm resistor. How much current flows?",
+              "answer": "3 amperes",
+              "explain": "I = V / R = 12 V / 4 Ω = 3 A.",
+              "choices": [
+                "3 amperes",
+                "2 amperes",
+                "4 amperes",
+                "12 amperes"
+              ],
+              "id": "circuits_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Electric Power and Energy",
+      "tip": "Electric power measures the rate at which energy is transferred or dissipated in a circuit. Power can be calculated from voltage and current, and affects the heat generated in resistors.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Power in Circuits",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is electric power?",
+              "answer": "The rate at which electrical energy is transferred or dissipated",
+              "explain": "Power is energy per unit time: P = E / t. A device that uses more energy per second has higher power.",
+              "choices": [
+                "The voltage in a circuit",
+                "The resistance of a wire",
+                "The rate at which electrical energy is transferred or dissipated",
+                "The total amount of energy in a circuit"
+              ],
+              "id": "circuits_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of power?",
+              "answer": "The watt (W)",
+              "explain": "A watt is one joule per second: 1 W = 1 J/s. A 60-watt light bulb dissipates 60 joules of energy each second.",
+              "choices": [
+                "The watt (W)",
+                "The ohm (Ω)",
+                "The ampere (A)",
+                "The volt (V)"
+              ],
+              "id": "circuits_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the formula for power in terms of voltage and current?",
+              "answer": "P = IV, where power equals voltage times current",
+              "explain": "This fundamental formula shows that power is the product of voltage and current. A 12-volt, 5-amp source provides 60 watts.",
+              "choices": [
+                "P = IV, where power equals voltage times current",
+                "P = I^2 / V",
+                "P = V / I",
+                "P = V^2 * I"
+              ],
+              "id": "circuits_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A device operates at 24 volts and draws 2 amperes. What is its power consumption?",
+              "answer": "48 watts",
+              "explain": "P = IV = 2 A * 24 V = 48 W.",
+              "choices": [
+                "26 watts",
+                "96 watts",
+                "12 watts",
+                "48 watts"
+              ],
+              "id": "circuits_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A resistor dissipates 20 watts of power with a current of 2 amperes. What is its resistance?",
+              "answer": "5 ohms",
+              "explain": "P = I^2 * R, so 20 = 4 * R, giving R = 5 Ω.",
+              "choices": [
+                "5 ohms",
+                "4 ohms",
+                "2 ohms",
+                "10 ohms"
+              ],
+              "id": "circuits_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Energy and Joule Heating",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'Joule heating'?",
+              "answer": "The heating of a conductor due to current flowing through its resistance",
+              "explain": "When current flows through a resistor, it dissipates energy as heat. This is Joule's heating effect, proportional to I^2 * R.",
+              "choices": [
+                "A type of electrical insulation",
+                "Heating from a battery",
+                "The cooling of a circuit",
+                "The heating of a conductor due to current flowing through its resistance"
+              ],
+              "id": "circuits_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the relationship between power and Joule heating?",
+              "answer": "All power dissipated in a resistance becomes heat: P = I^2 * R",
+              "explain": "Joule heating is the conversion of electrical energy to thermal energy in a resistor. The heat generated equals the electrical power.",
+              "choices": [
+                "Power and heat are unrelated",
+                "All power dissipated in a resistance becomes heat: P = I^2 * R",
+                "Heat decreases with higher resistance",
+                "Heat is proportional to voltage only"
+              ],
+              "id": "circuits_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is electric energy?",
+              "answer": "The total work done by or against an electrical force",
+              "explain": "Energy is power multiplied by time: E = P * t. A 100-watt device running for 10 seconds uses 1000 joules of energy.",
+              "choices": [
+                "The voltage in a circuit",
+                "The rate of energy transfer",
+                "The charge in a battery",
+                "The total work done by or against an electrical force"
+              ],
+              "id": "circuits_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How much energy is used by a 60-watt light bulb running for 10 seconds?",
+              "answer": "600 joules",
+              "explain": "E = P * t = 60 W * 10 s = 600 J.",
+              "choices": [
+                "6000 joules",
+                "60 joules",
+                "600 joules",
+                "300 joules"
+              ],
+              "id": "circuits_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a kilowatt-hour (kWh)?",
+              "answer": "A unit of energy equal to 3.6 million joules, commonly used for electricity bills",
+              "explain": "A kilowatt-hour is 1000 watts operating for one hour: 1 kWh = 3.6 * 10^6 J. Utility companies measure household electricity in kWh.",
+              "choices": [
+                "A unit of energy equal to 3.6 million joules, commonly used for electricity bills",
+                "A unit of voltage",
+                "A unit of power",
+                "A type of resistor"
+              ],
+              "id": "circuits_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Series and Parallel Circuits",
+      "tip": "Circuits can be connected in series (one after another) or parallel (branching paths). Each configuration affects total resistance, voltage, and current differently. Kirchhoff's laws govern both.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Series and Parallel Resistors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'series circuit'?",
+              "answer": "A circuit where components are connected one after another in a single path",
+              "explain": "In series, current flows through each component sequentially. If one component fails, the entire circuit breaks.",
+              "choices": [
+                "A circuit with multiple power sources",
+                "A circuit where components are connected one after another in a single path",
+                "A circuit with parallel branches",
+                "A circuit with no resistors"
+              ],
+              "id": "circuits_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'parallel circuit'?",
+              "answer": "A circuit where components are connected across the same two points, providing multiple paths for current",
+              "explain": "In parallel, each component has the same voltage across it. Current divides among the branches.",
+              "choices": [
+                "A circuit where components are connected across the same two points, providing multiple paths for current",
+                "A circuit in a straight line",
+                "A circuit with one resistor",
+                "A circuit with no branches"
+              ],
+              "id": "circuits_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is total resistance calculated for resistors in series?",
+              "answer": "R_total = R1 + R2 + R3 + ...",
+              "explain": "Resistances add directly in series. Two 10-ohm resistors in series give 20 ohms total.",
+              "choices": [
+                "1 / R_total = 1/R1 + 1/R2 + ...",
+                "R_total = R1 * R2 / (R1 + R2)",
+                "R_total = R1 / R2",
+                "R_total = R1 + R2 + R3 + ..."
+              ],
+              "id": "circuits_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Three resistors of 10 ohms, 20 ohms, and 30 ohms are connected in series. What is the total resistance?",
+              "answer": "60 ohms",
+              "explain": "R_total = 10 + 20 + 30 = 60 Ω.",
+              "choices": [
+                "6000 ohms",
+                "30 ohms",
+                "20 ohms",
+                "60 ohms"
+              ],
+              "id": "circuits_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Two 10-ohm resistors are connected in parallel. What is the total resistance?",
+              "answer": "5 ohms",
+              "explain": "For parallel: 1/R_total = 1/10 + 1/10 = 2/10, so R_total = 5 Ω.",
+              "choices": [
+                "10 ohms",
+                "5 ohms",
+                "15 ohms",
+                "20 ohms"
+              ],
+              "id": "circuits_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Kirchhoff's Laws",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'Kirchhoff's current law'?",
+              "answer": "The sum of currents entering a node equals the sum of currents leaving it",
+              "explain": "Charge is conserved at any point in a circuit. If 3 amps enter a junction, 3 amps must leave it.",
+              "choices": [
+                "Voltage is constant around any loop",
+                "The sum of currents entering a node equals the sum of currents leaving it",
+                "Resistance is constant in a circuit",
+                "Current always flows from positive to negative"
+              ],
+              "id": "circuits_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Kirchhoff's voltage law'?",
+              "answer": "The sum of voltages around any closed loop in a circuit is zero",
+              "explain": "Energy is conserved around a closed loop. Gains (from sources) equal losses (across resistors).",
+              "choices": [
+                "The sum of voltages around any closed loop in a circuit is zero",
+                "All resistors must be the same",
+                "Voltage and current are proportional",
+                "Voltage is constant everywhere in a circuit"
+              ],
+              "id": "circuits_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "At a junction in a circuit, 5 amperes enters from one branch and 2 amperes from another. How much exits?",
+              "answer": "7 amperes",
+              "explain": "By Kirchhoff's current law, 5 + 2 = 7 amperes must exit the junction.",
+              "choices": [
+                "7 amperes",
+                "5 amperes",
+                "10 amperes",
+                "3 amperes"
+              ],
+              "id": "circuits_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a series circuit with a 12-volt battery and resistors dissipating 5 volts and 4 volts, what is the voltage across the third resistor?",
+              "answer": "3 volts",
+              "explain": "By Kirchhoff's voltage law, 12 = 5 + 4 + V3, so V3 = 3 volts.",
+              "choices": [
+                "21 volts",
+                "8 volts",
+                "1 volt",
+                "3 volts"
+              ],
+              "id": "circuits_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main application of Kirchhoff's laws?",
+              "answer": "Analyzing complex circuits with multiple loops and sources",
+              "explain": "Kirchhoff's laws allow you to set up equations to solve for unknown currents and voltages in any circuit configuration.",
+              "choices": [
+                "Determining wire color",
+                "Measuring battery age",
+                "Calculating power only",
+                "Analyzing complex circuits with multiple loops and sources"
+              ],
+              "id": "circuits_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Capacitors and Inductors",
+      "tip": "Capacitors store energy in an electric field and oppose voltage changes. Inductors store energy in a magnetic field and oppose current changes. Both exhibit time-dependent behavior, characterized by the RC time constant.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Capacitors",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a capacitor?",
+              "answer": "A component that stores electrical energy in an electric field between two conducting plates",
+              "explain": "Capacitors block DC current but allow AC current to flow. They are used for filtering, energy storage, and timing circuits.",
+              "choices": [
+                "A type of resistor",
+                "A device that measures voltage",
+                "A device that generates electricity",
+                "A component that stores electrical energy in an electric field between two conducting plates"
+              ],
+              "id": "circuits_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'capacitance'?",
+              "answer": "The ability of a component to store charge, measured in farads",
+              "explain": "Capacitance is defined as C = Q / V, where Q is charge and V is voltage. A larger capacitor stores more charge at the same voltage.",
+              "choices": [
+                "The current through a capacitor",
+                "The power dissipated in a capacitor",
+                "The resistance to voltage change",
+                "The ability of a component to store charge, measured in farads"
+              ],
+              "id": "circuits_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the SI unit of capacitance?",
+              "answer": "The farad (F)",
+              "explain": "A farad is a large unit. Practical capacitors are measured in microfarads (μF) or nanofarads (nF).",
+              "choices": [
+                "The volt (V)",
+                "The henry (H)",
+                "The farad (F)",
+                "The coulomb (C)"
+              ],
+              "id": "circuits_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What happens to a capacitor in a DC circuit after it is fully charged?",
+              "answer": "It acts like an open circuit; no current flows",
+              "explain": "When fully charged, the voltage across the capacitor equals the source voltage. No additional charge can flow.",
+              "choices": [
+                "It acts like an open circuit; no current flows",
+                "It continues to conduct current",
+                "It acts like a short circuit",
+                "It generates its own voltage"
+              ],
+              "id": "circuits_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a capacitor do to an AC signal?",
+              "answer": "It allows AC current to flow, with the amount depending on frequency",
+              "explain": "Capacitors oppose DC but permit AC. At higher frequencies, a capacitor has less opposition to current flow.",
+              "choices": [
+                "It blocks all AC signals",
+                "It converts AC to DC",
+                "It has no effect on AC",
+                "It allows AC current to flow, with the amount depending on frequency"
+              ],
+              "id": "circuits_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Inductors and RC Time Constants",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an inductor?",
+              "answer": "A component that stores electrical energy in a magnetic field",
+              "explain": "Inductors oppose changes in current. They are coils of wire whose magnetic field resists current variation.",
+              "choices": [
+                "A type of capacitor",
+                "A voltage regulator",
+                "A component that stores electrical energy in a magnetic field",
+                "A resistor with no resistance"
+              ],
+              "id": "circuits_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'inductance'?",
+              "answer": "The property of a component to oppose changes in current, measured in henries",
+              "explain": "Inductance is defined by V = L * (dI/dt). Higher inductance means stronger opposition to current change.",
+              "choices": [
+                "The total voltage drop",
+                "The rate of current flow",
+                "The ability to store charge",
+                "The property of a component to oppose changes in current, measured in henries"
+              ],
+              "id": "circuits_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'RC time constant'?",
+              "answer": "tau = RC, the time for a capacitor to charge or discharge to about 63% of its final value",
+              "explain": "The time constant tau is the product of resistance and capacitance. It characterizes how fast a capacitor charges or discharges.",
+              "choices": [
+                "The total resistance in a circuit",
+                "The speed of current flow",
+                "tau = RC, the time for a capacitor to charge or discharge to about 63% of its final value",
+                "The energy stored in a capacitor"
+              ],
+              "id": "circuits_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "A 100-ohm resistor is in series with a 0.01-farad capacitor. What is the time constant?",
+              "answer": "1 second",
+              "explain": "tau = R * C = 100 * 0.01 = 1 second.",
+              "choices": [
+                "1 second",
+                "10 seconds",
+                "0.1 seconds",
+                "0.01 seconds"
+              ],
+              "id": "circuits_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a large RC time constant mean?",
+              "answer": "The capacitor charges and discharges slowly",
+              "explain": "A large time constant means the exponential rise and fall are stretched out over a long period.",
+              "choices": [
+                "The capacitor charges and discharges slowly",
+                "The circuit has no resistance",
+                "The capacitor charges quickly",
+                "The capacitor has failed"
+              ],
+              "id": "circuits_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "AC Circuits and Signals",
+      "tip": "AC (alternating current) reverses direction periodically, contrasting with DC (direct current). AC is described by frequency, amplitude, and phase. AC analysis requires understanding impedance and phase relationships.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "AC vs DC",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is DC (direct current)?",
+              "answer": "Current that flows in one direction only",
+              "explain": "DC sources like batteries provide a steady voltage. The current flows in one direction around the circuit.",
+              "choices": [
+                "Current that flows in one direction only",
+                "Current that periodically reverses direction",
+                "Current from a transformer",
+                "Current that varies randomly"
+              ],
+              "id": "circuits_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is AC (alternating current)?",
+              "answer": "Current that periodically reverses direction and varies in magnitude",
+              "explain": "AC is generated by rotating generators and is used for power distribution. Household power is AC, typically 50 or 60 Hz.",
+              "choices": [
+                "Current that only flows one way",
+                "Current that periodically reverses direction and varies in magnitude",
+                "Direct current from a battery",
+                "Current that never changes"
+              ],
+              "id": "circuits_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'frequency' of an AC signal?",
+              "answer": "The number of complete cycles per second, measured in hertz (Hz)",
+              "explain": "Household AC in North America is 60 Hz, meaning it completes 60 cycles per second. Europe uses 50 Hz.",
+              "choices": [
+                "The maximum voltage of the signal",
+                "The number of complete cycles per second, measured in hertz (Hz)",
+                "The time it takes for one cycle",
+                "The total current in the circuit"
+              ],
+              "id": "circuits_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'period' of an AC signal?",
+              "answer": "The time for one complete cycle, T = 1 / f",
+              "explain": "Period is the reciprocal of frequency. A 60 Hz signal has a period of 1/60 seconds, about 16.7 milliseconds.",
+              "choices": [
+                "The frequency of the signal",
+                "The number of waves in a second",
+                "The maximum voltage",
+                "The time for one complete cycle, T = 1 / f"
+              ],
+              "id": "circuits_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is AC used for power distribution instead of DC?",
+              "answer": "AC can be easily stepped up or down in voltage with transformers, reducing transmission losses",
+              "explain": "High voltage reduces current, and power loss is proportional to I^2. Transformers convert high-voltage for transmission and low-voltage for use.",
+              "choices": [
+                "AC is cheaper to generate",
+                "AC can be easily stepped up or down in voltage with transformers, reducing transmission losses",
+                "DC generators are too large",
+                "AC is safer than DC"
+              ],
+              "id": "circuits_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Sinusoidal AC and Phase",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'sinusoidal' AC signal?",
+              "answer": "An AC signal that varies as a sine function of time",
+              "explain": "Most AC power and signals are sinusoidal, described by v(t) = V_peak * sin(2πft). This smooth wave is the natural output of rotating generators.",
+              "choices": [
+                "A square wave",
+                "A signal with random variations",
+                "A signal with constant amplitude",
+                "An AC signal that varies as a sine function of time"
+              ],
+              "id": "circuits_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'amplitude' of an AC signal?",
+              "answer": "The peak (maximum) voltage or current value",
+              "explain": "Amplitude is the furthest the signal swings from zero. For a sine wave, the signal oscillates between +amplitude and -amplitude.",
+              "choices": [
+                "The instantaneous voltage",
+                "The peak (maximum) voltage or current value",
+                "The total voltage",
+                "The average voltage"
+              ],
+              "id": "circuits_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'phase' in AC circuits?",
+              "answer": "The time offset between two AC signals or between a signal and a reference",
+              "explain": "Phase is measured in degrees or radians. If two 60 Hz signals are 90 degrees out of phase, one leads the other by 1/4 cycle.",
+              "choices": [
+                "The time offset between two AC signals or between a signal and a reference",
+                "The amplitude of the signal",
+                "The total voltage drop",
+                "The frequency of the signal"
+              ],
+              "id": "circuits_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'RMS voltage' (root mean square)?",
+              "answer": "The equivalent DC voltage that delivers the same average power to a resistor",
+              "explain": "For a sine wave, RMS = peak / sqrt(2). Household AC of 120 V RMS actually swings between about +170 and -170 volts peak.",
+              "choices": [
+                "The peak voltage",
+                "The equivalent DC voltage that delivers the same average power to a resistor",
+                "The instantaneous voltage",
+                "The average of all voltage values"
+              ],
+              "id": "circuits_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "If an AC signal has a peak voltage of 100 volts, what is the RMS voltage?",
+              "answer": "Approximately 70.7 volts",
+              "explain": "V_RMS = V_peak / sqrt(2) = 100 / 1.414 ≈ 70.7 V.",
+              "choices": [
+                "141.4 volts",
+                "50 volts",
+                "Approximately 70.7 volts",
+                "100 volts"
+              ],
+              "id": "circuits_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

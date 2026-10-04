@@ -1,0 +1,904 @@
+{
+  "id": "real_time_systems",
+  "name": "Real-Time Systems",
+  "category": "engineering",
+  "icon": "fa-solid fa-stopwatch",
+  "level": "When Timing Is Correctness",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Real-Time Fundamentals",
+      "tip": "A real-time system is one where correctness depends on both the result and the time it is produced. Timing deadlines are not optional; they are part of the specification.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "What Is Real-Time",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What defines a real-time system?",
+              "answer": "Correctness depends on the result and the time it is delivered",
+              "explain": "A real-time system must not only produce the right answer but deliver it by a deadline. Lateness is failure, even if the answer is correct.",
+              "choices": [
+                "It runs at the fastest speed possible",
+                "Correctness depends on the result and the time it is delivered",
+                "It processes data in real time on live input",
+                "It requires 100% uptime with no errors"
+              ],
+              "id": "real_time_systems_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the primary challenge in real-time computing?",
+              "answer": "Meeting strict timing constraints predictably",
+              "explain": "Real-time systems must guarantee that tasks complete within their deadlines. The challenge is making this guarantee even under worst-case conditions.",
+              "choices": [
+                "Maximizing the total throughput of the system",
+                "Reducing memory usage",
+                "Processing data faster than other systems",
+                "Meeting strict timing constraints predictably"
+              ],
+              "id": "real_time_systems_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is predictability more important than speed in real-time systems?",
+              "answer": "A slow but predictable system can meet deadlines; a fast but unpredictable one cannot",
+              "explain": "In real-time computing, knowing that a task will finish in 50ms is more valuable than knowing it sometimes finishes in 10ms and sometimes in 100ms.",
+              "choices": [
+                "Slow systems are always more reliable",
+                "Speed is never important",
+                "A slow but predictable system can meet deadlines; a fast but unpredictable one cannot",
+                "Real-time systems do not care about performance"
+              ],
+              "id": "real_time_systems_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a hard real-time system, what happens if a task misses its deadline?",
+              "answer": "The system has failed, even if the result was eventually correct",
+              "explain": "Missing a deadline is a failure of the real-time system, regardless of whether the computation was correct. The late result is useless.",
+              "choices": [
+                "The system has failed, even if the result was eventually correct",
+                "The result is discarded",
+                "Nothing happens; the system retries the task",
+                "The system attempts to recover the lost time"
+              ],
+              "id": "real_time_systems_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'timing constraint' in real-time systems?",
+              "answer": "A specification of when a task or event must be completed",
+              "explain": "Timing constraints are deadlines, period requirements, and latency bounds written into the system specification. They are requirements, not suggestions.",
+              "choices": [
+                "A hardware limitation of the CPU",
+                "The time it takes to reboot the system",
+                "A specification of when a task or event must be completed",
+                "The maximum amount of data a task can process"
+              ],
+              "id": "real_time_systems_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Hard and Soft Real-Time",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a hard real-time deadline?",
+              "answer": "A deadline that must be met; missing it causes complete system failure",
+              "explain": "Hard deadlines are unforgiving. A missile guidance system, pacemaker, or aircraft autopilot cannot tolerate a missed deadline.",
+              "choices": [
+                "A deadline that the system tries to meet",
+                "A deadline that can be missed occasionally",
+                "A deadline that is less strict than average",
+                "A deadline that must be met; missing it causes complete system failure"
+              ],
+              "id": "real_time_systems_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a soft real-time deadline?",
+              "answer": "A deadline that is desirable but missing it degrades service, not fails the system",
+              "explain": "Soft deadlines are common in multimedia and interactive systems. Streaming video can drop frames; audio can skip. The system keeps running.",
+              "choices": [
+                "A deadline that is desirable but missing it degrades service, not fails the system",
+                "A deadline that is never important",
+                "A deadline that is twice as long as a hard deadline",
+                "A deadline that must be met"
+              ],
+              "id": "real_time_systems_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which example is a hard real-time system?",
+              "answer": "An aircraft's autopilot control system",
+              "explain": "Aircraft control must respond to sensor input within strict deadlines. A late response can cause a crash. Streaming video or web page loading can tolerate delays.",
+              "choices": [
+                "A web page that takes 5 seconds to load",
+                "An aircraft's autopilot control system",
+                "A background file sync process",
+                "A video streaming service buffering a frame"
+              ],
+              "id": "real_time_systems_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which example is a soft real-time system?",
+              "answer": "A video game rendering frames at 60fps",
+              "explain": "Video games aim for smooth frame rates but can drop a frame or two without crashing. Users perceive degradation, but the system continues.",
+              "choices": [
+                "A brake-by-wire system in a car",
+                "A surgical robot controlling a scalpel",
+                "A nuclear plant emergency shutdown",
+                "A video game rendering frames at 60fps"
+              ],
+              "id": "real_time_systems_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why must hard real-time systems be designed differently from soft real-time systems?",
+              "answer": "Hard systems must guarantee deadlines in the worst case; soft systems only aim for average performance",
+              "explain": "Hard real-time systems use worst-case timing analysis, dedicated hardware, and predictable scheduling. Soft systems can use best-effort scheduling.",
+              "choices": [
+                "Hard systems are always more expensive",
+                "Soft systems are easier to implement",
+                "There is no difference in design approach",
+                "Hard systems must guarantee deadlines in the worst case; soft systems only aim for average performance"
+              ],
+              "id": "real_time_systems_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Tasks, Priorities, and Scheduling",
+      "tip": "A real-time system executes multiple tasks with different priorities and deadlines. The scheduler decides which task runs at each moment. Good scheduling ensures all tasks meet their deadlines.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Tasks and Priorities",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'task' in real-time systems?",
+              "answer": "A unit of work with a specific deadline and priority",
+              "explain": "A task is a schedulable unit in a real-time system. Each task has timing requirements (deadline, period) and a priority level.",
+              "choices": [
+                "Any process running on the computer",
+                "A thread that never blocks",
+                "A unit of work with a specific deadline and priority",
+                "A piece of hardware"
+              ],
+              "id": "real_time_systems_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'periodic task'?",
+              "answer": "A task that executes repeatedly at fixed time intervals",
+              "explain": "A periodic task has a period. It might execute every 10ms, every 100ms, or every second. Real-time control loops are periodic.",
+              "choices": [
+                "A task that completes in periodic timing",
+                "A task that has a deadline",
+                "A task that executes repeatedly at fixed time intervals",
+                "A task that uses periodic memory"
+              ],
+              "id": "real_time_systems_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'aperiodic task'?",
+              "answer": "A task that is triggered irregularly, not at fixed intervals",
+              "explain": "Aperiodic tasks respond to events. An interrupt handler processing a button press is aperiodic; it activates only when the button is pressed.",
+              "choices": [
+                "A task that is triggered irregularly, not at fixed intervals",
+                "A task that is never periodic",
+                "A task that has no deadline",
+                "A task with very low priority"
+              ],
+              "id": "real_time_systems_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'task priority' mean in a real-time scheduler?",
+              "answer": "A ranking that determines which task runs when multiple tasks are ready",
+              "explain": "Higher priority tasks run first. If a high-priority task becomes ready while a low-priority one is running, the scheduler preempts the low-priority task.",
+              "choices": [
+                "How important the task is to the user",
+                "Which task started first",
+                "A ranking that determines which task runs when multiple tasks are ready",
+                "How long the task will take"
+              ],
+              "id": "real_time_systems_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a priority-driven scheduler, what happens when a higher-priority task becomes ready?",
+              "answer": "The lower-priority task is preempted and the higher-priority task runs",
+              "explain": "Preemption allows the scheduler to interrupt a running task and switch to a higher-priority one. This ensures urgent work is not delayed.",
+              "choices": [
+                "Nothing; the lower-priority task continues",
+                "The lower-priority task waits until the next time slice",
+                "Both tasks run together",
+                "The lower-priority task is preempted and the higher-priority task runs"
+              ],
+              "id": "real_time_systems_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Scheduling Algorithms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'Rate Monotonic' scheduling?",
+              "answer": "Assign higher priority to tasks with shorter periods",
+              "explain": "In Rate Monotonic, a task with a 10ms period gets higher priority than a task with a 100ms period. This simple rule provably meets all deadlines under certain conditions.",
+              "choices": [
+                "Assign priority by task size",
+                "Assign higher priority to tasks with shorter periods",
+                "Assign priority randomly",
+                "Assign priority by task creation time"
+              ],
+              "id": "real_time_systems_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'Earliest Deadline First' (EDF) scheduling?",
+              "answer": "At any moment, run the task with the soonest deadline",
+              "explain": "EDF is dynamic: deadlines change as time passes. The task closest to missing its deadline gets the CPU. EDF is optimal for uniprocessor scheduling.",
+              "choices": [
+                "Run the shortest task first",
+                "Run tasks in the order they arrive",
+                "Run all deadlines at the same time",
+                "At any moment, run the task with the soonest deadline"
+              ],
+              "id": "real_time_systems_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of Rate Monotonic over other schemes?",
+              "answer": "It is simple, static, and easy to verify offline",
+              "explain": "Rate Monotonic requires no dynamic decisions at runtime. You assign priorities once, and analysis can prove all deadlines are met before deployment.",
+              "choices": [
+                "It uses less memory",
+                "It always runs faster than other algorithms",
+                "It handles aperiodic tasks better",
+                "It is simple, static, and easy to verify offline"
+              ],
+              "id": "real_time_systems_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of Earliest Deadline First over Rate Monotonic?",
+              "answer": "EDF can schedule tasks that Rate Monotonic cannot, achieving higher CPU utilization",
+              "explain": "EDF is optimal: if any scheduling algorithm can meet all deadlines, EDF will. Rate Monotonic is less flexible but simpler to analyze.",
+              "choices": [
+                "EDF can schedule tasks that Rate Monotonic cannot, achieving higher CPU utilization",
+                "EDF uses less memory",
+                "EDF does not require priorities",
+                "EDF is always faster"
+              ],
+              "id": "real_time_systems_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In EDF, if two tasks have the same deadline, what happens?",
+              "answer": "The scheduler chooses between them arbitrarily; the system design should avoid ties",
+              "explain": "EDF does not define behavior for tied deadlines. Real systems break ties by secondary priority, FIFO, or other rules. Designers should avoid exact deadline ties.",
+              "choices": [
+                "Both run at the same time",
+                "The system crashes",
+                "The task with higher priority runs",
+                "The scheduler chooses between them arbitrarily; the system design should avoid ties"
+              ],
+              "id": "real_time_systems_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Priority Inversion and Synchronization",
+      "tip": "When a low-priority task locks a resource that a high-priority task needs, the high-priority task is blocked. This priority inversion can cause deadline misses. Solutions include priority inheritance and priority ceiling protocols.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Priority Inversion",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'priority inversion'?",
+              "answer": "A low-priority task blocks a high-priority task, inverting the effective priorities",
+              "explain": "Priority inversion occurs when a high-priority task waits for a resource held by a low-priority task. The high-priority task is effectively delayed as if it had low priority.",
+              "choices": [
+                "A hardware failure in the scheduler",
+                "A low-priority task blocks a high-priority task, inverting the effective priorities",
+                "When task priorities are assigned randomly",
+                "When the high-priority task finishes first"
+              ],
+              "id": "real_time_systems_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is priority inversion dangerous in real-time systems?",
+              "answer": "The high-priority task may miss its deadline while waiting for the low-priority task",
+              "explain": "If a critical, high-priority task is blocked by a less critical task, it may miss its deadline. In hard real-time, this is a system failure.",
+              "choices": [
+                "It increases memory usage",
+                "It causes data corruption",
+                "It makes the system slower",
+                "The high-priority task may miss its deadline while waiting for the low-priority task"
+              ],
+              "id": "real_time_systems_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "In a priority inversion scenario, what blocks the high-priority task?",
+              "answer": "The low-priority task holding a mutex or semaphore it needs",
+              "explain": "The high-priority task tries to acquire a lock (mutex, semaphore) that the low-priority task already holds. Synchronization primitives, meant to protect data, cause the inversion.",
+              "choices": [
+                "The scheduler bug",
+                "Another high-priority task",
+                "A hardware interrupt",
+                "The low-priority task holding a mutex or semaphore it needs"
+              ],
+              "id": "real_time_systems_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'unbounded priority inversion' problem?",
+              "answer": "The duration of blocking is unpredictable because intermediate tasks can extend the delay",
+              "explain": "If a third task runs between the blocking and the resource holder, it adds more delay. Without limits, the high-priority task's latency becomes unbounded.",
+              "choices": [
+                "The inversion lasts forever",
+                "The duration of blocking is unpredictable because intermediate tasks can extend the delay",
+                "The priority levels are infinite",
+                "Multiple priority inversions happen at once"
+              ],
+              "id": "real_time_systems_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What famous incident highlighted the dangers of priority inversion?",
+              "answer": "The Mars Pathfinder rover experiencing spontaneous resets due to priority inversion",
+              "explain": "In 1997, Mars Pathfinder kept resetting itself. A low-priority task held a shared mutex needed by a high-priority bus task, and medium-priority tasks kept preempting the holder. The watchdog saw the stall and reset the system.",
+              "choices": [
+                "A smartphone crashing during a call",
+                "A website going offline",
+                "The Mars Pathfinder rover experiencing spontaneous resets due to priority inversion",
+                "An ATM running out of money"
+              ],
+              "id": "real_time_systems_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Priority Inheritance Solutions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'priority inheritance'?",
+              "answer": "When a lower-priority task holds a lock, it temporarily inherits the priority of the highest-priority task waiting for that lock",
+              "explain": "Priority inheritance ensures that the low-priority task holding a resource runs at high enough priority to release it quickly, reducing blocking time.",
+              "choices": [
+                "Giving all tasks the same priority",
+                "When a lower-priority task holds a lock, it temporarily inherits the priority of the highest-priority task waiting for that lock",
+                "Copying one task's priority to another",
+                "A hardware mechanism in the CPU"
+              ],
+              "id": "real_time_systems_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How does priority inheritance reduce priority inversion?",
+              "answer": "The low-priority task runs at high priority while holding the lock, executing and releasing it quickly",
+              "explain": "By elevating the low-priority task's priority, it is not preempted by other medium-priority tasks. It runs to completion and releases the lock sooner.",
+              "choices": [
+                "It removes the high-priority task",
+                "It pauses all other tasks",
+                "The low-priority task runs at high priority while holding the lock, executing and releasing it quickly",
+                "It eliminates locks"
+              ],
+              "id": "real_time_systems_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'priority ceiling protocol'?",
+              "answer": "Assign a ceiling priority to each lock; any task acquiring it runs at that priority",
+              "explain": "The ceiling is set to the highest priority of any task that might use the lock. A task holding the lock runs at that ceiling, which limits blocking and prevents deadlock among locks.",
+              "choices": [
+                "A hardware CPU feature",
+                "Assign a ceiling priority to each lock; any task acquiring it runs at that priority",
+                "A maximum priority for all tasks",
+                "A limit on how many locks exist"
+              ],
+              "id": "real_time_systems_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What advantage does the priority ceiling protocol have over basic priority inheritance?",
+              "answer": "It bounds blocking to at most one critical section and prevents deadlock among locks",
+              "explain": "With ceilings, a task can be blocked by lower-priority tasks for at most one critical section, and chains of blocking and lock deadlocks are avoided. The cost is needing to know in advance which tasks use which locks.",
+              "choices": [
+                "It uses less memory",
+                "It bounds blocking to at most one critical section and prevents deadlock among locks",
+                "It is simpler to implement",
+                "It runs faster"
+              ],
+              "id": "real_time_systems_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Which solution is more commonly used in practice, priority inheritance or priority ceiling?",
+              "answer": "Priority inheritance, because it is simpler and requires less static knowledge about locks",
+              "explain": "Priority inheritance is implemented in many RTOSes (Linux real-time, VxWorks, QNX). It needs no advance analysis of which task might use which lock.",
+              "choices": [
+                "Neither; other mechanisms are preferred",
+                "Both equally",
+                "Priority inheritance, because it is simpler and requires less static knowledge about locks",
+                "Priority ceiling, because it is more robust"
+              ],
+              "id": "real_time_systems_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "RTOS vs General Purpose OS",
+      "tip": "Real-Time Operating Systems are designed for predictability. General-purpose systems (Windows, Linux) prioritize throughput and flexibility. Understanding the differences explains why critical systems use dedicated RTOSes.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "RTOS Design Principles",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an RTOS?",
+              "answer": "An operating system designed to handle tasks with strict timing constraints",
+              "explain": "An RTOS (Real-Time Operating System) guarantees predictable latency and deadline-meeting. Examples: VxWorks, QNX, RTLinux. It trades flexibility for predictability.",
+              "choices": [
+                "A Linux distribution",
+                "An operating system designed to handle tasks with strict timing constraints",
+                "An embedded system OS",
+                "Any operating system that runs fast"
+              ],
+              "id": "real_time_systems_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do many RTOSes avoid demand paging and swapping to disk?",
+              "answer": "Page faults introduce unpredictable delays that violate timing guarantees",
+              "explain": "Page faults and disk paging have unbounded latency. An RTOS either avoids them or tightly bounds them to maintain predictability.",
+              "choices": [
+                "To save memory",
+                "RTOSes cannot use memory protection",
+                "They are too complex",
+                "Page faults introduce unpredictable delays that violate timing guarantees"
+              ],
+              "id": "real_time_systems_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'deterministic' behavior in an RTOS?",
+              "answer": "The worst-case timing of operations is known and bounded in advance",
+              "explain": "Deterministic means predictable. A deterministic scheduler always completes a task in a known worst-case time, making timing guarantees possible.",
+              "choices": [
+                "The behavior is always the same",
+                "The worst-case timing of operations is known and bounded in advance",
+                "The system is never random",
+                "The OS uses no algorithms"
+              ],
+              "id": "real_time_systems_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'jitter' in an RTOS?",
+              "answer": "The variation in timing between repeated executions of the same task",
+              "explain": "A task that completes in 10ms one time and 11ms the next has jitter of 1ms. RTOSes minimize jitter to improve predictability.",
+              "choices": [
+                "The variation in timing between repeated executions of the same task",
+                "A communication protocol",
+                "Random noise in the system",
+                "A bug in the scheduler"
+              ],
+              "id": "real_time_systems_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why do RTOSes use smaller kernels than general-purpose operating systems?",
+              "answer": "Smaller kernels have fewer code paths, making timing analysis and worst-case estimation easier",
+              "explain": "A large, complex kernel (like Linux) has so many code paths that worst-case timing is nearly impossible to analyze. RTOSes keep the kernel minimal.",
+              "choices": [
+                "To run on slower computers",
+                "Smaller kernels are always faster",
+                "To use less memory",
+                "Smaller kernels have fewer code paths, making timing analysis and worst-case estimation easier"
+              ],
+              "id": "real_time_systems_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "RTOS vs General-Purpose OS",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the primary design goal of a general-purpose OS like Linux?",
+              "answer": "Maximize overall throughput and allow fair resource sharing among tasks",
+              "explain": "General-purpose OSes optimize for average-case performance and fairness. They may sacrifice individual task latency for overall system efficiency.",
+              "choices": [
+                "Eliminate all background processes",
+                "Minimize latency for every task",
+                "Meet hard real-time deadlines",
+                "Maximize overall throughput and allow fair resource sharing among tasks"
+              ],
+              "id": "real_time_systems_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is a general-purpose OS unsuitable for hard real-time?",
+              "answer": "Memory paging, cache effects, and background processes create unpredictable latencies",
+              "explain": "Linux and Windows make no guarantees on task latency. A page fault, garbage collection, or background daemon can delay any task unpredictably.",
+              "choices": [
+                "They use too much memory",
+                "Memory paging, cache effects, and background processes create unpredictable latencies",
+                "They cannot run user programs",
+                "They are too slow"
+              ],
+              "id": "real_time_systems_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'preemptible Linux' or 'real-time Linux'?",
+              "answer": "Linux patched to make the kernel preemptible, reducing worst-case latency to near real-time levels",
+              "explain": "Projects such as PREEMPT_RT modify Linux so the kernel itself becomes preemptible, improving latency. Even so, it does not offer every guarantee of a true RTOS.",
+              "choices": [
+                "A version of Linux that requires no waiting",
+                "A special Linux kernel module",
+                "Linux patched to make the kernel preemptible, reducing worst-case latency to near real-time levels",
+                "A faster version of Linux"
+              ],
+              "id": "real_time_systems_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an advantage of using Linux for soft real-time instead of a dedicated RTOS?",
+              "answer": "Linux offers rich software ecosystems, drivers, and development tools",
+              "explain": "Linux has vast software support. For soft real-time where occasional missed deadlines are acceptable, Linux's tools and libraries often outweigh its timing uncertainty.",
+              "choices": [
+                "Linux guarantees hard real-time",
+                "Linux is faster than RTOSes",
+                "Linux uses less power",
+                "Linux offers rich software ecosystems, drivers, and development tools"
+              ],
+              "id": "real_time_systems_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an example of a commercial RTOS?",
+              "answer": "VxWorks, QNX, or INTEGRITY",
+              "explain": "VxWorks (Wind River) is used in aerospace and defense. QNX is popular in automotive and industrial control. INTEGRITY is used in avionics.",
+              "choices": [
+                "VxWorks, QNX, or INTEGRITY",
+                "BeOS, Amiga, classic Mac OS",
+                "Windows, macOS, Linux",
+                "Android, iOS, watchOS"
+              ],
+              "id": "real_time_systems_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Temporal Properties and Latency",
+      "tip": "Real-time systems are characterized by precise temporal properties: deadlines, latency bounds, jitter, and response times. Analyzing and measuring these properties is essential for verifying system correctness.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Deadlines and Response Times",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'deadline' in real-time systems?",
+              "answer": "The latest time by which a task must complete and produce its result",
+              "explain": "A deadline is an absolute requirement. A task triggered at time 0 with a deadline of 10ms must finish by time 10ms or the system fails.",
+              "choices": [
+                "The total CPU time in the system",
+                "The latest time by which a task must complete and produce its result",
+                "How long a task has been waiting",
+                "The time it takes a task to run"
+              ],
+              "id": "real_time_systems_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'response time' of a task?",
+              "answer": "The time from when the task is triggered until it finishes execution",
+              "explain": "Response time includes wait time in the queue plus actual execution time. A deadline is met if the response time does not exceed the deadline.",
+              "choices": [
+                "The time between two task activations",
+                "The time from when the task is triggered until it finishes execution",
+                "How long the CPU spends on the task",
+                "The memory used by the task"
+              ],
+              "id": "real_time_systems_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'latency' in real-time systems?",
+              "answer": "The delay between an event and the system's response to that event",
+              "explain": "Latency is the time from stimulus (interrupt, input) to system reaction (output, task completion). Low and predictable latency is critical.",
+              "choices": [
+                "The delay between an event and the system's response to that event",
+                "The total execution time of all tasks",
+                "The time a task spends in memory",
+                "The frequency of task activations"
+              ],
+              "id": "real_time_systems_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'interrupt latency'?",
+              "answer": "The time from when an interrupt occurs until the handler begins executing",
+              "explain": "Interrupt latency measures how quickly the system responds to hardware events. Long interrupt latency can cause missed deadlines.",
+              "choices": [
+                "The time from when an interrupt occurs until the handler begins executing",
+                "The number of interrupts per second",
+                "The priority of an interrupt",
+                "The time an interrupt handler spends executing"
+              ],
+              "id": "real_time_systems_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'hard deadline' mean versus 'soft deadline'?",
+              "answer": "Hard: missing it causes system failure; Soft: missing it degrades service but system continues",
+              "explain": "A pacemaker's hard deadline cannot be missed; a video frame's soft deadline can be occasionally missed without crashing.",
+              "choices": [
+                "No practical difference",
+                "Hard: enforced by hardware, Soft: by software",
+                "Hard: missing it causes system failure; Soft: missing it degrades service but system continues",
+                "Hard: shorter, Soft: longer"
+              ],
+              "id": "real_time_systems_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Timing Bounds and Jitter",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'worst-case execution time' (WCET)?",
+              "answer": "The maximum time a task could possibly take under any input or system condition",
+              "explain": "WCET is not the average or typical time; it is the absolute longest time. Real-time scheduling uses WCET to guarantee deadlines.",
+              "choices": [
+                "The average time a task takes",
+                "The fastest a task has ever run",
+                "The maximum time a task could possibly take under any input or system condition",
+                "The time a task waits for I/O"
+              ],
+              "id": "real_time_systems_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How is WCET determined?",
+              "answer": "By analyzing code paths, cache behavior, and running timing tests on the target hardware",
+              "explain": "WCET analysis is complex. It requires understanding the worst-case path through the code, cache misses, and hardware effects. Tools and measurement combine.",
+              "choices": [
+                "From the number of instructions",
+                "By analyzing code paths, cache behavior, and running timing tests on the target hardware",
+                "By running the task once",
+                "From the task name"
+              ],
+              "id": "real_time_systems_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'jitter' in task execution?",
+              "answer": "The variation between the actual response time and the expected response time",
+              "explain": "If a task always takes 10ms plus or minus 1ms, it has 1ms jitter. Reducing jitter improves system predictability.",
+              "choices": [
+                "The variation between the actual response time and the expected response time",
+                "The total execution time of all tasks",
+                "A bug in the scheduler",
+                "A delay in the network"
+              ],
+              "id": "real_time_systems_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What causes jitter in task response times?",
+              "answer": "Cache hits and misses, other tasks being scheduled, and interrupt service time",
+              "explain": "Jitter comes from the nondeterminism of caches, context switches, and interrupt handling. RTOSes reduce jitter by controlling these factors.",
+              "choices": [
+                "Cache hits and misses, other tasks being scheduled, and interrupt service time",
+                "The task's algorithm",
+                "The operating system version",
+                "User input"
+              ],
+              "id": "real_time_systems_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'deadline miss' defined as?",
+              "answer": "A task completes after its deadline has passed",
+              "explain": "If a task has a deadline of 10ms and completes at 11ms, it has missed its deadline. In hard real-time, even one miss is a failure.",
+              "choices": [
+                "A task that was never scheduled",
+                "A task waiting for input",
+                "A task completes after its deadline has passed",
+                "A task that was not created"
+              ],
+              "id": "real_time_systems_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Hardware Support and Verification",
+      "tip": "Real-time systems rely on hardware features like watchdog timers and interrupt controllers to enforce timing constraints. Verifying that a system meets its requirements requires formal methods and testing.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Watchdog Timers and Hardware Support",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a 'watchdog timer'?",
+              "answer": "A hardware timer that resets the system if the software does not reset it periodically",
+              "explain": "A watchdog detects deadlock or infinite loops. If the system is hung and does not reset the watchdog, it times out and forces a reboot.",
+              "choices": [
+                "A hardware timer that resets the system if the software does not reset it periodically",
+                "A clock that tells the time of day",
+                "A timer that measures how long a task runs",
+                "A memory protection device"
+              ],
+              "id": "real_time_systems_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why would a real-time system use a watchdog timer?",
+              "answer": "To automatically recover from software failures like deadlock or infinite loops",
+              "explain": "In critical systems, automatic recovery is often better than waiting for human intervention. A watchdog forces a reset so the system can return to a known state.",
+              "choices": [
+                "To measure power consumption",
+                "To measure execution time",
+                "To count interrupts",
+                "To automatically recover from software failures like deadlock or infinite loops"
+              ],
+              "id": "real_time_systems_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'interrupt masking'?",
+              "answer": "Disabling interrupts to execute a critical section of code without preemption",
+              "explain": "By masking interrupts, a task can guarantee it is not interrupted. This is used to protect critical sections, but excessive masking violates real-time guarantees.",
+              "choices": [
+                "Deleting interrupt handlers",
+                "Changing interrupt priority",
+                "Disabling interrupts to execute a critical section of code without preemption",
+                "Counting the number of interrupts"
+              ],
+              "id": "real_time_systems_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What problem arises if interrupts are masked for too long?",
+              "answer": "Other time-critical events are delayed, potentially missing their deadlines",
+              "explain": "Disabling interrupts prevents the system from responding to external events quickly. Long interrupt masks defeat real-time timing guarantees.",
+              "choices": [
+                "Other time-critical events are delayed, potentially missing their deadlines",
+                "Memory is corrupted",
+                "The watchdog timer is disabled",
+                "The system runs faster"
+              ],
+              "id": "real_time_systems_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'timer interrupt' and why is it critical in real-time systems?",
+              "answer": "A periodic interrupt from the system timer that triggers task switching and scheduling decisions",
+              "explain": "Timer interrupts drive the scheduler. They occur at regular intervals (e.g., every 1ms) and allow the kernel to switch between tasks and check deadlines.",
+              "choices": [
+                "A user-generated interrupt",
+                "An interrupt that stops the timer",
+                "A periodic interrupt from the system timer that triggers task switching and scheduling decisions",
+                "An interrupt from the real-time clock"
+              ],
+              "id": "real_time_systems_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Verification and Validation",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is 'schedulability analysis'?",
+              "answer": "Mathematical analysis to prove that all tasks will meet their deadlines under a given scheduling algorithm",
+              "explain": "Schedulability tests (like Liu and Layland bounds for Rate Monotonic) prove offline that the system will not miss deadlines.",
+              "choices": [
+                "Measuring how fast the scheduler runs",
+                "Testing the scheduler by running the system",
+                "Checking if the scheduler has bugs",
+                "Mathematical analysis to prove that all tasks will meet their deadlines under a given scheduling algorithm"
+              ],
+              "id": "real_time_systems_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the 'Liu and Layland bound' for Rate Monotonic scheduling?",
+              "answer": "A formula proving that tasks meet deadlines if their CPU utilization is below a certain threshold",
+              "explain": "For n periodic tasks, if total utilization is below n(2^(1/n)-1), Rate Monotonic scheduling guarantees all deadlines are met.",
+              "choices": [
+                "A way to measure jitter",
+                "A hardware requirement",
+                "A formula proving that tasks meet deadlines if their CPU utilization is below a certain threshold",
+                "A method for sorting task priorities"
+              ],
+              "id": "real_time_systems_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'measurement-based timing analysis'?",
+              "answer": "Running the system on target hardware under stress and recording the observed timings",
+              "explain": "Measurement stresses the system with demanding workloads and records actual execution times. It is validation, not proof, since it only shows the cases that were observed.",
+              "choices": [
+                "Drawing a timing diagram of the design",
+                "Running the system on target hardware under stress and recording the observed timings",
+                "Proving timing bounds from the code structure without running it",
+                "Predicting timing with a mathematical formula"
+              ],
+              "id": "real_time_systems_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is formal verification important for hard real-time systems?",
+              "answer": "It mathematically proves the system meets requirements, not just demonstrates it in testing",
+              "explain": "Testing can show that a system worked in the scenarios tried. Formal verification proves a model of the system meets its requirements in all scenarios, which is valuable when a miss is catastrophic.",
+              "choices": [
+                "It mathematically proves the system meets requirements, not just demonstrates it in testing",
+                "It is faster than testing",
+                "It uses less memory",
+                "It eliminates the need for source code"
+              ],
+              "id": "real_time_systems_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'timing annotation' in real-time software development?",
+              "answer": "Marking code with execution time estimates to support timing analysis",
+              "explain": "Developers and tools annotate functions with WCET, often using pragmas or attributes, so analysis tools can build worst-case models.",
+              "choices": [
+                "A note about when code was written",
+                "Marking code with execution time estimates to support timing analysis",
+                "A comment explaining the algorithm",
+                "A performance measurement"
+              ],
+              "id": "real_time_systems_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
