@@ -1,0 +1,904 @@
+{
+  "id": "dsa",
+  "name": "Data Structures and Algorithms",
+  "category": "programming",
+  "icon": "fa-solid fa-diagram-project",
+  "level": "Computer Science Core",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Big O Analysis",
+      "tip": "Big O measures how an algorithm's performance scales with input size. O(1) is constant, O(n) grows linearly, O(n^2) quadratically. Lower is faster. Understanding Big O helps you choose efficient algorithms.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Time and Space Complexity",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does Big O notation measure?",
+              "answer": "How an algorithm's performance scales as input grows",
+              "explain": "Big O ignores constants and focuses on the dominant term. It predicts how performance changes with larger inputs.",
+              "choices": [
+                "The exact time in seconds",
+                "How an algorithm's performance scales as input grows",
+                "The number of lines of code",
+                "Memory used in bytes"
+              ],
+              "id": "dsa_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does O(1) complexity mean?",
+              "answer": "Constant time, independent of input size",
+              "explain": "O(1) means the time is the same no matter how large the input is. Array access by index is O(1).",
+              "choices": [
+                "Linear time",
+                "Constant time, independent of input size",
+                "Logarithmic time",
+                "One operation only"
+              ],
+              "id": "dsa_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does O(n) complexity mean?",
+              "answer": "Time grows proportionally with input size",
+              "explain": "O(n) is linear. Doubling the input size doubles the time. Linear search is O(n).",
+              "choices": [
+                "Time is constant",
+                "Time grows proportionally with input size",
+                "Time grows exponentially",
+                "Time is zero"
+              ],
+              "id": "dsa_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does O(log n) complexity mean?",
+              "answer": "Time grows logarithmically with input size",
+              "explain": "O(log n) is very efficient. Doubling input size increases time only slightly. Binary search is O(log n).",
+              "choices": [
+                "Time is linear",
+                "Time grows logarithmically with input size",
+                "Time is constant",
+                "Time grows quadratically"
+              ],
+              "id": "dsa_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does O(n^2) complexity mean?",
+              "answer": "Time grows quadratically with input size",
+              "explain": "O(n^2) means nested loops. Doubling input size multiplies time by 4. Bubble sort is O(n^2) in worst case.",
+              "choices": [
+                "Time is linear",
+                "Time grows quadratically with input size",
+                "Time is constant",
+                "Time grows logarithmically"
+              ],
+              "id": "dsa_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Comparing Complexities",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which complexity is best?",
+              "answer": "O(1), then O(log n), then O(n)",
+              "explain": "Faster is better. O(1) is constant and fastest. O(log n) is very fast. O(n) is linear. O(n^2) is slow.",
+              "choices": [
+                "O(n^2)",
+                "O(1), then O(log n), then O(n)",
+                "O(n)",
+                "They are all equal"
+              ],
+              "id": "dsa_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is O(n log n) complexity?",
+              "answer": "Time grows as n times log n, between linear and quadratic",
+              "explain": "O(n log n) is efficient and common in sorting. Merge sort and quicksort (average case) are O(n log n).",
+              "choices": [
+                "Time is linear",
+                "Time grows as n times log n, between linear and quadratic",
+                "Time is constant",
+                "Time is exponential"
+              ],
+              "id": "dsa_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "For an input of size 1000, which is faster: O(n^2) or O(n log n)?",
+              "answer": "O(n log n) is much faster",
+              "explain": "O(n^2) = 1,000,000 operations. O(n log n) ≈ 10,000 operations. Logarithmic factors matter hugely.",
+              "choices": [
+                "O(n^2)",
+                "O(n log n) is much faster",
+                "They are the same",
+                "Depends on the constant factors"
+              ],
+              "id": "dsa_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between average and worst case?",
+              "answer": "Average case is typical performance; worst case is the slowest possible",
+              "explain": "Quicksort is O(n log n) average, O(n^2) worst case. Stating both cases is more accurate than just one.",
+              "choices": [
+                "There is no difference",
+                "Average case is typical performance; worst case is the slowest possible",
+                "Average case is always slower",
+                "Only worst case matters"
+              ],
+              "id": "dsa_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is space complexity?",
+              "answer": "How much extra memory an algorithm uses relative to input size",
+              "explain": "Space complexity measures auxiliary memory, not the input itself. Merge sort is O(n) space; bubble sort is O(1).",
+              "choices": [
+                "The size of the input",
+                "How much extra memory an algorithm uses relative to input size",
+                "The number of variables",
+                "The runtime in seconds"
+              ],
+              "id": "dsa_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Arrays and Linked Lists",
+      "tip": "Arrays store elements at fixed positions accessed by index in O(1) time. Linked lists chain nodes together, making insertion O(1) but access O(n). Each has trade-offs.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "Array Operations",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is array indexing complexity?",
+              "answer": "O(1) constant time",
+              "explain": "Arrays store elements contiguously. Index 5 is computed directly: base_address + 5 * element_size. Always instant.",
+              "choices": [
+                "O(n) linear time",
+                "O(1) constant time",
+                "O(log n) logarithmic",
+                "Depends on the position"
+              ],
+              "id": "dsa_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is array insertion at the end complexity?",
+              "answer": "O(1) amortized",
+              "explain": "Appending to the end of an array is usually O(1). When capacity is full, it reallocates and copies (O(n)), but this happens rarely.",
+              "choices": [
+                "O(n) always",
+                "O(1) amortized",
+                "O(log n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is array insertion in the middle complexity?",
+              "answer": "O(n) because elements shift",
+              "explain": "Inserting at position 5 requires shifting all elements after it. In the worst case, you shift every element.",
+              "choices": [
+                "O(1)",
+                "O(n) because elements shift",
+                "O(log n)",
+                "O(n log n)"
+              ],
+              "id": "dsa_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is array deletion complexity?",
+              "answer": "O(n) because remaining elements shift",
+              "explain": "Deleting position 5 requires shifting all elements after it leftward. Worst case is O(n).",
+              "choices": [
+                "O(1)",
+                "O(n) because remaining elements shift",
+                "O(log n)",
+                "Depends on the value"
+              ],
+              "id": "dsa_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why is array search O(n) without sorting?",
+              "answer": "You must check each element until you find it",
+              "explain": "Linear search has no choice but to look at every element in worst case. Found at the end? O(n).",
+              "choices": [
+                "Arrays are inefficient",
+                "You must check each element until you find it",
+                "Search is impossible",
+                "Arrays can only search the first element"
+              ],
+              "id": "dsa_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Linked Lists",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a linked list?",
+              "answer": "A chain of nodes, each holding data and a pointer to the next",
+              "explain": "Each node contains a value and a reference to the next node. No contiguous memory required.",
+              "choices": [
+                "A fixed array",
+                "A chain of nodes, each holding data and a pointer to the next",
+                "A graph",
+                "A tree"
+              ],
+              "id": "dsa_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is linked list access complexity?",
+              "answer": "O(n) because you traverse from the head",
+              "explain": "To access the 5th node, you start at the head and follow pointers 5 times. No direct indexing.",
+              "choices": [
+                "O(1) instant",
+                "O(n) because you traverse from the head",
+                "O(log n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is linked list insertion at the head complexity?",
+              "answer": "O(1) constant time",
+              "explain": "Create a new node, point it to the current head, and update the head. No shifting needed.",
+              "choices": [
+                "O(n) linear",
+                "O(1) constant time",
+                "O(log n)",
+                "Depends on the size"
+              ],
+              "id": "dsa_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is linked list insertion in the middle complexity?",
+              "answer": "O(n) because you must traverse to the position",
+              "explain": "Even though insertion itself is O(1), finding the position requires traversing O(n) nodes.",
+              "choices": [
+                "O(1) instant",
+                "O(n) because you must traverse to the position",
+                "O(log n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main advantage of linked lists over arrays?",
+              "answer": "Fast insertion/deletion when you have a pointer to the location",
+              "explain": "Once you are at a node, inserting or deleting neighbors is O(1). Arrays require O(n) shifting.",
+              "choices": [
+                "Faster access by index",
+                "Fast insertion/deletion when you have a pointer to the location",
+                "Uses less memory",
+                "Easier to understand"
+              ],
+              "id": "dsa_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Stacks, Queues, and Hash Tables",
+      "tip": "Stacks are LIFO (last in, first out). Queues are FIFO (first in, first out). Hash tables map keys to values using a hash function. Hash tables offer O(1) average lookup, collision handling varies.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Stacks and Queues",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a stack?",
+              "answer": "A LIFO collection: last element in is first out",
+              "explain": "Think of a stack of plates. You remove from the top, the last one placed. push(x) adds, pop() removes.",
+              "choices": [
+                "A queue",
+                "A LIFO collection: last element in is first out",
+                "A sorted array",
+                "A tree"
+              ],
+              "id": "dsa_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What operations does a stack have?",
+              "answer": "push (add), pop (remove from top), peek (view top)",
+              "explain": "push(5) adds 5 to the top. pop() removes the top element. peek() views the top without removing.",
+              "choices": [
+                "search, sort",
+                "push (add), pop (remove from top), peek (view top)",
+                "insert at middle, delete",
+                "map, filter"
+              ],
+              "id": "dsa_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a queue?",
+              "answer": "A FIFO collection: first element in is first out",
+              "explain": "Think of a line. First person in leaves first. enqueue(x) adds to the back, dequeue() removes from the front.",
+              "choices": [
+                "A stack",
+                "A FIFO collection: first element in is first out",
+                "A sorted list",
+                "A graph"
+              ],
+              "id": "dsa_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the complexities of stack operations?",
+              "answer": "O(1) for push, pop, and peek",
+              "explain": "All stack operations are constant time. Add/remove from one end, no traversal needed.",
+              "choices": [
+                "O(n)",
+                "O(1) for push, pop, and peek",
+                "O(log n)",
+                "Depends on the size"
+              ],
+              "id": "dsa_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the complexities of queue operations?",
+              "answer": "O(1) for enqueue, dequeue, and peek",
+              "explain": "Queues maintain two pointers: front and back. Operations at both ends are constant time.",
+              "choices": [
+                "O(n)",
+                "O(1) for enqueue, dequeue, and peek",
+                "O(log n)",
+                "Depends on the value"
+              ],
+              "id": "dsa_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Hash Tables",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a hash table?",
+              "answer": "A data structure mapping keys to values using a hash function",
+              "explain": "A hash function converts a key into an array index. hash('name') might return 7, so dictionary['name'] looks at index 7.",
+              "choices": [
+                "A sorted array",
+                "A data structure mapping keys to values using a hash function",
+                "A binary tree",
+                "A linked list"
+              ],
+              "id": "dsa_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a hash function?",
+              "answer": "A function converting a key into an array index",
+              "explain": "hash('Alice') returns a number from 0 to table_size-1. The same key always hashes to the same index.",
+              "choices": [
+                "A sorting algorithm",
+                "A function converting a key into an array index",
+                "A random number generator",
+                "A search algorithm"
+              ],
+              "id": "dsa_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a hash collision?",
+              "answer": "Two different keys hash to the same index",
+              "explain": "hash('Alice') and hash('Bob') might both return 5. Collisions must be handled by chaining or probing.",
+              "choices": [
+                "A hash function error",
+                "Two different keys hash to the same index",
+                "A full hash table",
+                "A slow lookup"
+              ],
+              "id": "dsa_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is collision chaining?",
+              "answer": "Storing colliding keys in a linked list at each index",
+              "explain": "If hash('Alice') and hash('Bob') both return 5, store a linked list at index 5 with both entries.",
+              "choices": [
+                "Moving keys to different positions",
+                "Storing colliding keys in a linked list at each index",
+                "Removing one key",
+                "Increasing the table size"
+              ],
+              "id": "dsa_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the average-case lookup complexity in a hash table?",
+              "answer": "O(1) constant time",
+              "explain": "With a good hash function and reasonable load factor, average lookup is O(1). Worst case is O(n) with many collisions.",
+              "choices": [
+                "O(n) linear",
+                "O(1) constant time",
+                "O(log n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Trees and Graphs",
+      "tip": "Trees are hierarchies: root at top, children below. Binary search trees keep left < parent < right for fast search. Heaps maintain an ordering for priority queues. Graphs are networks: nodes connected by edges. BFS explores breadth-first; DFS goes deep.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Trees and Binary Search Trees",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a tree?",
+              "answer": "A hierarchical data structure with a root and child nodes",
+              "explain": "Each node has a parent (except the root) and zero or more children. No cycles.",
+              "choices": [
+                "A linked list",
+                "A hierarchical data structure with a root and child nodes",
+                "A set of values",
+                "A sorted array"
+              ],
+              "id": "dsa_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a binary tree?",
+              "answer": "A tree where each node has at most two children",
+              "explain": "Binary trees have left and right children. Each child is itself a binary tree.",
+              "choices": [
+                "A tree with exactly two nodes",
+                "A tree where each node has at most two children",
+                "A tree with two roots",
+                "A linked list"
+              ],
+              "id": "dsa_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a binary search tree (BST)?",
+              "answer": "A binary tree where left < parent < right",
+              "explain": "In a BST, all values in the left subtree are less than the parent, and all in the right subtree are greater. Enables fast search.",
+              "choices": [
+                "A tree that is sorted top to bottom",
+                "A binary tree where left < parent < right",
+                "A tree with exactly three values",
+                "A heap"
+              ],
+              "id": "dsa_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the search complexity in a balanced BST?",
+              "answer": "O(log n) average case",
+              "explain": "A balanced BST is similar to binary search on an array. Each comparison halves the search space.",
+              "choices": [
+                "O(1)",
+                "O(log n) average case",
+                "O(n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a heap?",
+              "answer": "A complete binary tree where parent >= all children (max heap) or parent <= all children (min heap)",
+              "explain": "Heaps maintain a partial order. The root is always the max (or min). Enables O(log n) insertion and extraction.",
+              "choices": [
+                "A sorted array",
+                "A complete binary tree where parent >= all children (max heap) or parent <= all children (min heap)",
+                "A hash table",
+                "A linked list"
+              ],
+              "id": "dsa_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Graphs and Traversal",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a graph?",
+              "answer": "A set of nodes connected by edges",
+              "explain": "Graphs are more general than trees. Nodes are called vertices; connections are edges. Cycles are allowed.",
+              "choices": [
+                "A tree with multiple roots",
+                "A set of nodes connected by edges",
+                "A sorted array",
+                "A hash table"
+              ],
+              "id": "dsa_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are directed and undirected graphs?",
+              "answer": "Directed edges have direction (A to B); undirected edges go both ways",
+              "explain": "In a directed graph, edge A->B does not mean B->A. In undirected, if A-B exists, B-A also exists.",
+              "choices": [
+                "Directed has more nodes",
+                "Directed edges have direction (A to B); undirected edges go both ways",
+                "Undirected is a special case of directed",
+                "They are identical"
+              ],
+              "id": "dsa_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is breadth-first search (BFS)?",
+              "answer": "Exploring all neighbors before exploring deeper nodes",
+              "explain": "BFS uses a queue. Visit root, then all children, then all grandchildren. Explores level by level.",
+              "choices": [
+                "Exploring all ancestors first",
+                "Exploring all neighbors before exploring deeper nodes",
+                "Searching in random order",
+                "A sorting algorithm"
+              ],
+              "id": "dsa_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is depth-first search (DFS)?",
+              "answer": "Exploring as far as possible along each branch before backtracking",
+              "explain": "DFS uses a stack. Go deep into one path, backtrack when stuck, then explore another path.",
+              "choices": [
+                "Exploring all neighbors first",
+                "Exploring as far as possible along each branch before backtracking",
+                "A sorting algorithm",
+                "Finding the shortest path"
+              ],
+              "id": "dsa_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are the complexities of BFS and DFS?",
+              "answer": "Both O(V + E) where V is vertices and E is edges",
+              "explain": "Both visit every vertex once and traverse every edge once. Linear in the size of the graph.",
+              "choices": [
+                "O(V^2)",
+                "O(log V)",
+                "Both O(V + E) where V is vertices and E is edges",
+                "Depends on the type"
+              ],
+              "id": "dsa_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Searching and Sorting",
+      "tip": "Linear search is O(n); binary search is O(log n) on sorted data. Bubble sort is O(n^2) naive. Merge sort is O(n log n) always. Quicksort is O(n log n) average, O(n^2) worst. Choose wisely.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "Searching Algorithms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is linear search?",
+              "answer": "Checking each element one by one until found",
+              "explain": "Start at the beginning and compare each element. Works on any list, but slow on large unsorted data.",
+              "choices": [
+                "A sorted array search",
+                "Checking each element one by one until found",
+                "A hash table search",
+                "A tree search"
+              ],
+              "id": "dsa_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complexity of linear search?",
+              "answer": "O(n) in the worst case",
+              "explain": "You might need to check all n elements. Average case is also O(n).",
+              "choices": [
+                "O(1)",
+                "O(n) in the worst case",
+                "O(log n)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is binary search?",
+              "answer": "Dividing sorted data in half repeatedly to find a target",
+              "explain": "Check the middle. If target is smaller, search left half; if larger, search right half. Requires sorted data.",
+              "choices": [
+                "Linear search on two lists",
+                "Dividing sorted data in half repeatedly to find a target",
+                "Searching two trees",
+                "Using two pointers"
+              ],
+              "id": "dsa_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complexity of binary search?",
+              "answer": "O(log n)",
+              "explain": "Each comparison halves the search space. On 1,000,000 items, you need at most 20 comparisons.",
+              "choices": [
+                "O(n)",
+                "O(log n)",
+                "O(1)",
+                "O(n^2)"
+              ],
+              "id": "dsa_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When is binary search faster than linear search?",
+              "answer": "Always on sorted data with reasonably large input",
+              "explain": "Binary search's O(log n) beats linear's O(n) unless the list is very small. Cost of sorting is worth it.",
+              "choices": [
+                "Never",
+                "Always on sorted data with reasonably large input",
+                "Only on arrays",
+                "Only with small data"
+              ],
+              "id": "dsa_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Sorting Algorithms",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is bubble sort?",
+              "answer": "Repeatedly swapping adjacent elements if they are in wrong order",
+              "explain": "Compare neighbors, swap if needed. Repeat until sorted. Largest elements 'bubble' to the end.",
+              "choices": [
+                "Dividing and sorting halves",
+                "Repeatedly swapping adjacent elements if they are in wrong order",
+                "Selecting the smallest repeatedly",
+                "Using a heap"
+              ],
+              "id": "dsa_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complexity of bubble sort?",
+              "answer": "O(n^2) in average and worst case",
+              "explain": "Nested loops: for each pass, you compare all neighbors. n passes, each O(n), so O(n^2).",
+              "choices": [
+                "O(n)",
+                "O(n^2) in average and worst case",
+                "O(n log n)",
+                "O(1)"
+              ],
+              "id": "dsa_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is merge sort?",
+              "answer": "Dividing the list in half, sorting each half, and merging results",
+              "explain": "Divide and conquer. Split until single elements, then merge while maintaining order. Always O(n log n).",
+              "choices": [
+                "Swapping adjacent elements",
+                "Dividing the list in half, sorting each half, and merging results",
+                "Selecting smallest repeatedly",
+                "Using a pivot"
+              ],
+              "id": "dsa_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the complexity of merge sort?",
+              "answer": "O(n log n) in all cases, O(n) space",
+              "explain": "Guaranteed O(n log n) time. Divides into log n levels, each level is O(n). Space is O(n) for merging.",
+              "choices": [
+                "O(n^2)",
+                "O(n log n) in all cases, O(n) space",
+                "O(n)",
+                "O(1) space"
+              ],
+              "id": "dsa_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is quicksort's complexity?",
+              "answer": "O(n log n) average case, O(n^2) worst case",
+              "explain": "Quicksort picks a pivot, partitions around it, and recursively sorts. Good average, bad if pivot is always extreme.",
+              "choices": [
+                "O(n^2) always",
+                "O(n log n) average case, O(n^2) worst case",
+                "O(n log n) always",
+                "O(n)"
+              ],
+              "id": "dsa_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Problem Solving Patterns",
+      "tip": "Recursion breaks problems into smaller versions of itself with a base case. Divide and conquer solves subproblems independently. Dynamic programming reuses solutions to avoid recomputation. Greedy picks locally optimal choices.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Recursion and Divide and Conquer",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is recursion?",
+              "answer": "A function calling itself with a simpler version of the problem",
+              "explain": "Recursion breaks problems down. Base case stops it. Example: factorial(n) = n * factorial(n-1).",
+              "choices": [
+                "A loop",
+                "A function calling itself with a simpler version of the problem",
+                "A type of array",
+                "A sorting algorithm"
+              ],
+              "id": "dsa_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a base case?",
+              "answer": "The condition that stops recursion from continuing",
+              "explain": "Without a base case, recursion is infinite. factorial(0) = 1 is the base case for factorial.",
+              "choices": [
+                "The first recursive call",
+                "The condition that stops recursion from continuing",
+                "A loop counter",
+                "A return statement"
+              ],
+              "id": "dsa_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is divide and conquer?",
+              "answer": "Breaking a problem into independent subproblems, solving each, and combining results",
+              "explain": "Merge sort divides the array, sorts halves independently, and merges. Quicksort partitions and recursively sorts.",
+              "choices": [
+                "Trying all possibilities",
+                "Breaking a problem into independent subproblems, solving each, and combining results",
+                "Using a greedy approach",
+                "A loop pattern"
+              ],
+              "id": "dsa_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the recurrence relation for binary search?",
+              "answer": "T(n) = T(n/2) + O(1), solving to O(log n)",
+              "explain": "Each call halves the problem size and does constant work. This solves to logarithmic time.",
+              "choices": [
+                "T(n) = 2*T(n/2) + O(n)",
+                "T(n) = T(n/2) + O(1), solving to O(log n)",
+                "T(n) = T(n-1) + O(1)",
+                "T(n) = O(n^2)"
+              ],
+              "id": "dsa_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the recurrence for merge sort?",
+              "answer": "T(n) = 2*T(n/2) + O(n), solving to O(n log n)",
+              "explain": "Merge sort divides into two halves (2*T(n/2)) and merges them (O(n)). This solves to O(n log n).",
+              "choices": [
+                "T(n) = T(n/2) + O(1)",
+                "T(n) = 2*T(n/2) + O(n), solving to O(n log n)",
+                "T(n) = T(n-1) + O(n)",
+                "T(n) = O(n)"
+              ],
+              "id": "dsa_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Dynamic Programming and Greedy",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is dynamic programming?",
+              "answer": "Solving a problem by storing solutions to subproblems and reusing them",
+              "explain": "Avoid recomputing the same subproblem. Fibonacci: instead of recalculating fib(5) every time, store it.",
+              "choices": [
+                "A type of sorting",
+                "Solving a problem by storing solutions to subproblems and reusing them",
+                "Dividing into independent subproblems",
+                "A greedy approach"
+              ],
+              "id": "dsa_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is memoization?",
+              "answer": "Storing computed results to avoid recomputation",
+              "explain": "Cache results. If fib(5) was computed, reuse it instead of recalculating. Transforms exponential to polynomial.",
+              "choices": [
+                "Sorting algorithm",
+                "Storing computed results to avoid recomputation",
+                "A hash table",
+                "A memory leak"
+              ],
+              "id": "dsa_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a greedy algorithm?",
+              "answer": "Making the locally optimal choice at each step, hoping for a global optimum",
+              "explain": "Greedy picks the best option now without planning ahead. Works for some problems (coin change), fails for others.",
+              "choices": [
+                "A randomized algorithm",
+                "Making the locally optimal choice at each step, hoping for a global optimum",
+                "A dynamic programming algorithm",
+                "A sorting algorithm"
+              ],
+              "id": "dsa_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When does a greedy approach work?",
+              "answer": "When the problem has optimal substructure and the greedy choice leads to the global optimum",
+              "explain": "Greedy works for some problems (activity selection, coin change with certain denominations) but not all (0-1 knapsack).",
+              "choices": [
+                "Always",
+                "When the problem has optimal substructure and the greedy choice leads to the global optimum",
+                "For sorting only",
+                "Never for NP-hard problems"
+              ],
+              "id": "dsa_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between DP and greedy?",
+              "answer": "DP reuses subproblem solutions; greedy makes one-shot local choices",
+              "explain": "DP is exhaustive and guaranteed optimal. Greedy is fast but not always optimal.",
+              "choices": [
+                "DP is faster",
+                "DP reuses subproblem solutions; greedy makes one-shot local choices",
+                "Greedy always works",
+                "They are the same"
+              ],
+              "id": "dsa_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

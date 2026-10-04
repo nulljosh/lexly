@@ -1,0 +1,904 @@
+{
+  "id": "swift",
+  "name": "Swift",
+  "category": "programming",
+  "icon": "fa-brands fa-swift",
+  "level": "Apple Development",
+  "version": 1,
+  "units": [
+    {
+      "id": "u1",
+      "title": "Values and Types",
+      "tip": "Swift requires you to declare whether variables can change (var) or are fixed (let). Every value has a type like Int, Double, String, or Bool. Swift often infers the type automatically from how you use the value.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "title": "Variables and Constants",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "Which keyword declares a value that cannot be changed?",
+              "answer": "let",
+              "explain": "let declares a constant, which cannot be reassigned. var declares a variable, which can be reassigned.",
+              "choices": [
+                "var",
+                "let",
+                "const",
+                "immutable"
+              ],
+              "id": "swift_u1l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'var age = 25' mean?",
+              "answer": "age is a variable holding the integer 25",
+              "explain": "var declares a mutable variable. The type Int is inferred from the value 25. The variable age can be reassigned to a different integer later.",
+              "choices": [
+                "age is a constant holding 25",
+                "age is a variable holding the integer 25",
+                "age is a string",
+                "age cannot be changed"
+              ],
+              "id": "swift_u1l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "After 'let name = \"Alice\"', what happens if you try 'name = \"Bob\"'?",
+              "answer": "Compilation error: cannot assign to immutable value",
+              "explain": "let creates a constant. Once assigned, it cannot be reassigned. The compiler rejects any attempt to change a let binding.",
+              "choices": [
+                "name becomes \"Bob\"",
+                "Compilation error: cannot assign to immutable value",
+                "The program ignores the assignment",
+                "name becomes \"AliceBob\""
+              ],
+              "id": "swift_u1l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "Why use 'let' instead of 'var'?",
+              "answer": "To prevent accidental changes and show intent",
+              "explain": "Using let signals that a value should not change. It prevents bugs from accidental reassignment and makes code clearer to read.",
+              "choices": [
+                "let is faster than var",
+                "To prevent accidental changes and show intent",
+                "let uses less memory",
+                "There is no difference"
+              ],
+              "id": "swift_u1l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between 'let' and 'var'?",
+              "answer": "let cannot be reassigned; var can be reassigned",
+              "explain": "let declares an immutable constant; var declares a mutable variable. Both are type-safe, but only var values can be changed after the initial assignment.",
+              "choices": [
+                "let is for numbers; var is for text",
+                "let cannot be reassigned; var can be reassigned",
+                "var is deprecated in favor of let",
+                "let requires a type annotation; var does not"
+              ],
+              "id": "swift_u1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "title": "Basic Types",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is the type of the value 42?",
+              "answer": "Int",
+              "explain": "42 is a whole number, which Swift infers as type Int. Int represents integers without decimal points.",
+              "choices": [
+                "Double",
+                "String",
+                "Int",
+                "Float"
+              ],
+              "id": "swift_u1l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of the value 3.14?",
+              "answer": "Double",
+              "explain": "3.14 has a decimal point, so Swift infers it as Double. Double is the default floating-point type for decimal numbers.",
+              "choices": [
+                "Int",
+                "Float",
+                "Double",
+                "Decimal"
+              ],
+              "id": "swift_u1l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the type of the value \"Hello\"?",
+              "answer": "String",
+              "explain": "Text surrounded by double quotes is a String. String represents sequences of characters.",
+              "choices": [
+                "Text",
+                "Character",
+                "String",
+                "Array"
+              ],
+              "id": "swift_u1l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'true' and 'false' represent?",
+              "answer": "Boolean values for true and false logic",
+              "explain": "true and false are Boolean values, which are the type Bool. Booleans are used in conditions and logical operations.",
+              "choices": [
+                "String values",
+                "Integer values 1 and 0",
+                "Boolean values for true and false logic",
+                "Type names"
+              ],
+              "id": "swift_u1l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is type inference?",
+              "answer": "Swift determines the type automatically from the assigned value",
+              "explain": "Type inference means you do not need to write 'let x: Int = 5'. Swift sees the value 5 and knows it is an Int. You write less code without losing type safety.",
+              "choices": [
+                "You must always write the type explicitly",
+                "Swift determines the type automatically from the assigned value",
+                "The type is determined at runtime",
+                "Swift guesses and might be wrong"
+              ],
+              "id": "swift_u1l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Control Flow",
+      "tip": "Control flow directs which code runs based on conditions. if and switch statements make decisions. for-in, while, and repeat-while loops repeat code. Ranges let you create sequences of numbers efficiently.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "title": "if, switch, and conditions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'if age >= 18' do?",
+              "answer": "Runs the code block if age is 18 or greater",
+              "explain": "if evaluates a Boolean condition. If it is true, the code inside the braces runs. If false, it is skipped.",
+              "choices": [
+                "Sets age to 18",
+                "Runs the code block if age is 18 or greater",
+                "Prints age",
+                "Checks if age is less than 18"
+              ],
+              "id": "swift_u2l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the purpose of 'else'?",
+              "answer": "Run code if the if condition is false",
+              "explain": "else provides an alternative code block that runs when the if condition evaluates to false.",
+              "choices": [
+                "Run code if the condition is true",
+                "Run code if the if condition is false",
+                "Repeat code",
+                "Exit the program"
+              ],
+              "id": "swift_u2l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a switch statement good for?",
+              "answer": "Choosing between many possible values cleanly",
+              "explain": "switch is cleaner than multiple if-else statements when checking one value against many options. Each case handles a different value.",
+              "choices": [
+                "Turning things on and off",
+                "Choosing between many possible values cleanly",
+                "Looping over a range",
+                "Creating variables"
+              ],
+              "id": "swift_u2l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'default' do in a switch?",
+              "answer": "Runs if no other case matches",
+              "explain": "default is the fallback case in a switch. If none of the explicit cases match, the default case runs.",
+              "choices": [
+                "Sets default values",
+                "Runs first",
+                "Runs if no other case matches",
+                "Ends the switch"
+              ],
+              "id": "swift_u2l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the '==' operator?",
+              "answer": "Checks if two values are equal",
+              "explain": "== compares two values and returns true if they are equal. Use it in if conditions to make decisions based on equality.",
+              "choices": [
+                "Assigns a value",
+                "Checks if two values are equal",
+                "Increments a number",
+                "Concatenates strings"
+              ],
+              "id": "swift_u2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "title": "Loops",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'for i in 1...5' do?",
+              "answer": "Loops with i from 1 to 5 inclusive",
+              "explain": "The ... operator creates a closed range. for-in iterates through each value: 1, 2, 3, 4, 5.",
+              "choices": [
+                "Loops 5 times only",
+                "Loops with i from 1 to 5 inclusive",
+                "Loops from 1 to 4",
+                "Creates a range named i"
+              ],
+              "id": "swift_u2l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the difference between '...' and '..<'?",
+              "answer": "'...' includes the end; '..<' excludes the end",
+              "explain": "1...5 is 1, 2, 3, 4, 5. 1..<5 is 1, 2, 3, 4. Both are ranges; the difference is whether the end value is included.",
+              "choices": [
+                "'...' is for loops; '..<' is for switches",
+                "'...' includes the end; '..<' excludes the end",
+                "They are identical",
+                "'..<' is older syntax"
+              ],
+              "id": "swift_u2l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does a 'while' loop do?",
+              "answer": "Repeats as long as a condition is true",
+              "explain": "while checks a condition before each iteration. If true, the code block runs. If false, the loop ends.",
+              "choices": [
+                "Repeats a fixed number of times",
+                "Repeats as long as a condition is true",
+                "Runs once",
+                "Repeats forever"
+              ],
+              "id": "swift_u2l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'repeat-while'?",
+              "answer": "A loop that runs at least once before checking the condition",
+              "explain": "repeat-while executes the code block first, then checks the condition. Even if the condition is false, the code runs at least once.",
+              "choices": [
+                "A loop that never repeats",
+                "A loop that runs at least once before checking the condition",
+                "Identical to while",
+                "A loop for ranges only"
+              ],
+              "id": "swift_u2l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'break' do in a loop?",
+              "answer": "Exits the loop immediately",
+              "explain": "break stops the loop at once, skipping any remaining iterations. Useful to exit early when a condition is met.",
+              "choices": [
+                "Pauses the loop",
+                "Exits the loop immediately",
+                "Skips one iteration",
+                "Restarts the loop"
+              ],
+              "id": "swift_u2l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Collections",
+      "tip": "Collections store multiple values together. Arrays are ordered lists indexed by position. Dictionaries map keys to values. Sets store unique, unordered values. Each has different strengths.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "title": "Arrays and Dictionaries",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is an Array?",
+              "answer": "An ordered collection indexed by position starting at 0",
+              "explain": "Arrays store multiple values of the same type in order. You access them by index: numbers[0] is the first element.",
+              "choices": [
+                "A fixed-size collection",
+                "An ordered collection indexed by position starting at 0",
+                "A collection of unique values",
+                "A key-value store"
+              ],
+              "id": "swift_u3l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'let fruits = [\"apple\", \"banana\"]' create?",
+              "answer": "An Array of Strings with two elements",
+              "explain": "This is array literal syntax. The type is [String]. fruits[0] is \"apple\", fruits[1] is \"banana\".",
+              "choices": [
+                "A dictionary",
+                "An Array of Strings with two elements",
+                "A set",
+                "A tuple"
+              ],
+              "id": "swift_u3l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a Dictionary?",
+              "answer": "A collection that maps unique keys to values",
+              "explain": "Dictionaries store key-value pairs. You look up values by key, not by position. dictionary[\"name\"] retrieves the value associated with the key \"name\".",
+              "choices": [
+                "An ordered list of values",
+                "A collection that maps unique keys to values",
+                "A collection of unique values only",
+                "A type of array"
+              ],
+              "id": "swift_u3l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'let person = [\"name\": \"Alice\", \"age\": \"30\"]' create?",
+              "answer": "A dictionary with string keys and string values",
+              "explain": "This is dictionary literal syntax with key-value pairs. person[\"name\"] returns \"Alice\".",
+              "choices": [
+                "An array of arrays",
+                "A dictionary with string keys and string values",
+                "A set of strings",
+                "A variable named person"
+              ],
+              "id": "swift_u3l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "How do you add an element to an array?",
+              "answer": "Use the append() method",
+              "explain": "numbers.append(5) adds 5 to the end of the array. You can also use += with an array literal.",
+              "choices": [
+                "Use insert()",
+                "Use the append() method",
+                "Use add()",
+                "Use push()"
+              ],
+              "id": "swift_u3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "title": "Sets and Collection Methods",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a Set?",
+              "answer": "An unordered collection of unique values",
+              "explain": "Sets store each value only once. Order does not matter. Perfect for membership testing: 'if numbers.contains(5)'.",
+              "choices": [
+                "An ordered list",
+                "An unordered collection of unique values",
+                "A dictionary",
+                "An array without duplicates"
+              ],
+              "id": "swift_u3l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'let uniqueNumbers: Set = [1, 2, 2, 3]' create?",
+              "answer": "A set with three unique values: 1, 2, 3",
+              "explain": "Sets automatically remove duplicates. The second 2 is discarded. Type annotation is needed because [1, 2, 3] alone is inferred as an Array.",
+              "choices": [
+                "An array with four elements",
+                "A set with four elements",
+                "A set with three unique values: 1, 2, 3",
+                "A dictionary"
+              ],
+              "id": "swift_u3l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the count property return?",
+              "answer": "The number of elements in a collection",
+              "explain": "array.count returns how many elements are in the array. Works on Arrays, Dictionaries, and Sets.",
+              "choices": [
+                "The maximum value",
+                "The number of elements in a collection",
+                "The size in bytes",
+                "The index of the last element"
+              ],
+              "id": "swift_u3l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the isEmpty property check?",
+              "answer": "Whether a collection has zero elements",
+              "explain": "array.isEmpty returns true if count is 0. It is safer and clearer than checking 'count == 0'.",
+              "choices": [
+                "Whether values are empty strings",
+                "Whether a collection has zero elements",
+                "Whether the collection is a set",
+                "Whether the collection is ordered"
+              ],
+              "id": "swift_u3l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'contains()' do?",
+              "answer": "Checks if a value is in the collection",
+              "explain": "array.contains(5) returns true if 5 is in the array, false otherwise. O(1) for Sets, O(n) for Arrays.",
+              "choices": [
+                "Removes a value",
+                "Checks if a value is in the collection",
+                "Finds the index of a value",
+                "Adds a value"
+              ],
+              "id": "swift_u3l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Functions and Closures",
+      "tip": "Functions group code into reusable blocks. Argument labels make calls readable. Closures are functions without names, useful for callbacks. Return values communicate results.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "title": "Function Basics",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does the 'func' keyword do?",
+              "answer": "Declares a function",
+              "explain": "func tells Swift you are defining a reusable block of code. You call it by name with parentheses.",
+              "choices": [
+                "Declares a variable",
+                "Declares a function",
+                "Declares a type",
+                "Imports a library"
+              ],
+              "id": "swift_u4l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a parameter?",
+              "answer": "A named value passed into a function",
+              "explain": "Parameters appear in the function definition: func greet(name: String). When called, greet(\"Alice\") passes \"Alice\" as the name parameter.",
+              "choices": [
+                "The value returned by a function",
+                "A named value passed into a function",
+                "A local variable only",
+                "A type annotation"
+              ],
+              "id": "swift_u4l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'return' do in a function?",
+              "answer": "Specifies the value the function produces",
+              "explain": "return stops execution and sends a value back to the caller. func add(_ a: Int, _ b: Int) -> Int { return a + b } returns the sum.",
+              "choices": [
+                "Exits the program",
+                "Specifies the value the function produces",
+                "Calls another function",
+                "Prints a value"
+              ],
+              "id": "swift_u4l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an argument label?",
+              "answer": "A name that describes what a parameter is for when calling a function",
+              "explain": "func move(to direction: String) has argument label 'to'. You call it move(to: \"north\"), not move(\"north\").",
+              "choices": [
+                "The name of the parameter",
+                "A name that describes what a parameter is for when calling a function",
+                "The type of the return value",
+                "A comment"
+              ],
+              "id": "swift_u4l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does '-> Int' mean in a function signature?",
+              "answer": "The function returns an Int",
+              "explain": "-> specifies the return type. func double(_ x: Int) -> Int returns an integer value.",
+              "choices": [
+                "An input is an Int",
+                "The function returns an Int",
+                "The function creates an Int variable",
+                "An error code"
+              ],
+              "id": "swift_u4l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "title": "Closures and Advanced Functions",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a closure?",
+              "answer": "A function without a name that captures surrounding variables",
+              "explain": "Closures are anonymous functions. They can be passed as arguments or stored in variables, and they can access variables from their enclosing scope.",
+              "choices": [
+                "A function with a return type",
+                "A function without a name that captures surrounding variables",
+                "A function parameter",
+                "A type of loop"
+              ],
+              "id": "swift_u4l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the syntax for a basic closure?",
+              "answer": "{ (parameters) -> ReturnType in code }",
+              "explain": "Closures use { } and the 'in' keyword. Example: { (x: Int) -> Int in return x * 2 } doubles a number.",
+              "choices": [
+                "function { code }",
+                "{ (parameters) -> ReturnType in code }",
+                "func { parameters in code }",
+                "[code]"
+              ],
+              "id": "swift_u4l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What are closures used for?",
+              "answer": "Passing code as arguments, callbacks, and asynchronous operations",
+              "explain": "Closures are ideal for completion handlers, array transformations (map, filter), and sorting with custom logic.",
+              "choices": [
+                "Declaring variables only",
+                "Passing code as arguments, callbacks, and asynchronous operations",
+                "Type annotations",
+                "Memory management"
+              ],
+              "id": "swift_u4l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'map' method do with a closure?",
+              "answer": "Transforms each element in a collection and returns a new collection",
+              "explain": "numbers.map { $0 * 2 } doubles every number. It applies the closure to each element and collects the results.",
+              "choices": [
+                "Filters elements",
+                "Transforms each element in a collection and returns a new collection",
+                "Sorts elements",
+                "Removes elements"
+              ],
+              "id": "swift_u4l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the 'filter' method do with a closure?",
+              "answer": "Returns a new collection with only elements where the closure returns true",
+              "explain": "numbers.filter { $0 > 5 } keeps only numbers greater than 5. It tests each element against the closure condition.",
+              "choices": [
+                "Transforms all elements",
+                "Returns a new collection with only elements where the closure returns true",
+                "Removes the first matching element",
+                "Sorts elements"
+              ],
+              "id": "swift_u4l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Optionals",
+      "tip": "An Optional can hold a value or nil (nothing). Use if let and guard let to safely unwrap them. Optional chaining and nil coalescing provide convenient shortcuts. Avoiding force-unwrap prevents crashes.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "title": "nil and Unwrapping",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What does 'Optional' represent?",
+              "answer": "A value that might be nil or a real value",
+              "explain": "Optional<Int> means the value is either an Int or nil. You declare it as Int?, read as 'optional Int'.",
+              "choices": [
+                "A value that is always nil",
+                "A value that might be nil or a real value",
+                "A feature you can choose to use",
+                "A type of array"
+              ],
+              "id": "swift_u5l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is 'nil'?",
+              "answer": "The absence of a value in an Optional",
+              "explain": "nil means 'no value'. Only Optionals can be nil. Using nil outside an Optional is a compilation error.",
+              "choices": [
+                "Zero",
+                "The absence of a value in an Optional",
+                "An empty string",
+                "The same as false"
+              ],
+              "id": "swift_u5l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'if let' do?",
+              "answer": "Safely unwraps an Optional and runs code only if it is not nil",
+              "explain": "if let age = maybeAge { ... } unwraps the Optional. If maybeAge is nil, the block is skipped. If it has a value, age holds that value.",
+              "choices": [
+                "Checks if a value equals something",
+                "Safely unwraps an Optional and runs code only if it is not nil",
+                "Creates a new Optional",
+                "Assigns a value"
+              ],
+              "id": "swift_u5l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'guard let' do?",
+              "answer": "Unwraps an Optional and exits early if it is nil",
+              "explain": "guard let age = maybeAge else { return } unwraps age. If maybeAge is nil, the code returns immediately. Otherwise, age is available for the rest of the function.",
+              "choices": [
+                "Protects a variable from changes",
+                "Unwraps an Optional and exits early if it is nil",
+                "Checks for equality",
+                "Loops until a condition is true"
+              ],
+              "id": "swift_u5l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does force-unwrapping with '!' do?",
+              "answer": "Extracts the value without checking if it is nil, crashing if it is",
+              "explain": "age! assumes age has a value. If it is nil, the app crashes. Avoid ! unless you are certain the value is not nil.",
+              "choices": [
+                "Checks if the value is nil",
+                "Extracts the value without checking if it is nil, crashing if it is",
+                "Converts a value to optional",
+                "Compares two optionals"
+              ],
+              "id": "swift_u5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "title": "Optional Chaining and Coalescing",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is optional chaining?",
+              "answer": "Calling methods or accessing properties on an Optional without unwrapping",
+              "explain": "If person is an Optional, person?.getName() calls getName only if person is not nil. If person is nil, the call is skipped safely.",
+              "choices": [
+                "Unwrapping multiple optionals",
+                "Calling methods or accessing properties on an Optional without unwrapping",
+                "Creating a chain of optionals",
+                "Comparing optionals"
+              ],
+              "id": "swift_u5l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does the '?.' operator do?",
+              "answer": "Performs an operation safely on an Optional, returning nil if the Optional is nil",
+              "explain": "person?.name returns the name if person is not nil, or nil if person is nil. No crash either way.",
+              "choices": [
+                "Unwraps an optional",
+                "Performs an operation safely on an Optional, returning nil if the Optional is nil",
+                "Compares two values",
+                "Creates a new optional"
+              ],
+              "id": "swift_u5l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the nil coalescing operator??",
+              "answer": "Provides a default value if the left Optional is nil",
+              "explain": "let age = maybeAge ?? 18 returns maybeAge if it is not nil, or 18 if it is nil. Concise way to handle nil.",
+              "choices": [
+                "Checks for nil",
+                "Provides a default value if the left Optional is nil",
+                "Unwraps an optional",
+                "Chains optionals"
+              ],
+              "id": "swift_u5l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "When should you use '??' (nil coalescing)?",
+              "answer": "When you have a fallback value for nil",
+              "explain": "If you want a default value when an Optional is nil, ?? is clean and readable. Example: let name = inputName ?? \"Guest\".",
+              "choices": [
+                "To replace all if let statements",
+                "When you have a fallback value for nil",
+                "To check if a value is zero",
+                "To create optionals"
+              ],
+              "id": "swift_u5l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'if let age = person?.age' do?",
+              "answer": "Unwraps person, accesses age, and then unwraps age if it exists",
+              "explain": "This combines optional chaining and if let. It safely accesses age on person, and only enters the block if both person and age are not nil.",
+              "choices": [
+                "Checks if person and age are equal",
+                "Unwraps person, accesses age, and then unwraps age if it exists",
+                "Creates a new optional",
+                "Calls a method"
+              ],
+              "id": "swift_u5l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Structs, Classes, and Protocols",
+      "tip": "Structs and classes package data and functions together. Structs are value types (copied); classes are reference types (shared). Protocols define contracts. Enums organize related values.",
+      "lessons": [
+        {
+          "id": "u6l1",
+          "title": "Structs and Classes",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a struct?",
+              "answer": "A value type that groups related data and functions",
+              "explain": "struct Person { var name: String } creates a new type. Structs are copied when passed around, so changes do not affect other copies.",
+              "choices": [
+                "A fixed array",
+                "A value type that groups related data and functions",
+                "A reference type",
+                "A protocol"
+              ],
+              "id": "swift_u6l1_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a class?",
+              "answer": "A reference type that groups related data and functions",
+              "explain": "class Person { var name: String } creates a new type. Classes are shared by reference, so changes to one variable affect all references to the same instance.",
+              "choices": [
+                "A value type",
+                "A reference type that groups related data and functions",
+                "A protocol",
+                "A built-in type"
+              ],
+              "id": "swift_u6l1_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is the main difference between struct and class?",
+              "answer": "Struct is value type; class is reference type",
+              "explain": "When you copy a struct, you get a new independent copy. When you copy a class, you get another reference to the same object.",
+              "choices": [
+                "Classes can have methods; structs cannot",
+                "Struct is value type; class is reference type",
+                "Structs are faster",
+                "Classes cannot have properties"
+              ],
+              "id": "swift_u6l1_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an 'initializer'?",
+              "answer": "A special function that sets up a new instance",
+              "explain": "init is the initializer. init(name: String) { self.name = name } sets up initial values when you create an instance.",
+              "choices": [
+                "A function that destroys objects",
+                "A special function that sets up a new instance",
+                "A type annotation",
+                "A property"
+              ],
+              "id": "swift_u6l1_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'self' refer to?",
+              "answer": "The current instance of the struct or class",
+              "explain": "Inside a method, self refers to the instance the method is called on. self.name = name sets the instance's name property.",
+              "choices": [
+                "The type itself",
+                "The current instance of the struct or class",
+                "A global variable",
+                "The argument passed in"
+              ],
+              "id": "swift_u6l1_4"
+            }
+          ]
+        },
+        {
+          "id": "u6l2",
+          "title": "Protocols and Enums",
+          "exercises": [
+            {
+              "type": "mathChoice",
+              "question": "What is a protocol?",
+              "answer": "A contract defining what properties and methods a type must have",
+              "explain": "protocol Drawable { func draw() } requires any type adopting it to implement draw(). Protocols enable polymorphism.",
+              "choices": [
+                "A data type",
+                "A contract defining what properties and methods a type must have",
+                "A function",
+                "A class"
+              ],
+              "id": "swift_u6l2_0"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'conforming to a protocol' mean?",
+              "answer": "Implementing all required properties and methods of the protocol",
+              "explain": "struct Circle: Drawable implements the Drawable protocol. It must define draw() and any other requirements.",
+              "choices": [
+                "Following naming rules",
+                "Implementing all required properties and methods of the protocol",
+                "Using the protocol as a base class",
+                "Importing a library"
+              ],
+              "id": "swift_u6l2_1"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is an enum?",
+              "answer": "A type representing a fixed set of related values",
+              "explain": "enum Color { case red, green, blue } defines three color values. Enums organize related options and prevent invalid states.",
+              "choices": [
+                "A list of numbers",
+                "A type representing a fixed set of related values",
+                "A string type",
+                "A loop"
+              ],
+              "id": "swift_u6l2_2"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What does 'associated value' mean in an enum?",
+              "answer": "Extra data attached to an enum case",
+              "explain": "enum Result { case success(String) } allows success to carry a message. Case failure(Error) can carry an error.",
+              "choices": [
+                "A related struct",
+                "Extra data attached to an enum case",
+                "A protocol requirement",
+                "A type annotation"
+              ],
+              "id": "swift_u6l2_3"
+            },
+            {
+              "type": "mathChoice",
+              "question": "What is a 'computed property'?",
+              "answer": "A property that calculates its value instead of storing it",
+              "explain": "var doubled: Int { return value * 2 } computes doubled each time it is accessed. No stored storage, just calculation.",
+              "choices": [
+                "A property that is calculated at compile time",
+                "A property that calculates its value instead of storing it",
+                "A stored property",
+                "A type of class"
+              ],
+              "id": "swift_u6l2_4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
