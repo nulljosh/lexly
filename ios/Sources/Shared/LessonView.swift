@@ -51,6 +51,7 @@ struct LessonView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         HeartsRow(hearts: store.progress.hearts)
                         Text(prompt(for: exercise)).font(.title3.bold())
+                        if let fen = exercise.fen { ChessBoard(fen: fen) }
 
                         switch exercise.type {
                         case "sentence":
@@ -555,5 +556,58 @@ private struct FeedbackBanner: View {
         case .correct(let explain): return explain
         case .incorrect(_, let explain): return explain
         }
+    }
+}
+
+/// Board for a `chess` exercise, drawn from its FEN with the side to move at the
+/// bottom. Both sides use the solid glyphs, told apart by colour and outline.
+/// U+FE0E keeps the pawn from rendering as a colour emoji.
+struct ChessBoard: View {
+    let fen: String
+    private static let glyphs: [Character: String] = [
+        "k": "\u{265A}", "q": "\u{265B}", "r": "\u{265C}", "b": "\u{265D}", "n": "\u{265E}", "p": "\u{265F}",
+    ]
+
+    private var parts: (rows: [[Character]], black: Bool) {
+        let fields = fen.split(separator: " ")
+        let rows = (fields.first ?? "").split(separator: "/").map { rank in
+            rank.flatMap { c -> [Character] in c.isNumber ? Array(repeating: ".", count: c.wholeNumberValue ?? 0) : [c] }
+        }
+        return (rows, fields.count > 1 && fields[1] == "b")
+    }
+
+    var body: some View {
+        let (rows, black) = parts
+        Grid(horizontalSpacing: 0, verticalSpacing: 0) {
+            ForEach(0..<8, id: \.self) { r in
+                GridRow {
+                    ForEach(0..<8, id: \.self) { f in
+                        let rank = black ? 7 - r : r, file = black ? 7 - f : f
+                        let piece: Character = rows.indices.contains(rank) && rows[rank].indices.contains(file) ? rows[rank][file] : "."
+                        ZStack {
+                            Rectangle().fill((rank + file) % 2 == 1 ? Color(hex: "9fb6cd") : Color(hex: "eef2f7"))
+                            if let glyph = Self.glyphs[Character(piece.lowercased())] {
+                                let text = Text(glyph + "\u{FE0E}").font(.system(size: 30))
+                                if piece.isUppercase {
+                                    // Outline: the glyph in near-black under a slightly smaller white one.
+                                    ZStack {
+                                        text.foregroundStyle(Color(hex: "18181b")).scaleEffect(1.12)
+                                        text.foregroundStyle(Color.white)
+                                    }
+                                } else {
+                                    text.foregroundStyle(Color(hex: "18181b"))
+                                }
+                            }
+                        }
+                        .aspectRatio(1, contentMode: .fit)
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: 360)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .frame(maxWidth: .infinity)
+        .accessibilityElement()
+        .accessibilityLabel("Chess position, \(black ? "Black" : "White") to move")
     }
 }

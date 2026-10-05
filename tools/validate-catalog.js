@@ -27,6 +27,7 @@ const EXERCISE_TYPES = {
   sentence:     ['words'],
   listening:    ['audio'],
   match:        ['pairs'],
+  chess:        ['choices', 'fen'],
 };
 
 function checkExerciseType(ex, where) {
@@ -36,8 +37,8 @@ function checkExerciseType(ex, where) {
     return;
   }
   for (const field of required) {
-    // `audio` is a string of text to speak; the rest are arrays.
-    const ok = field === 'audio'
+    // `audio` and `fen` are strings; the rest are arrays.
+    const ok = field === 'audio' || field === 'fen'
       ? typeof ex[field] === 'string' && ex[field].length > 0
       : Array.isArray(ex[field]) && ex[field].length > 0;
     check(ok, `${where}: ${ex.type} exercise missing non-empty "${field}"`);

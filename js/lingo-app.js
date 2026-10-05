@@ -1767,7 +1767,7 @@ function renderQuestion(question) {
     const typeDiv = document.createElement('div');
     typeDiv.className = 'question-type';
 
-    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze') {
+    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze' || question.type === 'chess') {
         typeDiv.textContent = CHOICE_PROMPTS[question.type];
         container.appendChild(typeDiv);
 
@@ -1775,6 +1775,7 @@ function renderQuestion(question) {
         questionText.className = 'question-text';
         questionText.textContent = question.question;
         container.appendChild(questionText);
+        if (question.fen) container.appendChild(renderChessBoard(question.fen));
 
         if (hasSpeech && question.type === 'translation') {
             const micBtn = document.createElement('button');
@@ -2007,7 +2008,37 @@ const CHOICE_PROMPTS = {
     translation: 'Select the correct translation',
     mathChoice: 'Choose the correct answer',
     cloze: 'Fill in the blank',
+    chess: 'Chess puzzle',
 };
+
+// Board for a `chess` exercise, drawn from its FEN with the side to move at the
+// bottom. Both sides use the solid glyphs (the hollow white set reads as faint
+// outlines once coloured); colour and an outline tell them apart. U+FE0E keeps
+// Apple from turning the pawn into a colour emoji.
+const CHESS_GLYPHS = { k: '\u265A', q: '\u265B', r: '\u265C', b: '\u265D', n: '\u265E', p: '\u265F' };
+function renderChessBoard(fen) {
+    const [placement, turn] = fen.split(' ');
+    const rows = placement.split('/').map((rank) => rank.replace(/\d/g, (n) => '.'.repeat(Number(n))).split(''));
+    const black = turn === 'b';
+    const board = document.createElement('div');
+    board.className = 'chess-board';
+    board.setAttribute('role', 'img');
+    board.setAttribute('aria-label', `Chess position, ${black ? 'Black' : 'White'} to move: ${fen}`);
+    for (let r = 0; r < 8; r += 1) {
+        for (let f = 0; f < 8; f += 1) {
+            const rank = black ? 7 - r : r, file = black ? 7 - f : f;
+            const square = document.createElement('div');
+            square.className = (rank + file) % 2 ? 'chess-square dark' : 'chess-square';
+            const piece = rows[rank][file];
+            if (piece !== '.') {
+                square.textContent = CHESS_GLYPHS[piece.toLowerCase()] + '\uFE0E';
+                square.classList.add(piece === piece.toUpperCase() ? 'white-piece' : 'black-piece');
+            }
+            board.appendChild(square);
+        }
+    }
+    return board;
+}
 
 function shuffle(items) {
     const copy = [...items];
@@ -2143,7 +2174,7 @@ function checkAnswer() {
 
     if (question.type === 'match') {
         isCorrect = !gameState.matchState?.missed;
-    } else if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze' || question.type === 'sentence') {
+    } else if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze' || question.type === 'chess' || question.type === 'sentence') {
         isCorrect = gameState.currentAnswer === question.answer;
     } else if (question.type === 'listening') {
         const input = document.getElementById('listeningInput')?.value.trim();
@@ -2208,7 +2239,7 @@ function checkAnswer() {
     button.textContent = 'Continue';
     button.onclick = nextQuestion;
 
-    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze') {
+    if (question.type === 'translation' || question.type === 'mathChoice' || question.type === 'cloze' || question.type === 'chess') {
         document.querySelectorAll('.choice-btn').forEach((item) => {
             item.style.pointerEvents = 'none';
             if (item.dataset.choice === question.answer) item.classList.add('correct');

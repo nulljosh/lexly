@@ -16,6 +16,7 @@ Live at [tonchi.heyitsmejosh.com](https://tonchi.heyitsmejosh.com) · [App Store
 ## What is in it
 
 - 100+ courses in tabs: Languages, Programming, Computer Science, Engineering, Math, Science, School, Skills
+- Chess puzzles on a real board: mate in one, free pieces, pins and more
 - Every lesson opens with a "Learn this first" card, then a quiz. Misses come back at the end and every answer says why
 - Multiple choice, word bank, fill in the blank, matching pairs, listening, speech
 - Spaced repetition, weak-word practice, a placement test, streaks, XP, achievements
@@ -50,3 +51,4 @@ cd ios && xcodegen generate      # native projects
 
 Language sentences come from the [Tatoeba Project](https://tatoeba.org) (CC-BY 2.0 FR), ranked by [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT).
 Courses Cruise has played (Greek, Polish, Hindi, Japanese, Korean, French and more) get up to 120 units, sized to how much it practised and ordered so sentences using the words it practised come first. Only the word list is read from Cruise; every sentence is Tatoeba.
+Chess has 90 tactics puzzles on a real board, from the [Lichess puzzle database](https://database.lichess.org/#puzzles) (CC0). Each one is replayed with python-chess before it ships.

@@ -2177,3 +2177,28 @@ body.demo .header-inner::after {
 @media (max-width: 600px) {
     .category-tabs { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 1.5rem; }
 }
+
+/* Chess puzzle board. Sized to the column, square by aspect ratio. */
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);   /* an empty rank would otherwise collapse */
+    width: min(100%, 360px);
+    aspect-ratio: 1;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border, rgba(0,0,0,0.12));
+}
+.chess-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f7;
+    font-size: clamp(1.25rem, 7vw, 2.1rem);
+    line-height: 1;
+    user-select: none;
+}
+.chess-square.dark { background: #9fb6cd; }
+.chess-square.white-piece { color: #ffffff; text-shadow: -1px 0 #18181b, 1px 0 #18181b, 0 -1px #18181b, 0 1px #18181b; }
+.chess-square.black-piece { color: #18181b; }

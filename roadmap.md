@@ -85,6 +85,8 @@ closes the "iOS never actually run" gap.
   "statistically most common words", not "greetings". This is the real remaining gap versus a
   designed curriculum, and no amount of extra sentences fixes it.
 - [x] **Bigger courses from Cruise practice (2026-10-05).** `build-language-course.mjs` reads the words Cruise practised and builds up to 120 Tatoeba units per course: Greek 120, Polish 120, Hindi 55, Japanese 49, Korean 43, French 36, Turkish 11, and 10 each for Arabic, Swedish, Russian, Dutch.
+- [x] **Chess puzzles with a real board (2026-10-05).** 90 one-move Lichess puzzles (CC0) in 6 units: mate in one, free pieces, back rank mates, pins, discovered attacks, promotion. New `chess` exercise type, board drawn on web and iOS/macOS; Android skips the type. iOS and macOS show it from the next App Store build.
+- [ ] **Chess: forks, skewers and deflections.** They almost never finish in one move, so they need an exercise that takes a line of moves.
 - [ ] **No native-speaker review of ~1,800 generated exercises.** Tatoeba sentences are
   human-written so the floor is high, but Hindi, Arabic, Korean and Chinese have had no check at
   all beyond schema validation.

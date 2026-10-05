@@ -4,7 +4,7 @@
   "category": "skills",
   "icon": "fa-solid fa-chess",
   "level": "Strategy & Tactics",
-  "version": 2,
+  "version": 4,
   "units": [
     {
       "id": "u1",
@@ -895,6 +895,1416 @@
                 "Drawing with rook and pawn versus rook"
               ],
               "id": "chess_u6l2_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp1",
+      "title": "Mate in One",
+      "tip": "Look at every check first. Mate is a check the king cannot escape, block or capture.",
+      "lessons": [
+        {
+          "id": "lp1l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r4rk1/pb3ppp/1p2p3/3q4/3N4/2P4P/PPQ2PP1/R4RK1 b - - 2 18",
+              "answer": "Qxg2#",
+              "choices": [
+                "Qxg2#",
+                "Qxd4",
+                "Qxa2",
+                "b5"
+              ],
+              "explain": "Qxg2#: the queen move wins here. Lichess puzzle 00EdH, rated 633.",
+              "id": "chess_lp1l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "2kr1b1r/p1p2pp1/2pqN3/7p/6n1/2NPB3/PPP2PPP/R2Q1RK1 b - - 0 13",
+              "answer": "Qxh2#",
+              "choices": [
+                "Nxe3",
+                "Qxh2#",
+                "Qxd3",
+                "fxe6"
+              ],
+              "explain": "Qxh2#: the queen move wins here. Lichess puzzle 000rZ, rated 662.",
+              "id": "chess_lp1l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "6r1/7p/2pk1p2/P2p4/P2KbP2/2N1P3/5R1P/8 b - - 2 35",
+              "answer": "c5#",
+              "choices": [
+                "Bd3",
+                "Re8",
+                "c5#",
+                "Rc8"
+              ],
+              "explain": "c5#: the pawn move wins here. Lichess puzzle 00HPz, rated 678.",
+              "id": "chess_lp1l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2kr3r/p2n2pp/2pB1bp1/5q2/2B5/8/PPP2PPP/3R1RK1 w - - 0 18",
+              "answer": "Ba6#",
+              "choices": [
+                "Bf7",
+                "Rfe1",
+                "f3",
+                "Ba6#"
+              ],
+              "explain": "Ba6#: the bishop move wins here. Lichess puzzle 007c6, rated 721.",
+              "id": "chess_lp1l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r1bk3r/ppp1np1p/3P2pP/1N4q1/2BP1n2/8/PPP3P1/R1BQ2KR b - - 0 14",
+              "answer": "Qxg2#",
+              "choices": [
+                "Qxg2#",
+                "cxd6",
+                "Qxh6",
+                "Ne2+"
+              ],
+              "explain": "Qxg2#: the queen move wins here. Lichess puzzle 00EDa, rated 774.",
+              "id": "chess_lp1l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp1l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "rn3q1r/4pk2/2pp1npp/p5Q1/1p1PPNP1/5P2/PPP5/R4KNR w - - 0 18",
+              "answer": "Qxg6#",
+              "choices": [
+                "Nxg6",
+                "Qxg6#",
+                "Rxh6",
+                "Qd5+"
+              ],
+              "explain": "Qxg6#: the queen move wins here. Lichess puzzle 00Elq, rated 832.",
+              "id": "chess_lp1l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r4rk1/2q2ppp/3pp3/4Pb1N/1p6/1p4Q1/PPP3PP/1K1RR3 w - - 0 22",
+              "answer": "Qxg7#",
+              "choices": [
+                "Nf6+",
+                "Nxg7",
+                "Qxg7#",
+                "axb3"
+              ],
+              "explain": "Qxg7#: the queen move wins here. Lichess puzzle 0082f, rated 882.",
+              "id": "chess_lp1l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/8/5pkp/1RP5/1P3PKP/r7/8/8 b - - 0 48",
+              "answer": "f5#",
+              "choices": [
+                "Rg3+",
+                "Re3",
+                "Ra8",
+                "f5#"
+              ],
+              "explain": "f5#: the pawn move wins here. Lichess puzzle 00EWi, rated 903.",
+              "id": "chess_lp1l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r5k1/pp4pp/4p1q1/4p3/3n4/P3Q1P1/1PP4P/2KR1R2 b - - 5 24",
+              "answer": "Qxc2#",
+              "choices": [
+                "Qxc2#",
+                "Nxc2",
+                "Qxg3",
+                "Ne2+"
+              ],
+              "explain": "Qxc2#: the queen move wins here. Lichess puzzle 002CP, rated 923.",
+              "id": "chess_lp1l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r2q1rk1/2p3pn/2pbp2p/p2p1p2/P4PQ1/1P1PP3/1BPN2PP/4RR1K w - - 0 16",
+              "answer": "Qxg7#",
+              "choices": [
+                "Bxg7",
+                "Qxg7#",
+                "Qxf5",
+                "Nf3"
+              ],
+              "explain": "Qxg7#: the queen move wins here. Lichess puzzle 007bH, rated 963.",
+              "id": "chess_lp1l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp1l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r1bqkb1r/pp1pnppp/2n5/1N2p3/5B2/8/PPP1PPPP/R2QKBNR w KQkq - 0 7",
+              "answer": "Nd6#",
+              "choices": [
+                "Bxe5",
+                "Nc7+",
+                "Nd6#",
+                "Nxa7"
+              ],
+              "explain": "Nd6#: the knight move wins here. Lichess puzzle 00Bn0, rated 1029.",
+              "id": "chess_lp1l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/6kp/4b1q1/1p6/1PpPN2Q/2P1P3/r5P1/5RK1 b - - 0 34",
+              "answer": "Qxg2#",
+              "choices": [
+                "Rxg2+",
+                "Qxe4",
+                "Ra5",
+                "Qxg2#"
+              ],
+              "explain": "Qxg2#: the queen move wins here. Lichess puzzle 00Bm8, rated 1113.",
+              "id": "chess_lp1l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "3k2r1/pR5R/3r4/4p3/7q/3Pn1PP/PP5K/8 w - - 0 28",
+              "answer": "Rb8#",
+              "choices": [
+                "Rb8#",
+                "Rxh4",
+                "Rhd7+",
+                "gxh4"
+              ],
+              "explain": "Rb8#: the rook move wins here. Lichess puzzle 00GY4, rated 1156.",
+              "id": "chess_lp1l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r3r3/1kpR1qpp/p1n2p2/Qp2P2P/1N6/4Pb2/PPP3P1/2K2R2 w - - 1 23",
+              "answer": "Qxc7#",
+              "choices": [
+                "Rxc7+",
+                "Qxc7#",
+                "Nxa6",
+                "Qb6+"
+              ],
+              "explain": "Qxc7#: the queen move wins here. Lichess puzzle 00H1C, rated 1249.",
+              "id": "chess_lp1l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "3r4/1p4p1/2pB1bBp/p1Pk4/3rp3/P7/1PK2P2/4R3 w - - 2 32",
+              "answer": "Bf7#",
+              "choices": [
+                "Rxe4",
+                "Bxe4+",
+                "Bf7#",
+                "Kb1"
+              ],
+              "explain": "Bf7#: the bishop move wins here. Lichess puzzle 00CWE, rated 1503.",
+              "id": "chess_lp1l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp2",
+      "title": "Free Pieces",
+      "tip": "Before anything clever, ask what is undefended. A piece nobody protects can just be taken.",
+      "lessons": [
+        {
+          "id": "lp2l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/2r5/1b5k/1P1Pp1R1/4Q2p/6pP/6P1/2r2B1K b - - 0 41",
+              "answer": "Rxf1#",
+              "choices": [
+                "Kxg5",
+                "Rb7",
+                "Rg7",
+                "Rxf1#"
+              ],
+              "explain": "Rxf1#: the rook move wins here. Lichess puzzle 01zWA, rated 605.",
+              "id": "chess_lp2l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "rn3k1r/pp2p2p/2p3p1/8/2B1n3/4q3/PQP3PP/RN3K1R w - - 4 15",
+              "answer": "Qxh8#",
+              "choices": [
+                "Qxh8#",
+                "Qg7+",
+                "Qf6+",
+                "Qxb7"
+              ],
+              "explain": "Qxh8#: the queen move wins here. Lichess puzzle 00zxV, rated 636.",
+              "id": "chess_lp2l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "1r4nk/p3brpp/b1p4N/q2p4/5P2/1P1pP3/PBP2RPP/R5K1 w - - 0 22",
+              "answer": "Nxf7#",
+              "choices": [
+                "cxd3",
+                "Nxf7#",
+                "Bxg7+",
+                "Nxg8"
+              ],
+              "explain": "Nxf7#: the knight move wins here. Lichess puzzle 05HWB, rated 663.",
+              "id": "chess_lp2l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2n2r1k/p1q4p/2P3p1/2Q1b3/3P4/7P/P4PP1/5RK1 w - - 0 25",
+              "answer": "Qxf8#",
+              "choices": [
+                "Qxa7",
+                "Qxe5+",
+                "Qxf8#",
+                "dxe5"
+              ],
+              "explain": "Qxf8#: the queen move wins here. Lichess puzzle 02Or9, rated 679.",
+              "id": "chess_lp2l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "3r1k1r/p1p2pp1/1p6/2pQ1b2/2Pn1P2/8/PP1P1KBq/R1B1R3 w - - 4 26",
+              "answer": "Qxd8#",
+              "choices": [
+                "Qxd4",
+                "Qxc5+",
+                "Qd6+",
+                "Qxd8#"
+              ],
+              "explain": "Qxd8#: the queen move wins here. Lichess puzzle 00CYP, rated 709.",
+              "id": "chess_lp2l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp2l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r1b2rk1/pp3pb1/4p1pp/1P3n2/2q1NP2/1PN4Q/2P3PP/R1B2R1K b - - 0 17",
+              "answer": "Qxf1#",
+              "choices": [
+                "Qxf1#",
+                "Qxe4",
+                "Qxb3",
+                "Qxc3"
+              ],
+              "explain": "Qxf1#: the queen move wins here. Lichess puzzle 044rM, rated 731.",
+              "id": "chess_lp2l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "3r1r1k/ppp3pp/4Rn2/4N3/Pq6/1P5Q/5PPP/4R1K1 b - - 2 24",
+              "answer": "Qxe1#",
+              "choices": [
+                "Qxb3",
+                "Qxe1#",
+                "Qxa4",
+                "Qb6"
+              ],
+              "explain": "Qxe1#: the queen move wins here. Lichess puzzle 04JOs, rated 779.",
+              "id": "chess_lp2l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "4k3/4bpp1/1p2b3/3pPpr1/1Pq2N2/1Rn5/P1Q2P1P/2B2R1K b - - 3 30",
+              "answer": "Qxf1#",
+              "choices": [
+                "Qe4+",
+                "Qxb3",
+                "Qxf1#",
+                "Rg1+"
+              ],
+              "explain": "Qxf1#: the queen move wins here. Lichess puzzle 031GC, rated 828.",
+              "id": "chess_lp2l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r4rk1/1p1b1p2/p3p1p1/q2pN2p/5Q1P/6R1/NPP2PP1/2K1R3 b - - 0 21",
+              "answer": "Qxe1#",
+              "choices": [
+                "Qd2+",
+                "Qxa2",
+                "Kg7",
+                "Qxe1#"
+              ],
+              "explain": "Qxe1#: the queen move wins here. Lichess puzzle 01zzO, rated 852.",
+              "id": "chess_lp2l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "3r1k2/pb2rpq1/4p3/1P6/4Bn2/Q7/5PPP/3RR1K1 w - - 3 31",
+              "answer": "Rxd8#",
+              "choices": [
+                "Rxd8#",
+                "Qxa7",
+                "Qxe7+",
+                "Bxb7"
+              ],
+              "explain": "Rxd8#: the rook move wins here. Lichess puzzle 03ZGI, rated 926.",
+              "id": "chess_lp2l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp2l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "5r2/1p1R4/p2Qq1pk/4P2p/3P1n1P/8/PP5K/8 w - - 1 36",
+              "answer": "Qxf8#",
+              "choices": [
+                "Rh7+",
+                "Qxf8#",
+                "Rxb7",
+                "Qxa6"
+              ],
+              "explain": "Qxf8#: the queen move wins here. Lichess puzzle 01pz8, rated 1014.",
+              "id": "chess_lp2l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "5r1k/p4p1p/q3p2Q/8/P7/1r6/2p1RPPb/3R1K2 w - - 0 32",
+              "answer": "Qxf8#",
+              "choices": [
+                "Qxh2",
+                "Qxe6",
+                "Qxf8#",
+                "Qg7+"
+              ],
+              "explain": "Qxf8#: the queen move wins here. Lichess puzzle 03hK3, rated 1057.",
+              "id": "chess_lp2l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "b1r4r/k3bp1p/3p2p1/1Q1Pp1P1/1P2P2P/q5R1/2P2P1N/2K5 w - - 0 34",
+              "answer": "Rxa3#",
+              "choices": [
+                "Kd2",
+                "Kb1",
+                "Kd1",
+                "Rxa3#"
+              ],
+              "explain": "Rxa3#: the rook move wins here. Lichess puzzle 07San, rated 1125.",
+              "id": "chess_lp2l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3r1k1/pp3ppp/2q2b2/2p5/3N4/8/PPQ2PPP/1RB1R1K1 b - - 0 19",
+              "answer": "Rxe1#",
+              "choices": [
+                "Rxe1#",
+                "Qxg2+",
+                "cxd4",
+                "Bxd4"
+              ],
+              "explain": "Rxe1#: the rook move wins here. Lichess puzzle 057jr, rated 1185.",
+              "id": "chess_lp2l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "8/8/P6p/6p1/4R3/1P1K4/r7/3k1q1Q w - - 0 60",
+              "answer": "Qxf1#",
+              "choices": [
+                "Kd4",
+                "Qxf1#",
+                "Ke3",
+                "Kc3"
+              ],
+              "explain": "Qxf1#: the queen move wins here. Lichess puzzle 05MED, rated 1334.",
+              "id": "chess_lp2l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp3",
+      "title": "Back Rank Mates",
+      "tip": "A king boxed in by its own pawns dies to a rook or queen on the last rank.",
+      "lessons": [
+        {
+          "id": "lp3l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "2k5/ppp5/4p3/2p4P/4Pr2/3P3R/PPP5/1K6 b - - 0 34",
+              "answer": "Rf1#",
+              "choices": [
+                "Rxe4",
+                "a6",
+                "Rf1#",
+                "Rf6"
+              ],
+              "explain": "Rf1#: the rook move wins here. Lichess puzzle 08SYe, rated 600.",
+              "id": "chess_lp3l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "3r4/p1p2pk1/1p3p1p/5P2/2N2RP1/1B5P/PPP5/1K6 b - - 0 26",
+              "answer": "Rd1#",
+              "choices": [
+                "Rd5",
+                "a5",
+                "h5",
+                "Rd1#"
+              ],
+              "explain": "Rd1#: the rook move wins here. Lichess puzzle 02Bm1, rated 639.",
+              "id": "chess_lp3l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6k1/5ppp/1P2p3/3p4/3nb3/6P1/1r5P/R5K1 w - - 1 34",
+              "answer": "Ra8#",
+              "choices": [
+                "Ra8#",
+                "h3",
+                "Ra6",
+                "Ra3"
+              ],
+              "explain": "Ra8#: the rook move wins here. Lichess puzzle 01S1N, rated 663.",
+              "id": "chess_lp3l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6k1/pp3ppp/2p1b3/8/2PR4/3P2PP/P3r1BK/8 w - - 1 30",
+              "answer": "Rd8#",
+              "choices": [
+                "Re4",
+                "Rd8#",
+                "c5",
+                "Kh1"
+              ],
+              "explain": "Rd8#: the rook move wins here. Lichess puzzle 02QUs, rated 683.",
+              "id": "chess_lp3l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2r4k/q5pp/4Qp2/8/1Ppb4/5PPP/7K/4BB2 w - - 1 40",
+              "answer": "Qxc8#",
+              "choices": [
+                "Qxf6",
+                "Qg8+",
+                "Qxc8#",
+                "Bxc4"
+              ],
+              "explain": "Qxc8#: the queen move wins here. Lichess puzzle 02MgK, rated 702.",
+              "id": "chess_lp3l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp3l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "6k1/ppp2pp1/7p/8/2R5/2Pr4/PR4PP/7K b - - 0 26",
+              "answer": "Rd1#",
+              "choices": [
+                "Rxc3",
+                "b6",
+                "Rd5",
+                "Rd1#"
+              ],
+              "explain": "Rd1#: the rook move wins here. Lichess puzzle 01Pbw, rated 717.",
+              "id": "chess_lp3l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/R6p/8/2pB4/3b4/2k5/PR1r2PP/7K b - - 0 34",
+              "answer": "Rd1#",
+              "choices": [
+                "Rd1#",
+                "Rxb2",
+                "Rxg2",
+                "Kxb2"
+              ],
+              "explain": "Rd1#: the rook move wins here. Lichess puzzle 06TaJ, rated 760.",
+              "id": "chess_lp3l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "4r1k1/5ppp/p7/3b4/P4p2/2r2N2/5PPP/1R2R1K1 w - - 0 28",
+              "answer": "Rxe8#",
+              "choices": [
+                "g4",
+                "Rxe8#",
+                "Rb5",
+                "Rb6"
+              ],
+              "explain": "Rxe8#: the rook move wins here. Lichess puzzle 0CjgC, rated 798.",
+              "id": "chess_lp3l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "R3n1k1/5ppp/pQ6/8/8/1P3q2/P4PPP/3R2K1 b - - 0 24",
+              "answer": "Qxd1#",
+              "choices": [
+                "Qxa8",
+                "Qxf2+",
+                "Qxd1#",
+                "Qxg2+"
+              ],
+              "explain": "Qxd1#: the queen move wins here. Lichess puzzle 06G21, rated 822.",
+              "id": "chess_lp3l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "R7/4kP1p/8/3pp3/8/1P6/p5PP/1r3R1K b - - 0 34",
+              "answer": "Rxf1#",
+              "choices": [
+                "Rxb3",
+                "e4",
+                "Rc1",
+                "Rxf1#"
+              ],
+              "explain": "Rxf1#: the rook move wins here. Lichess puzzle 02tzm, rated 863.",
+              "id": "chess_lp3l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp3l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/p2kr3/2Rp2p1/1P1P1p2/5Q2/q5B1/P4PPP/6K1 b - - 2 38",
+              "answer": "Re1#",
+              "choices": [
+                "Re1#",
+                "Qxg3",
+                "Qc1+",
+                "Qxa2"
+              ],
+              "explain": "Re1#: the rook move wins here. Lichess puzzle 07W7D, rated 912.",
+              "id": "chess_lp3l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "4r1k1/pr3ppp/5q2/2p5/1nNp1n2/1P3N1P/P1P2PP1/R2QR1K1 w - - 0 21",
+              "answer": "Rxe8#",
+              "choices": [
+                "Qxd4",
+                "Rxe8#",
+                "Nxd4",
+                "Qe2"
+              ],
+              "explain": "Rxe8#: the rook move wins here. Lichess puzzle 02pcX, rated 949.",
+              "id": "chess_lp3l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "3r2k1/pp3ppp/4p3/2N5/7q/1Q3P2/PP1R2PP/4R2K b - - 0 24",
+              "answer": "Qxe1#",
+              "choices": [
+                "Qxh2+",
+                "Rxd2",
+                "Qxe1#",
+                "b6"
+              ],
+              "explain": "Qxe1#: the queen move wins here. Lichess puzzle 00rTX, rated 971.",
+              "id": "chess_lp3l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r2qr1k1/pp4pp/5bn1/3N2N1/Q4Bb1/8/PP1R1PPP/4R1K1 b - - 0 19",
+              "answer": "Rxe1#",
+              "choices": [
+                "Nxf4",
+                "Bxb2",
+                "Bxg5",
+                "Rxe1#"
+              ],
+              "explain": "Rxe1#: the rook move wins here. Lichess puzzle 01vI5, rated 1078.",
+              "id": "chess_lp3l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "5rk1/p4ppp/2p5/2Np3n/P2P3q/2P2P2/1PQ3PP/4R2K b - - 0 26",
+              "answer": "Qxe1#",
+              "choices": [
+                "Qxe1#",
+                "Ng3+",
+                "Qxh2+",
+                "Qxd4"
+              ],
+              "explain": "Qxe1#: the queen move wins here. Lichess puzzle 038VQ, rated 1264.",
+              "id": "chess_lp3l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp5",
+      "title": "Pins",
+      "tip": "A piece that cannot move without exposing something bigger behind it is pinned. Attack it again.",
+      "lessons": [
+        {
+          "id": "lp5l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6k1/5rpp/1r3p2/6q1/1PB4n/P6P/5PP1/3R1R1K w - - 0 23",
+              "answer": "Rd8#",
+              "choices": [
+                "Bxf7+",
+                "Rd8#",
+                "Rd5",
+                "Rc1"
+              ],
+              "explain": "Rd8#: the rook move wins here. Lichess puzzle 01u1D, rated 825.",
+              "id": "chess_lp5l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3r1k1/2q2pp1/p2b3p/3Bn3/1p6/3P4/1PPB1PQ1/1NKR3R b - - 2 21",
+              "answer": "Nxd3#",
+              "choices": [
+                "Qxc2+",
+                "Reb8",
+                "Nxd3#",
+                "Bc5"
+              ],
+              "explain": "Nxd3#: the knight move wins here. Lichess puzzle 08caT, rated 901.",
+              "id": "chess_lp5l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r1b2k2/pp2q1p1/4pp1p/7B/1Q6/P7/1P3PPP/3R2K1 w - - 4 24",
+              "answer": "Rd8#",
+              "choices": [
+                "Qxb7",
+                "Qxe7+",
+                "f4",
+                "Rd8#"
+              ],
+              "explain": "Rd8#: the rook move wins here. Lichess puzzle 097pq, rated 971.",
+              "id": "chess_lp5l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r4rk1/2p1nppN/p7/1p2p3/3qP1Q1/1pN4R/PP3PPP/6K1 w - - 0 18",
+              "answer": "Nf6#",
+              "choices": [
+                "Nf6#",
+                "Nxb5",
+                "Nxf8",
+                "axb3"
+              ],
+              "explain": "Nf6#: the knight move wins here. Lichess puzzle 07ZNT, rated 1076.",
+              "id": "chess_lp5l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3r1k1/ppp2R2/1b5Q/3PP2n/2B3bq/2N5/PP4PP/R6K b - - 0 18",
+              "answer": "Ng3#",
+              "choices": [
+                "Kxf7",
+                "Ng3#",
+                "Qe1+",
+                "Qxh2+"
+              ],
+              "explain": "Ng3#: the knight move wins here. Lichess puzzle 00jPw, rated 1159.",
+              "id": "chess_lp5l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp5l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r2qkb1r/pp2pp1p/1np2p2/5b2/3PN3/5N2/PPP1QPPP/R3KB1R w KQkq - 3 9",
+              "answer": "Nxf6#",
+              "choices": [
+                "Nd6+",
+                "Rc1",
+                "Nxf6#",
+                "Ned2"
+              ],
+              "explain": "Nxf6#: the knight move wins here. Lichess puzzle 0C7pY, rated 1168.",
+              "id": "chess_lp5l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r4rk1/5p1p/p5p1/2pq4/2pNn3/P1P1P2P/2QN2RB/6RK b - - 1 29",
+              "answer": "Nf2#",
+              "choices": [
+                "Ng3+",
+                "Nxc3",
+                "Qxd4",
+                "Nf2#"
+              ],
+              "explain": "Nf2#: the knight move wins here. Lichess puzzle 0AnwQ, rated 1183.",
+              "id": "chess_lp5l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r2qkb1r/pp1bpppp/8/1Np5/Q1P5/8/PP1P1PPP/R1B1R1K1 w kq - 0 14",
+              "answer": "Nd6#",
+              "choices": [
+                "Nd6#",
+                "Nxa7",
+                "Qxa7",
+                "Rxe7+"
+              ],
+              "explain": "Nd6#: the knight move wins here. Lichess puzzle 01fz7, rated 1251.",
+              "id": "chess_lp5l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "N1bk2nr/pp1p2pp/5p2/8/1b1Q4/5P2/PPqBPP1P/2R1KB1R b K - 3 12",
+              "answer": "Qxc1#",
+              "choices": [
+                "Qxb2",
+                "Qxc1#",
+                "Qd1+",
+                "Qxd2+"
+              ],
+              "explain": "Qxc1#: the queen move wins here. Lichess puzzle 07OVq, rated 1339.",
+              "id": "chess_lp5l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "8/2p4k/6p1/8/2PQb2p/1P4qP/P5P1/6RK b - - 0 34",
+              "answer": "Qxh3#",
+              "choices": [
+                "Bxg2+",
+                "Qxb3",
+                "Qxh3#",
+                "Qxg2+"
+              ],
+              "explain": "Qxh3#: the queen move wins here. Lichess puzzle 094yw, rated 1397.",
+              "id": "chess_lp5l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp5l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r4rk1/pb3ppp/7q/5P2/3Q2n1/P6P/1P2N1P1/R1B3RK b - - 0 21",
+              "answer": "Qxh3#",
+              "choices": [
+                "Qxc1",
+                "Nf2+",
+                "Bxg2+",
+                "Qxh3#"
+              ],
+              "explain": "Qxh3#: the queen move wins here. Lichess puzzle 0ADfR, rated 1471.",
+              "id": "chess_lp5l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "6k1/5ppp/1p1N4/4Pb2/Q2P4/P7/1P3PPq/2r1NK2 b - - 2 32",
+              "answer": "Bd3#",
+              "choices": [
+                "Bd3#",
+                "Qxg2+",
+                "Qh1+",
+                "Qxe5"
+              ],
+              "explain": "Bd3#: the bishop move wins here. Lichess puzzle 0Awc4, rated 1540.",
+              "id": "chess_lp5l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r2qk2r/pbp3p1/1p2p3/2bPPp2/4n3/1PN3P1/PBQ1P1BP/3R1R1K b kq - 2 16",
+              "answer": "Nxg3#",
+              "choices": [
+                "Nxc3",
+                "Nxg3#",
+                "Bxd5",
+                "Rxh2+"
+              ],
+              "explain": "Nxg3#: the knight move wins here. Lichess puzzle 0Byu6, rated 1556.",
+              "id": "chess_lp5l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r6k/1pq3pp/p1n5/4Np2/7Q/1B6/PP3PPP/3b2K1 w - - 0 24",
+              "answer": "Ng6#",
+              "choices": [
+                "Bxd1",
+                "Qxh7+",
+                "Ng6#",
+                "Nf7+"
+              ],
+              "explain": "Ng6#: the knight move wins here. Lichess puzzle 02btz, rated 1595.",
+              "id": "chess_lp5l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2k4r/pppr1pp1/5bp1/3qn3/4p1B1/PP2P3/1BQP1PPP/2R1K2R w K - 8 18",
+              "answer": "Qxc7#",
+              "choices": [
+                "Qxe4",
+                "Bxe5",
+                "Bxd7+",
+                "Qxc7#"
+              ],
+              "explain": "Qxc7#: the queen move wins here. Lichess puzzle 05pYW, rated 1737.",
+              "id": "chess_lp5l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp7",
+      "title": "Discovered Attacks",
+      "tip": "Move one piece out of the way and the one behind it attacks. Two threats from one move.",
+      "lessons": [
+        {
+          "id": "lp7l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "3r1r1k/8/p4P1p/1p2BB1b/1P3P2/2PP4/p1NK4/8 w - - 0 37",
+              "answer": "f7#",
+              "choices": [
+                "f7#",
+                "Bd4",
+                "Bb8",
+                "Ne3"
+              ],
+              "explain": "f7#: the pawn move wins here. Lichess puzzle 02THe, rated 806.",
+              "id": "chess_lp7l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2kr2nr/Bp4pp/5p2/4p3/2B5/P4n2/P4P1P/2R2K2 w - - 0 18",
+              "answer": "Bb5#",
+              "choices": [
+                "Bd5+",
+                "Bb5#",
+                "Ba6+",
+                "Bxg8+"
+              ],
+              "explain": "Bb5#: the bishop move wins here. Lichess puzzle 2a0w6, rated 913.",
+              "id": "chess_lp7l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3k2r/pbqp1p2/2p1p3/2b3pp/2B1PPP1/8/PPP1Q1P1/RNB2R1K b kq - 0 13",
+              "answer": "hxg4#",
+              "choices": [
+                "gxf4",
+                "Qxf4",
+                "hxg4#",
+                "Qb8"
+              ],
+              "explain": "hxg4#: the pawn move wins here. Lichess puzzle 0U9Jl, rated 975.",
+              "id": "chess_lp7l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3k1r1/ppp2p1p/2n1pp2/8/3P1Pb1/5N2/PPP1BP1P/R2Q1RK1 b q - 0 13",
+              "answer": "Bxf3#",
+              "choices": [
+                "Bh5+",
+                "Nxd4",
+                "Bf5+",
+                "Bxf3#"
+              ],
+              "explain": "Bxf3#: the bishop move wins here. Lichess puzzle 1p7ZE, rated 1057.",
+              "id": "chess_lp7l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "7r/pp4k1/3p4/3P2pn/2P5/PP3RP1/5P1K/6R1 b - - 0 28",
+              "answer": "Nf4#",
+              "choices": [
+                "Nf4#",
+                "Nf6+",
+                "Nxg3+",
+                "Kh7"
+              ],
+              "explain": "Nf4#: the knight move wins here. Lichess puzzle 1wFis, rated 1100.",
+              "id": "chess_lp7l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp7l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "rn3b1r/pp1q1Qpk/1n1p3P/4p3/3p2p1/2P5/PP3PP1/RNB1K2R w KQ - 0 18",
+              "answer": "hxg7#",
+              "choices": [
+                "Qxg7+",
+                "hxg7#",
+                "Qxf8",
+                "Qg8+"
+              ],
+              "explain": "hxg7#: the pawn move wins here. Lichess puzzle 1h5b0, rated 1166.",
+              "id": "chess_lp7l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2r3k1/p4RBp/1p6/2pB4/2P5/3n1P2/2n2P1P/6K1 w - - 1 29",
+              "answer": "Rxa7#",
+              "choices": [
+                "Rf4+",
+                "Rf5+",
+                "Rxa7#",
+                "Rf6+"
+              ],
+              "explain": "Rxa7#: the rook move wins here. Lichess puzzle 2YtDM, rated 1242.",
+              "id": "chess_lp7l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r2q1rk1/1b1nbpBp/2p2n2/p7/1ppP4/1B3P1P/PPP1NP2/2KR2R1 w - - 0 18",
+              "answer": "Bxf6#",
+              "choices": [
+                "Bh6+",
+                "Bxf8+",
+                "Bh8+",
+                "Bxf6#"
+              ],
+              "explain": "Bxf6#: the bishop move wins here. Lichess puzzle 0ARjd, rated 1320.",
+              "id": "chess_lp7l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r1bq1r2/ppp1n1pk/3p3B/5p1Q/2BPP3/2b5/PP3PPP/R4RK1 w - - 1 15",
+              "answer": "Bf4#",
+              "choices": [
+                "Bf4#",
+                "Qg6+",
+                "Qxf5+",
+                "bxc3"
+              ],
+              "explain": "Bf4#: the bishop move wins here. Lichess puzzle 2LC1d, rated 1413.",
+              "id": "chess_lp7l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "1R3Bk1/5p1p/2p1p1p1/r2p4/3P4/4PKP1/2P2P1P/q7 w - - 0 31",
+              "answer": "Bh6#",
+              "choices": [
+                "Bc5+",
+                "Bh6#",
+                "Ba3+",
+                "Bb4+"
+              ],
+              "explain": "Bh6#: the bishop move wins here. Lichess puzzle 1w62o, rated 1472.",
+              "id": "chess_lp7l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp7l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r4r2/pp3k1p/5p2/3R2n1/2B2p2/2P5/PP3P2/2K1R3 w - - 2 24",
+              "answer": "Rxg5#",
+              "choices": [
+                "Rd8+",
+                "Rd4+",
+                "Rxg5#",
+                "Rdd1+"
+              ],
+              "explain": "Rxg5#: the rook move wins here. Lichess puzzle 21bIO, rated 1546.",
+              "id": "chess_lp7l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "r1bq1r1k/ppp1nBp1/3p3B/7Q/4P3/2b2N2/PP3PPP/n2K3R w - - 0 15",
+              "answer": "Bg5#",
+              "choices": [
+                "bxc3",
+                "Bxg7+",
+                "Nd2",
+                "Bg5#"
+              ],
+              "explain": "Bg5#: the bishop move wins here. Lichess puzzle 0YFg1, rated 1627.",
+              "id": "chess_lp7l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r3k2r/p1p2ppp/2pp4/2b1P3/4PR1q/2NB3b/PPP3P1/R1BQ3K b kq - 1 13",
+              "answer": "Bg4#",
+              "choices": [
+                "Bg4#",
+                "dxe5",
+                "Be6+",
+                "Bc8+"
+              ],
+              "explain": "Bg4#: the bishop move wins here. Lichess puzzle 2Nlzs, rated 1688.",
+              "id": "chess_lp7l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r4rk1/p4Np1/7p/1ppN4/3bPR1q/3P3b/PPP3P1/R2Q3K b - - 2 20",
+              "answer": "Bg4#",
+              "choices": [
+                "Qe1+",
+                "Bg4#",
+                "Bxb2",
+                "Bc8+"
+              ],
+              "explain": "Bg4#: the bishop move wins here. Lichess puzzle 07cbK, rated 1724.",
+              "id": "chess_lp7l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6r1/5ppk/3p1b1B/3P3Q/1Pp5/p1P2P1P/8/1q2K1R1 w - - 1 34",
+              "answer": "Bc1#",
+              "choices": [
+                "Ke2",
+                "Kd2",
+                "Bc1#",
+                "Kf2"
+              ],
+              "explain": "Bc1#: the bishop move wins here. Lichess puzzle 0xBy6, rated 1808.",
+              "id": "chess_lp7l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp8",
+      "title": "Promotion",
+      "tip": "A pawn on the last rank becomes a queen. Sometimes a knight is better, so check both.",
+      "lessons": [
+        {
+          "id": "lp8l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "R7/8/8/8/P5k1/1P4p1/5pP1/7K b - - 1 65",
+              "answer": "f1=Q#",
+              "choices": [
+                "Kf4",
+                "Kh5",
+                "Kg5",
+                "f1=Q#"
+              ],
+              "explain": "f1=Q#: the pawn move wins here. Lichess puzzle 0ZpB6, rated 625.",
+              "id": "chess_lp8l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "2Q5/7k/3N4/pP1P2p1/3Q4/6P1/4p1PP/6K1 b - - 0 46",
+              "answer": "e1=Q#",
+              "choices": [
+                "e1=Q#",
+                "e1=R+",
+                "a4",
+                "Kh6"
+              ],
+              "explain": "e1=Q#: the pawn move wins here. Lichess puzzle 0lz0F, rated 682.",
+              "id": "chess_lp8l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "1R2nk2/5p1p/6p1/8/B1P5/P5Pb/3p1P1P/4N1K1 b - - 0 33",
+              "answer": "dxe1=Q#",
+              "choices": [
+                "dxe1=N",
+                "dxe1=Q#",
+                "dxe1=B",
+                "Bd7"
+              ],
+              "explain": "dxe1=Q#: the pawn move wins here. Lichess puzzle 0VM8E, rated 703.",
+              "id": "chess_lp8l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "k3r3/pp3P1p/2p3p1/3n4/2q5/2P2P2/1P3P1P/1BKR4 w - - 0 27",
+              "answer": "fxe8=Q#",
+              "choices": [
+                "fxe8=B",
+                "fxe8=N",
+                "fxe8=Q#",
+                "Rxd5"
+              ],
+              "explain": "fxe8=Q#: the pawn move wins here. Lichess puzzle 0QqFn, rated 760.",
+              "id": "chess_lp8l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "2k5/7P/2K5/2P2p2/8/7P/8/5q2 w - - 0 52",
+              "answer": "h8=Q#",
+              "choices": [
+                "h4",
+                "Kd5",
+                "Kd6",
+                "h8=Q#"
+              ],
+              "explain": "h8=Q#: the pawn move wins here. Lichess puzzle 0CCsd, rated 868.",
+              "id": "chess_lp8l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp8l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "5r1k/4P2p/p5pP/1p3p2/1P1pq3/8/P4PP1/2R3K1 w - - 0 38",
+              "answer": "exf8=Q#",
+              "choices": [
+                "exf8=Q#",
+                "exf8=N",
+                "exf8=B",
+                "Kf1"
+              ],
+              "explain": "exf8=Q#: the pawn move wins here. Lichess puzzle 0ZtL6, rated 903.",
+              "id": "chess_lp8l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "r5k1/1b4p1/p5Q1/np6/3P4/2P5/PPB1p1PP/5R1K b - - 0 27",
+              "answer": "exf1=Q#",
+              "choices": [
+                "exf1=N",
+                "exf1=Q#",
+                "Bxg2+",
+                "exf1=B"
+              ],
+              "explain": "exf1=Q#: the pawn move wins here. Lichess puzzle 0J7jU, rated 993.",
+              "id": "chess_lp8l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "1Q6/5N1p/6p1/2P5/8/4k3/3p1r2/6K1 b - - 0 62",
+              "answer": "d1=Q#",
+              "choices": [
+                "Rf1+",
+                "Rxf7",
+                "d1=Q#",
+                "Rg2+"
+              ],
+              "explain": "d1=Q#: the pawn move wins here. Lichess puzzle 04o8O, rated 1043.",
+              "id": "chess_lp8l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "4rk2/2p2Pb1/p7/1p1p3Q/5p2/3B4/qPP3PP/7K w - - 0 32",
+              "answer": "fxe8=Q#",
+              "choices": [
+                "Qxd5",
+                "Qh8+",
+                "fxe8=B",
+                "fxe8=Q#"
+              ],
+              "explain": "fxe8=Q#: the pawn move wins here. Lichess puzzle 0k6IE, rated 1143.",
+              "id": "chess_lp8l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "1B5k/2p3p1/1p3n1p/8/P7/1Q3B2/1P1rp1PP/6K1 b - - 0 37",
+              "answer": "e1=Q#",
+              "choices": [
+                "e1=Q#",
+                "Rxb2",
+                "Rd1+",
+                "e1=N"
+              ],
+              "explain": "e1=Q#: the pawn move wins here. Lichess puzzle 0ggbe, rated 1220.",
+              "id": "chess_lp8l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp8l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "7k/6R1/p6p/1p1p4/1P4Q1/P1r1q3/4p1PP/5R1K b - - 0 43",
+              "answer": "exf1=Q#",
+              "choices": [
+                "Rxa3",
+                "exf1=Q#",
+                "exf1=B",
+                "exf1=N"
+              ],
+              "explain": "exf1=Q#: the pawn move wins here. Lichess puzzle 02eeX, rated 1287.",
+              "id": "chess_lp8l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6rk/7P/8/3Bp1P1/2p5/2PqP3/P4P2/4K3 w - - 0 45",
+              "answer": "hxg8=Q#",
+              "choices": [
+                "Bxc4",
+                "hxg8=B",
+                "hxg8=Q#",
+                "Bxg8"
+              ],
+              "explain": "hxg8=Q#: the pawn move wins here. Lichess puzzle 0EBGy, rated 1332.",
+              "id": "chess_lp8l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "rn2kbnr/ppP2ppp/6q1/6B1/4P3/8/PPP2PPP/RN1bKB1R w KQkq - 0 8",
+              "answer": "c8=Q#",
+              "choices": [
+                "cxb8=B",
+                "c8=R+",
+                "cxb8=N",
+                "c8=Q#"
+              ],
+              "explain": "c8=Q#: the pawn move wins here. Lichess puzzle 0VKS1, rated 1470.",
+              "id": "chess_lp8l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the best move.",
+              "fen": "6k1/3Q1R1p/6p1/2p5/3b1P2/3P2PP/pr6/7K b - - 2 41",
+              "answer": "a1=Q#",
+              "choices": [
+                "a1=Q#",
+                "Rh2+",
+                "Rb1+",
+                "Bf6"
+              ],
+              "explain": "a1=Q#: the pawn move wins here. Lichess puzzle 0Uy7E, rated 1532.",
+              "id": "chess_lp8l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the best move.",
+              "fen": "6rk/7P/3q1p2/3p4/8/1PpP4/r1P2P2/2K3R1 w - - 0 34",
+              "answer": "hxg8=Q#",
+              "choices": [
+                "Rxg8+",
+                "hxg8=Q#",
+                "hxg8=N",
+                "hxg8=R+"
+              ],
+              "explain": "hxg8=Q#: the pawn move wins here. Lichess puzzle 0Pwx6, rated 1646.",
+              "id": "chess_lp8l3_4"
             }
           ]
         }

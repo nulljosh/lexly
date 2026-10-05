@@ -23,7 +23,14 @@ the OpenSubtitles corpus.
 
 Licensed **MIT**.
 
+## Lichess puzzle database
+
+The tactics puzzles in the Chess course come from the [Lichess puzzle database](https://database.lichess.org/#puzzles),
+built by `scripts/build-chess-puzzles.py`. Each exercise names its Lichess puzzle id.
+
+Released into the public domain under **CC0**.
+
 ## Everything else
 
-Course content outside the `languages` category — math, science, programming, skills, and
-the BC curriculum material — is original to this project.
+Course content outside the `languages` category (math, science, programming, skills, and
+the BC curriculum material) is original to this project, apart from the chess puzzles above.
