@@ -24,24 +24,33 @@ PREFIX = 'lp'          # unit ids, so a re-run replaces only these
 PER_LESSON, LESSONS = 5, 3
 PER_UNIT = PER_LESSON * LESSONS
 
-# theme -> (unit title, tip). In teaching order. Forks, skewers, deflections and
-# the like almost never resolve in ONE move, so they stay out until the exercise
-# can take a line of moves.
+# theme -> (unit title, tip, line). In teaching order. line=False units take
+# one-move puzzles only. Forks, skewers and the like almost never finish in one
+# move, so line=True units ask for the FIRST move of the combination (Lichess
+# puzzles are only-move at every step) and the explanation plays out the rest.
 UNITS = [
-    ('mateIn1', 'Mate in One', 'Look at every check first. Mate is a check the king cannot escape, block or capture.'),
-    ('hangingPiece', 'Free Pieces', 'Before anything clever, ask what is undefended. A piece nobody protects can just be taken.'),
-    ('backRankMate', 'Back Rank Mates', 'A king boxed in by its own pawns dies to a rook or queen on the last rank.'),
-    ('pin', 'Pins', 'A piece that cannot move without exposing something bigger behind it is pinned. Attack it again.'),
-    ('discoveredAttack', 'Discovered Attacks', 'Move one piece out of the way and the one behind it attacks. Two threats from one move.'),
-    ('promotion', 'Promotion', 'A pawn on the last rank becomes a queen. Sometimes a knight is better, so check both.'),
+    ('mateIn1', 'Mate in One', 'Look at every check first. Mate is a check the king cannot escape, block or capture.', False),
+    ('hangingPiece', 'Free Pieces', 'Before anything clever, ask what is undefended. A piece nobody protects can just be taken.', False),
+    ('backRankMate', 'Back Rank Mates', 'A king boxed in by its own pawns dies to a rook or queen on the last rank.', False),
+    ('pin', 'Pins', 'A piece that cannot move without exposing something bigger behind it is pinned. Attack it again.', False),
+    ('discoveredAttack', 'Discovered Attacks', 'Move one piece out of the way and the one behind it attacks. Two threats from one move.', False),
+    ('promotion', 'Promotion', 'A pawn on the last rank becomes a queen. Sometimes a knight is better, so check both.', False),
+    ('fork', 'Forks', 'One piece attacking two at once. Knights are the classic forkers because nothing blocks them.', True),
+    ('skewer', 'Skewers', 'A pin in reverse: attack the big piece, and when it moves, take the one behind it.', True),
+    ('mateIn2', 'Mate in Two', 'Find the move that leaves every reply losing. Checks first, then quiet moves that take squares away.', True),
+    ('deflection', 'Deflection', 'Pull a defender away from the square it has to guard.', True),
+    ('attraction', 'Attraction', 'Lure a piece onto a bad square, often with a sacrifice, then hit it there.', True),
+    ('capturingDefender', 'Remove the Defender', 'If one piece guards everything, take that piece first and the rest falls.', True),
+    ('trappedPiece', 'Trapped Pieces', 'A piece with no safe square is lost. Take away its last escape and win it.', True),
 ]
+LINE = {t: line for t, _, _, line in UNITS}
 RATING = (600, 1900)
 GLYPH = {'P': 'pawn', 'N': 'knight', 'B': 'bishop', 'R': 'rook', 'Q': 'queen', 'K': 'king'}
 
 
 def exercise(row, theme, rnd):
     fen, moves = row['FEN'], row['Moves'].split()
-    if len(moves) != 2:
+    if (len(moves) != 2) if not LINE[theme] else (len(moves) < 4 or len(moves) > 8):
         return None
     board = chess.Board(fen)
     board.push_uci(moves[0])
@@ -61,20 +70,38 @@ def exercise(row, theme, rnd):
     picks = [board.san(m) for m in (loud + quiet)[:3]]
     side = 'White' if board.turn else 'Black'
     piece = GLYPH[board.piece_at(best.from_square).symbol().upper()]
+    start = board.fen()
+    if LINE[theme]:
+        # Play the line out in SAN for the explanation, then put the board back.
+        line, b = [], board.copy()
+        for uci in moves[1:]:
+            m = chess.Move.from_uci(uci)
+            if m not in b.legal_moves:
+                return None
+            line.append(b.san(m)); b.push(m)
+        why = f'{answer} starts it: {" ".join(line)}.'
+    else:
+        why = f'{answer}: the {piece} move wins here.'
     return {
         'type': 'chess',
-        'question': f'{side} to move. Find the best move.',
-        'fen': board.fen(),
+        'question': f'{side} to move. Find the best move.' if not LINE[theme] else f'{side} to move. Find the move that starts the combination.',
+        'fen': start,
         'answer': answer,
         'choices': [answer] + picks,
-        'explain': f'{answer}: the {piece} move wins here. Lichess puzzle {row["PuzzleId"]}, rated {row["Rating"]}.',
+        'explain': f'{why} Lichess puzzle {row["PuzzleId"]}, rated {row["Rating"]}.',
         '_rating': int(row['Rating']),
     }
 
 
 def build():
     rnd = random.Random(7)
-    want = {t for t, _, _ in UNITS}
+    pack = json.loads(PACK.read_text())
+    # Units already shipped stay exactly as they are (saved progress points at
+    # their exercise ids); only themes without a unit yet get built.
+    have = {u['title'] for u in pack['units'] if str(u['id']).startswith(PREFIX)}
+    want = {t for t, title, _, _ in UNITS if title not in have}
+    if not want:
+        print('every theme already has a unit', file=sys.stderr); return
     buckets = {t: [] for t in want}
     target = PER_UNIT * 4          # a wider pool, then keep an even spread of ratings
     proc = subprocess.Popen(f'curl -sL {URL} | zstd -dc', shell=True, stdout=subprocess.PIPE)
@@ -91,13 +118,15 @@ def build():
             break
     proc.kill()
 
-    pack = json.loads(PACK.read_text())
-    pack['units'] = [u for u in pack['units'] if not str(u['id']).startswith(PREFIX)]
+    n = max([int(str(u['id'])[len(PREFIX):]) for u in pack['units'] if str(u['id']).startswith(PREFIX)] or [0])
     slot = 0
-    for n, (theme, title, tip) in enumerate(UNITS, 1):
+    for theme, title, tip, _ in UNITS:
+        if theme not in want:
+            continue
         pool = sorted(buckets[theme], key=lambda e: e['_rating'])
         if len(pool) < PER_UNIT:
             print(f'skip {theme}: only {len(pool)} puzzles', file=sys.stderr); continue
+        n += 1
         step = len(pool) / PER_UNIT
         chosen = [pool[int(i * step)] for i in range(PER_UNIT)]   # easiest to hardest, evenly across the pool
         lessons = []

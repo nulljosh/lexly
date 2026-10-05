@@ -4,7 +4,7 @@
   "category": "skills",
   "icon": "fa-solid fa-chess",
   "level": "Strategy & Tactics",
-  "version": 4,
+  "version": 5,
   "units": [
     {
       "id": "u1",
@@ -2305,6 +2305,1651 @@
               ],
               "explain": "hxg8=Q#: the pawn move wins here. Lichess puzzle 0Pwx6, rated 1646.",
               "id": "chess_lp8l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp9",
+      "title": "Forks",
+      "tip": "One piece attacking two at once. Knights are the classic forkers because nothing blocks them.",
+      "lessons": [
+        {
+          "id": "lp9l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/6pp/p1N5/1pP2bp1/5P2/8/PPP5/3K4 w - - 0 29",
+              "answer": "Ne7+",
+              "choices": [
+                "Ne7+",
+                "fxg5",
+                "Kd2",
+                "Nb8"
+              ],
+              "explain": "Ne7+ starts it: Ne7+ Kf7 Nxf5. Lichess puzzle 009tE, rated 624.",
+              "id": "chess_lp9l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/8/8/2Pk4/pK4p1/3N4/4bP2/8 w - - 8 60",
+              "answer": "Nf4+",
+              "choices": [
+                "Kxa4",
+                "Nf4+",
+                "f3",
+                "c6"
+              ],
+              "explain": "Nf4+ starts it: Nf4+ Kc6 Nxe2. Lichess puzzle 00K0G, rated 777.",
+              "id": "chess_lp9l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "2r3k1/6p1/R6p/3P1N2/8/3K4/5b2/8 w - - 6 58",
+              "answer": "Ne7+",
+              "choices": [
+                "Nxh6+",
+                "Nxg7",
+                "Ne7+",
+                "Rxh6"
+              ],
+              "explain": "Ne7+ starts it: Ne7+ Kf7 Nxc8. Lichess puzzle 00IEW, rated 843.",
+              "id": "chess_lp9l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "3q2k1/3r4/pp3p1Q/2b1n3/P3N3/2P5/1P4PP/R6K w - - 1 25",
+              "answer": "Nxf6+",
+              "choices": [
+                "Qf8+",
+                "Qg6+",
+                "Qh8+",
+                "Nxf6+"
+              ],
+              "explain": "Nxf6+ starts it: Nxf6+ Qxf6 Qxf6. Lichess puzzle 004nd, rated 898.",
+              "id": "chess_lp9l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r2q1r2/p3ppkp/3p2P1/1N2n3/4P1P1/5P2/PPPQ4/R3K2R b KQ - 0 16",
+              "answer": "Nxf3+",
+              "choices": [
+                "Nxf3+",
+                "hxg6",
+                "Nxg6",
+                "Nxg4"
+              ],
+              "explain": "Nxf3+ starts it: Nxf3+ Ke2 Nxd2. Lichess puzzle 00Kxt, rated 932.",
+              "id": "chess_lp9l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp9l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r4rk1/p3ppbp/Pp1q1np1/3PpbB1/2B5/2N2P2/1PPQ2PP/3RR1K1 b - - 0 18",
+              "answer": "Qc5+",
+              "choices": [
+                "Qxd5",
+                "Qc5+",
+                "Bxc2",
+                "Nxd5"
+              ],
+              "explain": "Qc5+ starts it: Qc5+ Kh1 Qxc4. Lichess puzzle 001wr, rated 989.",
+              "id": "chess_lp9l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/1p3pp1/pB2q2p/2P1b3/1P6/6QP/4r1P1/3R3K w - - 5 34",
+              "answer": "Rd8+",
+              "choices": [
+                "Qxe5",
+                "Qxg7+",
+                "Rd8+",
+                "Ba5"
+              ],
+              "explain": "Rd8+ starts it: Rd8+ Kh7 Qd3+ Qg6 Qxe2. Lichess puzzle 00Nej, rated 1008.",
+              "id": "chess_lp9l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r4rk1/1Q2bppp/p1N1p3/1p1q4/2pP1n2/2P5/PP3PPP/R4RK1 w - - 2 19",
+              "answer": "Nxe7+",
+              "choices": [
+                "Qxb5",
+                "Qxa6",
+                "Qxe7",
+                "Nxe7+"
+              ],
+              "explain": "Nxe7+ starts it: Nxe7+ Kh8 Nxd5. Lichess puzzle 00BJm, rated 1088.",
+              "id": "chess_lp9l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "3r1rk1/1p2q1pp/5p2/8/1P1n4/6Q1/PPBB1PPP/R4RK1 b - - 0 20",
+              "answer": "Ne2+",
+              "choices": [
+                "Ne2+",
+                "Qxb4",
+                "Nxc2",
+                "Nf3+"
+              ],
+              "explain": "Ne2+ starts it: Ne2+ Kh1 Nxg3+ fxg3 Rxd2. Lichess puzzle 00Aas, rated 1111.",
+              "id": "chess_lp9l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5rk1/1p2p2p/p2p4/2pPb2R/2P1P3/1P1BKPrR/8/8 w - - 5 31",
+              "answer": "Rxg3+",
+              "choices": [
+                "Rxe5",
+                "Rxg3+",
+                "Rg5+",
+                "Rxh7"
+              ],
+              "explain": "Rxg3+ starts it: Rxg3+ Bxg3 Rg5+ Kf7 Rxg3. Lichess puzzle 0050w, rated 1131.",
+              "id": "chess_lp9l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp9l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r3r1k1/ppp2ppp/2nnq3/8/3P4/P1P1P1P1/2Q3BP/R1B1KR2 w Q - 5 17",
+              "answer": "d5",
+              "choices": [
+                "Bxc6",
+                "Rxf7",
+                "d5",
+                "Qxh7+"
+              ],
+              "explain": "d5 starts it: d5 Qe5 dxc6. Lichess puzzle 00O8m, rated 1376.",
+              "id": "chess_lp9l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/pp2R3/6pp/8/2r5/P4BbP/1P4P1/6K1 w - - 4 39",
+              "answer": "Bd5+",
+              "choices": [
+                "Re8+",
+                "Bxb7",
+                "Rg7+",
+                "Bd5+"
+              ],
+              "explain": "Bd5+ starts it: Bd5+ Kf8 Rf7+ Ke8 Bxc4. Lichess puzzle 00HDS, rated 1462.",
+              "id": "chess_lp9l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1b3rk/2q2p2/1n2p2n/p2pP1NP/P1pP1QP1/1pP5/1P3PB1/R3R1K1 w - - 5 27",
+              "answer": "Qf6+",
+              "choices": [
+                "Qf6+",
+                "Nxf7+",
+                "Bxd5",
+                "Qxf7"
+              ],
+              "explain": "Qf6+ starts it: Qf6+ Rg7 Qxh6+. Lichess puzzle 00Myw, rated 1523.",
+              "id": "chess_lp9l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r2qk2r/pp2ppbp/1n1p2p1/3P4/2n5/2NBBP1P/PP3P2/R2QK2R w KQkq - 0 13",
+              "answer": "Bxc4",
+              "choices": [
+                "Qa4+",
+                "Bxc4",
+                "Bxb6",
+                "Bxg6"
+              ],
+              "explain": "Bxc4 starts it: Bxc4 Nxc4 Qa4+ Qd7 Qxc4. Lichess puzzle 0017R, rated 1655.",
+              "id": "chess_lp9l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1rr3k1/4Qppp/q3p3/p2pn3/3N4/4P2P/5PP1/RR4K1 w - - 0 30",
+              "answer": "Rxb8",
+              "choices": [
+                "Qd8+",
+                "Rxa5",
+                "Rxb8",
+                "Qe8+"
+              ],
+              "explain": "Rxb8 starts it: Rxb8 Rxb8 Qc7 Rc8 Qxe5. Lichess puzzle 00Hpe, rated 1768.",
+              "id": "chess_lp9l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp10",
+      "title": "Skewers",
+      "tip": "A pin in reverse: attack the big piece, and when it moves, take the one behind it.",
+      "lessons": [
+        {
+          "id": "lp10l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r5k1/6pp/p1R5/4Pp2/1P3P2/4P3/1P3P1r/R4K2 b - - 2 28",
+              "answer": "Rh1+",
+              "choices": [
+                "Rxf2+",
+                "h6",
+                "Rf8",
+                "Rh1+"
+              ],
+              "explain": "Rh1+ starts it: Rh1+ Kg2 Rxa1. Lichess puzzle 01xzs, rated 736.",
+              "id": "chess_lp10l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6R1/8/Kpk1p3/1p1pP3/6P1/PPr5/8/8 w - - 0 41",
+              "answer": "Rc8+",
+              "choices": [
+                "Rc8+",
+                "Rg7",
+                "g5",
+                "Rb8"
+              ],
+              "explain": "Rc8+ starts it: Rc8+ Kd7 Rxc3. Lichess puzzle 006yP, rated 819.",
+              "id": "chess_lp10l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/8/5k2/R2K4/2P4r/8/P7/8 b - - 2 43",
+              "answer": "Rh5+",
+              "choices": [
+                "Rd4+",
+                "Rh5+",
+                "Rxc4",
+                "Ke7"
+              ],
+              "explain": "Rh5+ starts it: Rh5+ Kd6 Rxa5. Lichess puzzle 0100g, rated 873.",
+              "id": "chess_lp10l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/p2r3p/4k3/8/4P3/3p2P1/PP3K1P/3B4 w - - 4 33",
+              "answer": "Bg4+",
+              "choices": [
+                "Bb3+",
+                "Kg1",
+                "Bg4+",
+                "Bc2"
+              ],
+              "explain": "Bg4+ starts it: Bg4+ Ke5 Bxd7. Lichess puzzle 01iaw, rated 942.",
+              "id": "chess_lp10l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "4R3/6p1/6pp/Bp1kn3/2p3PP/2P3K1/3r4/8 w - - 9 42",
+              "answer": "Rd8+",
+              "choices": [
+                "Rxe5+",
+                "Rf8",
+                "Bd8",
+                "Rd8+"
+              ],
+              "explain": "Rd8+ starts it: Rd8+ Kc6 Rxd2. Lichess puzzle 029B5, rated 957.",
+              "id": "chess_lp10l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp10l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "5rk1/6pp/pqp1p3/4P3/1PK5/2P3P1/P3Q2P/3R4 b - - 0 28",
+              "answer": "Qb5+",
+              "choices": [
+                "Qb5+",
+                "Rf4+",
+                "Qd4+",
+                "Qxb4+"
+              ],
+              "explain": "Qb5+ starts it: Qb5+ Kb3 Qxe2. Lichess puzzle 025y9, rated 995.",
+              "id": "chess_lp10l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "4r1k1/1p3p1p/p3p1pQ/3b4/7R/1P1P1P2/2r3PP/q3NK1R w - - 0 25",
+              "answer": "Qxh7+",
+              "choices": [
+                "Qxg6+",
+                "Qxh7+",
+                "Qg7+",
+                "Qf8+"
+              ],
+              "explain": "Qxh7+ starts it: Qxh7+ Kf8 Qh8+ Qxh8 Rxh8+ Kg7 Rxe8. Lichess puzzle 015jf, rated 1079.",
+              "id": "chess_lp10l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/7Q/3p1kp1/1p6/2b5/2q4P/5PPK/8 w - - 0 37",
+              "answer": "Qh8+",
+              "choices": [
+                "Qh4+",
+                "Qe7+",
+                "Qh8+",
+                "Qg7+"
+              ],
+              "explain": "Qh8+ starts it: Qh8+ Ke6 Qxc3. Lichess puzzle 00AB1, rated 1107.",
+              "id": "chess_lp10l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/r4pp1/2k1p2p/8/pK1PP3/5PP1/6P1/1R6 b - - 2 35",
+              "answer": "Rb7+",
+              "choices": [
+                "Re7",
+                "f5",
+                "Kc7",
+                "Rb7+"
+              ],
+              "explain": "Rb7+ starts it: Rb7+ Kxa4 Rxb1. Lichess puzzle 00sXv, rated 1121.",
+              "id": "chess_lp10l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/4n1k1/4P3/3p2PP/rp1P4/3K4/P4R2/8 b - - 1 47",
+              "answer": "Ra3+",
+              "choices": [
+                "Ra3+",
+                "Rxa2",
+                "Nf5",
+                "Ra8"
+              ],
+              "explain": "Ra3+ starts it: Ra3+ Kc2 Rxa2+ Kb3 Rxf2. Lichess puzzle 02F4S, rated 1180.",
+              "id": "chess_lp10l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp10l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/2p1b3/q1Pp2k1/3Pp3/4Pr2/1Q3PK1/3N2P1/4R3 b - - 2 47",
+              "answer": "Bh4+",
+              "choices": [
+                "Rg4+",
+                "Bh4+",
+                "Qxc6",
+                "Rxf3+"
+              ],
+              "explain": "Bh4+ starts it: Bh4+ Kh2 Bxe1. Lichess puzzle 00Q4v, rated 1228.",
+              "id": "chess_lp10l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5Q2/7K/8/8/4p2P/3k2q1/8/8 w - - 2 54",
+              "answer": "Qa3+",
+              "choices": [
+                "Qd6+",
+                "Qd8+",
+                "Qa3+",
+                "Qf1+"
+              ],
+              "explain": "Qa3+ starts it: Qa3+ Kd2 Qxg3. Lichess puzzle 00WJN, rated 1324.",
+              "id": "chess_lp10l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "3rk3/R4p2/p6p/1p4pB/8/1b2P3/1P2KPPP/3R4 b - - 0 26",
+              "answer": "Bxd1+",
+              "choices": [
+                "Rxd1",
+                "Bc4+",
+                "Rd2+",
+                "Bxd1+"
+              ],
+              "explain": "Bxd1+ starts it: Bxd1+ Ke1 Bxh5. Lichess puzzle 023NL, rated 1383.",
+              "id": "chess_lp10l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "6k1/R3K3/8/1r6/5r2/p4N2/8/5R2 b - - 4 50",
+              "answer": "Rf7+",
+              "choices": [
+                "Rf7+",
+                "Rxf3",
+                "Rb7+",
+                "Re5+"
+              ],
+              "explain": "Rf7+ starts it: Rf7+ Kd6 Rxa7. Lichess puzzle 00coU, rated 1526.",
+              "id": "chess_lp10l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r7/2p2pk1/q4np1/3PQ3/4P3/5PPK/2R2N1P/8 b - - 0 34",
+              "answer": "Qf1+",
+              "choices": [
+                "Rh8+",
+                "Qf1+",
+                "Qe6+",
+                "Qc8+"
+              ],
+              "explain": "Qf1+ starts it: Qf1+ Kh4 Rh8+ Kg5 Rh5+ Kf4 Rxe5. Lichess puzzle 01Z1w, rated 1624.",
+              "id": "chess_lp10l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp11",
+      "title": "Mate in Two",
+      "tip": "Find the move that leaves every reply losing. Checks first, then quiet moves that take squares away.",
+      "lessons": [
+        {
+          "id": "lp11l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1n3k1/3R1ppp/2p5/5P2/8/1P2r3/P7/5RK1 w - - 0 34",
+              "answer": "Rd8+",
+              "choices": [
+                "Rxf7",
+                "Re7",
+                "Rd8+",
+                "a4"
+              ],
+              "explain": "Rd8+ starts it: Rd8+ Re8 Rxe8#. Lichess puzzle 00EXM, rated 621.",
+              "id": "chess_lp11l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "2k2br1/1pprn3/p4p2/4p2Q/4P2P/2N1q3/PP4PK/3R4 w - - 0 23",
+              "answer": "Qe8+",
+              "choices": [
+                "Rxd7",
+                "Qxe5",
+                "Qg6",
+                "Qe8+"
+              ],
+              "explain": "Qe8+ starts it: Qe8+ Rd8 Rxd8#. Lichess puzzle 00Lvv, rated 670.",
+              "id": "chess_lp11l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/pp3pp1/2p1q1Pp/3b4/8/6Q1/PB3Pp1/3r1NK1 w - - 0 28",
+              "answer": "Qb8+",
+              "choices": [
+                "Qb8+",
+                "Bxg7",
+                "gxf7+",
+                "Qxg2"
+              ],
+              "explain": "Qb8+ starts it: Qb8+ Qe8 Qxe8#. Lichess puzzle 0061g, rated 801.",
+              "id": "chess_lp11l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "R7/1p3kp1/2pK3p/3p1PP1/3r2nP/8/1P6/8 w - - 0 40",
+              "answer": "g6+",
+              "choices": [
+                "gxh6",
+                "g6+",
+                "Rf8+",
+                "Kd7"
+              ],
+              "explain": "g6+ starts it: g6+ Kf6 Rf8#. Lichess puzzle 00Keu, rated 882.",
+              "id": "chess_lp11l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r3r1k1/6b1/p2Nn2p/1P1Qp3/6nq/2P3P1/1PB2P2/R1B1R1K1 b - - 0 30",
+              "answer": "Qh2+",
+              "choices": [
+                "axb5",
+                "Qh1+",
+                "Qh2+",
+                "Qxg3+"
+              ],
+              "explain": "Qh2+ starts it: Qh2+ Kf1 Qxf2#. Lichess puzzle 00MGA, rated 915.",
+              "id": "chess_lp11l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp11l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/2R3pp/2p4q/1p1p4/3P4/P7/1PP2R2/1K1Nr3 w - - 4 33",
+              "answer": "Rc8+",
+              "choices": [
+                "Rf8+",
+                "Rxg7+",
+                "Rxc6",
+                "Rc8+"
+              ],
+              "explain": "Rc8+ starts it: Rc8+ Re8 Rxe8#. Lichess puzzle 008oX, rated 976.",
+              "id": "chess_lp11l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "2r3k1/3R1ppp/p1q5/2p2Q2/P7/7P/5PP1/6K1 w - - 4 27",
+              "answer": "Qxf7+",
+              "choices": [
+                "Qxf7+",
+                "Rxf7",
+                "Rd8+",
+                "Qxh7+"
+              ],
+              "explain": "Qxf7+ starts it: Qxf7+ Kh8 Qxg7#. Lichess puzzle 0092z, rated 991.",
+              "id": "chess_lp11l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "kr6/1pR4p/p4R2/n7/P3p3/3rB3/6PP/6K1 w - - 1 39",
+              "answer": "Rxa6+",
+              "choices": [
+                "Rxh7",
+                "Rxa6+",
+                "Rxb7",
+                "Rcc6"
+              ],
+              "explain": "Rxa6+ starts it: Rxa6+ bxa6 Ra7#. Lichess puzzle 00LNB, rated 1074.",
+              "id": "chess_lp11l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/1p4p1/pb2pp1p/3n1k2/3P4/P3BN1P/1P2KPP1/8 w - - 1 27",
+              "answer": "Nh4+",
+              "choices": [
+                "Bxh6",
+                "g4+",
+                "Nh4+",
+                "b4"
+              ],
+              "explain": "Nh4+ starts it: Nh4+ Ke4 f3#. Lichess puzzle 009f8, rated 1149.",
+              "id": "chess_lp11l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5Q2/pbp3np/1p1pq1pk/1P6/P6P/6K1/8/8 w - - 0 33",
+              "answer": "Qf4+",
+              "choices": [
+                "Qxd6",
+                "Qxg7+",
+                "Qg8",
+                "Qf4+"
+              ],
+              "explain": "Qf4+ starts it: Qf4+ g5 Qxg5#. Lichess puzzle 009oc, rated 1165.",
+              "id": "chess_lp11l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp11l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "7k/p5pp/2r2q2/2p4Q/8/8/P5PP/3r1R1K w - - 0 30",
+              "answer": "Qe8+",
+              "choices": [
+                "Qe8+",
+                "Qxd1",
+                "Qxc5",
+                "Rxd1"
+              ],
+              "explain": "Qe8+ starts it: Qe8+ Qf8 Qxf8#. Lichess puzzle 00MFe, rated 1294.",
+              "id": "chess_lp11l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "3r2k1/1q3ppp/p3p3/Qp1r4/7P/P4P2/1PP3P1/1K1R3R w - - 0 22",
+              "answer": "Qxd8+",
+              "choices": [
+                "Qxa6",
+                "Qxd8+",
+                "Rxd5",
+                "Qxb5"
+              ],
+              "explain": "Qxd8+ starts it: Qxd8+ Rxd8 Rxd8#. Lichess puzzle 00Bg4, rated 1370.",
+              "id": "chess_lp11l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "4rk2/p4q2/1p3Q1b/8/1p5N/2P1p3/P3P3/2K5 w - - 1 44",
+              "answer": "Ng6+",
+              "choices": [
+                "cxb4",
+                "Qe7+",
+                "Ng6+",
+                "Qg7+"
+              ],
+              "explain": "Ng6+ starts it: Ng6+ Kg8 Qh8#. Lichess puzzle 005Bm, rated 1434.",
+              "id": "chess_lp11l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "3r3k/6p1/4Q3/4B3/1p3P2/4PKP1/3q4/8 w - - 18 52",
+              "answer": "Qh6+",
+              "choices": [
+                "Qg8+",
+                "Qh3+",
+                "Bxg7+",
+                "Qh6+"
+              ],
+              "explain": "Qh6+ starts it: Qh6+ Kg8 Qxg7#. Lichess puzzle 009BH, rated 1513.",
+              "id": "chess_lp11l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "3Q4/p1p2ppp/4k3/8/5P2/4P3/Prqn2PP/3R1RK1 b - - 0 22",
+              "answer": "Nf3+",
+              "choices": [
+                "Nf3+",
+                "Qxd1",
+                "Nxf1",
+                "Rxa2"
+              ],
+              "explain": "Nf3+ starts it: Nf3+ Kh1 Qxg2#. Lichess puzzle 009zR, rated 1620.",
+              "id": "chess_lp11l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp12",
+      "title": "Deflection",
+      "tip": "Pull a defender away from the square it has to guard.",
+      "lessons": [
+        {
+          "id": "lp12l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/3R3p/6pk/5p2/5PP1/7P/rr1B1K2/8 w - - 1 47",
+              "answer": "g5+",
+              "choices": [
+                "Rxh7+",
+                "g5+",
+                "gxf5",
+                "Rd6"
+              ],
+              "explain": "g5+ starts it: g5+ Kh5 Rxh7#. Lichess puzzle 01Ie5, rated 868.",
+              "id": "chess_lp12l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5rk1/p3Q1pp/2p5/8/4p1B1/6PP/4P1K1/3q4 w - - 4 32",
+              "answer": "Be6+",
+              "choices": [
+                "Qxe4",
+                "Qxa7",
+                "Be6+",
+                "Qf7+"
+              ],
+              "explain": "Be6+ starts it: Be6+ Kh8 Qxf8#. Lichess puzzle 01Qwv, rated 988.",
+              "id": "chess_lp12l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/1R6/p1pk4/2q3bp/1QP5/P7/KP6/3r4 w - - 3 45",
+              "answer": "Rd7+",
+              "choices": [
+                "Qxc5+",
+                "Qd2+",
+                "Rf7",
+                "Rd7+"
+              ],
+              "explain": "Rd7+ starts it: Rd7+ Kxd7 Qxc5. Lichess puzzle 00AoZ, rated 1090.",
+              "id": "chess_lp12l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "1k4r1/7p/1p4r1/pPp1qp2/P1Pp1R2/3Q1RNP/2P4K/8 b - - 5 32",
+              "answer": "Rxg3",
+              "choices": [
+                "Rxg3",
+                "Qxf4",
+                "Qe2+",
+                "Kc7"
+              ],
+              "explain": "Rxg3 starts it: Rxg3 Rxg3 Qxf4. Lichess puzzle 00n3G, rated 1120.",
+              "id": "chess_lp12l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1q3r2/p5k1/1p2pbpp/2p5/2P1p3/2P2PQP/PP3P2/6RK w - - 0 30",
+              "answer": "Qxg6+",
+              "choices": [
+                "Qxb8",
+                "Qxg6+",
+                "fxe4",
+                "Qc7+"
+              ],
+              "explain": "Qxg6+ starts it: Qxg6+ Kh8 Qxh6#. Lichess puzzle 00J1Y, rated 1139.",
+              "id": "chess_lp12l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp12l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/7R/5p2/p7/7P/2p5/3k2N1/1K6 b - - 0 48",
+              "answer": "c2+",
+              "choices": [
+                "f5",
+                "Ke2",
+                "c2+",
+                "Kd1"
+              ],
+              "explain": "c2+ starts it: c2+ Ka2 c1=Q Rd7+ Ke2. Lichess puzzle 004LZ, rated 1195.",
+              "id": "chess_lp12l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "4Qn1k/6p1/7p/8/1b1P2N1/2q1B2P/6P1/6K1 b - - 1 31",
+              "answer": "Qe1+",
+              "choices": [
+                "Qxe3+",
+                "Qxd4",
+                "Qa1+",
+                "Qe1+"
+              ],
+              "explain": "Qe1+ starts it: Qe1+ Kh2 Bd6+ Ne5 Qxe3. Lichess puzzle 01FB6, rated 1287.",
+              "id": "chess_lp12l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "2r3k1/p4pp1/1p5p/1Q6/2q5/5P2/1P4PP/3R2K1 w - - 4 31",
+              "answer": "Rd8+",
+              "choices": [
+                "Rd8+",
+                "Qxc4",
+                "Qxb6",
+                "Qe8+"
+              ],
+              "explain": "Rd8+ starts it: Rd8+ Rxd8 Qxc4 Rd1+ Kf2. Lichess puzzle 00g5H, rated 1374.",
+              "id": "chess_lp12l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1q3k1/3nbppp/pp2p3/4B3/8/2N2Q2/PPPR1PPP/6K1 w - - 1 19",
+              "answer": "Rxd7",
+              "choices": [
+                "Qxf7+",
+                "Rxd7",
+                "Qxa8",
+                "Bxg7"
+              ],
+              "explain": "Rxd7 starts it: Rxd7 Qxd7 Qxa8+. Lichess puzzle 0068B, rated 1459.",
+              "id": "chess_lp12l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/3R3p/6p1/4k3/2Bnp3/1P5P/P6r/4K3 w - - 2 41",
+              "answer": "Rd5+",
+              "choices": [
+                "Rxh7",
+                "Rxd4",
+                "Rd5+",
+                "Re7+"
+              ],
+              "explain": "Rd5+ starts it: Rd5+ Kf4 Rxd4. Lichess puzzle 00UEs, rated 1513.",
+              "id": "chess_lp12l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp12l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "6k1/p4rp1/8/2p1Bq1p/2P1b3/2P3QP/P5PK/4R3 b - - 1 30",
+              "answer": "h4",
+              "choices": [
+                "Qxe5",
+                "Qxh3+",
+                "Bxg2",
+                "h4"
+              ],
+              "explain": "h4 starts it: h4 Qxh4 Qxe5+. Lichess puzzle 00uKb, rated 1545.",
+              "id": "chess_lp12l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/8/8/4R2p/4p2k/4r2P/6PK/8 w - - 2 51",
+              "answer": "g3+",
+              "choices": [
+                "g3+",
+                "Rxe4+",
+                "Rxh5+",
+                "Rg5"
+              ],
+              "explain": "g3+ starts it: g3+ Rxg3 Rxe4+ Kg5 Kxg3. Lichess puzzle 00nh0, rated 1583.",
+              "id": "chess_lp12l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r3r3/R3nkb1/5p2/3p4/3P2N1/2P1R1PP/5P2/5K2 w - - 11 35",
+              "answer": "Rexe7+",
+              "choices": [
+                "Nh6+",
+                "Rexe7+",
+                "Ne5+",
+                "Raxe7+"
+              ],
+              "explain": "Rexe7+ starts it: Rexe7+ Rxe7 Rxa8. Lichess puzzle 01OSA, rated 1613.",
+              "id": "chess_lp12l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "3rr1k1/1p3pq1/p1n1b2p/2b3p1/QP6/P2BPNB1/5PPP/R2R2K1 b - - 0 20",
+              "answer": "Rxd3",
+              "choices": [
+                "Nxb4",
+                "Bxb4",
+                "Rxd3",
+                "Qxa1"
+              ],
+              "explain": "Rxd3 starts it: Rxd3 Rxd3 Qxa1+. Lichess puzzle 00rAM, rated 1743.",
+              "id": "chess_lp12l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/2pR3p/pb4pk/8/5p1P/B6K/P1r5/6r1 w - - 4 40",
+              "answer": "Bf8+",
+              "choices": [
+                "Rxh7+",
+                "Rxc7",
+                "Rd6",
+                "Bf8+"
+              ],
+              "explain": "Bf8+ starts it: Bf8+ Kh5 Rxh7#. Lichess puzzle 00CBU, rated 1836.",
+              "id": "chess_lp12l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp13",
+      "title": "Attraction",
+      "tip": "Lure a piece onto a bad square, often with a sacrifice, then hit it there.",
+      "lessons": [
+        {
+          "id": "lp13l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1rb3k1/q4rP1/4p2p/3p3p/3P1P2/2P5/2QK3P/3R2R1 w - - 1 30",
+              "answer": "Qh7+",
+              "choices": [
+                "Qh7+",
+                "Qa4",
+                "Qc1",
+                "Kc1"
+              ],
+              "explain": "Qh7+ starts it: Qh7+ Kxh7 g8=Q#. Lichess puzzle 001w5, rated 1034.",
+              "id": "chess_lp13l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5rk1/n2P3p/1p2p1pQ/pP6/q3p1p1/8/5PPP/5RK1 w - - 0 35",
+              "answer": "Qxf8+",
+              "choices": [
+                "Qg7+",
+                "Qxf8+",
+                "Qxh7+",
+                "Qxg6+"
+              ],
+              "explain": "Qxf8+ starts it: Qxf8+ Kxf8 d8=Q+. Lichess puzzle 01do1, rated 1121.",
+              "id": "chess_lp13l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1r4r1/2q2ppk/2pb1n2/1p2pN1p/4P3/4Q1RP/PP3PP1/R5K1 w - - 0 26",
+              "answer": "Rxg7+",
+              "choices": [
+                "Nxd6",
+                "Nxg7",
+                "Rxg7+",
+                "Qh6+"
+              ],
+              "explain": "Rxg7+ starts it: Rxg7+ Rxg7 Qh6+ Kg8 Qxg7#. Lichess puzzle 01tZ5, rated 1184.",
+              "id": "chess_lp13l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "4rk1r/1pp2p2/p2p3p/3N4/3P2q1/8/PPP5/1K2Q1NR w - - 2 24",
+              "answer": "Qxe8+",
+              "choices": [
+                "Rxh6",
+                "Nxc7",
+                "Qe7+",
+                "Qxe8+"
+              ],
+              "explain": "Qxe8+ starts it: Qxe8+ Kxe8 Nf6+ Ke7 Nxg4. Lichess puzzle 003mh, rated 1325.",
+              "id": "chess_lp13l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "3r2k1/1b4bR/p2P2p1/3p2N1/2p5/2P2N2/PP6/2K5 w - - 0 29",
+              "answer": "Rxg7+",
+              "choices": [
+                "Rxg7+",
+                "Rh8+",
+                "Ng1",
+                "Kd2"
+              ],
+              "explain": "Rxg7+ starts it: Rxg7+ Kxg7 Ne6+ Kg8 Nxd8. Lichess puzzle 00761, rated 1357.",
+              "id": "chess_lp13l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp13l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1k1r1b1r/npp2pp1/5n1p/1N6/8/1P3N2/1P2qPPP/R2R2K1 w - - 0 17",
+              "answer": "Rxd8+",
+              "choices": [
+                "Rxa7",
+                "Rxd8+",
+                "Nxc7",
+                "Nxa7"
+              ],
+              "explain": "Rxd8+ starts it: Rxd8+ Nc8 Ra8+ Kxa8 Rxc8#. Lichess puzzle 024sp, rated 1399.",
+              "id": "chess_lp13l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "5r2/pp1k4/4p1b1/3pP1Np/3P1P1K/8/P7/2R5 w - - 8 43",
+              "answer": "Rc7+",
+              "choices": [
+                "Nxe6",
+                "Nf3",
+                "Rc7+",
+                "Kh3"
+              ],
+              "explain": "Rc7+ starts it: Rc7+ Kxc7 Nxe6+ Kb6 Nxf8. Lichess puzzle 005do, rated 1433.",
+              "id": "chess_lp13l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "2rr2k1/5ppp/p7/1p1nP3/1B1P1PP1/PK5P/2R5/3R4 b - - 5 30",
+              "answer": "Rxc2",
+              "choices": [
+                "Nxf4",
+                "Nxb4",
+                "Rc3+",
+                "Rxc2"
+              ],
+              "explain": "Rxc2 starts it: Rxc2 Kxc2 Ne3+ Kd3 Nxd1. Lichess puzzle 00Rmm, rated 1492.",
+              "id": "chess_lp13l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "2kr4/2p2pp1/8/1R2PP1p/6n1/8/1Q4PP/3q2BK b - - 2 28",
+              "answer": "Qxg1+",
+              "choices": [
+                "Qxg1+",
+                "Nxe5",
+                "Nxh2",
+                "Nf2+"
+              ],
+              "explain": "Qxg1+ starts it: Qxg1+ Kxg1 Rd1#. Lichess puzzle 022ib, rated 1526.",
+              "id": "chess_lp13l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "2R2b2/5k1p/6p1/3p1p2/1r1Bp3/4P1P1/5PKP/8 w - - 2 37",
+              "answer": "Rxf8+",
+              "choices": [
+                "Rc7+",
+                "Rxf8+",
+                "Rc6",
+                "h4"
+              ],
+              "explain": "Rxf8+ starts it: Rxf8+ Kxf8 Bc5+ Kf7 Bxb4. Lichess puzzle 01dsW, rated 1555.",
+              "id": "chess_lp13l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp13l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "5rk1/R5bp/q2p4/3Ppn1p/4Q3/4B2P/5PP1/5RK1 b - - 0 24",
+              "answer": "Qxf1+",
+              "choices": [
+                "Qxa7",
+                "Nxe3",
+                "Qxf1+",
+                "Rf7"
+              ],
+              "explain": "Qxf1+ starts it: Qxf1+ Kxf1 Ng3+ Ke1 Nxe4. Lichess puzzle 00sKo, rated 1637.",
+              "id": "chess_lp13l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r3n2k/2q1b2p/3p2p1/2n2N2/2B1P3/8/1Pp2B2/1NKR3R w - - 2 30",
+              "answer": "Rxh7+",
+              "choices": [
+                "Nxd6",
+                "Rxd6",
+                "Nxe7",
+                "Rxh7+"
+              ],
+              "explain": "Rxh7+ starts it: Rxh7+ Kxh7 Rh1+ Bh4 Rxh4#. Lichess puzzle 01h56, rated 1712.",
+              "id": "chess_lp13l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "6k1/pp4p1/7p/1PPp4/P2b2rq/5QN1/6PP/4R2K b - - 0 30",
+              "answer": "Qxh2+",
+              "choices": [
+                "Qxh2+",
+                "Rxg3",
+                "Bxc5",
+                "Qxg3"
+              ],
+              "explain": "Qxh2+ starts it: Qxh2+ Kxh2 Rh4#. Lichess puzzle 01Qdr, rated 1730.",
+              "id": "chess_lp13l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "2k4r/ppp2ppr/2n5/3b1N2/3p1bP1/5NP1/PPP1QPK1/R3R3 b - - 2 20",
+              "answer": "Rh2+",
+              "choices": [
+                "Bxf3+",
+                "Rh2+",
+                "Bxa2",
+                "Bxg3"
+              ],
+              "explain": "Rh2+ starts it: Rh2+ Kf1 Rh1+ Ng1 Rxg1+ Kxg1 Rh1#. Lichess puzzle 00XGg, rated 1804.",
+              "id": "chess_lp13l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "q4r1k/5pbp/2Np1np1/3b2B1/pQ6/5B2/P4PPP/4R1K1 w - - 0 24",
+              "answer": "Bxf6",
+              "choices": [
+                "Bxd5",
+                "Qxd6",
+                "Bxf6",
+                "Qxa4"
+              ],
+              "explain": "Bxf6 starts it: Bxf6 Bxc6 Bxg7+ Kxg7 Qc3+. Lichess puzzle 015Vc, rated 1835.",
+              "id": "chess_lp13l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp14",
+      "title": "Remove the Defender",
+      "tip": "If one piece guards everything, take that piece first and the rest falls.",
+      "lessons": [
+        {
+          "id": "lp14l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/rb3p2/pq2r1pp/1p1n4/2pN4/2P4P/1PQ3P1/1B1RR1K1 w - - 0 28",
+              "answer": "Rxe6",
+              "choices": [
+                "Qxg6+",
+                "Rf1",
+                "Kf2",
+                "Rxe6"
+              ],
+              "explain": "Rxe6 starts it: Rxe6 fxe6 Qxg6+. Lichess puzzle 05GU4, rated 891.",
+              "id": "chess_lp14l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r4rk1/pp1b1ppp/2n1pq2/1B1p1n2/Qb1P4/2N1B3/PP2NPPP/R4RK1 w - - 8 13",
+              "answer": "Bxc6",
+              "choices": [
+                "Bxc6",
+                "Qxb4",
+                "Nxd5",
+                "Qxa7"
+              ],
+              "explain": "Bxc6 starts it: Bxc6 Bxc6 Qxb4. Lichess puzzle 01lh4, rated 1165.",
+              "id": "chess_lp14l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r2k3r/pp1n2p1/3bpnBp/2qp4/3Q1BPP/P1N1P3/1PP2P2/R4RK1 b - - 3 15",
+              "answer": "Qxd4",
+              "choices": [
+                "Qxa3",
+                "Qxd4",
+                "Qxc3",
+                "Bxf4"
+              ],
+              "explain": "Qxd4 starts it: Qxd4 exd4 Bxf4. Lichess puzzle 05Pkx, rated 1202.",
+              "id": "chess_lp14l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1rb2rk1/4bppp/p1n1p3/1pq1P3/7N/P5P1/1PQ2PBP/R1B2RK1 w - - 2 16",
+              "answer": "Qxc5",
+              "choices": [
+                "Qxh7+",
+                "Bxc6",
+                "Qxc5",
+                "a4"
+              ],
+              "explain": "Qxc5 starts it: Qxc5 Bxc5 Bxc6. Lichess puzzle 00SyL, rated 1252.",
+              "id": "chess_lp14l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "5k2/6pp/p5p1/1r2N3/1P5n/P1P2P2/5P1P/4R1K1 b - - 0 35",
+              "answer": "Rxe5",
+              "choices": [
+                "Rxb4",
+                "Nxf3+",
+                "Rb7",
+                "Rxe5"
+              ],
+              "explain": "Rxe5 starts it: Rxe5 Rxe5 Nxf3+ Kf1 Nxe5. Lichess puzzle 033ej, rated 1301.",
+              "id": "chess_lp14l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp14l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r2q1rk1/pppb1ppp/1b3n2/4B3/2Q5/2N5/PPP3PP/2KR1B1R w - - 1 13",
+              "answer": "Bxf6",
+              "choices": [
+                "Bxf6",
+                "Bxc7",
+                "Qxc7",
+                "Qxf7+"
+              ],
+              "explain": "Bxf6 starts it: Bxf6 Qxf6 Rxd7. Lichess puzzle 031pC, rated 1340.",
+              "id": "chess_lp14l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r4rk1/1p3pp1/p2b1n1p/2p1N3/P3q1b1/2P2N2/1P4PP/R1B1QRK1 w - - 0 19",
+              "answer": "Qxe4",
+              "choices": [
+                "Nxg4",
+                "Qxe4",
+                "Bxh6",
+                "Nxf7"
+              ],
+              "explain": "Qxe4 starts it: Qxe4 Nxe4 Nxg4. Lichess puzzle 06QTl, rated 1391.",
+              "id": "chess_lp14l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "4r1k1/ppB1q1pp/4Npb1/2bP4/2P1r1P1/1P5P/P4P2/R2Q1RK1 b - - 0 23",
+              "answer": "Rxe6",
+              "choices": [
+                "Bxf2+",
+                "Qxe6",
+                "Rxe6",
+                "Rxc4"
+              ],
+              "explain": "Rxe6 starts it: Rxe6 dxe6 Qxc7. Lichess puzzle 09968, rated 1473.",
+              "id": "chess_lp14l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "3q2k1/7p/p5pb/1p2Pp2/2r5/2N1P2P/PP1Q2P1/3R2K1 b - - 0 28",
+              "answer": "Qxd2",
+              "choices": [
+                "Bxe3+",
+                "Rxc3",
+                "Re4",
+                "Qxd2"
+              ],
+              "explain": "Qxd2 starts it: Qxd2 Rxd2 Bxe3+. Lichess puzzle 06qRA, rated 1516.",
+              "id": "chess_lp14l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r2q1rnk/2p3bp/1p1p2p1/1N1Pp3/2P1Nn2/2Q1B2b/P1B2PP1/R4RK1 w - - 0 19",
+              "answer": "Bxf4",
+              "choices": [
+                "Bxf4",
+                "Bxb6",
+                "Nexd6",
+                "gxh3"
+              ],
+              "explain": "Bxf4 starts it: Bxf4 exf4 Qxh3. Lichess puzzle 08BaP, rated 1568.",
+              "id": "chess_lp14l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp14l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r3k1nr/ppp2ppp/5q2/2b5/3nP3/2NPBB2/PPP3PP/R2QK2R b KQkq - 2 10",
+              "answer": "Nxf3+",
+              "choices": [
+                "Nxc2+",
+                "Nxf3+",
+                "Qxf3",
+                "Qh4+"
+              ],
+              "explain": "Nxf3+ starts it: Nxf3+ Qxf3 Qxf3 gxf3 Bxe3 Nd5 Bb6. Lichess puzzle 07hR4, rated 1617.",
+              "id": "chess_lp14l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "2rr1k2/1p2b1pp/p4n2/4R3/P1Np4/1n1P2P1/1P1B1PBP/5RK1 b - - 0 23",
+              "answer": "Rxc4",
+              "choices": [
+                "Nxd2",
+                "Ra8",
+                "Rxc4",
+                "Rd7"
+              ],
+              "explain": "Rxc4 starts it: Rxc4 dxc4 Nxd2. Lichess puzzle 07NOA, rated 1651.",
+              "id": "chess_lp14l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "1q3rk1/p1p2pp1/brpp1b1p/4p3/Q1P1P3/3P1N1P/P2N1PP1/1R2R1K1 w - - 4 15",
+              "answer": "Rxb6",
+              "choices": [
+                "Qxa6",
+                "Nxe5",
+                "Qxc6",
+                "Rxb6"
+              ],
+              "explain": "Rxb6 starts it: Rxb6 axb6 Qxa6 Qa8 Qxa8. Lichess puzzle 02yVL, rated 1709.",
+              "id": "chess_lp14l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1b3k1/ppq1brp1/4Qn1p/2n2N2/8/1NP5/PP3PPP/R1BR2K1 w - - 3 18",
+              "answer": "Nxe7+",
+              "choices": [
+                "Nxe7+",
+                "Nxc5",
+                "Nxg7",
+                "Qxf7+"
+              ],
+              "explain": "Nxe7+ starts it: Nxe7+ Qxe7 Qxe7 Rxe7 Nxc5. Lichess puzzle 01j9y, rated 1802.",
+              "id": "chess_lp14l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/1p3pp1/2q4p/p3PQb1/2p1N3/2P1r2P/PP2R1PK/8 w - - 0 37",
+              "answer": "Nxg5",
+              "choices": [
+                "Qxf7+",
+                "Nxg5",
+                "Qh7+",
+                "Qc8+"
+              ],
+              "explain": "Nxg5 starts it: Nxg5 hxg5 Rxe3. Lichess puzzle 01Tr9, rated 1829.",
+              "id": "chess_lp14l3_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lp15",
+      "title": "Trapped Pieces",
+      "tip": "A piece with no safe square is lost. Take away its last escape and win it.",
+      "lessons": [
+        {
+          "id": "lp15l1",
+          "title": "Puzzles 1",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "6k1/1p3r2/p1p2P1p/3pr1qP/1P3RP1/P3p2Q/8/5R1K w - - 1 38",
+              "answer": "Rf5",
+              "choices": [
+                "Qxe3",
+                "Rb1",
+                "Rf5",
+                "Rg1"
+              ],
+              "explain": "Rf5 starts it: Rf5 e2 Rxg5+. Lichess puzzle 06Eew, rated 964.",
+              "id": "chess_lp15l1_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "3r1rk1/p2nppbp/2p2np1/q1Pp4/p2P1B2/PP1BP2P/5PP1/R2Q1RK1 w - - 0 16",
+              "answer": "b4",
+              "choices": [
+                "bxa4",
+                "Bxg6",
+                "Bb5",
+                "b4"
+              ],
+              "explain": "b4 starts it: b4 Qb5 Bxb5. Lichess puzzle 01V4g, rated 1170.",
+              "id": "chess_lp15l1_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "Q1b2rk1/2q2p1p/1p2pbp1/pP6/2P5/P2B1N2/5PPP/3R1RK1 b - - 0 20",
+              "answer": "Bb7",
+              "choices": [
+                "Bb7",
+                "Qxh2+",
+                "Qxc4",
+                "Be5"
+              ],
+              "explain": "Bb7 starts it: Bb7 Qa7 Ra8 Qxa8+ Bxa8. Lichess puzzle 00AhO, rated 1229.",
+              "id": "chess_lp15l1_2"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "5rk1/Qbq1bppp/2p1pn2/4N3/3P4/3B3P/1BP2PP1/1R4K1 b - - 5 21",
+              "answer": "Ra8",
+              "choices": [
+                "Qxe5",
+                "Ra8",
+                "Rb8",
+                "Nh5"
+              ],
+              "explain": "Ra8 starts it: Ra8 Qxa8+ Bxa8. Lichess puzzle 04DEQ, rated 1318.",
+              "id": "chess_lp15l1_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r1b1kbr1/pppp3Q/5qp1/8/2P1Pp2/8/PPP2PPP/RNB1K2R b KQq - 0 10",
+              "answer": "Rh8",
+              "choices": [
+                "Qc3+",
+                "Qxb2",
+                "Rh8",
+                "Bb4+"
+              ],
+              "explain": "Rh8 starts it: Rh8 Qxh8 Qxh8. Lichess puzzle 05BVq, rated 1357.",
+              "id": "chess_lp15l1_4"
+            }
+          ]
+        },
+        {
+          "id": "lp15l2",
+          "title": "Puzzles 2",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "8/8/3k4/p1b1p2p/P1R3pP/2P3K1/8/8 b - - 5 45",
+              "answer": "Kd5",
+              "choices": [
+                "Bf2+",
+                "Kc6",
+                "Kc7",
+                "Kd5"
+              ],
+              "explain": "Kd5 starts it: Kd5 Rxg4 hxg4. Lichess puzzle 038q1, rated 1386.",
+              "id": "chess_lp15l2_0"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r3r2k/6pp/p1n2p2/1pp2b2/5P2/1BP2N1P/PP3PP1/3R1K1R b - - 1 18",
+              "answer": "c4",
+              "choices": [
+                "c4",
+                "Re1+",
+                "Bd3+",
+                "Bxh3"
+              ],
+              "explain": "c4 starts it: c4 Bxc4 bxc4. Lichess puzzle 05nKb, rated 1426.",
+              "id": "chess_lp15l2_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "r3k2r/pppqbppp/2n1b3/3p2PQ/PP1Pp2P/2P1P3/5PB1/RNB1K1NR b KQkq - 0 11",
+              "answer": "Bg4",
+              "choices": [
+                "Bxg5",
+                "Bg4",
+                "Bxb4",
+                "Nxb4"
+              ],
+              "explain": "Bg4 starts it: Bg4 Bh3 Bxh5 Bxd7+ Kxd7. Lichess puzzle 01HgH, rated 1504.",
+              "id": "chess_lp15l2_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r3kb1r/1p4p1/p1p1bp2/4p1Bp/4P3/2NQ1PP1/PPP2qBP/R6K w kq - 0 17",
+              "answer": "Be3",
+              "choices": [
+                "Qd7+",
+                "Qd8+",
+                "Be3",
+                "Bxf6"
+              ],
+              "explain": "Be3 starts it: Be3 Bc4 Bxf2 Bxd3 cxd3. Lichess puzzle 01iqw, rated 1533.",
+              "id": "chess_lp15l2_3"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1bqr3/ppp1k1pp/1b3n2/nP1pp1NP/4P3/2PP4/P4PP1/RNBQK2R w KQ - 0 12",
+              "answer": "Ba3+",
+              "choices": [
+                "Nxh7",
+                "exd5",
+                "Rf1",
+                "Ba3+"
+              ],
+              "explain": "Ba3+ starts it: Ba3+ Kd7 Nf7 Qe7 Bxe7. Lichess puzzle 01rBE, rated 1601.",
+              "id": "chess_lp15l2_4"
+            }
+          ]
+        },
+        {
+          "id": "lp15l3",
+          "title": "Puzzles 3",
+          "exercises": [
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "6k1/5rp1/4NnQp/1q1p1p2/pp1P4/3b1P2/PP1B2PP/K3R3 b - - 1 31",
+              "answer": "f4",
+              "choices": [
+                "f4",
+                "Rb7",
+                "Ne8",
+                "Qb8"
+              ],
+              "explain": "f4 starts it: f4 Qxf7+ Kxf7. Lichess puzzle 05pk8, rated 1637.",
+              "id": "chess_lp15l3_0"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "r1bb1rk1/5ppp/3p2q1/2pP2P1/p1P1PP1P/1p4Q1/PP1N4/1K1R3R w - - 0 25",
+              "answer": "h5",
+              "choices": [
+                "Nxb3",
+                "h5",
+                "axb3",
+                "Qxb3"
+              ],
+              "explain": "h5 starts it: h5 Qxe4+ Nxe4. Lichess puzzle 04Izo, rated 1658.",
+              "id": "chess_lp15l3_1"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "2r2r1k/pbq1Q1pp/1p1p1n2/8/3P4/2P5/PP1B1PPP/1BR1R1K1 b - - 0 18",
+              "answer": "Qc6",
+              "choices": [
+                "Bxg2",
+                "Qxc3",
+                "Qc6",
+                "Qxe7"
+              ],
+              "explain": "Qc6 starts it: Qc6 f3 Rce8 Qxf8+ Rxf8. Lichess puzzle 03NcI, rated 1732.",
+              "id": "chess_lp15l3_2"
+            },
+            {
+              "type": "chess",
+              "question": "White to move. Find the move that starts the combination.",
+              "fen": "8/5k2/4Rp2/p3pPp1/2P4p/rPK4P/6P1/8 w - - 0 53",
+              "answer": "Kb2",
+              "choices": [
+                "Rxf6+",
+                "Re7+",
+                "Rxe5",
+                "Kb2"
+              ],
+              "explain": "Kb2 starts it: Kb2 Ra2+ Kxa2. Lichess puzzle 06llD, rated 1761.",
+              "id": "chess_lp15l3_3"
+            },
+            {
+              "type": "chess",
+              "question": "Black to move. Find the move that starts the combination.",
+              "fen": "1r1q1rk1/Q3ppbp/1p1pb1p1/1Nn5/P1P1P3/1P2BPP1/6BP/1R1R2K1 b - - 2 18",
+              "answer": "Rb7",
+              "choices": [
+                "Rb7",
+                "Nxe4",
+                "Nxa4",
+                "Nxb3"
+              ],
+              "explain": "Rb7 starts it: Rb7 Qxb7 Nxb7. Lichess puzzle 05XHa, rated 1817.",
+              "id": "chess_lp15l3_4"
             }
           ]
         }
