@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-language",
   "level": "Beginner",
-  "version": 2,
+  "version": 3,
   "units": [
     {
       "id": "t1",
@@ -16,47 +16,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do as you please.",
-              "answer": "Gör som du vill.",
+              "question": "I'll do as I please.",
+              "answer": "Jag gör som jag vill.",
               "choices": [
-                "Kunde du ta det här, tack?",
-                "Gör som du vill.",
-                "Ha ett bra liv.",
-                "Ja, jag förstår. Tack."
+                "Ja, jag förstår. Tack.",
+                "Jag gör som jag vill.",
+                "Förlåt, jag tror inte att jag kan.",
+                "Jag vill inte veta vad han heter."
               ],
               "id": "swedish_t1_1_0"
             },
             {
               "type": "cloze",
-              "question": "Jag gör ____ jag vill.",
-              "answer": "som",
+              "question": "Gör som ____ vill.",
+              "answer": "du",
               "choices": [
-                "Ha",
-                "dag",
-                "att",
-                "som"
+                "hej",
+                "på",
+                "gjort",
+                "du"
               ],
               "id": "swedish_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "Thanks, that's all.",
-              "answer": "Tack, det var allt.",
+              "question": "Thank you for coming.",
+              "answer": "Tack för att du kom.",
               "words": [
-                "det",
-                "mycket.",
-                "här.",
-                "Tack,",
-                "allt.",
-                "var"
+                "för",
+                "du",
+                "gjort.",
+                "så",
+                "kom.",
+                "att",
+                "Tack"
               ],
               "id": "swedish_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Tack för att du kom.",
-              "audio": "Tack för att du kom.",
+              "answer": "Jag kan inte komma på vad han heter.",
+              "audio": "Jag kan inte komma på vad han heter.",
               "id": "swedish_t1_1_3"
             },
             {
@@ -65,20 +66,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thanks for everything.",
-                  "Tack för allt."
+                  "I can't think of his name.",
+                  "Jag kommer inte på vad han heter."
                 ],
                 [
-                  "Thank you very much!",
-                  "Tack så mycket!"
+                  "Yes, I understand. Thanks a lot.",
+                  "Ja, jag förstår. Tack så mycket."
+                ],
+                [
+                  "Yes, I understand. Thank you.",
+                  "Ja, jag förstår. Tack."
                 ],
                 [
                   "Could you take this, please?",
                   "Kunde du ta det här, tack?"
-                ],
-                [
-                  "I came by to say hi.",
-                  "Jag kom för att säga hej."
                 ]
               ],
               "id": "swedish_t1_1_4"
@@ -91,47 +92,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Thank you for all you've done.",
-              "answer": "Tack för allt du gjort.",
+              "question": "I came by to say hi.",
+              "answer": "Jag kom för att säga hej.",
               "choices": [
-                "Förlåt, men jag hör dig inte så bra.",
-                "Tack för allt du gjort.",
-                "Jag gör som jag vill.",
-                "Tack så mycket!"
+                "Tack, det var allt.",
+                "Jag kom för att säga hej.",
+                "Gör som du vill.",
+                "Ja, jag förstår. Tack så mycket."
               ],
               "id": "swedish_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ha en ____ dag.",
-              "answer": "bra",
+              "question": "Förlåt, jag hade inte ____ det att göra.",
+              "answer": "med",
               "choices": [
-                "kan",
-                "sätt",
-                "bra",
-                "som"
+                "Gör",
+                "att",
+                "med",
+                "är"
               ],
               "id": "swedish_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "Have a nice life.",
-              "answer": "Ha ett bra liv.",
+              "question": "I'm sorry, I don't think I can.",
+              "answer": "Förlåt, jag tror inte att jag kan.",
               "words": [
-                "bra",
-                "Förlåt,",
-                "allt",
-                "Ha",
-                "ett",
-                "liv."
+                "jag",
+                "tror",
+                "jag",
+                "kan.",
+                "inte",
+                "att",
+                "vet",
+                "Ja,",
+                "Förlåt,"
               ],
               "id": "swedish_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Tack, jag förstår nu.",
-              "audio": "Tack, jag förstår nu.",
+              "answer": "Förlåt, men jag hör dig inte så bra.",
+              "audio": "Förlåt, men jag hör dig inte så bra.",
               "id": "swedish_t1_2_3"
             },
             {
@@ -140,20 +144,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Yes, I understand. Thanks a lot.",
-                  "Ja, jag förstår. Tack så mycket."
+                  "I'm sorry I brought it up.",
+                  "Jag är ledsen att jag tog upp det."
                 ],
                 [
-                  "Yes, I understand. Thank you.",
-                  "Ja, jag förstår. Tack."
+                  "I don't want to know what his name is.",
+                  "Jag vill inte veta vad han heter."
                 ],
                 [
-                  "It's my way of saying thank you.",
-                  "Det är mitt sätt att säga tack."
+                  "I know what your name is.",
+                  "Jag vet vad du heter."
                 ],
                 [
-                  "It's his way of saying thank you.",
-                  "Det är hans sätt att säga tack."
+                  "Do you know her name?",
+                  "Vet du vad hon heter?"
                 ]
               ],
               "id": "swedish_t1_2_4"
@@ -166,51 +170,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Sorry, that was none of my business.",
-              "answer": "Förlåt, jag hade inte med det att göra.",
+              "question": "Thank you for all you've done.",
+              "answer": "Tack för allt du gjort.",
               "choices": [
-                "Ha ett bra liv.",
-                "Ja, jag förstår. Tack.",
-                "Tack för att du kom.",
-                "Förlåt, jag hade inte med det att göra."
+                "Förlåt, jag tror inte att jag kan.",
+                "Jag vill inte veta vad han heter.",
+                "Jag kan inte komma på vad han heter.",
+                "Tack för allt du gjort."
               ],
               "id": "swedish_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Förlåt, jag tror ____ att jag kan.",
-              "answer": "inte",
+              "question": "Hej! Hur ____ du?",
+              "answer": "mår",
               "choices": [
-                "jag",
-                "inte",
-                "säga",
-                "för"
+                "gör",
+                "mår",
+                "du",
+                "bra"
               ],
               "id": "swedish_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "I'm sorry, but I can't hear you well.",
-              "answer": "Förlåt, men jag hör dig inte så bra.",
+              "question": "Thanks, that's all.",
+              "answer": "Tack, det var allt.",
               "words": [
-                "dig",
-                "allt.",
-                "inte",
-                "bra.",
-                "men",
-                "jag",
-                "hör",
+                "det",
                 "var",
-                "Förlåt,",
-                "så"
+                "allt.",
+                "gör",
+                "jag",
+                "Tack,"
               ],
               "id": "swedish_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Det är inget att vara ledsen över.",
-              "audio": "Det är inget att vara ledsen över.",
+              "answer": "Tack för allt.",
+              "audio": "Tack för allt.",
               "id": "swedish_t1_3_3"
             },
             {
@@ -219,20 +219,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm sorry about this.",
-                  "Jag är ledsen för det här."
+                  "Thanks, I understand now.",
+                  "Tack, jag förstår nu."
                 ],
                 [
-                  "I'm sorry I brought it up.",
-                  "Jag är ledsen att jag tog upp det."
+                  "Please tell me where we're going.",
+                  "Snälla, berätta vart vi är på väg."
                 ],
                 [
-                  "I don't feel sorry for them.",
-                  "Jag känner mig inte ledsen för dem."
+                  "Thank you very much!",
+                  "Tack så mycket!"
                 ],
                 [
-                  "I'm really sorry!",
-                  "Jag är verkligen ledsen!"
+                  "I can't think of his name just now.",
+                  "Jag kommer inte på hans namn just nu."
                 ]
               ],
               "id": "swedish_t1_3_4"
@@ -242,16 +242,16 @@
       ],
       "preview": [
         [
-          "Do as you please.",
-          "Gör som du vill."
-        ],
-        [
           "I'll do as I please.",
           "Jag gör som jag vill."
         ],
         [
-          "Thanks, that's all.",
-          "Tack, det var allt."
+          "Do as you please.",
+          "Gör som du vill."
+        ],
+        [
+          "Thank you for coming.",
+          "Tack för att du kom."
         ]
       ]
     },
@@ -270,8 +270,8 @@
               "choices": [
                 "Han är bara en man.",
                 "Jag är man nu.",
-                "Jag är inte din mamma.",
-                "Du är ett barn."
+                "Hur är det med din mamma?",
+                "Älskar du din mamma?"
               ],
               "id": "swedish_t2_1_0"
             },
@@ -280,9 +280,9 @@
               "question": "Du är ____ bra man.",
               "answer": "en",
               "choices": [
-                "Sluta",
-                "just",
-                "barn",
+                "bra",
+                "ut",
+                "precis",
                 "en"
               ],
               "id": "swedish_t2_1_1"
@@ -292,9 +292,9 @@
               "question": "He is only a man.",
               "answer": "Han är bara en man.",
               "words": [
-                "vara",
+                "fru.",
                 "en",
-                "är",
+                "barn.",
                 "Han",
                 "man.",
                 "bara",
@@ -305,8 +305,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag är inte din mamma.",
-              "audio": "Jag är inte din mamma.",
+              "answer": "Hur är det med din mamma?",
+              "audio": "Hur är det med din mamma?",
               "id": "swedish_t2_1_3"
             },
             {
@@ -315,20 +315,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How is your mother?",
-                  "Hur är det med din mamma?"
-                ],
-                [
                   "You are my father.",
                   "Du är min pappa."
                 ],
                 [
-                  "I know your mother.",
-                  "Jag känner din mamma."
+                  "Did you see my mother?",
+                  "Såg du min mamma?"
                 ],
                 [
-                  "He's not the right man for you.",
-                  "Han är inte rätt man för dig."
+                  "I thought you were your father.",
+                  "Jag trodde du var din pappa."
+                ],
+                [
+                  "I did not know that she has a child.",
+                  "Jag visste inte att hon har ett barn."
                 ]
               ],
               "id": "swedish_t2_1_4"
@@ -341,47 +341,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Did you see my mother?",
-              "answer": "Såg du min mamma?",
+              "question": "I'm not your mother.",
+              "answer": "Jag är inte din mamma.",
               "choices": [
-                "Jag trodde du var din pappa.",
-                "Såg du min mamma?",
+                "Jag känner din mamma.",
+                "Jag är inte din mamma.",
                 "Du är en bra man.",
-                "Älskar du din mamma?"
+                "Jag vill att du blir min fru."
               ],
               "id": "swedish_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "Jag trodde du ____ din pappa.",
-              "answer": "var",
+              "question": "Jag känner ____ mamma.",
+              "answer": "din",
               "choices": [
-                "är",
-                "var",
-                "Såg",
-                "visste"
+                "en",
+                "din",
+                "blir",
+                "hon"
               ],
               "id": "swedish_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Do you love your mother?",
-              "answer": "Älskar du din mamma?",
+              "question": "I want you to become my wife.",
+              "answer": "Jag vill att du blir min fru.",
               "words": [
-                "din",
-                "Såg",
+                "att",
+                "min",
+                "vill",
+                "har",
                 "du",
-                "Älskar",
-                "Det",
-                "mamma?"
+                "blir",
+                "fru.",
+                "nu.",
+                "Jag"
               ],
               "id": "swedish_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Berätta inte för din mamma.",
-              "audio": "Berätta inte för din mamma.",
+              "answer": "Han är inte rätt man för dig.",
+              "audio": "Han är inte rätt man för dig.",
               "id": "swedish_t2_2_3"
             },
             {
@@ -390,20 +393,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You look just like your father.",
-                  "Du ser precis ut som din pappa."
+                  "You are my friend.",
+                  "Du är min vän."
                 ],
                 [
-                  "We are going to have a baby.",
-                  "Vi ska ha barn."
+                  "He brought a friend.",
+                  "Han tog med sig en vän."
                 ],
                 [
-                  "I did not know that she has a child.",
-                  "Jag visste inte att hon har ett barn."
+                  "He is my friend.",
+                  "Han är min vän."
                 ],
                 [
-                  "I want to be a child.",
-                  "Jag vill vara ett barn."
+                  "You aren't my friend.",
+                  "Du är inte min vän."
                 ]
               ],
               "id": "swedish_t2_2_4"
@@ -416,47 +419,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You're my child.",
-              "answer": "Du är mitt barn.",
+              "question": "Are you my father?",
+              "answer": "Är du min far?",
               "choices": [
-                "Jag trodde du var din pappa.",
-                "Älskar du din mamma?",
+                "Jag känner din mamma.",
+                "Jag vill att du blir min fru.",
                 "Du är en bra man.",
-                "Du är mitt barn."
+                "Är du min far?"
               ],
               "id": "swedish_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "Sluta säga att ____ är mitt barn.",
-              "answer": "det",
+              "question": "Du är ____ far.",
+              "answer": "min",
               "choices": [
-                "ett",
-                "det",
-                "säga",
-                "kanske"
+                "är",
+                "min",
+                "en",
+                "fru"
               ],
               "id": "swedish_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "She is a child.",
-              "answer": "Hon är ett barn.",
+              "question": "I don't know where my father is.",
+              "answer": "Jag vet inte var min far är.",
               "words": [
-                "är",
-                "ett",
+                "vet",
                 "min",
-                "Hon",
-                "barn.",
-                "rätt"
+                "var",
+                "är.",
+                "inte",
+                "känner",
+                "far",
+                "Jag",
+                "bara"
               ],
               "id": "swedish_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Du är ett barn.",
-              "audio": "Du är ett barn.",
+              "answer": "Älskar du din mamma?",
+              "audio": "Älskar du din mamma?",
               "id": "swedish_t2_3_3"
             },
             {
@@ -465,20 +471,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is a good man.",
-                  "Han är en god man."
+                  "You look just like your father.",
+                  "Du ser precis ut som din pappa."
                 ],
                 [
-                  "This is a friend of mine.",
-                  "Det här är en vän till mig."
+                  "She's my wife.",
+                  "Hon är min fru."
                 ],
                 [
-                  "I just made a friend.",
-                  "Jag fick just en vän."
+                  "Have you seen my wife?",
+                  "Har du sett min fru?"
                 ],
                 [
-                  "I might be your only friend.",
-                  "Jag kanske är din enda vän."
+                  "She knows my wife.",
+                  "Hon känner min fru."
                 ]
               ],
               "id": "swedish_t2_3_4"
@@ -514,10 +520,10 @@
               "question": "I ate too much.",
               "answer": "Jag åt för mycket.",
               "choices": [
-                "Vad vill du äta?",
+                "Tycker du om kaffe?",
                 "Jag åt för mycket.",
-                "Du borde inte äta här.",
-                "Du borde äta."
+                "Hur kan du äta det där?",
+                "Vi är vad vi äter."
               ],
               "id": "swedish_t3_1_0"
             },
@@ -526,9 +532,9 @@
               "question": "Åt ____ något?",
               "answer": "du",
               "choices": [
-                "jag",
-                "måste",
-                "inne",
+                "vatten",
+                "kaffe",
+                "känner",
                 "du"
               ],
               "id": "swedish_t3_1_1"
@@ -540,10 +546,10 @@
               "words": [
                 "åt",
                 "upp",
-                "Ska",
+                "mycket.",
                 "Jag",
                 "alla.",
-                "åt"
+                "Hur"
               ],
               "id": "swedish_t3_1_2"
             },
@@ -560,20 +566,20 @@
               "answer": "matched",
               "pairs": [
                 [
+                  "I like water.",
+                  "Jag tycker om vatten."
+                ],
+                [
                   "I didn't eat anything else.",
                   "Jag åt ingenting annat."
                 ],
                 [
-                  "What would you like to eat?",
-                  "Vad skulle du vilja äta?"
+                  "How can you eat that?",
+                  "Hur kan du äta det där?"
                 ],
                 [
-                  "You shouldn't eat here.",
-                  "Du borde inte äta här."
-                ],
-                [
-                  "You don't have to eat.",
-                  "Du måste inte äta."
+                  "How do I eat this?",
+                  "Hur ska jag äta det här?"
                 ]
               ],
               "id": "swedish_t3_1_4"
@@ -586,47 +592,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You can eat very well there.",
-              "answer": "Där kan man äta mycket bra.",
+              "question": "Why don't we go out to eat?",
+              "answer": "Ska vi inte gå ut och äta?",
               "choices": [
-                "Du borde inte äta här.",
-                "Där kan man äta mycket bra.",
-                "Kan vi äta det här?",
-                "Hur kan du äta det där?"
+                "Hur kan du äta det där?",
+                "Ska vi inte gå ut och äta?",
+                "Jag går inte ut och äter så ofta.",
+                "Jag gillar att sova och äta."
               ],
               "id": "swedish_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Jag känner inte för ____ äta just nu.",
-              "answer": "att",
+              "question": "Om du inte ____ dör du.",
+              "answer": "äter",
               "choices": [
-                "annat",
-                "mycket",
-                "att",
-                "jag"
+                "du",
+                "såg",
+                "äter",
+                "någon"
               ],
               "id": "swedish_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "When can we eat?",
-              "answer": "När kan vi äta?",
+              "question": "We'll bring plenty of food.",
+              "answer": "Vi kommer att ta med mycket mat.",
               "words": [
-                "När",
-                "måste",
-                "vi",
-                "När",
-                "äta?",
-                "kan"
+                "kommer",
+                "mat.",
+                "med",
+                "mycket",
+                "mycket",
+                "att",
+                "ta",
+                "Vi",
+                "åt"
               ],
               "id": "swedish_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag kan äta.",
-              "audio": "Jag kan äta.",
+              "answer": "Hur mycket mat har vi kvar?",
+              "audio": "Hur mycket mat har vi kvar?",
               "id": "swedish_t3_2_3"
             },
             {
@@ -635,20 +644,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I can't eat.",
-                  "Jag kan inte äta."
+                  "He doesn't like coffee.",
+                  "Han tycker inte om kaffe."
                 ],
                 [
-                  "Would you like anything to eat?",
-                  "Vill ni äta något?"
+                  "I like coffee.",
+                  "Jag tycker om kaffe."
                 ],
                 [
-                  "What do you want to eat?",
-                  "Vad vill du äta?"
+                  "Do you like coffee?",
+                  "Tycker du om kaffe?"
                 ],
                 [
-                  "I will eat.",
-                  "Jag kommer att äta."
+                  "I dislike coffee.",
+                  "Jag tycker inte om kaffe."
                 ]
               ],
               "id": "swedish_t3_2_4"
@@ -661,48 +670,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you want to eat?",
-              "answer": "Vill du äta?",
+              "question": "I know someone who can walk on water.",
+              "answer": "Jag känner någon som kan gå på vatten.",
               "choices": [
+                "Jag tycker om vatten.",
                 "Jag åt ingenting annat.",
-                "Vad skulle du vilja äta?",
-                "Får jag äta?",
-                "Vill du äta?"
+                "Vad ska du med vatten till?",
+                "Jag känner någon som kan gå på vatten."
               ],
               "id": "swedish_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Får ____ äta?",
-              "answer": "jag",
+              "question": "Vad ska du ____ vatten till?",
+              "answer": "med",
               "choices": [
-                "åt",
-                "jag",
-                "för",
-                "mycket"
+                "mycket",
+                "med",
+                "Han",
+                "du"
               ],
               "id": "swedish_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "Can we eat this?",
-              "answer": "Kan vi äta det här?",
+              "question": "I don't eat out very often.",
+              "answer": "Jag går inte ut och äter så ofta.",
               "words": [
-                "vi",
-                "det",
-                "du",
-                "annat.",
-                "här?",
-                "äta",
-                "Kan"
+                "går",
+                "äter",
+                "så",
+                "ofta.",
+                "ut",
+                "Vad",
+                "och",
+                "Jag",
+                "åt",
+                "inte"
               ],
               "id": "swedish_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hur kan du äta det där?",
-              "audio": "Hur kan du äta det där?",
+              "answer": "Jag gillar att sova och äta.",
+              "audio": "Jag gillar att sova och äta.",
               "id": "swedish_t3_3_3"
             },
             {
@@ -711,20 +723,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How do I eat this?",
-                  "Hur ska jag äta det här?"
+                  "How much do you eat?",
+                  "Hur mycket äter du?"
                 ],
                 [
-                  "I can eat it in here.",
-                  "Jag kan äta den här inne."
+                  "She is eating.",
+                  "Hon sitter och äter."
                 ],
                 [
-                  "Why don't we go out to eat?",
-                  "Ska vi inte gå ut och äta?"
+                  "Where are we eating tonight?",
+                  "Var äter vi i kväll?"
                 ],
                 [
-                  "You should eat.",
-                  "Du borde äta."
+                  "We are what we eat.",
+                  "Vi är vad vi äter."
                 ]
               ],
               "id": "swedish_t3_3_4"
@@ -757,25 +769,25 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm going home.",
-              "answer": "Jag går hem.",
+              "question": "I need you to go home.",
+              "answer": "Jag behöver att du går hem.",
               "choices": [
-                "Jag skulle precis gå hem.",
-                "Jag går hem.",
+                "Varför kom du inte hem i går kväll?",
+                "Jag behöver att du går hem.",
                 "Jag vill komma hem.",
-                "Kan jag gå hem nu?"
+                "Kommer du inte hem?"
               ],
               "id": "swedish_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ni ____ hem.",
-              "answer": "måste",
+              "question": "Jag ____ hem.",
+              "answer": "går",
               "choices": [
                 "du",
-                "går",
-                "bara",
-                "måste"
+                "behöver",
+                "Borde",
+                "går"
               ],
               "id": "swedish_t4_1_1"
             },
@@ -785,7 +797,7 @@
               "answer": "Får jag gå hem?",
               "words": [
                 "du",
-                "tillbaka",
+                "nu.",
                 "jag",
                 "Får",
                 "hem?",
@@ -810,16 +822,16 @@
                   "Jag vill komma hem."
                 ],
                 [
-                  "I need you to go home.",
-                  "Jag behöver att du går hem."
-                ],
-                [
                   "Shouldn't you go home?",
                   "Borde inte du gå hem?"
                 ],
                 [
                   "I just want to go home.",
                   "Jag vill bara gå hem."
+                ],
+                [
+                  "I must go home.",
+                  "Jag måste hem."
                 ]
               ],
               "id": "swedish_t4_1_4"
@@ -832,47 +844,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I must go home.",
-              "answer": "Jag måste hem.",
+              "question": "Are we going home?",
+              "answer": "Ska vi gå hem?",
               "choices": [
-                "Ni måste hem.",
-                "Jag måste hem.",
-                "Jag skulle precis gå hem.",
-                "Jag måste komma hem."
+                "Jag går hem.",
+                "Ska vi gå hem?",
+                "Varför kom du inte hem i går kväll?",
+                "Du måste komma hem."
               ],
               "id": "swedish_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ska vi ____ hem?",
+              "question": "Ska du ____ hem?",
               "answer": "gå",
               "choices": [
-                "hem",
+                "gick",
                 "gå",
-                "Ni",
-                "kom"
+                "hem",
+                "vill"
               ],
               "id": "swedish_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "Are you walking home?",
-              "answer": "Ska du gå hem?",
+              "question": "We can all walk home.",
+              "answer": "Vi kan alla gå hem.",
               "words": [
-                "gå",
-                "hem?",
-                "du",
-                "Får",
-                "Ska",
-                "precis"
+                "kan",
+                "alla",
+                "alla",
+                "behöver",
+                "hem.",
+                "Vi",
+                "gå"
               ],
               "id": "swedish_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Vi kan alla gå hem.",
-              "audio": "Vi kan alla gå hem.",
+              "answer": "Kan vi gå hem?",
+              "audio": "Kan vi gå hem?",
               "id": "swedish_t4_2_3"
             },
             {
@@ -880,10 +893,6 @@
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
-                [
-                  "Can we go home?",
-                  "Kan vi gå hem?"
-                ],
                 [
                   "I came back home.",
                   "Jag kom tillbaka hem."
@@ -895,6 +904,10 @@
                 [
                   "I need to come home.",
                   "Jag måste komma hem."
+                ],
+                [
+                  "You need to get home.",
+                  "Du måste komma hem."
                 ]
               ],
               "id": "swedish_t4_2_4"
@@ -907,48 +920,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You need to get home.",
-              "answer": "Du måste komma hem.",
+              "question": "You need to go home.",
+              "answer": "Du måste gå hem.",
               "choices": [
-                "Vi kan alla gå hem.",
+                "Kan vi gå hem?",
                 "Kan vi bara gå hem?",
-                "Ni måste hem.",
-                "Du måste komma hem."
+                "Jag går hem.",
+                "Du måste gå hem."
               ],
               "id": "swedish_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Du måste ____ hem.",
-              "answer": "gå",
+              "question": "Jag ville ____ gå hem.",
+              "answer": "inte",
               "choices": [
-                "gick",
-                "gå",
-                "går",
-                "jag"
+                "behöver",
+                "inte",
+                "hem",
+                "komma"
               ],
               "id": "swedish_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "I didn't want to go home.",
-              "answer": "Jag ville inte gå hem.",
+              "question": "Can I go home now?",
+              "answer": "Kan jag gå hem nu?",
               "words": [
-                "precis",
-                "hem.",
+                "i",
+                "nu?",
+                "hem",
+                "Kan",
+                "Vi",
                 "gå",
-                "Jag",
-                "komma",
-                "inte",
-                "ville"
+                "jag"
               ],
               "id": "swedish_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Kan jag gå hem nu?",
-              "audio": "Kan jag gå hem nu?",
+              "answer": "Kommer du inte hem?",
+              "audio": "Kommer du inte hem?",
               "id": "swedish_t4_3_3"
             },
             {
@@ -957,20 +970,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you not coming home?",
-                  "Kommer du inte hem?"
-                ],
-                [
                   "I must go home now.",
                   "Jag måste hem nu."
+                ],
+                [
+                  "I was on my way home.",
+                  "Jag var på väg hem."
                 ],
                 [
                   "She went home.",
                   "Hon gick hem."
                 ],
                 [
-                  "I was just about to go home.",
-                  "Jag skulle precis gå hem."
+                  "Why did you not come home last night?",
+                  "Varför kom du inte hem i går kväll?"
                 ]
               ],
               "id": "swedish_t4_3_4"
@@ -980,12 +993,12 @@
       ],
       "preview": [
         [
-          "I'm going home.",
-          "Jag går hem."
+          "I need you to go home.",
+          "Jag behöver att du går hem."
         ],
         [
-          "You must go home.",
-          "Ni måste hem."
+          "I'm going home.",
+          "Jag går hem."
         ],
         [
           "May I go home?",
@@ -1008,8 +1021,8 @@
               "choices": [
                 "Jag går alltid.",
                 "Han kommer att gå.",
-                "Kom in och sätt dig i bilen bara.",
-                "Den här bilen är hans."
+                "Jag kommer att vänta i bilen.",
+                "In i bilen med dig."
               ],
               "id": "swedish_t5_1_0"
             },
@@ -1018,9 +1031,9 @@
               "question": "Kan ____ gå?",
               "answer": "du",
               "choices": [
-                "sitt",
-                "Se",
-                "vänta",
+                "Det",
+                "rätt",
+                "gav",
                 "du"
               ],
               "id": "swedish_t5_1_1"
@@ -1030,8 +1043,8 @@
               "question": "I always walk.",
               "answer": "Jag går alltid.",
               "words": [
-                "Här",
-                "illa",
+                "gå.",
+                "ha",
                 "alltid.",
                 "Jag",
                 "går"
@@ -1041,8 +1054,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag gick inte.",
-              "audio": "Jag gick inte.",
+              "answer": "Är jag på rätt väg?",
+              "audio": "Är jag på rätt väg?",
               "id": "swedish_t5_1_3"
             },
             {
@@ -1051,20 +1064,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Am I on the right road?",
-                  "Är jag på rätt väg?"
+                  "I didn't walk.",
+                  "Jag gick inte."
                 ],
                 [
-                  "He could not walk any further.",
-                  "Han kunde inte gå längre."
+                  "I don't want her in my car.",
+                  "Jag vill inte ha henne i min bil."
                 ],
                 [
                   "I'm in the car.",
                   "Jag är i bilen."
                 ],
                 [
-                  "That car is his.",
-                  "Den bilen är hans."
+                  "Go wait in the car.",
+                  "Gå och vänta i bilen."
                 ]
               ],
               "id": "swedish_t5_1_4"
@@ -1077,52 +1090,125 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Go wait in the car.",
-              "answer": "Gå och vänta i bilen.",
+              "question": "Just get in the car.",
+              "answer": "Kom in och sätt dig i bilen bara.",
               "choices": [
-                "När behöver jag lämna tillbaka bilen?",
-                "Gå och vänta i bilen.",
-                "Jag gick inte.",
-                "Den här bilen är hans."
+                "Hon tog min bil.",
+                "Kom in och sätt dig i bilen bara.",
+                "Är jag på rätt väg?",
+                "In i bilen med dig."
               ],
               "id": "swedish_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Den här ____ är hans.",
+              "question": "In i ____ med dig.",
               "answer": "bilen",
               "choices": [
-                "Se",
+                "gå",
                 "bilen",
-                "för",
-                "in"
+                "okej",
+                "Kan"
               ],
               "id": "swedish_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "Just get in the car.",
-              "answer": "Kom in och sätt dig i bilen bara.",
+              "question": "I'll wait in the car.",
+              "answer": "Jag kommer att vänta i bilen.",
               "words": [
-                "och",
-                "bilen",
-                "dig",
-                "alltid.",
-                "bilen",
-                "bara.",
-                "sätt",
-                "Kom",
+                "kommer",
+                "bilen.",
+                "vänta",
+                "Jag",
+                "att",
+                "okej?",
                 "i",
-                "in"
+                "In"
               ],
               "id": "swedish_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Här är bilen.",
-              "audio": "Här är bilen.",
+              "answer": "Han hörde illa och kunde inte gå.",
+              "audio": "Han hörde illa och kunde inte gå.",
               "id": "swedish_t5_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "He could not walk any further.",
+                  "Han kunde inte gå längre."
+                ],
+                [
+                  "There is something wrong with my car.",
+                  "Det är något fel på min bil."
+                ],
+                [
+                  "He has a car which I gave to him.",
+                  "Han har en bil som jag gav honom."
+                ],
+                [
+                  "You came by car, didn't you?",
+                  "Du kom med bil, inte sant?"
+                ]
+              ],
+              "id": "swedish_t5_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t5l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "Do you see my car?",
+              "answer": "Ser du min bil?",
+              "choices": [
+                "Jag älskar den här bilen.",
+                "Kan du gå?",
+                "Vänta i bilen, okej?",
+                "Ser du min bil?"
+              ],
+              "id": "swedish_t5_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Hon tog ____ bil.",
+              "answer": "min",
+              "choices": [
+                "bara",
+                "min",
+                "okej",
+                "du"
+              ],
+              "id": "swedish_t5_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "He took my car.",
+              "answer": "Han tog min bil.",
+              "words": [
+                "tog",
+                "min",
+                "bil.",
+                "har",
+                "Han",
+                "kommer"
+              ],
+              "id": "swedish_t5_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Nej, du kan inte använda min bil!",
+              "audio": "Nej, du kan inte använda min bil!",
+              "id": "swedish_t5_3_3"
             },
             {
               "type": "match",
@@ -1138,89 +1224,12 @@
                   "Vänta i bilen, okej?"
                 ],
                 [
-                  "Get in the car.",
-                  "In i bilen med dig."
-                ],
-                [
                   "I love this car.",
                   "Jag älskar den här bilen."
-                ]
-              ],
-              "id": "swedish_t5_2_4"
-            }
-          ]
-        },
-        {
-          "id": "t5l3",
-          "title": "Lesson 3",
-          "exercises": [
-            {
-              "type": "translation",
-              "question": "Stop the car now!",
-              "answer": "Stanna bilen nu!",
-              "choices": [
-                "Han hörde illa och kunde inte gå.",
-                "Kan du gå?",
-                "Se upp för bilen!",
-                "Stanna bilen nu!"
-              ],
-              "id": "swedish_t5_3_0"
-            },
-            {
-              "type": "cloze",
-              "question": "När behöver jag ____ tillbaka bilen?",
-              "answer": "lämna",
-              "choices": [
-                "kommer",
-                "lämna",
-                "okej",
-                "gå"
-              ],
-              "id": "swedish_t5_3_1"
-            },
-            {
-              "type": "sentence",
-              "question": "I'll wait in the car.",
-              "answer": "Jag kommer att vänta i bilen.",
-              "words": [
-                "bilen.",
-                "vänta",
-                "på",
-                "Jag",
-                "kommer",
-                "att",
-                "sätt",
-                "i"
-              ],
-              "id": "swedish_t5_3_2"
-            },
-            {
-              "type": "listening",
-              "question": "Type what you hear",
-              "answer": "Gå sitt i bilen.",
-              "audio": "Gå sitt i bilen.",
-              "id": "swedish_t5_3_3"
-            },
-            {
-              "type": "match",
-              "question": "Tap the matching pairs",
-              "answer": "matched",
-              "pairs": [
-                [
-                  "The car is his.",
-                  "Bilen är hans."
                 ],
                 [
-                  "Watch out for the car!",
-                  "Se upp för bilen!"
-                ],
-                [
-                  "He had difficulty in hearing and could not walk.",
-                  "Han hörde illa och kunde inte gå."
-                ],
-                [
-                  "The car is ready.",
-                  "Bilen står redo."
+                  "When should I return the car?",
+                  "När behöver jag lämna tillbaka bilen?"
                 ]
               ],
               "id": "swedish_t5_3_4"
@@ -1253,13 +1262,13 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Come at any time you like.",
-              "answer": "Kom när ni vill.",
+              "question": "What will we do if he's late?",
+              "answer": "Vad gör vi om han är sen?",
               "choices": [
-                "Du är lite sen.",
-                "Jag kan inte göra det i dag.",
-                "Kom när ni vill.",
-                "Ge mig en dag eller två."
+                "Hon kommer aldrig i tid.",
+                "Var är du i dag?",
+                "Vad gör vi om han är sen?",
+                "Vi kom hit i tid."
               ],
               "id": "swedish_t6_1_0"
             },
@@ -1268,31 +1277,32 @@
               "question": "I came yesterday.",
               "answer": "Jag kom i går.",
               "choices": [
-                "Hur sen är jag?",
-                "Jag är inte sen.",
+                "Jag trodde att jag var i tid.",
                 "Du är sen.",
+                "Hur sen är jag?",
                 "Jag kom i går."
               ],
               "id": "swedish_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "You are late.",
-              "answer": "Du är sen.",
+              "question": "How late am I?",
+              "answer": "Hur sen är jag?",
               "words": [
+                "sen",
                 "är",
+                "jag?",
                 "gör",
-                "är",
-                "Du",
-                "sen."
+                "hon",
+                "Hur"
               ],
               "id": "swedish_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Du är lite sen.",
-              "audio": "Du är lite sen.",
+              "answer": "Hon kommer aldrig i tid.",
+              "audio": "Hon kommer aldrig i tid.",
               "id": "swedish_t6_1_3"
             },
             {
@@ -1301,20 +1311,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How late am I?",
-                  "Hur sen är jag?"
+                  "I thought I was on time.",
+                  "Jag trodde att jag var i tid."
                 ],
                 [
-                  "I'm late.",
-                  "Jag är sen."
+                  "I came here yesterday.",
+                  "Jag kom hit i går."
                 ],
                 [
-                  "Why are you late?",
-                  "Varför är du sen?"
+                  "Can't you make it this year?",
+                  "Kan du inte komma i år?"
                 ],
                 [
-                  "I'm not late.",
-                  "Jag är inte sen."
+                  "You are late.",
+                  "Du är sen."
                 ]
               ],
               "id": "swedish_t6_1_4"
@@ -1327,46 +1337,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He was late.",
-              "answer": "Han var sen.",
+              "question": "You're a little late.",
+              "answer": "Du är lite sen.",
               "choices": [
-                "Hur sen är jag?",
-                "Han var sen.",
-                "I går var en bra dag.",
-                "Ge mig en dag eller två."
+                "Jag trodde att jag var i tid.",
+                "Du är lite sen.",
+                "Jag kommer tillbaka i tid.",
+                "Vi kom hit i tid."
               ],
               "id": "swedish_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Vad gör vi ____ han är sen?",
-              "answer": "om",
+              "question": "Jag ____ sen.",
+              "answer": "är",
               "choices": [
-                "hit",
+                "aldrig",
+                "är",
                 "om",
-                "när",
-                "göra"
+                "kommer"
               ],
               "id": "swedish_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Now just hold on a minute.",
-              "answer": "Vänta lite nu.",
+              "question": "Why are you late?",
+              "answer": "Varför är du sen?",
               "words": [
-                "lite",
-                "när",
-                "nu.",
-                "Vänta",
-                "lite"
+                "är",
+                "sen?",
+                "du",
+                "inte",
+                "Varför",
+                "är"
               ],
               "id": "swedish_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag kom hit i går.",
-              "audio": "Jag kom hit i går.",
+              "answer": "Jag är inte sen.",
+              "audio": "Jag är inte sen.",
               "id": "swedish_t6_2_3"
             },
             {
@@ -1375,20 +1386,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Can't you make it this year?",
-                  "Kan du inte komma i år?"
+                  "He was late.",
+                  "Han var sen."
                 ],
                 [
-                  "He is not always late.",
-                  "Han är inte alltid sen."
-                ],
-                [
-                  "How was your day?",
-                  "Hur var din dag?"
+                  "Come at any time you like.",
+                  "Kom när ni vill."
                 ],
                 [
                   "I can't do it today.",
                   "Jag kan inte göra det i dag."
+                ],
+                [
+                  "Where are you today?",
+                  "Var är du i dag?"
                 ]
               ],
               "id": "swedish_t6_2_4"
@@ -1401,49 +1412,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That was a good day.",
-              "answer": "Det var en bra dag.",
+              "question": "I am not coming today.",
+              "answer": "Jag kommer inte i dag.",
               "choices": [
-                "Du är lite sen.",
-                "Varför är du sen?",
+                "Hon kommer aldrig i tid.",
+                "Kan du inte komma i år?",
                 "Jag kom i går.",
-                "Det var en bra dag."
+                "Jag kommer inte i dag."
               ],
               "id": "swedish_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ge mig ____ dag.",
-              "answer": "en",
+              "question": "Hur mycket ____ behöver du?",
+              "answer": "tid",
               "choices": [
-                "när",
-                "en",
-                "går",
-                "för"
+                "var",
+                "tid",
+                "har",
+                "om"
               ],
               "id": "swedish_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "Yesterday was a good day.",
-              "answer": "I går var en bra dag.",
+              "question": "I'll be back in time.",
+              "answer": "Jag kommer tillbaka i tid.",
               "words": [
-                "var",
-                "en",
-                "går",
-                "när",
-                "dag.",
-                "I",
-                "sen",
-                "bra"
+                "kommer",
+                "tillbaka",
+                "i",
+                "tid.",
+                "om",
+                "Jag",
+                "gör"
               ],
               "id": "swedish_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ge mig en dag eller två.",
-              "audio": "Ge mig en dag eller två.",
+              "answer": "Vi kom hit i tid.",
+              "audio": "Vi kom hit i tid.",
               "id": "swedish_t6_3_3"
             },
             {
@@ -1452,20 +1462,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We had a good day.",
-                  "Vi hade en bra dag."
+                  "You're late.",
+                  "Du är inte i tid."
                 ],
                 [
-                  "Where are you today?",
-                  "Var är du i dag?"
+                  "She has not seen him for a long time.",
+                  "Honom har hon inte sett på länge."
                 ],
                 [
-                  "What day is it?",
-                  "Vad är det för dag?"
+                  "I haven't seen him for a long time.",
+                  "Jag har inte sett honom på länge."
                 ],
                 [
-                  "Not today!",
-                  "Inte i dag!"
+                  "I haven't seen you for a long time.",
+                  "Jag har inte sett dig på länge."
                 ]
               ],
               "id": "swedish_t6_3_4"
@@ -1475,16 +1485,16 @@
       ],
       "preview": [
         [
-          "Come at any time you like.",
-          "Kom när ni vill."
+          "What will we do if he's late?",
+          "Vad gör vi om han är sen?"
         ],
         [
           "I came yesterday.",
           "Jag kom i går."
         ],
         [
-          "You are late.",
-          "Du är sen."
+          "How late am I?",
+          "Hur sen är jag?"
         ]
       ]
     },
@@ -1498,46 +1508,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you read me?",
-              "answer": "Hör ni mig?",
+              "question": "I have no money on me.",
+              "answer": "Jag har inga pengar på mig.",
               "choices": [
-                "Vi behöver pengar.",
-                "Hör ni mig?",
-                "Ge mig lite pengar.",
-                "Ge mig mina pengar."
+                "Hur mycket pengar har du?",
+                "Jag har inga pengar på mig.",
+                "Behöver du pengar?",
+                "Kan du inte ge mig lite pengar?"
               ],
               "id": "swedish_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Jag har ____ pengar.",
-              "answer": "inga",
+              "question": "Jag har inte så ____ pengar med mig.",
+              "answer": "mycket",
               "choices": [
-                "Vi",
-                "på",
-                "ha",
-                "inga"
+                "Hur",
+                "för",
+                "pengar",
+                "mycket"
               ],
               "id": "swedish_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "We need some money.",
-              "answer": "Vi behöver pengar.",
+              "question": "How much money do you have?",
+              "answer": "Hur mycket pengar har du?",
               "words": [
-                "behöver",
-                "dem",
-                "pengar.",
-                "Kan",
-                "Vi"
+                "pengar",
+                "du?",
+                "pengar",
+                "för",
+                "har",
+                "Hur",
+                "mycket"
               ],
               "id": "swedish_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag har lite pengar.",
-              "audio": "Jag har lite pengar.",
+              "answer": "Men jag har inte några pengar.",
+              "audio": "Men jag har inte några pengar.",
               "id": "swedish_t7_1_3"
             },
             {
@@ -1546,20 +1558,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I have no money on me.",
-                  "Jag har inga pengar på mig."
+                  "Do you like your job?",
+                  "Tycker du om ditt jobb?"
                 ],
                 [
-                  "I haven't got much money with me.",
-                  "Jag har inte så mycket pengar med mig."
+                  "I like my job.",
+                  "Jag tycker om mitt jobb."
                 ],
                 [
-                  "How much money do you have?",
-                  "Hur mycket pengar har du?"
+                  "He lost his job.",
+                  "Han blev av med sitt jobb."
                 ],
                 [
-                  "Won't you give me a little money?",
-                  "Kan du inte ge mig lite pengar?"
+                  "I think you like your job.",
+                  "Jag tror att du gillar ditt jobb."
                 ]
               ],
               "id": "swedish_t7_1_4"
@@ -1572,49 +1584,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you need money?",
-              "answer": "Behöver du pengar?",
+              "question": "I'm good at my job.",
+              "answer": "Jag är bra på mitt jobb.",
               "choices": [
-                "Jag har inte så mycket pengar med mig.",
-                "Behöver du pengar?",
-                "Jag har lite pengar.",
-                "Han har alltid för lite pengar."
+                "Jag tycker om mitt jobb.",
+                "Jag är bra på mitt jobb.",
+                "Men jag har inte några pengar.",
+                "Hon hade inga pengar."
               ],
               "id": "swedish_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Är detta ____ pengar?",
-              "answer": "dina",
+              "question": "Är du ____ jobb?",
+              "answer": "på",
               "choices": [
-                "ni",
-                "dina",
-                "ha",
-                "är"
+                "att",
+                "på",
+                "pengar",
+                "tycker"
               ],
               "id": "swedish_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "But I don't have any money.",
-              "answer": "Men jag har inte några pengar.",
+              "question": "I have no money.",
+              "answer": "Jag har inga pengar.",
               "words": [
-                "jag",
                 "nu.",
-                "inte",
                 "pengar.",
                 "har",
-                "Men",
-                "några",
-                "Jag"
+                "Jag",
+                "inga",
+                "du"
               ],
               "id": "swedish_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hon hade inga pengar.",
-              "audio": "Hon hade inga pengar.",
+              "answer": "Vi behöver pengar.",
+              "audio": "Vi behöver pengar.",
               "id": "swedish_t7_2_3"
             },
             {
@@ -1623,20 +1633,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He had no money.",
-                  "Han hade inga pengar."
+                  "I have some money.",
+                  "Jag har lite pengar."
                 ],
                 [
-                  "Give me my money.",
-                  "Ge mig mina pengar."
+                  "Won't you give me a little money?",
+                  "Kan du inte ge mig lite pengar?"
                 ],
                 [
-                  "Give me some money.",
-                  "Ge mig lite pengar."
+                  "Do you need money?",
+                  "Behöver du pengar?"
                 ],
                 [
-                  "He's always short of money.",
-                  "Han har alltid för lite pengar."
+                  "She had no money.",
+                  "Hon hade inga pengar."
                 ]
               ],
               "id": "swedish_t7_2_4"
@@ -1649,49 +1659,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Give them money.",
-              "answer": "Ge dem pengar.",
+              "question": "He had no money.",
+              "answer": "Han hade inga pengar.",
               "choices": [
-                "Jag har inga pengar.",
-                "Ge mig lite pengar.",
-                "Hur mycket pengar har du?",
-                "Ge dem pengar."
+                "Jag har inte så mycket pengar med mig.",
+                "Behöver du pengar?",
+                "Han blev av med sitt jobb.",
+                "Han hade inga pengar."
               ],
               "id": "swedish_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "Jag vet att ____ inte är allt.",
-              "answer": "pengar",
+              "question": "Han har alltid ____ lite pengar.",
+              "answer": "för",
               "choices": [
-                "jag",
-                "inga",
-                "pengar",
-                "ha"
+                "tror",
+                "har",
+                "för",
+                "Behöver"
               ],
               "id": "swedish_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't have much money now.",
-              "answer": "Jag har inte mycket pengar nu.",
+              "question": "I know that money isn't everything.",
+              "answer": "Jag vet att pengar inte är allt.",
               "words": [
-                "nu.",
-                "mycket",
-                "några",
-                "Jag",
-                "har",
+                "att",
+                "är",
+                "vet",
+                "om",
+                "pengar",
+                "allt.",
                 "inte",
                 "Jag",
-                "pengar"
+                "mig."
               ],
               "id": "swedish_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag behöver mer pengar.",
-              "audio": "Jag behöver mer pengar.",
+              "answer": "Jag har inte mycket pengar nu.",
+              "audio": "Jag har inte mycket pengar nu.",
               "id": "swedish_t7_3_3"
             },
             {
@@ -1699,6 +1710,10 @@
               "question": "Tap the matching pairs",
               "answer": "matched",
               "pairs": [
+                [
+                  "I need more money.",
+                  "Jag behöver mer pengar."
+                ],
                 [
                   "Your money or your life!",
                   "Dina pengar eller ditt liv!"
@@ -1710,10 +1725,6 @@
                 [
                   "He needs money.",
                   "Han behöver pengar."
-                ],
-                [
-                  "I want my money.",
-                  "Jag vill ha mina pengar."
                 ]
               ],
               "id": "swedish_t7_3_4"
@@ -1723,16 +1734,16 @@
       ],
       "preview": [
         [
-          "Do you read me?",
-          "Hör ni mig?"
+          "I have no money on me.",
+          "Jag har inga pengar på mig."
         ],
         [
-          "I have no money.",
-          "Jag har inga pengar."
+          "I haven't got much money with me.",
+          "Jag har inte så mycket pengar med mig."
         ],
         [
-          "We need some money.",
-          "Vi behöver pengar."
+          "How much money do you have?",
+          "Hur mycket pengar har du?"
         ]
       ]
     },
@@ -1749,43 +1760,46 @@
               "question": "But what do you want?",
               "answer": "Men vad vill du?",
               "choices": [
-                "Vad vill du då?",
+                "Vi vet vad vi vill ha.",
                 "Men vad vill du?",
-                "Vad vill du?",
-                "Vi gör som vi vill."
+                "Jag vet inte vad jag vill.",
+                "Vad vill du?"
               ],
               "id": "swedish_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Är det ____ du vill?",
-              "answer": "vad",
+              "question": "Ja, jag vill ____ du gör det.",
+              "answer": "att",
               "choices": [
-                "Vad",
-                "vara",
-                "bara",
-                "vad"
+                "på",
+                "Jag",
+                "dig",
+                "att"
               ],
               "id": "swedish_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "What do you want?",
-              "answer": "Vad vill du?",
+              "question": "I don't know what I want.",
+              "answer": "Jag vet inte vad jag vill.",
               "words": [
-                "vill",
-                "att",
-                "du?",
-                "Vad",
-                "de"
+                "vill.",
+                "vad",
+                "vet",
+                "har",
+                "Jag",
+                "vill.",
+                "jag",
+                "inte"
               ],
               "id": "swedish_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Vad vill vi här?",
-              "audio": "Vad vill vi här?",
+              "answer": "Jag vet vad jag vill.",
+              "audio": "Jag vet vad jag vill.",
               "id": "swedish_t8_1_3"
             },
             {
@@ -1794,20 +1808,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What do you guys want?",
-                  "Vad vill ni?"
-                ],
-                [
-                  "I don't know what I want.",
-                  "Jag vet inte vad jag vill."
-                ],
-                [
-                  "I know what I want.",
-                  "Jag vet vad jag vill."
-                ],
-                [
                   "We do what we want.",
                   "Vi gör som vi vill."
+                ],
+                [
+                  "I do what I want.",
+                  "Jag gör vad jag vill."
+                ],
+                [
+                  "Is this what you want?",
+                  "Är det vad du vill?"
+                ],
+                [
+                  "What do you want?",
+                  "Vad vill du?"
                 ]
               ],
               "id": "swedish_t8_1_4"
@@ -1820,47 +1834,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Yes, I want you to do it.",
-              "answer": "Ja, jag vill att du gör det.",
+              "question": "What do we want here?",
+              "answer": "Vad vill vi här?",
               "choices": [
-                "När vill vi ha det?",
-                "Ja, jag vill att du gör det.",
-                "Jag gör vad jag vill.",
-                "Vad vill du då?"
+                "Vad vill du att jag ska göra?",
+                "Vad vill vi här?",
+                "Jag har vad jag vill ha.",
+                "Vi vet vad vi vill ha."
               ],
               "id": "swedish_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Jag gör ____ jag vill.",
-              "answer": "vad",
+              "question": "Jag har vad ____ vill ha.",
+              "answer": "jag",
               "choices": [
-                "mig",
-                "vad",
-                "att",
-                "vill"
+                "du",
+                "jag",
+                "som",
+                "hon"
               ],
               "id": "swedish_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "What do you want then?",
-              "answer": "Vad vill du då?",
+              "question": "We know what we want.",
+              "answer": "Vi vet vad vi vill ha.",
               "words": [
-                "du",
-                "vill.",
+                "vet",
+                "ha.",
+                "vad",
+                "Vi",
+                "vi",
                 "vill",
-                "med",
-                "Vad",
-                "då?"
+                "här",
+                "Tror"
               ],
               "id": "swedish_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag vill inte ha det här.",
-              "audio": "Jag vill inte ha det här.",
+              "answer": "Jag vill bara vara med dig.",
+              "audio": "Jag vill bara vara med dig.",
               "id": "swedish_t8_2_3"
             },
             {
@@ -1869,20 +1885,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "They want me.",
-                  "De vill ha mig."
+                  "I want you to be here.",
+                  "Jag vill att du ska vara här."
                 ],
                 [
-                  "I don't want you here.",
-                  "Jag vill inte ha dig här."
+                  "I want to be with you.",
+                  "Jag vill vara med dig."
                 ],
                 [
-                  "We only want you.",
-                  "Vi vill bara ha dig."
+                  "If you want, you can go.",
+                  "Du kan gå om du vill."
                 ],
                 [
-                  "When do we want it?",
-                  "När vill vi ha det?"
+                  "What do you want me to do?",
+                  "Vad vill du att jag ska göra?"
                 ]
               ],
               "id": "swedish_t8_2_4"
@@ -1895,50 +1911,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I have what I want.",
-              "answer": "Jag har vad jag vill ha.",
+              "question": "They want me to join them.",
+              "answer": "De vill att jag kommer med dem.",
               "choices": [
-                "Vi vet vad vi vill ha.",
-                "Jag vill inte ha dig här.",
-                "Jag vill bara ha den.",
-                "Jag har vad jag vill ha."
+                "Jag tror inte på det.",
+                "Jag vill vara med dig.",
+                "Jag tror inte att han kommer.",
+                "De vill att jag kommer med dem."
               ],
               "id": "swedish_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Jag vill ____ ha den.",
-              "answer": "bara",
+              "question": "Jag tror inte ____ han kommer.",
+              "answer": "att",
               "choices": [
-                "dig",
-                "bara",
-                "som",
-                "ska"
+                "mig",
+                "att",
+                "är",
+                "han"
               ],
               "id": "swedish_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "Isn't that what they want?",
-              "answer": "Är inte det vad de vill ha?",
+              "question": "I believe you.",
+              "answer": "Jag tror på dig.",
               "words": [
-                "här?",
+                "tror",
+                "dig.",
+                "på",
+                "tror",
                 "vad",
-                "de",
-                "har",
-                "vill",
-                "det",
-                "inte",
-                "Är",
-                "ha?"
+                "Jag"
               ],
               "id": "swedish_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Vi vet vad vi vill ha.",
-              "audio": "Vi vet vad vi vill ha.",
+              "answer": "Jag tror inte på det.",
+              "audio": "Jag tror inte på det.",
               "id": "swedish_t8_3_3"
             },
             {
@@ -1947,20 +1960,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want to be here.",
-                  "Jag vill vara här."
+                  "Do you believe me now?",
+                  "Tror du på mig nu?"
                 ],
                 [
-                  "I just want to be with you.",
-                  "Jag vill bara vara med dig."
+                  "Do you believe this?",
+                  "Tror du på det här?"
                 ],
                 [
-                  "I want you to be here.",
-                  "Jag vill att du ska vara här."
+                  "I think I know what this is.",
+                  "Jag tror jag vet vad det här är."
                 ],
                 [
-                  "I want to be with you.",
-                  "Jag vill vara med dig."
+                  "I think that she will come.",
+                  "Jag tror att hon kommer."
                 ]
               ],
               "id": "swedish_t8_3_4"
@@ -1974,12 +1987,12 @@
           "Men vad vill du?"
         ],
         [
-          "Is this what you want?",
-          "Är det vad du vill?"
+          "Yes, I want you to do it.",
+          "Ja, jag vill att du gör det."
         ],
         [
-          "What do you want?",
-          "Vad vill du?"
+          "I don't know what I want.",
+          "Jag vet inte vad jag vill."
         ]
       ]
     },
@@ -1993,13 +2006,13 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "My hands are really cold.",
-              "answer": "Mina händer är väldigt kalla.",
+              "question": "He would sit in the sun doing nothing.",
+              "answer": "Han brukade sitta i solen och göra ingenting.",
               "choices": [
-                "Har du för varmt?",
-                "Mina händer är väldigt kalla.",
-                "Det är kallt.",
-                "Det är väldigt kallt!"
+                "Det var väldigt kallt i morse.",
+                "Han brukade sitta i solen och göra ingenting.",
+                "Jag är varm.",
+                "Han var riktigt kall."
               ],
               "id": "swedish_t9_1_0"
             },
@@ -2008,34 +2021,34 @@
               "question": "Hur långt ifrån ____ är vi?",
               "answer": "havet",
               "choices": [
-                "bra",
-                "Det",
-                "Jorden",
+                "brukade",
+                "att",
+                "ett",
                 "havet"
               ],
               "id": "swedish_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "The Sun is very far from the Earth.",
-              "answer": "Solen är mycket långt från jorden.",
+              "question": "Do you like it hot or cold?",
+              "answer": "Gillar du det varmt eller kallt?",
               "words": [
-                "är",
-                "sitta",
-                "jorden.",
-                "Solen",
-                "långt",
-                "från",
-                "kallt",
-                "mycket"
+                "du",
+                "i",
+                "kallt?",
+                "Gillar",
+                "varmt",
+                "eller",
+                "brukade",
+                "det"
               ],
               "id": "swedish_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jorden är mindre än solen.",
-              "audio": "Jorden är mindre än solen.",
+              "answer": "Jag kan sova i ett träd.",
+              "audio": "Jag kan sova i ett träd.",
               "id": "swedish_t9_1_3"
             },
             {
@@ -2044,20 +2057,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Where is the sun?",
-                  "Var är solen?"
+                  "How are we going to cross the river?",
+                  "Hur ska vi ta oss över floden?"
+                ],
+                [
+                  "My hands are really cold.",
+                  "Mina händer är väldigt kalla."
                 ],
                 [
                   "I like the sun.",
                   "Jag gillar solen."
                 ],
                 [
-                  "There's nothing new under the sun.",
-                  "Det finns inget nytt under solen."
-                ],
-                [
-                  "He would sit in the sun doing nothing.",
-                  "Han brukade sitta i solen och göra ingenting."
+                  "Are you too warm?",
+                  "Har du för varmt?"
                 ]
               ],
               "id": "swedish_t9_1_4"
@@ -2070,46 +2083,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The sun is coming out.",
-              "answer": "Solen visar sig.",
+              "question": "Are you too cold?",
+              "answer": "Har du för kallt?",
               "choices": [
-                "Var är solen?",
-                "Solen visar sig.",
-                "Det var kallt om natten.",
-                "Tom gillar det kallt."
+                "Hur ska vi ta oss över floden?",
+                "Har du för kallt?",
+                "Jag är kall.",
+                "Han lyckades ta sig över floden."
               ],
               "id": "swedish_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Solen ____ bra.",
-              "answer": "känns",
+              "question": "Hur kallt ____ det?",
+              "answer": "är",
               "choices": [
-                "Hur",
-                "känns",
-                "långt",
-                "händer"
+                "vi",
+                "är",
+                "låg",
+                "göra"
               ],
               "id": "swedish_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "The sea is deep.",
-              "answer": "Havet är djupt.",
+              "question": "I sure am cold.",
+              "answer": "Jag har verkligen kallt.",
               "words": [
-                "djupt.",
-                "Hur",
                 "har",
-                "Havet",
-                "är"
+                "här",
+                "under",
+                "Jag",
+                "verkligen",
+                "kallt."
               ],
               "id": "swedish_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Solen är vit.",
-              "audio": "Solen är vit.",
+              "answer": "Det var kallt om natten.",
+              "audio": "Det var kallt om natten.",
               "id": "swedish_t9_2_3"
             },
             {
@@ -2118,20 +2132,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Are you too warm?",
-                  "Har du för varmt?"
+                  "It was very cold this morning.",
+                  "Det var väldigt kallt i morse."
                 ],
                 [
-                  "It's cold.",
-                  "Det är kallt."
+                  "I'm warm.",
+                  "Jag är varm."
                 ],
                 [
-                  "It's rather cold.",
-                  "Det är ganska kallt."
+                  "I'd like to swim in this river.",
+                  "Jag skulle vilja simma i den här floden."
                 ],
                 [
-                  "It's too cold.",
-                  "Det är för kallt."
+                  "We went to swim in the river.",
+                  "Vi gick för att simma i floden."
                 ]
               ],
               "id": "swedish_t9_2_4"
@@ -2144,47 +2158,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It was very cold that evening.",
-              "answer": "Det var väldigt kallt den kvällen.",
+              "question": "He needs to find another tree.",
+              "answer": "Han måste hitta ett annat träd.",
               "choices": [
                 "Hur långt ifrån havet är vi?",
-                "Solen känns bra.",
-                "Jorden är mindre än solen.",
-                "Det var väldigt kallt den kvällen."
+                "Hur kallt är det?",
+                "Jag kan sova i ett träd.",
+                "Han måste hitta ett annat träd."
               ],
               "id": "swedish_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Tom gillar ____ kallt.",
-              "answer": "det",
+              "question": "Han lyckades ta ____ över floden.",
+              "answer": "sig",
               "choices": [
-                "gillar",
-                "det",
-                "mycket",
-                "bra"
+                "vilja",
+                "sig",
+                "skulle",
+                "solen"
               ],
               "id": "swedish_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "It is cold outside.",
-              "answer": "Det är kallt ute.",
+              "question": "Tom said his feet were cold.",
+              "answer": "Tom sa att han hade kallt om fötterna.",
               "words": [
+                "att",
+                "han",
                 "kallt",
-                "ute.",
-                "är",
-                "Det",
-                "kvällen.",
-                "händer"
+                "fötterna.",
+                "under",
+                "hade",
+                "om",
+                "Tom",
+                "sa",
+                "brukade"
               ],
               "id": "swedish_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Har du för kallt?",
-              "audio": "Har du för kallt?",
+              "answer": "Han låg och sov under trädet.",
+              "audio": "Han låg och sov under trädet.",
               "id": "swedish_t9_3_3"
             },
             {
@@ -2193,20 +2211,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How cold is it?",
-                  "Hur kallt är det?"
+                  "I can hear the wind.",
+                  "Jag kan höra vinden."
                 ],
                 [
-                  "I sure am cold.",
-                  "Jag har verkligen kallt."
+                  "I don't like snow.",
+                  "Jag tycker inte om snö."
                 ],
                 [
-                  "It's really cold!",
-                  "Det är väldigt kallt!"
+                  "He was really cold.",
+                  "Han var riktigt kall."
                 ],
                 [
-                  "It was cold at night.",
-                  "Det var kallt om natten."
+                  "I am cold.",
+                  "Jag är kall."
                 ]
               ],
               "id": "swedish_t9_3_4"
@@ -2216,16 +2234,16 @@
       ],
       "preview": [
         [
-          "My hands are really cold.",
-          "Mina händer är väldigt kalla."
+          "He would sit in the sun doing nothing.",
+          "Han brukade sitta i solen och göra ingenting."
         ],
         [
           "How far are we from the sea?",
           "Hur långt ifrån havet är vi?"
         ],
         [
-          "The Sun is very far from the Earth.",
-          "Solen är mycket långt från jorden."
+          "Do you like it hot or cold?",
+          "Gillar du det varmt eller kallt?"
         ]
       ]
     },
@@ -2239,48 +2257,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "They went hand in hand.",
-              "answer": "De gick hand i hand.",
+              "question": "You can hold my hand.",
+              "answer": "Du kan hålla min hand.",
               "choices": [
-                "Du gjorde mig illa.",
-                "De gick hand i hand.",
-                "Släpp min hand.",
-                "Det kommer inte att göra ont."
+                "Gå och lägg dig nu.",
+                "Du kan hålla min hand.",
+                "Har du fortfarande ont i huvudet?",
+                "Släpp min hand."
               ],
               "id": "swedish_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ge mig ____ hand.",
-              "answer": "din",
+              "question": "De gick ____ i hand.",
+              "answer": "hand",
               "choices": [
-                "gick",
-                "Hur",
-                "Du",
-                "din"
+                "kan",
+                "det",
+                "ont",
+                "hand"
               ],
               "id": "swedish_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "You can hold my hand.",
-              "answer": "Du kan hålla min hand.",
+              "question": "Would you like to hold my hand?",
+              "answer": "Skulle du vilja hålla min hand?",
               "words": [
+                "vilja",
                 "hålla",
-                "min",
-                "kanske",
-                "Du",
-                "kan",
+                "hand?",
+                "Skulle",
                 "du",
-                "hand."
+                "kan",
+                "min",
+                "vilja"
               ],
               "id": "swedish_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Jag ska inte göra illa dig.",
-              "audio": "Jag ska inte göra illa dig.",
+              "answer": "Du tänker inte låta mig sova, eller hur?",
+              "audio": "Du tänker inte låta mig sova, eller hur?",
               "id": "swedish_t10_1_3"
             },
             {
@@ -2289,20 +2308,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Did anybody get hurt?",
-                  "Gjorde någon sig illa?"
-                ],
-                [
-                  "Did they hurt you?",
-                  "Gjorde de dig illa?"
+                  "I'm not going to hurt you.",
+                  "Jag ska inte göra illa dig."
                 ],
                 [
                   "You hurt me.",
                   "Du gjorde mig illa."
                 ],
                 [
-                  "Don't hurt me!",
-                  "Gör inte illa mig!"
+                  "Now go to sleep.",
+                  "Gå och lägg dig nu."
+                ],
+                [
+                  "I used to get sick a lot when I was a kid.",
+                  "Jag blev ofta sjuk när jag var barn."
                 ]
               ],
               "id": "swedish_t10_1_4"
@@ -2315,46 +2334,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Now go to sleep.",
-              "answer": "Gå och lägg dig nu.",
+              "question": "Does your head hurt?",
+              "answer": "Har du ont i huvudet?",
               "choices": [
-                "Gör det fortfarande ont?",
-                "Gå och lägg dig nu.",
-                "Var gör det ont?",
-                "Ge mig din hand."
+                "Jag såg det med mina egna ögon.",
+                "Har du ont i huvudet?",
+                "Jag skulle vilja gå och sova nu.",
+                "De gick hand i hand."
               ],
               "id": "swedish_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Vad har hänt ____ din hand?",
-              "answer": "med",
+              "question": "Han står ____ huvudet.",
+              "answer": "på",
               "choices": [
-                "här",
-                "med",
-                "det",
-                "nu"
+                "egna",
+                "på",
+                "gå",
+                "lägger"
               ],
               "id": "swedish_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "Let go of my hand.",
-              "answer": "Släpp min hand.",
+              "question": "Does your head still hurt?",
+              "answer": "Har du fortfarande ont i huvudet?",
               "words": [
-                "min",
-                "här",
-                "hand.",
-                "Släpp",
-                "illa?"
+                "huvudet?",
+                "i",
+                "du",
+                "Har",
+                "ont",
+                "du",
+                "fortfarande",
+                "ansikte"
               ],
               "id": "swedish_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Skulle du vilja hålla min hand?",
-              "audio": "Skulle du vilja hålla min hand?",
+              "answer": "Vad har hänt med din hand?",
+              "audio": "Vad har hänt med din hand?",
               "id": "swedish_t10_2_3"
             },
             {
@@ -2363,20 +2385,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It won't hurt.",
-                  "Det kommer inte att göra ont."
+                  "Let go of my hand.",
+                  "Släpp min hand."
                 ],
                 [
-                  "It doesn't hurt so much.",
-                  "Det gör inte så ont."
+                  "I have to go to sleep.",
+                  "Jag måste gå och sova."
                 ],
                 [
-                  "Where does it hurt?",
-                  "Var gör det ont?"
+                  "I would like to go to sleep now.",
+                  "Jag skulle vilja gå och sova nu."
                 ],
                 [
-                  "It may hurt.",
-                  "Det kommer kanske att göra ont."
+                  "Give me your hand.",
+                  "Ge mig din hand."
                 ]
               ],
               "id": "swedish_t10_2_4"
@@ -2389,47 +2411,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm in a lot of pain.",
-              "answer": "Jag har väldigt ont.",
+              "question": "I'm sick of this.",
+              "answer": "Jag är trött på det här.",
               "choices": [
-                "Det där måste ha gjort ont.",
-                "Hur ont gör det?",
-                "Det här kommer inte att göra ont alls.",
-                "Jag har väldigt ont."
+                "Hon är ett huvud längre än jag.",
+                "Han var sjuk, så han kunde inte komma.",
+                "Hon kunde inte komma för hon var sjuk.",
+                "Jag är trött på det här."
               ],
               "id": "swedish_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Det här kommer inte ____ göra ont alls.",
-              "answer": "att",
+              "question": "Hon kunde inte komma ____ hon var sjuk.",
+              "answer": "för",
               "choices": [
-                "göra",
-                "att",
-                "gick",
-                "din"
+                "han",
+                "för",
+                "mina",
+                "min"
               ],
               "id": "swedish_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "How bad is the pain?",
-              "answer": "Hur ont gör det?",
+              "question": "He was sick, so he couldn't come.",
+              "answer": "Han var sjuk, så han kunde inte komma.",
               "words": [
-                "ont",
-                "Jag",
-                "det?",
-                "Hur",
-                "alls.",
-                "gör"
+                "var",
+                "så",
+                "sjuk,",
+                "kan",
+                "huvudet.",
+                "komma.",
+                "han",
+                "Han",
+                "kunde",
+                "inte"
               ],
               "id": "swedish_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Gör det väldigt ont?",
-              "audio": "Gör det väldigt ont?",
+              "answer": "Kom så går vi och lägger oss.",
+              "audio": "Kom så går vi och lägger oss.",
               "id": "swedish_t10_3_3"
             },
             {
@@ -2438,20 +2464,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Does it really hurt?",
-                  "Gör det verkligen ont?"
+                  "I saw him with my own eyes.",
+                  "Jag såg honom med mina egna ögon."
                 ],
                 [
-                  "Does it still hurt?",
-                  "Gör det fortfarande ont?"
+                  "I saw it with my own eyes.",
+                  "Jag såg det med mina egna ögon."
                 ],
                 [
-                  "I bet that hurt.",
-                  "Det där måste ha gjort ont."
+                  "She's a head taller than me.",
+                  "Hon är ett huvud längre än jag."
                 ],
                 [
-                  "I'm not in any pain.",
-                  "Jag har inte ont."
+                  "I never saw his face again.",
+                  "Jag såg aldrig hans ansikte igen."
                 ]
               ],
               "id": "swedish_t10_3_4"
@@ -2461,16 +2487,16 @@
       ],
       "preview": [
         [
+          "You can hold my hand.",
+          "Du kan hålla min hand."
+        ],
+        [
           "They went hand in hand.",
           "De gick hand i hand."
         ],
         [
-          "Give me your hand.",
-          "Ge mig din hand."
-        ],
-        [
-          "You can hold my hand.",
-          "Du kan hålla min hand."
+          "Would you like to hold my hand?",
+          "Skulle du vilja hålla min hand?"
         ]
       ]
     }

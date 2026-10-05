@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-europe",
   "level": "Beginner",
-  "version": 5,
+  "version": 6,
   "units": [
     {
       "id": "u1",
@@ -213,51 +213,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Fine, thank you. And you?",
-              "answer": "Спасибо, хорошо. А вы?",
+              "question": "I'm fine, thank you. And you?",
+              "answer": "У меня всё хорошо, спасибо. А у тебя?",
               "choices": [
-                "Это тебе спасибо.",
-                "Спасибо вам за это.",
-                "Спасибо, хорошо. А вы?",
-                "Спасибо, это всё."
+                "Спасибо, у меня всё.",
+                "У меня всё хорошо, спасибо. А у тебя?",
+                "Спасибо, что сказал мне это.",
+                "Спасибо за это."
               ],
               "id": "russian_t1_1_0"
             },
             {
               "type": "cloze",
-              "question": "Спасибо ____ всё.",
-              "answer": "за",
+              "question": "Спасибо, что ____ здесь.",
+              "answer": "ты",
               "choices": [
-                "Очень",
-                "за",
-                "что",
-                "там"
+                "Нет",
+                "нужно",
+                "есть",
+                "ты"
               ],
               "id": "russian_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "I'm fine, thank you. And you?",
-              "answer": "У меня всё хорошо, спасибо. А у тебя?",
+              "question": "I don't know who you are, but thanks.",
+              "answer": "Я не знаю, кто ты, но спасибо.",
               "words": [
-                "А",
-                "хорошо,",
-                "меня",
-                "тебя?",
-                "всё,",
-                "ты",
-                "у",
-                "У",
-                "всё",
-                "спасибо."
+                "не",
+                "кто",
+                "спасибо.",
+                "но",
+                "ты,",
+                "только",
+                "Нет,",
+                "Я",
+                "знаю,"
               ],
               "id": "russian_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Спасибо за это.",
-              "audio": "Спасибо за это.",
+              "answer": "Спасибо, но я не хочу есть.",
+              "audio": "Спасибо, но я не хочу есть.",
               "id": "russian_t1_1_3"
             },
             {
@@ -266,20 +265,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thank you for everything.",
-                  "Спасибо тебе за всё."
+                  "Thank you for being here.",
+                  "Спасибо, что вы здесь."
                 ],
                 [
-                  "Thank you for this.",
-                  "Спасибо тебе за это."
+                  "I'm fine, thank you.",
+                  "У меня всё хорошо, спасибо."
                 ],
                 [
-                  "Thanks, that's all.",
-                  "Спасибо, это всё."
+                  "Thank you, I've finished talking.",
+                  "Спасибо, у меня всё."
                 ],
                 [
-                  "Very well. Thank you.",
-                  "Очень хорошо, спасибо."
+                  "That's for me? Thank you.",
+                  "Это мне? Спасибо."
                 ]
               ],
               "id": "russian_t1_1_4"
@@ -292,47 +291,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Thank you for being here.",
-              "answer": "Спасибо, что вы здесь.",
+              "question": "No, that's all, thank you.",
+              "answer": "Нет, это всё, спасибо.",
               "choices": [
-                "Спасибо тебе за это.",
-                "Спасибо, всё хорошо.",
-                "Спасибо за всё.",
-                "Спасибо, что вы здесь."
+                "Спасибо вам за это.",
+                "Нет, это всё, спасибо.",
+                "Спасибо, что ты здесь.",
+                "У меня всё хорошо, спасибо."
               ],
               "id": "russian_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Это ____ спасибо.",
-              "answer": "всё",
+              "question": "Мне ничего ____ нужно, спасибо.",
+              "answer": "не",
               "choices": [
                 "тебя",
-                "знаю",
-                "тебе",
-                "всё"
+                "же",
+                "не",
+                "что"
               ],
               "id": "russian_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "Thank you for that.",
-              "answer": "Спасибо вам за это.",
+              "question": "Thank you for telling me that.",
+              "answer": "Спасибо, что сказал мне это.",
               "words": [
-                "за",
-                "всё",
-                "вы",
-                "Спасибо",
-                "вам",
-                "это."
+                "что",
+                "мне",
+                "сказал",
+                "Спасибо,",
+                "Мне",
+                "это.",
+                "меня"
               ],
               "id": "russian_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У меня всё хорошо, спасибо.",
-              "audio": "У меня всё хорошо, спасибо.",
+              "answer": "Мне то же, что и ему, пожалуйста.",
+              "audio": "Мне то же, что и ему, пожалуйста.",
               "id": "russian_t1_2_3"
             },
             {
@@ -341,20 +341,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thank you, I've finished talking.",
-                  "Спасибо, у меня всё."
+                  "I just want to say thank you.",
+                  "Я только хочу сказать тебе спасибо."
                 ],
                 [
-                  "I have you to thank.",
-                  "Это тебе спасибо."
+                  "Thanks for this.",
+                  "Спасибо за это."
                 ],
                 [
-                  "Thanks for being here.",
-                  "Спасибо, что ты здесь."
+                  "Thank you for this.",
+                  "Спасибо тебе за это."
                 ],
                 [
-                  "Thanks, but no.",
-                  "Спасибо, но нет."
+                  "Thanks, that's all.",
+                  "Спасибо, это всё."
                 ]
               ],
               "id": "russian_t1_2_4"
@@ -367,46 +367,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "That's for me? Thank you.",
-              "answer": "Это мне? Спасибо.",
+              "question": "Very well. Thank you.",
+              "answer": "Очень хорошо, спасибо.",
               "choices": [
-                "Спасибо вам за это.",
+                "Спасибо, что сказал мне это.",
                 "Спасибо за это.",
-                "Это мне? Спасибо.",
-                "Это тебе спасибо."
+                "Спасибо, но я не хочу есть.",
+                "Очень хорошо, спасибо."
               ],
               "id": "russian_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Я не знаю, ____ ты, но спасибо.",
-              "answer": "кто",
+              "question": "Это ____ спасибо.",
+              "answer": "всё",
               "choices": [
-                "Мне",
-                "кто",
-                "нужно",
-                "Это"
+                "пожалуйста",
+                "всё",
+                "тебя",
+                "ему"
               ],
               "id": "russian_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "I'm fine, thanks!",
-              "answer": "Спасибо, всё хорошо.",
+              "question": "Thank you for that.",
+              "answer": "Спасибо вам за это.",
               "words": [
-                "хорошо.",
-                "Спасибо.",
-                "Нет,",
-                "Спасибо,",
-                "всё"
+                "вам",
+                "за",
+                "это.",
+                "ты",
+                "же,",
+                "Спасибо"
               ],
               "id": "russian_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Нет, это всё, спасибо.",
-              "audio": "Нет, это всё, спасибо.",
+              "answer": "Это тебе спасибо.",
+              "audio": "Это тебе спасибо.",
               "id": "russian_t1_3_3"
             },
             {
@@ -415,20 +416,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thanks, everything is fine there.",
-                  "Спасибо, там все хорошо."
+                  "Thanks, but no.",
+                  "Спасибо, но нет."
                 ],
                 [
-                  "Thank you, but I'm not hungry.",
-                  "Спасибо, но я не хочу есть."
+                  "Hi, it's me.",
+                  "Привет, это я."
                 ],
                 [
-                  "I don't need any, thanks.",
-                  "Мне ничего не нужно, спасибо."
+                  "Thank you for not saying anything.",
+                  "Спасибо, что ничего не сказал!"
                 ],
                 [
-                  "Thanks, but no thanks.",
-                  "Спасибо, не надо."
+                  "Thank you for telling me.",
+                  "Спасибо, что сказал мне."
                 ]
               ],
               "id": "russian_t1_3_4"
@@ -438,16 +439,16 @@
       ],
       "preview": [
         [
-          "Fine, thank you. And you?",
-          "Спасибо, хорошо. А вы?"
-        ],
-        [
-          "Thanks for everything.",
-          "Спасибо за всё."
-        ],
-        [
           "I'm fine, thank you. And you?",
           "У меня всё хорошо, спасибо. А у тебя?"
+        ],
+        [
+          "Thanks for being here.",
+          "Спасибо, что ты здесь."
+        ],
+        [
+          "I don't know who you are, but thanks.",
+          "Я не знаю, кто ты, но спасибо."
         ]
       ]
     },
@@ -461,48 +462,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Who is that man?",
-              "answer": "Кто этот человек?",
+              "question": "I don't know who this man is.",
+              "answer": "Я не знаю, что это за человек.",
               "choices": [
-                "Да, я её мама.",
-                "Я не знаю, кто этот человек.",
-                "Что он был за человек?",
-                "Кто этот человек?"
+                "Ты хочешь сказать, что ты не мой отец?",
+                "Я не знаю, что это за человек.",
+                "Я — это не мой отец.",
+                "У тебя есть друг, который может тебе помочь?"
               ],
               "id": "russian_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Что ты ____ человек!",
-              "answer": "за",
+              "question": "Да, я ____ мама.",
+              "answer": "его",
               "choices": [
-                "Где",
-                "мог",
                 "человек",
-                "за"
+                "всегда",
+                "Моя",
+                "его"
               ],
               "id": "russian_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "What kind of man was he?",
-              "answer": "Что он был за человек?",
+              "question": "Are you telling me you are not my father?",
+              "answer": "Ты хочешь сказать, что ты не мой отец?",
               "words": [
-                "Он",
+                "хочешь",
+                "что",
+                "мой",
+                "отец?",
+                "не",
+                "Ты",
+                "ты",
+                "Ты",
                 "за",
-                "один?",
-                "Что",
-                "человек?",
-                "был",
-                "он"
+                "сказать,"
               ],
               "id": "russian_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я не знаю, кто этот человек.",
-              "audio": "Я не знаю, кто этот человек.",
+              "answer": "Я — это не мой отец.",
+              "audio": "Я — это не мой отец.",
               "id": "russian_t2_1_3"
             },
             {
@@ -511,20 +515,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't know who this man is.",
-                  "Я не знаю, что это за человек."
+                  "Tom didn't tell me who his father was.",
+                  "Том не сказал мне, кто его отец."
                 ],
                 [
-                  "Who is that man over there?",
-                  "Что это там за человек?"
+                  "Do you have a father?",
+                  "У тебя есть отец?"
                 ],
                 [
-                  "You don't even know who that man was.",
-                  "Вы даже не знаете, кто был этот человек."
+                  "He has a father.",
+                  "У него есть отец."
                 ],
                 [
-                  "Do you know who that man is?",
-                  "Вы знаете, кто этот человек?"
+                  "Yes, I'm his father.",
+                  "Да, я его отец."
                 ]
               ],
               "id": "russian_t2_1_4"
@@ -537,49 +541,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know who the man is.",
-              "answer": "Я знаю, кто этот человек.",
+              "question": "You're not my friend anymore.",
+              "answer": "Ты мне больше не друг.",
               "choices": [
-                "Что ты за человек!",
-                "Что сказал тебе этот человек?",
-                "Кто этот человек? Ты его знаешь?",
-                "Я знаю, кто этот человек."
+                "Он не друг ни тебе, ни мне.",
+                "Ты мне больше не друг.",
+                "Да, я его мама.",
+                "Что мне нужно, так это друг."
               ],
               "id": "russian_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "Что сказал ____ этот человек?",
-              "answer": "тебе",
+              "question": "Он не друг ____ тебе, ни мне.",
+              "answer": "ни",
               "choices": [
-                "за",
-                "мой",
-                "тебе",
-                "его"
+                "человек",
+                "ни",
+                "так",
+                "больше"
               ],
               "id": "russian_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Who is the man? Do you know him?",
-              "answer": "Кто этот человек? Ты его знаешь?",
+              "question": "What I need is a friend.",
+              "answer": "Что мне нужно, так это друг.",
               "words": [
-                "Вы",
-                "знаешь?",
-                "его",
-                "Кто",
-                "Ты",
-                "человек?",
-                "этот",
-                "сказал"
+                "он.",
+                "друг.",
+                "это",
+                "Что",
+                "так",
+                "нужно,",
+                "мне",
+                "за"
               ],
               "id": "russian_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Он не мой человек.",
-              "audio": "Он не мой человек.",
+              "answer": "Он мне больше не друг.",
+              "audio": "Он мне больше не друг.",
               "id": "russian_t2_2_3"
             },
             {
@@ -588,20 +592,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is my mother.",
-                  "Это моя мама."
+                  "I have a friend.",
+                  "У меня есть друг."
                 ],
                 [
-                  "Where's your mother?",
-                  "Где твоя мама?"
+                  "You're no friend of mine.",
+                  "Ты мне не друг."
                 ],
                 [
-                  "I am like my mother.",
-                  "Я как мама."
+                  "He's no friend of mine.",
+                  "Он мне не друг."
                 ],
                 [
-                  "Why are you alone? Where is your mother?",
-                  "Почему ты один? Где твоя мама?"
+                  "Tom said you were his friend.",
+                  "Том сказал, что ты его друг."
                 ]
               ],
               "id": "russian_t2_2_4"
@@ -614,47 +618,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Are you my mother?",
-              "answer": "Вы моя мама?",
+              "question": "I want to have a friend.",
+              "answer": "Я хочу, чтобы у меня был друг.",
               "choices": [
-                "Кто этот человек? Ты его знаешь?",
-                "Что ты за человек!",
-                "Что сказал тебе этот человек?",
-                "Вы моя мама?"
+                "Он не друг ни тебе, ни мне.",
+                "Что мне нужно, так это друг.",
+                "Да, я его мама.",
+                "Я хочу, чтобы у меня был друг."
               ],
               "id": "russian_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "Моя ____ здесь.",
-              "answer": "мама",
+              "question": "Ты мне ____ или нет?",
+              "answer": "друг",
               "choices": [
-                "Почему",
-                "отец",
-                "её",
-                "мама"
+                "знаю",
+                "друг",
+                "человек",
+                "меня"
               ],
               "id": "russian_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "Yes, I am his mother.",
-              "answer": "Да, я его мама.",
+              "question": "You are my friend, not him.",
+              "answer": "Ты мой друг, а не он.",
               "words": [
-                "я",
-                "его",
-                "Что",
-                "Да,",
-                "мама.",
-                "что"
+                "знаю,",
+                "а",
+                "Моя",
+                "он.",
+                "друг,",
+                "Ты",
+                "мой",
+                "не"
               ],
               "id": "russian_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Да, я её мама.",
-              "audio": "Да, я её мама.",
+              "answer": "У тебя есть друг, который может тебе помочь?",
+              "audio": "У тебя есть друг, который может тебе помочь?",
               "id": "russian_t2_3_3"
             },
             {
@@ -663,20 +669,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Tom, your mother is here.",
-                  "Том, твоя мама здесь."
+                  "I have a friend who can help you.",
+                  "У меня есть друг, который может тебе помочь."
                 ],
                 [
-                  "You are not my mother.",
-                  "Вы не моя мама."
+                  "Tom is just a friend. He's not my boyfriend.",
+                  "Том мне просто друг. Он не мой парень."
                 ],
                 [
-                  "No one man could do it.",
-                  "Ни один человек не мог это сделать."
+                  "My mother is not always at home.",
+                  "Моя мама не всегда дома."
                 ],
                 [
-                  "Where is your father?",
-                  "Где твой отец?"
+                  "Where's your mother? Is she at home?",
+                  "Где твоя мама? Она дома?"
                 ]
               ],
               "id": "russian_t2_3_4"
@@ -686,16 +692,16 @@
       ],
       "preview": [
         [
-          "Who is that man?",
-          "Кто этот человек?"
+          "I don't know who this man is.",
+          "Я не знаю, что это за человек."
         ],
         [
-          "What a man you are!",
-          "Что ты за человек!"
+          "Yes, I am his mother.",
+          "Да, я его мама."
         ],
         [
-          "What kind of man was he?",
-          "Что он был за человек?"
+          "Are you telling me you are not my father?",
+          "Ты хочешь сказать, что ты не мой отец?"
         ]
       ]
     },
@@ -713,9 +719,9 @@
               "answer": "Как мне это есть?",
               "choices": [
                 "Я сейчас есть не хочу.",
-                "Теперь я хочу есть.",
+                "Как мне это есть?",
                 "Я не могу это есть.",
-                "Как мне это есть?"
+                "Теперь я хочу есть."
               ],
               "id": "russian_t3_1_0"
             },
@@ -725,9 +731,9 @@
               "answer": "это",
               "choices": [
                 "мне",
+                "Не",
                 "Он",
-                "это",
-                "Не"
+                "это"
               ],
               "id": "russian_t3_1_1"
             },
@@ -788,8 +794,8 @@
               "question": "I can't eat now.",
               "answer": "Я не могу сейчас есть.",
               "choices": [
-                "Я не могу сейчас есть.",
                 "Я не могу это есть.",
+                "Я не могу сейчас есть.",
                 "Я сейчас не хочу ничего есть.",
                 "Я не хочу ничего есть сейчас."
               ],
@@ -800,10 +806,10 @@
               "question": "Я ____ хочу!",
               "answer": "есть",
               "choices": [
-                "что",
-                "есть",
+                "Не",
                 "будет",
-                "Не"
+                "есть",
+                "что"
               ],
               "id": "russian_t3_2_1"
             },
@@ -862,10 +868,10 @@
               "question": "Why am I hungry?",
               "answer": "Почему я хочу есть?",
               "choices": [
-                "Не могу есть.",
                 "Я могу есть?",
-                "Почему я хочу есть?",
-                "Я сейчас не очень хочу есть."
+                "Не могу есть.",
+                "Я сейчас не очень хочу есть.",
+                "Почему я хочу есть?"
               ],
               "id": "russian_t3_3_0"
             },
@@ -874,10 +880,10 @@
               "question": "Я сейчас не ____ хочу есть.",
               "answer": "очень",
               "choices": [
-                "мне",
-                "всё",
                 "есть",
-                "очень"
+                "очень",
+                "мне",
+                "всё"
               ],
               "id": "russian_t3_3_1"
             },
@@ -956,47 +962,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "There isn't room for everyone.",
-              "answer": "Не для всех есть место.",
+              "question": "I really want to go home.",
+              "answer": "Я очень хочу домой.",
               "choices": [
-                "Теперь иди домой.",
-                "Мне надо домой.",
-                "Не для всех есть место.",
-                "Тебе сейчас надо домой?"
+                "Том никогда не был у меня дома.",
+                "Я очень хочу домой.",
+                "Не думаю, что она дома.",
+                "Я не думаю, что Том дома."
               ],
               "id": "russian_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Для меня ____ место?",
-              "answer": "есть",
+              "question": "Я пока ____ хочу домой.",
+              "answer": "не",
               "choices": [
-                "домой",
-                "сказала",
-                "Она",
-                "есть"
+                "было",
+                "что",
+                "хочу",
+                "не"
               ],
               "id": "russian_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "We have room.",
-              "answer": "У нас есть место.",
+              "question": "He said he wanted to go home.",
+              "answer": "Он сказал, что хочет домой.",
               "words": [
-                "очень",
-                "надо",
-                "нас",
-                "У",
-                "место.",
-                "есть"
+                "сказал,",
+                "думаю,",
+                "у",
+                "Он",
+                "домой.",
+                "что",
+                "хочет"
               ],
               "id": "russian_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Место есть для всех.",
-              "audio": "Место есть для всех.",
+              "answer": "Она сказала, что хочет домой.",
+              "audio": "Она сказала, что хочет домой.",
               "id": "russian_t4_1_3"
             },
             {
@@ -1005,20 +1012,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I need to go home.",
-                  "Мне надо домой."
+                  "I do not think that she is at home.",
+                  "Не думаю, что она дома."
                 ],
                 [
-                  "Are you going home now?",
-                  "Ты сейчас домой?"
+                  "I'm not coming from home.",
+                  "Я не из дома."
                 ],
                 [
-                  "I really want to go home.",
-                  "Я очень хочу домой."
+                  "He is away from home.",
+                  "Его нет дома."
                 ],
                 [
-                  "Does Tom want to go home?",
-                  "Том хочет домой?"
+                  "I want to be at home.",
+                  "Я хочу быть дома."
                 ]
               ],
               "id": "russian_t4_1_4"
@@ -1031,46 +1038,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I need to come home.",
-              "answer": "Мне нужно домой.",
+              "question": "I wasn't home.",
+              "answer": "Я не был дома.",
               "choices": [
-                "Тебе домой не надо?",
-                "Теперь иди домой.",
-                "Мне нужно домой.",
-                "Для меня есть место?"
+                "Я пока не хочу домой.",
+                "Я не был дома.",
+                "Том никогда не был у меня дома.",
+                "Том сейчас может быть не дома."
               ],
               "id": "russian_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Тебе ____ домой.",
-              "answer": "нужно",
+              "question": "У меня ____ дома.",
+              "answer": "нет",
               "choices": [
-                "Мне",
-                "для",
-                "нужно",
-                "Ему"
+                "Он",
+                "нет",
+                "пока",
+                "сказал"
               ],
               "id": "russian_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "I want to come home.",
-              "answer": "Я хочу домой.",
+              "question": "You're never at home.",
+              "answer": "Тебя никогда нет дома.",
               "words": [
-                "хочу",
-                "домой.",
-                "есть",
-                "Я",
-                "что"
+                "нет",
+                "дома.",
+                "никогда",
+                "думаю,",
+                "Тебя",
+                "домой."
               ],
               "id": "russian_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Мне надо бы домой.",
-              "audio": "Мне надо бы домой.",
+              "answer": "Он не дома.",
+              "audio": "Он не дома.",
               "id": "russian_t4_2_3"
             },
             {
@@ -1079,20 +1087,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I needed to go home.",
-                  "Мне нужно было домой."
+                  "He was away from home.",
+                  "Его не было дома."
                 ],
                 [
-                  "I don't want to go back home yet.",
-                  "Я пока не хочу домой."
+                  "We're back home.",
+                  "Мы снова дома."
                 ],
                 [
-                  "We should go home.",
-                  "Нам надо домой."
+                  "I'm not home.",
+                  "Я не дома."
                 ],
                 [
-                  "Shouldn't you go back home?",
-                  "Тебе домой не надо?"
+                  "Tom may not be at home now.",
+                  "Том сейчас может быть не дома."
                 ]
               ],
               "id": "russian_t4_2_4"
@@ -1105,48 +1113,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He really needs to go home.",
-              "answer": "Ему правда нужно домой.",
+              "question": "We're not home.",
+              "answer": "Мы не дома.",
               "choices": [
-                "Для меня есть место?",
-                "Мне надо бы домой.",
-                "Место есть для всех.",
-                "Ему правда нужно домой."
+                "Он не дома.",
+                "Она сказала, что хочет домой.",
+                "Я пока не хочу домой.",
+                "Мы не дома."
               ],
               "id": "russian_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Он сказал, ____ хочет домой.",
-              "answer": "что",
+              "question": "Почему тебя ____ дома?",
+              "answer": "нет",
               "choices": [
-                "Для",
-                "что",
                 "Она",
-                "есть"
+                "нет",
+                "было",
+                "Он"
               ],
               "id": "russian_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "She said she wanted to go home.",
-              "answer": "Она сказала, что хочет домой.",
+              "question": "I don't have a house anymore.",
+              "answer": "У меня больше нет дома.",
               "words": [
-                "иди",
-                "домой.",
-                "хочет",
-                "Она",
-                "Домой?",
-                "что",
-                "сказала,"
+                "никогда",
+                "дома.",
+                "нет",
+                "У",
+                "может",
+                "больше",
+                "меня"
               ],
               "id": "russian_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Тебе сейчас надо домой?",
-              "audio": "Тебе сейчас надо домой?",
+              "answer": "Я не думаю, что Том дома.",
+              "audio": "Я не думаю, что Том дома.",
               "id": "russian_t4_3_3"
             },
             {
@@ -1155,20 +1163,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Where are we going now? Home?",
-                  "Мы сейчас куда? Домой?"
+                  "He is supposed to be at home today.",
+                  "Он должен быть сегодня дома."
                 ],
                 [
-                  "I have to go home now.",
-                  "Мне сейчас надо домой."
+                  "I guess Tom isn't at home.",
+                  "Я так думаю, что Том сейчас не дома."
                 ],
                 [
-                  "I'm heading home now.",
-                  "Я сейчас домой."
+                  "I'm coming from home.",
+                  "Я из дома."
                 ],
                 [
-                  "Now go home.",
-                  "Теперь иди домой."
+                  "Tom has never been in my house.",
+                  "Том никогда не был у меня дома."
                 ]
               ],
               "id": "russian_t4_3_4"
@@ -1178,16 +1186,16 @@
       ],
       "preview": [
         [
-          "There isn't room for everyone.",
-          "Не для всех есть место."
+          "I really want to go home.",
+          "Я очень хочу домой."
         ],
         [
-          "Is there room for me?",
-          "Для меня есть место?"
+          "I don't want to go back home yet.",
+          "Я пока не хочу домой."
         ],
         [
-          "We have room.",
-          "У нас есть место."
+          "He said he wanted to go home.",
+          "Он сказал, что хочет домой."
         ]
       ]
     },
@@ -1201,48 +1209,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He can't walk any more.",
-              "answer": "Он больше не может идти.",
+              "question": "I can't walk any more.",
+              "answer": "Я больше не могу идти.",
               "choices": [
-                "Он больше не может идти.",
-                "Он больше не мог идти.",
-                "Том больше не может идти.",
-                "Я не могу идти."
+                "Том сказал мне, что он не может идти.",
+                "Я больше не могу идти.",
+                "Том сказал, что не может идти.",
+                "Я не мог идти."
               ],
               "id": "russian_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Вы ____ идти?",
-              "answer": "можете",
+              "question": "Я не ____ идти.",
+              "answer": "могу",
               "choices": [
-                "больше",
-                "можете",
-                "Ты",
-                "сказала"
+                "не",
+                "быстро",
+                "сказала",
+                "могу"
               ],
               "id": "russian_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "Tom can't walk any more.",
-              "answer": "Том больше не может идти.",
+              "question": "Tom told me he couldn't walk.",
+              "answer": "Том сказал мне, что он не может идти.",
               "words": [
-                "больше",
+                "взять",
+                "что",
+                "мне,",
                 "не",
-                "можете",
+                "сказал",
+                "могу",
+                "идти.",
                 "Том",
-                "может",
-                "может",
-                "идти."
+                "он",
+                "может"
               ],
               "id": "russian_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я не мог идти.",
-              "audio": "Я не мог идти.",
+              "answer": "Он сказал мне, что не может идти.",
+              "audio": "Он сказал мне, что не может идти.",
               "id": "russian_t5_1_3"
             },
             {
@@ -1251,20 +1262,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I can't walk any more.",
-                  "Я больше не могу идти."
+                  "She told me that she couldn't walk.",
+                  "Она сказала мне, что не может идти."
                 ],
                 [
-                  "Tom said he couldn't walk.",
-                  "Том сказал, что не может идти."
+                  "He says he can't walk any further.",
+                  "Он говорит, что не может больше идти."
                 ],
                 [
-                  "Can you still walk?",
-                  "Ты ещё можешь идти?"
+                  "She says she can't walk any further.",
+                  "Она говорит, что не может больше идти."
                 ],
                 [
-                  "Tom couldn't walk.",
-                  "Том не мог идти."
+                  "It's already time not just to talk the talk, but to walk the walk.",
+                  "Уже пора не только говорить, но и делать."
                 ]
               ],
               "id": "russian_t5_1_4"
@@ -1277,48 +1288,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can walk.",
-              "answer": "Я могу идти.",
+              "question": "He can't walk any more.",
+              "answer": "Он больше не может идти.",
               "choices": [
-                "Я не могу идти.",
-                "Я могу идти.",
-                "Я не мог идти.",
-                "Уже пора не только говорить, но и делать."
+                "Я не хочу машину.",
+                "Он больше не может идти.",
+                "Он сказал мне, что не может идти.",
+                "Я не мог идти."
               ],
               "id": "russian_t5_2_0"
             },
             {
               "type": "cloze",
               "question": "Я не ____ идти.",
-              "answer": "могу",
+              "answer": "мог",
               "choices": [
-                "не",
-                "могу",
-                "сказал",
-                "так"
+                "Она",
+                "мог",
+                "идти",
+                "Уже"
               ],
               "id": "russian_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "He could not walk any further.",
-              "answer": "Он больше не мог идти.",
+              "question": "Tom said he couldn't walk.",
+              "answer": "Том сказал, что не может идти.",
               "words": [
-                "больше",
-                "Я",
-                "мог",
-                "Он",
-                "может",
+                "сказал,",
+                "идти.",
                 "не",
-                "идти."
+                "Том",
+                "что",
+                "только",
+                "может",
+                "просто"
               ],
               "id": "russian_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Том сказал мне, что он не может идти.",
-              "audio": "Том сказал мне, что он не может идти.",
+              "answer": "Я могу идти.",
+              "audio": "Я могу идти.",
               "id": "russian_t5_2_3"
             },
             {
@@ -1327,20 +1339,20 @@
               "answer": "matched",
               "pairs": [
                 [
+                  "He could not walk any further.",
+                  "Он больше не мог идти."
+                ],
+                [
                   "I couldn't walk anymore.",
                   "Я больше не мог идти."
                 ],
                 [
-                  "He told me that he couldn't walk.",
-                  "Он сказал мне, что не может идти."
+                  "I can't walk any further.",
+                  "Я не могу идти дальше."
                 ],
                 [
-                  "She told me that she couldn't walk.",
-                  "Она сказала мне, что не может идти."
-                ],
-                [
-                  "He says he can't walk any further.",
-                  "Он говорит, что не может больше идти."
+                  "I cannot walk any farther.",
+                  "Я дальше идти не могу."
                 ]
               ],
               "id": "russian_t5_2_4"
@@ -1353,47 +1365,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She says she can't walk any further.",
-              "answer": "Она говорит, что не может больше идти.",
+              "question": "It isn't much of a car.",
+              "answer": "Это не очень похоже на машину.",
               "choices": [
-                "Вы можете идти?",
-                "Она говорит, что не может больше идти.",
-                "Я дальше идти не могу.",
-                "Я не мою твою машину."
+                "Мы не можем просто взять и уйти.",
+                "Я не могу идти.",
+                "Я не могу уйти отсюда.",
+                "Это не очень похоже на машину."
               ],
               "id": "russian_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Уже пора не только ____ но и делать.",
-              "answer": "говорить",
+              "question": "Я не ____ машину.",
+              "answer": "хочу",
               "choices": [
-                "не",
-                "Вы",
-                "говорить",
-                "машину"
+                "дальше",
+                "хочу",
+                "быстрее",
+                "идти"
               ],
               "id": "russian_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "Don't walk so fast.",
-              "answer": "Не иди так быстро.",
+              "question": "Tell Tom that I need to borrow his car.",
+              "answer": "Скажи Тому, что мне нужно взять его машину.",
               "words": [
-                "иди",
-                "так",
-                "быстро.",
-                "мне,",
-                "Не",
-                "сказал"
+                "что",
+                "его",
+                "Тому,",
+                "взять",
+                "мне",
+                "быстрее.",
+                "нужно",
+                "Скажи",
+                "машину.",
+                "можешь"
               ],
               "id": "russian_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Можно мне пойти с вами?",
-              "audio": "Можно мне пойти с вами?",
+              "answer": "Не иди так быстро.",
+              "audio": "Не иди так быстро.",
               "id": "russian_t5_3_3"
             },
             {
@@ -1402,20 +1418,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I can't walk any further.",
-                  "Я не могу идти дальше."
+                  "You can't just walk away.",
+                  "Ты не можешь просто взять и уйти."
                 ],
                 [
-                  "I cannot walk any farther.",
-                  "Я дальше идти не могу."
+                  "I can't walk away from this.",
+                  "Я не могу уйти отсюда."
                 ],
                 [
-                  "I don't wash your car.",
-                  "Я не мою твою машину."
+                  "We can't just walk away.",
+                  "Мы не можем просто взять и уйти."
                 ],
                 [
-                  "Take my car.",
-                  "Возьми мою машину."
+                  "I don't think that I can walk any faster.",
+                  "Не думаю, что могу идти быстрее."
                 ]
               ],
               "id": "russian_t5_3_4"
@@ -1425,16 +1441,16 @@
       ],
       "preview": [
         [
-          "He can't walk any more.",
-          "Он больше не может идти."
+          "I can't walk any more.",
+          "Я больше не могу идти."
         ],
         [
-          "Can you walk?",
-          "Вы можете идти?"
+          "I'm not able to walk.",
+          "Я не могу идти."
         ],
         [
-          "Tom can't walk any more.",
-          "Том больше не может идти."
+          "Tom told me he couldn't walk.",
+          "Том сказал мне, что он не может идти."
         ]
       ]
     },
@@ -1451,10 +1467,10 @@
               "question": "One minute he was here, the next he was gone.",
               "answer": "Только что он был здесь, и уже нет.",
               "choices": [
-                "На это нужно время.",
-                "Я был здесь всё время.",
-                "Нам нужно время.",
-                "Только что он был здесь, и уже нет."
+                "У меня есть время.",
+                "У меня ещё есть время.",
+                "Только что он был здесь, и уже нет.",
+                "У него есть время."
               ],
               "id": "russian_t6_1_0"
             },
@@ -1463,34 +1479,33 @@
               "question": "Только что она была ____ и уже нет.",
               "answer": "здесь",
               "choices": [
-                "здесь",
+                "этот",
                 "что",
-                "нет",
-                "она"
+                "Время",
+                "здесь"
               ],
               "id": "russian_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "I think about you all the time.",
-              "answer": "Я всё время думаю о тебе.",
+              "question": "Now I've got some time.",
+              "answer": "Сейчас у меня есть время.",
               "words": [
-                "всё",
-                "о",
-                "тебе.",
-                "Я",
-                "думаю",
-                "время",
-                "о",
-                "время"
+                "у",
+                "есть",
+                "Время",
+                "был",
+                "время.",
+                "меня",
+                "Сейчас"
               ],
               "id": "russian_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "На это нужно время.",
-              "audio": "На это нужно время.",
+              "answer": "У меня есть время.",
+              "audio": "У меня есть время.",
               "id": "russian_t6_1_3"
             },
             {
@@ -1499,20 +1514,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I was there all the time.",
-                  "Всё это время я был там."
+                  "You have time.",
+                  "У тебя есть время."
                 ],
                 [
-                  "We have time.",
-                  "У нас есть время."
+                  "You've got time.",
+                  "Время у тебя есть."
                 ],
                 [
-                  "I just need time.",
-                  "Мне просто нужно время."
+                  "Do you have time to do that?",
+                  "У тебя есть на это время?"
                 ],
                 [
-                  "I wish we had time.",
-                  "Если бы у нас было время!"
+                  "Do we have time for this?",
+                  "У нас есть на это время?"
                 ]
               ],
               "id": "russian_t6_1_4"
@@ -1525,48 +1540,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Now is not the time.",
-              "answer": "Сейчас не время.",
+              "question": "Do you have time now?",
+              "answer": "У тебя сейчас есть время?",
               "choices": [
-                "Сейчас не время.",
-                "Всё это время я был там.",
-                "Нам нужно было время.",
-                "Нам нужно время."
+                "У тебя есть время.",
+                "У тебя сейчас есть время?",
+                "Что он сказал на этот раз?",
+                "У него есть время."
               ],
               "id": "russian_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Мне ____ время.",
-              "answer": "нужно",
+              "question": "У тебя есть ____ меня время?",
+              "answer": "для",
               "choices": [
+                "Сейчас",
+                "для",
                 "что",
-                "нужно",
-                "здесь",
-                "нет"
+                "он"
               ],
               "id": "russian_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Now I've got some time.",
-              "answer": "Сейчас у меня есть время.",
+              "question": "What's wrong this time?",
+              "answer": "Что не так на этот раз?",
               "words": [
-                "время.",
-                "был",
-                "есть",
-                "Сейчас",
-                "у",
-                "меня",
-                "нужно"
+                "раз?",
+                "этот",
+                "не",
+                "Что",
+                "на",
+                "так",
+                "раз?",
+                "сказать."
               ],
               "id": "russian_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я всё время здесь.",
-              "audio": "Я всё время здесь.",
+              "answer": "На этот раз это ты.",
+              "audio": "На этот раз это ты.",
               "id": "russian_t6_2_3"
             },
             {
@@ -1575,20 +1591,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I have time.",
-                  "У меня есть время."
+                  "I don't know if I'll have time.",
+                  "Я не знаю, будет ли у меня время."
                 ],
                 [
-                  "You have time.",
-                  "У тебя есть время."
+                  "I don't know if I have the time.",
+                  "Я не знаю, есть ли у меня время."
                 ],
                 [
-                  "Where were you that whole time?",
-                  "Где ты был всё это время?"
+                  "I don't know if there's time.",
+                  "Я не знаю, есть ли время."
                 ],
                 [
-                  "I was here all the time.",
-                  "Я был здесь всё время."
+                  "I still have time.",
+                  "У меня ещё есть время."
                 ]
               ],
               "id": "russian_t6_2_4"
@@ -1601,47 +1617,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you have time?",
-              "answer": "У вас есть время?",
+              "question": "Do you still have time?",
+              "answer": "У тебя ещё есть время?",
               "choices": [
-                "На это нужно время.",
-                "Мне просто нужно время.",
+                "У меня есть время.",
+                "У тебя есть на это время?",
                 "Только что она была здесь, и уже нет.",
-                "У вас есть время?"
+                "У тебя ещё есть время?"
               ],
               "id": "russian_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Время у ____ есть.",
-              "answer": "нас",
+              "question": "Время на ____ ещё есть?",
+              "answer": "это",
               "choices": [
-                "что",
-                "нас",
-                "Если",
-                "нет"
+                "нет",
+                "это",
+                "он",
+                "сказать"
               ],
               "id": "russian_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "We needed time.",
-              "answer": "Нам нужно было время.",
+              "question": "What did he say this time?",
+              "answer": "Что он сказал на этот раз?",
               "words": [
-                "нужно",
-                "здесь",
-                "время.",
-                "Нам",
-                "было",
-                "нужно"
+                "сказал",
+                "на",
+                "он",
+                "есть?",
+                "раз?",
+                "Что",
+                "тогда",
+                "этот"
               ],
               "id": "russian_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Нам нужно время.",
-              "audio": "Нам нужно время.",
+              "answer": "У него есть время.",
+              "audio": "У него есть время.",
               "id": "russian_t6_3_3"
             },
             {
@@ -1650,20 +1668,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We just need time.",
-                  "Нам просто нужно время."
+                  "He still has time.",
+                  "Время у него ещё есть."
                 ],
                 [
-                  "You've got time.",
-                  "Время у тебя есть."
+                  "I wasn't with you at that time.",
+                  "Я тогда был не с тобой."
                 ],
                 [
-                  "I needed time.",
-                  "Мне нужно было время."
+                  "I can't say anything at this time.",
+                  "Я пока ничего не могу сказать."
                 ],
                 [
-                  "Do you have time to do that?",
-                  "У тебя есть на это время?"
+                  "I'm free today.",
+                  "У меня сегодня есть время."
                 ]
               ],
               "id": "russian_t6_3_4"
@@ -1681,8 +1699,8 @@
           "Только что она была здесь, и уже нет."
         ],
         [
-          "I think about you all the time.",
-          "Я всё время думаю о тебе."
+          "Now I've got some time.",
+          "Сейчас у меня есть время."
         ]
       ]
     },
@@ -1696,47 +1714,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He has a lot of work to do.",
-              "answer": "Ему нужно много сделать.",
+              "question": "You don't know how much money I owe.",
+              "answer": "Ты не знаешь, сколько я должен.",
               "choices": [
-                "Он сделал это за деньги.",
-                "Я хочу деньги.",
-                "Ему нужно много сделать.",
-                "Сколько ты им должен?"
+                "У него есть деньги.",
+                "Ты не знаешь, сколько я должен.",
+                "Я не хочу делать его работу за него.",
+                "Ты не должен делать его работу."
               ],
               "id": "russian_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Сколько ты ____ должен?",
-              "answer": "нам",
+              "question": "У тебя ____ деньги?",
+              "answer": "есть",
               "choices": [
-                "Где",
-                "сделать",
-                "сделал",
-                "нам"
+                "деньги",
+                "Это",
+                "может",
+                "есть"
               ],
               "id": "russian_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "How much money do you owe them?",
-              "answer": "Сколько ты им должен?",
+              "question": "He has money.",
+              "answer": "У него есть деньги.",
               "words": [
-                "ты",
-                "должен?",
-                "им",
-                "Ты",
-                "Сколько",
-                "у"
+                "него",
+                "деньги.",
+                "есть",
+                "деньги.",
+                "У",
+                "сделать"
               ],
               "id": "russian_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Сколько вы мне должны?",
-              "audio": "Сколько вы мне должны?",
+              "answer": "У меня есть деньги.",
+              "audio": "У меня есть деньги.",
               "id": "russian_t7_1_3"
             },
             {
@@ -1745,20 +1763,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How much money do you owe him?",
-                  "Сколько вы ему должны?"
+                  "This is all the money I have.",
+                  "Это все деньги, которые у меня есть."
                 ],
                 [
-                  "How much money do you owe her?",
-                  "Сколько вы ей должны?"
+                  "Does he have money?",
+                  "Деньги у него есть?"
                 ],
                 [
-                  "How much money do we owe them?",
-                  "Сколько мы им должны?"
+                  "This is all the money that I have now.",
+                  "Это все деньги, что у меня сейчас есть."
                 ],
                 [
-                  "How much money does Tom owe you?",
-                  "Сколько Том тебе должен?"
+                  "This is all the money I have now.",
+                  "Это все деньги, которые у меня сейчас есть."
                 ]
               ],
               "id": "russian_t7_1_4"
@@ -1771,46 +1789,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't know how much money I owe.",
-              "answer": "Ты не знаешь, сколько я должен.",
+              "question": "You have money, don't you?",
+              "answer": "У тебя же есть деньги?",
               "choices": [
-                "Ты не знаешь, сколько я должен.",
-                "У него есть деньги.",
-                "Сколько вы ей должны?",
-                "Сколько вы мне должны?"
+                "Деньги у него есть?",
+                "У тебя же есть деньги?",
+                "У меня есть деньги.",
+                "Я не уверен, что хочу работу."
               ],
               "id": "russian_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Деньги — ____ всё.",
-              "answer": "это",
+              "question": "У него ____ есть?",
+              "answer": "деньги",
               "choices": [
-                "это",
-                "мы",
-                "сделать",
-                "не"
+                "не",
+                "деньги",
+                "может",
+                "могу"
               ],
               "id": "russian_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "He wants the money.",
-              "answer": "Он хочет деньги.",
+              "question": "Do you have my money or not?",
+              "answer": "Мои деньги у вас или нет?",
               "words": [
-                "хочет",
-                "хочу",
-                "деньги?",
-                "Он",
-                "деньги."
+                "деньги",
+                "найти",
+                "вас",
+                "нет?",
+                "у",
+                "Мои",
+                "или",
+                "сколько"
               ],
               "id": "russian_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У вас есть деньги?",
-              "audio": "У вас есть деньги?",
+              "answer": "На что у меня есть деньги?",
+              "audio": "На что у меня есть деньги?",
               "id": "russian_t7_2_3"
             },
             {
@@ -1819,20 +1840,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you have money?",
-                  "У тебя есть деньги?"
+                  "He has a lot of work to do.",
+                  "Ему нужно много сделать."
                 ],
                 [
-                  "He did it for money.",
-                  "Он сделал это за деньги."
+                  "You shouldn't do his work.",
+                  "Ты не должен делать его работу."
                 ],
                 [
-                  "I want money.",
-                  "Я хочу деньги."
+                  "I don't want to do his work for him.",
+                  "Я не хочу делать его работу за него."
                 ],
                 [
-                  "He has money.",
-                  "У него есть деньги."
+                  "I'm not sure I want the job.",
+                  "Я не уверен, что хочу работу."
                 ]
               ],
               "id": "russian_t7_2_4"
@@ -1845,47 +1866,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I have money.",
-              "answer": "У меня есть деньги.",
+              "question": "I want you to do this work.",
+              "answer": "Я хочу, чтобы ты сделал эту работу.",
               "choices": [
-                "У меня есть деньги.",
-                "Сколько ты нам должен?",
-                "Я хочу деньги.",
-                "Сколько мы им должны?"
+                "У тебя есть деньги?",
+                "Я не хочу делать его работу за него.",
+                "Это все деньги, что у меня сейчас есть.",
+                "Я хочу, чтобы ты сделал эту работу."
               ],
               "id": "russian_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "У них ____ деньги?",
-              "answer": "есть",
+              "question": "Я не могу ____ эту работу один.",
+              "answer": "сделать",
               "choices": [
-                "ты",
-                "есть",
+                "нужно",
+                "тебя",
                 "сделать",
-                "знаю"
+                "может"
               ],
               "id": "russian_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "Why do you need this money?",
-              "answer": "Зачем тебе эти деньги?",
+              "question": "I don't know if I can do this job.",
+              "answer": "Не знаю, могу ли я сделать эту работу.",
               "words": [
-                "ему",
-                "деньги?",
-                "тебе",
-                "Зачем",
-                "них",
-                "эти"
+                "хочу,",
+                "ли",
+                "знаю,",
+                "работу.",
+                "сделать",
+                "эту",
+                "Я",
+                "Не",
+                "я",
+                "могу"
               ],
               "id": "russian_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Это просто деньги.",
-              "audio": "Это просто деньги.",
+              "answer": "Я не могу найти работу.",
+              "audio": "Я не могу найти работу.",
               "id": "russian_t7_3_3"
             },
             {
@@ -1894,20 +1919,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I know where the money is.",
-                  "Я знаю, где деньги."
+                  "I can't do this job.",
+                  "Я не могу сделать эту работу."
                 ],
                 [
-                  "I want my money now.",
-                  "Я хочу мои деньги сейчас."
+                  "Do you want the job or not?",
+                  "Ты хочешь работу или нет?"
                 ],
                 [
-                  "This is all the money I have.",
-                  "Это все деньги, которые у меня есть."
+                  "Do you want this job or not?",
+                  "Ты хочешь эту работу или нет?"
                 ],
                 [
-                  "Where's my money?",
-                  "Где мои деньги?"
+                  "He said he couldn't find a job.",
+                  "Он сказал, что не может найти работу."
                 ]
               ],
               "id": "russian_t7_3_4"
@@ -1917,16 +1942,16 @@
       ],
       "preview": [
         [
-          "He has a lot of work to do.",
-          "Ему нужно много сделать."
+          "You don't know how much money I owe.",
+          "Ты не знаешь, сколько я должен."
         ],
         [
-          "How much money do you owe us?",
-          "Сколько ты нам должен?"
+          "Do you have money?",
+          "У тебя есть деньги?"
         ],
         [
-          "How much money do you owe them?",
-          "Сколько ты им должен?"
+          "He has money.",
+          "У него есть деньги."
         ]
       ]
     },
@@ -1940,47 +1965,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What do you think of this?",
-              "answer": "Как тебе это?",
+              "question": "I'll be here if you need me.",
+              "answer": "Если что, я здесь.",
               "choices": [
+                "У меня есть то, что мне нужно.",
                 "Если что, я здесь.",
-                "Это то, что мне нужно.",
-                "Вам это нужно.",
-                "Как тебе это?"
+                "Мне здесь очень хорошо.",
+                "Мне нужно быть здесь."
               ],
               "id": "russian_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Мне ____ хорошо.",
-              "answer": "так",
+              "question": "Как ____ это?",
+              "answer": "тебе",
               "choices": [
-                "тебе",
-                "вам",
+                "что",
+                "быть",
                 "то",
-                "так"
+                "тебе"
               ],
               "id": "russian_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "I'll be here if you need me.",
-              "answer": "Если что, я здесь.",
+              "question": "I feel really good here.",
+              "answer": "Мне здесь очень хорошо.",
               "words": [
-                "что,",
+                "здесь",
+                "Здесь",
                 "хорошо.",
-                "здесь.",
-                "Если",
                 "Мне",
-                "я"
+                "не",
+                "очень"
               ],
               "id": "russian_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Как она вам?",
-              "audio": "Как она вам?",
+              "answer": "Это то, что мне нужно.",
+              "audio": "Это то, что мне нужно.",
               "id": "russian_t8_1_3"
             },
             {
@@ -1989,20 +2014,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What do you guys think of him?",
-                  "Как он вам?"
+                  "I have everything I need.",
+                  "У меня есть всё, что нужно."
                 ],
                 [
-                  "What do you guys think of them?",
-                  "Как они вам?"
+                  "I don't need that.",
+                  "Мне это не нужно."
                 ],
                 [
-                  "I feel really good here.",
-                  "Мне здесь очень хорошо."
+                  "I'll need that.",
+                  "Мне будет нужно это."
                 ],
                 [
-                  "You need this.",
-                  "Вам это нужно."
+                  "I need to be here.",
+                  "Мне нужно быть здесь."
                 ]
               ],
               "id": "russian_t8_1_4"
@@ -2015,48 +2040,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What do you need?",
-              "answer": "Что тебе нужно?",
+              "question": "I don't know what you need.",
+              "answer": "Я не знаю, что тебе нужно.",
               "choices": [
-                "Что тебе нужно?",
-                "Мне будет нужно это.",
-                "Мне это нужно.",
-                "Это то, что мне нужно."
+                "У меня здесь есть всё, что мне нужно.",
+                "Я не знаю, что тебе нужно.",
+                "Мне не нужно быть здесь.",
+                "У меня есть то, что мне нужно."
               ],
               "id": "russian_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Мне ____ нужно.",
-              "answer": "это",
+              "question": "Мне не ____ быть здесь.",
+              "answer": "нужно",
               "choices": [
-                "мне",
-                "так",
-                "тебе",
-                "это"
+                "знаю",
+                "нужно",
+                "Как",
+                "что"
               ],
               "id": "russian_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "This is what I need.",
-              "answer": "Это то, что мне нужно.",
+              "question": "I have what I need.",
+              "answer": "У меня есть то, что мне нужно.",
               "words": [
+                "есть",
                 "то,",
+                "меня",
+                "У",
+                "и",
                 "что",
                 "мне",
-                "нужно?",
-                "Если",
-                "нужно.",
-                "Это"
+                "У",
+                "нужно."
               ],
               "id": "russian_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У меня есть всё, что нужно.",
-              "audio": "У меня есть всё, что нужно.",
+              "answer": "Мне это уже не нужно.",
+              "audio": "Мне это уже не нужно.",
               "id": "russian_t8_2_3"
             },
             {
@@ -2065,20 +2092,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We don't need it anymore.",
-                  "Нам это уже не нужно."
+                  "We've got everything we need.",
+                  "У нас есть все, что нам нужно."
                 ],
                 [
-                  "We need this.",
-                  "Нам это нужно."
+                  "That's all I need.",
+                  "Это всё, что мне нужно."
                 ],
                 [
-                  "I don't need that.",
-                  "Мне это не нужно."
+                  "You don't need that, do you?",
+                  "Тебе же это не нужно, да?"
                 ],
                 [
-                  "I'll need that.",
-                  "Мне будет нужно это."
+                  "I have everything here that I need.",
+                  "У меня здесь есть всё, что мне нужно."
                 ]
               ],
               "id": "russian_t8_2_4"
@@ -2091,48 +2118,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I need to be here.",
-              "answer": "Мне нужно быть здесь.",
+              "question": "Everything you need is here.",
+              "answer": "Здесь есть всё, что тебе нужно.",
               "choices": [
-                "Мне нужно быть здесь.",
-                "Нам это не было нужно.",
-                "Нам это нужно.",
-                "Я не знаю, что тебе нужно."
+                "Нам это здесь не нужно.",
+                "Это всё, что мне нужно.",
+                "Мне это было не нужно.",
+                "Здесь есть всё, что тебе нужно."
               ],
               "id": "russian_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Я не знаю, ____ тебе нужно.",
-              "answer": "что",
+              "question": "Мне это ____ не нужно.",
+              "answer": "было",
               "choices": [
-                "это",
-                "что",
-                "то",
-                "Мне"
+                "здесь",
+                "было",
+                "будет",
+                "Как"
               ],
               "id": "russian_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't need to be here.",
-              "answer": "Мне не нужно быть здесь.",
+              "question": "I don't know what I need.",
+              "answer": "Я не знаю, что мне нужно.",
               "words": [
                 "не",
-                "быть",
-                "нужно",
-                "здесь.",
-                "будет",
-                "уже",
-                "Мне"
+                "же",
+                "хорошо.",
+                "нужно.",
+                "что",
+                "Я",
+                "знаю,",
+                "мне"
               ],
               "id": "russian_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Нам это не было нужно.",
-              "audio": "Нам это не было нужно.",
+              "answer": "Нам это здесь не нужно.",
+              "audio": "Нам это здесь не нужно.",
               "id": "russian_t8_3_3"
             },
             {
@@ -2141,20 +2169,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We don't need that.",
-                  "Нам это не нужно."
+                  "That's what I need.",
+                  "Это мне и нужно."
                 ],
                 [
-                  "I have what I need.",
-                  "У меня есть то, что мне нужно."
+                  "I know what I need.",
+                  "Я знаю, что мне нужно."
                 ],
                 [
-                  "I need it.",
-                  "Мне нужно это."
+                  "We have everything we need already.",
+                  "У нас уже есть всё, что нужно."
                 ],
                 [
-                  "I don't need that anymore.",
-                  "Мне это уже не нужно."
+                  "Do we have everything we need?",
+                  "У нас есть всё, что нужно?"
                 ]
               ],
               "id": "russian_t8_3_4"
@@ -2164,16 +2192,16 @@
       ],
       "preview": [
         [
+          "I'll be here if you need me.",
+          "Если что, я здесь."
+        ],
+        [
           "What do you think of this?",
           "Как тебе это?"
         ],
         [
-          "I feel so good.",
-          "Мне так хорошо."
-        ],
-        [
-          "I'll be here if you need me.",
-          "Если что, я здесь."
+          "I feel really good here.",
+          "Мне здесь очень хорошо."
         ]
       ]
     },
@@ -2190,10 +2218,10 @@
               "question": "He has a warm heart.",
               "answer": "У него доброе сердце.",
               "choices": [
+                "Она сказала мне, что ей холодно.",
                 "У него доброе сердце.",
-                "Она хочет поехать на море.",
-                "У нас тут солнце.",
-                "Не смотри на солнце."
+                "Он сказал, что ему очень холодно.",
+                "Если будет дождь, он не придёт."
               ],
               "id": "russian_t9_1_0"
             },
@@ -2202,31 +2230,33 @@
               "question": "Видно, что он ____ любит своих детей.",
               "answer": "очень",
               "choices": [
-                "знаем",
-                "люблю",
-                "очень",
-                "Как"
+                "спать",
+                "Видно",
+                "море",
+                "очень"
               ],
               "id": "russian_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "I hate the sun.",
-              "answer": "Я ненавижу солнце.",
+              "question": "She wants to go to the sea.",
+              "answer": "Она хочет поехать на море.",
               "words": [
-                "солнце.",
-                "он",
-                "был",
-                "Я",
-                "ненавижу"
+                "хочет",
+                "не",
+                "что",
+                "море.",
+                "Она",
+                "поехать",
+                "на"
               ],
               "id": "russian_t9_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я твоё солнце.",
-              "audio": "Я твоё солнце.",
+              "answer": "Ты когда-нибудь был на море?",
+              "audio": "Ты когда-нибудь был на море?",
               "id": "russian_t9_1_3"
             },
             {
@@ -2235,20 +2265,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We know that the Sun is bigger than the Earth.",
-                  "Мы знаем, что Солнце больше Земли."
+                  "I haven't been on sea for four years.",
+                  "Я четыре года не была на море."
                 ],
                 [
-                  "The Sun is very far from the Earth.",
-                  "Солнце очень далеко от Земли."
+                  "It was so cold that I couldn't sleep.",
+                  "Было так холодно, что я не мог спать."
                 ],
                 [
-                  "I really like the sun.",
-                  "Я правда люблю солнце."
+                  "I told you it was going to be cold.",
+                  "Я говорил тебе, что будет холодно."
                 ],
                 [
-                  "Do you see the sun?",
-                  "Ты видишь солнце?"
+                  "I told Tom that I was cold.",
+                  "Я сказал Тому, что мне холодно."
                 ]
               ],
               "id": "russian_t9_1_4"
@@ -2261,46 +2291,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't like the sun.",
-              "answer": "Не люблю солнце.",
+              "question": "I wasn't very cold.",
+              "answer": "Мне было не очень холодно.",
               "choices": [
-                "Я также хотел увидеть море.",
-                "Не люблю солнце.",
-                "Мы знаем, что Солнце больше Земли.",
-                "Я смотрел вниз на море."
+                "Я четыре года не была на море.",
+                "Мне было не очень холодно.",
+                "У меня такое чувство, что будет дождь.",
+                "Они сказали, что им очень холодно."
               ],
               "id": "russian_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Солнце ____ мной.",
-              "answer": "надо",
+              "question": "Он сказал, что ____ не очень холодно.",
+              "answer": "ему",
               "choices": [
-                "надо",
-                "очень",
-                "он",
-                "доброе"
+                "Меня",
+                "ему",
+                "детей",
+                "сказала"
               ],
               "id": "russian_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "The sun is so big.",
-              "answer": "Солнце такое большое.",
+              "question": "She said that she wasn't very cold.",
+              "answer": "Она сказала, что ей не очень холодно.",
               "words": [
-                "большое.",
-                "Видно,",
-                "также",
-                "Солнце",
-                "такое"
+                "сказала,",
+                "очень",
+                "немного",
+                "доброе",
+                "ей",
+                "что",
+                "не",
+                "Она",
+                "холодно."
               ],
               "id": "russian_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Не смотри прямо на солнце.",
-              "audio": "Не смотри прямо на солнце.",
+              "answer": "Он сказал мне, что ему холодно.",
+              "audio": "Он сказал мне, что ему холодно.",
               "id": "russian_t9_2_3"
             },
             {
@@ -2309,20 +2343,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Don't look at the sun.",
-                  "Не смотри на солнце."
+                  "She told me she was cold.",
+                  "Она сказала мне, что ей холодно."
                 ],
                 [
-                  "The sun is shining where we are.",
-                  "У нас тут солнце."
+                  "He said that he was really cold.",
+                  "Он сказал, что ему очень холодно."
                 ],
                 [
-                  "The sun is much bigger than the earth.",
-                  "Солнце гораздо больше Земли."
+                  "She said that she was really cold.",
+                  "Она сказала, что ей очень холодно."
                 ],
                 [
-                  "How far is it from here to the sea?",
-                  "Как далеко отсюда море?"
+                  "I told you it was going to be cold here.",
+                  "Я тебе говорил, что здесь будет холодно."
                 ]
               ],
               "id": "russian_t9_2_4"
@@ -2335,47 +2369,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The sea was very smooth.",
-              "answer": "Море было очень спокойно.",
+              "question": "They told me they were cold.",
+              "answer": "Они сказали мне, что им холодно.",
               "choices": [
                 "Видно, что он очень любит своих детей.",
-                "Море было очень спокойно.",
-                "Я твоё солнце.",
-                "Солнце надо мной."
+                "Он сказал, что ему не очень холодно.",
+                "Ты когда-нибудь был на море?",
+                "Они сказали мне, что им холодно."
               ],
               "id": "russian_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Я смотрел ____ на море.",
-              "answer": "вниз",
+              "question": "Они сказали, что ____ очень холодно.",
+              "answer": "им",
               "choices": [
-                "солнце",
-                "Как",
-                "правда",
-                "вниз"
+                "будет",
+                "им",
+                "доброе",
+                "Они"
               ],
               "id": "russian_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "The sea can be heard from here.",
-              "answer": "Отсюда можно услышать море.",
+              "question": "Tom and Mary told me they felt cold.",
+              "answer": "Том и Мэри сказали мне, что им холодно.",
               "words": [
-                "услышать",
-                "море.",
-                "можно",
-                "Отсюда",
-                "сердце.",
-                "спокойно."
+                "Мэри",
+                "сказали",
+                "что",
+                "холодно.",
+                "такой",
+                "мне,",
+                "им",
+                "Том",
+                "и",
+                "сказала"
               ],
               "id": "russian_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Он хотел поехать на море.",
-              "audio": "Он хотел поехать на море.",
+              "answer": "Меня не беспокоит то, что немного холодно.",
+              "audio": "Меня не беспокоит то, что немного холодно.",
               "id": "russian_t9_3_3"
             },
             {
@@ -2384,20 +2422,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "The ship is at sea.",
-                  "Корабль в море."
+                  "They say we're going to get rain!",
+                  "Они говорят, что у нас будет дождь!"
                 ],
                 [
-                  "The ship was at sea.",
-                  "Корабль был в море."
+                  "He won't come in a rain like this.",
+                  "Он не придёт в такой дождь."
                 ],
                 [
-                  "She wants to go to the sea.",
-                  "Она хочет поехать на море."
+                  "If it rains, he won't come.",
+                  "Если будет дождь, он не придёт."
                 ],
                 [
-                  "I also wanted to see the sea.",
-                  "Я также хотел увидеть море."
+                  "I have a hunch that it will rain.",
+                  "У меня такое чувство, что будет дождь."
                 ]
               ],
               "id": "russian_t9_3_4"
@@ -2415,8 +2453,8 @@
           "Видно, что он очень любит своих детей."
         ],
         [
-          "I hate the sun.",
-          "Я ненавижу солнце."
+          "She wants to go to the sea.",
+          "Она хочет поехать на море."
         ]
       ]
     },
@@ -2433,43 +2471,48 @@
               "question": "Could you give me a hand?",
               "answer": "Ты не мог бы мне помочь?",
               "choices": [
-                "Он, говорят, хороший доктор.",
-                "Это не доктор.",
-                "Посмотри мне в глаза.",
-                "Ты не мог бы мне помочь?"
+                "Что сказал доктор?",
+                "Ты не мог бы мне помочь?",
+                "Вы действительно доктор?",
+                "Он не видел никого, кроме неё."
               ],
               "id": "russian_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Доктор ____ он?",
-              "answer": "ли",
+              "question": "Я ____ доктор.",
+              "answer": "не",
               "choices": [
-                "помочь",
-                "не",
-                "чувствую",
-                "ли"
+                "Тому",
+                "видела",
+                "есть",
+                "не"
               ],
               "id": "russian_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "What did the doctor say?",
-              "answer": "Что сказал доктор?",
+              "question": "I don't know if he's a doctor.",
+              "answer": "Я не знаю, правда ли, что он доктор.",
               "words": [
-                "доктор?",
-                "отца.",
-                "сказал",
-                "Что",
-                "людей"
+                "не",
+                "знаю,",
+                "правда",
+                "что",
+                "посмотреть",
+                "он",
+                "себе.",
+                "Я",
+                "доктор.",
+                "ли,"
               ],
               "id": "russian_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Я не доктор.",
-              "audio": "Я не доктор.",
+              "answer": "Он не доктор.",
+              "audio": "Он не доктор.",
               "id": "russian_t10_1_3"
             },
             {
@@ -2478,16 +2521,16 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't know if he's a doctor.",
-                  "Я не знаю, правда ли, что он доктор."
-                ],
-                [
-                  "He's not a doctor.",
-                  "Он не доктор."
-                ],
-                [
                   "That's not a doctor.",
                   "Это не доктор."
+                ],
+                [
+                  "Is he a doctor?",
+                  "Доктор ли он?"
+                ],
+                [
+                  "What did the doctor say?",
+                  "Что сказал доктор?"
                 ],
                 [
                   "I saw him with my own eyes.",
@@ -2504,47 +2547,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Are you really a doctor?",
-              "answer": "Вы действительно доктор?",
+              "question": "I've got eyes.",
+              "answer": "У меня есть глаза.",
               "choices": [
-                "Доктор ли он?",
-                "Я себя плохо чувствую.",
-                "Где твои глаза?",
-                "Вы действительно доктор?"
+                "Я не собираюсь с тобой спать.",
+                "У меня есть глаза.",
+                "Я не мог посмотреть ей в лицо.",
+                "Я не доктор."
               ],
               "id": "russian_t10_2_0"
             },
             {
-              "type": "translation",
-              "question": "The world is sick.",
-              "answer": "Мир не в себе.",
+              "type": "cloze",
+              "question": "У него глаза, ____ у отца.",
+              "answer": "как",
               "choices": [
-                "Вы действительно доктор?",
-                "У тебя глаза отца.",
-                "Мир не в себе.",
-                "У меня два глаза."
+                "ли",
+                "как",
+                "не",
+                "говорят"
               ],
               "id": "russian_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "He is said to be a good doctor.",
-              "answer": "Он, говорят, хороший доктор.",
+              "question": "Are you really a doctor?",
+              "answer": "Вы действительно доктор?",
               "words": [
-                "бы",
-                "хороший",
-                "доктор.",
-                "Он,",
-                "что",
-                "говорят,"
+                "действительно",
+                "спать.",
+                "доктор?",
+                "Вы",
+                "хороший"
               ],
               "id": "russian_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У меня два глаза.",
-              "audio": "У меня два глаза.",
+              "answer": "Мир не в себе.",
+              "audio": "Мир не в себе.",
               "id": "russian_t10_2_3"
             },
             {
@@ -2553,20 +2595,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Look at my eyes.",
-                  "Посмотри мне в глаза."
+                  "He only had eyes for her.",
+                  "Он не видел никого, кроме неё."
                 ],
                 [
-                  "Those eyes say everything.",
-                  "Те глаза говорят все."
+                  "She only had eyes for him.",
+                  "Она не видела никого, кроме него."
                 ],
                 [
-                  "Where are your eyes?",
-                  "Где твои глаза?"
+                  "I was unable to look her in the face.",
+                  "Я не мог посмотреть ей в лицо."
                 ],
                 [
-                  "Look into my eyes.",
-                  "Смотри мне в глаза."
+                  "You wouldn't say that to Tom's face.",
+                  "Ты бы не сказал этого Тому в лицо."
                 ]
               ],
               "id": "russian_t10_2_4"
@@ -2579,49 +2621,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I've got eyes.",
-              "answer": "У меня есть глаза.",
+              "question": "He is said to be a good doctor.",
+              "answer": "Он, говорят, хороший доктор.",
               "choices": [
-                "У него глаза, как у отца.",
-                "Не смотри ему в глаза.",
-                "У меня есть глаза.",
-                "Кто-нибудь здесь может мне помочь?"
+                "Я не буду спать.",
+                "Вы не говорили мне, что вы доктор.",
+                "Ты не должен плохо говорить о других.",
+                "Он, говорят, хороший доктор."
               ],
               "id": "russian_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "Не смотри ____ в глаза.",
-              "answer": "ему",
+              "question": "Ты не должен ____ говорить о других.",
+              "answer": "плохо",
               "choices": [
-                "ему",
-                "не",
-                "правда",
-                "помочь"
+                "ли",
+                "плохо",
+                "других",
+                "мне"
               ],
               "id": "russian_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "He has his father's eyes.",
-              "answer": "У него глаза, как у отца.",
+              "question": "You didn't tell me that you were a doctor.",
+              "answer": "Вы не говорили мне, что вы доктор.",
               "words": [
-                "отца.",
-                "как",
-                "его.",
-                "У",
-                "него",
-                "Где",
-                "глаза,",
-                "у"
+                "сам",
+                "мне,",
+                "что",
+                "доктор.",
+                "не",
+                "Она",
+                "вы",
+                "Вы",
+                "говорили"
               ],
               "id": "russian_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "У тебя глаза отца.",
-              "audio": "У тебя глаза отца.",
+              "answer": "Я не мог спать всю ночь.",
+              "audio": "Я не мог спать всю ночь.",
               "id": "russian_t10_3_3"
             },
             {
@@ -2630,20 +2673,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "People have two eyes.",
-                  "У людей два глаза."
+                  "I'd like to sleep with you.",
+                  "Я хотел бы спать с тобой."
                 ],
                 [
-                  "I'm feeling rather sick.",
-                  "Я себя плохо чувствую."
+                  "I'm not going to sleep with you.",
+                  "Я не собираюсь с тобой спать."
                 ],
                 [
-                  "Can somebody give me a hand here?",
-                  "Кто-нибудь здесь может мне помочь?"
+                  "I won't sleep.",
+                  "Я не буду спать."
                 ],
                 [
-                  "Put your hands above your head.",
-                  "Руки за голову."
+                  "I thought you needed the sleep.",
+                  "Я думал, что тебе нужно спать."
                 ]
               ],
               "id": "russian_t10_3_4"
@@ -2657,12 +2700,12 @@
           "Ты не мог бы мне помочь?"
         ],
         [
-          "Is he a doctor?",
-          "Доктор ли он?"
+          "I'm not a doctor.",
+          "Я не доктор."
         ],
         [
-          "What did the doctor say?",
-          "Что сказал доктор?"
+          "I don't know if he's a doctor.",
+          "Я не знаю, правда ли, что он доктор."
         ]
       ]
     }

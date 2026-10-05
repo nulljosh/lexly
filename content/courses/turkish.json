@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-language",
   "level": "Beginner",
-  "version": 2,
+  "version": 3,
   "units": [
     {
       "id": "t1",
@@ -16,37 +16,39 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is this nice?",
-              "answer": "Bu güzel mi?",
+              "question": "Please say yes.",
+              "answer": "Lütfen evet de.",
               "choices": [
+                "O çok iyi biri değil.",
                 "Lütfen evet de.",
-                "Bu güzel mi?",
-                "Bu gerçekten güzel!",
-                "Bu güzel olacak."
+                "Lütfen bana bak.",
+                "Güzel bir gün için teşekkür ederim."
               ],
               "id": "turkish_t1_1_0"
             },
             {
               "type": "cloze",
-              "question": "Bu güzel ____ mi?",
-              "answer": "değil",
+              "question": "Lütfen ona ____ bak.",
+              "answer": "iyi",
               "choices": [
-                "mi",
-                "güzel",
-                "Güzel",
-                "değil"
+                "sadece",
+                "yardım",
+                "çok",
+                "iyi"
               ],
               "id": "turkish_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "Isn't it nice?",
-              "answer": "Güzel değil mi?",
+              "question": "That's much better, thanks.",
+              "answer": "O çok daha iyi, teşekkürler.",
               "words": [
-                "değil",
-                "mi?",
-                "Tüm",
-                "Güzel",
+                "çok",
+                "iyi,",
+                "evet",
+                "daha",
+                "teşekkürler.",
+                "daha",
                 "O"
               ],
               "id": "turkish_t1_1_2"
@@ -68,16 +70,16 @@
                   "O çok güzel değil."
                 ],
                 [
-                  "This is kind of nice, don't you think?",
-                  "Bu biraz güzel, öyle değil mi?"
+                  "He's not a nice guy.",
+                  "O iyi biri değil."
                 ],
                 [
-                  "Please say yes.",
-                  "Lütfen evet de."
+                  "He's not a very nice guy.",
+                  "O çok iyi biri değil."
                 ],
                 [
-                  "Please look at me.",
-                  "Lütfen bana bak."
+                  "Great thanks for a lovely night.",
+                  "Güzel bir gece için büyük teşekkürler."
                 ]
               ],
               "id": "turkish_t1_1_4"
@@ -90,46 +92,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Look at me, please.",
-              "answer": "Bana bak, lütfen.",
+              "question": "He will be very nice.",
+              "answer": "O çok iyi olacak.",
               "choices": [
-                "Sana çok, çok teşekkürler!",
-                "Bana bak, lütfen.",
-                "Bu güzel değil mi?",
-                "Bu biraz güzel, öyle değil mi?"
+                "Ben o kadar iyi bir adam değilim.",
+                "O çok iyi olacak.",
+                "Lütfen ona iyi bak.",
+                "O iyi biri değil."
               ],
               "id": "turkish_t1_2_0"
             },
             {
               "type": "cloze",
-              "question": "Lütfen ona ____ bak.",
-              "answer": "iyi",
+              "question": "Ne güzel ____ adam!",
+              "answer": "bir",
               "choices": [
-                "biri",
-                "mi",
-                "iyi",
-                "güzel"
+                "Teşekkür",
+                "güzel",
+                "bir",
+                "değil"
               ],
               "id": "turkish_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "This is really nice!",
-              "answer": "Bu gerçekten güzel!",
+              "question": "Please look at me.",
+              "answer": "Lütfen bana bak.",
               "words": [
-                "teşekkürler.",
-                "Sana",
-                "güzel!",
-                "Bu",
-                "gerçekten"
+                "Ben",
+                "ederim!",
+                "bak.",
+                "Lütfen",
+                "bana"
               ],
               "id": "turkish_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O iyi biri değil.",
-              "audio": "O iyi biri değil.",
+              "answer": "Bana bak, lütfen.",
+              "audio": "Bana bak, lütfen.",
               "id": "turkish_t1_2_3"
             },
             {
@@ -138,20 +140,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He's not a very nice guy.",
-                  "O çok iyi biri değil."
+                  "OK, thanks a lot.",
+                  "Tamam, çok teşekkürler."
                 ],
                 [
-                  "That'll be nice.",
-                  "Bu güzel olacak."
+                  "Thank you for a nice day.",
+                  "Güzel bir gün için teşekkür ederim."
                 ],
                 [
-                  "He will be very nice.",
-                  "O çok iyi olacak."
+                  "Very well. Thank you.",
+                  "Çok iyi. Teşekkür ederim."
                 ],
                 [
-                  "What a nice man!",
-                  "Ne güzel bir adam!"
+                  "I'm the one who should thank you.",
+                  "Ben teşekkür ederim."
                 ]
               ],
               "id": "turkish_t1_2_4"
@@ -164,47 +166,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'd like some help, please.",
-              "answer": "Biraz yardım istiyorum, lütfen.",
+              "question": "She's a really nice girl.",
+              "answer": "O gerçekten iyi bir kız.",
               "choices": [
-                "Bu gerçekten güzel!",
-                "Bu güzel olacak.",
+                "Lütfen bana bak.",
+                "Güzel bir gün için teşekkür ederim.",
                 "O çok güzel değil, değil mi?",
-                "Biraz yardım istiyorum, lütfen."
+                "O gerçekten iyi bir kız."
               ],
               "id": "turkish_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Hey, ____ güzel.",
-              "answer": "bu",
+              "question": "O gerçekten ____ bir kız.",
+              "answer": "güzel",
               "choices": [
-                "Tüm",
-                "bu",
-                "bak",
-                "evet"
+                "gün",
+                "güzel",
+                "Bana",
+                "lütfen"
               ],
               "id": "turkish_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "Thank you very, very much!",
-              "answer": "Sana çok, çok teşekkürler!",
+              "question": "I'm not that nice a guy.",
+              "answer": "Ben o kadar iyi bir adam değilim.",
               "words": [
-                "çok,",
-                "çok",
-                "teşekkürler!",
-                "Bunun",
-                "için",
-                "Sana"
+                "o",
+                "değilim.",
+                "kadar",
+                "bir",
+                "adam",
+                "Çok",
+                "iyi",
+                "ona",
+                "Ben"
               ],
               "id": "turkish_t1_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Onun için teşekkürler.",
-              "audio": "Onun için teşekkürler.",
+              "answer": "Üzgünüm, ben sadece bilmiyorum.",
+              "audio": "Üzgünüm, ben sadece bilmiyorum.",
               "id": "turkish_t1_3_3"
             },
             {
@@ -213,20 +218,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thanks for the help.",
-                  "Yardım için teşekkürler."
+                  "She is a really nice lady.",
+                  "O gerçekten güzel bir bayan."
                 ],
                 [
-                  "Thanks for this.",
-                  "Bunun için teşekkürler."
+                  "I'd like some help, please.",
+                  "Biraz yardım istiyorum, lütfen."
                 ],
                 [
-                  "Thanks for all the help.",
-                  "Tüm yardım için teşekkürler."
+                  "Thank you very much!",
+                  "Çok teşekkür ederim!"
                 ],
                 [
-                  "Hey, thanks for everything.",
-                  "Hey, her şey için teşekkürler."
+                  "Thank you very much for everything.",
+                  "Her şey için çok teşekkür ederim."
                 ]
               ],
               "id": "turkish_t1_3_4"
@@ -236,16 +241,16 @@
       ],
       "preview": [
         [
-          "Is this nice?",
-          "Bu güzel mi?"
+          "Please say yes.",
+          "Lütfen evet de."
         ],
         [
-          "Isn't this nice?",
-          "Bu güzel değil mi?"
+          "Please take care of it.",
+          "Lütfen ona iyi bak."
         ],
         [
-          "Isn't it nice?",
-          "Güzel değil mi?"
+          "That's much better, thanks.",
+          "O çok daha iyi, teşekkürler."
         ]
       ]
     },
@@ -259,47 +264,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Who is that man?",
-              "answer": "Bu adam kim?",
+              "question": "He is only a man.",
+              "answer": "O sadece bir adam.",
               "choices": [
+                "Sanırım o iyi bir adam.",
                 "O sadece bir adam.",
-                "Bu adam kim?",
-                "O benim için doğru adam değil.",
-                "Yeni kız nerede?"
+                "O kötü bir adam.",
+                "O, aslında iyi bir adam."
               ],
               "id": "turkish_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "O ____ kim?",
-              "answer": "adam",
+              "question": "O ____ adam.",
+              "answer": "bir",
               "choices": [
-                "için",
-                "kim",
-                "Yeni",
-                "adam"
+                "güzel",
+                "ol",
+                "küçük",
+                "bir"
               ],
               "id": "turkish_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "He is only a man.",
-              "answer": "O sadece bir adam.",
+              "question": "I think he is a good man.",
+              "answer": "Sanırım o iyi bir adam.",
               "words": [
-                "nerede?",
-                "adam.",
+                "mı?",
                 "bir",
-                "çok",
-                "sadece",
-                "O"
+                "ama!",
+                "Sanırım",
+                "adam.",
+                "iyi",
+                "o"
               ],
               "id": "turkish_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O benim için doğru adam değil.",
-              "audio": "O benim için doğru adam değil.",
+              "answer": "O kötü bir adam.",
+              "audio": "O kötü bir adam.",
               "id": "turkish_t2_1_3"
             },
             {
@@ -308,20 +314,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "He is a man.",
-                  "O bir adam."
+                  "Who's that man?",
+                  "O adam kim?"
+                ],
+                [
+                  "He's not the right man for me.",
+                  "O benim için doğru adam değil."
                 ],
                 [
                   "This is a man.",
                   "Bu bir adam."
                 ],
                 [
-                  "What a man!",
-                  "Ne adam ama!"
-                ],
-                [
-                  "I think he is a good man.",
-                  "Sanırım o iyi bir adam."
+                  "She is a pretty girl.",
+                  "O güzel bir kız."
                 ]
               ],
               "id": "turkish_t2_1_4"
@@ -334,47 +340,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The man isn't made for this.",
-              "answer": "Bu adam bunun için değil.",
+              "question": "Is she a pretty girl?",
+              "answer": "O güzel bir kız mı?",
               "choices": [
-                "O kötü bir adam.",
-                "Bu adam bunun için değil.",
-                "O adam kim?",
-                "Ne kötü bir kız!"
+                "İyi bir kız ol.",
+                "O güzel bir kız mı?",
+                "O bir adam.",
+                "O kötü bir kız değil."
               ],
               "id": "turkish_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "O kötü ____ adam.",
-              "answer": "bir",
+              "question": "İyi bir ____ ol.",
+              "answer": "kız",
               "choices": [
+                "kötü",
+                "kız",
                 "İyi",
-                "bir",
-                "sadece",
-                "adam"
+                "doğru"
               ],
               "id": "turkish_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "What a bad girl!",
-              "answer": "Ne kötü bir kız!",
+              "question": "She's not a bad girl.",
+              "answer": "O kötü bir kız değil.",
               "words": [
+                "değil.",
+                "kız",
                 "bir",
-                "adam",
-                "kötü",
-                "Ne",
-                "doğru",
-                "kız!"
+                "değil.",
+                "böyle",
+                "O",
+                "kötü"
               ],
               "id": "turkish_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O güzel kız kim?",
-              "audio": "O güzel kız kim?",
+              "answer": "O bir kız.",
+              "audio": "O bir kız.",
               "id": "turkish_t2_2_3"
             },
             {
@@ -383,20 +390,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She is a pretty girl.",
-                  "O güzel bir kız."
+                  "She's a very beautiful girl.",
+                  "O çok güzel bir kız."
                 ],
                 [
-                  "Is she a pretty girl?",
-                  "O güzel bir kız mı?"
+                  "She's a great girl.",
+                  "O harika bir kız."
                 ],
                 [
-                  "That girl is very beautiful.",
-                  "Şu kız çok güzel."
+                  "She's a good girl.",
+                  "O, iyi bir kız."
                 ],
                 [
-                  "Be a good girl.",
-                  "İyi bir kız ol."
+                  "She's such a lovely girl!",
+                  "O böyle güzel bir kız!"
                 ]
               ],
               "id": "turkish_t2_2_4"
@@ -409,39 +416,39 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She's not a bad girl.",
-              "answer": "O kötü bir kız değil.",
+              "question": "He's not a girl.",
+              "answer": "O bir kız değil.",
               "choices": [
-                "O kötü bir adam.",
-                "Ne kötü bir kız!",
-                "O adam kim?",
-                "O kötü bir kız değil."
+                "İyi bir kız ol.",
+                "O kötü bir kız değil.",
+                "O bir adam.",
+                "O bir kız değil."
               ],
               "id": "turkish_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "O ____ kız.",
+              "question": "Ben artık küçük ____ kız değilim.",
               "answer": "bir",
               "choices": [
-                "adam",
+                "harika",
                 "bir",
-                "kötü",
-                "ama"
+                "iyi",
+                "küçük"
               ],
               "id": "turkish_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "She's a very beautiful girl.",
-              "answer": "O çok güzel bir kız.",
+              "question": "I'm not a girl anymore.",
+              "answer": "Ben artık bir kız değilim.",
               "words": [
-                "güzel",
                 "bir",
-                "kız.",
-                "kız.",
-                "çok",
-                "O",
+                "kız",
+                "değilim.",
+                "sadece",
+                "artık",
+                "Ben",
                 "İyi"
               ],
               "id": "turkish_t2_3_2"
@@ -449,8 +456,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yeni kız nerede?",
-              "audio": "Yeni kız nerede?",
+              "answer": "O, aslında iyi bir adam.",
+              "audio": "O, aslında iyi bir adam.",
               "id": "turkish_t2_3_3"
             },
             {
@@ -459,20 +466,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Who's the new girl?",
-                  "Yeni kız kim?"
+                  "He's a man of importance.",
+                  "O önemli bir adam."
                 ],
                 [
-                  "She's a great girl.",
-                  "O harika bir kız."
+                  "He is a man of great importance.",
+                  "O çok önemli bir adam."
                 ],
                 [
-                  "What a pretty girl!",
-                  "Ne güzel bir kız!"
+                  "Who is that man?",
+                  "Bu adam kim?"
                 ],
                 [
-                  "The little girl is beautiful.",
-                  "Küçük kız güzel."
+                  "What a man!",
+                  "Ne adam ama!"
                 ]
               ],
               "id": "turkish_t2_3_4"
@@ -482,16 +489,16 @@
       ],
       "preview": [
         [
-          "Who is that man?",
-          "Bu adam kim?"
-        ],
-        [
-          "Who's that man?",
-          "O adam kim?"
-        ],
-        [
           "He is only a man.",
           "O sadece bir adam."
+        ],
+        [
+          "He is a man.",
+          "O bir adam."
+        ],
+        [
+          "I think he is a good man.",
+          "Sanırım o iyi bir adam."
         ]
       ]
     },
@@ -508,10 +515,10 @@
               "question": "Drink something.",
               "answer": "Bir şey için.",
               "choices": [
-                "İyi bir şey yemek istiyorum.",
+                "Ben sadece yemek için bir şeyler almak istiyorum.",
                 "Bir şey için.",
-                "O et yer.",
-                "Ne zaman yemek yemek istiyorsun?"
+                "Şu an başka bir şey yemek istemiyorum.",
+                "Şu anda bir şey yemek istemiyorum."
               ],
               "id": "turkish_t3_1_0"
             },
@@ -520,32 +527,31 @@
               "question": "O, ____ yer.",
               "answer": "çok",
               "choices": [
-                "Bunu",
-                "şeyler",
-                "yer",
+                "Çok",
+                "almak",
+                "Biri",
                 "çok"
               ],
               "id": "turkish_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "How does one eat this?",
-              "answer": "Biri bunu nasıl yer?",
+              "question": "He eats meat.",
+              "answer": "O et yer.",
               "words": [
-                "bunu",
-                "nasıl",
-                "O,",
-                "Biri",
-                "yer?",
-                "istiyorsun?"
+                "yer.",
+                "çabuk",
+                "et",
+                "yemek",
+                "O"
               ],
               "id": "turkish_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Et yer misin?",
-              "audio": "Et yer misin?",
+              "answer": "Yemek yemek için birkaç iyi yer biliyorum.",
+              "audio": "Yemek yemek için birkaç iyi yer biliyorum.",
               "id": "turkish_t3_1_3"
             },
             {
@@ -554,20 +560,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Would you eat this?",
-                  "Bunu yer misin?"
+                  "I want to eat something good.",
+                  "İyi bir şey yemek istiyorum."
                 ],
                 [
-                  "Do you eat a lot?",
-                  "Çok yer misin?"
+                  "This is good food.",
+                  "Bu iyi bir yemek."
                 ],
                 [
-                  "He eats meat.",
-                  "O et yer."
+                  "I don't want to eat anything else right now.",
+                  "Şu an başka bir şey yemek istemiyorum."
                 ],
                 [
-                  "It's not really my cup of tea.",
-                  "Kesinlikle bana göre değil."
+                  "I'd like to eat somewhere else.",
+                  "Ben başka bir yerde yemek yemek istiyorum."
                 ]
               ],
               "id": "turkish_t3_1_4"
@@ -580,46 +586,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What do you want to eat?",
-              "answer": "Ne yemek istiyorsun?",
+              "question": "Eat something.",
+              "answer": "Bir şey ye.",
               "choices": [
-                "O et yer.",
-                "Ne yemek istiyorsun?",
-                "Burada yemek istiyorum.",
-                "Bunu yemek istiyor musun?"
+                "Şu an başka bir şey yemek istemiyorum.",
+                "Bir şey ye.",
+                "Ben daha çok yemek istiyorum.",
+                "Başka bir şey yemek ister misin?"
               ],
               "id": "turkish_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Bir şeyler ____ istiyorum.",
-              "answer": "yemek",
+              "question": "Biri bunu ____ yer?",
+              "answer": "nasıl",
               "choices": [
-                "istiyorsun",
                 "çok",
-                "yemek",
-                "Yemek"
+                "iyi",
+                "nasıl",
+                "daha"
               ],
               "id": "turkish_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "I would like to eat now.",
-              "answer": "Şimdi yemek istiyorum.",
+              "question": "Do you eat meat?",
+              "answer": "Et yer misin?",
               "words": [
-                "yemek",
-                "istiyorum.",
-                "şey",
-                "Şimdi",
-                "Şimdi"
+                "yer",
+                "misin?",
+                "Bana",
+                "çabuk",
+                "Et"
               ],
               "id": "turkish_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Burada yemek istemiyorum.",
-              "audio": "Burada yemek istemiyorum.",
+              "answer": "Bunu yer misin?",
+              "audio": "Bunu yer misin?",
               "id": "turkish_t3_2_3"
             },
             {
@@ -628,20 +634,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't want to eat any more.",
-                  "Artık yemek istemiyorum."
+                  "Do you eat a lot?",
+                  "Çok yer misin?"
                 ],
                 [
-                  "Would you like to eat something?",
-                  "Bir şey yemek ister misin?"
+                  "Give me some water, and make it quick!",
+                  "Bana biraz su ver ve çabuk ol!"
                 ],
                 [
-                  "I want to eat something good.",
-                  "İyi bir şey yemek istiyorum."
+                  "I just want to get something to eat.",
+                  "Ben sadece yemek için bir şeyler almak istiyorum."
                 ],
                 [
-                  "I want to eat it.",
-                  "Onu yemek istiyorum."
+                  "I want to eat something.",
+                  "Bir şeyler yemek istiyorum."
                 ]
               ],
               "id": "turkish_t3_2_4"
@@ -654,46 +660,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Would you like to eat?",
-              "answer": "Yemek yemek ister misin?",
+              "question": "Would you like to eat something?",
+              "answer": "Bir şey yemek ister misin?",
               "choices": [
-                "Bunu yer misin?",
-                "Çok yer misin?",
-                "Herkes yemek zorunda.",
-                "Yemek yemek ister misin?"
+                "İyi bir şey yemek istiyorum.",
+                "Bu iyi bir yemek.",
+                "Yemek için bir şey var mı?",
+                "Bir şey yemek ister misin?"
               ],
               "id": "turkish_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Herkes ____ zorunda.",
-              "answer": "yemek",
+              "question": "Yemek için bir ____ var mı?",
+              "answer": "şey",
               "choices": [
+                "Et",
                 "şey",
-                "yemek",
-                "olacak",
-                "Bunu"
+                "su",
+                "misin"
               ],
               "id": "turkish_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "I want to eat here.",
-              "answer": "Burada yemek istiyorum.",
+              "question": "I want more food.",
+              "answer": "Ben daha çok yemek istiyorum.",
               "words": [
-                "var",
-                "yer?",
+                "daha",
                 "yemek",
-                "Burada",
-                "istiyorum."
+                "için",
+                "yer.",
+                "istiyorum.",
+                "çok",
+                "Ben"
               ],
               "id": "turkish_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Bunu yemek istiyor musun?",
-              "audio": "Bunu yemek istiyor musun?",
+              "answer": "Başka bir şey yemek ister misin?",
+              "audio": "Başka bir şey yemek ister misin?",
               "id": "turkish_t3_3_3"
             },
             {
@@ -702,20 +710,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is there anything to eat?",
-                  "Yemek için bir şey var mı?"
+                  "I'd like to eat something else.",
+                  "Başka bir şey yemek istiyorum."
                 ],
                 [
-                  "When are you going to get dinner ready?",
-                  "Yemek ne zaman hazır olacak?"
+                  "I'd like to eat something.",
+                  "Bir şey yemek istiyorum."
                 ],
                 [
-                  "I don't want to eat this.",
-                  "Bunu yemek istemiyorum."
+                  "I don't want to eat anything.",
+                  "Bir şey yemek istemiyorum."
                 ],
                 [
-                  "When do you want to eat?",
-                  "Ne zaman yemek yemek istiyorsun?"
+                  "I don't want to eat anything right now.",
+                  "Şu anda bir şey yemek istemiyorum."
                 ]
               ],
               "id": "turkish_t3_3_4"
@@ -733,8 +741,8 @@
           "O, çok yer."
         ],
         [
-          "How does one eat this?",
-          "Biri bunu nasıl yer?"
+          "He eats meat.",
+          "O et yer."
         ]
       ]
     },
@@ -748,46 +756,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He came home three hours later.",
-              "answer": "O, eve üç saat sonra geldi.",
+              "question": "There's no room for anything more.",
+              "answer": "Daha fazla bir şey için yer yok.",
               "choices": [
-                "Hadi, eve geri gidelim.",
-                "O, eve üç saat sonra geldi.",
-                "Hemen eve gel.",
-                "Eve gidelim mi?"
+                "O güzel bir ev.",
+                "Daha fazla bir şey için yer yok.",
+                "O, eve tekrar geliyor.",
+                "Yerde bir şey var."
               ],
               "id": "turkish_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Şimdi ____ git.",
-              "answer": "eve",
+              "question": "O, eve üç ____ sonra geldi.",
+              "answer": "saat",
               "choices": [
-                "Çok",
-                "Sadece",
-                "geldi",
-                "eve"
+                "şey",
+                "yer",
+                "evde",
+                "saat"
               ],
               "id": "turkish_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "Just go home.",
-              "answer": "Sadece eve git.",
+              "question": "Are you coming home tonight?",
+              "answer": "Bu gece eve geliyor musun?",
               "words": [
+                "gece",
+                "sonra",
+                "neden",
+                "Bu",
+                "musun?",
                 "eve",
-                "git.",
-                "Hadi",
-                "Sadece",
-                "var"
+                "geliyor"
               ],
               "id": "turkish_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eve geri git.",
-              "audio": "Eve geri git.",
+              "answer": "Onlar eve geldi.",
+              "audio": "Onlar eve geldi.",
               "id": "turkish_t4_1_3"
             },
             {
@@ -796,20 +806,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Come home right away.",
-                  "Hemen eve gel."
+                  "He's coming home again.",
+                  "O, eve tekrar geliyor."
                 ],
                 [
-                  "Are you coming home tonight?",
-                  "Bu gece eve geliyor musun?"
+                  "They're coming home.",
+                  "Onlar eve geliyor."
                 ],
                 [
-                  "Come home with me.",
-                  "Benimle eve gel."
+                  "He came first at home.",
+                  "Eve ilk o geldi."
                 ],
                 [
-                  "Look at this house.",
-                  "Bu eve bak."
+                  "He came home late last night.",
+                  "O, dün gece eve geç geldi."
                 ]
               ],
               "id": "turkish_t4_1_4"
@@ -822,46 +832,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "They came home.",
-              "answer": "Onlar eve geldi.",
+              "question": "Is there any room for me?",
+              "answer": "Benim için yer var mı?",
               "choices": [
-                "Şimdi eve git.",
-                "Onlar eve geldi.",
-                "Hadi, eve geri gidelim.",
-                "Burada daha fazla yer yok."
+                "O, eve üç saat sonra geldi.",
+                "Benim için yer var mı?",
+                "O güzel bir ev.",
+                "Evet, o evde."
               ],
               "id": "turkish_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "O, eve ____ geliyor.",
-              "answer": "tekrar",
+              "question": "Burada daha ____ yer yok.",
+              "answer": "fazla",
               "choices": [
-                "üç",
-                "tekrar",
-                "için",
-                "Şimdi"
+                "geliyor",
+                "fazla",
+                "dün",
+                "daha"
               ],
               "id": "turkish_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "Who is coming home?",
-              "answer": "Kim eve geliyor?",
+              "question": "There isn't much room.",
+              "answer": "Çok yer yok.",
               "words": [
-                "eve",
-                "geliyor?",
-                "Şimdi",
-                "Kim",
-                "yer"
+                "yer",
+                "yok.",
+                "yer",
+                "Çok",
+                "ilk"
               ],
               "id": "turkish_t4_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Onlar eve geliyor.",
-              "audio": "Onlar eve geliyor.",
+              "answer": "Burada çok yer var.",
+              "audio": "Burada çok yer var.",
               "id": "turkish_t4_2_3"
             },
             {
@@ -870,20 +880,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Go in the house right now.",
-                  "Hemen eve git."
+                  "It seems to be a good house.",
+                  "O iyi bir ev gibi görünüyor."
                 ],
                 [
-                  "He came first at home.",
-                  "Eve ilk o geldi."
+                  "He has just come home.",
+                  "O az önce eve geldi."
                 ],
                 [
-                  "Is there any room for me?",
-                  "Benim için yer var mı?"
+                  "He has a pretty house.",
+                  "O güzel bir eve sahip."
                 ],
                 [
-                  "There's no more room here.",
-                  "Burada daha fazla yer yok."
+                  "Yes, she's at home.",
+                  "Evet, o evde."
                 ]
               ],
               "id": "turkish_t4_2_4"
@@ -896,47 +906,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "There isn't much room.",
-              "answer": "Çok yer yok.",
+              "question": "Go home and stay there.",
+              "answer": "Eve git ve orada kal.",
               "choices": [
-                "Onlar eve geliyor.",
-                "Eve geri git.",
-                "Şimdi eve git.",
-                "Çok yer yok."
+                "Burada çok yer var.",
+                "Onlar eve geldi.",
+                "O, eve üç saat sonra geldi.",
+                "Eve git ve orada kal."
               ],
               "id": "turkish_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Daha fazla bir ____ için yer yok.",
-              "answer": "şey",
+              "question": "Evet, o ____ eve gelecek.",
+              "answer": "muhtemelen",
               "choices": [
-                "Hadi",
-                "şey",
-                "sonra",
-                "gece"
+                "geç",
+                "muhtemelen",
+                "az",
+                "ve"
               ],
               "id": "turkish_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "There's a lot of room in here.",
-              "answer": "Burada çok yer var.",
+              "question": "Why is that on the floor?",
+              "answer": "O neden yerde?",
               "words": [
-                "Onlar",
-                "var.",
-                "yer",
-                "geliyor.",
-                "çok",
-                "Burada"
+                "neden",
+                "yerde?",
+                "saat",
+                "iyi.",
+                "O"
               ],
               "id": "turkish_t4_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Eve gidelim mi?",
-              "audio": "Eve gidelim mi?",
+              "answer": "Yerde bir şey var.",
+              "audio": "Yerde bir şey var.",
               "id": "turkish_t4_3_3"
             },
             {
@@ -945,20 +954,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Come on. Let's go home.",
-                  "Haydi. Eve gidelim."
+                  "He came home very late.",
+                  "O, eve çok geç geldi."
                 ],
                 [
-                  "Come on home.",
-                  "Hadi eve gidelim."
+                  "She came home very late.",
+                  "O çok geç eve geldi."
                 ],
                 [
-                  "Let's go back home.",
-                  "Eve geri gidelim."
+                  "That house is much better than this.",
+                  "O ev bundan çok daha iyi."
                 ],
                 [
-                  "Come on, let's go back to the house.",
-                  "Hadi, eve geri gidelim."
+                  "It's a pretty house.",
+                  "O güzel bir ev."
                 ]
               ],
               "id": "turkish_t4_3_4"
@@ -968,16 +977,16 @@
       ],
       "preview": [
         [
+          "There's no room for anything more.",
+          "Daha fazla bir şey için yer yok."
+        ],
+        [
           "He came home three hours later.",
           "O, eve üç saat sonra geldi."
         ],
         [
-          "Go home now.",
-          "Şimdi eve git."
-        ],
-        [
-          "Just go home.",
-          "Sadece eve git."
+          "Are you coming home tonight?",
+          "Bu gece eve geliyor musun?"
         ]
       ]
     },
@@ -991,47 +1000,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This road is very long.",
-              "answer": "Bu yol çok uzun.",
+              "question": "That's a very good car.",
+              "answer": "O çok iyi bir araba.",
               "choices": [
-                "O yol nereye gidiyor?",
-                "Bu yol çok uzun.",
-                "Bu araba hızlı.",
-                "Dikkat! Gelen bir araba var."
+                "Ben yeni bir araba aldım.",
+                "O çok iyi bir araba.",
+                "Onun ne tür bir araba olduğunu bilmiyorum.",
+                "Bir anda bir araba ortaya çıktı."
               ],
               "id": "turkish_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "Yol ____ mı?",
-              "answer": "açık",
+              "question": "Ben bu ____ bilmiyorum.",
+              "answer": "yolu",
               "choices": [
-                "yol",
-                "geldi",
                 "musunuz",
-                "açık"
+                "aldı",
+                "mı",
+                "yolu"
               ],
               "id": "turkish_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "Where does that road lead?",
-              "answer": "O yol nereye gidiyor?",
+              "question": "I bought a new car.",
+              "answer": "Ben yeni bir araba aldım.",
               "words": [
-                "yol",
-                "iyi",
-                "nereye",
-                "hızlı.",
-                "gidiyor?",
-                "O"
+                "yeni",
+                "bir",
+                "çok",
+                "Ben",
+                "araba",
+                "musunuz?",
+                "aldım."
               ],
               "id": "turkish_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yol için bir tane daha.",
-              "audio": "Yol için bir tane daha.",
+              "answer": "O bir araba ile geldi.",
+              "audio": "O bir araba ile geldi.",
               "id": "turkish_t5_1_3"
             },
             {
@@ -1040,20 +1050,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What is the best road to go?",
-                  "Gitmek için en iyi yol nedir?"
+                  "It isn't much of a car.",
+                  "O neredeyse bir araba değil."
                 ],
                 [
-                  "I don't know this road.",
-                  "Ben bu yolu bilmiyorum."
+                  "Is that a new car?",
+                  "O yeni bir araba mı?"
                 ],
                 [
-                  "He knows this road well.",
-                  "Bu yolu iyi biliyor."
+                  "It's a great little car.",
+                  "O harika küçük bir araba."
                 ],
                 [
-                  "The road is all clear.",
-                  "Yol tamamen boş."
+                  "It's a really good car.",
+                  "Gerçekten iyi bir araba."
                 ]
               ],
               "id": "turkish_t5_1_4"
@@ -1066,46 +1076,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Are we on the right road?",
-              "answer": "Doğru yol üzerinde miyiz?",
+              "question": "This is a good car.",
+              "answer": "Bu iyi bir araba.",
               "choices": [
-                "Bir araba istiyor musunuz?",
-                "Doğru yol üzerinde miyiz?",
-                "Yol için bir tane daha.",
-                "Dikkat! Gelen bir araba var."
+                "Bu yolu iyi biliyor.",
+                "Bu iyi bir araba.",
+                "O bir araba ile geldi.",
+                "Bir anda bir araba ortaya çıktı."
               ],
               "id": "turkish_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Dikkat! Gelen ____ araba var.",
-              "answer": "bir",
+              "question": "Bir anda bir ____ ortaya çıktı.",
+              "answer": "araba",
               "choices": [
-                "yeni",
-                "bir",
-                "iyi",
-                "yol"
+                "için",
+                "araba",
+                "en",
+                "Yol"
               ],
               "id": "turkish_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "This car is fast.",
-              "answer": "Bu araba hızlı.",
+              "question": "I don't know what kind of a car it was.",
+              "answer": "Onun ne tür bir araba olduğunu bilmiyorum.",
               "words": [
-                "hızlı.",
-                "bu",
-                "uzun.",
-                "Bu",
-                "araba"
+                "ne",
+                "bir",
+                "araba",
+                "çok",
+                "olduğunu",
+                "bilmiyorum.",
+                "tür",
+                "Onun",
+                "bir"
               ],
               "id": "turkish_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Gelen bir araba var.",
-              "audio": "Gelen bir araba var.",
+              "answer": "O ne tür bir araba?",
+              "audio": "O ne tür bir araba?",
               "id": "turkish_t5_2_3"
             },
             {
@@ -1114,20 +1128,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Let's go by car.",
-                  "Araba ile gidelim."
+                  "They bought a new car.",
+                  "Onlar yeni bir araba aldı."
                 ],
                 [
-                  "He came by car.",
-                  "O araba ile geldi."
+                  "He bought me a very fast car.",
+                  "O bana çok hızlı bir araba aldı."
                 ],
                 [
-                  "That car is his.",
-                  "O araba onun."
+                  "Where does that road lead?",
+                  "O yol nereye gidiyor?"
                 ],
                 [
-                  "This car is mine.",
-                  "Bu araba benim."
+                  "One more for the road.",
+                  "Yol için bir tane daha."
                 ]
               ],
               "id": "turkish_t5_2_4"
@@ -1140,39 +1154,39 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Which car is ours?",
-              "answer": "Hangi araba bizim?",
+              "question": "What is the best road to go?",
+              "answer": "Gitmek için en iyi yol nedir?",
               "choices": [
-                "O bir araba ile geldi.",
-                "Yol açık mı?",
-                "Bu araba yeni gibi.",
-                "Hangi araba bizim?"
+                "Bir araba istiyor musunuz?",
+                "Ben bu yolu bilmiyorum.",
+                "O araba onun.",
+                "Gitmek için en iyi yol nedir?"
               ],
               "id": "turkish_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Bir araba ____ musunuz?",
-              "answer": "istiyor",
+              "question": "Bu yolu ____ biliyor.",
+              "answer": "iyi",
               "choices": [
-                "araba",
-                "istiyor",
-                "mı",
-                "uzun"
+                "yolu",
+                "iyi",
+                "neredeyse",
+                "Bu"
               ],
               "id": "turkish_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "I bought a new car.",
-              "answer": "Ben yeni bir araba aldım.",
+              "question": "Look out! There's a car coming.",
+              "answer": "Dikkat! Gelen bir araba var.",
               "words": [
-                "yeni",
-                "nedir?",
+                "Gelen",
+                "Bu",
                 "araba",
-                "daha.",
-                "Ben",
-                "aldım.",
+                "en",
+                "Dikkat!",
+                "var.",
                 "bir"
               ],
               "id": "turkish_t5_3_2"
@@ -1180,8 +1194,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Yeni araba onun.",
-              "audio": "Yeni araba onun.",
+              "answer": "Gelen bir araba var.",
+              "audio": "Gelen bir araba var.",
               "id": "turkish_t5_3_3"
             },
             {
@@ -1190,16 +1204,16 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "The car is very fast.",
-                  "Araba çok hızlı."
+                  "He came by car.",
+                  "O araba ile geldi."
                 ],
                 [
-                  "This car is like new.",
-                  "Bu araba yeni gibi."
+                  "That car is his.",
+                  "O araba onun."
                 ],
                 [
-                  "She arrived in a car.",
-                  "O bir araba ile geldi."
+                  "Do you want a car?",
+                  "Bir araba istiyor musunuz?"
                 ],
                 [
                   "That car is quite new.",
@@ -1213,16 +1227,16 @@
       ],
       "preview": [
         [
-          "This road is very long.",
-          "Bu yol çok uzun."
+          "That's a very good car.",
+          "O çok iyi bir araba."
         ],
         [
-          "Is the road open?",
-          "Yol açık mı?"
+          "I don't know this road.",
+          "Ben bu yolu bilmiyorum."
         ],
         [
-          "Where does that road lead?",
-          "O yol nereye gidiyor?"
+          "I bought a new car.",
+          "Ben yeni bir araba aldım."
         ]
       ]
     },
@@ -1236,49 +1250,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "There's always time.",
-              "answer": "Her zaman zaman var.",
+              "question": "Is this not a good time?",
+              "answer": "Bu iyi bir zaman değil mi?",
               "choices": [
-                "Bu çok iyi bir zaman.",
-                "Şimdi gerçekten iyi bir zaman değil.",
-                "Her zaman zaman var.",
-                "Sadece biraz daha zaman istiyorum."
+                "Bu benim için iyi bir zaman değil.",
+                "Zaman var mı?",
+                "Bu iyi bir zaman değil mi?",
+                "O, bu gece burada olacak."
               ],
               "id": "turkish_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "Zaman ____ mı?",
-              "answer": "var",
+              "question": "Bu çok ____ bir zaman.",
+              "answer": "iyi",
               "choices": [
-                "mı",
-                "Bu",
-                "zaman",
-                "var"
+                "Zaman",
+                "şey",
+                "bir",
+                "iyi"
               ],
               "id": "turkish_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "Is this not a good time?",
-              "answer": "Bu iyi bir zaman değil mi?",
+              "question": "This isn't a good time.",
+              "answer": "Bu iyi bir zaman değil.",
               "words": [
                 "iyi",
-                "değil",
-                "mi?",
-                "Bu",
                 "zaman",
-                "gerçekten",
-                "başka",
-                "bir"
+                "için",
+                "O",
+                "değil.",
+                "bir",
+                "Bu"
               ],
               "id": "turkish_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Bu çok iyi bir zaman.",
-              "audio": "Bu çok iyi bir zaman.",
+              "answer": "Bu benim için iyi bir zaman değil.",
+              "audio": "Bu benim için iyi bir zaman değil.",
               "id": "turkish_t6_1_3"
             },
             {
@@ -1287,20 +1300,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This isn't a good time.",
-                  "Bu iyi bir zaman değil."
+                  "Now's not a good time.",
+                  "Şimdi iyi bir zaman değil."
                 ],
                 [
-                  "There's plenty of time.",
-                  "Çok zaman var."
+                  "Now is not a very good time.",
+                  "Şimdi çok iyi bir zaman değil."
                 ],
                 [
-                  "This isn't a good time for me.",
-                  "Bu benim için iyi bir zaman değil."
+                  "This really isn't a good time.",
+                  "Bu gerçekten iyi bir zaman değil."
                 ],
                 [
-                  "There's time for everything.",
-                  "Her şey için zaman var."
+                  "Now is really not a good time.",
+                  "Şimdi gerçekten iyi bir zaman değil."
                 ]
               ],
               "id": "turkish_t6_1_4"
@@ -1313,49 +1326,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "There's time now.",
-              "answer": "Şimdi zaman var.",
+              "question": "Yes, it happens from time to time.",
+              "answer": "Evet, o zaman zaman olur.",
               "choices": [
-                "Bu iyi bir zaman değil.",
-                "Şimdi zaman var.",
-                "Sadece biraz zaman istiyorum.",
-                "Sadece biraz daha zaman istiyorum."
+                "Şimdi iyi bir zaman değil.",
+                "Evet, o zaman zaman olur.",
+                "Belki başka bir zaman.",
+                "O, bu gece burada olacak."
               ],
               "id": "turkish_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Şimdi iyi ____ zaman değil.",
+              "question": "Bu iyi ____ gün olacak.",
               "answer": "bir",
               "choices": [
-                "Artık",
+                "olacak",
                 "bir",
-                "doğru",
-                "istiyorum"
+                "Belki",
+                "olur"
               ],
               "id": "turkish_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "Now is not a very good time.",
-              "answer": "Şimdi çok iyi bir zaman değil.",
+              "question": "One day he will be mine.",
+              "answer": "Bir gün o benim olacak.",
               "words": [
-                "değil.",
-                "zaman",
-                "çok",
-                "Şimdi",
-                "bir",
-                "iyi",
-                "mı?",
-                "Zaman"
+                "olacak.",
+                "o",
+                "benim",
+                "Bir",
+                "gün",
+                "o",
+                "mi?"
               ],
               "id": "turkish_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Zaman çok güzel.",
-              "audio": "Zaman çok güzel.",
+              "answer": "O bir gün olacak.",
+              "audio": "O bir gün olacak.",
               "id": "turkish_t6_2_3"
             },
             {
@@ -1364,20 +1376,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "There isn't time for that.",
-                  "Onun için zaman yok."
+                  "I know what time it is.",
+                  "Onun ne zaman olduğunu biliyorum."
                 ],
                 [
-                  "Is there time now?",
-                  "Artık zaman var mı?"
+                  "I'd like a little more time.",
+                  "Ben biraz daha zaman istiyorum."
                 ],
                 [
-                  "This really isn't a good time.",
-                  "Bu gerçekten iyi bir zaman değil."
+                  "There's always time.",
+                  "Her zaman zaman var."
                 ],
                 [
-                  "Now is really not a good time.",
-                  "Şimdi gerçekten iyi bir zaman değil."
+                  "Is there time?",
+                  "Zaman var mı?"
                 ]
               ],
               "id": "turkish_t6_2_4"
@@ -1390,47 +1402,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know what time it is.",
-              "answer": "Onun ne zaman olduğunu biliyorum.",
+              "question": "There's plenty of time.",
+              "answer": "Çok zaman var.",
               "choices": [
-                "Bu çok iyi bir zaman.",
                 "Bu benim için iyi bir zaman değil.",
-                "Zaman var mı?",
-                "Onun ne zaman olduğunu biliyorum."
+                "Bu gerçekten iyi bir zaman değil.",
+                "Bu çok iyi bir zaman.",
+                "Çok zaman var."
               ],
               "id": "turkish_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ben biraz ____ zaman istiyorum.",
-              "answer": "daha",
+              "question": "Her şey ____ zaman var.",
+              "answer": "için",
               "choices": [
-                "zaman",
-                "daha",
-                "Zaman",
-                "var"
+                "Belki",
+                "için",
+                "başka",
+                "Ben"
               ],
               "id": "turkish_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "I just want some time.",
-              "answer": "Sadece biraz zaman istiyorum.",
+              "question": "Maybe some other time.",
+              "answer": "Belki başka bir zaman.",
               "words": [
-                "biraz",
-                "Şimdi",
-                "istiyorum.",
-                "Sadece",
-                "zaman",
-                "Onun"
+                "başka",
+                "benim",
+                "zaman.",
+                "Belki",
+                "bir",
+                "bu"
               ],
               "id": "turkish_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Sadece biraz daha zaman istiyorum.",
-              "audio": "Sadece biraz daha zaman istiyorum.",
+              "answer": "O, bu gece burada olacak.",
+              "audio": "O, bu gece burada olacak.",
               "id": "turkish_t6_3_3"
             },
             {
@@ -1439,20 +1451,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Maybe some other time.",
-                  "Belki başka bir zaman."
+                  "It'll happen tonight.",
+                  "O bu gece olacak."
                 ],
                 [
-                  "It's the right time.",
-                  "Bu doğru zaman."
+                  "He's not here tonight.",
+                  "O bu gece burada değil."
                 ],
                 [
-                  "Is it the right time?",
-                  "Bu doğru zaman mı?"
+                  "Would tonight be soon enough?",
+                  "Bu gece iyi mi?"
                 ],
                 [
-                  "Yes, it happens from time to time.",
-                  "Evet, o zaman zaman olur."
+                  "It happens all the time.",
+                  "O her zaman olur."
                 ]
               ],
               "id": "turkish_t6_3_4"
@@ -1462,16 +1474,16 @@
       ],
       "preview": [
         [
-          "There's always time.",
-          "Her zaman zaman var."
-        ],
-        [
-          "Is there time?",
-          "Zaman var mı?"
-        ],
-        [
           "Is this not a good time?",
           "Bu iyi bir zaman değil mi?"
+        ],
+        [
+          "This is a very good time.",
+          "Bu çok iyi bir zaman."
+        ],
+        [
+          "This isn't a good time.",
+          "Bu iyi bir zaman değil."
         ]
       ]
     },
@@ -1485,47 +1497,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's just a job, you know?",
-              "answer": "Bu sadece bir iş, biliyor musun?",
+              "question": "I know it's important work.",
+              "answer": "Ben bunun önemli bir iş olduğunu biliyorum.",
               "choices": [
-                "Bu çok fazla iş.",
-                "Bu sadece bir iş, biliyor musun?",
-                "İyi bir iş istiyorum.",
-                "Sadece bir iş istiyorum."
+                "Ben iş hakkında biliyorum.",
+                "Ben bunun önemli bir iş olduğunu biliyorum.",
+                "İş hemen hemen tamam.",
+                "Bana bir iş ver."
               ],
               "id": "turkish_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "İş ____ değil.",
-              "answer": "bu",
+              "question": "O büyük ____ iş.",
+              "answer": "bir",
               "choices": [
-                "istiyorum",
-                "olduğunu",
-                "iş",
-                "bu"
+                "bunun",
+                "ver",
+                "önemli",
+                "bir"
               ],
               "id": "turkish_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "That's so much work.",
-              "answer": "Bu çok fazla iş.",
+              "question": "I know about the job.",
+              "answer": "Ben iş hakkında biliyorum.",
               "words": [
-                "çok",
-                "iş.",
-                "fazla",
-                "biraz",
-                "Bu",
-                "Bana"
+                "iş",
+                "biliyorum.",
+                "hakkında",
+                "Sen",
+                "Ben",
+                "ve"
               ],
               "id": "turkish_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Bir iş istiyorum.",
-              "audio": "Bir iş istiyorum.",
+              "answer": "İyi bir iş istiyorum.",
+              "audio": "İyi bir iş istiyorum.",
               "id": "turkish_t7_1_3"
             },
             {
@@ -1534,20 +1546,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "How's the new job?",
-                  "Yeni iş nasıl?"
+                  "You do good work.",
+                  "Sen iyi bir iş yapıyorsun."
                 ],
                 [
-                  "This is a good job.",
-                  "Bu güzel bir iş."
+                  "I want to do a good job.",
+                  "Ben iyi bir iş yapmak istiyorum."
                 ],
                 [
-                  "It's an awfully big job.",
-                  "Bu çok büyük bir iş."
+                  "That's a woman's job.",
+                  "O bir kadın işi."
                 ],
                 [
-                  "That's a big job.",
-                  "O büyük bir iş."
+                  "You and he have to do the job.",
+                  "Sen ve o işi yapmak zorunda."
                 ]
               ],
               "id": "turkish_t7_1_4"
@@ -1560,49 +1572,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know about the job.",
-              "answer": "Ben iş hakkında biliyorum.",
+              "question": "You're doing a good job.",
+              "answer": "İyi bir iş yapıyorsun.",
               "choices": [
-                "Bu güzel bir iş.",
-                "Ben iş hakkında biliyorum.",
-                "Bir iş istiyorum.",
-                "Bu büyük bir iş."
+                "Ben iyi bir iş yapmak istiyorum.",
+                "İyi bir iş yapıyorsun.",
+                "İyi bir iş istiyorum.",
+                "Bu bir iş değil."
               ],
               "id": "turkish_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Bana bir ____ ver.",
+              "question": "Bu sadece bir ____ biliyor musun?",
               "answer": "iş",
               "choices": [
-                "nasıl",
+                "biliyorum",
                 "iş",
-                "hakkında",
-                "Sadece"
+                "yapmak",
+                "kadın"
               ],
               "id": "turkish_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "This job is too much for me.",
-              "answer": "Bu iş benim için çok fazla.",
+              "question": "I want a job.",
+              "answer": "Bir iş istiyorum.",
               "words": [
                 "iş",
-                "İş",
-                "için",
-                "fazla.",
-                "benim",
-                "Bu",
-                "çok",
-                "Ne"
+                "iş.",
+                "para",
+                "Bir",
+                "istiyorum."
               ],
               "id": "turkish_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "İş hemen hemen tamam.",
-              "audio": "İş hemen hemen tamam.",
+              "answer": "Bu güzel bir iş.",
+              "audio": "Bu güzel bir iş.",
               "id": "turkish_t7_2_3"
             },
             {
@@ -1611,20 +1620,20 @@
               "answer": "matched",
               "pairs": [
                 [
+                  "It's an awfully big job.",
+                  "Bu çok büyük bir iş."
+                ],
+                [
+                  "Give me a job.",
+                  "Bana bir iş ver."
+                ],
+                [
+                  "The job is practically done.",
+                  "İş hemen hemen tamam."
+                ],
+                [
                   "That's not a job.",
                   "Bu bir iş değil."
-                ],
-                [
-                  "I just want a job.",
-                  "Sadece bir iş istiyorum."
-                ],
-                [
-                  "I want a good job.",
-                  "İyi bir iş istiyorum."
-                ],
-                [
-                  "It's a big job.",
-                  "Bu büyük bir iş."
                 ]
               ],
               "id": "turkish_t7_2_4"
@@ -1637,46 +1646,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I know it's important work.",
-              "answer": "Ben bunun önemli bir iş olduğunu biliyorum.",
+              "question": "I just want a job.",
+              "answer": "Sadece bir iş istiyorum.",
               "choices": [
-                "İş bu değil.",
-                "İyi bir iş istiyorum.",
-                "Bu çok büyük bir iş.",
-                "Ben bunun önemli bir iş olduğunu biliyorum."
+                "O büyük bir iş.",
+                "İş hemen hemen tamam.",
+                "O bir kadın işi.",
+                "Sadece bir iş istiyorum."
               ],
               "id": "turkish_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "Bu gerçekten ____ bir iş.",
-              "answer": "önemli",
+              "question": "Bu büyük ____ iş.",
+              "answer": "bir",
               "choices": [
-                "biraz",
-                "iş",
-                "önemli",
-                "Ben"
+                "tamam",
+                "biliyor",
+                "bir",
+                "iş"
               ],
               "id": "turkish_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "Are you still at work?",
-              "answer": "Hala işte misin?",
+              "question": "I don't want a job.",
+              "answer": "Ben bir iş istemiyorum.",
               "words": [
-                "işte",
-                "ver.",
-                "biliyorum.",
-                "Hala",
-                "misin?"
+                "sadece",
+                "istemiyorum.",
+                "bir",
+                "Ben",
+                "istiyorum.",
+                "iş"
               ],
               "id": "turkish_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ne kadar para?",
-              "audio": "Ne kadar para?",
+              "answer": "O az bir para değil.",
+              "audio": "O az bir para değil.",
               "id": "turkish_t7_3_3"
             },
             {
@@ -1685,12 +1695,12 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is it only about money?",
-                  "Sadece para hakkında mı?"
+                  "That's a man's job.",
+                  "O bir erkek işi."
                 ],
                 [
-                  "This isn't money.",
-                  "Bu para değil."
+                  "This is a really important job.",
+                  "Bu gerçekten önemli bir iş."
                 ],
                 [
                   "I want some money.",
@@ -1708,16 +1718,16 @@
       ],
       "preview": [
         [
-          "It's just a job, you know?",
-          "Bu sadece bir iş, biliyor musun?"
+          "I know it's important work.",
+          "Ben bunun önemli bir iş olduğunu biliyorum."
         ],
         [
-          "It's not the job.",
-          "İş bu değil."
+          "That's a big job.",
+          "O büyük bir iş."
         ],
         [
-          "That's so much work.",
-          "Bu çok fazla iş."
+          "I know about the job.",
+          "Ben iş hakkında biliyorum."
         ]
       ]
     },
@@ -1731,46 +1741,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I want a lot.",
-              "answer": "Ben çok istiyorum.",
+              "question": "I want something better.",
+              "answer": "Daha iyi bir şey istiyorum.",
               "choices": [
-                "Sadece onu istiyorum.",
-                "Ben çok istiyorum.",
-                "Seni çok istiyorum.",
-                "Öyle bir şey istiyorum."
+                "Ben sadece bunu istiyorum.",
+                "Daha iyi bir şey istiyorum.",
+                "Sanırım o daha iyi.",
+                "Ben gerçekten onu istiyorum."
               ],
               "id": "turkish_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ben gerçekten ____ istiyorum.",
-              "answer": "onu",
+              "question": "Ben başka ____ şey istiyorum.",
+              "answer": "bir",
               "choices": [
-                "istiyorum",
-                "sonra",
-                "şey",
-                "onu"
+                "çok",
+                "de",
+                "doğru",
+                "bir"
               ],
               "id": "turkish_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "I want you so much.",
-              "answer": "Seni çok istiyorum.",
+              "question": "I think that's better.",
+              "answer": "Sanırım o daha iyi.",
               "words": [
-                "çok",
-                "istiyorum.",
-                "istiyorum.",
-                "Seni",
-                "çok"
+                "o",
+                "Ben",
+                "iyi.",
+                "Sanırım",
+                "şey",
+                "daha"
               ],
               "id": "turkish_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Seni burada istiyorum.",
-              "audio": "Seni burada istiyorum.",
+              "answer": "Sanırım o en iyi.",
+              "audio": "Sanırım o en iyi.",
               "id": "turkish_t8_1_3"
             },
             {
@@ -1779,20 +1790,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want some more.",
-                  "Biraz daha istiyorum."
+                  "I think it's all right now.",
+                  "Sanırım o şimdi tamam."
                 ],
                 [
-                  "I want something more.",
-                  "Bir şey daha istiyorum."
+                  "I think that'll happen someday.",
+                  "Sanırım o bir gün olacak."
                 ],
                 [
-                  "I want something better.",
-                  "Daha iyi bir şey istiyorum."
+                  "I want a lot.",
+                  "Ben çok istiyorum."
                 ],
                 [
-                  "I'd love something like that.",
-                  "Öyle bir şey istiyorum."
+                  "I really do want that.",
+                  "Ben gerçekten onu istiyorum."
                 ]
               ],
               "id": "turkish_t8_1_4"
@@ -1805,46 +1816,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Why would I want this?",
-              "answer": "Neden bunu istiyorum?",
+              "question": "I want something more.",
+              "answer": "Bir şey daha istiyorum.",
               "choices": [
-                "Ben çok şey istiyorum.",
-                "Neden bunu istiyorum?",
-                "Sadece seni istiyorum.",
-                "Sadece onu istiyorum."
+                "Ben onu şimdi istiyorum!",
+                "Bir şey daha istiyorum.",
+                "Öyle bir şey istiyorum.",
+                "Ben sadece bunu istiyorum."
               ],
               "id": "turkish_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Sadece ____ istiyorum.",
-              "answer": "seni",
+              "question": "Öyle bir ____ istiyorum.",
+              "answer": "şey",
               "choices": [
-                "iyi",
-                "seni",
-                "Onu",
-                "çok"
+                "yardım",
+                "şey",
+                "olacak",
+                "şimdi"
               ],
               "id": "turkish_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "I only want him.",
-              "answer": "Sadece onu istiyorum.",
+              "question": "I just want it.",
+              "answer": "Ben sadece bunu istiyorum.",
               "words": [
-                "istiyorum.",
-                "Onu",
-                "onu",
-                "gerçekten",
-                "Sadece"
+                "bunu",
+                "Öyle",
+                "sadece",
+                "başka",
+                "Ben",
+                "istiyorum."
               ],
               "id": "turkish_t8_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Onu burada istiyorum.",
-              "audio": "Onu burada istiyorum.",
+              "answer": "Ben onu istiyorum.",
+              "audio": "Ben onu istiyorum.",
               "id": "turkish_t8_2_3"
             },
             {
@@ -1853,20 +1865,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want it back.",
-                  "Onu geri istiyorum."
-                ],
-                [
-                  "I just want it.",
-                  "Ben sadece bunu istiyorum."
-                ],
-                [
-                  "I want that.",
-                  "Ben onu istiyorum."
-                ],
-                [
                   "I want many things.",
                   "Ben çok şey istiyorum."
+                ],
+                [
+                  "I just want a little more.",
+                  "Ben sadece biraz daha istiyorum."
+                ],
+                [
+                  "I really, really want this.",
+                  "Ben bunu gerçekten, gerçekten istiyorum."
+                ],
+                [
+                  "I want it now!",
+                  "Ben onu şimdi istiyorum!"
                 ]
               ],
               "id": "turkish_t8_2_4"
@@ -1879,46 +1891,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I really want this.",
-              "answer": "Bunu gerçekten istiyorum.",
+              "question": "I want some, too.",
+              "answer": "Ben de biraz istiyorum.",
               "choices": [
+                "Ben sadece biraz yardım istiyorum.",
                 "Ben sadece biraz daha istiyorum.",
-                "Ben sadece bunu istiyorum.",
-                "Sadece seni geri istiyorum.",
-                "Bunu gerçekten istiyorum."
+                "Tek bir şey istiyorum.",
+                "Ben de biraz istiyorum."
               ],
               "id": "turkish_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Sadece seni ____ istiyorum.",
-              "answer": "geri",
+              "question": "Tek bir ____ istiyorum.",
+              "answer": "şey",
               "choices": [
-                "Bir",
-                "geri",
-                "Seni",
-                "bir"
+                "de",
+                "şey",
+                "burada",
+                "çok"
               ],
               "id": "turkish_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "That's just what I want.",
-              "answer": "Sadece bunu istiyorum.",
+              "question": "That could be a problem, I think.",
+              "answer": "Sanırım, o bir sorun olabilir.",
               "words": [
-                "bunu",
-                "istiyorum.",
-                "çok",
-                "istiyorum?",
-                "Sadece"
+                "o",
+                "sorun",
+                "bir",
+                "olabilir.",
+                "doğru.",
+                "olabilir.",
+                "Sanırım,"
               ],
               "id": "turkish_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ben sadece biraz daha istiyorum.",
-              "audio": "Ben sadece biraz daha istiyorum.",
+              "answer": "Ben sadece biraz yardım istiyorum.",
+              "audio": "Ben sadece biraz yardım istiyorum.",
               "id": "turkish_t8_3_3"
             },
             {
@@ -1927,20 +1941,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I really, really want this.",
-                  "Ben bunu gerçekten, gerçekten istiyorum."
+                  "I believe it to be true.",
+                  "Sanırım o doğru."
                 ],
                 [
-                  "I want it now!",
-                  "Ben onu şimdi istiyorum!"
+                  "I think it's fine.",
+                  "Sanırım o güzel."
                 ],
                 [
-                  "I want that later.",
-                  "Onu daha sonra istiyorum."
+                  "I think I know what's happening now.",
+                  "Sanırım şimdi ne olduğunu biliyorum."
                 ],
                 [
-                  "I want some, too.",
-                  "Ben de biraz istiyorum."
+                  "I think I know what's going on here.",
+                  "Sanırım burada ne olduğunu biliyorum"
                 ]
               ],
               "id": "turkish_t8_3_4"
@@ -1950,16 +1964,16 @@
       ],
       "preview": [
         [
-          "I want a lot.",
-          "Ben çok istiyorum."
+          "I want something better.",
+          "Daha iyi bir şey istiyorum."
         ],
         [
-          "I really do want that.",
-          "Ben gerçekten onu istiyorum."
+          "I want something else.",
+          "Ben başka bir şey istiyorum."
         ],
         [
-          "I want you so much.",
-          "Seni çok istiyorum."
+          "I think that's better.",
+          "Sanırım o daha iyi."
         ]
       ]
     },
@@ -1973,25 +1987,25 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "She must be on cloud nine.",
-              "answer": "O çok mutlu olmalı.",
+              "question": "Every cloud has a silver lining.",
+              "answer": "Her işte bir hayır vardır.",
               "choices": [
-                "Hava nasıl olacak?",
-                "O çok mutlu olmalı.",
-                "Hava gerçekten harika!",
-                "Bu hava harika değil mi!"
+                "İyi hava devam edecek.",
+                "Her işte bir hayır vardır.",
+                "O berbat bir soğuk aldı.",
+                "Sıcak bir yere gidelim."
               ],
               "id": "turkish_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "Her işte ____ hayır vardır.",
-              "answer": "bir",
+              "question": "O çok ____ olmalı.",
+              "answer": "mutlu",
               "choices": [
-                "sonra",
-                "Kötü",
-                "Umarım",
-                "bir"
+                "aldı",
+                "görünüyor",
+                "hava",
+                "mutlu"
               ],
               "id": "turkish_t9_1_1"
             },
@@ -2001,12 +2015,12 @@
               "answer": "Ne olursa olsun, o orada olacak.",
               "words": [
                 "olursa",
-                "Bu",
+                "hayır",
                 "olacak.",
                 "Ne",
                 "o",
                 "orada",
-                "hava,",
+                "Bu",
                 "olsun,"
               ],
               "id": "turkish_t9_1_2"
@@ -2014,8 +2028,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Daha sonra olsa olur mu?",
-              "audio": "Daha sonra olsa olur mu?",
+              "answer": "Dün hava durumu o kadar iyi değildi.",
+              "audio": "Dün hava durumu o kadar iyi değildi.",
               "id": "turkish_t9_1_3"
             },
             {
@@ -2024,20 +2038,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'll be there rain or shine.",
-                  "Ne olursa olsun orada olacağım."
+                  "It is bad weather.",
+                  "Kötü bir hava."
                 ],
                 [
-                  "The weather stayed bad.",
-                  "Hava kötü kaldı."
+                  "The weather is looking good.",
+                  "Hava iyi görünüyor."
                 ],
                 [
-                  "Great weather, isn't it?",
-                  "Hava harika, değil mi?"
+                  "What beautiful weather!",
+                  "Ne güzel bir hava!"
                 ],
                 [
-                  "How is the weather there?",
-                  "Orada hava nasıl?"
+                  "Isn't the weather good?",
+                  "Hava iyi değil mi?"
                 ]
               ],
               "id": "turkish_t9_1_4"
@@ -2050,46 +2064,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's beautiful weather, isn't it?",
-              "answer": "Güzel hava, değil mi?",
+              "question": "Hopefully the weather will be good.",
+              "answer": "Umarım hava iyi olacak.",
               "choices": [
-                "Ne olursa olsun orada olacağım.",
-                "Güzel hava, değil mi?",
-                "Ne kadar da kötü hava!",
-                "Hava güzel değil mi?"
+                "Kötü bir hava.",
+                "Umarım hava iyi olacak.",
+                "Ben hiç kırmızı bir deniz görmedim.",
+                "O yer çok soğuk."
               ],
               "id": "turkish_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Kötü ____ hava.",
-              "answer": "bir",
+              "question": "Hava şu ____ nasıl?",
+              "answer": "an",
               "choices": [
-                "hava",
-                "bir",
-                "harika",
-                "güzel"
+                "çok",
+                "an",
+                "mutlu",
+                "işte"
               ],
               "id": "turkish_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "The weather is looking good.",
-              "answer": "Hava iyi görünüyor.",
+              "question": "Such beautiful weather!",
+              "answer": "Ne kadar güzel bir hava!",
               "words": [
-                "görünüyor.",
-                "olsun,",
-                "an",
-                "Hava",
-                "iyi"
+                "kadar",
+                "bir",
+                "güzel",
+                "hava!",
+                "şu",
+                "Ne",
+                "bir"
               ],
               "id": "turkish_t9_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ne harika hava!",
-              "audio": "Ne harika hava!",
+              "answer": "Ne korkunç bir hava!",
+              "audio": "Ne korkunç bir hava!",
               "id": "turkish_t9_2_3"
             },
             {
@@ -2098,20 +2114,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What will the weather be like?",
-                  "Hava nasıl olacak?"
+                  "The good weather will hold.",
+                  "İyi hava devam edecek."
                 ],
                 [
-                  "The weather is really great!",
-                  "Hava gerçekten harika!"
+                  "He caught a terrible cold.",
+                  "O berbat bir soğuk aldı."
                 ],
                 [
-                  "What beautiful weather!",
-                  "Ne güzel bir hava!"
+                  "She caught a cold last night.",
+                  "O, dün gece soğuk aldı."
                 ],
                 [
-                  "The weather is just perfect.",
-                  "Hava sadece mükemmel."
+                  "He's a cold person like that.",
+                  "O böyle soğuk bir kişi."
                 ]
               ],
               "id": "turkish_t9_2_4"
@@ -2124,47 +2140,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What's the weather like now?",
-              "answer": "Şimdi hava nasıl?",
+              "question": "He wants something cold.",
+              "answer": "O soğuk bir şey istiyor.",
               "choices": [
-                "Her işte bir hayır vardır.",
-                "Kötü bir hava.",
-                "Daha sonra olsa olur mu?",
-                "Şimdi hava nasıl?"
+                "O çok mutlu olmalı.",
+                "Hava şu an nasıl?",
+                "Dün hava durumu o kadar iyi değildi.",
+                "O soğuk bir şey istiyor."
               ],
               "id": "turkish_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Hava güzel ____ mi?",
-              "answer": "değil",
+              "question": "O yer ____ soğuk.",
+              "answer": "çok",
               "choices": [
                 "görünüyor",
-                "değil",
-                "mutlu",
-                "Her"
+                "çok",
+                "olacak",
+                "dün"
               ],
               "id": "turkish_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "Isn't the weather good?",
-              "answer": "Hava iyi değil mi?",
+              "question": "That's a cold place.",
+              "answer": "Bu soğuk bir yer.",
               "words": [
-                "değil",
-                "mi?",
-                "iyi",
-                "Hava",
-                "olacağım.",
-                "olur"
+                "bir",
+                "yer.",
+                "soğuk",
+                "Bu",
+                "hava.",
+                "durumu"
               ],
               "id": "turkish_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Umarım hava iyi olacak.",
-              "audio": "Umarım hava iyi olacak.",
+              "answer": "Ne berbat bir hava!",
+              "audio": "Ne berbat bir hava!",
               "id": "turkish_t9_3_3"
             },
             {
@@ -2173,20 +2189,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "The weather is quite lovely.",
-                  "Hava oldukça güzel."
+                  "Yesterday's weather wasn't very good.",
+                  "Dün hava durumu pek iyi değildi."
                 ],
                 [
-                  "How's the weather right now?",
-                  "Hava şu an nasıl?"
+                  "The water's not very warm.",
+                  "Su çok sıcak değil."
                 ],
                 [
-                  "Isn't this weather just great!",
-                  "Bu hava harika değil mi!"
+                  "Let's go somewhere warm.",
+                  "Sıcak bir yere gidelim."
                 ],
                 [
-                  "What bad weather!",
-                  "Ne kadar da kötü hava!"
+                  "I've never seen a red sea.",
+                  "Ben hiç kırmızı bir deniz görmedim."
                 ]
               ],
               "id": "turkish_t9_3_4"
@@ -2196,12 +2212,12 @@
       ],
       "preview": [
         [
-          "She must be on cloud nine.",
-          "O çok mutlu olmalı."
-        ],
-        [
           "Every cloud has a silver lining.",
           "Her işte bir hayır vardır."
+        ],
+        [
+          "She must be on cloud nine.",
+          "O çok mutlu olmalı."
         ],
         [
           "He'll be there, rain or shine.",
@@ -2222,43 +2238,45 @@
               "question": "She became very ill.",
               "answer": "O çok kötü oldu.",
               "choices": [
-                "Bize yardım etmek ister misin?",
+                "O şimdi bir doktor.",
                 "O çok kötü oldu.",
-                "O doktor mu?",
-                "O bir doktor."
+                "İyi bir doktor biliyor musun?",
+                "Sen gerçek bir doktor musun?"
               ],
               "id": "turkish_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Bana ____ et.",
-              "answer": "yardım",
+              "question": "O iyi ____ doktor.",
+              "answer": "bir",
               "choices": [
-                "İki",
-                "olacak",
+                "değil",
+                "iyi",
                 "oldu",
-                "yardım"
+                "bir"
               ],
               "id": "turkish_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "Give him a hand.",
-              "answer": "Ona yardım et.",
+              "question": "He will make a good doctor.",
+              "answer": "O iyi bir doktor olacak.",
               "words": [
-                "et.",
+                "bir",
+                "doktor",
+                "biliyor",
+                "O",
+                "iyi",
                 "değil.",
-                "yardım",
-                "Ona",
-                "Seni"
+                "olacak."
               ],
               "id": "turkish_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Burada bana yardım et.",
-              "audio": "Burada bana yardım et.",
+              "answer": "O çok iyi bir doktor.",
+              "audio": "O çok iyi bir doktor.",
               "id": "turkish_t10_1_3"
             },
             {
@@ -2267,20 +2285,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Give us a hand, will you?",
-                  "Bize yardım et, olur mu?"
+                  "He is not a doctor.",
+                  "O bir doktor değil."
                 ],
                 [
-                  "Lend us a hand.",
-                  "Bize yardım et."
+                  "She is a doctor.",
+                  "O bir doktor."
                 ],
                 [
-                  "Care to lend a hand?",
-                  "Bize yardım etmek ister misin?"
+                  "She's a doctor now.",
+                  "O şimdi bir doktor."
                 ],
                 [
-                  "You're a sight for sore eyes.",
-                  "Seni görmek ne güzel."
+                  "Isn't she a doctor?",
+                  "O bir doktor değil mi?"
                 ]
               ],
               "id": "turkish_t10_1_4"
@@ -2293,46 +2311,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Give them a hand.",
-              "answer": "Onlara yardım et.",
+              "question": "He grew up to be a doctor.",
+              "answer": "O bir doktor oldu.",
               "choices": [
-                "İki yıl içinde bir doktor olacak.",
-                "Onlara yardım et.",
-                "O şimdi bir doktor.",
-                "Bana yardım et."
+                "Doktor olarak iyi değil.",
+                "O bir doktor oldu.",
+                "O bir doktor olmak istiyor.",
+                "O iyi bir doktor."
               ],
               "id": "turkish_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Doktor olarak ____ değil.",
-              "answer": "iyi",
+              "question": "Ben bir ____ değilim.",
+              "answer": "doktor",
               "choices": [
-                "ister",
                 "iyi",
-                "mu",
-                "değil"
+                "doktor",
+                "değil",
+                "Sen"
               ],
               "id": "turkish_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "Is he a doctor?",
-              "answer": "O doktor mu?",
+              "question": "Do you know any good doctor?",
+              "answer": "İyi bir doktor biliyor musun?",
               "words": [
-                "doktor",
+                "biliyor",
                 "çok",
-                "mu?",
-                "O",
-                "oldu."
+                "bir",
+                "değil",
+                "İyi",
+                "doktor",
+                "musun?"
               ],
               "id": "turkish_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O bir doktor değil.",
-              "audio": "O bir doktor değil.",
+              "answer": "Hey, ben bir doktor değilim.",
+              "audio": "Hey, ben bir doktor değilim.",
               "id": "turkish_t10_2_3"
             },
             {
@@ -2341,20 +2361,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "She is a doctor.",
-                  "O bir doktor."
+                  "Are you a real doctor?",
+                  "Sen gerçek bir doktor musun?"
                 ],
                 [
-                  "He's no doctor.",
-                  "O, doktor değil."
+                  "Are you a doctor now, too?",
+                  "Sen de artık bir doktor musun?"
                 ],
                 [
-                  "She's a doctor now.",
-                  "O şimdi bir doktor."
+                  "She wishes to become a doctor.",
+                  "O bir doktor olmak istiyor."
                 ],
                 [
-                  "I wish to be a doctor.",
-                  "Bir doktor olmak istiyorum."
+                  "She will become a doctor within two years.",
+                  "O, iki yıl içinde bir doktor olacak."
                 ]
               ],
               "id": "turkish_t10_2_4"
@@ -2367,38 +2387,38 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Isn't she a doctor?",
-              "answer": "O bir doktor değil mi?",
+              "question": "Aren't you a doctor?",
+              "answer": "Sen bir doktor değil misin?",
               "choices": [
-                "Bir doktor musun?",
-                "O bir doktor oldu.",
-                "O iyi bir doktor.",
-                "O bir doktor değil mi?"
+                "O doktor mu?",
+                "Sen bir doktor değilsin.",
+                "Bana yardım et.",
+                "Sen bir doktor değil misin?"
               ],
               "id": "turkish_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "O iyi ____ doktor.",
-              "answer": "bir",
+              "question": "Bana ____ et.",
+              "answer": "yardım",
               "choices": [
-                "Bir",
-                "bir",
-                "et",
-                "istiyorum"
+                "iki",
+                "yardım",
+                "mi",
+                "istiyor"
               ],
               "id": "turkish_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "He grew up to be a doctor.",
-              "answer": "O bir doktor oldu.",
+              "question": "You are not a doctor.",
+              "answer": "Sen bir doktor değilsin.",
               "words": [
                 "bir",
-                "yardım",
-                "oldu.",
-                "O",
-                "olur",
+                "Burada",
+                "değilsin.",
+                "Sen",
+                "Ona",
                 "doktor"
               ],
               "id": "turkish_t10_3_2"
@@ -2406,8 +2426,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "O iyi bir doktor olacak.",
-              "audio": "O iyi bir doktor olacak.",
+              "answer": "Ona yardım et.",
+              "audio": "Ona yardım et.",
               "id": "turkish_t10_3_3"
             },
             {
@@ -2416,20 +2436,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "The doctor came immediately.",
-                  "Doktor hemen geldi."
+                  "Give me a hand here.",
+                  "Burada bana yardım et."
                 ],
                 [
-                  "She will become a doctor in two years.",
-                  "İki yıl içinde bir doktor olacak."
+                  "He is no good as a doctor.",
+                  "Doktor olarak iyi değil."
                 ],
                 [
-                  "Are you a doctor?",
-                  "Bir doktor musun?"
+                  "Is he a doctor?",
+                  "O doktor mu?"
                 ],
                 [
-                  "I'm not a doctor.",
-                  "Ben bir doktor değilim."
+                  "He's no doctor.",
+                  "O, doktor değil."
                 ]
               ],
               "id": "turkish_t10_3_4"
@@ -2443,12 +2463,257 @@
           "O çok kötü oldu."
         ],
         [
-          "Lend me a hand.",
-          "Bana yardım et."
+          "He is a good doctor.",
+          "O iyi bir doktor."
         ],
         [
-          "Give him a hand.",
-          "Ona yardım et."
+          "He will make a good doctor.",
+          "O iyi bir doktor olacak."
+        ]
+      ]
+    },
+    {
+      "id": "t11",
+      "title": "General Practice",
+      "lessons": [
+        {
+          "id": "t11l1",
+          "title": "Lesson 1",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "What's it for?",
+              "answer": "O ne için?",
+              "choices": [
+                "Bu o değil.",
+                "O ne için?",
+                "O bir hayır mı?",
+                "O çok değil mi?"
+              ],
+              "id": "turkish_t11_1_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Bu ____ için?",
+              "answer": "ne",
+              "choices": [
+                "çok",
+                "bir",
+                "Hayır",
+                "ne"
+              ],
+              "id": "turkish_t11_1_1"
+            },
+            {
+              "type": "sentence",
+              "question": "Is that a no?",
+              "answer": "O bir hayır mı?",
+              "words": [
+                "çok",
+                "mı?",
+                "Bu",
+                "O",
+                "bir",
+                "hayır"
+              ],
+              "id": "turkish_t11_1_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Hayır, ben değil, sen!",
+              "audio": "Hayır, ben değil, sen!",
+              "id": "turkish_t11_1_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "No, not me, but you!",
+                  "Hayır, ben değil, ama sen!"
+                ],
+                [
+                  "No, not that one!",
+                  "Hayır, o değil!"
+                ],
+                [
+                  "Is that a good thing?",
+                  "O iyi bir şey mi?"
+                ],
+                [
+                  "That is a very good thing.",
+                  "O çok iyi bir şey."
+                ]
+              ],
+              "id": "turkish_t11_1_4"
+            }
+          ]
+        },
+        {
+          "id": "t11l2",
+          "title": "Lesson 2",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "This one's good, but that one's better.",
+              "answer": "Bu iyi ama o daha iyi.",
+              "choices": [
+                "Bu ne için?",
+                "Bu iyi ama o daha iyi.",
+                "Hayır, bu değil!",
+                "O bir hayır mı?"
+              ],
+              "id": "turkish_t11_2_0"
+            },
+            {
+              "type": "cloze",
+              "question": "O ____ ne?",
+              "answer": "da",
+              "choices": [
+                "iyi",
+                "da",
+                "Hayır",
+                "hayır"
+              ],
+              "id": "turkish_t11_2_1"
+            },
+            {
+              "type": "sentence",
+              "question": "That's not so many.",
+              "answer": "O o kadar çok değil.",
+              "words": [
+                "o",
+                "değil.",
+                "çok",
+                "Bu",
+                "kadar",
+                "O",
+                "kadar"
+              ],
+              "id": "turkish_t11_2_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "Bu o değil.",
+              "audio": "Bu o değil.",
+              "id": "turkish_t11_2_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "Isn't that a lot?",
+                  "O çok değil mi?"
+                ],
+                [
+                  "It's he, isn't it?",
+                  "Bu o, değil mi?"
+                ],
+                [
+                  "It's not this one.",
+                  "O bu değil."
+                ],
+                [
+                  "Don't mention it.",
+                  "Bir şey değil."
+                ]
+              ],
+              "id": "turkish_t11_2_4"
+            }
+          ]
+        },
+        {
+          "id": "t11l3",
+          "title": "Lesson 3",
+          "exercises": [
+            {
+              "type": "translation",
+              "question": "This is nothing.",
+              "answer": "Bu bir şey değil.",
+              "choices": [
+                "O ne kadar iyi?",
+                "Hayır, bu değil!",
+                "Bu da bir şey değil mi?",
+                "Bu bir şey değil."
+              ],
+              "id": "turkish_t11_3_0"
+            },
+            {
+              "type": "cloze",
+              "question": "Bu da bir ____ değil mi?",
+              "answer": "şey",
+              "choices": [
+                "değil",
+                "kadar",
+                "şey",
+                "sen"
+              ],
+              "id": "turkish_t11_3_1"
+            },
+            {
+              "type": "sentence",
+              "question": "No, not this one!",
+              "answer": "Hayır, bu değil!",
+              "words": [
+                "değil!",
+                "iyi,",
+                "bu",
+                "Hayır,",
+                "Bu"
+              ],
+              "id": "turkish_t11_3_2"
+            },
+            {
+              "type": "listening",
+              "question": "Type what you hear",
+              "answer": "O iyi mi?",
+              "audio": "O iyi mi?",
+              "id": "turkish_t11_3_3"
+            },
+            {
+              "type": "match",
+              "question": "Tap the matching pairs",
+              "answer": "matched",
+              "pairs": [
+                [
+                  "That's too much of a good thing.",
+                  "Bu çok iyi bir şey."
+                ],
+                [
+                  "That's good, isn't it?",
+                  "O iyi, değil mi?"
+                ],
+                [
+                  "How good is he?",
+                  "O ne kadar iyi?"
+                ],
+                [
+                  "That's no good.",
+                  "O iyi değil."
+                ]
+              ],
+              "id": "turkish_t11_3_4"
+            }
+          ]
+        }
+      ],
+      "preview": [
+        [
+          "What's it for?",
+          "O ne için?"
+        ],
+        [
+          "What is this for?",
+          "Bu ne için?"
+        ],
+        [
+          "Is that a no?",
+          "O bir hayır mı?"
         ]
       ]
     }

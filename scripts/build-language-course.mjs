@@ -85,6 +85,12 @@ const LANGS = {
 const UNSPACED = new Set(['japanese', 'chinese', 'thai']);
 
 const UNITS = 10;
+// Courses that Cruise (the sibling repo) has played get more units, sized to
+// how much it practised, and lean toward the words it practised. Only Tatoeba
+// text goes into the pack; the Cruise ledger is read for its vocabulary alone.
+const MAX_UNITS = 60;   // ponytail: about 1,400 sentences; the app fetches the whole pack when a course opens
+const CRUISE_CODES = { greek: 'el', polish: 'pl', hindi: 'hi', japanese: 'ja', korean: 'ko', french: 'fr', turkish: 'tr', arabic: 'ar', swedish: 'sv', russian: 'ru', dutch: 'nl', chinese: 'zh' };
+const CRUISE_LEDGERS = ['lessons.archive.jsonl', 'lessons.jsonl'].map((f) => path.join(ROOT, '..', 'cruise', 'scripts', f));
 const MIN_UNITS = 3;
 const LESSONS_PER_UNIT = 3;
 // One lesson consumes: translation 1 + cloze 1 + sentence 1 + listening 1 + match 4.
@@ -249,9 +255,27 @@ async function loadFrequency({ freq, freqYear }) {
 const tokenize = (text) =>
     text.toLowerCase().replace(/[^\p{L}\p{N}\s'-]/gu, '').split(/\s+/).filter(Boolean);
 
+// Practised vocabulary for one course from the Cruise ledger: { words, items }.
+// items = distinct prompt/answer rows, which sets the unit count.
+async function cruiseVocab(id) {
+    const code = CRUISE_CODES[id];
+    const words = new Set(), items = new Set();
+    if (!code) return { words, items: 0 };
+    for (const file of CRUISE_LEDGERS) {
+        let text; try { text = await readFile(file, 'utf8'); } catch { continue; }
+        for (const line of text.split('\n')) {
+            if (!line.includes(`"course":"${code}"`)) continue;
+            let row; try { row = JSON.parse(line); } catch { continue; }
+            items.add(`${row.prompt}\u0000${row.answer}`);
+            for (const side of [row.prompt, row.answer]) if (typeof side === 'string') for (const w of tokenize(side)) words.add(w);
+        }
+    }
+    return { words, items: items.size };
+}
+
 // Ranked pairs, easiest first. "Easiest" = the rarest word in the target sentence is
 // still common; that keeps unit 1 off vocabulary nobody needs.
-async function rankedPairs(id, config) {
+async function rankedPairs(id, config, practised = new Set()) {
     const [target, english, rank] = await Promise.all([
         loadSentences(config.tatoeba),
         loadSentences('eng'),
@@ -307,6 +331,9 @@ async function rankedPairs(id, config) {
             const known = ranks.filter((value) => value !== undefined);
             if (!known.length) continue;
             difficulty = Math.max(...known) + unknown * UNKNOWN_WORD_PENALTY;
+            // Practised words pull a sentence forward: half the rank per word, at most a quarter.
+            const hits = practised.size ? words.filter((word) => practised.has(word)).length : 0;
+            if (hits) difficulty /= Math.min(4, 1 + hits);
         }
 
         seenEnglish.add(key);
@@ -423,8 +450,11 @@ async function build(id) {
     const packPath = path.join(COURSES, `${id}.json`);
     const pack = JSON.parse(await readFile(packPath, 'utf8'));
 
-    const pairs = await rankedPairs(id, config);
+    const vocab = await cruiseVocab(id);
+    const pairs = await rankedPairs(id, config, vocab.words);
     const unspaced = UNSPACED.has(id);
+    const units = vocab.items ? Math.min(MAX_UNITS, Math.max(UNITS, Math.ceil(vocab.items / PER_UNIT))) : UNITS;
+    if (vocab.items) process.stderr.write(`  cruise: ${vocab.items} practised items, ${vocab.words.size} words -> up to ${units} units\n`);
 
     // Bucket by theme, keeping each bucket in difficulty order. A theme only becomes a
     // unit if it has enough sentences of its own -- padding it with unrelated ones is
@@ -440,13 +470,16 @@ async function build(id) {
     for (const theme of THEMES) {
         const pool = buckets.get(theme.title);
         if (pool.length >= PER_UNIT) chosen.push({ title: theme.title, pool: pool.slice(0, PER_UNIT) });
+        // A bigger course keeps the rest of the theme for the practice units.
+        if (units > UNITS) leftovers.push(...pool.slice(pool.length >= PER_UNIT ? PER_UNIT : 0));
     }
+    if (units > UNITS) leftovers.sort((a, b) => a.difficulty - b.difficulty);
 
     // Anything that matched no theme still makes practice units at the end, so a large
     // corpus is not thrown away just because its sentences are off-topic.
     let spare = leftovers;
     let generalIndex = 1;
-    while (chosen.length < UNITS && spare.length >= PER_UNIT) {
+    while (chosen.length < units && spare.length >= PER_UNIT) {
         chosen.push({
             title: chosen.some((u) => u.title.startsWith(GENERAL_UNIT)) ? `${GENERAL_UNIT} ${generalIndex}` : GENERAL_UNIT,
             pool: spare.slice(0, PER_UNIT),
@@ -459,7 +492,7 @@ async function build(id) {
         process.stderr.write(`  ! only ${pairs.length} usable pairs — skipping\n`);
         return null;
     }
-    if (chosen.length < UNITS) process.stderr.write(`  ${chosen.length} units (thin corpus)\n`);
+    if (chosen.length < units) process.stderr.write(`  ${chosen.length} units (thin corpus)\n`);
 
     // Drop any previously generated units, keep every hand-authored one.
     pack.units = pack.units.filter((unit) => !unit.id.startsWith('t'));

@@ -4,7 +4,7 @@
   "category": "languages",
   "icon": "fa-solid fa-earth-europe",
   "level": "Beginner",
-  "version": 5,
+  "version": 6,
   "units": [
     {
       "id": "u1",
@@ -216,10 +216,10 @@
               "question": "I go where I please.",
               "answer": "Ik ga waar ik wil.",
               "choices": [
-                "Ik zie je daar.",
+                "Bedankt, dat was het.",
                 "Ik ga waar ik wil.",
-                "Nee, dank u.",
-                "Dank je wel!"
+                "Het spijt me, ik hou van je.",
+                "Ik wil zeggen dat het me spijt."
               ],
               "id": "dutch_t1_1_0"
             },
@@ -228,34 +228,36 @@
               "question": "Ik doe ____ ik wil.",
               "answer": "wat",
               "choices": [
-                "dag",
-                "waar",
-                "wat",
-                "ik"
+                "dat",
+                "het",
+                "weg",
+                "wat"
               ],
               "id": "dutch_t1_1_1"
             },
             {
               "type": "sentence",
-              "question": "Would you leave us alone, please?",
-              "answer": "Zou je ons alleen kunnen laten?",
+              "question": "Sorry to be late.",
+              "answer": "Het spijt mij dat ik te laat ben.",
               "words": [
-                "even",
-                "alleen",
-                "je,",
-                "kunnen",
-                "laten?",
-                "Zou",
-                "je",
-                "ons"
+                "te",
+                "dat",
+                "spijt",
+                "ben.",
+                "ben.",
+                "sorry.",
+                "laat",
+                "Het",
+                "mij",
+                "ik"
               ],
               "id": "dutch_t1_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Zou je ons even alleen kunnen laten?",
-              "audio": "Zou je ons even alleen kunnen laten?",
+              "answer": "Het spijt me dat ik zo laat ben.",
+              "audio": "Het spijt me dat ik zo laat ben.",
               "id": "dutch_t1_1_3"
             },
             {
@@ -264,20 +266,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Bye! Take care!",
-                  "Tot kijk! Hou je goed!"
+                  "I'm sorry about being late.",
+                  "Het spijt me dat ik te laat ben."
                 ],
                 [
-                  "We have a nice house.",
-                  "We hebben een goed huis."
+                  "I'm fine, thank you.",
+                  "Ik ben oké, dank je."
                 ],
                 [
-                  "Meet me there.",
-                  "Ik zie je daar."
+                  "Thanks, that's everything.",
+                  "Bedankt, dat was het."
                 ],
                 [
-                  "Please show me another one.",
-                  "Kunt u me nog een andere laten zien?"
+                  "Thanks for coming.",
+                  "Bedankt voor het komen."
                 ]
               ],
               "id": "dutch_t1_1_4"
@@ -290,46 +292,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Thanks, that's all.",
-              "answer": "Dank je, dat is alles.",
+              "question": "Thank you for the warning.",
+              "answer": "Bedankt dat je het me laat weten.",
               "choices": [
-                "Bedankt voor alles wat je hebt gedaan.",
+                "Bedankt voor het helpen.",
+                "Bedankt dat je het me laat weten.",
                 "Ik doe wat ik wil.",
-                "We hebben een goed huis.",
-                "Dank je, dat is alles."
+                "Ik ben oké, dank je."
               ],
               "id": "dutch_t1_2_0"
             },
             {
-              "type": "translation",
-              "question": "Thank you!",
-              "answer": "Dank u wel!",
+              "type": "cloze",
+              "question": "Bedankt voor ____ andere dag.",
+              "answer": "de",
               "choices": [
-                "Bedankt voor niets.",
-                "Dank u wel!",
-                "Dank u, met mij gaat het goed.",
-                "We hebben een goed huis."
+                "ik",
+                "meer",
+                "de",
+                "ga"
               ],
               "id": "dutch_t1_2_1"
             },
             {
               "type": "sentence",
-              "question": "Thanks!",
-              "answer": "Dank je wel!",
+              "question": "I'm sorry, I love you.",
+              "answer": "Het spijt me, ik hou van je.",
               "words": [
-                "alles",
-                "je,",
-                "wel!",
-                "Dank",
-                "je"
+                "spijt",
+                "me,",
+                "van",
+                "je.",
+                "ik",
+                "hou",
+                "het.",
+                "mij",
+                "Het"
               ],
               "id": "dutch_t1_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Dank u, met mij gaat het goed.",
-              "audio": "Dank u, met mij gaat het goed.",
+              "answer": "Ik heb spijt om wat ik gedaan heb.",
+              "audio": "Ik heb spijt om wat ik gedaan heb.",
               "id": "dutch_t1_2_3"
             },
             {
@@ -338,20 +344,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Fine, thank you. And you?",
-                  "Goed, dank u. En met u?"
+                  "I'm sorry I was late.",
+                  "Het spijt me dat ik te laat was."
                 ],
                 [
-                  "No, thank you.",
-                  "Nee, dank u."
+                  "I want to say I'm sorry.",
+                  "Ik wil zeggen dat het me spijt."
                 ],
                 [
-                  "I thank you.",
-                  "Ik dank u."
+                  "Excuse me. I need to go.",
+                  "Het spijt me. Ik moet weg."
                 ],
                 [
-                  "I'm fine, thank you.",
-                  "Ik ben oké, dank je."
+                  "I'm sorry, but I have to go.",
+                  "Het spijt me, maar ik moet gaan."
                 ]
               ],
               "id": "dutch_t1_2_4"
@@ -364,41 +370,38 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Thanks, that's everything.",
-              "answer": "Bedankt, dat was het.",
+              "question": "I'm sorry, I haven't any left.",
+              "answer": "Het spijt me, ik heb niets meer.",
               "choices": [
-                "Nee, dank u.",
-                "Zou je ons even alleen kunnen laten?",
-                "Bedankt, dat was het.",
-                "Dank je wel!"
+                "Het spijt me, ik hou van je.",
+                "Ik wil zeggen dat het me spijt.",
+                "Het spijt me dat ik zo laat ben.",
+                "Het spijt me, ik heb niets meer."
               ],
               "id": "dutch_t1_3_0"
             },
             {
               "type": "cloze",
-              "question": "Bedankt voor ____ komen.",
-              "answer": "het",
+              "question": "Het spijt me ____ het laat zijn.",
+              "answer": "voor",
               "choices": [
-                "het",
-                "laten",
-                "wordt",
-                "kunnen"
+                "andere",
+                "voor",
+                "me",
+                "mij"
               ],
               "id": "dutch_t1_3_1"
             },
             {
               "type": "sentence",
-              "question": "Thank you for all you've done.",
-              "answer": "Bedankt voor alles wat je hebt gedaan.",
+              "question": "Thank you for the help.",
+              "answer": "Bedankt voor het helpen.",
               "words": [
                 "voor",
-                "gedaan.",
-                "alles",
-                "je",
-                "hebt",
-                "waar",
-                "wat",
-                "Bedankt,",
+                "het",
+                "helpen.",
+                "ga",
+                "ben.",
                 "Bedankt"
               ],
               "id": "dutch_t1_3_2"
@@ -406,8 +409,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je wordt bedankt.",
-              "audio": "Je wordt bedankt.",
+              "answer": "Ik kan het niet, sorry.",
+              "audio": "Ik kan het niet, sorry.",
               "id": "dutch_t1_3_3"
             },
             {
@@ -416,20 +419,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Thanks for everything.",
-                  "Bedankt voor alles."
+                  "Sorry I'm late.",
+                  "Sorry dat ik laat ben."
                 ],
                 [
-                  "Thank you for the warning.",
-                  "Bedankt dat je het me laat weten."
+                  "I'm sorry that I'm so late.",
+                  "Sorry dat ik zo laat ben."
                 ],
                 [
-                  "Thanks for nothing.",
-                  "Bedankt voor niets."
+                  "Sorry. I don't have time.",
+                  "Sorry. Ik heb geen tijd."
                 ],
                 [
-                  "Thanks for the other day.",
-                  "Bedankt voor de andere dag."
+                  "I'm sorry, I don't know.",
+                  "Sorry, ik weet het niet."
                 ]
               ],
               "id": "dutch_t1_3_4"
@@ -447,8 +450,8 @@
           "Ik doe wat ik wil."
         ],
         [
-          "Would you leave us alone, please?",
-          "Zou je ons alleen kunnen laten?"
+          "Sorry to be late.",
+          "Het spijt mij dat ik te laat ben."
         ]
       ]
     },
@@ -462,47 +465,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He's already a man.",
-              "answer": "Hij is al een man.",
+              "question": "I am a man.",
+              "answer": "Ik ben een man.",
               "choices": [
-                "Hij is al een man.",
+                "Ben ik de vader?",
                 "Ik ben een man.",
-                "Hij is maar een man.",
-                "Deze man is dood."
+                "Ik weet niet wie deze man is.",
+                "Het meisje zag het ook."
               ],
               "id": "dutch_t2_1_0"
             },
             {
               "type": "cloze",
-              "question": "Wie is ____ man?",
-              "answer": "die",
+              "question": "Ik ben ____ mijn man.",
+              "answer": "bij",
               "choices": [
-                "die",
-                "dat",
-                "weet",
-                "Hoe"
+                "andere",
+                "Ben",
+                "een",
+                "bij"
               ],
               "id": "dutch_t2_1_1"
             },
             {
               "type": "sentence",
-              "question": "I am a man.",
-              "answer": "Ik ben een man.",
+              "question": "Am I the father?",
+              "answer": "Ben ik de vader?",
               "words": [
-                "u",
-                "man.",
-                "een",
-                "Wat",
                 "ben",
-                "Ik"
+                "vader?",
+                "de",
+                "jongen.",
+                "ik",
+                "Ben"
               ],
               "id": "dutch_t2_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hij is maar een man.",
-              "audio": "Hij is maar een man.",
+              "answer": "Ik weet niet wie deze man is.",
+              "audio": "Ik weet niet wie deze man is.",
               "id": "dutch_t2_1_3"
             },
             {
@@ -511,20 +514,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "You're a man.",
-                  "Jij bent een man."
-                ],
-                [
-                  "I don't know who this man is.",
-                  "Ik weet niet wie deze man is."
-                ],
-                [
-                  "Is he a man?",
-                  "Is hij een man?"
-                ],
-                [
                   "You're not a man.",
                   "Jij bent geen man."
+                ],
+                [
+                  "How you doing, man?",
+                  "Hoe gaat het, man?"
+                ],
+                [
+                  "Yes, I am his father.",
+                  "Ja, ik ben zijn vader."
+                ],
+                [
+                  "I'm your father.",
+                  "Ik ben jouw vader."
                 ]
               ],
               "id": "dutch_t2_1_4"
@@ -537,46 +540,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Where's my husband?",
-              "answer": "Waar is mijn man?",
+              "question": "I am a woman.",
+              "answer": "Ik ben een vrouw.",
               "choices": [
-                "Wat een man.",
-                "Wie is die man?",
-                "Wie is die man daar?",
-                "Waar is mijn man?"
+                "Ik ben jouw vrouw niet.",
+                "Ik ben een vrouw.",
+                "Ik ben bij mijn man.",
+                "Ik ben niet jouw vrouw."
               ],
               "id": "dutch_t2_2_0"
             },
             {
               "type": "cloze",
-              "question": "Wie is ____ man daar?",
-              "answer": "die",
+              "question": "Ik ben ____ vrouw niet.",
+              "answer": "jouw",
               "choices": [
-                "een",
-                "die",
-                "gaat",
-                "de"
+                "vader",
+                "jouw",
+                "goed",
+                "niet"
               ],
               "id": "dutch_t2_2_1"
             },
             {
               "type": "sentence",
-              "question": "Some man.",
-              "answer": "Wat een man.",
+              "question": "I am not your wife.",
+              "answer": "Ik ben niet jouw vrouw.",
               "words": [
-                "een",
-                "man",
-                "hij",
-                "Wat",
-                "man."
+                "niet",
+                "jouw",
+                "niet",
+                "vrouw.",
+                "moeder.",
+                "Ik",
+                "ben"
               ],
               "id": "dutch_t2_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Is dat een man?",
-              "audio": "Is dat een man?",
+              "answer": "Ik wil niet de andere vrouw zijn.",
+              "audio": "Ik wil niet de andere vrouw zijn.",
               "id": "dutch_t2_2_3"
             },
             {
@@ -585,16 +590,16 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "A man is here.",
-                  "Er is hier een man."
+                  "I am like my father.",
+                  "Ik ben zoals mijn vader."
                 ],
                 [
-                  "How you doing, man?",
-                  "Hoe gaat het, man?"
+                  "She is the woman I love.",
+                  "Zij is de vrouw van wie ik hou."
                 ],
                 [
-                  "I'm with my husband.",
-                  "Ik ben bij mijn man."
+                  "I am your mother.",
+                  "Ik ben je moeder."
                 ],
                 [
                   "I will make a man of you.",
@@ -611,50 +616,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Is that your husband?",
-              "answer": "Is dat uw man?",
+              "question": "I don't love my husband anymore.",
+              "answer": "Ik hou niet meer van mijn man.",
               "choices": [
-                "Is dat uw man?",
-                "Wat een man.",
-                "Wie is die man?",
-                "Wie is die man daar?"
+                "Ik ben jouw vrouw niet.",
+                "Ik ben niet jouw vrouw.",
+                "Ik ben bij mijn man.",
+                "Ik hou niet meer van mijn man."
               ],
               "id": "dutch_t2_3_0"
             },
             {
               "type": "cloze",
-              "question": "Hou je ____ je man?",
-              "answer": "van",
+              "question": "Het eerste wat ik ____ was de jongen.",
+              "answer": "zag",
               "choices": [
-                "van",
-                "vader",
-                "hij",
-                "Hou"
+                "meer",
+                "zag",
+                "jouw",
+                "wil"
               ],
               "id": "dutch_t2_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't love my husband anymore.",
-              "answer": "Ik hou niet meer van mijn man.",
+              "question": "That is the girl whom I know well.",
+              "answer": "Dat is het meisje dat ik goed ken.",
               "words": [
-                "hou",
-                "van",
-                "meer",
-                "man.",
-                "niet",
-                "een",
-                "mijn",
-                "Ik",
-                "niet"
+                "het",
+                "meisje",
+                "eerste",
+                "ik",
+                "ken.",
+                "vader?",
+                "is",
+                "Dat",
+                "goed",
+                "dat"
               ],
               "id": "dutch_t2_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Deze man is dood.",
-              "audio": "Deze man is dood.",
+              "answer": "Het meisje zag het ook.",
+              "audio": "Het meisje zag het ook.",
               "id": "dutch_t2_3_3"
             },
             {
@@ -663,20 +669,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Did you think that was the man?",
-                  "Dacht je dat dat de man was?"
+                  "The girl saw it as well.",
+                  "Ook het meisje zag het."
                 ],
                 [
-                  "Where is your father?",
-                  "Waar is je vader?"
+                  "I am a girl.",
+                  "Ik ben een meisje."
                 ],
                 [
-                  "This is my father.",
-                  "Dit is mijn vader."
+                  "I see the girl.",
+                  "Ik zie het meisje."
                 ],
                 [
-                  "He's not my father.",
-                  "Hij is niet mijn vader."
+                  "The girl has no mother.",
+                  "Het meisje heeft geen moeder."
                 ]
               ],
               "id": "dutch_t2_3_4"
@@ -686,16 +692,16 @@
       ],
       "preview": [
         [
-          "He's already a man.",
-          "Hij is al een man."
-        ],
-        [
-          "Who's that man?",
-          "Wie is die man?"
-        ],
-        [
           "I am a man.",
           "Ik ben een man."
+        ],
+        [
+          "I'm with my husband.",
+          "Ik ben bij mijn man."
+        ],
+        [
+          "Am I the father?",
+          "Ben ik de vader?"
         ]
       ]
     },
@@ -709,47 +715,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Can I eat this?",
-              "answer": "Kan ik dit eten?",
+              "question": "I'm eating.",
+              "answer": "Ik ben aan het eten.",
               "choices": [
-                "Wanneer kunnen we eten?",
-                "We hebben wat eten nodig.",
+                "Ik denk dat we meer eten nodig hebben.",
+                "Ik ben aan het eten.",
                 "Ik had geen tijd om te eten.",
-                "Kan ik dit eten?"
+                "Kan ik iets krijgen om te eten?"
               ],
               "id": "dutch_t3_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ze hadden ____ eten.",
-              "answer": "geen",
+              "question": "Ik ben nu ____ het eten.",
+              "answer": "aan",
               "choices": [
-                "geen",
-                "hebben",
-                "iets",
-                "eten"
+                "Kan",
+                "zijn",
+                "zou",
+                "aan"
               ],
               "id": "dutch_t3_1_1"
             },
             {
               "type": "sentence",
-              "question": "What would you like to eat?",
-              "answer": "Wat wil je eten?",
+              "question": "I'm eating here.",
+              "answer": "Ik ben hier aan het eten.",
               "words": [
-                "wil",
-                "je",
-                "eten?",
-                "Wat",
-                "eten?",
-                "niet"
+                "eten",
+                "eten.",
+                "ben",
+                "Ik",
+                "aan",
+                "het",
+                "ben",
+                "hier"
               ],
               "id": "dutch_t3_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik wil iets om te eten.",
-              "audio": "Ik wil iets om te eten.",
+              "answer": "Ik ben alles aan het eten.",
+              "audio": "Ik ben alles aan het eten.",
               "id": "dutch_t3_1_3"
             },
             {
@@ -758,20 +766,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'd like something to eat.",
-                  "Ik zou graag iets eten."
+                  "I am still eating.",
+                  "Ik ben nog aan het eten."
                 ],
                 [
-                  "You must not eat too much.",
-                  "Je mag niet te veel eten."
+                  "I'm not eating at the moment.",
+                  "Ik ben niet aan het eten."
                 ],
                 [
-                  "When can we eat?",
-                  "Wanneer kunnen we eten?"
+                  "I had no time to eat.",
+                  "Ik had geen tijd om te eten."
                 ],
                 [
-                  "Would you like to eat something?",
-                  "Wil je iets eten?"
+                  "I have no food.",
+                  "Ik heb geen eten."
                 ]
               ],
               "id": "dutch_t3_1_4"
@@ -784,48 +792,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "You don't have to eat.",
-              "answer": "Je moet niet eten.",
+              "question": "I will not give them food.",
+              "answer": "Ik zal hun geen eten geven.",
               "choices": [
-                "Wanneer kunnen we eten?",
-                "Kan ik eten?",
-                "Geef mij iets te eten.",
-                "Je moet niet eten."
+                "Ik had geen tijd om te eten.",
+                "Ik zal hun geen eten geven.",
+                "Kan ik dit eten?",
+                "Ze hadden geen eten."
               ],
               "id": "dutch_t3_2_0"
             },
             {
               "type": "cloze",
-              "question": "Kan ik iets ____ om te eten?",
-              "answer": "krijgen",
+              "question": "Ik ben ____ met eten.",
+              "answer": "klaar",
               "choices": [
-                "ik",
-                "hadden",
-                "krijgen",
-                "eten"
+                "om",
+                "het",
+                "klaar",
+                "Kan"
               ],
               "id": "dutch_t3_2_1"
             },
             {
               "type": "sentence",
-              "question": "You can't eat here.",
-              "answer": "Je mag hier niet eten.",
+              "question": "I'll eat it.",
+              "answer": "Ik zal het eten.",
               "words": [
-                "mag",
-                "is",
-                "hadden",
-                "Je",
-                "niet",
+                "te",
+                "aan",
+                "het",
+                "Ik",
                 "eten.",
-                "hier"
+                "zal"
               ],
               "id": "dutch_t3_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ze hadden niet veel om te eten.",
-              "audio": "Ze hadden niet veel om te eten.",
+              "answer": "We zijn aan het eten.",
+              "audio": "We zijn aan het eten.",
               "id": "dutch_t3_2_3"
             },
             {
@@ -834,20 +841,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Can I have something to eat?",
-                  "Kan ik iets te eten krijgen?"
+                  "I'll eat it here.",
+                  "Ik zal het hier eten."
                 ],
                 [
-                  "I'll eat here.",
-                  "Ik zal hier eten."
+                  "We'll go after we eat.",
+                  "We gaan na het eten."
                 ],
                 [
-                  "We are in need of some food.",
-                  "We hebben wat eten nodig."
+                  "I think we'll need more food.",
+                  "Ik denk dat we meer eten nodig hebben."
                 ],
                 [
-                  "We have time enough to eat.",
-                  "We hebben genoeg tijd om te eten."
+                  "We were eating.",
+                  "We waren aan het eten."
                 ]
               ],
               "id": "dutch_t3_2_4"
@@ -860,48 +867,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I think it is necessary for you to eat more.",
-              "answer": "Ik vind dat je meer moet eten.",
+              "question": "I thought we were going out to dinner.",
+              "answer": "Ik dacht dat we uit eten zouden gaan.",
               "choices": [
-                "Heb je iets te eten?",
-                "Ik vind dat je meer moet eten.",
-                "Ik zou graag iets eten.",
-                "Je mag niet te veel eten."
+                "Ik ben nog aan het eten.",
+                "Ik ben niet aan het eten.",
+                "Ik ben op zoek naar eten.",
+                "Ik dacht dat we uit eten zouden gaan."
               ],
               "id": "dutch_t3_3_0"
             },
             {
               "type": "cloze",
-              "question": "Heb je ____ te eten?",
-              "answer": "iets",
+              "question": "Ik ben op ____ naar eten.",
+              "answer": "zoek",
               "choices": [
-                "moet",
-                "eten",
-                "ik",
-                "iets"
+                "ben",
+                "zoek",
+                "aan",
+                "het"
               ],
               "id": "dutch_t3_3_1"
             },
             {
               "type": "sentence",
-              "question": "Give me something to eat.",
-              "answer": "Geef mij iets te eten.",
+              "question": "Can I eat this?",
+              "answer": "Kan ik dit eten?",
               "words": [
-                "mij",
-                "te",
-                "graag",
-                "hier",
-                "eten.",
-                "iets",
-                "Geef"
+                "ik",
+                "eten?",
+                "We",
+                "dit",
+                "Kan",
+                "dit"
               ],
               "id": "dutch_t3_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Kan ik eten?",
-              "audio": "Kan ik eten?",
+              "answer": "Ze hadden geen eten.",
+              "audio": "Ze hadden geen eten.",
               "id": "dutch_t3_3_3"
             },
             {
@@ -910,20 +916,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Where do you want to eat?",
-                  "Waar wil je eten?"
+                  "I want something to eat.",
+                  "Ik wil iets om te eten."
                 ],
                 [
-                  "The food is ready.",
-                  "Het eten is klaar."
+                  "I'd like something to eat.",
+                  "Ik zou graag iets eten."
                 ],
                 [
-                  "There is no food left.",
-                  "Er is niets meer om te eten."
+                  "When can we eat?",
+                  "Wanneer kunnen we eten?"
                 ],
                 [
-                  "I had no time to eat.",
-                  "Ik had geen tijd om te eten."
+                  "Can I get something to eat?",
+                  "Kan ik iets krijgen om te eten?"
                 ]
               ],
               "id": "dutch_t3_3_4"
@@ -933,16 +939,16 @@
       ],
       "preview": [
         [
-          "Can I eat this?",
-          "Kan ik dit eten?"
+          "I'm eating.",
+          "Ik ben aan het eten."
         ],
         [
-          "They had no food.",
-          "Ze hadden geen eten."
+          "I'm eating now.",
+          "Ik ben nu aan het eten."
         ],
         [
-          "What would you like to eat?",
-          "Wat wil je eten?"
+          "I'm eating here.",
+          "Ik ben hier aan het eten."
         ]
       ]
     },
@@ -956,50 +962,51 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can't live that kind of life.",
-              "answer": "Ik kan zo niet leven.",
+              "question": "I am in the house.",
+              "answer": "Ik ben in het huis.",
               "choices": [
-                "We moeten iets hebben waar we voor leven.",
-                "Ik hou van mijn huis.",
-                "Mag ik naar huis gaan?",
-                "Ik kan zo niet leven."
+                "Waarom gaan we niet naar huis?",
+                "Ik ben in het huis.",
+                "Ik ben op weg naar huis.",
+                "Mag ik naar huis gaan?"
               ],
               "id": "dutch_t4_1_0"
             },
             {
               "type": "cloze",
-              "question": "Leven en ____ leven.",
-              "answer": "laten",
+              "question": "We moeten iets hebben ____ we voor leven.",
+              "answer": "waar",
               "choices": [
-                "kan",
-                "hun",
+                "Laten",
                 "zo",
-                "laten"
+                "meer",
+                "waar"
               ],
               "id": "dutch_t4_1_1"
             },
             {
               "type": "sentence",
-              "question": "I have nothing to live for.",
-              "answer": "Ik heb niets om voor te leven.",
+              "question": "The house by the lake is mine.",
+              "answer": "Het huis bij het meer is van mij.",
               "words": [
-                "naar",
-                "om",
-                "niets",
-                "mijn",
-                "heb",
-                "voor",
-                "leven.",
-                "Ik",
-                "te"
+                "wil",
+                "het",
+                "huis",
+                "mij.",
+                "meer",
+                "van",
+                "bij",
+                "Het",
+                "is",
+                "op"
               ],
               "id": "dutch_t4_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik wil leven.",
-              "audio": "Ik wil leven.",
+              "answer": "Het is van het huis.",
+              "audio": "Het is van het huis.",
               "id": "dutch_t4_1_3"
             },
             {
@@ -1008,20 +1015,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "We must have something to live for.",
-                  "We moeten iets hebben waar we voor leven."
+                  "I'm on the way home.",
+                  "Ik ben op weg naar huis."
                 ],
                 [
-                  "I don't want to live.",
-                  "Ik wil niet leven."
+                  "I see the house.",
+                  "Ik zie het huis."
                 ],
                 [
-                  "We live here.",
-                  "We leven hier."
+                  "I can't live that kind of life.",
+                  "Ik kan zo niet leven."
                 ],
                 [
-                  "Do people live here?",
-                  "Leven hier mensen?"
+                  "Live and let live.",
+                  "Leven en laten leven."
                 ]
               ],
               "id": "dutch_t4_1_4"
@@ -1034,42 +1041,38 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I don't wanna live with you anymore.",
-              "answer": "Ik wil niet meer met je leven.",
+              "question": "I have nothing to live for.",
+              "answer": "Ik heb niets om voor te leven.",
               "choices": [
-                "Dit is haar huis.",
-                "Ik hou van mijn huis.",
-                "Ik wil niet meer met je leven.",
-                "Leven en laten leven."
+                "We moeten iets hebben waar we voor leven.",
+                "Ik heb niets om voor te leven.",
+                "Waarom gaan we niet naar huis?",
+                "Ik ben de hele dag thuis geweest."
               ],
               "id": "dutch_t4_2_0"
             },
             {
               "type": "cloze",
-              "question": "Laten we ____ huis gaan!",
-              "answer": "naar",
+              "question": "Ik ____ leven.",
+              "answer": "wil",
               "choices": [
-                "terug",
-                "naar",
-                "Dat",
-                "hun"
+                "waar",
+                "wil",
+                "thuis",
+                "Neem"
               ],
               "id": "dutch_t4_2_1"
             },
             {
               "type": "sentence",
-              "question": "The house by the lake is mine.",
-              "answer": "Het huis bij het meer is van mij.",
+              "question": "I don't want to live.",
+              "answer": "Ik wil niet leven.",
               "words": [
-                "is",
-                "van",
-                "huis",
-                "mij.",
-                "meer",
-                "bij",
-                "haar",
-                "Het",
-                "zo",
+                "niet",
+                "leven.",
+                "wil",
+                "Neem",
+                "Ik",
                 "het"
               ],
               "id": "dutch_t4_2_2"
@@ -1077,8 +1080,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Dat huis is van mij.",
-              "audio": "Dat huis is van mij.",
+              "answer": "We leven hier.",
+              "audio": "We leven hier.",
               "id": "dutch_t4_2_3"
             },
             {
@@ -1087,20 +1090,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "This is his house.",
-                  "Dit is zijn huis."
+                  "I don't wanna live with you anymore.",
+                  "Ik wil niet meer met je leven."
                 ],
                 [
-                  "It's time to go home.",
-                  "Het is tijd om naar huis te gaan."
+                  "I'm at a friend's house.",
+                  "Ik ben in het huis van een vriend."
                 ],
                 [
-                  "I have to go home.",
-                  "Ik moet naar huis gaan."
+                  "Live life as it comes.",
+                  "Neem het leven zoals het komt."
                 ],
                 [
-                  "This is her house.",
-                  "Dit is haar huis."
+                  "I've been at home all day.",
+                  "Ik ben de hele dag thuis geweest."
                 ]
               ],
               "id": "dutch_t4_2_4"
@@ -1113,40 +1116,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "What time do you go home?",
-              "answer": "Hoe laat ga je naar huis?",
+              "question": "Let's go home!",
+              "answer": "Laten we naar huis gaan!",
               "choices": [
-                "Ik wil leven.",
-                "Hoe laat ga je naar huis?",
-                "Dat huis is van mij.",
-                "Leven en laten leven."
+                "We leven hier.",
+                "Het is van het huis.",
+                "We moeten iets hebben waar we voor leven.",
+                "Laten we naar huis gaan!"
               ],
               "id": "dutch_t4_3_0"
             },
             {
               "type": "cloze",
-              "question": "Dit is ____ huis.",
-              "answer": "hun",
+              "question": "Het is tijd om ____ huis te gaan.",
+              "answer": "naar",
               "choices": [
-                "laat",
-                "hun",
-                "kan",
-                "van"
+                "Mag",
+                "naar",
+                "leven",
+                "voor"
               ],
               "id": "dutch_t4_3_1"
             },
             {
               "type": "sentence",
-              "question": "I am in the house.",
-              "answer": "Ik ben in het huis.",
+              "question": "I have to go home.",
+              "answer": "Ik moet naar huis gaan.",
               "words": [
-                "niet",
-                "huis.",
-                "het",
+                "We",
+                "gaan.",
+                "huis",
                 "Ik",
-                "is",
-                "in",
-                "ben"
+                "ben",
+                "naar",
+                "moet"
               ],
               "id": "dutch_t4_3_2"
             },
@@ -1163,20 +1166,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "My house is here.",
-                  "Mijn huis is hier."
-                ],
-                [
                   "I want to go home.",
                   "Ik wil naar huis."
                 ],
                 [
-                  "Go back home.",
-                  "Ga terug naar huis."
-                ],
-                [
                   "I like my house.",
                   "Ik hou van mijn huis."
+                ],
+                [
+                  "I like their house.",
+                  "Ik hou van hun huis."
+                ],
+                [
+                  "Why don't we go home?",
+                  "Waarom gaan we niet naar huis?"
                 ]
               ],
               "id": "dutch_t4_3_4"
@@ -1186,16 +1189,16 @@
       ],
       "preview": [
         [
-          "I can't live that kind of life.",
-          "Ik kan zo niet leven."
+          "I am in the house.",
+          "Ik ben in het huis."
         ],
         [
-          "Live and let live.",
-          "Leven en laten leven."
+          "We must have something to live for.",
+          "We moeten iets hebben waar we voor leven."
         ],
         [
-          "I have nothing to live for.",
-          "Ik heb niets om voor te leven."
+          "The house by the lake is mine.",
+          "Het huis bij het meer is van mij."
         ]
       ]
     },
@@ -1209,51 +1212,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Walk!",
-              "answer": "Weg van hier!",
+              "question": "The road is not good.",
+              "answer": "De weg is niet goed.",
               "choices": [
-                "Ik ben in de auto.",
-                "Weg van hier!",
                 "Laten we met de auto gaan.",
-                "Er is niemand die met mij mee wil."
+                "De weg is niet goed.",
+                "Ik ga in de auto zitten.",
+                "Ik dacht dat je geen auto had."
               ],
               "id": "dutch_t5_1_0"
             },
             {
               "type": "cloze",
-              "question": "De weg ____ niet goed.",
-              "answer": "is",
+              "question": "Ik ben ____ de auto.",
+              "answer": "in",
               "choices": [
-                "auto",
-                "is",
-                "een",
-                "Laten"
+                "hier",
+                "Ik",
+                "heb",
+                "in"
               ],
               "id": "dutch_t5_1_1"
             },
             {
               "type": "sentence",
-              "question": "I don't have anyone who'd travel with me.",
-              "answer": "Er is niemand die met mij mee wil.",
+              "question": "Let's go by car.",
+              "answer": "Laten we met de auto gaan.",
               "words": [
-                "een",
-                "die",
-                "niemand",
-                "mij",
-                "is",
-                "Hou",
-                "wil.",
-                "Er",
-                "met",
-                "mee"
+                "auto",
+                "gaan.",
+                "de",
+                "Laten",
+                "we",
+                "had.",
+                "auto",
+                "met"
               ],
               "id": "dutch_t5_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "De weg is lang.",
-              "audio": "De weg is lang.",
+              "answer": "Ik heb geen auto.",
+              "audio": "Ik heb geen auto.",
               "id": "dutch_t5_1_3"
             },
             {
@@ -1262,20 +1263,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you know whose car this is?",
-                  "Weten jullie van wie deze auto is?"
+                  "We don't have a car.",
+                  "We hebben geen auto."
                 ],
                 [
-                  "I have a car.",
-                  "Ik heb een auto."
+                  "I don't have a car anymore.",
+                  "Ik heb geen auto meer."
                 ],
                 [
-                  "Do you have a car?",
-                  "Heb je een auto?"
+                  "I don't have a car yet.",
+                  "Ik heb nog geen auto."
                 ],
                 [
-                  "That is his car.",
-                  "Dat is zijn auto."
+                  "I don't have a car now.",
+                  "Ik heb nu geen auto."
                 ]
               ],
               "id": "dutch_t5_1_4"
@@ -1288,49 +1289,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is my car.",
-              "answer": "Dit is mijn auto.",
+              "question": "You know I don't have a car.",
+              "answer": "Je weet dat ik geen auto heb.",
               "choices": [
-                "De weg is lang.",
-                "Ik zit in mijn auto.",
-                "Dit is mijn auto.",
-                "Ik ben in de auto."
+                "Ik heb een auto.",
+                "Je weet dat ik geen auto heb.",
+                "Ik heb geen auto.",
+                "Ik dacht dat je geen auto had."
               ],
               "id": "dutch_t5_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ben ____ de auto.",
-              "answer": "in",
+              "question": "Ik dacht dat ____ geen auto had.",
+              "answer": "je",
               "choices": [
+                "nu",
                 "je",
-                "jullie",
-                "ik",
-                "in"
+                "auto",
+                "hebben"
               ],
               "id": "dutch_t5_2_1"
             },
             {
               "type": "sentence",
-              "question": "Let's go by car.",
-              "answer": "Laten we met de auto gaan.",
+              "question": "I get in the car.",
+              "answer": "Ik ga in de auto zitten.",
               "words": [
-                "we",
-                "gaan.",
+                "ga",
+                "zitten.",
                 "de",
-                "Laten",
-                "met",
-                "niemand",
+                "Ik",
+                "in",
+                "Ik",
                 "auto",
-                "auto."
+                "niet"
               ],
               "id": "dutch_t5_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hij heeft een auto.",
-              "audio": "Hij heeft een auto.",
+              "answer": "Ik heb geen auto nodig.",
+              "audio": "Ik heb geen auto nodig.",
               "id": "dutch_t5_2_3"
             },
             {
@@ -1339,20 +1340,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't have a car.",
-                  "Ik heb geen auto."
+                  "I'm in the city.",
+                  "Ik ben in de stad."
                 ],
                 [
-                  "The car is ready.",
-                  "De auto is klaar."
+                  "Walk!",
+                  "Weg van hier!"
                 ],
                 [
-                  "What did you do with that car?",
-                  "Wat heb je gedaan met die auto?"
+                  "When can I pick up the car?",
+                  "Wanneer kan ik de auto komen halen?"
                 ],
                 [
-                  "We need a car.",
-                  "Wij hebben een auto nodig."
+                  "The road is long.",
+                  "De weg is lang."
                 ]
               ],
               "id": "dutch_t5_2_4"
@@ -1365,47 +1366,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Whose car is this?",
-              "answer": "Van wie is die auto?",
+              "question": "I'll wait for you in the car.",
+              "answer": "Ik zal in de auto op je wachten.",
               "choices": [
-                "Van wie is die auto?",
-                "Dit is zijn auto.",
-                "De weg is niet goed.",
-                "U heeft een auto, toch?"
+                "Kom uit de auto.",
+                "Ik ben in de auto.",
+                "Wat is het jaar van uw auto?",
+                "Ik zal in de auto op je wachten."
               ],
               "id": "dutch_t5_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik zit ____ mijn auto.",
-              "answer": "in",
+              "question": "Ik heb ____ auto.",
+              "answer": "een",
               "choices": [
-                "mij",
-                "die",
-                "in",
-                "mijn"
+                "uit",
+                "een",
+                "halen",
+                "niet"
               ],
               "id": "dutch_t5_3_1"
             },
             {
               "type": "sentence",
-              "question": "Is this your car?",
-              "answer": "Is dit uw auto?",
+              "question": "The car is ready.",
+              "answer": "De auto is klaar.",
               "words": [
-                "dit",
-                "uw",
-                "auto?",
-                "mee",
-                "Is",
-                "Heb"
+                "auto",
+                "is",
+                "klaar.",
+                "klaar.",
+                "De",
+                "je"
               ],
               "id": "dutch_t5_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hou die auto tegen!",
-              "audio": "Hou die auto tegen!",
+              "answer": "Ik zit in mijn auto.",
+              "audio": "Ik zit in mijn auto.",
               "id": "dutch_t5_3_3"
             },
             {
@@ -1414,20 +1415,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What're you doing with my car?",
-                  "Wat doe je met mijn auto?"
-                ],
-                [
-                  "This car is his.",
-                  "Dit is zijn auto."
-                ],
-                [
-                  "You've got a car, right?",
-                  "U heeft een auto, toch?"
-                ],
-                [
                   "I wish I had a car.",
                   "Had ik maar een auto."
+                ],
+                [
+                  "What is the year of your car?",
+                  "Wat is het jaar van uw auto?"
+                ],
+                [
+                  "Get out of the car.",
+                  "Kom uit de auto."
+                ],
+                [
+                  "I need a car.",
+                  "Ik heb een auto nodig."
                 ]
               ],
               "id": "dutch_t5_3_4"
@@ -1437,16 +1438,16 @@
       ],
       "preview": [
         [
-          "Walk!",
-          "Weg van hier!"
-        ],
-        [
           "The road is not good.",
           "De weg is niet goed."
         ],
         [
-          "I don't have anyone who'd travel with me.",
-          "Er is niemand die met mij mee wil."
+          "I'm in the car.",
+          "Ik ben in de auto."
+        ],
+        [
+          "Let's go by car.",
+          "Laten we met de auto gaan."
         ]
       ]
     },
@@ -1460,46 +1461,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Are you leaving so early?",
-              "answer": "Ga je nu al?",
+              "question": "I'm late, aren't I?",
+              "answer": "Ik ben te laat, of niet?",
               "choices": [
-                "Ga je nu al?",
-                "U bent laat.",
-                "Is het te laat?",
-                "Het is al laat."
+                "Ik ben laat.",
+                "De tijd zal het zeggen.",
+                "Ik ben te laat, of niet?",
+                "Daar hebben we nu geen tijd voor."
               ],
               "id": "dutch_t6_1_0"
             },
             {
               "type": "cloze",
-              "question": "Waarom was ____ laat?",
-              "answer": "je",
+              "question": "Ik weet niet ____ laat het is.",
+              "answer": "hoe",
               "choices": [
                 "nu",
-                "was",
-                "je",
-                "Waarom"
+                "ben",
+                "Ben",
+                "hoe"
               ],
               "id": "dutch_t6_1_1"
             },
             {
               "type": "sentence",
-              "question": "It's late.",
-              "answer": "Het is laat.",
+              "question": "It's late. I have to go.",
+              "answer": "Het is laat, ik moet gaan.",
               "words": [
                 "is",
-                "je",
-                "wat",
+                "moet",
+                "gaan.",
                 "Het",
-                "laat."
+                "ik",
+                "echt",
+                "niet?",
+                "laat,"
               ],
               "id": "dutch_t6_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Het is al laat.",
-              "audio": "Het is al laat.",
+              "answer": "Ik ben laat.",
+              "audio": "Ik ben laat.",
               "id": "dutch_t6_1_3"
             },
             {
@@ -1508,20 +1512,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "What time is it?",
-                  "Hoe laat is het?"
+                  "Have I arrived too late?",
+                  "Ben ik te laat?"
                 ],
                 [
-                  "I'm late, aren't I?",
-                  "Ik ben te laat, of niet?"
+                  "I may be late.",
+                  "Ik ben misschien laat."
                 ],
                 [
-                  "I don't know what time it is.",
-                  "Ik weet niet hoe laat het is."
+                  "I might be a little late.",
+                  "Ik ben misschien wat te laat."
                 ],
                 [
-                  "Why are you late?",
-                  "Waarom ben je te laat?"
+                  "I'm never late.",
+                  "Ik ben nooit te laat."
                 ]
               ],
               "id": "dutch_t6_1_4"
@@ -1534,46 +1538,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's already too late.",
-              "answer": "Het is al te laat.",
+              "question": "I don't know if I have the time.",
+              "answer": "Ik weet niet of ik tijd heb.",
               "choices": [
-                "Is het te laat?",
-                "Hoe laat is het?",
-                "Ik weet niet waarom hij laat was.",
-                "Het is al te laat."
+                "Ben ik te laat?",
+                "Ik weet niet of ik tijd heb.",
+                "Daar heb ik nu geen tijd voor.",
+                "Daar hebben we nu geen tijd voor."
               ],
               "id": "dutch_t6_2_0"
             },
             {
               "type": "cloze",
-              "question": "Het is laat, ____ moet gaan.",
-              "answer": "ik",
+              "question": "Ik heb geen ____ voor jou.",
+              "answer": "tijd",
               "choices": [
-                "moet",
-                "hij",
-                "wel",
-                "ik"
+                "is",
+                "tijd",
+                "ben",
+                "te"
               ],
               "id": "dutch_t6_2_1"
             },
             {
               "type": "sentence",
-              "question": "We are late.",
-              "answer": "We zijn laat.",
+              "question": "I don't have time now.",
+              "answer": "Ik heb nu geen tijd.",
               "words": [
-                "zijn",
-                "laat.",
-                "laat.",
-                "We",
-                "Om"
+                "tijd.",
+                "had",
+                "geen",
+                "Ik",
+                "heb",
+                "nu",
+                "dan"
               ],
               "id": "dutch_t6_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hoe laat is het nu?",
-              "audio": "Hoe laat is het nu?",
+              "answer": "Ik heb geen tijd.",
+              "audio": "Ik heb geen tijd.",
               "id": "dutch_t6_2_3"
             },
             {
@@ -1582,20 +1588,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "It isn't too late for you.",
-                  "Het is niet te laat voor u."
+                  "We have no time.",
+                  "We hebben geen tijd."
                 ],
                 [
-                  "How late were you?",
-                  "Hoe laat was je?"
+                  "I will come if I have time.",
+                  "Als ik tijd heb dan kom ik."
                 ],
                 [
-                  "You are late.",
-                  "Je bent laat."
+                  "I didn't have time for that.",
+                  "Daar had ik geen tijd voor."
                 ],
                 [
-                  "You're late.",
-                  "U bent laat."
+                  "Time will tell.",
+                  "De tijd zal het zeggen."
                 ]
               ],
               "id": "dutch_t6_2_4"
@@ -1608,50 +1614,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "It's too late now.",
-              "answer": "Het is nu te laat.",
+              "question": "I don't know if I'll have time.",
+              "answer": "Ik weet niet of ik tijd zal hebben.",
               "choices": [
-                "Waarom was je laat?",
-                "Het is al laat.",
-                "Het is nu te laat.",
-                "Ik weet niet hoe laat het is."
+                "Ik ben laat.",
+                "Ik ben misschien wat te laat.",
+                "Ik weet niet hoe laat het is.",
+                "Ik weet niet of ik tijd zal hebben."
               ],
               "id": "dutch_t6_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ____ laat.",
-              "answer": "ben",
+              "question": "We hebben ____ geen tijd.",
+              "answer": "echt",
               "choices": [
-                "je",
-                "ben",
-                "al",
-                "nu"
+                "weet",
+                "echt",
+                "te",
+                "dat"
               ],
               "id": "dutch_t6_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't know why he was late.",
-              "answer": "Ik weet niet waarom hij laat was.",
+              "question": "I don't have time for that now.",
+              "answer": "Daar heb ik nu geen tijd voor.",
               "words": [
-                "hij",
-                "waarom",
-                "niet",
-                "laat",
-                "te",
-                "Om",
-                "was.",
-                "Ik",
-                "weet"
+                "geen",
+                "nu",
+                "ik",
+                "tijd",
+                "laat,",
+                "tijd.",
+                "voor.",
+                "Daar",
+                "heb"
               ],
               "id": "dutch_t6_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Is het te laat?",
-              "audio": "Is het te laat?",
+              "answer": "Daar hebben we nu geen tijd voor.",
+              "audio": "Daar hebben we nu geen tijd voor.",
               "id": "dutch_t6_3_3"
             },
             {
@@ -1660,20 +1666,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Is it already so late?",
-                  "Is het al zo laat?"
+                  "There's no time for this.",
+                  "Het is hier geen tijd voor."
                 ],
                 [
-                  "They're late.",
-                  "Ze zijn laat."
+                  "I don't have time for this right now.",
+                  "Ik heb hier nu geen tijd voor."
                 ],
                 [
-                  "You're somewhat late.",
-                  "Je bent wel wat laat."
+                  "I have no time to do that.",
+                  "Ik heb geen tijd om dat te doen."
                 ],
                 [
-                  "What time?",
-                  "Om hoe laat?"
+                  "I don't have time for that.",
+                  "Daar heb ik geen tijd voor."
                 ]
               ],
               "id": "dutch_t6_3_4"
@@ -1683,16 +1689,16 @@
       ],
       "preview": [
         [
-          "Are you leaving so early?",
-          "Ga je nu al?"
+          "I'm late, aren't I?",
+          "Ik ben te laat, of niet?"
         ],
         [
-          "Why were you late?",
-          "Waarom was je laat?"
+          "I don't know what time it is.",
+          "Ik weet niet hoe laat het is."
         ],
         [
-          "It's late.",
-          "Het is laat."
+          "It's late. I have to go.",
+          "Het is laat, ik moet gaan."
         ]
       ]
     },
@@ -1706,48 +1712,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I'm sure everything will work out just fine.",
-              "answer": "Ik weet zeker dat alles goed zal komen.",
+              "question": "I did it for the money.",
+              "answer": "Ik heb het voor het geld gedaan.",
               "choices": [
-                "Ik weet zeker dat alles goed zal komen.",
-                "Hij heeft geld nodig.",
-                "Heb je geld?",
-                "Het doet het niet meer."
+                "We hebben het geld nodig.",
+                "Ik heb het voor het geld gedaan.",
+                "Laten we het niet over geld hebben.",
+                "We hebben geen geld."
               ],
               "id": "dutch_t7_1_0"
             },
             {
               "type": "cloze",
-              "question": "Hij is goed ____ wat hij doet.",
-              "answer": "in",
+              "question": "Het doet ____ niet meer.",
+              "answer": "het",
               "choices": [
-                "weet",
-                "echt",
-                "goed",
-                "in"
+                "nodig",
+                "over",
+                "gaat",
+                "het"
               ],
               "id": "dutch_t7_1_1"
             },
             {
               "type": "sentence",
-              "question": "It doesn't work anymore.",
-              "answer": "Het doet het niet meer.",
+              "question": "We need the money.",
+              "answer": "We hebben het geld nodig.",
               "words": [
                 "het",
-                "meer.",
-                "dat",
-                "doet.",
-                "niet",
-                "Het",
-                "doet"
+                "nodig.",
+                "voor",
+                "te",
+                "geld",
+                "We",
+                "hebben"
               ],
               "id": "dutch_t7_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Alles doet het.",
-              "audio": "Alles doet het.",
+              "answer": "Ik wil geen geld.",
+              "audio": "Ik wil geen geld.",
               "id": "dutch_t7_1_3"
             },
             {
@@ -1756,20 +1762,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I don't have much money.",
-                  "Ik heb niet veel geld."
+                  "But I don't have money.",
+                  "Maar ik heb geen geld."
                 ],
                 [
-                  "Do you have much money with you?",
-                  "Heb je veel geld bij je?"
+                  "I do not have any money.",
+                  "Ik heb geen geld."
                 ],
                 [
-                  "I have a little money now.",
-                  "Ik heb nu wat geld."
+                  "It's not real money.",
+                  "Het is geen echt geld."
                 ],
                 [
-                  "We need the money.",
-                  "We hebben het geld nodig."
+                  "We don't need money.",
+                  "We hebben het geld niet nodig."
                 ]
               ],
               "id": "dutch_t7_1_4"
@@ -1782,47 +1788,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "We need money.",
-              "answer": "We hebben geld nodig.",
+              "question": "I'm not doing this for money.",
+              "answer": "Ik doe dit niet voor het geld.",
               "choices": [
-                "Heb je veel geld bij je?",
-                "Ze had niet veel geld.",
-                "Alles doet het.",
-                "We hebben geld nodig."
+                "Ik heb geen geld.",
+                "Ik doe dit niet voor het geld.",
+                "Ik wil geen geld.",
+                "Ik dacht dat je geen geld had."
               ],
               "id": "dutch_t7_2_0"
             },
             {
               "type": "cloze",
-              "question": "Ik weet dat ____ niet alles is.",
-              "answer": "geld",
+              "question": "Ik weet dat ____ geen geld hebt.",
+              "answer": "je",
               "choices": [
-                "geld",
-                "te",
-                "Alles",
-                "We"
+                "geen",
+                "je",
+                "werk",
+                "weet"
               ],
               "id": "dutch_t7_2_1"
             },
             {
               "type": "sentence",
-              "question": "She has a lot of money.",
-              "answer": "Zij heeft veel geld.",
+              "question": "I have no money on me.",
+              "answer": "Ik heb geen geld bij.",
               "words": [
-                "nu",
-                "geld.",
-                "heeft",
-                "Zij",
-                "veel",
-                "wil"
+                "geen",
+                "geld",
+                "heb",
+                "Ik",
+                "gaat",
+                "bij.",
+                "ik"
               ],
               "id": "dutch_t7_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Hij heeft veel geld.",
-              "audio": "Hij heeft veel geld.",
+              "answer": "Ik heb geen geld bij me.",
+              "audio": "Ik heb geen geld bij me.",
               "id": "dutch_t7_2_3"
             },
             {
@@ -1831,20 +1838,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I do not want any money.",
-                  "Ik wil geen geld."
+                  "I've run out of money.",
+                  "Ik heb geen geld meer."
                 ],
                 [
-                  "He needs money.",
-                  "Hij heeft geld nodig."
+                  "We have no money.",
+                  "We hebben geen geld."
                 ],
                 [
-                  "Do you have money?",
-                  "Heb je geld?"
+                  "Let's not talk about money.",
+                  "Laten we het niet over geld hebben."
                 ],
                 [
-                  "She didn't have much money.",
-                  "Ze had niet veel geld."
+                  "I thought you didn't have any money.",
+                  "Ik dacht dat je geen geld had."
                 ]
               ],
               "id": "dutch_t7_2_4"
@@ -1857,47 +1864,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "He wants the money.",
-              "answer": "Hij wil het geld.",
+              "question": "Let's not talk about money, okay?",
+              "answer": "Laten we het niet over geld hebben, oké?",
               "choices": [
-                "Hij wil het geld.",
-                "Heb je geld?",
-                "Hij is goed in wat hij doet.",
-                "Ik heb nu wat geld."
+                "Het doet het niet meer.",
+                "Laten we het niet over geld hebben.",
+                "Het is geen echt geld.",
+                "Laten we het niet over geld hebben, oké?"
               ],
               "id": "dutch_t7_3_0"
             },
             {
               "type": "cloze",
-              "question": "Maar ik ____ geen geld.",
-              "answer": "heb",
+              "question": "Ik had het ____ niet nodig.",
+              "answer": "geld",
               "choices": [
-                "echt",
-                "nodig",
-                "dat",
-                "heb"
+                "dit",
+                "weet",
+                "geld",
+                "geen"
               ],
               "id": "dutch_t7_3_1"
             },
             {
               "type": "sentence",
-              "question": "I do not have any money.",
-              "answer": "Ik heb geen geld.",
+              "question": "I do it for money.",
+              "answer": "Ik doe het voor geld.",
               "words": [
-                "wil",
-                "geld.",
-                "heb",
+                "doe",
+                "voor",
+                "is",
                 "Ik",
-                "iets",
-                "geen"
+                "het",
+                "geld.",
+                "gedaan."
               ],
               "id": "dutch_t7_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Het moet iets met geld te maken hebben.",
-              "audio": "Het moet iets met geld te maken hebben.",
+              "answer": "Hou je geld. Ik wil het niet.",
+              "audio": "Hou je geld. Ik wil het niet.",
               "id": "dutch_t7_3_3"
             },
             {
@@ -1906,20 +1914,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Haven't you got any money?",
-                  "Heb je geen geld?"
+                  "I go to work.",
+                  "Ik ga naar het werk."
                 ],
                 [
-                  "She had no money.",
-                  "Zij had geen geld."
+                  "We know we have work to do.",
+                  "We weten dat we werk te doen hebben."
                 ],
                 [
-                  "It's not real money.",
-                  "Het is geen echt geld."
+                  "How's work?",
+                  "Hoe gaat het met het werk?"
                 ],
                 [
-                  "We don't need money.",
-                  "We hebben het geld niet nodig."
+                  "I thought that was my job.",
+                  "Ik dacht dat het mijn werk was."
                 ]
               ],
               "id": "dutch_t7_3_4"
@@ -1929,16 +1937,16 @@
       ],
       "preview": [
         [
-          "I'm sure everything will work out just fine.",
-          "Ik weet zeker dat alles goed zal komen."
-        ],
-        [
-          "He's good at his job.",
-          "Hij is goed in wat hij doet."
+          "I did it for the money.",
+          "Ik heb het voor het geld gedaan."
         ],
         [
           "It doesn't work anymore.",
           "Het doet het niet meer."
+        ],
+        [
+          "We need the money.",
+          "We hebben het geld nodig."
         ]
       ]
     },
@@ -1952,47 +1960,46 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "But I don't want to.",
-              "answer": "Maar ik wil niet.",
+              "question": "I don't want it.",
+              "answer": "Ik wil het niet.",
               "choices": [
-                "Dat wil ik niet.",
-                "Maar ik wil niet.",
-                "Wat wil je?",
-                "Ik wil dit."
+                "Ik denk, dus ik ben.",
+                "Ik wil het niet.",
+                "Ik wil het.",
+                "Ik weet niet wat ik wil doen."
               ],
               "id": "dutch_t8_1_0"
             },
             {
               "type": "cloze",
-              "question": "Ik wil ____ niet.",
-              "answer": "het",
+              "question": "Ik weet ____ ik wil.",
+              "answer": "wat",
               "choices": [
-                "dit",
-                "Dat",
-                "het",
-                "weet"
+                "ook",
+                "heb",
+                "niet",
+                "wat"
               ],
               "id": "dutch_t8_1_1"
             },
             {
               "type": "sentence",
-              "question": "I don't want that.",
-              "answer": "Dat wil ik niet.",
+              "question": "I want it.",
+              "answer": "Ik wil het.",
               "words": [
                 "wil",
-                "het",
                 "niet.",
-                "Dat",
-                "niet.",
-                "ik"
+                "het.",
+                "Ik",
+                "door"
               ],
               "id": "dutch_t8_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Wat wil je van me?",
-              "audio": "Wat wil je van me?",
+              "answer": "Ik heb niet wat ik wil.",
+              "audio": "Ik heb niet wat ik wil.",
               "id": "dutch_t8_1_3"
             },
             {
@@ -2001,20 +2008,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want to be here.",
-                  "Ik wil hier zijn."
+                  "I want to have it.",
+                  "Ik wil het hebben."
                 ],
                 [
-                  "I know what I want.",
-                  "Ik weet wat ik wil."
+                  "I don't want to talk about this right now.",
+                  "Ik wil het hier nu niet over hebben."
                 ],
                 [
-                  "I want you to know that.",
-                  "Ik wil dat je dat weet."
+                  "I also want it!",
+                  "Ik wil het ook!"
                 ],
                 [
-                  "What do you want?",
-                  "Wat wil je?"
+                  "I don't know what I want to do.",
+                  "Ik weet niet wat ik wil doen."
                 ]
               ],
               "id": "dutch_t8_1_4"
@@ -2027,37 +2034,39 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "This is what I want.",
-              "answer": "Dit is wat ik wil.",
+              "question": "I know what I want to do.",
+              "answer": "Ik weet wat ik wil doen.",
               "choices": [
-                "Ik heb niet wat ik wil.",
-                "Dit is wat ik wil.",
-                "Maar wat wil je?",
-                "Ik wil dit."
+                "Dat wil ik niet.",
+                "Ik weet wat ik wil doen.",
+                "Moet ik het nu doen?",
+                "Ik denk, dus ik ben."
               ],
               "id": "dutch_t8_2_0"
             },
             {
               "type": "cloze",
-              "question": "Maar wat ____ je?",
-              "answer": "wil",
+              "question": "Moet ik ____ nu doen?",
+              "answer": "het",
               "choices": [
-                "Dat",
-                "Ik",
-                "wil",
-                "wat"
+                "door",
+                "het",
+                "weet",
+                "wil"
               ],
               "id": "dutch_t8_2_1"
             },
             {
               "type": "sentence",
-              "question": "I want this.",
-              "answer": "Ik wil dit.",
+              "question": "I think, therefore I am.",
+              "answer": "Ik denk, dus ik ben.",
               "words": [
-                "dit.",
-                "Dat",
-                "wil",
-                "is",
+                "denk,",
+                "dus",
+                "ik",
+                "niet.",
+                "heb",
+                "ben.",
                 "Ik"
               ],
               "id": "dutch_t8_2_2"
@@ -2065,8 +2074,8 @@
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik wil het.",
-              "audio": "Ik wil het.",
+              "answer": "Ik denk dat ik het kan.",
+              "audio": "Ik denk dat ik het kan.",
               "id": "dutch_t8_2_3"
             },
             {
@@ -2075,20 +2084,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Do you know what I want?",
-                  "Weet je wat ik wil?"
+                  "I think I know who it is.",
+                  "Ik denk dat ik weet wie het is."
                 ],
                 [
-                  "You want this?",
-                  "Wil je dit?"
+                  "I think I've got it.",
+                  "Ik denk dat ik het door heb."
                 ],
                 [
-                  "Want one?",
-                  "Wil je er een?"
+                  "But I don't want to.",
+                  "Maar ik wil niet."
                 ],
                 [
-                  "I don't have what I want.",
-                  "Ik heb niet wat ik wil."
+                  "I don't want that.",
+                  "Dat wil ik niet."
                 ]
               ],
               "id": "dutch_t8_2_4"
@@ -2101,48 +2110,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "Do you want them?",
-              "answer": "Wil je ze?",
+              "question": "I want to be here.",
+              "answer": "Ik wil hier zijn.",
               "choices": [
-                "Ik wil dat.",
-                "Wil je ze?",
-                "Wil je dit?",
-                "Ja, dat wil ik!"
+                "Ik wil dit.",
+                "Ik denk dat ik het door heb.",
+                "Ik wil dat je dat weet.",
+                "Ik wil hier zijn."
               ],
               "id": "dutch_t8_3_0"
             },
             {
               "type": "cloze",
-              "question": "Ik ____ dat.",
-              "answer": "wil",
+              "question": "Ik wil dat ____ dat weet.",
+              "answer": "je",
               "choices": [
                 "wil",
-                "dit",
-                "dat",
-                "Ik"
+                "je",
+                "niet",
+                "het"
               ],
               "id": "dutch_t8_3_1"
             },
             {
               "type": "sentence",
-              "question": "I don't want you here.",
-              "answer": "Ik wil je hier niet.",
+              "question": "This is what I want.",
+              "answer": "Dit is wat ik wil.",
               "words": [
-                "wil",
+                "is",
+                "ik",
+                "wat",
+                "wil.",
+                "Dit",
                 "hier",
-                "je",
-                "niet.",
-                "dat.",
-                "niet",
-                "Ik"
+                "Dit"
               ],
               "id": "dutch_t8_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ja, dat wil ik!",
-              "audio": "Ja, dat wil ik!",
+              "answer": "Ik wil dit.",
+              "audio": "Ik wil dit.",
               "id": "dutch_t8_3_3"
             },
             {
@@ -2151,20 +2160,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I want them.",
-                  "Ik wil ze hebben."
+                  "Do you know what I want?",
+                  "Weet je wat ik wil?"
                 ],
                 [
-                  "I want to have it.",
-                  "Ik wil het hebben."
+                  "I want that.",
+                  "Ik wil dat."
                 ],
                 [
-                  "Do you want it?",
-                  "Wil je het hebben?"
+                  "I don't want you here.",
+                  "Ik wil je hier niet."
                 ],
                 [
-                  "Do you want it now?",
-                  "Wil je het nu hebben?"
+                  "Yes, I want to!",
+                  "Ja, dat wil ik!"
                 ]
               ],
               "id": "dutch_t8_3_4"
@@ -2174,16 +2183,16 @@
       ],
       "preview": [
         [
-          "But I don't want to.",
-          "Maar ik wil niet."
-        ],
-        [
           "I don't want it.",
           "Ik wil het niet."
         ],
         [
-          "I don't want that.",
-          "Dat wil ik niet."
+          "I know what I want.",
+          "Ik weet wat ik wil."
+        ],
+        [
+          "I want it.",
+          "Ik wil het."
         ]
       ]
     },
@@ -2200,37 +2209,39 @@
               "question": "How's the weather?",
               "answer": "Hoe is het weer?",
               "choices": [
+                "Gelukkig werd het weer beter.",
                 "Hoe is het weer?",
-                "Hoe is het weer in New York?",
-                "We hebben het vaak over het weer.",
-                "Gelukkig werd het weer beter."
+                "Wat een mooi weer!",
+                "We hadden het koud."
               ],
               "id": "dutch_t9_1_0"
             },
             {
               "type": "cloze",
-              "question": "Wat voor ____ weer.",
-              "answer": "een",
+              "question": "Hoe is ____ weer daar?",
+              "answer": "het",
               "choices": [
-                "een",
+                "hadden",
+                "Gelukkig",
                 "weer",
-                "in",
-                "erger"
+                "het"
               ],
               "id": "dutch_t9_1_1"
             },
             {
               "type": "sentence",
-              "question": "How's the weather there?",
-              "answer": "Hoe is het weer daar?",
+              "question": "If the weather is good, I'll go.",
+              "answer": "Als het mooi weer is, ga ik.",
               "words": [
-                "is",
-                "dit",
-                "voor",
-                "daar?",
-                "Hoe",
                 "het",
-                "weer"
+                "weer",
+                "ga",
+                "is",
+                "is,",
+                "Het",
+                "mooi",
+                "Als",
+                "ik."
               ],
               "id": "dutch_t9_1_2"
             },
@@ -2255,12 +2266,12 @@
                   "Ik heb genoeg van dit weer."
                 ],
                 [
-                  "What lovely weather!",
-                  "Wat een mooi weer!"
+                  "What weather!",
+                  "Wat voor een weer."
                 ],
                 [
-                  "If the weather is good, I'll go.",
-                  "Als het mooi weer is, ga ik."
+                  "We have had bad weather recently.",
+                  "We hebben de laatste tijd slecht weer gehad."
                 ]
               ],
               "id": "dutch_t9_1_4"
@@ -2273,43 +2284,40 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The weather is different everyday.",
-              "answer": "Het weer is elke dag anders.",
+              "question": "We often talk about the weather.",
+              "answer": "We hebben het vaak over het weer.",
               "choices": [
-                "Het weer is elke dag anders.",
-                "Het weer ging van kwaad tot erger.",
-                "Wat een prachtig weer.",
-                "Het weer had niet beter kunnen zijn."
+                "Het weer had niet beter kunnen zijn.",
+                "We hebben het vaak over het weer.",
+                "Ik weet nog hoe koud het toen was.",
+                "Het weer ging van kwaad tot erger."
               ],
               "id": "dutch_t9_2_0"
             },
             {
               "type": "cloze",
-              "question": "Voel je je ____ helemaal goed?",
-              "answer": "niet",
+              "question": "Het weer is ____ dag anders.",
+              "answer": "elke",
               "choices": [
-                "weer",
-                "niet",
-                "mooi",
-                "is"
+                "vaak",
+                "elke",
+                "kwaad",
+                "fijn"
               ],
               "id": "dutch_t9_2_1"
             },
             {
               "type": "sentence",
-              "question": "We have had bad weather recently.",
-              "answer": "We hebben de laatste tijd slecht weer gehad.",
+              "question": "I hate the weather here.",
+              "answer": "Ik haat het weer hier.",
               "words": [
-                "ongeluk.",
-                "tijd",
+                "haat",
+                "toen",
                 "het",
-                "weer",
-                "slecht",
-                "de",
-                "gehad.",
-                "We",
-                "laatste",
-                "hebben"
+                "hier.",
+                "ga",
+                "Ik",
+                "weer"
               ],
               "id": "dutch_t9_2_2"
             },
@@ -2330,16 +2338,16 @@
                   "Gelukkig werd het weer beter."
                 ],
                 [
-                  "We often talk about the weather.",
-                  "We hebben het vaak over het weer."
+                  "What lovely weather!",
+                  "Wat een mooi weer!"
                 ],
                 [
-                  "I hate the weather here.",
-                  "Ik haat het weer hier."
+                  "I like it when it's cold.",
+                  "Ik vind het fijn wanneer het koud is."
                 ],
                 [
-                  "Weather on Earth will change.",
-                  "Het weer op aarde zal veranderen."
+                  "We've been having good weather.",
+                  "We hebben goed weer gehad de afgelopen tijd."
                 ]
               ],
               "id": "dutch_t9_2_4"
@@ -2352,47 +2360,49 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "The weather was gorgeous.",
-              "answer": "Het weer was prachtig.",
+              "question": "I like the sun.",
+              "answer": "Ik ben gek op de zon.",
               "choices": [
+                "Hoe is het weer daar?",
+                "Het weer is elke dag anders.",
                 "Het weer was erg goed.",
-                "Voel je je niet helemaal goed?",
-                "Wat voor een weer.",
-                "Het weer was prachtig."
+                "Ik ben gek op de zon."
               ],
               "id": "dutch_t9_3_0"
             },
             {
               "type": "cloze",
-              "question": "Wat een ____ weer.",
-              "answer": "prachtig",
+              "question": "Het weer ging ____ kwaad tot erger.",
+              "answer": "van",
               "choices": [
-                "prachtig",
-                "hebben",
-                "Voel",
-                "Geluk"
+                "Gelukkig",
+                "van",
+                "Ik",
+                "had"
               ],
               "id": "dutch_t9_3_1"
             },
             {
               "type": "sentence",
-              "question": "The weather is beautiful.",
-              "answer": "Het weer is prachtig.",
+              "question": "I know it's cold.",
+              "answer": "Ik weet dat het koud is.",
               "words": [
-                "is",
-                "prachtig.",
-                "weer",
-                "Het",
-                "tijd.",
-                "werd"
+                "weet",
+                "echt",
+                "het",
+                "is.",
+                "hier.",
+                "Ik",
+                "dat",
+                "koud"
               ],
               "id": "dutch_t9_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Geluk bij een ongeluk.",
-              "audio": "Geluk bij een ongeluk.",
+              "answer": "Ik heb het echt koud.",
+              "audio": "Ik heb het echt koud.",
               "id": "dutch_t9_3_3"
             },
             {
@@ -2401,20 +2411,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Beautiful weather, isn't it?",
-                  "Mooi weer, nietwaar?"
+                  "We're cold.",
+                  "We hebben het koud."
                 ],
                 [
-                  "We've been having good weather.",
-                  "We hebben goed weer gehad de afgelopen tijd."
+                  "I felt cold.",
+                  "Ik had het koud."
                 ],
                 [
-                  "How's the weather in New York?",
-                  "Hoe is het weer in New York?"
+                  "We were cold.",
+                  "We hadden het koud."
                 ],
                 [
-                  "The weather was going from bad to worse.",
-                  "Het weer ging van kwaad tot erger."
+                  "I still remember how cold it was back then.",
+                  "Ik weet nog hoe koud het toen was."
                 ]
               ],
               "id": "dutch_t9_3_4"
@@ -2428,12 +2438,12 @@
           "Hoe is het weer?"
         ],
         [
-          "What weather!",
-          "Wat voor een weer."
-        ],
-        [
           "How's the weather there?",
           "Hoe is het weer daar?"
+        ],
+        [
+          "If the weather is good, I'll go.",
+          "Als het mooi weer is, ga ik."
         ]
       ]
     },
@@ -2447,47 +2457,50 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "My hair looks good!",
-              "answer": "Mijn haar zit goed!",
+              "question": "Let's talk face to face.",
+              "answer": "Laten we man tot man met elkaar praten.",
               "choices": [
-                "Je hebt lang haar.",
-                "Mijn haar zit goed!",
-                "Haar haar is lang.",
-                "Je haar is erg lang."
+                "Wanneer ik groot ben, wil ik dokter worden.",
+                "Laten we man tot man met elkaar praten.",
+                "Het zal geen pijn doen.",
+                "Doet het geen pijn als je dat zegt?"
               ],
               "id": "dutch_t10_1_0"
             },
             {
               "type": "cloze",
-              "question": "Er zit iets ____ jouw haar.",
-              "answer": "in",
+              "question": "Geef het ____ mij!",
+              "answer": "aan",
               "choices": [
-                "te",
-                "iets",
-                "in",
-                "erg"
+                "doet",
+                "we",
+                "weet",
+                "aan"
               ],
               "id": "dutch_t10_1_1"
             },
             {
               "type": "sentence",
-              "question": "Hand it over!",
-              "answer": "Geef het aan mij!",
+              "question": "I can do it with one hand.",
+              "answer": "Ik kan het met één hand doen.",
               "words": [
+                "ik",
+                "met",
+                "hand",
+                "we",
+                "doen.",
                 "het",
-                "mij!",
-                "Je",
-                "Geef",
-                "aan",
-                "haar"
+                "kan",
+                "Ik",
+                "één"
               ],
               "id": "dutch_t10_1_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Kunnen jullie ons helpen?",
-              "audio": "Kunnen jullie ons helpen?",
+              "answer": "Ik heb er genoeg van.",
+              "audio": "Ik heb er genoeg van.",
               "id": "dutch_t10_1_3"
             },
             {
@@ -2496,20 +2509,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "I'm sick of it!",
-                  "Ik heb er genoeg van."
+                  "I'm not a doctor.",
+                  "Ik ben geen dokter."
                 ],
                 [
-                  "Let's talk face to face.",
-                  "Laten we man tot man met elkaar praten."
+                  "I've got long hair.",
+                  "Ik heb lang haar."
                 ],
                 [
-                  "Her hair is long.",
-                  "Haar haar is lang."
+                  "I aim to be a doctor when I grow up.",
+                  "Wanneer ik groot ben, wil ik dokter worden."
                 ],
                 [
-                  "She has got long hair.",
-                  "Zij heeft lang haar."
+                  "I have no hair on my head.",
+                  "Ik heb geen haar op mijn hoofd."
                 ]
               ],
               "id": "dutch_t10_1_4"
@@ -2522,47 +2535,48 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I've got long hair.",
-              "answer": "Ik heb lang haar.",
+              "question": "It doesn't hurt.",
+              "answer": "Het doet geen pijn.",
               "choices": [
-                "Ik heb lang haar.",
-                "Ik kan niet meer tegen deze pijn.",
-                "Wat heb je in je hand?",
-                "Er zit iets in jouw haar."
+                "Ik heb het met eigen ogen gezien.",
+                "Het doet geen pijn.",
+                "Ik ben je dokter.",
+                "Geef het aan mij!"
               ],
               "id": "dutch_t10_2_0"
             },
             {
               "type": "cloze",
-              "question": "Jouw haar ____ te lang.",
-              "answer": "is",
+              "question": "Ik kan je iets ____ tegen de pijn.",
+              "answer": "geven",
               "choices": [
-                "Je",
-                "haar",
-                "mij",
-                "is"
+                "gezien",
+                "geven",
+                "in",
+                "één"
               ],
               "id": "dutch_t10_2_1"
             },
             {
               "type": "sentence",
-              "question": "You have long hair.",
-              "answer": "Je hebt lang haar.",
+              "question": "It won't hurt.",
+              "answer": "Het zal geen pijn doen.",
               "words": [
-                "in",
-                "lang",
-                "haar.",
-                "Je",
-                "Geef",
-                "hebt"
+                "pijn",
+                "Ik",
+                "zal",
+                "zouden",
+                "Het",
+                "geen",
+                "doen."
               ],
               "id": "dutch_t10_2_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Je hebt erg lang haar.",
-              "audio": "Je hebt erg lang haar.",
+              "answer": "Ik heb geen pijn.",
+              "audio": "Ik heb geen pijn.",
               "id": "dutch_t10_2_3"
             },
             {
@@ -2571,20 +2585,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Your hair is really long.",
-                  "Je haar is erg lang."
+                  "Doesn't it hurt as you say that?",
+                  "Doet het geen pijn als je dat zegt?"
                 ],
                 [
-                  "My hair is already very long.",
-                  "Mijn haar is al erg lang."
+                  "I'm going to the doctor.",
+                  "Ik ga naar de dokter."
                 ],
                 [
-                  "What do you have in your hand?",
-                  "Wat heb je in je hand?"
+                  "I'm your doctor.",
+                  "Ik ben je dokter."
                 ],
                 [
-                  "What are you holding in your hand?",
-                  "Wat hebt u in uw hand?"
+                  "I am a doctor.",
+                  "Ik ben dokter."
                 ]
               ],
               "id": "dutch_t10_2_4"
@@ -2597,49 +2611,47 @@
           "exercises": [
             {
               "type": "translation",
-              "question": "I can do it with one hand.",
-              "answer": "Ik kan het met één hand doen.",
+              "question": "I know that you aren't a doctor.",
+              "answer": "Ik weet dat je geen dokter bent.",
               "choices": [
-                "Ik kan het met één hand doen.",
-                "We zouden nu terug moeten gaan.",
-                "Het is allemaal in jouw hoofd.",
-                "Waar doet het pijn?"
+                "Er zit iets in jouw haar.",
+                "Mijn haar zit goed!",
+                "Ik ben niet naar een dokter geweest.",
+                "Ik weet dat je geen dokter bent."
               ],
               "id": "dutch_t10_3_0"
             },
             {
               "type": "cloze",
-              "question": "We zouden nu ____ moeten gaan.",
-              "answer": "terug",
+              "question": "Ik ben niet ____ een dokter geweest.",
+              "answer": "naar",
               "choices": [
-                "hoofd",
-                "op",
-                "terug",
-                "niet"
+                "geen",
+                "naar",
+                "we",
+                "dokter"
               ],
               "id": "dutch_t10_3_1"
             },
             {
               "type": "sentence",
-              "question": "It's all in your head.",
-              "answer": "Het is allemaal in jouw hoofd.",
+              "question": "My hair looks good!",
+              "answer": "Mijn haar zit goed!",
               "words": [
-                "hoofd.",
-                "in",
+                "haar",
                 "elkaar",
-                "Het",
-                "is",
-                "meer",
-                "allemaal",
-                "jouw"
+                "goed!",
+                "Mijn",
+                "zit",
+                "zit"
               ],
               "id": "dutch_t10_3_2"
             },
             {
               "type": "listening",
               "question": "Type what you hear",
-              "answer": "Ik heb geen haar op mijn hoofd.",
-              "audio": "Ik heb geen haar op mijn hoofd.",
+              "answer": "Ik moet naar de dokter.",
+              "audio": "Ik moet naar de dokter.",
               "id": "dutch_t10_3_3"
             },
             {
@@ -2648,20 +2660,20 @@
               "answer": "matched",
               "pairs": [
                 [
-                  "Watch your head!",
-                  "Pas op je hoofd!"
+                  "I can see it in your eyes.",
+                  "Ik kan het in jouw ogen zien."
                 ],
                 [
-                  "I cannot bear the pain any more.",
-                  "Ik kan niet meer tegen deze pijn."
+                  "I saw it with my own eyes.",
+                  "Ik heb het met eigen ogen gezien."
                 ],
                 [
-                  "Where does it hurt?",
-                  "Waar doet het pijn?"
+                  "There's something in your hair.",
+                  "Er zit iets in jouw haar."
                 ],
                 [
-                  "It doesn't hurt.",
-                  "Het doet geen pijn."
+                  "We should head back now.",
+                  "We zouden nu terug moeten gaan."
                 ]
               ],
               "id": "dutch_t10_3_4"
@@ -2671,16 +2683,16 @@
       ],
       "preview": [
         [
-          "My hair looks good!",
-          "Mijn haar zit goed!"
-        ],
-        [
-          "There's something in your hair.",
-          "Er zit iets in jouw haar."
+          "Let's talk face to face.",
+          "Laten we man tot man met elkaar praten."
         ],
         [
           "Hand it over!",
           "Geef het aan mij!"
+        ],
+        [
+          "I can do it with one hand.",
+          "Ik kan het met één hand doen."
         ]
       ]
     }
