@@ -88,7 +88,7 @@ const UNITS = 10;
 // Courses that Cruise (the sibling repo) has played get more units, sized to
 // how much it practised, and lean toward the words it practised. Only Tatoeba
 // text goes into the pack; the Cruise ledger is read for its vocabulary alone.
-const MAX_UNITS = 60;   // ponytail: about 1,400 sentences; the app fetches the whole pack when a course opens
+const MAX_UNITS = 120;  // ponytail: about 2,900 sentences, ~1MB; the app fetches the whole pack when a course opens
 const CRUISE_CODES = { greek: 'el', polish: 'pl', hindi: 'hi', japanese: 'ja', korean: 'ko', french: 'fr', turkish: 'tr', arabic: 'ar', swedish: 'sv', russian: 'ru', dutch: 'nl', chinese: 'zh' };
 const CRUISE_LEDGERS = ['lessons.archive.jsonl', 'lessons.jsonl'].map((f) => path.join(ROOT, '..', 'cruise', 'scripts', f));
 const MIN_UNITS = 3;

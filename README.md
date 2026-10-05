@@ -49,4 +49,4 @@ cd ios && xcodegen generate      # native projects
 [Architecture](docs/ARCHITECTURE.md) · [API and agent tools](docs/API.md) · [Whitepaper](WHITEPAPER.md) · [Roadmap](roadmap.md) · [Attribution](ATTRIBUTION.md)
 
 Language sentences come from the [Tatoeba Project](https://tatoeba.org) (CC-BY 2.0 FR), ranked by [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT).
-Courses Cruise has played (Greek, Polish, Hindi, Japanese, Korean, French and more) get up to 60 units, sized to how much it practised and ordered so sentences using the words it practised come first. Only the word list is read from Cruise; every sentence is Tatoeba.
+Courses Cruise has played (Greek, Polish, Hindi, Japanese, Korean, French and more) get up to 120 units, sized to how much it practised and ordered so sentences using the words it practised come first. Only the word list is read from Cruise; every sentence is Tatoeba.

@@ -84,7 +84,7 @@ closes the "iOS never actually run" gap.
 - [ ] **Generated content is ordered by word frequency, not by teaching order.** Unit 1 is
   "statistically most common words", not "greetings". This is the real remaining gap versus a
   designed curriculum, and no amount of extra sentences fixes it.
-- [x] **Bigger courses from Cruise practice (2026-10-05).** `build-language-course.mjs` reads the words Cruise practised and builds up to 60 Tatoeba units per course: Greek 60, Polish 60, Hindi 55, Japanese 49, Korean 43, French 36, Turkish 11, and 10 each for Arabic, Swedish, Russian, Dutch.
+- [x] **Bigger courses from Cruise practice (2026-10-05).** `build-language-course.mjs` reads the words Cruise practised and builds up to 120 Tatoeba units per course: Greek 120, Polish 120, Hindi 55, Japanese 49, Korean 43, French 36, Turkish 11, and 10 each for Arabic, Swedish, Russian, Dutch.
 - [ ] **No native-speaker review of ~1,800 generated exercises.** Tatoeba sentences are
   human-written so the floor is high, but Hindi, Arabic, Korean and Chinese have had no check at
   all beyond schema validation.
