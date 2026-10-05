@@ -38,3 +38,7 @@ Renamed from Lexly on 2026-10-04; the App Store listing name, the old host lexly
 - Deploy with `./scripts/deploy.sh`. A plain `git push` deploys nothing. It publishes the working tree, so do not run it mid-edit.
 - Tests: `node tools/validate-catalog.js`, `node tools/check-streak-freeze.js`, `node tools/check-lesson-completion-scoping.js`, `node scripts/check-lesson-gate.mjs`, `ios/Tests/ContentStoreTests.swift`.
 - Version state goes stale: `asc versions list --app 6783501611` is the truth. See `roadmap.md` before touching a submission.
+
+## The loop
+
+Self-paced loop running alongside Cruise. See `docs/LOOP-HANDOFF.md` for the current state, next steps, gotchas, and restart prompt. Each round picks the next roadmap item using open sources only (Tatoeba, Lichess CC0, original content), runs all checks, commits, pushes, syncs landing/README/roadmap, and replies with a 1-2 line TLDR.
