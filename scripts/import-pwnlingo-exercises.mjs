@@ -12,7 +12,7 @@ const src = path.join(root, '..', 'cruise', 'scripts');
 const coursesDir = path.join(root, 'content', 'courses');
 
 // pwnlingo track code -> Tonchi course id. NEW entries only matter for courses Tonchi lacks.
-const COURSES = { hi: 'hindi', ja: 'japanese', ko: 'korean', ar: 'arabic', zh: 'chinese', fr: 'french', ru: 'russian', pt: 'portuguese', es: 'spanish', de: 'german', it: 'italian', nl: 'dutch', tlh: 'klingon', yi: 'yiddish', id: 'indonesian' };
+const COURSES = { hi: 'hindi', ja: 'japanese', ko: 'korean', ar: 'arabic', zh: 'chinese', fr: 'french', ru: 'russian', pt: 'portuguese', es: 'spanish', de: 'german', it: 'italian', nl: 'dutch', tlh: 'klingon', yi: 'yiddish', id: 'indonesian', el: 'greek', pl: 'polish', tr: 'turkish', sv: 'swedish' };
 const NEW = {
   indonesian: { name: 'Indonesian', lang: 'id-ID', icon: 'fa-solid fa-earth-asia' },
 };
