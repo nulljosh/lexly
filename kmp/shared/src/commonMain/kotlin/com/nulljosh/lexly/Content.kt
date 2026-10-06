@@ -33,6 +33,8 @@ data class Exercise(
     val choices: List<String> = emptyList(),
     val words: List<String> = emptyList(),
     val audio: String? = null,
+    /** Position for a `chess` exercise, drawn as a board above the choices. */
+    val fen: String? = null,
 )
 
 @Serializable
