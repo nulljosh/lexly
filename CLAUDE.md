@@ -16,7 +16,7 @@ Renamed from Lexly on 2026-10-04; the App Store listing name, the old host lexly
 ## Content rules
 
 - Exercise types and their fields: `translation`/`mathChoice`/`cloze` use `choices`, `sentence` uses `words`,
-  `listening` uses `audio`, `match` uses `pairs`, `math` is free entry, `chess` uses `choices` plus a `fen` drawn as a board. **Every type must render on web and iOS.**
+  `listening` uses `audio`, `match` uses `pairs`, `math` is free entry, `chess` uses `choices` plus a `fen` drawn as a board (web, iOS/macOS and the Compose app all draw it). **Every type must render on web and iOS.**
   `node tools/validate-catalog.js` guards this; keep it in sync when adding a type.
 - Written courses are 6 units x 2 lessons x 5 `mathChoice` exercises, each with a unit `tip` and an `explain` on every
   answer. The app renders choices in file order, so shuffle them in the data (the answer must not sit in one slot).

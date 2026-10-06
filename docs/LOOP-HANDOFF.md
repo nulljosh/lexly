@@ -10,13 +10,13 @@ Cruise at 470k XP (goal 500k by end of day then 1M), watchdog restart 5s, streak
 
 ## Next, in order
 
-1. Fact-check Greek and Polish packs so they can join the catalog
-2. Android chess board UI for fens
-3. Step-by-step chess lines for longer sequences
-4. Update ATTRIBUTION.md to document third-party sources (Tatoeba, Lichess)
-5. Cruise gift/chest selectors once Duolingo shows one (gift-sent and chest-open log entries)
-6. Russian (speaking exercises) and Arabic (characterMatch pair-select) earn no XP; investigate if worth fixing
-7. Merge held packs back into catalog after fact-check passes
+1. Step-by-step chess lines: a combination is one question about its first move today; an exercise where the board answers back would teach the follow-up
+2. ATTRIBUTION.md still says no third-party app content is used; the restored Hindi/Japanese/Korean/French/Arabic drill units contradict that
+3. Cruise gift/chest selectors once Duolingo shows one (gift-sent and chest-open log entries)
+4. Russian (speaking exercises) and Arabic (characterMatch pair-select) earn no XP; investigate if worth fixing
+5. Chess course stub units (6 hand-written multiple-choice units) could use more original content
+
+Done since the handoff was written: Polish, Greek, Turkish and Swedish fact-checked and in the catalog (2026-10-05); Android draws the chess board (compiles with JDK 17 at /opt/homebrew/opt/openjdk@17).
 
 ## Restart prompt
 
