@@ -85,7 +85,7 @@ closes the "iOS never actually run" gap.
   "statistically most common words", not "greetings". This is the real remaining gap versus a
   designed curriculum, and no amount of extra sentences fixes it.
 - [ ] **Chess: play the whole line.** Today a combination is one question about its first move. A step-by-step exercise where the board answers back would teach the follow-up too.
-- [x] **Polish in the catalog (2026-10-05).** 120 Tatoeba units fact-checked by a second model (Haiku, 2,880 rows, 6 real errors dropped), then added to the catalog. Greek next, same pass.
+- [x] **Polish in the catalog (2026-10-05).** 120 Tatoeba units fact-checked by a second model (Haiku, 2,880 rows, 6 real errors dropped), then added to the catalog. Greek followed the same day: 5 flags, 1 real (a tense mismatch), 4 were the reviewer misreading idioms like "το πολύ", so flags get a human read before anything is dropped.
 - [ ] **No native-speaker review of ~1,800 generated exercises.** Tatoeba sentences are
   human-written so the floor is high, but Hindi, Arabic, Korean and Chinese have had no check at
   all beyond schema validation.
