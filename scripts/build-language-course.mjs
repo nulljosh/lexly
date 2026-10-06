@@ -276,6 +276,8 @@ async function cruiseVocab(id) {
 // Ranked pairs, easiest first. "Easiest" = the rarest word in the target sentence is
 // still common; that keeps unit 1 off vocabulary nobody needs.
 async function rankedPairs(id, config, practised = new Set()) {
+    const excluded = new Set((await readFile(path.join(ROOT, 'scripts', 'tatoeba-exclude.txt'), 'utf8').catch(() => ''))
+        .split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('#')));
     const [target, english, rank] = await Promise.all([
         loadSentences(config.tatoeba),
         loadSentences('eng'),
@@ -311,6 +313,7 @@ async function rankedPairs(id, config, practised = new Set()) {
         // Quotation marks survive whitespace tokenizing as junk word-bank chips
         // (`\"\u00bfPor`), so drop quoted sentences rather than special-casing them later.
         if (/["\u00ab\u00bb\u201c\u201d]/.test(targetText) || /["\u201c\u201d]/.test(englishText)) continue;
+        if (excluded.has(targetText)) continue;   // rejected by a fact-check, see scripts/tatoeba-exclude.txt
 
         let difficulty;
         if (unspaced) {
